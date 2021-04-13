@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Overzicht van Data Prep
 topic: overzicht
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -35,6 +36,10 @@ Lees de [handleiding voor toewijzingsfuncties](./functions.md) voor meer informa
 
 Een reeks afbeeldingen die een schema in een ander schema omzetten, wordt samen een toewijzingsset genoemd. Er wordt één toewijzingenset gemaakt als onderdeel van elke gegevensstroom. Een toewijzingenset is een integraal onderdeel van de gegevensstromen en wordt gemaakt, bewerkt en bewaakt als onderdeel van de gegevensstromen.
 
+## Gegevensverwerking
+
+De Prep van gegevens kan robuust verschillende formaten van gegevens behandelen die in Platform worden opgenomen. Lees [het overzicht van de verwerking van gegevensformaten](./data-handling.md) voor meer informatie over de manier waarop Data Prep met verschillende gegevenstypen omgaat.
+
 ## Volgende stappen
 
-In dit document worden de basisbeginselen van Data Prep in Adobe Experience Platform besproken. Lees de [handleiding voor toewijzingsfuncties](./functions.md) voor meer informatie over verschillende toewijzingsfuncties. Lees voor meer informatie over de verschillende datetime-tekenreeksen de [date strings guide](./dates.md). Lees voor meer informatie over het gebruik van de Data Prep API de [Data Prep developer guide](api/overview.md).
+In dit document worden de basisbeginselen van Data Prep in Adobe Experience Platform besproken. Lees de [handleiding voor toewijzingsfuncties](./functions.md) voor meer informatie over verschillende toewijzingsfuncties. Lees de [handleiding voor de verwerking van gegevensformaten](./data-handling.md#dates) voor meer informatie over de manier waarop Data Prep met verschillende gegevenstypen omgaat. Lees voor meer informatie over het gebruik van de Data Prep API de [Data Prep developer guide](api/overview.md).
