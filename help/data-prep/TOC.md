@@ -5,9 +5,9 @@ user-guide-title: Handleiding voor voorinstelling van gegevens
 user-guide-description: Bereid uw gegevens voor voor inname in Adobe Experience Platform.
 feature: Gegevensbeheer, gegevensinname
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '43'
 ht-degree: 9%
 
 ---
@@ -22,5 +22,5 @@ ht-degree: 9%
    - [Aan de slag](./api/getting-started.md)
    - [Functies](./api/functions.md)
    - [Toewijzingsset](./api/mapping-set.md)
-- [Datumtijdobjecten](dates.md)
+- [Gegevensindelingen verwerken](./data-handling.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
