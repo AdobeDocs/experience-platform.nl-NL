@@ -6,9 +6,9 @@ topic: overzicht
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 2%
 
 ---
@@ -109,7 +109,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 >[!NOTE]
 >
->Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven. Meer informatie over de functie `date` vindt u in de [handleiding voor datumfuncties](./dates.md).
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven. Meer informatie over de functie `date` vindt u in de datumsectie van de [handleiding voor de verwerking van gegevensformaten](./data-handling.md#dates).
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
