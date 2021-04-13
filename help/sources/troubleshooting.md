@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Bronoplossing
 topic: problemen oplossen
 description: Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) de gids van het oplossen van problemenproblemen van Bronnen
 
@@ -57,7 +57,7 @@ Tot de ondersteunde gegevenstypen behoren gehele getallen, tekenreeksen, boolean
 
 ### Welke datum- en tijdnotaties worden ondersteund?
 
-De bronnen steunen een grote verscheidenheid van datetime formaten terwijl het opnemen van gegevens. Meer informatie over ondersteunde datetime-indelingen vindt u in de handleiding [datafoutfuncties voor gegevenprep](../data-prep/dates.md).
+De bronnen steunen een grote verscheidenheid van datetime formaten terwijl het opnemen van gegevens. Meer informatie over ondersteunde datetime-indelingen vindt u in de datumsectie van de [handleiding voor de verwerking van gegevensindelingen](../data-prep/data-handling.md#dates) in de Prep-documentatie voor gegevens.
 
 ### Hoe kan ik arrays opmaken in CSV-, JSON- en Parquet-bestanden?
 
