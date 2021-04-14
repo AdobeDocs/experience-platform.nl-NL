@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;Intelligente services;populaire onderwerpen;intelligente service;Intelligente service
 solution: Experience Platform, Intelligent Services
 title: Gegevens voorbereiden voor gebruik in intelligente services
-topic: Intelligent Services
-description: 'Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn. '
+topic: Intelligente services
+description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn.
+exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
-
 
 # Gegevens voorbereiden voor gebruik in [!DNL Intelligent Services]
 
@@ -75,7 +75,28 @@ U moet bepalen welk veld het beste kan worden gebruikt als primaire identiteit o
 * &quot;mcid&quot; (voor Adobe Audience Manager-id&#39;s)
 * &quot;aid&quot; (voor Adobe Analytics-id&#39;s)
 
-Als u onzeker bent welk gebied u als primaire identiteit zou moeten gebruiken, contacteer de Consulting Diensten van de Adobe om de beste oplossing te bepalen.
+Als u onzeker bent welk gebied u als primaire identiteit zou moeten gebruiken, contacteer de Consulting Diensten van de Adobe om de beste oplossing te bepalen. Als er geen primaire identiteit is ingesteld, gebruikt de toepassing Intelligente service het volgende standaardgedrag:
+
+| Standaard | Attribution AI | Customer AI |
+| --- | --- | --- |
+| Identiteitskolom | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| Naamruimte | AAID | ECID |
+
+Als u een primaire identiteit wilt instellen, navigeert u naar het schema op het tabblad **[!UICONTROL Schemas]** en selecteert u de hyperlink voor de schemanaam om **[!DNL Schema Editor]** te openen.
+
+![Navigeren naar schema](./images/data-preparation/navigate_schema.png)
+
+Navigeer vervolgens naar het veld dat u als primaire identiteit wilt gebruiken en selecteer het. Het menu **[!UICONTROL Field properties]** wordt geopend voor dat veld.
+
+![Selecteer het veld](./images/data-preparation/find_field.png)
+
+Schuif omlaag in het menu **[!UICONTROL Field properties]** totdat u het selectievakje **[!UICONTROL Identity]** hebt gevonden. Nadat u het selectievakje hebt ingeschakeld, wordt de optie voor het instellen van de geselecteerde identiteit als **[!UICONTROL Primary identity]** weergegeven. Selecteer dit vak ook.
+
+![Selectievakje selecteren](./images/data-preparation/set_primary_identity.png)
+
+Vervolgens moet u een **[!UICONTROL Identity namespace]** opgeven uit de lijst met vooraf gedefinieerde naamruimten in het vervolgkeuzemenu. In dit voorbeeld wordt de ECID-naamruimte geselecteerd omdat een Adobe Audience Manager-id `mcid.id` wordt gebruikt. Selecteer **[!UICONTROL Apply]** om de updates te bevestigen en selecteer **[!UICONTROL Save]** in de hoger-juiste hoek om de veranderingen in uw schema te bewaren.
+
+![Sla de wijzigingen op](./images/data-preparation/select_namespace.png)
 
 #### xdm:tijdstempel {#timestamp}
 
@@ -104,7 +125,7 @@ Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEv
 
 Voor volledige informatie betreffende elk van de vereiste subvelden voor `xdm:channel`, gelieve te verwijzen naar [het schema van het ervaringskanaal](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) specificatie. Voor sommige voorbeeldafbeeldingen, zie [lijst hieronder](#example-channels).
 
-##### Voorbeeldkanaaltoewijzingen {#example-channels}
+#### Voorbeeldkanaaltoewijzingen {#example-channels}
 
 In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toegewezen aan het schema `xdm:channel`:
 
@@ -272,7 +293,7 @@ Zodra u het schema hebt gecreeerd en bewaard, kunt u een nieuwe dataset tot stan
 * [Creeer een dataset in UI](../catalog/datasets/user-guide.md#create)  (volg het werkschema voor het gebruiken van een bestaand schema)
 * [Een gegevensset maken in de API](../catalog/datasets/create.md)
 
-Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen **[!UICONTROL Datasets]** werkruimte vinden.
+Nadat de dataset wordt gecreeerd, kunt u het in Platform UI binnen de **[!UICONTROL Datasets]** werkruimte vinden.
 
 ![](images/data-preparation/dataset-location.png)
 
