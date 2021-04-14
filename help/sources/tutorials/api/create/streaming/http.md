@@ -3,12 +3,13 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 solution: Experience Platform
 title: Een streamingverbinding maken met de API
 topic: zelfstudie
-type: Zelfstudie
+type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
+exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69abc982c4a820b850096d83761552ca526bca29
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '884'
 ht-degree: 1%
 
 ---
