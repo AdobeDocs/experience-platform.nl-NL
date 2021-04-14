@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Overzicht van beheer, privacy en beveiliging
-topic: overview
+topic: overzicht
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
+exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 0%
+source-wordcount: '833'
+ht-degree: 1%
 
 ---
-
 
 # Bestuur, privacy en beveiliging in Adobe Experience Platform
 
@@ -55,13 +55,13 @@ Adobe Experience Platform Privacy Service biedt een RESTful-API en -gebruikersin
 
 Zie [Overzicht van de Privacy Service](../../privacy-service/home.md) voor meer informatie.
 
-### Ingediende verzameling {#consent}
+### Goedkeuring {#consent}
 
 Veel wettelijke privacyverordeningen hebben vereisten ingevoerd voor actieve en specifieke toestemming op het gebied van gegevensverzameling, personalisatie en andere gevallen van marketinggebruik. Om aan deze vereisten te voldoen, staat het Experience Platform u toe om toestemmingsinformatie in individuele klantenprofielen te vangen en die voorkeur te gebruiken als bepalende factor in hoe de gegevens van elke klant in stroomafwaartse werkschema&#39;s van de Platform worden gebruikt.
 
-Meer informatie over het verzamelen en verwerken van gegevens over toestemming van klanten in overeenstemming met IAB Transparency and Consent Framework (TCF) 2.0 vindt u in het overzicht over [IAB TCF 2.0-ondersteuning in Platform](./consent/iab/overview.md).
+Als u wilt leren hoe u toestemming en voorkeursgegevens van klanten kunt verwerken met de Adobe-standaard, raadpleegt u het overzicht over de verwerking van [toestemming in Experience Platform](./consent/adobe/overview.md).
 
-<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+Voor informatie over hoe de gegevens van de de toestemmingstoestemming van de procesklant in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0, zie het overzicht over [IAB TCF 2.0 steun in Platform](./consent/iab/overview.md).
 
 ## Beveiliging {#security}
 
