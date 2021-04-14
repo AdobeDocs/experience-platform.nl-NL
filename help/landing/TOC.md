@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen in real-time aan uw klanten te leveren.
 translation-type: tm+mt
-source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '193'
 ht-degree: 5%
 
 ---
@@ -45,6 +45,10 @@ ht-degree: 5%
 * Beheer, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)
    * Toestemmingsbeheer {#consent}
+      * Adobe standaard {#adobe}
+         * [Overzicht](./governance-privacy-security/consent/adobe/overview.md)
+         * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/adobe/dataset.md)
+         * [De SDK van het Web Platform integreren om toestemmings- en voorkeursgegevens te verwerken](./governance-privacy-security/consent/adobe/sdk.md)
       * IAB TCF 2.0 {#iab}
          * [Overzicht](./governance-privacy-security/consent/iab/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
@@ -52,4 +56,4 @@ ht-degree: 5%
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2 gegevensmeermigratie](adls2-gen2-migration.md)
 * [Verklarende woordenlijst](glossary.md)
-* [Releaseopmerkingen](https://www.adobe.com/go/platform-release-notes-en)
+* [Aanvullende informatie](https://www.adobe.com/go/platform-release-notes-en)
