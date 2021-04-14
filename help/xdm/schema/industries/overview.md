@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
 title: Overzicht van industriemodellen
-topic: ' - overzicht'
+topic: overzicht
 description: Leer over de gestandaardiseerde gegevensmodellen voor diverse de industrietakken die kunnen worden geconstrueerd gebruikend de componenten van het Model van de Gegevens van de Ervaring (XDM).
 translation-type: tm+mt
-source-git-commit: 6a7aebb64a533158f7ab17af0cd28243aeda0eca
+source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -52,7 +52,6 @@ ERD&#39;s zijn beschikbaar voor de volgende verticale handelslijnen:
 * [[!UICONTROL Retail]](./retail.md)
 * [[!UICONTROL Financial services]](./financial.md)
 * [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
-* [[!UICONTROL Telecommunications]](./telecom.md)
 
 ## Volgende stappen
 
