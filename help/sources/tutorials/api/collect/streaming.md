@@ -7,9 +7,9 @@ type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: a63208dcdbe6851262e567a89c00b160dffa0e41
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -119,10 +119,89 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ```json
 {
-    "id": "2abd97c4-91bb-4c93-bd97-c491bbfc933d",
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+## URL van streamingeindpunt ophalen {#get-endpoint}
+
+Wanneer de bronverbinding is gemaakt, kunt u nu de URL van het streamingeindpunt ophalen.
+
+**API-indeling**
+
+```http
+GET /flowservice/sourceConnections/{CONNECTION_ID}
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | De `id` waarde van sourceConnections u eerder creeerde. |
+
+**Verzoek**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gevraagde verbinding terug. De URL van het streamingeindpunt wordt automatisch gemaakt met de verbinding en kan worden opgehaald met de waarde `inletUrl`.
+
+```json
+{
+    "items": [
+        {
+            "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+            "createdAt": 1617743929826,
+            "updatedAt": 1617743930363,
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{USER_ID}",
+            "updatedClient": "{USER_ID}",
+            "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
+            "sandboxName": "prod",
+            "imsOrgId": "{IMS_ORG}",
+            "name": "Test source connector for streaming data",
+            "description": "Test source connector for streaming data",
+            "baseConnectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+            "state": "enabled",
+            "data": {
+                "format": "delimited",
+                "schema": null,
+                "properties": null
+            },
+            "connectionSpec": {
+                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "version": "1.0"
+            },
+            "params": {
+                "sourceId": "Streaming raw data",
+                "inletUrl": "https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "inletId": "2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "dataType": "raw",
+                "name": "hgtest"
+            },
+            "version": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "etag": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+                    "connectionSpec": {
+                        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                        "version": "1.0"
+                    }
+                }
+            }
+        }
+    ]
+}
+```
+
 
 ## Een doel-XDM-schema maken {#target-schema}
 
@@ -528,7 +607,7 @@ curl -X POST \
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "2abd97c4-91bb-4c93-bd97-c491bbfc933d"
+            "e96d6135-4b50-446e-922c-6dd66672b6b2"
         ],
         "targetConnectionIds": [
             "723222e2-6ab9-4b0b-b222-e26ab9bb0bc2"
@@ -562,6 +641,62 @@ Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd datafl
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## Onbewerkte gegevens plaatsen die {#ingest-data} moeten worden ingevoerd
+
+Nu u uw stroom hebt gecreeerd, kunt u uw JSON bericht naar het het stromen eindpunt verzenden u eerder creeerde.
+
+**API-indeling**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | De `id`-waarde van de nieuwe streamingverbinding. |
+
+**Verzoek**
+
+Het voorbeeldverzoek neemt onbewerkte gegevens aan het het stromen eindpunt op dat eerder werd gecreeerd.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Antwoord**
+
+Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgenomen informatie.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
+| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
+| `receivedTimeMs`: Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
 
 ## Volgende stappen
 
