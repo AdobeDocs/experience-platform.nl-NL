@@ -6,9 +6,9 @@ breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 feature: Schemas
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '279'
 ht-degree: 6%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 6%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Demografische details](./mixins/profile/person-details.md)
       * [Persoonlijke contactgegevens](./mixins/profile/personal-details.md)
+      * [Voorkeuren voor privacy/persoonlijke voorkeur/marketing (inhoud)](./mixins/profile/consents.md)
       * [Details segmentlidmaatschap](./mixins/profile/segmentation.md)
       * [Contactgegevens werken](./mixins/profile/work-details.md)
    * Gebeurtenismixen {#event}
@@ -51,6 +52,10 @@ ht-degree: 6%
    * [Apparaat](./data-types/device.md)
    * [E-mailadres](./data-types/email-address.md)
    * [Omgeving](./data-types/environment.md)
+   * [Veld voor algemene toestemming](./data-types/consent-field.md)
+   * [Algemeen veld Voorkeuren voor marketing](./data-types/marketing-field.md)
+   * [Algemeen veld Voorkeuren voor marketing met abonnementen](./data-types/marketing-field-subscriptions.md)
+   * [Algemeen veld Voorkeuren voor aanpassen](./data-types/personalization-field.md)
    * [Geo](./data-types/geo.md)
    * [Geo Circle](./data-types/geo-circle.md)
    * [Geo-coördinaten](./data-types/geo-coordinates.md)
