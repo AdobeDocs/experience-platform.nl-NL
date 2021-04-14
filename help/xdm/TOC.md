@@ -6,9 +6,9 @@ breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 feature: Schemas
 translation-type: tm+mt
-source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
+source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '257'
 ht-degree: 6%
 
 ---
@@ -22,6 +22,11 @@ ht-degree: 6%
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
+   * Industriële gegevensmodellen {#industries}
+      * [Overzicht](./schema/industries/overview.md)
+      * [Detailgegevensmodel ERD](./schema/industries/retail.md)
+      * [Gegevensmodel financiële diensten ERD](./schema/industries/financial.md)
+      * [Gegevensmodel reis- en gastvrijheid ERD](./schema/industries/travel-hospitality.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
