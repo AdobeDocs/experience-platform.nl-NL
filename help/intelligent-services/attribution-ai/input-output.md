@@ -2,16 +2,16 @@
 keywords: Experience Platform;aan de slag;Attribution ai;populaire onderwerpen;Attribution ai input;Attribution ai output;
 solution: Experience Platform, Intelligent Services
 title: Invoer en Uitvoer in Attribution AI
-topic: Input and Output data for Attribution AI
+topic: Invoer- en uitvoergegevens voor Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 0%
 
 ---
-
 
 # Invoer en uitvoer in [!DNL Attribution AI]
 
@@ -49,7 +49,7 @@ De kolommen hieronder zijn niet vereist maar het wordt geadviseerd dat u hen in 
 - web.webPageDetails
 - xdm:productListItems
 
-### Historische gegevens
+### Historische gegevens {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -136,11 +136,11 @@ In de volgende tabel worden de schemavelden in de voorbeelduitvoer van onbewerkt
 
 ### Raw-muziekpaden (UI) {#raw-score-path} weergeven
 
-U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Begin door **[!UICONTROL Schema&#39;s]** in de UI van het Platform te selecteren dan zoek en selecteer uw attributieAI scores schema van binnen **[!UICONTROL Browse]** tabel.
+U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van het Platform en zoek en selecteer vervolgens het schema voor de AI-score van uw kenmerk op het tabblad **[!UICONTROL Browse]**.
 
 ![Schema kiezen](./images/input-output/schemas_browse.png)
 
-Selecteer vervolgens een veld in het venster **[!UICONTROL Structuur]** van de gebruikersinterface. Het tabblad **[!UICONTROL Veldeigenschappen]** wordt geopend. Binnen **[!UICONTROL De eigenschappen van het Gebied]** is het weggebied dat aan uw ruwe scores toewijst.
+Selecteer vervolgens een veld in het venster **[!UICONTROL Structure]** van de gebruikersinterface. Het tabblad **[!UICONTROL Field properties]** wordt geopend. Binnen **[!UICONTROL Field properties]** is het weggebied dat aan uw ruwe scores toewijst.
 
 ![Een schema kiezen](./images/input-output/field_properties.png)
 
