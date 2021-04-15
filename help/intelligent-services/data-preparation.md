@@ -3,21 +3,21 @@ keywords: Experience Platform;thuis;Intelligente services;populaire onderwerpen;
 solution: Experience Platform, Intelligent Services
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligente services
-description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn.
+description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services gebruiken XDM-schema's (Experience Data Model) om dit te bereiken.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
+source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2387'
 ht-degree: 0%
 
 ---
 
 # Gegevens voorbereiden voor gebruik in [!DNL Intelligent Services]
 
-Als u [!DNL Intelligent Services] inzichten wilt laten detecteren uit de gegevens van uw marketinggebeurtenissen, moeten de gegevens semantisch worden verrijkt en onderhouden in een standaardstructuur. [!DNL Intelligent Services] hefboomwerking  [!DNL Experience Data Model] (XDM) regelingen om dit te bereiken. Specifiek, moeten alle datasets die in [!DNL Intelligent Services] worden gebruikt met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn.
+Als u [!DNL Intelligent Services] inzichten wilt laten detecteren uit de gegevens van uw marketinggebeurtenissen, moeten de gegevens semantisch worden verrijkt en onderhouden in een standaardstructuur. [!DNL Intelligent Services] hefboomwerking  [!DNL Experience Data Model] (XDM) regelingen om dit te bereiken. Specifiek, moeten alle datasets die in [!DNL Intelligent Services] worden gebruikt met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn of de schakelaar van Adobe Analytics gebruiken. Daarnaast ondersteunt de AI van de Klant de Adobe Audience Manager-aansluiting.
 
-Dit document verstrekt algemene begeleiding bij het in kaart brengen van uw marketing gebeurtenisgegevens van veelvoudige kanalen aan dit schema, schetsend informatie over belangrijke gebieden binnen het schema om u te helpen bepalen hoe te om uw gegevens aan zijn structuur effectief in kaart te brengen.
+Dit document verstrekt algemene begeleiding bij het in kaart brengen van uw gegevens van marketinggebeurtenissen van veelvoudige kanalen aan het CEE schema, schetsend informatie over belangrijke gebieden binnen het schema om u te helpen bepalen hoe te om uw gegevens aan zijn structuur effectief in kaart te brengen. Als u van plan bent om Adobe Analytics-gegevens te gebruiken, bekijkt u de sectie voor [Adobe Analytics-gegevensvoorbereiding](#analytics-data). Als u van plan bent om Adobe Audience Manager-gegevens te gebruiken (alleen voor AI van klant), bekijkt u de sectie voor het voorbereiden van gegevens van [Adobe Audience Manager](#AAM-data).
 
 ## Overzicht van workflow
 
@@ -31,12 +31,32 @@ Voer de onderstaande stappen uit als uw gegevens buiten [!DNL Experience Platfor
 1. Upload uw gegevens naar de Blob-container met uw toegangsgegevens.
 1. Als u werkt met Adobe Consulting Services, worden uw gegevens toegewezen aan het [Consumer ExperienceEvent-schema](#cee-schema) en opgenomen in [!DNL Intelligent Services].
 
+### Adobe Analytics-gegevensvoorbereiding {#analytics-data}
+
+AI en Attribution AI bieden native ondersteuning voor Adobe Analytics-gegevens. Als u Adobe Analytics-gegevens wilt gebruiken, volgt u de stappen in de documentatie om een [Bronconnector voor analyse](../sources/tutorials/ui/create/adobe-applications/analytics.md) in te stellen.
+
+Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe Analytics als gegevensbron selecteren die door een dataset tijdens uw instantieconfiguratie wordt gevolgd. Alle vereiste schemagebieden en mixins worden automatisch gecreeerd tijdens de verbindingsopstelling. U te hoeven niet om (Extraheren, Transformeren, Lading) de datasets in het formaat te ETL.
+
+>[!IMPORTANT]
+>
+>De Adobe Analytics-connector duurt maximaal vier weken om gegevens te herstellen. Als u onlangs opstelling een verbinding zou moeten verifiëren u dat de dataset de minimumlengte van gegevens heeft die voor Klant of Attribution AI wordt vereist. Controleer de historische gegevenssecties in [AI van de Klant](./customer-ai/input-output.md#data-requirements) of [Attribution AI](./attribution-ai/input-output.md#data-requirements), en controleer of u voldoende gegevens hebt voor uw voorspellingsdoel.
+
+### Adobe Audience Manager-gegevensvoorbereiding (alleen voor AI van klant) {#AAM-data}
+
+Adobe Audience Manager-gegevens worden native door de klant ondersteund. Om de gegevens van de Audience Manager te gebruiken, volg de stappen die in de documentatie worden geschetst aan opstelling een [Audience Manager bronschakelaar](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+
+Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe Audience Manager als gegevensbron selecteren die door een dataset tijdens uw configuratie van AI van de Klant wordt gevolgd. Alle vereiste schemagebieden en mixins worden automatisch gecreeerd tijdens de verbindingsopstelling. U te hoeven niet om (Extraheren, Transformeren, Lading) de datasets in het formaat te ETL.
+
+>[!IMPORTANT]
+>
+>Als u onlangs opstelling een schakelaar zou moeten verifiëren u dat de dataset de minimumlengte van vereiste gegevens heeft. Controleer de historische gegevenssectie in de [invoer-/uitvoerdocumentatie](./customer-ai/input-output.md) voor de AI van de Klant en controleer of u voldoende gegevens hebt voor uw voorspellingsdoel.
+
 ### [!DNL Experience Platform] gegevensvoorbereiding
 
-Voer de onderstaande stappen uit als uw gegevens al zijn opgeslagen in [!DNL Platform]:
+Als uw gegevens al zijn opgeslagen in [!DNL Platform] en niet via de Adobe Analytics- of Adobe Audience Manager-bronconnectors (alleen Customer AI) worden gestreamd, voert u de onderstaande stappen uit. Het wordt nog steeds aanbevolen dat u het CEE-schema begrijpt als u met Customer AI wilt werken.
 
 1. Controleer de structuur van het [Consumer ExperienceEvent-schema](#cee-schema) en bepaal of uw gegevens kunnen worden toegewezen aan de bijbehorende velden.
-1. Neem contact op met de Consulting Services voor Adobe om uw gegevens toe te wijzen aan het schema en deze in te voeren in [!DNL Intelligent Services], of [volg de stappen in deze handleiding](#mapping) als u de gegevens zelf wilt toewijzen.
+2. Neem contact op met de Consulting Services voor Adobe om uw gegevens toe te wijzen aan het schema en deze in te voeren in [!DNL Intelligent Services], of [volg de stappen in deze handleiding](#mapping) als u de gegevens zelf wilt toewijzen.
 
 ## Het CEE schema {#cee-schema} begrijpen
 
