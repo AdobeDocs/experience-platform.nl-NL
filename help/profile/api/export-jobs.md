@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: API-eindpunt voor taken exporteren
-topic: guide
+topic: hulplijn
 type: Documentation
 description: In realtime klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
+exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1543'
 ht-degree: 0%
 
 ---
-
 
 # Eindpunt van taken exporteren
 
@@ -68,9 +68,7 @@ curl -X POST \
           "contentType": "application/vnd.adobe.xed+json;version=1"
         },
         "fileDescription": {
-          "persisted": true,
-          "containerFormat": "parquet",
-          "format": "parquet"
+          "persisted": true
         }
       }'
 ```
