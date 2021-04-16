@@ -2,16 +2,16 @@
 keywords: Experience Platform;gebruikershandleiding;attributie ai;populaire onderwerpen;regio
 solution: Experience Platform, Intelligent Services
 title: Handleiding voor Attribution AI-gebruikersinterface
-topic: User guide
+topic: 'Gebruikershandleiding '
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
+exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1712'
 ht-degree: 0%
 
 ---
-
 
 # Handleiding Attribution AI UI
 
@@ -21,33 +21,33 @@ Dit document fungeert als richtlijn voor interactie met Attribution AI in de geb
 
 ## Een instantie maken
 
-Klik in de gebruikersinterface [!DNL Adobe Experience Platform] op **[!UICONTROL Services]** in de linkernavigatie. De browser **[!UICONTROL Services]** wordt weergegeven en geeft beschikbare intelligente Adobe-services weer. Klik in de container voor Attribution AI op **[!UICONTROL Openen]**.
+Klik in de gebruikersinterface [!DNL Adobe Experience Platform] op **[!UICONTROL Services]** in de linkernavigatie. De browser **[!UICONTROL Services]** wordt weergegeven en geeft beschikbare intelligente Adobe-services weer. Klik in de container voor Attribution AI op **[!UICONTROL Open]**.
 
 ![Toegang tot uw exemplaar](./images/user-guide/open_Attribution_ai.png)
 
 De de dienstpagina van de Attribution AI verschijnt. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update.
 
-U kunt de **[!UICONTROL Totale omzettingsgebeurtenissen vinden die]** metrisch in de bodem-juiste kant van **[!UICONTROL Create instantie]** container worden gevestigd. Deze metrisch spoor het totale aantal omzettingsgebeurtenissen door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties worden gemeten die.
+U kunt **[!UICONTROL Total conversion events scored]** metrisch vinden in de bodem-juiste kant van de **[!UICONTROL Create instance]** container wordt gevestigd die. Deze metrisch spoor het totale aantal omzettingsgebeurtenissen door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties worden gemeten die.
 
 ![](./images/user-guide/total_conversions.png)
 
-De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Om deze controles te tonen, selecteer een geval van uw bestaande **[!UICONTROL Instanties van de Dienst]**. De besturingselementen bevatten de volgende informatie:
+De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Om deze controles te tonen, selecteer een geval van uw bestaande **[!UICONTROL Service instances]**. De besturingselementen bevatten de volgende informatie:
 
-- **[!UICONTROL Bewerken]**: Als u  **** Bewerken selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, beschrijving, status en scores van de instantie bewerken.
-- **[!UICONTROL Klonen]**: Als u Clonecopies selecteert, wordt de geselecteerde service-instantie  **** gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
-- **[!UICONTROL Verwijderen]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen.
-- **[!UICONTROL Gegevensbron]**: Een verbinding aan de dataset die door dit geval wordt gebruikt.
-- **[!UICONTROL Details]** laatste uitvoering: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
+- **[!UICONTROL Edit]**: Als u  **[!UICONTROL Edit]** deze optie selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, beschrijving, status en scores van de instantie bewerken.
+- **[!UICONTROL Clone]**: Als u deze optie selecteert, wordt de geselecteerde service-instantie  **[!UICONTROL Clone]** gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
+- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen.
+- **[!UICONTROL Data source]**: Een verbinding aan de dataset die door dit geval wordt gebruikt.
+- **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 
 ![](./images/user-guide/side_panel.png)
 
-- **[!UICONTROL Conversiegebeurtenissen]**: Een kort overzicht van de conversiegebeurtenissen die voor deze instantie zijn geconfigureerd.
-- **[!UICONTROL Venster]** Opzoeken: Het tijdframe dat u hebt gedefinieerd, geeft aan hoeveel dagen voor de conversiegebeurtenis de aanraakpunten worden opgenomen.
-- **[!UICONTROL Aanraakpunten]**: Een lijst met alle aanraakpunten die u tijdens het maken van deze instantie hebt gedefinieerd.
+- **[!UICONTROL Conversion events]**: Een kort overzicht van de conversiegebeurtenissen die voor deze instantie zijn geconfigureerd.
+- **[!UICONTROL Lookback window]**: Het tijdframe dat u hebt gedefinieerd, geeft aan hoeveel dagen voor de conversiegebeurtenis de aanraakpunten worden opgenomen.
+- **[!UICONTROL Touchpoints]**: Een lijst met alle aanraakpunten die u tijdens het maken van deze instantie hebt gedefinieerd.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Selecteer **[!UICONTROL Instantie maken]** om te beginnen.
+Selecteer **[!UICONTROL Create instance]** om te beginnen.
 
 ![Instantie maken](./images/user-guide/landing_page.png)
 
@@ -57,7 +57,7 @@ Daarna, verschijnt de opstellingspagina voor Attribution AI, waar u basisinforma
 
 ### De instantie een naam geven
 
-Geef onder **[!UICONTROL Basisinformatie]** een naam en een optionele beschrijving op voor uw serviceexemplaar.
+Geef onder **[!UICONTROL Basic information]** een naam en een optionele beschrijving op voor uw serviceexemplaar.
 
 ![een instantie een naam geven](./images/user-guide/naming_instance.png)
 
@@ -65,7 +65,11 @@ Geef onder **[!UICONTROL Basisinformatie]** een naam en een optionele beschrijvi
 
 Nadat u de basisgegevens hebt ingevuld, klikt u op de vervolgkeuzelijst met het label **Gegevensset selecteren** om de gegevensset te selecteren. De dataset wordt gebruikt om het model te trainen en de verdere gegevens te scoren het produceert. Wanneer het selecteren van een dataset van de dropdown selecteur, slechts degenen die met Attribution AI compatibel zijn en met het schema van de Gegevens van de Ervaring in overeenstemming zijn (XDM) zijn vermeld. Zodra een dataset wordt gekozen, klik **Volgende** in de hoger-juiste hoek om aan de bepaalde gebeurtenispagina te werk te gaan.
 
-![instellingspagina](./images/user-guide/initial_creation_attribution.png)
+>[!TIP]
+>
+>Adobe Analytics-gegevenssets worden ondersteund via de Bronverbinding voor analyse.
+
+![instellingspagina](./images/user-guide/dataset_selector.png)
 
 ## Gebeurtenissen definiëren
 
@@ -73,7 +77,7 @@ Er zijn drie verschillende typen invoergegevens die worden gebruikt voor het def
 
 - **Conversiegebeurtenissen:** bedrijfsdoelstellingen die het effect van marketing activiteiten, zoals, e-commerceorders, aankopen in-store, en websitebezoeken identificeren.
 - **Lookback-venster:** biedt een tijdframe dat aangeeft hoeveel dagen voor de conversiegebeurtenis de aanraakpunten moeten worden opgenomen.
-- **Aanraakpunten:marketinggebeurtenissen op** ontvangerniveau, op individuele basis of op cookieniveau die worden gebruikt om de numerieke of op inkomsten gebaseerde impact van conversies te evalueren.
+- **Aanraakpunten:marketinggebeurtenissen op** ontvangerniveau, op individuele basis of op cookieniveau die worden gebruikt om het numerieke of op inkomsten gebaseerde effect van conversies te evalueren.
 
 ### Conversiegebeurtenissen {#define-conversion-events} definiëren
 
@@ -89,15 +93,15 @@ Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zij
 
 ![geen vervolgkeuzelijst](./images/user-guide/conversion_event_1.png)
 
-De **[!UICONTROL Add gebeurtenis]** en **[!UICONTROL Add Groep]** knopen worden gebruikt om uw omzetting verder te bepalen. Afhankelijk van de omzetting die u definieert, moet u mogelijk de knoppen **[!UICONTROL Gebeurtenis toevoegen]** en **[!UICONTROL Groep toevoegen]** gebruiken om verdere context te bieden.
+De knoppen **[!UICONTROL Add event]** en **[!UICONTROL Add Group]** worden gebruikt om de conversie verder te definiëren. Afhankelijk van de conversie die u definieert, moet u mogelijk de knoppen **[!UICONTROL Add event]** en **[!UICONTROL Add group]** gebruiken om verdere context te bieden.
 
 ![add, gebeurtenis](./images/user-guide/add_event.png)
 
-Als u op **[!UICONTROL Gebeurtenis toevoegen]** klikt, worden aanvullende velden gemaakt die met dezelfde methode kunnen worden gevuld als hierboven beschreven. Hiermee voegt u een AND-instructie toe aan de tekenreeksdefinitie onder de conversienaam. Klik **x** om een gebeurtenis te verwijderen die is toegevoegd.
+Als u op **[!UICONTROL Add event]** klikt, worden aanvullende velden gemaakt die met dezelfde methode kunnen worden gevuld als hierboven is beschreven. Hiermee voegt u een AND-instructie toe aan de tekenreeksdefinitie onder de conversienaam. Klik **x** om een gebeurtenis te verwijderen die is toegevoegd.
 
 ![Gebeurtenismenu toevoegen](./images/user-guide/add_event_result.png)
 
-Als u op **[!UICONTROL Groep toevoegen]** klikt, kunt u extra velden maken die los staan van het origineel. Met de toevoeging van groepen wordt een blauwe *en* knop weergegeven. Als u op **And** klikt, kunt u de parameter zo wijzigen dat deze &quot;Of&quot; bevat. &quot;Of&quot; wordt gebruikt om meerdere succesvolle conversiepaden te definiëren. &quot;En&quot; breidt het conversiepad uit om aanvullende voorwaarden op te nemen.
+Als u op **[!UICONTROL Add Group]** klikt, kunt u extra velden maken die los staan van het origineel. Met de toevoeging van groepen wordt een blauwe *en* knop weergegeven. Als u op **And** klikt, kunt u de parameter zo wijzigen dat deze &quot;Of&quot; bevat. &quot;Of&quot; wordt gebruikt om meerdere succesvolle conversiepaden te definiëren. &quot;En&quot; breidt het conversiepad uit om aanvullende voorwaarden op te nemen.
 
 ![gebruik en](./images/user-guide/and_or.png)
 
@@ -185,7 +189,7 @@ Door gebrek, wordt een score dataset gecreeerd voor elke de dienstinstantie in e
 
 Het gedrag van uw klanten kan per land en geografische regio aanzienlijk verschillen. Voor globale ondernemingen, die op land-gebaseerde of op regio-gebaseerde modellen gebruiken kan attributienauwkeurigheid verhogen. Elk toegevoegd gebied leidt tot een nieuw model met de gegevens van dat gebied.
 
-Als u een nieuw gebied wilt definiëren, klikt u op **[!UICONTROL Gebied toevoegen]**. Geef in de container die wordt weergegeven een naam voor het gebied op. Slechts één waarde (&quot;placeContext.geo.countryCode&quot;) wordt gevuld vanaf het vervolgkeuzemenu **[!UICONTROL Veldnaam invoeren]**. Selecteer deze waarde.
+Als u een nieuw gebied wilt definiëren, klikt u op **[!UICONTROL Add region]**. Geef in de container die wordt weergegeven een naam voor het gebied op. Slechts één waarde (&quot;placeContext.geo.countryCode&quot;) wordt gevuld vanaf het vervolgkeuzemenu **[!UICONTROL Enter Field Name]**. Selecteer deze waarde.
 
 ![Gebied selecteren bij](./images/user-guide/select_region_att.png)
 
@@ -193,7 +197,7 @@ Selecteer vervolgens een operator.
 
 ![regionale operator](./images/user-guide/region_operators.png)
 
-Typ ten slotte de landcode in het vervolgkeuzemenu **[!UICONTROL Veldwaarde invoeren]**.
+Typ ten slotte de landcode in het vervolgkeuzemenu **[!UICONTROL Enter Field Value]**.
 
 >[!NOTE]
 >
@@ -211,7 +215,7 @@ Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het be
 
 ![trainingsvenster](./images/user-guide/training_window.png)
 
-Als u uw trainingsvenster hebt geselecteerd, klikt u op **[!UICONTROL Voltooien]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Klik op **[!UICONTROL Ok]** om te worden omgeleid naar de pagina **[!UICONTROL Service-instanties]** waar u uw service-exemplaar kunt zien.
+Als u uw trainingsvenster hebt geselecteerd, klikt u op **[!UICONTROL Finish]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Klik op **[!UICONTROL Ok]** om te worden omgeleid naar de pagina **[!UICONTROL Service instances]** waar u uw serviceexemplaar kunt zien.
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
 
