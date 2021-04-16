@@ -6,9 +6,9 @@ topic: Invoer- en uitvoergegevens voor Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2182'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,16 @@ In het volgende document worden de verschillende invoer- en uitvoerbestanden bes
 
 ## [!DNL Attribution AI] invoergegevens
 
-[!DNL Attribution AI] gebruikt  [!DNL Consumer Experience Event] gegevens om algoritmische scores te berekenen. Raadpleeg [Gegevens voorbereiden voor gebruik in de documentatie van Intelligente services](../data-preparation.md) voor meer informatie over [!DNL Consumer Experience Event].
+Attribution AI werkt door een van de volgende datasets te analyseren om algoritmische scores te berekenen:
+
+- Gegevensset met consumentenervaringen (CEE)
+- Adobe Analytics-gegevenssets met de [Bronconnector voor analyse](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>De Adobe Analytics-bronaansluiting kan maximaal vier weken duren om back-ups van gegevens te maken. Als u onlangs opstelling een schakelaar, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor Attribution AI wordt vereist. Controleer de sectie [historische gegevens](#data-requirements) om te controleren of u voldoende gegevens hebt om nauwkeurige algoritmische scores te berekenen.
+
+Raadpleeg de [handleiding voor het voorbereiden van gegevens van intelligente services](../data-preparation.md) voor meer informatie over het instellen van het [!DNL Consumer Experience Event] (CEE)-schema. Voor meer informatie over het in kaart brengen van de gegevens van Adobe Analytics, bezoek de [documentatie van het gebied van Analytics ](../../sources/connectors/adobe-applications/analytics.md).
 
 Niet alle kolommen in het schema [!DNL Consumer Experience Event] (CEE) zijn verplicht voor Attribution AI.
 
