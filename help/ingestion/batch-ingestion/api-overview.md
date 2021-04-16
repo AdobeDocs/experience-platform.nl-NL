@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;inname;ontwikkelaarshandleiding;api-handleiding;upload;ingest Parquet;ingest json;
 solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
-topic: developer guide
+topic: ontwikkelaarsgids
 description: Dit document biedt een uitgebreid overzicht van het gebruik van batch-opname-API's.
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2558'
 ht-degree: 3%
 
 ---
-
 
 # Handleiding voor inname van batch-API
 
@@ -608,15 +608,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
       "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-      },
-      "fileDescription": {
-          "format": "parquet",
-          "delimiters": [","], 
-          "quotes": ["\""],
-          "escapes": ["\\"],
-          "header": true,
-          "charset": "UTF-8"
-      }      
+      }
   }'
 ```
 
@@ -624,32 +616,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | --------- | ----------- |
 | `{TENANT_ID}` | Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. |
 | `{SCHEMA_ID}` | De id van het schema dat u hebt gemaakt. |
-
-Een uitleg van wat het verschillende gedeelte van de sectie &quot;fileDescription&quot; van de JSON-hoofdtekst hieronder kan worden weergegeven:
-
-```json
-{
-    "fileDescription": {
-        "format": "parquet",
-        "delimiters": [","],
-        "quotes": ["\""],
-        "escapes": ["\\"],
-        "header": true,
-        "charset": "UTF-8"
-    }
-}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `format` | De indeling van het hoofdbestand, niet de indeling van het invoerbestand. |
-| `delimiters` | Het teken dat als scheidingsteken moet worden gebruikt. |
-| `quotes` | Het teken dat voor aanhalingstekens moet worden gebruikt. |
-| `escapes` | Het teken dat als escape-teken moet worden gebruikt. |
-| `header` | Het geüploade bestand **must** bevat kopteksten. Aangezien de schemabevestiging wordt gedaan, moet dit aan waar worden geplaatst. Daarnaast kunnen kopteksten **geen** spaties bevatten. Als u spaties in de koptekst hebt, vervangt u deze door onderstrepingstekens. |
-| `charset` | Een optioneel veld. Andere ondersteunde tekensets zijn US-ASCII en ISO-8869-1. Als deze parameter leeg blijft, wordt standaard UTF-8 gebruikt. |
-
-De dataset waarnaar wordt verwezen moet het hierboven vermelde blok van de dossierbeschrijving hebben en moet aan een geldig schema in de registratie richten. Anders wordt het bestand niet in Parquet verwerkt.
 
 ### Batch maken
 
