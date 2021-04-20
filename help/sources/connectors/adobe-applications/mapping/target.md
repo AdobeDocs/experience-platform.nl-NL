@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;doeltoewijzing;doeltoewijzing
 solution: Experience Platform
 title: Adobe Target-gebeurtenisgegevens toewijzen aan XDM
-topic: overview
+topic-legacy: overview
 description: Leer hoe u Adobe Target-gebeurtenisvelden kunt toewijzen aan een XDM-schema (Experience Data Model) voor gebruik in Adobe Experience Platform.
+exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
-
 
 # Toewijzingen doelveld
 
@@ -88,3 +88,5 @@ De volgende lijst schetst de gebieden van een schema van de Gebeurtenis van de E
 | **`identityMap`** |
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
+
+{style=&quot;table-layout:auto&quot;}
