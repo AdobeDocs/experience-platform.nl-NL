@@ -1,19 +1,19 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;versie nota's;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
+exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
 
+# Aanvullende informatie
 
-# Releaseopmerkingen
-
-## Versie 2.4.0
+## Versie 2.4.0, maart 2021
 
 * De SDK kan nu [worden geïnstalleerd als een npm-pakket](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
 * Toegevoegde steun voor een `out` optie wanneer [vormend standaardtoestemming](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie vormt gebeurtenissen in de rij en verzendt hen zodra de toestemming wordt ontvangen).
@@ -27,7 +27,7 @@ ht-degree: 0%
 * Opgeloste problemen: Gebeurtenissen voor persoonlijke interactiemeldingen bevatten dubbele informatie over dezelfde activiteit wanneer een gebruiker naar een nieuwe app-weergave van één pagina navigeert, teruggaat naar de oorspronkelijke weergave en op een element klikt dat in aanmerking komt voor conversie.
 * Opgeloste problemen: Als de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` op `true` was ingesteld, zou [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) worden gebruikt om de gebeurtenis te verzenden, resulterend in een fout betreffende een identiteit die niet wordt gevestigd.
 
-## Versie 2.3.0
+## Versie 2.3.0, november 2020
 
 * Nonce-ondersteuning toegevoegd om een strenger beleid voor inhoudsbeveiliging mogelijk te maken.
 * Extra ondersteuning voor personalisatie voor toepassingen van één pagina.
@@ -37,12 +37,12 @@ ht-degree: 0%
 * Opgeloste problemen: Bepaalde browserfouten met een alleen-lezen `message`-eigenschap zijn niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
 * Opgeloste problemen: Als de SDK in een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe afkomstig is uit een ander subdomein dan de HTML-pagina van het bovenliggende venster.
 
-## Versie 2.2.0
+## Versie 2.2.0, oktober 2020
 
 * Opgeloste problemen: Het Opt-in voorwerp blokkeerde Alloy om vraag te maken wanneer `idMigrationEnabled` `true` is.
 * Opgeloste problemen: Alloy bewust maken van verzoeken die de aanbiedingen van de verpersoonlijking zouden moeten terugkeren om een flikkerende kwestie te verhinderen.
 
-## Versie 2.1.0
+## Versie 2.1.0, augustus 2020
 
 * Verwijder het `syncIdentity` bevel en steun die die IDs in het `sendEvent` bevel overgaan.
 * Ondersteuning voor IAB 2.0 Consent Standard.
