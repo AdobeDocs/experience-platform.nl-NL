@@ -1,22 +1,22 @@
 ---
-keywords: Facebook;facebook;Sociaal netwerk;Sociaal netwerk;Sociale netwerkverificatie;Sociale netwerkverificatie;Sociale netwerkverificatie
-title: Een sociale netwerkbestemming maken
+keywords: Facebook;facebook;Sociaal netwerk;Sociaal netwerk;Sociale authenticatie;Sociale netwerkverificatie
+title: Een sociale bestemming maken
 type: Tutorial
-description: Leer hoe u verbinding maakt met uw sociale netwerk en accounts in Adobe Experience Platform.
+description: Leer hoe u verbinding kunt maken met uw sociale-advertentierekeningen in Adobe Experience Platform.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
-# Een sociale netwerkbestemming maken {#social-network-destinations-workflow}
+# Een sociale bestemming maken {#social-network-destinations-workflow}
 
 ## Overzicht {#overview}
 
-Deze zelfstudie gebruikt [!DNL Facebook] als voorbeeld, maar de Adobe Experience Platform-workflow is hetzelfde voor alle sociale netwerkdoelen.
+Deze zelfstudie gebruikt [!DNL Facebook] als voorbeeld, maar de Adobe Experience Platform-workflow is hetzelfde voor alle sociale doelen.
 
 ## Vorm sociale bestemming - videoanalyse {#video}
 
@@ -26,9 +26,9 @@ In de onderstaande video ziet u hoe u een sociale bestemming configureert en seg
 
 ## Sociale bestemming {#select-destination} selecteren
 
-Blader in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar de categorie **[!UICONTROL Social]**. Selecteer de gewenste sociale netwerkbestemming en selecteer **[!UICONTROL Configure]**.
+Blader in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar de categorie **[!UICONTROL Social]**. Selecteer uw voorkeur voor sociale bestemming en selecteer **[!UICONTROL Configure]**.
 
-![Verbinden met sociale netwerkbestemming](../../assets/catalog/social/workflow/catalog.png)
+![Verbinden met sociale bestemming](../../assets/catalog/social/workflow/catalog.png)
 
 >[!NOTE]
 >
@@ -36,13 +36,13 @@ Blader in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar de categ
 
 ## Accountstap {#account}
 
-Als u in de stap **Account** eerder een verbinding met uw sociale netwerkbestemming had ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding met uw sociale netwerkbestemming in te stellen. Selecteer **[!UICONTROL Connect to destination]** en hiermee gaat u naar de geselecteerde sociale netwerkbestemming om u aan te melden en Adobe Experience Cloud te verbinden met uw sociale netwerk Ad-account.
+Als u in de stap **Account** eerder een verbinding met uw sociale bestemming hebt ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding met uw sociale bestemming in te stellen. Selecteer **[!UICONTROL Connect to destination]** en hiermee gaat u naar de geselecteerde sociale bestemming om u aan te melden en Adobe Experience Cloud te verbinden met uw account voor sociale advertenties.
 
 >[!NOTE]
 >
->Platform ondersteunt validatie van gebruikersgegevens in het verificatieproces en geeft een foutbericht weer als u onjuiste gegevens hebt ingevoerd voor uw sociale-netwerkaccount-id. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
+>Platform ondersteunt validatie van gebruikersgegevens in het verificatieproces en geeft een foutbericht weer als u onjuiste gegevens hebt ingevoerd voor uw sociale account-id. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
 
-![Verbinden met sociale netwerkbestemming - authentificatiestap](../../assets/catalog/social/workflow/pre-connect.png)
+![Verbinden met sociale bestemming - authentificatiestap](../../assets/catalog/social/workflow/pre-connect.png)
 
 Nadat uw aanmeldingsgegevens zijn bevestigd en Adobe Experience Cloud is aangesloten op uw sociale netwerk, kunt u **[!UICONTROL Next]** selecteren om door te gaan naar de stap **[!UICONTROL Authentication]**.
 
@@ -58,7 +58,7 @@ Voer in de stap **[!UICONTROL Authentication]** een [!UICONTROL Name] en een [!U
 > * Voor [!DNL LinkedIn] bestemmingen, **[!UICONTROL Account ID]** is uw [!DNL LinkedIn Campaign Manager Account ID]. U kunt deze id vinden in [!DNL LinkedIn Campaign Manager].
 
 
-![Verbinden met sociale netwerkbestemming - authentificatiestap](../../assets/catalog/social/workflow/authentication.png)
+![Verbinden met sociale bestemming - authentificatiestap](../../assets/catalog/social/workflow/authentication.png)
 
 In deze stap kunt u ook elke **[!UICONTROL Marketing action]** selecteren die op dit doel moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
