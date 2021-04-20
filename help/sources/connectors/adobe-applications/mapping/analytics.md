@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;analytische toewijzingsvelden;analytische toewijzing
 solution: Experience Platform
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
-topic: overview
+topic-legacy: overview
 description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
+exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '3393'
+source-wordcount: '3405'
 ht-degree: 0%
 
 ---
-
 
 # Toewijzingen van analytische velden
 
@@ -23,7 +23,7 @@ Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de An
 
 Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het XDM-model (Experience Data Model).
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende veld XDM (*XDM field*) en het type ervan (*XDM type*), en een beschrijving van het veld (*Description*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende XDM-veld (*XDM field*) en het type ervan (*XDM type*) en een beschrijving van het veld (*Description*).
 
 >[!NOTE]
 >
@@ -124,6 +124,8 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 | videopausetime | media.mediaTimed.pauseTime | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoseconssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | integer |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Toewijzingsvelden splitsen
 
 Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen XDM.
@@ -134,11 +136,13 @@ Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen 
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | string | Versie van mobiel besturingssysteem. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | integer | Lengte van video-advertentie. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Gegenereerde toewijzingsvelden
 
 Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd. Voor het genereren in XDM is logica vereist die verder gaat dan een directe kopie van Adobe Analytics.
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende veld XDM (*XDM field*) en het type ervan (*XDM type*), en een beschrijving van het veld (*Description*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende XDM-veld (*XDM field*) en het type ervan (*XDM type*) en een beschrijving van het veld (*Description*).
 
 >[!NOTE]
 >
@@ -192,13 +196,15 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 | videohoofdstuk | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | integer | De naam van het videohoofdstuk. |
 | videolengte | media.mediaTimed.primaryAssetReference._xmpDM.duration | integer | De lengte van de video. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Geavanceerde toewijzingsvelden
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) vereisen geavanceerdere transformaties voordat ze van Adobe Analytics-velden naar XDM (Experience Data Model) kunnen worden toegewezen. Wanneer u deze geavanceerde transformaties uitvoert, gebruikt u Adobe Experience Platform Query Service en vooraf gebouwde functies (zogenaamde door Adobe gedefinieerde functies) voor sessionisatie, attributie en deduplicatie.
 
 Voor meer informatie over het uitvoeren van deze transformaties met de Dienst van de Vraag, gelieve de [Adobe-bepaalde functies](../../../../query-service/sql/adobe-defined-functions.md) documentatie te bezoeken.
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende veld XDM (*XDM field*) en het type ervan (*XDM type*), en een beschrijving van het veld (*Description*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende XDM-veld (*XDM field*) en het type ervan (*XDM type*) en een beschrijving van het veld (*Description*).
 
 >[!NOTE]
 >
@@ -269,3 +275,5 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | string | Numerieke id die het referentietype van de eerste referentie van het bezoek vertegenwoordigt. |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | string | Numerieke id van de eerste zoekfunctie van het bezoek. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | integer | Tijdstempel van de eerste hit van het bezoek in Unix-tijd. |
+
+{style=&quot;table-layout:auto&quot;}
