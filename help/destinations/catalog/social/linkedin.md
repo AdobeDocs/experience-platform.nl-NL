@@ -1,15 +1,15 @@
 ---
 keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;gekoppeld in;
 title: Koppeling in verbinding met passend publiek
-description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
+description: Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 0%
+source-wordcount: '669'
+ht-degree: 1%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] verbinding
 
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Activeer profielen voor uw [!DNL LinkedIn] campagnes voor doelgroepen, personalisatie, en onderdrukking, die op gehakte e-mail en mobiele IDs worden gebaseerd.
 
-![Het doel LinkedIn in Adobe Experience Platform UI](../../assets/catalog/social/linkedin/catalog.png)
+![linkedIn-bestemming in de gebruikersinterface van Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
-## Gevallen gebruiken
+## Gebruiksscenario’s
 
 Om u beter te helpen begrijpen hoe en wanneer om de [!DNL LinkedIn Matched Audiences] bestemming te gebruiken, is hier een gebruiksgeval dat de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
 
@@ -36,15 +36,15 @@ Een softwarebedrijf organiseert een conferentie en wil contact houden met deelne
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ID passende vereisten](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakte e-mails, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
 
 
-## Exporttype {#export-type}
+## Type exporteren {#export-type}
 
 **De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, en anderen) die in de  [!DNL LinkedIn Matched Audiences] bestemming worden gebruikt.
 
-## Voorwaarden voor LinkedIn-account {#LinkedIn-account-prerequisites}
+## linkedIn-accountvoorwaarden {#LinkedIn-account-prerequisites}
 
 Voordat u de bestemming [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager]-account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
 
-Om te leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [Gebruikerstoestemmingen op Advertising Accounts toevoegen, uitgeven en verwijderen ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
+Zie [Gebruikersmachtigingen toevoegen, bewerken en verwijderen voor meer informatie over het bewerken van uw [!DNL LinkedIn Campaign Manager]-gebruikersmachtigingen in de documentatie van LinkedIn.](https://www.linkedin.com/help/lms/answer/5753)
 
 ## Overeenkomende vereisten {#id-matching-requirements}
 
@@ -81,6 +81,10 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 ## Verbinden met doel {#connect-destination}
 
 Als u verbinding wilt maken met de [!DNL LinkedIn Matched Audiences]-bestemming, raadpleegt u [Workflow voor verificatie van sociale netwerkdoelen](./workflow.md).
+
+In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL LinkedIn Matched Audiences]-bestemming en het activeren van segmenten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Segmenten activeren naar [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
