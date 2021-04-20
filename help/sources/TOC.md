@@ -1,14 +1,13 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
-feature: Data Ingestion, Sources
+feature: Gegevensinname, bronnen
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '602'
 ht-degree: 5%
 
 ---
@@ -27,6 +26,11 @@ ht-degree: 5%
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Toewijzingen doelveld](connectors/adobe-applications/mapping/target.md)
+         - [Marketo Engage-veldtoewijzingen](connectors/adobe-applications/mapping/marketo.md)
+      - Marketo Engage {#marketo}
+         - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
+         - [Marketo Engage-verificatiegids](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Marketo Engage-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Reclame {#advertising}
       - [Google AdWords-connector](connectors/advertising/ads.md)
    - Cloudopslag {#cloud-storage}
@@ -159,6 +163,7 @@ ht-degree: 5%
          - [Adobe Analytics (classificatiegegevens)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Reclame {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloudopslag {#cloud-storage}
