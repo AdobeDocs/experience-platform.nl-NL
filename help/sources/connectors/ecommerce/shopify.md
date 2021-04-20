@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;uitspringen;Vergroten;
 solution: Experience Platform
 title: Overzicht van de Source Connector uitwerken
-topic: overzicht
+topic: overview
 description: Leer hoe u via API's of de gebruikersinterface verbinding kunt maken met Shopify met Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

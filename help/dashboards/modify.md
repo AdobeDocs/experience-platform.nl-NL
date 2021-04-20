@@ -2,7 +2,7 @@
 keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;vergunningsgebruik
 title: Platform-dashboards wijzigen in de gebruikersinterface
 description: 'Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop de Adobe Experience Platform-gegevens van uw organisatie worden weergegeven in dashboards. '
-topic: hulplijn
+topic: guide
 translation-type: tm+mt
 source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
 workflow-type: tm+mt

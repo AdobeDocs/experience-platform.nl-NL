@@ -2,7 +2,7 @@
 keywords: Experience Platform;gebruikershandleiding;attributie ai;populaire onderwerpen;regio
 solution: Experience Platform, Intelligent Services
 title: Handleiding voor Attribution AI-gebruikersinterface
-topic: 'Gebruikershandleiding '
+topic: User guide 
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt

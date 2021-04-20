@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids;schema's;
 solution: Experience Platform
 title: Schemas API Endpoint
-topic: schema's
+topic: schemas
 description: 'U kunt het `/schema''s'' eindpunt in Adobe Experience Platform API gebruiken om schema''s voor gebruik met Mapper in Platform programmatically terug te winnen, tot stand te brengen en bij te werken. '
 translation-type: tm+mt
 source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Salesforce Service Cloud;salesforce-servicelolm
 solution: Experience Platform
 title: Overzicht van de cloudbronverbinding van de Salesforce-service
-topic: overzicht
+topic: overview
 description: Leer hoe u Salesforce Service Cloud kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
 source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Adobe Experience Platform;api-handleiding;platform-api-handleiding;inleiding tot platform;ontwikkelaarshandleiding
 solution: Experience Platform
 title: Aan de slag met Adobe Experience Platform API's
-topic: api-hulplijn
+topic: api guide
 description: Adobe Experience Platform biedt API-services die nauw met elkaar zijn verbonden. Deze gids bevat informatie over de beschikbare diensten, vereiste kopballen voor verrichtingen CRUD, foutenmeldingen, de inzamelingen van Postman, en de vraag van steekproefAPI.
 translation-type: tm+mt
 source-git-commit: 85d2ae5ccf1b27baaafe839f1d3f00d588abe4fc

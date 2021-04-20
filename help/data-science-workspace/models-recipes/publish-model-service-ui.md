@@ -2,8 +2,8 @@
 keywords: Experience Platform;publiceer een model;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;score een dienst
 solution: Experience Platform
 title: Publiceer een Model als Dienst in de Werkruimte van de Wetenschap van Gegevens UI
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 description: Met de Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw IMS-organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 translation-type: tm+mt
 source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e

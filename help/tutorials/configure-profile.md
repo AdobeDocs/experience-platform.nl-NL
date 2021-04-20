@@ -2,8 +2,8 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Real-time profiel van de Klant;De Dienst van de Identiteit;
 solution: Experience Platform
 title: Zelfstudies voor realtime klantprofiel
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 description: In dit document worden de desbetreffende stappen beschreven en worden koppelingen weergegeven naar zelfstudies voor het voltooien van elke afzonderlijke workflow.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

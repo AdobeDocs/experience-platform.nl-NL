@@ -2,7 +2,7 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;RStudio;rstudio;verbind met de vraagdienst;
 solution: Experience Platform
 title: RStudio verbinden met Query Service
-topic: verbinden
+topic: connect
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a

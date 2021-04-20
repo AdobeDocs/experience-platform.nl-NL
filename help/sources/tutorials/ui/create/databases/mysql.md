@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;mysql;MySQL
 solution: Experience Platform
 title: Een MySQL-bronverbinding maken in de gebruikersinterface
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Leer hoe u een MySQL-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt

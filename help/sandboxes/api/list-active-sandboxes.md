@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;actieve sandboxen weergeven;lijstsandboxen
 solution: Experience Platform
 title: Actieve sandboxen weergeven voor de huidige gebruiker in de API
-topic: ontwikkelaarsgids
+topic: developer guide
 description: U kunt een lijst maken van de sandboxen die actief zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het hoofdeindpunt.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

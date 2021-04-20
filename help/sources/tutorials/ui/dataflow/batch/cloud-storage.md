@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;dataflow;DataFlow
 solution: Experience Platform
 title: Een DataFlow configureren voor een Cloud Storage Batch-connector in de gebruikersinterface
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 translation-type: tm+mt

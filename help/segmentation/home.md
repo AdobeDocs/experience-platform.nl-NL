@@ -2,7 +2,7 @@
 keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentatie;segmentservice;segment;Segment;Segmenten;segmenten
 solution: Experience Platform
 title: Overzicht van segmentatieservice
-topic: overzicht
+topic: overview
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 translation-type: tm+mt
 source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef

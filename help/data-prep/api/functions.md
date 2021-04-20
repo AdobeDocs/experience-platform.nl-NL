@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids;schema's;
 solution: Experience Platform
 title: Schemas API Endpoint
-topic: schema's
+topic: schemas
 description: 'U kunt het `/functies'' eindpunt in Adobe Experience Platform API gebruiken om uw kaartuitdrukkingen en lijst beschikbare kaartsetfuncties te bevestigen. '
 translation-type: tm+mt
 source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3

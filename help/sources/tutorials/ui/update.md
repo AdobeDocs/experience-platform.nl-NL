@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;bijgewerkte accounts
 description: In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De werkruimte Bronnen biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en referenties.
 solution: Experience Platform
 title: Accountgegevens van bronverbinding bijwerken in de gebruikersinterface
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4a7405e2c8c97442d2781295dd827c6940aa33eb

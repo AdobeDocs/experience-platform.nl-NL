@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Algemeen veld met voorkeursgegevens voor marketing met abonnementen
-topic: overzicht
+topic: overview
 description: Dit document biedt een overzicht van het veld Algemene marketingvoorkeur met XDM-gegevenstypen voor abonnementen.
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

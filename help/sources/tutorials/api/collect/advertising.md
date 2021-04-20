@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;flowservice;reclame;Google-trefwoorden;reclame
 solution: Experience Platform
 title: Reclamegegevens verzamelen met behulp van bronconnectors en API's
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe advertentietoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en de Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1

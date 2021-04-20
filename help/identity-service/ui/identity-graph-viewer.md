@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsgrafiekviewer;Identiteitsgrafiekviewer;grafiekviewer;Grafiekviewer;Naamruimte;Identiteitsnaamruimte;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van de Identity Graph Viewer
-topic: zelfstudie
+topic: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
 source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;voorvoegsel van gegevens;voorinstelling van gegevens, api;problemen oplossen;API
 title: Aan de slag met Data Prep API
-topic: hulplijn
+topic: guide
 description: Leer de belangrijkste concepten en basisfunctionaliteit die u moet kennen om de eindpunten van de API van Prep van Gegevens te gebruiken om basisbewerkingen van CRUD voor gebruik met Mapper uit te voeren.
 translation-type: tm+mt
 source-git-commit: a3ea7a6b68c81ee91a338735009ae0fa63884ded

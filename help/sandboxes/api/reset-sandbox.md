@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;sandbox opnieuw instellen
 solution: Experience Platform
 title: Een sandbox in de API opnieuw instellen
-topic: ontwikkelaarsgids
+topic: developer guide
 description: Ontwikkelingssandboxen beschikken over een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een PUT-aanvraag in te dienen die de naam van de sandbox in het aanvraagpad bevat.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

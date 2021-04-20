@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle-objectopslag
 solution: Experience Platform
 title: Een Oracle Object Storage-bronverbinding maken met de Flow Service API
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Oracle Object Storage.
 translation-type: tm+mt

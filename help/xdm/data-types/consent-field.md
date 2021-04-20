@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Gegevenstype algemeen toestemmingsveld
-topic: overzicht
+topic: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Algemeen akkoord.
 translation-type: tm+mt
 source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58

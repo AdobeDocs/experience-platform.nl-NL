@@ -2,8 +2,8 @@
 keywords: Experience Platform;voorbeeldschemagegevens;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
 title: Een voorvertoning weergeven van het detailhandelsschema en de gegevensset
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 description: Het volgende document schetst het voorvertonen van schema's en datasets op Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09

@@ -3,8 +3,8 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API
 description: Dit document behandelt het maken van e-mailmarketingdoelen met de Adobe Experience Platform API
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt

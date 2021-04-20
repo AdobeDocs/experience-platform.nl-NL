@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle-objectopslag
 solution: Experience Platform
 title: Creeer een Verbinding van de Bron van de Opslag van de Objecten van het Oracle in UI
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Leer hoe u een Oracle Object Storage-bronverbinding maakt met de Adobe Experience Platform-interface.
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentering;segmentservice;segmenten;segmenten;meerdere entiteiten;segmentatie over meerdere entiteiten;segmenten over meerdere entiteiten;
 solution: Experience Platform
 title: Overzicht van segmentatie van meerdere entiteiten
-topic: ' - overzicht'
+topic: overview
 description: De segmentatie van meerdere entiteiten is de capaciteit om de gegevens van het Profiel met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het schema van het Profiel inheems waren.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

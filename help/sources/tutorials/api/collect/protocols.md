@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Verzamel protocolgegevens;protocolgegevens
 solution: Experience Platform
 title: Gegevens van protocollen verzamelen met bronconnectors en API's
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d

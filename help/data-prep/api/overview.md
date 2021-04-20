@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;voorvoegsel van gegevens;voorinstelling van gegevens, api;problemen oplossen;API
 title: Overzicht van de API voor gegevenprep
-topic: hulplijn
+topic: guide
 description: Met de Data Prep-API kunt u via programmacode toewijzingssets en functies maken, zodat u uw gegevens kunt transformeren tussen bron- en doelschema's.
 translation-type: tm+mt
 source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498

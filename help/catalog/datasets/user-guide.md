@@ -2,7 +2,7 @@
 keywords: Experience Platform;huis;populaire onderwerpen;laat dataset toe;Dataset;dataset
 solution: Experience Platform
 title: UI-gids voor gegevensbestanden
-topic: gegevenssets
+topic: datasets
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
 source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5

@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Table Storage;azure table storage;ATS;ats
 solution: Experience Platform
 title: Azure Table Storage Source Connector - Overzicht
-topic: ' - overzicht'
+topic: overview
 description: Leer hoe u Azure Table Storage kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
 source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30

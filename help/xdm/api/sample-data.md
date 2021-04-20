@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: API-eindpunt voor voorbeeldgegevens
 description: Het /sampledata eindpunt in de Registratie API van het Schema staat u toe om steekproefgegevens te produceren die aan de structuur van om het even welk bestaand schema XDM in kaart worden gebracht.
-topic: ontwikkelaarsgids
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

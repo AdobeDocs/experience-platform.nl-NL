@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensverzameling;starten;web-SDK
 solution: Experience Platform
 title: Overzicht van gegevensverzameling
-topic: ' - overzicht'
+topic: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6

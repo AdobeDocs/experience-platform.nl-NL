@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;uitspringen;Schuiven
 solution: Experience Platform
 title: Een schopify-bronverbinding maken in de gebruikersinterface
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Leer hoe u een Shopify-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt

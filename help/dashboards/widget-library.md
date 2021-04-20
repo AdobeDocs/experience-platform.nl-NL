@@ -2,7 +2,7 @@
 keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;vergunningsgebruik
 title: Widget-widget-bibliotheek gebruiken om dashboardwidgets toe te voegen en te maken
 description: 'Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets en het maken van aangepaste widgets voor het visualiseren van dashboardgegevens in Adobe Experience Platform. '
-topic: hulplijn
+topic: guide
 translation-type: tm+mt
 source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
 workflow-type: tm+mt

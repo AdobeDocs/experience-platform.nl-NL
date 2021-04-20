@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Voorbeeld-PQL-expressies voor berekende kenmerken
-topic: hulplijn
-type: Documentatie
+topic: guide
+type: Documentation
 description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies vereisen het gebruik van geldige PQL-expressies (Profile Query Language). In deze handleiding worden enkele van de meestgebruikte PQL-expressies voor berekende kenmerken beschreven.
 translation-type: tm+mt
 source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04

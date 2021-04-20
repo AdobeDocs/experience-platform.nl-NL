@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;segmentdefinitie;segmentdefinities;api;API;
 solution: Experience Platform
 title: Segment Definition API Endpoint
-topic: ontwikkelaarsgids
+topic: developer guide
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 translation-type: tm+mt
 source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b

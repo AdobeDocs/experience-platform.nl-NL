@@ -2,7 +2,7 @@
 keywords: Experience Platform;aan de slag;content ai;commerce ai;content en commerce ai
 solution: Experience Platform, Intelligent Services
 title: Aan de slag met AI voor Inhoud en Handel
-topic: Getting started
+topic: Getting started 
 description: In de AI voor Inhoud en Handel worden Adobe I/O API's gebruikt. Als u aanroepen wilt uitvoeren naar Adobe I/O API's en de I/O Console-integratie, moet u eerst de zelfstudie voor verificatie voltooien.
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f

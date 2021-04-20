@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;sandbox;sandbox;testen;testen
 solution: Experience Platform
 title: Overzicht van sandboxen
-topic: overzicht
+topic: overview
 description: Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

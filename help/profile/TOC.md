@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Handleiding voor realtime-klantprofiel
 user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
-feature: Profielen
+feature: Profiles
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

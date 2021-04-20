@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systee
 solution: Experience Platform
 title: Logboek-API-eindpunt controleren
 description: Het /auditlog eindpunt in de Registratie API van het Schema staat u toe om een chronologische lijst van veranderingen terug te winnen die aan een bestaand middel XDM zijn aangebracht.
-topic: ontwikkelaarsgids
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

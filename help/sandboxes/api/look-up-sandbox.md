@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;zoek sandbox;zoek een sandbox
 solution: Experience Platform
 title: Sandbox opzoeken in de API
-topic: ontwikkelaarsgids
+topic: developer guide
 description: U kunt een afzonderlijke sandbox opzoeken door een aanvraag voor een GET in te dienen waarin de eigenschap name van de sandbox is opgenomen in het aanvraagpad.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
 title: Een Amazon Kinesis Source Connection maken met de Flow Service API
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Amazon Kinesis-account met behulp van de Flow Service API.
 translation-type: tm+mt

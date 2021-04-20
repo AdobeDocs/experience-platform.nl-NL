@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Google PubSub;Google pubsub
 solution: Experience Platform
 title: Een Google PubSub-bronverbinding maken in de gebruikersinterface
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van het Platform.
 translation-type: tm+mt

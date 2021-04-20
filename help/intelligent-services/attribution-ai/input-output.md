@@ -2,7 +2,7 @@
 keywords: Experience Platform;aan de slag;Attribution ai;populaire onderwerpen;Attribution ai input;Attribution ai output;
 solution: Experience Platform, Intelligent Services
 title: Invoer en Uitvoer in Attribution AI
-topic: Invoer- en uitvoergegevens voor Attribution AI
+topic: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;aan de slag;klantenhulp;populaire onderwerpen;input van klantenhulp;klantenoutput
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Invoer en uitvoer in AI van de Klant
-topic: Aan de slag
+topic: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt

@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Handleiding voor voorinstelling van gegevens
 user-guide-description: Bereid uw gegevens voor voor inname in Adobe Experience Platform.
-feature: Gegevensbeheer, gegevensinname
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt

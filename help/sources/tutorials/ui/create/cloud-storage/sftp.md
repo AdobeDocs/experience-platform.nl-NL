@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
 solution: Experience Platform
 title: Een SFTP-bronverbinding maken in de gebruikersinterface
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt

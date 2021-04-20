@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
-topic: aan de slag
+topic: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c

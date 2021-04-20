@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
 title: Overzicht van Apache HDFS Source Connector
-topic: ' - overzicht'
+topic: overview
 description: Leer hoe u Apache HDFS via API's of de gebruikersinterface kunt aansluiten op Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

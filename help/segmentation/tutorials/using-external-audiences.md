@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
-topic: zelfstudie
+topic: tutorial
 translation-type: tm+mt
 source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt

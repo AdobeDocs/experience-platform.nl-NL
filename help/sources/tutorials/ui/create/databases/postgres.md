@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: Een PostSQL-bronverbinding maken in de gebruikersinterface
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Leer hoe u een PostSQL-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt

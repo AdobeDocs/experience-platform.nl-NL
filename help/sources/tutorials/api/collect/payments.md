@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Betalingsgegevens verzamelen;Betalingsgegevens
 solution: Experience Platform
 title: Betalingsgegevens verzamelen met behulp van bronconnectors en API's
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc

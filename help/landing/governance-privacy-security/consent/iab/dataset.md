@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;toestemming
 solution: Experience Platform
 title: Datasets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming
-topic: privacygebeurtenissen
+topic: privacy events
 description: Dit document verstrekt stappen voor vestiging de twee vereiste datasets om IAB TCF 2.0 toestemmingsgegevens te verzamelen.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

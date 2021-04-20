@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;populaire onderwerpen;streaming opname;inname;record gegevens;stream recordgegevens;
 solution: Experience Platform
 title: Gegevens stroomrecord met API's voor streaming-insluiting
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt

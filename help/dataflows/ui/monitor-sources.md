@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;monitorrekeningen;moni
 description: Deze zelfstudie biedt stappen om uw gegevensstroom te controleren met behulp van zowel de geaggregeerde controleweergave als de cross-service bewaking.
 solution: Experience Platform
 title: De Dataflows van de monitor voor Bronnen in UI
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4c668a47e62ba7736dd2d7afe4e71fd015198356

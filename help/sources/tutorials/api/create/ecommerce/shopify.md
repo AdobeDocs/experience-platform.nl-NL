@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Schopify;winkelen;e-commerce
 solution: Experience Platform
 title: Een Shopify-connector-bronverbinding maken met de Flow Service API
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Leer hoe u Shopify met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 translation-type: tm+mt

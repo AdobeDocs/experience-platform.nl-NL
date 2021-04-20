@@ -2,7 +2,7 @@
 keywords: Experience Platform;overzicht;klantenhulp;populaire onderwerpen;het overzicht van de klantenhulp
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: AI-overzicht van klant
-topic: AI-overzicht van klant
+topic: Customer AI Overview
 description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
 landing-page-description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd

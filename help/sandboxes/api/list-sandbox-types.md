@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;lijstsandboxen
 solution: Experience Platform
 title: Ondersteunde sandboxtypen weergeven in de API
-topic: ontwikkelaarsgids
+topic: developer guide
 description: U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door een verzoek van de GET aan het /sandboxTypes eindpunt te richten.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

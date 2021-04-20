@@ -2,8 +2,8 @@
 keywords: Experience Platform;machine het leren model;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;creeer en publiceer een model
 solution: Experience Platform
 title: Een leermodel voor machines maken en publiceren
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 description: De Adobe Experience Platform Data Science Workspace biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde Product Recommendations Recipe. Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel, een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in de werkruimte voor wetenschap van gegevens.
 translation-type: tm+mt
 source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b

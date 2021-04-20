@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;velden;Standaardvelden;Standaardvelden;Woordenboek;Woordenboek;Kaart
 solution: Experience Platform
 title: XDM-veldwoordenboek (Experience Data Model)
-topic: overzichten
+topic: overviews
 description: Het Model van de Gegevens van de ervaring (XDM) bepaalt een reeks standaardgebieden die kunnen worden gebruikt wanneer het samenstellen van schema's van Adobe Experience Platform. Het gebruik van deze gebieden resulteert in verenigbaar gedrag over de diensten van het Platform, aangezien alle diensten die XDM verbruiken uitdrukkelijk de specifieke definities zullen begrijpen die door deze gebieden worden verstrekt.
 translation-type: tm+mt
 source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941

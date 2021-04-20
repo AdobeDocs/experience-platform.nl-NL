@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;enum;mixin;Mixin;Mixins;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;primaire identiteit;XDM individueel profiel;XDM velden;enum datatype;Experience gebeurtenis;XDM Experience Event;XDM ExperienceEvent;ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;schema;design;klasse;Class klassen;Klassen;datatype;Datatype;gegevenstype;Gegevenstype;schema's;Schema's;Identiteitskaart;Identiteitskaart;Schemaontwerp;Kaart;Verenigingsschema;Vereniging
 solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
-topic: overzicht
+topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
 source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2

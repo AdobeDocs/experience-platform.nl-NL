@@ -2,7 +2,7 @@
 keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klantenai inzichten
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Inzichten met Customer AI ontdekken
-topic: Inzichten detecteren
+topic: Discovering insights
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt

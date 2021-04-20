@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;update dataflows;geef 
 description: Dit leerprogramma behandelt de stappen voor het bijwerken van een gegevensstroomprogramma, met inbegrip van zijn innamefrequentie en intervalsnelheid, gebruikend de Bronwerkruimte.
 solution: Experience Platform
 title: Een gegevensstroom voor de bronverbinding bijwerken in de gebruikersinterface
-topic: overzicht
+topic: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt

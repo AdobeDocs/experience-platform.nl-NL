@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Sandboxen in Adobe Experience Platform Help
 breadcrumb-title: Handleiding voor Sandoxes
 user-guide-description: Een Platform-instantie partitioneren in virtuele omgevingen voor ontwikkeling, testen en implementatie van toepassingen.
-feature: Gegevensbeheer
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

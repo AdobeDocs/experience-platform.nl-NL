@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;toewijzingsvelden;toewijzingsfuncties;
 solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
-topic: overzicht
+topic: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt

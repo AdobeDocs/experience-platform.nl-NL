@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;verwijderen, sandbox
 solution: Experience Platform
 title: Een sandbox in de API verwijderen
-topic: ontwikkelaarsgids
+topic: developer guide
 description: U kunt een sandbox verwijderen door een DELETE-aanvraag in te dienen die de naam van de sandbox in het aanvraagpad bevat.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

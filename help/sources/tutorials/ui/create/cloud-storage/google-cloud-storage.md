@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;Google Cloud-opslag;Google Cloud-opslag;GCS;gcs
 solution: Experience Platform
 title: Een Google Cloud Storage Source Connection maken in de gebruikersinterface
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Leer hoe u een Google Cloud Storage-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt

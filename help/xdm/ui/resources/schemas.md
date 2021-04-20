@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systee
 solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
-topic: gebruikershandleiding
+topic: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
 source-git-commit: 90a0c4e8d47d9bce38c9e13272e4f41f78f46e35

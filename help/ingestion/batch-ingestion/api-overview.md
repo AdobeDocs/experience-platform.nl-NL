@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;inname;ontwikkelaarshandleiding;api-handleiding;upload;ingest Parquet;ingest json;
 solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
-topic: ontwikkelaarsgids
+topic: developer guide
 description: Dit document biedt een uitgebreid overzicht van het gebruik van batch-opname-API's.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt

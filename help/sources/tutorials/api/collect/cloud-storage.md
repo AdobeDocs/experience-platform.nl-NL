@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevens over cloudopslag
 solution: Experience Platform
 title: Opslaggegevens voor de cloud verzamelen met behulp van bronconnectors en API's
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f

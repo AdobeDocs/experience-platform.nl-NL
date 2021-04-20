@@ -2,7 +2,7 @@
 keywords: Experience Platform;huis;populaire onderwerpen;bronnen;opname;het oplossen van problemen;bronnen het oplossen van problemen;bronnen faq;faq;bron schakelaars;bron schakelaar;bron schakelaars komt voor;bron schakelaars het oplossen van problemen; bron schakelaars;
 solution: Experience Platform
 title: Bronoplossing
-topic: problemen oplossen
+topic: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt

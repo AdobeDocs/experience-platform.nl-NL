@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Gegevenstype van algemeen voorkeurenveld voor personalisatie
-topic: overzicht
+topic: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Algemene voorkeur voor personalisatie.
 translation-type: tm+mt
 source-git-commit: 9ca0978cdf42926303d622a4d536ac48bca32e70

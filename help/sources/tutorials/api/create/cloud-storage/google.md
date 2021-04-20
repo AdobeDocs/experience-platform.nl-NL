@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;google cloud-opslag;google;Google
 solution: Experience Platform
 title: Een Google Cloud Storage Source Connection maken met de Flow Service API
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google Cloud Storage-account met behulp van de Flow Service API.
 translation-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform;trainen en evalueren;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;creeer een model;creeer een trainingslooppas
 solution: Experience Platform
 title: Een model trainen en evalueren in de gebruikersinterface van de Data Science Workspace
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 description: In de Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform, wordt een machine het leren Model gecreeerd door bestaande Ontvanger op te nemen die voor de intentie van het Model aangewezen is. Het model wordt vervolgens getraind en geëvalueerd om de efficiëntie en werkzaamheid van de werking te optimaliseren door de bijbehorende hyperparameters te verfijnen. Ontvangers zijn herbruikbaar, wat betekent dat er meerdere modellen kunnen worden gemaakt en op specifieke doeleinden kunnen worden afgestemd met één ontvanger.
 translation-type: tm+mt
 source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83

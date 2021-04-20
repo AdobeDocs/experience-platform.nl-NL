@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Grondbeginselen van Experience Platform API
-topic: aan de slag
+topic: getting started
 description: Dit document biedt een kort overzicht van enkele onderliggende technologieën en syntaxis die van toepassing zijn op Experience Platform-API's.
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

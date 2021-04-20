@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Overzicht van industriemodellen
-topic: overzicht
+topic: overview
 description: Leer over de gestandaardiseerde gegevensmodellen voor diverse de industrietakken die kunnen worden geconstrueerd gebruikend de componenten van het Model van de Gegevens van de Ervaring (XDM).
 translation-type: tm+mt
 source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64

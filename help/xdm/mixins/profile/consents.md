@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Mengsel van privacy-/persoonlijke voorkeuren/marketingvoorkeuren (inhoud)
-topic: overzicht
+topic: overview
 description: Dit document biedt een overzicht van de mix Privacy/Persoonlijke/Marketingvoorkeuren (Inhoud).
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

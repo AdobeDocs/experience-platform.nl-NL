@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Metrics API Endpoint
-topic: ontwikkelaarsgids
+topic: developer guide
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 translation-type: tm+mt
 source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1

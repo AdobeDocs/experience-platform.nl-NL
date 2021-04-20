@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui guide;mapper;mapping;data prep;data voorbereiden;voorbereiden van gegevens;
 solution: Experience Platform
 title: Gegevensindelingen verwerken met Data Prep
-topic: overzicht
+topic: overview
 description: Dit document geeft een overzicht van hoe de verschillende gegevenstypen in de Prep van Gegevens worden behandeld.
 translation-type: tm+mt
 source-git-commit: 41656d204f7227388ee1a0a7cad01f737fb96c4f

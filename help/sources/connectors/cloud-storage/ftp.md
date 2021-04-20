@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;FTP;ftp;
 solution: Experience Platform
 title: Overzicht van FTP-bronverbinding
-topic: ' - overzicht'
+topic: overview
 description: Leer hoe u een FTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

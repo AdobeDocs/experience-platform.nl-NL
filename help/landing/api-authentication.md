@@ -2,8 +2,8 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Authenticeren;toegang
 solution: Experience Platform
 title: API's van Experience Platforms verifiëren en benaderen
-topic: zelfstudie
-type: Zelfstudie
+topic: tutorial
+type: Tutorial
 description: 'Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API''s. '
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

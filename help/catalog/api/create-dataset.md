@@ -2,7 +2,7 @@
 keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;creeer een dataset;creeer dataset;laat dataset toe
 solution: Experience Platform
 title: Een gegevensset maken in de API
-topic: ontwikkelaarsgids
+topic: developer guide
 description: In dit document wordt beschreven hoe u een gegevenssetobject maakt in de API voor catalogusservice.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;update-sandbox
 solution: Experience Platform
 title: Een sandbox bijwerken in de API
-topic: ontwikkelaarsgids
+topic: developer guide
 description: U kunt een of meer velden in een sandbox bijwerken door een PATCH-aanvraag in te dienen die de naam van de sandbox bevat in het aanvraagpad en de eigenschap die moet worden bijgewerkt in de aanvraaglading.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

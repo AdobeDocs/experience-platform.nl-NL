@@ -2,7 +2,7 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;analyseren gegevenslaptops;eda;verkennende gegevensanalyse;gegevenswetenschap
 solution: Experience Platform
 title: EDA-laptop (Exploration Data Analysis)
-topic: ' - overzicht'
+topic: overview
 type: Tutorial
 description: Deze gids concentreert zich op hoe te om het Verkennende Notitieboekje van de gegevensanalyse (EDA) te gebruiken om patronen in Webgegevens te ontdekken, gebeurtenissen met een voorspelingsdoel, schone samengevoegde gegevens te groeperen, en het verband tussen predikers en een doel te begrijpen.
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;verzamelen klantensucces;klantensucces
 solution: Experience Platform
 title: Gegevens verzamelen van een succesvol systeem van de Klant met behulp van bronconnectors en API's
-topic: overzicht
+topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
