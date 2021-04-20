@@ -6,9 +6,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor marketing
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,9 @@ ht-degree: 0%
       * [Google Customer Match-verbinding](./catalog/advertising/google-customer-match.md)
       * [Google Display en Video 360-verbinding](./catalog/advertising/google-dv360.md)
       * [Google-tag-extensie](./catalog/advertising/gtag-advertising.md)
-      * [LinkedIn Insight-tagextensie](./catalog/advertising/linkedin.md)
+      * [linkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
-      * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest.md)
+      * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [Twitter Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
    * Analysedoelen {#analytics}
@@ -117,10 +117,10 @@ ht-degree: 0%
       * [Experience Cloud ID Service-extensie](./catalog/personalization/adobe-ecid.md)
       * [Verkenningsextensie](./catalog/personalization/gainsight.md)
       * [KickFire-extensie](./catalog/personalization/kickfire.md)
-      * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
-   * Lokale netwerkdoelen{#social}
-      * [Overzicht van sociale netwerkbestemmingen](./catalog/social/overview.md)
-      * [Een sociale netwerkbestemming maken](./catalog/social/workflow.md)
+      * [Marketo Web Personalization-extensie](./catalog/personalization/marketo-web-personalization.md)
+   * Sociale doelen{#social}
+      * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
+      * [Een sociale bestemming maken](./catalog/social/workflow.md)
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [Koppeling in verbinding met passend publiek](./catalog/social/linkedin.md)
