@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;bronschakelaars;bronschakelaar;bronnen;gegevensbronnen;gegevensbron;gegevensbronverbinding
 solution: Experience Platform
 title: Overzicht van bronconnectors
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van bronconnectors
 
@@ -36,6 +36,8 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen worden ing
 - [Overzicht Adobe Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
 - [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] connectoroverzicht](connectors/adobe-applications/marketo/marketo.md)
+- [Een  [!DNL Marketo Engage] bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Reclame
 
@@ -121,15 +123,15 @@ Experience Platform verleent steun voor het opnemen van gegevens van een systeem
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Machtigingen]** in een bepaald productprofiel. Vanuit het **[!UICONTROL deelvenster Machtigingen bewerken]** hebt u toegang tot de machtigingen voor bronnen via de menuvermelding **[!UICONTROL data-invoer]**. De **[!UICONTROL machtiging Bronnen weergeven]** verleent alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalogus]** en geverifieerde bronnen op het tabblad **[!UICONTROL Bladeren]**, terwijl met de machtiging **[!UICONTROL Bronnen beheren]** volledige toegang wordt verleend tot het lezen, maken, bewerken en uitschakelen van bronnen.
+Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Permissions]** in een bepaald productprofiel. Vanuit het deelvenster **[!UICONTROL Edit Permissions]** hebt u via de menuvermelding **[!UICONTROL data ingestion]** toegang tot de machtigingen voor bronnen. De **[!UICONTROL View Sources]** toestemming verleent read-only toegang tot beschikbare bronnen op het **[!UICONTROL Catalog]** lusje en voor authentiek verklaarde bronnen op het **[!UICONTROL Browse]** lusje, terwijl **[!UICONTROL Manage Sources]** toestemming volledige toegang verleent om, bronnen te lezen tot stand te brengen, uit te geven en onbruikbaar te maken.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
 | Machtigingsniveau | Beschrijving |
 | ---- | ----|
-| **[!UICONTROL Bronnen]** weergeven | De read-only toegang van de subsidie tot bronnen in elk bron-type op het lusje van de Catalogus, evenals doorbladeren, Rekeningen, en lusjes Dataflow. |
-| **[!UICONTROL Bronnen]** beherenAan | Naast de functies die zijn opgenomen in **[!UICONTROL Bronnen weergeven]**, verleent u toegang tot de optie **[!UICONTROL Bron verbinden]** in **[!UICONTROL Catalogus]** en tot **[!UICONTROL Gegevens selecteren]** in **[!UICONTROL Bladeren]**. **[!UICONTROL Met]** Bronnen beheren kunt u ook  **** DataFlow in- of uitschakelen en hun schema&#39;s bewerken. |
-| **[!UICONTROL Bronnen]** weergevenUit en  **** Bronnen beherenUit | Alle toegang tot bronnen intrekken. |
+| **[!UICONTROL View Sources]** Aan | De read-only toegang van de subsidie tot bronnen in elk bron-type op het lusje van de Catalogus, evenals doorbladeren, Rekeningen, en lusjes Dataflow. |
+| **[!UICONTROL Manage Sources]** Aan | Naast de functies in **[!UICONTROL View Sources]** verleent toegang tot **[!UICONTROL Connect Source]** optie in **[!UICONTROL Catalog]** en aan **[!UICONTROL Select Data]** optie in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** staat u ook toe om hun programma&#39;s toe te laten of onbruikbaar te maken  **[!UICONTROL DataFlows]** en uit te geven. |
+| **[!UICONTROL View Sources]** Uit en  **[!UICONTROL Manage Sources]** uit | Alle toegang tot bronnen intrekken. |
 
 Voor meer informatie over de beschikbare toestemmingen die door de Admin Console, met inbegrip van die vier bronnen worden verleend, zie [toegangsbeheeroverzicht](../access-control/home.md).
 
