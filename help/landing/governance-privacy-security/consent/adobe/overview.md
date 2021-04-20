@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Verwerking van toestemming in Adobe Experience Platform
 topic: aan de slag
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
+exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: f7fde2cb6828ebdd1763171008858fdd7242c784
+source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
-
 
 # Goedkeuring in Adobe Experience Platform
 
@@ -71,7 +71,7 @@ Raadpleeg de zelfstudie over [het configureren van een gegevensset voor het vast
 
 ## [!DNL Profile] samenvoegbeleid bijwerken om gegevens over toestemming {#merge-policies} op te nemen
 
-Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw samenvoegbeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
+Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw fusiebeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
 >[!NOTE]
 >
@@ -83,13 +83,19 @@ Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de 
 
 Zodra u uw datasets en fusiebeleid hebt om de vereiste toestemmingsgebieden in uw klantenprofielen te vertegenwoordigen, is de volgende stap de toestemmingsgegevens zelf in Platform te brengen.
 
-Hoofdzakelijk, zou u SDK van het Web van Adobe Experience Platform moeten gebruiken om toestemmingsgegevens naar Platform te verzenden wanneer de toestemming-verandering gebeurtenissen door uw CMP worden ontdekt. Als u reeds toestemmingsgegevens hebt die elders worden opgeslagen, echter, kunt u ook verkiezen om uw verzamelde toestemmingsgegevens direct in te voeren door het aan het XDM schema van uw toestemmingsdataset in kaart te brengen en het te verzenden naar Platform door partijopname.
+Hoofdzakelijk, zou u SDK van het Web van Adobe Experience Platform moeten gebruiken om toestemmingsgegevens naar Platform te verzenden wanneer de toestemming-verandering gebeurtenissen door uw CMP worden ontdekt. Als u toestemmingsgegevens op een mobiel platform verzamelt, zou u Adobe Experience Platform Mobile SDK moeten gebruiken. U kunt er ook voor kiezen om de verzamelde toestemmingsgegevens direct in te voeren door het aan het XDM-schema van uw toestemmingsdataset in kaart te brengen en het naar Platform door partijopname te verzenden.
 
 Nadere bijzonderheden over elk van deze methoden zijn te vinden in de onderstaande punten.
 
-### Integreer de SDK van het Web Experience Platform om gegevens van de klanteninstemming {#sdk} te verwerken
+### Vorm het Web SDK van het Experience Platform om toestemmingsgegevens {#web-sdk} te verwerken
 
-Zodra u uw CMP hebt gevormd om op toestemmings-verandering gebeurtenissen op uw website te luisteren, kunt u het Web SDK van het Experience Platform integreren om de bijgewerkte toestemmingsmontages te ontvangen en hen naar Platform te verzenden wanneer een toestemming-verandering gebeurtenis voorkomt. Volg de handleiding bij [het configureren van de SDK voor het verwerken van gegevens voor klanttoestemming](./sdk.md) voor meer informatie.
+Zodra u uw CMP hebt gevormd om op toestemming-verandering gebeurtenissen op uw website te luisteren, kunt u het Web SDK van het Experience Platform integreren om de bijgewerkte toestemmingsmontages te ontvangen en hen te verzenden naar Platform op elke paginading en wanneer de toestemming-verandering gebeurtenissen voorkomt. Zie de gids op [het vormen van SDK van het Web om de gegevens van de klantentoestemming te verwerken](./sdk.md) voor meer informatie.
+
+### Configureer de Experience Platform Mobile SDK voor het verwerken van toestemmingsgegevens {#mobile-sdk}
+
+Als in uw mobiele toepassing de voorkeursinstellingen voor toestemming van de klant zijn vereist, kunt u de Experience Platform Mobile SDK integreren om toestemmingsinstellingen op te halen en bij te werken en deze naar het Platform te verzenden wanneer de API voor toestemming wordt aangeroepen.
+
+Raadpleeg de documentatie bij de mobiele SDK voor [het configureren van de mobiele extensie voor toestemming](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) en [met behulp van de API voor toestemming](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference). Raadpleeg de sectie [Privacy en GDPR](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr) voor meer informatie over het omgaan met privacyproblemen met de Mobile SDK.
 
 ### Voeg XDM-compatibele toestemmingsgegevens direct {#batch} in
 
