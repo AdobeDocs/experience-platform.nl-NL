@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
+source-git-commit: 73ecf6e6f9796088e2d14f9dc3d9667104b22a8e
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '586'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,22 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor het bewerken van toewijzingen voor bestaande gegevensstromen | U kunt nu de sets met toewijzingen van een bestaande gegevensstroom bijwerken. U kunt geen toewijzingssets bijwerken voor gegevensstromen die voor eenmalig gebruik waren gepland. Deze functie wordt niet ondersteund voor HTTP API, Adobe Analytics, Adobe Audience Manager en [!DNL Marketo Engage]. Voor meer informatie, zie de zelfstudie over [het bijwerken van bronnen dataflows in UI](../../sources/tutorials/ui/update-dataflows.md). |
+| Ondersteuning voor streaming-opname | U kunt nu functies van het gegevensvoorvoegsel gebruiken wanneer u een streamingbronverbinding maakt. Zie de zelfstudie over het maken van een streamingbronverbinding in de UI](../../sources/tutorials/ui/create/streaming/http.md) voor meer informatie.[ |
+
+Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -47,3 +62,14 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 
 Voor meer informatie over gesteunde datasets, te zien [[!DNL Intelligent Services] de documentatie van de gegevensvoorbereiding](../../intelligent-services/data-preparation.md).
 
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+
+Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| [!DNL Marketo Engage] (bèta) | U kunt nu een [!DNL Marketo Engage] bronverbinding tot stand brengen gebruikend UI om B2B gegevens aan Platform te brengen en deze gegevens bijgewerkt te houden gebruikend Platform-verbonden toepassingen. Zie de [[!DNL Marketo Engage] documentatie van de bronconnector](../../sources/connectors/adobe-applications/marketo/marketo.md) voor meer informatie. |
+
+Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
