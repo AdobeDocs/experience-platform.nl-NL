@@ -4,9 +4,9 @@ title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1133'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Voordat u de naamruimte `Extern_ID` kunt gebruiken om gegevens te verzenden naar
 
 ## Verbinden met doel {#connect-destination}
 
-Als u verbinding wilt maken met de [!DNL Facebook]-bestemming, raadpleegt u [Workflow voor verificatie van sociale netwerkdoelen](./workflow.md).
+Als u verbinding wilt maken met de [!DNL Facebook]-bestemming, raadpleegt u [Workflow voor verificatie van sociale doelen](./workflow.md).
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook]-bestemming en het activeren van segmenten.
 
