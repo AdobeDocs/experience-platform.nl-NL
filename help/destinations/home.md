@@ -4,16 +4,16 @@ title: Overzicht van doelen
 seo-title: Overzicht van doelen
 description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
 seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
+exl-id: afd07ddc-652e-4e22-b298-feba27332462
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 1%
+source-wordcount: '488'
+ht-degree: 0%
 
 ---
 
-
-# [!DNL Destinations] - overzicht{#overview}
+# [!DNL Destinations] overzicht  {#overview}
 
 ![Overzicht van doelen banner](./assets/overview/destinations-overview-banner.png)
 
@@ -65,6 +65,6 @@ Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platfo
 * [Advertentiebestemmingen - Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
 * [Opslagdoelen voor cloud](./catalog/cloud-storage/workflow.md)
 * [E-mailmarketingdoelen](./catalog/email-marketing/overview.md)
-* [Sociale netwerkbestemmingen](./catalog/social/workflow.md)
+* [Sociale bestemmingen](./catalog/social/workflow.md)
 
 Voor meer informatie over de schendingen van gegevensbeleid in het werkschema van de segmentactivering, zie de stap van het Overzicht in [Activate profielen en segmenten aan een bestemming](./ui/activate-destinations.md#review).
