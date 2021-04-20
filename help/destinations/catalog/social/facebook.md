@@ -2,14 +2,14 @@
 keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook;instagram;messenger;facebook-boodschapper
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Facebook] verbinding
 
@@ -21,15 +21,15 @@ U kunt deze bestemming voor publiek gebruiken richtend zich over [!DNL Facebook�
 
 ![Facebook-bestemming in de gebruikersinterface van Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
-## Gevallen gebruiken
+## Gebruiksscenario’s
 
 Om u beter te helpen begrijpen hoe en wanneer om de [!DNL Facebook] bestemming te gebruiken, zijn hier twee voorbeelden gebruiksgevallen die de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
 
-### Hoofdletters en kleine letters gebruiken 1
+### Hoofdletters gebruiken #1
 
 Een online detailhandelaar wil bestaande klanten door sociale platforms bereiken en hen gepersonaliseerde aanbiedingen tonen die op hun vorige orden worden gebaseerd. De online detailhandelaar kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen off-line gegevens bouwen, en deze segmenten naar het [!DNL Facebook] sociale platform verzenden, die hun reclame-uitgaven optimaliseren.
 
-### Hoofdletters en kleine letters gebruiken 2
+### Hoofdletters gebruiken #2
 
 Een luchtvaartmaatschappij heeft verschillende klantniveaus (Bronze, Silver en Gold) en wil elk niveau via sociale platforms voorzien van persoonlijke aanbiedingen. Niet alle klanten gebruiken echter de mobiele app van de luchtvaartmaatschappij en sommige van hen hebben zich niet aangemeld bij de website van het bedrijf. De enige id&#39;s die het bedrijf over deze klanten heeft, zijn id&#39;s voor lidmaatschap en e-mailadressen.
 
@@ -55,16 +55,16 @@ Daarna, kunnen zij hun off-line gegevens met inbegrip van bijbehorende lidmaatsc
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [sectie Identiteitsaanpassing ](#id-matching-requirements-id-matching-requirements) en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 
-## Exporttype {#export-type}
+## Type exporteren {#export-type}
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in de Facebook-bestemming worden gebruikt.
 
-## Voorwaarden voor Facebook-account {#facebook-account-prerequisites}
+## Facebook-accountvoorwaarden {#facebook-account-prerequisites}
 
 Voordat u publiekssegmenten kunt verzenden naar [!DNL Facebook], moet u controleren of aan de volgende vereisten is voldaan:
 
 - Voor uw [!DNL Facebook]-gebruikersaccount moet de **[!DNL Manage campaigns]**-machtiging zijn ingeschakeld voor de advertentiaccount die u wilt gebruiken.
-- De **Adobe Experience Cloud** bedrijfsrekening moet als advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973`. Zie [Partners toevoegen aan uw Business Manager](https://www.facebook.com/business/help/1717412048538897) in de Facebook-documentatie voor meer informatie.
+- De **Adobe Experience Cloud** bedrijfsrekening moet als advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973`. Zie [Partners toevoegen aan uw Business Manager](https://www.facebook.com/business/help/1717412048538897) in de documentatie van Facebook voor meer informatie.
    >[!IMPORTANT]
    >
    > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **Manage campagnes** toestemming toelaten. De toestemming wordt vereist voor de integratie [!DNL Adobe Experience Platform].
@@ -113,11 +113,15 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 
 ## Aangepaste naamruimten gebruiken {#custom-namespaces}
 
-Voordat u de naamruimte `Extern_ID` kunt gebruiken om gegevens te verzenden naar [!DNL Facebook], moet u uw eigen id&#39;s synchroniseren met [!DNL Facebook Pixel]. Zie de [officiële documentatie](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) voor gedetailleerde informatie.
+Voordat u de naamruimte `Extern_ID` kunt gebruiken om gegevens te verzenden naar [!DNL Facebook], moet u uw eigen id&#39;s synchroniseren met [!DNL Facebook Pixel]. Zie de [Officiële documentatie van Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) voor gedetailleerde informatie.
 
 ## Verbinden met doel {#connect-destination}
 
 Als u verbinding wilt maken met de [!DNL Facebook]-bestemming, raadpleegt u [Workflow voor verificatie van sociale netwerkdoelen](./workflow.md).
+
+In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook]-bestemming en het activeren van segmenten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Segmenten activeren naar [!DNL Facebook] {#activate-segments}
 
