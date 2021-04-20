@@ -5,7 +5,7 @@ type: Tutorial
 description: Leer hoe u verbinding kunt maken met uw sociale-advertentierekeningen in Adobe Experience Platform.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: e2af4fcfe232889f3f928c00c9f9b37cf9754ca1
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -64,8 +64,8 @@ In deze stap kunt u ook elke **[!UICONTROL Marketing action]** selecteren die op
 
 Selecteer **[!UICONTROL Create Destination]** nadat u de bovenstaande velden hebt ingevuld.
 
-Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Next]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen, zie de volgende sectie, [Activate segmenten aan sociale netwerken](#activate-segments), voor de rest van het werkschema.
+Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Next]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen, zie de volgende sectie, [Activate segmenten aan sociale bestemmingen](#activate-segments), voor de rest van het werkschema.
 
-## Segmenten activeren op sociale netwerken {#activate-segments}
+## Segmenten naar sociale doelen activeren {#activate-segments}
 
-Voor instructies op hoe te om segmenten aan sociale netwerken te activeren, zie [Gegevens aan Doelen activeren](../../ui/activate-destinations.md).
+Voor instructies op hoe te om segmenten aan sociale bestemmingen te activeren, zie [Gegevens aan Doelen activeren](../../ui/activate-destinations.md).
