@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;ECID;ecid
 solution: Experience Platform
 title: Identiteitsgegevens voor privacyverzoeken
-topic: overview
+topic-legacy: overview
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens voor privacyverzoeken van klanten op te halen.
+exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 1%
 
 ---
-
 
 # Identiteitsgegevens voor privacyverzoeken
 
