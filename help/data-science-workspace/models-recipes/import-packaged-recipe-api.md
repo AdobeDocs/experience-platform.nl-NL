@@ -2,17 +2,17 @@
 keywords: Experience Platform;in een pakket opgenomen recept importeren;Data Science Workspace;populaire onderwerpen;recepten;api;sensei machine leren;engine maken
 solution: Experience Platform
 title: Een gecomprimeerde ontvanger importeren met de API voor leren van de Sensei-machine
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'In deze zelfstudie wordt de API voor leren van Sensei-machines gebruikt om een engine te maken die ook wel een recept in de gebruikersinterface wordt genoemd. '
+description: In deze zelfstudie wordt de API voor leren van Sensei-machines gebruikt om een engine te maken die ook wel een recept in de gebruikersinterface wordt genoemd.
+exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
 
 ---
-
 
 # Een verpakt recept importeren met de API voor leren van Sensei-machines
 
