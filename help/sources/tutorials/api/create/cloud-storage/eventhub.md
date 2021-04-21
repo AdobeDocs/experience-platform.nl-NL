@@ -7,18 +7,15 @@ type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Azure Event Hubs]-bronverbinding maken met de [!DNL Flow Service]-API
 
->[!NOTE]
->
-> De [!DNL Azure Event Hubs] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# Een [!DNL Azure Event Hubs]-bronverbinding maken met de [!DNL Flow Service]-API
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
