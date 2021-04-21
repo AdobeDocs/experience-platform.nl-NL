@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;couchbase;Couchbase
 solution: Experience Platform
 title: Een Couchbase Source Connection maken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Couchbase aan Adobe Experience Platform koppelt met behulp van de Flow Service API.
+exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Couchbase]-bronverbinding maken met de [!DNL Flow Service]-API
 
