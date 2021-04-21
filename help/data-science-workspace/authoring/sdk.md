@@ -2,16 +2,16 @@
 keywords: Experience Platform;ontwikkelaarsgids;SDK;Model creatie;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;het testen
 solution: Experience Platform
 title: Model Authoring SDK
-topic: Overview
+topic-legacy: Overview
 description: De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen voor het leren van Ontvangers en functies die kunnen worden gebruikt in de Adobe Experience Platform Data Science Workspace en implementeerbare sjablonen te bieden in PySpark en Spark (Scala).
+exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 1%
 
 ---
-
 
 # Model Authoring SDK
 
