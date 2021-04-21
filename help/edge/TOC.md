@@ -1,13 +1,12 @@
 ---
-product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
-feature: Data Management
+feature: Gegevensbeheer
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 14%
@@ -59,6 +58,6 @@ ht-degree: 14%
    * [Typen handelingen](extension/action-types.md)
    * [Gegevenstelelementtypen](extension/data-element-types.md)
    * [Opmerkingen bij de release Web SDK](extension/web-sdk-ext-release-notes.md)
-* [Releaseopmerkingen](release-notes.md)
+* [Aanvullende informatie](release-notes.md)
 * [Veelgestelde vragen](web-sdk-faq.md)
 * [Blogberichten](blog-posts.md)
