@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
 title: Een Apache HDFS-bronverbinding maken in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: Leer hoe u een Apache Hadoop-bronverbinding voor gedistribueerd bestandssysteem maakt met behulp van de Adobe Experience Platform-gebruikersinterface.
+description: Leer hoe u een Apache Hadoop Distributed File System-bronverbinding maakt met de Adobe Experience Platform-interface.
+exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Apache] HDFS-bronverbinding maken in de gebruikersinterface
 
@@ -45,25 +45,25 @@ Voor verificatie van de HDFS-bronconnector moet u waarden opgeven voor de volgen
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw HDFS-account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Sources]** te openen. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL Apache HDFS]** onder de categorie **[!UICONTROL Cloudopslag]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders selecteert u **[!UICONTROL Gegevens toevoegen]** om een nieuwe HDFS-aansluiting te maken.
+Selecteer **[!UICONTROL Apache HDFS]** onder de categorie **[!UICONTROL Cloud storage]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe HDFS-aansluiting te maken.
 
 ![catalogus](../../../../images/tutorials/create/hdfs/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met HDFS]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to HDFS]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw HDFS-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL verbind met bron]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw HDFS-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![verbinden](../../../../images/tutorials/create/hdfs/new.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt aansluiten, selecteert u de HDFS-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt aansluiten, selecteert u de HDFS-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/hdfs/existing.png)
 
