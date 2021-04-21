@@ -6,18 +6,14 @@ topic-legacy: overview
 description: Leer hoe u Oracle met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Oracle]-connector
-
->[!NOTE]
->
->De [!DNL Oracle] schakelaar is in bèta. Zie [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# [!DNL Oracle] connector
 
 Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals [!DNL Microsoft], MySQL en [!DNL Azure]. U kunt uw gegevens van deze systemen naar [!DNL Platform] brengen.
 
