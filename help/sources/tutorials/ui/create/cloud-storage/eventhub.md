@@ -7,18 +7,15 @@ type: Tutorial
 description: Leer hoe u een Azure Event Hubs-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '460'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Azure Event Hubs]-bronverbinding maken in de gebruikersinterface
 
->[!NOTE]
->
-> De [!DNL Azure Event Hubs] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# Een [!DNL Azure Event Hubs]-bronverbinding maken in de gebruikersinterface
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een [!DNL Azure Event Hubs] (hierna &quot;[!DNL Event Hubs]&quot; genoemd) bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
