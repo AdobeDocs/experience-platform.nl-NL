@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;een object verwijderen;catalogusservice;api
 solution: Experience Platform
 title: Een object in de API verwijderen
-topic: developer guide
+topic-legacy: developer guide
 description: U kunt een object Catalog verwijderen door de id ervan op te geven in het pad van een DELETE-aanvraag.
+exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # Een object in de API verwijderen
 
