@@ -2,16 +2,16 @@
 keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiksdashboard;dashboard;licentiegebruik;machtiging;consumptie
 title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 translation-type: tm+mt
-source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
-
 
 # (bèta) Licentiegebruikdashboard {#license-usage-dashboard}
 
@@ -33,23 +33,23 @@ Op het dashboard voor licentiegebruik wordt een momentopname weergegeven van de 
 
 ## Het dashboard voor licentiegebruik verkennen
 
-Als u naar het dashboard voor licentiegebruik in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Licentiegebruik]** in de linkertrack. Dit wordt geopend met het tabblad **[!UICONTROL Overzicht]** waarin het dashboard wordt weergegeven.
+Als u naar het dashboard voor licentiegebruik in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL License usage]** in de linkertrack. Dit wordt geopend met het tabblad **[!UICONTROL Overview]** waarop het dashboard wordt weergegeven.
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Een sandbox selecteren
 
-Selecteer [!UICONTROL Productie] of [!UICONTROL Ontwikkeling] om een sandbox te kiezen die u wilt weergeven in het dashboard. De geselecteerde sandbox wordt aangegeven met het keuzerondje naast de naam van de sandbox.
+Selecteer [!UICONTROL Production] of [!UICONTROL Development] om een sandbox te kiezen die u wilt weergeven in het dashboard. De geselecteerde sandbox wordt aangegeven met het keuzerondje naast de naam van de sandbox.
 
 >[!NOTE]
 >
->Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten voor respectievelijk alle productie- of ontwikkelingssandboxen weergegeven.
+>Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden, als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten voor respectievelijk alle productie- of ontwikkelingssandboxen geleverd.
 
 ![](../images/license-usage/select-sandbox.png)
 
 ### Een datumbereik selecteren
 
-Nadat u een sandbox hebt geselecteerd, kunt u de vervolgkeuzelijst voor het datumbereik gebruiken om de periode te selecteren die moet worden weergegeven in het dashboard. Er zijn drie opties beschikbaar: [!UICONTROL Laatste 30 dagen], [!UICONTROL Laatste 90 dagen], en [!UICONTROL Laatste 12 maanden]. De laatste 30 dagen zijn standaard geselecteerd.
+Nadat u een sandbox hebt geselecteerd, kunt u de vervolgkeuzelijst voor het datumbereik gebruiken om de periode te selecteren die moet worden weergegeven in het dashboard. Er zijn drie opties beschikbaar: [!UICONTROL Last 30 days], [!UICONTROL Last 90 days] en [!UICONTROL Last 12 months]. De laatste 30 dagen zijn standaard geselecteerd.
 
 ![](../images/license-usage/select-date-range.png)
 
@@ -65,10 +65,10 @@ Elke widget geeft een lijngrafiek weer waarin de werkelijke nummers voor uw orga
 
 Er zijn momenteel vier metriek beschikbaar in het dashboard van het vergunningsgebruik:
 
-* [!UICONTROL Adresseerbare doelgroep]  (gemeten door aantal profielen)
-* [!UICONTROL Gemiddelde profielrijkheid]
-* [!UICONTROL Totaal verbruikte opslagruimte]
-* [!UICONTROL Gescande gegevens per segmentatieverhouding]
+* [!UICONTROL Addressable Audience] (gemeten op basis van het aantal profielen)
+* [!UICONTROL Average profile richness]
+* [!UICONTROL Total consumed storage]
+* [!UICONTROL Data scanned per segmentation ratio]
 
 De definitie van elk van deze cijfers is afhankelijk van de licenties die uw organisatie heeft aangeschaft. Raadpleeg de desbetreffende documentatie over de productbeschrijving voor gedetailleerde definities van elke meeteenheid:
 
