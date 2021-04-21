@@ -2,24 +2,24 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Schema ontwerp;mixin;mixin;persoon;persoondetails;profiel persoondetails;persoon;
 solution: Experience Platform
 title: Demografische-detailmix
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van de mix Demographic Details.
+exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '261'
 ht-degree: 2%
 
 ---
 
-
-# [!UICONTROL Demografische ] detailsmix
+# [!UICONTROL Demographic Details] mixen
 
 >[!NOTE]
 >
 >De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Demographic ] Details is een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt een `person`-object op hoofdniveau, waarvan de subvelden informatie over een individuele persoon beschrijven.
+[!UICONTROL Demographic Details] is een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt een `person`-object op hoofdniveau, waarvan de subvelden informatie over een individuele persoon beschrijven.
 
 <img src="../../images/mixins/profile-person-details.png" width="600" /><br />
 
