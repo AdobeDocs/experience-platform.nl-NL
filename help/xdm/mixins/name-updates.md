@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schemaontwerp;mixin;mixin;enduserids;eindgebruiker;eind - gebruiker;ids;updates;
 solution: Experience Platform
 title: Updates van Mixernaam
-topic: overview
+topic-legacy: overview
 description: Een lijst met recente wijzigingen in de naam van een XDM-mix.
+exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
-
 
 # Updates van Mixernamen
 
@@ -21,31 +21,31 @@ In de volgende tabel worden de bestaande mix beschreven die is bijgewerkt, samen
 
 | Vorige naam | Bijgewerkte naam |
 | --- | --- |
-| [!UICONTROL Geniet van privacymix voor gebeurtenissen] | [!UICONTROL Privacy-details] |
-| [!UICONTROL Toepassingsgegevens van ExperienceEvent] | [!UICONTROL Toepassingsdetails] |
-| [!UICONTROL Meer informatie over het kanaal ExperienceEvent] | [!UICONTROL Kanaaldetails] |
-| [!UICONTROL Handelsgegevens van ExperienceEvent] | [!UICONTROL Handelsgegevens] |
-| [!UICONTROL ExperienceEvent-details voor advertenties] | [!UICONTROL Reclamegegevens] |
-| [!UICONTROL ExperienceEvent-details voor marketing] | [!UICONTROL Campagne marketing details] |
-| [!UICONTROL ExperienceEvent-details voor media] | [!UICONTROL Details van interactie met media] |
-| [!UICONTROL ExperienceEvent-details voor zoeken] | [!UICONTROL Zoeken in details] |
-| [!UICONTROL ReclameEvent directe marketing details] | [!UICONTROL Details voor directe marketing] |
-| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL Gegevens van eindgebruiker] |
-| [!UICONTROL Omgevingsdetails van ExperienceEvent] | [!UICONTROL Omgevingsdetails] |
-| [!UICONTROL Implementatiedetails van ExperienceEvent] | [!UICONTROL Implementatiedetails] |
-| [!UICONTROL Gegevens van koppeling in het ExperienceEvent-profiel] | [!UICONTROL Profieltitel] |
-| [!UICONTROL ExperienceEvent-segmentlidmaatschap - Gegevens] | [!UICONTROL Details segmentlidmaatschap] |
-| [!UICONTROL Technische details van ExperienceEvent] | [!UICONTROL Technische details] |
-| [!UICONTROL Webdetails van ExperienceEvent] | [!UICONTROL Webdetails] |
-| [!UICONTROL Direct marketing profiel] | [!UICONTROL Contactgegevens voor directe marketing] |
-| [!UICONTROL Details van profielpersoon] | [!UICONTROL Demografische details] |
-| [!UICONTROL Persoonlijke gegevens registreren] | [!UICONTROL Persoonlijke contactgegevens] |
-| [!UICONTROL Profieltelefoons] | [!UICONTROL Telefoonnummer - details] |
-| [!UICONTROL Details van voorkeuren voor profiel] | [!UICONTROL Voorkeursdetails] |
-| [!UICONTROL Profielprivacy] | [!UICONTROL Privacy-details] |
-| [!UICONTROL Pushdetails profiel] | [!UICONTROL Tokengegevens pushmelding] |
-| [!UICONTROL Profielsegmentatie] | [!UICONTROL Details segmentlidmaatschap] |
-| [!UICONTROL Profielabonnementen] | [!UICONTROL Abonnementsgegevens] |
-| [!UICONTROL Profielwerkdetails] | [!UICONTROL Contactgegevens werken] |
-| [!UICONTROL Details van pushmelding] | [!UICONTROL Details pushmelding] |
-| [!UICONTROL Segmentexpressie] | [!UICONTROL Details segmentexpressie] |
+| [!UICONTROL Experience event privacy mixin] | [!UICONTROL Privacy Details] |
+| [!UICONTROL ExperienceEvent application details] | [!UICONTROL Application Details] |
+| [!UICONTROL ExperienceEvent channel details] | [!UICONTROL Channel Details] |
+| [!UICONTROL ExperienceEvent commerce details] | [!UICONTROL Commerce Details] |
+| [!UICONTROL ExperienceEvent details for advertising] | [!UICONTROL Advertising Details] |
+| [!UICONTROL ExperienceEvent details for marketing] | [!UICONTROL Campaign Marketing Details] |
+| [!UICONTROL ExperienceEvent details for media] | [!UICONTROL Media Interaction Details] |
+| [!UICONTROL ExperienceEvent details for search] | [!UICONTROL Search Details] |
+| [!UICONTROL ExperienceEvent direct marketing details] | [!UICONTROL Direct Marketing Details] |
+| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL End User ID Details] |
+| [!UICONTROL ExperienceEvent environment details] | [!UICONTROL Environment Details] |
+| [!UICONTROL ExperienceEvent implementation details] | [!UICONTROL Implementation Details] |
+| [!UICONTROL ExperienceEvent profile stitch details] | [!UICONTROL Profile Stitch] |
+| [!UICONTROL ExperienceEvent Segment Membership Details] | [!UICONTROL Segment Membership Details] |
+| [!UICONTROL ExperienceEvent technical details] | [!UICONTROL Technical Details] |
+| [!UICONTROL ExperienceEvent web details] | [!UICONTROL Web Details] |
+| [!UICONTROL Profile direct marketing] | [!UICONTROL Direct Marketing Contact Details] |
+| [!UICONTROL Profile person details] | [!UICONTROL Demographic Details] |
+| [!UICONTROL Profile personal details] | [!UICONTROL Personal Contact Details] |
+| [!UICONTROL Profile Phones] | [!UICONTROL Phone Number Details] |
+| [!UICONTROL Profile preferences details] | [!UICONTROL Preference Details] |
+| [!UICONTROL Profile privacy] | [!UICONTROL Privacy Details] |
+| [!UICONTROL Profile push details] | [!UICONTROL Push Notification Token Details] |
+| [!UICONTROL Profile segmentation] | [!UICONTROL Segment Membership Details] |
+| [!UICONTROL Profile subscriptions] | [!UICONTROL Subscription Details] |
+| [!UICONTROL Profile work details] | [!UICONTROL Work Contact Details] |
+| [!UICONTROL Push notification details] | [!UICONTROL Push Notification Details] |
+| [!UICONTROL Segment expression] | [!UICONTROL Segment Expression Details] |
