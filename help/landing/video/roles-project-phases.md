@@ -1,21 +1,19 @@
 ---
 title: Rollen en projectfasen
 description: Deze video geeft een overzicht van de rollen, de fasen, en de belangrijkste resultaten betrokken bij een succesvol project van het Experience Platform.
-feature: null
-topics: null
 kt: 4338
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32807.jpg
+exl-id: c4f913cd-ac84-49e4-a7e8-21abd7a82800
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
-
 
 # Rollen en projectfasen
 
