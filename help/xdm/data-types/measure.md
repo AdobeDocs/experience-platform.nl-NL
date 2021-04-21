@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;maatregel;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype meten
-topic: overview
+topic-legacy: overview
 description: Dit document verstrekt een overzicht van het het gegevenstype van het Model van de Gegevens van de Ervaring van de Meetlat (XDM).
+exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Measure] gegevenstype
 
-# [!UICONTROL Type ] meetgegevens
-
- Metingen zijn een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een beton kwantificeerbaar gegevenspunt van een bepaalde metrisch bevat. Een maat bestaat uit een unieke id en een waarde.
+[!UICONTROL Measure] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een beton kwantificeerbaar gegevenspunt van bepaalde metrisch bevat. Een maat bestaat uit een unieke id en een waarde.
 
 <img src="../images/data-types/measure.PNG" width="500" /><br />
 
