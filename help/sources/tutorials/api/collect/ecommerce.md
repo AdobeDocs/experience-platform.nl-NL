@@ -2,14 +2,14 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Gegevens van eCommerce verzamelen;Gegevens van eCommerce
 solution: Experience Platform
 title: Verzamel eCommerce-gegevens met behulp van Source Connectors en API's
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een eCommerce-systeem van derden en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
