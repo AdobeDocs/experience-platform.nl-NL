@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Grondbeginselen van Experience Platform API
-topic: getting started
+topic-legacy: getting started
 description: Dit document biedt een kort overzicht van enkele onderliggende technologieën en syntaxis die van toepassing zijn op Experience Platform-API's.
+exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '511'
 ht-degree: 1%
 
 ---
-
 
 # Grondbeginselen van Experience Platform API
 
