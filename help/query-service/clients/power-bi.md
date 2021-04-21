@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;Power BI;macht bi;verbindt met de vraagdienst;
 solution: Experience Platform
 title: Verbinding maken met Power BI-zoekservice
-topic: connect
+topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
+exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Power BI] verbinden met de Dienst van de Vraag (PC)
 
@@ -43,7 +43,7 @@ Selecteer **[!DNL PostgreSQL database]**, gevolgd door **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-U kunt nu waarden voor de server en database invoeren. Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Vragen]**, gevolgd door **[!UICONTROL Referenties]**.
+U kunt nu waarden voor de server en database invoeren. Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
 **[!DNL Server]** is de host die onder de verbindingsgegevens is gevonden. Voor productie, voeg haven `:80` aan het eind van het gastheerkoord toe. **[!DNL Database]** kan &quot;all&quot;of een naam van de datasetlijst zijn.
 
