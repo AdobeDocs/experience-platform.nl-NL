@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;vraag
 solution: Experience Platform
 title: API-handleiding voor query-service
-topic: query templates
+topic-legacy: query templates
 description: Met de API van de Query Service kunnen ontwikkelaars hun Adobe Experience Platform-gegevens opvragen met behulp van standaard SQL. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Query Service] API-handleiding
 
