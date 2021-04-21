@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 solution: Experience Platform
 title: Adobe Experience Platform - Overzicht
-topic: getting started
+topic-legacy: getting started
 description: Adobe Experience Platform stelt organisaties in staat klantgegevens te centraliseren en te standaardiseren voordat ze dataletterdheid en computerleren toepassen, zodat ze het ontwerp en de levering van rijke, persoonlijke ervaringen aanzienlijk kunnen verbeteren.
+exl-id: edcce353-338a-440e-99eb-a64e2abca579
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Platform-overzicht
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. [!DNL Experience Platform] stelt organisaties in staat om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 
-[!DNL Experience Platform] is gebaseerd op RESTful-API&#39;s en stelt de volledige functionaliteit van het systeem beschikbaar voor ontwikkelaars, waardoor de eenvoudige integratie van bedrijfsoplossingen met behulp van vertrouwde tools wordt ondersteund. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze kracht en flexibiliteit maken [!DNL Experience Platform] uniek in de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
+[!DNL Experience Platform] is gebaseerd op RESTful-API&#39;s en stelt de volledige functionaliteit van het systeem beschikbaar voor ontwikkelaars, waardoor de eenvoudige integratie van bedrijfsoplossingen met behulp van vertrouwde tools wordt ondersteund. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze kracht en flexibiliteit maken [!DNL Experience Platform] uniek in de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de Ervaring Bedrijfs drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
 
 ## [!DNL Experience Platform] documentatie
 
@@ -55,7 +55,7 @@ Ga naar de [Experience Platform zelfstudies](https://www.adobe.com/go/platform-t
 * [**Verklarende woordenlijst**](glossary.md)\
    Adobe Experience Platform-terminologie controleren.
 
-* [**Releaseopmerkingen**](https://www.adobe.com/go/platform-release-notes.en)\
+* [**Aanvullende informatie**](https://www.adobe.com/go/platform-release-notes.en)\
    Zoek informatie over de meest recente [!DNL Experience Platform] versie en herzie vorige versies.
 
 * [**Handleiding voor probleemoplossing**](troubleshooting.md)\
