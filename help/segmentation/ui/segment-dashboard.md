@@ -2,18 +2,18 @@
 keywords: Experience Platform;profiel;segment;segmenten;segmentatie;gebruikersinterface;UI;aanpassing;segmentdashboard;dashboard
 title: Segmentdashboard
 description: 'De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke metriek met betrekking tot segmenten kunt bekijken die door uw organisatie worden gemaakt en onderhouden. '
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
 translation-type: tm+mt
-source-git-commit: 77c94fb4654f7dcb0eb4ba9af6972be439eca55e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
 
-
-# (Bèta) [!UICONTROL Segmenten] dashboard {#segment-dashboard}
+# (Bèta) [!UICONTROL Segments] dashboard {#segment-dashboard}
 
 >[!IMPORTANT]
 >
