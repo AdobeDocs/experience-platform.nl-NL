@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;Catalogusservice;Catalogus api;appendix
 solution: Experience Platform
 title: Bijlage Catalog Service API-handleiding
-topic: developer guide
+topic-legacy: developer guide
 description: Dit document bevat aanvullende informatie die u helpt bij het werken met de Catalog-API in Adobe Experience Platform.
+exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Catalog Service] API-hulplijnbijlage
 
