@@ -2,16 +2,16 @@
 keywords: Experience Platform;product aanbeveling recept;Data Science Workspace;populaire onderwerpen;recepten;pre-build recept
 solution: Experience Platform
 title: Recipe productaanbeveling
-topic: overview
+topic-legacy: overview
 description: Met het product Recommendations-recept kunt u op maat gemaakte productaanbevelingen doen die zijn afgestemd op de behoeften en belangen van uw klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
+exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 1%
 
 ---
-
 
 # Recept voor productaanbevelingen
 
