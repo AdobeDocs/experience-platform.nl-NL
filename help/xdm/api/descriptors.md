@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Schema Register;Schema Register;Descriptor;Descriptors;Identiteit;Identiteit;Vriendelijke naam;Alternatieve naam;AlternateInfo;Referentie;Referentie;Relatie;Relatie
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Schema Register;Schema Register;Descriptor;Descriptors;Descriptors;Identiteit;Vriendelijke naam;Alternatieve naam;AlternateInfo;Referentie;Referentie;Relatie;Relatie
 solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
-
 
 # Het eindpunt van descriptors
 
@@ -287,7 +287,7 @@ In de volgende secties vindt u een overzicht van de beschikbare descriptortypen,
 
 #### Identiteitsbeschrijving
 
-Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot; van &quot;[!UICONTROL sourceSchema]&quot; een [!DNL Identity] gebied is zoals die door [Adobe Experience Platform Identity Service](../../identity-service/home.md) wordt beschreven.
+Een identiteitsbeschrijver geeft aan dat &quot;[!UICONTROL sourceProperty]&quot; van &quot;[!UICONTROL sourceSchema]&quot; een [!DNL Identity] gebied is zoals die door [Adobe Experience Platform Identity Service](../../identity-service/home.md) wordt beschreven.
 
 ```json
 {
