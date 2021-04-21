@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
 translation-type: tm+mt
-source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
+source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '610'
 ht-degree: 5%
 
 ---
@@ -79,6 +79,8 @@ ht-degree: 5%
       - [PayPal-connector](connectors/payments/paypal.md)
    - Protocollen {#protocols}
       - [Generic OData-connector](connectors/protocols/odata.md)
+   - Streaming {#streaming}
+      - [HTTP API-connector](connectors/streaming/http.md)
 - API-zelfstudies {#api-tutorials}
    - Een bronverbinding maken {#create}
       - Reclame {#advertising}
