@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
-topic: getting started
+topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
+exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '7139'
+source-wordcount: '7131'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platform glossary {#adobe-experience-platform-glossary}
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 **Kenmerken**: Kenmerken zijn opgegeven kenmerken die een profiel vertegenwoordigen.
 
-**Kenmerk samenvoegen**: Wanneer u een samenvoegbeleid definieert met de Real-Time Customer Profile API, geeft het  `attributeMerge` object aan op welke manier het samenvoegbeleid profielkenmerken voorrang geeft in het geval van gegevensconflicten. Het is gelijk aan het selecteren van een [!UICONTROL methode van de Fusie ] wanneer het bepalen van een fusiebeleid in het Platform UI.
+**Kenmerk samenvoegen**: Wanneer u een samenvoegbeleid definieert met de Real-Time Customer Profile API, geeft het  `attributeMerge` object aan op welke manier het samenvoegbeleid profielkenmerken voorrang geeft in het geval van gegevensconflicten. Het is gelijk aan het selecteren van een [!UICONTROL Merge method] wanneer het bepalen van een fusiebeleid in het Platform UI.
 
 **Attribution AI**:  [!DNL Attribution AI] is een Intelligent Service aangedreven door Adobe Sensei die algoritmische multi-channel attributiemogelijkheden over de volledige klantenlevenscyclus levert.
 
@@ -263,7 +263,7 @@ ht-degree: 0%
 
 **Identiteitslabels**: De etiketten van het gegevensgebruik van de identiteit (&quot;I&quot;) worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren.
 
-**Identiteitsgrafiek**: Een identiteitsgrafiek is een kaart van verhoudingen tussen verbonden en verbonden identiteiten die voor een individuele klant bestaan. Elke identiteitsgrafiek werkt in bijna-real-time met klantenactiviteit bij. De gemeenschappelijke structuur van identiteitsverhoudingen in uw gegevens wordt vertegenwoordigd door [!UICONTROL Privégrafiek], die als structurele blauwdruk voor elke individuele identiteitsgrafiek dient.
+**Identiteitsgrafiek**: Een identiteitsgrafiek is een kaart van verhoudingen tussen verbonden en verbonden identiteiten die voor een individuele klant bestaan. Elke identiteitsgrafiek werkt in bijna-real-time met klantenactiviteit bij. De gemeenschappelijke structuur van identiteitsverhoudingen in uw gegevens wordt vertegenwoordigd door [!UICONTROL Private Graph], die als structurele blauwdruk voor elke individuele identiteitsgrafiek dient.
 
 **Naamruimte**: Een naamruimte voor identiteiten definieert de context van een id, zoals een e-mailadres of CRM-id.
 
@@ -349,7 +349,7 @@ ht-degree: 0%
 
 ## P
 
-**Gedeeltelijke inname**: Gedeeltelijke invoer maakt het opnemen van geldige records met batchgegevens binnen een opgegeven foutdrempel mogelijk. Foutendiagnostiek voor mislukte verslagen kan in [!UICONTROL Controle ] of [!UICONTROL Overzicht van de dataflow looppas van Bronnen] worden gedownload of worden betreden.
+**Gedeeltelijke inname**: Gedeeltelijke invoer maakt het opnemen van geldige records met batchgegevens binnen een opgegeven foutdrempel mogelijk. Foutdiagnostiek voor mislukte records kan worden gedownload of geopend in het overzicht van [!UICONTROL Monitoring] of [!UICONTROL Sources] dataflow run.
 
 **Parketbestanden**: Een Parquet-bestand is een kolombestandsindeling met complexe geneste gegevensstructuren. De dossiers van de parket worden vereist voor het toevoegen van gegevens om een schemadataset te bevolken.
 
