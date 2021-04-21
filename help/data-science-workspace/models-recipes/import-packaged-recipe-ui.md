@@ -2,17 +2,17 @@
 keywords: Experience Platform;in een pakket opgenomen recept importeren;Data Science Workspace;populaire onderwerpen;recepten;ui;engine maken
 solution: Experience Platform
 title: Een gecomprimeerde ontvanger importeren in de werkruimte voor wetenschap van gegevens
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt recept met behulp van het meegeleverde voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in de Adobe Experience Platform Data Science Workspace.
+exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
-
 
 # Een verpakt recept importeren in de gebruikersinterface van de Data Science Workspace
 
@@ -182,7 +182,7 @@ Vervolgens selecteert u de invoer- en uitvoerschema&#39;s voor de detailhandel o
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder *het Beheer van de Eigenschap* sectie, selecteer op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]**. Voor deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]**. Selecteer **[!UICONTROL Next]** om uw nieuwe Gevormde recept te herzien.
+Onder *Het Beheer van de Eigenschap* sectie, selecteer op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]**. Voor deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]**. Selecteer **[!UICONTROL Next]** om uw nieuwe Gevormde recept te herzien.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Selecteer **Voltooien** om het recept te maken.
 
