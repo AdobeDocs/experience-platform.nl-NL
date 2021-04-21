@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;google cloud-opslag;google;Google
 solution: Experience Platform
 title: Een Google Cloud Storage Source Connection maken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google Cloud Storage-account met behulp van de Flow Service API.
+exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 translation-type: tm+mt
-source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '595'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Google Cloud Storage]-bronverbinding maken met de [!DNL Flow Service]-API
 
