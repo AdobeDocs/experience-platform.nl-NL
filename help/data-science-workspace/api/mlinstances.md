@@ -2,16 +2,16 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;mlinstances;sensei machine learning api
 solution: Experience Platform
 title: XMLInstances API Endpoint
-topic: Developer guide
+topic-legacy: Developer guide
 description: Een MLInstance is een huur van een bestaande Motor met een aangewezen reeks configuraties die om het even welke trainingsparameters, het scoren parameters, of configuraties van hardwaremiddelen bepalen.
+exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
 
 ---
-
 
 # MLInstances, eindpunt
 
@@ -441,7 +441,7 @@ curl -X DELETE \
 
 ## Een MLInstance verwijderen
 
-U kunt één enkele instantie verwijderen MLI door een verzoek van DELETE uit te voeren dat identiteitskaart van doelMLInstance in de verzoekweg omvat.
+U kunt één enkele instantie schrappen MLI door een verzoek van de DELETE uit te voeren die identiteitskaart van doelMLInstance in de verzoekweg omvat.
 
 **API-indeling**
 
