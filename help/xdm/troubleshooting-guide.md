@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;XDM;XDM-systeem;XDM ind
 solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Dit document biedt antwoorden op veelgestelde vragen over het model van de Gegevens van de Ervaring (XDM) en het Systeem XDM in Adobe Experience Platform, evenals een het oplossen van problemengids voor gemeenschappelijke fouten.
-topic: troubleshooting
+topic-legacy: troubleshooting
+exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
-
 
 # Handleiding voor probleemoplossing voor XDM-systemen
 
@@ -67,7 +67,7 @@ Zie het document over de sectie [descriptors](api/descriptors.md) in de [!DNL Sc
 
 #### Identiteiten definiëren in de gebruikersinterface
 
-Open het schema in de Schema-editor en selecteer het veld in de sectie **[!UICONTROL Structuur]** van de editor dat u als identiteit wilt markeren. Selecteer onder **[!UICONTROL Veldeigenschappen]** aan de rechterkant het selectievakje **[!UICONTROL Identiteit]**.
+Open het schema in de Schema-editor en selecteer het veld in de sectie **[!UICONTROL Structure]** van de editor dat u als identiteit wilt markeren. Selecteer onder **[!UICONTROL Field Properties]** aan de rechterkant het selectievakje **[!UICONTROL Identity]**.
 
 Voor meer details over het beheren van identiteiten in UI, zie de sectie over [het bepalen van identiteitsgebieden](./tutorials/create-schema-ui.md#identity-field) in het leerprogramma van de Redacteur van het Schema.
 
@@ -87,10 +87,10 @@ Voor meer informatie over het gebruiken van API om een schema voor gebruik in [!
 
 #### Het toelaten van een bestaand schema voor [!DNL Profile] gebruikend UI
 
-Selecteer [!DNL Experience Platform] in de linkernavigatie **[!UICONTROL Schema&#39;s]** en selecteer de naam van het schema dat u wilt inschakelen in de lijst met schema&#39;s. Selecteer vervolgens **[!UICONTROL Profiel]** aan de rechterkant van de editor onder **[!UICONTROL Schemaeigenschappen]** om deze in of uit te schakelen.
+Selecteer [!DNL Experience Platform] in de linkernavigatie en selecteer de naam van het schema dat u wilt inschakelen in de lijst met schema&#39;s. **[!UICONTROL Schemas]** Selecteer vervolgens **[!UICONTROL Profile]** aan de rechterkant van de editor onder **[!UICONTROL Schema Properties]** om deze in of uit te schakelen.
 
 
-Zie de sectie over [gebruik in Real-time Klantprofiel](./tutorials/create-schema-ui.md#profile) in de zelfstudie [!UICONTROL Schema-editor] voor meer informatie.
+Zie de sectie over [gebruik in Real-time Klantprofiel](./tutorials/create-schema-ui.md#profile) in de zelfstudie [!UICONTROL Schema Editor] voor meer informatie.
 
 ### Kan ik een samenvoegingsschema direct uitgeven?
 
@@ -120,7 +120,7 @@ Hieronder volgt een lijst met foutberichten die kunnen optreden wanneer u werkt 
 
 Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinden. De bron kan zijn verwijderd of het pad in de API-aanroep is ongeldig. Controleer of u een geldig pad voor uw API-aanroep hebt ingevoerd voordat u het opnieuw probeert. U kunt willen controleren dat u correcte identiteitskaart voor het middel bent ingegaan, en dat de weg behoorlijk namespaced met de aangewezen container (globaal of huurder) is.
 
-Zie de secties [container](./api/getting-started.md#container) en [resource identification](api/getting-started.md#resource-identification) in de [!DNL Schema Registry]-ontwikkelaarshandleiding voor meer informatie over het samenstellen van opzoekpaden in de API.
+Voor meer informatie bij het construeren van raadplegingswegen in API, zie [container](./api/getting-started.md#container) en [middelidentificatie](api/getting-started.md#resource-identification) secties in [!DNL Schema Registry] ontwikkelaarsgids.
 
 ### Titel moet uniek zijn
 
