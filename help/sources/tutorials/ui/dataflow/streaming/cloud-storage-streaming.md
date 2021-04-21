@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslagaansluiting;cloudopslag
 solution: Experience Platform
 title: Een DataFlow configureren voor een Cloud Storage Streaming Connector in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met behulp van de basisaansluiting voor cloudopslag.
+exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
-
 
 # Een gegevensstroom configureren voor een streamingverbinding voor cloudopslag in de gebruikersinterface
 
@@ -37,42 +37,42 @@ Nadat u de aansluiting voor cloudopslag hebt gemaakt, wordt de stap *Gegevens se
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
-De stap **[!UICONTROL Toewijzing]** verschijnt, die een interactieve interface verstrekt om de brongegevens aan een [!DNL Platform] dataset in kaart te brengen.
+De stap **[!UICONTROL Mapping]** verschijnt, die een interactieve interface verstrekken om de brongegevens aan een [!DNL Platform] dataset in kaart te brengen.
 
 Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
 
 **Een bestaande gegevensset gebruiken**
 
-Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL bestaande dataset]** gebruiken, dan klik het datasetpictogram.
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Use existing dataset]**, dan klik het datasetpictogram.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
 
-Het dialoogvenster **[!UICONTROL Gegevensset selecteren]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan **[!UICONTROL ga]** te klikken.
+Het dialoogvenster **[!UICONTROL Select dataset]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan **[!UICONTROL Continue]** te klikken.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
 
 **Een nieuwe gegevensset gebruiken**
 
-Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL nieuwe dataset]** creëren en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Selecteer vervolgens het schema dat u wilt gebruiken onder het vervolgkeuzemenu.
+Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Create new dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Selecteer vervolgens het schema dat u wilt gebruiken onder het vervolgkeuzemenu.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-new-dataset.png)
 
 ## Geef uw gegevensstroom een naam
 
-De stap **[!UICONTROL Dataflow detail]** verschijnt, toestaand u om een naam en een korte beschrijving over uw nieuwe dataflow te geven.
+De stap **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
-Geef waarden op voor de gegevensstroom en klik op **[!UICONTROL Volgende]**.
+Geef waarden op voor de gegevensstroom en klik op **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/name-your-dataflow.png)
 
 ### Controleer uw gegevensstroom
 
-De stap **[!UICONTROL Review]** verschijnt, die u toestaat om uw nieuwe gegevensstroom te herzien alvorens het wordt gecreeerd. De details worden gegroepeerd in de volgende categorieën:
+De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-- **[!UICONTROL Brongegevens]**: Toont het brontype en andere relevante details over de bron.
-- **[!UICONTROL Doelgegevens]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+- **[!UICONTROL Source details]**: Toont het brontype en andere relevante details over de bron.
+- **[!UICONTROL Target details]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
 
-Zodra u uw gegevensstroom hebt herzien, klik **[!UICONTROL Afwerking]** en laat wat tijd voor dataflow toe om worden gecreeerd.
+Zodra u uw gegevensstroom hebt herzien, klik **[!UICONTROL Finish]** en laat wat tijd voor dataflow om worden gecreeerd.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
@@ -84,8 +84,8 @@ Nadat u de gegevens voor de cloudopslag hebt gemaakt, kunt u de gegevens control
 
 Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om gegevens van een externe wolkenopslag in te brengen, en hebt u inzicht gekregen in de controle van datasets. Binnenkomende gegevens kunnen nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-- [[!DNL Real-time Customer Profile]  - overzicht](../../../../../profile/home.md)
-- [[!DNL Data Science Workspace]  - overzicht](../../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] overzicht](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace] overzicht](../../../../../data-science-workspace/home.md)
 
 ## Aanhangsel
 
@@ -95,11 +95,11 @@ De volgende secties verstrekken extra informatie voor het werken met bronschakel
 
 Wanneer een gegevensstroom wordt gecreeerd, wordt het onmiddellijk actief en neemt gegevens volgens het programma op het werd gegeven. U kunt een actieve gegevensstroom op elk ogenblik onbruikbaar maken door de instructies hieronder te volgen.
 
-Klik in de werkruimte **[!UICONTROL Bronnen]** op het tabblad **[!UICONTROL Bladeren]**. Klik vervolgens op de naam van de verbinding die is gekoppeld aan de actieve gegevensstroom die u wilt uitschakelen.
+Klik in de werkruimte **[!UICONTROL Sources]** op het tabblad **[!UICONTROL Browse]**. Klik vervolgens op de naam van de verbinding die is gekoppeld aan de actieve gegevensstroom die u wilt uitschakelen.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/browse.png)
 
-De pagina **[!UICONTROL Bronactiviteit]** wordt weergegeven. Selecteer de actieve dataflow in de lijst om zijn **[!UICONTROL Eigenschappen]** kolom op de rechterkant van het scherm te openen, die **[!UICONTROL Enabled]** knevelknoop bevat. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
+De pagina **[!UICONTROL Source activity]** wordt weergegeven. Selecteer de actieve gegevensstroom in de lijst om zijn **[!UICONTROL Properties]** kolom op de rechterkant van het scherm te openen, die een **[!UICONTROL Enabled]** knevelknoop bevat. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/disable-source.png)
 
