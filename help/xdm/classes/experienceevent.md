@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Identiteitskaart;Identiteitskaart;Het ontwerp van het schema;Kaart;Verenigingsschema;Vereniging
 solution: Experience Platform
 title: XDM ExperienceEvent-klasse
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent.
+exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL XDM ExperienceEvent] class
 
@@ -39,8 +39,8 @@ De klasse [!DNL XDM ExperienceEvent] zelf verstrekt verscheidene op tijd-reeksen
 
 Adobe biedt verschillende standaardmixen voor gebruik met de klasse [!DNL XDM ExperienceEvent]. Hieronder volgt een lijst met enkele veelgebruikte combinaties voor de klasse:
 
-* [[!UICONTROL Gegevens van eindgebruiker]](../mixins/event/enduserids.md)
-* [[!UICONTROL Omgevingsdetails]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
 
 ## Aanhangsel
 
