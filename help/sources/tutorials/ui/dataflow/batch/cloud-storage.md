@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;dataflow;DataFlow
 solution: Experience Platform
 title: Een DataFlow configureren voor een Cloud Storage Batch-connector in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
+exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
 translation-type: tm+mt
-source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
-
 
 # Een gegevensstroom configureren voor een batch-verbinding voor cloudopslag in de gebruikersinterface
 
@@ -39,7 +39,7 @@ Daarnaast vereist deze zelfstudie dat u beschikt over een gevestigde account voo
 
 ## Gegevens selecteren
 
-Nadat u uw account voor cloudopslag hebt gemaakt, wordt de stap **[!UICONTROL Gegevens selecteren]** weergegeven. Deze stap vormt een interface waarmee u de hiërarchie van uw cloudopslagbestanden kunt verkennen.
+Nadat u uw account voor cloudopslag hebt gemaakt, wordt de stap **[!UICONTROL Select data]** weergegeven en krijgt u een interface om de hiërarchie van uw cloudopslagbestanden te verkennen.
 
 * Het linkergedeelte van de interface is een directorybrowser waarin uw bestanden en mappen voor cloudopslag worden weergegeven.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
@@ -48,13 +48,13 @@ Nadat u uw account voor cloudopslag hebt gemaakt, wordt de stap **[!UICONTROL Ge
 
 Als u een map in de lijst selecteert, kunt u de mappenhiërarchie doorlopen in diepere mappen. U kunt één map selecteren om alle bestanden in de map recursief in te voeren. Wanneer u een volledige map opgeeft, moet u ervoor zorgen dat alle bestanden in de map hetzelfde schema hebben.
 
-Als u een compatibel bestand of een compatibele map hebt geselecteerd, selecteert u de corresponderende gegevensindeling in het vervolgkeuzemenu [!UICONTROL Gegevensindeling selecteren].
+Als u een compatibel bestand of een compatibele map hebt geselecteerd, selecteert u de corresponderende gegevensindeling in het vervolgkeuzemenu [!UICONTROL Select data format].
 
 In de volgende tabel wordt de juiste gegevensindeling voor de ondersteunde bestandstypen weergegeven:
 
 | Bestandstype | Gegevensindeling |
 | --- | --- |
-| CSV | [!UICONTROL Gescheiden] |
+| CSV | [!UICONTROL Delimited] |
 | JSON | [!UICONTROL JSON] |
 | Parquet | [!UICONTROL XDM Parquet] |
 
@@ -72,49 +72,49 @@ Als u een voorvertoning van een ander bestand wilt weergeven, selecteert u het v
 
 ![standaardvoorvertoning](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
 
-Als u de inhoud en structuur van de bestanden in uw map hebt geïnspecteerd, selecteert u **[!UICONTROL Volgende]** om alle bestanden in de map recursief in te voeren.
+Nadat u de inhoud en structuur van de bestanden in uw map hebt geïnspecteerd, selecteert u **[!UICONTROL Next]** om alle bestanden in de map recursief in te voeren.
 
 ![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
 
-Als u liever een specifiek bestand wilt selecteren, selecteert u het bestand dat u wilt invoegen en selecteert u **[!UICONTROL Volgende]**.
+Als u liever een specifiek bestand wilt selecteren, selecteert u het bestand dat u wilt invoegen en selecteert u **[!UICONTROL Next]**.
 
 ![bestand selecteren](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
 
 ### Een aangepast scheidingsteken instellen voor gescheiden bestanden
 
-U kunt een aangepast scheidingsteken instellen bij het invoegen van gescheiden bestanden. Selecteer de optie **[!UICONTROL Scheidingsteken]** en selecteer vervolgens een scheidingsteken in het vervolgkeuzemenu. In het menu worden de meest gebruikte opties voor scheidingstekens weergegeven, zoals een komma (`,`), een tab (`\t`) en een pipe (`|`). Als u liever een aangepast scheidingsteken wilt gebruiken, selecteert u **[!UICONTROL Aangepast]** en voert u een scheidingsteken voor één teken van uw keuze in de pop-upinvoerbalk in.
+U kunt een aangepast scheidingsteken instellen bij het invoegen van gescheiden bestanden. Selecteer de optie **[!UICONTROL Delimiter]** en selecteer vervolgens een scheidingsteken in het vervolgkeuzemenu. In het menu worden de meest gebruikte opties voor scheidingstekens weergegeven, zoals een komma (`,`), een tab (`\t`) en een pipe (`|`). Als u liever een aangepast scheidingsteken wilt gebruiken, selecteert u **[!UICONTROL Custom]** en voert u in de pop-upinvoerbalk een scheidingsteken voor één teken in.
 
-Nadat u de gegevensindeling hebt geselecteerd en het scheidingsteken hebt ingesteld, selecteert u **[!UICONTROL Volgende]**.
+Als u de gegevensindeling hebt geselecteerd en het scheidingsteken hebt ingesteld, selecteert u **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
-De stap **[!UICONTROL Toewijzing]** verschijnt, die een interactieve interface verstrekt om de brongegevens aan een [!DNL Platform] dataset in kaart te brengen. De brondossiers die in Parquet worden geformatteerd moeten XDM volgzaam zijn en vereisen u niet om de afbeelding manueel te vormen, terwijl de Csv- dossiers u vereisen om de afbeelding uitdrukkelijk te vormen, maar u toe te staan om te kiezen welke brongegevensgebieden aan kaart te brengen. Voor JSON-bestanden is geen handmatige configuratie vereist als deze zijn gemarkeerd als XDM-klacht. Nochtans, als het niet duidelijk als volgzaam XDM is, zal het u vereisen om de afbeelding uitdrukkelijk te vormen.
+De stap **[!UICONTROL Mapping]** verschijnt, die een interactieve interface verstrekken om de brongegevens aan een [!DNL Platform] dataset in kaart te brengen. De brondossiers die in Parquet worden geformatteerd moeten XDM volgzaam zijn en vereisen u niet om de afbeelding manueel te vormen, terwijl de Csv- dossiers u vereisen om de afbeelding uitdrukkelijk te vormen, maar u toe te staan om te kiezen welke brongegevensgebieden aan kaart te brengen. Voor JSON-bestanden is geen handmatige configuratie vereist als deze zijn gemarkeerd als XDM-klacht. Nochtans, als het niet duidelijk als volgzaam XDM is, zal het u vereisen om de afbeelding uitdrukkelijk te vormen.
 
 Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
 
 **Een bestaande gegevensset gebruiken**
 
-Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Bestaande dataset]**, dan het datasetpictogram selecteren.
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Existing dataset]**, dan het datasetpictogram.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-Het dialoogvenster **[!UICONTROL Gegevensset selecteren]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan **[!UICONTROL ga]** te klikken.
+Het dialoogvenster **[!UICONTROL Select dataset]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan **[!UICONTROL Continue]** te klikken.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **Een nieuwe gegevensset gebruiken**
 
-Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Als u een schema wilt toevoegen, kunt u een bestaande schemanaam invoeren in het dialoogvenster **[!UICONTROL Selecteer schema]**. Alternatief, kunt u **[!UICONTROL Schema geavanceerd onderzoek]** selecteren om naar een aangewezen schema te zoeken.
+Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL New dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Als u een schema wilt toevoegen, kunt u een bestaande schemanaam in het **[!UICONTROL Select schema]** dialoogvakje ingaan. U kunt ook **[!UICONTROL Schema advanced search]** selecteren om te zoeken naar een geschikt schema.
 
 Tijdens deze stap, kunt u uw dataset voor [!DNL Real-time Customer Profile] toelaten en een holistische mening van de attributen en het gedrag van een entiteit creëren. De gegevens van alle toegelaten datasets zullen in [!DNL Profile] worden omvat en de veranderingen worden toegepast wanneer u uw gegevensstroom bewaart.
 
-Schakel de knop **[!UICONTROL Profieldataset]** in of uit om uw doelgegevensset in te schakelen voor [!DNL Profile].
+Schakel de knop **[!UICONTROL Profile dataset]** in of uit om uw doelgegevensset in te schakelen voor [!DNL Profile].
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
-Het dialoogvenster **[!UICONTROL Selecteer schema]** wordt weergegeven. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan uitgezocht **[!UICONTROL Done]**.
+Het dialoogvenster **[!UICONTROL Select schema]** wordt weergegeven. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan uitgezocht **[!UICONTROL Done]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
@@ -134,17 +134,17 @@ Houd er rekening mee dat u geen toewijzingen kunt maken voor verschillende typen
 >
 >[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
-Selecteer **[!UICONTROL Voorvertoningsgegevens]** om de toewijzingsresultaten van maximaal 100 rijen met voorbeeldgegevens uit de geselecteerde gegevensset weer te geven.
+Selecteer **[!UICONTROL Preview data]** om toewijzingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
 
 Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
 
-Wanneer uw brongegevens zijn toegewezen, selecteert u **[!UICONTROL Close]**.
+Selecteer **[!UICONTROL Close]** als de brongegevens zijn toegewezen.
 
 ## Planninguitvoering
 
-De **[!UICONTROL Plannende]** stap verschijnt, toestaand u om een insluitingsprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
+De stap **[!UICONTROL Scheduling]** verschijnt, toestaand u om een insluitingsprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -163,35 +163,35 @@ Geef waarden op voor het schema en selecteer **[!UICONTROL Next]**.
 
 ### Eenmalige gegevensstroom voor inname instellen
 
-Als u eenmalige invoer wilt instellen, selecteert u de pijl voor de frequentieverlaging en selecteert u **[!UICONTROL Eenmaal]**. U kunt bewerkingen blijven uitvoeren op een gegevensstroom die is ingesteld voor eenmalig opnemen van de frequentie, zolang de begintijd in de toekomst behouden blijft. Zodra de begintijd is verstreken, kan de eenmalig frequentiewaarde niet meer worden bewerkt. **** Intervaland  **** backfillare not visible when setting a one-time ingestion dataflow.
+Als u eenmalige invoer wilt instellen, selecteert u de pijl voor de frequentieverlaging en selecteert u **[!UICONTROL Once]**. U kunt bewerkingen blijven uitvoeren op een gegevensstroom die is ingesteld voor eenmalig opnemen van de frequentie, zolang de begintijd in de toekomst behouden blijft. Zodra de begintijd is verstreken, kan de eenmalig frequentiewaarde niet meer worden bewerkt. **[!UICONTROL Interval]** en  **[!UICONTROL Backfill]** zijn niet zichtbaar bij het instellen van een eenmalige gegevensstroom.
 
 >[!IMPORTANT]
 >
 >Het wordt sterk geadviseerd om uw gegevensstroom voor eenmalig ingang te plannen wanneer het gebruiken van de [FTP schakelaar](../../../../connectors/cloud-storage/ftp.md).
 
-Nadat u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
+Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
 ## Gegevens over gegevensstroom opgeven
 
-De stap **[!UICONTROL Dataflow detail]** verschijnt, toestaand u om een naam en een korte beschrijving over uw nieuwe dataflow te geven.
+De stap **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
-Tijdens dit proces kunt u **[!UICONTROL Gedeeltelijke inname]** en **[!UICONTROL Foutdiagnostiek]** ook inschakelen. Als u **[!UICONTROL Gedeeltelijke inname]** inschakelt, kunt u gegevens met fouten, tot een bepaalde drempel die u kunt instellen, invoeren. Als u **[!UICONTROL Foutdiagnostiek]** inschakelt, worden details weergegeven over eventuele onjuiste gegevens die afzonderlijk in een batch worden opgenomen. Voor meer informatie, zie [gedeeltelijk partijingesinzicht overzicht](../../../../../ingestion/batch-ingestion/partial.md).
+Tijdens dit proces kunt u **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** ook inschakelen. Als u **[!UICONTROL Partial ingestion]** inschakelt, kunt u gegevens met fouten tot een bepaalde drempel invoeren die u kunt instellen. Als u **[!UICONTROL Error diagnostics]** inschakelt, worden details weergegeven over eventuele onjuiste gegevens die afzonderlijk in een batch worden opgeslagen. Voor meer informatie, zie [gedeeltelijk partijingesinzicht overzicht](../../../../../ingestion/batch-ingestion/partial.md).
 
-Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
+Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
 
 ## Controleer uw gegevensstroom
 
-De stap **[!UICONTROL Review]** verschijnt, die u toestaat om uw nieuwe gegevensstroom te herzien alvorens het wordt gecreeerd. De details worden gegroepeerd in de volgende categorieën:
+De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Verbinding]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-* **[!UICONTROL Gegevensset- en kaartvelden]** toewijzen: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
-* **[!UICONTROL Planning]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
+* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **[!UICONTROL Scheduling]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
 
-Zodra u uw gegevensstroom hebt herzien, klik **[!UICONTROL Afwerking]** en laat wat tijd voor dataflow toe om worden gecreeerd.
+Zodra u uw gegevensstroom hebt herzien, klik **[!UICONTROL Finish]** en laat wat tijd voor dataflow om worden gecreeerd.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
@@ -201,14 +201,14 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ## Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend **[!UICONTROL Delete]** functie beschikbaar in **[!UICONTROL Dataflows]** werkruimte zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over [het schrappen van gegevensstromen in UI](../../delete.md).
+U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend de functie **[!UICONTROL Delete]** beschikbaar in de **[!UICONTROL Dataflows]** werkruimte zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over [het schrappen van gegevensstromen in UI](../../delete.md).
 
 ## Volgende stappen
 
 Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om gegevens van een externe wolkenopslag in te brengen, en hebt u inzicht gekregen in de controle van datasets. Als u meer wilt weten over het maken van gegevensstromen, kunt u uw studie aanvullen door de onderstaande video te bekijken. Bovendien kunnen inkomende gegevens nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile]  - overzicht](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace]  - overzicht](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] overzicht](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] overzicht](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
@@ -224,11 +224,11 @@ De volgende secties verstrekken extra informatie voor het werken met bronschakel
 
 Wanneer een gegevensstroom wordt gecreeerd, wordt het onmiddellijk actief en neemt gegevens volgens het programma op het werd gegeven. U kunt een actieve gegevensstroom op elk ogenblik onbruikbaar maken door de instructies hieronder te volgen.
 
-Klik in de werkruimte **[!UICONTROL Bronnen]** op het tabblad **[!UICONTROL Bladeren]**. Klik vervolgens op de naam van de account die is gekoppeld aan de actieve gegevensstroom die u wilt uitschakelen.
+Klik in de werkruimte **[!UICONTROL Sources]** op het tabblad **[!UICONTROL Browse]**. Klik vervolgens op de naam van de account die is gekoppeld aan de actieve gegevensstroom die u wilt uitschakelen.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-De pagina **[!UICONTROL Bronactiviteit]** wordt weergegeven. Selecteer de actieve dataflow in de lijst om zijn **[!UICONTROL Eigenschappen]** kolom op de rechterkant van het scherm te openen, die **[!UICONTROL Enabled]** knevelknoop bevat. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
+De pagina **[!UICONTROL Source activity]** wordt weergegeven. Selecteer de actieve gegevensstroom in de lijst om zijn **[!UICONTROL Properties]** kolom op de rechterkant van het scherm te openen, die een **[!UICONTROL Enabled]** knevelknoop bevat. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
 
