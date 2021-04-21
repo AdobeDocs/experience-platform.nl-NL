@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Overzicht van Adobe Privacy JavaScript-bibliotheek
-topic: overview
+topic-legacy: overview
 description: Met de Adobe Privacy JavaScript-bibliotheek kunt u gegevenssubject-id's ophalen voor gebruik in Privacy Service.
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 4%
 
 ---
 
-
 # Overzicht van Adobe Privacy JavaScript-bibliotheek
 
-Als gegevensverwerker verwerkt Adobe persoonlijke gegevens volgens de toestemming en instructies van uw bedrijf. Als datacontroller bepaalt u welke persoonlijke data Adobe namens u verwerkt en opslaat. Afhankelijk van de informatie die u kiest om via Adobe Experience Cloud-oplossingen te verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyregels zoals [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA). Zie het document over [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) voor meer informatie over hoe de oplossingen van de Experience Cloud privé gegevens verzamelen.
+Als gegevensverwerker verwerkt Adobe persoonlijke gegevens volgens de toestemming en instructies van uw bedrijf. Als datacontroller bepaalt u welke persoonlijke data Adobe namens u verwerkt en opslaat. Afhankelijk van de informatie die u kiest om via Adobe Experience Cloud-oplossingen te verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyregels zoals [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA). Zie het document over [privacy in Adobe Experience Cloud](https://www.adobe.com/nl/privacy/marketing-cloud.html) voor meer informatie over hoe de oplossingen van de Experience Cloud privé gegevens verzamelen.
 
 Met de **Adobe Privacy JavaScript Library** kunnen gegevenscontrollers het ophalen van alle gegevenssubject-id&#39;s automatiseren die worden gegenereerd door [!DNL Experience Cloud]-oplossingen voor een specifiek domein. Met behulp van de API van [Adobe Experience Platform Privacy Service](home.md), kunnen deze identiteiten dan worden gebruikt om toegang tot en schrappingsverzoeken voor privé gegevens tot stand te brengen die tot die betrokkenen behoren.
 
