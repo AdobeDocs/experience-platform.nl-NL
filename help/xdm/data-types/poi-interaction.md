@@ -2,26 +2,26 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;poi;interactie;point-of-interest;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype Interactie punt
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Interaction.
+exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Point of interest interaction] gegevenstype
 
-# [!UICONTROL Gegevenstype van ] interactiepunt
-
-[!UICONTROL Interactie van het punt van belang is een standaardXDM gegevenstype dat het draadloze apparaat beschrijft dat identiteitsinformatie aan mobiele toepassingen meedeelt aangezien de mobiele apparaten binnen waaier vallen. ] 
+[!UICONTROL Point of interest interaction] is een standaard XDM gegevenstype dat het draadloze apparaat beschrijft dat identiteitsinformatie aan mobiele toepassingen meedeelt aangezien de mobiele apparaten binnen waaier vallen.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Details van het belangenpunt]](./poi-details.md) | Beschrijft de details van POI die de gebeurtenis veroorzaakte. |
+| `poiDetail` | [[!UICONTROL Point of interest details]](./poi-details.md) | Beschrijft de details van POI die de gebeurtenis veroorzaakte. |
 | `poiEntries` | Object | Beschrijft het aantal tijden een persoon POI is ingegaan. Bevat twee eigenschappen: <ul><li>`id`: Een unieke id voor de maat.</li><li>`value`: De kwantificeerbare waarde van de maatregel.</li></ul> |
 | `poiExits` | Object | Beschrijft het aantal tijden een persoon POI heeft verlaten. Bevat twee eigenschappen: <ul><li>`id`: Een unieke id voor de maat.</li><li>`value`: De kwantificeerbare waarde van de maatregel.</li></ul> |
 
