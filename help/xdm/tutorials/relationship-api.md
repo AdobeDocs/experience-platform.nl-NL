@@ -3,16 +3,16 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem
 solution: Experience Platform
 title: Definieer een relatie tussen twee schema's met behulp van de API voor het schemaregister
 description: Dit document verstrekt een zelfstudie voor het bepalen van een één-op-één verhouding tussen twee schema's die door uw organisatie worden bepaald gebruikend de Registratie API van het Schema.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 0%
 
 ---
-
 
 # Definieer een relatie tussen twee schema&#39;s met behulp van de [!DNL Schema Registry]-API
 
