@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;doelzelfstudie
 solution: Experience Platform
 title: Een doel maken en gegevens activeren met API's
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Leer om verschillende soorten bestemmingen tot stand te brengen en gegevens te activeren.
+exl-id: f9c421e5-7e07-4587-8cf7-dc14b716865c
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
-
 
 # Een doel maken en gegevens activeren met API&#39;s
 
