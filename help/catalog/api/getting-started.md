@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;catalogusservice;catalogus;Catalogusservice;Catalogus
 solution: Experience Platform
 title: API-handleiding voor Catalogusservice
-topic: developer guide
+topic-legacy: developer guide
 description: Met de API voor catalogusservice kunnen ontwikkelaars metagegevens voor gegevenssets beheren in Adobe Experience Platform. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Catalog Service] API-handleiding
 
