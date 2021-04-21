@@ -3,16 +3,16 @@ keywords: Experience Platform;home;populaire onderwerpen;ui;UI;XDM;XDM systeem;e
 solution: Experience Platform
 title: XDM-bronnen verkennen in de gebruikersinterface
 description: Leer hoe u bestaande schema's, klassen, mixins en gegevenstypen in de gebruikersinterface van het Experience Platform kunt verkennen.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
-
 
 # XDM-bronnen verkennen in de gebruikersinterface
 
@@ -22,19 +22,19 @@ Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39
 
 ## Een XDM-resource {#lookup} opzoeken
 
-Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie in de interface van het Platform. De [!UICONTROL Schemas] werkruimte verstrekt een **[!UICONTROL Browse]** lusje om alle bestaande middelen XDM in uw organisatie, samen met extra specifieke lusjes voor het onderzoeken van **[!UICONTROL Klassen]**, **[!UICONTROL Mixins]**, en **[!UICONTROL Gegevenstypes]** specifiek te onderzoeken.
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform. De [!UICONTROL Schemas] werkruimte verstrekt een **[!UICONTROL Browse]** lusje om alle bestaande middelen XDM in uw organisatie, samen met extra specifieke lusjes voor het onderzoeken **[!UICONTROL Classes]**, **[!UICONTROL Mixins]**, en **[!UICONTROL Data types]** specifiek te onderzoeken.
 
 ![](../images/ui/explore/tabs.png)
 
-Op [!UICONTROL Browse] lusje, kunt u het filterpictogram (![de Beeld van het Pictogram van de Filter ](../images/ui/explore/icon.png)) gebruiken om controles in de linkerspoorstaaf te openbaren om onderaan vermelde resultaten te beperken.
+Op het [!UICONTROL Browse] lusje, kunt u het filterpictogram (![de Beeld van het Pictogram van het Filter ](../images/ui/explore/icon.png)) gebruiken om controles in het linkerspoor zichtbaar te maken om onderaan vermelde resultaten te beperken.
 
-Als u bijvoorbeeld de lijst wilt filteren zodat alleen standaardgegevenstypen worden weergegeven die door Adobe worden geleverd, selecteert u **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder respectievelijk **[!UICONTROL Type]** en **[!UICONTROL Eigenaar]**.
+Als u bijvoorbeeld de lijst wilt filteren zodat alleen standaardgegevenstypen worden weergegeven die door Adobe worden geleverd, selecteert u **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder respectievelijk de secties **[!UICONTROL Type]** en **[!UICONTROL Owner]**.
 
-Met de schakeloptie **[!UICONTROL Opgenomen in profiel]** kunt u resultaten filteren om alleen bronnen weer te geven die worden gebruikt in schema&#39;s die zijn ingeschakeld voor gebruik in [Real-time klantprofiel](../../profile/home.md).
+Met de schakeloptie **[!UICONTROL Included in Profile]** kunt u resultaten filteren om alleen bronnen weer te geven die worden gebruikt in schema&#39;s die zijn ingeschakeld voor gebruik in [Real-time klantprofiel](../../profile/home.md).
 
 ![](../images/ui/explore/filter.png)
 
-U kunt de zoekbalk ook gebruiken om de resultaten verder omlaag te brengen. Wanneer u naar een termijn zoekt, vertegenwoordigen de hoogste punten middelen de waarvan namen de onderzoeksvraag aanpassen. Onder deze punten, onder **[!UICONTROL Standaard Gebieden]**, zullen om het even welke middelen die gebieden bevatten die de vraag aanpassen worden vermeld. Dit staat u toe om naar middelen te zoeken XDM die op het type van gegevens worden gebaseerd zij bevatten, zonder het moeten de naam van het middel vooraf kennen.
+U kunt de zoekbalk ook gebruiken om de resultaten verder omlaag te brengen. Wanneer u naar een termijn zoekt, vertegenwoordigen de hoogste punten middelen de waarvan namen de onderzoeksvraag aanpassen. Onder deze punten, onder **[!UICONTROL Standard Fields]**, zullen om het even welke middelen die gebieden bevatten die de vraag aanpassen worden vermeld. Dit staat u toe om naar middelen te zoeken XDM die op het type van gegevens worden gebaseerd zij bevatten, zonder het moeten de naam van het middel vooraf kennen.
 
 ![](../images/ui/explore/search.png)
 
@@ -68,9 +68,9 @@ Als een arrayveld is gebaseerd op een objecttype, kunt u het pictogram ervan op 
 
 ![](../images/ui/explore/array-type.png)
 
-### [!UICONTROL Veldeigenschappen] {#field-properties}
+### [!UICONTROL Field properties] {#field-properties}
 
-Wanneer u de naam van een veld op het canvas selecteert, wordt het rechterspoor bijgewerkt om details over dat veld weer te geven onder **[!UICONTROL Veldeigenschappen]**. Dit kan een beschrijving bevatten van het bedoelde gebruiksgeval van het veld, standaardwaarden, patronen, indelingen, of het veld al dan niet is vereist, enzovoort.
+Wanneer u de naam van een veld op het canvas selecteert, wordt de rechterrails bijgewerkt om details over dat veld onder **[!UICONTROL Field properties]** weer te geven. Dit kan een beschrijving bevatten van het bedoelde gebruiksgeval van het veld, standaardwaarden, patronen, indelingen, of het veld al dan niet is vereist, enzovoort.
 
 ![](../images/ui/explore/field-properties.png)
 
@@ -92,7 +92,7 @@ Identiteitsvelden worden op het canvas gemarkeerd met een vingerafdrukpictogram 
 
 ### Relatievelden {#relationship}
 
-Als u een schema inspecteert dat een relatiegebied bevat, zal het gebied in de linkerspoorstaaf onder **[!UICONTROL Verhoudingen]** worden vermeld. Selecteer de naam van het relatieveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
+Als u een schema inspecteert dat een relatieveld bevat, zal het gebied in de linkerspoorstaaf onder **[!UICONTROL Relationships]** worden vermeld. Selecteer de naam van het relatieveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
 
 De gebieden van de verhouding worden ook uniek benadrukt in het canvas, die de naam van het bestemmingsschema tonen dat de gebiedsverwijzingen. Als u de naam van het relatieveld selecteert, kunt u de identiteitsnaamruimte van de primaire identiteit van het bestemmingsschema in het juiste spoor bekijken.
 
@@ -104,4 +104,4 @@ De gebieden van de verhouding worden ook uniek benadrukt in het canvas, die de n
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u bestaande XDM-bronnen kunt verkennen in de gebruikersinterface van het Experience Platform. Voor meer informatie over de verschillende eigenschappen van [!UICONTROL Schemas] werkruimte en [!DNL Schema Editor], zie [[!UICONTROL Schemas] werkruimteoverzicht](./overview.md).
+In dit document wordt beschreven hoe u bestaande XDM-bronnen kunt verkennen in de gebruikersinterface van het Experience Platform. Voor meer informatie over de verschillende eigenschappen van de [!UICONTROL Schemas] werkruimte en [!DNL Schema Editor], zie [[!UICONTROL Schemas] werkruimteoverzicht](./overview.md).
