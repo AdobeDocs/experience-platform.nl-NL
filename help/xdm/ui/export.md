@@ -2,22 +2,22 @@
 solution: Experience Platform
 title: XDM-schema's exporteren in de gebruikersinterface
 description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of IMS-organisatie in de Adobe Experience Platform-gebruikersinterface.
-topic: user guide
+topic-legacy: user guide
 type: Tutorial
+exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
-
 
 # XDM-schema&#39;s exporteren in de gebruikersinterface
 
 Alle bronnen in de Schemabibliotheek bevinden zich in een specifieke sandbox binnen een IMS-organisatie. In sommige gevallen wilt u mogelijk bronnen van het Experience Data Model (XDM) delen tussen sandboxen en IMS Orgs.
 
-Om deze behoefte te richten, staat [!UICONTROL Schemas] werkruimte in Adobe Experience Platform UI u toe om een de uitvoerlading voor om het even welk schema binnen in de Bibliotheek van het Schema te produceren. Deze nuttige lading kan dan in een vraag aan de Registratie-API van het Schema worden gebruikt om het schema (en alle afhankelijke middelen) in een doelzandbak en IMS Org in te voeren.
+Om aan deze behoefte te voldoen, staat de [!UICONTROL Schemas] werkruimte in Adobe Experience Platform UI u toe om een de uitvoerlading voor om het even welk schema binnen in de Bibliotheek van het Schema te produceren. Deze nuttige lading kan dan in een vraag aan de Registratie-API van het Schema worden gebruikt om het schema (en alle afhankelijke middelen) in een doelzandbak en IMS Org in te voeren.
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ Terwijl de interface van het Platform u toelaat de middelen van XDM uitvoeren, m
 
 ## Een exportlading genereren
 
-Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie in de interface van het Platform. Zoek in de werkruimte [!UICONTROL Schema&#39;s] het schema dat u wilt exporteren en open het schema in [!DNL Schema Editor].
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform. Zoek in de werkruimte [!UICONTROL Schemas] het schema dat u wilt exporteren en open het in [!DNL Schema Editor].
 
 >[!TIP]
 >
 >Zie de gids op [het onderzoeken van Middelen XDM](./explore.md) voor details op hoe te om de bron te vinden XDM u zoekt.
 
-Als u het schema hebt geopend, selecteert u het pictogram **[!UICONTROL JSON kopiëren]** (![Pictogram kopiëren](../images/ui/export/icon.png)) rechtsboven in het canvas.
+Als u het schema hebt geopend, selecteert u het **[!UICONTROL Copy JSON]**-pictogram (![Pictogram kopiëren](../images/ui/export/icon.png)) rechtsboven in het canvas.
 
 ![](../images/ui/export/copy-json.png)
 
@@ -213,4 +213,4 @@ Zodra u de uitvoer JSON voor het schema hebt gekopieerd, kunt u het als nuttige 
 
 ## Volgende stappen
 
-Als u deze handleiding volgt, hebt u een XDM-schema geëxporteerd naar een andere IMS-organisatie of -sandbox. Voor meer informatie over de mogelijkheden van [!UICONTROL Schemas] UI, verwijs naar [[!UICONTROL Schemas] UI overview](./overview.md).
+Als u deze handleiding volgt, hebt u een XDM-schema geëxporteerd naar een andere IMS-organisatie of -sandbox. Voor meer informatie over de mogelijkheden van [!UICONTROL Schemas] UI, verwijs naar [[!UICONTROL Schemas] UI overzicht](./overview.md).
