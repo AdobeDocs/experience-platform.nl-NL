@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheertoestemmingen;de types van toegangsbeheermiddel;toegangsbeheer api
 solution: Experience Platform
 title: Referentie-API-eindpunt
-topic: developer guide
+topic-legacy: developer guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET aan het /acl/verwijzingspunten in de Controle API van de Toegang te richten. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid voor de huidige gebruiker weer te geven.
+exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
-
 
 # Referentie-eindpunt
 
