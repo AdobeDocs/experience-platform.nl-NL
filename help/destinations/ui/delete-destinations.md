@@ -1,14 +1,14 @@
 ---
-keywords: bestemmingen schrappen; hoe te om bestemmingen te schrappen
+keywords: doelen verwijderen, bestemmingen verwijderen, doel verwijderen
 title: Doelen verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen waarmee een bestaand doel in de gebruikersinterface van Adobe Experience Platform kan worden verwijderd
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt
-source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
