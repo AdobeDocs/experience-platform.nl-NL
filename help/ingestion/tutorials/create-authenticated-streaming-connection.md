@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;geverifieerde streamingverbinding;streamingverbinding;maak streamingverbinding;maak geverifieerde streamingverbinding;streaming opname;inname;insluiten;
 solution: Experience Platform
 title: Een geverifieerde streamingverbinding maken
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van Adobe Experience Platform, zoals het Profiel van de Klant In real time en Identiteit, toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen.
+exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # Een geverifieerde streamingverbinding maken
 
