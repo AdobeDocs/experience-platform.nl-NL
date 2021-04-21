@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Google PubSub;Google pubsub
 solution: Experience Platform
 title: Een Google PubSub-bronverbinding maken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
+exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 translation-type: tm+mt
-source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 1%
+source-wordcount: '611'
+ht-degree: 0%
 
 ---
-
 
 # Een [!DNL Google PubSub]-bronverbinding maken met de Flow Service API
 
