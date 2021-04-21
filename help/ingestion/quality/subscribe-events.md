@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;meldingen over het invoeren van gegevens;meldingen;subscribe gebeurtenissen;statusgebeurtenissen voor het invoeren van gegevens;statusgebeurtenissen;subscribe;statusmeldingen;
 solution: Experience Platform
 title: Gegevensinscriptie
-topic: overview
+topic-legacy: overview
 description: Om bij het controleren van het innameproces te helpen, maakt Adobe Experience Platform het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van de status van de opgenomen gegevens en om het even welke mogelijke mislukkingen.
+exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
-
 
 # Meldingen voor gegevensinvoer
 
@@ -29,11 +29,11 @@ Volg de zelfstudie op [Abonneren op [!DNL Adobe I/O Event] notifications](../../
 
 >[!IMPORTANT]
 >
->Tijdens het abonnementsproces, zorg ervoor dat u **[!UICONTROL Platform berichten]** als gebeurtenisleverancier selecteert, en **[!UICONTROL de kennisgeving van de opname van Gegevens]** gebeurtenisabonnement selecteert wanneer ertoe aangezet.
+>Zorg tijdens het abonnementsproces dat u **[!UICONTROL Platform notifications]** als gebeurtenisleverancier selecteert, en selecteer **[!UICONTROL Data ingestion notification]** gebeurtenisabonnement wanneer ertoe aangezet.
 
 ## Meldingen over gegevensinvoer ontvangen
 
-Nadat u de webhaak hebt geregistreerd en nieuwe gegevens zijn ingevoerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend de webhaak zelf, of door **[!UICONTROL Debug het Vinden]** lusje in het de gebeurtenisregistratieoverzicht van uw project in de Console van de Ontwikkelaar van Adobe te selecteren.
+Nadat u de webhaak hebt geregistreerd en nieuwe gegevens zijn ingevoerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend webhaak zelf, of door het **[!UICONTROL Debug Tracing]** lusje in het overzicht van de gebeurtenisregistratie van uw project in de Console van de Ontwikkelaar van de Adobe te selecteren.
 
 De volgende JSON is een voorbeeld van een berichtlading die naar uw webhaak in het geval van een ontbroken partijingestitie gebeurtenis zou worden verzonden:
 
@@ -73,7 +73,7 @@ Om het volledige schema voor gebeurtenisberichten te bekijken, verwijs naar [ope
 
 ## Volgende stappen
 
-Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van [!UICONTROL Overzicht van het Project] bekijken. Raadpleeg de handleiding bij [Het overtrekken van Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over hoe u gebeurtenissen kunt overtrekken.
+Nadat u [!DNL Platform]-berichten hebt geregistreerd voor uw project, kunt u ontvangen gebeurtenissen van [!UICONTROL Project overview] weergeven. Raadpleeg de handleiding bij [Gebeurtenissen van Adobe I/O overtrekken](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
 
 ## Aanhangsel
 
