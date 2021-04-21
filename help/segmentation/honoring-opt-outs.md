@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;opt-out;Segmentatie;Segmenteringsservice;segmenteringsservice;eeroptie-outs;opt-outs;opt-out;opt-out; opt-outs;
 solution: Experience Platform
 title: Opt-out-verzoeken in segmenten respecteren
-topic: overview
-description: 'Adobe Experience Platform staat uw klanten toe om "opt-out" verzoeken betreffende het gebruik en de opslag van hun gegevens binnen het profiel van de Klant in real time te verzenden []. Deze "opt-out"-verzoeken maken deel uit van de California Consumer Privacy Act (CCPA), die de inwoners van Californië het recht geeft toegang te krijgen tot hun persoonsgegevens en deze te verwijderen en te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie). '
+topic-legacy: overview
+description: Adobe Experience Platform staat uw klanten toe om "opt-out" verzoeken betreffende het gebruik en de opslag van hun gegevens binnen het profiel van de Klant in real time te verzenden []. Deze "opt-out"-verzoeken maken deel uit van de California Consumer Privacy Act (CCPA), die de inwoners van Californië het recht geeft toegang te krijgen tot hun persoonsgegevens en deze te verwijderen en te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie).
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
-
 
 # Naleving van &quot;opt-out&quot;-verzoeken in segmenten
 
@@ -112,15 +112,15 @@ In de volgende secties ziet u hoe u de juiste velden toevoegt voor de twee typen
 
 ### Algemene opt-out
 
-[!DNL Segmentation] Hiermee worden automatisch alle profielen geaccepteerd die de markering &quot;[!UICONTROL Algemeen uitschakelen]&quot; bevatten. Dit betekent dat deze profielen niet standaard worden opgenomen in het publiek of de exportbewerking. Het is echter aan te raden de juiste velden toe te voegen om ervoor te zorgen dat opted-out-profielen niet worden opgenomen in publiek- en marketingactiviteiten.
+[!DNL Segmentation] worden automatisch alle profielen ondersteund die de markering &quot;[!UICONTROL General Opt-Out]&quot; bevatten. Dit houdt in dat deze profielen niet standaard worden opgenomen in het publiek of de export. Het is echter aan te raden de juiste velden toe te voegen om ervoor te zorgen dat opted-out-profielen niet worden opgenomen in publiek- en marketingactiviteiten.
 
-Dit kan worden gedaan gebruikend het gebruikersinterface door **[!UICONTROL De eigenschappen van de Privacy toe te voegen Opt-Outs]**. In dit geval wordt het segment zo ingesteld dat het alleen diegenen omvat die ervoor hebben gekozen (wat betekent dat ze geen algemene &quot;opt-out&quot;-vlag hebben op hun profiel. Dit wordt gedaan door te verklaren dat &quot;[!UICONTROL Opt-Out Type]&quot; &quot;[!UICONTROL General Opt-Out]&quot;en &quot;[!UICONTROL Opt-Out Waarde]&quot;evenaart &quot;[!UICONTROL Opt-in]&quot;.
+Dit kan worden gedaan gebruikend het gebruikersinterface door **[!UICONTROL Privacy Opt-Outs]** attributen toe te voegen. In dit geval wordt het segment zo ingesteld dat het alleen diegenen omvat die ervoor hebben gekozen (wat betekent dat ze geen algemene &quot;opt-out&quot;-vlag hebben op hun profiel. Dit wordt gedaan door te verklaren dat &quot;[!UICONTROL Opt-Out Type]&quot;&quot;[!UICONTROL General Opt-Out]&quot;en &quot;[!UICONTROL Opt-Out Value]&quot;evenaart &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### Optie voor verkopen/delen
 
-Als een gebruiker een verkoop/het delen opt-out vlag op hun profiel heeft wordt geplaatst, zou dit profiel niet meer voor om het even welke segmentverwezenlijking of marketing activiteiten moeten worden gebruikt. Om ervoor te zorgen dat deze markering wordt nageleefd, moet &quot;[!UICONTROL Opt-Out Type]&quot; gelijk zijn aan &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; en moet &quot;[!UICONTROL Opt-Out Value]&quot; gelijk zijn aan &quot;[!UICONTROL Opt-in]&quot;.
+Als een gebruiker een verkoop/het delen opt-out vlag op hun profiel heeft wordt geplaatst, zou dit profiel niet meer voor om het even welke segmentverwezenlijking of marketing activiteiten moeten worden gebruikt. Om ervoor te zorgen dat deze markering wordt toegepast, moet &quot;[!UICONTROL Opt-Out Type]&quot; gelijk zijn aan &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; en moet &quot;[!UICONTROL Opt-Out Value]&quot; gelijk zijn aan &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
