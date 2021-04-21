@@ -1,15 +1,15 @@
 ---
 title: Gegevens met toestemming van de klant verwerken met de Adobe Experience Platform Web SDK
-topic: getting started
+topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten in Adobe Experience Platform te verwerken met behulp van de Adobe 2.0-standaard.
+exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 translation-type: tm+mt
-source-git-commit: fee3f005ca3679f8639cea45c16150090b2a1e0f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
-
 
 # Integreer het Web SDK van het Platform om de gegevens van de klantentoestemming te verwerken gebruikend de Adobe 2.0 norm
 
