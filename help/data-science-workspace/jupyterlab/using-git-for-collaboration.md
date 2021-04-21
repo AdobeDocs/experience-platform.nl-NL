@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;Git;Github
 solution: Experience Platform
 title: Samenwerken in JupyterLab met behulp van kit
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Git is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git is vooraf geïnstalleerd in de JupyterLab-omgeving van de Data Science Workspace.
+exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '281'
 ht-degree: 1%
 
 ---
-
 
 # Samenwerken in [!DNL JupyterLab] met [!DNL Git]
 
@@ -30,7 +30,7 @@ De [!DNL Data Science Workspace JupyterLab]-omgeving is een gehoste omgeving en 
 
 Start door [!DNL Adobe Experience Platform] te starten en naar de [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab)-omgeving te navigeren.
 
-Selecteer **[!UICONTROL Bestand]** in [!DNL JupyterLab] en houd de muisaanwijzer boven **[!UICONTROL Nieuw]**. Van dropdown die verschijnt, selecteer **[!UICONTROL Terminal]**.
+Selecteer **[!UICONTROL File]** in [!DNL JupyterLab] en houd de muisaanwijzer boven **[!UICONTROL New]**. Selecteer **[!UICONTROL Terminal]** in het vervolgkeuzemenu dat wordt weergegeven.
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
