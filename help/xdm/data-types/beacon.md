@@ -2,20 +2,20 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schemas;baken;interactiedetails;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype baken
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---
 
+# [!UICONTROL Beacon] gegevenstype
 
-# [!UICONTROL Het type ] Beacondata
-
- Beaconis een standaard XDM gegevenstype dat het draadloze apparaat beschrijft dat identiteitsinformatie aan mobiele toepassingen meedeelt aangezien de mobiele apparaten binnen waaier vallen.
+[!UICONTROL Beacon] is een standaard XDM gegevenstype dat het draadloze apparaat beschrijft dat identiteitsinformatie aan mobiele toepassingen meedeelt aangezien de mobiele apparaten binnen waaier vallen.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
@@ -33,7 +33,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstyp
 
 ## Aanhangsel
 
-De volgende sectie bevat extra informatie over het [!UICONTROL gegevenstype Beacon].
+De volgende sectie bevat aanvullende informatie over het gegevenstype [!UICONTROL Beacon].
 
 ## Geaccepteerde waarden voor nabijheid {#proximity}
 
