@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Azure Blob;azure blob;Azure blob-connector
 solution: Experience Platform
 title: Een Azure Blob Source Connection maken in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure Blob-bronconnector kunt maken via de gebruikersinterface van het Platform.
+exl-id: 0e54569b-7305-4065-981e-951623717648
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Azure Blob]-bronverbinding maken in de gebruikersinterface
 
@@ -50,29 +50,29 @@ Als u toegang wilt krijgen tot uw [!DNL Blob]-opslagruimte op het Platform, moet
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Blob]-account te koppelen aan het Platform.
 
-In [Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot [!UICONTROL Bronnen] werkruimte toegang te hebben. Het scherm [!UICONTROL Catalog] toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+In [Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Sources]** van de linkernavigatiebar om tot de [!UICONTROL Sources] werkruimte toegang te hebben. In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
-Selecteer onder de categorie [!UICONTROL Cloudopslag] **[!UICONTROL Azure Blob Storage]** en selecteer **[!UICONTROL Gegevens toevoegen]**.
+Selecteer [!UICONTROL Cloud storage] onder de categorie **[!UICONTROL Azure Blob Storage]** en selecteer **[!UICONTROL Add data]**.
 
 ![catalogus](../../../../images/tutorials/create/blob/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met Azure Blob Storage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Azure Blob Storage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account
 
-Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Blob]-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Blob]-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/blob/existing.png)
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL Nieuwe account]** en geeft u vervolgens een naam en een optiebeschrijving voor uw nieuwe [!DNL Blob]-account.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam en een optiebeschrijving voor uw nieuwe [!DNL Blob]-account.
 
 **Verifiëren met een verbindingstekenreeks**
 
-De [!DNL Blob] schakelaar voorziet u van verschillende authentificatietypen voor toegang. Selecteer **[!UICONTROL ConnectionString]** onder [!UICONTROL Accountverificatie] om referenties te gebruiken die zijn gebaseerd op een verbindingstekenreeks.
+De [!DNL Blob] schakelaar voorziet u van verschillende authentificatietypen voor toegang. Selecteer [!UICONTROL Account authentication] onder **[!UICONTROL ConnectionString]** om referenties te gebruiken die zijn gebaseerd op een verbindingstekenreeks.
 
 ![verbindingstekenreeks](../../../../images/tutorials/create/blob/connectionstring.png)
 
@@ -80,7 +80,7 @@ De [!DNL Blob] schakelaar voorziet u van verschillende authentificatietypen voor
 
 Een gedeelde toegangshandtekening (SAS) URI staat veilige gedelegeerde autorisatie toe aan uw [!DNL Blob]-account. Met SAS kunt u verificatiereferenties maken met verschillende toegangsgraden, aangezien een SAS-gebaseerde verificatie u in staat stelt machtigingen, begin- en vervaldatums en bepalingen voor specifieke bronnen in te stellen.
 
-Selecteer **[!UICONTROL SasURIAuthentication]** en geef vervolgens uw [!DNL Blob] SAS URI op. Selecteer **[!UICONTROL Verbinding maken met bron]** om door te gaan.
+Selecteer **[!UICONTROL SasURIAuthentication]** en geef vervolgens uw [!DNL Blob] SAS-URI op. Selecteer **[!UICONTROL Connect to source]** om door te gaan.
 
 ![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
 
