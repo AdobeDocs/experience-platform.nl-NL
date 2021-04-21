@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;labels voor gegevensgebruik;catalogusservice
 solution: Experience Platform
 title: De Etiketten van het Gebruik van gegevens in de Dienst API van de Dataset
-topic: developer guide
+topic-legacy: developer guide
 description: De Dataset Service API verstrekt eindpunten om de etiketten van het gegevensgebruik voor datasets te beheren.
+exl-id: 2451e5b0-b117-4465-8e58-70fc341c0748
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # De etiketten van het gegevensgebruik in de Dienst van de Dataset API
 
