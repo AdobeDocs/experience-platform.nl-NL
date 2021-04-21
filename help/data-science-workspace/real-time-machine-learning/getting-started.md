@@ -2,16 +2,16 @@
 keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;
 solution: Experience Platform
 title: Aan de slag met het leren van machines in real time
-topic: Getting started
+topic-legacy: Getting started
 description: In het volgende document worden de stappen beschreven die nodig zijn om een real-time model voor machinetolken in Adobe Experience Platform te maken.
+exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met Real-Time Machine Learning (Alpha)
 
@@ -52,4 +52,3 @@ Om een nieuwe dataset voor gebruik in het Leren van de machine in real time tot 
 ## Volgende stappen {#next-steps}
 
 Zodra u uw gegevens voor het Leren van de Machine in real time hebt voorbereid, begin door [de Notitiegebruikershandleiding van de Notitieboekje ](./rtml-authoring-notebook.md) te volgen in real time van de Machine het Leren notitieboekje&lt;a1 te leren en een model te uploaden ONNX aan de het modelopslag van het Leren in real time van de Machine.
-
