@@ -2,24 +2,24 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Identiteitskaart;Identiteitskaart;Het ontwerp van het schema;Kaart;Verenigingsschema;Vereniging
 solution: Experience Platform
 title: IdentityMap-mixin
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
+exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
-
-#  IdentityMapmixin
+# [!UICONTROL IdentityMap] mixen
 
 >[!NOTE]
 >
 >De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
- IdentityMapis een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
+[!UICONTROL IdentityMap] is een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
 
 >[!WARNING]
 >
