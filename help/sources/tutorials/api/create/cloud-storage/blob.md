@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Een Azure Blob Source Connection maken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Azure Blob met behulp van de Flow Service API.
+exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
 
 ---
-
 
 # Een [!DNL Azure Blob]-bronverbinding maken met de [!DNL Flow Service]-API
 
