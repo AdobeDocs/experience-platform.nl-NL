@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;recept;laptops;Data Science Workspace;populaire onderwerpen;recept maken
 solution: Experience Platform
 title: Een ontvanger maken met Jupyter-laptops
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
+exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2345'
 ht-degree: 0%
 
 ---
-
 
 # Een recept maken met Jupyter-laptops
 
@@ -27,7 +27,7 @@ Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine
 
 ## Aan de slag met de [!DNL JupyterLab]-laptopomgeving
 
-Het maken van een geheel nieuw recept kan binnen [!DNL Data Science Workspace] worden gedaan. Navigeer naar [Adobe Experience Platform](https://platform.adobe.com) en klik op het tabblad **[!UICONTROL Laptops]** links om te starten. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in [!DNL JupyterLab Launcher].
+Het maken van een geheel nieuw recept kan binnen [!DNL Data Science Workspace] worden gedaan. Navigeer naar [Adobe Experience Platform](https://platform.adobe.com) en klik op het tabblad **[!UICONTROL Notebooks]** links om te beginnen. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in [!DNL JupyterLab Launcher].
 
 Met de [!UICONTROL Recipe Builder]-laptop kunt u training en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes in tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken dat u kunt gebruiken in [!DNL Data Science Workspace] met behulp van de laptopfunctionaliteit die is ingebouwd in de Recipe Builder-laptop.
 
@@ -39,7 +39,7 @@ Met de [!UICONTROL Recipe Builder]-laptop kunt u training en scoring uitvoeren i
 
 Wanneer u klikt op de Recipe Builder-laptop van de startprogramma, wordt de laptop geopend op het tabblad. De sjabloon die in de laptop wordt gebruikt, is de Recipe voor verkoopprognoses voor Python Retail, die ook te vinden is in [deze openbare opslagplaats](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-U zult zien dat er op de werkbalk drie extra acties zijn: - **[!UICONTROL Training]**, **[!UICONTROL Score]** en **[!UICONTROL Ontvanger maken]**. Deze pictogrammen worden alleen weergegeven in de [!UICONTROL Recipe Builder]-laptop. Meer informatie over deze acties wordt besproken [in de sectie Training en het scoren](#training-and-scoring) nadat u de Recipe in de laptop hebt gemaakt.
+U zult zien dat er op de werkbalk drie extra handelingen staan, namelijk **[!UICONTROL Train]**, **[!UICONTROL Score]** en **[!UICONTROL Create Recipe]**. Deze pictogrammen worden alleen weergegeven in de notitie [!UICONTROL Recipe Builder]. Meer informatie over deze acties wordt besproken [in de sectie Training en het scoren](#training-and-scoring) nadat u de Recipe in de laptop hebt gemaakt.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -460,13 +460,13 @@ def save(configProperties, prediction):
 
 Wanneer u klaar bent met het aanbrengen van wijzigingen in uw laptop en uw recept wilt trainen, kunt u op de bijbehorende knoppen boven aan de balk klikken om een trainingsrun in de cel te maken. Nadat u op de knop hebt geklikt, wordt een logboek met opdrachten en uitvoerbestanden van het trainingsscript weergegeven in de laptop (onder de `evaluator.py`-cel). Conda installeert eerst alle gebiedsdelen, dan wordt de opleiding in werking gesteld.
 
-Let erop dat u minstens één keer training moet uitvoeren voordat u scoring kunt uitvoeren. Wanneer u op de knop **[!UICONTROL Scores uitvoeren]** klikt, wordt het getrainde model dat tijdens de training is gegenereerd, gescand. Het scorescript wordt onder `datasaver.py` weergegeven.
+Let erop dat u minstens één keer training moet uitvoeren voordat u scoring kunt uitvoeren. Als u op de knop **[!UICONTROL Run Scoring]** klikt, wordt het getrainde model weergegeven dat tijdens de training is gegenereerd. Het scorescript wordt onder `datasaver.py` weergegeven.
 
 Voor het zuiveren doeleinden, als u wenst om de verborgen output te zien, voeg `debug` aan het eind van de outputcel toe en stel het opnieuw in werking.
 
 ## Recept maken {#create-recipe}
 
-Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept maken van de laptop door te drukken op **[!UICONTROL Recipe maken]** in de navigatie rechtsboven.
+Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept van de laptop maken door op **[!UICONTROL Create Recipe]** te drukken in de navigatie rechtsboven.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -474,7 +474,7 @@ Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Nadat u op **[!UICONTROL Ok]** hebt gedrukt, kunt u naar het nieuwe recept navigeren op [Adobe Experience Platform](https://platform.adobe.com/). U kunt op **[!UICONTROL Ontvangers van de Mening]** knoop klikken om u aan **[!UICONTROL Ontvangt]** tabel onder **[!UICONTROL Modellen van XML]** te brengen
+Als u op **[!UICONTROL Ok]** drukt, kunt u naar het nieuwe recept navigeren op [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **[!UICONTROL View Recipes]** knoop klikken om u aan het **[!UICONTROL Recipes]** lusje onder **[!UICONTROL ML Models]** te brengen
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -500,5 +500,3 @@ Ga naar [!DNL Data Science Workspace] recepten en modellen dropdown om te leren 
 De volgende video is ontworpen om uw inzicht in het bouwen en implementeren van modellen te ondersteunen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
-
-
