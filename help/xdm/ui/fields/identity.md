@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Identiteitsvelden definiëren in de gebruikersinterface
 description: Leer hoe u een identiteitsveld definieert in de gebruikersinterface van het Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
-
 
 # Identiteitsvelden definiëren in de gebruikersinterface
 
@@ -31,21 +31,21 @@ Wanneer [een nieuw gebied](./overview.md#define) in UI bepaalt, kunt u het als i
 
 ![](../../images/ui/fields/special/identity.png)
 
-Aanvullende besturingselementen worden weergegeven nadat u het selectievakje hebt ingeschakeld. Als u wilt dat dit veld de primaire identiteit voor het schema is, schakelt u het selectievakje **[!UICONTROL Primaire identiteit]** in.
+Aanvullende besturingselementen worden weergegeven nadat u het selectievakje hebt ingeschakeld. Als u wilt dat dit veld de primaire identiteit voor het schema is, schakelt u het selectievakje **[!UICONTROL Primary identity]** in.
 
 >[!NOTE]
 >
 >Voor één schema kunnen veel identiteitsvelden zijn gedefinieerd, maar dit schema kan slechts één primaire identiteit hebben. Alle identiteitsgebieden (primair of anders) dragen aan de identiteitsgrafiek voor een individuele klant bij, maar het Profiel van de Klant in real time gebruikt slechts de primaire identiteit als bron van waarheid wanneer het samenvoegen van gegevensfragmenten samen. Als u een schema voor gebruik in Profiel wilt toelaten, moet het schema een primaire bepaalde identiteit hebben.
 
-Onder **[!UICONTROL Identiteitsnaamruimte]**, gebruik dropdown menu om aangewezen namespace voor het identiteitsgebied te selecteren. De standaardnaamruimten die door Adobe worden verschaft, worden weergegeven samen met aangepaste naamruimten die door uw organisatie zijn gedefinieerd.
+Gebruik onder **[!UICONTROL Identity namespace]** het vervolgkeuzemenu om de juiste naamruimte voor het naamveld te selecteren. De standaardnaamruimten die door Adobe worden verschaft, worden weergegeven samen met aangepaste naamruimten die door uw organisatie zijn gedefinieerd.
 
-Als u klaar bent, selecteert u **[!UICONTROL Toepassen]** om de wijziging toe te passen op het schema.
+Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijziging toe te passen op het schema.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
 Het canvas wordt bijgewerkt met de wijzigingen, waarbij het geselecteerde veld een vingerafdruksymbool (![](../../images/ui/fields/special/identity-symbol.png)) krijgt om het aan te duiden als een identiteit. In het linkerspoor, is het identiteitsgebied nu vermeld onder de naam van de klasse of mengeling die het gebied aan het schema verstrekt.
 
-Aangezien alle identiteitsgebieden door gebrek worden vereist, is het gebied nu vermeld onder **[!UICONTROL Vereiste gebieden]** in de linkerspoorstaaf. Als het identiteitsveld is genest binnen de schemastructuur, worden alle bovenliggende velden ook vermeld zoals vereist.
+Aangezien alle identiteitsgebieden door gebrek worden vereist, is het gebied nu vermeld onder **[!UICONTROL Required fields]** in de linkerspoorstaaf. Als het identiteitsveld is genest binnen de schemastructuur, worden alle bovenliggende velden ook vermeld zoals vereist.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
