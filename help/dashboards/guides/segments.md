@@ -2,16 +2,16 @@
 keywords: Experience Platform;profiel;segment;segmenten;segmentatie;gebruikersinterface;UI;aanpassing;segmentdashboard;dashboard
 title: Segmentdashboard
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 translation-type: tm+mt
-source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '727'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) Segmentdashboard {#segment-dashboard}
 
@@ -35,7 +35,7 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het segmentdashboard verkennen
 
-Als u naar het segmentdashboard in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Segmenten]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overzicht]** om het dashboard weer te geven.
+Als u naar het segmentdashboard in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Segments]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 ![](../images/segments/dashboard-overview.png)
 
@@ -59,29 +59,29 @@ Het segmentdashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die bela
 
 Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw segment. Selecteer de naam van een widget hieronder voor meer informatie:
 
-* [[!UICONTROL Segmentgrootte]](#segment-size)
-* [[!UICONTROL Profielen die in de loop der tijd zijn toegevoegd]](#profiles-added-over-time)
-* [[!UICONTROL Profielen op naamruimte]](#profiles-by-namespace)
+* [[!UICONTROL Segment size]](#segment-size)
+* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
+* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
 
-### [!UICONTROL Segmentgrootte] {#segment-size}
+### [!UICONTROL Segment size] {#segment-size}
 
-Met de widget **[!UICONTROL Segmentgrootte]** wordt het totale aantal samengevoegde profielen weergegeven binnen het geselecteerde segment op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
+De widget **[!UICONTROL Segment size]** geeft het totale aantal samengevoegde profielen weer binnen het geselecteerde segment op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
 
 Voor meer informatie over fragmenten en samengevoegde profielen, gelieve te beginnen door [overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
 
 ![](../images/segments/segment-size.png)
 
-### [!UICONTROL Profielen die in de loop der tijd zijn toegevoegd] {#profiles-added-over-time}
+### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
 
-De widget **[!UICONTROL Profielen die in de loop van de tijd worden toegevoegd]** biedt informatie over het totale aantal profielen in het segment dat tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen is vastgelegd. Deze widget geeft aan hoe de segmentgrootte over een periode van 30 dagen kan zijn verschoven omdat nieuwe profielen in aanmerking komen voor of het segment verlaten.
+De widget **[!UICONTROL Profiles added over time]** biedt informatie over het totale aantal profielen in het segment dat is vastgelegd tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen. Deze widget geeft aan hoe de segmentgrootte over een periode van 30 dagen kan zijn verschoven omdat nieuwe profielen in aanmerking komen voor of het segment verlaten.
 
 Raadpleeg de [documentatie bij Segmentatieservice](../../segmentation/home.md) voor meer informatie over segmentbeoordeling en hoe profielen in aanmerking komen en uit segmenten worden afgesloten.
 
 ![](../images/segments/profiles-added-over-time.png)
 
-### [!UICONTROL Profielen op naamruimte] {#profiles-by-namespace}
+### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
-Met de widget **[!UICONTROL Profielen op naamruimte]** wordt de uitsplitsing van naamruimten in alle samengevoegde profielen in het geselecteerde segment weergegeven. Het totale aantal profielen per naamruimte van de identiteit ([!UICONTROL ID naamruimte] in de widget) kan hoger zijn dan het totale aantal profielen in het segment omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke namespace worden getoond kan meer dan de totale profielen in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, veelvoudige namespaces met die individuele klant kunnen worden geassocieerd.
+Met de widget **[!UICONTROL Profiles by namespace]** wordt de indeling van naamruimten in alle samengevoegde profielen in het geselecteerde segment weergegeven. Het totale aantal profielen per naamruimte van de identiteit ([!UICONTROL ID namespace] in de widget) kan hoger zijn dan het totale aantal profielen in het segment omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke namespace worden getoond kan meer dan de totale profielen in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, veelvoudige namespaces met die individuele klant kunnen worden geassocieerd.
 
 Voor meer informatie over naamruimten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
