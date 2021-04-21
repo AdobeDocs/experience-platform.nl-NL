@@ -3,13 +3,13 @@ keywords: Experience Platform;thuis;populaire onderwerpen;monitorrekeningen;moni
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 solution: Experience Platform
 title: Monitorgegevensstromen
-topic: overview
+topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
