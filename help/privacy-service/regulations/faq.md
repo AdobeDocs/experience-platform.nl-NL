@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;Regulation;Regulations;Regulations;Regulations;Privacy;Privacy; Privacy;
 solution: Experience Platform
 title: Veelgestelde vragen over privacyregels
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteunde wettelijke privacyregels en de toepassing ervan in Adobe Experience Cloud.
+exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
 
 ---
-
 
 # Veelgestelde vragen over privacyregels
 
@@ -59,7 +59,7 @@ Een **gegevenscontroller** is de persoon of organisatie die de bevoegdheid en ve
 
 ### Wat is het verschil tussen expliciete en ondubbelzinnige toestemming van de betrokkene?
 
-**De uitdrukkelijke** instemming heeft betrekking op een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige indicatie van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
+**De uitdrukkelijke** instemming heeft betrekking op een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige indicatie van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga ermee akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
 
 **Ondubbelzinnige (impliciete)** instemming heeft betrekking op toestemming die niet expliciet door de betrokkene is gegeven, maar die niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een bedrijfswebsite wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als ondubbelzinnige toestemming te worden beschouwd.
 
@@ -85,7 +85,7 @@ Ervan uitgaande dat het bedrijf persoonlijke informatie heeft verzameld en dat h
 | Verordening | Compatibiliteitsvenster | Notities |
 | --- | --- | --- |
 | CCPA (Californië) | 45 dagen |  |
-| GDPR (Europese Unie) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
+| GDPR (Europese Unie) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken zijn ingediend door dezelfde betrokkene, kan het verzoek worden verlengd tot 60 dagen. |
 | LGPD (Brazilië) | 15 dagen |  |
 | PDPA (Thailand) | 30 dagen | Als een onderneming niet binnen het nalevingsvenster op het verzoek van een betrokkene kan reageren, krijgt de onderneming een extra termijn van 30 dagen vanaf de datum waarop zij het verzoek om schriftelijk aan de betrokkene te antwoorden niet kon inwilligen. |
 
