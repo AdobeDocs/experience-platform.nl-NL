@@ -2,17 +2,17 @@
 keywords: Experience Platform;machine het leren model;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;creeer en publiceer een model
 solution: Experience Platform
 title: Een leermodel voor machines maken en publiceren
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: De Adobe Experience Platform Data Science Workspace biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde Product Recommendations Recipe. Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel, een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in de werkruimte voor wetenschap van gegevens.
+exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 translation-type: tm+mt
-source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
-
 
 # Een leermodel voor computers maken en publiceren
 
@@ -58,11 +58,11 @@ Als u een model voor machinaal leren wilt maken dat gepersonaliseerde productaan
 
 ### Ontdek de gegevens en begrijp de schema&#39;s
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com/) en selecteer **[!UICONTROL Datasets]** om alle bestaande datasets weer te geven en selecteer de dataset die u wilt verkennen. In dit geval, [!DNL Analytics] dataset **Gulden Dataset postValues**.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com/) en selecteer **[!UICONTROL Datasets]** om alle bestaande gegevenssets weer te geven en selecteer de gegevensset die u wilt verkennen. In dit geval, [!DNL Analytics] dataset **Gulden Dataset postValues**.
 
 ![](../images/models-recipes/model-walkthrough/dataset-browse.png)
 
-De pagina van de datasetactiviteit opent, die informatie opsomt met betrekking tot uw dataset. U kunt **[!UICONTROL Gegevensset van de voorvertoning]** dichtbij het hoogste recht selecteren om steekproefverslagen te onderzoeken. U kunt het schema voor de geselecteerde dataset ook bekijken. Selecteer de schemaverbinding in het juiste spoor. Er verschijnt een pop-upvenster waarin u de koppeling onder **[!UICONTROL schemanaam]** selecteert, wordt het schema op een nieuw tabblad geopend.
+De pagina van de datasetactiviteit opent, die informatie opsomt met betrekking tot uw dataset. U kunt **[!UICONTROL Preview Dataset]** dichtbij bovenkant-recht selecteren om steekproefverslagen te onderzoeken. U kunt het schema voor de geselecteerde dataset ook bekijken. Selecteer de schemaverbinding in het juiste spoor. Er wordt een pop-up weergegeven. Als u de koppeling onder **[!UICONTROL schema name]** selecteert, wordt het schema op een nieuw tabblad geopend.
 
 ![](../images/models-recipes/model-walkthrough/dataset-activity.png)
 
@@ -85,7 +85,7 @@ Ontvangers vormen de basis voor een model aangezien zij machine het leren algori
 
 ### Ontdek het product dat Recommendations recept
 
-In Experience Platform, navigeer aan **[!UICONTROL Modellen]** van de linkernavigatiekolom, dan uitgezocht **[!UICONTROL Recipes]** in de hoogste navigatie om een lijst van beschikbare recepten voor uw organisatie te bekijken.
+Navigeer in Experience Platform naar **[!UICONTROL Models]** in de linkernavigatiekolom en selecteer **[!UICONTROL Recipes]** in de bovenste navigatie om een lijst met beschikbare recepten voor uw organisatie weer te geven.
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
@@ -93,7 +93,7 @@ Zoek en open vervolgens de opgegeven **[!UICONTROL Recommendations Recipe]** doo
 
 ![](../images/models-recipes/model-walkthrough/Recipe-view.png)
 
-Selecteer vervolgens in het rechterspoor **[!UICONTROL Recommendations Input Schema]** om het schema voor het recept weer te geven. De schemavelden &quot;[!UICONTROL itemId]&quot; en &quot;[!UICONTROL userId]&quot; komen overeen met een product dat door die klant op een specifiek tijdstip ([!UICONTROL interactionType]) is aangeschaft ([!UICONTROL timestamp]). Voer dezelfde stappen uit om de velden voor het **[!UICONTROL Recommendations-uitvoerschema]** te bekijken.
+Selecteer vervolgens **[!UICONTROL Recommendations Input Schema]** in het rechterspoor om het schema voor het recept weer te geven. De schemavelden &quot;[!UICONTROL itemId]&quot; en &quot;[!UICONTROL userId]&quot; komen overeen met een product dat door die klant op een specifiek tijdstip ([!UICONTROL interactionType]) is aangeschaft ([!UICONTROL timestamp]). Voer dezelfde stappen uit om de velden voor de **[!UICONTROL Recommendations Output Schema]** te controleren.
 
 ![](../images/models-recipes/model-walkthrough/input-output.png)
 
@@ -107,11 +107,11 @@ Nu uw gegevens zijn voorbereid en de recept klaar is, kunt u uw model voor machi
 
 Een model is een instantie van een recept, waarmee u gegevens op schaal kunt trainen en scoren.
 
-Navigeer in Experience Platform naar **[!UICONTROL Modellen]** in de linkernavigatiekolom en selecteer **[!UICONTROL Recipes]** in de bovenste navigatie. Hier wordt een lijst weergegeven met beschikbare recepten voor uw organisatie. Selecteer het recept voor productaanbevelingen.
+Navigeer in Experience Platform naar **[!UICONTROL Models]** in de linkernavigatiekolom en selecteer **[!UICONTROL Recipes]** in de bovenste navigatie. Hier wordt een lijst weergegeven met beschikbare recepten voor uw organisatie. Selecteer het recept voor productaanbevelingen.
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-Selecteer **[!UICONTROL Model maken]** op de pagina met recept.
+Selecteer **[!UICONTROL Create Model]** op de pagina met recept.
 
 ![model maken](../images/models-recipes/model-walkthrough/create-model-recipe.png)
 
@@ -119,7 +119,7 @@ De workflow voor het maken van modellen begint met het selecteren van een recept
 
 ![](../images/models-recipes/model-walkthrough/create-model.png)
 
-Geef vervolgens een modelnaam op. Beschikbare configuraties voor het model worden weergegeven met instellingen voor de standaardtraining en -scoring van het model. Controleer de configuraties en selecteer **[!UICONTROL Voltooien]**.
+Geef vervolgens een modelnaam op. Beschikbare configuraties voor het model worden weergegeven met instellingen voor de standaardtraining en -scoring van het model. Controleer de configuraties en selecteer **[!UICONTROL Finish]**.
 
 ![](../images/models-recipes/model-walkthrough/configure-model.png)
 
@@ -131,11 +131,11 @@ U kunt ervoor kiezen te wachten totdat de trainingsreeks is voltooid of een nieu
 
 ### Het model trainen met aangepaste hyperparameters
 
-Selecteer op de pagina **Modeloverzicht** **[!UICONTROL Lijn]** rechtsboven om een nieuwe trainingsrun te maken. Selecteer de zelfde inputdataset u toen het creëren van het model gebruikte en **[!UICONTROL daarna]** selecteert.
+Selecteer **[!UICONTROL Train]** in de buurt van de rechterbovenhoek op de pagina **Modeloverzicht** om een nieuwe trainingsrun te maken. Selecteer de zelfde inputdataset u toen het creëren van het model gebruikte en uitgezocht **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/model-walkthrough/select-train.png)
 
-De **[!UICONTROL Configuration]** pagina verschijnt. Hier kunt u de trainingslooppas `num_recommendations` waarde vormen, die ook als hyperparameter wordt bekend. Een getraind en geoptimaliseerd model zal de best-presterende hyperparameters gebruiken die op de resultaten van de trainingslooppas worden gebaseerd.
+De pagina **[!UICONTROL Configuration]** wordt weergegeven. Hier kunt u de trainingslooppas `num_recommendations` waarde vormen, die ook als hyperparameter wordt bekend. Een getraind en geoptimaliseerd model zal de best-presterende hyperparameters gebruiken die op de resultaten van de trainingslooppas worden gebaseerd.
 
 Hyperparameters kunnen niet worden geleerd, daarom moeten zij worden toegewezen alvorens de opleidingslooppas voorkomt. Het aanpassen van hyperparameters kan de nauwkeurigheid van het getrainde model veranderen. Aangezien het optimaliseren van een model een herhalend proces is, kunnen meerdere trainingen nodig zijn voordat een bevredigende evaluatie wordt uitgevoerd.
 
@@ -173,19 +173,19 @@ Selecteer op de overzichtspagina van het model met productaanbevelingen de naam 
 
 ![score de beste looppas](../images/models-recipes/model-walkthrough/select-training-run.png)
 
-Selecteer vervolgens **[!UICONTROL Score]** in de rechterbovenhoek van de pagina met gegevens over de trainingsrun.
+Selecteer vervolgens **[!UICONTROL Score]** in de rechterbovenhoek van de pagina met details voor de training.
 
 ![score selecteren](../images/models-recipes/model-walkthrough/select-score.png)
 
-Vervolgens selecteert u **[!UICONTROL Recommendations Input Dataset]** als de gegevensset voor de score van de invoergegevensset. Dit is dezelfde gegevensset die u hebt gebruikt toen u het Model hebt gemaakt en de trainingsreeks uitvoerde. Selecteer vervolgens **[!UICONTROL Volgende]**.
+Vervolgens selecteert u **[!UICONTROL Recommendations Input Dataset]** als de gegevensset voor het zoeken van de invoergegevens. Dit is dezelfde gegevensset die u hebt gebruikt toen u het model maakte en de trainingsreeks uitvoerde. Selecteer vervolgens **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/model-walkthrough/score-input.png)
 
-Als u uw invoergegevensset hebt, selecteert u **[!UICONTROL Recommendations Output Dataset]** als de gegevensset voor de score van de uitvoergegevens. Scoreresultaten worden opgeslagen in deze dataset als partij.
+Zodra u uw inputdataset hebt, selecteer **[!UICONTROL Recommendations Output Dataset]** als het scoren outputdataset. Scoreresultaten worden opgeslagen in deze dataset als partij.
 
 ![](../images/models-recipes/model-walkthrough/score-output.png)
 
-Tot slot herzie de het scoren configuraties. Deze parameters bevatten de input en outputdatasets u vroeger samen met de aangewezen schema&#39;s selecteerde. Selecteer **[!UICONTROL Voltooien]** om de scoring te starten. De uitvoering kan enkele minuten duren.
+Tot slot herzie de het scoren configuraties. Deze parameters bevatten de input en outputdatasets u vroeger samen met de aangewezen schema&#39;s selecteerde. Selecteer **[!UICONTROL Finish]** om met de scoring te beginnen. De uitvoering kan enkele minuten duren.
 
 ![](../images/models-recipes/model-walkthrough/score-finish.png)
 
@@ -193,11 +193,11 @@ Tot slot herzie de het scoren configuraties. Deze parameters bevatten de input e
 
 Nadat de scoring is voltooid, kunt u een voorvertoning van de resultaten bekijken en de gegenereerde inzichten weergeven.
 
-Selecteer op de pagina met scoring-resultaten de voltooide scoring-run en selecteer vervolgens **[!UICONTROL Voorvertoning met scoreresultaatgegevens]** in de rechterrail.
+Selecteer op de pagina met scoring de voltooide scoring en selecteer vervolgens **[!UICONTROL Preview Scoring Results Dataset]** op de rechterrail.
 
 ![](../images/models-recipes/model-walkthrough/preview-scores.png)
 
-In de voorproeflijst, bevat elke rij productaanbevelingen voor een bepaalde klant, geëtiketteerd als [!UICONTROL aanbevelingen] en [!UICONTROL userId] respectievelijk. Aangezien de [!UICONTROL num_recommendations] hyperparameter aan 10 in de steekproefscreenshots werd geplaatst, kan elke rij van aanbevelingen tot 10 productidentiteiten bevatten die door een aantalteken (#) worden afgebakend.
+In de voorvertoningstabel bevat elke rij productaanbevelingen voor een bepaalde klant, aangeduid als respectievelijk [!UICONTROL recommendations] en [!UICONTROL userId]. Aangezien de [!UICONTROL num_recommendations] hyperparameter aan 10 in de steekproefscreenshots werd geplaatst, kan elke rij van aanbevelingen tot 10 productidentiteiten bevatten die door een aantalteken (#) worden afgebakend.
 
 ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
