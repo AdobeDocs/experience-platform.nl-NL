@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsgrafiekviewer;Identiteitsgrafiekviewer;grafiekviewer;Grafiekviewer;Naamruimte;Identiteitsnaamruimte;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van de Identity Graph Viewer
-topic: tutorial
+topic-legacy: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
+exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 translation-type: tm+mt
-source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '995'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van de identiteitsgrafiekviewer
 
@@ -39,23 +39,23 @@ Als u met de viewer voor identiteitsgrafieken werkt, moet u de verschillende bet
 
 ## De viewer voor identiteitsgrafieken openen
 
-Als u de viewer voor identiteitsgrafieken in de UI wilt gebruiken, selecteert u **[!UICONTROL Identiteiten]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Identiteitsgrafiek]**. Klik in het scherm **[!UICONTROL Identiteitsnaamruimte]** op het pictogram **[!UICONTROL Identiteitsnaamruimte selecteren]** om te zoeken naar de naamruimte die u wilt gebruiken.
+Als u de viewer voor identiteitsgrafieken in de gebruikersinterface wilt gebruiken, selecteert u **[!UICONTROL Identities]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Identity graph]**. Klik in het scherm **[!UICONTROL Identity Namespace]** op het pictogram **[!UICONTROL Select identity namespace]** om te zoeken naar de naamruimte die u wilt gebruiken.
 
 ![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-Het deelvenster **[!UICONTROL Naamruimte selecteren]** wordt weergegeven. Dit scherm bevat een lijst met naamruimten die beschikbaar zijn voor uw organisatie, inclusief informatie over de **[!UICONTROL Weergavenaam]**, **[!UICONTROL Identiteitssymbool]**, **[!UICONTROL Eigenaar]**, **[!UICONTROL Laatst bijgewerkt]** datum, en **[!UICONTROL Beschrijving]**. U kunt alle opgegeven naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld.
+Het **[!UICONTROL Select identity namespace]** paneel verschijnt. Dit scherm bevat een lijst met naamruimten die beschikbaar zijn voor uw organisatie, zoals informatie over de **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** datum en **[!UICONTROL Description]**. U kunt alle opgegeven naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld.
 
 Selecteer de naamruimte die u wilt gebruiken en klik op **[!UICONTROL Select]** om door te gaan.
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
-Nadat u een naamruimte hebt geselecteerd, voert u de bijbehorende waarde voor een bepaalde klant in het tekstvak **[!UICONTROL Identiteitswaarde]** in en selecteert u **[!UICONTROL Weergave]**.
+Nadat u een naamruimte hebt geselecteerd, voert u de bijbehorende waarde voor een bepaalde klant in het tekstvak **[!UICONTROL Identity value]** in en selecteert u **[!UICONTROL View]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
 ### Toegang tot de kijker van de identiteitsgrafiek van datasets
 
-U kunt tot de kijker van de identiteitsgrafiek ook toegang hebben gebruikend de datasetinterface. Van de datasets [!UICONTROL Browse] pagina, selecteer een dataset u met wilt in wisselwerking staan, en dan **[!UICONTROL dataset van de Voorproef]** selecteren
+U kunt tot de kijker van de identiteitsgrafiek ook toegang hebben gebruikend de datasetinterface. Van de datasets [!UICONTROL Browse] pagina, selecteer een dataset u met wilt in wisselwerking staan, en dan **[!UICONTROL Preview dataset]** selecteren
 
 ![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
 
@@ -75,15 +75,15 @@ De viewer voor identiteitsgrafieken wordt weergegeven. Links in het scherm ziet 
 
 ![identiteitsgrafiek](../images/identity-graph-viewer/graph-viewer.png)
 
-Selecteer een identiteit om de gemarkeerde rij in de tabel **[!UICONTROL Identiteiten]** bij te werken en de informatie in de rechtertrack bij te werken, waaronder de **[!UICONTROL Waarde]**, **[!UICONTROL Batch ID]** en de datum **[!UICONTROL Laatst bijgewerkt]**.
+Selecteer een identiteit om de gemarkeerde rij in de tabel **[!UICONTROL Identities]** bij te werken en om de informatie in de rechtertrack bij te werken, waaronder **[!UICONTROL Value]**, **[!UICONTROL Batch ID]** en de datum **[!UICONTROL Last updated]** van de identiteit.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-U kunt door een grafiek filtreren en een specifieke namespace isoleren gebruikend de soortoptie bovenop de **[!UICONTROL Lijst van Identiteiten]**. Selecteer in het vervolgkeuzemenu de naamruimte die u wilt markeren.
+U kunt door een grafiek filtreren en een specifieke namespace isoleren gebruikend de soortoptie bovenop **[!UICONTROL Identities]** lijst. Selecteer in het vervolgkeuzemenu de naamruimte die u wilt markeren.
 
 ![filter-voor-naamruimte](../images/identity-graph-viewer/filter-namespace.png)
 
-De grafiekviewer retourneert een markering voor de door u geselecteerde naamruimte. De filteroptie werkt ook de **[!UICONTROL Identiteiten]** lijst bij om informatie slechts voor namespace terug te keren u selecteerde.
+De grafiekviewer retourneert een markering voor de door u geselecteerde naamruimte. De filteroptie werkt ook de **[!UICONTROL Identities]** lijst bij om informatie slechts voor namespace terug te keren u selecteerde.
 
 ![gefilterd](../images/identity-graph-viewer/filtered.png)
 
@@ -91,7 +91,7 @@ De rechterbovenhoek van het vak van de grafiekviewer bevat opties voor vergrotin
 
 ![zoomen](../images/identity-graph-viewer/zoom.png)
 
-U kunt meer informatie over partijen bekijken door **[!UICONTROL Gegevensbron]** van de kopbal te selecteren. De **[!UICONTROL Gegevensbron]** lijst toont een lijst van **[!UICONTROL Partij IDs]** verbonden aan grafiek, evenals zijn **[!UICONTROL Gekoppelde IDs]**, bronschema, en datum van opname.
+U kunt meer informatie over partijen bekijken door **[!UICONTROL Data source]** van de kopbal te selecteren. De **[!UICONTROL Data source]** lijst toont een lijst van **[!UICONTROL Batch IDs]** verbonden aan grafiek, evenals zijn **[!UICONTROL Linked IDs]**, bronschema, en datum van opname.
 
 ![gegevensbron](../images/identity-graph-viewer/data-source-table.png)
 
