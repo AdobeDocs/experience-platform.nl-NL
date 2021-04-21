@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;query-service
 solution: Experience Platform
 title: Query-service in Jupyter-laptop
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in de Data Science Workspace door Query Service te integreren in JupyterLab als een standaardfunctie. In deze zelfstudie wordt een voorbeeld gegeven van SQL-query's voor veelvoorkomende gebruiksscenario's voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
-
 
 # Query-service in Jupyter-laptop
 
@@ -36,15 +36,15 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 ## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Navigeer in [[!DNL Experience Platform]](https://platform.adobe.com) naar **[!UICONTROL Laptops]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
+1. Navigeer in [[!DNL Experience Platform]](https://platform.adobe.com) naar **[!UICONTROL Notebooks]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door te klikken op **[!UICONTROL Bestand]** en vervolgens **[!UICONTROL Nieuwe Launcher]** te selecteren.
+   >Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL File]** te klikken en **[!UICONTROL New Launcher]** te selecteren.
 
-2. Klik op het tabblad Launcher op het pictogram **[!UICONTROL Lege]** in een Python 3-omgeving om een lege laptop te openen.
+2. Klik op het tabblad Launcher op het pictogram **[!UICONTROL Blank]** in een Python 3-omgeving om een lege laptop te openen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -52,11 +52,11 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    >
    >Python 3 is momenteel de enige ondersteunde omgeving voor Query Service in laptops.
 
-3. Klik in de linkerselectieregel op het pictogram **[!UICONTROL Gegevens]** en dubbelklik op de map **[!UICONTROL Datasets]** om alle datasets weer te geven.
+3. Klik in de linkerselectieregel op het pictogram **[!UICONTROL Data]** en dubbelklik op de map **[!UICONTROL Datasets]** om alle datasets weer te geven.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Zoek een [!DNL Adobe Analytics] dataset om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, **[!UICONTROL Gegevens van de Vraag in Notitieboekje]** om SQL vragen in de lege notitieboekje te produceren.
+4. Zoek een [!DNL Adobe Analytics] dataset om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, **[!UICONTROL Query Data in Notebook]** om SQL vragen in de lege notitie te produceren.
 
 5. Klik op de eerste cel die de functie `qs_connect()` bevat en voer deze uit door op de afspeelknop te klikken. Met deze functie maakt u een verbinding tussen uw laptopexemplaar en [!DNL Query Service].
 
@@ -98,7 +98,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 ## Vraag uw gegevens {#query-your-data}
 
-Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag door op zijn cel te selecteren door **[!UICONTROL play]** knoop te selecteren wordt gevolgd. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
+Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag uit door op zijn cel te selecteren die door **[!UICONTROL play]** knoop te selecteren wordt gevolgd. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
 Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] verbroken worden. Start in dergelijke gevallen [!DNL JupyterLab] opnieuw door de **Herstart**-knop ![Opnieuw starten](../images/jupyterlab/user-guide/restart_button.png) in de rechterbovenhoek naast de aan/uit-knop te selecteren.
 
