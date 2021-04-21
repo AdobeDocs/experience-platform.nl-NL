@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Amazon S3;Azure Blob
 solution: Experience Platform
 title: Een Azure Blob- of Amazon S3-bronverbinding maken in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure Blob- of Amazon S3-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
+exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
-
 
 # Een [!DNL Azure Blob]- of [!DNL Amazon] S3-bronverbinding maken in de gebruikersinterface
 
