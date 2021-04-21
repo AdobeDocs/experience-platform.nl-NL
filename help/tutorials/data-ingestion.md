@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Zelfstudies voor gegevensinsluiting
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: De Ingestie van gegevens omvat partijingestie, het stromen ingestie, en ingestie gebruikend bronschakelaars.
+exl-id: 51627acf-e90b-4911-aa54-4a59f3b6a8f9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
 
 ---
-
 
 # Gegevens opnemen in [!DNL Experience Platform]
 
@@ -45,6 +45,3 @@ Met een dataset en het zwerven verbindingen op zijn plaats, kunt u verslag of ti
 ## Meerdere berichten streamen in één HTTP-aanvraag
 
 Wanneer het stromen van gegevens aan Adobe Experience Platform, kan het maken van talrijke vraag van HTTP duur zijn. Bijvoorbeeld, in plaats van het creëren van 200 HTTP- verzoeken met 1KB nuttige lading, is het veel efficiënter om 1 HTTP- verzoek met 200 berichten van 1KB elk, met één enkele lading van 200KB tot stand te brengen. Wanneer correct gebruikt, is het groeperen van veelvoudige berichten binnen één enkel verzoek een uitstekende manier om gegevens te optimaliseren die naar [!DNL Experience Platform] worden verzonden. Om te leren hoe te om veelvoudige berichten naar [!DNL Experience Platform] binnen één enkel HTTP- verzoek te verzenden gebruikend het stromen opname, volg [verzendend veelvoudige berichtzelfstudie](../ingestion/tutorials/streaming-multiple-messages.md).
-
-
-
