@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maak streamingverbinding;ui-handleiding;zelfstudie;maak een streamingverbinding;streaming opname;opname;
 solution: Experience Platform
 title: Een streamingverbinding maken met de gebruikersinterface
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze UI-handleiding helpt u bij het maken van een streamingverbinding met Adobe Experience Platform.
+exl-id: af485890-61b1-4c83-8af9-a55e8ed6d69a
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 0%
 
 ---
-
 
 # Een streamingverbinding maken met de gebruikersinterface
 
