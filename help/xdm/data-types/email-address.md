@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;emailAddress;xdm:emailAddress;email;email adres;datatype;data-type;data-type; data-type;
 solution: Experience Platform
 title: Gegevenstype e-mailadres
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor e-mailadressen.
+exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Email address] gegevenstype
 
-# [!UICONTROL Gegevenstype ] E-mailadres
-
-[!UICONTROL E-] mailadres is een standaard XDM gegevenstype dat de details van een e-mailadres beschrijft.
+[!UICONTROL Email address] is een standaard XDM gegevenstype dat de details van een e-mailadres beschrijft.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
