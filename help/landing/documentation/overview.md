@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;werkschema
 solution: Experience Platform
 title: Documentatieoverzicht Experience Platform
-topic: overview
+topic-legacy: overview
 description: De documentatie van Adobe Experience Platform wordt verstrekt in veelvoudige formaten, met inbegrip van overzichten, leerprogramma's, en gidsen voor zowel de gebruikersinterface als API. Hier is een korte beschrijving van de gemeenschappelijkste documentatietypen die voor de diensten van het Experience Platform beschikbaar zijn.
+exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van de documentatie van Experience Platforms
 
@@ -36,4 +36,3 @@ De documentatie van het Experience Platform wordt verstrekt in veelvoudige forma
 * **Zelfstudie:** een zelfstudie is een stapsgewijze handleiding via de gebruikersinterface, de API of een combinatie van beide, die tot een specifiek resultaat leidt. In tegenstelling tot een ontwikkelaarsgids, kan een API leerprogramma zich slechts op één of twee eindpunten concentreren en is geen volledige API middel. Op dezelfde manier kunnen de zelfstudies UI slechts op specifieke stappen, niet de volledige gebruikersinterface beschikbaar voor die dienst concentreren. Tutorials maken vaak deel uit van een grotere werkstroom en hebben de functie &quot;volgende stappen&quot; die beschrijven welke zelfstudies u wilt proberen volgende.
 
 * **UI-gids:** Een UI-hulplijn schetst acties die beschikbaar zijn in de  [!DNL Platform] gebruikersinterface voor een specifieke service. Deze documenten bevatten schermafbeeldingen en stappen die zijn gericht op interactie met Platform via de gebruikersinterface. Net als in een handleiding voor ontwikkelaars worden in de UI-handleiding alle beschikbare acties en opties beschreven, inclusief &#39;gotchas&#39; die moeten worden vermeden. Dit is het meest gedetailleerde middel voor het werken met UI.
-
