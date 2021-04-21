@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Overzicht gebruikersinterface Privacy Service
-topic: UI guide
+topic-legacy: UI guide
 description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
+exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '171'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Privacy Service] Overzicht van gebruikersinterface
 
@@ -21,15 +21,15 @@ Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebru
 
 U moet een Adobe ID hebben om aan [!DNL Privacy Service] UI voor authentiek te verklaren. Daarnaast moet u over systeembeheerdersrechten beschikken binnen de organisatie waaraan uw Adobe ID is gekoppeld.
 
-Selecteer **[!UICONTROL Aanmelden met een Adobe ID]** en voer uw Adobe ID-referenties in wanneer hierom wordt gevraagd.
+Selecteer **[!UICONTROL Sign In with an Adobe ID]** en voer uw Adobe ID-referenties in wanneer hierom wordt gevraagd.
 
-Wanneer u bent aangemeld, selecteert u **[!UICONTROL Privacy UI]**.
+Als u eenmaal bent aangemeld, selecteert u **[!UICONTROL Privacy UI]**.
 
 ![](../images/ui-overview/quick-access.png)
 
 ### Aanmelden vanaf [!DNL Experience Platform]
 
-Als u toegang tot de UI van Adobe Experience Platform hebt, kunt u tot [!DNL Privacy Service] UI door **[!UICONTROL Verzoeken]** lusje in de linkernavigatie ook toegang hebben.
+Als u toegang hebt tot de gebruikersinterface van Adobe Experience Platform, kunt u de gebruikersinterface [!DNL Privacy Service] ook openen via het tabblad **[!UICONTROL Requests]** in de linkernavigatie.
 
 ![](../images/ui-overview/platform.png)
 
