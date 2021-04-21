@@ -2,16 +2,16 @@
 keywords: Experience Platform;attributie ai;access scores;populaire onderwerpen;download scores;attributie ai scores;export;Export
 solution: Experience Platform, Intelligent Services
 title: Scores downloaden in Attribution AI
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: Dit document dient als richtlijn voor het downloaden van scores voor Attribution AI.
+exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
-
 
 # Muziek downloaden in Attribution AI
 
@@ -25,7 +25,7 @@ Bovendien, om tot scores voor Attribution AI toegang te hebben, moet u een de di
 
 ## Uw gegevensset-id {#dataset-id} zoeken
 
-Binnen uw de dienstinstantie voor Attribution AI inzichten, klik *Meer acties* dropdown in de top-juiste navigatie dan selecteren **[!UICONTROL de scores van de Toegang]**.
+Binnen uw de dienstinstantie voor Attribution AI inzichten, klik *Meer acties* dropdown in de top-juiste navigatie dan uitgezocht **[!UICONTROL Access scores]**.
 
 ![meer acties](./images/download-scores/more-actions.png)
 
