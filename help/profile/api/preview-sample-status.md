@@ -2,15 +2,15 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API;voorvertoning;voorbeeld
 title: Voorbeeld van voorbeeldstatus (Profile Preview) API-eindpunt
 description: Met het voorbeeldstatuseindpunt van de voorvertoning, onderdeel van de Real-Time Customer Profile API, kunt u een voorvertoning weergeven van het meest recente voorbeeld van de profielgegevens, en kunt u de distributie van het lijstprofiel per dataset en per naamruimte in Adobe Experience Platform bekijken.
-topic: guide
+topic-legacy: guide
+exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 translation-type: tm+mt
-source-git-commit: 5266c393b034d1744134522cf1769304f39733da
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
-
 
 # Voorvertoning voorbeeldstatuseindpunt (voorvertoning profiel)
 
@@ -21,7 +21,7 @@ Wanneer de opname van records in het archief Profiel het totale aantal profielen
 * Voor **streaminggegevensworkflows** wordt een controle per uur uitgevoerd om te bepalen of aan de drempel van 5% verhoging of verlaging is voldaan. Als dit het geval is, wordt er automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
 * Voor **batch-opname** wordt binnen 15 minuten nadat een batch in de profielopslag is opgenomen, een taak uitgevoerd om de telling bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte.
 
-Deze metriek zijn ook beschikbaar binnen [!UICONTROL Profielen] sectie van de UI van het Experience Platform. Voor informatie over hoe te om tot de gegevens van het Profiel toegang te hebben gebruikend UI, gelieve [[!DNL Profile] gebruikersgids](../ui/user-guide.md) te bezoeken.
+Deze metriek zijn ook beschikbaar binnen [!UICONTROL Profiles] sectie van het Experience Platform UI. Voor informatie over hoe te om tot de gegevens van het Profiel toegang te hebben gebruikend UI, gelieve [[!DNL Profile] gebruikersgids](../ui/user-guide.md) te bezoeken.
 
 >[!NOTE]
 >
@@ -288,7 +288,7 @@ De reactie omvat een `data` serie, met individuele voorwerpen die de details voo
 | `fullIDsFragmentCount` | Het totale aantal profielfragmenten in de naamruimte. |
 | `fullIDsCount` | Het totale aantal samengevoegde profielen in de naamruimte. |
 | `fullIDsPercentage` | De `fullIDsCount` als percentage van het totaal van samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in [laatste steekproefstatus](#view-last-sample-status)), uitgedrukt in decimaal formaat. |
-| `code` | De `code` voor de naamruimte. Dit is te vinden wanneer het werken met namespaces gebruikend [de Dienst API van de Identiteit van Adobe Experience Platform](../../identity-service/api/list-namespaces.md) en ook bedoeld als [!UICONTROL Identiteitssymbool] in Experience Platform UI. Voor meer informatie gaat u naar [Naamruimte overzicht](../../identity-service/namespaces.md). |
+| `code` | De `code` voor de naamruimte. Dit is te vinden wanneer het werken met namespaces gebruikend [de Dienst API van de Identiteit van Adobe Experience Platform](../../identity-service/api/list-namespaces.md) en wordt ook bedoeld als [!UICONTROL Identity symbol] in Experience Platform UI. Voor meer informatie gaat u naar [Naamruimte overzicht](../../identity-service/namespaces.md). |
 | `value` | De waarde `id` voor de naamruimte. Dit is te vinden wanneer het werken met namespaces gebruikend [Identiteitsdienst API](../../identity-service/api/list-namespaces.md). |
 
 ## Volgende stappen
