@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;populaire onderwerpen;streaming opname;inname;record gegevens;stream recordgegevens;
 solution: Experience Platform
 title: Gegevens stroomrecord met API's voor streaming-insluiting
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Stel een schema samen dat van de [!DNL XDM Individual Profile] klasse wordt gebaseerd
 
-Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM Individual Profile] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve [de ontwikkelaarsgids ](../../xdm/api/getting-started.md) van de Registratie van het Schema API.
+Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM Individual Profile] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve [de ontwikkelaarsgids ](../../xdm/api/getting-started.md) van de Registratie van het schema API.
 
 **API-indeling**
 
