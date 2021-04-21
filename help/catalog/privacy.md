@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevens meer privacy;identiteit namespaces;privacy;gegevens meer
 solution: Experience Platform
 title: De verwerking van het privacy- verzoek in het meer van Gegevens
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
+exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
-
 
 # De verzoekverwerking van de privacy in [!DNL Data Lake]
 
@@ -57,7 +57,7 @@ Er zijn twee methodes om een identiteitsbeschrijver aan een datasetschema toe te
 
 ### UI {#identity-ui} gebruiken
 
-In de [!DNL Experience Platform ]gebruikersinterface, **[!UICONTROL Schemas]** werkruimte staat u toe om uw bestaande schema&#39;s uit te geven XDM. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor [plaatsend een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field) in [!DNL Schema Editor] leerprogramma.
+In de [!DNL Experience Platform ]gebruikersinterface, staat **[!UICONTROL Schemas]** werkruimte u toe om uw bestaande XDM schema&#39;s uit te geven. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor [plaatsend een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field) in [!DNL Schema Editor] leerprogramma.
 
 Als u de juiste velden in het schema hebt ingesteld als identiteitsvelden, kunt u doorgaan naar de volgende sectie over [het indienen van privacyverzoeken](#submit).
 
@@ -143,13 +143,13 @@ In de volgende sectie wordt beschreven hoe u privacyverzoeken voor [!DNL Data La
 
 ### De gebruikersinterface gebruiken
 
-Als u taakaanvragen maakt in de gebruikersinterface, moet u **[!UICONTROL AEP-gegevensmeer]** en/of **[!UICONTROL Profiel]** selecteren onder **[!UICONTROL Producten]** om taken te verwerken voor gegevens die zijn opgeslagen in respectievelijk [!DNL Data Lake] of [!DNL Real-time Customer Profile].
+Wanneer u taakaanvragen maakt in de gebruikersinterface, moet u **[!UICONTROL AEP Data Lake]** en/of **[!UICONTROL Profile]** onder **[!UICONTROL Products]** selecteren om taken te verwerken voor gegevens die zijn opgeslagen in respectievelijk [!DNL Data Lake] of [!DNL Real-time Customer Profile].
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
 ### De API gebruiken
 
-Bij het maken van taakaanvragen in de API moeten `userIDs` die worden opgegeven, een specifieke `namespace` en `type` gebruiken, afhankelijk van de gegevensopslag waarop ze van toepassing zijn. Id&#39;s voor de [!DNL Data Lake] moeten &quot;niet-geregistreerd&quot; gebruiken voor hun `type`-waarde en een `namespace`-waarde die overeenkomt met een [privacylabel](#privacy-labels) die zijn toegevoegd aan de toepasselijke gegevenssets.
+Bij het maken van taakaanvragen in de API moeten `userIDs` die worden opgegeven, een specifieke `namespace` en `type` gebruiken, afhankelijk van de gegevensopslag waarop ze van toepassing zijn. Id&#39;s voor de [!DNL Data Lake] moeten &quot;niet-geregistreerd&quot; gebruiken voor hun `type`-waarde en een `namespace`-waarde die overeenkomt met een [privacylabels](#privacy-labels) die zijn toegevoegd aan de toepasselijke gegevenssets.
 
 Daarnaast moet de `include`-array van de payload van het verzoek de productwaarden voor de verschillende gegevensopslagruimten bevatten waarop het verzoek wordt uitgevoerd. Bij het indienen van aanvragen bij [!DNL Data Lake] moet de array de waarde `aepDataLake` bevatten.
 
