@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;rekenkundige functies;rekenkunde;
 solution: Experience Platform
 title: Rekenkundige functies van PAL
-topic: developer guide
+topic-legacy: developer guide
 description: De rekenkundige functies worden gebruikt om basisberekeningen op waarden in de Taal van de Vraag van het Profiel (PQL) uit te voeren.
+exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 2%
 
 ---
-
 
 # Rekenkundige functies
 
