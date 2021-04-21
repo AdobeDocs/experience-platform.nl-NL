@@ -2,17 +2,17 @@
 keywords: Experience Platform;optimaliseren;model;Data Science Workspace;populaire onderwerpen;modelinzichten
 solution: Experience Platform
 title: Een model optimaliseren met behulp van het Model Insights Framework
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Het Model Insights Framework biedt de gegevenswetenschapper hulpmiddelen in de Data Science Workspace om snelle en geïnformeerde keuzes te maken voor optimale modellen voor machinaal leren op basis van experimenten.
+exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
 
 ---
-
 
 # Een model optimaliseren met behulp van het Model Insights-framework
 
