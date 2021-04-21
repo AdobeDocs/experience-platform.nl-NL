@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Selecteer een productprofiel om toegangsbeheermachtigingen te bewerken
-topic: user guide
+topic-legacy: user guide
 description: In dit document worden de stappen beschreven die nodig zijn om door de werkruimte voor toegangsbeheer te bladeren. Om toegangsbeheer voor Experience Platform door Adobe Admin Console te vormen, moet u een beheerder voor een IMS Organisatie zijn die een abonnement op Experience Platform heeft.
+exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '309'
 ht-degree: 2%
 
 ---
-
 
 # Selecteer een productprofiel om de toegangsbeheermachtigingen te beheren
 
@@ -19,11 +19,11 @@ Als u toegangsbeheer voor [!DNL Experience Platform] via de Adobe Admin Console 
 
 Als u geen beheerdersrechten hebt, neemt u contact op met de systeembeheerder om toegang te krijgen.
 
-Als u beheerdersrechten hebt, gaat u naar [Adobe Admin Console](https://adminconsole.adobe.com) en meldt u zich aan met uw Adobe-referenties. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overzicht]** weergegeven voor de IMS-organisatie waarvoor u beheerdersrechten hebt. Op deze pagina worden de producten weergegeven waarop de IMS-organisatie is geabonneerd, samen met andere besturingselementen voor het toevoegen van gebruikers en beheerders aan de IMS-organisatie als geheel. Klik **[!UICONTROL Adobe Experience Platform]** om de werkruimte van het toegangsbeheer voor uw integratie te openen [!DNL Platform].
+Als u beheerdersrechten hebt, gaat u naar [Adobe Admin Console](https://adminconsole.adobe.com) en meldt u zich aan met uw Adobe-referenties. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** weergegeven voor de IMS-organisatie waarvoor u beheerdersrechten hebt. Op deze pagina worden de producten weergegeven waarop de IMS-organisatie is geabonneerd, samen met andere besturingselementen voor het toevoegen van gebruikers en beheerders aan de IMS-organisatie als geheel. Klik **[!UICONTROL Adobe Experience Platform]** om de toegangsbeheerwerkruimte voor uw [!DNL Platform] integratie te openen.
 
 ![overzichtspagina](../images/overview-page.png)
 
-De werkruimte voor toegangsbeheer voor Adobe Experience Platform wordt geopend op het tabblad **[!UICONTROL Productprofielen]**. Op dit tabblad kunt u alle productprofielen weergeven en verschillende instellingen beheren zoals in dit document wordt beschreven.
+De werkruimte voor toegangsbeheer voor Adobe Experience Platform wordt geopend op het tabblad **[!UICONTROL Product Profiles]**. Op dit tabblad kunt u alle productprofielen weergeven en verschillende instellingen beheren zoals in dit document wordt beschreven.
 
 ![platformtoegangsbeheer](../images/platform-access-control.png)
 
