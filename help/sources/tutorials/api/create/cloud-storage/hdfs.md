@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
 title: Een Apache HDFS-bronverbinding maken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Apache Hadoop Distributed File System met de Flow Service API kunt verbinden.
+exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Apache] HDFS-bronverbinding maken met de [!DNL Flow Service]-API
 
