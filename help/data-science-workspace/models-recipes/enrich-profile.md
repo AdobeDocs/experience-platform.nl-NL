@@ -2,17 +2,17 @@
 keywords: Experience Platform;machine het leren model;De Werkruimte van de Wetenschap van Gegevens;In real time het Profiel van de Klant;populaire onderwerpen;machine het leren inzicht
 solution: Experience Platform
 title: Verrijk het Profiel van de Klant in real time met het Leren van de Machine Inzichten
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Dit document biedt een handleiding voor het verrijken van realtime klantprofiel met kennis van machinaal leren.
+exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] verrijken met kennis van machinaal leren
 
