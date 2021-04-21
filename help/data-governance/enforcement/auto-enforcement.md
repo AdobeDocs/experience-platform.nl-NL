@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;Automatische handhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
 title: Automatische beleidscontrole
-topic: guide
+topic-legacy: guide
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
+exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
-
 
 # Automatische beleidshandhaving
 
@@ -71,7 +71,7 @@ Wanneer beleidsschendingen voorkomen, verstrekken de resulterende berichten die 
 
 ## Beleidsovertredingsberichten {#enforcement}
 
-Als een beleidsschending voorkomt van het proberen om een segment (of [het aanbrengen van uitgeeft aan reeds geactiveerd segment](#policy-enforcement-for-activated-segments)) te activeren wordt de actie verhinderd en een popover lijkt erop wijzend dat één of meerdere beleid zijn overtreden. Nadat een schending is geactiveerd, wordt de knop **[!UICONTROL Opslaan]** uitgeschakeld voor de entiteit die u wijzigt, totdat de juiste componenten worden bijgewerkt om te voldoen aan het beleid voor gegevensgebruik.
+Als een beleidsschending voorkomt van het proberen om een segment (of [het aanbrengen van uitgeeft aan reeds geactiveerd segment](#policy-enforcement-for-activated-segments)) te activeren wordt de actie verhinderd en een popover lijkt erop wijzend dat één of meerdere beleid zijn overtreden. Nadat een schending is geactiveerd, wordt de knop **[!UICONTROL Save]** uitgeschakeld voor de entiteit die u wijzigt, totdat de juiste componenten worden bijgewerkt om te voldoen aan het beleid voor gegevensgebruik.
 
 Selecteer een beleidsovertreding in de linkerkolom van de pop-up om details voor die schending te tonen.
 
@@ -89,7 +89,7 @@ U kunt het **[!UICONTROL Filter]** pictogram (![](../images/enforcement/filter.p
 
 ![](../images/enforcement/lineage-filter.png)
 
-Selecteer **[!UICONTROL Lijstweergave]** om de gegevenskoppeling als een lijst weer te geven. Als u wilt terugschakelen naar de visuele grafiek, selecteert u **[!UICONTROL Padweergave]**.
+Selecteer **[!UICONTROL List view]** om de gegevenslijn als een lijst te tonen. Als u wilt terugschakelen naar de visuele grafiek, selecteert u **[!UICONTROL Path view]**.
 
 ![](../images/enforcement/list-view.png)
 
