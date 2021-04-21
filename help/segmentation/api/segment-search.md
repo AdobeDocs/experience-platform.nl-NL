@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;segmentatie;segmenteringsservice;problemen;API;seg;segment;Segment;zoek;segmentzoekopdracht; segmentzoekopdracht;
 title: Eindpunt van API voor segmentzoekopdracht
-topic: guide
+topic-legacy: guide
 description: In de API van de Dienst van de Segmentatie van Adobe Experience Platform, wordt het Onderzoek van het Segment gebruikt om gebieden te zoeken die zich over diverse gegevensbronnen bevinden en hen in bijna real time terug te keren. Deze gids verstrekt informatie om u te helpen het Onderzoek van het Segment beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
+exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 0%
 
 ---
-
 
 # Zoekeindpunt segment
 
