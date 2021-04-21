@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Real-time profiel van de Klant;De Dienst van de Identiteit;
 solution: Experience Platform
 title: Zelfstudies voor realtime klantprofiel
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In dit document worden de desbetreffende stappen beschreven en worden koppelingen weergegeven naar zelfstudies voor het voltooien van elke afzonderlijke workflow.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
-
 
 # Configureren [!DNL Real-time Customer Profile]
 
@@ -25,7 +25,7 @@ Als u meer wilt weten over [!DNL Real-time Customer Profile], leest u eerst het 
 Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren.
 
 **Deze handleiding helpt u:**
-- Lees de interface [!UICONTROL Profielen] en de beschikbare functies.
+- De interface [!UICONTROL Profiles] en de beschikbare functies begrijpen.
 - De profielgegevens weergeven en beheren.
 
 Voor meer informatie raadpleegt u de [Gebruikershandleiding voor realtime klantprofiel](../profile/ui/user-guide.md)
