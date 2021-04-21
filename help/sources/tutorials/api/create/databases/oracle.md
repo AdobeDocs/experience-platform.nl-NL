@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle;oracle
+keywords: Experience Platform;thuis;populaire onderwerpen;Oracle;oracle
 solution: Experience Platform
-title: Een Oracle Source Connection maken met de Flow Service API
-topic: overview
+title: Creeer een Verbinding van de Bron van het Oracle gebruikend de Dienst API van de Stroom
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Oracle met Experience Platform kunt verbinden met behulp van de Flow Service API.
+exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Oracle]-bronverbinding maken met de [!DNL Flow Service]-API
 
@@ -38,7 +38,7 @@ De volgende secties bevatten aanvullende informatie die u moet weten om een verb
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met [!DNL Oracle]. Het patroon van de [!DNL Oracle] verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Zie [dit Oracle-document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) voor meer informatie over aan de slag gaan.
+Zie [dit Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) voor meer informatie over aan de slag gaan.
 
 ### API-voorbeeldaanroepen lezen
 
