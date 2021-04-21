@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;tableau;Tableau;queryservice;Query-service;Verbinden met queryservice;
 solution: Experience Platform
 title: Connect Tableau naar Query Service
-topic: connect
+topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van Tableau met de Dienst van de Vraag van Adobe Experience Platform.
+exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Tableau] verbinden met de Dienst van de Vraag
 
@@ -25,7 +25,7 @@ Als u [!DNL Tableau] wilt verbinden met [!DNL Query Service], opent u [!DNL Tabl
 
 ![](../images/clients/tableau/open-connection.png)
 
-U kunt nu waarden invoeren om verbinding te maken met Adobe Experience Platform. Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Vragen]**, gevolgd door **[!UICONTROL Referenties]**.
+U kunt nu waarden invoeren om verbinding te maken met Adobe Experience Platform. Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
 Controleer of u het selectievakje **[!UICONTROL SSL Required]** hebt ingeschakeld voordat u probeert verbinding te maken.
 
