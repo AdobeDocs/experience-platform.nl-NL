@@ -2,16 +2,16 @@
 keywords: Experience Platform;analyse;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen
 solution: Experience Platform
 title: Analyse van werkruimte voor gegevenswetenschap
-topic: Walkthrough
+topic-legacy: Walkthrough
 description: Dit document biedt een analyse voor de Adobe Experience Platform Data Science Workspace. Specifiek de algemene werkstroom zou een gegevenswetenschapper een probleem oplossen gebruikend machine het leren.
+exl-id: d814846e-52a9-46c6-831a-3399241959f2
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Data Science Workspace] wandelpad
 
@@ -39,7 +39,7 @@ Dit overzicht weerspiegelt de stappen die een gegevenswetenschapper zou doorlope
 
 ### Laptops in [!DNL Data Science Workspace]
 
-Selecteer **[!UICONTROL Laptops]** in de gebruikersinterface van Adobe Experience Platform op het tabblad **[!UICONTROL Gegevenswetenschap]** om naar de overzichtspagina [!UICONTROL Laptops] te gaan. Selecteer op deze pagina het tabblad [!DNL JupyterLab] om de [!DNL JupyterLab]-omgeving te starten. De standaardlandingspagina voor [!DNL JupyterLab] is **[!UICONTROL Launcher]**.
+Selecteer **[!UICONTROL Notebooks]** in de gebruikersinterface van Adobe Experience Platform op het tabblad **[!UICONTROL Data Science]** om naar de overzichtspagina [!UICONTROL Notebooks] te gaan. Selecteer op deze pagina het tabblad [!DNL JupyterLab] om de [!DNL JupyterLab]-omgeving te starten. De standaardlandingspagina voor [!DNL JupyterLab] is **[!UICONTROL Launcher]**.
 
 ![](./images/walkthrough/notebooks.png)
 
