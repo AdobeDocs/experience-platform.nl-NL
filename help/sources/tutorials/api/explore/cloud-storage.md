@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslag;Cloudopslag
 solution: Experience Platform
 title: Een hardop opslagsysteem verkennen met de Flow Service API
-topic: overview
+topic-legacy: overview
 description: Deze zelfstudie gebruikt de Flow Service API om een extern cloudopslagsysteem te verkennen.
+exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 translation-type: tm+mt
-source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
-
 
 # Een systeem voor cloudopslag verkennen met de [!DNL Flow Service]-API
 
