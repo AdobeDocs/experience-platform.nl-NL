@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevenstoegang;python sdk;gegevenstoegang api;read python;write python
 solution: Experience Platform
 title: Toegang verkrijgen tot gegevens met Python in de werkruimte van de wetenschap van gegevens
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens in Python voor gebruik in de werkruimte voor wetenschap van gegevens.
+exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
 
 ---
-
 
 # Toegang verkrijgen tot gegevens met Python in de werkruimte voor wetenschap van gegevens
 
