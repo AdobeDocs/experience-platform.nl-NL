@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Overzicht van Privacy Service
-topic: overview
+topic-legacy: overview
 description: Met Privacy Service kunt u de automatische naleving van wettelijke privacyregels in uw gegevensbewerkingen met Experience Cloud vergemakkelijken.
+exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Privacy Service] - overzicht
 
@@ -82,7 +82,7 @@ Zodra u de privacybehoeften van uw bedrijf hebt bepaald en hebt besloten welke i
 >
 >De [!DNL Privacy Service] UI steunt momenteel slechts toegang en schrappingsverzoeken. Alle verzoeken om te weigeren moeten in plaats daarvan via de API worden gedaan.
 
-Met de interface [!DNL Privacy Service] kunt u met een grafische interface privacytaken maken en controleren. UI omvat een **[!UICONTROL Rapport van de Status]** widget die een visuele vertegenwoordiging van de status van alle actieve verzoeken verstrekt, en staat u toe om nieuwe verzoeken tot stand te brengen door ingebouwde **[!UICONTROL de Bouwer van het Verzoek te gebruiken]** of door JSON dossiers te uploaden. Voor meer informatie bij het gebruiken van UI, zie [Privacy Service gebruikersgids](ui/overview.md).
+Met de interface [!DNL Privacy Service] kunt u met een grafische interface privacytaken maken en controleren. UI omvat een **[!UICONTROL Status Report]** widget die een visuele vertegenwoordiging van de status van alle actieve verzoeken verstrekt, en staat u toe om nieuwe verzoeken tot stand te brengen door ingebouwde **[!UICONTROL Request Builder]** te gebruiken of door JSON dossiers te uploaden. Voor meer informatie bij het gebruiken van UI, zie [Privacy Service gebruikersgids](ui/overview.md).
 
 ### Privacytaken controleren {#monitor}
 
@@ -90,9 +90,9 @@ Nadat u een privacytaak hebt uitgevoerd, kunt u de status en de resultaten van d
 
 | Controlemethode | Beschrijving |
 | --- | --- |
-| [!DNL Privacy Service] UI | De interface [!DNL Privacy Service] verstrekt een controledashboard dat u toestaat om een visuele vertegenwoordiging van de status van alle actieve verzoeken te bekijken. Zie [Gebruikershandleiding voor Privacys Service](ui/overview.md) voor meer informatie. |
+| [!DNL Privacy Service] Gebruikersinterface | De interface [!DNL Privacy Service] verstrekt een controledashboard dat u toestaat om een visuele vertegenwoordiging van de status van alle actieve verzoeken te bekijken. Zie [Gebruikershandleiding voor Privacys Service](ui/overview.md) voor meer informatie. |
 | [!DNL Privacy Service] API | U kunt de status van de banen van de Privacy programmatically controleren door de raadplegingseindpunten te gebruiken die door [!DNL Privacy Service] API worden verstrekt. Zie de [Privacy Service-ontwikkelaarshandleiding](./api/getting-started.md) voor gedetailleerde stappen over het gebruik van de API. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] hefboomwerking Adobe I/O Gebeurtenissen die naar een gevormde webhaak worden verzonden om efficiënte baanverzoekautomatisering te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of of een bepaalde mijlpaal binnen een workflow is bereikt. Zie de zelfstudie over [het abonneren op de Gebeurtenissen van de Privacy](./privacy-events.md) voor meer informatie. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] hefboomwerking Adobe I/O Gebeurtenissen die naar een gevormde webhaak worden verzonden om efficiënte de automatisering van het baanverzoek te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of of een bepaalde mijlpaal binnen een workflow is bereikt. Zie de zelfstudie over [het abonneren op de Gebeurtenissen van de Privacy](./privacy-events.md) voor meer informatie. |
 
 ## Volgende stappen
 
