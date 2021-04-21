@@ -2,16 +2,16 @@
 keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;knoopverwijzing;
 solution: Experience Platform
 title: Real-time Machine Learning-laptops beheren
-topic: Training and scoring a ML model
+topic-legacy: Training and scoring a ML model
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te maken in Adobe Experience Platform JupyterLab.
+exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
-
 
 # Real-time Machine Learning-laptops beheren (Alpha)
 
@@ -19,15 +19,15 @@ ht-degree: 0%
 >
 >Het leren van de machine in real time is niet beschikbaar aan alle gebruikers nog. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
-In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te bouwen. Met behulp van de Adobe die **[!UICONTROL Real-time ML]** Python notebooksjabloon wordt aangeboden, behandelt deze handleiding het trainen van een model, het creëren van een DSL, het publiceren van DSL aan Rand, en het scoren van het verzoek. Aangezien u door het uitvoeren van uw het Leren model van de machine in real time vordert, wordt verwacht dat u het malplaatje wijzigt om de behoeften van uw dataset te passen.
+In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te bouwen. Met behulp van de Adobe die **[!UICONTROL Real-time ML]** Python-laptopsjabloon wordt aangeboden, behandelt deze handleiding het trainen van een model, het maken van een DSL, het publiceren van DSL naar Edge en het scoren van de aanvraag. Aangezien u door het uitvoeren van uw het Leren model van de machine in real time vordert, wordt verwacht dat u het malplaatje wijzigt om de behoeften van uw dataset te passen.
 
 ## Een laptop voor real-time leren van machines maken
 
-Selecteer **[!UICONTROL Laptops]** in de gebruikersinterface van Adobe Experience Platform vanuit **Gegevenswetenschap**. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat enige tijd over aan het laden van de omgeving.
+Selecteer **[!UICONTROL Notebooks]** in de gebruikersinterface van Adobe Experience Platform vanuit **Gegevenswetenschap**. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat enige tijd over aan het laden van de omgeving.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-De [!DNL JupyterLab]-startprogramma wordt weergegeven. Blader omlaag naar *Real-Time Machine Learning* en selecteer de **[!UICONTROL Real-time ML]**-laptop. Er wordt een sjabloon geopend met voorbeeldlaptopcellen met een voorbeeldgegevensset.
+De [!DNL JupyterLab]-startprogramma wordt weergegeven. Schuif omlaag naar *Real-Time Machine Learning* en selecteer de **[!UICONTROL Real-time ML]**-laptop. Er wordt een sjabloon geopend met voorbeeldlaptopcellen met een voorbeeldgegevensset.
 
 ![blanco python](../images/rtml/authoring-notebook.png)
 
@@ -92,7 +92,7 @@ Als u een gegevensset wilt gebruiken vanuit Adobe Experience Platform, verwijder
 
 ![rtml-gegevensset](../images/rtml/rtml-dataset.png)
 
-Als u toegang wilt krijgen tot een gegevensset in uw [!DNL JupyterLab]-laptop, selecteert u het tabblad **Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De directory **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Gegevens in Notitieboekje]** optie van het drop-down menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft uw `dataset_id`.
+Als u toegang wilt krijgen tot een gegevensset in uw [!DNL JupyterLab]-laptop, selecteert u het tabblad **Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Explore Data in Notebook]** optie van het dropdown menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft uw `dataset_id`.
 
 ![toegang tot gegevensset](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### Uw model voorbereiden
 
-Gebruikend **[!UICONTROL Real-time ML]** malplaatje, moet u uw model van ML analyseren, vooraf verwerken, trainen, en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
+Met de sjabloon **[!UICONTROL Real-time ML]** moet u uw XML-model analyseren, vooraf verwerken, trainen en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
 
 **Gegevenstransformaties**
 
-De **[!UICONTROL In real time ML]** malplaatjes **De cel van de Transformaties van Gegevens** moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
+De **[!UICONTROL Real-time ML]** malplaatjes **De cel van de Transformaties van Gegevens** moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ U bent teruggekeerd bijgewerkte DSL.
 
 ## Scores {#scoring}
 
-Na publicatie naar [!DNL Edge] wordt het scoren uitgevoerd door een POST-aanvraag van een client. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het **[!UICONTROL Real-time ML]** malplaatje gebruikt EdgeUtils om dit proces aan te tonen.
+Na publicatie naar [!DNL Edge] wordt het scoren uitgevoerd door een POST-aanvraag van een client. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. De sjabloon **[!UICONTROL Real-time ML]** gebruikt EdgeUtils om dit proces aan te tonen.
 
 >[!NOTE]
 >
