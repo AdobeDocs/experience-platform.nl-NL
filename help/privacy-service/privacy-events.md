@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Abonneren op Privacy Service Events
-topic: privacy events
+topic-legacy: privacy events
 description: Leer hoe te om aan de gebeurtenissen van de Privacy Service in te schrijven gebruikend een vooraf gevormde webhaak.
+exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 translation-type: tm+mt
-source-git-commit: 2b919a3b6cbbd59521874cfd2d11e20de3077740
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '432'
 ht-degree: 1%
 
 ---
 
-
 # Abonneren op [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] Dit zijn berichten van Adobe Experience Platform  [!DNL Privacy Service], die Adobe I/O Events gebruiken die naar een geconfigureerde webhaak worden verzonden om efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of of een bepaalde mijlpaal binnen een workflow is bereikt.
+[!DNL Privacy Service Events] Dit zijn berichten van Adobe Experience Platform  [!DNL Privacy Service], die gebruikmaakt van Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of of een bepaalde mijlpaal binnen een workflow is bereikt.
 
 Er zijn momenteel vier typen meldingen die betrekking hebben op de levenscyclus van de privacytaakaanvraag:
 
@@ -39,11 +39,11 @@ Raadpleeg de volgende documentatie bij de Privacy Service voordat u deze zelfstu
 
 Als u [!DNL Privacy Service Events] wilt ontvangen, moet u de Adobe Developer Console gebruiken om een webhaak te registreren voor uw [!DNL Privacy Service]-integratie.
 
-Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Gebeurtenissen van de Privacy Service]** als uw gebeurtenisleverancier kiest om tot de hierboven vermelde gebeurtenissen toegang te hebben.
+Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Privacy Service Events]** kiest als uw gebeurtenisprovider om toegang te krijgen tot de hierboven vermelde gebeurtenissen.
 
 ## [!DNL Privacy Service Event] meldingen ontvangen
 
-Nadat u de webhaak en privacytaken hebt geregistreerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend de webhaak zelf, of door **[!UICONTROL Debug het Vinden]** lusje in het de gebeurtenisregistratieoverzicht van uw project in de Console van de Ontwikkelaar van Adobe te selecteren.
+Nadat u de webhaak en privacytaken hebt geregistreerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend webhaak zelf, of door het **[!UICONTROL Debug Tracing]** lusje in het overzicht van de gebeurtenisregistratie van uw project in de Console van de Ontwikkelaar van de Adobe te selecteren.
 
 ![](images/privacy-events/debug-tracing.png)
 
