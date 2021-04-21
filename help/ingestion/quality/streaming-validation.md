@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;streaming;streaming opname;streaming opname validatie;validatie;streaming opname validatie;validate;synchrone validatie;synchrone validatie;asynchrone validatie;asynchrone validatie;asynchrone validatie;
 solution: Experience Platform
 title: Validatie voor streaming-inname
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 'Met streaming opname kunt u uw gegevens in real-time uploaden naar Adobe Experience Platform met streaming eindpunten. API''s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.'
+exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 2%
 
 ---
-
 
 # Validatie van gestreamde invoer
 
