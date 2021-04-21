@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;catalogus;gegevensbescherming;encryptiegegevens meer
 solution: Experience Platform
 title: Gegevensbeveiliging in Adobe Experience Platform
-topic: data protection
+topic-legacy: data protection
 description: Alle gegevens die in het meer van Gegevens worden voortgeduurd worden gecodeerd, opgeslagen, en beheerd in een geïsoleerde rekening van de Opslag van de Gegevens van Microsoft Azure die voor uw organisatie uniek is. Het volgende stroomdiagram van het proces illustreert hoe het gegeven wordt opgenomen, verwerkt, gecodeerd en door Experience Platform voortgeduurd.
+exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
-
 
 # Gegevensbescherming in Adobe Experience Platform
 
