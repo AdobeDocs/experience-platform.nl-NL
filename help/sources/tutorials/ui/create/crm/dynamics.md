@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics;dynamics
 solution: Experience Platform
 title: Creeer een Verbinding van de Bron van de Dynamica van Microsoft in UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Microsoft Dynamics-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '558'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Microsoft Dynamics]-bronverbinding maken in de gebruikersinterface
 
@@ -45,27 +45,27 @@ Raadpleeg [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/power
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Dynamics]-account te koppelen aan het Platform.
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Bronnen] te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Sources] te openen. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL Microsoft Dynamics]** onder de categorie **[!UICONTROL CRM]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Dynamics] schakelaar tot stand te brengen.
+Selecteer **[!UICONTROL Microsoft Dynamics]** onder de categorie **[!UICONTROL CRM]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders, selecteer **[!UICONTROL Add data]** om een nieuwe [!DNL Dynamics] schakelaar tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met dynamiek]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Dynamics]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef op het invoerformulier dat wordt weergegeven een naam en een optionele beschrijving voor uw nieuwe [!DNL Dynamics]-account.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam en een optionele beschrijving voor uw nieuwe [!DNL Dynamics]-account.
 
-De [!DNL Dynamics] schakelaar verstrekt u verschillende authentificatietypen voor toegang. Selecteer **[!UICONTROL Standaardverificatie]** onder [!UICONTROL Accountverificatie] om op een wachtwoord gebaseerde referenties te gebruiken.
+De [!DNL Dynamics] schakelaar verstrekt u verschillende authentificatietypen voor toegang. Selecteer [!UICONTROL Account authentication] onder **[!UICONTROL Basic authentication]** om op wachtwoord gebaseerde referenties te gebruiken.
 
-Als u klaar bent, selecteert u **[!UICONTROL Verbinding maken met bron]** en laat u vervolgens enige tijd over aan de nieuwe account.
+Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe account enige tijd over om op te richten.
 
 ![basisverificatie](../../../../images/tutorials/create/ms-dynamics/basic-auth.png)
 
-U kunt ook **[!UICONTROL Service-principal en key authentication]** selecteren en uw [!DNL Dynamics]-account aansluiten met een combinatie van [!UICONTROL Service principal ID] en [!UICONTROL Service principal key].
+U kunt ook **[!UICONTROL Service-principal and key authentication]** selecteren en uw [!DNL Dynamics]-account aansluiten met een combinatie van [!UICONTROL Service principal ID] en [!UICONTROL Service principal key].
 
 >[!IMPORTANT]
 >
@@ -76,11 +76,11 @@ U kunt ook **[!UICONTROL Service-principal en key authentication]** selecteren e
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | [!UICONTROL Service principal ID] | De client-id van uw [!DNL Dynamics]-account. Deze ID wordt vereist wanneer het gebruiken van de dienst hoofd en op sleutel-gebaseerde authentificatie. |
-| [!UICONTROL Sleutelsleutel service] | De geheime sleutel van de dienst belangrijkste geheim. Deze referentie wordt vereist wanneer het gebruiken van de dienst belangrijkste en op sleutel-gebaseerde authentificatie. |
+| [!UICONTROL Service principal key] | De geheime sleutel van de dienst belangrijkste geheim. Deze referentie wordt vereist wanneer het gebruiken van de dienst belangrijkste en op sleutel-gebaseerde authentificatie. |
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL Dynamics]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de [!DNL Dynamics]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** in de rechterbovenhoek om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/ms-dynamics/existing.png)
 
