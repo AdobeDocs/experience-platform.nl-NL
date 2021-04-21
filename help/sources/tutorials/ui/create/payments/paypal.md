@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;paypal;Paypal
 solution: Experience Platform
 title: Een PayPal-bronverbinding maken in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een PayPal-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '450'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL PayPal]-bronverbinding maken in de gebruikersinterface
 
@@ -49,25 +49,25 @@ Raadpleeg dit [[!DNL PayPal] document](https://developer.paypal.com/docs/api/ove
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PayPal]-account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Sources]** te openen. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL PayPal]** onder de categorie **[!UICONTROL Payments]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL PayPal] schakelaar tot stand te brengen.
+Selecteer **[!UICONTROL PayPal]** onder de categorie **[!UICONTROL Payments]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders, selecteer **[!UICONTROL Add data]** om een nieuwe [!DNL PayPal] schakelaar tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/paypal/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met PayPal]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to PayPal]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL PayPal]-referenties op. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL PayPal]-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![verbinden](../../../../images/tutorials/create/paypal/connect.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL PayPal]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de [!DNL PayPal]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/paypal/existing.png)
 
