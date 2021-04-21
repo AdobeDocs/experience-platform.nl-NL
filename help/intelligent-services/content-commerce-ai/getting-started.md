@@ -2,16 +2,16 @@
 keywords: Experience Platform;aan de slag;content ai;commerce ai;content en commerce ai
 solution: Experience Platform, Intelligent Services
 title: Aan de slag met AI voor Inhoud en Handel
-topic: Getting started 
-description: In de AI voor Inhoud en Handel worden Adobe I/O API's gebruikt. Als u aanroepen wilt uitvoeren naar Adobe I/O API's en de I/O Console-integratie, moet u eerst de zelfstudie voor verificatie voltooien.
+topic-legacy: Getting started
+description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. Om vraag aan Adobe I/O APIs en de I/O Integratie van de Console te maken, moet u het authentificatieleerprogramma eerst voltooien.
+exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met Content and Commerce AI
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 >AI van de Inhoud en van de Handel is in bèta. De documentatie kan worden gewijzigd.
 
-[!DNL Content and Commerce AI] gebruikt Adobe I/O API&#39;s. Als u aanroepen wilt uitvoeren naar Adobe I/O API&#39;s en de I/O Console-integratie, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien.
+[!DNL Content and Commerce AI] gebruikt Adobe I/O API&#39;s. Om vraag aan Adobe I/O APIs en de I/O Console Integratie te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien.
 
 Wanneer u echter de stap **API toevoegen** doorloopt, bevindt de API zich onder Experience Cloud in plaats van Adobe Experience Platform, zoals in de volgende schermafbeelding wordt getoond:
 
 ![AI voor inhoud en handel toevoegen](./images/add-api.png)
 
-Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Adobe I/O API-aanroepen, zoals hieronder wordt getoond:
+Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk van de vereiste kopballen in alle Adobe I/O API vraag, zoals hieronder getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -33,7 +33,7 @@ Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van 
 
 ## Een postmanomgeving maken (optioneel)
 
-Nadat u uw project en API hebt ingesteld in de Adobe Developer Console, kunt u een omgevingsbestand voor Postman downloaden. Onder **[!UICONTROL APIs]** de linkerspoor van uw project, selecteer **[!UICONTROL Inhoud en Handel AI]**. Er wordt een nieuw tabblad geopend met een kaart met het label &quot;[!DNL Try it out]&quot;. Selecteer **Download voor Postman** om een JSON-bestand te downloaden dat wordt gebruikt om uw postmanomgeving te configureren.
+Nadat u uw project en API hebt ingesteld in de Adobe Developer Console, kunt u een omgevingsbestand voor Postman downloaden. Selecteer **[!UICONTROL Content and Commerce AI]** onder **[!UICONTROL APIs]** de linkerrail van uw project. Er wordt een nieuw tabblad geopend met een kaart met het label &quot;[!DNL Try it out]&quot;. Selecteer **Download voor Postman** om een JSON-bestand te downloaden dat wordt gebruikt om uw postmanomgeving te configureren.
 
 ![download voor postbode](./images/add-to-postman.png)
 
@@ -63,7 +63,7 @@ U kunt nu de omgeving selecteren in het vervolgkeuzemenu rechtsboven in het sche
 
 ![voorbeeld](./images/select-environment.png)
 
-Zie het artikel Medium op [Using Postman for JWT authentication on Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) voor meer informatie over het werken met Adobe I/O API&#39;s met Postman.
+Voor meer informatie over het werken met Adobe I/O APIs die Postman gebruiken, zie de Middelgrote post op [gebruikend Postman voor authentificatie JWT op Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## API-voorbeeldaanroepen lezen
 
