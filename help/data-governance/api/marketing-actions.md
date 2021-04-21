@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;marketingacties api;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
 title: API-eindpunt voor marketinghandelingen
-topic: developer guide
+topic-legacy: developer guide
 description: Een marketingactie, in het kader van de Adobe Experience Platform Data Governance, is een actie die een consument van gegevens uit een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
+exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 0%
 
 ---
-
 
 # Eindpunt marketingacties
 
