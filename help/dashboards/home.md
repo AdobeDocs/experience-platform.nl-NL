@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
 title: Inleiding tot Experience Platform-dashboards
-topic: overview
+topic-legacy: overview
 type: Documentation
-description: 'Ontdek meerdere dashboards in Adobe Experience Platform om belangrijke informatie over de gegevens van uw organisatie te bekijken, zoals die tijdens dagelijkse momentopnamen worden vastgelegd. '
+description: Ontdek meerdere dashboards in Adobe Experience Platform om belangrijke informatie over de gegevens van uw organisatie te bekijken, zoals die tijdens dagelijkse momentopnamen worden vastgelegd.
+exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 translation-type: tm+mt
-source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) Overzicht van dashboards {#dashboards}
 
@@ -27,7 +27,7 @@ De dashboards verstrekken out-of-the-box rapportering over de gegevens van uw or
 
 ## Aan de slag met dashboards
 
-Als u dashboards wilt openen, navigeert u naar de juiste sectie in de gebruikersinterface van het Platform (UI). Selecteer eenmaal in de sectie de tab **[!UICONTROL Overzicht]** als deze niet automatisch is geselecteerd om het dashboard weer te geven.
+Als u dashboards wilt openen, navigeert u naar de juiste sectie in de gebruikersinterface van het Platform (UI). Selecteer eenmaal in de sectie de tab **[!UICONTROL Overview]** als deze niet automatisch is geselecteerd om het dashboard weer te geven.
 
 De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en de dashboards worden niet in real time bijgewerkt.
 
