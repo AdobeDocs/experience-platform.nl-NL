@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;enum;primaire identiteit;primaire identiteit;XDM individueel profiel;ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;schema ontwerp;best practices
 solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
-topic: overview
+topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
+exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2502'
 ht-degree: 1%
 
 ---
-
 
 # Aanbevolen procedures voor gegevensmodellering
 
@@ -202,7 +202,7 @@ Experience Platform verstrekt verscheidene uit-van-de-doos mengsels XDM voor het
 * Adobe Campaign
 * Adobe Target
 
-Met de [[!UICONTROL Adobe Analytics ExperienceEvent-sjabloonmixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) kunt u [!DNL Analytics]-specifieke velden bijvoorbeeld toewijzen aan uw XDM-schema&#39;s. Afhankelijk van de toepassingen van de Adobe u met werkt, zou u deze Adobe-Geleverde mengen in uw schema&#39;s moeten gebruiken.
+Met de [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) kunt u bijvoorbeeld [!DNL Analytics]-specifieke velden toewijzen aan uw XDM-schema&#39;s. Afhankelijk van de toepassingen van de Adobe u met werkt, zou u deze Adobe-Geleverde mengen in uw schema&#39;s moeten gebruiken.
 
 <img src="../images/best-practices/analytics-mixin.png" width="700"><br>
 
