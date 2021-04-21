@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;ETL;etl;etl workflow;ETL-workflow
 solution: Experience Platform
 title: ETL-workflow
-topic: overview
+topic-legacy: overview
 description: Verschillende extractie-, transformatie- en laadprogramma's (ETL) verschillen mogelijk in indeling, maar de meeste van deze gereedschappen bieden vergelijkbare functionaliteit als hulpmiddel bij het combineren van meerdere gegevensbronnen.
+exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
 
 ---
-
 
 # ETL-workflow
 
