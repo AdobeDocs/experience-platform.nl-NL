@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;ETL;etl;etl integraties;ETL-integratie
 solution: Experience Platform
 title: Ontwikkeling van ETL-integratie voor Adobe Experience Platform
-topic: overview
+topic-legacy: overview
 description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
+exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '4143'
 ht-degree: 0%
 
 ---
-
 
 # Ontwikkeling van ETL-integratie voor Adobe Experience Platform
 
@@ -132,7 +132,7 @@ Raadpleeg het [Overzicht van de catalogusservice](../catalog/home.md) voor gedet
 
 **Antwoord**
 
-De reactie omvat drie (`limit=3`) datasets die de &quot;naam&quot;, &quot;beschrijving&quot;, en &quot;schemaRef&quot;zoals die door `properties` vraagparameter wordt vermeld tonen.
+De reactie omvat drie (`limit=3`) datasets die de &quot;naam&quot;, &quot;beschrijving&quot;, en &quot;schemaRef&quot;zoals die door de `properties` vraagparameter wordt vermeld tonen.
 
 ```json
 {
@@ -264,7 +264,7 @@ Gelijkaardig aan de stappen voor [het bekijken van datasetschema](#view-dataset-
 
 De eigenschap &quot;observableSchema&quot; van een dataset heeft een JSON-structuur die overeenkomt met die van het XDM-schema JSON. Het &quot;observableSchema&quot; bevat de velden die aanwezig waren in de binnenkomende invoerbestanden. Wanneer het schrijven van gegevens aan [!DNL Experience Platform], wordt een gebruiker vereist niet om elk gebied van het doelschema te gebruiken. In plaats daarvan moeten ze alleen die velden leveren die worden gebruikt.
 
-Het waarneembare schema is het schema dat u zou gebruiken als u de gegevens leest of een lijst presenteert met velden die beschikbaar zijn om van te lezen/in kaart te brengen.
+Het waarneembare schema is het schema dat u zou gebruiken als u de gegevens leest of een lijst van gebieden presenteert die beschikbaar zijn om van te lezen/in kaart te brengen.
 
 ```json
 {
@@ -637,7 +637,7 @@ Als dit lukt, retourneert de reactie HTTP Status 200 OK en is de hoofdtekst van 
 
 Het ETL-hulpmiddel zorgt ervoor dat de tijdstempel van de brongegevensset(s) wordt genoteerd wanneer de gegevens worden gelezen.
 
-Bij de volgende transformatie-uitvoering, waarschijnlijk door planning of aanroeping van de gebeurtenis, zal ETL beginnen om de gegevens van eerder-bewaarde timestamp en alle gegevens te vragen die voorwaarts gaan.
+Bij de volgende transformatie-uitvoering, waarschijnlijk door planning of aanroeping van de gebeurtenis, zal ETL beginnen om de gegevens van eerder-bewaarde timestamp en alle gegevens te vragen die door:gaan.
 
 ### Laatste batchstatus ophalen
 
