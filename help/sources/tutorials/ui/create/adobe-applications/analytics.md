@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Bronaansluiting voor analyse;Analytische aansluiting;Analytische bron;Analytics
 solution: Experience Platform
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
+exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
-
 
 # Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 
@@ -28,17 +28,17 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## Een bronverbinding maken met Adobe Analytics
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte Bronnen te openen. Het **scherm Catalog** toont beschikbare bronnen om binnenkomende verbindingen met tot stand te brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte Bronnen te openen. Het **scherm Catalog** toont beschikbare bronnen om binnenkomende verbindingen met tot stand te brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer onder de categorie **[!UICONTROL Adobe toepassingen]** **[!UICONTROL Adobe Analytics]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **[!UICONTROL Accounts]** om bestaande accounts weer te geven.
+Selecteer onder de categorie **[!UICONTROL Adobe applications]** **[!UICONTROL Adobe Analytics]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **[!UICONTROL Accounts]** om bestaande accounts weer te geven.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Gegevens selecteren
 
-De stap **[!UICONTROL Adobe Analytics]** wordt weergegeven. Eerder ingestelde gegevenssetstromen voor Analytics worden vermeld op dit scherm. U kunt een nieuwe datasetstroom tot stand brengen door **[!UICONTROL Selecteer gegevens]** te klikken.
+De stap **[!UICONTROL Adobe Analytics]** wordt weergegeven. Eerder ingestelde gegevenssetstromen voor Analytics worden vermeld op dit scherm. U kunt een nieuwe datasetstroom tot stand brengen door **[!UICONTROL Select data]** te klikken.
 
 >[!NOTE]
 >
@@ -48,13 +48,13 @@ De stap **[!UICONTROL Adobe Analytics]** wordt weergegeven. Eerder ingestelde ge
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-Van de lijst van beschikbare rapportreeksen, selecteer één u in Platform wilt brengen en **[!UICONTROL daarna]** klikken.
+Van de lijst van beschikbare rapportreeksen, selecteer één u in Platform wilt brengen en **[!UICONTROL Next]** klikken.
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
 ### Geef de gegevenssetstroom een naam
 
-De **[!UICONTROL Dataset flow detail]** stap verschijnt, waar u een naam en een facultatieve beschrijving voor de datasetstroom moet verstrekken. Selecteer **[!UICONTROL Volgende]** als u klaar bent.
+De stap **[!UICONTROL Dataset flow detail]** verschijnt, waar u een naam en een facultatieve beschrijving voor de datasetstroom moet verstrekken. Selecteer **[!UICONTROL Next]** wanneer gebeëindigd.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
@@ -62,14 +62,14 @@ De **[!UICONTROL Dataset flow detail]** stap verschijnt, waar u een naam en een 
 
 De stap **[!UICONTROL Review]** verschijnt, toestaand u om uw nieuwe Analytics in-gebonden datasetstroom te herzien alvorens het wordt gecreeerd. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
 
-* **[!UICONTROL Verbinding]**: Toont het type van de bronverbinding en de geselecteerde rapportreeks.
-* **[!UICONTROL Gegevensset- en kaartvelden]** toewijzen: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Het outputschema en de dataset worden automatisch gevormd voor de gegevenssetstromen van Analytics.
+* **[!UICONTROL Connection]**: Toont het type van de bronverbinding en de geselecteerde rapportreeks.
+* **[!UICONTROL Assign dataset & map fields]**: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Het outputschema en de dataset worden automatisch gevormd voor de gegevenssetstromen van Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### De gegevenssetstroom controleren
 
-Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Selecteer **[!UICONTROL Gegevensstromen]** in het scherm **[!UICONTROL Catalogus]** om een lijst weer te geven met bestaande stromen die zijn gekoppeld aan uw account Analytics.
+Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Selecteer **[!UICONTROL Catalog]** in het scherm **[!UICONTROL Dataset flows]** om een lijst weer te geven met bestaande stromen die zijn gekoppeld aan uw account Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
@@ -113,4 +113,3 @@ De volgende video is bedoeld ter ondersteuning van uw inzicht in het opnemen van
 > De interface [!DNL Platform] die in de volgende video wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
-
