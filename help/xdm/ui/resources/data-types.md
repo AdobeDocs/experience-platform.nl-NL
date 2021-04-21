@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;ui;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schemaregister;Schema;Schema;schema's;Schema's;Schema's;creëren;gegevenstype;gegevenstypen;
 solution: Experience Platform
 title: Gegevenstypen maken en bewerken met de gebruikersinterface
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
+exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
-
 
 # Gegevenstypen maken en bewerken met de gebruikersinterface
 
@@ -30,7 +30,7 @@ Hoewel niet vereist voor deze gids, wordt het geadviseerd dat u het leerprogramm
 
 ## [!DNL Schema Editor] openen voor een gegevenstype
 
-Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie om de [!UICONTROL Schema&#39;s] werkruimte te openen en selecteer vervolgens het tabblad **[!UICONTROL Gegevenstypen]**. Een lijst van beschikbare gegevenstypes wordt getoond, met inbegrip van die door Adobe worden bepaald evenals die die door uw organisatie worden gecreeerd.
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform om de werkruimte [!UICONTROL Schemas] te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]**. Een lijst van beschikbare gegevenstypes wordt getoond, met inbegrip van die door Adobe worden bepaald evenals die die door uw organisatie worden gecreeerd.
 
 ![](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -41,7 +41,7 @@ Hier hebt u twee opties:
 
 ### Een nieuw gegevenstype maken {#create}
 
-Selecteer op het tabblad **[!UICONTROL Gegevenstypen]** **[!UICONTROL Gegevenstype]** maken.
+Selecteer **[!UICONTROL Create data type]** op het tabblad **[!UICONTROL Data types]**.
 
 ![](../../images/ui/resources/data-types/create.png)
 
@@ -55,7 +55,7 @@ Van hier, kunt u vooruit naar [volgende sectie ](#add-fields) overslaan om gebie
 
 ### Een bestaand gegevenstype bewerken
 
-Alleen aangepaste gegevenstypen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Als u de weergegeven lijst wilt verkleinen, selecteert u het filterpictogram (![Filter Pictogram](../../images/ui/resources/data-types/filter.png)) om besturingselementen voor filtering weer te geven op basis van [!UICONTROL Eigenaar]. Selecteer **[!UICONTROL Klant]** om alleen aangepaste gegevenstypen weer te geven die eigendom zijn van uw organisatie.
+Alleen aangepaste gegevenstypen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Als u de weergegeven lijst wilt verkleinen, selecteert u het filterpictogram (![Filter Pictogram](../../images/ui/resources/data-types/filter.png)) om besturingselementen voor filtering weer te geven op basis van [!UICONTROL Owner]. Selecteer **[!UICONTROL Customer]** om alleen aangepaste gegevenstypen weer te geven die eigendom zijn van uw organisatie.
 
 Selecteer in de lijst het gegevenstype dat u wilt bewerken om de rechtertrack te openen, met daarin de details van het gegevenstype. Selecteer de naam van het gegevenstype in de rechterrail om de structuur ervan te openen in [!DNL Schema Editor].
 
@@ -69,7 +69,7 @@ Als u velden wilt toevoegen aan het gegevenstype, selecteert u het pictogram **p
 
 Gebruik de besturingselementen in het rechterspoor om de details van het nieuwe veld te configureren. Zie de gids op [het bepalen van gebieden in UI](../fields/overview.md#define) voor specifieke stappen op om het gebied aan het gegevenstype te vormen en toe te voegen.
 
-Het gegevenstype Restaurant vereist een tekenreeksveld voor de naam van het restaurant. Als zodanig wordt de [!UICONTROL veldnaam] ingesteld als &quot;naam&quot; en wordt [!UICONTROL Type] ingesteld als &quot;[!UICONTROL String]&quot;. Selecteer **[!UICONTROL Toepassen]** om de wijzigingen toe te passen op het veld.
+Het gegevenstype Restaurant vereist een tekenreeksveld voor de naam van het restaurant. Als zodanig wordt [!UICONTROL Field name] ingesteld als &quot;name&quot; en [!UICONTROL Type] als &quot;[!UICONTROL String]&quot;. Selecteer **[!UICONTROL Apply]** om de wijzigingen op het veld toe te passen.
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
@@ -77,25 +77,25 @@ Voeg desgewenst meer velden aan het gegevenstype toe. Het gegevenstype Restauran
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
-Naast basisvelden kunt u ook andere gegevenstypen nesten binnen het aangepaste gegevenstype. Het gegevenstype Restaurant vereist bijvoorbeeld een veld dat het fysieke adres van de eigenschap vertegenwoordigt. In dit scenario, kunt u een nieuw &quot;adres&quot;gebied toevoegen dat het standaardgegevenstype &quot;[!UICONTROL Postal adres]&quot;wordt toegewezen.
+Naast basisvelden kunt u ook andere gegevenstypen nesten binnen het aangepaste gegevenstype. Het gegevenstype Restaurant vereist bijvoorbeeld een veld dat het fysieke adres van de eigenschap vertegenwoordigt. In dit scenario, kunt u een nieuw &quot;adres&quot;gebied toevoegen dat het standaardgegevenstype &quot;[!UICONTROL Postal address]&quot;wordt toegewezen.
 
 ![](../../images/ui/resources/data-types/address-field.png)
 
 Dit toont aan hoe de flexibele gegevenstypes in termen van het beschrijven van uw gegevens kunnen zijn: gegevenstypen kunnen velden gebruiken die ook gegevenstypen zijn, die zelf verdere gegevenstypen kunnen bevatten, enzovoort. Dit staat u toe om gemeenschappelijke gegevenspatronen door uw schema&#39;s te abstract en opnieuw te gebruiken XDM, die het gemakkelijker maken om complexe gegevensstructuren te vertegenwoordigen.
 
-Als u klaar bent met het toevoegen van velden aan het gegevenstype, selecteert u **[!UICONTROL Opslaan]** om de wijzigingen op te slaan en het gegevenstype toe te voegen aan [!DNL Schema Library].
+Als u klaar bent met het toevoegen van velden aan het gegevenstype, selecteert u **[!UICONTROL Save]** om uw wijzigingen op te slaan en het gegevenstype toe te voegen aan [!DNL Schema Library].
 
 ## Het gegevenstype toevoegen aan een klasse of mix
 
 Nadat u een gegevenstype hebt gemaakt, kunt u het in uw schema&#39;s gebruiken. Aangezien XDM-schema&#39;s bestaan uit een klasse en nul of meer combinaties, kunnen velden die door een gegevenstype worden verschaft, niet rechtstreeks aan een schema worden toegevoegd. In plaats daarvan moeten ze in een klasse of een mix worden opgenomen.
 
-Begin door de stappen te volgen betrokken met [toevoegend een gebied aan een klasse ](./classes.md#add-fields) of [toevoegend een gebied aan een mixin](./mixins.md#add-fields). Wanneer u **[!UICONTROL Type]** voor het nieuwe gebied kiest, selecteer de naam van uw gegevenstype van het dropdown menu.
+Begin door de stappen te volgen betrokken met [toevoegend een gebied aan een klasse ](./classes.md#add-fields) of [toevoegend een gebied aan een mixin](./mixins.md#add-fields). Wanneer u **[!UICONTROL Type]** voor het nieuwe gebied kiest, selecteer de naam van uw gegevenstype van dropdown menu.
 
 ## Een object met meerdere velden omzetten in een gegevenstype {#convert}
 
 Wanneer u een object-type gebied met veelvoudige subgebieden in [!DNL Schema Editor] creeert, kunt u dat gebied in een gegevenstype omzetten zodat kunt u die zelfde gebiedsstructuur in een verschillende klasse gebruiken of mengen.
 
-Als u een objecttypeveld wilt omzetten in een gegevenstype, selecteert u het veld op het canvas. Voordat u het veld converteert, moet u ervoor zorgen dat de **[!UICONTROL Weergavenaam]** een beschrijving bevat van de gegevens die het object bevat, aangezien dit de naam van het gegevenstype wordt. Wanneer u klaar bent om het gebied om te zetten, uitgezochte **[!UICONTROL Omzetten in nieuw gegevenstype]** in het juiste spoor.
+Als u een objecttypeveld wilt omzetten in een gegevenstype, selecteert u het veld op het canvas. Voordat u het veld converteert, moet u ervoor zorgen dat **[!UICONTROL Display name]** een beschrijving bevat van de gegevens die het object bevat, aangezien dit de naam van het gegevenstype wordt. Wanneer u klaar bent om het veld om te zetten, selecteert u **[!UICONTROL Convert to new data type]** in de rechterrails.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
