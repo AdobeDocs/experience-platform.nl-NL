@@ -2,16 +2,16 @@
 keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;Het Leren van de machine in real time;knoopverwijzing;
 solution: Experience Platform
 title: Naslaggids voor het leren van machines in realtime
-topic: Nodes reference
+topic-legacy: Nodes reference
 description: Een knooppunt is de fundamentele eenheid waarvan grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
+exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
 
 ---
-
 
 # Real-time Machine Learning node reference (Alpha)
 
