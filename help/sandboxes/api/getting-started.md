@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;sandbox-ontwikkelaarsgids
 solution: Experience Platform
 title: API-handleiding voor sandbox
-topic: developer guide
+topic-legacy: developer guide
 description: Met de sandbox-API kunnen ontwikkelaars sandboxen in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
 
 ---
-
 
 # Handleiding voor sandbox-API
 
