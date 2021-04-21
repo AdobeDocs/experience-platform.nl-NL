@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevenstoegang;spark sdk;gegevenstoegang api;spark recept;read spark;write spark
 solution: Experience Platform
 title: Toegang tot gegevens die Vonk in de Werkruimte van de Wetenschap van Gegevens gebruiken
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens.
+exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
 
 ---
-
 
 # Toegang tot gegevens die Vonk in de Werkruimte van de Wetenschap van Gegevens gebruiken
 
