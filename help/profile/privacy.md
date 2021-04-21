@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Privacy-aanvraagverwerking in realtime-klantprofiel
-topic: overview
+topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-time Klantprofiel.
+exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
-
 
 # De verzoekverwerking van de privacy in [!DNL Real-time Customer Profile]
 
@@ -42,7 +42,7 @@ In de onderstaande secties wordt beschreven hoe u met de API of UI van [!DNL Pri
 
 >[!IMPORTANT]
 >
->Privacy Service kan alleen [!DNL Profile] gegevens verwerken met behulp van een samenvoegbeleid dat geen identiteitsstitching uitvoert. Als u UI gebruikt om te bevestigen of uw privacyverzoeken worden verwerkt, zorg ervoor dat u een beleid met &quot;[!DNL None]&quot;als zijn [!UICONTROL ID stitching] type gebruikt. Met andere woorden, u kunt geen samenvoegbeleid gebruiken waarbij [!UICONTROL ID stitching] aan &quot;[!UICONTROL Private graph]&quot;wordt geplaatst.
+>Privacy Service kan alleen [!DNL Profile] gegevens verwerken met behulp van een samenvoegbeleid dat geen identiteitsstitching uitvoert. Als u UI gebruikt om te bevestigen of uw privacyverzoeken worden verwerkt, zorg ervoor dat u een beleid met &quot;[!DNL None]&quot;als zijn [!UICONTROL ID stitching] type gebruikt. Met andere woorden, u kunt geen samenvoegbeleid gebruiken waarbij [!UICONTROL ID stitching] wordt geplaatst aan &quot;[!UICONTROL Private graph]&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
 >
@@ -103,7 +103,7 @@ curl -X POST \
 
 ### De gebruikersinterface gebruiken
 
-Als u taakaanvragen maakt in de gebruikersinterface, moet u **[!UICONTROL AEP-gegevensmeer]** en/of **[!UICONTROL Profiel]** selecteren onder **[!UICONTROL Producten]** om taken te verwerken voor gegevens die zijn opgeslagen in respectievelijk [!DNL Data Lake] of [!DNL Real-time Customer Profile].
+Wanneer u taakaanvragen maakt in de gebruikersinterface, moet u **[!UICONTROL AEP Data Lake]** en/of **[!UICONTROL Profile]** onder **[!UICONTROL Products]** selecteren om taken te verwerken voor gegevens die zijn opgeslagen in respectievelijk [!DNL Data Lake] of [!DNL Real-time Customer Profile].
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
