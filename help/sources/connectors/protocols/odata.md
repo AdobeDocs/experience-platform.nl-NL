@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
 title: Generic OData Source Connector - Overzicht
-topic: overview
+topic-legacy: overview
 description: Leer hoe u Generic OData met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
+exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) [!DNL Generic OData]-connector
 
