@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: API-eindpunt voor profielsysteemtaken
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het profiel in real-time te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
+exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%
 
 ---
-
 
 # Het taakeindpunt van het profielsysteem (verzoeken van de Schrapping)
 
