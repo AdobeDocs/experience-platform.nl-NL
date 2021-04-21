@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;het oplossen van problemengids;faq;het oplossen van problemen;
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen bij Query Service
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
+exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Query Service] Handleiding voor probleemoplossing
 
