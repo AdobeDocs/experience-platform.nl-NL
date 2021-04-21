@@ -3,22 +3,22 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Eindpunt van gedrags-API
 description: Het /behavior eindpunt in de Registratie API van het Schema staat u toe om al beschikbaar gedrag in de globale container terug te winnen.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 1%
 
 ---
-
 
 # Eindpunt gedrag
 
 In het Model van Gegevens van de Ervaring (XDM), bepalen het gedrag de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Voor bijna alle gebruiksgevallen in Platform zijn er twee beschikbare gedragingen:
 
-* **[!UICONTROL Opnemen]**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
-* **[!UICONTROL Tijdreeks]**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
+* **[!UICONTROL Record]**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
+* **[!UICONTROL Time-series]**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
 
 >[!NOTE]
 >
