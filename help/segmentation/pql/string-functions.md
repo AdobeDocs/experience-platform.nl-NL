@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;string functies;string;
 solution: Experience Platform
 title: PQL-tekenreeksfuncties
-topic: developer guide
+topic-legacy: developer guide
 description: PQL (Profile Query Language) biedt functies om interactie met tekenreeksen eenvoudiger te maken.
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 3%
 
 ---
-
 
 # Reeksfuncties
 
@@ -269,4 +269,3 @@ emailAddress.regexGroup("@(\w+)", 1)
 ## Volgende stappen
 
 Nu u over koordfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
-
