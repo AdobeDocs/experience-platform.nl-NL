@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;laat dataset toe;Dataset;dataset
 solution: Experience Platform
 title: UI-gids voor gegevensbestanden
-topic: datasets
+topic-legacy: datasets
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
+exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
-
 
 # UI-gids voor gegevensbestanden
 
@@ -30,18 +30,18 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 
 ## Gegevensbestanden weergeven
 
-In [!DNL Experience Platform] UI, klik **[!UICONTROL Datasets]** in linkernavigatie om **[!UICONTROL Datasets]** dashboard te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
+In [!DNL Experience Platform] UI, klik **[!UICONTROL Datasets]** in de linkernavigatie om **[!UICONTROL Datasets]** dashboard te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-Klik de naam van een dataset om tot zijn **[!UICONTROL Dataset activiteit]** scherm toegang te hebben en details van de dataset te zien u selecteerde. Het activiteitenlusje omvat een grafiek die het tarief visualiseert van berichten die worden verbruikt evenals een lijst van succesvolle en ontbroken partijen.
+Klik de naam van een dataset om tot zijn **[!UICONTROL Dataset activity]** scherm toegang te hebben en details van de dataset te zien u selecteerde. Het activiteitenlusje omvat een grafiek die het tarief visualiseert van berichten die worden verbruikt evenals een lijst van succesvolle en ontbroken partijen.
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
 
 ## Een voorbeeld van een gegevensset bekijken
 
-Klik in het scherm **[!UICONTROL Datasetactiviteit]** op **[!UICONTROL Gegevensset voorvertonen]** in de rechterbovenhoek van het scherm om een voorvertoning weer te geven van maximaal 100 rijen met gegevens. Als de dataset leeg is, zal de voorproefverbinding worden gedeactiveerd en in plaats daarvan zal zeggen dat de voorproef niet beschikbaar is.
+Klik in het **[!UICONTROL Dataset activity]**-scherm op **[!UICONTROL Preview dataset]** in de rechterbovenhoek van het scherm om een voorvertoning weer te geven van maximaal 100 rijen gegevens. Als de dataset leeg is, zal de voorproefverbinding worden gedeactiveerd en in plaats daarvan zal zeggen dat de voorproef niet beschikbaar is.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
@@ -56,7 +56,7 @@ In het voorproefvenster, wordt de hiërarchische mening van het schema voor de d
 
 ## Een gegevensset {#create} maken
 
-Als u een nieuwe gegevensset wilt maken, klikt u op **[!UICONTROL Gegevensset maken]** in het **[!UICONTROL Datasets]**-dashboard.
+Om een nieuwe dataset tot stand te brengen, begin door **[!UICONTROL Create dataset]** in **[!UICONTROL Datasets]** dashboard te klikken.
 
 ![](../images/datasets/user-guide/click_to_create.png)
 
@@ -67,29 +67,29 @@ In het volgende scherm, wordt u voorgesteld met de volgende twee opties om een n
 
 ### Maak een dataset met een bestaand schema {#schema}
 
-Klik in het scherm **[!UICONTROL Gegevensset maken]** op **[!UICONTROL Gegevensset maken van schema]** om een nieuwe lege gegevensset te maken.
+Klik in het scherm **[!UICONTROL Create dataset]** op **[!UICONTROL Create dataset from schema]** om een nieuwe lege dataset te maken.
 
 ![](../images/datasets/user-guide/create_dataset_schema.png)
 
-De stap **[!UICONTROL Selecteer schema]** wordt weergegeven. Blader door het schema en selecteer het schema waaraan de dataset zich zal houden alvorens **[!UICONTROL Next]** te klikken.
+De stap **[!UICONTROL Select schema]** wordt weergegeven. Blader door het schema en selecteer het schema waaraan de dataset zich zal houden voordat u op **[!UICONTROL Next]** klikt.
 
 ![](../images/datasets/user-guide/select_schema.png)
 
-De stap **[!UICONTROL Gegevensset configureren]** wordt weergegeven. Geef de gegevensset een naam en een optionele beschrijving en klik vervolgens op **[!UICONTROL Voltooien]** om de gegevensset te maken.
+De stap **[!UICONTROL Configure dataset]** wordt weergegeven. Geef de gegevensset een naam en een optionele beschrijving en klik vervolgens op **[!UICONTROL Finish]** om de gegevensset te maken.
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
 ### Een gegevensset maken met een CSV-bestand {#csv}
 
-Wanneer een dataset gebruikend een Csv- dossier wordt gecreeerd, wordt een ad hoc schema gecreeerd om de dataset van een structuur te voorzien die het verstrekte Csv- dossier aanpast. Klik in het scherm **[!UICONTROL Gegevensset maken]** op het vakje **[!UICONTROL Gegevensset maken van CSV-bestand]**.
+Wanneer een dataset gebruikend een Csv- dossier wordt gecreeerd, wordt een ad hoc schema gecreeerd om de dataset van een structuur te voorzien die het verstrekte Csv- dossier aanpast. Klik in het scherm **[!UICONTROL Create dataset]** op het vakje **[!UICONTROL Create dataset from CSV file]**.
 
 ![](../images/datasets/user-guide/create_dataset_csv.png)
 
-De stap **[!UICONTROL Configure]** verschijnt. Geef de gegevensset een naam en een optionele beschrijving en klik op **[!UICONTROL Volgende]**.
+De stap **[!UICONTROL Configure]** wordt weergegeven. Geef de gegevensset een naam en een optionele beschrijving en klik op **[!UICONTROL Next]**.
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-De stap **[!UICONTROL Gegevens toevoegen]** wordt weergegeven. Upload het CSV-bestand door het naar het midden van het scherm te slepen of klik op **[!UICONTROL Bladeren]** om de bestandsmap te verkennen. Het bestand kan maximaal tien gigabyte groot zijn. Nadat het CSV-bestand is geüpload, klikt u op **[!UICONTROL Opslaan]** om de gegevensset te maken.
+De stap **[!UICONTROL Add data]** wordt weergegeven. Upload het CSV-bestand door het naar het midden van het scherm te slepen of klik op **[!UICONTROL Browse]** om de bestandsmap te verkennen. Het bestand kan maximaal tien gigabyte groot zijn. Nadat het CSV-bestand is geüpload, klikt u op **[!UICONTROL Save]** om de gegevensset te maken.
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Elke dataset heeft de capaciteit om klantenprofielen met zijn ingebedde gegevens
 
 Voor meer informatie bij het toelaten van een schema voor [!DNL Profile], zie [de gebruikersgids van de Redacteur van het Schema](../../xdm/tutorials/create-schema-ui.md).
 
-Als u een gegevensset voor Profiel wilt inschakelen, opent u het scherm **[!UICONTROL Datasetactiviteit]** en klikt u op de schakeloptie **[!UICONTROL Profiel]** in de kolom **[!UICONTROL Eigenschappen]**. Zodra toegelaten, zullen de gegevens die in de dataset worden opgenomen ook worden gebruikt om klantenprofielen te bevolken.
+Als u een gegevensset voor Profiel wilt inschakelen, opent u het **[!UICONTROL Dataset activity]**-scherm en klikt u op de schakeloptie **[!UICONTROL Profile]** in de kolom **[!UICONTROL Properties]**. Zodra toegelaten, zullen de gegevens die in de dataset worden opgenomen ook worden gebruikt om klantenprofielen te bevolken.
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op b
 
 ## Een gegevensset verwijderen
 
-U kunt een dataset schrappen door tot zijn **[!UICONTROL Dataset activiteit]** scherm eerst toegang te hebben. Klik vervolgens op **[!UICONTROL Gegevensset verwijderen]** om deze te verwijderen.
+U kunt een dataset schrappen door tot zijn **[!UICONTROL Dataset activity]** scherm eerst toegang te hebben. Klik vervolgens op **[!UICONTROL Delete dataset]** om deze te verwijderen.
 
 >[!NOTE]
 >
@@ -140,15 +140,15 @@ U kunt een dataset van [!DNL Profile] opslag slechts schrappen (verlatend de geg
 
 ## Gegevens bijhouden
 
-In [!DNL Experience Platform] UI, klik **[!UICONTROL Controle]** in de linkernavigatie. Met het dashboard **[!UICONTROL Monitoring]** kunt u de status van binnenkomende gegevens van batch- of streaming opname bekijken. Als u de status van afzonderlijke batches wilt weergeven, klikt u op **[!UICONTROL Batch end-to-end]** of **[!UICONTROL Streaming end-to-end]**. De dashboards maakt een lijst van alle partij of het stromen ingangen, met inbegrip van die die succesvol zijn, ontbroken, of nog lopend. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal verslagen die worden opgenomen. Als de doeldataset voor [!DNL Profile] wordt toegelaten, wordt het aantal ingebedde identiteit en profielverslagen ook getoond.
+Klik in de gebruikersinterface [!DNL Experience Platform] op **[!UICONTROL Monitoring]** in de linkernavigatie. Met het dashboard **[!UICONTROL Monitoring]** kunt u de status van binnenkomende gegevens van batch- of streaming invoer bekijken. Als u de status van afzonderlijke batches wilt weergeven, klikt u op **[!UICONTROL Batch end-to-end]** of **[!UICONTROL Streaming end-to-end]**. De dashboards maakt een lijst van alle partij of het stromen ingangen, met inbegrip van die die succesvol zijn, ontbroken, of nog lopend. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal verslagen die worden opgenomen. Als de doeldataset voor [!DNL Profile] wordt toegelaten, wordt het aantal ingebedde identiteit en profielverslagen ook getoond.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
-U kunt op een individuele **[!UICONTROL Batch ID]** klikken om tot **[!UICONTROL Batch overzicht]** dashboard toegang te hebben en details voor de partij, met inbegrip van foutenlogboeken te zien als de partij er niet in slaagt op te nemen.
+U kunt op een individu **[!UICONTROL Batch ID]** klikken om tot **[!UICONTROL Batch overview]** dashboard toegang te hebben en details voor de partij, met inbegrip van foutenlogboeken te zien als de partij er niet in slaagt op te nemen.
 
 ![](../images/datasets/user-guide/batch_overview.png)
 
-Als u de batch wilt verwijderen, kunt u dit doen door te klikken op **[!UICONTROL Batch verwijderen]** boven aan het dashboard. Dit zal ook zijn verslagen uit de dataset verwijderen de partij oorspronkelijk aan werd opgenomen.
+Als u de batch wilt verwijderen, kunt u dit doen door te klikken op **[!UICONTROL Delete batch]** in de rechterbovenhoek van het dashboard. Dit zal ook zijn verslagen uit de dataset verwijderen de partij oorspronkelijk aan werd opgenomen.
 
 ![](../images/datasets/user-guide/delete_batch.png)
 
