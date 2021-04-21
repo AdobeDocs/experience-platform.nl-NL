@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;Automatische handhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
 title: API-eindpunten voor beleidsevaluatie
-topic: developer guide
+topic-legacy: developer guide
 description: Zodra de marketing acties zijn gecreeerd en het beleid is bepaald, kunt u de Dienst API van het Beleid gebruiken om te evalueren of om het even welk beleid door bepaalde acties wordt geschonden. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
+exl-id: f9903939-268b-492c-aca7-63200bfe4179
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 0%
 
 ---
-
 
 # Eindpunten van de beleidsevaluatie
 
