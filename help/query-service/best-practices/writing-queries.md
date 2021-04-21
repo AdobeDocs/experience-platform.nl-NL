@@ -2,17 +2,17 @@
 keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de vraag;het schrijven van vragen;het schrijven vraag;
 solution: Experience Platform
 title: Algemene begeleiding voor de Uitvoering van de Vraag in de Dienst van de Vraag
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: Dit document bevat belangrijke details die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 2%
 
 ---
-
 
 # Algemene begeleiding voor vraaguitvoering in [!DNL Query Service]
 
