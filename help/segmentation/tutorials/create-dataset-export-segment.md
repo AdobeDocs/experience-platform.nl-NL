@@ -2,17 +2,17 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de Dienst van de segmentatie;segmentatie;creeer een dataset;het segment van het uitvoerpubliek;het uitvoersegment;
 solution: Experience Platform
 title: Creeer een Dataset voor het Uitvoeren van een Segment van de Publiek
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
+exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
-
 
 # Een dataset maken voor het exporteren van een publiekssegment
 
@@ -26,7 +26,7 @@ Deze zelfstudie houdt rechtstreeks verband met de stappen die worden beschreven 
 
 Als u een segment wilt exporteren, moet de gegevensset zijn gebaseerd op [!DNL XDM Individual Profile Union Schema]. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van alle schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de [!DNL XDM Individual Profile] klasse is. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve [sectie van het Profiel van de Klant in real time van de Ontwikkelaar van het Registratie van het Schema gids](../../xdm/schema/composition.md#union).
 
-Om verenigingsschema&#39;s in UI te bekijken, klik **[!UICONTROL Profielen]** in de linkernavigatie, dan klik op **[!UICONTROL Unieschema]** tabel zoals hieronder getoond.
+Om verenigingsschema&#39;s in UI te bekijken, klik **[!UICONTROL Profiles]** in de linkernavigatie, dan klik op **[!UICONTROL Union schema]** tabel zoals hieronder getoond.
 
 ![Verenigingsschema-tabblad in gebruikersinterface van Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
@@ -35,7 +35,7 @@ Om verenigingsschema&#39;s in UI te bekijken, klik **[!UICONTROL Profielen]** in
 
 De datasetwerkruimte binnen [!DNL Experience Platform] UI staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe te creëren.
 
-Om de datasetwerkruimte te bekijken, klik **[!UICONTROL Datasets]** in de linkernavigatie, dan klik op **[!UICONTROL Browse]** tabel. De datasetwerkruimte bevat een lijst van datasets, met inbegrip van kolommen die naam tonen, (datum en tijd), bron, schema, en laatste partijstatus, evenals de datum en de tijd de dataset het laatst werd bijgewerkt. Afhankelijk van de breedte van elke kolom moet u mogelijk naar links of rechts schuiven om alle kolommen weer te geven.
+Als u de werkruimte van de gegevenssets wilt weergeven, klikt u op **[!UICONTROL Datasets]** in de linkernavigatie en klikt u op het tabblad **[!UICONTROL Browse]**. De werkruimte van datasets bevat een lijst van datasets, met inbegrip van kolommen die naam tonen, (datum en tijd), bron, schema, en laatste partijstatus, evenals de datum en de tijd de dataset het laatst werd bijgewerkt. Afhankelijk van de breedte van elke kolom moet u mogelijk naar links of rechts schuiven om alle kolommen weer te geven.
 
 >[!NOTE]
 >
@@ -45,42 +45,42 @@ Om de datasetwerkruimte te bekijken, klik **[!UICONTROL Datasets]** in de linker
 
 ## Een gegevensset maken
 
-Als u een gegevensset wilt maken, klikt u op **[!UICONTROL Dataset maken]** rechtsboven in de werkruimte **[!UICONTROL Datasets]**.
+Als u een gegevensset wilt maken, klikt u op **[!UICONTROL Create Dataset]** in de rechterbovenhoek van de werkruimte **[!UICONTROL Datasets]**.
 
 ![Klik op Gegevensset maken](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-Klik op **[!UICONTROL Dataset maken]** in het scherm **[!UICONTROL Gegevensset maken van schema]** om door te gaan.
+Klik op **[!UICONTROL Create Dataset]** in het scherm **[!UICONTROL Create Dataset from Schema]** om door te gaan.
 
 ![Gegevensbron selecteren](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## XDM Individueel profiel verenigingsschema selecteren
 
-Als u het schema [!DNL XDM Individual Profile Union Schema] wilt selecteren voor gebruik in uw gegevensset, zoekt u het schema &quot;[!UICONTROL XDM Individual Profile]&quot; met het type &quot;[!UICONTROL Union]&quot; op het scherm **[!UICONTROL Select Schema]**.
+Om [!DNL XDM Individual Profile Union Schema] voor gebruik in uw dataset te selecteren, vind &quot;[!UICONTROL XDM Individual Profile]&quot;schema met een type van &quot;[!UICONTROL Union]&quot;op het **[!UICONTROL Select Schema]** scherm.
 
-Selecteer het keuzerondje naast **[!UICONTROL XDM Individual Profile]**, dan klik **[!UICONTROL Next]** in de hoger-juiste hoek.
+Selecteer het keuzerondje naast **[!UICONTROL XDM Individual Profile]** en klik vervolgens op **[!UICONTROL Next]** in de rechterbovenhoek.
 
 ![Schema selecteren](../images/tutorials/segment-export-dataset/select-schema.png)
 
 ## Gegevensset configureren
 
-Op **[!UICONTROL vorm het scherm Dataset]**, zult u uw dataset een naam moeten geven en kan een beschrijving van de dataset ook verstrekken.
+Op het **[!UICONTROL Configure Dataset]** scherm, zult u worden vereist om uw dataset een naam te geven en kan een beschrijving van de dataset ook verstrekken.
 
 **Opmerkingen over gegevenssetnamen:**
 - De namen van gegevenssets moeten kort en beschrijvend zijn, zodat de gegevensset later gemakkelijk in de bibliotheek kan worden gevonden.
 - Dataset-namen moeten uniek zijn, wat betekent dat ze ook specifiek genoeg moeten zijn om in de toekomst niet opnieuw te worden gebruikt.
 - Het is beste praktijken om extra informatie over de dataset te verstrekken gebruikend het beschrijvingsgebied, aangezien het andere gebruikers kan helpen tussen datasets in de toekomst differentiëren.
 
-Als de gegevensset een naam en een beschrijving heeft, klikt u op **[!UICONTROL Voltooien]**.
+Als de gegevensset een naam en een beschrijving heeft, klikt u op **[!UICONTROL Finish]**.
 
 ![Gegevensset configureren](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## Gegevensactiviteit
 
-Er is nu een lege dataset gemaakt en u bent teruggestuurd naar het tabblad **[!UICONTROL Datasetactiviteit]** in de werkruimte **[!UICONTROL Datasets]**. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
+Er is nu een lege dataset gemaakt en u bent teruggestuurd naar het tabblad **[!UICONTROL Dataset Activity]** in de werkruimte **[!UICONTROL Datasets]**. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-Rechts in de werkruimte Datasets ziet u het tabblad **[!UICONTROL Info]** met informatie over uw nieuwe gegevensset, zoals id, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad **[!UICONTROL Info]** bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
+Rechts in de werkruimte Datasets ziet u het tabblad **[!UICONTROL Info]** met informatie over uw nieuwe dataset, zoals id, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad **[!UICONTROL Info]** bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
 
-Noteer **[!UICONTROL Dataset ID]**, aangezien deze waarde vereist is om de workflow voor het exporteren van het publiekssegment te voltooien.
+Noteer **[!UICONTROL Dataset ID]**, omdat deze waarde is vereist om de workflow voor het exporteren van het publiekssegment te voltooien.
 
 ![Gegevensactiviteit](../images/tutorials/segment-export-dataset/dataset-activity.png)
 
