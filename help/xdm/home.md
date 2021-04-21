@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;XDM;XDM-systeem;XDM individueel profiel;XDM ExperienceEvent;XDM Experience Event;ExperienceEvent;ExperienceEvent;Mixins;mixin;Mixin;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceDataModel;ExperienceDataModel;DataModel register;Schema-register;schema-bibliotheek;Schema-bibliotheek;schema;recordgegevens;tijdreeks;tijdreeks
 solution: Experience Platform
 title: XDM-systeemoverzicht
-topic: overview
-description: 'Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema''s voor het beheer van de klantenervaring te bepalen. '
+topic-legacy: overview
+description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
+exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 0%
 
 ---
-
 
 # XDM System, overzicht
 
@@ -119,4 +119,3 @@ Om ontwerpprincipes en beste praktijken voor het samenstellen van schema&#39;s t
 Bekijk de volgende video om uw begrip van [!DNL XDM System] in [!DNL Experience Platform] te versterken:
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
-
