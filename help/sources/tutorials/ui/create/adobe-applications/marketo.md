@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;Marketo-bronaansluiting;Marketo-aansluiting;Marketo-bron;Marketo
 solution: Experience Platform
 title: Creeer een Marketo Engage bronschakelaar in UI
-topic: overzicht
+topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronconnector in de UI om B2B-gegevens over te brengen naar Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5d4d88f88ab184c679a4cf425283a71983c929f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
