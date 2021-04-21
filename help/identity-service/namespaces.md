@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;naamruimte;Naamruimte;Naamruimten;naamruimten;Naamruimte;Naamruimte;Identiteitsnaamruimte;Identiteit;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van id-naamruimte
-topic: overview
-description: 'Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id. '
+topic-legacy: overview
+description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
+exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1450'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht naamruimte identiteit
 
@@ -74,13 +74,13 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Platform worde
 | TNTID | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [Doel](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) voor meer informatie. |
 | Windows-ID | A namespace that represents a Windows Advertising ID. Zie het volgende document op [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) voor meer informatie. |
 
-Als u standaardnaamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UICONTROL Identiteiten]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Bladeren]** om een lijst weer te geven met standaardnaamruimten die toegankelijk zijn voor uw organisatie. U kunt de naamruimten alfabetisch sorteren op **[!UICONTROL Weergavenaam]**, **[!UICONTROL Identiteitssymbool]** of **[!UICONTROL Eigenaar]**. U kunt de naamruimten ook chronologisch sorteren op de meest recente updatedatum.
+Als u standaardnaamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UICONTROL Identities]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Browse]** om een lijst weer te geven met standaardnaamruimten die toegankelijk zijn voor uw organisatie. U kunt de naamruimten alfabetisch sorteren op **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]** of **[!UICONTROL Owner]**. U kunt de naamruimten ook chronologisch sorteren op de meest recente updatedatum.
 
 Selecteer een naamruimte voor meer specifieke informatie over de rechterrail.
 
 >[!NOTE]
 >
->Platform biedt ook naamruimten voor integratiedoeleinden. Deze naamruimten zijn standaard verborgen omdat ze worden gebruikt om verbinding te maken met andere systemen en niet om identiteiten aan te sluiten. Selecteer **[!UICONTROL Integratie-id&#39;s weergeven]** om integratie-naamruimten weer te geven.
+>Platform biedt ook naamruimten voor integratiedoeleinden. Deze naamruimten zijn standaard verborgen omdat ze worden gebruikt om verbinding te maken met andere systemen en niet om identiteiten aan te sluiten. Selecteer **[!UICONTROL View integration identities]** om integratienamen weer te geven.
 
 ![](./images/browse-namespaces.png)
 
@@ -88,11 +88,11 @@ Selecteer een naamruimte voor meer specifieke informatie over de rechterrail.
 
 Afhankelijk van uw organisatorische gegevens en gebruiksgevallen hebt u mogelijk aangepaste naamruimten nodig. Aangepaste naamruimten kunnen worden gemaakt met de API [[!DNL Identity Service]](./api/create-custom-namespace.md) of via de interface.
 
-Als u een aangepaste naamruimte wilt maken met de gebruikersinterface, navigeert u naar de werkruimte **[!UICONTROL Identiteiten]** en selecteert u **[!UICONTROL Bladeren]**. Selecteer vervolgens **[!UICONTROL Naamruimte maken]**.
+Als u een aangepaste naamruimte wilt maken met de gebruikersinterface, navigeert u naar de werkruimte **[!UICONTROL Identities]**, selecteert u **[!UICONTROL Browse]** en selecteert u **[!UICONTROL Create identity namespace]**.
 
 ![](./images/create.png)
 
-Het dialoogvenster **[!UICONTROL Naamruimte maken]** wordt weergegeven. Geef een unieke **[!UICONTROL Weergavenaam]** en **[!UICONTROL Identiteitssymbool]** op en selecteer vervolgens het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen aan meer informatie over de naamruimte. Selecteer **[!UICONTROL Maken]** als u klaar bent.
+Het dialoogvenster **[!UICONTROL Create identity namespace]** wordt weergegeven. Geef een uniek **[!UICONTROL Display name]** en **[!UICONTROL Identity symbol]** op en selecteer het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen aan meer informatie over de naamruimte. Selecteer **[!UICONTROL Create]** als u klaar bent.
 
 >[!IMPORTANT]
 >
@@ -100,7 +100,7 @@ Het dialoogvenster **[!UICONTROL Naamruimte maken]** wordt weergegeven. Geef een
 
 ![](./images/create-namespace.png)
 
-Net als bij standaardnaamruimten kunt u een aangepaste naamruimte selecteren op het tabblad **[!UICONTROL Bladeren]** om de details weer te geven. Met een aangepaste naamruimte kunt u echter ook de weergavenaam en de beschrijving van de naamruimte wijzigen vanuit het detailgebied.
+Net als bij standaardnaamruimten kunt u een aangepaste naamruimte selecteren op het tabblad **[!UICONTROL Browse]** om de details weer te geven. Met een aangepaste naamruimte kunt u echter ook de weergavenaam en de beschrijving van de naamruimte wijzigen vanuit het detailgebied.
 
 >[!NOTE]
 >
