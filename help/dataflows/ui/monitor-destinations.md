@@ -3,16 +3,16 @@ keywords: Experience Platform;thuis;populaire onderwerpen;monitorrekeningen;moni
 description: Met doelen kunt u uw gegevens activeren van Adobe Experience Platform naar talloze externe partners. Dit leerprogramma verstrekt instructies op hoe u dataflows voor uw bestemmingen kunt controleren gebruikend het gebruikersinterface van het Experience Platform.
 solution: Experience Platform
 title: Gegevensstromen van de monitor voor Doelen in UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
-
 
 # Dataflows voor doelen in de UI controleren
 
@@ -27,7 +27,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## Dataflows bewaken
 
-In **[!UICONTROL De werkruimte van Doelen]** binnen het Platform UI, navigeert aan **[!UICONTROL doorbladert]** tabel en selecteert de naam van een bestemming die u wilt bekijken.
+Navigeer in de **[!UICONTROL Destinations]** werkruimte in de interface van het Platform naar het tabblad **[!UICONTROL Browse]** en selecteer de naam van een doel dat u wilt weergeven.
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -42,12 +42,12 @@ Zie de volgende tabel voor meer informatie over statussen:
 | Verwerking | De status `Processing` geeft aan dat een gegevensstroom nog niet actief is. Deze status wordt vaak direct na het maken van een nieuwe gegevensstroom aangetroffen. |
 | Fout | De status `Error` geeft aan dat het activeringsproces van een gegevensstroom is onderbroken. |
 
-## [!UICONTROL Dataflow-uitvoering]
+## [!UICONTROL Dataflow runs]
 
-Het [!UICONTROL lusje Dataflow looppas] verstrekt metrische gegevens op uw dataflow looppas aan partijbestemmingen. Er wordt een lijst weergegeven met afzonderlijke uitvoeringen en de bijbehorende maatstaven, samen met de volgende totalen voor profielrecords:
+Het [!UICONTROL Dataflow runs] lusje verstrekt metrische gegevens over uw dataflow looppas aan partijbestemmingen. Er wordt een lijst weergegeven met afzonderlijke uitvoeringen en de bijbehorende maatstaven, samen met de volgende totalen voor profielrecords:
 
-- **[!UICONTROL Profielrecords geactiveerd]**: Het totale aantal profielrecords dat voor activering is gemaakt of bijgewerkt.
-- **[!UICONTROL Profielrecords overgeslagen]**: Het totale aantal profielrecords dat voor activering wordt overgeslagen op basis van het profiel, wordt afgesloten of ontbrekende kenmerken.
+- **[!UICONTROL Profile records activated]**: Het totale aantal profielrecords dat voor activering is gemaakt of bijgewerkt.
+- **[!UICONTROL Profile records skipped]**: Het totale aantal profielrecords dat voor activering wordt overgeslagen op basis van het profiel, wordt afgesloten of ontbrekende kenmerken.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
