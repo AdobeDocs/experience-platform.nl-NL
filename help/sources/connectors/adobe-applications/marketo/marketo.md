@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Marketo Engage;marketo engageren;marketo
 solution: Experience Platform
 title: Marketo Engage-aansluiting
-topic: overzicht
+topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
