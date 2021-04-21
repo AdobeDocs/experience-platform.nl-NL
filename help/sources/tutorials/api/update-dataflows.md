@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;de stroomdienst;update dataflows
 solution: Experience Platform
 title: Gegevensstromen bijwerken met behulp van de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het bijwerken van een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma, gebruikend de Dienst API van de Stroom.
+exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 translation-type: tm+mt
-source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 1%
+source-wordcount: '615'
+ht-degree: 0%
 
 ---
-
 
 # Dataflows bijwerken met de Flow Service API
 
