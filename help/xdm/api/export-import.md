@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: API-eindpunten exporteren/importeren
 description: Met de eindpunten /export en /import in de API voor schemaregistratie kunt u XDM-bronnen delen tussen IMS-organisaties en sandboxen.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
-
 
 # Eindpunten exporteren/importeren
 
