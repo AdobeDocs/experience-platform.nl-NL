@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;naamruimte voor identiteit;Naamruimte
 solution: Experience Platform
 title: Handleiding voor probleemoplossing voor identiteitsservice
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
+exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2189'
 ht-degree: 0%
 
 ---
-
 
 # Handleiding voor het oplossen van problemen met identiteitsservice
 
