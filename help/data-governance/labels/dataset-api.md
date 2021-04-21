@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;dataset api;beheer gegevensgebruik;gegevensgebruik api
 solution: Experience Platform
 title: 'Labels voor gegevensgebruik voor gegevenssets beheren met API''s '
-topic: developer guide
+topic-legacy: developer guide
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
+exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
 
 ---
-
 
 # Gegevensgebruikslabels voor gegevenssets beheren met behulp van API&#39;s
 
