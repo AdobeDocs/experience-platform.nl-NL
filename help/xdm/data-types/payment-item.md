@@ -2,20 +2,20 @@
 keywords: Experience Platform;huis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;betalings punt;datatype;gegeven-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype betalingsobject
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Data Model (XDM) van het betalingsitemervaringsgegevensmodel.
+exl-id: d25a358b-73c1-468b-a9c5-808385689932
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '157'
 ht-degree: 2%
 
 ---
 
+# [!UICONTROL Payment Item] gegevenstype
 
-# [!UICONTROL Gegevenstype ] betalingsitem
-
-[!UICONTROL Betalingsitems ] zijn een standaard XDM-gegevenstype (Experience Data Model) waarmee een betaling wordt beschreven voor een bestelling die het type betaling, het bedrag en de bijbehorende valuta definieert.
+[!UICONTROL Payment Item] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een betaling verbonden aan een orde beschrijft die het type van betaling, het bedrag, en de bijbehorende munt bepaalt.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
