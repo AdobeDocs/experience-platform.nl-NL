@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;HP Vertica
 solution: Experience Platform
 title: Creeer een Verbinding van de Bron van HP Vertica in UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om een HP Vertica bronverbinding tot stand te brengen gebruikend Adobe Experience Platform UI.
+exl-id: d7315ad4-9250-4e66-be33-016efabb512e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
-
 
 # Creeer HP [!DNL Vertica] bronverbinding in UI
 
@@ -47,19 +47,19 @@ Voor meer informatie over begonnen worden, verwijs naar [dit HP [!DNL Vertica] d
 
 Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om uw rekening van HP [!DNL Vertica] aan [!DNL Platform] te verbinden.
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Sources]** te openen. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL HP Vertica]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe schakelaar van HP [!DNL Vertica] tot stand te brengen.
+Selecteer **[!UICONTROL HP Vertica]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders, selecteer **[!UICONTROL Add data]** om een nieuwe schakelaar van HP [!DNL Vertica] tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/hp-vertica/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met HP Vertica]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to HP Vertica]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Voor de inputvorm die verschijnt, verstrek een naam, een facultatieve beschrijving, en uw [!DNL Vertica] geloofsbrieven van HP. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Voor de inputvorm die verschijnt, verstrek een naam, een facultatieve beschrijving, en uw [!DNL Vertica] geloofsbrieven van HP. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![verbinden](../../../../images/tutorials/create/hp-vertica/new.png)
 
