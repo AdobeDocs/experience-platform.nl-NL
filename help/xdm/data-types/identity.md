@@ -2,20 +2,20 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;identiteit;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype identiteit
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Identity.
+exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '280'
 ht-degree: 2%
 
 ---
 
+# [!UICONTROL Identity] gegevenstype
 
-#  Gegevenstype ID
-
-[!UICONTROL De ] identiteit is een standaard XDM gegevenstype dat wordt gebruikt om mensen duidelijk te onderscheiden die met digitale ervaringen in wisselwerking staan. De identiteit wordt gevestigd door een identiteitsleverancier, die zelf in een `namespace` attribuut van verwijzingen wordt voorzien. Binnen elke `namespace`, is de identiteit uniek.
+[!UICONTROL Identity] is een standaard XDM gegevenstype dat wordt gebruikt om mensen duidelijk te onderscheiden die met digitale ervaringen in wisselwerking staan. De identiteit wordt gevestigd door een identiteitsleverancier, die zelf in een `namespace` attribuut van verwijzingen wordt voorzien. Binnen elke `namespace`, is de identiteit uniek.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
