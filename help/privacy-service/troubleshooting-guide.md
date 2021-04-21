@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Privacy Service probleemoplossingsgids
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over Privacy Service en informatie over veelvoorkomende fouten in de API.
+exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Privacy Service] gids voor problemen
 
@@ -81,7 +81,7 @@ Om de status van een bepaalde baan terug te winnen die [!DNL Privacy Service] AP
 
 ### De gebruikersinterface gebruiken
 
-Alle actieve taakverzoeken worden vermeld in **[!UICONTROL Taakverzoeken]** widget op het [!DNL Privacy Service] UI-dashboard. De status voor elk taakverzoek wordt weergegeven onder de kolom **[!UICONTROL Status]**. Voor meer informatie over het bekijken van baanverzoeken in UI, gelieve [Privacy Service te zien gebruikersgids](ui/user-guide.md).
+Alle actieve baanverzoeken worden vermeld in **[!UICONTROL Job Requests]** widget op [!DNL Privacy Service] UI dashboard. De status voor elk taakverzoek wordt weergegeven onder de kolom **[!UICONTROL Status]**. Voor meer informatie over het bekijken van baanverzoeken in UI, gelieve [Privacy Service te zien gebruikersgids](ui/user-guide.md).
 
 ## Hoe kan ik de resultaten van mijn voltooide privacytaken downloaden?
 
