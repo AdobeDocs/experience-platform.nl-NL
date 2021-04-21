@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Adobe Experience Platform-gegevensverzameling
 breadcrumb-title: Handleiding voor gegevensverzameling
 user-guide-description: Gegevensverzameling op de client inschakelen voor Adobe Experience Platform Edge Network.
-feature: Gegevensverzameling, starten
+feature: Gegevensverzameling
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '28'
+source-wordcount: '27'
 ht-degree: 0%
 
 ---
