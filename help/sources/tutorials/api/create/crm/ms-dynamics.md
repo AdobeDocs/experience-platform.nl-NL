@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Creeer een Verbinding van de Bron van de Dynamica van Microsoft Gebruikend de Dienst van de Stroom API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om Platform met een rekening van de Dynamica van Microsoft te verbinden gebruikend de Dienst API van de Stroom.
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
 
 ---
-
 
 # Een [!DNL Microsoft Dynamics]-bronverbinding maken met de [!DNL Flow Service]-API
 
