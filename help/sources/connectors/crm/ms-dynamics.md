@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Overzicht van Microsoft Dynamics Source Connector
-topic: overview
+topic-legacy: overview
 description: Leer hoe u Microsoft Dynamics met Adobe Experience Platform verbindt via API's of de gebruikersinterface.
+exl-id: 6ca162ce-2016-4270-b741-301cf4230233
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '269'
 ht-degree: 1%
 
 ---
-
 
 # Microsoft Dynamics-connector
 
