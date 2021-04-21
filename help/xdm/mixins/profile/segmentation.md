@@ -2,24 +2,24 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;segment;segmentLidmaatschap;segmentlidmaatschap;Schemaontwerp;kaart;Kaart;
 solution: Experience Platform
 title: Mengsel met gegevens over segmentlidmaatschap
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van de mix Details segmentlidmaatschap.
+exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
 
-
-# [!UICONTROL Segmentlidmaatschap ] detailsmix
+# [!UICONTROL Segment Membership Details] mixen
 
 >[!NOTE]
 >
 >De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Segmentlidmaatschap ] geeft een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md) weer. De mix verstrekt één enkel kaartgebied dat informatie betreffende segmentlidmaatschap, met inbegrip van welke segmenten het individu tot, de laatste kwalificatietijd behoort, en wanneer het lidmaatschap geldig tot is.
+[!UICONTROL Segment Membership Details] is een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix verstrekt één enkel kaartgebied dat informatie betreffende segmentlidmaatschap, met inbegrip van welke segmenten het individu tot, de laatste kwalificatietijd behoort, en wanneer het lidmaatschap geldig tot is.
 
 >[!WARNING]
 >
