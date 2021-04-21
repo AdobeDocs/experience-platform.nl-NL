@@ -2,16 +2,16 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;jupyterlab
 solution: Experience Platform
 title: Overzicht van de gebruikersinterface van JupyterLab
-topic: Overview
-description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
+topic-legacy: Overview
+description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
+exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL JupyterLab] Overzicht van gebruikersinterface
 
@@ -64,7 +64,7 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 
 ### Ga naar [!DNL JupyterLab] {#access-jupyterlab}
 
-Selecteer **[!UICONTROL Laptops]** in [Adobe Experience Platform](https://platform.adobe.com) in de linkernavigatiekolom. Sta wat tijd voor [!DNL JupyterLab] toe om volledig te initialiseren.
+Selecteer **[!UICONTROL Notebooks]** in [Adobe Experience Platform](https://platform.adobe.com) in de linkernavigatiekolom. Sta wat tijd voor [!DNL JupyterLab] toe om volledig te initialiseren.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -108,7 +108,7 @@ Met het belangrijkste werkgebied in [!DNL JupyterLab] kunt u documenten en ander
 
 ### GPU- en geheugenserverconfiguratie in [!DNL Python]/R
 
-Selecteer in [!DNL JupyterLab] het tandwielpictogram in de rechterbovenhoek om *Configuratie notebookserver* te openen. Met de schuifregelaar kunt u de GPU in- en uitschakelen en de benodigde hoeveelheid geheugen toewijzen. De hoeveelheid geheugen die u kunt toewijzen, is afhankelijk van de hoeveelheid geheugen die uw organisatie heeft ingericht. Selecteer **[!UICONTROL Configuraties bijwerken]** om op te slaan.
+Selecteer in [!DNL JupyterLab] het tandwielpictogram in de rechterbovenhoek om *Configuratie notebookserver* te openen. Met de schuifregelaar kunt u de GPU in- en uitschakelen en de benodigde hoeveelheid geheugen toewijzen. De hoeveelheid geheugen die u kunt toewijzen, is afhankelijk van de hoeveelheid geheugen die uw organisatie heeft ingericht. Selecteer **[!UICONTROL Update configs]** om op te slaan.
 
 >[!NOTE]
 >
@@ -118,9 +118,9 @@ Selecteer in [!DNL JupyterLab] het tandwielpictogram in de rechterbovenhoek om *
 
 ### [!DNL JupyterLab] beëindigen en opnieuw starten
 
-In [!DNL JupyterLab], kunt u uw zitting eindigen om verdere middelen te verhinderen worden gebruikt. Begin door **machtspictogram** ![machtspictogram](../images/jupyterlab/user-guide/power_button.png) te selecteren, dan uitgezocht **[!UICONTROL Sluit]** van popover die uw zitting lijkt te eindigen. Laptopsessies worden automatisch beëindigd na twaalf uur geen activiteit.
+In [!DNL JupyterLab], kunt u uw zitting eindigen om verdere middelen te verhinderen worden gebruikt. Begin door **machtspictogram** ![machtspictogram](../images/jupyterlab/user-guide/power_button.png) te selecteren, dan uitgezocht **[!UICONTROL Shut Down]** van popover die lijkt om uw zitting te eindigen. Laptopsessies worden automatisch beëindigd na twaalf uur geen activiteit.
 
-Als u [!DNL JupyterLab] opnieuw wilt starten, selecteert u het **pictogram voor opnieuw opstarten** ![pictogram voor opnieuw opstarten](../images/jupyterlab/user-guide/restart_button.png) dat zich direct links van het energiepictogram bevindt en selecteert u **[!UICONTROL Opnieuw starten]** in de pop-up die wordt weergegeven.
+Als u [!DNL JupyterLab] opnieuw wilt starten, selecteert u het **opstartpictogram** ![opstartpictogram](../images/jupyterlab/user-guide/restart_button.png) dat zich direct links van het energiepictogram bevindt en selecteert u **[!UICONTROL Restart]** in de pop-up die wordt weergegeven.
 
 ![jupyterlab beëindigen](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
