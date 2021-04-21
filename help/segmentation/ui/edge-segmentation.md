@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;randsegmentatie;Segmentatie;Segmenteringsservice;segmenteringsservice;ui-hulplijn;streamingrand;
 solution: Experience Platform
 title: gebruikersgids voor Edge Segmentation
-topic: ui guide
+topic-legacy: ui guide
 description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
