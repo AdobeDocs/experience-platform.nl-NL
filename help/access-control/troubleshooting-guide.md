@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;het oplossen van problemen;toegangsbeheer
 solution: Experience Platform
 title: Handleiding voor probleemoplossing bij toegangsbeheer
-topic: troubleshooting guide
+topic-legacy: troubleshooting guide
 description: Dit document bevat antwoorden op veelgestelde vragen over toegangsbeheer in Adobe Experience Platform.
+exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
-
 
 # Handleiding voor probleemoplossing bij toegangsbeheer
 
@@ -27,7 +27,7 @@ Als u geen beheerder bent, kunt u uw huidige toegangstoestemmingen nog bekijken 
 
 ## Sommige functies in de interface [!DNL Platform] zijn niet beschikbaar. Hoe wordt de toegang tot deze eigenschappen gecontroleerd door toestemmingen?
 
-Als u geen toegangstoestemmingen voor een bepaalde [!DNL Platform] eigenschap hebt, zal die eigenschap worden verborgen of grayed-out in [!DNL Experience Platform] UI. Als u bijvoorbeeld het tabblad &quot;[!UICONTROL Profielen]&quot; wilt weergeven, hebt u de machtiging &quot;[!UICONTROL Profielen weergeven]&quot; of &quot;[!UICONTROL Profielen beheren]&quot; nodig. Neem contact op met de beheerder als u aanvullende machtigingen voor [!DNL Experience Platform] mogelijkheden nodig hebt.
+Als u geen toegangstoestemmingen voor een bepaalde [!DNL Platform] eigenschap hebt, zal die eigenschap worden verborgen of grayed-out in [!DNL Experience Platform] UI. Als u bijvoorbeeld het tabblad &quot;[!UICONTROL Profiles]&quot; wilt weergeven, moet u over de machtigingen &quot;[!UICONTROL View Profiles]&quot; of &quot;[!UICONTROL Manage Profiles]&quot; beschikken. Neem contact op met de beheerder als u aanvullende machtigingen voor [!DNL Experience Platform] mogelijkheden nodig hebt.
 
 ## Hoe worden de toestemmingen gegroepeerd, en welke groep bevat de toestemming ik wil gebruiken?
 
