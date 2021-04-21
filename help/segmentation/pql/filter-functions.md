@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;filter;filter;
 solution: Experience Platform
 title: PQL-filterfuncties
-topic: developer guide
+topic-legacy: developer guide
 description: Filterfuncties worden gebruikt voor het filteren van gegevens binnen arrays in Profile Query Language (PQL).
+exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 2%
 
 ---
-
 
 # Filterfuncties
 
