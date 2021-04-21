@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,7 @@ Experience Platform verleent steun voor het opnemen van gegevens van een derdege
 - [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] connector](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
 - [[!DNL MySQL] connector](connectors/databases/mysql.md)
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
