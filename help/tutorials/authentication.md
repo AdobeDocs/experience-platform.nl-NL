@@ -2,13 +2,13 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Authenticeren;toegang
 solution: Experience Platform
 title: API's van Experience Platforms verifiëren en benaderen
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 'Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API''s. '
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -20,14 +20,14 @@ Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang t
 
 ## Verifiëren om API-aanroepen te maken
 
-Om de veiligheid van uw toepassingen en gebruikers te handhaven, moeten alle verzoeken aan Adobe I/O APIs voor authentiek worden verklaard en worden gemachtigd gebruikend normen zoals OAuth en JSON Webtokens (JWT). JWT wordt dan gebruikt samen met cliënt-specifieke informatie om uw persoonlijk toegangstoken te produceren.
+Om de veiligheid van uw toepassingen en gebruikers te handhaven, moeten alle verzoeken aan Adobe I/O APIs voor authentiek worden verklaard en worden gemachtigd gebruikend normen zoals de Tokens van het Web OAuth en JSON (JWT). JWT wordt dan gebruikt samen met cliënt-specifieke informatie om uw persoonlijk toegangstoken te produceren.
 
 Deze zelfstudie behandelt de stappen van authentificatie door het creëren van een toegangstoken die in het volgende stroomschema wordt geschetst:
 ![](images/authentication/authentication-flowchart.png)
 
 ## Vereisten
 
-Als u met succes aanroepen naar [!DNL Experience Platform] API&#39;s wilt uitvoeren, hebt u het volgende nodig:
+Als u aanroepen naar [!DNL Experience Platform] API&#39;s wilt uitvoeren, hebt u het volgende nodig:
 
 * Een IMS-organisatie met toegang tot Adobe Experience Platform
 * Een geregistreerde Adobe ID-account
@@ -40,12 +40,12 @@ De volgende secties lopen door de stappen om een Adobe ID tot stand te brengen e
 Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
 
 1. Ga naar [Adobe Developer Console](https://console.adobe.io)
-2. Selecteer **[!UICONTROL een nieuw account maken]**
+2. Selecteer **[!UICONTROL create a new account]**
 3. Voltooi het aanmeldingsproces
 
 ## Ontwikkelaar en gebruiker worden voor [!DNL Experience Platform] voor een organisatie
 
-Voordat u integraties op Adobe I/O kunt maken, moet uw account beschikken over ontwikkelmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor het beheer van ontwikkelaars.
+Voordat u integraties op Adobe I/O maakt, moet uw account beschikken over ontwikkelaarsmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor het beheer van ontwikkelaars.
 
 **Toegang voor ontwikkelaars verkrijgen**
 
@@ -57,7 +57,7 @@ De beheerder moet u als ontwikkelaar toewijzen aan ten minste één productprofi
 
 ![](images/authentication/add-developer.png)
 
-Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties te maken op [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
+Zodra u als ontwikkelaar wordt toegewezen, zult u toegangsvoorrechten hebben om tot integratie op [Adobe I/O](https://www.adobe.com/go/devs_console_ui) te leiden. Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
 
 **Toegang tot gebruikers verkrijgen**
 
@@ -89,11 +89,11 @@ De stappen worden hieronder in detail besproken.
 
 Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Volg vervolgens de stappen die worden beschreven in de zelfstudie over het maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.[
 
-Zodra u een nieuw project hebt gecreeerd, uitgezocht **[!UICONTROL voeg API]** op **Overzicht van het Project** scherm toe.
+Nadat u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** in het scherm **Project Overview**.
 
 ![](images/authentication/add-api-button.png)
 
-Het scherm **Add een API** verschijnt. Selecteer het productpictogram voor Adobe Experience Platform en kies **[!UICONTROL Experience Platform-API]** voordat u **[!UICONTROL Volgende]** selecteert.
+Het scherm **Add een API** verschijnt. Selecteer het productpictogram voor Adobe Experience Platform en kies **[!UICONTROL Experience Platform API]** voordat u **[!UICONTROL Next]** selecteert.
 
 ![](images/authentication/add-platform-api.png)
 
