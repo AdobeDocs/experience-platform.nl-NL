@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Azure Event Hubs;Event Hubs;azure-gebeurtenishubs
 solution: Experience Platform
 title: Een Azure Event Hubs Source Connection in de UI maken
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure Event Hubs-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
+exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Azure Event Hubs]-bronverbinding maken in de gebruikersinterface
 
@@ -49,25 +49,25 @@ Raadpleeg [this [!DNL Event Hubs] document](https://docs.microsoft.com/en-us/azu
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Event Hubs]-account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Op het tabblad **[!UICONTROL Catalogus]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Sources]** te openen. Op het tabblad **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL Azure Event Hubs]** onder de categorie **[!UICONTROL Cloud Storage]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe schakelaar van de Hubs van de Gebeurtenis tot stand te brengen.
+Selecteer **[!UICONTROL Azure Event Hubs]** onder de categorie **[!UICONTROL Cloud Storage]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders, selecteer **[!UICONTROL Add data]** om een nieuwe schakelaar van de Hubs van de Gebeurtenis tot stand te brengen.
 
 ![](../../../../images/tutorials/create/eventhub/catalog.png)
 
-Het dialoogvenster **[!UICONTROL Verbinden met Azure Event Hubs]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+Het dialoogvenster **[!UICONTROL Connect to Azure Event Hubs]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe Rekening]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Event Hubs]-referenties op. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New Account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Event Hubs]-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![](../../../../images/tutorials/create/eventhub/new.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL Event Hubs]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de [!DNL Event Hubs]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![](../../../../images/tutorials/create/eventhub/existing.png)
 
