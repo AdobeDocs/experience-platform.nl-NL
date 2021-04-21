@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Objectvelden definiëren in de gebruikersinterface
 description: Leer hoe u een objecttype-veld definieert in de gebruikersinterface van het Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
-
 
 # Objectvelden definiëren in de gebruikersinterface
 
@@ -21,7 +21,7 @@ Als [een nieuw veld](./overview.md#define) in de Adobe Experience Platform-gebru
 
 ![](../../images/ui/fields/special/object.png)
 
-Selecteer **[!UICONTROL Toepassen]** om het object aan het schema toe te voegen. Het canvas wordt bijgewerkt om het nieuwe veld weer te geven met het gegevenstype [!UICONTROL Object] toegepast, inclusief besturingselementen voor het bewerken en toevoegen van subvelden aan het object.
+Selecteer **[!UICONTROL Apply]** om het object aan het schema toe te voegen. Het canvas wordt bijgewerkt om het nieuwe veld weer te geven met het gegevenstype [!UICONTROL Object] toegepast, inclusief besturingselementen voor het bewerken en toevoegen van subvelden aan het object.
 
 ![](../../images/ui/fields/special/object-applied.png)
 
@@ -29,7 +29,7 @@ Als u een subveld wilt toevoegen, selecteert u het pictogram **plus (+)** naast 
 
 ![](../../images/ui/fields/special/object-add-field.png)
 
-Nadat u het subveld hebt geconfigureerd en **[!UICONTROL Toepassen]** hebt geselecteerd, kunt u velden aan het object blijven toevoegen met hetzelfde proces. U kunt ook subvelden toevoegen die zelf objecten zijn, zodat u velden zo diep kunt nesten als u wilt.
+Nadat u het subveld hebt geconfigureerd en **[!UICONTROL Apply]** hebt geselecteerd, kunt u via hetzelfde proces velden aan het object blijven toevoegen. U kunt ook subvelden toevoegen die zelf objecten zijn, zodat u velden zo diep kunt nesten als u wilt.
 
 ![](../../images/ui/fields/special/object-nested.png)
 
