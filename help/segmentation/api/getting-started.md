@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;api;
 solution: Experience Platform
 title: Aan de slag met de segmentatieservice-API
-topic: developer guide
+topic-legacy: developer guide
 description: De volgende documentatie verstrekt extra informatie die u moet weten om met de Segmentatie API met succes te werken.
+exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met de segmentatieservice-API {#getting-started}
 
