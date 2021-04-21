@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevensopname;partij;Partij;Gegevensset inschakelen;Overzicht van inname van batch;overzicht;overzicht;overzicht van inname van batch
 solution: Experience Platform
 title: Overzicht van batchverwerking
-topic: overview
+topic-legacy: overview
 description: Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
+exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van inname in batch
 
