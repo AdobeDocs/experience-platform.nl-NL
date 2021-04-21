@@ -3,17 +3,17 @@ keywords: Experience Platform;profiel;real-time klantprofiel;het oplossen van pr
 title: Gardrails voor gegevens in realtime klantprofiel
 solution: Experience Platform
 product: experience platform
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Adobe Experience Platform biedt een reeks instructies om u te helpen te voorkomen dat u gegevensmodellen maakt die niet kunnen worden ondersteund door het Real-Time Klantprofiel. In dit document worden aanbevolen procedures en beperkingen beschreven waarmee u rekening kunt houden bij het modelleren van profielgegevens. '
+description: Adobe Experience Platform biedt een reeks instructies om u te helpen te voorkomen dat u gegevensmodellen maakt die niet kunnen worden ondersteund door het Real-Time Klantprofiel. In dit document worden aanbevolen procedures en beperkingen beschreven waarmee u rekening kunt houden bij het modelleren van profielgegevens.
+exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 translation-type: tm+mt
-source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 1%
 
 ---
-
 
 # Guardrails voor [!DNL Real-time Customer Profile]-gegevens
 
@@ -108,6 +108,6 @@ De instructies in deze sectie verwijzen naar het aantal en de aard van de segmen
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximumaantal segmenten per sandbox | 10 kB | Zacht | **Het maximumaantal segmenten dat een organisatie kan maken, is 10 kB per sandbox.** Een organisatie kan in totaal meer dan 10K segmenten hebben, zolang er minder dan 10.000 segmenten in elke individuele zandbak zijn. Het proberen om extra segmenten tot stand te brengen zal in verminderde systeemprestaties resulteren. |
+| Maximumaantal segmenten per sandbox | 10K | Zacht | **Het maximumaantal segmenten dat een organisatie kan maken, is 10 kB per sandbox.** Een organisatie kan in totaal meer dan 10K segmenten hebben, zolang er minder dan 10.000 segmenten in elke individuele zandbak zijn. Het proberen om extra segmenten tot stand te brengen zal in verminderde systeemprestaties resulteren. |
 | Maximumaantal streamingsegmenten per sandbox | 500 | Zacht | **Het maximumaantal streamingsegmenten dat een organisatie kan maken, is 500 per sandbox.** Een organisatie kan in totaal meer dan 500 streaming segmenten hebben, zolang er zich in elke sandbox minder dan 500 streaming segmenten bevinden. Als u probeert extra streamingsegmenten te maken, neemt de systeemprestaties af. |
 | Maximum aantal batchsegmenten per sandbox | 10 kB | Zacht | **Het maximumaantal batchsegmenten dat een organisatie kan maken, is 10 kB per sandbox.** Een organisatie kan in totaal meer dan 10.000 batchsegmenten hebben, zolang er in elke sandbox minder dan 10.000 batchsegmenten zijn. Het proberen om extra partijsegmenten tot stand te brengen zal in verminderde systeemprestaties resulteren. |
