@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;DULE;module
 solution: Experience Platform
 title: Overzicht gegevensbeheer
-topic: overview
+topic-legacy: overview
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties
+exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van gegevensbeheer
 
