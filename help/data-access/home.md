@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevenstoegang;python sdk;spark sdk;gegevenstoegang api
 solution: Experience Platform
 title: Overzicht van gegevenstoegang
-topic: overview
+topic-legacy: overview
 description: De Toegang van gegevens steunt Adobe Experience Platform door gebruikershulpmiddelen te verstrekken die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde Platform datasets worden geconcentreerd.
+exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Data Access] - overzicht
 
