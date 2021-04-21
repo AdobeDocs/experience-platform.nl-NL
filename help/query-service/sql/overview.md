@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;sql;sql verwijzing;
 solution: Experience Platform
 title: SQL-naslaggids voor Query Service
-topic: reference
+topic-legacy: reference
 description: Adobe Experience Platform Query Service biedt de mogelijkheid om standaard ANSI SQL te gebruiken voor SELECT-instructies en andere beperkte opdrachten.
+exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
-
 
 # SQL-naslagservice
 
