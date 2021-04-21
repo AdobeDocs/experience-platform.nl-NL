@@ -2,17 +2,17 @@
 keywords: Experience Platform;pakket bronbestanden;Data Science Workspace;populaire onderwerpen;Docker;docker-afbeelding
 solution: Experience Platform
 title: Bronbestanden in een ontvanger verpakken
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. Deze kan worden gebruikt om een recept te maken in de Adobe Experience Platform Data Science Workspace door de workflow voor het importeren van recept in de gebruikersinterface of met de API uit te voeren.
+exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
-
 
 # Bronbestanden in een recept plaatsen
 
@@ -40,15 +40,15 @@ Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle
 
 De ingebouwde afbeelding van de Docker wordt geduwd aan de Azure Registratie van de Container gebruikend geloofsbrieven die aan u tijdens de het creatieve werkschema van het recept worden geleverd.
 
-Als u uw Azure Container Registry-referenties wilt verkrijgen, meldt u zich aan bij [Adobe Experience Platform](https://platform.adobe.com). Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer **[!UICONTROL Recipe importeren]** gevolgd door **[!UICONTROL Launch]** te selecteren. Zie de schermafbeelding hieronder ter referentie.
+Als u uw Azure Container Registry-referenties wilt verkrijgen, meldt u zich aan bij [Adobe Experience Platform](https://platform.adobe.com). Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer **[!UICONTROL Import Recipe]** gevolgd door **[!UICONTROL Launch]** te selecteren. Zie de schermafbeelding hieronder ter referentie.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-De **[!UICONTROL Configure]** pagina opent. Verstrek aangewezen **[!UICONTROL Naam van recept]**, bijvoorbeeld, &quot;Detailhandel recept van de Verkoop&quot;, en verstrek naar keuze een beschrijving of documentatie URL. Klik op **[!UICONTROL Volgende]** als u klaar bent.
+De pagina **[!UICONTROL Configure]** wordt geopend. Geef een geschikte **[!UICONTROL Recipe Name]**, bijvoorbeeld &quot;Retail Sales recipe&quot;, op en geef desgewenst een beschrijving of documentatie-URL. Klik op **[!UICONTROL Next]** als de bewerking is voltooid.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Selecteer de juiste *Runtime* en kies vervolgens een **[!UICONTROL Classificatie]** voor *Type*. Uw Azure Container Registry-referenties worden gegenereerd zodra dit is voltooid.
+Selecteer aangewezen *Runtime*, dan kies **[!UICONTROL Classification]** voor *Type*. Uw Azure Container Registry-referenties worden gegenereerd zodra dit is voltooid.
 
 >[!NOTE]
 >
@@ -57,9 +57,9 @@ Selecteer de juiste *Runtime* en kies vervolgens een **[!UICONTROL Classificatie
 >[!TIP]
 >
 >- Voor [!DNL Python] recepten selecteert u de **[!UICONTROL Python]** runtime.
->- Voor R-recepten selecteert u de **[!UICONTROL R]**-runtime.
->- Voor PySpark-recepten selecteert u de runtime **[!UICONTROL PySpark]**. Een artefacttype dat automatisch wordt gevuld.
->- Voor Scala recipes selecteer **[!UICONTROL Spark]** runtime. Een artefacttype dat automatisch wordt gevuld.
+>- Selecteer de runtime **[!UICONTROL R]** voor R-recepten.
+>- Voor PySpark-recepten selecteert u de **[!UICONTROL PySpark]**-runtime. Een artefacttype dat automatisch wordt gevuld.
+>- Selecteer voor Scala-recepten de **[!UICONTROL Spark]**-runtime. Een artefacttype dat automatisch wordt gevuld.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
