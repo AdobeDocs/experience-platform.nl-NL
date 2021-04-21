@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;toestemming
 solution: Experience Platform
 title: Datasets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming
-topic: privacy events
+topic-legacy: privacy events
 description: Dit document verstrekt stappen voor vestiging de twee vereiste datasets om IAB TCF 2.0 toestemmingsgegevens te verzamelen.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1564'
 ht-degree: 0%
 
 ---
-
 
 # Gegevenssets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming
 
@@ -34,15 +34,15 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
    * [Naamruimten](../../../../identity-service/namespaces.md) van identiteit: De identiteitsgegevens van de klant moeten worden verstrekt onder een specifieke naamruimte die door de Identiteitsdienst wordt erkend.
 * [Klantprofiel](../../../../profile/home.md) in realtime: Hefboomwerkingen  [!DNL Identity Service] om u gedetailleerde klantenprofielen van uw datasets in real time te laten tot stand brengen. [!DNL Real-time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 
-## [!UICONTROL Privacy ] detailsmixstructuur  {#structure}
+## [!UICONTROL Privacy Details] mengstructuur  {#structure}
 
-De [!UICONTROL Privacy Details] mix biedt velden voor toestemming van klanten die vereist zijn voor TCF 2.0-ondersteuning. Er zijn twee versies van deze mix: één compatibel met de [!DNL XDM Individual Profile] klasse, en andere met de [!DNL XDM ExperienceEvent] klasse.
+De [!UICONTROL Privacy Details] mix biedt de gebieden van de klantentoestemming die voor TCF 2.0 steun worden vereist. Er zijn twee versies van deze mix: één compatibel met de [!DNL XDM Individual Profile] klasse, en andere met de [!DNL XDM ExperienceEvent] klasse.
 
 In de onderstaande secties wordt de structuur van elk van deze mengsels uitgelegd, inclusief de gegevens die ze tijdens inname verwachten.
 
 ### Profielmix {#profile-mixin}
 
-Voor schema&#39;s die op [!DNL XDM Individual Profile] worden gebaseerd, verstrekt [!UICONTROL de Details van de Privacy ] de mengeling één enkel kaart-type gebied, `xdm:identityPrivacyInfo`, dat klantenidentiteiten aan hun TCF toestemmingsvoorkeur in kaart brengt. Het volgende JSON is een voorbeeld van het soort gegevens dat `xdm:identityPrivacyInfo` verwacht na gegevensinvoer:
+Voor schema&#39;s die op [!DNL XDM Individual Profile] worden gebaseerd, verstrekt [!UICONTROL Privacy Details] mengsel één enkel kaart-type gebied, `xdm:identityPrivacyInfo`, dat klantenidentiteiten aan hun TCF toestemmingsvoorkeur in kaart brengt. Het volgende JSON is een voorbeeld van het soort gegevens dat `xdm:identityPrivacyInfo` verwacht na gegevensinvoer:
 
 ```json
 {
@@ -80,7 +80,7 @@ Binnen het identiteitswaardeobject bevindt zich één veld, `xdm:identityIABCons
 
 ### Gebeurtenismix {#event-mixin}
 
-Voor schema&#39;s die op [!DNL XDM ExperienceEvent] worden gebaseerd, verstrekt [!UICONTROL Privacy Details] de mengeling één enkel serie-type gebied: `xdm:consentStrings`. Elk item in deze array moet een object zijn dat de benodigde eigenschappen voor een TCF-toestemmingstekenreeks bevat, vergelijkbaar met het veld `xdm:consentString` in de profielmix. Zie [volgende sectie](#consent-string) voor meer informatie over deze subeigenschappen.
+Voor schema&#39;s die op [!DNL XDM ExperienceEvent] worden gebaseerd, verstrekt de [!UICONTROL Privacy Details] mix één enkel serie-type gebied: `xdm:consentStrings`. Elk item in deze array moet een object zijn dat de benodigde eigenschappen voor een TCF-toestemmingstekenreeks bevat, vergelijkbaar met het veld `xdm:consentString` in de profielmix. Zie [volgende sectie](#consent-string) voor meer informatie over deze subeigenschappen.
 
 ```json
 {
@@ -98,7 +98,7 @@ Voor schema&#39;s die op [!DNL XDM ExperienceEvent] worden gebaseerd, verstrekt 
 
 ### Goedgekeurde tekenreekseigenschappen {#consent-string}
 
-Voor beide versies van de [!UICONTROL Privacy Details]-mix is ten minste één object vereist dat de benodigde velden vastlegt die de TCF-toestemmingstekenreeks voor de klant beschrijven. Deze eigenschappen worden hieronder uitgelegd:
+Beide versies van de [!UICONTROL Privacy Details] mix vereisen minstens één voorwerp dat de noodzakelijke gebieden vangt die het TCF toestemmingskoord voor de klant beschrijven. Deze eigenschappen worden hieronder uitgelegd:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
@@ -112,7 +112,7 @@ Voor beide versies van de [!UICONTROL Privacy Details]-mix is ten minste één o
 
 Om datasets tot stand te brengen die toestemmingsgegevens vangen, moet u XDM schema&#39;s eerst creëren om die datasets op te baseren.
 
-Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie om de werkruimte [!UICONTROL Schema&#39;s] te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform om de werkruimte [!UICONTROL Schemas] te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
 
 >[!NOTE]
 >
@@ -122,15 +122,15 @@ Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie om de werkruimte [
 
 ### Creeer een op verslag-gebaseerd toestemmingsschema {#profile-schema}
 
-Selecteer **[!UICONTROL Schema**[!UICONTROL  Schema&#39;s ]**maken en kies**[!UICONTROL  XDM Individueel profiel ]**in het vervolgkeuzemenu.]**
+Selecteer **[!UICONTROL Schemas]** in de werkruimte **[!UICONTROL Create schema]** en kies **[!UICONTROL XDM Individual Profile]** in het vervolgkeuzemenu.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder **[!UICONTROL Mixins]** sectie op de linkerkant van het canvas.
+De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder de **[!UICONTROL Mixins]** sectie op de linkerkant van het canvas.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
 
-Het dialoogvenster **[!UICONTROL Add mixin]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Wanneer de mixin is geselecteerd, selecteert u **[!UICONTROL Mengsel toevoegen]**.
+Het dialoogvenster **[!UICONTROL Add mixin]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Selecteer **[!UICONTROL Add mixin]** als de mix is geselecteerd.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -141,13 +141,13 @@ Het canvas verschijnt weer en geeft aan dat het veld `identityPrivacyInfo` is to
 Herhaal hier de bovenstaande stappen om de volgende extra mixen aan het schema toe te voegen:
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL Gebied voor gegevensvastlegging voor profiel]
-* [!UICONTROL Demografische details]
-* [!UICONTROL Persoonlijke contactgegevens]
+* [!UICONTROL Data capture region for Profile]
+* [!UICONTROL Demographic Details]
+* [!UICONTROL Personal Contact Details]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
 
-Als u een bestaand schema uitgeeft dat reeds voor gebruik in [!DNL Real-time Customer Profile] is toegelaten, uitgezocht **[!UICONTROL sparen]** om uw veranderingen te bevestigen alvorens naar de sectie over [het creëren van een dataset over te slaan die op uw toestemmingsschema wordt gebaseerd](#dataset). Als u een nieuw schema maakt, gaat u verder met de stappen in de onderstaande subsectie.
+Als u een bestaand schema uitgeeft dat reeds voor gebruik in [!DNL Real-time Customer Profile] is toegelaten, uitgezocht **[!UICONTROL Save]** om uw veranderingen te bevestigen alvorens vooruit naar de sectie op [creërend een dataset op uw toestemmingsschema](#dataset) te slaan. Als u een nieuw schema maakt, gaat u verder met de stappen in de onderstaande subsectie.
 
 #### Het schema inschakelen voor gebruik in [!DNL Real-time Customer Profile]
 
@@ -159,7 +159,7 @@ Om het Platform in staat te stellen de toestemmingsgegevens te associëren het a
 >
 >De stappen op hoe te om een primair identiteitsgebied voor een schema te plaatsen kunnen in [zelfstudie van de schemaverwezenlijking worden gevonden](../../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
-Als u het schema wilt inschakelen voor [!DNL Profile], selecteert u de naam van het schema in de linkerrail om het dialoogvenster **[!UICONTROL Schemaeigenschappen]** in de rechterrail te openen. Van hier, selecteer **[!UICONTROL Profiel]** knevelknoop.
+Als u het schema wilt inschakelen voor [!DNL Profile], selecteert u de naam van het schema in de linkerrail om het dialoogvenster **[!UICONTROL Schema properties]** in de rechterrail te openen. Van hier, selecteer **[!UICONTROL Profile]** knevelknoop.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-enable-profile.png)
 
@@ -167,21 +167,21 @@ Er wordt een pop-up weergegeven die aangeeft dat de primaire identiteit ontbreek
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/missing-primary-identity.png)
 
-Tot slot uitgezocht **[!UICONTROL sparen]** om uw veranderingen te bevestigen.
+Tot slot selecteer **[!UICONTROL Save]** om uw veranderingen te bevestigen.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-save.png)
 
 ### Creeer een op tijd-reeksen gebaseerd toestemmingsschema {#event-schema}
 
-Selecteer **[!UICONTROL Schema**[!UICONTROL  Schema&#39;s ]**maken en kies**[!UICONTROL  XDM ExperienceEvent ]**in het vervolgkeuzemenu.]**
+Selecteer **[!UICONTROL Schemas]** in de werkruimte **[!UICONTROL Create schema]** en kies **[!UICONTROL XDM ExperienceEvent]** in het vervolgkeuzemenu.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder **[!UICONTROL Mixins]** sectie op de linkerkant van het canvas.
+De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder de **[!UICONTROL Mixins]** sectie op de linkerkant van het canvas.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
 
-Het dialoogvenster **[!UICONTROL Add mixin]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Nadat u een mix hebt gekozen, selecteert u **[!UICONTROL Mengsel toevoegen]**.
+Het dialoogvenster **[!UICONTROL Add mixin]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Wanneer u een mix hebt gekozen, selecteert u **[!UICONTROL Add mixin]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -192,11 +192,11 @@ Het canvas verschijnt weer en geeft aan dat de array `consentStrings` aan de sch
 Herhaal hier de bovenstaande stappen om de volgende extra mixen aan het schema toe te voegen:
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL Omgevingsdetails]
-* [!UICONTROL Webdetails]
-* [!UICONTROL Implementatiedetails]
+* [!UICONTROL Environment Details]
+* [!UICONTROL Web Details]
+* [!UICONTROL Implementation Details]
 
-Nadat de mixen zijn toegevoegd, voltooit u door **[!UICONTROL Opslaan]** te selecteren.
+Nadat de mixinen zijn toegevoegd, voltooit u door **[!UICONTROL Save]** te selecteren.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
 
@@ -204,25 +204,25 @@ Nadat de mixen zijn toegevoegd, voltooit u door **[!UICONTROL Opslaan]** te sele
 
 Voor elk van de vereiste hierboven beschreven schema&#39;s, moet u een dataset tot stand brengen die uiteindelijk de gegevens van de klantentoestemming zal opnemen. De dataset die op het verslagschema wordt gebaseerd moet voor [!DNL Real-time Customer Profile] worden toegelaten, terwijl de dataset die op het tijdreeksschema **wordt gebaseerd niet** [!DNL Profile]-toegelaten zou moeten zijn.
 
-Als u wilt beginnen, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie en selecteert u **[!UICONTROL Gegevensset maken]** in de rechterbovenhoek.
+Selecteer **[!UICONTROL Datasets]** in de linkernavigatie en selecteer **[!UICONTROL Create dataset]** in de rechterbovenhoek om te beginnen.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create.png)
 
-Selecteer **[!UICONTROL Gegevensset maken van schema]** op de volgende pagina.
+Selecteer **[!UICONTROL Create dataset from schema]** op de volgende pagina.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create-from-schema.png)
 
-De **[!UICONTROL Gegevensset maken van schema]**-workflow wordt weergegeven, te beginnen bij de stap **[!UICONTROL Schema]** selecteren. Zoek in de opgegeven lijst een van de toestemmingsschema&#39;s die u eerder hebt gemaakt. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en het schema gemakkelijker te vinden. Selecteer het keuzerondje naast het gewenste schema en selecteer **[!UICONTROL Volgende]** om door te gaan.
+De **[!UICONTROL Create dataset from schema]**-workflow wordt weergegeven, te beginnen bij de stap **[!UICONTROL Select schema]**. Zoek in de opgegeven lijst een van de toestemmingsschema&#39;s die u eerder hebt gemaakt. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en het schema gemakkelijker te vinden. Selecteer het keuzerondje naast het gewenste schema en selecteer **[!UICONTROL Next]** om door te gaan.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-select-schema.png)
 
-De stap **[!UICONTROL Gegevensset configureren]** wordt weergegeven. Geef een unieke, gemakkelijk herkenbare naam en beschrijving voor de gegevensset op voordat u **[!UICONTROL Voltooien]** selecteert.
+De stap **[!UICONTROL Configure dataset]** wordt weergegeven. Geef een unieke, gemakkelijk herkenbare naam en beschrijving voor de gegevensset voordat u **[!UICONTROL Finish]** selecteert.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
 De detailspagina voor de pas gecreëerde dataset verschijnt. Als de dataset op uw tijd-reeksen schema gebaseerd is, dan is het proces volledig. Als de dataset op uw verslagschema gebaseerd is, moet de definitieve stap in het proces de dataset voor gebruik in [!DNL Real-time Customer Profile] toelaten.
 
-Selecteer in de rechterrail de **[!UICONTROL Profiel]**-schakeloptie en selecteer **[!UICONTROL Inschakelen]** in de bevestigingspop-up om het schema in te schakelen voor [!DNL Profile].
+Selecteer in de rechterrail de **[!UICONTROL Profile]**-schakeloptie en selecteer **[!UICONTROL Enable]** in de bevestigingspop-up om het schema in te schakelen voor [!DNL Profile].
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
