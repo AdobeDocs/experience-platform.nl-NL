@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle-objectopslag
+keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle object storage
 solution: Experience Platform
-title: Overzicht van Oracle Object Storage Source Connector
-topic: overview
+title: Overzicht van oracle Object Storage Source Connector
+topic-legacy: overview
 description: Leer hoe u Oracle Object Storage met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
+exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
 translation-type: tm+mt
-source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
-
 
 # Oracle Object Storage-connector
 
