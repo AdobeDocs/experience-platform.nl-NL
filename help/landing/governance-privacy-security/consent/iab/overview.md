@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;toestemming
 solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Experience Platform
-topic: privacy events
+topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
+exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2459'
 ht-degree: 0%
 
 ---
-
 
 # IAB TCF 2.0-ondersteuning in Experience Platform
 
@@ -127,13 +127,13 @@ Nadat u een unieke naam voor de configuratie hebt opgegeven, selecteert u de sch
 | Edge-configuratieveld | Value |
 | --- | --- |
 | [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../../sandboxes/home.md) dat de vereiste streamingverbinding en datasets bevat om de randconfiguratie in te stellen. |
-| [!UICONTROL Streaming-ingang] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie over [het maken van een streamingverbinding](../../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streamingingang hebt. |
-| [!UICONTROL Gebeurtenisgegevens] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets) wordt gecreeerd. |
-| [!UICONTROL Profielgegevens] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets) wordt gecreeerd. |
+| [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie over [het maken van een streamingverbinding](../../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streamingingang hebt. |
+| [!UICONTROL Event Dataset] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets) wordt gecreeerd. |
+| [!UICONTROL Profile Dataset] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets) wordt gecreeerd. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Wanneer gebeëindigd, uitgezocht **[!UICONTROL sparen]** bij de bodem van het scherm en ga na om het even welke extra herinneringen verder om de configuratie te voltooien.
+Wanneer gebeëindigd, selecteer **[!UICONTROL Save]** bij de bodem van het scherm en ga na om het even welke extra herinneringen verder om de configuratie te voltooien.
 
 ### Opdrachten voor wijzigen van toestemming maken
 
