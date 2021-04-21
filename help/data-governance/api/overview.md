@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: API-handleiding voor beleidsservice
-topic: developer guide
+topic-legacy: developer guide
 description: Met de Beleidsservice-API kunnen ontwikkelaars labels en beleidsregels voor gegevensgebruik in Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Policy Service] API-handleiding
 
