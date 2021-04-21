@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;fullName;xdm:fullName;person name;name;datatype;data-type;data-type; data-type;
 solution: Experience Platform
 title: Gegevenstype naam persoon
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Personnaam.
+exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Person name] gegevenstype
 
-# [!UICONTROL Persoon ] met naam gegevenstype
-
-[!UICONTROL Persoon ] noemt een standaard XDM gegevenstype dat de volledige naam van een persoon beschrijft. Aangezien de conventies voor naamstructuren sterk verschillen tussen talen en culturen, moeten namen altijd worden gemodelleerd met dit gegevenstype.
+[!UICONTROL Person name] is een standaard XDM gegevenstype dat de volledige naam van een persoon beschrijft. Aangezien de conventies voor naamstructuren sterk verschillen tussen talen en culturen, moeten namen altijd worden gemodelleerd met dit gegevenstype.
 
 Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen worden gebruikt in situaties die alleen een fragment met de volledige naam vereisen, zoals het maken van een formele of informele begroeting.
 
