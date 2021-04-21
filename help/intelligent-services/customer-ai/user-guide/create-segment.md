@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klant ai segmenten
+keywords: Experience Platform;inzichten;klantenai;populaire onderwerpen;klantenai segmenten
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Klantsegmenten maken met voorspelde scores
-topic: Create a segment
+topic-legacy: Create a segment
 description: Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid automatisch verbruikt door profielen. Door profielen te verrijken met AI-scores van de Klant, kunnen klantsegmenten worden gemaakt om een publiek te zoeken op basis van hun populatiescore. Deze sectie verstrekt stappen voor het creëren van segmenten gebruikend de Bouwer van het Segment.
+exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
-
 
 # Maak klantsegmenten met voorspelde scores
 
@@ -21,11 +21,11 @@ Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid
 >
 >Om deze methode te gebruiken, moet het Profiel van de Klant in real time voor de dataset worden toegelaten.
 
-In het Platform UI, klik **[!UICONTROL Segmenten]** in de linkernavigatie, en klik dan **[!UICONTROL Create segment]**.
+In Platform UI, klik **[!UICONTROL Segments]** in de linkernavigatie, en klik dan **[!UICONTROL Create segment]**.
 
 ![](../images/user-guide/segments.png)
 
-De **Segment Builder** verschijnt. Van de linkerkolom **[!UICONTROL Fields]** en onder **[!UICONTROL Attributes]** tabel, klik de omslag genoemd **[!UICONTROL XDM Individual Profile]** en klik dan de omslag met namespace van uw organisatie. De map met de naam **[!UICONTROL AI van de klant]** bevat de resultaten van voorspelling en krijgt een naam na de instantie waartoe de scores behoren. Klik op een instantiemap om de resultaten van de gewenste instantie te openen.
+De **Segment Builder** verschijnt. Klik in de linkerkolom **[!UICONTROL Fields]** en onder het tabblad **[!UICONTROL Attributes]** op de map met de naam **[!UICONTROL XDM Individual Profile]** en klik vervolgens op de map met de naamruimte van uw organisatie. De map met de naam **[!UICONTROL Customer AI]** bevat de resultaten van voorspelling en krijgt een naam na de instantie waartoe de scores behoren. Klik op een instantiemap om de resultaten van de gewenste instantie te openen.
 
 ![](../images/user-guide/results.png)
 
@@ -35,7 +35,7 @@ Geef onder de rechterkolom *Segmenteigenschappen* een naam voor het segment op.
 
 ![](../images/user-guide/properties.png)
 
-Klik boven de linkerkolom *Fields* op het pictogram **versnelling** en selecteer een *Samenvoegen-beleid* in de vervolgkeuzelijst. Klik **[!UICONTROL Opslaan]** om het segment te maken.
+Klik boven de linkerkolom *Fields* op het pictogram **versnelling** en selecteer een *Samenvoegen-beleid* in de vervolgkeuzelijst. Klik **[!UICONTROL Save]** om het segment tot stand te brengen.
 
 ![](../images/user-guide/merge_policy.png)
 
