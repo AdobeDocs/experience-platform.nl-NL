@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: XDM-velden definiëren in de gebruikersinterface
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1236'
 ht-degree: 3%
 
 ---
-
 
 # XDM-velden definiëren in de gebruikersinterface
 
@@ -41,19 +41,19 @@ Als u een nieuw veld aan de bron wilt toevoegen, selecteert u het pictogram **pl
 
 ## Een veld definiëren voor een resource {#define}
 
-Nadat u het pictogram **plus (+)** hebt geselecteerd, wordt een **[!UICONTROL Nieuw veld]** weergegeven in het canvas, dat zich bevindt binnen een basisobject dat is naamgeving aan uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle velden die via aangepaste klassen en mixen aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten met andere velden van door Adobe verschafte klassen en mixen te voorkomen.
+Nadat u het pictogram **plus (+)** hebt geselecteerd, wordt een **[!UICONTROL New field]** weergegeven in het canvas, dat zich bevindt binnen een basisobject dat is naamloos voor uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle velden die via aangepaste klassen en mixen aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten met andere velden van door Adobe verschafte klassen en mixen te voorkomen.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-In het juiste spoor onder **[!UICONTROL Eigenschappen van het Gebied]**, kunt u de details van de nieuwe gebieden vormen. Voor elk veld is de volgende informatie vereist:
+In het juiste spoor onder **[!UICONTROL Field properties]**, kunt u de details van de nieuwe gebieden vormen. Voor elk veld is de volgende informatie vereist:
 
 | Field, eigenschap | Beschrijving |
 | --- | --- |
-| [!UICONTROL Veldnaam] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen.<br><br>De naam moet idealiter in camelCase worden geschreven. Het kan alfanumerieke, streepje- of onderstrepingstekens bevatten, maar **mag niet** met een onderstrepingsteken beginnen.<ul><li>**Juist**:  `fieldName`</li><li>**Aanvaardbaar:** `field_name2`,  `Field-Name`,  `field-name_3`</li><li>**Onjuist**:  `_fieldName`</li></ul> |
-| [!UICONTROL Weergavenaam] | Een mensvriendelijke naam voor het veld. |
-| [!UICONTROL Type] | Het type gegevens dat het veld zal bevatten. In dit vervolgkeuzemenu kunt u een van de [standaard scalaire typen](../../schema/field-constraints.md) selecteren die door XDM worden ondersteund, of een van de multiveld [gegevenstypen](../resources/data-types.md) die eerder zijn gedefinieerd in [!DNL Schema Registry].<br><br>U kunt ook  **[!UICONTROL Geavanceerde]** typezoekopdrachten selecteren om bestaande gegevenstypen te zoeken en te filteren en het gewenste type gemakkelijker te vinden. |
+| [!UICONTROL Field name] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen.<br><br>De naam moet idealiter in camelCase worden geschreven. Het kan alfanumerieke, streepje- of onderstrepingstekens bevatten, maar **mag niet** met een onderstrepingsteken beginnen.<ul><li>**Juist**:  `fieldName`</li><li>**Aanvaardbaar:** `field_name2`,  `Field-Name`,  `field-name_3`</li><li>**Onjuist**:  `_fieldName`</li></ul> |
+| [!UICONTROL Display name] | Een mensvriendelijke naam voor het veld. |
+| [!UICONTROL Type] | Het type gegevens dat het veld zal bevatten. In dit vervolgkeuzemenu kunt u een van de [standaard scalaire typen](../../schema/field-constraints.md) selecteren die door XDM worden ondersteund, of een van de multiveld [gegevenstypen](../resources/data-types.md) die eerder zijn gedefinieerd in [!DNL Schema Registry].<br><br>U kunt ook selecteren  **[!UICONTROL Advanced type search]** om bestaande gegevenstypen te zoeken en te filteren en het gewenste type gemakkelijker te vinden. |
 
-U kunt het veld ook voorzien van een optioneel leesbaar **[!UICONTROL Beschrijving]** voor meer context met betrekking tot het beoogde gebruik van het veld.
+U kunt het veld ook voorzien van een optionele leesbare **[!UICONTROL Description]** voor meer context met betrekking tot het beoogde gebruik van het veld.
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ U kunt het veld ook voorzien van een optioneel leesbaar **[!UICONTROL Beschrijvi
 >
 >De rechterrail biedt ook selectievakjes voor het aanwijzen van speciale veldtypen. Zie de sectie over [speciale veldtypen](#special) voor meer informatie.
 
-Als u klaar bent met het configureren van het veld, selecteert u **[!UICONTROL Toepassen]**.
+Nadat u het veld hebt geconfigureerd, selecteert u **[!UICONTROL Apply]**.
 
 ![](../../images/ui/fields/overview/field-details.png)
 
@@ -77,31 +77,31 @@ U kunt de bovenstaande stappen blijven volgen om meer velden aan het schema toe 
 
 ## Type-specifieke veldeigenschappen {#type-specific-properties}
 
-Wanneer u een nieuw veld definieert, worden mogelijk aanvullende configuratieopties weergegeven in de rechterraster, afhankelijk van het type **[!UICONTROL Type]** dat u voor het veld kiest. In de volgende tabel worden deze extra veldeigenschappen in combinatie met de compatibele typen weergegeven:
+Wanneer u een nieuw veld definieert, kunnen er extra configuratieopties worden weergegeven in de rechtertrack, afhankelijk van de **[!UICONTROL Type]** die u voor het veld kiest. In de volgende tabel worden deze extra veldeigenschappen in combinatie met de compatibele typen weergegeven:
 
 | Field, eigenschap | Compatibele typen | Beschrijving |
 | --- | --- | --- |
-| [!UICONTROL Standaardwaarde] | [!UICONTROL String],  [!UICONTROL Double],  [!UICONTROL Long],  [!UICONTROL Integer],  [!UICONTROL Short],    [!UICONTROL Byte, Boolean] | A default value that will be assigned to this field if no other value is provided during ingestion. Deze waarde moet overeenkomen met het geselecteerde type van het veld. |
-| [!UICONTROL Patroon] | [!UICONTROL Tekenreeks] | Een [reguliere expressie](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) waaraan de waarde voor dit veld moet voldoen om tijdens inname te worden geaccepteerd. |
-| [!UICONTROL Indeling] | [!UICONTROL Tekenreeks] | Selecteer een optie in een lijst met vooraf gedefinieerde indelingen voor tekenreeksen die de waarde moet bevatten. Beschikbare indelingen zijn: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostnaam]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-verwijzing]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
-| [!UICONTROL Minimumlengte] | [!UICONTROL Tekenreeks] | Het minimale aantal tekens dat de tekenreeks moet bevatten voordat de waarde wordt geaccepteerd tijdens de opname. |
-| [!UICONTROL Maximumlengte] | [!UICONTROL Tekenreeks] | Het maximum aantal tekens dat de tekenreeks moet bevatten voordat de waarde wordt geaccepteerd tijdens de invoer. |
-| [!UICONTROL Minimumwaarde] | [!UICONTROL Dubbel] | De minimumwaarde voor het Dubbele die tijdens inname moet worden goedgekeurd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde geaccepteerd. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Exclusive minimum value]&quot; leeg blijven. |
-| [!UICONTROL Maximumwaarde] | [!UICONTROL Dubbel] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde geaccepteerd. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Exclusive maximum value]&quot; leeg blijven. |
-| [!UICONTROL Exclusieve minimumwaarde] | [!UICONTROL Dubbel] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Minimum value]&quot; (niet-exclusief) leeg blijven. |
-| [!UICONTROL Exclusieve maximumwaarde] | [!UICONTROL Dubbel] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Maximum value]&quot; (niet-exclusief) leeg blijven. |
+| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that will be assigned to this field if no other value is provided during ingestion. Deze waarde moet overeenkomen met het geselecteerde type van het veld. |
+| [!UICONTROL Pattern] | [!UICONTROL String] | Een [reguliere expressie](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) waaraan de waarde voor dit veld moet voldoen om tijdens inname te worden geaccepteerd. |
+| [!UICONTROL Format] | [!UICONTROL String] | Selecteer een optie in een lijst met vooraf gedefinieerde indelingen voor tekenreeksen die de waarde moet bevatten. Beschikbare indelingen zijn: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
+| [!UICONTROL Minimum length] | [!UICONTROL String] | Het minimale aantal tekens dat de tekenreeks moet bevatten voordat de waarde wordt geaccepteerd tijdens de opname. |
+| [!UICONTROL Maximum length] | [!UICONTROL String] | Het maximum aantal tekens dat de tekenreeks moet bevatten voordat de waarde wordt geaccepteerd tijdens de invoer. |
+| [!UICONTROL Minimum value] | [!UICONTROL Double] | De minimumwaarde voor het Dubbele die tijdens inname moet worden goedgekeurd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde geaccepteerd. Wanneer het gebruiken van deze beperking, &quot;[!UICONTROL Exclusive minimum value]&quot;beperking moet leeg worden gelaten. |
+| [!UICONTROL Maximum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde geaccepteerd. Wanneer het gebruiken van deze beperking, &quot;[!UICONTROL Exclusive maximum value]&quot;beperking moet leeg worden gelaten. |
+| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Minimum value]&quot; (niet-exclusief) leeg blijven. |
+| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Maximum value]&quot; (niet-exclusief) leeg blijven. |
 
 ## Speciale veldtypen {#special}
 
-Het rechterspoor biedt verschillende selectievakjes voor het aanwijzen van speciale rollen voor het geselecteerde veld. De gebruiksgevallen voor sommige van deze opties houden belangrijke overwegingen in met betrekking tot uw strategie voor het modelleren van gegevens en hoe u downstreamservices voor Platforms wilt gebruiken.
+Het rechterspoor biedt verschillende selectievakjes voor het aanwijzen van speciale rollen voor het geselecteerde veld. De gebruiksgevallen voor sommige van deze opties vragen om belangrijke overwegingen met betrekking tot uw strategie voor het modelleren van gegevens en hoe u de downstreamservices voor Platforms wilt gebruiken.
 
 Raadpleeg de volgende documentatie voor meer informatie over deze speciale typen:
 
-* [[!UICONTROL Vereist]](./required.md)
+* [[!UICONTROL Required]](./required.md)
 * [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
-* [[!UICONTROL Identiteit]](./identity.md)  (alleen beschikbaar voor tekenreeksvelden)
-* [[!UICONTROL Relatie]](./relationship.md)  (alleen beschikbaar voor tekenreeksvelden)
+* [[!UICONTROL Identity]](./identity.md) (Alleen beschikbaar voor tekenreeksvelden)
+* [[!UICONTROL Relationship]](./relationship.md) (Alleen beschikbaar voor tekenreeksvelden)
 
 Technisch gezien is het geen speciaal veldtype, maar u wordt ook aangeraden de hulplijn te raadplegen bij [het definiëren van objecttype velden](./object.md) voor meer informatie over het definiëren van geneste subvelden als uw schema is gestructureerd.
 
