@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;Sandbox;sandbox
 solution: Experience Platform
 title: Een sandbox maken in de API
-topic: developer guide
+topic-legacy: developer guide
 description: U kunt een nieuwe zandbak tot stand brengen door een verzoek van de POST aan het `/zandbakeneindpunt te richten.
+exl-id: 676c5de8-2c3a-4612-9dd8-93e01cafe90e
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
-
 
 # Een sandbox maken in de API
 
