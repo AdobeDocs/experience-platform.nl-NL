@@ -2,16 +2,16 @@
 keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;
 solution: Experience Platform
 title: Real-time Machine Learning-overzicht
-topic: Overview
+topic-legacy: Overview
 description: Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren op de Experience Edge te gebruiken.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
-
 
 # Real-time Machine Learning-overzicht (Alpha)
 
@@ -45,7 +45,7 @@ Maak een real-time model voor het leren van machines door deze volledig te ontwe
 
 ### Implementatie
 
-Implementeer uw model op [!DNL Experience Edge] om een Real-time Machine Learning-service te maken in de [!UICONTROL Service Gallery] met behulp van het voorspellings-API-eindpunt.
+Implementeer uw model op [!DNL Experience Edge] om een Real-time Machine Learning-service in het [!UICONTROL Service Gallery] te maken met behulp van het API-eindpunt voor voorspellingen.
 
 ### Opkomst
 
@@ -81,4 +81,3 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 ## Volgende stappen
 
 U kunt beginnen door [te volgen begonnen ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor het creëren van een In real time het Leren van de Machine model.
-
