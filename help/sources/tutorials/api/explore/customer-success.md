@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;cs;CS;systeem van de klantensucces
 solution: Experience Platform
 title: Ontdek een systeem met succes van de Klant met behulp van de Flow Service API
-topic: overview
+topic-legacy: overview
 description: In deze zelfstudie wordt de Flow Service API gebruikt om de systemen van Customer Success (CS) te verkennen.
+exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 1%
 
 ---
-
 
 # Ontdek het successysteem van een klant met de [!DNL Flow Service]-API
 
