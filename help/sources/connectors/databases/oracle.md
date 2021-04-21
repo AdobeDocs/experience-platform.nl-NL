@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle;oracle
+keywords: Experience Platform;thuis;populaire onderwerpen;Oracle;oracle
 solution: Experience Platform
 title: Overzicht van oracle Source Connector
-topic: overview
+topic-legacy: overview
 description: Leer hoe u Oracle met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
+exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) [!DNL Oracle]-connector
 
