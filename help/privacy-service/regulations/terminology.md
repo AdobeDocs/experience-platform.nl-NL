@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy; Privacy;
 solution: Experience Platform
 title: Terminologie van privacyregels
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
+exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 9%
 
 ---
-
 
 # De terminologie van de privacyverordeningen
 
@@ -61,7 +61,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 **Ondernemingen**: Elke entiteit die een economische activiteit uitoefent, ongeacht haar rechtsvorm, met inbegrip van personen, partnerschappen, verenigingen enz.
 
-**Expliciete toestemming**: Een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige aanduiding van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
+**Expliciete toestemming**: Een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige aanduiding van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga ermee akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
 
 ## F
 
@@ -143,7 +143,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 ## T
 
-**Trillen**: Informele onderhandelingen tussen de Europese Commissie, het Europees Parlement en de Raad van de Europese Unie hebben gewoonlijk plaatsgevonden na de eerste lezing van de voorgestelde wetgeving, zodat er sneller overeenstemming kan worden bereikt over een goed te keuren compromistekst.
+**Trillen**: Informele onderhandelingen tussen de Europese Commissie, het Europees Parlement en de Raad van de Europese Unie hebben gewoonlijk plaatsgevonden na de eerste lezing van de voorgestelde wetgeving, zodat sneller overeenstemming kan worden bereikt over een goed te keuren compromistekst.
 
 ## U
 
