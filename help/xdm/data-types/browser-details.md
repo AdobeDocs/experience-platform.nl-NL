@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;Schema's;browser;browserdetails;datatype;data-type;gegevenstype.
 solution: Experience Platform
 title: Gegevenstype browserdetails
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor browserdetails.
+exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 4%
+source-wordcount: '258'
+ht-degree: 5%
 
 ---
 
+# [!UICONTROL Browser details] gegevenstype
 
-# [!UICONTROL Browser ] detailsgegevenstype
-
-[!UICONTROL Browser ] detailleert een standaard XDM gegevenstype dat details met betrekking tot browser of toepassing beschrijft.
+[!UICONTROL Browser details] is een standaard XDM gegevenstype dat details met betrekking tot browser of toepassing beschrijft.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
