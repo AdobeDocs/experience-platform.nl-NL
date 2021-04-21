@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;gebruikershandleiding voor gegevensgebruiksbeleid
 solution: Experience Platform
 title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
-topic: policies
+topic-legacy: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
+exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
-
 
 # Beleid voor gegevensgebruik beheren in de gebruikersinterface
 
@@ -30,7 +30,7 @@ Deze gids vereist een werkend inzicht in de volgende [!DNL Experience Platform] 
 
 ## Bestaand beleid {#view-policies} weergeven
 
-In [!DNL Experience Platform] UI, selecteer **[!UICONTROL Beleid]** om **[!UICONTROL Beleid]** werkruimte te openen. Op **[!UICONTROL Browse]** lusje, kunt u een lijst van beschikbaar beleid, met inbegrip van hun bijbehorende etiketten, marketing acties, en status zien.
+Selecteer [!DNL Experience Platform] in de gebruikersinterface om de werkruimte **[!UICONTROL Policies]** te openen. **[!UICONTROL Policies]** Op het tabblad **[!UICONTROL Browse]** ziet u een lijst met beschikbare beleidsregels, inclusief de bijbehorende labels, marketingacties en status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,7 +40,7 @@ Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een d
 
 ## Een aangepast beleid maken {#create-policy}
 
-Als u een nieuw beleid voor het gebruik van aangepaste gegevens wilt maken, selecteert u **[!UICONTROL Beleid maken]** in de rechterbovenhoek van het tabblad **[!UICONTROL Bladeren]** in de werkruimte **[!UICONTROL Beleid]**.
+Als u een nieuw beleid voor het gebruik van aangepaste gegevens wilt maken, selecteert u **[!UICONTROL Create policy]** in de rechterbovenhoek van het tabblad **[!UICONTROL Browse]** in de werkruimte **[!UICONTROL Policies]**.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -48,11 +48,11 @@ De **[!UICONTROL Create policy]**-workflow wordt weergegeven. Begin door een naa
 
 ![](../images/policies/create-policy-description.png)
 
-Selecteer vervolgens de labels voor gegevensgebruik waarop het beleid wordt gebaseerd. Als u meerdere labels selecteert, kunt u kiezen of de gegevens alle labels moeten bevatten of slechts één label, zodat het beleid van toepassing is. Selecteer **[!UICONTROL Volgende]** als u klaar bent.
+Selecteer vervolgens de labels voor gegevensgebruik waarop het beleid wordt gebaseerd. Als u meerdere labels selecteert, kunt u kiezen of de gegevens alle labels moeten bevatten of slechts één label, zodat het beleid van toepassing is. Selecteer **[!UICONTROL Next]** wanneer gebeëindigd.
 
 ![](../images/policies/add-labels.png)
 
-De stap **[!UICONTROL marketingacties selecteren]** wordt weergegeven. Kies de aangewezen marketing acties van de verstrekte lijst, dan uitgezocht **[!UICONTROL Volgende]** om verder te gaan.
+De stap **[!UICONTROL Select marketing actions]** wordt weergegeven. Kies de gewenste marketingacties in de lijst en selecteer **[!UICONTROL Next]** om door te gaan.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ De stap **[!UICONTROL marketingacties selecteren]** wordt weergegeven. Kies de a
 
 ![](../images/policies/add-marketing-actions.png)
 
-De stap **[!UICONTROL Review]** verschijnt, die u toestaat om de details van het nieuwe beleid te herzien alvorens het tot stand te brengen. Als u tevreden bent, selecteert u **[!UICONTROL Voltooien]** om het beleid te maken.
+De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de details van het nieuwe beleid kunt bekijken voordat u het maakt. Als u tevreden bent, selecteert u **[!UICONTROL Finish]** om het beleid te maken.
 
 ![](../images/policies/policy-review.png)
 
-Het **[!UICONTROL Browse]** lusje verschijnt opnieuw, dat nu van het nieuw gecreëerde beleid in &quot;Ontwerp&quot;status een lijst maakt. Zie de volgende sectie om het beleid in te schakelen.
+Het tabblad **[!UICONTROL Browse]** wordt opnieuw weergegeven. Hierin wordt nu het nieuwe beleid in de status &quot;Concept&quot; weergegeven. Zie de volgende sectie om het beleid in te schakelen.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,27 +72,27 @@ Het **[!UICONTROL Browse]** lusje verschijnt opnieuw, dat nu van het nieuw gecre
 
 Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
 
-U kunt beleid van **[!UICONTROL Browse]** lusje in of onbruikbaar maken **[!UICONTROL Beleid]** werkruimte. Selecteer een aangepast beleid in de lijst om de details aan de rechterkant weer te geven. Selecteer onder **[!UICONTROL Status]** de schakelknop om het beleid in of uit te schakelen.
+U kunt beleid van het **[!UICONTROL Browse]** lusje in of onbruikbaar maken **[!UICONTROL Policies]** werkruimte. Selecteer een aangepast beleid in de lijst om de details aan de rechterkant weer te geven. Selecteer onder **[!UICONTROL Status]** de schakelknop om het beleid in of uit te schakelen.
 
 ![](../images/policies/enable-policy.png)
 
 ## Marketingacties {#view-marketing-actions} weergeven
 
-Selecteer in de werkruimte **[!UICONTROL Beleid]** het tabblad **[!UICONTROL Handelingen voor marketing]** om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd.
+Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd.
 
 ![](../images/policies/marketing-actions.png)
 
 ## Een marketingactie maken {#create-marketing-action}
 
-Als u een nieuwe aangepaste marketingactie wilt maken, selecteert u **[!UICONTROL Marketing-actie maken]** in de rechterbovenhoek van het tabblad **[!UICONTROL Handelingen voor marketing]** in de werkruimte **[!UICONTROL Beleid]**.
+Als u een nieuwe aangepaste marketingactie wilt maken, selecteert u **[!UICONTROL Create marketing action]** in de rechterbovenhoek van het tabblad **[!UICONTROL Marketing actions]** in de werkruimte **[!UICONTROL Policies]**.
 
 ![](../images/policies/create-marketing-action.png)
 
-Het dialoogvenster **[!UICONTROL Marketing maken]** wordt weergegeven. Voer een naam en beschrijving in voor de marketingactie en selecteer **[!UICONTROL Maken]**.
+Het dialoogvenster **[!UICONTROL Create marketing action]** wordt weergegeven. Voer een naam en beschrijving in voor de marketingactie en selecteer **[!UICONTROL Create]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-De nieuwe actie wordt weergegeven op het tabblad **[!UICONTROL Handelingen voor marketing]**. U kunt de marketingactie nu gebruiken wanneer u nieuwe beleidsregels voor gegevensgebruik maakt](#create-policy).[
+De nieuwe handeling wordt weergegeven op het tabblad **[!UICONTROL Marketing actions]**. U kunt de marketingactie nu gebruiken wanneer u nieuwe beleidsregels voor gegevensgebruik maakt](#create-policy).[
 
 ![](../images/policies/created-marketing-action.png)
 
@@ -102,11 +102,11 @@ De nieuwe actie wordt weergegeven op het tabblad **[!UICONTROL Handelingen voor 
 >
 >Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Marketingacties die door Adobe worden gedefinieerd, kunnen niet worden gewijzigd of verwijderd.
 
-Selecteer in de werkruimte **[!UICONTROL Beleid]** het tabblad **[!UICONTROL Handelingen voor marketing]** om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
+Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
 
 ![](../images/policies/edit-marketing-action.png)
 
-Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt u deze verwijderen door **[!UICONTROL Marketing action]** verwijderen te selecteren.
+Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt u deze verwijderen door **[!UICONTROL Delete marketing action]** te selecteren.
 
 >[!NOTE]
 >
