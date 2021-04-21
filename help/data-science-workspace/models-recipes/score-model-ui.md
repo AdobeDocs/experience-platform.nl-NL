@@ -2,17 +2,17 @@
 keywords: Experience Platform;score een model;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;ui;scoring looppas;scores resultaten
 solution: Experience Platform
 title: Score een Model in de Werkruimte van de Wetenschap van Gegevens UI
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'Scores in de Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij. '
+description: Scores in de Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
+exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 translation-type: tm+mt
-source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
-
 
 # Score een model in de Werkruimte van de Wetenschap van Gegevens UI
 
