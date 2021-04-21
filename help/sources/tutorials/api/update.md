@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;flowservice;updateaccounts
 solution: Experience Platform
 title: Accounts bijwerken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het bijwerken van de gegevens en referenties van een account met behulp van de Flow Service API.
+exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 translation-type: tm+mt
-source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '687'
 ht-degree: 1%
 
 ---
-
 
 # Accounts bijwerken met de Flow Service API
 
