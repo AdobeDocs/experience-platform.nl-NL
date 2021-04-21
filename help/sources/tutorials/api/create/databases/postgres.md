@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Een PostSQL-bronverbinding maken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API verbindt met PostgreSQL.
+exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL PostgreSQL]-bronverbinding maken met de [!DNL Flow Service]-API
 
