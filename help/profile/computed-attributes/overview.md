@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Inleiding tot berekende kenmerken
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
-
 
 # (Alpha) Overzicht van berekende kenmerken
 
@@ -38,8 +38,8 @@ De berekende attributen omvatten het creëren van een uitdrukking, of &quot;rege
 Bij gebruik van berekende kenmerken kan het gaan om eenvoudige berekeningen tot zeer complexe verwijzingen. Hier volgen een paar voorbeelden van gebruiksscenario&#39;s voor berekende kenmerken:
 
 1. **[!UICONTROL Percentages]:** Een eenvoudig berekend kenmerk kan het opnemen van twee numerieke velden in een record omvatten en het splitsen van deze velden om een percentage te maken. U kunt bijvoorbeeld het totale aantal e-mails dat naar een individu is verzonden, opsplitsen in het aantal e-mails dat de persoon opent. Als u het resulterende berekende kenmerkveld bekijkt, wordt snel het percentage weergegeven van het totale aantal e-mails dat door het individu wordt geopend.
-1. **[!UICONTROL Toepassingsgebruik]: in** een ander voorbeeld kunt u het aantal keren samenvoegen dat een gebruiker de toepassing opent. Door het totale aantal geopende toepassingen te volgen, op basis van afzonderlijke open gebeurtenissen, kunt u speciale aanbiedingen of berichten aan gebruikers aanbieden op hun 100e open, waardoor u een diepere betrokkenheid bij uw merk aanmoedigt.
-1. **[!UICONTROL Levenstijdwaarden]:Het** verzamelen van lopende totalen, zoals een levenslange aankoopwaarde voor een klant, kan zeer moeilijk zijn. Dit vereist het bijwerken van het historische totaal telkens wanneer een nieuwe aankoopgebeurtenis plaatsvindt. Een gegevens verwerkt attribuut staat u toe om dit veel gemakkelijker te doen door de levenwaarde op één enkel gebied te handhaven dat automatisch na elke succesvolle koopgebeurtenis met betrekking tot de klant wordt bijgewerkt.
+1. **[!UICONTROL Application use]:** Een ander voorbeeld is de mogelijkheid om het aantal keren samen te voegen dat een gebruiker de toepassing opent. Door het totale aantal geopende toepassingen te volgen, op basis van afzonderlijke open gebeurtenissen, kunt u speciale aanbiedingen of berichten aan gebruikers aanbieden op hun 100e open, waardoor u een diepere betrokkenheid bij uw merk aanmoedigt.
+1. **[!UICONTROL Lifetime values]:** Het verzamelen van lopende totalen, zoals een waarde van de levenslange aankoop voor een klant, kan zeer moeilijk zijn. Dit vereist het bijwerken van het historische totaal telkens wanneer een nieuwe aankoopgebeurtenis plaatsvindt. Een gegevens verwerkt attribuut staat u toe om dit veel gemakkelijker te doen door de levenwaarde op één enkel gebied te handhaven dat automatisch na elke succesvolle koopgebeurtenis met betrekking tot de klant wordt bijgewerkt.
 
 ## Bekende beperkingen
 
