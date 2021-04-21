@@ -2,20 +2,20 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;milieu;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype omgeving
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het milieu-XDM-gegevenstype.
+exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '461'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Environment] gegevenstype
 
-# [!UICONTROL Gegevenstype ] Omgeving
-
- Environment is een standaard XDM-gegevenstype dat de omringende omgeving van een waargenomen gebeurtenis beschrijft, met name met gedetailleerde informatie over tijdelijke gegevens zoals netwerk- en softwareversies.
+[!UICONTROL Environment] is een standaard XDM gegevenstype dat het omringende milieu van een waargenomen gebeurtenis beschrijft, specifiek die overgangsinformatie zoals netwerk en softwareversies detailleert.
 
 >[!IMPORTANT]
 >
@@ -34,7 +34,7 @@ ht-degree: 3%
 | `domain` | Tekenreeks | Het domein van ISP van de gebruiker. |
 | `ipV4` | Tekenreeks | Het numerieke label dat is toegewezen aan een apparaat dat deelneemt aan een computernetwerk dat het Internet Protocol voor communicatie (32 bits) gebruikt. |
 | `ipV6` | Tekenreeks | Het numerieke label dat is toegewezen aan een apparaat dat deelneemt aan een computernetwerk dat het Internet Protocol voor communicatie (128 bits) gebruikt. |
-| `operatingSystem` | Tekenreeks | De naam van het besturingssysteem dat bij de waarneming werd gebruikt. Het kenmerk mag geen versiegegevens zoals `10.5.3` bevatten, maar moet in plaats daarvan &#39;edition&#39;-aanduidingen zoals `Ultimate` of `Professional` bevatten. |
+| `operatingSystem` | Tekenreeks | De naam van het besturingssysteem dat bij de waarneming werd gebruikt. Het kenmerk mag geen versiegegevens bevatten zoals `10.5.3`, maar wel &#39;edition&#39;-aanduidingen zoals `Ultimate` of `Professional`. |
 | `operatingSystemVendor` | Tekenreeks | De naam van de leverancier van het besturingssysteem die is gebruikt bij de waarneming. |
 | `operatingSystemVersion` | Tekenreeks | De volledige versie-id voor het besturingssysteem dat bij de waarneming werd gebruikt. Versies worden meestal numeriek samengesteld, maar kunnen in een door de leverancier gedefinieerde indeling worden gebruikt. |
 | `type` | Tekenreeks | Het type toepassingsomgeving. Zie [appendix](#type) voor geaccepteerde waarden. |
