@@ -1,21 +1,19 @@
 ---
 title: Een klantervaring met Experience Platform
 description: Deze video volgt een hypothetische ervaring die met Adobe Experience Platform is opgebouwd, zoals vanuit het perspectief van een klant wordt gezien. Bekijk hoe Experience Platform een rijke, relevante en real-time ervaring creëert.
-feature: null
-topics: null
 kt: 4339
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 27361.jpg
+exl-id: f59bf52a-13fe-4b84-81d6-518b9b081151
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
-
 
 # Een klantervaring met Experience Platform
 
