@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;apparaat;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype apparaat
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het apparaat.
+exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '322'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Device] gegevenstype
 
-# [!UICONTROL Het type ] DeviceData
-
-[!UICONTROL Apparaten ] zijn een standaard XDM gegevenstype dat een geïdentificeerd apparaat beschrijft. Een apparaat is een toepassing of browserinstantie die tijdens verschillende sessies kan worden bijgehouden, meestal door cookies.
+[!UICONTROL Device] is een standaard XDM gegevenstype dat een geïdentificeerd apparaat beschrijft. Een apparaat is een toepassing of browserinstantie die tijdens verschillende sessies kan worden bijgehouden, meestal door cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
