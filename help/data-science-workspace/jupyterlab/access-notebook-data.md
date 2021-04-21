@@ -2,16 +2,16 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;%dataset;interactieve modus;batchmodus;Spark sdk;python sdk;toegangsgegevens;laptop toegang tot gegevens
 solution: Experience Platform
 title: Toegang tot gegevens in Jupyterlab-laptops
-topic: Developer Guide
+topic-legacy: Developer Guide
 description: Deze gids concentreert zich op hoe te om Notities van Jupyter te gebruiken, die binnen de Werkruimte van de Wetenschap van Gegevens worden gebouwd om tot uw gegevens toegang te hebben.
+exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3101'
+source-wordcount: '3031'
 ht-degree: 9%
 
 ---
-
 
 # Toegang tot gegevens in [!DNL Jupyterlab] laptops
 
@@ -45,7 +45,7 @@ Wanneer het lezen van datasets met PySpark en Nota&#39;s Scala, hebt u de optie 
 
 **XDM ExperienceEvent-schema:** U moet maximaal 2 miljoen rijen (~6,1 GB gegevens op schijf) met XDM-gegevens kunnen lezen in minder dan 22 minuten. Als u extra rijen toevoegt, kunnen er fouten optreden.
 
-| Aantal rijen | 1 K | 10 kB | 100 K | 1M | 2 MB |
+| Aantal rijen | 1K | 10K | 100K | 1M | 2 MB |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Grootte op schijf (MB) | 18,73 | 187,5 | 308 | 3000 | 6050 |
 | SDK (in seconden) | 20,3 | 86,8 | 63 | 659 | 1315 |
@@ -150,13 +150,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Schrijven naar een gegevensset in Python {#write-python}
 
-Als u naar een gegevensset in uw JupyterLab-notitie wilt schrijven, selecteert u het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De directory **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Gegevens in Notitieboekje]** optie van het drop-down menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
+Als u naar een gegevensset in uw JupyterLab-notitie wilt schrijven, selecteert u het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Write Data in Notebook]** optie van het dropdown menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Gebruik **[!UICONTROL Gegevens schrijven in Laptop]** om een schrijfcel met uw geselecteerde dataset te produceren.
-- Gebruik **[!UICONTROL Gegevens in laptop ontdekken]** om een leescel met uw geselecteerde dataset te produceren.
-- Gebruik **[!UICONTROL Gegevens van de Vraag in Notitieboekje]** om een basisvraagcel met uw geselecteerde dataset te produceren.
+- Gebruik **[!UICONTROL Write Data in Notebook]** om een schrijfcel met uw geselecteerde dataset te produceren.
+- Gebruik **[!UICONTROL Explore Data in Notebook]** om een gelezen cel met uw geselecteerde dataset te produceren.
+- Gebruik **[!UICONTROL Query Data in Notebook]** om een basisvraagcel met uw geselecteerde dataset te produceren.
 
 U kunt ook de volgende codecel kopiëren en plakken. Vervang zowel `{DATASET_ID}` als `{PANDA_DATAFRAME}`.
 
@@ -175,7 +175,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Voordat u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, moet u ervoor zorgen dat u een goed begrip hebt van de [[!DNL Query Service] SQL-syntaxis](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-Het vragen van gegevens die [!DNL Query Service] gebruiken vereist u om de naam van de doeldataset te verstrekken. U kunt de noodzakelijke codecellen produceren door de gewenste dataset te vinden gebruikend **[!UICONTROL de ontdekkingsreiziger van Gegevens]**. Klik met de rechtermuisknop op de gegevenssetlijst en klik op **[!UICONTROL Query-gegevens in laptop]** om twee codecellen in uw laptop te genereren. Deze twee cellen worden hieronder gedetailleerder beschreven.
+Het vragen van gegevens die [!DNL Query Service] gebruiken vereist u om de naam van de doeldataset te verstrekken. U kunt de noodzakelijke codecellen produceren door de gewenste dataset te vinden gebruikend **[!UICONTROL Data explorer]**. Klik met de rechtermuisknop op de gegevenssetlijst en klik op **[!UICONTROL Query Data in Notebook]** om twee codecellen in uw notitieboekje te genereren. Deze twee cellen worden hieronder gedetailleerder beschreven.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -286,12 +286,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Schrijven naar een gegevensset in R {#write-r}
 
-Als u naar een gegevensset in uw JupyterLab-notitie wilt schrijven, selecteert u het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De directory **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Gegevens in Notitieboekje]** optie van het drop-down menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
+Als u naar een gegevensset in uw JupyterLab-notitie wilt schrijven, selecteert u het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Write Data in Notebook]** optie van het dropdown menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Gebruik **[!UICONTROL Gegevens schrijven in Laptop]** om een schrijfcel met uw geselecteerde dataset te produceren.
-- Gebruik **[!UICONTROL Gegevens in laptop ontdekken]** om een leescel met uw geselecteerde dataset te produceren.
+- Gebruik **[!UICONTROL Write Data in Notebook]** om een schrijfcel met uw geselecteerde dataset te produceren.
+- Gebruik **[!UICONTROL Explore Data in Notebook]** om een gelezen cel met uw geselecteerde dataset te produceren.
 
 U kunt ook de volgende codecel kopiëren en plakken:
 
@@ -388,10 +388,10 @@ Een aangepaste [!DNL Data Science Workspace] toveropdracht voor het lezen of sch
 
 U kunt de bovenstaande voorbeelden automatisch genereren bij het aanschaffen van JupyterLab met de volgende methode:
 
-Selecteer het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De directory **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Gegevens in Notitieboekje]** optie van het drop-down menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
+Selecteer het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Write Data in Notebook]** optie van het dropdown menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
 
-- Gebruik **[!UICONTROL Gegevens verkennen in laptop]** om een leescel te genereren.
-- Gebruik **[!UICONTROL Gegevens schrijven in laptop]** om een schrijfcel te genereren.
+- Gebruik **[!UICONTROL Explore Data in Notebook]** om een gelezen cel te produceren.
+- Gebruik **[!UICONTROL Write Data in Notebook]** om een schrijfcel te produceren.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -510,10 +510,10 @@ df1.show(10)
 
 U kunt het bovenstaande voorbeeld automatisch genereren bij het aanschaffen van JupyterLab met de volgende methode:
 
-Selecteer het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De directory **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Gegevens in Notitieboekje]** optie van het drop-down menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
+Selecteer het tabblad Gegevenspictogram (hieronder gemarkeerd) in de linkernavigatie van JupyterLab. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Explore Data in Notebook]** optie van het dropdown menu op de dataset u wenst te gebruiken. Onder aan uw laptop wordt een uitvoerbaar code-item weergegeven.
 en
-- Gebruik **[!UICONTROL Gegevens verkennen in laptop]** om een leescel te genereren.
-- Gebruik **[!UICONTROL Gegevens schrijven in laptop]** om een schrijfcel te genereren.
+- Gebruik **[!UICONTROL Explore Data in Notebook]** om een gelezen cel te produceren.
+- Gebruik **[!UICONTROL Write Data in Notebook]** om een schrijfcel te produceren.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
@@ -619,4 +619,3 @@ In deze tabel staan de optionele SQL-markeringen die kunnen worden gebruikt voor
 | `-n`,  `--notify` | Optie in-/uitschakelen voor het melden van queryresultaten. |
 | `-a`,  `--async` | Als u deze markering gebruikt, wordt de query asynchroon uitgevoerd en kan de kernel vrijkomen terwijl de query wordt uitgevoerd. Wees voorzichtig wanneer u queryresultaten toewijst aan variabelen, omdat deze mogelijk niet gedefinieerd zijn als de query niet volledig is. |
 | `-d`,  `--display` | Met deze markering voorkomt u dat resultaten worden weergegeven. |
-
