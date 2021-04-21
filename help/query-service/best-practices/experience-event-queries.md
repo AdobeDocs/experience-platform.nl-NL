@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;ExperienceEvent-query;ExperienceEvent-query;ExperienceEvent-query;
 solution: Experience Platform
 title: Voorbeeldquery's voor Experience Events
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: In het volgende document worden voorbeelden gegeven van query's voor Experience Events in Adobe Experience Platform Query Service.
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
-
 
 # Voorbeeldquery&#39;s voor [!DNL Experience Events]
 
@@ -190,4 +190,3 @@ ORDER BY pageViews DESC;
 ## Volgende stappen
 
 Voor meer informatie over steekproefvragen die Adobe bepaalde Functies (ADFs) gebruiken, te lezen gelieve de Adobe bepaalde gids van Functies. Voor algemene begeleiding bij vraaguitvoering, te lezen gelieve [gids op vraaguitvoering in de Dienst van de Vraag](./writing-queries.md).
-
