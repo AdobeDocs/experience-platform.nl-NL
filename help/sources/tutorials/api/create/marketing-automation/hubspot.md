@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;hubspot;Hubspot
 solution: Experience Platform
 title: Creeer een Verbinding van de Bron van HubSpot Gebruikend de Dienst API van de Stroom
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om Adobe Experience Platform met HubSpot te verbinden gebruikend de Dienst API van de Stroom.
+exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
 
 ---
-
 
 # Een [!DNL HubSpot]-bronverbinding maken met de [!DNL Flow Service]-API
 
