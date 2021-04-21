@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Data Lake Storage Gen2;azure data Lake storage;Azure
 solution: Experience Platform
 title: Een Azure Data Lake Storage Gen2 Source Connection maken met behulp van de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Azure Data Lake Storage Gen2 met behulp van de Flow Service API.
+exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
 
 ---
-
 
 # Een [!DNL Azure] Data Lake Storage Gen2-bronverbinding maken met de [!DNL Flow Service]-API
 
