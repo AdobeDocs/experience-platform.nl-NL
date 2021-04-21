@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home;popular topics;access data sources;data access;spark sdk;python sdk
+keywords: Experience Platform;thuis;populaire onderwerpen;toegang gegevensbronnen;gegevenstoegang;spark sdk;python sdk
 solution: Experience Platform
 title: Zelfstudies voor gegevenstoegang
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunnen gebruikers ingesloten gegevenssets binnen Experience Platform detecteren en benaderen met behulp van de API voor gegevenstoegang.
+exl-id: c0b6eb7d-8874-4f3a-927e-9ff51e3c0cc9
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
-
 
 # Zelfstudies voor gegevenstoegang
 
 De Toegang van gegevens steunt Adobe Experience Platform door gebruikershulpmiddelen te verstrekken die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform worden geconcentreerd.
 
-Om meer te leren, begin door het overzicht [van de Toegang van](../data-access/home.md)Gegevens te lezen.
+Om meer te leren, begin door [Overzicht van de Toegang van Gegevens te lezen](../data-access/home.md).
 
 ## Vraag een datasetgegevens gebruikend de Toegang API van Gegevens
 
@@ -32,4 +32,4 @@ De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruik
 - Gedeeltelijke inhoud van een bestand downloaden.
 - Paginering van API-reactie configureren.
 
-Volg de zelfstudie over de API voor [gegevenstoegang om aan de slag te gaan](../data-access/tutorials/dataset-data.md).
+Om aan de slag te gaan, volgt u de [API-zelfstudie voor gegevenstoegang](../data-access/tutorials/dataset-data.md).
