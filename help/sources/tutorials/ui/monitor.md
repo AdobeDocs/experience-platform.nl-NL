@@ -3,16 +3,16 @@ keywords: Experience Platform;thuis;populaire onderwerpen;monitorrekeningen;moni
 description: De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande gegevensstromen van de werkruimte van Bronnen.
 solution: Experience Platform
 title: Gegevensstromen van de monitor in UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 5fc4d98b-811e-42e7-8342-0cdac1027ca5
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # Gegevens controleren in de gebruikersinterface
 
