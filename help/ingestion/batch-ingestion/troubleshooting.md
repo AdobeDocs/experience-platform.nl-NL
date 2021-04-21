@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;ingebedde gegevens;het oplossen van problemen;faq;Ingestie;Het opnemen van de partij;partij ingestie;
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met inslikken
-topic: troubleshooting
-description: 'Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform Batch Data Ingestie-API''s te beantwoorden. '
+topic-legacy: troubleshooting
+description: Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform Batch Data Ingestie-API's te beantwoorden.
+exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
 
 ---
-
 
 # Handleiding voor het oplossen van problemen met inslikken
 
