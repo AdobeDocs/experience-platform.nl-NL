@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Mixins maken en bewerken in de gebruikersinterface
 description: Leer hoe u combinaties maakt en bewerkt in de gebruikersinterface van het Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 240b857d-75ad-42fd-9249-050cbc5306a9
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
-
 
 # Mengsels maken en bewerken in de gebruikersinterface
 
@@ -31,11 +31,11 @@ Hoewel niet vereist voor deze gids, wordt het geadviseerd dat u het leerprogramm
 
 Als u een nieuwe mix wilt maken, moet u eerst een schema selecteren waaraan de mix wordt toegevoegd. U kunt verkiezen om [een nieuw schema te creëren](./schemas.md#create) of [een bestaand schema te selecteren om](./schemas.md#edit) uit te geven.
 
-Als u het schema hebt geopend in [!DNL Schema Editor], selecteert u **[!UICONTROL Add]** naast de sectie [!UICONTROL Mixins] in de linkerrail.
+Als u het schema hebt geopend in [!DNL Schema Editor], selecteert u **[!UICONTROL Add]** naast de sectie [!UICONTROL Mixins] in de linkertrack.
 
 ![](../../images/ui/resources/mixins/add-mixin-button.png)
 
-Er wordt een dialoogvenster weergegeven met een lijst bestaande combinaties voor uw organisatie. Selecteer **[!UICONTROL Nieuwe mix maken]** boven in het dialoogvenster. Hier kunt u een **[!UICONTROL Weergavenaam]** en **[!UICONTROL Beschrijving]** voor de mix opgeven. Als u klaar bent, selecteert u **[!UICONTROL Mengsel toevoegen]**.
+Er wordt een dialoogvenster weergegeven met een lijst bestaande combinaties voor uw organisatie. Selecteer **[!UICONTROL Create new mixin]** boven in het dialoogvenster. Hier kunt u een **[!UICONTROL Display name]** en **[!UICONTROL Description]** voor de mix verstrekken. Selecteer **[!UICONTROL Add mixin]** als u klaar bent.
 
 ![](../../images/ui/resources/mixins/create-mixin.png)
 
@@ -59,9 +59,9 @@ Als u velden wilt toevoegen aan een mix in [!DNL Schema Editor], selecteert u ee
 
 ![](../../images/ui/resources/mixins/add-field-button.png)
 
-Er verschijnt een **[!UICONTROL Nieuw veld]** op het canvas en de juiste updates per spoor om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Zie de gids op [het bepalen van gebieden in UI](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de mixin te vormen en toe te voegen.
+Er verschijnt een **[!UICONTROL New field]** in het canvas en de rechterrails worden bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Zie de gids op [het bepalen van gebieden in UI](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de mixin te vormen en toe te voegen.
 
-Voeg zoveel velden toe als nodig zijn voor de mix. Als u klaar bent, selecteert u **[!UICONTROL Opslaan]** om zowel het schema als de mix op te slaan.
+Voeg zoveel velden toe als nodig zijn voor de mix. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de mix op te slaan.
 
 ![](../../images/ui/resources/mixins/complete-mixin.png)
 
