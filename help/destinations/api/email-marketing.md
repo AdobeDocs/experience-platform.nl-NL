@@ -3,16 +3,16 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API
 description: Dit document behandelt het maken van e-mailmarketingdoelen met de Adobe Experience Platform API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
-
 
 # Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API
 
@@ -593,7 +593,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Gebruik de gegevensstroom die u in de vorige stap hebt verkregen.
 * `{ETAG}`: Gebruik het label dat u in de vorige stap hebt verkregen.
-* `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, gaat u naar **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecteert u **[!UICONTROL Segmenteringsservice-API]** in het linkernavigatiemenu en zoekt u de `GET /segment/definitions`-bewerking in **[!UICONTROL Segmentdefinities]**.
+* `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, gaat u naar **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecteert u **[!UICONTROL Segmentation Service API]** in het linkernavigatiemenu en zoekt u naar de `GET /segment/definitions`-bewerking in **[!UICONTROL Segment Definitions]**.
 * `{PROFILE_ATTRIBUTE}`: Bijvoorbeeld, `"person.lastName"`
 
 **Antwoord**
