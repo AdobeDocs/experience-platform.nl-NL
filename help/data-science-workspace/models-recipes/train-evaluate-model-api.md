@@ -2,17 +2,17 @@
 keywords: Experience Platform;trainen en evalueren;Data Science Workspace;populaire onderwerpen;Sensei Machine Learning API
 solution: Experience Platform
 title: Een model trainen en evalueren met de API voor leren van Sensei-machines
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een model kunt maken, trainen en evalueren met API-aanroepen van Sensei Machine Learning.
+exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 0%
 
 ---
-
 
 # Een model trainen en evalueren met de [!DNL Sensei Machine Learning]-API
 
@@ -54,7 +54,7 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 ### Een MLInstance maken
 
-Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die wanneer het creëren van een Motor van [een verpakte Ontvanger invoeren gebruikend de API](./import-packaged-recipe-ui.md) leerprogramma is teruggekeerd.
+Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die wanneer het creëren van een Motor van [een verpakte Ontvanger gebruikend API](./import-packaged-recipe-ui.md) leerprogramma is teruggekeerd invoeren.
 
 **Verzoek**
 
