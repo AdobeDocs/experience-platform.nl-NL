@@ -2,16 +2,16 @@
 keywords: Experience Cloud;aan de slag;inhoud en handel ai;populaire onderwerpen;Intelligente services;ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: Overzicht van Content and Commerce AI
-topic: Content and Commerce AI
+topic-legacy: Content and Commerce AI
 description: AI van de Inhoud en van de Handel is een reeks diensten van AI die u toestaat om intelligente eigenschappen uit uw inhoud te halen, inhoudsstroom te organiseren, te stroomlijnen, en nuttigere, gepersonaliseerde ervaringen aan uw klanten te leveren.
+exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van AI-bestanden voor inhoud en handel
 
@@ -29,7 +29,7 @@ Inhoud is een essentieel onderdeel van deze ervaringen. Om marketingvragen beter
 
 | Inhoudstype | Functies | Overzicht van functionaliteit |
 | --- | --- | --- |
-| Tekst | - extractie van trefwoorden en entiteiten <br> - Aangepaste classificaties | - Trefwoorden en tags automatisch ophalen uit bedrijfsdocumenten en webpagina&#39;s met een AI-service buiten de box. <br> - Automatisch de documenten of webpagina&#39;s van een onderneming labelen per bedrijfstaxonomie met behulp van een service die is gebaseerd op aangepaste AI-modellen. |
+| Tekst | - extractie van trefwoorden en entiteiten <br> - Aangepaste classificaties | - Trefwoorden en -tags automatisch extraheren uit bedrijfsdocumenten en webpagina&#39;s met een AI-service die niet beschikbaar is. <br> - Automatisch de documenten of webpagina&#39;s van een onderneming labelen per bedrijfstaxonomie met behulp van een service die is gebaseerd op aangepaste AI-modellen. |
 | Afbeeldingen | - Visuele aanbevelingen <br> - Kleurextractie | - visueel vergelijkbare productaanbevelingen aan de consument doen, met behulp van een AI-model dat is ontwikkeld op basis van intuïtieve productkenmerken (ontwerp, kleur, vorm). <br> - Haal de dominante kleuren (labels en hexadecimale waarden) en hun gewicht nauwkeurig uit een afbeelding van het product. |
 
 ## Inzicht in AI voor inhoud en handel
@@ -54,4 +54,3 @@ De algemene visie van de AI van de Inhoud en van de Handel wordt verdeeld in dri
 - Gebruik het profiel van de klant om verbeterde, gepersonaliseerde ervaringen, in sessies en voor verdere ervaringen te bieden.
 - Gebruik inhoudseigenschappen om inzicht te krijgen in het gedrag van klanten dat KPI&#39;s drijft.
 - Inhoudsinzichten gebruiken voor verbeterde creatie, creatie en selectie van inhoud.
-
