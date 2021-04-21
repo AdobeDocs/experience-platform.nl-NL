@@ -2,17 +2,17 @@
 keywords: Experience Platform;een model publiceren;Data Science Workspace;populaire onderwerpen;sensei machine learning api
 solution: Experience Platform
 title: Een model publiceren als een service met de API voor leren van Sensei-machines
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie behandelt het publiceren van een model als service met behulp van de API voor leren van Sensei-machines.
+exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 0%
 
 ---
-
 
 # Een model publiceren als een service met [!DNL Sensei Machine Learning API]
 
