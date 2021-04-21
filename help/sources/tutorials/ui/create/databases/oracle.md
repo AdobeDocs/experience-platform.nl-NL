@@ -7,18 +7,14 @@ type: Tutorial
 description: Leer hoe u een Oracle DB-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Oracle DB]-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
-> De [!DNL Oracle DB] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Oracle DB]-bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
