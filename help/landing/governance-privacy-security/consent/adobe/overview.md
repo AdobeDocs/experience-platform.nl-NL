@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Verwerking van toestemming in Adobe Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Raadpleeg de zelfstudie over [het configureren van een gegevensset voor het vast
 
 ## [!DNL Profile] samenvoegbeleid bijwerken om gegevens over toestemming {#merge-policies} op te nemen
 
-Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw fusiebeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
+Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw samenvoegbeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
 >[!NOTE]
 >
