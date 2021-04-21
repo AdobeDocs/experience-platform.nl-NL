@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids;toewijzende reeksen;
 solution: Experience Platform
 title: API-eindpunt voor toewijzingssets
-topic: mapping sets
-description: 'U kunt het `/mappingSets eindpunt ` in Adobe Experience Platform API gebruiken om kaartreeksen programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen. '
+topic-legacy: mapping sets
+description: U kunt het `/mappingSets eindpunt ` in Adobe Experience Platform API gebruiken om kaartreeksen programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
+exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '807'
 ht-degree: 0%
 
 ---
-
 
 # Punt voor toewijzingssets
 
