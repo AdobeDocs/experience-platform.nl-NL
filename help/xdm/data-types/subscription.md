@@ -2,28 +2,28 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;Abonnement;datatype;data-type;gegevenstype.
 solution: Experience Platform
 title: Gegevenstype abonnement
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Subscription Experience Data Model (XDM).
+exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 translation-type: tm+mt
-source-git-commit: 8ccf0a53f231c9f59cd87735126b180c6b678e51
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '411'
 ht-degree: 8%
 
 ---
 
+# [!UICONTROL Subscription] gegevenstype
 
-# [!UICONTROL Het type ] SubscriptData
-
- Abonnement is een standaard XDM-gegevenstype (Experience Data Model) waarmee gelicentieerde rechten op software, services of goederen worden beschreven die worden gebruikt op basis van tijd of gebruik.
+[!UICONTROL Subscription] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat vergunning gegeven aanspraken op software, de diensten, of goederen beschrijft die op tijd of gebruik worden gebruikt.
 
 <img src="../images/data-types/subscription-data-type.png" width="500" /><br />
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `device` | [[!UICONTROL Apparaat]](./device.md) | Beschrijft details over het apparaat dat met het abonnement verbonden is. |
-| `environment` | [[!UICONTROL Omgeving]](./environment.md) | Bevat informatie over de omringende situatie de gebeurtenisobservatie voorkwam, specifiek die voorbijgaande informatie zoals de netwerk of softwareversies specificeert. |
-| `subscriber` | [[!UICONTROL Persoon]](./person.md) | Beschrijft een individuele persoon. Dit kan ook een persoon vertegenwoordigen die in diverse rollen, zoals een klant, een contact, of een eigenaar handelt. |
+| `device` | [[!UICONTROL Device]](./device.md) | Beschrijft details over het apparaat dat met het abonnement verbonden is. |
+| `environment` | [[!UICONTROL Environment]](./environment.md) | Bevat informatie over de omringende situatie de gebeurtenisobservatie voorkwam, specifiek die voorbijgaande informatie zoals de netwerk of softwareversies specificeert. |
+| `subscriber` | [[!UICONTROL Person]](./person.md) | Beschrijft een individuele persoon. Dit kan ook een persoon vertegenwoordigen die in diverse rollen, zoals een klant, een contact, of een eigenaar handelt. |
 | `SKU` | Tekenreeks | De voorraadeenheid (SKU), een unieke identificatiecode voor een product. |
 | `billingPeriod` | Tekenreeks | De duur tussen factureringen. |
 | `billingStartDate` | Datum | De datum waarop de eerste rekening verschuldigd is. De datumnotatie (zonder tijd) moet de [RFC 3339, sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) norm volgen. |
