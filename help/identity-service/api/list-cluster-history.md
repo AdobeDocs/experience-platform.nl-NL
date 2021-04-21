@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;identiteiten;clustergeschiedenis
 solution: Experience Platform
 title: Cluster-geschiedenis van een identiteit ophalen
-topic: API guide
+topic-legacy: API guide
 description: Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. De Dienst van de identiteit verstrekt zicht in de clusterverenigingen van een bepaalde identiteit in tijd.
+exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
 
 ---
-
 
 # De clustergeschiedenis van een identiteit ophalen
 
