@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;segmenttaken;segmenttaak;API;api;
 solution: Experience Platform
 title: API-eindpunt segmenttaken
-topic: developer guide
+topic-legacy: developer guide
 description: Het eindpunt van segmentbanen in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om segmentbanen voor uw organisatie programmatically te beheren.
+exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%
 
 ---
-
 
 # Eindpunt segmenttaken
 
