@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;velden;Standaardvelden;Standaardvelden;Woordenboek;Woordenboek;Kaart
 solution: Experience Platform
 title: XDM-veldwoordenboek (Experience Data Model)
-topic: overviews
+topic-legacy: overviews
 description: Het Model van de Gegevens van de ervaring (XDM) bepaalt een reeks standaardgebieden die kunnen worden gebruikt wanneer het samenstellen van schema's van Adobe Experience Platform. Het gebruik van deze gebieden resulteert in verenigbaar gedrag over de diensten van het Platform, aangezien alle diensten die XDM verbruiken uitdrukkelijk de specifieke definities zullen begrijpen die door deze gebieden worden verstrekt.
+exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '25239'
+source-wordcount: '25238'
 ht-degree: 0%
 
 ---
-
 
 # XDM-veldwoordenboek
 
@@ -133,7 +133,7 @@ U kunt de onderzoeksfunctionaliteit in [!DNL Schema Editor] gebruiken om details
 | xdm:containsInPlace | Verborgen op locatie | XDM URI van een andere `Place` dat deze plaats in.This het bezit is gebaseerd op `schema:containedInPlace`, maar gebruikt de verwijzingen van URI in plaats van het inbedden van de bevattende plaats. | string | uri | string | https://ns.adobe.com/xdm/common/organization, https://ns.adobe.com/xdm/context/place |
 | xdm:containsPlaces | Bevat locaties | Een array van XDM URI&#39;s van andere `Place`-instanties die deze plaats bevat. Deze eigenschap is gebaseerd op `schema:containsPlace`, maar gebruikt URI-verwijzingen in plaats van de omvattende plaats in te sluiten. Bovendien is het een array, waardoor één plaats meerdere andere plaatsen kan opnemen. | array |  | array | https://ns.adobe.com/xdm/common/organization, https://ns.adobe.com/xdm/context/place |
 | xdm:contentTypes | Contenttypen | De inhoudstypen die dit kanaal kan leveren. | array |  | array | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details, https://ns.adobe.com/experience/campaign/profile-snapshot, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-channel, https://ns.adobe.com/xdm/context/profile-push-details |
-| xdm:contractID | Contract-id | De unieke id voor het contract dat dit abonnement regelt. | string |  | string | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
+| xdm:contractID | Contract-id | De unieke id voor het contract dat dit abonnement beheerst. | string |  | string | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
 | xdm:controlGroupMember | Lid van controlegroep | De ontvanger van dit bericht is een lid van een controlegroep voor deze campagneactiviteit. Een controlegroep is een populatie die de levering niet zal ontvangen; het wordt gebruikt om gedrag na de levering en het effect van de campagne te volgen door een vergelijking tussen de controlegroep (of de holle groep) met het gedrag van de doelpopulatie te maken, die de levering heeft ontvangen. | boolean |  | boolean | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:conversies | conversies | Een vooraf gedefinieerde actie(s) van de klant die een gebeurtenis voor prestatiebeoordeling activeert. | object |  | object | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |
 | xdm:cookiesEnabled | Cookies toestaan | De huidige instellingen van de gebruikersagent staan het schrijven van cookies toe.&#39; | boolean |  | boolean | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details, https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-push-details, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-environment-details, https://ns.adobe.com/experience/campaign/profile-snapshot, |
