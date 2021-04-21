@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;api gids;vragen;vraag;de dienst van de Vraag;
 solution: Experience Platform
 title: API-eindpunt voor query's
-topic: queries
+topic-legacy: queries
 description: De volgende secties lopen door vraag u het gebruiken van het /query eindpunt in de Dienst API van de Vraag kunt maken.
+exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
 
 ---
-
 
 # Zoekopdrachten, eindpunt
 
