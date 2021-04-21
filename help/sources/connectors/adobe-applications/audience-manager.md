@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Audience Manager-aansluiting;Audience Manager;publieksmanager
 solution: Experience Platform
 title: Overzicht van Audience Manager Source Connector
-topic: overview
+topic-legacy: overview
 description: De de bronschakelaarstromen van Adobe Audience Manager eerste-partijgegevens die in Audience Manager aan Adobe Experience Platform worden verzameld.
+exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
-
 
 # Audience Manager-aansluiting
 
@@ -59,13 +59,13 @@ De datasets van de Audience Manager worden onbruikbaar gemaakt voor Profiel door
 | Naam gegevensset | Beschrijving |
 | ------------ | ----------- |
 | AAM in realtime | Deze dataset bevat gegevens die door directe treffers op eindpunten DCS van de Audience Manager en identiteitskaarten voor Profielen van de Audience Manager worden verzameld. Laat deze gegevensset ingeschakeld voor het opnemen van profielen. |
-| Updates van real-time profiel AAM | Deze dataset laat in real time het richten van de eigenschappen en de segmenten van de Audience Manager toe. Het omvat informatie voor het regionale verpletteren van de Rand, eigenschap, en segmentlidmaatschap. Laat deze gegevensset ingeschakeld voor het opnemen van profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de **[!UICONTROL Profiel]** knevel toelaten, om de gegevens aan Profiel direct in te gaan. |
-| Apparaatgegevens AAM | Apparaatgegevens met ECID&#39;s en bijbehorende segmentrealisaties geaggregeerd in Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de **[!UICONTROL Profiel]** knevel toelaten, om de gegevens aan Profiel direct in te gaan. |
-| Apparaatprofielgegevens AAM | Wordt gebruikt voor de diagnose van Audience Manager-aansluiting. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de **[!UICONTROL Profiel]** knevel toelaten, om de gegevens aan Profiel direct in te gaan. |
-| AAM geverifieerde profielen | Deze dataset bevat Audience Manager voor authentiek verklaarde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de **[!UICONTROL Profiel]** knevel toelaten, om de gegevens aan Profiel direct in te gaan. |
-| Metagegevens geverifieerde profielen AAM | Gebruikt voor de diagnostiek van de Verbinding van de Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de **[!UICONTROL Profiel]** knevel toelaten, om de gegevens aan Profiel direct in te gaan. |
-| Gegevensback-up AAM apparaten | Dataset van het brengen in vroegere apparatengegevens. Dit bevat ECID&#39;s en de bijbehorende segmentrealisaties geaggregeerd in Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de **[!UICONTROL Profiel]** knevel toelaten om de gegevens aan Profiel direct in te gaan. |
-| Back-up van geverifieerde profielen AAM | Dataset van het brengen in verleden voor authentiek verklaarde gegevens. Dit bevat voor Audience Managers geverifieerde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de **[!UICONTROL Profiel]** knevel toelaten om de gegevens aan Profiel direct in te gaan. |
+| Updates van real-time profiel AAM | Deze dataset laat in real time het richten van de eigenschappen en de segmenten van de Audience Manager toe. Het omvat informatie voor het regionale verpletteren van de Rand, eigenschap, en segmentlidmaatschap. Laat deze gegevensset ingeschakeld voor het opnemen van profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. |
+| Apparaatgegevens AAM | Apparaatgegevens met ECID&#39;s en bijbehorende segmentrealisaties geaggregeerd in Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. |
+| Apparaatprofielgegevens AAM | Wordt gebruikt voor de diagnose van Audience Manager-aansluiting. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. |
+| AAM geverifieerde profielen | Deze dataset bevat Audience Manager voor authentiek verklaarde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. |
+| Metagegevens geverifieerde profielen AAM | Gebruikt voor de diagnostiek van de Verbinding van de Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. |
+| Gegevensback-up AAM apparaten | Dataset van het brengen in vroegere apparatengegevens. Dit bevat ECID&#39;s en de bijbehorende segmentrealisaties geaggregeerd in Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. |
+| Back-up van geverifieerde profielen AAM | Dataset van het brengen in verleden voor authentiek verklaarde gegevens. Dit bevat voor Audience Managers geverifieerde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. |
 
 ### Verbindingen
 
