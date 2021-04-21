@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;partiële inname;Partiële inname;Fouten ophalen;Fout ophalen;Gedeeltelijke batch-opname;Gedeeltelijke batch-opname;Gedeeltelijke;Inslikken;Ingestie;Fouten diagnostiseren;Fouten opvragen;Fouten opsporen in diagnostiek;Fouten ophalen;Fouten ophalen;Fouten ophalen;
 solution: Experience Platform
 title: Diagnostiek gegevensinscriptiefout ophalen
-topic: overview
+topic-legacy: overview
 description: Dit document bevat informatie over het controleren van batch-inname, het beheren van fouten bij gedeeltelijke batch-inname en een verwijzing naar typen partiële batch-inname.
+exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 1%
 
 ---
-
 
 # Diagnostische gegevens voor gegevensinvoer ophalen
 
