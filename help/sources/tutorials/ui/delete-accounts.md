@@ -3,20 +3,20 @@ keywords: Experience Platform;thuis;populaire onderwerpen; accounts verwijderen
 description: De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verwijderen van accounts in de werkruimte Bronnen.
 solution: Experience Platform
 title: Bronverbindingsaccounts verwijderen in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
-
 # Bronverbindingsaccounts verwijderen
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verwijderen van accounts in de werkruimte **[!UICONTROL Bronnen]**.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verwijderen van accounts in de werkruimte **[!UICONTROL Sources]**.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## Accounts verwijderen via de gebruikersinterface
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u rekeningen en dataflows met kunt tot stand brengen. Elke bron toont het aantal bestaande rekeningen en gegevensstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Sources]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u rekeningen en gegevensstromen met kunt tot stand brengen. Elke bron toont het aantal bestaande rekeningen en gegevensstromen verbonden aan hen.
 
 Selecteer **[!UICONTROL Accounts]** om tot de **[!UICONTROL Accounts]** pagina toegang te hebben.
 
@@ -41,24 +41,24 @@ Er wordt een lijst met bestaande accounts weergegeven. Op deze pagina vindt u ee
 
 Het sorteervenster wordt aan de linkerkant van het scherm weergegeven met een lijst met beschikbare bronnen. Met de sorteerfunctie kunt u meerdere bronnen selecteren.
 
-Selecteer de bron die u wilt openen en zoek de account die u wilt verwijderen uit de lijst met accounts in de hoofdinterface. In het voorbeeld is de geselecteerde bron **[!DNL Azure Blob Storage]** en de accountnaam is **[!UICONTROL blobTestConnector]**. Wanneer u meerdere bronnen selecteert in het sorteervenster, worden de laatst gemaakte accounts eerst weergegeven omdat de lijst is gesorteerd op de gemaakte datum.
+Selecteer de bron die u wilt openen en zoek de account die u wilt verwijderen uit de lijst met accounts in de hoofdinterface. In het voorbeeld is de geselecteerde bron **[!DNL Azure Blob Storage]** en is de accountnaam **[!UICONTROL blobTestConnector]**. Wanneer u meerdere bronnen selecteert in het sorteervenster, worden de laatst gemaakte accounts eerst weergegeven omdat de lijst is gesorteerd op de gemaakte datum.
 
 Selecteer het account dat u wilt verwijderen.
 
 ![gegevensstroom sorteren](../../images/tutorials/delete-accounts/sort.png)
 
-Het deelvenster **[!UICONTROL Eigenschappen]** wordt aan de rechterkant van het scherm weergegeven met informatie over de geselecteerde account.
+Het venster **[!UICONTROL Properties]** wordt aan de rechterkant van het scherm weergegeven met informatie over de geselecteerde account.
 
-Selecteer de ovalen (`...`) naast de naam van de account die u wilt verwijderen. Er wordt een pop-upvenster weergegeven met opties voor **[!UICONTROL Gegevens toevoegen]**, **[!UICONTROL Details bewerken]** en **[!UICONTROL Verwijderen]**. Selecteer **[!UICONTROL Delete]** om de account te verwijderen.
+Selecteer de ovalen (`...`) naast de naam van de account die u wilt verwijderen. Er wordt een pop-upvenster weergegeven met opties voor **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** en **[!UICONTROL Delete]**. Selecteer **[!UICONTROL Delete]** om de account te verwijderen.
 
 ![gegevensstroom sorteren](../../images/tutorials/delete-accounts/delete.png)
 
-Er verschijnt een laatste bevestigingsvenster. Selecteer **[!UICONTROL Verwijderen]** om het proces te voltooien.
+Er verschijnt een laatste bevestigingsvenster waarin u **[!UICONTROL Delete]** selecteert om het proces te voltooien.
 
 ![delete](../../images/tutorials/delete-accounts/confirm.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes **[!UICONTROL Bronnen]** werkruimte gebruikt om bestaande rekeningen te schrappen.
+Door deze zelfstudie te volgen, hebt u met succes de **[!UICONTROL Sources]** werkruimte gebruikt om bestaande rekeningen te schrappen.
 
 Raadpleeg de zelfstudie over [het verwijderen van verbindingen met de Flow Service API](../../tutorials/api/delete.md) voor informatie over het programmatisch uitvoeren van deze bewerkingen met de [!DNL Flow Service]-API
