@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;spark sql;Spark sql;spark;spark sql functies;functies;
 solution: Experience Platform
 title: SQL-functies in Query Service parkeren
-topic: spark sql functions
+topic-legacy: spark sql functions
 description: Deze documentatie bevat informatie over de functies van SQL van de Vonk die SQL functionaliteit uitbreiden.
+exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '3893'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Spark] SQL-functies
 
