@@ -2,16 +2,16 @@
 keywords: OCR;aanwezigheid van tekst;optische tekenherkenning
 solution: Experience Platform, Intelligent Services
 title: Aanwezigheid van tekst en optische tekenherkenning
-topic: Developer guide
+topic-legacy: Developer guide
 description: In de AI API voor Inhoud en Handel kan de dienst van de Erkenning van het Karakter van de Tekst Aanwezigheid/Optische (OCR) van het Karakter erop wijzen als de tekst in een bepaalde beeld aanwezig is. Als er tekst aanwezig is, kan OCR de tekst retourneren.
+exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 2%
 
 ---
-
 
 # Aanwezigheid van tekst en optische tekenherkenning
 
