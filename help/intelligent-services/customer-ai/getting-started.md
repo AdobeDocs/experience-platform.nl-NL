@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;aan de slag;klantenondersteuning;populaire onderwerpen
+keywords: Experience Platform;aan de slag;klantenservice;populaire onderwerpen
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Aan de slag met Customer AI
-topic: Getting started
+topic-legacy: Getting started
 description: Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen.
+exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met Customer AI
 
