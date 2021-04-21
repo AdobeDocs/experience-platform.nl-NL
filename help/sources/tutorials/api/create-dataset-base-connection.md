@@ -2,17 +2,17 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de de verbindingsstroom van de dataset;de stroomdienst;De dienstverbinding van de stroom
 solution: Experience Platform
 title: Een Adobe Experience Platform DataSet Base-verbinding maken met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u de Flow Service API gebruikt om een basisverbinding voor gegevenssets te maken met Adobe Experience Platform.
+exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
 
 ---
-
 
 # Creeer een [!DNL Experience Platform] verbinding van de datasetbasis gebruikend [!DNL Flow Service] API
 
