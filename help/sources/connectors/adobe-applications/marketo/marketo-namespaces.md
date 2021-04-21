@@ -5,9 +5,9 @@ title: 'Marketo-naamruimten '
 topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een Marketo Engage-bronaansluiting.
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1215'
 ht-degree: 1%
 
 ---
@@ -50,6 +50,10 @@ De naamruimte [!DNL Marketo] wordt gebruikt in de primaire identiteit van de ent
 
 De volgende tabel bevat informatie over de onderliggende set-up voor naamruimten [!DNL Marketo].
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | Weergavenaam | Identiteitssymbool | Identiteitstype | Type uitgever | Type emittent | Voorbeeld van Munchkin-id |
 | --- | --- | --- | --- | --- | --- |
 | `marketo_person_{MUNCHKIN_ID}` | automatisch gegenereerd | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
@@ -70,6 +74,10 @@ Als u aan de [!DNL Salesforce] integratie wordt geabonneerd, wordt [!DNL Salesfo
 
 De volgende tabel bevat informatie over de onderliggende set-up voor naamruimten [!DNL Salesforce].
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | Weergavenaam | Identiteitssymbool | Identiteitstype | Type uitgever | Type emittent | [!DNL Salesforce] ID-voorbeeld van abonnementsorganisatie |
 | --- | --- | --- | --- | --- | --- |
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | automatisch gegenereerd | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
@@ -87,6 +95,10 @@ Als u aan de [!DNL Dynamics] integratie wordt geabonneerd, wordt [!DNL Dynamics]
 
 De volgende tabel bevat informatie over de onderliggende set-up voor naamruimten [!DNL Dynamics].
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | Weergavenaam | Identiteitssymbool | Identiteitstype | Type uitgever | Type emittent | [!DNL Salesforce] ID-voorbeeld van abonnementsorganisatie |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | automatisch gegenereerd | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
@@ -95,6 +107,8 @@ De volgende tabel bevat informatie over de onderliggende set-up voor naamruimten
 | `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | automatisch gegenereerd | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_{DYNAMICS_ID}` | automatisch gegenereerd | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_member_{DYNAMICS_ID}` | automatisch gegenereerd | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!DNL Marketo] schema&#39;s
 
