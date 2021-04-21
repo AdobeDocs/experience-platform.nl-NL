@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;ssc;SSC;Salesforce Service Cloud;salesforce-serviccloud
 solution: Experience Platform
 title: Een Cloud Source Connection van de Salesforce-service maken met behulp van de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Salesforce Service Cloud.
+exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Salesforce Service Cloud]-bronverbinding maken met de [!DNL Flow Service]-API
 
