@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;servicenow;ServiceNow
 solution: Experience Platform
 title: Maak een ServiceNow-bronverbinding met behulp van de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een ServiceNow-server met behulp van de Flow Service API.
+exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL ServiceNow]-bronverbinding maken met de [!DNL Flow Service]-API
 
