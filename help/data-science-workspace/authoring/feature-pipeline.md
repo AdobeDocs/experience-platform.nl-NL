@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Zelfstudie;functiepijplijn;Data Science Workspace;populaire onderwerpen
 title: Creeer een Pijpleiding van de Eigenschap Gebruikend de ModelAuthoring SDK
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functionaliteit kunnen bieden via de Sensei Machine Learning Framework-runtime. Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend ModelAuthoring SDK in PySpark.
+exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
 
 ---
-
 
 # Creeer een eigenschappijpleiding gebruikend ModelAuthoring SDK
 
