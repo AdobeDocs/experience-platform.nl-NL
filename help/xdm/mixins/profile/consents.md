@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Mengsel van privacy-/persoonlijke voorkeuren/marketingvoorkeuren (inhoud)
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van de mix Privacy/Persoonlijke/Marketingvoorkeuren (Inhoud).
+exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 translation-type: tm+mt
-source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2239'
+source-wordcount: '2238'
 ht-degree: 0%
 
 ---
-
 
 # [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixen
 
