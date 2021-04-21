@@ -6,19 +6,15 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Maria DB-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
 
 
 # Een [!DNL MariaDB]-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
-> De [!DNL MariaDB] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een Maria DB-bronconnector met behulp van de gebruikersinterface [!DNL Platform].
 
