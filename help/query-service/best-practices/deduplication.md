@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;gegevensdeduplicatie;deduplicatie;
 solution: Experience Platform
 title: Data Deduplication in Query Service
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: Dit document schetst sub-select en volledige voorbeelden van steekproefvraag voor het dedupliceren van drie veelvoorkomende gebruiksgevallen Ervaring Gebeurtenissen, aankopen, en metriek.
+exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
 
 ---
-
 
 # Gegevensdeduplicatie in [!DNL Query Service]
 
@@ -106,7 +106,7 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 ) WHERE id_dup_num = 1 AND purchaseID_dup_num = 1
 ```
 
-## Cijfers {#metrics}
+## Metrics {#metrics}
 
 Als u metrisch hebt die facultatieve unieke identiteitskaart gebruikt en een duplicaat van die identiteitskaart verschijnt, zult u waarschijnlijk die metrische waarde willen negeren en de rest Gebeurtenis van de Ervaring houden.
 
