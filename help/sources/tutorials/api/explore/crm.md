@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;CRM;crm;crm-flowservice
 solution: Experience Platform
 title: Een CRM-systeem verkennen met de Flow Service API
-topic: overview
+topic-legacy: overview
 description: Deze zelfstudie gebruikt de Flow Service API om CRM-systemen te verkennen.
+exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
 
 ---
-
 
 # Een CRM-systeem verkennen met de API [!DNL Flow Service]
 
