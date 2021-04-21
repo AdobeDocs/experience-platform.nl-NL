@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;verbind;verbind met vraagdienst;aqua gegevensstudio;Aqua Data Studio;Looker;plukker;Postico;postico;Power BI;macht bi;psql;studio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
 title: Clients verbinden met Query-service
-topic: connect
+topic-legacy: connect
 description: In dit document wordt uitgelegd hoe u verbinding maakt met de Query-service via een groot aantal clienttoepassingen op het bureaublad en hoe u die verbindingen kunt verifiëren.
+exl-id: 2ba20179-5adb-4259-a120-231a40e78054
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
 
 ---
-
 
 # Client verbinden met [!DNL Query Service]
 
