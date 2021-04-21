@@ -2,15 +2,15 @@
 solution: Experience Platform
 title: Voorbeeldgegevens genereren voor een XDM-schema in de gebruikersinterface
 description: Leer hoe u voorbeeld-JSON-gegevens kunt genereren op basis van een bestaand schema in de Adobe Experience Platform-gebruikersinterface.
-topic: user guide
+topic-legacy: user guide
+exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
 translation-type: tm+mt
-source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
-
 
 # Voorbeeldgegevens genereren voor een XDM-schema in de gebruikersinterface
 
@@ -18,7 +18,7 @@ Om gegevens in Adobe Experience Platform in te voeren, moeten de indeling en de 
 
 Voor elk schema dat u in de interface van het Experience Platform definieert, kunt u een voorbeeld-JSON-object genereren dat voldoet aan de structuur van het schema. Dit voorwerp kan als malplaatje voor om het even welke gegevens dienen die in datasets worden opgenomen die het betrokken schema in dienst nemen.
 
-Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie in de interface van het Platform. Zoek onder het tabblad **[!UICONTROL Bladeren]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Voorbeeldbestand downloaden]**.
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform. Zoek onder het tabblad **[!UICONTROL Browse]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Download sample file]**.
 
 ![](../images/ui/sample/sample-data.png)
 
@@ -30,4 +30,4 @@ Deze handleiding besprak hoe u een voorbeeld-JSON-bestand kunt genereren op basi
 
 Als u klaar bent om met het opnemen van gegevens te beginnen, raadpleegt u de zelfstudie over [het toewijzen van een CSV-bestand aan XDM](../../ingestion/tutorials/map-a-csv-file.md) om te leren hoe u een plat gegevensbestand (zoals een CSV) kunt toewijzen aan een XDM-schema en het in Platform kunt opnemen. Alternatief, kunt u [bronverbinding ](../../sources/home.md) vestigen om uw gegevens van een externe bron in te brengen en het in kaart te brengen aan XDM.
 
-Voor meer informatie over de mogelijkheden van de [!UICONTROL Werkruimte van Schema] in UI, verwijs naar [[!UICONTROL Schemas] werkruimteoverzicht](./overview.md).
+Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte in UI, verwijs naar [[!UICONTROL Schemas] werkruimteoverzicht](./overview.md).
