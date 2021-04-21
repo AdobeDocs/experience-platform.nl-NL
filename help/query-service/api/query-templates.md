@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;vraagmalplaatjes;api gids;malplaatjes;de dienst van de Vraag;
 solution: Experience Platform
 title: API-eindpunt voor querysjablonen
-topic: query templates
+topic-legacy: query templates
 description: De volgende documentatie loopt door de diverse API vraag u het gebruiken van vraagmalplaatjes voor de Dienst API van de Vraag kunt maken.
+exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 1%
 
 ---
-
 
 # Zoeksjablonen, eindpunt
 
