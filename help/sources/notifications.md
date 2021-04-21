@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen; meldingen
-description: Als u zich abonneert op Adobe I/O Events, kunt u webhooks gebruiken om meldingen te ontvangen over de status die door de stroom wordt toegepast op uw bronverbindingen. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
+description: Door u te abonneren op Adobe I/O Events, kunt u webhooks gebruiken om meldingen te ontvangen over de status van uw bronverbindingen tijdens de uitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 solution: Experience Platform
 title: Meldingen voor Flow Run
-topic: overview
+topic-legacy: overview
+exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
-
 
 # Meldingen voor stroomuitvoering
 
@@ -19,7 +19,7 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 [[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen te verzamelen en te centraliseren  [!DNL Platform]. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Met Adobe I/O Events kunt u zich abonneren op gebeurtenissen en websites gebruiken om meldingen te ontvangen over de status van uw flowuitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
+Met Adobe I/O Events, kunt u op gebeurtenissen intekenen en Web gebruiken om berichten betreffende de status van uw stroomlooppas te ontvangen. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 
 In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, het registreren van websites en het ontvangen van meldingen met informatie over de status van uw flowuitvoering.
 
@@ -37,10 +37,10 @@ Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observabi
 
 >[!IMPORTANT]
 >
->Tijdens het abonnementsproces, zorg ervoor dat u **[!UICONTROL Platform berichten]** als gebeurtenisleverancier selecteert, en de volgende gebeurtenisabonnementen selecteert:
+>Zorg tijdens het abonnementsproces ervoor dat u **[!UICONTROL Platform notifications]** als gebeurtenisleverancier selecteert, en selecteer de volgende gebeurtenisabonnementen:
 >
->* **[!UICONTROL Experience Platform Source&#39;s Flow Run geslaagd]**
->* **[!UICONTROL Doorloop van bron van Experience Platform is mislukt]**
+>* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
+>* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
 
 
 ## Meldingen ontvangen voor uitvoering van flow
