@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;PSQL;psql;de dienst van de Vraag;de vraagdienst;meta-gegevens;bevelen;meta-gegevensbevelen;
 solution: Experience Platform
 title: Metadata PostgreSQL-opdrachten in Query Service
-topic: metadata
+topic-legacy: metadata
 description: Een lijst met PostgreSQL-opdrachten die momenteel worden ondersteund voor het opvragen van metagegevens in Adobe Experience Platform Query Service.
+exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # Metadata PostgreSQL commands in de Dienst van de Vraag
 
@@ -45,4 +45,3 @@ Voor meta-gegevens op uw dataset, worden de volgende bevelen PostgreSQL momentee
 Alle bevelen die met `\d` beginnen kunnen worden gecombineerd. U kunt bijvoorbeeld `\dtsn` uitgeven om een lijst van alle lijsten, opeenvolgingen, en schema&#39;s te tonen. `\d` op zichzelf toont alle zichtbare tabellen, weergaven, gematerialiseerde weergaven en reeksen.
 
 Raadpleeg de documentatie op [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) voor meer informatie over de bovenstaande opdrachten. Houd er echter rekening mee dat niet alle opties in de documentatie van PostgreSQL worden ondersteund door [!DNL Experience Platform].
-
