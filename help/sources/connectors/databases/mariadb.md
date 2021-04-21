@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Maria DB;mariadb;Maria DB;maria db
 solution: Experience Platform
 title: Overzicht van MariaDB-bronverbinding
-topic: overview
+topic-legacy: overview
 description: Leer hoe u MariaDB met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
