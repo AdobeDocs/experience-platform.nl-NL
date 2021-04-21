@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;populaire onderwerpen;marketingautomatiseringssysteem;Gegevens over marketingautomatisering verzamelen
 solution: Experience Platform
 title: Gegevens voor marketingautomatisering verzamelen met behulp van bronconnectors en API's
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het overbrengen van gegevens naar Adobe Experience Platform met behulp van bronconnectors en API's.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
