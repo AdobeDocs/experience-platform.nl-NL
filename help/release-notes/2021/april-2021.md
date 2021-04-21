@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 1072b95469fac19a2e03ca4eacaae05250e11be8
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 1%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -36,6 +37,14 @@ Updates voor bestaande functies in Adobe Experience Platform:
 | Ondersteuning voor streaming-opname | U kunt nu functies van het gegevensvoorvoegsel gebruiken wanneer u een streamingbronverbinding maakt. Zie de zelfstudie over het maken van een streamingbronverbinding in de UI](../../sources/tutorials/ui/create/streaming/http.md) voor meer informatie.[ |
 
 Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wordt ontworpen om de kracht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+| Functie | Beschrijving |
+| --- | --- |
+| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en mengen in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Raadpleeg de documentatie bij [industriedomodellen](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten met elkaar betrekking hebben voor verschillende gevallen van industrieel gebruik. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
