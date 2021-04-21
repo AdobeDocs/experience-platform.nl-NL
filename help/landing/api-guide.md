@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;Adobe Experience Platform;api-handleiding;platform-api-handleiding;inleiding tot platform;ontwikkelaarshandleiding
 solution: Experience Platform
 title: Aan de slag met Adobe Experience Platform API's
-topic: api guide
+topic-legacy: api guide
 description: Adobe Experience Platform biedt API-services die nauw met elkaar zijn verbonden. Deze gids bevat informatie over de beschikbare diensten, vereiste kopballen voor verrichtingen CRUD, foutenmeldingen, de inzamelingen van Postman, en de vraag van steekproefAPI.
+exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 translation-type: tm+mt
-source-git-commit: 85d2ae5ccf1b27baaafe839f1d3f00d588abe4fc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met Adobe Experience Platform API&#39;s
 
@@ -147,4 +147,3 @@ In dit document zijn de vereiste kopteksten, beschikbare hulplijnen en een voorb
 Raadpleeg de [handleiding voor het oplossen van Platforms](troubleshooting.md) voor antwoorden op veelgestelde vragen.
 
 Als u een Postman-omgeving wilt instellen en de beschikbare Postman-collecties wilt verkennen, raadpleegt u de [Handleiding Postman Platform](postman.md).
-
