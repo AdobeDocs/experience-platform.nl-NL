@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;steekproefvragen;steekproefvraag;adobe analytics;
 solution: Experience Platform
 title: Voorbeeldquery's voor Adobe Analytics-gegevens
-topic: queries
+topic-legacy: queries
 description: Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden getransformeerd in XDM ExperienceEvents en als datasets voor u opgenomen in Adobe Experience Platform. Dit document schetst een aantal gebruiksgevallen waar de Dienst van de Vraag van Adobe Experience Platform deze gegevens gebruikt, en de inbegrepen steekproefvragen zouden met uw datasets van Adobe Analytics moeten werken.
+exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 1%
 
 ---
-
 
 # Voorbeeldquery&#39;s voor Adobe Analytics-gegevens
 
@@ -213,10 +213,10 @@ Een ander type handelsvariabele in Adobe Analytics is de conversiesyntaxis. Met 
 
 Bij de rapportage worden de orders, opbrengsten, productweergaven en winkelwagentjes gerapporteerd tegen eVar6 en afgestemd op de activiteit van het gebonden product.
 
-| eVar6 (productzoekmethode) | inkomsten | orders | productweergave | cartografische objecten |
+| eVar6 (productzoekmethode) | omzet | orders | productweergave | cartografische objecten |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| intern zoeken:zomershirt | 19,99 | 1 | 3 | 1 |
-| interne zoekopdracht:winterhoed | 12,99 | 3 | 1 | 1 |
+| intern zoeken:zomershirt | 19,99 | 1 | 1 | 1 |
+| interne zoekopdracht:winterhoed | 12,99 | 1 | 1 | 1 |
 
 Lees voor meer informatie over het gebruik van de conversiesyntaxis de Adobe Analytics-documentatie op [Vars implementeren met de conversiesyntaxis](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
