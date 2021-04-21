@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Gegevenstype van voorkeursveld voor algemene marketing
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Generic Marketing Preference.
+exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 translation-type: tm+mt
-source-git-commit: f5ec59e609fda66d379847dca068d19d4cce8228
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Generic Marketing Preference Field] gegevenstype
 
