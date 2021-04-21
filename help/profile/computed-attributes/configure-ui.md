@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Hoe te om een Berekend Veld van Attributen te vormen
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit veld kan worden gemaakt met een mix om het veld toe te voegen aan een bestaand schema of door een veld te selecteren dat u al in een schema hebt gedefinieerd.
 translation-type: tm+mt
-source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Het werkschema in deze zelfstudie gebruikt een [!DNL Profile]-Toegelaten schema 
 
 De stappen die volgen gebruiken het gebruikersinterface van Adobe Experience Platform om van een schema de plaats te bepalen, een mengeling toe te voegen, en een gebied te bepalen. Als u liever de [!DNL Schema Registry] API gebruikt, raadpleegt u de [Handleiding voor ontwikkelaars van het schemeregister](../../xdm/api/getting-started.md) voor stappen over hoe u een mix maakt, een mix aan een schema toevoegt en een schema voor gebruik met [!DNL Real-time Customer Profile] inschakelt.
 
-Klik in de gebruikersinterface op **[!UICONTROL Schema&#39;s]** in de linkertrack en gebruik de zoekbalk op het tabblad **[!UICONTROL Bladeren]** om snel het schema te zoeken dat u wilt bijwerken.
+Klik in de gebruikersinterface op **[!UICONTROL Schemas]** in de linkertrack en gebruik de zoekbalk op het tabblad **[!UICONTROL Browse]** om snel het schema te zoeken dat u wilt bijwerken.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
@@ -43,37 +43,37 @@ Zodra u het schema hebt gevestigd, klik zijn naam om [!DNL Schema Editor] te ope
 
 ## Een mix maken
 
-Als u een nieuwe mix wilt maken, klikt u op **[!UICONTROL Toevoegen]** naast **[!UICONTROL Mixins]** in de sectie **[!UICONTROL Compositie]** aan de linkerkant van de editor. Dit opent **[!UICONTROL Add mixin]** dialoog waar u bestaande mengen kunt zien. Klik op het keuzerondje voor **[!UICONTROL Nieuwe mix maken]** om de nieuwe mix te definiëren.
+Als u een nieuwe mix wilt maken, klikt u op **[!UICONTROL Add]** naast **[!UICONTROL Mixins]** in de sectie **[!UICONTROL Composition]** links in de editor. Hiermee opent u het dialoogvenster **[!UICONTROL Add mixin]** waarin u bestaande mixen kunt zien. Klik op het keuzerondje voor **[!UICONTROL Create new mixin]** om de nieuwe mix te definiëren.
 
-Geef de mixin een naam en een beschrijving, en klik **[!UICONTROL Add mixin]** wanneer volledig.
+Geef de mix een naam en een beschrijving en klik op **[!UICONTROL Add mixin]** wanneer deze is voltooid.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
 ## Een veld voor berekende kenmerken toevoegen aan het schema
 
-Uw nieuwe mix moet nu worden weergegeven in de sectie &quot;[!UICONTROL Mixins]&quot; onder &quot;[!UICONTROL Compositie]&quot;. Klik op de naam van de mixin en de veelvoudige **[!UICONTROL voegt gebied]** knopen in **[!UICONTROL Structuur]** sectie van de redacteur zal verschijnen.
+Uw nieuwe mix moet nu worden weergegeven in de sectie &quot;[!UICONTROL Mixins]&quot; onder &quot;[!UICONTROL Composition]&quot;. Klik op de naam van de mixin en meerdere **[!UICONTROL Add field]** knoppen worden weergegeven in de sectie **[!UICONTROL Structure]** van de editor.
 
-Selecteer **[!UICONTROL Veld toevoegen]** naast de naam van het schema om een veld op hoofdniveau toe te voegen, of u kunt selecteren om het veld toe te voegen binnen het schema dat u wilt gebruiken.
+Selecteer **[!UICONTROL Add field]** naast de naam van het schema om een veld op hoofdniveau toe te voegen, of selecteer deze optie om het veld toe te voegen binnen het schema dat u wilt gebruiken.
 
-Nadat u op **[!UICONTROL Veld toevoegen]** hebt geklikt, wordt een nieuw object geopend dat voor uw huurder-id is benoemd en waaruit blijkt dat het veld zich in de juiste naamruimte bevindt. Binnen dat object wordt een **[!UICONTROL Nieuw veld]** weergegeven. Dit als het veld waarin u het berekende kenmerk wilt definiëren.
+Nadat u op **[!UICONTROL Add field]** hebt geklikt, wordt er een nieuw object geopend met de naam van uw huurder-id. Hieruit blijkt dat het veld zich in de juiste naamruimte bevindt. Binnen dat object wordt een **[!UICONTROL New field]** weergegeven. Dit als het veld waarin u het berekende kenmerk wilt definiëren.
 
 ![](../images/computed-attributes/New-field.png)
 
 ## Het veld configureren
 
-Met de sectie **[!UICONTROL Veldeigenschappen]** aan de rechterkant van de editor geeft u de benodigde informatie voor het nieuwe veld op, zoals de naam, weergavenaam en het type.
+Gebruikend de **[!UICONTROL Field properties]** sectie op de rechterkant van de redacteur, verstrek de noodzakelijke informatie voor uw nieuw gebied, met inbegrip van zijn naam, vertoningsnaam, en type.
 
 >[!NOTE]
 >
 >Het type voor het veld moet van hetzelfde type zijn als de berekende kenmerkwaarde. Als de berekende kenmerkwaarde bijvoorbeeld een tekenreeks is, moet het veld dat in het schema wordt gedefinieerd, een tekenreeks zijn.
 
-Wanneer gedaan, klik **[!UICONTROL toepassen]** en de naam van het gebied, evenals zijn type zal in de **[!UICONTROL sectie van de Structuur]** van de redacteur verschijnen.
+Wanneer gedaan, klik **[!UICONTROL Apply]** en de naam van het gebied, evenals zijn type zal in **[!UICONTROL Structure]** sectie van de redacteur verschijnen.
 
 ![](../images/computed-attributes/Apply.png)
 
 ## Schema inschakelen voor [!DNL Profile]
 
-Controleer voordat u doorgaat of het schema is ingeschakeld voor [!DNL Profile]. Klik op de schemanaam in **[!UICONTROL de sectie van de Structuur]** van de redacteur zodat **[!UICONTROL de Eigenschappen van het Schema]** tabel verschijnt. Als de schuifregelaar **[!UICONTROL Profiel]** blauw is, is het schema ingeschakeld voor [!DNL Profile].
+Controleer voordat u doorgaat of het schema is ingeschakeld voor [!DNL Profile]. Klik op de schemanaam in **[!UICONTROL Structure]** sectie van de redacteur zodat **[!UICONTROL Schema Properties]** tabel verschijnt. Als de schuifregelaar **[!UICONTROL Profile]** blauw is, is het schema ingeschakeld voor [!DNL Profile].
 
 >[!NOTE]
 >
