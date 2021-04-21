@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;label api voor gegevensgebruik;beleidservice-api;overzicht van labels voor gegevensgebruik
 solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
-topic: labels
+topic-legacy: labels
 description: Met Adobe Experience Platform Data Governance kunt u gegevensgebruikslabels toepassen op gegevenssets en velden, waarbij elk veld wordt ingedeeld volgens het beleid voor het gebruik van verwante gegevens. Dit document biedt een overzicht van labels voor gegevensgebruik in Experience Platform.
+exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van labels voor gegevensgebruik
 
@@ -49,7 +49,7 @@ U kunt labels voor gegevensgebruik beheren met behulp van [!DNL Experience Platf
 
 ### De gebruikersinterface gebruiken
 
-Met de **[!UICONTROL beleidsregels]**-werkruimte in de [!DNL Experience Platform]-gebruikersinterface kunt u kern- en aangepaste labels voor uw organisatie weergeven en beheren. Met de werkruimte **[!DNL Datasets]** kunt u labels toepassen op gegevenssets en velden. Raadpleeg voor meer informatie de [handleiding voor labelgebruikers](user-guide.md).
+De **[!UICONTROL Policies]** werkruimte in [!DNL Experience Platform] UI staat u toe om kern en douanelabels voor uw organisatie te bekijken en te beheren. Met de werkruimte **[!DNL Datasets]** kunt u labels toepassen op gegevenssets en velden. Raadpleeg voor meer informatie de [handleiding voor labelgebruikers](user-guide.md).
 
 ### API&#39;s gebruiken
 
