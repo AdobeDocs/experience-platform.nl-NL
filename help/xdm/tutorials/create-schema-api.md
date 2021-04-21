@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema register;Schema Register;Schema;Schema;schema's;Schema's;Maken
 solution: Experience Platform
 title: Een schema maken met de API voor het schemaregister
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
+exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 0%
 
 ---
-
 
 # Een schema maken met de API [!DNL Schema Registry]
 
@@ -1171,7 +1171,7 @@ Het antwoord is een gefilterde lijst van schema&#39;s die alleen schema&#39;s be
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebruikend zowel standaardmengen als een mengeling die u bepaalde. U kunt dit schema nu gebruiken om een dataset te creëren en recordgegevens in Adobe Experience Platform in te voeren.
+Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebruikend zowel standaardmengen als een mengeling die u bepaalde. U kunt dit schema nu gebruiken om een dataset tot stand te brengen en recordgegevens in Adobe Experience Platform in te voeren.
 
 Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u naar het schema kijkt, kunt u zien hoe de mixins bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
 
