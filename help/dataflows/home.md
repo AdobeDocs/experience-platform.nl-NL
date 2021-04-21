@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;gegevensstromen;dataflows;gegevens;controle;controle;monitorgegevens stromen;monitor gegevensstromen;monitor;controle dataflows;controle gegevensstromen;stroom;stroom de dienst van de stroom;
 solution: Experience Platform
 title: Overzicht van gegevensstromen
-topic: overview
+topic-legacy: overview
 description: In dit document worden gegevensstromen geïntroduceerd, waarmee wordt aangegeven hoe deze in Adobe Experience Platform worden gebruikt.
+exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 translation-type: tm+mt
-source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van gegevensstromen
 
@@ -32,4 +32,3 @@ Lees voor meer informatie over het voorbereiden van gegevens nadat deze zijn opg
 ## Gegevensstromen controleren
 
 De gegevens van de controle kunnen worden gedaan door of Platform APIs of Platform UI te gebruiken. Lees de [API-zelfstudie voor het controleren van gegevensstromen](./api/monitor.md) voor meer informatie over het controleren van gegevensstromen met behulp van de API. Leer hoe te om gegevensstromen binnen de interface van het Platform te controleren, te lezen gelieve de leerprogramma&#39;s op [controledataflows voor bronnen](./ui/monitor-sources.md) en [controledataflows voor bestemmingen](./ui/monitor-destinations.md).
-
