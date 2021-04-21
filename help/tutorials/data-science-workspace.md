@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;dsw;DSW
 solution: Experience Platform
 title: Zelfstudies over de werkruimte voor gegevenswetenschap
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: De Adobe Experience Platform Data Science Workspace maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te creëren. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
+exl-id: 7cfd71b1-584f-4588-bbcd-bc42a08a0bc0
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Data Science Workspace]-tutorials
 
@@ -53,7 +53,7 @@ JupyterLab in de Werkruimte van de Wetenschap van Gegevens steunt laptops voor [
 - Lees, schrijf, en vraag de gegevens van het Platform gebruikend de laptops van Python, R, PySpark, of Scala.
 - Begrijp de leesbeperkingen van elk type laptop.
 
-Voor meer informatie raadpleegt u de [JupyterLab-handleiding voor toegang tot gegevens van laptops](../data-science-workspace/jupyterlab/access-notebook-data.md)
+Voor meer informatie raadpleegt u de [JupyterLab-handleiding voor de ontwikkelaar van toegang tot gegevens voor laptops](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Bronbestanden verpakken voor het maken van [!DNL Docker] recept
 
