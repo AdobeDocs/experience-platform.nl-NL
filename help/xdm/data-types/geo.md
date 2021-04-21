@@ -2,26 +2,26 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;geo;datatype;data-type;data-type;
 solution: Experience Platform
 title: Geo-gegevenstype
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Geo XDM.
+exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '192'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Geo] gegevenstype
 
-# [!UICONTROL Het type ] Geodata
-
- Geois een standaard XDM gegevenstype dat het geografische gebied beschrijft waar een gebeurtenis werd waargenomen.
+[!UICONTROL Geo] is een standaard XDM gegevenstype dat het geografische gebied beschrijft waar een gebeurtenis werd waargenomen.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL Geo-coördinaten]](./geo-coordinates.md) | Beschrijft de geografische coördinaten van een plaats. |
+| `_schema` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Beschrijft de geografische coördinaten van een plaats. |
 | `_id` | Tekenreeks | Een unieke, door het systeem gegenereerde id voor de coördinaten. |
 | `city` | Tekenreeks | De naam van de stad. |
 | `countryCode` | Tekenreeks | De code van twee tekens <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> voor het land. |
