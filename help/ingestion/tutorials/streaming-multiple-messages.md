@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;het stromen ingestie;ingestie;het stromen veelvoudige berichten;veelvoudige berichten;
 solution: Experience Platform
 title: Meerdere berichten verzenden in één HTTP-aanvraag
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Dit document bevat een zelfstudie voor het verzenden van meerdere berichten naar Adobe Experience Platform binnen één HTTP-aanvraag via streaming invoer.
+exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1492'
 ht-degree: 1%
 
 ---
-
 
 # Meerdere berichten verzenden in één HTTP-aanvraag
 
@@ -45,7 +45,7 @@ Na het registreren van een het stromen verbinding, zult u, als gegevensproducent
 
 Het volgende voorbeeld toont hoe te om veelvoudige berichten naar een specifieke dataset binnen één enkel HTTP- verzoek te verzenden. Neem identiteitskaart van de dataset in de berichtkopbal op om dat bericht direct in het te hebben worden opgenomen.
 
-U kunt identiteitskaart voor een bestaande dataset krijgen gebruikend [!DNL Platform] UI of gebruikend een lijstverrichting in API. De dataset-id is te vinden op [Experience Platform](https://platform.adobe.com) door naar het tabblad **[!UICONTROL Datasets]** te gaan, op de dataset te klikken waarvoor u de id wilt en de tekenreeks te kopiëren uit het veld Gegevensset-id op het tabblad **[!UICONTROL Info]**. Zie [Overzicht van de Dienst van de Catalogus](../../catalog/home.md) voor informatie over hoe te om datasets terug te winnen gebruikend API.
+U kunt identiteitskaart voor een bestaande dataset krijgen gebruikend [!DNL Platform] UI of gebruikend een lijstverrichting in API. De dataset ID kan op [Experience Platform](https://platform.adobe.com) door naar **[!UICONTROL Datasets]** tabel te gaan worden gevonden, op de dataset te klikken u identiteitskaart voor, en het kopiëren van het koord van het gebied van dataset ID op **[!UICONTROL Info]** tabel wilt. Zie [Overzicht van de Dienst van de Catalogus](../../catalog/home.md) voor informatie over hoe te om datasets terug te winnen gebruikend API.
 
 In plaats van een bestaande dataset te gebruiken, kunt u een nieuwe dataset tot stand brengen. Lees de zelfstudie [Een gegevensset maken met behulp van API&#39;s](../../catalog/api/create-dataset.md) voor meer informatie over het maken van een gegevensset met behulp van API&#39;s.
 
