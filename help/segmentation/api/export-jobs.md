@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;exporttaken;api;
 solution: Experience Platform
 title: API-eindpunt voor taken exporteren
-topic: developer guide
+topic-legacy: developer guide
 description: De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het /export/job eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform gebruiken, die u toestaat om, uitvoerbanen programmatically terug te winnen tot stand te brengen en te annuleren.
+exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 1%
 
 ---
-
 
 # Eindpunt van taken exporteren
 
@@ -204,7 +204,7 @@ De volgende reactie keert HTTP status 200 met een lijst van met succes voltooide
 | `schema.name` | De naam van het schema verbonden aan de dataset waar het gegeven moet worden uitgevoerd. |
 | `filter.segments` | De segmenten die worden geëxporteerd. De volgende velden worden opgenomen:<ul><li>`segmentId`: De segment-id waarnaar profielen worden geëxporteerd.</li><li>`segmentNs`: Segmentnaamruimte voor de opgegeven naamruimte  `segmentID`.</li><li>`status`: Een array van tekenreeksen die een statusfilter voor de  `segmentID`tekenreeks bieden. Standaard heeft `status` de waarde `["realized", "existing"]` die alle profielen vertegenwoordigt die in het segment vallen op het huidige tijdstip. Mogelijke waarden zijn: &quot;gerealiseerd&quot;, &quot;bestaand&quot; en &quot;verlaten&quot;. Een waarde van &quot;gerealiseerd&quot; betekent dat het profiel het segment binnengaat. Een waarde van &quot;bestaand&quot; betekent dat het profiel zich in het segment blijft bevinden. De waarde &quot;exiting&quot; houdt in dat het profiel het segment verlaat.</li></ul> |
 | `mergePolicy` | Voeg beleidsinformatie voor de uitgevoerde gegevens samen. |
-| `metrics.totalTime` | Een veld dat de totale tijd aangeeft waarop de exporttaak is uitgevoerd. |
+| `metrics.totalTime` | Een veld dat de totale tijd aangeeft waarop de exporttaak werd uitgevoerd. |
 | `metrics.profileExportTime` | Een veld waarin de exporttijd van de profielen wordt aangegeven. |
 | `page` | Informatie over de paginering van de gewenste exporttaken. |
 | `link.next` | Een koppeling naar de volgende pagina met exporttaken. |
@@ -474,7 +474,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 | `schema.name` | De naam van het schema verbonden aan de dataset waar het gegeven moet worden uitgevoerd. |
 | `filter.segments` | De segmenten die worden geëxporteerd. De volgende velden worden opgenomen:<ul><li>`segmentId`: Segment-id voor profielen die moeten worden geëxporteerd.</li><li>`segmentNs`: Segmentnaamruimte voor de opgegeven naamruimte  `segmentID`.</li><li>`status`: Een array van tekenreeksen die een statusfilter voor de  `segmentID`tekenreeks bieden. Standaard heeft `status` de waarde `["realized", "existing"]` die alle profielen vertegenwoordigt die in het segment vallen op het huidige tijdstip. Mogelijke waarden zijn: &quot;gerealiseerd&quot;, &quot;bestaand&quot; en &quot;verlaten&quot;.  Een waarde van &quot;gerealiseerd&quot; betekent dat het profiel het segment binnengaat. Een waarde van &quot;bestaand&quot; betekent dat het profiel zich in het segment blijft bevinden. De waarde &quot;exiting&quot; houdt in dat het profiel het segment verlaat.</li></ul> |
 | `mergePolicy` | Voeg beleidsinformatie voor de uitgevoerde gegevens samen. |
-| `metrics.totalTime` | Een veld dat de totale tijd aangeeft waarop de exporttaak is uitgevoerd. |
+| `metrics.totalTime` | Een veld dat de totale tijd aangeeft waarop de exporttaak werd uitgevoerd. |
 | `metrics.profileExportTime` | Een veld waarin de exporttijd van de profielen wordt aangegeven. |
 | `totalExportedProfileCounter` | Het totale aantal profielen dat is geëxporteerd naar alle batches. |
 
