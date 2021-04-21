@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;partiële inname;Partiële inname;Fout ophalen;Fout ophalen;Onvolledige batch-opname;gedeeltelijke batch-opname;gedeeltelijke;Inslitie;Ingestie;
 solution: Experience Platform
 title: Overzicht van partiële batchverwerking
-topic: overview
+topic-legacy: overview
 description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
+exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
-
 
 # Gedeeltelijke batch ingestie
 
@@ -56,7 +56,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 U kunt een nieuwe partij tot stand brengen met gedeeltelijke toegelaten opname.
 
-Om een nieuwe partij tot stand te brengen, volg de stappen in [batch ingestion developer guide](./api-overview.md). Als u de stap **[!UICONTROL Batch maken]** hebt bereikt, voegt u het volgende veld toe aan de hoofdtekst van de aanvraag:
+Om een nieuwe partij tot stand te brengen, volg de stappen in [batch ingestion developer guide](./api-overview.md). Wanneer u de stap **[!UICONTROL Create batch]** hebt bereikt, voegt u het volgende veld toe binnen de aanvraaginstantie:
 
 ```json
 {
@@ -77,21 +77,21 @@ Om een nieuwe partij tot stand te brengen, volg de stappen in [batch ingestion d
 >
 >In deze sectie wordt beschreven hoe u een batch voor gedeeltelijke batchinvoer via de gebruikersinterface inschakelt. Als u al een batch voor gedeeltelijke batch-opname hebt ingeschakeld met de API, kunt u verdergaan met de volgende sectie.
 
-Om een partij voor gedeeltelijke opname door [!DNL Platform] UI toe te laten, kunt u een nieuwe partij door bronverbindingen tot stand brengen, een nieuwe partij in een bestaande dataset tot stand brengen, of een nieuwe partij door &quot;[!UICONTROL Kaart CSV aan XDM stroom]&quot;tot stand brengen.
+Om een partij voor gedeeltelijke opname door [!DNL Platform] UI toe te laten, kunt u een nieuwe partij door bronverbindingen tot stand brengen, een nieuwe partij in een bestaande dataset tot stand brengen, of een nieuwe partij door &quot;[!UICONTROL Map CSV to XDM flow]&quot;creëren.
 
 ### Nieuwe bronverbinding maken {#new-source}
 
-Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in [Bronoverzicht](../../sources/home.md). Wanneer u de **[!UICONTROL Dataflow detail]** stap bereikt, neem nota van **[!UICONTROL Gedeeltelijke opname]** en **[!UICONTROL Error diagnostics]** gebieden.
+Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in [Bronoverzicht](../../sources/home.md). Wanneer u de stap **[!UICONTROL Dataflow detail]** hebt bereikt, neemt u nota van de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]**.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-Met de schakeloptie **[!UICONTROL Gedeeltelijke opname]** kunt u het gebruik van gedeeltelijke batch-opname in- of uitschakelen.
+Met de schakeloptie **[!UICONTROL Partial ingestion]** kunt u het gebruik van gedeeltelijke batch-opname in- of uitschakelen.
 
-De **[!UICONTROL Foutdiagnostiek]** schakelt alleen in wanneer de **[!UICONTROL Partiële opname]** schakelt uit. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als **[!UICONTROL Gedeeltelijke opname]** schakelt, wordt de verbeterde foutdiagnostiek automatisch afgedwongen.
+De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-Met de **[!UICONTROL Foutdrempel]** kunt u het percentage acceptabele fouten instellen voordat de gehele batch mislukt. Deze waarde is standaard ingesteld op 5%.
+Met **[!UICONTROL Error threshold]** kunt u het percentage acceptabele fouten instellen voordat de volledige batch mislukt. Deze waarde is standaard ingesteld op 5%.
 
 ### Een bestaande gegevensset {#existing-dataset} gebruiken
 
@@ -99,29 +99,29 @@ Om een bestaande dataset te gebruiken, begin door een dataset te selecteren. De 
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-Met de schakeloptie **[!UICONTROL Gedeeltelijke opname]** kunt u het gebruik van gedeeltelijke batch-opname in- of uitschakelen.
+Met de schakeloptie **[!UICONTROL Partial ingestion]** kunt u het gebruik van gedeeltelijke batch-opname in- of uitschakelen.
 
-De **[!UICONTROL Foutdiagnostiek]** schakelt alleen in wanneer de **[!UICONTROL Partiële opname]** schakelt uit. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als **[!UICONTROL Gedeeltelijke opname]** schakelt, wordt de verbeterde foutdiagnostiek automatisch afgedwongen.
+De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-Met de **[!UICONTROL Foutdrempel]** kunt u het percentage acceptabele fouten instellen voordat de gehele batch mislukt. Deze waarde is standaard ingesteld op 5%.
+Met **[!UICONTROL Error threshold]** kunt u het percentage acceptabele fouten instellen voordat de volledige batch mislukt. Deze waarde is standaard ingesteld op 5%.
 
 Nu, kunt u gegevens uploaden gebruikend **voeg gegevens** knoop toe, en het zal worden opgenomen gebruikend gedeeltelijke opname.
 
-### Gebruik &quot;[!UICONTROL CSV aan XDM schema]&quot;stroom {#map-flow}
+### De &quot;[!UICONTROL Map CSV to XDM schema]&quot;-stroom {#map-flow} gebruiken
 
-Als u de stroom &quot;[!UICONTROL CSV toewijzen aan XDM-schema]&quot; wilt gebruiken, voert u de vermelde stappen uit in de zelfstudie [Een CSV-bestand toewijzen](../tutorials/map-a-csv-file.md). Als u de stap **[!UICONTROL Gegevens toevoegen]** hebt bereikt, neemt u nota van de velden **[!UICONTROL Gedeeltelijke opname]** en **[!UICONTROL Foutdiagnose]**.
+Als u de stroom &quot;[!UICONTROL Map CSV to XDM schema]&quot; wilt gebruiken, volgt u de vermelde stappen in de [zelfstudie voor een CSV-bestand toewijzen](../tutorials/map-a-csv-file.md). Wanneer u de stap **[!UICONTROL Add data]** hebt bereikt, neemt u nota van de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]**.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-Met de schakeloptie **[!UICONTROL Gedeeltelijke opname]** kunt u het gebruik van gedeeltelijke batch-opname in- of uitschakelen.
+Met de schakeloptie **[!UICONTROL Partial ingestion]** kunt u het gebruik van gedeeltelijke batch-opname in- of uitschakelen.
 
-De **[!UICONTROL Foutdiagnostiek]** schakelt alleen in wanneer de **[!UICONTROL Partiële opname]** schakelt uit. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als **[!UICONTROL Gedeeltelijke opname]** schakelt, wordt de verbeterde foutdiagnostiek automatisch afgedwongen.
+De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL De]** drempelwaarde van de fout staat u toe om het percentage aanvaardbare fouten te plaatsen alvorens de volledige partij zal ontbreken. Deze waarde is standaard ingesteld op 5%.
+**[!UICONTROL Error threshold]** Hiermee kunt u het percentage acceptabele fouten instellen voordat de gehele batch mislukt. Deze waarde is standaard ingesteld op 5%.
 
 ## Volgende stappen {#next-steps}
 
