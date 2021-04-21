@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Handleiding voor het oplossen van problemen in realtime-profielen van klanten
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Dit document bevat antwoorden op veelgestelde vragen over het realtime-klantprofiel en een gids voor probleemoplossing voor algemene fouten bij het werken met profielgegevens met Adobe Experience Platform.
+exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
-
 
 # Handleiding voor het oplossen van problemen in realtime van klantprofielen
 
@@ -53,9 +53,9 @@ U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om to
 
 #### De gebruikersinterface gebruiken
 
-In het Experience Platform UI, **[!UICONTROL Browse]** lusje in **[!UICONTROL Profielen]** werkruimte staat u toe om het totale profielaantal te bekijken en naar individuele profielen op hun identiteitswaarde te zoeken. Zie [Gebruikershandleiding voor profielen](./ui/user-guide.md) voor meer informatie.
+In de interface van het Experience Platform kunt u op het tabblad **[!UICONTROL Browse]** in de werkruimte **[!UICONTROL Profiles]** het totale aantal profielen weergeven en op basis van hun identiteitswaarde naar afzonderlijke profielen zoeken. Zie [Gebruikershandleiding voor profielen](./ui/user-guide.md) voor meer informatie.
 
-U kunt een lijst van uw segmenten onder **[!UICONTROL Browse]** lusje in **[!UICONTROL Segmenten]** werkruimte ook bekijken. Nadat u een segment hebt geselecteerd, wordt een voorbeeld met profielen weergegeven die voor dat segment zijn gekwalificeerd. Vervolgens kunt u een van deze profielen selecteren om de details weer te geven. Zie [Overzicht van de Segmentatie UI](../segmentation/ui/overview.md) voor meer informatie.
+U kunt ook een lijst met uw segmenten weergeven onder het tabblad **[!UICONTROL Browse]** in de werkruimte **[!UICONTROL Segments]**. Nadat u een segment hebt geselecteerd, wordt een voorbeeld met profielen weergegeven die voor dat segment zijn gekwalificeerd. Vervolgens kunt u een van deze profielen selecteren om de details weer te geven. Zie [Overzicht van de Segmentatie UI](../segmentation/ui/overview.md) voor meer informatie.
 
 ## Foutcodes
 
