@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;controle;monitor;gegevensstromen;monitoringestie;gegevensopname;gegevensopname;meningsverslagen;meningspartijen;
 solution: Experience Platform
 title: Gegevensinname controleren
-topic: overview
+topic-legacy: overview
 description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
+exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
-
 
 # Inname van gegevens controleren
 
@@ -21,7 +21,7 @@ Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw 
 
 ## Doorlopende gegevensinvoer controleren
 
-In [Experience Platform UI](https://platform.adobe.com), klik **[!UICONTROL Controle]** op het linkernavigatiemenu, dan klik **[!UICONTROL het stromen van begin tot eind]**.
+In [Experience Platform UI](https://platform.adobe.com), klik **[!UICONTROL Monitoring]** op het linkernavigatiemenu, dan klik **[!UICONTROL Streaming end-to-end]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
@@ -61,11 +61,11 @@ Bovendien bevatten mislukte records details over de fouten die zijn opgetreden t
 
 ## Gegevens van begin tot einde bijhouden in batch
 
-In [[!DNL Experience Platform UI]](https://platform.adobe.com), klik **[!UICONTROL Controle]** op het linkernavigatiemenu.
+In [[!DNL Experience Platform UI]](https://platform.adobe.com), klik **[!UICONTROL Monitoring]** op het linkernavigatiemenu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-De **[!UICONTROL Batch van begin tot eind]** controlepagina verschijnt, die een lijst van de eerder opgenomen partijen toont. U kunt op een van de batches klikken voor meer informatie over de record.
+De **[!UICONTROL Batch end-to-end]** controlepagina verschijnt, tonend een lijst van de eerder opgenomen partijen. U kunt op een van de batches klikken voor meer informatie over de record.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
