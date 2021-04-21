@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;kafka;kafka-connector;Kafka;
 solution: Experience Platform
 title: Kafka Connector
-topic: overview
+topic-legacy: overview
 description: De streamaansluiting voor Adobe Experience Platform is gebaseerd op Apache Kafka Connect. Deze bibliotheek kan worden gebruikt om JSON-gebeurtenissen van Kafka-onderwerpen in uw datacenter rechtstreeks naar Experience Platform in real-time te streamen.
+exl-id: 062963e5-c727-4c2c-97db-8a9a5a7d903c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Kafka] connector voor Adobe Experience Platform
 
