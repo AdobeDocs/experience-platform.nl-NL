@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;catalogus;opzoeken van meerdere objecten;api
 solution: Experience Platform
 title: Meerdere catalogusobjecten opzoeken
-topic: developer guide
+topic-legacy: developer guide
 description: Als u meerdere specifieke objecten wilt weergeven in plaats van één aanvraag per object te maken, biedt Catalog een eenvoudige sneltoets voor het aanvragen van meerdere objecten van hetzelfde type. U kunt één aanvraag voor GET gebruiken om meerdere specifieke objecten te retourneren door een lijst met id's met komma's als scheidingsteken op te nemen.
+exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
 
 ---
-
 
 # Meerdere catalogusobjecten opzoeken
 
