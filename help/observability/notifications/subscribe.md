@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Abonneren op Adobe I/O-gebeurtenismeldingen
-topic: developer guide
+topic-legacy: developer guide
 description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. De informatie van de verwijzing betreffende beschikbare gebeurtenistypen wordt ook verstrekt, samen met verbindingen aan verdere documentatie over hoe te om teruggekeerde gebeurtenisgegevens voor elke toepasselijke  [!DNL Platform] dienst te interpreteren.
+exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
 
-
 # Abonneren op Adobe I/O-gebeurtenismeldingen
 
-[!DNL Observability Insights] Hiermee kunt u zich abonneren op Adobe I/O-gebeurtenismeldingen met betrekking tot Adobe Experience Platform-activiteiten. Deze gebeurtenissen worden naar een geconfigureerde webhaak verzonden om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken.
+[!DNL Observability Insights] Hiermee kunt u zich abonneren op Adobe I/O Event-meldingen met betrekking tot Adobe Experience Platform-activiteiten. Deze gebeurtenissen worden naar een geconfigureerde webhaak verzonden om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken.
 
 Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook informatie over de beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over hoe de geretourneerde gebeurtenisgegevens voor elke toepasselijke [!DNL Platform]-service moeten worden geïnterpreteerd.
 
@@ -41,20 +41,20 @@ Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en m
 
 ## Abonneren op gebeurtenissen
 
-Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Selecteer **[!UICONTROL Gebeurtenis toevoegen]**.
+Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Selecteer **[!UICONTROL Add event]**.
 
 ![](../images/notifications/add-event-button.png)
 
 Er wordt een dialoogvenster weergegeven waarin u een gebeurtenisprovider kunt toevoegen aan uw project:
 
-* Als u zich abonneert op [!DNL Experience Platform]-berichten, selecteert u **[!UICONTROL Platform-meldingen]**
-* Als u zich abonneert op Adobe Experience Platform [!DNL Privacy Service]-berichten, selecteert u **[!UICONTROL Gebeurtenissen Privacys Service]**
+* Als u zich abonneert op [!DNL Experience Platform]-berichten, selecteert u **[!UICONTROL Platform notifications]**
+* Als u zich abonneert op Adobe Experience Platform [!DNL Privacy Service]-berichten, selecteert u **[!UICONTROL Privacy Service Events]**
 
-Nadat u een gebeurtenisprovider hebt gekozen, selecteert u **[!UICONTROL Volgende]**.
+Als u een gebeurtenisprovider hebt gekozen, selecteert u **[!UICONTROL Next]**.
 
 ![](../images/notifications/event-provider.png)
 
-In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u zich wilt abonneren. Selecteer de gebeurtenissen u wenst om aan in te tekenen, dan uitgezocht **[!UICONTROL Volgende]**.
+In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u zich wilt abonneren. Selecteer de gebeurtenissen waarop u zich wilt abonneren en selecteer **[!UICONTROL Next]**.
 
 >[!NOTE]
 >
@@ -69,23 +69,23 @@ In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u
 
 In het volgende scherm wordt u gevraagd een JSON Web Token (JWT) te maken. U wordt gegeven de optie om een zeer belangrijk paar automatisch te produceren, of uw eigen openbare sleutel te uploaden die in de terminal wordt geproduceerd.
 
-In deze zelfstudie wordt de eerste optie gevolgd. Selecteer het optievak voor **[!UICONTROL Genereer een zeer belangrijk paar]**, dan selecteer **[!UICONTROL Generate keypair]** knoop in de bodem-juiste hoek.
+In deze zelfstudie wordt de eerste optie gevolgd. Selecteer het optievak voor **[!UICONTROL Generate a key pair]**, dan selecteer **[!UICONTROL Generate keypair]** knoop in de bodem-juiste hoek.
 
 ![](../images/notifications/generate-keypair.png)
 
 Wanneer het sleutelpaar produceert, wordt het automatisch gedownload door browser. U moet dit bestand zelf opslaan omdat het niet wordt voortgezet in de Developer Console.
 
-In het volgende scherm kunt u de details van het nieuwe sleutelpaar bekijken. Selecteer **[!UICONTROL Volgende]** om door te gaan.
+In het volgende scherm kunt u de details van het nieuwe sleutelpaar bekijken. Selecteer **[!UICONTROL Next]** om door te gaan.
 
 ![](../images/notifications/keypair-generated.png)
 
-Geef in het volgende scherm een naam en een beschrijving voor de gebeurtenisregistratie op in de sectie [!UICONTROL Gegevens voor gebeurtenisregistratie]. De beste manier is om een unieke, gemakkelijk identificeerbare naam te maken om deze gebeurtenisregistratie te onderscheiden van andere registraties voor hetzelfde project.
+Geef in het volgende scherm een naam en een beschrijving voor de gebeurtenisregistratie op in de sectie [!UICONTROL Event registration details]. De beste manier is om een unieke, gemakkelijk identificeerbare naam te maken om deze gebeurtenisregistratie te onderscheiden van andere registraties voor hetzelfde project.
 
 ![](../images/notifications/registration-details.png)
 
-Verderop op het zelfde scherm onder [!UICONTROL Hoe te om gebeurtenissen] sectie te ontvangen, kunt u naar keuze vormen hoe te om gebeurtenissen te ontvangen. **[!UICONTROL Met]** Webhookallows kunt u een aangepast webhaadres opgeven om gebeurtenissen te ontvangen, terwijl met  **[!UICONTROL Runtime-]** actie hetzelfde kan worden gedaan met  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Verderop op het zelfde scherm onder [!UICONTROL How to receive events] sectie, kunt u naar keuze vormen hoe te om gebeurtenissen te ontvangen. **[!UICONTROL Webhook]** kunt u een aangepast webhaadres opgeven om gebeurtenissen te ontvangen, terwijl u  **[!UICONTROL Runtime action]** dit kunt doen met  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
-Voor deze zelfstudie selecteert u **[!UICONTROL Webhaak]** en geeft u de URL op van de webhaak die u eerder hebt gemaakt. Als u klaar bent, selecteert u **[!UICONTROL geconfigureerde gebeurtenissen opslaan]** om de gebeurtenisregistratie te voltooien.
+Selecteer **[!UICONTROL Webhook]** voor deze zelfstudie en geef de URL op van de webhaak die u eerder hebt gemaakt. Als u klaar bent, selecteert u **[!UICONTROL Save configured events]** om de gebeurtenisregistratie te voltooien.
 
 ![](../images/notifications/receive-events.png)
 
