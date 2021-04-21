@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Gegevenstype algemeen toestemmingsveld
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Algemeen akkoord.
+exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 translation-type: tm+mt
-source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Generic Consent Field] gegevenstype
 
