@@ -2,16 +2,16 @@
 keywords: Experience Platform;product aankoop recept;Data Science Workspace;populaire onderwerpen;recepten;pre-build recept
 solution: Experience Platform
 title: Recipe voor productaankoopprognose
-topic: overview
+topic-legacy: overview
 description: Met het product Purchase Prediction recipe kunt u de waarschijnlijkheid voorspellen van een bepaald type aankoopgebeurtenis van de klant, bijvoorbeeld een aankoop van een product.
+exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 2%
 
 ---
-
 
 # Voorspelrecept voor productaankoop
 
