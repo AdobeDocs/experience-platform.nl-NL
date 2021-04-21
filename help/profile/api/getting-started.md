@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Aan de slag met de Real-Time Customer Profile API
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: In de gids Aan de slag met profiel-API worden de belangrijkste concepten en basisfuncties beschreven die u moet kennen om de eindpunten van de API-eindpunten van het profiel van de klant in realtime te kunnen gebruiken om standaard-CRUD-bewerkingen uit te voeren ten opzichte van profielgegevens.
+exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met de [!DNL Real-time Customer Profile]-API {#getting-started}
 
