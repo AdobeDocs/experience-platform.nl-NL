@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;label-id's
 solution: Experience Platform
 title: Een veld als identiteit labelen
-topic: api guide
+topic-legacy: api guide
 description: Velden met PII-gegevens (Persoonlijk identificeerbaar) kunnen als identiteitsvelden worden gemarkeerd. Een waarde die in een identiteitsveld wordt opgegeven, wordt geïnterpreteerd als een identiteit van de identiteitsdienst. De naamruimte van de identiteit wordt opgegeven als onderdeel van het labelen van het veld.
+exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%
 
 ---
-
 
 # Een veld labelen als identiteit
 
