@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;DULE;module
 solution: Experience Platform
 title: Aan de slag met de API voor beleidsservice
-topic: developer guide
+topic-legacy: developer guide
 description: Met de API voor beleidsservice kunt u verschillende bronnen maken en beheren die te maken hebben met Adobe Experience Platform Data Governance. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Dienst API van het Beleid te maken.
+exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met de [!DNL Policy Service]-API
 
