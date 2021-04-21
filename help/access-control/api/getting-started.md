@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;toegangsbeheer;api;aan de slag
 solution: Experience Platform
 title: API-handleiding voor toegangsbeheer
-topic: developer guide
+topic-legacy: developer guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. De volgende secties verstrekken extra informatie die de ontwikkelaars zullen moeten weten om met succes vraag aan de Registratie API van het Schema te maken.
+exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Access Control] API-handleiding
 
