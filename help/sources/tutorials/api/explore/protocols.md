@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;protocol
 solution: Experience Platform
 title: Een protocolsysteem verkennen met de Flow Service API
-topic: overview
+topic-legacy: overview
 description: Deze zelfstudie gebruikt de Flow Service API om protocoltoepassingen te verkennen.
+exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 1%
 
 ---
-
 
 # Een protocolsysteem verkennen met de API [!DNL Flow Service]
 
