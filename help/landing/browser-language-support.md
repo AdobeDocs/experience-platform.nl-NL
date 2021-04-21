@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 solution: Experience Platform
 title: Ondersteuning voor browser en taal voor de gebruikersinterface van het Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
+exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
-
 
 # Browserondersteuning en taalondersteuning voor de gebruikersinterface van het Experience Platform
 
@@ -49,7 +49,7 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 De taal wijzigen:
 
 1. Selecteer de huidige taal in de voettekst van de [!DNL Experience Platform] gebruikersinterface.
-2. Selecteer **[!UICONTROL Gebied wijzigen]** in uw profielinstellingen.
+2. Selecteer **[!UICONTROL Change Region]** in uw profielinstellingen.
 3. Selecteer uw gebied.
 
 >[!NOTE]
