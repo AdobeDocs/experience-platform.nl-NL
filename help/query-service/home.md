@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;vraag
 solution: Experience Platform
 title: Overzicht van Query Service
-topic: overview
+topic-legacy: overview
 description: Dit document verstrekt een overzicht van de rol van de Dienst van de Vraag binnen Experience Platform.
+exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Query Service] - overzicht
 
