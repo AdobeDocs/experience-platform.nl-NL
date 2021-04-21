@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentering;segmentbuilder;Segment builder
 solution: Experience Platform
 title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refactorgesegmentatie
-topic: ui guide
-description: 'De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. '
+topic-legacy: ui guide
+description: De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
+exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
-
 
 # Tijd beperkte reactoring
 
@@ -23,7 +23,7 @@ Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking 
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: Eén voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Gisteren]&quot;.
+Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: Een voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Yesterday]&quot;.
 
 Het vorige segment is gelijkwaardig aan het volgende segment — beide gebeurtenis-vlakke tijdbeperkingen zijn verbonden gebruikend een exploitant AND. De eerste tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Training&quot; en die vandaag plaatsvindt, terwijl de tweede tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Huisdieren&quot; en die gisteren heeft plaatsgevonden.
 
