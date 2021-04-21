@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;object-functies;object;
 solution: Experience Platform
 title: PQL-objectfuncties
-topic: developer guide
+topic-legacy: developer guide
 description: PQL (Profile Query Language) biedt functies om interactie met objecten eenvoudiger te maken.
+exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 2%
 
 ---
-
 
 # Objectfuncties
 
