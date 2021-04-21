@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;verenigd profiel;verenigd profiel;verenigd;Profiel;rtcp;inschakelen profiel;Profiel inschakelen;Unieschema;UNION-PROFIEL;verenigingsprofiel
 title: UI-gids Unieschema
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema's voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema's te bekijken en te onderzoeken gebruikend het Platform UI.
+exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
 
-
-# [!UICONTROL UnieschemaUI-] hulplijn
+# [!UICONTROL Union schema] UI-hulplijn
 
 In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema&#39;s voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema&#39;s te bekijken en te onderzoeken gebruikend het Platform UI.
 
@@ -35,7 +35,7 @@ Het werken met unieschema&#39;s vereist een diep inzicht in schema&#39;s XDM. Vo
 
 ## Verenigingsschema&#39;s weergeven
 
-Als u wilt navigeren naar samenvoegingsschema&#39;s binnen de interface van het Platform, selecteert u **[!UICONTROL Profielen]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Unieschema]**. Het [!UICONTROL Unieschema] tabblad wordt geopend om het samenvoegingsschema voor de momenteel geselecteerde klasse weer te geven.
+Als u naar samenvoegingsschema&#39;s in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Union Schema]**. Het tabblad [!UICONTROL Union Schema] wordt geopend om het samenvoegingsschema voor de geselecteerde klasse weer te geven.
 
 ![](../images/union-schema/union-schema-landing.png)
 
@@ -43,7 +43,7 @@ Als u wilt navigeren naar samenvoegingsschema&#39;s binnen de interface van het 
 
 Als u het samenvoegingsschema voor een specifieke XDM-klasse wilt weergeven, selecteert u de klasse in het vervolgkeuzemenu **[!UICONTROL Class]**. Vanwege het feit dat niet alle klassen vakbondsschema&#39;s hebben, zijn alleen klassen met vakbondsschema&#39;s (dat wil zeggen klassen met schema&#39;s die zijn ingeschakeld voor Profiel) beschikbaar in de vervolgkeuzelijst.
 
-Nadat een klasse is geselecteerd, het schema dat wordt getoond werkt bij om op het verenigingsschema voor de geselecteerde klasse te wijzen. U kunt bijvoorbeeld **[!UICONTROL XDM Individueel profiel]** selecteren om het samenvoegingsschema voor die klasse weer te geven.
+Nadat een klasse is geselecteerd, het schema dat wordt getoond werkt bij om op het verenigingsschema voor de geselecteerde klasse te wijzen. U kunt bijvoorbeeld **[!UICONTROL XDM Individual Profile]** selecteren om het samenvoegingsschema voor die klasse weer te geven.
 
 ![](../images/union-schema/union-schema-class.png)
 
@@ -65,7 +65,7 @@ Voor meer informatie over datasets, met inbegrip van het bekijken van datasetact
 
 ## Contribute-schema&#39;s weergeven
 
-U kunt ook bekijken welke specifieke schema&#39;s tot het unieschema bijdragen door **[!UICONTROL Alle bijdragende schema&#39;s]** te selecteren om de lijst van schema&#39;s uit te breiden. Afhankelijk van de klasse u hebt geselecteerd en het aantal schema&#39;s die uw organisatie binnen Platform heeft gecreeerd, zou dit een korte lijst kunnen zijn die één enkel schema of een lange lijst bevat die vele schema&#39;s bevat.
+U kunt ook bekijken welke specifieke schema&#39;s tot het verenigingsschema bijdragen door **[!UICONTROL All contributing schemas]** te selecteren om de lijst van schema&#39;s uit te breiden. Afhankelijk van de klasse u hebt geselecteerd en het aantal schema&#39;s die uw organisatie binnen Platform heeft gecreeerd, zou dit een korte lijst kunnen zijn die één enkel schema of een lange lijst bevat die vele schema&#39;s bevat.
 
 ![](../images/union-schema/union-schema-contributing-schemas.png)
 
@@ -75,7 +75,7 @@ Als u de naam van een specifiek schema selecteert, worden de velden binnen het s
 
 ## Identiteiten weergeven
 
-Via UI kunt u een lijst van identiteiten bekijken die in het unieschema inbegrepen zijn door **[!UICONTROL Identiteiten]** te selecteren om de lijst uit te breiden.
+Via UI kunt u een lijst van identiteiten bekijken die in het unieschema inbegrepen zijn door **[!UICONTROL Identities]** te selecteren om de lijst uit te breiden.
 
 ![](../images/union-schema/union-schema-identities.png)
 
@@ -89,7 +89,7 @@ Het identiteitsveld wordt gemarkeerd in het samenvoegingsschema en de details va
 
 Het unieschema UI laat u ook toe om verhoudingen te zien die voor schema&#39;s zijn bepaald die op de geselecteerde schemaklasse worden gebaseerd. Het bepalen van een verhouding is een manier om twee regelingen te verbinden die tot verschillende klassen behoren om complexere inzichten in klantengegevens te bereiken.
 
-Als er relaties zijn ingesteld voor de geselecteerde klasse en u **[!UICONTROL Relaties]** selecteert, wordt een lijst weergegeven met velden die worden gebruikt om relaties te maken. Niet alle schema&#39;s gebruiken of vereisen vastgestelde verhoudingen, zodat is het gemeenschappelijk voor de relatiesectie om geen gebieden te bevatten.
+Als er relaties zijn ingesteld voor de geselecteerde klasse, wordt bij het selecteren van **[!UICONTROL Relationships]** een lijst weergegeven met velden die worden gebruikt om relaties te maken. Niet alle schema&#39;s gebruiken of vereisen vastgestelde verhoudingen, zodat is het gemeenschappelijk voor de relatiesectie om geen gebieden te bevatten.
 
 Voor meer informatie over schemaverhoudingen, met inbegrip van hoe te om hen te bepalen die UI gebruiken, bezoek [dit document op schemaverhoudingen](../../xdm/tutorials/relationship-ui.md).
 
