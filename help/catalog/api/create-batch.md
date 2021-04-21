@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;batch maken;catalogusservice;api
 solution: Experience Platform
 title: Een batch maken in de API
-topic: developer guide
+topic-legacy: developer guide
 description: U kunt een partij tot stand brengen door een verzoek van de POST aan het /batches eindpunt in de Catalogus API te doen.
+exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 translation-type: tm+mt
-source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # Een batch maken
 
