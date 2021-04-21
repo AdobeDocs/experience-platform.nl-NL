@@ -2,16 +2,16 @@
 keywords: tekstclassificatie;Tekstclassificatie
 solution: Experience Platform, Intelligent Services
 title: Tekstclassificatie in de API voor inhoud en handel
-topic: Developer guide
-description: Als de tekstclassificatiedienst een tekstfragment opgeeft, kan deze classificeren in een of meer labels. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
+topic-legacy: Developer guide
+description: Wanneer de tekstclassificatiedienst een tekstfragment geeft, kan deze in een of meer labels indelen. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
+exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 2%
 
 ---
-
 
 # Tekstclassificatie
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >AI van de Inhoud en van de Handel is in bèta. De documentatie kan worden gewijzigd.
 
-Als de tekstclassificatiedienst een tekstfragment opgeeft, kan deze classificeren in een of meer labels. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
+Wanneer de tekstclassificatiedienst een tekstfragment geeft, kan deze in een of meer labels indelen. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
 
 **API-indeling**
 
