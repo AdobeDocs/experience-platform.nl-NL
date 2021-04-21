@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;catalogusservice;catalogus;Catalogusservice;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;Lineage;Lijn;Catalogus;Gegevensset inschakelen
 solution: Experience Platform
 title: Overzicht van Catalog Service
-topic: overview
-description: Catalogusservice is het systeem voor het vastleggen van de gegevenslocatie en -lijn in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+topic-legacy: overview
+description: Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de verbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Catalog Service] - overzicht
 
@@ -64,4 +64,4 @@ In de volgende tabel worden de verschillende objecttypen weergegeven die worden 
 
 ## Volgende stappen
 
-Dit document gaf een inleiding aan [!DNL Catalog Service] en hoe het binnen het grotere werkingsgebied van [!DNL Experience Platform] functioneert. Zie de [[!DNL Catalog] ontwikkelaarshandleiding](api/getting-started.md) voor stappen bij het werken met de verschillende eindpunten van die [!DNL Catalog] API. Het wordt aanbevolen ook te verwijzen naar de handleiding voor het filteren van catalogusgegevens](api/filter-data.md) om de best practices voor het beperken van de gegevens die worden geretourneerd in API-reacties te volgen.[
+Dit document gaf een inleiding aan [!DNL Catalog Service] en hoe het binnen het grotere werkingsgebied van [!DNL Experience Platform] functioneert. Zie de [[!DNL Catalog] ontwikkelaarshandleiding](api/getting-started.md) voor stappen bij het werken met de verschillende eindpunten van die [!DNL Catalog] API. Het wordt aanbevolen ook te verwijzen naar de handleiding voor het filteren van catalogusgegevens](api/filter-data.md) om de beste praktijken voor het beperken van de gegevens te volgen die in API reacties worden teruggegeven.[
