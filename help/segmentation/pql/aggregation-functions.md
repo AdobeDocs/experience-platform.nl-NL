@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;samenvoegingsfuncties;samenvoeging;
 solution: Experience Platform
 title: PQL-aggregatiefuncties
-topic: developer guide
-description: 'Samenvoegfuncties worden gebruikt om meerdere waarden binnen PQL-arrays (Profile Query Language) te groeperen en één samenvattingswaarde te maken. '
+topic-legacy: developer guide
+description: Samenvoegfuncties worden gebruikt om meerdere waarden binnen PQL-arrays (Profile Query Language) te groeperen en één samenvattingswaarde te maken.
+exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Samenvoegingsfuncties
 
@@ -53,7 +53,7 @@ De volgende vraag PQL keert de som van alle prijzen van orden terug.
 orders.sum(order.price)
 ```
 
-## Gemiddeld
+## Gemiddelde
 
 De functie `average` retourneert het rekenkundig gemiddelde van alle geselecteerde waarden binnen de array.
 
