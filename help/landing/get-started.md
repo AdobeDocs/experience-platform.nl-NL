@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Aan de slag met Adobe Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: Deze video biedt een snelle inleiding op het Experience Platform en schetst de zakelijke uitdagingen die het oplost.
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
