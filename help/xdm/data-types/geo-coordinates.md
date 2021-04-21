@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;geo;coördinaten;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype Geo-coördinaten
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Geo Coordinates XDM.
+exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '127'
 ht-degree: 2%
 
 ---
 
+# [!UICONTROL Geo Coordinates] gegevenstype
 
-# [!UICONTROL Geo ] Coordinators, gegevenstype
-
-[!UICONTROL Geo ] Coordinators is een standaard XDM gegevenstype dat de geografische coördinaten van een plaats beschrijft. Dit gegevenstype is gebaseerd op de openbare specificatie die op [schema.org](https://schema.org/GeoCoordinates) wordt gedocumenteerd.
+[!UICONTROL Geo Coordinates] is een standaard XDM gegevenstype dat de geografische coördinaten van een plaats beschrijft. Dit gegevenstype is gebaseerd op de openbare specificatie die op [schema.org](https://schema.org/GeoCoordinates) wordt gedocumenteerd.
 
 <img src="../images/data-types/geo-coordinates.png" width="400" /><br />
 
