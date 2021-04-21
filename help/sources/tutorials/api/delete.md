@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;flowservice;delete accounts;delete;api
 solution: Experience Platform
 title: Een account verwijderen met de Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een account verwijdert met de Flow Service API.
+exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 translation-type: tm+mt
-source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '592'
 ht-degree: 1%
 
 ---
-
 
 # Een account verwijderen met de Flow Service API
 
