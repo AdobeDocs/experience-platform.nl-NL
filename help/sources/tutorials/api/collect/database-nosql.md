@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;populaire onderwerpen;database;database van derden
 solution: Experience Platform
 title: Gegevens verzamelen van een database met behulp van bronconnectors en API's
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1649'
 ht-degree: 0%
 
 ---
