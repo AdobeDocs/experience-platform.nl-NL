@@ -2,21 +2,21 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;eCommerce-connector;eCommerce
 solution: Experience Platform
 title: Vorm een Dataflow voor een Verbinding van de Bron van de eCommerce in UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan a [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw eCommerce-account.
+exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
 
-
 # Een gegevensstroom configureren voor een eCommerce-verbinding in de gebruikersinterface
 
-Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie bevat stappen om een nieuwe gegevensstroom te configureren met uw **[!UICONTROL eCommerce]**-account.
+Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw **[!UICONTROL eCommerce]**-account.
 
 ## Aan de slag
 
@@ -27,54 +27,54 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
    - [Zelfstudie](../../../../xdm/tutorials/create-schema-ui.md) Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Bovendien, vereist dit leerprogramma dat u reeds een **[!UICONTROL eCommerce]** rekening hebt gecreeerd. Een lijst van leerprogramma&#39;s voor het creëren van verschillende **[!UICONTROL eCommerce]** schakelaars in UI kan in [overzicht van bronschakelaars](../../../home.md) worden gevonden.
+Bovendien vereist deze zelfstudie dat u al een **[!UICONTROL eCommerce]**-account hebt gemaakt. Een lijst van leerprogramma&#39;s voor het creëren van verschillende **[!UICONTROL eCommerce]** schakelaars in UI kan in [overzicht van bronschakelaars](../../../home.md) worden gevonden.
 
 ## Gegevens selecteren
 
-Nadat u uw **[!UICONTROL eCommerce]**-account hebt gemaakt, wordt de stap **[!UICONTROL Gegevens selecteren]** weergegeven en krijgt u een interactieve interface waarmee u uw bestandshiërarchie kunt verkennen.
+Nadat u uw **[!UICONTROL eCommerce]**-account hebt gemaakt, wordt de stap **[!UICONTROL Select data]** weergegeven en krijgt u een interactieve interface om de bestandshiërarchie te verkennen.
 
 - De linkerhelft van de interface is een directorybrowser waarin de bestanden en mappen van uw server worden weergegeven.
 - Met de rechterhelft van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
 
-Met de optie **[!UICONTROL Zoeken]** boven aan de pagina kunt u snel de brongegevens identificeren die u wilt gebruiken.
+Met de optie **[!UICONTROL Search]** boven aan de pagina kunt u snel de brongegevens identificeren die u wilt gebruiken.
 
 >[!NOTE]
 >
 >De optie van onderzoeksbrongegevens is beschikbaar aan alle op tabelvorm-gebaseerde bronschakelaars behalve de Analytics, Classifications, de Hubs van de Gebeurtenis, en de schakelaars van Kinesis.
 
-Wanneer u de brongegevens hebt gevonden, selecteert u de map en selecteert u **[!UICONTROL Volgende]**.
+Wanneer u de brongegevens hebt gevonden, selecteert u de map en selecteert u **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/ecommerce/select-data.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
-De stap **[!UICONTROL Toewijzing]** verschijnt, die een interactieve interface verstrekt om de brongegevens aan een [!DNL Platform] dataset in kaart te brengen.
+De stap **[!UICONTROL Mapping]** verschijnt, die een interactieve interface verstrekken om de brongegevens aan een [!DNL Platform] dataset in kaart te brengen.
 
 Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of een nieuwe dataset tot stand brengen.
 
 ### Een bestaande gegevensset gebruiken
 
-Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL bestaande dataset]** gebruiken, dan klik het datasetpictogram.
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Use existing dataset]**, dan klik het datasetpictogram.
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/ecommerce/use-existing-dataset.png)
 
-Het dialoogvenster **[!UICONTROL Gegevensset selecteren]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan **[!UICONTROL ga]** te klikken.
+Het dialoogvenster **[!UICONTROL Select dataset]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan **[!UICONTROL Continue]** te klikken.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/ecommerce/select-existing-dataset.png)
 
 ### Een nieuwe gegevensset gebruiken
 
-Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL nieuwe dataset]** creëren en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
+Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Create new dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
 
-U kunt een schemagebied vastmaken door een schemanaam in te gaan **[!UICONTROL Selecteer schema]** onderzoeksbar. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren om toegang te krijgen tot het scherm van bestaande schema&#39;s met hun respectievelijke details.
+U kunt een schemagebied vastmaken door een schemanaam in **[!UICONTROL Select schema]** onderzoeksbar in te gaan. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Advanced search]** selecteren om toegang te krijgen tot het scherm van bestaande schema&#39;s met hun respectievelijke details.
 
 Tijdens deze stap, kunt u uw dataset voor [!DNL Real-time Customer Profile] toelaten en een holistische mening van de attributen en het gedrag van een entiteit creëren. De gegevens van alle toegelaten datasets zullen in [!DNL Profile] worden omvat en de veranderingen worden toegepast wanneer u uw gegevensstroom bewaart.
 
-Schakel de knop **[!UICONTROL Profieldataset]** in of uit om uw doelgegevensset in te schakelen voor [!DNL Profile].
+Schakel de knop **[!UICONTROL Profile dataset]** in of uit om uw doelgegevensset in te schakelen voor [!DNL Profile].
 
 ![create-new-dataset](../../../images/tutorials/dataflow/ecommerce/new-dataset.png)
 
-Het dialoogvenster **[!UICONTROL Selecteer schema]** wordt weergegeven. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Done]**.
+Het dialoogvenster **[!UICONTROL Select schema]** wordt weergegeven. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Done]**.
 
 ![selectieschema](../../../images/tutorials/dataflow/ecommerce/select-schema.png)
 
@@ -86,17 +86,17 @@ Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wij
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
-Selecteer **[!UICONTROL Voorvertoningsgegevens]** om de toewijzingsresultaten van maximaal 100 rijen met voorbeeldgegevens uit de geselecteerde gegevensset weer te geven.
+Selecteer **[!UICONTROL Preview data]** om toewijzingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
 
 Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
 
-Wanneer uw brongegevens zijn toegewezen, selecteert u **[!UICONTROL Close]**.
+Selecteer **[!UICONTROL Close]** als de brongegevens zijn toegewezen.
 
 ## Planninguitvoering
 
-De **[!UICONTROL Plannende]** stap verschijnt, toestaand u om een insluitingsprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
+De stap **[!UICONTROL Scheduling]** verschijnt, toestaand u om een insluitingsprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -110,41 +110,41 @@ Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande 
 
 Als u de begintijd voor inname wilt instellen, past u de datum en tijd aan die worden weergegeven in het vak Begintijd. U kunt ook het kalenderpictogram selecteren om de begintijdwaarde te bewerken. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd.
 
-Selecteer **[!UICONTROL Incrementele gegevens laden door]** om de deltabkolom toe te wijzen. In dit veld wordt een onderscheid gemaakt tussen nieuwe en bestaande gegevens.
+Selecteer **[!UICONTROL Load incremental data by]** om de deltakolom toe te wijzen. In dit veld wordt een onderscheid gemaakt tussen nieuwe en bestaande gegevens.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
 ### Eenmalige gegevensstroom voor inname instellen
 
-Als u eenmalige invoer wilt instellen, selecteert u de pijl voor de frequentieverlaging en selecteert u **[!UICONTROL Eenmaal]**.
+Als u eenmalige invoer wilt instellen, selecteert u de pijl voor de frequentieverlaging en selecteert u **[!UICONTROL Once]**.
 
 >[!TIP]
 >
->**** Intervaland  **** Backfillare is niet zichtbaar tijdens eenmalige inname.
+>**[!UICONTROL Interval]** en niet zichtbaar  **[!UICONTROL Backfill]** zijn tijdens eenmalig gebruik.
 
-Nadat u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
+Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Next]**.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
 ## Gegevens over gegevensstroom opgeven
 
-De stap **[!UICONTROL Dataflow detail]** verschijnt, toestaand u om een naam en een korte beschrijving over uw nieuwe dataflow te geven.
+De stap **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
-Tijdens dit proces kunt u **[!UICONTROL Gedeeltelijke inname]** en **[!UICONTROL Foutdiagnostiek]** ook inschakelen. Als u **[!UICONTROL Gedeeltelijke inname]** inschakelt, kunt u gegevens met fouten tot een bepaalde drempel invoeren. Als **[!UICONTROL Gedeeltelijke inname]** is ingeschakeld, sleept u de oproep **[!UICONTROL Foutdrempel %]** om de foutdrempel van de batch aan te passen. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie [gedeeltelijk partijingesinzicht overzicht](../../../../ingestion/batch-ingestion/partial.md).
+Tijdens dit proces kunt u **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** ook inschakelen. Als u **[!UICONTROL Partial ingestion]** inschakelt, kunt u gegevens met fouten tot een bepaalde drempel invoeren. Wanneer **[!UICONTROL Partial ingestion]** is ingeschakeld, sleept u de **[!UICONTROL Error threshold %]**-schijf om de foutdrempel van de batch aan te passen. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie [gedeeltelijk partijingesinzicht overzicht](../../../../ingestion/batch-ingestion/partial.md).
 
-Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
+Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Next]**.
 
 ![details gegevensstroom](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Controleer uw gegevensstroom
 
-De stap **[!UICONTROL Review]** verschijnt, die u toestaat om uw nieuwe gegevensstroom te herzien alvorens het wordt gecreeerd. De details worden gegroepeerd in de volgende categorieën:
+De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-- **[!UICONTROL Verbinding]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-- **[!UICONTROL Gegevensset- en kaartvelden]** toewijzen: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
-- **[!UICONTROL Planning]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
+- **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
+- **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+- **[!UICONTROL Scheduling]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
 
-Zodra u uw gegevensstroom hebt herzien, klik **[!UICONTROL Afwerking]** en laat wat tijd voor dataflow toe om worden gecreeerd.
+Zodra u uw gegevensstroom hebt herzien, klik **[!UICONTROL Finish]** en laat wat tijd voor dataflow om worden gecreeerd.
 
 ![revisie](../../../images/tutorials/dataflow/ecommerce/review.png)
 
@@ -154,11 +154,11 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ## Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend **[!UICONTROL Delete]** functie beschikbaar in **[!UICONTROL Dataflows]** werkruimte zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over [het schrappen van gegevensstromen in UI](../delete.md).
+U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend de functie **[!UICONTROL Delete]** beschikbaar in de **[!UICONTROL Dataflows]** werkruimte zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over [het schrappen van gegevensstromen in UI](../delete.md).
 
 ## Volgende stappen
 
 Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om **[!UICONTROL eCommerce]** gegevens in te brengen en inzicht verworven in de controle datasets. Binnenkomende gegevens kunnen nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-- [[!DNL Real-time Customer Profile]  - overzicht](../../../../profile/home.md)
-- [[!DNL Data Science Workspace]  - overzicht](../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] overzicht](../../../../profile/home.md)
+- [[!DNL Data Science Workspace] overzicht](../../../../data-science-workspace/home.md)
