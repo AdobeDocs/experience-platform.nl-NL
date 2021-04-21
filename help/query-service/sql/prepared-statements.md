@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;voorbereide verklaringen;voorbereid;sql;
+keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;voorbereide verklaringen;voorbereid;sql;
 solution: Experience Platform
 title: Bereide verklaringen in de Dienst van de Vraag
-topic: prepared statements
+topic-legacy: prepared statements
 description: In SQL, worden de voorbereide verklaringen gebruikt aan malplaatje gelijkaardige vragen of updates. De Dienst van de Vraag van Adobe Experience Platform steunt voorbereide verklaringen door een parameterized vraag te gebruiken.
+exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 6%
 
 ---
-
 
 # Vooraf voorbereide instructies
 
@@ -104,7 +104,7 @@ Nu, kan de voorbereide verklaring worden uitgevoerd door de volgende vraag te ge
 EXECUTE getIdRange(10000, 10005);
 ```
 
-Wanneer dit wordt aangeroepen, ziet u precies dezelfde resultaten als voorheen:
+Wanneer deze wordt aangeroepen, ziet u precies dezelfde resultaten als voorheen:
 
 | id | firstname | lastname | geboortedatum | email | stad | land |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
