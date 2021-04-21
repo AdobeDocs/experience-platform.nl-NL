@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;effectief beleid;toegangsbeheer api
 solution: Experience Platform
 title: Efficiënt beleid API-eindpunt
-topic: developer guide
+topic-legacy: developer guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor het weergeven van effectief beleid met behulp van de API voor toegangsbeheer voor Adobe Experience Platform.
+exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
-
 
 # Doeltreffend beleidseindpunt
 
