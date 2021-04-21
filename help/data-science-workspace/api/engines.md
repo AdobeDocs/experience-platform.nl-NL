@@ -2,16 +2,16 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;engines;sensei machine learning api
 solution: Experience Platform
 title: Engine API-eindpunt
-topic: Developer guide
+topic-legacy: Developer guide
 description: Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
+exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 0%
 
 ---
-
 
 # Het eindpunt Motoren
 
@@ -173,7 +173,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Creeer een motor van de eigenschappijpleiding gebruikend de Url {#feature-pipeline-docker} van de Dokker
 
-U kunt een Motor van de eigenschappijpleiding tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
+U kunt een motor van de eigenschappijpleiding tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
 
 **API-indeling**
 
