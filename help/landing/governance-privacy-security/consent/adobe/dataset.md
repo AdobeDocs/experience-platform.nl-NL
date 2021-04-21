@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Een gegevensset configureren voor het vastleggen van toestemmings- en voorkeursgegevens
-topic: getting started
+topic-legacy: getting started
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
+exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 980bff169659d3ffc92a0678f8a0b153b3189906
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
-
 
 # Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen
 
