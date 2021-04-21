@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Toegangsbeheer;Adobe-beheerconsole
 solution: Experience Platform
 title: Overzicht van de interface voor toegangsbeheer
-topic: user guide
+topic-legacy: user guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor hoe te om de Admin Console te navigeren om toegangsbeheer voor Platform te beheren.
+exl-id: 6d83cbf5-c09f-4e2a-9678-b124981f8e83
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 1%
 
 ---
-
 
 # Overzicht van de interface voor toegangsbeheer
 
