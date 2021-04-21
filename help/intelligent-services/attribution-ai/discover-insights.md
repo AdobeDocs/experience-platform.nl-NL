@@ -2,16 +2,16 @@
 keywords: Experience Platform;inzichten;attributie ai;populaire onderwerpen;attributie ai inzichten
 solution: Intelligent Services, Experience Platform
 title: Inzichten in Attribution AI ontdekken
-topic: Attribution AI insights
+topic-legacy: Attribution AI insights
 description: Dit document fungeert als richtlijn voor het communiceren met de inzichten van serviceversies in de gebruikersinterface van Adobe Intelligent Services.
+exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1584'
 ht-degree: 0%
 
 ---
-
 
 # Inzichten in Attribution AI ontdekken
 
@@ -25,7 +25,7 @@ Om inzichten voor Attribution AI te gebruiken, moet u een de dienstinstantie heb
 
 ## Overzicht van inzichten in servicevergaderingen
 
-Selecteer **[!UICONTROL Services]** in de linkernavigatie in de interface [!DNL Adobe Experience Platform]. De browser **[!UICONTROL Services]** wordt weergegeven en geeft de beschikbare Adobe Intelligente services weer. Selecteer **[!UICONTROL Open]** in de container voor Attribution AI.
+Selecteer **[!UICONTROL Services]** in de gebruikersinterface van [!DNL Adobe Experience Platform] in de linkernavigatie. De browser **[!UICONTROL Services]** wordt weergegeven en geeft de beschikbare Adobe Intelligente services weer. Selecteer **[!UICONTROL Open]** in de container voor Attribution AI.
 
 ![Toegang tot uw exemplaar](./images/insights/open_Attribution_ai.png)
 
@@ -43,7 +43,7 @@ Vervolgens wordt de pagina met inzichten voor die service-instantie weergegeven,
 
 ### Details van serviceinstantie
 
-Als u aanvullende details voor een service-instantie wilt weergeven, selecteert u **[!UICONTROL Meer weergeven]** rechtsboven.
+Als u aanvullende details voor een service-instantie wilt weergeven, selecteert u **[!UICONTROL Show more]** in de rechterbovenhoek.
 
 ![meer weergeven](./images/insights/show-more.png)
 
@@ -53,22 +53,22 @@ Er wordt een gedetailleerde lijst weergegeven. Voor meer informatie over om het 
 
 ### Een instantie bewerken
 
-Als u een instantie wilt bewerken, selecteert u **[!UICONTROL Bewerken]** in de navigatie rechtsboven.
+Als u een instantie wilt bewerken, selecteert u **[!UICONTROL Edit]** in de navigatie rechtsboven.
 ![Klik op de knop Bewerken](./images/insights/edit-button.png)
 
-Het dialoogvenster Bewerken wordt weergegeven. In dit venster kunt u de naam, beschrijving en frequentie van de instantie bewerken. Als de status van de instantie is uitgeschakeld, kan de scorefrequentie niet worden bewerkt. Als u uw wijzigingen wilt bevestigen en het dialoogvenster wilt sluiten, selecteert u **[!UICONTROL Opslaan]** in de rechterbenedenhoek.
+Het dialoogvenster Bewerken wordt weergegeven. In dit venster kunt u de naam, beschrijving en frequentie van de instantie bewerken. Als de status van de instantie is uitgeschakeld, kan de scorefrequentie niet worden bewerkt. Als u de wijzigingen wilt bevestigen en het dialoogvenster wilt sluiten, selecteert u **[!UICONTROL Save]** in de rechterbenedenhoek.
 
 ![popup bewerken](./images/insights/edit-popover.png)
 
 ### Meer handelingen {#more-actions}
 
-De **[!UICONTROL Meer acties]** knoop wordt gevestigd in de top-juiste navigatie naast **[!UICONTROL Edit]**. Als u **[!UICONTROL Meer acties]** selecteert, wordt een vervolgkeuzelijst geopend waarin u een van de volgende bewerkingen kunt selecteren:
+De knop **[!UICONTROL More actions]** bevindt zich in de navigatie rechtsboven naast **[!UICONTROL Edit]**. Als u **[!UICONTROL More actions]** selecteert, wordt een vervolgkeuzelijst geopend waarin u een van de volgende bewerkingen kunt selecteren:
 
-- **[!UICONTROL Klonen]**: Hiermee wordt de instantie gekloond.
-- **[!UICONTROL Verwijderen]**: Hiermee wordt de instantie verwijderd.
-- **[!UICONTROL Samenvattingsgegevens]** downloaden: Hiermee downloadt u een CSV-bestand met de overzichtsgegevens.
-- **[!UICONTROL Toegangscores]**: Als u  **[!UICONTROL Access-]** scoresredirects selecteert, wordt u omgeleid naar de  [toegangscores voor de zelfstudie](./download-scores.md) Attribution AI.
-- **[!UICONTROL Runtimegeschiedenis]** weergeven: Er wordt een pop-upmenu weergegeven met een lijst van alle scoring-reeksen die aan de service-instantie zijn gekoppeld.
+- **[!UICONTROL Clone]**: Hiermee wordt de instantie gekloond.
+- **[!UICONTROL Delete]**: Hiermee wordt de instantie verwijderd.
+- **[!UICONTROL Download summary data]**: Hiermee downloadt u een CSV-bestand met de overzichtsgegevens.
+- **[!UICONTROL Access scores]**: Als u  **[!UICONTROL Access scores]** deze optie selecteert, wordt u omgeleid naar de  [toegangscores voor de zelfstudie](./download-scores.md) Attribution AI.
+- **[!UICONTROL View run history]**: Er wordt een pop-upmenu weergegeven met een lijst van alle scoring-reeksen die aan de service-instantie zijn gekoppeld.
 
 ![meer acties](./images/insights/more-actions.png)
 
@@ -78,15 +78,15 @@ Met Attribution AI-inzichten kunt u uw gegevens filteren en de gebruikersinterfa
 
 ### Conversion-gebeurtenis
 
-Wanneer u een nieuwe instantie maakt in Attribution AI, is een van de vereiste velden Conversiegebeurtenissen. Conversiegebeurtenissen zijn bedrijfsdoelstellingen die het effect van marketingactiviteiten, zoals e-commerceorders, aankopen in winkel en websitebezoeken, identificeren.
+Wanneer u een nieuwe instantie in Attribution AI maakt, is een van de vereiste velden Conversiegebeurtenissen. Conversiegebeurtenissen zijn bedrijfsdoelstellingen die het effect van marketingactiviteiten, zoals e-commerceorders, aankopen in winkel en websitebezoeken, identificeren.
 
-Vanuit de instantie kunt u met het vervolgkeuzemenu **[!UICONTROL Conversiegebeurtenissen]** een van de gebeurtenissen selecteren die voor de instantie zijn gedefinieerd om uw gegevens te filteren. Als u specifieke gebeurtenissen selecteert, worden de gebruikersinterfacevisualisaties gewijzigd en worden conversies die bij die gebeurtenissen horen alleen gevuld.
+Vanuit de instantie kunt u met het vervolgkeuzemenu **[!UICONTROL Conversion events]** de gebeurtenissen selecteren die voor de instantie zijn gedefinieerd om uw gegevens te filteren. Als u specifieke gebeurtenissen selecteert, worden de gebruikersinterfacevisualisaties gewijzigd en worden conversies die bij die gebeurtenissen horen alleen gevuld.
 
 ![conversiegebeurtenis](./images/insights/conversion-event.png)
 
 ### Attributiemodel
 
-Als u **[!UICONTROL Attributiemodel]** selecteert, wordt een vervolgkeuzelijst geopend met alle verschillende beschikbare attributiemodellen. U kunt meerdere modellen selecteren om de resultaten te vergelijken. Voor meer informatie over de verschillende attributiemodellen en hoe zij werken, bezoek [Attribution AI](./overview.md) overzicht dat een lijst met informatie over elk model bevat.
+Als u **[!UICONTROL Attribution Model]** selecteert, wordt een vervolgkeuzelijst geopend met alle verschillende beschikbare attributiemodellen. U kunt meerdere modellen selecteren om de resultaten te vergelijken. Voor meer informatie over de verschillende attributiemodellen en hoe zij werken, bezoek [Attribution AI](./overview.md) overzicht dat een lijst met informatie over elk model bevat.
 
 ![toewijzingsmodel](./images/insights/attribution-model.png)
 
@@ -100,16 +100,16 @@ Met dit filter kunt u alle gebieden selecteren die u hebt ingesteld in het proce
 
 ### Filters toevoegen
 
-U kunt extra filters toevoegen door het **filter** pictogram te selecteren om **[!UICONTROL filters toevoegen]** popover te openen. Met **[!UICONTROL Filters toevoegen]** kunt u filteren op Kanaal, Geografie, Mediatype en Product. Alleen de toepasselijke filters voor een service-instantie worden gevuld door de pop-over. Als u bijvoorbeeld geen geografische gegevens of een mediatype hebt opgegeven, zijn deze filterkenmerken niet beschikbaar voor uw instantie.
+U kunt extra filters toevoegen door **filter** te selecteren pictogram om **[!UICONTROL Add filters]** popover te openen. Met **[!UICONTROL Add filters]** popover kunt u filteren op Kanaal, Geografie, Mediatype en Product. Alleen de toepasselijke filters voor een service-instantie worden gevuld door de pop-over. Als u bijvoorbeeld geen geografische gegevens of een mediatype hebt opgegeven, zijn deze filterkenmerken niet beschikbaar voor uw instantie.
 
 ![extra filters](./images/insights/additional-filters.png)
 
 ![filterpopup](./images/insights/filter-popover.png)
 
-- **[!UICONTROL Kanaal]:** het selecteren van het kanaalattribuut staat u toe om het even welk van uw beschikbare marketing kanalen te filtreren. U kunt meerdere kanalen selecteren om ze te vergelijken.
-- **[!UICONTROL Geografie]:** Door het kenmerk geografie te selecteren kunt u landcodes filteren op basis van modellen op basis van regio&#39;s. Afhankelijk van uw gegevens kan dit filter al dan niet aanwezig zijn. Landcodes zijn twee tekens lang. Zie de volledige lijst met landcodes [hier](https://datahub.io/core/country-list).
-- **[!UICONTROL Mediatype]:Met het kenmerk mediatype** kunt u elk gedefinieerd mediatype filteren.
-- **[!UICONTROL Product]:Door het kenmerk product te** selecteren kunt u filteren op producten die oorspronkelijk in het ontwerp van de instantie zijn opgenomen.
+- **[!UICONTROL Channel]:** Wanneer u het kanaalkenmerk selecteert, kunt u elk van de beschikbare marketingkanalen filteren. U kunt meerdere kanalen selecteren om ze te vergelijken.
+- **[!UICONTROL Geography]:** Het selecteren van de aardrijkskundeattributen staat u toe om landcodes te filtreren die op gebied-gebaseerde modellen worden gebaseerd. Afhankelijk van uw gegevens kan dit filter al dan niet aanwezig zijn. Landcodes zijn twee tekens lang. Zie de volledige lijst met landcodes [hier](https://datahub.io/core/country-list).
+- **[!UICONTROL Media type]:** Als u het kenmerk van het mediatype selecteert, kunt u elk van de gedefinieerde mediatypen filteren.
+- **[!UICONTROL Product]:** Wanneer u het kenmerk product selecteert, kunt u filteren op producten die oorspronkelijk zijn opgenomen in het ontwerp van de instantie.
 
 ### Datumbereik
 
@@ -119,13 +119,13 @@ Selecteer het kalenderpictogram om de popover van het datumbereik te openen. De 
 
 ## Overzicht van uw gegevens
 
-De **[!UICONTROL Overzicht]** kaart toont uw totale omzettingen door attributiemodel. Het totale aantal verandert op basis van hoe specifiek u de zoekopdracht maakt met de filters die eerder in dit document zijn beschreven. Als u meer modellen selecteert, worden extra cirkels aan het overzicht toegevoegd, elk met een eigen kleur die overeenkomt met de legenda.
+De **[!UICONTROL Overview]** kaart toont uw totale omzettingen door attributiemodel. Het totale aantal verandert op basis van hoe specifiek u de zoekopdracht maakt met de filters die eerder in dit document zijn beschreven. Als u meer modellen selecteert, worden extra cirkels aan het overzicht toegevoegd, elk met een eigen kleur die overeenkomt met de legenda.
 
-![ - overzicht](./images/insights/Overview.png)
+![overzicht](./images/insights/Overview.png)
 
 ## Wekelijkse trends
 
-De **[!UICONTROL Wekelijkse trends]** kaart onderbreekt uw totale omzetting door de datumwaaier u tijdens het het filtreren proces plaatst.
+De **[!UICONTROL Weekly trends]** kaart onderbreekt uw totale omzetting door de datumwaaier u tijdens het het filtreren proces plaatst.
 
 Als u de ovalen rechtsboven op de **Wekelijkse trends**-kaart selecteert, wordt een vervolgkeuzelijst weergegeven waarmee u dagelijkse, wekelijkse of maandelijkse trends kunt selecteren.
 
@@ -135,23 +135,23 @@ Als u de muis boven de gegevensregel van een specifiek toewijzingsmodel houdt, w
 
 ## Uitsplitsing naar kanaal
 
-De **[!UICONTROL Verdeling per kanaal]** kaart wordt gebruikt om het totale aantal omzettingen met betrekking tot elk kanaal te bepalen. Deze kaart kan worden gebruikt om beslissingen te nemen over de doeltreffendheid van elk kanaal en het rendement van investeringen.
+De **[!UICONTROL Breakdown by channel]** kaart wordt gebruikt om het totale aantal omzettingen met betrekking tot elk kanaal te bepalen. Deze kaart kan worden gebruikt om beslissingen te nemen over de doeltreffendheid van elk kanaal en het rendement van investeringen.
 
-Als u de ovalen rechtsboven op de **[!UICONTROL Kaart voor uitsplitsen via kanaal]** selecteert, wordt een vervolgkeuzelijst geopend waarmee u gegevens kunt vullen op basis van aanraakpunten.
+Als u de ovalen rechtsboven op de **[!UICONTROL Breakdown by channel]**-kaart selecteert, wordt een vervolgkeuzelijst geopend waarmee u gegevens kunt vullen op basis van aanraakpunten.
 
 ![uitsplitsingskanaal](./images/insights/channel-breakdown.png)
 
 ## Beste campagnes
 
-De **[!UICONTROL Top campagnes]** kaart toont een overzicht van uw campagnes en hoe de campagne in elk kanaal uitvoert. Deze kaart kan u helpen uw team te informeren over de doeltreffendheid van een specifieke campagne voor een bepaald kanaal en kan inzichten verstrekken zoals welke campagnes u verder in zou moeten investeren.
+De **[!UICONTROL Top campaigns]** kaart geeft een overzicht van uw campagnes en hoe de campagne in elk kanaal presteert. Deze kaart kan u helpen uw team te informeren over de doeltreffendheid van een specifieke campagne voor een bepaald kanaal en kan inzichten verstrekken zoals welke campagnes u verder in zou moeten investeren.
 
 ![topcampagnes](./images/insights/top-campaigns.png)
 
 ## Uitsplitsing naar positie aanraakpunt
 
-Als u de tab **[!UICONTROL Padanalyse]** selecteert, worden de grafieken **[!UICONTROL Onderverdeling per aanraakpuntpositie]** en **[!UICONTROL Hoogste omzettingspaden]** geladen.
+Als u de tab **[!UICONTROL Path Analysis]** selecteert, worden de grafieken **[!UICONTROL Breakdown by touchpoint position]** en **[!UICONTROL Top conversion paths]** geladen.
 
-De **[!UICONTROL Uitsplitsing naar aanraakpuntpositie]** grafiek is een uitsplitsing van toegeschreven omzettingen naar positie van het aanraakpunt in vergelijking met alle conversiepaden. Deze grafiek helpt u begrijpen welke aanraakpunten effectiever zijn in verschillende stadia van het conversiepad. De stadia zijn starter, speler, en dichter.
+De grafiek **[!UICONTROL Breakdown by touchpoint position]** is een uitsplitsing van toegewezen omzettingen door positie van het aanraakpunt vergeleken over alle omzettingspaden. Deze grafiek helpt u begrijpen welke aanraakpunten effectiever zijn in verschillende stadia van het conversiepad. De stadia zijn starter, speler, en dichter.
 
 - **Starter:** Geeft aan dat het aanraakpunt de eerste aanraking in een conversiepad was.
 - **Speler:** Geeft aan dat het aanraakpunt niet het eerste of laatste aanraakpunt was dat tot een conversie heeft geleid.
@@ -164,17 +164,17 @@ De som van de procentuele bijdrage voor een toewijzingsmodel voor alle aanraakpu
 
 ## Bovenste omzetpaden
 
-In de grafiek **[!UICONTROL Bovenste omzettingspaden]** worden de beïnvloede en algoritmische scores weergegeven op de bovenste omzettingspaden in de geselecteerde gebieden. In deze grafiek kunt u visualiseren wat aanraakpunten bijdragen aan conversies en wat de attributiescore is voor elk aanraakpunt. U kunt deze informatie gebruiken om de meest frequente paden in een bepaald gebied weer te geven en te zien of er patronen ontstaan tussen de verschillende sets aanraakpunten.
+De grafiek **[!UICONTROL Top conversion paths]** toont de beïnvloede en algoritmische scores op de hoogste omzettingswegen in de geselecteerde gebieden. In deze grafiek kunt u visualiseren wat aanraakpunten bijdragen aan conversies en wat de attributiescore is voor elk aanraakpunt. U kunt deze informatie gebruiken om de meest frequente paden in een bepaald gebied weer te geven en te zien of er patronen ontstaan tussen de verschillende sets aanraakpunten.
 
 ![Meest gangbare gebruikerspaden](./images/insights/Touchpoint-paths.png)
 
 ## Efficiëntie van aanraakpunten
 
-Als u de tab **[!UICONTROL Doeltreffendheid aanraakpunt]** selecteert, wordt de **[!UICONTROL Doeltreffendheid aanraakpunt]**-kaart geladen. Deze kaart gebruikt de verspreiding van gegevens door Attribution AI om informatie voor elk touchpoint te tonen. De gegevens voor deze tabel worden alleen gegenereerd voor specifieke tijdsperiodes zoals aangegeven door de datum **[!UICONTROL Vanaf]** rechtsboven op de kaart.
+Als u het tabblad **[!UICONTROL Touchpoint Effectiveness]** selecteert, wordt de **[!UICONTROL Touchpoint effectiveness]**-kaart geladen. Deze kaart gebruikt de verspreiding van gegevens door Attribution AI om informatie voor elk touchpoint te tonen. De gegevens voor deze tabel worden alleen gegenereerd voor specifieke tijdsperiodes zoals aangegeven door de datum **[!UICONTROL As of]** rechtsboven op de kaart.
 
 ![doeltreffendheid aanraakpunt selecteren](./images/insights/Touchpoint-effectiveness.png)
 
-U kunt de **[!UICONTROL Touchpoint effectiviteit]** kaartinformatie gebruiken om te begrijpen hoe een touchpoint aan een omzetting bijdraagt. U kunt ook zien hoe effectief elk aanraakpunt is met de volgende prestatiemetriek:
+U kunt de kaartinformatie **[!UICONTROL Touchpoint effectiveness]** gebruiken om te begrijpen hoe een aanraakpunt aan een omzetting bijdraagt. U kunt ook zien hoe effectief elk aanraakpunt is met de volgende prestatiemetriek:
 
 **Aangeraakt** paden: Deze metrische vertoningen een percentage wegen die of geen omzetting voor touchpoint bereiken. U zult hogere toegeschreven omzettingen zien als de verhouding van wegen (percentage) die omzetting tot wegen bereiken die geen omzetting bereiken hoog is.
 
