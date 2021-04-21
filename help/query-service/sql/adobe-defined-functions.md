@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;adobe defined functies;sql;
 solution: Experience Platform
 title: Adobe-Gedefinieerde SQL Functies in de Dienst van de Vraag
-topic: functions
+topic-legacy: functions
 description: Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in Adobe Experience Platform Query Service.
+exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 1%
 
 ---
-
 
 # Adobe bepaalde SQL functies in de Dienst van de Vraag
 
@@ -41,7 +41,7 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 ## Sessionering
 
-Wanneer u werkt met [!DNL Experience Event]-gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakantwoordsysteem of een ander kanaal voor klantinteractie, is het nuttig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort.
+Wanneer u werkt met [!DNL Experience Event]-gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakreactiesysteem of een ander kanaal voor klantinteractie, is het nuttig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort.
 
 Deze groepering, of zitting van gegevens, helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
