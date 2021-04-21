@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Handleiding voor Privacy Service-API
 description: Met de Privacy Service-API kunnen ontwikkelaars hun verzoeken om toegang tot of verwijdering van hun persoonlijke gegevens in Experience Cloud-toepassingen maken en beheren, in overeenstemming met de wettelijke privacyregels. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Privacy Service] API-handleiding
 
@@ -61,26 +61,26 @@ De stappen voor het genereren van deze waarden worden hieronder in detail bespro
 
 Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Volg vervolgens de stappen die worden beschreven in de zelfstudie over het maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.[
 
-Zodra u een nieuw project hebt gecreeerd, uitgezocht **[!UICONTROL voeg API]** op **[!UICONTROL Overzicht van het Project]** scherm toe.
+Nadat u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** op het scherm **[!UICONTROL Project Overview]**.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-Het scherm **[!UICONTROL Add een API]** verschijnt. Selecteer **[!UICONTROL Privacy Service-API]** in de lijst met beschikbare API&#39;s voordat u **[!UICONTROL Volgende]** selecteert.
+Het **[!UICONTROL Add an API]** scherm verschijnt. Selecteer **[!UICONTROL Privacy Service API]** in de lijst met beschikbare API&#39;s voordat u **[!UICONTROL Next]** selecteert.
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-Het scherm **[!UICONTROL API configureren]** wordt weergegeven. Selecteer de optie **[!UICONTROL Een sleutelpaar genereren]** en selecteer **[!UICONTROL Keypair genereren]** in de rechterbenedenhoek.
+Het **[!UICONTROL Configure API]** scherm verschijnt. Selecteer de optie **[!UICONTROL Generate a key pair]** en selecteer **[!UICONTROL Generate keypair]** in de rechterbenedenhoek.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
-Het sleutelpaar wordt automatisch geproduceerd, en een dossier van het ZIP dat een privé sleutel en een openbaar certificaat bevat wordt gedownload aan uw lokale machine (die in een recentere stap moet worden gebruikt). Selecteer **[!UICONTROL gevormde API opslaan]** om de configuratie te voltooien.
+Het sleutelpaar wordt automatisch geproduceerd, en een dossier van het ZIP dat een privé sleutel en een openbaar certificaat bevat wordt gedownload aan uw lokale machine (die in een recentere stap moet worden gebruikt). Selecteer **[!UICONTROL Save configured API]** om de configuratie te voltooien.
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op **Privacy Service API overzicht** pagina. Van hier, scrol neer aan de **[!UICONTROL sectie van de Rekening van de Dienst (JWT)]**, die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan [!DNL Privacy Service] API worden vereist:
+Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op **Privacy Service API overzicht** pagina. Van hier, scrol neer aan de **[!UICONTROL Service Account (JWT)]** sectie, die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan [!DNL Privacy Service] API worden vereist:
 
-* **[!UICONTROL CLIENT-ID]**: De client-id is de vereiste  `{API_KEY}` voor die id die moet worden opgegeven in de header x-api-key.
-* **[!UICONTROL ORGANISATIE-ID]**: De organisatie-id is de  `{IMS_ORG}` waarde die moet worden gebruikt in de header x-gw-ims-org-id.
+* **[!UICONTROL CLIENT ID]**: De client-id is de vereiste  `{API_KEY}` voor die id die moet worden opgegeven in de header x-api-key.
+* **[!UICONTROL ORGANIZATION ID]**: De organisatie-id is de  `{IMS_ORG}` waarde die moet worden gebruikt in de header x-gw-ims-org-id.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
@@ -88,7 +88,7 @@ Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op 
 
 De laatste vereiste referentie die u moet verzamelen, is uw `{ACCESS_TOKEN}`, die wordt gebruikt in de machtigingsheader. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om te kunnen doorgaan met het gebruik van [!DNL Platform] API&#39;s.
 
-Als u een nieuwe `{ACCESS_TOKEN}` wilt genereren, opent u de eerder gedownloade persoonlijke sleutel en plakt u de inhoud ervan in het tekstvak naast **[!UICONTROL Toegangstoken genereren]** voordat u **[!UICONTROL Token genereren]** selecteert.
+Als u een nieuwe `{ACCESS_TOKEN}` wilt genereren, opent u de eerder gedownloade persoonlijke sleutel en plakt u de inhoud ervan in het tekstvak naast **[!UICONTROL Generate access token]** voordat u **[!UICONTROL Generate Token]** selecteert.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
