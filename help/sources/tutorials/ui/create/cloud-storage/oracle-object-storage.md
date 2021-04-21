@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle-objectopslag
+keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle object storage
 solution: Experience Platform
 title: Creeer een Verbinding van de Bron van de Opslag van de Objecten van het Oracle in UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Oracle Object Storage-bronverbinding maakt met de Adobe Experience Platform-interface.
+exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Oracle Object Storage]-bronverbinding maken in de gebruikersinterface
 
@@ -43,23 +43,23 @@ Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de hieronder stappen v
 
 ## Verbinding maken met Oracle Object Storage
 
-In het Platform UI, selecteer **[!UICONTROL Bronnen]** van de linkernavigatie om tot de [!UICONTROL Bronswerkruimte] toegang te hebben. In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer **[!UICONTROL Sources]** in de gebruikersinterface van het Platform in de linkernavigatie om de werkruimte [!UICONTROL Sources] te openen. In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
-Selecteer **[!UICONTROL Oracle Object Storage]** onder de categorie [!UICONTROL Cloud storage] en selecteer **[!UICONTROL Gegevens toevoegen]**.
+Selecteer [!UICONTROL Cloud storage] onder de categorie **[!UICONTROL Oracle Object Storage]** en selecteer **[!UICONTROL Add data]**.
 
 ![catalogus](../../../../images/tutorials/create/oracle-object-storage/catalog.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Oracle Object Storage]-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Oracle Object Storage]-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/oracle-object-storage/existing.png)
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL Nieuwe account]** en geeft u een naam, een optionele beschrijving en uw [!DNL Oracle Object Storage]-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL verbind met bron]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw [!DNL Oracle Object Storage]-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![new](../../../../images/tutorials/create/oracle-object-storage/new.png)
 
