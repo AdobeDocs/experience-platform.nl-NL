@@ -2,20 +2,20 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;adres;xdm:adres;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype postadres
-topic: overview
+topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor postadres.
+exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Postal address] gegevenstype
 
-# [!UICONTROL Gegevenstype ] postadres
-
-[!UICONTROL Het postale ] adres is een standaard XDM gegevenstype dat de details van een postend adres beschrijft.
+[!UICONTROL Postal address] is een standaard XDM gegevenstype dat de details van een postend adres beschrijft.
 
 <img src="../images/data-types/postal-address.png" width="450" /><br />
 
