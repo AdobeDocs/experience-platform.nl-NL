@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle DB;oracle db
+keywords: Experience Platform;thuis;populaire onderwerpen;Oracle DB;oracle db
 solution: Experience Platform
 title: Een Oracle DB-bronverbinding maken in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: Leer hoe u een Oracle DB-bronverbinding maakt met de interface van Adobe Experience Platform.
+description: Leer hoe u een Oracle DB-bronverbinding maakt met de Adobe Experience Platform-interface.
+exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '464'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Oracle DB]-bronverbinding maken in de gebruikersinterface
 
@@ -42,31 +42,31 @@ Als u toegang wilt krijgen tot uw [!DNL Oracle DB]-account op [!DNL Platform], m
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met [!DNL Oracle DB]. Het patroon van de [!DNL Oracle DB] verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Oracle DB] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Raadpleeg [dit Oracle-document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) voor meer informatie over aan de slag gaan.
+Raadpleeg [dit Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) voor meer informatie over aan de slag gaan.
 
 ## Uw [!DNL Oracle DB]-account aansluiten
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Oracle DB]-account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Sources]** te openen. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL Oracle DB]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Oracle DB] schakelaar tot stand te brengen.
+Selecteer **[!UICONTROL Oracle DB]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders, selecteer **[!UICONTROL Add data]** om een nieuwe [!DNL Oracle DB] schakelaar tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/oracle/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met Oracle DB]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Oracle DB]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Oracle DB]-referenties op. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Oracle DB]-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![verbinden](../../../../images/tutorials/create/oracle/new.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL Oracle DB]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de [!DNL Oracle DB]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/oracle/existing.png)
 
