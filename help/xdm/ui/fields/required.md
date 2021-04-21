@@ -3,25 +3,25 @@ keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systee
 solution: Experience Platform
 title: Vereiste velden definiëren in de gebruikersinterface
 description: Leer hoe u een vereist XDM-veld definieert in de gebruikersinterface van het Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '187'
 ht-degree: 1%
 
 ---
-
 
 # Vereiste velden definiëren in de gebruikersinterface
 
 In het Model van de Gegevens van de Ervaring (XDM), wijst een vereist gebied erop dat het een geldige waarde moet worden verstrekt opdat een bepaalde verslag of een tijd-reeksgebeurtenis tijdens gegevensopname wordt goedgekeurd. Veelvoorkomende gebruiksgevallen voor vereiste velden zijn gebruikersidentiteitsgegevens en tijdstempels.
 
-Wanneer [een nieuw gebied](./overview.md#define) in het gebruikersinterface van Adobe Experience Platform bepaalt, kunt u het als vereist gebied plaatsen door **[!UICONTROL Required]** checkbox in het juiste spoor te selecteren. Selecteer **[!UICONTROL Toepassen]** om de wijziging op het schema toe te passen.
+Wanneer [een nieuw gebied](./overview.md#define) in het gebruikersinterface van Adobe Experience Platform bepaalt, kunt u het als vereist gebied plaatsen door **[!UICONTROL Required]** checkbox in het juiste spoor te selecteren. Selecteer **[!UICONTROL Apply]** om de wijziging op het schema toe te passen.
 
 ![](../../images/ui/fields/special/required.png)
 
-Als het veld eenmaal is toegepast, wordt het pad ervan weergegeven onder **[!UICONTROL Vereiste velden]** in de linkerspoorstaaf. Als het veld is genest, worden alle bovenliggende velden ook weergegeven als dat nodig is.
+Als het veld eenmaal is toegepast, wordt het pad ervan weergegeven onder **[!UICONTROL Required fields]** in de linkerrail. Als het veld is genest, worden alle bovenliggende velden ook weergegeven als dat nodig is.
 
 ![](../../images/ui/fields/special/required-applied.png)
 
