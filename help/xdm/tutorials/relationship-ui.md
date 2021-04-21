@@ -3,16 +3,16 @@ keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;
 solution: Experience Platform
 title: Bepaal een verhouding tussen Twee Schema's gebruikend de Redacteur van het Schema
 description: Dit document verstrekt een zelfstudie voor het bepalen van een verband tussen twee schema's gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
-
 
 # Bepaal een verband tussen twee schema&#39;s gebruikend [!DNL Schema Editor]
 
@@ -44,7 +44,7 @@ Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk
 
 ### [!DNL Loyalty Members] schema
 
-Het bronschema &quot;[!DNL Loyalty Members]&quot;is gebaseerd op [!DNL XDM Individual Profile] klasse, en is het schema dat in het leerprogramma voor [het creëren van een schema in UI](create-schema-ui.md) werd geconstrueerd. Het omvat een `loyalty` voorwerp onder zijn `_tenantId` namespace, die verscheidene loyaliteitsspecifieke gebieden omvat. Één van deze gebieden, `loyaltyId`, dient als primaire identiteit voor het schema onder [!UICONTROL Email] namespace. Zoals onder **[!UICONTROL Schemaeigenschappen]** wordt gezien, is dit schema toegelaten voor gebruik in [!DNL Real-time Customer Profile].
+Het bronschema &quot;[!DNL Loyalty Members]&quot;is gebaseerd op [!DNL XDM Individual Profile] klasse, en is het schema dat in het leerprogramma voor [het creëren van een schema in UI](create-schema-ui.md) werd geconstrueerd. Het omvat een `loyalty` voorwerp onder zijn `_tenantId` namespace, die verscheidene loyaliteitsspecifieke gebieden omvat. Één van deze gebieden, `loyaltyId`, dient als primaire identiteit voor het schema onder [!UICONTROL Email] namespace. Zoals u onder **[!UICONTROL Schema Properties]** ziet, is dit schema ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -66,23 +66,23 @@ Selecteer **[!UICONTROL Add]** in de sectie **[!UICONTROL Mixins]** om te beginn
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Het dialoogvenster [!UICONTROL Mixin] toevoegen wordt weergegeven. Selecteer **[!UICONTROL Nieuwe mix maken]**. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe mix. Selecteer **[!UICONTROL Mengsel toevoegen]** wanneer gebeëindigd.
+Het dialoogvenster [!UICONTROL Add Mixin] wordt weergegeven. Selecteer **[!UICONTROL Create new mixin]**. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe mix. Selecteer **[!UICONTROL Add mixin]** wanneer gebeëindigd.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Het canvas verschijnt weer met &quot;[!DNL Favorite Hotel]&quot; in de sectie **[!UICONTROL Mixins]**. Selecteer de mixnaam en selecteer **[!UICONTROL Veld toevoegen]** naast het veld op hoofdniveau `Loyalty Members`.
+Het canvas verschijnt weer met &quot;[!DNL Favorite Hotel]&quot; in de sectie **[!UICONTROL Mixins]**. Selecteer de mixnaam en selecteer **[!UICONTROL Add field]** naast het veld op hoofdniveau `Loyalty Members`.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Er wordt een nieuw veld weergegeven op het canvas onder de naamruimte `_tenantId`. Geef onder **[!UICONTROL Veldeigenschappen]** een veldnaam en weergavenaam voor het veld op en stel het type in op &quot;[!UICONTROL String]&quot;.
+Er wordt een nieuw veld weergegeven op het canvas onder de naamruimte `_tenantId`. Geef onder **[!UICONTROL Field properties]** een veldnaam en weergavenaam voor het veld op en stel het type in op &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Selecteer **[!UICONTROL Toepassen]** als u klaar bent.
+Selecteer **[!UICONTROL Apply]** als u klaar bent.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Het bijgewerkte veld `favoriteHotel` wordt weergegeven op het canvas. Selecteer **[!UICONTROL Opslaan]** om de wijzigingen in het schema te voltooien.
+Het bijgewerkte veld `favoriteHotel` wordt weergegeven op het canvas. Selecteer **[!UICONTROL Save]** om uw wijzigingen in het schema te voltooien.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -90,15 +90,15 @@ Het bijgewerkte veld `favoriteHotel` wordt weergegeven op het canvas. Selecteer 
 
 Zodra uw bronschema een specifiek die verwijzingsgebied heeft wordt bepaald, kunt u het als relatiegebied aanwijzen.
 
-Selecteer het veld `favoriteHotel` op het canvas en schuif omlaag onder **[!UICONTROL Veldeigenschappen]** totdat het selectievakje **[!UICONTROL Relatie]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
+Selecteer het veld `favoriteHotel` op het canvas en schuif omlaag onder **[!UICONTROL Field properties]** totdat het selectievakje **[!UICONTROL Relationship]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Selecteer dropdown voor **[!UICONTROL Referentieschema]** en selecteer het bestemmingsschema voor de verhouding (&quot;[!DNL Hotels]&quot;in dit voorbeeld). Als het bestemmingsschema voor [!DNL Profile] wordt toegelaten, wordt **[!UICONTROL Verwijzing identiteitsnamespace]** gebied automatisch geplaatst aan namespace van de primaire identiteit van het bestemmingsschema. Als voor het schema geen primaire identiteit is gedefinieerd, moet u de naamruimte die u wilt gebruiken handmatig selecteren in het vervolgkeuzemenu. Selecteer **[!UICONTROL Toepassen]** wanneer u klaar bent.
+Selecteer dropdown voor **[!UICONTROL Reference schema]** en selecteer het bestemmingsschema voor de verhouding (&quot;[!DNL Hotels]&quot;in dit voorbeeld). Als het bestemmingsschema voor [!DNL Profile] wordt toegelaten, wordt **[!UICONTROL Reference identity namespace]** gebied automatisch geplaatst aan namespace van de primaire identiteit van het bestemmingsschema. Als voor het schema geen primaire identiteit is gedefinieerd, moet u de naamruimte die u wilt gebruiken handmatig selecteren in het vervolgkeuzemenu. Selecteer **[!UICONTROL Apply]** wanneer gebeëindigd.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-Het veld `favoriteHotel` wordt nu gemarkeerd als een relatie op het canvas en geeft de naam en naamruimte van de referentie-identiteit van het doelschema weer. Selecteer **[!UICONTROL Opslaan]** om uw wijzigingen op te slaan en de workflow te voltooien.
+Het veld `favoriteHotel` wordt nu gemarkeerd als een relatie op het canvas en geeft de naam en naamruimte van de referentie-identiteit van het doelschema weer. Selecteer **[!UICONTROL Save]** om uw wijzigingen op te slaan en de workflow te voltooien.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 
