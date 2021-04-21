@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Entiteiten (Profile Access) API-eindpunt
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot gegevens van het profiel Real-time klanten met behulp van RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
+exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 0%
 
 ---
-
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
 
@@ -548,7 +548,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `schema.name` | **(VEREIST)** Het XDM-schema van de entiteit die moet worden opgehaald |
+| `schema.name` | **(VEREIST)** Het XDM-schema van de op te halen entiteit |
 | `relatedSchema.name` | Als `schema.name` `_xdm.context.experienceevent` is moet deze waarde het schema voor de profielentiteit specificeren die de gebeurtenissen van de tijdreeks met betrekking tot zijn. |
 | `identities` | **(VEREIST)** Een arraylijst met profielen waaruit de bijbehorende tijdreeksgebeurtenissen kunnen worden opgehaald. Elke ingang in de serie wordt geplaatst op één van twee manieren: 1) gebruiken van een volledig gekwalificeerde identiteit die uit de waarde van identiteitskaart en namespace of 2) het verstrekken van een XID bestaat. |
 | `fields` | Hiermee worden de gegevens die naar een opgegeven set velden worden geretourneerd, geïsoleerd. Hiermee kunt u filteren welke schemavelden worden opgenomen in opgehaalde gegevens. Voorbeeld: persoonlijke e-mail,persoon.naam,persoon.geslacht |
@@ -901,7 +901,7 @@ De volgende parameters worden gebruikt in de weg voor GET verzoeken aan het `/ac
 
 | Parameter | Beschrijving | Voorbeeld |
 |---|---|---|
-| `schema.name` | **(VEREIST)** Het XDM-schema van de entiteit die moet worden opgehaald | `schema.name=_xdm.context.experienceevent` |
+| `schema.name` | **(VEREIST)** Het XDM-schema van de op te halen entiteit | `schema.name=_xdm.context.experienceevent` |
 | `relatedSchema.name` | Als `schema.name` &quot;_xdm.context.experienceEvent&quot;is, moet deze waarde het schema specificeren voor de profielentiteit waaraan de gebeurtenissen van de tijdreeks gerelateerd zijn. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(VEREIST)** De id van de entiteit. Als de waarde van deze parameter geen XID is, moet ook een naamruimteparameter voor identiteit worden opgegeven (zie `entityIdNS` hieronder). | `entityId=janedoe@example.com` |
 | `entityIdNS` | Als `entityId` niet als XID wordt verstrekt, moet dit gebied de identiteitsnaamruimte specificeren. | `entityIdNE=email` |
