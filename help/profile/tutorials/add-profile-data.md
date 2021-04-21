@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API;profiel inschakelen;profiel inschakelen
 title: Gegevens toevoegen aan realtime klantprofiel
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe te voegen aan het realtime profiel van de klant.
+exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
 
 ---
-
 
 # Gegevens toevoegen aan [!DNL Real-time Customer Profile]
 
