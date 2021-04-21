@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Azure HDInsights;Apache Spark
 solution: Experience Platform
 title: Maak een Apache Spark op Azure HDInsights Source Connection in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Apache Spark maakt op de Azure HDInsights-bronverbinding met de Adobe Experience Platform-gebruikersinterface.
+exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '481'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Apache Spark] maken op [!DNL Azure HDInsights]-bronverbinding in de gebruikersinterface
 
@@ -49,25 +49,25 @@ Voor meer informatie over begonnen worden, verwijs naar [dit document van de Von
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Spark]-account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Sources]** te openen. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL Spark]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Spark] schakelaar tot stand te brengen.
+Selecteer **[!UICONTROL Spark]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders, selecteer **[!UICONTROL Add data]** om een nieuwe [!DNL Spark] schakelaar tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/spark/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met Spark]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Spark]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Spark]-referenties op. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Spark]-referenties op. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![new](../../../../images/tutorials/create/spark/new.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL Spark]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de [!DNL Spark]-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/spark/existing.png)
 
