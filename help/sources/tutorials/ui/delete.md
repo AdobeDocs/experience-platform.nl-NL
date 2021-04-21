@@ -3,22 +3,22 @@ keywords: Experience Platform;thuis;populaire onderwerpen; gegevensstroom verwij
 description: De werkruimte Bronnen biedt u de mogelijkheid om bestaande batch- en streaming gegevensstromen te verwijderen die fouten bevatten of verouderd zijn.
 solution: Experience Platform
 title: Gegevensstromen verwijderen in de gebruikersinterface
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
 
-
 # Gegevensstromen verwijderen in de gebruikersinterface
 
-Met de werkruimte [!UICONTROL Bronnen] kunt u bestaande batch- en streaming gegevensstromen verwijderen die fouten bevatten of verouderd zijn geworden.
+Met de werkruimte [!UICONTROL Sources] kunt u bestaande batch- en streaminggegevens verwijderen die fouten bevatten of verouderd zijn.
 
-Deze zelfstudie bevat stappen voor het verwijderen van gegevensstromen met behulp van de werkruimte [!UICONTROL Bronnen].
+Deze zelfstudie bevat stappen voor het verwijderen van gegevensstromen in de werkruimte [!UICONTROL Sources].
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## Gegevensstromen verwijderen
 
-In [Experience Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Bronnen]** van de linkernavigatie om tot [!UICONTROL Bronnen] werkruimte toegang te hebben, en selecteer dan **[!UICONTROL Dataflows]** van de hoogste kopbal.
+In [Experience Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Sources]** van de linkernavigatie om tot de [!UICONTROL Sources] werkruimte toegang te hebben, en dan **[!UICONTROL Dataflows]** van de hoogste kopbal te selecteren.
 
 ![catalogus](../../images/tutorials/delete/catalog.png)
 
@@ -47,11 +47,11 @@ Selecteer de bron waarmee u wilt werken om een lijst met de bestaande gegevensst
 
 Er wordt een vervolgkeuzemenu weergegeven waarin u opties kunt opgeven om het schema van uw gegevensstroom te bewerken, de gegevensstroom uit te schakelen of deze volledig te verwijderen.
 
-Selecteer **[!UICONTROL Verwijderen]** om de gegevensstroom te verwijderen.
+Selecteer **[!UICONTROL Delete]** om de gegevensstroom te schrappen.
 
 ![delete](../../images/tutorials/delete/delete.png)
 
-Er wordt een laatste bevestigingsvenster weergegeven. Selecteer **[!UICONTROL Verwijderen]** om het proces te voltooien.
+Er wordt een laatste bevestigingsvenster weergegeven. Selecteer **[!UICONTROL Delete]** om het proces te voltooien.
 
 ![bevestigen](../../images/tutorials/delete/confirm.png)
 
@@ -61,6 +61,6 @@ Na enkele ogenblikken wordt onder aan het scherm een bevestigingsvak weergegeven
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes [!UICONTROL Bronnen] werkruimte gebruikt om een bestaande gegevensstroom te schrappen.
+Door deze zelfstudie te volgen, hebt u met succes de [!UICONTROL Sources] werkruimte gebruikt om een bestaande gegevensstroom te schrappen.
 
 Zie de zelfstudie over [het schrappen van gegevensstromen gebruikend de Dienst API van de Stroom](../../tutorials/api/delete-dataflows.md) voor stappen op hoe te om deze verrichtingen programmatically uit te voeren gebruikend API vraag.
