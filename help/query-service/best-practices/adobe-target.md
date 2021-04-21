@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;steekproefvragen;steekproefvraag;adobe doel;
 solution: Experience Platform
 title: Voorbeeldquery's voor Adobe Target-gegevens
-topic: queries
+topic-legacy: queries
 description: Gegevens uit Adobe Target worden omgezet in XDM-schema voor Experience Event en worden als datasets voor u opgenomen in Experience Platform. Dit document bevat steekproefvragen voor het gebruiken van de Dienst van de Vraag met uw datasets van Adobe Target.
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
-
 
 # Voorbeeldquery&#39;s voor Adobe Target-gegevens
 
