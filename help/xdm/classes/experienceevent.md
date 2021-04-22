@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De klasse [!DNL XDM ExperienceEvent] zelf verstrekt verscheidene op tijd-reeksen
 | `eventMergeId` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. Dit veld wordt automatisch ingevuld door het systeem bij het invoeren van gegevens. |
 | `eventType` | Een tekenreeks die het primaire gebeurtenistype voor de record aangeeft. Accepteerde waarden en de bijbehorende definities zijn opgenomen in de [bijlage sectie](#eventType). |
 | `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor de persoon op wie de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Als u dit veld correct wilt gebruiken voor [Real-time klantprofiel](../../profile/home.md), moet u niet handmatig de inhoud van het veld bijwerken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in de  [grondbeginselen van schemacompositie voor meer informatie ](../schema/composition.md#identityMap) over hun gebruiksgeval. |
-| `timestamp` | Het tijdstip waarop de gebeurtenis of de waarneming plaatsvond, ingedeeld volgens [RFC 3339, paragraaf 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `timestamp` | Een tijdstempel volgens ISO 8601 van het tijdstip van de gebeurtenis, opgemaakt volgens [RFC 339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>Deze tijdstempel kan  **** alleen de waarneming van de gebeurtenis zelf weergeven en moet in het verleden voorkomen. Als in uw segmentatiegebruikgevallen tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen (zoals een vertrekdatum), moeten deze waarden elders in het schema van de Gebeurtenis van de Ervaring worden beperkt. |
 
 ## Compatibele combinaties {#mixins}
 
