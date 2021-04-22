@@ -7,7 +7,7 @@ type: Tutorial
 description: Deze zelfstudie behandelt het publiceren van een model als service met behulp van de API voor leren van Sensei-machines.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Alle POST, PUT, en PATCH verzoeken vereisen een extra kopbal:
 In de volgende tabel wordt een aantal gangbare terminologie beschreven die in deze zelfstudie wordt gebruikt:
 
 | Term | Definitie |
---- | ---
+| --- | --- |
 | **Machine Learning Instance (XML-instantie)** | Een instantie van een [!DNL Sensei] Motor voor een bepaalde huurder, die specifieke gegevens, parameters, en [!DNL Sensei] code bevat. |
 | **Experimenteer** | Een overkoepelende entiteit voor het houden van de looppas van de trainingsExperiment, het scoren Experimentloops, of allebei. |
 | **Gepland experiment** | Een term die de automatisering van de looppas van het opleidings of het schatten van Experiment beschrijft, die door een user-defined programma wordt geregeld. |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | Eigenschap | Beschrijving |
---- | ---
+| --- | --- |
 | `mlInstanceId` | De bestaande die Instantie van XML identificatie, de opleidingUitvoer van de Experiment wordt gebruikt om de Dienst van ML tot stand te brengen zou aan dit bepaalde Instantie van XML moeten beantwoorden. |
 | `trainingExperimentId` | Identificatie van het experiment overeenkomstig de identificatie van het XML-exemplaar. |
 | `trainingExperimentRunId` | Een bepaalde opleiding van de Experimentlooppas die voor het publiceren van de Dienst van ML moet worden gebruikt. |
