@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Met het recept voor detailhandel kunt u de verkoopprognose voor alle winkels die gedurende een bepaalde periode worden ingezaaid, voorspellen. Met een accuraat voorspellingsmodel zou de detailhandelaar de relatie tussen vraag en prijsbeleid kunnen vinden en geoptimaliseerde prijsbeslissingen kunnen nemen om verkoop en inkomsten te maximaliseren.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Deze zelfstudie gaat over het maken van het recept voor detailhandel in een Jupy
 Dit recept gebruikt [XDM schema&#39;s](../../xdm/schema/field-dictionary.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
 
 | Veldnaam | Type |
---- | ---
+| --- | --- |
 | date | Tekenreeks |
 | winkel | Geheel |
 | storeType | Tekenreeks |
