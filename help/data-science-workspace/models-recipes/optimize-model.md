@@ -7,7 +7,7 @@ type: Tutorial
 description: Het Model Insights Framework biedt de gegevenswetenschapper hulpmiddelen in de Data Science Workspace om snelle en geïnformeerde keuzes te maken voor optimale modellen voor machinaal leren op basis van experimenten.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 In de volgende tabel worden de standaardmetriek voor elke klasse weergegeven. Een gebruiker kan de waarden in `evaluation.metric` kolom ook gebruiken om specifieke metrisch toe te laten.
 
 | `evaluator.class` | Standaardwaarden | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusiematrix <br>-F-score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area under the Receiver Operating Characters | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Confusiematrix <br>-F-score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area under the Receiver Operating Characters | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` | -Gemiddelde gemiddelde precisie (MAP) <br>-genormaliseerde gekwantificeerde gecumuleerde gecumuleerde winst <br>-Gemiddelde kringloop <br>-Metrisch K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ De gegevens worden eerst geladen aan een dataset van een bron zoals die in [reta
 [!DNL Sensei Model Insights Framework] zal één standaardmalplaatje voor elk type van machine het leren algoritme steunen. In de onderstaande tabel ziet u veelvoorkomende machineleesalgoritme-klassen en de bijbehorende evaluatiemetriek en -visualisaties.
 
 | ML Algorithm Type | Beoordelingswaarden | Visualisaties |
---- | --- | ---
+| --- | --- | --- |
 | Regressie | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Voorspelde versus werkelijke bedekkingscurve voor waarden |
 | Binaire indeling | - Verfusiematrix<br>- Precision-terugroeping<br>- Nauwkeurigheid<br>- F-score (specifiek F1,F2)<br>- AUC<br>- ROC | ROC-curve en verwarringsmatrix |
 | Classificatie van meerdere klassen | -Confusiematrix <br>- Voor elke klasse: <br>- precisie-terugroepnauwkeurigheid <br>- F-score (met name F1, F2) | ROC-curve en verwarringsmatrix |
