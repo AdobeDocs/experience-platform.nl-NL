@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Leer hoe u privacytaken voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`gdpr` (Europese Unie)</li><li>`ccpa` (Californië)</li><li>`lgpd_bra` (Brazilië)</li><li>`nzpa_nzl` (Nieuw-Zeeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum is `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar door de opgegeven verzameling gebruikers-id&#39;s wordt verwezen, worden anoniem gemaakt. Als `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
 | `regulation` **(Vereist)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`gdpr` (Europese Unie)</li><li>`ccpa` (Californië)</li><li>`lgpd_bra` (Brazilië)</li><li>`nzpa_nzl` (Nieuw-Zeeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Een succesvol antwoord geeft de details van de nieuwe banen terug.
@@ -210,6 +214,8 @@ Een succesvol antwoord geeft de details van de nieuwe banen terug.
 | --- | --- |
 | `jobId` | Een alleen-lezen, unieke door het systeem gegenereerde id voor een taak. Deze waarde wordt gebruikt in de volgende stap van het opzoeken van een specifieke taak. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Nadat u de taakaanvraag hebt verzonden, kunt u doorgaan naar de volgende stap van [de status van de taak controleren](#check-status).
 
 ## De status van een taak {#check-status} controleren
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{JOB_ID}` | De id van de taak die u wilt opzoeken. Deze id wordt geretourneerd onder `jobId` in geslaagde API-reacties voor [het maken van een taak](#create-job) en [het weergeven van alle taken](#list). |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -326,6 +334,8 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
 | `productStatusResponse.results` | Voor bepaalde statussen kunnen sommige producten een `results`-object retourneren dat aanvullende informatie biedt die niet wordt gedekt door `responseMsgDetail`. |
 | `downloadURL` | Als de status van de taak `complete` is, geeft dit kenmerk een URL om de taakresultaten te downloaden als een ZIP-bestand. Dit bestand kan 60 dagen nadat de taak is voltooid, worden gedownload. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Taakstatuscategorieën {#status-categories}
 
 In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en de bijbehorende betekenis weergegeven:
@@ -336,6 +346,8 @@ In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en
 | `processing` | Toepassingen hebben de taak erkend en worden momenteel verwerkt. |
 | `submitted` | De taak wordt voorgelegd aan elke toepasselijke toepassing. |
 | `error` | Er is iets misgegaan in de verwerking van de taak - er kan meer specifieke informatie worden verkregen door individuele taakdetails op te halen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
