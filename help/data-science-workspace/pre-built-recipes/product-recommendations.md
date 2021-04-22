@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Met het product Recommendations-recept kunt u op maat gemaakte productaanbevelingen doen die zijn afgestemd op de behoeften en belangen van uw klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 1%
@@ -39,7 +39,7 @@ In dit recept worden aangepaste [XDM-schema&#39;s](../../xdm/schema/field-dictio
 ### Invoergegevensschema
 
 | Veldnaam | Type |
---- | ---
+| --- | --- |
 | itemId | Tekenreeks |
 | interactionType | Tekenreeks |
 | timestamp | Tekenreeks |
@@ -48,7 +48,7 @@ In dit recept worden aangepaste [XDM-schema&#39;s](../../xdm/schema/field-dictio
 ### Uitvoergegevensschema
 
 | Veldnaam | Type |
---- | ---
+| --- | --- |
 | aanbevelingen | Tekenreeks |
 | userId | Geheel |
 
