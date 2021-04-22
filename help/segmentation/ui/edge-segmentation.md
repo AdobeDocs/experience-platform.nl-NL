@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ De volgende vraagtypes zijn **not** momenteel gesteund voor randsegmentatie:
 | Type query | Details |
 | ---------- | ------- |
 | Het venster Relative-time | Als een vraag naar een tijdvenster verwijst, kan het niet worden geëvalueerd gebruikend randsegmentatie. |
-| Negatie | Als een vraag een negatie bevat, kan het niet worden geëvalueerd gebruikend randsegmentatie. |
+| Negatie | Als een vraag een negatie, of een `not` gebeurtenis bevat, kan het niet worden geëvalueerd gebruikend randsegmentatie. |
 | Meerdere gebeurtenissen | Als een query meer dan één gebeurtenis bevat, kan deze niet worden geëvalueerd met behulp van randsegmentatie. |
 
 ## Volgende stappen
