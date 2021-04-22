@@ -6,7 +6,7 @@ type: Tutorial
 description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functionaliteit kunnen bieden via de Sensei Machine Learning Framework-runtime. Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend ModelAuthoring SDK in PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
@@ -163,7 +163,6 @@ class MyDataLoader(DataLoader):
 Een DatasetTransformer verstrekt de logica voor het omzetten van een input DataFrame en keert een nieuwe afgeleide DataFrame terug. Deze klasse kan worden uitgevoerd om of samen met een FeaturePipelineFactory te werken, als enige component van de eigenschapengineering te werken, of u kunt verkiezen om deze klasse niet uit te voeren.
 
 In het volgende voorbeeld wordt de klasse DataSetTransformer uitgebreid:
-
 
 **Voorbeeld van PySpark**
 
