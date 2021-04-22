@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;RStudio;rstudio;verbind met de vraagdienst;
 solution: Experience Platform
 title: RStudio verbinden met Query Service
-topic: connect
+topic-legacy: connect
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
+exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 translation-type: tm+mt
-source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL RStudio] verbinden met de Dienst van de Vraag
 
@@ -41,7 +41,7 @@ Nadat RStudio opnieuw is begonnen, kunt u met de Dienst van de Vraag nu verbinde
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Waar {PAD NAAR DE POSTGRESQL JDBC    het pad vertegenwoordigt naar de PostSQL JDBC JAR die op uw computer is geïnstalleerd.
+Where {PATH TO THE POSTGRESQL JDBC JAR} represents the path to the PostgreSQL JDBC JAR that was installed on your computer.
 
 Nu, kunt u uw verbinding aan de Dienst van de Vraag tot stand brengen door het volgende bevel in de console in te gaan:
 
@@ -51,7 +51,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
->Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Vragen]**, gevolgd door **[!UICONTROL Referenties]**.
+>Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
