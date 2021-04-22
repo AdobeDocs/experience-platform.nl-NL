@@ -7,9 +7,9 @@ type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een model kunt maken, trainen en evalueren met API-aanroepen van Sensei Machine Learning.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1235'
 ht-degree: 0%
 
 ---
@@ -41,16 +41,14 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 >[!NOTE]
 >
->De termen &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; en &quot;Model&quot; worden in de gebruikersinterface aangeduid als verschillende termen. Als u uit UI komt, zal de volgende lijst de verschillen in kaart brengen.
-> 
-> | UI-term | API-term |
-> --- | ---
-> | Recipe | Engine |
-> | Model | MLInstance |
-> | Trainingsduur | Experimenteer |
-> | Service | MLService |
+>De termen &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; en &quot;Model&quot; worden in de gebruikersinterface aangeduid als verschillende termen. Als u uit UI komt, brengt de volgende lijst de verschillen in kaart.
 
-
+| UI-term | API-term |
+| --- | --- |
+| Recipe | Engine |
+| Model | MLInstance |
+| Trainingsduur | Experimenteer |
+| Service | MLService |
 
 ### Een MLInstance maken
 
@@ -128,7 +126,7 @@ curl -X POST \
 >
 >In `{JSON_PAYLOAD}`, bepalen wij parameters die voor opleiding en het scoren in `tasks` serie worden gebruikt. De `{ENGINE_ID}` is identiteitskaart van de Motor u wilt gebruiken en het `tag` gebied is een facultatieve parameter die wordt gebruikt om de Instantie te identificeren.
 
-De reactie zal `{INSTANCE_ID}` bevatten die MLInstance vertegenwoordigt die wordt gecreeerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
+De reactie bevat `{INSTANCE_ID}` die MLInstance vertegenwoordigt die wordt gecreeerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
 
 **Antwoord**
 
