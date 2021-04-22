@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -25,15 +25,17 @@ In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identite
 
 | Identiteitstype | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| Email | E-mail | 6 |
-| Telefoon | Telefoon | 7 |
-| Adobe Advertising Cloud-id | AdCloud | 411 |
-| Adobe Audience Manager UUID | CORE | 0 |
-| Adobe Experience Cloud-id | ECID | 4 |
-| Adobe Target-id | TNTID | 9 |
-| [!DNL Apple] ID voor adverteerders | IDFA | 20915 |
-| [!DNL Google] ID advertentie | GAID | 20914 |
-| [!DNL Windows] STEUN | WAID | 8 |
+| Email | `Email` | `6` |
+| Telefoon | `Phone` | `7` |
+| Adobe Advertising Cloud-id | `AdCloud` | `411` |
+| Adobe Audience Manager UUID | `CORE` | `0` |
+| Adobe Experience Cloud-id | `ECID` | `4` |
+| Adobe Target-id | `TNTID` | `9` |
+| [!DNL Apple] ID voor adverteerders | `IDFA` | `20915` |
+| [!DNL Google] ID advertentie | `GAID` | `20914` |
+| [!DNL Windows] STEUN | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ Wanneer u een `namespace`-waarde opgeeft in de [!DNL Privacy Service]-API, moet 
 
 | Kwalificatie | Definitie |
 | --------- | ---------- |
-| standaard | Een van de standaard naamruimten die globaal is gedefinieerd en niet is gekoppeld aan een afzonderlijke gegevensset van de organisatie (bijvoorbeeld e-mail, telefoonnummer, enz.). Naamruimte-id is opgegeven. |
-| aangepast | Een unieke naamruimte die is gemaakt in de context van een organisatie en die niet wordt gedeeld door [!DNL Experience Cloud]. De waarde vertegenwoordigt de vriendschappelijke naam (&quot;naam&quot;gebied) moet worden gezocht naar. Naamruimte-id is opgegeven. |
-| integrationCode | De code van de integratie - gelijkend op &quot;douane&quot;, maar specifiek bepaald als integratiecode van een gegevensbron die moet worden gezocht. Naamruimte-id is opgegeven. |
-| namespaceId | Geeft aan dat de waarde de werkelijke id is van de naamruimte die is gemaakt of toegewezen via de naamruimteservice. |
-| niet geregistreerd | Een vrije-vormkoord dat niet in de namespaceservice wordt bepaald en &quot;zoals is&quot;genomen. Om het even welke toepassing die deze soorten namespaces behandelt controleert tegen hen en behandelt als aangewezen voor de bedrijfcontext en gegevensreeks. Er is geen naamruimte-id opgegeven. |
-| analyse | Een aangepaste naamruimte die intern wordt toegewezen in [!DNL Analytics], niet in de naamruimteservice. Dit wordt direct doorgegeven zoals opgegeven door de oorspronkelijke aanvraag, zonder naamruimte-id |
-| target | Een aangepaste naamruimte die intern wordt begrepen door [!DNL Target], niet in de naamruimteservice. Dit wordt direct doorgegeven zoals opgegeven door de oorspronkelijke aanvraag, zonder naamruimte-id |
+| `standard` | Een van de standaard naamruimten die globaal is gedefinieerd en niet is gekoppeld aan een afzonderlijke gegevensset van de organisatie (bijvoorbeeld e-mail, telefoonnummer, enz.). Naamruimte-id is opgegeven. |
+| `custom` | Een unieke naamruimte die is gemaakt in de context van een organisatie en die niet wordt gedeeld door [!DNL Experience Cloud]. De waarde vertegenwoordigt de vriendschappelijke naam (&quot;naam&quot;gebied) moet worden gezocht naar. Naamruimte-id is opgegeven. |
+| `integrationCode` | De code van de integratie - gelijkend op &quot;douane&quot;, maar specifiek bepaald als integratiecode van een gegevensbron die moet worden gezocht. Naamruimte-id is opgegeven. |
+| `namespaceId` | Geeft aan dat de waarde de werkelijke id is van de naamruimte die is gemaakt of toegewezen via de naamruimteservice. |
+| `unregistered` | Een vrije-vormkoord dat niet in de namespaceservice wordt bepaald en &quot;zoals is&quot;genomen. Om het even welke toepassing die deze soorten namespaces behandelt controleert tegen hen en behandelt als aangewezen voor de bedrijfcontext en gegevensreeks. Er is geen naamruimte-id opgegeven. |
+| `analytics` | Een aangepaste naamruimte die intern wordt toegewezen in [!DNL Analytics], niet in de naamruimteservice. Dit wordt direct doorgegeven zoals opgegeven door de oorspronkelijke aanvraag, zonder naamruimte-id |
+| `target` | Een aangepaste naamruimte die intern wordt begrepen door [!DNL Target], niet in de naamruimteservice. Dit wordt direct doorgegeven zoals opgegeven door de oorspronkelijke aanvraag, zonder naamruimte-id |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Geaccepteerde productwaarden
 
@@ -70,3 +74,5 @@ In de volgende tabel worden de geaccepteerde waarden voor het opgeven van een Ad
 | Adobe Target | `Target` |
 | Customer Record-service | `CRS` |
 | Klantprofiel in realtime | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}
