@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Leer hoe u verzoeken om toestemming van klanten voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,8 @@ curl -X POST \
 | `entities` | Een array met objecten die aangeven op welke gebruikers de aanvraag voor toestemming van toepassing is. Elk object bevat een `namespace` en een array van `values` om afzonderlijke gebruikers met die naamruimte te laten overeenkomen. |
 | `nameSpace` | Elk object in de `entities`-array moet een van de [standaard naamruimten](./appendix.md#standard-namespaces) bevatten die door de Privacy Service-API worden herkend. |
 | `values` | Een array van waarden voor elke gebruiker, die overeenkomt met de opgegeven `nameSpace`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
