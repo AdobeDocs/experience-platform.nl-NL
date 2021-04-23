@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Leer hoe u Amazon Kinesis met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 translation-type: tm+mt
-source-git-commit: d6f1521470b8dc630060584189690545c724de6b
+source-git-commit: af11bc966889be54fc27e02f3eee321519cef88f
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,68 @@ Opslagbronnen in de cloud kunnen uw eigen gegevens naar [!DNL Platform] brengen 
 ## IP adres lijst van gewenste personen
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
+
+## Vereisten
+
+In de volgende sectie vindt u meer informatie over de vereiste configuratie voordat u een [!DNL Kinesis]-bronverbinding kunt maken.
+
+### Toegangsbeleid instellen
+
+Een [!DNL Kinesis] stroom vereist de volgende toestemmingen om een bronverbinding tot stand te brengen:
+
+- `GetShardIterator`
+- `GetRecords`
+- `DescribeStream`
+- `ListStreams`
+
+Deze toestemmingen worden geschikt door de [!DNL Kinesis] console en door Platform gecontroleerd zodra u uw geloofsbrieven ingaat en uw gegevensstroom selecteert.
+
+In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die vereist zijn om een [!DNL Kinesis]-bronverbinding te maken.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:GetShardIterator",
+                "kinesis:GetRecords",
+                "kinesis:DescribeStream",
+                "kinesis:ListStreams"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:us-east-2:901341027596:stream/*"
+            ]
+        }
+    ]
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `kinesis:GetShardIterator` | Een handeling die is vereist om records te doorlopen. |
+| `kinesis:GetRecords` | Een handeling die is vereist om records op te halen van een specifieke offset- of gedeelde id. |
+| `kinesis:DescribeStream` | Een actie die informatie betreffende de stroom met inbegrip van de kaart terugkeert, die nodig is om een gedeelde identiteitskaart te produceren. |
+| `kinesis:ListStreams` | Een handeling die is vereist om beschikbare streams weer te geven die u kunt selecteren in de gebruikersinterface. |
+
+Raadpleeg het volgende [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) voor meer informatie over het beheren van toegang voor [!DNL Kinesis] gegevensstromen.
+
+### Type iterator configureren
+
+[!DNL Kinesis] De volgende iteratortypen worden ondersteund, zodat u de volgorde kunt opgeven waarin de gegevens worden gelezen:
+
+| Type iterator | Beschrijving |
+| ------------- | ----------- |
+| `AT_SEQUENCE_NUMBER` | De gegevens worden gelezen vanaf een positie die wordt aangeduid met een specifiek volgnummer. |
+| `AFTER_SEQUENCE_NUMBER` | De gegevens worden gelezen vanaf de positie die wordt bepaald door een specifiek volgnummer. |
+| `AT_TIMESTAMP` | De gegevens worden gelezen vanaf een positie die wordt aangeduid met een specifiek tijdstempel. |
+| `TRIM_HORIZON` | De gegevens worden gelezen vanaf de oudste gegevensrecord. |
+| `LATEST` | De gegevens worden gelezen vanaf de meest recente gegevensrecord. |
+
+Een [!DNL Kinesis] UI-bron ondersteunt momenteel alleen `TRIM_HORIZON`, terwijl de API zowel `TRIM_HORIZON` als `LATEST` ondersteunt als modi om gegevens op te halen. De standaardwaarde voor de iterator die Platform gebruikt voor de bron [!DNL Kinesis] is `TRIM_HORIZON`.
+
+Zie het volgende [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) voor meer informatie over iteratortypen.
 
 ## [!DNL Amazon Kinesis] verbinden met [!DNL Platform]
 
