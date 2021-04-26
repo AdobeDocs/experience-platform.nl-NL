@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Het is ook belangrijk om twee belangrijke termen te kennen die in dit document w
 
 ## Overzicht
 
-Selecteer **[!UICONTROL Segments]** in de linkernavigatie in [[!DNL Experience Platform] UI](http://platform.adobe.com/) om het tabblad **[!UICONTROL Overview]** te openen. Dit tabblad bevat koppelingen naar documentatie en video&#39;s waarmee u segmenten kunt begrijpen en bewerken.
+Selecteer **[!UICONTROL Segments]** in de linkernavigatie in [[!DNL Experience Platform] UI](https://platform.adobe.com/) om het tabblad **[!UICONTROL Overview]** te openen. Dit tabblad bevat koppelingen naar documentatie en video&#39;s waarmee u segmenten kunt begrijpen en bewerken.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ Selecteer het tabblad **[!UICONTROL Browse]** om een lijst weer te geven met all
 
 Deze mening maakt een lijst van informatie over de segmentdefinitie met inbegrip van de uitsplitsing, de koeling, de profieltelling, de evaluatiemethode, gecreeerd datum, en laatst gewijzigde datum.
 
-De uitsplitsing toont een staafgrafiek die het percentage van profielen schetst die tot elk van de volgende statussen behoren: [!UICONTROL Entered], [!UICONTROL Realized] en [!UICONTROL Exiting].
+De uitsplitsing toont een staafgrafiek die het percentage van profielen schetst die tot elk van de volgende statussen behoren: [!UICONTROL Realized], [!UICONTROL Existing] en [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | Status | Beschrijving |
 | ------ | ----------- |
-| Ingegaan | Een nieuw profiel binnen het segment. |
-| Gerealiseerd | Een bestaand profiel dat binnen het segment is gebleven. |
+| Gerealiseerd | Een nieuw profiel binnen het segment. |
+| Bestaande | Een bestaand profiel dat binnen het segment is gebleven. |
 | Afsluiten | Een bestaand profiel dat het segment verlaat. |
 
 De kolom vertegenwoordigt het percentage profielen die binnen een segmentdefinitie in vergelijking met de laatste tijd veranderen de segmentbaan liep, terwijl de profieltelling het totale aantal profielen vertegenwoordigt die voor het segment kwalificeren.
