@@ -7,7 +7,7 @@ type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een XDM-schema.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 1%
@@ -85,7 +85,7 @@ De pop-up **[!UICONTROL Map source to target field]** wordt weergegeven. Van hie
 
 Als u een van de toewijzingen wilt verwijderen, plaatst u de muisaanwijzer boven de toewijzing en selecteert u het minteken.
 
-### Berekend veld toevoegen
+### Berekend veld {#add-calculated-field} toevoegen
 
 Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
 
