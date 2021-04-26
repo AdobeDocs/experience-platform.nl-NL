@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '453'
 ht-degree: 1%
 
 ---
-
 
 # (Bèta) [!DNL Marketo Engage] veldtoewijzingen
 
@@ -158,6 +158,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Primaire identiteit |
-| `marketingListID` | `staticListID` | Relatie |
+| `staticListMemberID` | `marketingListMemberID` | Primaire identiteit |
+| `staticListID` | `marketingListID` | Relatie |
 | `personID` | `personID` | Relatie |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Aanbevolen alleen als u de Salesforce-integratie gebruikt. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Aanbevolen alleen als u de Salesforce-integratie gebruikt. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ Als tijdelijke oplossing kunt u het veld Id-stitching bijwerken van `None` naar 
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ Als tijdelijke oplossing kunt u het veld Id-stitching bijwerken van `None` naar 
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Het bronveld `to_object('ECID',arrays_to_objects('id',explode(ecids)))` is een berekend veld dat moet worden toegevoegd met de optie [!UICONTROL Add calculated field] in de gebruikersinterface van het Platform. Zie de zelfstudie op [berekende velden toevoegen](../../../../ingestion/tutorials/map-a-csv-file.md) voor meer informatie.
 
 ## Volgende stappen
 
