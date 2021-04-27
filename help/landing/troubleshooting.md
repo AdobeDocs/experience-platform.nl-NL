@@ -8,9 +8,9 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1768'
 ht-degree: 1%
 
 ---
@@ -179,6 +179,16 @@ Dit foutbericht wordt weergegeven wanneer de gebruikers- of Adobe I/O-integratie
 
 Dit foutbericht wordt weergegeven wanneer een POST-, PUT- of PATCH-aanvraag een ongeldige of ontbrekende `Content-Type`-header heeft. Zorg ervoor dat de kopbal in het verzoek inbegrepen is en dat zijn waarde `application/json` is.
 
+### Gebruikersgebied ontbreekt
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+Dit foutbericht wordt weergegeven wanneer uw account (weergegeven door de opgegeven verificatiereferenties) niet is gekoppeld aan een productprofiel voor Experience Platform. Volg de stappen op [het produceren van toegangsgeloofsbrieven](./api-authentication.md#authentication-for-each-session) in de Platform API authentificatiezelfstudie om Platform aan uw rekening toe te voegen en uw authentificatiegeloofsbrieven dienovereenkomstig bij te werken.
 
 ## Servicemap voor probleemoplossing {#service-troubleshooting-directory}
 
