@@ -2,14 +2,14 @@
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;salesforce bestemming
 title: Verbinding met Salesforce-Marketing Cloud
 seo-description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
+exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Salesforce Marketing Cloud] verbinding
 
@@ -22,6 +22,12 @@ Als u segmentgegevens naar [!DNL Salesforce Marketing Cloud] wilt verzenden, moe
 ## Exporttype {#export-type}
 
 **Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
+
+## IP adres lijst van gewenste personen {#allow-list}
+
+Bij het vestigen van e-mail marketing bestemmingen met opslag SFTP, adviseert Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
+
+Verwijs naar [IP adreslijst van gewenste personen voor wolkenopslagbestemmingen ](../cloud-storage/ip-address-allow-list.md) als u Adobe IPs aan uw lijst van gewenste personen moet toevoegen.
 
 ## Doel {#connect-destination} verbinden
 
