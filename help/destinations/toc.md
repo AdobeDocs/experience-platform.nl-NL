@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor marketing
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
    * Opslagdoelen voor cloud {#cloud-storage}
       * [Overzicht van Cloud Storage-bestemmingen](./catalog/cloud-storage/overview.md)
       * [Een bestemming voor cloudopslag maken](./catalog/cloud-storage/workflow.md)
-      * [Amazon Kinesis-verbinding](./catalog/cloud-storage/amazon-kinesis.md)
+      * [(Beta) Amazon Kinesis-verbinding](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-verbinding](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-verbinding](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Azure Event Hubs-verbinding](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 0%
       * [Een sociale bestemming maken](./catalog/social/workflow.md)
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
-      * [Koppeling in verbinding met passend publiek](./catalog/social/linkedin.md)
+      * [linkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
    * Beoordelingsdoelen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
