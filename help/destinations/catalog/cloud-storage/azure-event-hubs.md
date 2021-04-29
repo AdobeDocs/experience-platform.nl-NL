@@ -1,15 +1,15 @@
 ---
 keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
-title: (Beta) Azure Event Hubs-verbinding
-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
+title: (Beta) !DNL Azure Event Hubs] verbinding
+description: Creeer een uitgaande verbinding in real time aan uw !DNL Azure Event Hubs] opslag aan stroomgegevens van Experience Platform.
+exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) [!DNL Azure Event Hubs] verbinding
 
@@ -113,3 +113,4 @@ Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in de JSON-indeling
 >* [Verbind met Azure Event Hubs en activeer gegevens gebruikend de Dienst API van de Stroom](../../api/streaming-destinations.md)
 >* [AWS Kinesis-bestemming](./amazon-kinesis.md)
 >* [Doeltypen en -categorieën](../../destination-types.md)
+
