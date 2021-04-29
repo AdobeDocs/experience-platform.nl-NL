@@ -4,9 +4,9 @@ title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -36,12 +36,6 @@ Een luchtvaartmaatschappij heeft verschillende klantniveaus (Bronze, Silver en G
 Om hen over sociale media te richten, kunnen zij de klantengegevens van hun CRM aan boord nemen in Adobe Experience Platform, gebruikend de e-mailadressen als herkenningstekens.
 
 Daarna, kunnen zij hun off-line gegevens met inbegrip van bijbehorende lidmaatschap IDs en klantenrijen gebruiken om nieuwe publiekssegmenten te bouwen die zij door de [!DNL Facebook] bestemming kunnen richten.
-
-## Gegevensbeheer voor [!DNL Facebook] doelen {#data-governance}
-
->[!IMPORTANT]
->
->Gegevens die naar [!DNL Facebook] worden verzonden, kunnen geen naadloze identiteiten bevatten. U bent verantwoordelijk voor het nakomen van deze verplichting en kunt dit doen door ervoor te zorgen dat de segmenten die voor activering worden geselecteerd geen het stitching optie in hun fusiebeleid gebruiken. Meer informatie over [samenvoegbeleid](/help/profile/ui/merge-policies.md).
 
 ## Ondersteunde identiteiten {#supported-identities}
 
