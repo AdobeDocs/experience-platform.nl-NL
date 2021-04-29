@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,10 @@ De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-gepr
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `_repo` | Een object met de volgende velden [!UICONTROL DateTime]: <ul><li>`createDate`: De datum en tijd waarop de bron in de gegevensopslag werd gemaakt, bijvoorbeeld wanneer gegevens voor het eerst werden ingevoerd.</li><li>`modifyDate`: De datum en het tijdstip waarop de bron voor het laatst is gewijzigd.</li></ul> |
-| `_id` | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten. Aangezien dit veld door het systeem wordt gegenereerd, mag er tijdens het invoeren van gegevens geen expliciete waarde worden opgegeven.<br><br>Het is belangrijk te onderscheiden dat dit veld  **geen identiteit** bevat die verband houdt met een individuele persoon, maar eerder met de gegevens zelf. Identiteitsgegevens die betrekking hebben op een persoon moeten in plaats daarvan worden beperkt tot [identiteitsvelden](../schema/composition.md#identity). |
+| `_id` | Een unieke id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br>Het is belangrijk te onderscheiden dat dit veld  **geen identiteit** bevat die verband houdt met een individuele persoon, maar eerder met de gegevens zelf. Identiteitsgegevens die betrekking hebben op een persoon moeten in plaats daarvan worden beperkt tot [identiteitsvelden](../schema/composition.md#identity). |
 | `createdByBatchID` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. |
 | `modifiedByBatchID` | De id van de laatst opgenomen batch die ervoor zorgde dat de record werd bijgewerkt. |
+| `personID` | Een unieke id voor de individuele persoon waarop deze record betrekking heeft. Dit veld vertegenwoordigt niet noodzakelijkerwijs een identiteit die betrekking heeft op de persoon, tenzij het ook wordt aangeduid als een [identiteitsveld](../schema/composition.md#identity). |
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
 
@@ -38,10 +39,12 @@ De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-gepr
 >
 >De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../mixins/name-updates.md) voor meer informatie.
 
-Adobe biedt verschillende standaardmixen voor gebruik met de klasse [!DNL XDM Individual Profile]. Hieronder volgt een lijst met de meestgebruikte mixen voor de klasse:
+Adobe biedt verschillende standaardmixen voor gebruik met de klasse [!DNL XDM Individual Profile]. Hieronder volgt een lijst met enkele veelgebruikte combinaties voor de klasse:
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
 * [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
 * [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
 * [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
 * [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+
+Voor een volledige lijst van alle compatibele mengsels voor [!DNL XDM Individual Profile], verwijs naar [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
