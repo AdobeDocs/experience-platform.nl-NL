@@ -2,12 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Privacy-aanvraagverwerking in realtime-klantprofiel
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
@@ -24,9 +23,9 @@ Dit document behandelt essentiële concepten met betrekking tot het verwerken va
 
 U wordt aangeraden de volgende [!DNL Experience Platform]-services goed te begrijpen voordat u deze handleiding leest:
 
-* [[!DNL Privacy Service]](home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time Customer Profile]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
