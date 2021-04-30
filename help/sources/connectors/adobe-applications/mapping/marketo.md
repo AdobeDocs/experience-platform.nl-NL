@@ -6,9 +6,9 @@ topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '330'
 ht-degree: 1%
 
 ---
@@ -259,10 +259,6 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 ## Personen {#persons}
 
-In [!DNL Profiles] dashboard van het Platform UI, als de waarde van identiteitskaart het stitching in het fusiebeleid u gebruikte om te doorbladeren aan `None` wordt geplaatst, dan zal het verbonden identiteitsvenster slechts de primaire identiteitsattributen tonen.
-
-Als tijdelijke oplossing kunt u het veld Id-stitching bijwerken van `None` naar `Private graph` om alle gekoppelde identiteiten in een [!DNL Profile] weer te geven. U kunt ook een nieuw samenvoegbeleid maken of een ander samenvoegbeleid gebruiken dat een waarde voor id-stitching bevat die is ingesteld op `Private graph`. Als u verkiest om een nieuw fusiebeleid tot stand te brengen of een verschillend fusiebeleid te gebruiken, moet u ervoor zorgen dat het beleid het zelfde schematype bevat dat voor [!DNL Marketo] de in kaart brengingsreeks van Personen wordt gebruikt. Voor meer informatie, zie [de gids UI van het samenvoegbeleid](../../../../profile/ui/merge-policies.md).
-
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primaire identiteit |
@@ -313,7 +309,7 @@ Als tijdelijke oplossing kunt u het veld Id-stitching bijwerken van `None` naar 
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >Het bronveld `to_object('ECID',arrays_to_objects('id',explode(ecids)))` is een berekend veld dat moet worden toegevoegd met de optie [!UICONTROL Add calculated field] in de gebruikersinterface van het Platform. Zie de zelfstudie op [berekende velden toevoegen](../../../../ingestion/tutorials/map-a-csv-file.md) voor meer informatie.
 
