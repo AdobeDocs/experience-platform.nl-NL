@@ -7,120 +7,155 @@ type: Tutorial
 description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API's.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ef00f50ea2cda2c173208075123b3fe2b2d7ecd4
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
 
-# [!DNL Experience Platform] API&#39;s verifiëren en openen
 
-Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar [!DNL Experience Platform] API&#39;s.
+# API&#39;s van Experience Platforms verifiëren en openen
 
-## Verifiëren om API-aanroepen te maken
+Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API&#39;s. Aan het eind van dit leerprogramma, zult u de volgende geloofsbrieven hebben geproduceerd die voor alle Platform API vraag worden vereist:
 
-Om de veiligheid van uw toepassingen en gebruikers te handhaven, moeten alle verzoeken aan Adobe I/O APIs voor authentiek worden verklaard en worden gemachtigd gebruikend normen zoals de Tokens van het Web OAuth en JSON (JWT). JWT wordt dan gebruikt samen met cliënt-specifieke informatie om uw persoonlijk toegangstoken te produceren.
+* `{ACCESS_TOKEN}`
+* `{API_KEY}`
+* `{IMS_ORG}`
 
-Deze zelfstudie behandelt de stappen van authentificatie door het creëren van een toegangstoken die in het volgende stroomschema wordt geschetst:
-![](images/api-authentication/authentication-flowchart.png)
+Om de veiligheid van uw toepassingen en gebruikers te handhaven, moeten alle verzoeken aan Adobe I/O APIs voor authentiek worden verklaard en worden gemachtigd gebruikend normen zoals de Tokens van het Web OAuth en JSON (JWT). Een JWT wordt gebruikt samen met cliënt-specifieke informatie om uw persoonlijk toegangstoken te produceren.
+
+In deze zelfstudie wordt uitgelegd hoe u de vereiste gegevens verzamelt om API-aanroepen van Platforms te verifiëren, zoals in het volgende stroomschema wordt beschreven:
+
+![](./images/api-authentication/authentication-flowchart.png)
 
 ## Vereisten
 
-Als u aanroepen naar [!DNL Experience Platform] API&#39;s wilt uitvoeren, hebt u het volgende nodig:
+Om met succes vraag aan Experience Platform APIs te maken, moet u het volgende hebben:
 
-* Een IMS-organisatie met toegang tot Adobe Experience Platform
-* Een geregistreerde Adobe ID-account
-* Een beheerder van de Admin Console om u als **ontwikkelaar** en **gebruiker** voor een product toe te voegen.
+* Een IMS-organisatie met toegang tot Adobe Experience Platform.
+* Een beheerder van de Admin Console die u als ontwikkelaar en gebruiker voor een productprofiel kan toevoegen.
 
-De volgende secties lopen door de stappen om een Adobe ID tot stand te brengen en een ontwikkelaar en een gebruiker voor een organisatie te worden.
+U moet ook over een Adobe ID beschikken om deze zelfstudie te voltooien. Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
 
-### Een Adobe ID maken
+1. Ga naar [Adobe Developer Console](https://console.adobe.io).
+2. Selecteer **[!UICONTROL Create a new account]**.
+3. Voltooi het aanmeldingsproces.
 
-Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
+## Verbeter ontwikkelaar en gebruikerstoegang voor Experience Platform
 
-1. Ga naar [Adobe Developer Console](https://console.adobe.io)
-2. Selecteer **[!UICONTROL create a new account]**
-3. Voltooi het aanmeldingsproces
+Voordat u integratie kunt maken in de Adobe Developer Console, moet uw account ontwikkelings- en gebruikersmachtigingen hebben voor een productprofiel voor een Experience Platform in Adobe Admin Console.
 
-## Ontwikkelaar en gebruiker worden voor [!DNL Experience Platform] voor een organisatie
+### Toegang voor ontwikkelaars verkrijgen
 
-Voordat u integraties op Adobe I/O maakt, moet uw account beschikken over ontwikkelaarsmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor het beheer van ontwikkelaars.
+Neem contact op met een [!DNL Admin Console]-beheerder in uw organisatie om u als ontwikkelaar toe te voegen aan een productprofiel van een Experience Platform met de [[!DNL Admin Console]](https://adminconsole.adobe.com/). Zie de [!DNL Admin Console] documentatie voor specifieke instructies over hoe te [de toegang van de ontwikkelaar voor productprofielen ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) beheren.
 
-**Toegang voor ontwikkelaars verkrijgen**
+Als u eenmaal als ontwikkelaar bent toegewezen, kunt u beginnen met het maken van integratie in [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Deze integratie vormt een pijplijn van externe apps en services naar Adobe-API&#39;s.
 
-Neem contact op met een [!DNL Admin Console]-beheerder in uw organisatie om u toe te voegen als ontwikkelaar voor een van de producten van uw organisatie met de [[!DNL Admin Console]](https://adminconsole.adobe.com/).
+### Toegang tot gebruikers verkrijgen
 
-![](images/api-authentication/assign-developer.png)
+Uw [!DNL Admin Console] beheerder moet u als gebruiker aan het zelfde productprofiel ook toevoegen. Zie de handleiding over [het beheren van gebruikersgroepen in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie.
 
-De beheerder moet u als ontwikkelaar toewijzen aan ten minste één productprofiel om door te gaan.
-
-![](images/api-authentication/add-developer.png)
-
-Zodra u als ontwikkelaar wordt toegewezen, zult u toegangsvoorrechten hebben om tot integratie op [Adobe I/O](https://www.adobe.com/go/devs_console_ui) te leiden. Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
-
-**Toegang tot gebruikers verkrijgen**
-
-Uw [!DNL Admin Console] beheerder moet u aan het product als gebruiker ook toevoegen.
-
-![](images/api-authentication/assign-users.png)
-
-Net als bij het toevoegen van een ontwikkelaar moet de beheerder u toewijzen aan ten minste één productprofiel om door te gaan.
-
-![](images/api-authentication/assign-user-details.png)
-
-## Toegangsgegevens genereren in Adobe Developer Console
+## Een API-sleutel, IMS Org ID en een clientgeheim {#api-ims-secret} genereren
 
 >[!NOTE]
 >
 >Als u dit document van [Privacy Service ontwikkelaarsgids](../privacy-service/api/getting-started.md) volgt, kunt u nu aan die gids terugkeren om de toegangsgeloofsbrieven te produceren uniek aan [!DNL Privacy Service].
 
-Gebruikend de Console van de Ontwikkelaar van Adobe, moet u de volgende drie toegangsgeloofsbrieven produceren:
+Nadat u ontwikkelaar en gebruiker toegang tot Platform door [!DNL Admin Console] hebt gekregen, is de volgende stap uw `{IMS_ORG}` en `{API_KEY}` geloofsbrieven in de Console van de Ontwikkelaar van de Adobe te produceren. Deze geloofsbrieven moeten slechts eenmaal worden geproduceerd en kunnen in toekomstige Platform API vraag worden opnieuw gebruikt.
 
-* `{IMS_ORG}`
-* `{API_KEY}`
-* `{ACCESS_TOKEN}`
-
-Uw `{IMS_ORG}` en `{API_KEY}` moeten slechts eenmaal worden geproduceerd en kunnen in toekomstige [!DNL Platform] API vraag opnieuw worden gebruikt. Uw `{ACCESS_TOKEN}` is echter tijdelijk en moet elke 24 uur opnieuw worden gegenereerd.
-
-De stappen worden hieronder in detail besproken.
-
-### Eenmalige installatie
+### Experience Platform toevoegen aan een project
 
 Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Volg vervolgens de stappen die worden beschreven in de zelfstudie over het maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.[
 
-Nadat u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** in het scherm **Project Overview**.
+Nadat u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** op het scherm **[!UICONTROL Project Overview]**.
 
-![](images/api-authentication/add-api-button.png)
+![](./images/api-authentication/add-api.png)
 
-Het scherm **Add een API** verschijnt. Selecteer het productpictogram voor Adobe Experience Platform en kies **[!UICONTROL Experience Platform API]** voordat u **[!UICONTROL Next]** selecteert.
+Het **[!UICONTROL Add an API]** scherm verschijnt. Selecteer het productpictogram voor Adobe Experience Platform en kies **[!UICONTROL Experience Platform API]** voordat u **[!UICONTROL Next]** selecteert.
 
-![](images/api-authentication/add-platform-api.png)
+![](./images/api-authentication/platform-api.png)
 
-Nadat u [!DNL Experience Platform] hebt geselecteerd als de API die aan het project moet worden toegevoegd, volgt u de stappen in de zelfstudie over [het toevoegen van een API aan een project met behulp van een serviceaccount (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (te beginnen bij de stap &quot;API configureren&quot;) om het proces te voltooien.
+Van hier, volg de stappen die in de zelfstudie op [worden geschetst toevoegend API aan een project gebruikend een de dienstrekening (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (beginnend van de &quot;Configure API&quot;stap) om het proces te beëindigen.
 
-Zodra API aan het project is toegevoegd, **Project overzicht** de pagina toont de volgende geloofsbrieven die in alle vraag aan [!DNL Experience Platform] APIs worden vereist:
+>[!IMPORTANT]
+>
+>Tijdens een bepaalde stap tijdens het hierboven gekoppelde proces worden in uw browser automatisch een persoonlijke sleutel en een bijbehorend openbaar certificaat gedownload. Deze persoonlijke sleutel wordt op uw computer opgeslagen, aangezien deze in een latere stap in deze zelfstudie is vereist.
 
-* `{API_KEY}` (Client-id)
-* `{IMS_ORG}` (Organisatie-id)
+### Referenties verzamelen
 
-![](./images/api-authentication/api-key-ims-org.png)
+Zodra API aan het project is toegevoegd, **[!UICONTROL Experience Platform API]** de pagina voor het project toont de volgende geloofsbrieven die in alle vraag aan Experience Platform APIs worden vereist:
 
-### Verificatie voor elke sessie
+* `{API_KEY}` ([!UICONTROL Client ID])
+* `{IMS_ORG}` ([!UICONTROL Organization ID])
 
-De laatste vereiste referentie die u moet verzamelen, is uw `{ACCESS_TOKEN}`. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om te kunnen doorgaan met het gebruik van [!DNL Platform] API&#39;s.
+![](././images/api-authentication/api-key-ims-org.png)
 
-Als u een nieuwe `{ACCESS_TOKEN}` wilt genereren, voert u de stappen uit om een JWT-token te genereren in de handleiding voor aanmeldgegevens van de ontwikkelaarsconsole.[](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md)
+Naast de bovengenoemde geloofsbrieven, hebt u ook geproduceerde **[!UICONTROL Client Secret]** voor een toekomstige stap nodig. Selecteer **[!UICONTROL Retrieve client secret]** om de waarde weer te geven en kopieer deze vervolgens voor later gebruik.
+
+![](././images/api-authentication/client-secret.png)
+
+## Een JSON-webtoken (JWT) {#jwt} genereren
+
+De volgende stap bestaat uit het genereren van een JSON Web Token (JWT) op basis van uw accountgegevens. Deze waarde wordt gebruikt om uw `{ACCESS_TOKEN}` referentie voor gebruik in Platform API vraag te produceren, die om de 24 uur opnieuw moet worden geproduceerd.
+
+Selecteer **[!UICONTROL Service Account (JWT)]** in de linkernavigatie, dan uitgezocht **[!UICONTROL Generate JWT]**.
+
+![](././images/api-authentication/generate-jwt.png)
+
+Plak in het tekstvak onder **[!UICONTROL Generate custom JWT]** de inhoud van de persoonlijke sleutel die u eerder hebt gegenereerd toen u de Platform-API aan uw serviceaccount toevoegde. Selecteer vervolgens **[!UICONTROL Generate Token]**.
+
+![](././images/api-authentication/paste-key.png)
+
+De pagina wordt bijgewerkt om de gegenereerde JWT weer te geven, samen met een voorbeeld-URL-opdracht waarmee u een toegangstoken kunt genereren. In deze zelfstudie selecteert u **[!UICONTROL Copy]** naast **[!UICONTROL Generated JWT]** om het token naar het klembord te kopiëren.
+
+![](././images/api-authentication/copy-jwt.png)
+
+## Een toegangstoken genereren
+
+Zodra u een JWT hebt geproduceerd, kunt u het in een API vraag gebruiken om uw `{ACCESS_TOKEN}` te produceren. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om verder te gaan met het gebruik van Platform-API&#39;s.
+
+**Verzoek**
+
+Met het volgende verzoek wordt een nieuwe `{ACCESS_TOKEN}` gegenereerd op basis van de referenties die in de payload zijn opgegeven. Dit eindpunt keurt slechts vormgegevens als zijn lading goed, en daarom moet het een `Content-Type` kopbal van `multipart/form-data` worden gegeven.
+
+```shell
+curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'client_id={API_KEY}' \
+  -F 'client_secret={SECRET}' \
+  -F 'jwt_token={JWT}'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `{API_KEY}` | De `{API_KEY}` ([!UICONTROL Client ID]) die u in een [vorige stap](#api-ims-secret) terughaalde. |
+| `{SECRET}` | Het clientgeheim dat u hebt opgehaald in een [vorige stap](#api-ims-secret). |
+| `{JWT}` | De JWT die u in een [vorige stap](#jwt) hebt gegenereerd. |
+
+>[!NOTE]
+>
+>U kunt dezelfde API-sleutel, clientgeheim en JWT gebruiken om een nieuw toegangstoken voor elke sessie te genereren. Hierdoor kunt u het genereren van toegangstoken in uw toepassingen automatiseren.
+
+**Antwoord**
+
+```json
+{
+  "token_type": "bearer",
+  "access_token": "{ACCESS_TOKEN}",
+  "expires_in": 86399992
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `token_type` | Het type token dat wordt geretourneerd. Voor toegangstokens, is deze waarde altijd `bearer`. |
+| `access_token` | De gegenereerde `{ACCESS_TOKEN}`. Deze waarde, die met het woord `Bearer` vooraf wordt bepaald, wordt vereist als `Authentication` kopbal voor alle Platform API vraag. |
+| `expires_in` | Het aantal milliseconden dat resteert tot het toegangstoken verloopt. Zodra deze waarde 0 bereikt, moet een nieuw toegangstoken worden geproduceerd om Platform APIs te blijven gebruiken. |
 
 ## Toegangsreferenties testen
 
-Nadat u alle drie vereiste gegevens hebt verzameld, kunt u de volgende API-aanroep proberen te maken. Deze vraag zal van alle [!DNL Experience Data Model] (XDM) klassen binnen de container `global` van de Registratie van het Schema een lijst maken:
-
-**API-indeling**
-
-```http
-GET /global/classes
-```
+Nadat u alle drie vereiste gegevens hebt verzameld, kunt u de volgende API-aanroep proberen te maken. Deze vraag maakt een lijst van alle standaard [!DNL Experience Data Model] (XDM) klassen beschikbaar aan uw organisatie.
 
 **Verzoek**
 
@@ -155,12 +190,12 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw ge
 }
 ```
 
-## Postman gebruiken voor JWT-verificatie en API-aanroepen
+## Gebruik Postman om API-aanroepen te verifiëren en te testen
 
-[](https://www.postman.com/) Postmanis is een populair hulpmiddel om met RESTful APIs te werken. In deze [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken om Adobe Experience Platform API&#39;s te gebruiken.
+[](https://www.postman.com/) Postmanis is een populair hulpmiddel dat ontwikkelaars toestaat om RESTful APIs te onderzoeken en te testen. In deze [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u Postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken om Platform-API&#39;s te gebruiken.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u uw toegangsreferenties voor [!DNL Platform] API&#39;s verzameld en getest. U kunt nu de voorbeelden volgen die in [gids aan de slag voor Platform APIs](api-guide.md) worden verstrekt. Deze handleiding bevat koppelingen naar de API-hulplijnen voor elke service van het Platform en bevat aanvullende informatie. op fouten, Postman en JSON.
+Door dit document te lezen, hebt u uw toegangsreferenties voor Platform-API&#39;s verzameld en getest. U kunt nu de voorbeeldAPI vraag volgen die door [documentatie](../landing/documentation/overview.md) wordt verstrekt.
 
-Naast de verificatiewaarden die u in deze zelfstudie hebt verzameld, vereisen veel [!DNL Platform] API&#39;s ook dat een geldige `{SANDBOX_NAME}` als koptekst wordt opgegeven. Zie het [overzicht van sandboxen](../sandboxes/home.md) voor meer informatie.
+Naast de authentificatiewaarden u in dit leerprogramma hebt verzameld, vereisen veel Platform APIs ook een geldige `{SANDBOX_NAME}` om als kopbal worden verstrekt. Zie het [overzicht van sandboxen](../sandboxes/home.md) voor meer informatie.
