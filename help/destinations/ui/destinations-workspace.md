@@ -5,7 +5,7 @@ description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorb
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 1%
@@ -38,7 +38,7 @@ De [!DNL Platform] gebruikersinterface verstrekt verscheidene onderzoek en filte
 De bestemmingskaarten bevatten of een **[!UICONTROL Configure]** of **[!UICONTROL Activate]** controle, en een secundaire controle die meer opties omhoog brengt. Deze besturingselementen worden hieronder beschreven:
 
 | Control | Beschrijving |
----------|----------
+|---------|----------|
 | [!UICONTROL Configure] | Hiermee kunt u verbinding maken met het doel. |
 | [!UICONTROL Activate] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten activeren. |
 | [!UICONTROL View account] | Bekijk de accounts waarmee u verbinding hebt gemaakt voor een bestemming. |
@@ -72,7 +72,7 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschrijving |
----------|----------
+|---------|----------|
 | Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. Dezelfde kolom bevat twee besturingselementen: [!UICONTROL Activate ] en [!UICONTROL Delete destination]. |
 | [!UICONTROL Last Flow Run Status] | De status van de laatste gegevensstroom die wordt uitgevoerd. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Last Flow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
