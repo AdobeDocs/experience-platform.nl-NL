@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Lees de [handleiding voor toewijzingsfuncties](./functions.md) voor meer informa
 ## Toewijzingsset
 
 Een reeks afbeeldingen die een schema in een ander schema omzetten, wordt samen een toewijzingsset genoemd. Er wordt één toewijzingenset gemaakt als onderdeel van elke gegevensstroom. Een toewijzingenset is een integraal onderdeel van de gegevensstromen en wordt gemaakt, bewerkt en bewaakt als onderdeel van de gegevensstromen.
+
+Lees de [handleiding voor toewijzingssets](./mapping-set.md) voor meer informatie over toewijzingssets, inclusief het gebruik van de velden in een toewijzingsset. Als u wilt leren hoe u een toewijzingenset maakt en andere API-aanroepen met betrekking tot toewijzingssets gebruikt, leest u de sectie voor de toewijzingenset in de [ontwikkelaarshandleiding](./api/mapping-set.md).
 
 ## Gegevensverwerking
 
