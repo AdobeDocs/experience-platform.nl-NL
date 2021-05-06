@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor marketing
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 0%
       * [Overzicht Adobe Experience Platform Launch-extensie](./catalog/launch-extensions/overview.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
-      * [Koppeling met kenmerken van luchtschip](./catalog/mobile-engagement/airship-attributes.md)
-      * [Koppeling met vliegtuigcodes](./catalog/mobile-engagement/airship-tags.md)
-      * [Braze verbinding](./catalog/mobile-engagement/braze.md)
+      * [(bèta) Verbinding van kenmerken van het luchtschip](./catalog/mobile-engagement/airship-attributes.md)
+      * [(bèta) Verbinding van vliegtuigcodes](./catalog/mobile-engagement/airship-tags.md)
+      * [(Bèta) Braze verbinding](./catalog/mobile-engagement/braze.md)
    * Aanpassingsdoelen {#personalization}
       * [Overzicht van personalisatiedoelen](./catalog/personalization/overview.md)
       * [Adobe Target-extensie](./catalog/personalization/adobe-target.md)
