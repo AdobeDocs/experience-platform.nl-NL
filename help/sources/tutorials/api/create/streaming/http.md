@@ -7,10 +7,10 @@ type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 1%
+source-wordcount: '1090'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,8 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Het gestandaardiseerde kader voor het  [!DNL Platform] organiseren van ervaringsgegevens.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+
+Bovendien, vereist het creëren van een het stromen verbinding u om een doelXDM schema en een dataset te hebben. Lees de zelfstudie over [streaming recordgegevens](../../../../../ingestion/tutorials/streaming-record-data.md) of de zelfstudie over [streaming tijdreeksgegevens](../../../../../ingestion/tutorials/streaming-time-series-data.md) voor meer informatie over het maken van deze bestanden.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
 
@@ -54,9 +56,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 - Inhoudstype: application/json
 
-## Verbinding maken
+## Een basisverbinding maken
 
-Een verbinding geeft de bron op en bevat de informatie die nodig is om de stroom compatibel te maken met API&#39;s voor streaming invoer. Wanneer u een verbinding maakt, kunt u een niet-geverifieerde en een geverifieerde verbinding maken.
+Een basisverbinding geeft de bron aan en bevat de informatie die nodig is om de stroom compatibel te maken met streaming opname-API&#39;s. Wanneer u een basisverbinding maakt, kunt u een niet-geverifieerde en een geverifieerde verbinding maken.
 
 ### Niet-geverifieerde verbinding
 
@@ -95,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | Eigenschap | Beschrijving |
@@ -189,7 +191,7 @@ Een succesvolle reactie keert status 201 van HTTP met details van de pas gecreë
 
 ## URL voor streamingeindpunt ophalen
 
-Met de gemaakte verbinding kunt u nu de URL van het streamingeindpunt ophalen.
+Als de basisverbinding is gemaakt, kunt u nu de URL van het streamingeindpunt ophalen.
 
 **API-indeling**
 
@@ -247,6 +249,142 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## Een bronverbinding maken
+
+Nadat u de basisverbinding hebt gemaakt, moet u een bronverbinding maken. Wanneer u een bronverbinding maakt, hebt u de waarde `id` van uw gemaakte basisverbinding nodig.
+
+**API-indeling**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**Antwoord**
+
+Een geslaagde reactie retourneert HTTP-status 201 met gedetailleerde informatie over de nieuwe bronverbinding, inclusief de unieke id (`id`).
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## Een doelverbinding maken
+
+Nadat u de bronverbinding hebt gemaakt, kunt u een doelverbinding maken. Wanneer het creëren van uw doelverbinding, zult u de `id` waarde van uw eerder gecreeerde dataset nodig hebben.
+
+**API-indeling**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert status 201 van HTTP met details van de pas gecreëerde doelverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## Een gegevensstroom maken
+
+Wanneer uw bron- en doelverbindingen zijn gemaakt, kunt u nu een gegevensstroom maken. De dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST aan het `/flows` eindpunt uit te voeren.
+
+**API-indeling**
+
+```http
+POST /flows
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert status 201 van HTTP met details van uw onlangs gecreeerd dataflow, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 
