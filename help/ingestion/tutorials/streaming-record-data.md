@@ -7,12 +7,13 @@ type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
+
 
 # Gegevens voor stroomrecord streamen met API&#39;s voor streaming insluiting
 
@@ -23,10 +24,8 @@ Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdee
 Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het  [!DNL Platform] organiseren van ervaringsgegevens.
+   - [Handleiding](../../xdm/api/getting-started.md) voor ontwikkelaars van het schemaregister: Een uitvoerige gids die elk van de beschikbare eindpunten van  [!DNL Schema Registry] API behandelt en hoe te om vraag aan hen te maken. Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Handleiding](../../xdm/api/getting-started.md) voor ontwikkelaars van het schemaregister: Een uitvoerige gids die elk van de beschikbare eindpunten van  [!DNL Schema Registry] API behandelt en hoe te om vraag aan hen te maken. Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
-
-Bovendien is voor deze zelfstudie vereist dat u al een streamingverbinding hebt gemaakt. Lees voor meer informatie over het maken van een streamingverbinding de zelfstudie [Een streamingverbinding maken](./create-streaming-connection.md).
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
 
@@ -264,6 +263,12 @@ Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de 
 ]
 ```
 
+## Een streamingverbinding maken
+
+Na het creëren van uw schema en dataset, kunt u een het stromen verbinding tot stand brengen
+
+Lees voor meer informatie over het maken van een streamingverbinding de zelfstudie [Een streamingverbinding maken](./create-streaming-connection.md).
+
 ## Recordgegevens opnemen in de streamingverbinding {#ingest-data}
 
 Met de gegevensset en streamingverbinding op zijn plaats kunt u JSON-records met XDM-indeling invoeren om recordgegevens in te voeren in [!DNL Platform].
@@ -276,7 +281,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De `id`-waarde van de eerder gemaakte streamingverbinding. |
+| `{CONNECTION_ID}` | De `inletId`-waarde van de eerder gemaakte streamingverbinding. |
 | `synchronousValidation` | Een optionele query-parameter voor ontwikkelingsdoeleinden. Als ingesteld op `true`, kan deze worden gebruikt voor directe feedback om te bepalen of het verzoek is verzonden. Deze waarde wordt standaard ingesteld op `false`. |
 
 **Verzoek**
