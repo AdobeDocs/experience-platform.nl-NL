@@ -7,9 +7,9 @@ type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -290,9 +290,16 @@ Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de 
 ]
 ```
 
+
+## Een streamingverbinding maken
+
+Na het creëren van uw schema en dataset, zult u een het stromen verbinding moeten tot stand brengen om uw gegevens in te voeren.
+
+Lees voor meer informatie over het maken van een streamingverbinding de zelfstudie [Een streamingverbinding maken](./create-streaming-connection.md).
+
 ## Gegevens uit tijdreeksen opnemen in de streamingverbinding
 
-Met de dataset en het stromen verbinding op zijn plaats, kunt u XDM-Geformatteerde JSON verslagen opnemen om tijdreeksgegevens binnen [!DNL Platform] in te voeren.
+Met de dataset, het stromen verbinding, en het gemaakte dataflow, kunt u XDM-Geformatteerde JSON verslagen opnemen om tijdreeksgegevens binnen [!DNL Platform] in te voeren.
 
 **API-indeling**
 
@@ -326,7 +333,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -413,7 +420,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de zojuist ges
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
+| `{CONNECTION_ID}` | De `inletId` van de eerder gemaakte streamingverbinding. |
 | `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
 | `receivedTimeMs`: Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
 | `synchronousValidation.status` | Aangezien de vraagparameter `synchronousValidation=true` werd toegevoegd, zal deze waarde verschijnen. Als de validatie is voltooid, is de status `pass`. |
@@ -445,7 +452,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
