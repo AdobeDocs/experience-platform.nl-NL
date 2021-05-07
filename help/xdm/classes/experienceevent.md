@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
@@ -31,16 +31,16 @@ De klasse [!DNL XDM ExperienceEvent] zelf verstrekt verscheidene op tijd-reeksen
 | `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor de persoon op wie de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Als u dit veld correct wilt gebruiken voor [Real-time klantprofiel](../../profile/home.md), moet u niet handmatig de inhoud van het veld bijwerken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in de  [grondbeginselen van schemacompositie voor meer informatie ](../schema/composition.md#identityMap) over hun gebruiksgeval. |
 | `timestamp` | Een tijdstempel volgens ISO 8601 van het tijdstip van de gebeurtenis, opgemaakt volgens [RFC 339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>Deze tijdstempel kan  **** alleen de waarneming van de gebeurtenis zelf weergeven en moet in het verleden voorkomen. Als in uw segmentatiegebruikgevallen tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen (zoals een vertrekdatum), moeten deze waarden elders in het schema van de Gebeurtenis van de Ervaring worden beperkt. |
 
-## Compatibele combinaties {#mixins}
+## Compatibele schemagebiedgroepen {#field-groups}
 
 >[!NOTE]
 >
->De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../mixins/name-updates.md) voor meer informatie.
+>De namen van verschillende veldgroepen zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../field-groups/name-updates.md) voor meer informatie.
 
-Adobe biedt verschillende standaardmixen voor gebruik met de klasse [!DNL XDM ExperienceEvent]. Hieronder volgt een lijst met enkele veelgebruikte combinaties voor de klasse:
+Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL XDM ExperienceEvent]. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
-* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
 
 ## Aanhangsel
 
