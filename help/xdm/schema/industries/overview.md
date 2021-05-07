@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Leer over de gestandaardiseerde gegevensmodellen voor diverse de industrietakken die kunnen worden geconstrueerd gebruikend de componenten van het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Om u te helpen uw gegevensmodelleringsstrategie begeleiden die op uw bepaalde in
 Om ERDs te lezen die in deze gids van verwijzingen wordt voorzien, moet u een werkend inzicht in hebben hoe de componenten XDM aan vormschema&#39;s en hoe XDM- schema&#39;s in Experience Platform als geheel in wisselwerking staan. Lees de volgende overzichtsdocumentatie voordat u verdergaat:
 
 * [XDM-systeemoverzicht](../../home.md): Leer hoe XDM in het ecosysteem van het Platform werkt.
-* [Basisbeginselen van de schemacompositie](../../schema/composition.md): Leer hoe de componenten XDM (zoals mixins, klassen, en gegevenstypes) tot de structuur van een schema, evenals de rol van identiteitsgebieden bijdragen.
+* [Basisbeginselen van de schemacompositie](../../schema/composition.md): Leer hoe de componenten XDM (zoals de groepen van het schemagebied, klassen, en gegevenstypes) tot de structuur van een schema, evenals de rol van identiteitsgebieden bijdragen.
 
 Het wordt ook geadviseerd dat u [gegevens het modelleren beste praktijken gids](../../schema/best-practices.md) voor algemene richtlijnen over hoe te om uw gegevens aan XDM in kaart te brengen controleert.
 
@@ -37,7 +37,7 @@ Het wordt ook geadviseerd dat u [gegevens het modelleren beste praktijken gids](
 
 De verticale industriemodellen die hieronder door de ERD&#39;s worden vertegenwoordigd, worden opzettelijk op een gedenormaliseerde manier gecreëerd en met inachtneming van de wijze waarop gegevens in Platform worden opgeslagen.
 
-Voor een bepaalde ERD is elke entiteit die wordt weergegeven in gebaseerd op een onderliggende XDM-klasse. Voor een bepaalde entiteit vertegenwoordigt elke rij die in **bold** wordt gemarkeerd, een combinatie of een gegevenstype, met de relevante velden die hieronder in onbolle tekst worden weergegeven. De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
+Voor een bepaalde ERD is elke entiteit die wordt weergegeven in gebaseerd op een onderliggende XDM-klasse. Voor een bepaalde entiteit vertegenwoordigt elke rij die in **bold** wordt gemarkeerd, een veldgroep of een gegevenstype, met de relevante velden die hieronder in onbolle tekst worden weergegeven. De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
 
 >[!NOTE]
 >
