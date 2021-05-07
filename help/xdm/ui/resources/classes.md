@@ -6,9 +6,9 @@ description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van h
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ De [!DNL Schema Editor] verschijnt, die een nieuw schema in het canvas tonen dat
 
 >[!IMPORTANT]
 >
->Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de mengen voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele combinaties vermeld in het dialoogvenster **[!UICONTROL Add mixin]**. In plaats daarvan moet u [nieuwe mixins](./mixins.md#create) maken voor gebruik met die klasse. De volgende keer dat u een schema samenstelt dat de nieuwe klasse uitvoert, worden de mixins die u hebt bepaald vermeld en beschikbaar voor gebruik.
+>Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de groepen van het schemagebied voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden in het dialoogvenster **[!UICONTROL Add field group]** geen compatibele veldgroepen weergegeven. In plaats daarvan moet u [nieuwe veldgroepen maken](./field-groups.md#create) voor gebruik met die klasse. De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, worden de gedefinieerde veldgroepen weergegeven en beschikbaar voor gebruik.
 
 U kunt nu [velden toevoegen aan de klasse](#add-fields), die wordt gedeeld door alle schema&#39;s waarin de klasse wordt gebruikt.
 
@@ -77,7 +77,7 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 
 >[!IMPORTANT]
 >
->Onthoud dat alle velden die u aan een klasse toevoegt, worden gebruikt in alle schema&#39;s waarin die klasse wordt gebruikt. Daarom moet u zorgvuldig overwegen welke velden handig zijn in alle gevallen waarin het schema wordt gebruikt. Als u overweegt om een gebied toe te voegen dat slechts gebruik in sommige schema&#39;s onder deze klasse kan zien, kunt u het aan die schema&#39;s door [in plaats daarvan tot een mixin](./mixins.md#create) kunnen willen toevoegen.
+>Onthoud dat alle velden die u aan een klasse toevoegt, worden gebruikt in alle schema&#39;s waarin die klasse wordt gebruikt. Daarom moet u zorgvuldig overwegen welke velden handig zijn in alle gevallen waarin het schema wordt gebruikt. Als u van plan bent een gebied toe te voegen dat slechts gebruik in sommige schema&#39;s onder deze klasse kan zien, kunt u het aan die schema&#39;s door [in plaats daarvan tot een gebiedsgroep](./field-groups.md#create) kan willen toevoegen.
 
 Er verschijnt een **[!UICONTROL New field]** in het canvas en de rechterrails worden bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Zie de gids op [het bepalen van gebieden in UI](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen.
 
