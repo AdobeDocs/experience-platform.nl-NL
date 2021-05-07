@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De term &quot;mixin&quot; is bijgewerkt naar &quot;schemaveldgroep&quot; om begrip te bevorderen. Veldgroepen zijn herbruikbare sets velden ter ondersteuning van gevallen van zakelijk gebruik. Deze verandering wordt nu weerspiegeld in de Registratie API van het Schema, de UI van Adobe Experience Platform, en over alle documentatie van het Platform.
+>De term &quot;mixin&quot; is bijgewerkt naar schema &quot;veldgroep&quot; om begrip te bevorderen. Veldgroepen zijn herbruikbare sets velden ter ondersteuning van gevallen van zakelijk gebruik. Deze verandering wordt nu weerspiegeld in de Registratie API van het Schema, de UI van Adobe Experience Platform, en over alle documentatie van het Platform.
 
 Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
