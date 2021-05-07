@@ -2,20 +2,20 @@
 title: Handel en productinformatie verzamelen met de SDK van Adobe Experience Platform Web
 description: Leer hoe u gegevens met betrekking tot producten of een winkelwagentje toevoegt met de Adobe Experience Platform Web SDK.
 keywords: producten;handel;maatregelen;maatregel;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListViews;productListViews;productViews;aankopen;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseNumber;
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1324'
 ht-degree: 1%
 
 ---
-
 
 # Verzamelen van handel en productinformatie
 
 Als u producten op uw site hebt, is dit een standaardset van dingen die u wilt verzenden om de meeste mogelijkheden van Adobe in te schakelen. Hoewel dit een suggestie is, biedt het vanaf het begin een zeer sterke set gegevens.
 
-In dit document wordt de [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)-mix gebruikt. De `commerce`-mix wordt opgesplitst in twee delen: het `commerce`-object en de `productListItems`-array. Met het object `commerce` kunt u aangeven welke handelingen met de array `productListItems` worden uitgevoerd.
+In dit document wordt de schemaveldgroep [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) gebruikt. De `commerce`-veldgroep bestaat uit twee delen: het `commerce`-object en de `productListItems`-array. Met het object `commerce` kunt u aangeven welke handelingen met de array `productListItems` worden uitgevoerd.
 
 >[!TIP]
 >
