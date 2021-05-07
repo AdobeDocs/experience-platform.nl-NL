@@ -6,16 +6,16 @@ description: Met de eindpunten /export en /import in de API voor schemaregistrat
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
 
 # Eindpunten exporteren/importeren
 
-Alle bronnen in de [!DNL Schema Library] bevinden zich in een specifieke sandbox binnen een IMS-organisatie. In sommige gevallen wilt u mogelijk bronnen van het Experience Data Model (XDM) delen tussen sandboxen en IMS Orgs. De [!DNL Schema Registry] API verstrekt twee eindpunten die u een de uitvoerlading voor om het even welk schema, mengsel, of gegevenstype in [!DNL  Schema Library], en dan die nuttige lading toestaan om die middel (en alle afhankelijke middelen) in een doelzandbak en IMS te invoeren Org.
+Alle bronnen in de [!DNL Schema Library] bevinden zich in een specifieke sandbox binnen een IMS-organisatie. In sommige gevallen wilt u mogelijk bronnen van het Experience Data Model (XDM) delen tussen sandboxen en IMS Orgs. De [!DNL Schema Registry] API verstrekt twee eindpunten die u een de uitvoerlading voor om het even welk schema, de groep van het schemagebied, of gegevenstype in [!DNL  Schema Library], en dan die nuttige lading toestaan om die middel (en alle afhankelijke middelen) in een doelzandbak en IMS te invoeren Org.
 
 ## Aan de slag
 
@@ -25,7 +25,7 @@ De uitvoer/de invoereindpunten maken deel uit van de verre procedurevraag (RPCs)
 
 ## Hiermee wordt een exportlading opgehaald voor een resource {#export}
 
-Voor om het even welk bestaand schema, mengsel, of gegevenstype in [!DNL Schema Library], kunt u een de uitvoerlading produceren door een verzoek van de GET aan het `/export` eindpunt te richten, verstrekkend identiteitskaart van het middel in de weg.
+Voor om het even welk bestaand schema, gebiedsgroep, of gegevenstype in [!DNL Schema Library], kunt u een de uitvoerlading produceren door een verzoek van de GET tot `/export` eindpunt te richten, verstrekkend identiteitskaart van het middel in de weg.
 
 **API-indeling**
 
@@ -39,11 +39,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Verzoek**
 
-Het volgende verzoek wint een de uitvoerlading voor een `Restaurant` mengsel terug.
+Het volgende verzoek wint een de uitvoerlading voor een `Restaurant` gebiedsgroep terug.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door een huurder gemaakt `Property` gegevenstype dat door de `Restaurant`-mix wordt gebruikt, terwijl het tweede object de `Restaurant`-mix zelf is. Deze nuttige lading kan dan worden gebruikt om [het middel ](#import) in een verschillende zandbak of organisatie te invoeren IMS.
+Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door de gebruiker gemaakt `Property` gegevenstype dat door de veldgroep `Restaurant` wordt gebruikt, terwijl het tweede object de veldgroep `Restaurant` zelf is. Deze nuttige lading kan dan worden gebruikt om [het middel ](#import) in een verschillende zandbak of organisatie te invoeren IMS.
 
 Merk op dat alle instanties van huurder ID van het middel door `<XDM_TENANTID_PLACEHOLDER>` worden vervangen. Dit staat de Registratie van het Schema toe om correcte huurdersidentiteitskaart op de middelen automatisch toe te passen afhankelijk van waar zij in de verdere de invoervraag worden verzonden.
 
@@ -129,9 +129,9 @@ Merk op dat alle instanties van huurder ID van het middel door `<XDM_TENANTID_PL
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Verzoek**
 
-Het volgende verzoek neemt de nuttige lading die in het vorige [exporteer voorbeeld](#export) is teruggekeerd om `Restaurant` in een nieuwe Mengsel IMS te invoeren Org en zandbak, zoals die door `x-gw-ims-org-id` en `x-sandbox-name` kopballen, respectievelijk wordt bepaald.
+Het volgende verzoek neemt de nuttige lading die in het vorige [exporteer voorbeeld](#export) is teruggekeerd om `Restaurant` gebiedsgroep in een nieuwe MIMS Org en zandbak in te voeren, zoals die door `x-gw-ims-org-id` en `x-sandbox-name` kopballen, respectievelijk wordt bepaald.
 
 ```shell
 curl -X POST \
@@ -288,9 +288,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -446,9 +446,9 @@ Een succesvolle reactie keert een lijst van de ingevoerde middelen, met de aange
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
