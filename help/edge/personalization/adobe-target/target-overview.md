@@ -2,14 +2,14 @@
 title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 translation-type: tm+mt
-source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
+source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '659'
 ht-degree: 2%
 
 ---
-
 
 # Adobe Target gebruiken met de SDK van het Web van het Platform
 
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 ## Soorten publiek in XDM
 
-Wanneer het bepalen van Publiek voor uw activiteiten van het Doel die via het Web SDK van Adobe Experience Platform worden geleverd, [XDM](https://docs.adobe.com/content/help/nl-NL/experience-platform/xdm/home.html) moet worden bepaald en worden gebruikt. Nadat u schema&#39;s XDM, klassen, en mengen bepaalt, kunt u een het publieksregel van het Doel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen Doel, XDM- gegevensvertoningen in de Bouwer van de Publiek als douaneparameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld, `web.webPageDetails.name`).
+Wanneer het bepalen van Publiek voor uw activiteiten van het Doel die via het Web SDK van Adobe Experience Platform worden geleverd, [XDM](https://docs.adobe.com/content/help/nl-NL/experience-platform/xdm/home.html) moet worden bepaald en worden gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u een het publieksregel van het Doel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen Doel, XDM- gegevensvertoningen in de Bouwer van de Publiek als douaneparameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld, `web.webPageDetails.name`).
 
 Als u activiteiten van het Doel met vooraf bepaald publiek hebt die douaneparameters of een gebruikersprofiel gebruiken, worden zij niet correct geleverd via SDK. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box publiek dat zich richt op velden die worden ondersteund via Adobe Experience Platform Web SDK en waarvoor geen XDM vereist is. Deze velden zijn beschikbaar in de doelinterface waarvoor geen XDM vereist is:
 
