@@ -1,14 +1,14 @@
 ---
 title: Integreer de Steun van IAB TCF 2.0 gebruikend Platform launch en de Uitbreiding van SDK van het Web van het Platform
 description: Leer hoe u IAB TCF 2.0 instelt voor toestemming met Adobe Experience Platform Launch en de Adobe Experience Platform Web SDK-extensie.
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
-
 
 # Integreer IAB TCF 2.0 steun gebruikend Platform launch en de uitbreiding van SDK van het Web van het Platform
 
@@ -73,13 +73,13 @@ Deze aangepaste code doet twee dingen:
 
 ## Een XDM-gegevenselement maken voor Experience Events
 
-De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de mix van de Privacy van de Gebeurtenis van de Ervaring aan uw schema hebt toegevoegd, zou u een `consentStrings` sleutel in het voorwerp XDM moeten hebben.
+De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de het schemagroep van de Privacy van de Gebeurtenis van de Ervaring aan uw schema hebt toegevoegd, zou u een `consentStrings` sleutel in het voorwerp XDM moeten hebben.
 
-1. Selecteer **[!UICONTROL permissionStrings]**.
+1. Selecteer **[!UICONTROL consentStrings]**.
 
-1. Kies **[!UICONTROL Afzonderlijke items opgeven]** en **[!UICONTROL Item toevoegen]** selecteren.
+1. Kies **[!UICONTROL Provide individual items]** en selecteer **[!UICONTROL Add Item]**.
 
-1. Breid **[!UICONTROL permissionString]** rubriek uit, en breid het eerste punt uit, dan vul de volgende waarden in:
+1. Breid **[!UICONTROL consentString]** rubriek uit, en breid het eerste punt uit, dan vul de volgende waarden in:
 
 * `consentStandard`: IAB TCF
 * `consentStandardVersion`: 2,0
@@ -120,8 +120,8 @@ Voeg een actie &quot;Send Event&quot;van de uitbreiding van SDK van het Web van 
 
 ## Andere gebeurtenissen verzenden met IAB TCF 2.0 toestemmingsinformatie
 
-Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn de twee gegevenselementen nog steeds gedefinieerd en kunnen deze worden gebruikt om de informatie over de IAB-toestemming te verzenden. Gebruik hetzelfde XDM-gegevenselement om toekomstige gebeurtenissen te verzenden. TCF 2.0-informatie voor IAB is opgenomen.
+Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn de twee gegevenselementen nog steeds gedefinieerd en kunnen deze worden gebruikt om de informatie over de IAB-toestemming te verzenden. Gebruik hetzelfde XDM-gegevenselement om toekomstige gebeurtenissen te verzenden. Informatie over IAB TCF 2.0 is inbegrepen.
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of platform van de Gegevens van de Klant in real time te integreren. Zie [IAB Transparency &amp; Consent Framework 2.0 overzicht](./overview.md) voor meer informatie.
+Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of het platform van de Gegevens van de Klant in real time te integreren. Zie [IAB Transparency &amp; Consent Framework 2.0 overzicht](./overview.md) voor meer informatie.
