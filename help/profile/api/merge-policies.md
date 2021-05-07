@@ -6,9 +6,9 @@ type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 0%
 
 ---
@@ -752,19 +752,19 @@ Wanneer records in het Experience Platform worden opgenomen, wordt een systeemti
 
 Er kunnen soms gebruiksgevallen zijn, zoals het terugvullen van gegevens of het verzekeren van de correcte orde van gebeurtenissen als de verslagen uit orde worden opgenomen, waar het noodzakelijk is om een douantimestamp te leveren en het fusiebeleid te hebben de douane timestamp eerder dan de systeemtimestamp respecteren.
 
-Als u een aangepaste tijdstempel wilt gebruiken, moet [[!DNL External Source System Audit Details Mixin]](#mixin-details) worden toegevoegd aan uw profielschema. Nadat de aangepaste tijdstempel is toegevoegd, kan deze worden ingevuld met het veld `xdm:lastUpdatedDate`. Wanneer een verslag met het `xdm:lastUpdatedDate` gebied wordt opgenomen bevolkt, zal het Experience Platform dat gebied gebruiken om verslagen of profielfragmenten binnen en over datasets samen te voegen. Als `xdm:lastUpdatedDate` niet aanwezig, of niet bevolkt is, zal het Platform blijven gebruiken timestamp van het systeem.
+Als u een aangepaste tijdstempel wilt gebruiken, moet de [[!DNL External Source System Audit Details] schemaveldgroep](#field-group-details) worden toegevoegd aan uw profielschema. Nadat de aangepaste tijdstempel is toegevoegd, kan deze worden ingevuld met het veld `xdm:lastUpdatedDate`. Wanneer een verslag met het `xdm:lastUpdatedDate` gebied wordt opgenomen bevolkt, zal het Experience Platform dat gebied gebruiken om verslagen of profielfragmenten binnen en over datasets samen te voegen. Als `xdm:lastUpdatedDate` niet aanwezig, of niet bevolkt is, zal het Platform blijven gebruiken timestamp van het systeem.
 
 >[!NOTE]
 >
 >U moet ervoor zorgen dat de tijdstempel `xdm:lastUpdatedDate` wordt gevuld wanneer u een PATCH in dezelfde record verzendt.
 
-Voor geleidelijke instructies bij het werken met schema&#39;s die de Registratie API van het Schema gebruiken, met inbegrip van hoe te om mengelingen aan schema&#39;s toe te voegen, gelieve [zelfstudie voor het creëren van een schema te bezoeken gebruikend API](../../xdm/tutorials/create-schema-api.md).
+Voor geleidelijke instructies bij het werken met schema&#39;s gebruikend de Registratie API van het Schema, met inbegrip van hoe te om gebiedsgroepen aan schema&#39;s toe te voegen, gelieve [zelfstudie voor het creëren van een schema te bezoeken gebruikend API](../../xdm/tutorials/create-schema-api.md).
 
 Als u met aangepaste tijdstempels wilt werken met de gebruikersinterface, raadpleegt u de sectie over [aangepaste tijdstempels](../ui/merge-policies.md#custom-timestamps) in de [Gebruikershandleiding voor samenvoegbeleid](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] details  {#mixin-details}
+#### [!DNL External Source System Audit Details] veldgroepdetails  {#field-group-details}
 
-Het volgende voorbeeld toont correct bevolkte gebieden in [!DNL External Source System Audit Details Mixin]. De volledige mixin JSON kan ook in [public de Model van de Gegevens van de Ervaring (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) op GitHub worden bekeken.
+In het volgende voorbeeld worden correct gevulde velden in de veldgroep [!DNL External Source System Audit Details] weergegeven. De volledige gebiedsgroep JSON kan ook in [het Model van de Gegevens van de Ervaring (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) op GitHub worden bekeken.
 
 ```json
 {
