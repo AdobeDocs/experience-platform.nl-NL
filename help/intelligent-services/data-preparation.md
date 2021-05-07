@@ -6,9 +6,9 @@ topic-legacy: Intelligent Services
 description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services gebruiken XDM-schema's (Experience Data Model) om dit te bereiken.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2397'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Voer de onderstaande stappen uit als uw gegevens buiten [!DNL Experience Platfor
 
 AI en Attribution AI bieden native ondersteuning voor Adobe Analytics-gegevens. Als u Adobe Analytics-gegevens wilt gebruiken, volgt u de stappen in de documentatie om een [Bronconnector voor analyse](../sources/tutorials/ui/create/adobe-applications/analytics.md) in te stellen.
 
-Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe Analytics als gegevensbron selecteren die door een dataset tijdens uw instantieconfiguratie wordt gevolgd. Alle vereiste schemagebieden en mixins worden automatisch gecreeerd tijdens de verbindingsopstelling. U te hoeven niet om (Extraheren, Transformeren, Lading) de datasets in het formaat te ETL.
+Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe Analytics als gegevensbron selecteren die door een dataset tijdens uw instantieconfiguratie wordt gevolgd. Alle vereiste groepen van schemagebieden en individuele gebieden worden automatisch gecreeerd tijdens de verbindingsopstelling. U te hoeven niet om (Extraheren, Transformeren, Lading) de datasets in het formaat te ETL.
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe
 
 Adobe Audience Manager-gegevens worden native door de klant ondersteund. Om de gegevens van de Audience Manager te gebruiken, volg de stappen die in de documentatie worden geschetst aan opstelling een [Audience Manager bronschakelaar](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
-Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe Audience Manager als gegevensbron selecteren die door een dataset tijdens uw configuratie van AI van de Klant wordt gevolgd. Alle vereiste schemagebieden en mixins worden automatisch gecreeerd tijdens de verbindingsopstelling. U te hoeven niet om (Extraheren, Transformeren, Lading) de datasets in het formaat te ETL.
+Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe Audience Manager als gegevensbron selecteren die door een dataset tijdens uw configuratie van AI van de Klant wordt gevolgd. Alle groepen van schemagebieden en individuele gebieden worden automatisch gecreeerd tijdens de verbindingsopstelling. U te hoeven niet om (Extraheren, Transformeren, Lading) de datasets in het formaat te ETL.
 
 >[!IMPORTANT]
 >
@@ -68,13 +68,13 @@ Het CEE-schema legt, net als alle XDM ExperienceEvent-schema&#39;s, de op tijdre
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Net als alle XDM-schema&#39;s is de CEE-mix uitbreidbaar. Met andere woorden, extra velden kunnen worden toegevoegd aan de CEE-mix en verschillende variaties kunnen indien nodig worden opgenomen in meerdere schema&#39;s.
+Net als alle XDM-schema&#39;s is de veldgroep van het CEE-schema uitbreidbaar. Met andere woorden, er kunnen extra velden worden toegevoegd aan de CEE-veldgroep en indien nodig kunnen verschillende variaties in meerdere schema&#39;s worden opgenomen.
 
-Een volledig voorbeeld van de mix vindt u in de [openbare XDM-opslagruimte](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Bovendien kunt u het volgende [JSON dossier](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) voor een voorbeeld bekijken en kopiëren van hoe de gegevens kunnen worden gestructureerd om aan het CEE schema te voldoen. Verwijs naar beide voorbeelden aangezien u over de belangrijkste gebieden leert die in de sectie worden geschetst hieronder, om te bepalen hoe u uw eigen gegevens aan het schema kunt in kaart brengen.
+Een volledig voorbeeld van de veldgroep vindt u in de [openbare XDM-opslagruimte](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Bovendien kunt u het volgende [JSON dossier](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) voor een voorbeeld bekijken en kopiëren van hoe de gegevens kunnen worden gestructureerd om aan het CEE schema te voldoen. Verwijs naar beide voorbeelden aangezien u over de belangrijkste gebieden leert die in de sectie worden geschetst hieronder, om te bepalen hoe u uw eigen gegevens aan het schema kunt in kaart brengen.
 
 ## Hoofdvelden
 
-Er zijn verscheidene zeer belangrijke gebieden binnen de CEE mengeling die zou moeten worden gebruikt om [!DNL Intelligent Services] nuttige inzichten te produceren. In deze sectie worden het gebruiksgeval en de verwachte gegevens voor deze velden beschreven en vindt u koppelingen naar de documentatie bij naslagwerken voor meer voorbeelden.
+Er zijn verscheidene zeer belangrijke gebieden binnen de CEE gebiedsgroep die zou moeten worden gebruikt om [!DNL Intelligent Services] nuttige inzichten te produceren. In deze sectie worden het gebruiksgeval en de verwachte gegevens voor deze velden beschreven en vindt u koppelingen naar de documentatie bij naslagwerken voor meer voorbeelden.
 
 ### Verplichte velden
 
@@ -297,16 +297,16 @@ In deze sectie wordt de workflow beschreven voor het toewijzen en invoeren van g
 
 #### Een CEE-schema en gegevensset maken
 
-Wanneer u klaar bent om uw gegevens voor opname voor te bereiden, is de eerste stap een nieuw schema te creëren XDM dat de CEE mengeling gebruikt. De volgende zelfstudies lopen door het proces om een nieuw schema in UI of API tot stand te brengen:
+Wanneer u klaar bent om uw gegevens voor opname voor te bereiden, moet de eerste stap een nieuw XDM schema tot stand brengen dat de CEE gebiedsgroep aanwendt. De volgende zelfstudies lopen door het proces om een nieuw schema in UI of API tot stand te brengen:
 
 * [Een schema maken in de gebruikersinterface](../xdm/tutorials/create-schema-ui.md)
 * [Een schema maken in de API](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->De bovenstaande zelfstudies volgen een algemene workflow voor het maken van een schema. Wanneer u een klasse voor het schema kiest, moet u de **XDM ExperienceEvent-klasse** gebruiken. Nadat u deze klasse hebt gekozen, kunt u de CEE-mix aan het schema toevoegen.
+>De bovenstaande zelfstudies volgen een algemene workflow voor het maken van een schema. Wanneer u een klasse voor het schema kiest, moet u de **XDM ExperienceEvent-klasse** gebruiken. Zodra deze klasse is gekozen, kunt u de CEE gebiedsgroep aan het schema dan toevoegen.
 
-Nadat u de CEE-mix aan het schema hebt toegevoegd, kunt u desgewenst andere combinaties toevoegen voor extra velden in uw gegevens.
+Nadat u de CEE-veldgroep aan het schema hebt toegevoegd, kunt u desgewenst andere veldgroepen toevoegen voor extra velden in uw gegevens.
 
 Zodra u het schema hebt gecreeerd en bewaard, kunt u een nieuwe dataset tot stand brengen die op dat schema wordt gebaseerd. De volgende zelfstudies lopen door het proces om een nieuwe dataset in UI of API tot stand te brengen:
 
