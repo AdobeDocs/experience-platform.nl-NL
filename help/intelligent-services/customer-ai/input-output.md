@@ -6,9 +6,9 @@ topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2865'
+source-wordcount: '2878'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,10 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in di
 | Term | Definitie |
 | --- | --- |
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Adobe Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. De methodologie waarop het Experience Platform wordt gebouwd, het Systeem van XDM, stelt de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform in werking. |
-| XDM-schema | Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Platform kunnen worden opgenomen, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer mixins. |
+| XDM-schema | Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Platform kunnen worden opgenomen, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer schemaveldgroepen. |
 | XDM-klasse | Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen. |
-| [Mixins](../../xdm/schema/composition.md) | Een component die een of meer velden in een schema definieert. Mixins dwingen af hoe hun gebieden in de hiërarchie van het schema verschijnen, en tonen daarom de zelfde structuur in elk schema dat zij inbegrepen zijn. Mixins zijn alleen compatibel met specifieke klassen, zoals die door hun `meta:intendedToExtend`-kenmerk worden geïdentificeerd. |
-| [Gegevenstype](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot mengsels, worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
+| [Veldengroepen](../../xdm/schema/composition.md) | Een component die een of meer velden in een schema definieert. Veldgroepen dwingen af hoe hun velden worden weergegeven in de hiërarchie van het schema en tonen daarom in elk schema dezelfde structuur aan waarin ze zijn opgenomen. Veldgroepen zijn alleen compatibel met specifieke klassen, zoals bepaald door het kenmerk `meta:intendedToExtend`. |
+| [Gegevenstype](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
 | Churn | Een meting van het percentage accounts dat de abonnementen annuleert of niet vernieuwt. Een hoge wisselkoers kan een negatief effect hebben op de maandelijkse terugkerende inkomsten (MRR) en kan ook wijzen op ontevredenheid over een product of dienst. |
 | [Klantprofiel in realtime](../../profile/home.md) | Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt. |
 
@@ -49,7 +49,7 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in di
 >
 > De AI van de Klant bepaalt automatisch welke gebeurtenissen nuttig voor voorspellingen zijn en roept een waarschuwing op als de beschikbare gegevens niet voldoende zijn om kwaliteitsvoorspellingen te produceren.
 
-AI van de Klant steunt CEE, Adobe Analytics, en de datasets van Adobe Audience Manager. Het CEE-schema vereist dat u tijdens het maken van het schema mixins toevoegt. Als u de datasets van Adobe Analytics of van Adobe Audience Manager gebruikt, brengt de bronschakelaar direct de standaardgebeurtenissen (Handel, de details van de Web-pagina, Toepassing, en Onderzoek) in kaart die hieronder tijdens het verbindingsproces worden vermeld.
+AI van de Klant steunt CEE, Adobe Analytics, en de datasets van Adobe Audience Manager. Het CEE-schema vereist dat u tijdens het maken van het schema veldgroepen toevoegt. Als u de datasets van Adobe Analytics of van Adobe Audience Manager gebruikt, brengt de bronschakelaar direct de standaardgebeurtenissen (Handel, de details van de Web-pagina, Toepassing, en Onderzoek) in kaart die hieronder tijdens het verbindingsproces worden vermeld.
 
 Voor meer informatie over het in kaart brengen van de gegevens van Adobe Analytics of van de Audience Manager, bezoek [het gebiedsafbeeldingen van Analytics](../../sources/connectors/adobe-applications/analytics.md) of [Audience Manager van gebiedsafbeeldingen ](../../sources/connectors/adobe-applications/mapping/audience-manager.md) gids.
 
@@ -57,18 +57,17 @@ Voor meer informatie over het in kaart brengen van de gegevens van Adobe Analyti
 
 De Gebeurtenissen van de Ervaring XDM worden gebruikt voor het bepalen van diverse klantengedrag. Afhankelijk van de structuur van uw gegevens, omvatten de hieronder vermelde gebeurtenistypen mogelijk niet alle gedragingen van uw klant. Het is aan u om te bepalen welke gebieden de noodzakelijke gegevens hebben die nodig zijn om Webgebruikersactiviteit duidelijk en ondubbelzinnig te identificeren. Afhankelijk van uw voorspellingsdoel, kunnen de vereiste gebieden veranderen die nodig zijn.
 
-De AI van de klant is afhankelijk van verschillende gebeurtenistypen voor de eigenschappen van het bouwmodel. Deze gebeurtenistypen worden automatisch toegevoegd aan uw schema met behulp van meerdere XDM-mixen.
+De AI van de klant is afhankelijk van verschillende gebeurtenistypen voor de eigenschappen van het bouwmodel. Deze gebeurtenistypen worden automatisch aan uw schema toegevoegd gebruikend veelvoudige XDM gebiedsgroepen.
 
 >[!NOTE]
 >
->Als u Adobe Analytics- of Adobe Audience Manager-gegevens gebruikt, wordt het schema automatisch gemaakt met de vereiste standaardgebeurtenissen die nodig zijn om uw gegevens vast te leggen. Als u uw eigen douaneCEE schema creeert om gegevens te vangen, moet u overwegen welke mengen nodig zijn om uw gegevens te vangen.
+>Als u Adobe Analytics- of Adobe Audience Manager-gegevens gebruikt, wordt het schema automatisch gemaakt met de vereiste standaardgebeurtenissen die nodig zijn om uw gegevens vast te leggen. Als u uw eigen aangepaste CEE-schema maakt om gegevens vast te leggen, moet u overwegen welke veldgroepen nodig zijn om uw gegevens vast te leggen.
 
 Het is niet nodig gegevens te hebben voor elk van de hieronder vermelde standaardgebeurtenissen, maar voor bepaalde scenario&#39;s zijn bepaalde gebeurtenissen vereist. Als u standaardgebeurtenisgegevens hebt, is het raadzaam deze op te nemen in uw schema. Als u bijvoorbeeld een AI-toepassing van de Klant wilt maken om aankoopgebeurtenissen te voorspellen, is het handig om gegevens te hebben van de gegevenstypen `Commerce` en `Web page details`.
 
-Als u een mix wilt weergeven in de interface van het Platform, selecteert u de tab **[!UICONTROL Schemas]** op de linkertrack, gevolgd door de tab **[!UICONTROL Mixins]**.
+Als u een veldgroep wilt weergeven in de interface van het Platform, selecteert u de tab **[!UICONTROL Schemas]** op de linkertrack, gevolgd door de tab **[!UICONTROL Field groups]**.
 
-
-| Mixin | Het type Event | XDM-veldpad |
+| Veldgroep | Het type Event | XDM-veldpad |
 | --- | --- | --- |
 | [!UICONTROL Commerce Details] | bestellen | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
@@ -118,7 +117,7 @@ Naast de minimaal vereiste gegevens, werkt de AI van de Klant ook het best met r
 
 ### Voorbeeldscenario&#39;s
 
-In deze sectie worden verschillende scenario&#39;s voor exemplaren van AI van de Klant beschreven evenals de vereiste en geadviseerde gebeurtenistypen. Raadpleeg de bovenstaande [standaardgebeurtenissentabel](#standard-events) voor meer informatie over de mixin en het veldpad.
+In deze sectie worden verschillende scenario&#39;s voor exemplaren van AI van de Klant beschreven evenals de vereiste en geadviseerde gebeurtenistypen. Raadpleeg de bovenstaande [standaardgebeurtenissentabel](#standard-events) voor meer informatie over de veldgroep en het veldpad.
 
 >[!NOTE]
 >
@@ -249,7 +248,7 @@ Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op b
 
 **Vereiste standaardgebeurtenistypen:**
 
-Om eigenschappen van Adobe Audience Manager te gebruiken, moet u een bronverbinding tot stand brengen gebruikend [Audience Manager bronschakelaar](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). De bronschakelaar leidt automatisch tot het schema met juiste mengeling(en). U hoeft niet handmatig extra gebeurtenistypen toe te voegen om het schema te laten werken met Customer AI.
+Om eigenschappen van Adobe Audience Manager te gebruiken, moet u een bronverbinding tot stand brengen gebruikend [Audience Manager bronschakelaar](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). De bronschakelaar leidt automatisch tot het schema met de juiste gebiedsgroep(en). U hoeft niet handmatig extra gebeurtenistypen toe te voegen om het schema te laten werken met Customer AI.
 
 Wanneer u een nieuwe klant-AI-instantie configureert, kunnen `audienceName` en `audienceID` worden gebruikt om een bepaald kenmerk te selecteren voor scoring bij het definiëren van uw doel.
 
