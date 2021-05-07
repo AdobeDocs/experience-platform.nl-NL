@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1354'
 ht-degree: 0%
 
 ---
@@ -111,35 +111,35 @@ Registreer de `$id` waarden van de twee schema&#39;s u een verband tussen wilt b
 
 ## Een referentieveld definiëren voor het bronschema
 
-Binnen [!DNL Schema Registry], werken de relatiebeschrijvers gelijkaardig aan buitenlandse sleutels in relationele gegevensbestandlijsten: Een veld in het bronschema fungeert als een verwijzing naar het primaire identiteitsveld van een doelschema. Als uw bronschema geen gebied voor dit doel heeft, kunt u een mengeling met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet de waarde `type` &quot;[!DNL string]&quot; hebben.
+Binnen [!DNL Schema Registry], werken de relatiebeschrijvers gelijkaardig aan buitenlandse sleutels in relationele gegevensbestandlijsten: Een veld in het bronschema fungeert als een verwijzing naar het primaire identiteitsveld van een doelschema. Als uw bronschema geen gebied voor dit doel heeft, kunt u een groep van het schemagebied met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet de waarde `type` &quot;[!DNL string]&quot; hebben.
 
 >[!IMPORTANT]
 >
 >In tegenstelling tot het bestemmingsschema, kan het bronschema zijn primaire identiteit als verwijzingsgebied niet gebruiken.
 
-In dit leerprogramma, bevat het bestemmingsschema &quot;[!DNL Hotels]&quot;een `hotelId` gebied dat als primaire identiteit van het schema dient, en daarom ook als zijn verwijzingsgebied zal handelen. Nochtans, heeft het bronschema &quot;[!DNL Loyalty Members]&quot;geen specifiek gebied dat als verwijzing moet worden gebruikt, en moet een nieuwe mengeling worden gegeven die een nieuw gebied aan het schema toevoegt: `favoriteHotel`.
+In dit leerprogramma, bevat het bestemmingsschema &quot;[!DNL Hotels]&quot;een `hotelId` gebied dat als primaire identiteit van het schema dient, en daarom ook als zijn verwijzingsgebied zal handelen. Nochtans, heeft het bronschema &quot;[!DNL Loyalty Members]&quot;geen specifiek gebied dat als verwijzing moet worden gebruikt, en moet een nieuwe gebiedsgroep worden gegeven die een nieuw gebied aan het schema toevoegt: `favoriteHotel`.
 
 >[!NOTE]
 >
 >Als uw bronschema reeds een specifiek gebied heeft dat u als verwijzingsgebied van plan bent te gebruiken, kunt u vooruit naar de stap overslaan op [creërend een verwijzingsbeschrijver](#reference-identity).
 
-### Een nieuwe mix maken
+### Een nieuwe veldgroep maken
 
-Als u een nieuw veld aan een schema wilt toevoegen, moet u dit eerst definiëren in een mix. U kunt een nieuwe mengeling tot stand brengen door een verzoek van de POST aan het `/tenant/mixins` eindpunt te doen.
+Als u een nieuw veld aan een schema wilt toevoegen, moet u dit eerst definiëren in een veldgroep. U kunt een nieuwe gebiedsgroep tot stand brengen door een verzoek van de POST aan het `/tenant/fieldgroups` eindpunt te richten.
 
 **API-indeling**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe mix gemaakt waarmee een veld `favoriteHotel` onder de naamruimte `_{TENANT_ID}` van een willekeurig schema wordt toegevoegd.
+Met de volgende aanvraag wordt een nieuwe veldgroep gemaakt waaraan een veld `favoriteHotel` wordt toegevoegd onder de naamruimte `_{TENANT_ID}` van een schema waaraan het wordt toegevoegd.
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -176,20 +176,20 @@ curl -X POST\
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van de zojuist gemaakte mix.
+Een geslaagde reactie retourneert de details van de nieuwe veldgroep.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ Een geslaagde reactie retourneert de details van de zojuist gemaakte mix.
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `$id` | De alleen-lezen, door het systeem gegenereerde unieke id van de nieuwe mix. De vorm van een URI. |
+| `$id` | De alleen-lezen, door het systeem gegenereerde unieke id van de nieuwe veldgroep. De vorm van een URI. |
 
-Registreer `$id` URI van de mix, die in de volgende stap van het toevoegen van de mix aan het bronschema moet worden gebruikt.
+Registreer `$id` URI van de gebiedsgroep, die in de volgende stap van het toevoegen van de gebiedsgroep aan het bronschema moet worden gebruikt.
 
-### De mix toevoegen aan het bronschema
+### De veldgroep toevoegen aan het bronschema
 
-Zodra u een mixin hebt gecreeerd, kunt u het aan het bronschema toevoegen door een verzoek van PATCH aan het `/tenant/schemas/{SCHEMA_ID}` eindpunt te doen.
+Zodra u een gebiedsgroep hebt gecreeerd, kunt u het aan het bronschema toevoegen door een verzoek van PATCH aan het `/tenant/schemas/{SCHEMA_ID}` eindpunt te doen.
 
 **API-indeling**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Verzoek**
 
-Het volgende verzoek voegt &quot;[!DNL Favorite Hotel]&quot;mengsel aan &quot;[!DNL Loyalty Members]&quot;schema toe.
+Het volgende verzoek voegt &quot;[!DNL Favorite Hotel]&quot;gebiedsgroep aan &quot;[!DNL Loyalty Members]&quot;schema toe.
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `op` | De uit te voeren PATCH-bewerking. Dit verzoek gebruikt de `add` verrichting. |
-| `path` | De weg aan het schemagebied waar het nieuwe middel zal worden toegevoegd. Wanneer u combinaties toevoegt aan schema&#39;s, moet de waarde &quot;/allOf/-&quot; zijn. |
-| `value.$ref` | De `$id` van de toe te voegen mix. |
+| `path` | De weg aan het schemagebied waar het nieuwe middel zal worden toegevoegd. Wanneer u veldgroepen toevoegt aan schema&#39;s, moet de waarde &quot;/allOf/-&quot; zijn. |
+| `value.$ref` | De `$id` van de veldgroep die moet worden toegevoegd. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van het bijgewerkte schema, dat nu de `$ref`-waarde van de toegevoegde mix onder de `allOf`-array bevat.
+Een geslaagde reactie retourneert de details van het bijgewerkte schema, dat nu de `$ref`-waarde van de toegevoegde veldgroep onder de `allOf`-array bevat.
 
 ```json
 {
@@ -300,13 +300,13 @@ Een geslaagde reactie retourneert de details van het bijgewerkte schema, dat nu 
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ Een geslaagde reactie retourneert de details van het bijgewerkte schema, dat nu 
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
