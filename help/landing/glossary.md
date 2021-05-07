@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '7131'
+source-wordcount: '7147'
 ht-degree: 0%
 
 ---
@@ -239,6 +239,8 @@ ht-degree: 0%
 
 **Veld**: Een gebied is het laagste niveauelement van een dataset, zoals die door het schema XDM van de dataset wordt bepaald. Elk veld heeft een naam voor verwijzingsdoeleinden en een type om het type gegevens aan te geven dat het bevat. Veldtypen kunnen gehele getallen, getallen, tekenreeksen, booleaanse getallen en objecten bevatten.
 
+**Veldgroep**: Zie &quot;Schema field group&quot;.
+
 **Veldlabels**: Veldlabels zijn labels voor gegevensbeheer die zijn overgeërfd van een gegevensset of die rechtstreeks op een veld zijn toegepast.
 
 **Veldnaam**: Een veldnaam wordt gebruikt om naar de waarde van een gebied in vragen en stroomafwaartse diensten te verwijzen.
@@ -323,7 +325,7 @@ ht-degree: 0%
 
 **Samenvoegbeleid**: Het beleid van de fusie is regels die het Experience Platform gebruikt om te bepalen hoe de fragmenten van klantengegevens van veelvoudige bronnen zullen worden gecombineerd om een individueel profiel tot stand te brengen. Wanneer een gegevensconflict voorkomt, bepaalt het fusiebeleid welke gegevens voor opneming in het profiel zouden moeten worden voorrang gegeven.
 
-**Mengsel**: In het Model van Gegevens van de Ervaring (XDM), staat een mengeling gebruikers toe om herbruikbare gebieden uit te breiden om één of meerdere attributen te bepalen voorgenomen om in een schema worden omvat.
+**Mengsel**: Zie &quot;Schema field group&quot;.
 
 **Module**: In  [!DNL Platform Launch]een module is een fragment van uitvoerbaar JavaScript dat door een extensie wordt geleverd. Hiermee worden handelingen in een clientomgeving uitgevoerd zonder dat een regel hoeft te worden gemaakt.
 
@@ -437,7 +439,9 @@ ht-degree: 0%
 
 **Scores**: Scores is het proces om inzichten van gegevens te produceren gebruikend een opgeleid model.
 
-**Schema**: Een schema is een set regels die de structuur en indeling van gegevens vertegenwoordigen en valideren. Een schema bestaat uit een klasse en optionele mix(s) en wordt gebruikt om gegevenssets en gegevensstromen te maken. Een schema kan gedragskenmerken, tijdstempels, identiteiten, kenmerkdefinities, relaties en meer bevatten.
+**Schema**: Een schema is een set regels die de structuur en indeling van gegevens vertegenwoordigen en valideren. Een schema bestaat uit een klasse en optionele veldgroep(en) en wordt gebruikt om gegevenssets en gegevensstromen te maken. Een schema kan gedragskenmerken, tijdstempels, identiteiten, kenmerkdefinities, relaties en meer bevatten.
+
+**Schema, veldgroep**: In het Model van Gegevens van de Ervaring (XDM), staat een groep van het schemagebied gebruikers toe om herbruikbare gebieden uit te breiden om één of meerdere attributen te bepalen voorgenomen om in een schema worden omvat.
 
 **Schemabibliotheek**: De schemabibliotheek bevat industrie-standaard XDM middelen die door Adobe, evenals douanemiddelen beschikbaar worden gemaakt die door uw organisatie worden bepaald.
 
