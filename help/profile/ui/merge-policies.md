@@ -6,9 +6,9 @@ type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2879'
 ht-degree: 0%
 
 ---
@@ -49,15 +49,15 @@ Aangezien profielverslagen in Experience Platform worden opgenomen, wordt een sy
 
 Soms zijn er gebruiksgevallen waarin het nodig is een aangepaste tijdstempel op te geven en het samenvoegbeleid de aangepaste tijdstempel moet gebruiken in plaats van de systeemtijdstempel. Voorbeelden hiervan zijn het terugvullen van gegevens of het garanderen van de juiste volgorde van gebeurtenissen als records buiten de bestelling worden opgenomen.
 
-Als u een aangepaste tijdstempel wilt gebruiken, moet **[!UICONTROL External Source System Audit Details Mixin]** worden toegevoegd aan uw profielschema. Nadat de aangepaste tijdstempel is toegevoegd, kan deze worden ingevuld met het veld `lastUpdatedDate`. Wanneer een verslag met het `lastUpdatedDate` gebied wordt opgenomen bevolkt, zal het Experience Platform dat gebied gebruiken om verslagen over datasets samen te voegen. Als `lastUpdatedDate` niet aanwezig, of niet bevolkt is, zal het Platform blijven gebruiken timestamp van het systeem.
+Als u een aangepaste tijdstempel wilt gebruiken, moet de schemaveldgroep **[!UICONTROL External Source System Audit Details]worden toegevoegd aan uw profielschema.** Nadat de aangepaste tijdstempel is toegevoegd, kan deze worden ingevuld met het veld `lastUpdatedDate`. Wanneer een verslag met het `lastUpdatedDate` gebied wordt opgenomen bevolkt, zal het Experience Platform dat gebied gebruiken om verslagen over datasets samen te voegen. Als `lastUpdatedDate` niet aanwezig, of niet bevolkt is, zal het Platform blijven gebruiken timestamp van het systeem.
 
 >[!NOTE]
 >
 >U moet ervoor zorgen dat de tijdstempel `lastUpdatedDate` wordt gevuld wanneer u een update in dezelfde record invoegt.
 
-In de volgende schermafbeelding worden de velden in de [!UICONTROL External Source System Audit Details Mixin] weergegeven. Voor geleidelijke instructies bij het werken met schema&#39;s die de interface van het Platform gebruiken, met inbegrip van hoe te om mengen aan schema&#39;s toe te voegen, gelieve [zelfstudie voor het creëren van een schema te bezoeken gebruikend UI](../../xdm/tutorials/create-schema-ui.md).
+In de volgende schermafbeelding worden de velden in de veldgroep [!UICONTROL External Source System Audit Details] weergegeven. Voor geleidelijke instructies bij het werken met schema&#39;s gebruikend het Platform UI, met inbegrip van hoe te om gebiedsgroepen aan schema&#39;s toe te voegen, gelieve [zelfstudie voor het creëren van een schema te bezoeken gebruikend UI](../../xdm/tutorials/create-schema-ui.md).
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 Als u met aangepaste tijdstempels wilt werken met de API, raadpleegt u de sectie [Bindpuntgids voor samenvoegbeleid bij het gebruik van aangepaste tijdstempels](../api/merge-policies.md#custom-timestamps).
 
