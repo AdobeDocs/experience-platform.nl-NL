@@ -2,14 +2,14 @@
 keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1123'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) [!DNL Airship Tags] verbinding {#airship-tags-destination}
 
@@ -43,7 +43,7 @@ Voordat u uw Adobe Experience Platform-segmenten kunt verzenden naar [!DNL Airsh
 
 ## Taggroepen
 
-Het concept van segmenten in het platform van de Ervaring van Adobe is gelijkaardig aan [Markeringen](https://docs.airship.com/guides/audience/tags/) in Airship, met lichte verschillen in implementatie. Door deze integratie wordt de status van een [lidmaatschap van een gebruiker in een Experience Platform segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) toegewezen aan de aanwezigheid of niet-aanwezigheid van een [!DNL Airship]-tag. Bijvoorbeeld, in een segment van het Platform waar `xdm:status` in `realized` verandert, wordt de markering toegevoegd aan [!DNL Airship] kanaal of genoemde gebruiker wordt dit profiel in kaart gebracht aan. Als `xdm:status` in `exited` verandert, wordt de markering verwijderd.
+Het concept van segmenten in het platform van de Ervaring van Adobe is gelijkaardig aan [Markeringen](https://docs.airship.com/guides/audience/tags/) in Airship, met lichte verschillen in implementatie. Door deze integratie wordt de status van een [lidmaatschap van een gebruiker in een Experience Platform segment](../../../xdm/field-groups/profile/segmentation.md) toegewezen aan de aanwezigheid of niet-aanwezigheid van een [!DNL Airship]-tag. Bijvoorbeeld, in een segment van het Platform waar `xdm:status` in `realized` verandert, wordt de markering toegevoegd aan [!DNL Airship] kanaal of genoemde gebruiker wordt dit profiel in kaart gebracht aan. Als `xdm:status` in `exited` verandert, wordt de markering verwijderd.
 
 Om deze integratie toe te laten, creeer een *markeringsgroep* in [!DNL Airship] genoemd `adobe-segments`.
 
@@ -109,7 +109,7 @@ Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segm
 
 ## Segmenten {#activate-segments} activeren
 
-Volg onderstaande stappen om segmenten te activeren op [!DNL Airship Tags]:
+Volg onderstaande stappen om segmenten te activeren naar [!DNL Airship Tags]:
 
 Selecteer in **[!UICONTROL Destinations > Browse]** de bestemming [!DNL Airship Tags] waar u de segmenten wilt activeren.
 
@@ -157,4 +157,3 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Fi
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Zie [Overzicht gegevensbeheer](../../../data-governance/home.md) voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt.
-
