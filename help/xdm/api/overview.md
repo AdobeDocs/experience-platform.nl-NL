@@ -6,9 +6,9 @@ description: Met de API voor het schemaregister kunnen ontwikkelaars programmati
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -29,25 +29,25 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naa
 
 ## Schemas
 
-De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat van gegevens die in Platform worden opgenomen. Een schema bestaat uit een klasse en nul of meer combinaties. U kunt schema&#39;s tot stand brengen, bekijken, uitgeven en schrappen gebruikend het `/schemas` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, zie [schemas eindgids](./schemas.md).
+De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat van gegevens die in Platform worden opgenomen. Een schema bestaat uit een klasse en nul of meer groepen schemavelden. U kunt schema&#39;s tot stand brengen, bekijken, uitgeven en schrappen gebruikend het `/schemas` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, zie [schemas eindgids](./schemas.md).
 
-Voor een geleidelijke gids op hoe te om een volledig schema in de Registratie API van het Schema tot stand te brengen, met inbegrip van het creëren van en het toevoegen van mengen en gegevenstypes, zie [API schemaverwezenlijking zelfstudie](../tutorials/create-schema-api.md).
+Voor een geleidelijke gids op hoe te om een volledig schema in de Registratie API van het Schema tot stand te brengen, met inbegrip van het creëren van en het toevoegen van gebiedsgroepen en gegevenstypes, zie [API schemaverwezenlijking zelfstudie](../tutorials/create-schema-api.md).
 
 ## Gedrag
 
-Het gedrag bepaalt de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie [eindpuntgids voor gedrag](./behaviors.md) om te leren hoe te om beschikbaar gedrag in API te bekijken.
+Gedragingen bepalen de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie [eindpuntgids voor gedrag](./behaviors.md) om te leren hoe te om beschikbaar gedrag in API te bekijken.
 
 ## Klassen
 
-Een klasse definieert de basisstructuur van gemeenschappelijke eigenschappen die alle schema&#39;s die op die klasse zijn gebaseerd, moeten bevatten en bepaalt welke mixins in aanmerking komen voor gebruik in die schema&#39;s. Elke klasse moet aan een bestaand gedrag worden geassocieerd. Zie [de gids van het klassen eindpunt](./classes.md) voor details bij het werken met klassen in API.
+Een klasse definieert de basisstructuur van gemeenschappelijke eigenschappen die alle schema&#39;s die op die klasse zijn gebaseerd, moeten bevatten en bepaalt welke veldgroepen in aanmerking komen voor gebruik in die schema&#39;s. Elke klasse moet aan een bestaand gedrag worden geassocieerd. Zie [de gids van het klassen eindpunt](./classes.md) voor details bij het werken met klassen in API.
 
-## Mixins
+## Veldengroepen
 
-Mixins zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Mixins zijn bedoeld om te worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Zie [mixins eindpuntgids](./mixins.md) om te leren hoe te met mixins in API werken.
+Veldgroepen zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Zie [de gids van het gebiedsgroepseindpunt](./field-groups.md) leren hoe te met gebiedsgroepen in API werken.
 
 ## Datatypen
 
-Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als velden van het verwijzingstype in klassen of mixen. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Hoewel gelijkaardig aan mengelingen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de mengelingen slechts op het wortelniveau kunnen worden toegevoegd. Zie [gegevenstypes eindgids](./data-types.md) voor meer informatie over het werken met gegevenstypes in API.
+Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als referentietypen in klassen of veldgroepen. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Hoewel gelijkaardig aan gebiedsgroepen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd. Zie [gegevenstypes eindgids](./data-types.md) voor meer informatie over het werken met gegevenstypes in API.
 
 ## Beschrijvers
 
@@ -61,7 +61,7 @@ Leren hoe te om vakbonden in de Registratie API van het Schema te bekijken, zie 
 
 ## Exporteren/importeren
 
-Met de API voor schemaregistratie kunt u XDM-bronnen overbrengen en delen tussen sandboxen en IMS-organisaties. Voor om het even welk schema, mengsel, of gegevenstype, kunt u een de uitvoerlading produceren die de structuur van het middel en om het even welke afhankelijke middelen bevat. Deze nuttige lading kan dan worden gebruikt om het middel in een bestemmingszandbak en IMS Org in te voeren.
+Met de API voor schemaregistratie kunt u XDM-bronnen overbrengen en delen tussen sandboxen en IMS-organisaties. Voor om het even welk schema, gebiedsgroep, of gegevenstype, kunt u een de uitvoerlading produceren die de structuur van het middel en om het even welke afhankelijke middelen bevat. Deze nuttige lading kan dan worden gebruikt om het middel in een bestemmingszandbak en IMS Org in te voeren.
 
 Zie [export/import eindpunten guide](./export-import.md) voor meer informatie over hoe te om deze eindpunten te gebruiken.
 
@@ -73,7 +73,7 @@ Zie [de gids van het eindpunt van steekproefgegevens](./sample-data.md) voor mee
 
 ## Controlelogboek
 
-De Registratie van het Schema handhaaft een logboek van alle veranderingen die aan een middel (klasse, mixin, gegevenstype, of schema) tussen verschillende updates zijn voorgekomen. U kunt het logboek voor een bepaalde middel terugwinnen door zijn `$id` of `meta:altId` in de weg van een verzoek van de GET aan dit eindpunt te verstrekken.
+De Registratie van het Schema handhaaft een logboek van alle veranderingen die aan een middel (klasse, gebiedsgroep, gegevenstype, of schema) tussen verschillende updates zijn voorgekomen. U kunt het logboek voor een bepaalde middel terugwinnen door zijn `$id` of `meta:altId` in de weg van een verzoek van de GET aan dit eindpunt te verstrekken.
 
 Zie [de eindpuntgids van het controlelogboek](./audit-log.md) voor meer informatie over het gebruik van dit eindpunt.
 
