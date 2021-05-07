@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van het milieu-XDM-gegevenstype.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '462'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 3%
 | `viewportHeight` | Geheel | De verticale grootte in pixels van het venster waarin de ervaring is weergegeven. Voor een webweergavegebeurtenis is dit de hoogte van de viewport van de browser. |
 | `viewPortWidth` | Geheel | De horizontale grootte in pixels van het venster waarin de ervaring is weergegeven. Voor een webweergavegebeurtenis is dit de breedte van de viewport van de browser. |
 
-Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de mix:
+Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
