@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van de definitieklasse Segment in het XDM (Experience Data Model).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Deze klasse zou slechts moeten worden gebruikt om informatie over segmentdefinities zelf te vangen. Om de informatie van het segmentlidmaatschap binnen uw profielgegevens te vangen, zou u [de Mengsel van de Details van het Lidmaatschap van het Segment](../mixins/profile/segmentation.md) in uw [!UICONTROL XDM Individual Profile] schema moeten gebruiken.
+>Deze klasse zou slechts moeten worden gebruikt om informatie over segmentdefinities zelf te vangen. Om de informatie van het segmentlidmaatschap binnen uw profielgegevens te vangen, zou u [het gebiedsgroep van de Details van het Lidmaatschap van het Segment](../field-groups/profile/segmentation.md) in uw [!UICONTROL XDM Individual Profile] schema moeten gebruiken.
 
 ![](../images/classes/segment-definition.png)
 
