@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2466'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ De gegevens van de toestemming van de klant moeten naar datasets worden verzonde
 
 Zodra u een [!DNL Profile]-Toegelaten dataset voor het verzamelen van toestemmingsgegevens hebt gecreeerd, moet u ervoor zorgen dat uw samenvoegingsbeleid is gevormd om TCF toestemmingsgebieden in uw klantenprofielen altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
-Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de gebruikersgids van het samenvoegingsbeleid](../../../../profile/ui/merge-policies.md). Wanneer het opstelling van uw fusieprincipe, moet u ervoor zorgen dat uw segmenten alle vereiste toestemmingsattributen omvatten die door [XDM privacymixin](./dataset.md#privacy-mixin) worden verstrekt, zoals die in de gids over datasetvoorbereiding worden geschetst.
+Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de gebruikersgids van het samenvoegingsbeleid](../../../../profile/ui/merge-policies.md). Wanneer het opzetten van uw samenvoegbeleid, moet u ervoor zorgen dat uw segmenten alle vereiste toestemmingsattributen omvatten die door de [XDM groep van het privacyschemagebied van het privacyschema worden verstrekt](./dataset.md#privacy-field-group), zoals die in de gids over datasetvoorbereiding wordt geschetst.
 
 ## De Web SDK van het Experience Platform integreren om gegevens voor klanttoestemming te verzamelen {#sdk}
 
@@ -196,7 +196,7 @@ U kunt TCF 2.0 toestemmingsgegevens over elke gebeurtenis ook verzamelen die in 
 
 >[!NOTE]
 >
->Als u deze methode wilt gebruiken, moet u [!DNL Experience Event Privacy mixin] aan uw [!DNL Profile]-toegelaten [!DNL XDM ExperienceEvent] schema hebben toegevoegd. Zie de sectie over [het bijwerken van het schema ExperienceEvent](./dataset.md#event-schema) in de gids van de datasetvoorbereiding voor stappen op hoe te om dit te vormen.
+>Als u deze methode wilt gebruiken, moet u de het gebiedsgroep van de Privacy van de Gebeurtenis van de Ervaring aan uw [!DNL Profile]-Toegelaten [!DNL XDM ExperienceEvent] schema hebben toegevoegd. Zie de sectie over [het bijwerken van het schema ExperienceEvent](./dataset.md#event-schema) in de gids van de datasetvoorbereiding voor stappen op hoe te om dit te vormen.
 
 De opdracht `sendEvent` moet worden gebruikt als een callback in de juiste gebeurtenislisteners op uw website. De opdracht verwacht twee argumenten: (1) een tekenreeks die het opdrachttype aangeeft (in dit geval `sendEvent`) en (2) een payload die een object `xdm` bevat dat de vereiste toestemmingsvelden bevat als JSON:
 
