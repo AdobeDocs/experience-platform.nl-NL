@@ -6,9 +6,9 @@ description: Leer de grondbeginselen van om schema's in het gebruikersinterface 
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Deze handleiding biedt een overzicht van het maken, bewerken en beheren van XDM-
 
 >[!IMPORTANT]
 >
->De schema&#39;s XDM zijn uiterst aanpasbaar, en daarom kunnen de stappen betrokken bij het creëren van een schema variëren afhankelijk van welk soort gegevens u het schema wilt vangen. Dientengevolge, behandelt dit document slechts de basisinteractie u met schema&#39;s in UI kunt maken, en sluit verwante stappen uit zoals het aanpassen van klassen, mixins, gegevenstypes, en gebieden uit.
+>De schema&#39;s XDM zijn uiterst aanpasbaar, en daarom kunnen de stappen betrokken bij het creëren van een schema variëren afhankelijk van welk soort gegevens u het schema wilt vangen. Dientengevolge, behandelt dit document slechts de basisinteractie u met schema&#39;s in UI kunt maken, en sluit verwante stappen uit zoals het aanpassen van klassen, groepen van het schemagebied, gegevenstypes, en gebieden.
 >
 >Voor een volledige tour van het proces van de schemaverwezenlijking, volg samen met [schemaverwezenlijking leerprogramma](../../tutorials/create-schema-ui.md) om een volledig voorbeeldschema tot stand te brengen en met de vele mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
 
@@ -37,7 +37,7 @@ Nadat u een klasse hebt geselecteerd, wordt [!DNL Schema Editor] weergegeven en 
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-U kunt nu beginnen de structuur van het schema te bouwen door [mixins](#add-mixins) toe te voegen.
+U kunt nu beginnen de structuur van het schema te bouwen door [groepen van het schemagebied toe te voegen](#add-field-groups).
 
 ## Bewerk een bestaand schema {#edit}
 
@@ -53,23 +53,23 @@ Als u een bestaand schema wilt bewerken, selecteert u het tabblad **[!UICONTROL 
 >
 >Met de zoek- en filtermogelijkheden van de werkruimte kunt u het schema gemakkelijker vinden. Zie de handleiding bij [het verkennen van XDM-bronnen](../explore.md) voor meer informatie.
 
-Nadat u een schema hebt geselecteerd, wordt [!DNL Schema Editor] weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [mixins](#add-mixins) aan het schema toevoegen, [namen van veldvertoningen bewerken](#display-names), of [bestaande aangepaste mixins](./mixins.md#edit) bewerken als het schema een van deze mixins gebruikt.
+Nadat u een schema hebt geselecteerd, wordt [!DNL Schema Editor] weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [veldgroepen toevoegen](#add-field-groups) aan het schema, [namen van veldvertoningen bewerken](#display-names) of [bestaande aangepaste veldgroepen bewerken](./field-groups.md#edit) als het schema een van de volgende toepassingen gebruikt.
 
-## Mixingen toevoegen aan een schema {#add-mixins}
+## Veldgroepen toevoegen aan een schema {#add-field-groups}
 
 >[!NOTE]
 >
->Deze sectie behandelt hoe te om bestaande mengelingen aan een schema toe te voegen. Als u een nieuwe douanemix wilt tot stand brengen, zie de gids op [creërend en het uitgeven mixins](./mixins.md#create) in plaats daarvan.
+>In deze sectie wordt beschreven hoe u bestaande veldgroepen aan een schema kunt toevoegen. Als u een nieuwe aangepaste veldgroep wilt maken, raadpleegt u de handleiding bij [het maken en bewerken van veldgroepen](./field-groups.md#create).
 
-Nadat u een schema hebt geopend in het [!DNL Schema Editor], kunt u velden aan het schema toevoegen met behulp van mixins. Selecteer **[!UICONTROL Add]** naast **[!UICONTROL Mixins]** in de linkertrack om te beginnen.
+Nadat u een schema hebt geopend in de [!DNL Schema Editor], kunt u velden toevoegen aan het schema door veldgroepen te gebruiken. Selecteer **[!UICONTROL Add]** naast **[!UICONTROL Field groups]** in de linkertrack om te beginnen.
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
-Er wordt een dialoogvenster weergegeven met een lijst met combinaties die u voor het schema kunt selecteren. Aangezien mixins slechts met één klasse compatibel zijn, slechts zullen die mengen die met de geselecteerde klasse van het schema worden geassocieerd worden vermeld. Standaard worden vermelde mixen gesorteerd op basis van hun populariteit in uw organisatie.
+Er wordt een dialoogvenster weergegeven met een lijst met veldgroepen die u voor het schema kunt selecteren. Aangezien de gebiedsgroepen slechts met één klasse compatibel zijn, slechts die gebiedsgroepen die met de geselecteerde klasse van het schema worden geassocieerd zullen worden vermeld. Standaard worden vermelde veldgroepen gesorteerd op basis van hun populariteit in uw organisatie.
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-Als u de algemene activiteit of het bedrijfsgebied van de mixingebieden kent u wilt toevoegen, selecteer één of meerdere industrie verticale categorieën in de linkerspoorstaaf om de getoonde lijst van mengen te filtreren.
+Als u de algemene activiteit of het bedrijfsgebied van de gebieden kent u wilt toevoegen, selecteer één of meerdere industrie verticale categorieën in de linkerspoorstaaf om de getoonde lijst van gebiedsgroepen te filtreren.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -77,25 +77,25 @@ Als u de algemene activiteit of het bedrijfsgebied van de mixingebieden kent u w
 >
 >Voor meer informatie over beste praktijken voor industrie-specifieke gegevensmodellering in XDM, zie de documentatie over [de modellen van industriegegevens](../../schema/industries/overview.md).
 
-U kunt de zoekbalk ook gebruiken om te helpen de gewenste mix te vinden. De mengsels de waarvan naam de vraag aanpast verschijnen bij de bovenkant van de lijst. Onder **[!UICONTROL Standard Fields]** worden combinaties weergegeven die velden bevatten die de gewenste gegevenskenmerken beschrijven.
+U kunt de zoekbalk ook gebruiken om de gewenste veldgroep te zoeken. Veldgroepen waarvan de naam overeenkomt met de query, worden boven in de lijst weergegeven. Onder **[!UICONTROL Standard Fields]** worden veldgroepen weergegeven die velden bevatten die de gewenste gegevenskenmerken beschrijven.
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/field-group-search.png)
 
-Schakel het selectievakje in naast de naam van de mix die u aan het schema wilt toevoegen. U kunt meerdere mixen selecteren in de lijst, waarbij elke geselecteerde mix wordt weergegeven in de rechtertrack.
+Schakel het selectievakje in naast de naam van de veldgroep die u aan het schema wilt toevoegen. U kunt meerdere veldgroepen in de lijst selecteren, waarbij elke geselecteerde veldgroep in de rechtertrack verschijnt.
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->Voor elke vermelde mix kunt u de muis boven het informatiepictogram (![](../../images/ui/resources/schemas/info-icon.png)) houden of erop focussen om een korte beschrijving weer te geven van het type gegevens dat door de mix wordt vastgelegd. U kunt het voorproefpictogram (![](../../images/ui/resources/schemas/preview-icon.png)) ook selecteren om de structuur van de gebieden te bekijken die de mengeling verstrekt alvorens u besluit om het aan het schema toe te voegen.
+>Voor elke vermelde veldgroep kunt u het informatiepictogram (![](../../images/ui/resources/schemas/info-icon.png)) aanwijzen of activeren om een korte beschrijving weer te geven van het type gegevens dat de veldgroep vastlegt. U kunt het voorvertoningspictogram (![](../../images/ui/resources/schemas/preview-icon.png)) ook selecteren om de structuur van de gebieden te bekijken die de gebiedsgroep verstrekt alvorens u besluit om het aan het schema toe te voegen.
 
-Nadat u de mixins hebt gekozen, selecteert u **[!UICONTROL Add mixin]** om deze aan het schema toe te voegen.
+Nadat u de veldgroepen hebt gekozen, selecteert u **[!UICONTROL Add field groups]** om deze aan het schema toe te voegen.
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-De [!DNL Schema Editor] verschijnt opnieuw met de mixin-geleverde gebieden die in het canvas worden vertegenwoordigd.
+De [!DNL Schema Editor] verschijnt opnieuw met de door de veld-groep verschafte velden die op het canvas worden weergegeven.
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## Een schema inschakelen voor realtime klantprofiel {#profile}
 
@@ -127,11 +127,11 @@ Het schema is nu ingeschakeld voor gebruik in het Real-time profiel van de Klant
 
 ## Geef vertoningsnamen voor schemagebieden {#display-names} uit
 
-Zodra u een klasse hebt toegewezen en mengsels aan een schema toegevoegd, kunt u de vertoningsnamen van om het even welk van de gebieden van het schema uitgeven, ongeacht of die gebieden door standaard of douaneXDM middelen zijn verstrekt.
+Nadat u een klasse hebt toegewezen en veldgroepen aan een schema hebt toegevoegd, kunt u de weergavenamen van de velden van een schema bewerken, ongeacht of die velden zijn voorzien door standaard- of aangepaste XDM-bronnen.
 
 >[!NOTE]
 >
->Onthoud dat de weergavenamen van velden die tot standaardklassen of -mixen behoren, alleen kunnen worden bewerkt in de context van een specifiek schema. Met andere woorden, het veranderen van de vertoningsnaam van een standaardgebied in één schema beïnvloedt andere schema&#39;s niet die de zelfde bijbehorende klasse of de combinatie gebruiken.
+>Onthoud dat de weergavenamen van velden die tot standaardklassen of -veldgroepen behoren, alleen kunnen worden bewerkt in de context van een specifiek schema. Met andere woorden, het veranderen van de vertoningsnaam van een standaardgebied in één schema beïnvloedt andere schema&#39;s niet die de zelfde bijbehorende klasse of de gebiedsgroep gebruiken.
 
 Als u de weergavenaam van een schemaveld wilt bewerken, selecteert u het veld op het canvas. Geef in de rechtertrack de nieuwe naam op onder **[!UICONTROL Display name]**.
 
@@ -147,7 +147,7 @@ U kunt de klasse van een schema op om het even welk punt tijdens het aanvankelij
 
 >[!WARNING]
 >
->Het opnieuw toewijzen van de klasse voor een schema zou met uiterste voorzichtigheid moeten worden gedaan. Mixins zijn alleen compatibel met bepaalde klassen en als u de klasse wijzigt, worden het canvas en alle toegevoegde velden opnieuw ingesteld.
+>Het opnieuw toewijzen van de klasse voor een schema zou met uiterste voorzichtigheid moeten worden gedaan. Veldgroepen zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle velden die u hebt toegevoegd opnieuw ingesteld.
 
 Als u een klasse opnieuw wilt toewijzen, selecteert u **[!UICONTROL Assign]** aan de linkerkant van het canvas.
 
@@ -167,7 +167,7 @@ Nadat de klassewijziging is bevestigd, wordt het canvas opnieuw ingesteld en gaa
 
 ## Volgende stappen
 
-In dit document worden de basisbeginselen van het maken en bewerken van schema&#39;s besproken in de gebruikersinterface van het Platform. Het wordt sterk geadviseerd dat u [schemaverwezenlijking leerprogramma](../../tutorials/create-schema-ui.md) voor een uitvoerige werkschema voor het bouwen van een volledig schema in UI, met inbegrip van het creëren van douanemengsels en gegevenstypes voor unieke gebruiksgevallen herzien.
+In dit document worden de basisbeginselen van het maken en bewerken van schema&#39;s besproken in de gebruikersinterface van het Platform. Het wordt sterk geadviseerd dat u [schemaverwezenlijking leerprogramma](../../tutorials/create-schema-ui.md) voor een uitvoerige werkschema voor het bouwen van een volledig schema in UI, met inbegrip van het creëren van de groepen van het douanegebied en gegevenstypes voor unieke gebruiksgevallen controleert.
 
 Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie [[!UICONTROL Schemas] werkruimteoverzicht](../overview.md).
 
