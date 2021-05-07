@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van het veld Algemene marketingvoorkeur met XDM-gegevenstypen voor abonnementen.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md) als basislijn.
+>Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] gebiedsgroep](../field-groups/profile/consents.md) als basislijn.
 >
 >Als u geen `subscriptions` kaart voor een bepaald marketing voorkeurgebied vereist, kunt u [basistabel van het marketing gebiedsgegevenstype ](./marketing-field.md) in plaats daarvan gebruiken.
 
