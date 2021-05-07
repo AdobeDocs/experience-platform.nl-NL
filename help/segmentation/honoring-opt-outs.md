@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform staat uw klanten toe om "opt-out" verzoeken betreffende het gebruik en de opslag van hun gegevens binnen het profiel van de Klant in real time te verzenden []. Deze "opt-out"-verzoeken maken deel uit van de California Consumer Privacy Act (CCPA), die de inwoners van Californië het recht geeft toegang te krijgen tot hun persoonsgegevens en deze te verwijderen en te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie).
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -28,33 +28,33 @@ Voor het naleven van de &quot;opt-out&quot;-verzoeken is een goed begrip van de 
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Helpt organisaties om naleving van de regels van de gegevensprivacy te automatiseren die klantengegevens binnen impliceren  [!DNL Platform].
 
-## Opt-out-mixen
+## Schema-veldgroepen uitschakelen
 
-Om uit CCPA te respecteren opt-out verzoeken, moet één van de schema&#39;s die een deel van het unieschema uitmaken de noodzakelijke [!DNL Experience Data Model] (XDM) opt-out gebieden bevatten. Er zijn twee combinaties die kunnen worden gebruikt om opt-outvelden toe te voegen aan een schema. Elk van deze combinaties wordt nader beschreven in de volgende secties:
+Om uit CCPA te respecteren opt-out verzoeken, moet één van de schema&#39;s die een deel van het unieschema uitmaken de noodzakelijke [!DNL Experience Data Model] (XDM) opt-out gebieden bevatten. Er zijn twee groepen van het schemagebied die kunnen worden gebruikt om opt-out gebieden aan een schema toe te voegen, elk wordt behandeld meer in detail in de secties die volgen:
 
 - [Profielprivacy](#profile-privacy): Wordt gebruikt om verschillende soorten opt-out vast te leggen (algemeen of verkoop/delen).
 - [Profielvoorkeuren — Details](#profile-preferences-details): Wordt gebruikt voor het vastleggen van optieverzoeken voor specifieke XDM-kanalen.
 
-Voor geleidelijke instructies op hoe te om een mengeling aan een schema toe te voegen, gelieve te verwijzen naar de &quot;Add a mixin&quot;sectie in de volgende XDM documentatie:
+Voor geleidelijke instructies op hoe te om een gebiedsgroep aan een schema toe te voegen, gelieve te verwijzen naar de sectie &quot;voeg een gebiedsgroep&quot;in de volgende XDM documentatie toe:
 - [Zelfstudie](../xdm/api/getting-started.md) voor schema Registry API.: Een schema maken met de API voor schemaregistratie.
 - [Zelfstudie](../xdm/tutorials/create-schema-ui.md) Schema-editor: Een schema maken met behulp van de gebruikersinterface van het Platform.
 
-Hier ziet u een voorbeeld van de mix van de optie Weigeren die in de gebruikersinterface aan een schema wordt toegevoegd:
+Hier volgt een voorbeeld van een afbeelding waarin de groepen met uitschakelvelden worden weergegeven die in de gebruikersinterface aan een schema zijn toegevoegd:
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-De structuur van elke mix en een beschrijving van de velden die deze bijdragen aan het schema worden in de volgende secties nader beschreven.
+De structuur van elke veldgroep en een beschrijving van de velden die zij aan het schema toevoegen, worden in de volgende secties nader beschreven.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-Met de [!DNL Profile Privacy]-mix kunt u twee soorten CCPA-opt-out-verzoeken van klanten vastleggen:
+Met de veldgroep [!DNL Profile Privacy] kunt u twee soorten CCPA-verzoeken van klanten afvangen:
 
 1. Algemene opt-out
 2. Optie voor verkopen/delen
 
 ![](images/opt-outs/profile-privacy.png)
 
-De [!DNL Profile Privacy]-mix bevat de volgende velden:
+De [!DNL Profile Privacy] gebiedsgroep bevat de volgende gebieden:
 
 - Privacy opt-Outs (`privacyOptOuts`): Een array met een lijst met opt-out-objecten.
 - Type uitknop (`optOutType`): Het type opt-out. Dit veld is een opsomming met twee mogelijke waarden:
@@ -67,15 +67,15 @@ De [!DNL Profile Privacy]-mix bevat de volgende velden:
    - Inschakelen (`in`): De klant heeft zich aangemeld.
 - Tijdstempel uitschakelen (`timestamp`): Tijdstempel van het ontvangen opt-out-signaal.
 
-Als u de volledige structuur van de [!DNL Profile Privacy]-mix wilt weergeven, raadpleegt u de [XDM public GitHub-opslagruimte](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) of bekijkt u een voorvertoning van de mix met behulp van de Platform-UI.
+Om de volledige structuur van de [!DNL Profile Privacy] gebiedsgroep te bekijken, gelieve te verwijzen naar [XDM openbare bewaarplaats GitHub](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) of voorproef de gebiedsgroep gebruikend het Platform UI.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-De combinatie [!DNL Profile Preferences Details] biedt verschillende velden die voorkeuren voor klantprofielen vertegenwoordigen (zoals e-mailindeling, voorkeurstaal en tijdzone). Een van de velden in deze mix, OptInOut (`optInOut`), maakt het mogelijk de waarden voor de optie om te weigeren in te stellen voor afzonderlijke kanalen.
+De veldgroep [!DNL Profile Preferences Details] bevat verschillende velden die voorkeuren voor klantprofielen vertegenwoordigen (zoals e-mailindeling, voorkeurstaal en tijdzone). In een van de velden in deze veldgroep, OptInOut (`optInOut`), kunnen de waarden voor de optie om te weigeren worden ingesteld voor afzonderlijke kanalen.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-De [!DNL Profile Preferences Details]-mix bevat de volgende velden met betrekking tot opt-outs:
+De [!DNL Profile Preferences Details]-veldgroep bevat de volgende velden met betrekking tot opt-outs:
 
 - OptInOut (`optInOut`): Een object waarbij elke sleutel een geldige en bekende URI voor een communicatiekanaal vertegenwoordigt en de actieve status van de opt-out voor elk kanaal. Elk kanaal kan een van vier mogelijke waarden hebben:
    - Niet opgegeven (`not_provided`): Er is geen verzoek om te weigeren ingediend voor dit kanaal.
@@ -100,7 +100,7 @@ In het onderstaande voorbeeld ziet u hoe het OptInOut-object meerdere optiesigna
 }
 ```
 
-Als u de volledige structuur van de combinatie Details van de profielvoorkeuren wilt bekijken, gaat u naar de [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) of bekijkt u een voorvertoning van de mix met de [!DNL Platform] UI.
+Om de volledige structuur van de het gebiedsgroep van Details van de Voorkeur van het Profiel te bekijken, gelieve [XDM openbare bewaarplaats GitHub](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) of voorproef de gebiedsgroep gebruikend [!DNL Platform] UI.
 
 ## Afhandeling van opt-outs in segmentatie
 
