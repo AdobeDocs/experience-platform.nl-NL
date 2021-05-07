@@ -1,15 +1,15 @@
 ---
 title: Voorkeuren voor toestemming van de klant ondersteunen met de Adobe Experience Platform Web SDK
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK.
-keywords: toestemming;defaultConsent;defaultConsent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
+keywords: toestemming;defaultConsent;default toestemming;setConsent;Profile Privacy field group;Experience Event Privacy field group;Privacy field group;
+exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
 translation-type: tm+mt
-source-git-commit: dd9101079a1093c109f43b268a78c07770221156
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
-
 
 # Voorkeuren voor toestemming van klanten ondersteunen
 
@@ -54,7 +54,7 @@ De SDK ondersteunt versies 1.0 en 2.0 van de Adobe Experience Platform toestemmi
 
 ### De Adobe-standaardversie 2.0 gebruiken
 
-Als u Adobe Experience Platform gebruikt, moet u een privacymix opnemen in uw profielschema. Zie [Beheer, privacy en beveiliging in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) voor meer informatie over de standaardversie van Adobe 2.0. U kunt gegevens toevoegen binnen het waardeobject hieronder die overeenkomen met het schema van het veld `consents` van de profielmix van Inhoud en Voorkeuren.
+Als u Adobe Experience Platform gebruikt, moet u een privacyschemaveldgroep opnemen in uw profielschema. Zie [Beheer, privacy en beveiliging in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) voor meer informatie over de standaardversie van Adobe 2.0. U kunt gegevens toevoegen binnen het waardeobject hieronder die overeenkomen met het schema van het veld `consents` van de profielgroep van Inhoud en voorkeuren.
 
 Als de gebruiker binnen kiest, voer `setConsent` bevel met de inzamelingsvoorkeur uit die aan `y` wordt geplaatst als volgt:
 
@@ -147,7 +147,7 @@ alloy("setConsent", {
 });
 ```
 
-Wanneer de toestemming op deze manier wordt geplaatst, wordt het Profiel van de Klant in real time bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het profiel-XDM-schema de [Profile Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) bevat. Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, moet [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) aan het schema van de Gebeurtenis van de Ervaring worden toegevoegd.
+Wanneer de toestemming op deze manier wordt geplaatst, wordt het Profiel van de Klant in real time bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het profiel-XDM-schema de veldgroep [Profielprivacy bevat. ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, moet [de het gebiedsgroep van de Privacy van de Gebeurtenis van de Ervaring ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) aan het schema van de Gebeurtenis van de Ervaring worden toegevoegd.
 
 ## Meerdere standaarden verzenden in één aanvraag
 
@@ -184,4 +184,3 @@ U moet de gebruikersvoorkeuren afzonderlijk opslaan om het bevestigingsvenster m
 ## Identiteiten synchroniseren tijdens instellen van toestemming
 
 Wanneer de standaardtoestemming hangende of uit is, `setConsent` kan het eerste verzoek zijn dat uit gaat en identiteit vestigt. Daarom kan het belangrijk zijn om identiteiten op het eerste verzoek te synchroniseren. De identiteitskaart kan aan `setConsent` bevel enkel als op &lt;a1 worden toegevoegd/> bevel. `sendEvent` Zie [Experience Cloud-id ophalen](../identity/overview.md)
-
