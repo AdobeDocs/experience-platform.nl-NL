@@ -6,14 +6,21 @@ description: Het /mixins eindpunt in de Registratie API van het Schema staat u t
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
 
-# Mixins, eindpunt
+
+# Mixins, eindpunt (afgekeurd)
+
+>[!IMPORTANT]
+>
+>Mixins zijn hernoemd aan schemagebiedgroepen, en daarom is het `/mixins` eindpunt verouderd ten gunste van het `/fieldgroups` eindpunt.
+>
+>Terwijl `/mixins` als erfeniseindpunt zal blijven worden gehandhaafd, wordt het sterk geadviseerd dat u `/fieldgroups` voor nieuwe implementaties van de Registratie API van het Schema in uw ervaringstoepassingen gebruikt. Zie [eindgids voor veldgroepen](./field-groups.md) voor meer informatie.
 
 Mixins zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Mixins zijn bedoeld om te worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Het `/mixins` eindpunt in [!DNL Schema Registry] API staat u toe om mengen binnen uw ervaringstoepassing programmatically te beheren.
 
@@ -154,7 +161,7 @@ Een succesvolle reactie retourneert de details van de mix. Welke velden worden g
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een lading die de
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ Een succesvolle reactie retourneert de details van de bijgewerkte mix.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -621,7 +628,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
