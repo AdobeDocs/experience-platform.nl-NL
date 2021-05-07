@@ -3,12 +3,12 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Hoe te om een Berekend Veld van Attributen te vormen
 topic-legacy: guide
 type: Documentation
-description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit gebied kan worden gecreeerd gebruikend de Registratie API van het Schema om een schema en een douanemix te bepalen die het gegevens verwerkte attributengebied zullen houden.
+description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit gebied kan worden gecreeerd gebruikend de Registratie API van het Schema om een schema en een groep van het douanegebied te bepalen die het gegevens verwerkte attributengebied zal houden.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -19,33 +19,33 @@ ht-degree: 0%
 >
 >De functie voor berekende kenmerken bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit gebied kan worden gecreeerd gebruikend de Registratie API van het Schema om een schema en een douanemix te bepalen die het gegevens verwerkte attributengebied zullen houden. Het wordt aanbevolen een apart schema en een combinatie van &quot;berekende kenmerken&quot; te maken waarin uw organisatie alle kenmerken kan toevoegen die als berekende kenmerken moeten worden gebruikt. Dit laat uw organisatie toe om het gegevens verwerkte attributenschema van andere schema&#39;s schoon te scheiden die voor gegevensopname worden gebruikt.
+Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit gebied kan worden gecreeerd gebruikend de Registratie API van het Schema om een schema en een groep van het douaneschemagebied te bepalen die het gegevens verwerkte attributengebied zal houden. Het wordt aanbevolen een apart schema en een veldgroep met &quot;berekende kenmerken&quot; te maken waarin uw organisatie alle kenmerken kan toevoegen die als berekende kenmerken moeten worden gebruikt. Dit laat uw organisatie toe om het gegevens verwerkte attributenschema van andere schema&#39;s schoon te scheiden die voor gegevensopname worden gebruikt.
 
-Het werkschema in dit document schetst hoe te om de Registratie API van het Schema te gebruiken om een profiel-toegelaten &quot;Berekend Attribuut&quot;schema tot stand te brengen dat verwijzingen een douanemix. Dit document bevat voorbeeldcode die specifiek is voor berekende kenmerken, maar raadpleeg de [Handleiding voor de registratie-API voor schema](../../xdm/api/overview.md) voor gedetailleerde informatie over het definiëren van combinaties en schema&#39;s met behulp van de API.
+De workflow in dit document schetst hoe u de API voor het schemaregister kunt gebruiken om een profiel-ingeschakeld schema &quot;Berekend kenmerk&quot; te maken dat verwijst naar een aangepaste veldgroep. Dit document bevat voorbeeldcode die specifiek is voor berekende kenmerken, maar raadpleeg de [Handleiding voor schemaregistratie-API](../../xdm/api/overview.md) voor gedetailleerde informatie over het definiëren van veldgroepen en schema&#39;s met behulp van de API.
 
-## Een mix van berekende kenmerken maken
+## Een veldgroep met berekende kenmerken maken
 
-Om een mengeling tot stand te brengen die de Registratie API van het Schema gebruikt, begin door een verzoek van de POST aan het `/tenant/mixins` eindpunt te doen en de details van de mix in het verzoeklichaam te verstrekken. Voor details betreffende het werken met mixins gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [mixins API eindpuntgids](../../xdm/api/mixins.md).
+Om een gebiedsgroep tot stand te brengen die de Registratie API van het Schema gebruikt, begin door een verzoek van de POST aan het `/tenant/fieldgroups` eindpunt te doen en de details van de gebiedsgroep in het verzoeklichaam te verstrekken. Voor details betreffende het werken met gebiedsgroepen die de Registratie API van het Schema gebruiken, gelieve te verwijzen naar [de eindpuntgids van de gebiedsgroepen API](../../xdm/api/field-groups.md).
 
 **API-indeling**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Verzoek**
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
-        "title":"Computed Attributes Mixin",
-        "description":"Description of the mixin.",
+        "title":"Computed Attributes Field Group",
+        "description":"Description of the field group.",
         "type":"object",
         "meta:extensible": true,
         "meta:abstract": true,
@@ -53,7 +53,7 @@ curl -X POST \
           "https://ns.adobe.com/xdm/context/profile"
         ],
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -72,7 +72,7 @@ curl -X POST \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -80,24 +80,24 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `title` | De naam van de mix die u maakt. |
-| `meta:intendedToExtend` | De klasse XDM waarmee de mix kan worden gebruikt. |
+| `title` | De naam van de veldgroep die u maakt. |
+| `meta:intendedToExtend` | De klasse XDM waarmee de veldgroep kan worden gebruikt. |
 
 **Antwoord**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de zojuist gemaakte mix, zoals `$id`, `meta:altIt` en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de nieuwe veldgroep, inclusief `$id`, `meta:altIt` en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of the mixin.",
+  "description": "Description of the field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -116,7 +116,7 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -145,16 +145,16 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
 }
 ```
 
-## Mengfunctie bijwerken met extra berekende kenmerken
+## Veldgroep bijwerken met extra berekende kenmerken
 
-Aangezien meer gegevens verwerkte attributen nodig zijn, kunt u de gegevens verwerkte attributenmengeling met extra attributen bijwerken door een PUT te verzoeken om het `/tenant/mixins` eindpunt. Dit verzoek vereist u om unieke identiteitskaart van de mengeling te omvatten die u in de weg en alle nieuwe gebieden creeerde die u in het lichaam wilt toevoegen.
+Aangezien meer gegevens verwerkte attributen nodig zijn, kunt u de gegevens verwerkte groep van het attributengebied met extra attributen bijwerken door een verzoek van de PUT aan het `/tenant/fieldgroups` eindpunt te doen. Voor deze aanvraag moet u de unieke id opnemen van de veldgroep die u in het pad hebt gemaakt en alle nieuwe velden die u in de hoofdtekst wilt toevoegen.
 
-Voor meer informatie betreffende het bijwerken van een mixin gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [mixins API eindpuntgids](../../xdm/api/mixins.md).
+Voor meer informatie betreffende het bijwerken van een gebiedsgroep gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [de eindpuntgids van de gebiedsgroepen API](../../xdm/api/field-groups.md).
 
 **API-indeling**
 
 ```http
-PUT /tenant/mixins/{MIXIN_ID}
+PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 **Verzoek**
@@ -163,11 +163,11 @@ Dit verzoek voegt nieuwe gebieden met betrekking tot `purchaseSummary` informati
 
 >[!NOTE]
 >
->Wanneer het bijwerken van een mengeling door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die worden vereist wanneer het creëren van een nieuwe mengeling in een verzoek van de POST.
+>Wanneer het bijwerken van een gebiedsgroep door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die worden vereist wanneer het creëren van een nieuwe gebiedsgroep in een verzoek van de POST.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -175,15 +175,15 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
-        "title": "Computed Attributes Mixin",
+        "title": "Computed Attributes Field Group",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [
           "https://ns.adobe.com/xdm/context/profile"
         ],
-        "description": "Description of mixin.",
+        "description": "Description of field group.",
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -222,7 +222,7 @@ curl -X PUT \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -230,19 +230,19 @@ curl -X PUT \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details van de bijgewerkte mix.
+Met een geslaagde reactie worden de details van de bijgewerkte veldgroep geretourneerd.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of mixin.",
+  "description": "Description of field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -281,7 +281,7 @@ Een succesvolle reactie retourneert de details van de bijgewerkte mix.
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -324,7 +324,7 @@ POST /tenants/schemas
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuw schema dat verwijzingen `computedAttributesMixin` eerder in dit document (gebruikend zijn unieke identiteitskaart) wordt gecreeerd en voor het de unieschema van het Profiel (gebruikend `meta:immutableTags` serie) wordt toegelaten. Voor gedetailleerde instructies op hoe te om een schema tot stand te brengen gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [schema&#39;s API eindpuntgids](../../xdm/api/schemas.md).
+Het volgende verzoek leidt tot een nieuw schema dat verwijzingen `computedAttributesFieldGroup` eerder in dit document (gebruikend zijn unieke identiteitskaart) wordt gecreeerd en voor het de unieschema van het Profiel (gebruikend `meta:immutableTags` serie) wordt toegelaten. Voor gedetailleerde instructies op hoe te om een schema tot stand te brengen gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [schema&#39;s API eindpuntgids](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -345,7 +345,7 @@ curl -X POST \
         "meta:extends": [
           "https://ns.adobe.com/xdm/context/profile",
           "https://ns.adobe.com/xdm/context/identitymap",
-          "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+          "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
         ],
         "description": "Description of schema.",
         "definitions": {
@@ -358,7 +358,7 @@ curl -X POST \
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
           },
           {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
           }
         ],
         "meta:class": "https://ns.adobe.com/xdm/context/profile"
@@ -391,7 +391,7 @@ Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die 
       "meta:xdmType": "object"
     },
     {
-      "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+      "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -399,7 +399,7 @@ Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die 
   "refs": [
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "imsOrg": "{IMS_ORG}",
   "meta:extensible": false,
@@ -409,7 +409,7 @@ Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die 
     "https://ns.adobe.com/xdm/data/record",
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "meta:xdmType": "object",
   "meta:registryMetadata": {
@@ -435,4 +435,4 @@ Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die 
 
 ## Volgende stappen
 
-Nu u een schema en een mengeling hebt gecreeerd waarin uw gegevens verwerkte attributen zullen worden opgeslagen, kunt u de gegevens verwerkte attributen tot stand brengen gebruikend het `/computedattributes` API eindpunt. Voor gedetailleerde stappen aan het creëren van een gegevens verwerkt attribuut in API, volg de stappen die in [gegevens verwerkte attributen API eindpuntgids](ca-api.md) worden verstrekt.
+Nu u een schema en gebiedsgroep hebt gecreeerd waarin uw gegevens verwerkte attributen zullen worden opgeslagen, kunt u de gegevens verwerkte attributen tot stand brengen gebruikend het `/computedattributes` API eindpunt. Voor gedetailleerde stappen aan het creëren van een gegevens verwerkt attribuut in API, volg de stappen die in [gegevens verwerkte attributen API eindpuntgids](ca-api.md) worden verstrekt.
