@@ -6,7 +6,7 @@ topic-legacy: Getting started
 description: De volgende gidsen vereisen een inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het gebruiken van Attribution AI. Lees de volgende documenten voordat u de zelfstudies start.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De volgende gidsen vereisen een inzicht in de diverse [!DNL Adobe Experience Pla
 - [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Dit document verstrekt een inleiding aan de schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) en de bouwstenen, beginselen, en beste praktijken voor het samenstellen van schema&#39;s die binnen moeten worden gebruikt  [!DNL Adobe Experience Platform].
 - [Gebouwenschema&#39;s](../../xdm/tutorials/create-schema-ui.md): Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 
-Attribution AI vereist datasets om met het schema van de Gebeurtenissen van de Ervaring van de Consumenten (CEE) in overeenstemming te zijn, dat een mengeling in [het Model van de Gegevens van de Ervaring ](../../xdm/home.md) (XDM) is. Neem contact op met de ondersteuning van Adobe op attributionai-support@adobe.com om deze gegevens te implementeren of te wijzigen. Als er gegevens over mediaconcentages aanwezig zijn, kunt u verdere analyses uitvoeren, zoals incrementele inkomsten en ROI. Als de gegevens van het klantenprofiel beschikbaar zijn, kunt u kredieten aan het niveau van het klantenprofiel verder toeschrijven.
+Attribution AI vereist datasets om met het schema van de Gebeurtenissen van de Ervaring van de Consument (CEE) in overeenstemming te zijn, dat een [Gegevensmodel van de Ervaring (XDM)](../../xdm/home.md) schemagebiedgroep is. Neem contact op met de ondersteuning van Adobe op attributionai-support@adobe.com om deze gegevens te implementeren of te wijzigen. Als er gegevens over mediaconcentages aanwezig zijn, kunt u verdere analyses uitvoeren, zoals incrementele inkomsten en ROI. Als de gegevens van het klantenprofiel beschikbaar zijn, kunt u kredieten aan het niveau van het klantenprofiel verder toeschrijven.
 
 ## Terminologie
 
