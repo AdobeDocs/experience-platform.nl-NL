@@ -6,9 +6,9 @@ description: Dit document biedt antwoorden op veelgestelde vragen over het model
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1888'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,19 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over XDM System 
 
 ### Hoe voeg ik velden toe aan een schema?
 
-U kunt velden aan een schema toevoegen met behulp van een mix. Elke mix is compatibel met een of meer klassen, waardoor de mix kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industriemengsels van hun eigen vooraf gedefinieerde velden voorziet, kunt u uw eigen velden aan een schema toevoegen door nieuwe combinaties te maken met behulp van de API of de gebruikersinterface.
+U kunt velden toevoegen aan een schema met behulp van een schemaveldgroep. Elke veldgroep is compatibel met een of meer klassen, zodat de veldgroep kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industrieveldgroepen hun eigen vooraf gedefinieerde velden biedt, kunt u uw eigen velden aan een schema toevoegen door nieuwe veldgroepen te maken met behulp van de API of de gebruikersinterface.
 
-Voor details bij het creëren van nieuwe mengen in [!DNL Schema Registry] API, zie [mixin eindpuntgids](api/mixins.md#create). Als u UI gebruikt, zie [het leerprogramma van de Redacteur van het Schema](./tutorials/create-schema-ui.md).
+Voor details bij het creëren van nieuwe gebiedsgroepen in [!DNL Schema Registry] API, zie [de gids van het gebiedseindpunt ](api/field-groups.md#create). Als u UI gebruikt, zie [het leerprogramma van de Redacteur van het Schema](./tutorials/create-schema-ui.md).
 
-### Wat zijn de beste toepassingen voor mixins versus gegevenstypes?
+### Wat zijn de beste toepassingen voor veldgroepen versus gegevenstypen?
 
-[](./schema/composition.md#mixin) Mixins zijn componenten die een of meer velden in een schema definiëren. Mixins dwingen af hoe hun gebieden in de hiërarchie van het schema verschijnen, en tonen daarom de zelfde structuur in elk schema dat zij inbegrepen zijn. Mixins zijn alleen compatibel met specifieke klassen, zoals die door hun `meta:intendedToExtend`-kenmerk worden geïdentificeerd.
+[Veldgroepen ](./schema/composition.md#field-group) zijn componenten die een of meer velden in een schema definiëren. Veldgroepen dwingen af hoe hun velden worden weergegeven in de hiërarchie van het schema en tonen daarom in elk schema dezelfde structuur aan waarin ze zijn opgenomen. Veldgroepen zijn alleen compatibel met specifieke klassen, zoals bepaald door het kenmerk `meta:intendedToExtend`.
 
-[Gegevenstypen ](./schema/composition.md#data-type) kunnen ook een of meer velden voor een schema bevatten. In tegenstelling tot mengsels, worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn.
+[Gegevenstypen ](./schema/composition.md#data-type) kunnen ook een of meer velden voor een schema bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn.
 
 ### Wat is unieke identiteitskaart voor een schema?
 
-Alle [!DNL Schema Registry] middelen (schema&#39;s, mengen, gegevenstypes, klassen) hebben URI die als unieke identiteitskaart voor verwijzing en raadplegingsdoeleinden dienst doet. Wanneer het bekijken van een schema in API, kan het in top-level `$id` en `meta:altId` attributen worden gevonden.
+Alle [!DNL Schema Registry] middelen (schema&#39;s, gebiedsgroepen, gegevenstypes, klassen) hebben URI die als unieke identiteitskaart voor verwijzing en raadplegingsdoeleinden dienst doet. Wanneer het bekijken van een schema in API, kan het in top-level `$id` en `meta:altId` attributen worden gevonden.
 
 Zie de sectie [resource identification](api/getting-started.md#resource-identification) in de [!DNL Schema Registry] API developer guide voor meer informatie.
 
@@ -135,7 +135,7 @@ Voor meer informatie bij het construeren van raadplegingswegen in API, zie [cont
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met een titel die al door een andere bron wordt gebruikt. Titels moeten uniek zijn voor alle typen bronnen. Als u bijvoorbeeld een mix probeert te maken met een titel die al wordt gebruikt door een schema, ontvangt u deze fout.
+Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met een titel die al door een andere bron wordt gebruikt. Titels moeten uniek zijn voor alle typen bronnen. Als u bijvoorbeeld een veldgroep probeert te maken met een titel die al wordt gebruikt door een schema, ontvangt u deze fout.
 
 ### Aangepaste velden moeten een veld op hoofdniveau gebruiken
 
@@ -149,7 +149,7 @@ Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met een t
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u een nieuwe mix probeert te maken met velden met een onjuiste naam. Mixins die door uw IMS-organisatie zijn gedefinieerd, moeten hun velden naamruimte geven met een `TENANT_ID` om conflicten met andere bronnen in de branche en de leverancier te voorkomen. Gedetailleerde voorbeelden van juiste gegevensstructuren voor mengsels zijn te vinden in [mixins eindpuntgids](./api/mixins.md#create).
+Dit foutbericht wordt weergegeven wanneer u een nieuwe veldgroep probeert te maken met velden met een onjuiste naam. Veldgroepen die door uw IMS-organisatie zijn gedefinieerd, moeten hun velden naamruimte geven met een `TENANT_ID` om conflicten met andere bronnen in de branche en de leverancier te voorkomen. Gedetailleerde voorbeelden van juiste gegevensstructuren voor veldgroepen vindt u in de [eindgids voor veldgroepen](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] fouten
