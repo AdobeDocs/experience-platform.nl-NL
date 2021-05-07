@@ -7,9 +7,9 @@ type: Tutorial
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2426'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Deze zelfstudie doorloopt de stappen voor het samenstellen van een schema voor l
 
 ## Een schema met een standaardklasse samenstellen
 
-Een schema kan als blauwdruk voor de gegevens worden beschouwd u in [!DNL Experience Platform] wenst in te gaan. Elk schema bestaat uit een klasse en nul of meer mixen. Met andere woorden, u moet geen mixin toevoegen om een schema te bepalen, maar in de meeste gevallen wordt minstens één mixin gebruikt.
+Een schema kan als blauwdruk voor de gegevens worden beschouwd u in [!DNL Experience Platform] wenst in te gaan. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. Met andere woorden, u hoeft geen veldgroep toe te voegen om een schema te definiëren, maar in de meeste gevallen wordt ten minste één veldgroep gebruikt.
 
 ### Een klasse toewijzen
 
@@ -177,13 +177,13 @@ De responsindeling is afhankelijk van de Accept-header die bij de aanvraag wordt
 }
 ```
 
-### Een mix toevoegen {#add-a-mixin}
+### Een veldgroep {#add-a-field-group} toevoegen
 
-Nu het schema Loyalty-leden is gemaakt en bevestigd, kunnen er mixen aan worden toegevoegd.
+Nu het schema Loyalty-leden is gemaakt en bevestigd, kunnen er veldgroepen aan worden toegevoegd.
 
-Er zijn verschillende standaardmixen beschikbaar voor gebruik, afhankelijk van de geselecteerde klasse van schema. Elke mix bevat een `intendedToExtend`-veld dat de klasse(n) definieert waarmee die mix compatibel is.
+Er zijn verschillende standaardveldgroepen beschikbaar voor gebruik, afhankelijk van de geselecteerde schemaklasse. Elke veldgroep bevat een `intendedToExtend`-veld dat de klasse(n) definieert waarmee die veldgroep compatibel is.
 
-Mixins definieert concepten, zoals &quot;naam&quot; of &quot;adres&quot;, die opnieuw kunnen worden gebruikt in elk schema dat dezelfde informatie moet vastleggen.
+Veldgroepen definiëren concepten, zoals &quot;naam&quot; of &quot;adres&quot;, die opnieuw kunnen worden gebruikt in elk schema dat dezelfde informatie moet vastleggen.
 
 **API-indeling**
 
@@ -193,9 +193,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Verzoek**
 
-Dit verzoek werkt (PATCH) het schema van Loyalty Leden bij om de gebieden binnen de &quot;profiel-persoon-details&quot;mengeling te omvatten.
+Dit verzoek werkt (PATCH) het schema van Loyalty Leden bij om de gebieden binnen de &quot;profiel-persoon-details&quot;gebiedsgroep te omvatten.
 
-Door de &quot;profiel-persoon-details&quot;mix toe te voegen, vangt het schema van Leden Loyalty nu informatie over loyaliteitsprogrammaleden zoals hun voornaam, familienaam, en verjaardag.
+Door de &quot;profiel-persoon-details&quot;gebiedsgroep toe te voegen, vangt het schema van Leden Loyalty nu informatie over loyaliteitsprogrammaleden zoals hun voornaam, familienaam, en verjaardag.
 
 ```SHELL
 curl -X PATCH \
@@ -212,7 +212,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-De reactie toont de zojuist toegevoegde mix in de `meta:extends`-array en bevat een `$ref` naar de mix in het `allOf`-kenmerk.
+De reactie toont de zojuist toegevoegde veldgroep in de `meta:extends`-array en bevat een `$ref` aan de veldgroep in het `allOf`-kenmerk.
 
 ```JSON
 {
@@ -254,17 +254,17 @@ De reactie toont de zojuist toegevoegde mix in de `meta:extends`-array en bevat 
 }
 ```
 
-### Een andere mix toevoegen
+### Een andere veldgroep toevoegen
 
-U kunt nu een andere standaardmix toevoegen door de stappen te herhalen met een andere mix.
+U kunt nu een andere standaardveldgroep toevoegen door de stappen te herhalen met behulp van een andere veldgroep.
 
 >[!TIP]
 >
->Het is nuttig om alle beschikbare mengsels te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (GET) van alle mengsels een lijst maken beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de klasse [!DNL XDM Individual Profile], zodat wordt [!DNL XDM Individual Profile] `$id` gebruikt:
+>Het is nuttig om alle beschikbare gebiedsgroepen te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (GET) alle gebiedsgroepen vermelden beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die gebiedsgroepen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de klasse [!DNL XDM Individual Profile], zodat wordt [!DNL XDM Individual Profile] `$id` gebruikt:
 
 ```http
-GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
-GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
 **API-indeling**
@@ -275,7 +275,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Verzoek**
 
-Dit verzoek werkt (PATCH) het schema van de Leden van de Loyalty bij om de gebieden binnen de &quot;profiel-persoonlijk-details&quot;mengeling, toevoegend &quot;huisadres&quot;, &quot;e-mailadres&quot;, en &quot;huistelefoon&quot;gebieden aan het schema.
+Dit verzoek werkt (PATCH) het schema van de Leden van de Loyalty bij om de gebieden binnen de &quot;profiel-persoonlijk-details&quot;gebiedsgroep, toevoegend &quot;huisadres&quot;, &quot;e-mailadres&quot;, en &quot;huistelefoon&quot;gebieden aan het schema te omvatten.
 
 ```SHELL
 curl -X PATCH \
@@ -292,7 +292,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-De reactie toont de zojuist toegevoegde mix in de `meta:extends`-array en bevat een `$ref` naar de mix in het `allOf`-kenmerk.
+De reactie toont de zojuist toegevoegde veldgroep in de `meta:extends`-array en bevat een `$ref` aan de veldgroep in het `allOf`-kenmerk.
 
 Het schema Loyalty-leden moet nu drie `$ref`-waarden in de array `allOf` bevatten: &quot;profiel&quot;, &quot;profiel-persoon-details&quot; en &quot;profiel-persoonlijk-details&quot;, zoals hieronder getoond.
 
@@ -340,29 +340,29 @@ Het schema Loyalty-leden moet nu drie `$ref`-waarden in de array `allOf` bevatte
 }
 ```
 
-### Een nieuwe mix definiëren
+### Een nieuwe veldgroep definiëren
 
-Het schema van Loyalty-leden moet informatie vastleggen die uniek is voor het loyaliteitsprogramma. Deze informatie is in geen van de standaardmengsels opgenomen.
+Het schema van Loyalty-leden moet informatie vastleggen die uniek is voor het loyaliteitsprogramma. Deze informatie is in geen van de standaardveldgroepen opgenomen.
 
-[!DNL Schema Registry] verklaart dit door u toe te staan om uw eigen mengen binnen de huurderscontainer te bepalen. Deze combinaties zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar door iemand buiten uw IMS-organisatie.
+[!DNL Schema Registry] verklaart dit door u toe te staan om uw eigen gebiedsgroepen binnen de huurderscontainer te bepalen. Deze veldgroepen zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar voor personen buiten uw IMS-organisatie.
 
-Als u een nieuwe mix wilt maken (POST), moet uw aanvraag een `meta:intendedToExtend`-veld bevatten met de `$id` voor de basisklasse(en) waarmee de mix compatibel is, samen met de eigenschappen die de mix bevat.
+Als u een nieuwe veldgroep wilt maken (POSTEN), moet uw aanvraag een `meta:intendedToExtend`-veld bevatten dat `$id` bevat voor de basisklasse(n) waarmee de veldgroep compatibel is, samen met de eigenschappen die de veldgroep zal bevatten.
 
-Aangepaste eigenschappen moeten onder uw `TENANT_ID` worden genest om conflicten met andere combinaties of velden te voorkomen.
+Aangepaste eigenschappen moeten onder `TENANT_ID` worden genest om conflicten met andere veldgroepen of velden te voorkomen.
 
 **API-indeling**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Verzoek**
 
-Dit verzoek leidt tot een nieuwe mengeling die een &quot;loyalty&quot;voorwerp heeft dat vier loyaliteitsprogramma-specifieke gebieden bevat: &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot;, en &quot;memberSince&quot;.
+Dit verzoek leidt tot een nieuwe gebiedsgroep die een &quot;loyalty&quot;voorwerp heeft dat vier loyaliteitsprogramma-specifieke gebieden bevat: &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot;, en &quot;memberSince&quot;.
 
 ```SHELL
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -372,7 +372,7 @@ curl -X POST\
         "type": "object",
         "title": "Loyalty Member Details",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Loyalty Program Mixin.",
+        "description": "Loyalty Program Field Group.",
         "definitions": {
             "loyalty": {
               "properties": {
@@ -419,7 +419,7 @@ curl -X POST\
 
 **Antwoord**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de zojuist gemaakte mix, zoals `$id`, `meta:altIt` en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de nieuwe veldgroep, inclusief `$id`, `meta:altIt` en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
 
 ```JSON
 {
@@ -428,7 +428,7 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -482,11 +482,11 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -496,9 +496,9 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
 }
 ```
 
-### Aangepaste mix toevoegen aan schema
+### Aangepaste veldgroep toevoegen aan schema
 
-U kunt nu dezelfde stappen volgen voor [het toevoegen van een standaardmixin](#add-a-mixin) om deze zojuist gemaakte mix toe te voegen aan uw schema.
+U kunt nu dezelfde stappen volgen voor [het toevoegen van een standaardveldgroep](#add-a-field-group) om deze nieuwe veldgroep aan uw schema toe te voegen.
 
 **API-indeling**
 
@@ -508,7 +508,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Verzoek**
 
-Met dit verzoek wordt (PATCH) het schema Loyalty-leden bijgewerkt om de velden in de nieuwe mix &quot;Loyalty Member Details&quot; op te nemen.
+Met dit verzoek wordt (PATCH) het schema Loyalty-leden bijgewerkt om de velden in de nieuwe veldgroep &quot;Loyalty Member Details&quot; op te nemen.
 
 ```SHELL
 curl -X PATCH \
@@ -519,13 +519,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
 **Antwoord**
 
-U kunt zien dat de mixin met succes is toegevoegd omdat de reactie nu de onlangs toegevoegde mix in `meta:extends` serie toont en `$ref` aan de mixin in `allOf` attributen bevat.
+U ziet dat de veldgroep is toegevoegd omdat de reactie nu de toegevoegde veldgroep in de `meta:extends`-array weergeeft en een `$ref` aan de veldgroep in het `allOf`-kenmerk bevat.
 
 ```JSON
 {
@@ -543,7 +543,7 @@ U kunt zien dat de mixin met succes is toegevoegd omdat de reactie nu de onlangs
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +557,7 @@ U kunt zien dat de mixin met succes is toegevoegd omdat de reactie nu de onlangs
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -577,7 +577,7 @@ U kunt zien dat de mixin met succes is toegevoegd omdat de reactie nu de onlangs
 
 ### Het huidige schema weergeven
 
-U kunt een verzoek van de GET nu uitvoeren om het huidige schema te bekijken en te zien hoe de toegevoegde mengelingen aan de algemene structuur van het schema hebben bijgedragen.
+U kunt nu een verzoek van de GET uitvoeren om het huidige schema te bekijken en te zien hoe de toegevoegde gebiedsgroepen aan de algemene structuur van het schema hebben bijgedragen.
 
 **API-indeling**
 
@@ -599,9 +599,9 @@ curl -X GET \
 
 **Antwoord**
 
-Met de koptekst `application/vnd.adobe.xed-full+json; version=1` Accepteren kunt u het volledige schema weergeven met alle eigenschappen. Deze eigenschappen zijn de gebieden die door de klasse en mengen worden bijgedragen die zijn gebruikt om het schema samen te stellen. In dit voorbeeldantwoord, zijn de individuele bezitsattributen geminimaliseerd voor ruimte. U kunt het volledige schema, met inbegrip van alle eigenschappen en hun attributen, in [appendix](#appendix) aan het eind van dit document bekijken.
+Met de koptekst `application/vnd.adobe.xed-full+json; version=1` Accepteren kunt u het volledige schema weergeven met alle eigenschappen. Deze eigenschappen zijn de gebieden die door de klasse en de gebiedsgroepen worden bijgedragen die zijn gebruikt om het schema samen te stellen. In dit voorbeeldantwoord, zijn de individuele bezitsattributen geminimaliseerd voor ruimte. U kunt het volledige schema, met inbegrip van alle eigenschappen en hun attributen, in [appendix](#appendix) aan het eind van dit document bekijken.
 
-Onder `"properties"`, kunt u `_{TENANT_ID}` namespace zien die werd gecreeerd toen u de douanemix toevoegde. Binnen die naamruimte bevinden zich het &#39;loyalty&#39;-object en de velden die zijn gedefinieerd toen de mix werd gemaakt.
+Onder `"properties"`, kunt u `_{TENANT_ID}` namespace zien die werd gecreeerd toen u de groep van het douanegebied toevoegde. Binnen die naamruimte bevinden zich het object &#39;loyalty&#39; en de velden die zijn gedefinieerd toen de veldgroep werd gemaakt.
 
 ```JSON
 {
@@ -619,7 +619,7 @@ Onder `"properties"`, kunt u `_{TENANT_ID}` namespace zien die werd gecreeerd to
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -691,11 +691,11 @@ Onder `"properties"`, kunt u `_{TENANT_ID}` namespace zien die werd gecreeerd to
 
 ### Een gegevenstype maken
 
-De combinatie Loyalty die u creeerde bevat specifieke loyaliteitseigenschappen die in andere schema&#39;s nuttig zouden kunnen zijn. De gegevens kunnen bijvoorbeeld worden ingevoerd als onderdeel van een ervaringsgebeurtenis of worden gebruikt door een schema dat een andere klasse implementeert. In dit geval is het verstandig de objecthiërarchie op te slaan als een gegevenstype om het hergebruik van de definitie elders te vergemakkelijken.
+De het gebiedsgroep van de Loyalty die u creeerde bevat specifieke loyaliteitseigenschappen die in andere schema&#39;s nuttig zouden kunnen zijn. De gegevens kunnen bijvoorbeeld worden ingevoerd als onderdeel van een ervaringsgebeurtenis of worden gebruikt door een schema dat een andere klasse implementeert. In dit geval is het verstandig de objecthiërarchie op te slaan als een gegevenstype om het hergebruik van de definitie elders te vergemakkelijken.
 
 Met gegevenstypen kunt u één keer een objecthiërarchie definiëren en ernaar verwijzen in een veld, net als bij elk ander scalair type.
 
-Met andere woorden, staan de gegevenstypes voor het verenigbare gebruik van multi-gebiedsstructuren, met meer flexibiliteit dan mengen toe omdat zij overal in een schema kunnen worden omvat door hen als &quot;type&quot;van een gebied toe te voegen.
+Met andere woorden, staan de gegevenstypes voor het verenigbare gebruik van multi-gebiedsstructuren, met meer flexibiliteit dan gebiedsgroepen toe omdat zij overal in een schema kunnen worden omvat door hen als &quot;type&quot;van een gebied toe te voegen.
 
 **API-indeling**
 
@@ -822,19 +822,19 @@ U kunt een opzoekverzoek (GET) uitvoeren gebruikend URL gecodeerd `$id` URI om h
 
 ### Gegevenstype gebruiken in schema
 
-Nu het gegevenstype Loyalty Details is gemaakt, kunt u (PATCH) het veld &quot;loyalty&quot; in de gemaakte mixin bijwerken om naar het gegevenstype te verwijzen in plaats van de velden die er eerder waren.
+Nu het gegevenstype Loyalty Details is gemaakt, kunt u het veld &quot;loyalty&quot; in de veldgroep die u hebt gemaakt bijwerken (PATCH) en verwijzen naar het gegevenstype in plaats van de velden die er eerder waren.
 
 **API-indeling**
 
 ```http
-PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
+PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 ```
 
 **Verzoek**
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -867,7 +867,7 @@ De reactie omvat nu een verwijzing (`$ref`) aan het gegevenstype in het &quot;lo
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -896,11 +896,11 @@ De reactie omvat nu een verwijzing (`$ref`) aan het gegevenstype in het &quot;lo
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1068,7 +1068,7 @@ De reactie toont aan dat de verrichting met succes werd uitgevoerd, en het schem
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1082,7 @@ De reactie toont aan dat de verrichting met succes werd uitgevoerd, en het schem
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1171,9 +1171,9 @@ Het antwoord is een gefilterde lijst van schema&#39;s die alleen schema&#39;s be
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebruikend zowel standaardmengen als een mengeling die u bepaalde. U kunt dit schema nu gebruiken om een dataset tot stand te brengen en recordgegevens in Adobe Experience Platform in te voeren.
+Door deze zelfstudie te volgen, hebt u een schema samengesteld met gebruik van zowel standaardveldgroepen als een veldgroep die u hebt gedefinieerd. U kunt dit schema nu gebruiken om een dataset tot stand te brengen en recordgegevens in Adobe Experience Platform in te voeren.
 
-Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u naar het schema kijkt, kunt u zien hoe de mixins bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
+Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u het schema bekijkt, kunt u zien hoe de veldgroepen bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
 
 Zodra u meer dan één schema hebt gecreeerd, kunt u verhoudingen tussen hen door het gebruik van relatiebeschrijvers bepalen. Zie de zelfstudie voor [het bepalen van een verhouding tussen twee schema&#39;s](relationship-api.md) voor meer informatie. Voor gedetailleerde voorbeelden van hoe te om alle verrichtingen (GET, POST, PUT, PATCH, en DELETE) in het register uit te voeren, gelieve te verwijzen naar [de ontwikkelaarsgids van de Registratie van het Schema](../api/getting-started.md) terwijl het werken met API.
 
@@ -1185,7 +1185,7 @@ De volgende informatie vormt een aanvulling op de API-zelfstudie.
 
 Door dit leerprogramma, wordt een schema samengesteld om de leden van een programma van de kleinhandelsloyaliteit te beschrijven.
 
-Het schema implementeert de klasse [!DNL XDM Individual Profile] en combineert meerdere combinaties. informatie over de loyaliteitsleden inbrengen met behulp van de standaardmixen &quot;Persoonsgegevens&quot; en &quot;Persoonlijke details&quot;, alsmede door een mix van &quot;Loyalty Details&quot; die tijdens de zelfstudie is gedefinieerd.
+Het schema implementeert de klasse [!DNL XDM Individual Profile] en combineert meerdere veldgroepen. informatie over de loyaliteitsleden inbrengen met behulp van de standaardveldgroepen &quot;Persoonsgegevens&quot; en &quot;Persoonlijke details&quot;, alsmede via een veldgroep &quot;Loyalty Details&quot; die tijdens de zelfstudie is gedefinieerd.
 
 In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-indeling:
 
@@ -1205,7 +1205,7 @@ In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-inde
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
