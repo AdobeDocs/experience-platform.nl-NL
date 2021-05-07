@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;schema;schema;Schema;mixin;Mixin;Mixins;gegevenstype;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;schemaontwerp;datatype;gegevenstype;Gegevenstype;schema's;Schema's;Schema-ontwerp;kaart;Kaart;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;veldgroep;Veldgroep;Veldgroepen;veldgroepen;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;schemaontwerp;datatype;Datatype;Gegevenstype;Schema's;Schema's;Schema-ontwerp;Kaart;Kaart;
 solution: Experience Platform
 title: Beperkingen voor XDM-veldtypen
 topic-legacy: overview
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1063'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ In schema&#39;s van het Model van Gegevens van de Ervaring (XDM), beperkt het ty
 
 ## Aan de slag
 
-Alvorens deze gids te gebruiken, te herzien gelieve de [grondbeginselen van schemacompositie](./composition.md) voor een inleiding aan schema XDM, klassen, en mengen.
+Alvorens deze gids te gebruiken, te herzien gelieve de [grondbeginselen van schemacompositie](./composition.md) voor een inleiding aan schema XDM, klassen, en groepen van het schemagebied.
 
-Als u van plan bent om uw eigen gebiedstypes in API te bepalen, adviseert men sterk dat u met [de ontwikkelaarsgids van de Registratie van het Schema](../api/getting-started.md) begint om te leren hoe te om mengen en gegevenstypes tot stand te brengen om uw douanevelden in te omvatten. Als u het Experience Platform UI gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [het bepalen van gebieden in UI](../ui/fields/overview.md) leren hoe invoert beperkingen op gebieden die u binnen douanemengsels en gegevenstypes bepaalt.
+Als u van plan bent om uw eigen gebiedstypes in API te bepalen, adviseert men sterk dat u met [de ontwikkelaarsgids van de Registratie van het Schema](../api/getting-started.md) begint om te leren hoe te om gebiedsgroepen en gegevenstypes tot stand te brengen om uw douanevelden in te omvatten. Als u het Experience Platform UI gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [het bepalen van gebieden in UI](../ui/fields/overview.md) leren hoe invoert beperkingen op gebieden die u binnen de groepen van het douanegebied en gegevenstypes bepaalt.
 
 ## Basisstructuur en voorbeelden
 
@@ -214,7 +214,7 @@ Alle XDM gebieden worden bepaald gebruikend standaard [JSON Schema](https://json
 
 In de volgende tabel ziet u de juiste opmaak voor het definiëren van verschillende veldtypen, inclusief die met optionele eigenschappen. Meer informatie over optionele eigenschappen en typespecifieke trefwoorden is beschikbaar via de [JSON-schemadocumentatie](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt verstrekt om uw API verzoek voor [het creëren van een mixin](../api/mixins.md#create) of [het creëren van een gegevenstype](../api/data-types.md#create) te bouwen.
+Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt verstrekt om uw API verzoek te bouwen om [een gebiedsgroep te creëren ](../api/field-groups.md#create) of [creërend een gegevenstype](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
