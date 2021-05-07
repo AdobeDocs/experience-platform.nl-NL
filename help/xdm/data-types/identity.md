@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Identity.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '281'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 | `primary` | Boolean | Geeft aan of dit de primaire identiteit voor het individu is. Elke persoon kan slechts één primaire identiteit hebben. |
 | `xid` | Tekenreeks | Wanneer deze waarde aanwezig is, vertegenwoordigt deze een naamruimte-id die uniek is voor alle naamruimte-bereikid&#39;s in alle naamruimten. |
 
-Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de mix:
+Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
