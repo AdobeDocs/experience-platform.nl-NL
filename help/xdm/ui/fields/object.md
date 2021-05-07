@@ -6,16 +6,16 @@ description: Leer hoe u een objecttype-veld definieert in de gebruikersinterface
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
 # Objectvelden definiëren in de gebruikersinterface
 
-Met Adobe Experience Platform kunt u de structuur van uw aangepaste Experience Data Model-klassen, -mixen en -gegevenstypen volledig aanpassen. Als u gerelateerde velden wilt ordenen en nesten in aangepaste XDM-bronnen, kunt u objecttype-velden definiëren die aanvullende subvelden kunnen bevatten.
+Adobe Experience Platform staat u toe om de structuur van uw klassen van het Model van de Gegevens van de Ervaring (XDM), schema gebiedsgroepen, en gegevenstypes volledig aan te passen. Als u gerelateerde velden wilt ordenen en nesten in aangepaste XDM-bronnen, kunt u objecttype-velden definiëren die aanvullende subvelden kunnen bevatten.
 
 Als [een nieuw veld](./overview.md#define) in de Adobe Experience Platform-gebruikersinterface definieert, gebruikt u het vervolgkeuzemenu **[!UICONTROL Type]** en selecteert u &quot;[!UICONTROL Object]&quot; in de lijst.
 
@@ -33,7 +33,7 @@ Nadat u het subveld hebt geconfigureerd en **[!UICONTROL Apply]** hebt geselecte
 
 ![](../../images/ui/fields/special/object-nested.png)
 
-Wanneer u klaar bent met het maken van het object, zult u merken dat u de structuur ervan in verschillende klassen en mixen wilt hergebruiken. In dat geval kunt u het object omzetten in een gegevenstype. Zie de sectie over [het omzetten van voorwerpen in gegevenstypes](../resources/data-types.md#convert) in de gids UI van gegevenstypes voor meer informatie.
+Wanneer u klaar bent met het samenstellen van het object, zult u merken dat u de structuur ervan opnieuw wilt gebruiken in verschillende klassen en veldgroepen. In dat geval kunt u het object omzetten in een gegevenstype. Zie de sectie over [het omzetten van voorwerpen in gegevenstypes](../resources/data-types.md#convert) in de gids UI van gegevenstypes voor meer informatie.
 
 ## Volgende stappen
 
