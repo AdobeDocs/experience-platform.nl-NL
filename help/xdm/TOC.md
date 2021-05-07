@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
-user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
+user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 6%
+source-wordcount: '291'
+ht-degree: 7%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 6%
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
-* Mixins {#mixins}
-   * Profielmixen {#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
-      * [Demografische details](./mixins/profile/person-details.md)
-      * [Persoonlijke contactgegevens](./mixins/profile/personal-details.md)
-      * [Voorkeuren voor privacy/persoonlijke voorkeur/marketing (inhoud)](./mixins/profile/consents.md)
-      * [Details segmentlidmaatschap](./mixins/profile/segmentation.md)
-      * [Contactgegevens werken](./mixins/profile/work-details.md)
-   * Gebeurtenismixen {#event}
-      * [Gegevens van eindgebruiker](./mixins/event/enduserids.md)
-      * [Omgevingsdetails](./mixins/event/environment-details.md)
-   * [Updates van Mixernamen](./mixins/name-updates.md)
+* Schema veldgroepen {#field-groups}
+   * Profielveldgroepen {#profile}
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Demografische details](./field-groups/profile/demographic-details.md)
+      * [Persoonlijke contactgegevens](./field-groups/profile/personal-contact-details.md)
+      * [Details segmentlidmaatschap](./field-groups/profile/segmentation.md)
+      * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
+      * [Voorkeuren voor privacy/persoonlijke voorkeur/marketing (inhoud)](./field-groups/profile/consents.md)
+   * Groepen van gebeurtenisvelden {#event}
+      * [Gegevens van eindgebruiker](./field-groups/event/enduserids.md)
+      * [Omgevingsdetails](./field-groups/event/environment-details.md)
+   * [Updates van veldgroepnamen](./field-groups/name-updates.md)
 * Datatypen {#data-types}
    * [Toepassing](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
@@ -81,7 +81,7 @@ ht-degree: 6%
    * Bronnen maken en bewerken {#resources}
       * [Schemas](./ui/resources/schemas.md)
       * [Klassen](./ui/resources/classes.md)
-      * [Mixins](./ui/resources/mixins.md)
+      * [Veldengroepen](./ui/resources/field-groups.md)
       * [Datatypen](./ui/resources/data-types.md)
    * Veld {#fields} definiëren
       * [Overzicht](./ui/fields/overview.md)
@@ -99,7 +99,7 @@ ht-degree: 6%
    * [Schemas](api/schemas.md)
    * [Gedrag](api/behaviors.md)
    * [Klassen](api/classes.md)
-   * [Mixins](api/mixins.md)
+   * [Schema veldgroepen](api/field-groups.md)
    * [Datatypen](api/data-types.md)
    * [Beschrijvers](api/descriptors.md)
    * [Unies](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 6%
    * [Voorbeeldgegevens](api/sample-data.md)
    * [Controlelogboek](api/audit-log.md)
    * [Ad-hocregelingen](api/ad-hoc.md)
+   * [Mixinen (afgekeurd)](api/mixins.md)
    * [Aanhangsel](api/appendix.md)
 * Tutorials {#tutorials}
    * [Een schema maken (UI)](tutorials/create-schema-ui.md)
