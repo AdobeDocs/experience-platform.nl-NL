@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Dit document biedt een kort overzicht van enkele onderliggende technologieën en syntaxis die van toepassing zijn op Experience Platform-API's.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ JSON-aanwijzer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://
 
 ### Voorbeeld-JSON-schemaobject
 
-De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behulp van JSON-aanwijzertekenreeksen naar velden kan worden verwezen. Merk op dat alle gebieden die gebruikend douanemixins (zoals `loyaltyLevel`) zijn toegevoegd namespaced onder een `_{TENANT_ID}` voorwerp, terwijl de gebieden die zijn toegevoegd gebruikend kernmengen (zoals `fullName`) niet zijn.
+De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behulp van JSON-aanwijzertekenreeksen naar velden kan worden verwezen. Merk op dat alle gebieden die gebruikend de groepen van het douaneschema- gebied (zoals `loyaltyLevel`) zijn toegevoegd namespaced onder een `_{TENANT_ID}` voorwerp, terwijl de gebieden die gebruikend kerngebiedsgroepen (zoals `fullName`) zijn toegevoegd niet zijn.
 
 ```json
 {
@@ -87,8 +87,8 @@ De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behul
 | JSON-aanwijzer | Oplossen naar |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Retourneert een verwijzing naar het veld `fullName`, opgegeven door een kernmix.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Retourneert een verwijzing naar het veld `loyaltyLevel`, opgegeven door een aangepaste mix.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Retourneert een verwijzing naar het veld `fullName`, opgegeven door een kernveldgroep.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Retourneert een verwijzing naar het veld `loyaltyLevel`, opgegeven door een aangepaste veldgroep.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
