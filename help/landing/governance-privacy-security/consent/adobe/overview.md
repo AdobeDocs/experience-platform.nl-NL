@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerking
 >
 >Als u geen conflicterende datasets hebt, zou u timestamp belangrijkheid voor uw samenvoegbeleid in plaats daarvan moeten plaatsen. Dit helpt ervoor te zorgen dat de recentste toestemming die door een klant wordt gespecificeerd de toestemmingsinstelling is die wordt gebruikt.
 
-Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de gebruikersgids van het samenvoegingsbeleid](../../../../profile/ui/merge-policies.md). Wanneer het opzetten van uw fusiebeleid, moet u ervoor zorgen dat uw profielen alle vereiste toestemmingsattributen omvatten die door de Consents &amp; de mengen van Voorkeur worden verstrekt, zoals die in de gids over [datasetvoorbereiding](./dataset.md) worden geschetst.
+Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de gebruikersgids van het samenvoegingsbeleid](../../../../profile/ui/merge-policies.md). Wanneer het opzetten van uw fusiebeleid, moet u ervoor zorgen dat uw profielen alle vereiste toestemmingsattributen omvatten die door de het schemagebiedgroep van de Inhoud &amp; van de Voorkeur worden verstrekt, zoals die in de gids over [datasetvoorbereiding](./dataset.md) worden geschetst.
 
 ## Goedkeuringsgegevens in Platform plaatsen
 
