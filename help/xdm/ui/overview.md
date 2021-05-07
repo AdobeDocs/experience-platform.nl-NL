@@ -6,16 +6,16 @@ description: In dit overzicht worden de belangrijkste mogelijkheden van de werkr
 topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '291'
 ht-degree: 2%
 
 ---
 
 # [!UICONTROL Schemas] Overzicht van gebruikersinterface
 
-De [!UICONTROL Schemas] werkruimte in het gebruikersinterface van Adobe Experience Platform staat u toe om de middelen van het Gegevensmodel van de Ervaring (XDM), met inbegrip van schema&#39;s, klassen, mengen, en gegevenstypes te beheren. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
+De [!UICONTROL Schemas] werkruimte in het gebruikersinterface van Adobe Experience Platform staat u toe om de middelen van het Gegevensmodel van de Ervaring (XDM), met inbegrip van schema&#39;s, klassen, de groepen van het schemagebied, en gegevenstypes te beheren. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
 
 Als u toegang wilt tot de werkruimte in de interface van het Platform, selecteert u **[!UICONTROL Schemas]** in de linkertrack.
 
@@ -33,12 +33,12 @@ De [!UICONTROL Schemas] werkruimte biedt krachtige gereedschappen voor het maken
 
 * [Schemas](./resources/schemas.md)
 * [Klassen](./resources/classes.md)
-* [Mixins](./resources/mixins.md)
+* [Veldengroepen](./resources/field-groups.md)
 * [Datatypen](./resources/data-types.md)
 
 ## XDM-velden definiëren
 
-De klassen, de mengen, en de gegevenstypes dragen allen gebieden aan een schema bij. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Raadpleeg de handleiding bij [XDM-velden definiëren in de UI](./fields/overview.md) voor meer informatie.
+Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Raadpleeg de handleiding bij [XDM-velden definiëren in de UI](./fields/overview.md) voor meer informatie.
 
 ## Volgende stappen
 
