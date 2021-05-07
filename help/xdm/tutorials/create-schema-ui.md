@@ -7,9 +7,9 @@ type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3532'
+source-wordcount: '3588'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Als u verkiest om een schema samen te stellen gebruikend [!DNL Schema Registry] 
 Deze zelfstudie vereist een goed begrip van de verschillende aspecten van Adobe Experience Platform die bij het maken van schema&#39;s betrokken zijn. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Platform] klantenervaring worden georganiseerd.
-   * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, mengen, gegevenstypes, en gebieden.
+   * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, groepen van het schemagebied, gegevenstypes, en individuele gebieden.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## De [!UICONTROL Schemas] werkruimte {#browse} openen
@@ -48,9 +48,9 @@ Selecteer **[!UICONTROL XDM Individual Profile]** voor deze zelfstudie.
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Aangezien u een standaard XDM-klasse hebt gekozen om het schema op te baseren, wordt het dialoogvenster **[!UICONTROL Add mixin]** weergegeven, zodat u direct kunt beginnen met het toevoegen van velden aan het schema. Selecteer momenteel **[!UICONTROL Cancel]** om het dialoogvenster af te sluiten.
+Aangezien u een standaard XDM-klasse hebt gekozen om het schema op te baseren, wordt het dialoogvenster **[!UICONTROL Add field group]** weergegeven, zodat u direct kunt beginnen met het toevoegen van velden aan het schema. Selecteer momenteel **[!UICONTROL Cancel]** om het dialoogvenster af te sluiten.
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 De [!DNL Schema Editor] verschijnt. Dit is het canvas waarop u het schema wilt samenstellen. Er wordt automatisch een naamloos schema gemaakt in de sectie **[!UICONTROL Structure]** van het canvas wanneer u de editor binnenkomt, samen met de standaardvelden die worden opgenomen in alle schema&#39;s die op die klasse zijn gebaseerd. De toegewezen klasse voor het schema wordt ook vermeld onder **[!UICONTROL Class]** in **[!UICONTROL Composition]** sectie.
 
@@ -58,7 +58,7 @@ De [!DNL Schema Editor] verschijnt. Dit is het canvas waarop u het schema wilt s
 
 >[!NOTE]
 >
->U kunt [de klasse van een schema ](#change-class) op om het even welk punt tijdens het aanvankelijke samenstellingsproces veranderen alvorens het schema is bewaard, maar dit zou met uiterste voorzichtigheid moeten worden gedaan. Mixins zijn alleen compatibel met bepaalde klassen en als u de klasse wijzigt, worden het canvas en alle toegevoegde velden opnieuw ingesteld.
+>U kunt [de klasse van een schema ](#change-class) op om het even welk punt tijdens het aanvankelijke samenstellingsproces veranderen alvorens het schema is bewaard, maar dit zou met uiterste voorzichtigheid moeten worden gedaan. Veldgroepen zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle velden die u hebt toegevoegd opnieuw ingesteld.
 
 Gebruik de velden aan de rechterkant van de editor om een weergavenaam en een optionele beschrijving voor het schema op te geven. Nadat u een naam hebt ingevoerd, wordt het canvas bijgewerkt met de nieuwe naam van het schema.
 
@@ -72,35 +72,35 @@ Er zijn verscheidene belangrijke overwegingen om te maken wanneer het beslissen 
 
 Deze zelfstudie stelt een schema samen om gegevens met betrekking tot de leden van een loyaliteitsprogramma in te voeren, en daarom wordt het schema genoemd &quot;Loyalty Leden&quot;.
 
-## Een mix toevoegen {#mixin}
+## Een veldgroep {#field-group} toevoegen
 
-U kunt nu velden toevoegen aan uw schema door mixen toe te voegen. Een mix is een groep van één of meerdere gebieden die vaak samen worden gebruikt om een bepaald concept te beschrijven. Deze zelfstudie gebruikt mixins om de leden van het loyaliteitsprogramma te beschrijven en zeer belangrijke informatie zoals naam, verjaardag, telefoonaantal, adres, en meer te vangen.
+U kunt nu velden toevoegen aan uw schema door veldgroepen toe te voegen. Een veldgroep is een groep van een of meer velden die vaak samen worden gebruikt om een bepaald concept te beschrijven. Deze zelfstudie gebruikt veldgroepen om de leden van het loyaliteitsprogramma te beschrijven en belangrijke informatie zoals naam, verjaardag, telefoonaantal, adres, en meer te vangen.
 
-Als u een mix wilt toevoegen, selecteert u **[!UICONTROL Add]** in de **[!UICONTROL Mixins]**-subsectie.
+Als u een veldgroep wilt toevoegen, selecteert u **[!UICONTROL Add]** in de **[!UICONTROL Field groups]**-subsectie.
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
-Er wordt een nieuw dialoogvenster weergegeven met een lijst met beschikbare mixen. Elke mix is alleen bedoeld voor gebruik met een specifieke klasse. Daarom worden in het dialoogvenster alleen mengen weergegeven die compatibel zijn met de klasse die u hebt geselecteerd (in dit geval de klasse [!DNL XDM Individual Profile]). Als u een standaard XDM-klasse gebruikt, wordt de lijst met mixen op intelligente wijze gesorteerd op basis van de populariteit van het gebruik.
+Er wordt een nieuw dialoogvenster weergegeven met een lijst met beschikbare veldgroepen. Elke veldgroep is alleen bedoeld voor gebruik met een specifieke klasse. Daarom worden in het dialoogvenster alleen veldgroepen weergegeven die compatibel zijn met de klasse die u hebt geselecteerd (in dit geval de klasse [!DNL XDM Individual Profile]). Als u een standaard XDM-klasse gebruikt, wordt de lijst met veldgroepen op intelligente wijze gesorteerd op basis van de populariteit van het gebruik.
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
-Als u een mix in de lijst selecteert, wordt deze weergegeven in de rechterspoorstaaf. U kunt desgewenst meerdere mixen selecteren en vervolgens de mixen toevoegen aan de lijst in de rechterrail voordat u de mixer bevestigt. Bovendien verschijnt er een pictogram aan de rechterkant van de geselecteerde mix, zodat u een voorbeeld kunt bekijken van de structuur van de velden die worden weergegeven.
+Als u een veldgroep in de lijst selecteert, wordt deze weergegeven in de rechterspoorstaaf. U kunt desgewenst meerdere veldgroepen selecteren en deze aan de lijst in de rechtertrack toevoegen voordat u de groep bevestigt. Bovendien wordt aan de rechterkant van de momenteel geselecteerde veldgroep een pictogram weergegeven waarmee u een voorvertoning kunt weergeven van de structuur van de velden die worden weergegeven.
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-Als u een voorbeeld van een mix bekijkt, wordt een gedetailleerde beschrijving van het schema van de mix gegeven in de rechterspoorstaaf. U kunt ook door de velden van de mix navigeren op het beschikbare canvas. Als u verschillende velden selecteert, wordt het rechterspoor bijgewerkt om details over het betreffende veld weer te geven. Selecteer **[!UICONTROL Back]** wanneer u klaar bent met het voorvertonen om naar het dialoogvenster van de mengselselectie terug te keren.
+Als u een voorbeeld van een veldgroep bekijkt, wordt een gedetailleerde beschrijving van het schema van de veldgroep gegeven in de rechterrail. U kunt ook door de velden van de veldgroep navigeren op het beschikbare canvas. Als u verschillende velden selecteert, wordt het rechterspoor bijgewerkt om details over het betreffende veld weer te geven. Selecteer **[!UICONTROL Back]** wanneer u klaar bent met het voorvertonen om terug te keren naar het dialoogvenster voor het selecteren van veldgroepen.
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-Selecteer voor deze zelfstudie de **[!UICONTROL Demographic Details]**-mix en selecteer **[!UICONTROL Add mixin]**.
+Selecteer voor deze zelfstudie de veldgroep **[!UICONTROL Demographic Details]** en selecteer **[!UICONTROL Add field group]**.
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-Het schemacanvas verschijnt opnieuw. In de sectie **[!UICONTROL Mixins]** wordt nu &quot;[!UICONTROL Demographic Details]&quot; weergegeven en in de sectie **[!UICONTROL Structure]** worden de velden opgenomen die door de mix worden toegevoegd. U kunt de naam van de mix selecteren onder de sectie **[!UICONTROL Mixins]** om de specifieke velden te markeren die worden weergegeven binnen het canvas.
+Het schemacanvas verschijnt opnieuw. De sectie **[!UICONTROL Field groups]** bevat nu &quot;[!UICONTROL Demographic Details]&quot; en de sectie **[!UICONTROL Structure]** bevat de velden die zijn toegevoegd door de veldgroep. U kunt de naam van de veldgroep selecteren onder de sectie **[!UICONTROL Field groups]** om de specifieke velden te markeren die worden weergegeven binnen het canvas.
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-Deze mix levert verschillende velden onder de naam `person` op hoofdniveau bij met het gegevenstype &quot;[!UICONTROL Person]&quot;. In deze groep velden wordt informatie over een individu beschreven, zoals naam, geboortedatum en geslacht.
+Deze veldgroep draagt verschillende velden onder de naam `person` op het hoogste niveau bij met het gegevenstype &quot;[!UICONTROL Person]&quot;. In deze groep velden wordt informatie over een individu beschreven, zoals naam, geboortedatum en geslacht.
 
 >[!NOTE]
 >
@@ -110,49 +110,49 @@ Het veld `name` heeft het gegevenstype &quot;[!UICONTROL Person name]&quot;. Dit
 
 Selecteer de verschillende velden op het canvas om extra velden weer te geven die worden toegevoegd aan de schemastructuur.
 
-## Een andere mix toevoegen {#mixin-2}
+## Een andere veldgroep {#field-group-2} toevoegen
 
-U kunt nu dezelfde stappen herhalen om een andere mix toe te voegen. Wanneer u het dialoogvenster **[!UICONTROL Add mixin]** deze keer weergeeft, ziet u dat de mix &quot;[!UICONTROL Demographic Details]&quot; grijs is weergegeven en dat het selectievakje naast de mix niet kan worden geselecteerd. Zo voorkomt u dat u per ongeluk combinaties dupliceert die u al in het huidige schema hebt opgenomen.
+U kunt nu dezelfde stappen herhalen om een andere veldgroep toe te voegen. Wanneer u het dialoogvenster **[!UICONTROL Add field group]** dit keer weergeeft, ziet u dat de veldgroep &quot;[!UICONTROL Demographic Details]&quot; grijs is weergegeven en dat het selectievakje naast de groep niet kan worden geselecteerd. Zo voorkomt u dat u per ongeluk veldgroepen dupliceert die u al in het huidige schema hebt opgenomen.
 
-Voor deze zelfstudie selecteert u de &quot;[!DNL Personal Contact Details]&quot; mix in het dialoogvenster en selecteert u **[!UICONTROL Add mixin]** om deze aan het schema toe te voegen.
+Voor deze zelfstudie selecteert u de veldgroep &quot;[!DNL Personal Contact Details]&quot; in het dialoogvenster en selecteert u **[!UICONTROL Add field group]** om deze aan het schema toe te voegen.
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-Nadat u het canvas hebt toegevoegd, verschijnt het weer. &quot;[!UICONTROL Personal Contact Details]&quot; wordt nu vermeld onder **[!UICONTROL Mixins]** in **[!UICONTROL Composition]** sectie, en gebieden voor huisadres, mobiele telefoon, en meer zijn toegevoegd onder **[!UICONTROL Structure]**.
+Nadat u het canvas hebt toegevoegd, verschijnt het weer. &quot;[!UICONTROL Personal Contact Details]&quot; wordt nu vermeld onder **[!UICONTROL Field groups]** in **[!UICONTROL Composition]** sectie, en gebieden voor huisadres, mobiele telefoon, en meer zijn toegevoegd onder **[!UICONTROL Structure]**.
 
 Net als in het veld `name` vertegenwoordigen de velden die u zojuist hebt toegevoegd concepten met meerdere velden. `homeAddress` heeft bijvoorbeeld een gegevenstype &quot;[!UICONTROL Postal address]&quot; en `mobilePhone` heeft een gegevenstype &quot;[!UICONTROL Phone number]&quot;. U kunt elk van deze velden selecteren om deze uit te vouwen en de extra velden in het gegevenstype bekijken.
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## Een aangepaste mix definiëren {#define-mixin}
+## Een aangepaste veldgroep {#define-field-group} definiëren
 
 Het schema &quot;[!UICONTROL Loyalty Members]&quot;is bedoeld om gegevens met betrekking tot de leden van een loyaliteitsprogramma te vangen, zodat zal het sommige specifieke op loyaliteit betrekking hebbende gebieden vereisen.
 
-Er is een standaard [!UICONTROL Loyalty Details] mengsel dat u aan het schema kunt toevoegen om gemeenschappelijke gebieden met betrekking tot een loyaliteitsprogramma te vangen. Terwijl u sterk wordt aangemoedigd om standaardmengelingen te gebruiken om concepten te vertegenwoordigen die door uw schema&#39;s worden gevangen, zou de structuur van de standaardloyaliteitsmixin niet alle relevante gegevens voor uw bepaald loyaliteitsprogramma kunnen vangen. In dit scenario kunt u een nieuwe aangepaste mix definiëren om deze velden vast te leggen.
+Er is een standaard [!UICONTROL Loyalty Details] gebiedsgroep die u aan het schema kunt toevoegen om gemeenschappelijke gebieden met betrekking tot een loyaliteitsprogramma te vangen. Terwijl u sterk wordt aangemoedigd om standaardgebiedsgroepen te gebruiken om concepten te vertegenwoordigen die door uw schema&#39;s worden gevangen, zou de structuur van de standaardloyaliteitsgebiedsgroep niet alle relevante gegevens voor uw bepaald loyaliteitsprogramma kunnen kunnen vangen. In dit scenario kunt u een nieuwe aangepaste veldgroep definiëren om deze velden vast te leggen.
 
-Open het dialoogvenster **[!UICONTROL Add Mixin]** opnieuw, maar selecteer **[!UICONTROL Create New Mixin]** nu boven. Vervolgens wordt u gevraagd een weergavenaam en beschrijving voor de mix op te geven.
+Open het dialoogvenster **[!UICONTROL Add Field group]** opnieuw, maar selecteer **[!UICONTROL Create New Field group]** nu boven. Vervolgens wordt u gevraagd een weergavenaam en beschrijving voor uw veldgroep op te geven.
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
-Net als bij klassennamen moet de mixinnaam kort en eenvoudig zijn en beschrijven wat de mix aan het schema zal bijdragen. Ook deze zijn uniek, dus u kunt de naam niet opnieuw gebruiken en moet er dus voor zorgen dat deze voldoende specifiek is.
+Net als bij klassennamen moet de naam van de veldgroep kort en eenvoudig zijn en beschrijven wat de veldgroep aan het schema zal bijdragen. Ook deze zijn uniek, dus u kunt de naam niet opnieuw gebruiken en moet er dus voor zorgen dat deze voldoende specifiek is.
 
-Geef voor deze zelfstudie de nieuwe mix de naam &quot;Loyalty Details&quot;.
+Geef voor deze zelfstudie de nieuwe veldgroep &quot;Loyalty Details&quot; een naam.
 
-Selecteer **[!UICONTROL Add mixin]** om op [!DNL Schema Editor] terug te komen. &quot;[!UICONTROL Loyalty Details]&quot; moet nu worden weergegeven onder **[!UICONTROL Mixins]** aan de linkerkant van het canvas, maar er zijn nog geen velden aan gekoppeld en daarom verschijnen er geen nieuwe velden onder **[!UICONTROL Structure]**.
+Selecteer **[!UICONTROL Add field group]** om op [!DNL Schema Editor] terug te komen. &quot;[!UICONTROL Loyalty Details]&quot; moet nu worden weergegeven onder **[!UICONTROL Field groups]** aan de linkerkant van het canvas, maar er zijn nog geen velden aan gekoppeld en daarom verschijnen er geen nieuwe velden onder **[!UICONTROL Structure]**.
 
-## Velden toevoegen aan de mix {#mixin-fields}
+## Velden toevoegen aan de veldgroep {#field-group-fields}
 
-Nu u de mix &quot;Loyalty Details&quot;hebt gecreeerd, is het tijd om de gebieden te bepalen die de mixin aan het schema zal bijdragen.
+Nu u de het gebiedsgroep van de &quot;Details van de Loyaliteit&quot;hebt gecreeerd, is het tijd om de gebieden te bepalen die de gebiedsgroep aan het schema zal bijdragen.
 
-Selecteer eerst de mixnaam in de sectie **[!UICONTROL Mixins]**. Zodra u dit doet, verschijnen de eigenschappen van de mixin op de rechterkant van de redacteur en **plus (+)** verschijnt naast de naam van het schema onder **[!UICONTROL Structure]**.
+Selecteer eerst de naam van de veldgroep in de sectie **[!UICONTROL Field groups]**. Zodra u dit doet, verschijnen de eigenschappen van de gebiedsgroep op de rechterkant van de redacteur en **plus (+)** verschijnt naast de naam van het schema onder **[!UICONTROL Structure]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
 Selecteer **plus (+)** pictogram naast &quot;[!DNL Loyalty Members]&quot;om een nieuwe knoop in de structuur tot stand te brengen. Dit knooppunt (in dit voorbeeld `_tenantId` genoemd) vertegenwoordigt de huurder-id van uw IMS-organisatie, voorafgegaan door een onderstrepingsteken. De aanwezigheid van huurder identiteitskaart wijst erop dat de gebieden u toevoegt in namespace van uw organisatie bevat zijn.
 
-Met andere woorden, de velden die u toevoegt, zijn uniek voor uw organisatie en worden in het [!DNL Schema Registry] opgeslagen in een specifiek gebied dat alleen voor uw organisatie toegankelijk is. De gebieden u bepaalt moeten altijd aan uw huurdersnamespace worden toegevoegd om botsingen met namen van andere standaardklassen, mixins, gegevenstypes, en gebieden te verhinderen.
+Met andere woorden, de velden die u toevoegt, zijn uniek voor uw organisatie en worden in het [!DNL Schema Registry] opgeslagen in een specifiek gebied dat alleen voor uw organisatie toegankelijk is. De gebieden u bepaalt moeten altijd aan uw huurdersnamespace worden toegevoegd om botsingen met namen van andere standaardklassen, gebiedsgroepen, gegevenstypes, en gebieden te verhinderen.
 
-Binnen die namespaced knoop is &quot;[!UICONTROL New Field]&quot;. Dit is het begin van de &quot;[!UICONTROL Loyalty Details]&quot;mengeling.
+Binnen die namespaced knoop is &quot;[!UICONTROL New Field]&quot;. Dit is het begin van de &quot;[!UICONTROL Loyalty Details]&quot;gebiedsgroep.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -179,7 +179,7 @@ Welke beperkingsopties beschikbaar zijn, is afhankelijk van het geselecteerde ge
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Meer velden toevoegen aan de mix {#mixin-fields-2}
+## Meer velden toevoegen aan de veldgroep {#field-group-fields-2}
 
 Nu u het `loyaltyId` gebied hebt toegevoegd, kunt u extra gebieden toevoegen om loyaliteitsgerelateerde informatie zoals te vangen:
 
@@ -192,7 +192,7 @@ Wanneer voltooid, zal het voorwerp van de Loyalty gebieden voor loyauiteits iden
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Een opsommingsveld toevoegen aan de mix {#enum}
+## Een opsommingsveld toevoegen aan de veldgroep {#enum}
 
 Bij het definiëren van velden in de [!DNL Schema Editor] zijn er enkele extra opties die u kunt toepassen op standaardveldtypen om verdere beperkingen te bieden aan de gegevens die het veld kan bevatten. De gebruiksgevallen voor deze beperkingen worden in de volgende tabel uitgelegd:
 
@@ -226,7 +226,7 @@ Als u alle veldeigenschappen hebt voltooid, selecteert u **[!UICONTROL Apply]** 
 
 Het `loyalty` voorwerp bevat nu verscheidene loyaliteitspecifieke gebieden, en vertegenwoordigt een gemeenschappelijke gegevensstructuur die in andere schema&#39;s nuttig zou kunnen zijn. Met [!DNL Schema Editor] kunt u gemakkelijk herbruikbare objecten met meerdere velden toepassen door de structuur van die objecten om te zetten in gegevenstypen.
 
-De types van gegevens staan voor het verenigbare gebruik van multi-gebiedsstructuren toe en verstrekken meer flexibiliteit dan een mengeling omdat zij overal binnen een schema kunnen worden gebruikt. Dit wordt gedaan door de waarde **[!UICONTROL Type]** van het gebied aan dat van om het even welk gegevenstype te plaatsen die in [!DNL Schema Registry] wordt bepaald.
+De types van gegevens staan voor het verenigbare gebruik van multi-gebiedsstructuren toe en verstrekken meer flexibiliteit dan een gebiedsgroep omdat zij overal binnen een schema kunnen worden gebruikt. Dit wordt gedaan door de waarde **[!UICONTROL Type]** van het gebied aan dat van om het even welk gegevenstype te plaatsen die in [!DNL Schema Registry] wordt bepaald.
 
 Als u het object `loyalty` wilt omzetten in een gegevenstype, selecteert u het veld `loyalty` onder **[!UICONTROL Structure]** en selecteert u **[!UICONTROL Convert to new data type]** rechts van de editor onder **[!UICONTROL Field properties]**. Er verschijnt een groene popover om te bevestigen dat het object is geconverteerd.
 
@@ -244,17 +244,17 @@ In een toekomstig schema, kon u een gebied nu toewijzen als &quot;[!DNL Loyalty]
 
 ## Schema-velden zoeken en filteren
 
-Het schema bevat nu verschillende combinaties naast de velden die door de basisklasse worden verschaft. Wanneer u met grotere schema&#39;s werkt, kunt u de selectievakjes naast mixinnamen in de linkerrails selecteren om de weergegeven velden te filteren op de velden die alleen worden weergegeven door de mixins waarin u geïnteresseerd bent.
+Het schema bevat nu diverse veldgroepen naast de velden die door de basisklasse worden verschaft. Wanneer u met grotere schema&#39;s werkt, kunt u de selectievakjes naast veldgroepnamen in de linkerrail selecteren om de weergegeven velden te filteren op de velden die alleen worden weergegeven door de veldgroepen waarin u geïnteresseerd bent.
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
-Als u naar een specifiek veld in uw schema zoekt, kunt u ook de zoekbalk gebruiken om weergegeven velden op naam te filteren, ongeacht onder welke combinatie deze velden staan.
+Als u een specifiek veld in uw schema zoekt, kunt u ook de zoekbalk gebruiken om weergegeven velden op naam te filteren, ongeacht de veldgroep waarin ze staan.
 
 ![](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
->Bij de weergave van overeenkomende velden houdt de zoekfunctie rekening met eventuele geselecteerde mixfilters. Als een onderzoeksvraag niet de resultaten toont u verwacht, kunt u moeten tweemaal controleren dat u geen relevante mengen filtreert.
+>De zoekfunctie houdt bij het weergeven van overeenkomende velden rekening met alle geselecteerde veldgroepfilters. Als een zoekquery de resultaten die u verwacht niet weergeeft, moet u mogelijk twee keer controleren of er geen relevante veldgroepen worden uitgefilterd.
 
 ## Een schemaveld instellen als een identiteitsveld {#identity-field}
 
@@ -334,7 +334,7 @@ De volgende video toont hoe te om een eenvoudig schema in [!DNL Platform] UI tot
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
-De volgende video is bedoeld om uw inzicht in het werken met mixins en klassen te versterken.
+De volgende video is bedoeld om u meer inzicht te geven in het werken met veldgroepen en klassen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
@@ -352,6 +352,6 @@ U kunt de klasse van een schema op om het even welk punt tijdens het aanvankelij
 
 >[!WARNING]
 >
->Het opnieuw toewijzen van de klasse voor een schema zou met uiterste voorzichtigheid moeten worden gedaan. Mixins zijn alleen compatibel met bepaalde klassen en als u de klasse wijzigt, worden het canvas en alle toegevoegde velden opnieuw ingesteld.
+>Het opnieuw toewijzen van de klasse voor een schema zou met uiterste voorzichtigheid moeten worden gedaan. Veldgroepen zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle velden die u hebt toegevoegd opnieuw ingesteld.
 
 Leer hoe te om de klasse van een schema te veranderen, zie de gids op [het beheren van schema&#39;s in UI](../ui/resources/schemas.md).
