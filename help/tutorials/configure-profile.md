@@ -7,9 +7,9 @@ type: Tutorial
 description: In dit document worden de desbetreffende stappen beschreven en worden koppelingen weergegeven naar zelfstudies voor het voltooien van elke afzonderlijke workflow.
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Voordat gegevens in Adobe Experience Platform kunnen worden ingevoerd en kunnen 
 **Deze handleiding helpt u:**
 - Blader door bestaande schema&#39;s.
 - Maak een schema en geef dit een naam.
-- XDM-mixen toevoegen en definiëren.
+- Voeg XDM-schemaveldgroepen toe en definieer deze.
 - Stel uw schemavelden in als identiteitsvelden.
 - Profiel inschakelen voor uw schema.
 
