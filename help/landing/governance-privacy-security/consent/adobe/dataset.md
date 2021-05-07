@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Dit document verstrekt stappen om een dataset te vormen om toestemmingsgegevens 
 >
 >In de voorbeelden in deze handleiding wordt een gestandaardiseerde set velden gebruikt voor de weergave van toestemmingswaarden voor klanten, zoals gedefinieerd door het XDM-gegevenstype [Inhoud en voorkeuren](../../../../xdm/data-types/consents.md). De structuur van deze velden is bedoeld om een efficiënt gegevensmodel te bieden voor een groot aantal gemeenschappelijke gevallen waarin toestemming wordt gegeven.
 >
->U kunt echter ook uw eigen combinaties definiëren om toestemming te vertegenwoordigen op basis van uw eigen gegevensmodellen. Vraag uw juridische team om goedkeuring voor een gegevensmodel voor toestemming dat past bij uw bedrijfsbehoeften, op basis van de volgende opties:
+>U kunt echter ook uw eigen veldgroepen definiëren om toestemming te vertegenwoordigen op basis van uw eigen gegevensmodellen. Vraag uw juridische team om goedkeuring voor een gegevensmodel voor toestemming dat past bij uw bedrijfsbehoeften, op basis van de volgende opties:
 >
->* De gestandaardiseerde mengvoeders
->* Een combinatie van aangepaste toestemming die door uw organisatie is gemaakt
->* Een combinatie van de gestandaardiseerde toestemmingsmix en aanvullende velden die worden verstrekt door een aangepaste toestemmingsmix
+>* De standaardveldgroep voor toestemming
+>* Een veldgroep voor aangepaste toestemming die door uw organisatie is gemaakt
+>* Een combinatie van de standaardveldgroep voor toestemming en aanvullende velden die worden verstrekt door een veldgroep voor aangepaste toestemming
 
 
 ## Vereisten
@@ -42,11 +42,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 >
 >In deze zelfstudie wordt ervan uitgegaan dat u het schema [!DNL Profile] in het Platform kent dat u wilt gebruiken om kenmerkgegevens van de klant vast te leggen. Ongeacht de methode u gebruikt om toestemmingsgegevens te verzamelen, moet dit schema [toegelaten voor het Profiel van de Klant in real time](../../../../xdm/ui/resources/schemas.md#profile) zijn. Bovendien kan de primaire identiteit van het schema geen direct identificeerbaar veld zijn dat niet mag worden gebruikt in op rente gebaseerde reclame, zoals een e-mailadres. Raadpleeg uw juridische adviseur als u niet zeker weet welke velden beperkt zijn.
 
-## Inhoud en voorkeuren, mixingstructuur {#structure}
+## Inhoud en voorkeuren, veldgroepsstructuur {#structure}
 
-De [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]-mix (hierna de &quot;mix van constanten en voorkeuren&quot; genoemd) verschaft gestandaardiseerde toestemmingsvelden voor een schema. Momenteel is deze mix alleen compatibel met schema&#39;s die zijn gebaseerd op de klasse [!DNL XDM Individual Profile].
+De [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] gebiedsgroep (verder genoemd als &quot;de het gebiedsgroep van de Inhoud &amp; van de Voorkeur&quot;) verstrekt gestandaardiseerde toestemmingsgebieden aan een schema. Deze veldgroep is momenteel alleen compatibel met schema&#39;s die zijn gebaseerd op de klasse [!DNL XDM Individual Profile].
 
-De mix biedt één objecttype veld, `consents`, waarvan de subeigenschappen een set gestandaardiseerde toestemmingsvelden vastleggen. Het volgende JSON is een voorbeeld van het soort gegevens dat `consents` verwacht na gegevensinvoer:
+De veldgroep biedt één objecttype veld, `consents`, waarvan de subeigenschappen een set gestandaardiseerde toestemmingsvelden vastleggen. Het volgende JSON is een voorbeeld van het soort gegevens dat `consents` verwacht na gegevensinvoer:
 
 ```json
 {
@@ -95,7 +95,7 @@ De mix biedt één objecttype veld, `consents`, waarvan de subeigenschappen een 
 >
 >Voor meer informatie over de structuur en betekenis van de subeigenschappen in `consents`, zie het overzicht op [het gegevenstype van de Inhoud &amp; van de Voorkeur](../../../../xdm/data-types/consents.md).
 
-## Voeg de mix Consents &amp; Preferences toe aan uw [!DNL Profile] schema {#add-mixin}
+## Voeg de de gebiedsgroep van de Inhoud &amp; van de Voorkeur aan uw [!DNL Profile] schema {#add-field-group} toe
 
 In Platform UI, selecteer **[!UICONTROL Schemas]** in de linkernavigatie, dan selecteer **[!UICONTROL Browse]** tabel om een lijst van bestaande schema&#39;s te tonen. Van hier, selecteer de naam van [!DNL Profile]-Toegelaten schema dat u toestemmingsgebieden aan wilt toevoegen. De schermafbeeldingen in deze sectie gebruiken het schema &quot;van de Leden van de Loyalty&quot;dat in [schemaaanmaakzelfstudie](../../../../xdm/tutorials/create-schema-ui.md) als voorbeeld wordt gebouwd.
 
@@ -105,15 +105,15 @@ In Platform UI, selecteer **[!UICONTROL Schemas]** in de linkernavigatie, dan se
 >
 >U kunt de zoek- en filtermogelijkheden van de werkruimte gebruiken om uw schema gemakkelijker te vinden. Zie de handleiding bij [het verkennen van XDM-bronnen](../../../../xdm/ui/explore.md) voor meer informatie.
 
-De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Selecteer **[!UICONTROL Add]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
+De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Selecteer **[!UICONTROL Add]** onder de sectie **[!UICONTROL Field groups]** links op het canvas.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-Het dialoogvenster **[!UICONTROL Add mixin]** wordt weergegeven. Selecteer **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Selecteer **[!UICONTROL Add mixin]** als de mix is geselecteerd.
+Het dialoogvenster **[!UICONTROL Add field group]** wordt weergegeven. Selecteer **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden. Wanneer de veldgroep is geselecteerd, selecteert u **[!UICONTROL Add field group]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-Het canvas verschijnt weer en geeft aan dat het object `consents` is toegevoegd aan de schemastructuur. Als u extra toestemmings en voorkeursgebieden die niet door de standaardmengeling worden gevangen vereist, zie de bijlage sectie op [toevoegend de gebieden van de douanetoestemming en voorkeur aan het schema](#custom-consent). Anders, selecteer **[!UICONTROL Save]** om de veranderingen in het schema te voltooien.
+Het canvas verschijnt weer en geeft aan dat het object `consents` is toegevoegd aan de schemastructuur. Als u extra toestemmings en voorkeursgebieden nodig hebt die niet door de standaardgebiedsgroep worden gevangen, zie de bijlage sectie op [toevoegend de gebieden van de douanetoestemming en voorkeur aan het schema](#custom-consent). Anders, selecteer **[!UICONTROL Save]** om de veranderingen in het schema te voltooien.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -165,17 +165,17 @@ De volgende sectie bevat extra informatie over het creëren van een dataset om k
 
 ### Aangepaste toestemmings- en voorkeursvelden toevoegen aan het schema {#custom-consent}
 
-Als u extra toestemmingssignalen buiten die moet vangen die door de standaard [!DNL Consents & Preferences] mengen worden vertegenwoordigd, kunt u de componenten van douaneXDM gebruiken om uw toestemmingsschema te verbeteren om uw bijzondere bedrijfsbehoeften aan te passen. In deze sectie worden de basisbeginselen beschreven voor het aanpassen van het toestemmingsschema op een manier die compatibel is met de opdrachten voor het wijzigen van de instemming van Adobe Experience Platform Mobile en Web SDK&#39;s.
+Als u extra toestemmingssignalen buiten die moet vangen die door de standaard [!DNL Consents & Preferences] gebiedsgroep worden vertegenwoordigd, kunt u douaneXDM componenten gebruiken om uw toestemmingsschema te verbeteren om uw bijzondere bedrijfsbehoeften aan te passen. In deze sectie worden de basisbeginselen beschreven voor het aanpassen van het toestemmingsschema op een manier die compatibel is met de opdrachten voor het wijzigen van de instemming van Adobe Experience Platform Mobile en Web SDK&#39;s.
 
 >[!IMPORTANT]
 >
->U moet de [!DNL Consents & Preferences] mix gebruiken als basislijn voor de structuur van uw toestemmingsgegevens en extra gebieden toevoegen zoals nodig, eerder dan het proberen om de volledige structuur van kras tot stand te brengen.
+>U moet de [!DNL Consents & Preferences] gebiedsgroep als basislijn voor de structuur van uw toestemmingsgegevens gebruiken en extra gebieden toevoegen zoals nodig, eerder dan het proberen om de volledige structuur van kras tot stand te brengen.
 
-Als u aangepaste velden wilt toevoegen aan de structuur van een standaardmix, moet u eerst een aangepaste mix maken. Nadat u de [!DNL Consents & Preferences]-mix aan het schema hebt toegevoegd, selecteert u het **plus-pictogram (+)** in de sectie **[!UICONTROL Mixins]** en selecteert u **[!UICONTROL Create new mixin]**. Geef een naam en een optionele beschrijving voor de mix op en selecteer **[!UICONTROL Add mixin]**.
+Als u aangepaste velden wilt toevoegen aan de structuur van een standaardveldgroep, moet u eerst een aangepaste veldgroep maken. Nadat u de [!DNL Consents & Preferences]-veldgroep aan het schema hebt toegevoegd, selecteert u het **plus-pictogram (+)** in de sectie **[!UICONTROL Field groups]** en selecteert u **[!UICONTROL Create new field group]**. Geef een naam en een optionele beschrijving voor de veldgroep op en selecteer **[!UICONTROL Add field group]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-De [!DNL Schema Editor] verschijnt opnieuw met de nieuwe douanemix die in de linkerspoorstaaf wordt geselecteerd. Op het canvas worden besturingselementen weergegeven waarmee u aangepaste velden kunt toevoegen aan de schemastructuur. Als u een nieuw toestemmings- of voorkeursveld wilt toevoegen, selecteert u het pictogram **plus (+)** naast het object `consents`.
+De [!DNL Schema Editor] verschijnt opnieuw met de nieuwe geselecteerde groep van het douanegebied in de linkerspoorstaaf. Op het canvas worden besturingselementen weergegeven waarmee u aangepaste velden kunt toevoegen aan de schemastructuur. Als u een nieuw toestemmings- of voorkeursveld wilt toevoegen, selecteert u het pictogram **plus (+)** naast het object `consents`.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
