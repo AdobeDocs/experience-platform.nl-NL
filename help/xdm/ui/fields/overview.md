@@ -6,20 +6,20 @@ description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het 
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1250'
 ht-degree: 3%
 
 ---
 
 # XDM-velden definiëren in de gebruikersinterface
 
-Met de [!DNL Schema Editor] in de Adobe Experience Platform-gebruikersinterface kunt u uw eigen velden definiëren binnen de klassen en mixen van het aangepaste Experience Data Model (XDM). In deze handleiding worden de stappen beschreven voor het definiëren van XDM-velden in de gebruikersinterface, inclusief de beschikbare configuratieopties voor elk veldtype.
+Met de [!DNL Schema Editor] in de Adobe Experience Platform-gebruikersinterface kunt u uw eigen velden definiëren binnen de XDM-klassen (Custom Experience Data Model) en groepen schemavelden. In deze handleiding worden de stappen beschreven voor het definiëren van XDM-velden in de gebruikersinterface, inclusief de beschikbare configuratieopties voor elk veldtype.
 
 ## Vereisten
 
-Deze handleiding vereist een goed begrip van XDM System. Verwijs naar [XDM overzicht](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van schemacompositie](../../schema/composition.md) om te leren hoe de klassen en de mixins gebieden aan XDM schema&#39;s bijdragen.
+Deze handleiding vereist een goed begrip van XDM System. Verwijs naar [XDM overzicht](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van schemacompositie](../../schema/composition.md) om te leren hoe de klassen en de gebiedsgroepen gebieden aan XDM schema&#39;s bijdragen.
 
 Hoewel niet vereist voor deze gids, wordt het geadviseerd dat u het leerprogramma ook [het samenstellen van een schema in UI](../../tutorials/create-schema-ui.md) volgt om zich met de diverse mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
 
@@ -27,13 +27,13 @@ Hoewel niet vereist voor deze gids, wordt het geadviseerd dat u het leerprogramm
 
 Als u nieuwe XDM-velden in de gebruikersinterface wilt definiëren, moet u eerst een schema openen in het veld [!DNL Schema Editor]. Afhankelijk van welke schema&#39;s momenteel beschikbaar aan u in [!DNL Schema Library] zijn, kunt u verkiezen om [een nieuw schema te creëren ](../resources/schemas.md#create) of [een bestaand schema te selecteren om](../resources/schemas.md#edit) uit te geven.
 
-Wanneer u de [!DNL Schema Editor] open hebt, gebruikt u de linkerspoorstaaf om de klasse of de mengeling te selecteren die u gebieden voor wilt bepalen. Als de bron een aangepaste bron is die door uw organisatie is gedefinieerd, verschijnen er besturingselementen voor het toevoegen of bewerken van velden op het canvas. Deze besturingselementen worden naast de naam van het schema weergegeven, evenals alle velden van het objecttype die zijn gedefinieerd onder de geselecteerde klasse of mix.
+Wanneer u de [!DNL Schema Editor] open hebt, gebruikt u de linkerspoor om de klasse of de gebiedsgroep te selecteren die u gebieden voor wilt bepalen. Als de bron een aangepaste bron is die door uw organisatie is gedefinieerd, verschijnen er besturingselementen voor het toevoegen of bewerken van velden op het canvas. Deze besturingselementen worden naast de naam van het schema weergegeven, evenals alle velden van het objecttype die zijn gedefinieerd onder de geselecteerde klasse of veldgroep.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
 >[!NOTE]
 >
->Als de klasse of de mixin u uitgezocht een kernmiddel is dat door Adobe wordt verstrekt, kan het niet worden uitgegeven en daarom zullen de hierboven getoonde controles niet verschijnen. Als het schema u gebieden aan wilt toevoegen op een kernXDM klasse gebaseerd is en geen douanemengsels bevat, kunt u [een nieuwe mixin ](../resources/mixins.md#create) creëren om aan het schema in plaats daarvan toe te voegen.
+>Als de klasse of de gebiedsgroep u selecteert een kernmiddel is dat door Adobe wordt verstrekt, kan het niet worden uitgegeven en daarom zullen de hierboven getoonde controles niet verschijnen. Als het schema u gebieden aan wilt toevoegen op een kernXDM klasse gebaseerd is en geen aangepaste gebiedsgroepen bevat, kunt u [een nieuwe gebiedsgroep ](../resources/field-groups.md#create) creëren om aan het schema in plaats daarvan toe te voegen.
 
 Als u een nieuw veld aan de bron wilt toevoegen, selecteert u het pictogram **plus (+)** naast de naam van het schema op het canvas of naast het veld van het objecttype dat u onder het veld wilt definiëren.
 
@@ -41,7 +41,7 @@ Als u een nieuw veld aan de bron wilt toevoegen, selecteert u het pictogram **pl
 
 ## Een veld definiëren voor een resource {#define}
 
-Nadat u het pictogram **plus (+)** hebt geselecteerd, wordt een **[!UICONTROL New field]** weergegeven in het canvas, dat zich bevindt binnen een basisobject dat is naamloos voor uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle velden die via aangepaste klassen en mixen aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten met andere velden van door Adobe verschafte klassen en mixen te voorkomen.
+Nadat u het pictogram **plus (+)** hebt geselecteerd, wordt een **[!UICONTROL New field]** weergegeven in het canvas, dat zich bevindt binnen een basisobject dat is naamloos voor uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle velden die via aangepaste klassen en veldgroepen aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten met andere velden van door Adobe verschafte klassen en veldgroepen te voorkomen.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -69,11 +69,11 @@ Het canvas wordt bijgewerkt om de naam en het type van het veld weer te geven en
 
 ![](../../images/ui/fields/overview/field-added.png)
 
-U kunt de bovenstaande stappen blijven volgen om meer velden aan het schema toe te voegen. Zodra het schema wordt bewaard, worden zijn basisklasse en mengen ook bewaard als om het even welke veranderingen in hen zijn aangebracht.
+U kunt de bovenstaande stappen blijven volgen om meer velden aan het schema toe te voegen. Zodra het schema wordt bewaard, worden zijn basisklasse en gebiedsgroepen ook bewaard als om het even welke veranderingen in hen zijn aangebracht.
 
 >[!NOTE]
 >
->Om het even welke veranderingen u aan de mengen of de klasse van één schema aanbrengt zullen in alle andere schema&#39;s worden weerspiegeld die hen aanwenden.
+>Om het even welke veranderingen u aan de gebiedsgroepen of de klasse van één schema aanbrengt zullen in alle andere schema&#39;s worden weerspiegeld die hen aanwenden.
 
 ## Type-specifieke veldeigenschappen {#type-specific-properties}
 
@@ -107,6 +107,6 @@ Technisch gezien is het geen speciaal veldtype, maar u wordt ook aangeraden de h
 
 ## Volgende stappen
 
-Deze handleiding gaf een overzicht van hoe u XDM-velden in de gebruikersinterface kunt definiëren. Vergeet niet dat velden alleen aan schema&#39;s kunnen worden toegevoegd met behulp van klassen en mixins. Voor meer informatie over hoe te om deze middelen in UI te beheren, zie de gidsen bij het creëren van en het uitgeven [klassen](../resources/classes.md) en [mixins](../resources/mixins.md).
+Deze handleiding gaf een overzicht van hoe u XDM-velden in de gebruikersinterface kunt definiëren. Vergeet niet dat velden alleen aan schema&#39;s kunnen worden toegevoegd met behulp van klassen en veldgroepen. Voor meer informatie over hoe te om deze middelen in UI te beheren, zie de gidsen bij het creëren van en het uitgeven [klassen](../resources/classes.md) en [gebiedsgroepen](../resources/field-groups.md).
 
 Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie [[!UICONTROL Schemas] werkruimteoverzicht](../overview.md).
