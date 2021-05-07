@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
@@ -54,23 +54,23 @@ Het bestemmingsschema &quot;[!DNL Hotels]&quot;is gebaseerd op een douane &quot;
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## Een relatie-mix maken
+## Een veldgroep met een relatieschema maken
 
 >[!NOTE]
 >
 >Deze stap wordt slechts vereist als uw bronschema geen specifiek tekenreeks-type gebied heeft dat als verwijzing naar het bestemmingsschema moet worden gebruikt. Als dit gebied reeds in uw bronschema wordt bepaald, sla aan de volgende stap van [over het bepalen van een relatieveld](#relationship-field) over.
 
-Om een verband tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat als verwijzing naar het bestemmingsschema moet worden gebruikt. U kunt dit veld toevoegen aan het bronschema door een nieuwe mix te maken.
+Om een verband tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat als verwijzing naar het bestemmingsschema moet worden gebruikt. U kunt dit gebied aan het bronschema toevoegen door een nieuwe groep van het schemagebied te creëren.
 
-Selecteer **[!UICONTROL Add]** in de sectie **[!UICONTROL Mixins]** om te beginnen.
+Selecteer **[!UICONTROL Add]** in de sectie **[!UICONTROL Field groups]** om te beginnen.
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-Het dialoogvenster [!UICONTROL Add Mixin] wordt weergegeven. Selecteer **[!UICONTROL Create new mixin]**. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe mix. Selecteer **[!UICONTROL Add mixin]** wanneer gebeëindigd.
+Het dialoogvenster [!UICONTROL Add field group] wordt weergegeven. Selecteer **[!UICONTROL Create new field group]**. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe veldgroep. Selecteer **[!UICONTROL Add field groups]** wanneer gebeëindigd.
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-Het canvas verschijnt weer met &quot;[!DNL Favorite Hotel]&quot; in de sectie **[!UICONTROL Mixins]**. Selecteer de mixnaam en selecteer **[!UICONTROL Add field]** naast het veld op hoofdniveau `Loyalty Members`.
+Het canvas verschijnt weer met &quot;[!DNL Favorite Hotel]&quot; in de sectie **[!UICONTROL Field groups]**. Selecteer de naam van de veldgroep en selecteer **[!UICONTROL Add field]** naast het veld op hoofdniveau `Loyalty Members`.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
