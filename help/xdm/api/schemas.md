@@ -6,16 +6,16 @@ description: Het /schemas eindpunt in de Registratie API van het Schema staat u 
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
 
 # Schemas, eindpunt
 
-Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt invoeren. Elk schema bestaat uit een klasse en nul of meer mixen. Het `/schemas` eindpunt in [!DNL Schema Registry] API staat u toe om schema&#39;s binnen uw ervaringstoepassing programmatically te beheren.
+Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt invoeren. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. Het `/schemas` eindpunt in [!DNL Schema Registry] API staat u toe om schema&#39;s binnen uw ervaringstoepassing programmatically te beheren.
 
 ## Aan de slag
 
@@ -154,7 +154,7 @@ Een succesvolle reactie keert de details van het schema terug. Welke velden word
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -163,7 +163,7 @@ Een succesvolle reactie keert de details van het schema terug. Welke velden word
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -193,7 +193,7 @@ Het proces van de schemacompositie begint door een klasse toe te wijzen. De klas
 
 >[!NOTE]
 >
->De voorbeeldvraag hieronder is slechts een basislijnvoorbeeld van hoe te om een schema in API, met de minimale samenstellingsvereisten van een klasse en geen mengen tot stand te brengen. Voor volledige stappen op hoe te om een schema in API tot stand te brengen, met inbegrip van hoe te om gebieden toe te wijzen gebruikend mengen en gegevenstypes, zie [zelfstudie van de schemaverwezenlijking](../tutorials/create-schema-api.md).
+>De voorbeeldaanroep hieronder is slechts een basislijnvoorbeeld van hoe u een schema in de API maakt, met de minimale compositievereisten van een klasse en geen veldgroepen. Voor volledige stappen op hoe te om een schema in API tot stand te brengen, met inbegrip van hoe te om gebieden toe te wijzen gebruikend gebiedsgroepen en gegevenstypes, zie [schemaverwezenlijking zelfstudie](../tutorials/create-schema-api.md).
 
 **API-indeling**
 
@@ -227,7 +227,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `allOf` | Een array van objecten, waarbij elk object verwijst naar een klasse of combinatie waarvan het schema velden implementeert. Elk object bevat één eigenschap (`$ref`) waarvan de waarde `$id` van de klasse of mix in het nieuwe schema vertegenwoordigt, wordt geïmplementeerd. Er moet één klasse worden aangeboden met nul of meer extra mengsels. In het bovenstaande voorbeeld is het ene object in de array `allOf` de klasse van het schema. |
+| `allOf` | Een array van objecten, waarbij elk object verwijst naar een klasse of veldgroep waarvan de velden door het schema worden geïmplementeerd. Elk object bevat één eigenschap (`$ref`) waarvan de waarde de `$id` van de klasse of veldgroep vertegenwoordigt die het nieuwe schema zal implementeren. Er moet één klasse worden opgegeven, met nul of meer extra veldgroepen. In het bovenstaande voorbeeld is het ene object in de array `allOf` de klasse van het schema. |
 
 **Antwoord**
 
@@ -268,7 +268,7 @@ Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die 
 
 Het uitvoeren van een verzoek van de GET aan [list alle schema&#39;s](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt een [lookup (GET) verzoek](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken.
 
-Als u extra velden wilt toevoegen aan een schema, kunt u een [PATCH-bewerking](#patch) uitvoeren om mixins toe te voegen aan de `allOf`- en `meta:extends`-arrays van het schema.
+Als u extra velden wilt toevoegen aan een schema, kunt u een [PATCH-bewerking](#patch) uitvoeren om veldgroepen toe te voegen aan de `allOf`- en `meta:extends`-arrays van het schema.
 
 ## Schema {#put} bijwerken
 
@@ -357,7 +357,7 @@ U kunt een gedeelte van een schema bijwerken door een verzoek van PATCH te gebru
 >
 >Als u een volledige bron met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [het vervangen van een schema gebruikend een verrichting van de PUT](#put).
 
-Één van de gemeenschappelijkste verrichtingen van de PATCH impliceert het toevoegen van eerder bepaalde mengelingen aan een schema, zoals aangetoond in het hieronder voorbeeld.
+Een van de meest gangbare PATCH-bewerkingen bestaat uit het toevoegen van eerder gedefinieerde veldgroepen aan een schema, zoals in het onderstaande voorbeeld wordt getoond.
 
 **API-indeling**
 
@@ -371,7 +371,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **Verzoek**
 
-In de onderstaande voorbeeldaanvraag wordt een nieuwe mix toegevoegd aan een schema door de `$id`-waarde van die mix toe te voegen aan zowel de `meta:extends`- als `allOf`-arrays.
+In de onderstaande voorbeeldaanvraag wordt een nieuwe veldgroep toegevoegd aan een schema door de `$id`-waarde van die veldgroep toe te voegen aan zowel de `meta:extends`- als `allOf`-arrays.
 
 De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk object bevat de uit te voeren bewerking (`op`), in welk veld de bewerking moet worden uitgevoerd (`path`) en welke informatie in die bewerking moet worden opgenomen (`value`).
 
@@ -387,13 +387,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **Antwoord**
 
-De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De mixin `$id` is toegevoegd aan `meta:extends` serie en een verwijzing (`$ref`) aan de mixin `$id` verschijnt nu in `allOf` serie.
+De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgroep `$id` is toegevoegd aan de `meta:extends`-array en een verwijzing (`$ref`) naar de veldgroep `$id` wordt nu weergegeven in de `allOf`-array.
 
 ```JSON
 {
@@ -413,7 +413,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De mixin 
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -422,7 +422,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De mixin 
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -493,7 +493,7 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug, die t
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -502,7 +502,7 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug, die t
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
