@@ -6,9 +6,9 @@ description: Dit document verstrekt een inleiding aan de kernconcepten u moet ke
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -85,16 +85,16 @@ Een succesvolle reactie keert informatie betreffende het gebruik van [!DNL Schem
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ Een succesvolle reactie keert informatie betreffende het gebruik van [!DNL Schem
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van `CONTAINER_ID`.
 
 ### Algemene container
 
-De `global` container houdt alle standaardAdobe en [!DNL Experience Platform] partner verstrekte klassen, mixins, gegevenstypes, en schema&#39;s. U kunt lijst en raadplegings (GET) verzoeken tegen de `global` container slechts uitvoeren.
+De `global` container houdt alle standaardAdobe en [!DNL Experience Platform] partner verstrekte klassen, de groepen van het schemagebied, gegevenstypes, en schema&#39;s. U kunt lijst en raadplegings (GET) verzoeken tegen de `global` container slechts uitvoeren.
 
 Een voorbeeld van een vraag die de `global` container gebruikt zou als het volgende kijken:
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### Trekcontainer
 
-Om niet met uw uniek `TENANT_ID` te worden verward, bevat de `tenant` container alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een organisatie IMS worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD verrichtingen (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de `tenant` container creeert.
+Om niet met uw uniek `TENANT_ID` te worden verward, bevat de `tenant` container alle klassen, gebiedsgroepen, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD verrichtingen (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de `tenant` container creeert.
 
 Een voorbeeld van een vraag die de `tenant` container gebruikt zou als het volgende kijken:
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-Wanneer u een klasse, een mixin, een schema of een gegevenstype in de `tenant` container creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen `$id` URI die `TENANT_ID` omvat. Deze `$id` wordt gebruikt door de API om naar specifieke middelen te verwijzen. De voorbeelden van `$id` waarden worden verstrekt in de volgende sectie.
+Wanneer u een klasse, een gebiedsgroep, een schema of een gegevenstype in de `tenant` container creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen `$id` URI die `TENANT_ID` omvat. Deze `$id` wordt gebruikt door de API om naar specifieke middelen te verwijzen. De voorbeelden van `$id` waarden worden verstrekt in de volgende sectie.
 
 ## Bronidentificatie {#resource-identification}
 
