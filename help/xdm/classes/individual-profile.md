@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
+source-git-commit: 612917b23d1841556a71f6378497e1d033bc3b62
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) tot sterk geïdentificeerde profielen met gedetailleerde informatie zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identiteiten, contactgegevens en communicatievoorkeuren voor een individu. Voor meer informatie op hoog niveau over het gebruik van deze klasse in het Platform ecosysteem, verwijs naar [XDM overzicht](../home.md#data-behaviors).
 
-De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-geproduceerde waarden die automatisch bevolkt zijn wanneer het gegeven wordt opgenomen, terwijl alle andere gebieden door het gebruik van [compatibele mengen](#mixins) moeten worden toegevoegd:
+De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-geproduceerde waarden die automatisch bevolkt zijn wanneer het gegeven wordt opgenomen, terwijl alle andere gebieden door het gebruik van [compatibele groepen van het schemagebied](#field-groups) moeten worden toegevoegd:
 
 ![](../images/classes/individual-profile.png)
 
@@ -33,18 +33,18 @@ De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-gepr
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
 
-## Compatibele combinaties {#mixins}
+## Compatibele veldgroepen {#field-groups}
 
 >[!NOTE]
 >
->De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../mixins/name-updates.md) voor meer informatie.
+>De namen van verschillende veldgroepen zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../field-groups/name-updates.md) voor meer informatie.
 
-Adobe biedt verschillende standaardmixen voor gebruik met de klasse [!DNL XDM Individual Profile]. Hieronder volgt een lijst met enkele veelgebruikte combinaties voor de klasse:
+Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL XDM Individual Profile]. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
-* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
-* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 
-Voor een volledige lijst van alle compatibele mengsels voor [!DNL XDM Individual Profile], verwijs naar [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+Voor een volledige lijst van alle compatibele gebiedsgroepen voor [!DNL XDM Individual Profile], verwijs naar [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
