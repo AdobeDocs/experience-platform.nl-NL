@@ -1,15 +1,15 @@
 ---
 title: IAB TCF 2.0 Steun in de SDK van het Web van Adobe Experience Platform
 description: Leer hoe u IAB TCF 2.0-voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK
-keywords: toestemming;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+keywords: toestemming;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 translation-type: tm+mt
-source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
-
 
 # IAB TCF 2.0 steun in de SDK van het Web van Adobe Experience Platform
 
@@ -49,7 +49,7 @@ Terwijl CDP in real time en het publiek van de Audience Manager spoor van de hui
 
 Om toestemmingsinformatie over gebeurtenissen te verzamelen, wordt het volgende vereist:
 
-- Een dataset die op de [!DNL XDM Experience Event] klasse, met [!DNL Experience Event] privacymengsel wordt gebaseerd.
+- Een dataset die op de [!DNL XDM Experience Event] klasse, met de [!DNL Experience Event] de gebiedsgroep van het privacyschema wordt gebaseerd.
 - Een randconfiguratie opstelling met de [!DNL XDM Experience Event] dataset hierboven.
 
 Voor meer informatie over hoe te om een Gebeurtenis van de Ervaring XDM in een hit van de Analyse om te zetten, begin door [Analytics te lezen overzicht](../../data-collection/adobe-analytics/analytics-overview.md) documentatie.
