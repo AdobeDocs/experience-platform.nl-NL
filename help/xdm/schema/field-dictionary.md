@@ -6,9 +6,9 @@ topic-legacy: overviews
 description: Het Model van de Gegevens van de ervaring (XDM) bepaalt een reeks standaardgebieden die kunnen worden gebruikt wanneer het samenstellen van schema's van Adobe Experience Platform. Het gebruik van deze gebieden resulteert in verenigbaar gedrag over de diensten van het Platform, aangezien alle diensten die XDM verbruiken uitdrukkelijk de specifieke definities zullen begrijpen die door deze gebieden worden verstrekt.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '25238'
+source-wordcount: '25240'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Zie [grondbeginselen van schemacompositie](composition.md) voor meer informatie betreffende de bouwstenen van schema&#39;s, met inbegrip van principes en beste praktijken in het bepalen van schema&#39;s voor [!DNL Experience Platform].
 
-De onderstaande tabel bevat de veldnaam (niet alle XDM-velden krijgen een naamruimte met &quot;xdm&quot;) samen met de titel en beschrijving, het type en de indeling, indien nodig, evenals het corresponderende XDM-type en de bronnen (mixins, gegevenstypen en schema&#39;s) waarin het veld kan worden gevonden.
+De onderstaande tabel bevat de veldnaam (niet alle XDM-velden krijgen een naamruimte met &quot;xdm&quot;), de titel en beschrijving, het type en de indeling, indien nodig, evenals het overeenkomstige XDM-type en de bronnen (schema&#39;s, schemaveldgroepen en gegevenstypen) waarin het veld kan worden gevonden.
 
 U kunt de onderzoeksfunctionaliteit in [!DNL Schema Editor] gebruiken om details van deze middelen, zoals aangetoond in [de zelfstudie van de Redacteur van het Schema](../tutorials/create-schema-ui.md#browse) te bekijken.
 
