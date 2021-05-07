@@ -6,9 +6,9 @@ description: Leer hoe u een identiteitsveld definieert in de gebruikersinterface
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijziging toe te pas
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-Het canvas wordt bijgewerkt met de wijzigingen, waarbij het geselecteerde veld een vingerafdruksymbool (![](../../images/ui/fields/special/identity-symbol.png)) krijgt om het aan te duiden als een identiteit. In het linkerspoor, is het identiteitsgebied nu vermeld onder de naam van de klasse of mengeling die het gebied aan het schema verstrekt.
+Het canvas wordt bijgewerkt met de wijzigingen, waarbij het geselecteerde veld een vingerafdruksymbool (![](../../images/ui/fields/special/identity-symbol.png)) krijgt om het aan te duiden als een identiteit. In het linkerspoor, is het identiteitsgebied nu vermeld onder de naam van de klasse of de groep van het schemagebied die het gebied aan het schema verstrekt.
 
 Aangezien alle identiteitsgebieden door gebrek worden vereist, is het gebied nu vermeld onder **[!UICONTROL Required fields]** in de linkerspoorstaaf. Als het identiteitsveld is genest binnen de schemastructuur, worden alle bovenliggende velden ook vermeld zoals vereist.
 
