@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Dit document verstrekt stappen voor vestiging de twee vereiste datasets om IAB TCF 2.0 toestemmingsgegevens te verzamelen.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1564'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
    * [Naamruimten](../../../../identity-service/namespaces.md) van identiteit: De identiteitsgegevens van de klant moeten worden verstrekt onder een specifieke naamruimte die door de Identiteitsdienst wordt erkend.
 * [Klantprofiel](../../../../profile/home.md) in realtime: Hefboomwerkingen  [!DNL Identity Service] om u gedetailleerde klantenprofielen van uw datasets in real time te laten tot stand brengen. [!DNL Real-time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 
-## [!UICONTROL Privacy Details] mengstructuur  {#structure}
+## [!UICONTROL Privacy Details] veldgroepstructuur  {#structure}
 
-De [!UICONTROL Privacy Details] mix biedt de gebieden van de klantentoestemming die voor TCF 2.0 steun worden vereist. Er zijn twee versies van deze mix: één compatibel met de [!DNL XDM Individual Profile] klasse, en andere met de [!DNL XDM ExperienceEvent] klasse.
+De [!UICONTROL Privacy Details] schemagebiedgroep verstrekt de gebieden van de klantentoestemming die voor TCF 2.0 steun worden vereist. Er zijn twee versies van deze veldgroep: één compatibel met de [!DNL XDM Individual Profile] klasse, en andere met de [!DNL XDM ExperienceEvent] klasse.
 
-In de onderstaande secties wordt de structuur van elk van deze mengsels uitgelegd, inclusief de gegevens die ze tijdens inname verwachten.
+In de volgende secties wordt de structuur van elk van deze veldgroepen uitgelegd, inclusief de gegevens die ze tijdens inname verwachten.
 
-### Profielmix {#profile-mixin}
+### Profielveldgroep {#profile-field-group}
 
-Voor schema&#39;s die op [!DNL XDM Individual Profile] worden gebaseerd, verstrekt [!UICONTROL Privacy Details] mengsel één enkel kaart-type gebied, `xdm:identityPrivacyInfo`, dat klantenidentiteiten aan hun TCF toestemmingsvoorkeur in kaart brengt. Het volgende JSON is een voorbeeld van het soort gegevens dat `xdm:identityPrivacyInfo` verwacht na gegevensinvoer:
+Voor schema&#39;s die op [!DNL XDM Individual Profile] worden gebaseerd, verstrekt de [!UICONTROL Privacy Details] gebiedsgroep één enkel kaart-type gebied, `xdm:identityPrivacyInfo`, dat klantenidentiteiten aan hun TCF toestemmingsvoorkeur in kaart brengt. Het volgende JSON is een voorbeeld van het soort gegevens dat `xdm:identityPrivacyInfo` verwacht na gegevensinvoer:
 
 ```json
 {
@@ -78,9 +78,9 @@ Binnen het identiteitswaardeobject bevindt zich één veld, `xdm:identityIABCons
 | `xdm:consentTimestamp` | An [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) timestamp of when the TCF toestemmingswaarden changed. |
 | `xdm:consentString` | Een object met de bijgewerkte gegevens van de klant over toestemming en andere contextuele informatie. Zie de sectie over [eigenschappen van toestemmingstekenreeksen](#consent-string) om over de vereiste subeigenschappen van dit voorwerp te leren. |
 
-### Gebeurtenismix {#event-mixin}
+### Gebeurtenisveldgroep {#event-field-group}
 
-Voor schema&#39;s die op [!DNL XDM ExperienceEvent] worden gebaseerd, verstrekt de [!UICONTROL Privacy Details] mix één enkel serie-type gebied: `xdm:consentStrings`. Elk item in deze array moet een object zijn dat de benodigde eigenschappen voor een TCF-toestemmingstekenreeks bevat, vergelijkbaar met het veld `xdm:consentString` in de profielmix. Zie [volgende sectie](#consent-string) voor meer informatie over deze subeigenschappen.
+Voor schema&#39;s die op [!DNL XDM ExperienceEvent] worden gebaseerd, verstrekt de [!UICONTROL Privacy Details] gebiedsgroep één enkel serie-type gebied: `xdm:consentStrings`. Elk item in deze array moet een object zijn dat de benodigde eigenschappen voor een TCF-toestemmingstekenreeks bevat, vergelijkbaar met het veld `xdm:consentString` in de profielveldgroep. Zie [volgende sectie](#consent-string) voor meer informatie over deze subeigenschappen.
 
 ```json
 {
@@ -98,7 +98,7 @@ Voor schema&#39;s die op [!DNL XDM ExperienceEvent] worden gebaseerd, verstrekt 
 
 ### Goedgekeurde tekenreekseigenschappen {#consent-string}
 
-Beide versies van de [!UICONTROL Privacy Details] mix vereisen minstens één voorwerp dat de noodzakelijke gebieden vangt die het TCF toestemmingskoord voor de klant beschrijven. Deze eigenschappen worden hieronder uitgelegd:
+Beide versies van de [!UICONTROL Privacy Details] gebiedsgroep vereisen minstens één voorwerp dat de noodzakelijke gebieden vangt die het TCF toestemmingskoord voor de klant beschrijven. Deze eigenschappen worden hieronder uitgelegd:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
@@ -126,11 +126,11 @@ Selecteer **[!UICONTROL Schemas]** in de werkruimte **[!UICONTROL Create schema]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder de **[!UICONTROL Mixins]** sectie op de linkerkant van het canvas.
+De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder de **[!UICONTROL Field groups]** sectie op de linkerkant van het canvas.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-Het dialoogvenster **[!UICONTROL Add mixin]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Selecteer **[!UICONTROL Add mixin]** als de mix is geselecteerd.
+Het dialoogvenster **[!UICONTROL Add field groups]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden. Wanneer de veldgroep is geselecteerd, selecteert u **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -138,14 +138,14 @@ Het canvas verschijnt weer en geeft aan dat het veld `identityPrivacyInfo` is to
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-Herhaal hier de bovenstaande stappen om de volgende extra mixen aan het schema toe te voegen:
+Herhaal hier de bovenstaande stappen om de volgende extra veldgroepen aan het schema toe te voegen:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Data capture region for Profile]
 * [!UICONTROL Demographic Details]
 * [!UICONTROL Personal Contact Details]
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 Als u een bestaand schema uitgeeft dat reeds voor gebruik in [!DNL Real-time Customer Profile] is toegelaten, uitgezocht **[!UICONTROL Save]** om uw veranderingen te bevestigen alvorens vooruit naar de sectie op [creërend een dataset op uw toestemmingsschema](#dataset) te slaan. Als u een nieuw schema maakt, gaat u verder met de stappen in de onderstaande subsectie.
 
@@ -177,11 +177,11 @@ Selecteer **[!UICONTROL Schemas]** in de werkruimte **[!UICONTROL Create schema]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder de **[!UICONTROL Mixins]** sectie op de linkerkant van het canvas.
+De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canvas tonen. Gebruik de rechterrail om een naam en een beschrijving voor het schema te verstrekken, dan uitgezocht **[!UICONTROL Add]** onder de **[!UICONTROL Field groups]** sectie op de linkerkant van het canvas.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-Het dialoogvenster **[!UICONTROL Add mixin]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Wanneer u een mix hebt gekozen, selecteert u **[!UICONTROL Add mixin]**.
+Het dialoogvenster **[!UICONTROL Add field groups]** wordt weergegeven. Selecteer **[!UICONTROL Privacy Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden. Als u een veldgroep hebt gekozen, selecteert u **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -189,16 +189,16 @@ Het canvas verschijnt weer en geeft aan dat de array `consentStrings` aan de sch
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-Herhaal hier de bovenstaande stappen om de volgende extra mixen aan het schema toe te voegen:
+Herhaal hier de bovenstaande stappen om de volgende extra veldgroepen aan het schema toe te voegen:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Environment Details]
 * [!UICONTROL Web Details]
 * [!UICONTROL Implementation Details]
 
-Nadat de mixinen zijn toegevoegd, voltooit u door **[!UICONTROL Save]** te selecteren.
+Nadat de veldgroepen zijn toegevoegd, voltooit u door **[!UICONTROL Save]** te selecteren.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## Gegevenssets maken op basis van uw toestemmingsschema&#39;s {#datasets}
 
