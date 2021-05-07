@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Context plaatsen.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 | `localTime` | DateTime | Een tijdstempel in de notatie [RFC 3339](https://tools.ietf.org/html/rfc3339) die de lokale tijd aangeeft die wordt gebruikt met een opgegeven verschuiving van de tijdzone. Het opmaakpatroon is `yyyy-MM-dd'T'HH:mm:ssXXX` (bijvoorbeeld `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Geheel | De huidige lokale tijdzoneverschuiving in minuten vanaf UTC voor de waarde `localTime`. Dit moet, indien van toepassing, de huidige DST-verschuiving omvatten. |
 
-Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de mix:
+Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
 * [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)
