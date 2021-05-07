@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;exploreren;klasse;mixin;gegevenstype;schema;
+keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Onderzoek;klasse;veldgroep;gegevenstype;schema;
 solution: Experience Platform
 title: XDM-bronnen verkennen in de gebruikersinterface
-description: Leer hoe u bestaande schema's, klassen, mixins en gegevenstypen in de gebruikersinterface van het Experience Platform kunt verkennen.
+description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # XDM-bronnen verkennen in de gebruikersinterface
 
-In Adobe Experience Platform worden alle XDM-bronnen (Experience Data Model) opgeslagen in de [!DNL Schema Library], inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die zijn gedefinieerd door uw organisatie. In het Experience Platform UI, kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse bekijken, mixin, of gegevenstype in [!DNL Schema Library]. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
+In Adobe Experience Platform worden alle XDM-bronnen (Experience Data Model) opgeslagen in de [!DNL Schema Library], inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die zijn gedefinieerd door uw organisatie. In het Experience Platform UI, kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, de groep van het schemagebied, of gegevenstype in [!DNL Schema Library] bekijken. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
 
-Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39;s, klassen, mixins, en gegevenstypes in Experience Platform UI.
+Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39;s, klassen, gebiedsgroepen, en gegevenstypes in Experience Platform UI.
 
 ## Een XDM-resource {#lookup} opzoeken
 
-Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform. De [!UICONTROL Schemas] werkruimte verstrekt een **[!UICONTROL Browse]** lusje om alle bestaande middelen XDM in uw organisatie, samen met extra specifieke lusjes voor het onderzoeken **[!UICONTROL Classes]**, **[!UICONTROL Mixins]**, en **[!UICONTROL Data types]** specifiek te onderzoeken.
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform. De [!UICONTROL Schemas] werkruimte verstrekt een **[!UICONTROL Browse]** lusje om alle bestaande middelen XDM in uw organisatie, samen met extra specifieke lusjes voor het onderzoeken **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, en **[!UICONTROL Data types]** specifiek te onderzoeken.
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ Als het veld dat u inspecteert een opsommingsveld is, geeft de rechterspoorstaaf
 
 ### Identiteitsvelden {#identity}
 
-Wanneer het inspecteren van schema&#39;s die identiteitsgebieden bevatten, zijn deze gebieden vermeld in het linkerspoor onder de klasse of de mengeling die hen aan het schema verstrekt. Selecteer de naam van het identiteitsveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
+Wanneer het inspecteren van schema&#39;s die identiteitsgebieden bevatten, zijn deze gebieden vermeld in het linkerspoor onder de klasse of de gebiedsgroep die hen aan het schema verstrekt. Selecteer de naam van het identiteitsveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
 
 Identiteitsvelden worden op het canvas gemarkeerd met een vingerafdrukpictogram (![Vingerafdrukpictogram Afbeelding](../images/ui/explore/identity-symbol.png)). Als u de naam van het identiteitsgebied selecteert, kunt u extra informatie zoals [identity namespace](../../identity-service/namespaces.md) bekijken en of het gebied de primaire identiteit voor het schema is of niet.
 
