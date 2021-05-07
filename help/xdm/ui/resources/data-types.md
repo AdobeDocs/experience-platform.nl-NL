@@ -7,16 +7,16 @@ type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 # Gegevenstypen maken en bewerken met de gebruikersinterface
 
-In het Model van Gegevens van de Ervaring (XDM), worden de gegevenstypes gebruikt als verwijzing-type gebieden in klassen of mengelingen op de zelfde manier zoals fundamentele letterlijke gebieden, met het belangrijkste verschil dat de gegevenstypes veelvoudige subfields kunnen bepalen. Hoewel gelijkaardig aan mengelingen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de mengelingen slechts op het wortelniveau kunnen worden toegevoegd.
+In het Model van Gegevens van de Ervaring (XDM), worden de gegevenstypes gebruikt als verwijzing-type gebieden in klassen of de groepen van het schemagebied op de zelfde manier zoals fundamentele letterlijke gebieden, met het belangrijkste verschil dat de gegevenstypes veelvoudige subfields kunnen bepalen. Hoewel gelijkaardig aan gebiedsgroepen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd.
 
 Adobe Experience Platform biedt vele standaardgegevenstypen die kunnen worden gebruikt voor een groot aantal gangbare praktijkbeheertoepassingen. U kunt echter ook uw eigen aangepaste gegevenstypen definiëren om aan uw unieke bedrijfsbehoeften te voldoen.
 
@@ -85,21 +85,21 @@ Dit toont aan hoe de flexibele gegevenstypes in termen van het beschrijven van u
 
 Als u klaar bent met het toevoegen van velden aan het gegevenstype, selecteert u **[!UICONTROL Save]** om uw wijzigingen op te slaan en het gegevenstype toe te voegen aan [!DNL Schema Library].
 
-## Het gegevenstype toevoegen aan een klasse of mix
+## Het gegevenstype toevoegen aan een klasse of veldgroep
 
-Nadat u een gegevenstype hebt gemaakt, kunt u het in uw schema&#39;s gebruiken. Aangezien XDM-schema&#39;s bestaan uit een klasse en nul of meer combinaties, kunnen velden die door een gegevenstype worden verschaft, niet rechtstreeks aan een schema worden toegevoegd. In plaats daarvan moeten ze in een klasse of een mix worden opgenomen.
+Nadat u een gegevenstype hebt gemaakt, kunt u het in uw schema&#39;s gebruiken. Aangezien XDM-schema&#39;s bestaan uit een klasse en nul of meer veldgroepen, kunnen velden die door een gegevenstype worden verschaft, niet rechtstreeks aan een schema worden toegevoegd. In plaats daarvan moeten ze worden opgenomen in een klasse of een veldgroep.
 
-Begin door de stappen te volgen betrokken met [toevoegend een gebied aan een klasse ](./classes.md#add-fields) of [toevoegend een gebied aan een mixin](./mixins.md#add-fields). Wanneer u **[!UICONTROL Type]** voor het nieuwe gebied kiest, selecteer de naam van uw gegevenstype van dropdown menu.
+Begin door de stappen te volgen betrokken met [toevoegend een gebied aan een klasse ](./classes.md#add-fields) of [toevoegend een gebied aan een gebiedsgroep](./field-groups.md#add-fields). Wanneer u **[!UICONTROL Type]** voor het nieuwe gebied kiest, selecteer de naam van uw gegevenstype van dropdown menu.
 
 ## Een object met meerdere velden omzetten in een gegevenstype {#convert}
 
-Wanneer u een object-type gebied met veelvoudige subgebieden in [!DNL Schema Editor] creeert, kunt u dat gebied in een gegevenstype omzetten zodat kunt u die zelfde gebiedsstructuur in een verschillende klasse gebruiken of mengen.
+Wanneer u een object-type gebied met veelvoudige subgebieden in [!DNL Schema Editor] creeert, kunt u dat gebied in een gegevenstype omzetten zodat kunt u die zelfde gebiedsstructuur in een verschillende klasse of een gebiedsgroep gebruiken.
 
 Als u een objecttypeveld wilt omzetten in een gegevenstype, selecteert u het veld op het canvas. Voordat u het veld converteert, moet u ervoor zorgen dat **[!UICONTROL Display name]** een beschrijving bevat van de gegevens die het object bevat, aangezien dit de naam van het gegevenstype wordt. Wanneer u klaar bent om het veld om te zetten, selecteert u **[!UICONTROL Convert to new data type]** in de rechterrails.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Het canvas werkt het gegevenstype van het veld bij van &quot;[!UICONTROL Object]&quot; naar het nieuwe gegevenstype. De subvelden bevatten ook kleine vergrendelingspictogrammen naast de subvelden. Dit betekent dat het niet langer om afzonderlijke velden gaat, maar om een gebied dat deel uitmaakt van een gegevenstype met meerdere velden. Deze structuur kan nu opnieuw worden gebruikt in andere klassen en combinaties door dit gegevenstype te selecteren in het vervolgkeuzemenu **[!UICONTROL Type]** wanneer u een nieuw veld definieert.
+Het canvas werkt het gegevenstype van het veld bij van &quot;[!UICONTROL Object]&quot; naar het nieuwe gegevenstype. De subvelden bevatten ook kleine vergrendelingspictogrammen naast de subvelden. Dit betekent dat het niet langer om afzonderlijke velden gaat, maar om een gebied dat deel uitmaakt van een gegevenstype met meerdere velden. Deze structuur kan nu opnieuw worden gebruikt in andere klassen en veldgroepen door dit gegevenstype te selecteren in het vervolgkeuzemenu **[!UICONTROL Type]** wanneer u een nieuw veld definieert.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
