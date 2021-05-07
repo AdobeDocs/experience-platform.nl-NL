@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2511'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,7 @@ Een bedrijf wil bijvoorbeeld alle &quot;Gold&quot; of &quot;Platinum&quot; leden
 
 #### Gebruiksgevallen activeren
 
-Naast overwegingen met betrekking tot gevallen van segmentatiegebruik, zou u ook de activeringsgebruiksgevallen voor die segmenten moeten herzien om extra relevante attributen te identificeren.
+Naast overwegingen met betrekking tot gevallen waarin segmentatie wordt gebruikt, moet u ook de activeringsgebruiksgevallen voor die segmenten bekijken om aanvullende relevante kenmerken te identificeren.
 
 Bijvoorbeeld, heeft een bedrijf een publiekssegment gebouwd dat op de regel wordt gebaseerd die `country = US`. Vervolgens wil het bedrijf bij het activeren van dat segment naar bepaalde downstreamdoelen alle geëxporteerde profielen filteren op basis van de status van het land van herkomst. Daarom moet een `state`-kenmerk ook in de toepasselijke profielentiteit worden vastgelegd.
 
@@ -193,26 +193,26 @@ In Experience Platform, worden de gebieden XDM duidelijk als identiteiten gebrui
 
 Wanneer het ontwerpen van uw schema&#39;s, zullen om het even welke primaire sleutels in uw relationele gegevensbestandlijsten waarschijnlijk kandidaten voor primaire identiteiten zijn. Andere voorbeelden van toepasselijke identiteitsvelden zijn e-mailadressen van klanten, telefoonnummers, account-id&#39;s en [ECID](../../identity-service/ecid.md).
 
-### Adobe-toepassingsmixen
+### Adobe-toepassingsschemagroepen
 
-Experience Platform verstrekt verscheidene uit-van-de-doos mengsels XDM voor het vangen van gegevens met betrekking tot de volgende toepassingen van Adobe:
+Experience Platform verstrekt verscheidene uit-van-de-doos groepen van het XDM- schemagebied voor het vangen van gegevens met betrekking tot de volgende toepassingen van Adobe:
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-Met de [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) kunt u bijvoorbeeld [!DNL Analytics]-specifieke velden toewijzen aan uw XDM-schema&#39;s. Afhankelijk van de toepassingen van de Adobe u met werkt, zou u deze Adobe-Geleverde mengen in uw schema&#39;s moeten gebruiken.
+Met de [[!UICONTROL Adobe Analytics ExperienceEvent Template]-veldgroep](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) kunt u bijvoorbeeld [!DNL Analytics]-specifieke velden toewijzen aan uw XDM-schema&#39;s. Afhankelijk van de Adobe toepassingen u met werkt, zou u deze Adobe-Geleide gebiedsgroepen in uw schema&#39;s moeten gebruiken.
 
-<img src="../images/best-practices/analytics-mixin.png" width="700"><br>
+<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
-Met behulp van het veld `identityMap` wordt automatisch een primaire standaardidentiteit toegewezen aan een Adobe-toepassingsmix. Dit is een door het systeem gegenereerd, alleen-lezen-object dat standaardidentiteitswaarden voor een individuele klant toewijst.
+Met behulp van het veld `identityMap` wijst een Adobe-toepassingsveldgroep automatisch een primaire standaardidentiteit toe. Dit is een door het systeem gegenereerd, alleen-lezen-object waarmee standaardidentiteitswaarden voor een individuele klant worden toegewezen.
 
 Voor Adobe Analytics is ECID de primaire standaardidentiteit. Als een klant geen ECID-waarde opgeeft, wordt de primaire identiteit standaard ingesteld op AID.
 
 >[!IMPORTANT]
 >
->Wanneer u Adobe-toepassingsmixen gebruikt, mogen er geen andere velden worden gemarkeerd als de primaire identiteit. Als er extra eigenschappen zijn die als identiteiten moeten worden gemerkt, moeten deze gebieden in plaats daarvan als secundaire identiteiten worden toegewezen.
+>Wanneer u veldgroepen van Adobe-toepassingen gebruikt, mogen geen andere velden worden gemarkeerd als de primaire identiteit. Als er extra eigenschappen zijn die als identiteiten moeten worden gemerkt, moeten deze gebieden in plaats daarvan als secundaire identiteiten worden toegewezen.
 
 ## Volgende stappen
 
