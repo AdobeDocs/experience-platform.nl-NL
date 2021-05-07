@@ -6,9 +6,9 @@ type: Documentation
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -55,4 +55,4 @@ De attributen van het schema die reeds in een uitdrukking van de segmentdefiniti
 
 Wegens het feit dat geen gebiedsdeel is ontdekt, zal het Experience Platform niet automatisch de bijbehorende gegevens verwerkte attributen evalueren telkens als de segmentdefinitie wordt geëvalueerd.
 
-Alternatief, kon de verwezenlijking van gegevens verwerkte attributen door een specifieke mengeling worden beheerd die nieuwe gegevens verwerkte attributen toevoegt die niet met bestaande attributen strijdig zijn. Een ander alternatief is eenvoudig het segment met correcte gebiedsspatiëring voor de nieuwe gegevens verwerkte attributen te ontspannen.
+Alternatief, kon de verwezenlijking van gegevens verwerkte attributen door een specifieke groep van het schemagebied worden beheerd die nieuwe gegevens verwerkte attributen toevoegt die niet met bestaande attributen strijdig zijn. Een ander alternatief is eenvoudig het segment met correcte gebiedsspatiëring voor de nieuwe gegevens verwerkte attributen te ontspannen.
