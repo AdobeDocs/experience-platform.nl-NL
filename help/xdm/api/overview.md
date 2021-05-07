@@ -35,7 +35,7 @@ Voor een geleidelijke gids op hoe te om een volledig schema in de Registratie AP
 
 ## Gedrag
 
-Gedragingen bepalen de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie [eindpuntgids voor gedrag](./behaviors.md) om te leren hoe te om beschikbaar gedrag in API te bekijken.
+Het gedrag bepaalt de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie [eindpuntgids voor gedrag](./behaviors.md) om te leren hoe te om beschikbaar gedrag in API te bekijken.
 
 ## Klassen
 
