@@ -6,16 +6,16 @@ description: Het /classes eindpunt in de Registratie API van het Schema staat u 
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
 
 # Klassen, eindpunt
 
-Alle schema&#39;s van het Gegevensmodel van de Ervaring (XDM) moeten op een klasse worden gebaseerd. Een klasse bepaalt de basisstructuur van gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd moeten bevatten, evenals welke mengen geschikt voor gebruik in die schema&#39;s zijn. Bovendien bepaalt de klasse van een schema de gedragsaspecten van de gegevens die een schema zal bevatten, waarvan er twee types zijn:
+Alle schema&#39;s van het Gegevensmodel van de Ervaring (XDM) moeten op een klasse worden gebaseerd. Een klasse bepaalt de basisstructuur van gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd moeten bevatten, evenals welke groepen van het schemagebied voor gebruik in die schema&#39;s geschikt zijn. Bovendien bepaalt de klasse van een schema de gedragsaspecten van de gegevens die een schema zal bevatten, waarvan er twee types zijn:
 
 * **[!UICONTROL Record]**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
 * **[!UICONTROL Time-series]**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
@@ -246,7 +246,7 @@ U kunt een aangepaste klasse definiëren onder de container `tenant` door een PO
 
 >[!IMPORTANT]
 >
->Wanneer het samenstellen van een schema dat op een douaneklasse wordt gebaseerd die u bepaalt, zult u geen standaardmengen kunnen gebruiken. Elke mix definieert de klassen waarmee ze compatibel zijn in hun `meta:intendedToExtend`-kenmerk. Zodra u begint bepalend mengen die met uw nieuwe klasse (door `$id` van uw nieuwe klasse in het `meta:intendedToExtend` gebied van de mix te gebruiken) compatibel zijn, zult u die mixins kunnen opnieuw gebruiken telkens als u een schema bepaalt dat de klasse uitvoert u bepaalde. Zie de secties op [het creëren van mixins](./mixins.md#create) en [het creëren van schema&#39;s](./schemas.md#create) in hun respectieve eindpuntgidsen voor meer informatie.
+>Wanneer u een schema samenstelt dat is gebaseerd op een aangepaste klasse die u definieert, kunt u geen standaardveldgroepen gebruiken. Elke veldgroep definieert de klassen waarmee ze compatibel zijn in hun `meta:intendedToExtend`-kenmerk. Nadat u veldgroepen hebt gedefinieerd die compatibel zijn met uw nieuwe klasse (met de `$id` van uw nieuwe klasse in het veld `meta:intendedToExtend` van de veldgroep), kunt u deze veldgroepen telkens opnieuw gebruiken wanneer u een schema definieert dat de door u gedefinieerde klasse implementeert. Zie de secties op [het creëren van gebiedsgroepen](./field-groups.md#create) en [het creëren van schema&#39;s](./schemas.md#create) in hun respectieve eindpuntgidsen voor meer informatie.
 >
 >Als u schema&#39;s wilt gebruiken die op douaneklassen in het Profiel van de Klant in real time worden gebaseerd, is het ook belangrijk om in mening te houden dat de verenigingsschema&#39;s slechts gebaseerd op schema&#39;s zijn die de zelfde klasse delen. Als u een douane-klasse schema in de unie voor een andere klasse zoals [!UICONTROL XDM Individual Profile] of [!UICONTROL XDM ExperienceEvent] wilt omvatten, moet u een verhouding met een ander schema vestigen dat die klasse aanwendt. Zie de zelfstudie over [het bepalen van een relatie tussen twee schema&#39;s in API](../tutorials/relationship-api.md) voor meer informatie.
 
@@ -260,7 +260,7 @@ POST /tenant/classes
 
 De aanvraag om een klasse te maken (POST) moet een `allOf`-kenmerk bevatten dat een `$ref` tot een van twee waarden bevat: `https://ns.adobe.com/xdm/data/record` of `https://ns.adobe.com/xdm/data/time-series`. Deze waarden vertegenwoordigen het gedrag waarop de klasse is gebaseerd (record- of tijdreeks, respectievelijk). Voor meer informatie over de verschillen tussen verslaggegevens en tijdreeksgegevens, zie de sectie over gedragstypes binnen de [grondbeginselen van schemacompositie](../schema/composition.md).
 
-Wanneer u een klasse definieert, kunt u ook mixins of aangepaste velden opnemen in de klassendefinitie. Hierdoor worden de toegevoegde mixins en velden opgenomen in alle schema&#39;s die de klasse implementeren. In het volgende voorbeeldverzoek wordt een klasse met de naam &quot;Eigenschap&quot; gedefinieerd, die informatie vastlegt over verschillende eigenschappen die eigendom zijn van en worden beheerd door een bedrijf. Het bevat een veld `propertyId` dat moet worden opgenomen telkens wanneer de klasse wordt gebruikt.
+Wanneer u een klasse definieert, kunt u ook veldgroepen of aangepaste velden opnemen in de klassendefinitie. Hierdoor worden de toegevoegde veldgroepen en velden opgenomen in alle schema&#39;s die de klasse implementeren. In het volgende voorbeeldverzoek wordt een klasse met de naam &quot;Eigenschap&quot; gedefinieerd, die informatie vastlegt over verschillende eigenschappen die eigendom zijn van en worden beheerd door een bedrijf. Het bevat een veld `propertyId` dat moet worden opgenomen telkens wanneer de klasse wordt gebruikt.
 
 ```SHELL
 curl -X POST \
