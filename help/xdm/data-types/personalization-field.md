@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Algemene voorkeur voor personalisatie.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md) als basislijn.
+>Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] gebiedsgroep](../field-groups/profile/consents.md) als basislijn.
 
 ![](../images/data-types/personalization-field.png)
 
