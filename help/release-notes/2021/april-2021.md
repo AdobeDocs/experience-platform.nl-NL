@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: f0350be580394516016373b1754a49951b58e846
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '885'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wo
 
 | Functie | Beschrijving |
 | --- | --- |
-| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en mengen in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Raadpleeg de documentatie bij [industriedomodellen](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten met elkaar betrekking hebben voor verschillende gevallen van industrieel gebruik. |
+| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en groepen van het schemagebied in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Raadpleeg de documentatie bij [industriedomodellen](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten met elkaar betrekking hebben voor verschillende gevallen van industrieel gebruik. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
