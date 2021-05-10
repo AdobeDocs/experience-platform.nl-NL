@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
 translation-type: tm+mt
-source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '612'
 ht-degree: 5%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 5%
 - [Overzicht van bronconnectors](home.md)
 - Beschikbare bronconnectors {#connectors}
    - Adobe-toepassingen {#adobe-applications}
-      - [Gegevensconnector Analytics Classifications](connectors/adobe-applications/classifications.md)
-      - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
-      - [Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
-      - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
+      - [Bronconnector voor analytische classificaties](connectors/adobe-applications/classifications.md)
+      - [Bronconnector voor analyse](connectors/adobe-applications/analytics.md)
+      - [Audience Manager-bronaansluiting](connectors/adobe-applications/audience-manager.md)
+      - [Klantkenmerken bronaansluiting](connectors/adobe-applications/customer-attributes.md)
       - Toewijzingen van toepassingsveld Adobe {#mapping}
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
