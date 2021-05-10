@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevat
 
 ### Identiteitstypen
 
-Gegevens kunnen worden geïdentificeerd door verschillende typen identiteiten. Het identiteitstype wordt gespecificeerd op het tijdstip dat identiteitskaart namespace wordt gecreeerd en controleert al dan niet het gegeven aan de identiteitsgrafiek en om het even welke speciale instructies voor hoe die gegevens zouden moeten worden behandeld wordt voortgeduurd.
+Gegevens kunnen worden geïdentificeerd door verschillende typen identiteiten. Het identiteitstype wordt gespecificeerd op het tijdstip dat identiteitskaart namespace wordt gecreeerd en controleert al dan niet het gegeven aan de identiteitsgrafiek en om het even welke speciale instructies voor hoe die gegevens zouden moeten worden behandeld wordt voortgeduurd. Alle identiteitstypes behalve **Niet-personendetentidentifier** volgen het zelfde gedrag van het stitching van een namespace en zijn overeenkomstige waarde van identiteitskaart aan een cluster van de identiteitsgrafiek. Gegevens worden niet samengevoegd bij gebruik van **Niet-persoonlijke id**.
 
 De volgende identiteitstypen zijn beschikbaar binnen [!DNL Platform]:
 
@@ -92,7 +92,9 @@ Als u een aangepaste naamruimte wilt maken met de gebruikersinterface, navigeert
 
 ![](./images/create.png)
 
-Het dialoogvenster **[!UICONTROL Create identity namespace]** wordt weergegeven. Geef een uniek **[!UICONTROL Display name]** en **[!UICONTROL Identity symbol]** op en selecteer het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen aan meer informatie over de naamruimte. Selecteer **[!UICONTROL Create]** als u klaar bent.
+Het dialoogvenster **[!UICONTROL Create identity namespace]** wordt weergegeven. Geef een uniek **[!UICONTROL Display name]** en **[!UICONTROL Identity symbol]** op en selecteer het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen aan meer informatie over de naamruimte. Alle identiteitstypen, behalve **Niet-personentype**, volgen hetzelfde gedrag bij het stitching. Als u **Niet-persoonlijke id** selecteert als type identiteit bij het maken van een naamruimte, vindt het stitching niet plaats. Voor specifieke informatie betreffende elk identiteitstype, verwijs naar de lijst op [identiteitstypes](#identity-types).
+
+Selecteer **[!UICONTROL Create]** als u klaar bent.
 
 >[!IMPORTANT]
 >
