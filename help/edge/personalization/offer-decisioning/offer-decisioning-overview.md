@@ -2,14 +2,14 @@
 title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 4%
 
 ---
-
 
 # Het gebruiken van Offer decisioning met het Web SDK van het Platform
 
@@ -78,6 +78,7 @@ Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
           ]
       })
       ```
+
    * SDK voor platform launch geïnstalleerd
       1. [Een Platform launch-eigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
       2. [De Platform launch Embed Code toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
@@ -93,6 +94,7 @@ Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
          * Voeg een Platform SDK toe verzendt de actie van de Gebeurtenis en voeg relevante `decisionScopes` aan de configuratie van die actie toe
             ![send-event-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
       6. [Creeer en publiceer een bibliotheek ](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) die alle relevante Regels, de Elementen van Gegevens, en Uitbreidingen bevat u hebt gevormd
+
 
 
 ## Voorbeeldverzoeken en reacties
