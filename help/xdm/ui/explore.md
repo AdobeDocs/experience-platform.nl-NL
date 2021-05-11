@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ Met de schakeloptie **[!UICONTROL Included in Profile]** kunt u resultaten filte
 U kunt de zoekbalk ook gebruiken om de resultaten verder omlaag te brengen. Wanneer u naar een termijn zoekt, vertegenwoordigen de hoogste punten middelen de waarvan namen de onderzoeksvraag aanpassen. Onder deze punten, onder **[!UICONTROL Standard Fields]**, zullen om het even welke middelen die gebieden bevatten die de vraag aanpassen worden vermeld. Dit staat u toe om naar middelen te zoeken XDM die op het type van gegevens worden gebaseerd zij bevatten, zonder het moeten de naam van het middel vooraf kennen.
 
 ![](../images/ui/explore/search.png)
+
+De middelen die in onderzoeksresultaten worden getoond worden bevolen eerst door titelgelijken, dan door beschrijvingsgelijken. Hoe meer woorden in een van deze categorieën overeenkomen, hoe hoger de bron in de lijst.
+
+>[!NOTE]
+>
+>Voor standaard XDM-bronnen retourneert de zoekfunctie alleen afzonderlijke velden die een naamruimte `xdm` bevatten. Velden die zich onder een andere naamruimte bevinden (zoals uw huurder-id), worden alleen geretourneerd als ze zich in een aangepaste bron bevinden.
 
 Wanneer u de bron hebt gevonden die u wilt verkennen, selecteert u de naam in de lijst om de structuur ervan op het canvas weer te geven.
 
@@ -100,7 +106,7 @@ De gebieden van de verhouding worden ook uniek benadrukt in het canvas, die de n
 
 >[!NOTE]
 >
->Zie het leerprogramma op [het creëren van een verhouding in UI](../tutorials/create-schema-ui.md) voor meer informatie over het gebruik van verhoudingen in schema&#39;s XDM.
+>Zie het leerprogramma op [het creëren van een verhouding in UI](../tutorials/relationship-ui.md) voor meer informatie over het gebruik van verhoudingen in schema&#39;s XDM.
 
 ## Volgende stappen
 
