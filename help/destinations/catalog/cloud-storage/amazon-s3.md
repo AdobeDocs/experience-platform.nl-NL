@@ -4,7 +4,7 @@ title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van het Web van Amazon van de Diensten (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 translation-type: tm+mt
-source-git-commit: d77cd063e61118631b757d9821267b2fd6ab0148
+source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
@@ -36,16 +36,11 @@ Voor [!DNL Amazon S3] bestemmingen, ga de volgende informatie in tot bestemmings
 Als u gegevens met succes wilt verbinden en exporteren naar uw [!DNL Amazon S3]-opslaglocatie, maakt u een IAM-gebruiker voor [!DNL Platform] in [!DNL Amazon S3] en wijst u machtigingen toe voor de volgende handelingen:
 
 * `s3:DeleteObject`
-* `s3:DeleteObjectVersion`
 * `s3:GetBucketLocation`
 * `s3:GetObject`
-* `s3:GetObjectVersion`
 * `s3:ListBucket`
-* `s3:ListBuckets`
-* `s3:PutBucketVersioning`
 * `s3:PutObject`
-* `s3:ReplicateObject`
-* `s3:RestoreObject`
+* `s3:ListMultipartUploadParts`
 
 
 <!--
