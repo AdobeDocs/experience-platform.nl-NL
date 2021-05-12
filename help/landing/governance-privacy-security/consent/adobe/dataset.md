@@ -5,8 +5,7 @@ title: Een gegevensset configureren voor het vastleggen van toestemmings- en voo
 topic-legacy: getting started
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-translation-type: tm+mt
-source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 0%
@@ -121,7 +120,7 @@ Als het schema u uitgeeft door [!UICONTROL Profile Dataset] wordt gebruikt die i
 
 Als u geen dataset voor dit schema hebt gecreeerd, volg de stappen in de volgende sectie.
 
-## Creeer een dataset die op uw toestemmingsschema {#dataset} wordt gebaseerd
+## Een gegevensset maken op basis van uw toestemmingsschema {#dataset}
 
 Zodra u een schema met toestemmingsgebieden hebt gecreeerd, moet u een dataset tot stand brengen die uiteindelijk de gegevens van de klantentoestemming zal opnemen. Deze dataset moet voor [!DNL Real-time Customer Profile] worden toegelaten.
 
@@ -151,7 +150,7 @@ Tot slot selecteer **[!UICONTROL Enable]** in bevestigingspopover om het schema 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-De dataset wordt nu bewaard en toegelaten voor gebruik in [!DNL Profile]. Als u van plan bent gebruikend het Web SDK van het Platform om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] selecteren wanneer vestiging uw [randconfiguratie](../../../../edge/fundamentals/edge-configuration.md).
+De dataset wordt nu bewaard en toegelaten voor gebruik in [!DNL Profile]. Als u van plan bent gebruikend het Web SDK van het Platform om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] selecteren wanneer vestiging uw [randconfiguratie](../../../../edge/fundamentals/datastreams.md).
 
 ## Volgende stappen
 
