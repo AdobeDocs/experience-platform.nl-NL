@@ -1,14 +1,13 @@
 ---
 title: Overzicht van Adobe Experience Platform Web SDK-extensie
 description: Meer informatie over de Adobe Experience Platform Web SDK Extension voor Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
+source-git-commit: b70fe5f3a4de2501730cc799125a7181b61186c0
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 1%
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
-
 
 # Overzicht van Adobe Experience Platform Web SDK-extensie
 
@@ -18,7 +17,7 @@ In dit document wordt beschreven hoe u de extensie configureert in de gebruikers
 
 ## De extensie configureren
 
-Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in Platform launch UI en selecteer **[!UICONTROL Extensions]** tabel. Selecteer **[!UICONTROL Configure]** onder de SDK van het Web Platform.
+Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in Platform launch UI en selecteer **[!UICONTROL Extensions]** tabel. Selecteer **[!UICONTROL Configure]** onder Web SDK van Platform.
 
 ![](../images/extension/overview/configure.png)
 
@@ -34,35 +33,36 @@ In beide gevallen, komt u bij de configuratiepagina voor het Web SDK van het Pla
 
 De configuratieopties boven aan de pagina vertellen Adobe Experience Platform waar de gegevens moeten worden gerouteerd en welke configuraties op de server moeten worden gebruikt.
 
-### [!UICONTROL Naam]
+### [!UICONTROL Name]
 
 De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met één enkele configuratie van de Platform launch te verzenden.
 
 De naam van de extensie is standaard &quot;[!DNL alloy]&quot;. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
 
-### **[!UICONTROL IMS-organisatie-id]**
+### **[!UICONTROL IMS Organization ID]**
 
-De [!UICONTROL IMS Organisatie-id] is de organisatie waarnaar u de gegevens op Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
+De [!UICONTROL IMS Organization ID] is de organisatie waarnaar u de gegevens wilt verzenden bij Adobe. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
 
-### **[!UICONTROL Edge-domein]**
+### **[!UICONTROL Edge Domain]**
 
-Het [!UICONTROL Edge-domein] is het domein waarvan de Adobe Experience Platform-extensie gegevens verzendt en ontvangt. De uitbreiding vereist dat u 1st-partij CNAME voor productieverkeer gebruikt. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html).
+[!UICONTROL Edge Domain] is het domein dat de uitbreiding van Adobe Experience Platform verzendt en gegevens van ontvangt. De uitbreiding vereist dat u 1st-partij CNAME voor productieverkeer gebruikt. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html).
 
-## [!UICONTROL Edge-configuraties]
+## [!UICONTROL Datastreams]
 
-Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een Edge-configuratie-id gebruikt om naar de serverconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
+Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een gegevensstroom-id gebruikt om naar de serverconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
-Zie de handleiding op [randconfiguraties](../fundamentals/edge-configuration.md) voor meer informatie.
+Zie de gids op [gegevensstromen](../fundamentals/datastreams.md) voor meer informatie.
+
 
 ## [!UICONTROL Privacy]
 
-In de sectie [!UICONTROL Privacy] kunt u configureren hoe de SDK de signalen van uw website voor toestemming van gebruikers afhandelt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven. Het standaard toestemmingsniveau wordt niet bewaard aan het profiel van de gebruiker. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
+In de sectie [!UICONTROL Privacy] kunt u configureren hoe de SDK de signalen van uw website voor gebruikerstoestemming verwerkt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven. Het standaard toestemmingsniveau wordt niet bewaard aan het profiel van de gebruiker. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
 
-| [!UICONTROL Standaardniveau van toestemming] | Beschrijving |
+| [!UICONTROL Default Consent Level] | Beschrijving |
 | --- | --- |
 | [!UICONTROL In] | Verzamel gebeurtenissen die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. |
-| [!UICONTROL Uit] | Gebeurtenissen negeren die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. |
-| [!UICONTROL In behandeling] | Wachtrij-gebeurtenissen die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. Als er voorkeuren voor toestemming zijn opgegeven, worden de gebeurtenissen verzameld of genegeerd, afhankelijk van de opgegeven voorkeuren. |
-| [!UICONTROL Verstrekt door gegevenselement] | Het standaard toestemmingsniveau wordt bepaald door een afzonderlijk gegevenselement dat u bepaalt. Wanneer u deze optie gebruikt, moet u het gegevenselement opgeven met behulp van het opgegeven vervolgkeuzemenu. |
+| [!UICONTROL Out] | Gebeurtenissen negeren die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. |
+| [!UICONTROL Pending] | Wachtrij-gebeurtenissen die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. Als er voorkeuren voor toestemming zijn opgegeven, worden de gebeurtenissen verzameld of genegeerd, afhankelijk van de opgegeven voorkeuren. |
+| [!UICONTROL Provided by data element] | Het standaard toestemmingsniveau wordt bepaald door een afzonderlijk gegevenselement dat u bepaalt. Wanneer u deze optie gebruikt, moet u het gegevenselement opgeven met behulp van het opgegeven vervolgkeuzemenu. |
 
 Gebruik uit of in afwachting als u expliciete gebruikerstoestemming voor uw bedrijfsverrichtingen vereist.
