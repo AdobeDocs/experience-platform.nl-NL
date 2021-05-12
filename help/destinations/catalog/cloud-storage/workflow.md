@@ -5,10 +5,9 @@ type: Tutorial
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
-translation-type: tm+mt
-source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
+source-git-commit: 4dff8a95af79d14cf0c79fa1468df36f040ab1ad
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -63,7 +62,7 @@ Geef voor [!DNL Azure Event Hubs]-doelen de naam van uw bestaande gegevensstroom
 
 Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Next]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. Lees de sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow om gegevens te exporteren.
 
-## Macro&#39;s gebruiken om een map op uw opslaglocatie te maken{#use-macros}
+## Macro&#39;s gebruiken om een map op uw opslaglocatie te maken {#use-macros}
 
 >[!NOTE]
 >
