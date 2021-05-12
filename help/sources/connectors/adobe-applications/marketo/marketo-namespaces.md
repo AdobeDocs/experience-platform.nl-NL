@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een Marketo Engage-bronaansluiting.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1602'
 ht-degree: 1%
 
 ---
@@ -21,22 +21,39 @@ ht-degree: 1%
 
 Dit document bevat informatie over de onderliggende instelling voor B2B-naamruimten en -schema&#39;s die worden gebruikt met [!DNL Marketo Engage] (hierna &quot;[!DNL Marketo]&quot; genoemd). Dit document bevat ook informatie over het instellen van uw Postman-automatiseringsprogramma dat nodig is voor het genereren van [!DNL Marketo] B2B-naamruimten en -schema&#39;s.
 
-## Vereisten
+## Stel het hulpprogramma [!DNL Marketo] voor automatisch genereren van naamruimte en schema in
 
-Voordat u uw B2B-naamruimten en -schema&#39;s kunt genereren, moet u eerst de ontwikkelaarsconsole van uw Platform en de [!DNL Postman]-omgeving instellen. Zie de zelfstudie over het instellen van de ontwikkelaarsconsole en [!DNL Postman]](../../../../landing/postman.md) voor meer informatie.[
+De eerste stap in het gebruiken van [!DNL Marketo] namespace en schema auto-generatienut is aan opstelling uw Platform ontwikkelaarsconsole en [!DNL Postman] milieu.
 
-Met een console van de ontwikkelaar van het Platform en [!DNL Postman] opstelling, pas de volgende variabelen op uw [!DNL Marketo] milieu toe:
+- U kunt de namespace en het schema auto-generatienutsinzameling en milieu van deze [bewaarplaats GitHub](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility) downloaden.
+- Voor informatie bij het gebruiken van Platform APIs met inbegrip van details over hoe te om waarden voor vereiste kopballen te verzamelen en steekproefAPI vraag te lezen, zie de gids op [aan de slag met Platform APIs](../../../../landing/api-guide.md).
+- Voor informatie over hoe te om uw geloofsbrieven voor Platform APIs te produceren, zie de zelfstudie over [het voor authentiek verklaren van en het toegang tot van Experience Platform APIs](../../../../landing/api-authentication.md).
+- Voor informatie over hoe te opstelling [!DNL Postman] voor Platform APIs, zie de zelfstudie over [vestiging de console van de ontwikkelaar en [!DNL Postman]](../../../../landing/postman.md).
 
-| Omgevingsvariabele | Voorbeeldwaarde | Notities |
+Met een Platform-ontwikkelaarsconsole en [!DNL Postman] opstelling, kunt u nu beginnen de aangewezen milieuwaarden op uw &lt;a1 toe te passen/> milieu.[!DNL Postman]
+
+De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vullen van de [!DNL Postman]-omgeving:
+
+| Variabele | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `PRIVATE_KEY` | `{PRIVATE_KEY}` |
-| `SANDBOX_NAME` | `prod` |
-| `TENANT_ID` | `b2bcdpproductiontest` |
-| `munchkinId` | `123-ABC-456 ` | Zie de zelfstudie over [het verifiëren van uw [!DNL Marketo] instance](./marketo-auth.md) voor meer informatie. |
-| `sfdc_org_id` | `00D4W000000FgYJUA0` | Zie de volgende [[!DNL Salesforce] handleiding](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) voor meer informatie over het verkrijgen van uw organisatie-id. |
-| `msd_org_id` | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` | Zie de volgende [[!DNL Microsoft Dynamics] handleiding](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name) voor meer informatie over het verkrijgen van uw organisatie-id. |
-| `has_abm` | `false` | Deze waarde wordt ingesteld op `true` als u bent geabonneerd op Account-Based Marketing. |
-| `has_msi` | `false` | Deze waarde wordt ingesteld op `true` als u bent geabonneerd op [!DNL Marketo Sales Insight]. |
+| `CLIENT_SECRET` | Een unieke id die wordt gebruikt om uw `{ACCESS_TOKEN}` te genereren. Zie de zelfstudie over [het verifiëren van en de toegang tot van Experience Platform APIs](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{CLIENT_SECRET}` terug te winnen. | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON Web Token (JWT) is een verificatiereferentie die wordt gebruikt om uw {ACCESS_TOKEN} te genereren. Zie de zelfstudie over [het verifiëren van en de toegang tot van Experience Platform APIs](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{JWT_TOKEN}` te produceren. | `{JWT_TOKEN}` |
+| `API_KEY` | Een unieke id die wordt gebruikt om aanroepen van Experience Platform-API&#39;s te verifiëren. Zie de zelfstudie over [het verifiëren van en de toegang tot van Experience Platform APIs](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{API_KEY}` terug te winnen. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Het toestemmingstoken dat wordt vereist om vraag aan Experience Platform APIs te voltooien. Zie de zelfstudie over [het verifiëren van en de toegang tot van Experience Platform APIs](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{ACCESS_TOKEN}` terug te winnen. | `Bearer {ACCESS_TOKEN}` |
+| `META_SCOPE` | Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
+| `CONTAINER_ID` | De `global` container houdt alle standaardAdobe en de partner van het Experience Platform verstrekte klassen, de groepen van het schemagebied, gegevenstypes, en schema&#39;s. Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op `global`. | `global` |
+| `PRIVATE_KEY` | Een referentie die wordt gebruikt om uw [!DNL Postman]-instantie te verifiëren voor Experience Platform-API&#39;s. Zie de zelfstudie over het instellen van de ontwikkelaarsconsole en [het instellen van de ontwikkelaarsconsole en [!DNL Postman]](../../../../landing/postman.md) voor instructies over het ophalen van uw {PRIVATE_KEY} . | `{PRIVATE_KEY}` |
+| `TECHNICAL_ACCOUNT_ID` | Een referentie die wordt gebruikt om te integreren in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
+| `IMS` | Het Identity Management System (IMS) biedt het kader voor verificatie van Adobe-services. Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
+| `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie de zelfstudie over [het instellen van de ontwikkelaarsconsole en [!DNL Postman]](../../../../landing/postman.md) voor instructies over het ophalen van uw `{IMS_ORG}`-informatie. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `SANDBOX_NAME` | De naam van de virtuele sandboxpartitie die u gebruikt. | `prod` |
+| `TENANT_ID` | Een id die wordt gebruikt om ervoor te zorgen dat de bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. | `b2bcdpproductiontest` |
+| `PLATFORM_URL` | Het URL-eindpunt waarnaar u API-aanroepen maakt. Deze waarde is vast en wordt altijd ingesteld op: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
+| `munchkinId` | De unieke id voor uw [!DNL Marketo]-account. Zie de zelfstudie over [het verifiëren van uw  [!DNL Marketo] instantie](./marketo-auth.md) voor informatie over hoe te om uw `munchkinId` terug te winnen. | `123-ABC-456` |
+| `sfdc_org_id` | De organisatie-id voor uw [!DNL Salesforce]-account. Zie de volgende [[!DNL Salesforce] handleiding](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) voor meer informatie over het verkrijgen van uw [!DNL Salesforce] organisatie-id. | `00D4W000000FgYJUA0` |
+| `msd_org_id` | De organisatie-id voor uw [!DNL Dynamics]-account. Zie de volgende [[!DNL Microsoft Dynamics] handleiding](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name) voor meer informatie over het verkrijgen van uw [!DNL Dynamics] organisatie-id. | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` |
+| `has_abm` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Account-Based Marketing]. | `false` |
+| `has_msi` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Sales Insight]. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -99,7 +116,7 @@ De volgende tabel bevat informatie over de onderliggende set-up voor naamruimten
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| Weergavenaam | Identiteitssymbool | Identiteitstype | Type uitgever | Type emittent | [!DNL Salesforce] ID-voorbeeld van abonnementsorganisatie |
+| Weergavenaam | Identiteitssymbool | Identiteitstype | Type uitgever | Type emittent | [!DNL Dynamics] ID-voorbeeld van abonnementsorganisatie |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | automatisch gegenereerd | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_account_{DYNAMICS_ID}` | automatisch gegenereerd | `B2B_ACCOUNT` | [!DNL Microsoft] | `account` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
