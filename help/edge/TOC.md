@@ -5,10 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
 feature: Gegevensbeheer
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4ed738b2b71332db1602d5571797ed61214afc2d
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '149'
 ht-degree: 14%
 
 ---
@@ -19,7 +18,7 @@ ht-degree: 14%
 * [Overzicht van Platform Web SDK](home.md)
 * Grondbeginselen {#fundamentals}
    * [Vereisten](fundamentals/prerequisite.md)
-   * [Een randconfiguratie maken](fundamentals/edge-configuration.md)
+   * [Een gegevensstroom configureren](fundamentals/datastreams.md)
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
    * [De SDK configureren](fundamentals/configuring-the-sdk.md)
    * [Opdrachten uitvoeren](fundamentals/executing-commands.md)
@@ -57,6 +56,7 @@ ht-degree: 14%
    * [Web SDK-extensie](extension/web-sdk-extension.md)
    * [Typen handelingen](extension/action-types.md)
    * [Gegevenstelelementtypen](extension/data-element-types.md)
+   * [Toegang tot de ECID](extension/accessing-the-ecid.md)
    * [Opmerkingen bij de release Web SDK](extension/web-sdk-ext-release-notes.md)
 * [Aanvullende informatie](release-notes.md)
 * [Veelgestelde vragen](web-sdk-faq.md)
