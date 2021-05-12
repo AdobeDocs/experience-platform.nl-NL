@@ -3,10 +3,9 @@ keywords: Amazon S3;S3 doel;s3;amazon s3
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van het Web van Amazon van de Diensten (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-translation-type: tm+mt
-source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
+source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -31,9 +30,13 @@ Voor [!DNL Amazon S3] bestemmingen, ga de volgende informatie in tot bestemmings
 
 * **[!DNL Amazon S3]toegangstoets en  [!DNL Amazon S3] geheime sleutel**: In  [!DNL Amazon S3], produceer een  `access key - secret access key` paar om Platform toegang tot uw  [!DNL Amazon S3] rekening te verlenen. Meer informatie vindt u in de [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
+>[!TIP]
+>
+>In de Connect-doelworkflow kunt u per geëxporteerd segmentbestand een aangepaste map in uw Amazon S3-opslag maken. Lees [Gebruik macro&#39;s om een map op uw opslaglocatie te maken](./workflow.md#use-macros) voor instructies.
+
 ## Vereiste [!DNL Amazon S3] machtigingen {#required-s3-permission}
 
-Als u gegevens met succes wilt verbinden en exporteren naar uw [!DNL Amazon S3]-opslaglocatie, maakt u een IAM-gebruiker voor [!DNL Platform] in [!DNL Amazon S3] en wijst u machtigingen toe voor de volgende handelingen:
+Als u gegevens wilt verbinden en exporteren naar uw [!DNL Amazon S3]-opslaglocatie, maakt u een gebruikers voor Identiteit en Toegangsbeheer (IAM) voor [!DNL Platform] in [!DNL Amazon S3] en wijst u machtigingen toe voor de volgende handelingen:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
