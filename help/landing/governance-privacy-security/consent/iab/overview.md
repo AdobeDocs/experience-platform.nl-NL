@@ -5,8 +5,7 @@ title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '2466'
 ht-degree: 0%
@@ -48,7 +47,7 @@ Deze gids vereist ook een werkend begrip van de volgende diensten van de Platfor
 
 Naast de hierboven vermelde diensten van het Platform, zou u ook met [bestemmingen](../../../../data-governance/home.md) en hun rol in het ecosysteem van het Platform vertrouwd moeten zijn.
 
-## Overzicht van de toestemmingsstroom van de klant {#summary}
+## Overzicht van de instemmingsstroom van de klant {#summary}
 
 De volgende secties beschrijven hoe de toestemmingsgegevens worden verzameld en afgedwongen nadat het systeem behoorlijk is gevormd.
 
@@ -106,7 +105,7 @@ Zodra u een [!DNL Profile]-Toegelaten dataset voor het verzamelen van toestemmin
 
 Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de gebruikersgids van het samenvoegingsbeleid](../../../../profile/ui/merge-policies.md). Wanneer het opzetten van uw samenvoegbeleid, moet u ervoor zorgen dat uw segmenten alle vereiste toestemmingsattributen omvatten die door de [XDM groep van het privacyschemagebied van het privacyschema worden verstrekt](./dataset.md#privacy-field-group), zoals die in de gids over datasetvoorbereiding wordt geschetst.
 
-## De Web SDK van het Experience Platform integreren om gegevens voor klanttoestemming te verzamelen {#sdk}
+## Integreer de SDK van het Web van het Experience Platform om gegevens van de klantentoestemming te verzamelen {#sdk}
 
 >[!NOTE]
 >
@@ -120,7 +119,7 @@ Zodra u CMP hebt gevormd om toestemmingskoorden te produceren, moet u het Web SD
 
 ### Een nieuwe randconfiguratie maken
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe randconfiguratie voor Platform maakt in [!DNL Adobe Experience Platform Launch]. Specifieke stappen voor hoe te om een nieuwe configuratie tot stand te brengen worden verstrekt in [SDK documentatie](../../../../edge/fundamentals/edge-configuration.md).
+SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe randconfiguratie voor Platform maakt in [!DNL Adobe Experience Platform Launch]. Specifieke stappen voor hoe te om een nieuwe configuratie tot stand te brengen worden verstrekt in [SDK documentatie](../../../../edge/fundamentals/datastreams.md).
 
 Nadat u een unieke naam voor de configuratie hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 
@@ -225,7 +224,7 @@ alloy("sendEvent", {
 
 Alle [!DNL Platform SDK] bevelen keren beloftes terug die erop wijzen of de vraag slaagde of ontbrak. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie de sectie over [het behandelen van succes of mislukking](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in de gids bij het uitvoeren van bevelen SDK voor specifieke voorbeelden.
 
-## Segmenten {#export} exporteren
+## Segmenten exporteren {#export}
 
 >[!NOTE]
 >
