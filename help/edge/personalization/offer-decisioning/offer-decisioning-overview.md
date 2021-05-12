@@ -3,10 +3,9 @@ title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-translation-type: tm+mt
-source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '842'
 ht-degree: 4%
 
 ---
@@ -23,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] kan gepersonaliseerde aanbiedingen leve
 
 * IMS-organisatie is ingeschakeld voor randbeslissingen
 * Aanbiedingen, gemaakte activiteiten
-* Edge config wordt gepubliceerd
+* DataStream wordt gepubliceerd
 
 ## Terminologie
 
@@ -54,7 +53,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
    ![](assets/decision-scope-copy.png)
 
-* **Edge Configuration:** Lees de documentatie over de  [Edge-](../../fundamentals/edge-configuration.md) configuratie voor meer informatie.
+* **Gegevensstromen:** Lees de documentatie over  [](../../fundamentals/datastreams.md) gegevensstromen voor meer informatie.
 
 * **Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe de Identiteitsservice [ van ](../../identity/overview.md)Platform Web SDK wordt gebruikt.
 
@@ -62,7 +61,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
 Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
 
-1. Adobe Experience Platform ingeschakeld in uw [randconfiguratie](../../fundamentals/edge-configuration.md) en schakel het vakje &quot;Offer decisioning&quot; in
+1. Adobe Experience Platform ingeschakeld in uw [datastream](../../fundamentals/datastreams.md) en schakel het vakje &quot;Offer decisioning&quot; in
    ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
 2. Volg de instructies om de SDK [te installeren ](../../fundamentals/installing-the-sdk.md) (De SDK kan standalone of door [Adobe Experience Platform Launch](http://launch.adobe.com/) worden geïnstalleerd. Hier volgt een [snelstartgids voor Platform launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html)).
 3. [Vorm ](../../fundamentals/configuring-the-sdk.md) SDK voor Offer decisioning. Hieronder vindt u aanvullende specifieke stappen voor Offer decisioning.
@@ -82,11 +81,11 @@ Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
    * SDK voor platform launch geïnstalleerd
       1. [Een Platform launch-eigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
       2. [De Platform launch Embed Code toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Configuratie van de Rand u enkel door de configuratie van de drop-down &quot;Configuratie van de Rand&quot;te selecteren creeerde. Nuttige documentatie op [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      3. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Datastream u enkel creeerde door de configuratie van de &quot;Datasstream&quot;daling te selecteren. Zie de documentatie op [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Maak de benodigde [Data Elements](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). Bij het absolute minimum, zult u een Identiteitskaart van SDK van het Web van het Platform en een gegevenselement van de Objecten van SDK van het Web van het Platform XDM moeten tot stand brengen.
+      4. Maak de benodigde [Data Elements](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). Bij het absolute minimum, moet u een Identiteitskaart van SDK van het Web van het Platform en een gegevenselement van de Objecten van SDK van het Web van het Platform XDM tot stand brengen.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
