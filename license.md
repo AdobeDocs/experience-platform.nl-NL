@@ -1,14 +1,16 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
-translation-type: tm+mt
+source-git-commit: d98de584afbb6f5fa6cdd764a06dc745c97d990a
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 # MIT-licentie
 
-© Copyright 2018 Adobe. Alle rechten voorbehouden.
+© Copyright 2021 Adobe. Alle rechten voorbehouden.
 
-Hierbij wordt kosteloos een machtiging verleend aan eenieder die een exemplaar van deze software en de bijbehorende documentatiebestanden (&quot;de Software&quot;) ontvangt, om de Software zonder beperking te behandelen, met inbegrip van zonder beperking het recht om de Software te gebruiken, te kopiëren, te wijzigen, samen te voegen, te publiceren, te verspreiden, onder licentie te geven en/of te verkopen, en aan personen aan wie de Software is geleverd, onder de volgende voorwaarden toe te staan:
+Hierbij wordt kosteloos een machtiging verleend aan iedereen die een exemplaar van deze software en de bijbehorende documentatiebestanden (‘de Software’) ontvangt, om de Software zonder beperking te behandelen, met inbegrip van maar niet beperkt tot het recht om de Software te gebruiken, te kopiëren, te wijzigen, samen te voegen, te publiceren, te verspreiden, onder licentie te geven en/of te verkopen, en aan personen aan wie de Software is geleverd, onder de volgende voorwaarden toe te staan:
 
 De bovenstaande copyrightkennisgeving en deze machtigingskennisgeving worden opgenomen in alle exemplaren of belangrijke delen van de Software.
 
-DE SOFTWARE WORDT &quot;AS IS&quot; VERSTREKT, ZONDER ENIGE GARANTIE, UITDRUKKELIJK GEORIMPLITEERD, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN MERCHANTABILITEIT, FITNESS VOOR EEN BEPAALD DOEL EN NIET-INBREUK. IN GEEN GEVAL KUNNEN BEDRIJVEN OF HOUDERS VAN COPYRIGHT AANSPRAKELIJK ZIJN VOOR AANVRAGEN, SCHADE OF ANDERE AANSPRAKELIJKHEID, IN EEN ACTIE VAN CONTRACT, TEORT OF ANDERS, DIE VOORTVLOEIEN UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK OF ANDERE VERVALSINGEN IN DEZE TWARE.
+DE SOFTWARE WORDT ‘AS IS’ VERSTREKT, ZONDER ENIGE GARANTIE, EXPLICIET OF IMPLICIET, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN VERHANDELBAARHEID, GESCHIKTHEID VOOR EEN BIJZONDER DOEL EN NIET-SCHENDING. IN GEEN GEVAL ZULLEN DE AUTEURS OF RECHTHEBBENDEN AANSPRAKELIJK WORDEN GEHOUDEN VOOR ENIGE AANSPRAAK, SCHADE OF ANDERE AANSPRAKELIJKHEID, EVENWEL IN EEN CONTRACTHANDELING, ONRECHTMATIGE DAAD OF ANDERSZINS, VOORTKOMEND UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK OF ANDERE SOFTWAREGERELATEERDE GEBEURTENISSEN.
