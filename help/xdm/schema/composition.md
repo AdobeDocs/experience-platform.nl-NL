@@ -5,10 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '3497'
+source-wordcount: '3580'
 ht-degree: 0%
 
 ---
@@ -60,9 +59,13 @@ Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen dat de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht op [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen uw klanten digitale ervaringen te bieden.
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
+`identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
+
+Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteiten ingesloten worden in de gegevens en daardoor minder zichtbaar worden. Als u onbewerkte gegevens opneemt, moet u in plaats daarvan afzonderlijke identiteitsvelden definiëren binnen de daadwerkelijke schemastructuur.
+
+Identiteitskaarten kunnen echter vooral handig zijn als u gegevens opneemt van bronnen waarin identiteiten worden opgeslagen, zoals [!DNL Airship] of Adobe Audience Manager. Daarnaast zijn identiteitskaarten vereist als u de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) gebruikt.
 
 Een voorbeeld van een eenvoudige identiteitskaart zou als het volgende kijken:
 
@@ -99,7 +102,7 @@ Zoals in het bovenstaande voorbeeld wordt getoond, vertegenwoordigt elke sleutel
 >
 >Een booleaanse waarde waarmee kan worden opgegeven of de waarde een primaire identiteit (`primary`) is, kan ook worden opgegeven voor elke identiteitswaarde. Primaire identiteiten hoeven alleen te worden vastgesteld voor schema&#39;s die bedoeld zijn om te worden gebruikt in [!DNL Real-time Customer Profile]. Zie de sectie over [union schema&#39;s](#union) voor meer informatie.
 
-### Beginselen van de schemaevolutie {#evolution}
+### Beginselen voor de ontwikkeling van schema&#39;s {#evolution}
 
 Naarmate de aard van de digitale ervaringen zich blijft ontwikkelen, moeten de schema&#39;s die gebruikt worden om ze te vertegenwoordigen ook worden gebruikt. Een goed ontworpen schema kan daarom aanpassen en evolueren zoals nodig, zonder destructieve veranderingen in vorige versies van het schema te veroorzaken.
 
