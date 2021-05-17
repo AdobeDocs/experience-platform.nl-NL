@@ -5,8 +5,7 @@ title: Aanhangsel voor schema-registratie-API
 description: Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 Dit document bevat aanvullende informatie over het werken met de [!DNL Schema Registry]-API.
 
-## Query-parameters {#query} gebruiken
+## Query-parameters gebruiken {#query}
 
 [!DNL Schema Registry] steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het vermelden van middelen.
 
@@ -25,7 +24,7 @@ Dit document bevat aanvullende informatie over het werken met de [!DNL Schema Re
 >
 >Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (`&`) worden gescheiden.
 
-### {#paging} pagineren
+### Paginering {#paging}
 
 De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
 
@@ -54,7 +53,7 @@ U kunt resultaten filtreren door de `property` parameter te gebruiken, die wordt
 >
 >U kunt de parameter `property` gebruiken om schemagebiedgroepen door hun compatibele klasse te filtreren. `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retourneert bijvoorbeeld alleen veldgroepen die compatibel zijn met de klasse [!DNL XDM Individual Profile].
 
-## Compatibiliteitsmodus
+## Compatibiliteitsmodus {#compatibility}
 
 [!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [open bronproject op GitHub](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van Objecten JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van XDM schema&#39;s.
 
