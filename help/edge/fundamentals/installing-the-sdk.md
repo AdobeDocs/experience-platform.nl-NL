@@ -2,14 +2,13 @@
 title: De SDK van Adobe Experience Platform Web installeren
 description: Leer hoe te om het Web SDK van het Experience Platform te installeren.
 keywords: web sdk installatie;installeren web sdk;Internet Explorer;promise;npm pakket
-translation-type: tm+mt
-source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
-
 
 # SDK {#installing-the-sdk} installeren
 
@@ -130,6 +129,10 @@ const alloy = createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
+
+>[!NOTE]
+>
+>Het NPM-pakket is gebaseerd op CommonJS-modules; daarom wanneer het gebruiken van een bundelaar, zorg ervoor de bundelaar modules CommonJS steunt. Voor sommige bundelaars, zoals [Rollup](https://rollupjs.org), is een [plug-in](https://www.npmjs.com/package/@rollup/plugin-commonjs) vereist die ondersteuning biedt voor CommonJS.
 
 ### Het pakket gebruiken als een ECMAScript 5-module
 
