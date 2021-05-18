@@ -3,10 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -76,13 +75,13 @@ Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan de 
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Adobe Campaign] bestemmingen, [!DNL Platform] leidt tot een lusje-afgebakend `.txt` of `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+Voor [!DNL Adobe Campaign] bestemmingen, [!DNL Platform] leidt tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
 
 ## Gegevensimport instellen in Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
->- Houd bij het uitvoeren van deze integratie rekening met de opslaglimieten van SFTP, de opslaglimieten van de database en de limieten van het actieve profiel zoals vastgelegd in uw Adobe Campaign-contract.
+>- Houd bij het uitvoeren van deze integratie rekening met de [!DNL SFTP]-opslaglimieten, opslaglimieten voor databases en limieten voor actieve profielen zoals vastgelegd in uw Adobe Campaign-contract.
 >- U moet uw geëxporteerde segmenten in Adobe Campaign plannen, importeren en toewijzen met behulp van [!DNL Campaign]-workflows. Raadpleeg [Een terugkerende import instellen](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign Classic-documentatie en [Informatie over gegevensbeheeractiviteiten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in Adobe Campaign Standard-documentatie.
 >- De voorkeursmethode voor het verzenden van gegevens naar Adobe Campaign is [!DNL Amazon S3] of [!DNL Azure Blob].
 
