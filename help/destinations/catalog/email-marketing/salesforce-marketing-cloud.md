@@ -3,10 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;salesforce bestemmi
 title: Verbinding met Salesforce-Marketing Cloud
 seo-description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -77,8 +76,8 @@ Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan [!D
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Salesforce Marketing Cloud] bestemmingen, leidt het Platform tot een lusje-afgebakend `.txt` of `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+Voor [!DNL Salesforce Marketing Cloud] bestemmingen, leidt het Platform tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
 
 ## Gegevensimport instellen in [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Nadat u [!DNL Platform] hebt aangesloten op uw SFTP-opslag, moet u de gegevensimport vanaf uw opslaglocatie instellen op [!DNL Salesforce Marketing Cloud]. Om te leren hoe te om dit te verwezenlijken, zie [Invoerend Abonnees in Marketing Cloud van een Dossier](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
+Nadat u [!DNL Platform] hebt aangesloten op uw [!DNL SFTP]-opslag, moet u de gegevensimport vanaf uw opslaglocatie instellen op [!DNL Salesforce Marketing Cloud]. Om te leren hoe te om dit te verwezenlijken, zie [Invoerend Abonnees in Marketing Cloud van een Dossier](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
