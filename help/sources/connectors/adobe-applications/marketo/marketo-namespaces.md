@@ -5,9 +5,9 @@ title: Marketo-naamruimten
 topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een Marketo Engage-bronaansluiting.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
+source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1677'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Dit document bevat informatie over de onderliggende instelling voor B2B-naamruim
 
 De eerste stap in het gebruiken van [!DNL Marketo] namespace en schema auto-generatienut is aan opstelling uw Platform ontwikkelaarsconsole en [!DNL Postman] milieu.
 
-- U kunt de namespace en het schema auto-generatienutsinzameling en milieu van deze [bewaarplaats GitHub](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility) downloaden.
+- U kunt de namespace en het schema auto-generatienutsinzameling en milieu van deze [bewaarplaats GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) downloaden.
 - Voor informatie bij het gebruiken van Platform APIs met inbegrip van details over hoe te om waarden voor vereiste kopballen te verzamelen en steekproefAPI vraag te lezen, zie de gids op [aan de slag met Platform APIs](../../../../landing/api-guide.md).
 - Voor informatie over hoe te om uw geloofsbrieven voor Platform APIs te produceren, zie de zelfstudie over [het voor authentiek verklaren van en het toegang tot van Experience Platform APIs](../../../../landing/api-authentication.md).
 - Voor informatie over hoe te opstelling [!DNL Postman] voor Platform APIs, zie de zelfstudie over [vestiging de console van de ontwikkelaar en [!DNL Postman]](../../../../landing/postman.md).
