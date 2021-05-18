@@ -2,14 +2,13 @@
 keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) [!DNL Amazon Kinesis] verbinding
 
@@ -45,21 +44,21 @@ Zie [Workflow ](./workflow.md)voor cloudopslagdoelen voor instructies voor het m
 
 Voor [!DNL Amazon Kinesis] bestemmingen, ga de volgende informatie in tot bestemmingswerkschema:
 
-## Verificatiestap {#authentication-step}
+## Accountstap {#account-step}
 
 * **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel**: In  [!DNL Amazon Web Services], produceer een  `access key - secret access key` paar om Platform toegang tot uw  [!DNL Amazon Kinesis] rekening te verlenen. Meer informatie vindt u in de [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **regio**: Geef aan naar welk  [!DNL Amazon Web Services] gebied gegevens moeten worden gestreamd.
 
 ![Invoervelden in de stap van de account](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-## Stap {#setup-step} instellen
+## Verificatiestap {#authentication-step}
 
 * **Naam**: Geef een naam op voor uw verbinding met  [!DNL Amazon Kinesis]
 * **Omschrijving**: Geef een beschrijving op voor de verbinding met  [!DNL Amazon Kinesis].
 * **stream**: Geef de naam op van een bestaande gegevensstroom in uw  [!DNL Amazon Kinesis] account. Platform exporteert gegevens naar deze stream.
 * **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
-![Invoervelden in de verificatiestap](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
+![Invoervelden in de verificatiestap](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -120,6 +119,6 @@ Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in de JSON-indeling
 >[!MORELIKETHIS]
 >
 >* [Verbinding maken met Amazon Kinesis en gegevens activeren met de Flow Service API](../../api/streaming-destinations.md)
->* [Azure Event Hubs-bestemming](./azure-event-hubs.md)
->* [Doeltypen en -categorieën](../../destination-types.md)
+* [Azure Event Hubs-bestemming](./azure-event-hubs.md)
+* [Doeltypen en -categorieën](../../destination-types.md)
 
