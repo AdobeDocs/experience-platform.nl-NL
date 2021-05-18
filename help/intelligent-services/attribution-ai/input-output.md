@@ -5,10 +5,9 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2223'
 ht-degree: 0%
 
 ---
@@ -48,7 +47,11 @@ Niet alle kolommen in het schema [!DNL Consumer Experience Event] (CEE) zijn ver
 | Marketing.campaigngroup | Aanraakpunt |
 | Commerce | Conversie |
 
-Over het algemeen wordt de toewijzing uitgevoerd bij conversiekolommen zoals bestelling, aankopen en kassa&#39;s onder &quot;handel&quot;. De kolommen &quot;kanaal&quot; en &quot;marketing&quot; worden met klem aanbevolen om aanraakpunten voor goede inzichten te definiëren. Nochtans, kunt u om het even welke andere extra kolom samen met de bovengenoemde kolommen omvatten om als omzetting of touchpoint definitie te vormen.
+Over het algemeen wordt de toewijzing uitgevoerd bij conversiekolommen zoals bestelling, aankopen en kassa&#39;s onder &quot;handel&quot;. De kolommen voor &quot;channel&quot; en &quot;marketing&quot; worden gebruikt om aanraakpunten voor Attribution AI te definiëren (bijvoorbeeld `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Voor optimale resultaten en inzichten verdient het aanbeveling zoveel mogelijk conversie- en aanraakpuntkolommen op te nemen. Bovendien hoeft u niet alleen de bovenstaande kolommen te gebruiken. U kunt andere aanbevolen of aangepaste kolommen opnemen als een conversie- of aanraakpuntdefinitie.
+
+>[!TIP]
+>
+>Als u Adobe Analytics-gegevens gebruikt in uw CEE-schema, worden de aanraakpuntgegevens voor Analytics meestal opgeslagen in `channel.typeAtSource` (bijvoorbeeld `channel.typeAtSource = 'email'`).
 
 De kolommen hieronder zijn niet vereist maar het wordt geadviseerd dat u hen in uw CEE schema opneemt als u de beschikbare informatie hebt.
 
@@ -58,7 +61,7 @@ De kolommen hieronder zijn niet vereist maar het wordt geadviseerd dat u hen in 
 - web.webPageDetails
 - xdm:productListItems
 
-### Historische gegevens {#data-requirements}
+## Historische gegevens {#data-requirements}
 
 >[!IMPORTANT]
 >
