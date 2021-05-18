@@ -3,8 +3,7 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (Beta) !DNL Azure Event Hubs] verbinding
 description: Creeer een uitgaande verbinding in real time aan uw !DNL Azure Event Hubs] opslag aan stroomgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-translation-type: tm+mt
-source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -45,21 +44,21 @@ Zie [Workflow ](./workflow.md)voor cloudopslagdoelen voor instructies voor het m
 
 Voor [!DNL Azure Event Hubs] bestemmingen, ga de volgende informatie in tot bestemmingswerkschema:
 
-## Verificatiestap {#authentication-step}
+## Accountstap {#account-step}
 
 * **[!UICONTROL SAS Key Name]** en  **[!UICONTROL SAS Key]**: Vul uw SAS-sleutelnaam en -sleutel in. Meer informatie over het verifiëren van [!DNL Azure Event Hubs] met SAS sleutels in [de documentatie van Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Vul de  [!DNL Azure Event Hubs] naamruimte in. Meer informatie over [!DNL Azure Event Hubs] naamruimten in de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-![Invoer vereist in de verificatiestap](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+![Invoer vereist in de accountstap](../../assets/catalog/cloud-storage/event-hubs/account.png)
 
-## Stap {#setup-step} instellen
+## Verificatiestap {#authentication-step}
 
 * **[!UICONTROL Name]**: Geef een naam op voor de verbinding met  [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Geef een beschrijving van de verbinding op.  Voorbeelden: &quot;Klanten met de hoogste rang&quot;, &quot;Males die geïnteresseerd zijn in keukenvorming&quot;.
 * **[!UICONTROL eventHubName]**: Geef een naam voor de stream op naar uw  [!DNL Azure Event Hubs] bestemming.
 * **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
-![Gegevens vereist in de installatiestap](../../assets/catalog/cloud-storage/event-hubs/setup.png)
+![Gegevens vereist in de verificatiestap](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ## Segmenten {#activate-segments} activeren
 
@@ -111,6 +110,6 @@ Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in de JSON-indeling
 >[!MORELIKETHIS]
 >
 >* [Verbind met Azure Event Hubs en activeer gegevens gebruikend de Dienst API van de Stroom](../../api/streaming-destinations.md)
->* [AWS Kinesis-bestemming](./amazon-kinesis.md)
->* [Doeltypen en -categorieën](../../destination-types.md)
+* [AWS Kinesis-bestemming](./amazon-kinesis.md)
+* [Doeltypen en -categorieën](../../destination-types.md)
 
