@@ -3,10 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle eloqua;oracle
 title: Oracle Eloqua-verbinding
 description: Oracle Eloqua is een softwareplatform als service (SaaS) voor marketingautomatisering dat door Oracle wordt aangeboden en dat bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkooplood te beheren.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -79,8 +78,8 @@ Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan [!D
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Oracle Eloqua] bestemmingen, leidt het Platform tot een lusje-afgebakend `.txt` of `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+Voor [!DNL Oracle Eloqua] bestemmingen, leidt het Platform tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
 
 ## Gegevensimport instellen in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Nadat u [!DNL Platform] hebt aangesloten op uw SFTP-opslag, moet u de gegevensimport vanaf uw opslaglocatie instellen op [!DNL Oracle Eloqua]. Zie [Contactpersonen of accounts importeren](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in [!DNL Oracle Eloqua Help Center] voor meer informatie over het uitvoeren van deze taak.
+Nadat u [!DNL Platform] hebt aangesloten op uw [!DNL SFTP]-opslag, moet u de gegevensimport vanaf uw opslaglocatie instellen op [!DNL Oracle Eloqua]. Zie [Contactpersonen of accounts importeren](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in [!DNL Oracle Eloqua Help Center] voor meer informatie over het uitvoeren van deze taak.
