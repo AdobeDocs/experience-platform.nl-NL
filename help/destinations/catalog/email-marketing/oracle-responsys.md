@@ -3,10 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle responsys bestemming
 title: Verbinding oracle Responsys
 description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media te personaliseren.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -77,8 +76,8 @@ Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan [!D
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Oracle Responsys] bestemmingen, leidt het Platform tot een lusje-afgebakend `.txt` of `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+Voor [!DNL Oracle Responsys] bestemmingen, leidt het Platform tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
 
 ## Gegevensimport instellen in [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Nadat u [!DNL Platform] hebt aangesloten op uw SFTP-opslag, moet u de gegevensimport vanaf uw opslaglocatie instellen op [!DNL Oracle Responsys]. Zie [Contactpersonen of accounts importeren](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center] voor meer informatie over het uitvoeren van deze taak.
+Nadat u [!DNL Platform] hebt aangesloten op uw [!DNL SFTP]-opslag, moet u de gegevensimport vanaf uw opslaglocatie instellen op [!DNL Oracle Responsys]. Zie [Contactpersonen of accounts importeren](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center] voor meer informatie over het uitvoeren van deze taak.
