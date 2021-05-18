@@ -5,10 +5,9 @@ title: Marketo-naamruimten
 topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een Marketo Engage-bronaansluiting.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1670'
 ht-degree: 1%
 
 ---
@@ -56,6 +55,20 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | `has_msi` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Sales Insight]. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### Scripts uitvoeren
+
+Met uw [!DNL Postman] inzameling en milieu opstelling, kunt u het manuscript door de [!DNL Postman] interface nu in werking stellen.
+
+Selecteer in de interface [!DNL Postman] de hoofdmap van het hulpprogramma voor automatische generator en selecteer **[!DNL Run]** in de bovenste koptekst.
+
+![hoofdmap](../images/marketo/root-folder.png)
+
+De interface [!DNL Runner] verschijnt. Van hier, zorg ervoor dat alle controledozen worden geselecteerd en dan **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]** selecteren.
+
+![loopgenerator](../images/marketo/run-generator.png)
+
+Een succesvol verzoek leidt tot B2B namespaces en schema&#39;s volgens bètaspecificaties.
 
 ## [!DNL Marketo] naamruimten
 
