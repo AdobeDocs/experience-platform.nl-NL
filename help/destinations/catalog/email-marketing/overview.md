@@ -3,14 +3,13 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen
 title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
-translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van e-mailmarketingdoelen {#email-marketing-destinations}
 
@@ -20,7 +19,7 @@ Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, 
 
 Verbinding maken met marketingdoelen voor e-mail is een proces in drie stappen ([configure destination](#connect-destination), [activate segments](#select-segments), [import data from storage location into the destination](#import-data-into-destination)). Elk van de stappen wordt hieronder verder beschreven op deze pagina.
 
-In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven, verbind met of Amazon S3 of SFTP. Platform exporteert uw segmenten als `.csv`- of `.txt`-bestanden en levert deze naar de gewenste locatie. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die in het Platform is ingeschakeld. Het proces om gegevens in te voeren varieert voor elke partner. Lees de afzonderlijke bestemmingsartikelen voor meer informatie.
+In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven, verbind met of [!DNL Amazon S3] of [!DNL SFTP]. Platform exporteert uw segmenten als `.csv`-bestanden en levert deze naar de gewenste locatie. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die is ingeschakeld in [!DNL Platform]. Het proces om gegevens in te voeren varieert voor elke partner. Lees de afzonderlijke bestemmingsartikelen voor meer informatie.
 
 ## Doel {#connect-destination} configureren
 
