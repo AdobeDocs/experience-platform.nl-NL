@@ -5,8 +5,7 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-translation-type: tm+mt
-source-git-commit: e4823a2b787667fc181f8a4d474c7d2eb73c8eec
+source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 1%
@@ -210,7 +209,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 {style=&quot;table-layout:auto&quot;}
 
-## Opportuniteiten {#opportunities}
+## Kansen {#opportunities}
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -261,9 +260,6 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primaire identiteit |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
