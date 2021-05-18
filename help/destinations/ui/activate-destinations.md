@@ -6,10 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '2023'
+source-wordcount: '2477'
 ht-degree: 0%
 
 ---
@@ -114,13 +113,13 @@ Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht
 Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering.
 ![Transformatie identiteitstoewijzing](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-## **[!UICONTROL Configure]** stap  {#configure}
+## **[!UICONTROL Scheduling]** stap {#scheduling}
 
 Van toepassing op: E-mailmarketingbestemmingen en cloudopslagbestemmingen
 
-![Stap configureren](../assets/ui/activate-destinations/configure-icon.png)
+![Stap plannen](../assets/ui/activate-destinations/scheduling-icon.png)
 
-[!DNL Adobe Experience Platform] Hiermee exporteert u gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van  [!DNL CSV] bestanden. In de stap **[!UICONTROL Configure]**, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+[!DNL Adobe Experience Platform] Hiermee exporteert u gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van  [!DNL CSV] bestanden. In de stap **[!UICONTROL Scheduling]**, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
 
 >[!IMPORTANT]
 > 
@@ -128,18 +127,53 @@ Van toepassing op: E-mailmarketingbestemmingen en cloudopslagbestemmingen
 >
 >Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
+Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt dat u naar uw bestemming wilt verzenden.
 
-Selecteer **[!UICONTROL Create schedule]** om een schema voor het segment toe te voegen.
+![De knop Planning maken](../assets/ui/activate-destinations/create-schedule-button.png)
 
-![](../assets/ui/activate-destinations/configure-destination-schedule.png)
+### Volledige bestanden exporteren {#export-full-files}
 
-Er wordt een dialoogvenster weergegeven met opties voor het maken van het segmentschema.
+Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een volledige momentopname van alle profielen te hebben die voor dat segment kwalificeren.
 
-* **Bestand exporteren**: U kunt volledige of incrementele bestanden exporteren. Wanneer u een volledig bestand exporteert, wordt een volledige momentopname gepubliceerd van alle profielen die voor dat segment in aanmerking komen. Wanneer u een incrementeel bestand exporteert, wordt de delta gepubliceerd van profielen die voor dat segment in aanmerking komen sinds de laatste exportbewerking.
-* **Frequentie**: Als deze optie  **[!UICONTROL Export full files]** is geselecteerd, kunt u exporteren  **[!UICONTROL Once]** of  **[!UICONTROL Daily]** gebruiken. Als **[!UICONTROL Export incremental files]** wordt geselecteerd, hebt u slechts de optie om **[!UICONTROL Daily]** uit te voeren. Wanneer u een bestand **[!UICONTROL Once]** exporteert, wordt het bestand één keer geëxporteerd. Wanneer u een bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST) wanneer volledige bestanden zijn geselecteerd en 12:00 uur UTC (7:00 uur EST) wanneer incrementele bestanden zijn geselecteerd.
-* **Datum**: Als deze optie  **[!UICONTROL Once]** is geselecteerd, kunt u de datum voor de eenmalige export selecteren. Als **[!UICONTROL Daily]** wordt geselecteerd, kunt u de begin en einddata voor de uitvoer selecteren.
+![Volledige bestanden exporteren](../assets/ui/activate-destinations/export-full-files.png)
 
-![](../assets/ui/activate-destinations/export-full-file.png)
+1. Met de kiezer **[!UICONTROL Frequency]** kunt u kiezen tussen één keer (**[!UICONTROL Once]**) of **[!UICONTROL Daily]** exporteren. Wanneer u een volledig bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST).
+2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden. Wanneer u een bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum op het moment dat u selecteert.
+
+   >[!IMPORTANT]
+   >
+   >De optie om bestanden op een bepaald tijdstip te exporteren bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten.
+
+3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
+4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
+
+### Incrementele bestanden {#export-incremental-files} exporteren
+
+Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporteerde bestanden alleen de profielen bevatten die voor dat segment zijn gekwalificeerd sinds de laatste exportbewerking.
+
+>[!IMPORTANT]
+>
+>Het eerste geëxporteerde incrementele bestand bevat alle profielen die in aanmerking komen voor een segment en die als backfill werken.
+
+![Incrementele bestanden exporteren](../assets/ui/activate-destinations/export-incremental-files.png)
+
+1. Met de kiezer **[!UICONTROL Frequency]** kunt u kiezen tussen **[!UICONTROL Daily]** of **[!UICONTROL Hourly]** exporteren. Wanneer u een incrementeel bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST).
+   * Wanneer u **[!UICONTROL Hourly]** selecteert, gebruikt u de **[!UICONTROL Every]**-kiezer om te kiezen tussen de uuropties **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** en **[!UICONTROL 12]**.
+
+      >[!IMPORTANT]
+      >
+      >De optie om incrementele bestanden om de 3, 6, 8 of 12 uur te exporteren, bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten. Klanten die geen bètaversie zijn, kunnen incrementele bestanden eenmaal per dag exporteren.
+
+2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
+
+   >[!IMPORTANT]
+   >
+   >De optie om de tijd van de dag voor de uitvoer te selecteren is slechts beschikbaar aan een geselecteerd aantal klanten. Klanten die geen bèta zijn, kunnen incrementele bestanden eenmaal per dag om 12:00 uur UTC (7:00 UUR EST) exporteren.
+
+3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
+4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
+
+### Bestandsnamen {#file-names} configureren
 
 De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen.
 
@@ -147,7 +181,11 @@ Selecteer het potloodpictogram om een modaal venster te openen en de bestandsnam
 
 ![bestandsnaam configureren](../assets/ui/activate-destinations/configure-name.png)
 
-In de bestandsnaameditor kunt u verschillende componenten selecteren om aan de bestandsnaam toe te voegen. De doelnaam en segment-id kunnen niet uit bestandsnamen worden verwijderd. Naast deze, kunt u het volgende toevoegen:
+In de bestandsnaameditor kunt u verschillende componenten selecteren om aan de bestandsnaam toe te voegen.
+
+![Bestandsnaamopties bewerken](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
+
+De doelnaam en segment-id kunnen niet uit bestandsnamen worden verwijderd. Naast deze, kunt u het volgende toevoegen:
 
 * **[!UICONTROL Segment name]**: U kunt de segmentnaam aan de bestandsnaam toevoegen.
 * **[!UICONTROL Date and time]**: U kunt kiezen tussen het toevoegen van een  `MMDDYYYY_HHMMSS` indeling of een Unix 10-cijferige tijdstempel van het tijdstip waarop de bestanden worden gegenereerd. Kies een van deze opties als u voor de bestanden een dynamische bestandsnaam wilt genereren bij elke incrementele exportbewerking.
@@ -158,8 +196,6 @@ Selecteer **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 >[!IMPORTANT]
 > 
 >Als u de component **[!UICONTROL Date and Time]** niet selecteert, zijn de bestandsnamen statisch en overschrijft het nieuwe geëxporteerde bestand het vorige bestand op uw opslaglocatie met elke exportbewerking. Als u een terugkerende importtaak uitvoert vanaf een opslaglocatie naar een e-mailmarketingplatform, is dit de aanbevolen optie.
-
-![Bestandsnaamopties bewerken](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
 Nadat u alle segmenten hebt geconfigureerd, selecteert u **[!UICONTROL Next]** om door te gaan.
 
@@ -183,14 +219,6 @@ Op **[!UICONTROL Segment schedule]** pagina, kunt u de begindatum voor het verze
 
 ![app-id invoeren](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Scheduling]** stap  {#scheduling}
-
-Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
-
-![stap voor segmentplanning](../assets/ui/activate-destinations/scheduling-icon.png)
-
-Op de **[!UICONTROL Scheduling]** pagina, kunt u de begindatum voor het verzenden van gegevens naar de bestemming evenals de frequentie zien om gegevens naar de bestemming te verzenden. Deze waarden kunnen niet worden bewerkt.
-
 ## **[!UICONTROL Select attributes]** stap  {#select-attributes}
 
 Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
@@ -207,15 +235,154 @@ Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk 
 * Als het veld `segmentMembership.status` is geselecteerd, bevatten geëxporteerde bestanden **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in volgende incrementele exportbewerkingen.
 * Als het veld `segmentMembership.status` niet is geselecteerd, nemen geëxporteerde bestanden alleen **[!UICONTROL Active]** leden op in de eerste volledige momentopname en in volgende incrementele exportbewerkingen.
 
-![aanbevolen kenmerken](../assets/ui/activate-destinations/mark-mandatory.png)
+![aanbevolen kenmerken](../assets/ui/activate-destinations/mandatory-deduplication.png)
 
-Bovendien kunt u verschillende kenmerken als verplicht markeren. Als u een kenmerk als verplicht markeert, moet het worden gemarkeerd zodat het geëxporteerde segment dat kenmerk moet bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Het markeren van een kenmerk als verplicht is **niet** vereist.
+### Verplichte kenmerken {#mandatory-attributes}
+
+U kunt kenmerken als verplicht markeren om ervoor te zorgen dat [!DNL Platform] alleen de profielen exporteert die het specifieke kenmerk bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Het markeren van een kenmerk als verplicht is **niet** vereist.
+
+Als u geen verplicht kenmerk selecteert, worden alle gekwalificeerde profielen geëxporteerd, ongeacht de kenmerken ervan.
 
 Men adviseert dat één van de attributen een [unieke herkenningsteken](../../destinations/catalog/email-marketing/overview.md#identity) van uw schema is. Raadpleeg de identiteitssectie in de documentatie [E-mailmarketingdoelen](../../destinations/catalog/email-marketing/overview.md#identity) voor meer informatie over verplichte kenmerken.
+
+### Deduplicatietoetsen {#deduplication-keys}
+
+>[!IMPORTANT]
+>
+>De optie om deduplicatietoetsen te gebruiken is momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten.
+
+Deduplicatietoetsen maken het onmogelijk meerdere records van hetzelfde profiel in één exportbestand te hebben.
+
+Er zijn drie manieren u deduplicatietoetsen in [!DNL Platform] kunt gebruiken:
+
+* Eén naamruimte voor identiteit gebruiken als een [!UICONTROL deduplication key]
+* Eén profielkenmerk van een [!DNL XDM]-profiel gebruiken als [!UICONTROL deduplication key]
+* Een combinatie gebruiken van twee profielkenmerken van een [!DNL XDM] profiel als samengestelde sleutel
+
+>[!IMPORTANT]
+>
+> U kunt één naamruimte voor identiteit exporteren naar een doel en de naamruimte wordt automatisch ingesteld als deduplicatietoets. Het verzenden van meerdere naamruimten naar een doel wordt niet ondersteund.
+> 
+> U kunt geen combinatie van naamruimten en profielkenmerken gebruiken als deduplicatietoetsen.
+
+### Voorbeeld van deduplicatie {#deduplication-example}
+
+Dit voorbeeld illustreert hoe deduplicatie werkt, afhankelijk van de geselecteerde deduplicatietoetsen.
+
+Laten we eens kijken naar de volgende twee profielen.
+
+**Profiel A**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-03-10 10:03:08"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "Doe",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+**Profiel B**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-04-10 11:33:28"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "D",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+### Gebruiksscenario voor deduplicatie 1: geen deduplicatie
+
+Als u geen deduplicatie gebruikt, bevat het exportbestand de volgende items.
+
+| PersonalEmail | firstName | lastName |
+|---|---|---|
+| johndoe@example.com | John | Doe |
+| johndoe@example.com | John | D |
+
+
+### Gebruiksscenario 2 van deduplicatie: deduplicatie op basis van naamruimte van identiteit
+
+Als deduplicatie wordt verondersteld door de naamruimte [!DNL Email], bevat het exportbestand de volgende items. Profiel B is het meest recente profiel dat in aanmerking komt voor het segment. Het is dus de enige die wordt geëxporteerd.
+
+| Email* | PersonalEmail | firstName | lastName |
+|---|---|---|---|
+| johndoe_1@example.com | johndoe@example.com | John | D |
+| johndoe_2@example.com | johndoe@example.com | John | D |
+
+### Gebruiksscenario voor deduplicatie 3: deduplicatie op basis van één profielkenmerk
+
+Ervan uitgaande dat het kenmerk `personal Email` deduplicatie bevat, bevat het exportbestand de volgende vermelding. Profiel B is het meest recente profiel dat in aanmerking komt voor het segment. Het is dus de enige die wordt geëxporteerd.
+
+| PersonalEmail* | firstName | lastName |
+|---|---|---|
+| johndoe@example.com | John | D |
+
+
+### Gebruiksscenario voor deduplicatie 4: deduplicatie op basis van twee profielkenmerken (samengestelde deduplicatietoets)
+
+Als deduplicatie wordt verondersteld met de samengestelde sleutel `personalEmail + lastName`, bevat het exportbestand de volgende items.
+
+| PersonalEmail* | lastName* | firstName |
+|---|---|---|
+| johndoe@example.com | D | John |
+| johndoe@example.com | Doe | John |
+
+
+Adobe raadt u aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID]- of e-mailadres, te selecteren als deduplicatietoets om ervoor te zorgen dat alle profielrecords op unieke wijze worden geïdentificeerd.
 
 >[!NOTE]
 > 
 >Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
+>
 >* De velden worden gebruikt in de segmentdefinitie.
 >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
 
@@ -223,7 +390,7 @@ Men adviseert dat één van de attributen een [unieke herkenningsteken](../../de
 > 
 Bijvoorbeeld, als het gebied `person.name.firstName` bepaalde etiketten van het gegevensgebruik heeft die met de marketing van de bestemming actie in conflict brengen, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Zie [Gegevensbeheer in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations) voor meer informatie.
 
-## **[!UICONTROL Review]** stap  {#review}
+## **[!UICONTROL Review]** stap {#review}
 
 Van toepassing op: alle bestemmingen
 
@@ -245,12 +412,10 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Fi
 
 ### E-mailmarketingdoelen en cloudopslagdoelen {#esp-and-cloud-storage}
 
-Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een door tabs gescheiden `.csv` of `.txt` bestand op de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De standaardbestandsindeling is:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
+Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een door tabs gescheiden `.csv`-bestand op de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De standaardbestandsindeling is:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-U kunt de bestandsindeling bewerken. Voor meer informatie, ga naar [vorm](#configure) stap voor de bestemmingen van de wolkenopslag en e-mailmarketing bestemmingen.
-
-Met de standaardbestandsindeling kunnen de bestanden die u op drie opeenvolgende dagen ontvangt er als volgt uitzien:
+De bestanden die u op drie opeenvolgende dagen ontvangt, kunnen er als volgt uitzien:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
