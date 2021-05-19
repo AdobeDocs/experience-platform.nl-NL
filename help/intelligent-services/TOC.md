@@ -4,11 +4,10 @@ audience: user
 user-guide-title: Help bij Intelligente services
 breadcrumb-title: Handleiding voor intelligente services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken van uw gegevens over marketinggebeurtenissen.
-feature: Data Science Workspace
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+feature: Werkruimte voor gegevenswetenschap
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '124'
 ht-degree: 4%
 
 ---
@@ -44,4 +43,5 @@ ht-degree: 4%
       - [Inzichten ontdekken](customer-ai/user-guide/discover-insights.md)
       - [Segmenten maken met behulp van AI-scores van de klant](customer-ai/user-guide/create-segment.md)
       - [Muziek downloaden](customer-ai/user-guide/download-scores.md)
+   - [Problemen oplossen](customer-ai/troubleshooting.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
