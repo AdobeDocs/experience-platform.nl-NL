@@ -4,9 +4,9 @@ title: Veelgestelde vragen over doelen
 seo-title: Veelgestelde vragen over doelen
 description: Antwoorden op de vaakst gestelde vragen over de Doelen van Adobe Experience Platform
 seo-description: Antwoorden op de vaakst gestelde vragen over de Doelen van Adobe Experience Platform
-source-git-commit: 117f0f82adb764cedaa048e718cd72fa033845a0
+source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Veelgestelde vragen over doelen {#faq}
 
-## [!DNL Facebook Custom Audiences] (#facebook-faq)
+## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **Wat moet ik doen voordat ik publiek kan activeren  [!DNL Facebook Custom Audiences]?**
 
