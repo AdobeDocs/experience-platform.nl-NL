@@ -3,18 +3,17 @@ audience: user
 user-guide-title: Handleiding voor realtime-klantprofiel
 user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
 feature: Profielen
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 5%
+source-wordcount: '128'
+ht-degree: 6%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile] overzicht](home.md)
+* [[!DNL Profile] - overzicht](home.md)
 * [Profieloverzicht (video)](video/profile-overview.md)
 * [[!DNL Profile] guardrails](guardrails.md)
 * [!DNL Profile] API {#api}
@@ -24,7 +23,7 @@ ht-degree: 5%
    * [Entiteiten ([!DNL Profile] toegang)](api/entities.md)
    * [Exporttaken ([!DNL Profile] exporteren)](api/export-jobs.md)
    * [Beleid samenvoegen](api/merge-policies.md)
-   * [Voorvertoning voorbeeldstatus ([!DNL Profile] voorvertoning)](api/preview-sample-status.md)
+   * [Voorbeeldstatus voorvertonen ([!DNL Profile] voorvertoning)](api/preview-sample-status.md)
    * [[!DNL Profile] systeemtaken (aanvragen verwijderen)](api/profile-system-jobs.md)
 * Profiel-UI-hulplijnen {#ui}
    * [[!DNL Profile] UI-hulplijn](ui/user-guide.md)
@@ -41,7 +40,8 @@ ht-degree: 5%
    * [Voorbeeldexpressies](computed-attributes/expressions.md)
 * Tutorials {#tutorials}
    * [Gegevens toevoegen aan [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Vorm een dataset  [!DNL Profile] & [!DNL Identity] voor de dienst](tutorials/dataset-configuration.md)
+   * [Vorm een dataset voor  [!DNL Profile] & [!DNL Identity] dienst](tutorials/dataset-configuration.md)
+   * [Genereer het overlappingsrapport voor de gegevensset](tutorials/dataset-overlap-report.md)
    * [Meer zelfstudies](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Verwerking van privacyverzoeken](privacy.md)
 * [[!DNL Profile] gids voor problemen](troubleshooting.md)
