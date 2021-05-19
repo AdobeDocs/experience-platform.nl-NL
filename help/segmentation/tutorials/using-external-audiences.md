@@ -5,10 +5,9 @@ title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 82aa38c7bce05faeea5a9f42d0d86776737e04be
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -19,11 +18,25 @@ Adobe Experience Platform ondersteunt de mogelijkheid om extern publiek te impor
 
 ## Aan de slag
 
+Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] services die betrokken zijn bij het maken van publiekssegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+
 - [Segmenteringsservice](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
 - [Klantprofiel](../../profile/home.md) in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 - [Gegevenssets](../../catalog/datasets/overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in Experience Platform.
 - [Streaming opname](../../ingestion/streaming-ingestion/overview.md): Hoe Experience Platform gegevens van client- en server-side apparaten in real-time opneemt en opslaat.
+
+### Segmentgegevens vs segmentmetagegevens
+
+Voordat u begint met het importeren en gebruiken van externe doelgroepen, is het belangrijk dat u het verschil begrijpt tussen segmentgegevens en segmentmetagegevens.
+
+Segmentgegevens verwijzen naar de profielen die voldoen aan de kwalificatiecriteria van het segment en daarom deel uitmaken van het publiek.
+
+De meta-gegevens van het segment zijn informatie over het segment zelf, die de naam, de beschrijving, de uitdrukking (indien van toepassing), de aanmaakdatum, de laatste gewijzigde datum, en identiteitskaart omvat. De id koppelt de segmentmetagegevens aan de afzonderlijke profielen die voldoen aan de segmentkwalificatie en die deel uitmaken van het resulterende publiek.
+
+| Segmentgegevens | Metagegevens segment |
+| ------------ | ---------------- |
+| Profielen die voldoen aan de segmentkwalificatie | Informatie over het segment zelf |
 
 ## Een naamruimte voor identiteit maken voor het externe publiek
 
