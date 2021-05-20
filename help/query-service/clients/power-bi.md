@@ -5,10 +5,9 @@ title: Verbinding maken met Power BI-zoekservice
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ In dit document worden de stappen beschreven voor het maken van verbinding met A
 
 >[!NOTE]
 >
-> Deze gids veronderstelt u reeds toegang tot [!DNL Power BI] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Power BI] vindt u in de [officiële [!DNL Power BI] documentatie](https://docs.looker.com/).
+> Deze gids veronderstelt u reeds toegang tot [!DNL Power BI] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Power BI] vindt u in de [officiële [!DNL Power BI] documentatie](https://docs.microsoft.com/en-us/power-bi/).
 >
 > Bovendien is Power BI **alleen** beschikbaar op Windows-apparaten.
 
@@ -67,7 +66,7 @@ De tabel wordt nu geïmporteerd in Power BI.
 
 ![](../images/clients/power-bi/import-table.png)
 
-## SQL-instructies {#create} maken
+## SQL-instructies maken {#create}
 
 Als u de modus **[!DNL DirectQuery]** hebt geselecteerd, moet u de sectie Geavanceerde opties invullen met de SQL-query die u wilt maken.
 
