@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-time handleiding voor de API voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ Via Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profil
 
 ## Beleid {#merge-policies} samenvoegen
 
-Wanneer het brengen van gegevens uit veelvoudige bronnen in [!DNL Experience Platform], is het fusieprincipe de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens zullen worden geprioriteerd en welke gegevens zullen worden gecombineerd om individuele klantenprofielen tot stand te brengen. Met de [!DNL Real-time Customer Profile]-API kunt u een nieuw samenvoegbeleid maken, bestaand beleid beheren en een standaardsamenvoegbeleid voor uw organisatie instellen. Meer over het werken met fusiebeleid gebruikend API, gelieve te bezoeken [de gids ](merge-policies.md) van het eindpunt van samenvoegingsbeleid.
+Wanneer het brengen van gegevens uit veelvoudige bronnen in [!DNL Experience Platform], is het fusieprincipe de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens zullen worden geprioriteerd en welke gegevens zullen worden gecombineerd om individuele klantenprofielen tot stand te brengen. Met de [!DNL Real-time Customer Profile]-API kunt u een nieuw samenvoegbeleid maken, bestaand beleid beheren en een standaardsamenvoegbeleid voor uw organisatie instellen. Als u met samenvoegbeleid wilt werken met de API, gaat u naar de [eindhulplijn voor samenvoegbeleidsregels](merge-policies.md).
 
-Voor een gids aan het werken met samenvoegbeleid gebruikend [!DNL Platform] UI, te zien gelieve [de gebruikersgids van het beleid van de samenvoegen](../ui/merge-policies.md).
+Als u meer wilt weten over samenvoegingsbeleid en hun rol in het Platform, begint u met het lezen van het [overzicht van samenvoegingsbeleid](../merge-policies/overview.md).
 
 ## Voorbeeldstatus voorvertoning ([!DNL Profile] voorvertoning) {#profile-preview}
 
