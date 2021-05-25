@@ -5,8 +5,7 @@ title: Verwerking van toestemming in Adobe Experience Platform
 topic-legacy: getting started
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
 source-wordcount: '1565'
 ht-degree: 0%
@@ -63,7 +62,7 @@ Aangezien elk CMP-systeem uniek is, moet u de beste manier bepalen om uw klanten
 
 In dit dialoogvenster kan de klant kiezen of hij of zij voor zijn of haar gegevens gebruikmaakt van specifieke gevallen voor marketing en personalisatie. Deze toestemmingen en voorkeur zouden aan het gegevensmodel moeten in overeenstemming zijn dat u voor [!DNL Profile]-Toegelaten dataset in de volgende stap bepaalt.
 
-## Voeg gestandaardiseerde toestemmingsgebieden aan een [!DNL Profile]-Toegelaten dataset {#dataset} toe
+## Voeg gestandaardiseerde toestemmingsgebieden aan een [!DNL Profile]-Toegelaten dataset toe {#dataset}
 
 De gegevens van de toestemming van de klant moeten naar een [!DNL Profile]-Toegelaten dataset worden verzonden het waarvan schema toestemmingsgebieden bevat. Deze gebieden moeten in het zelfde schema en de dataset worden omvat die u gebruikt om attributeninformatie over individuele klanten te vangen.
 
@@ -71,13 +70,13 @@ Raadpleeg de zelfstudie over [het configureren van een gegevensset voor het vast
 
 ## [!DNL Profile] samenvoegbeleid bijwerken om gegevens over toestemming {#merge-policies} op te nemen
 
-Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw samenvoegbeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
+Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw fusiebeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
 >[!NOTE]
 >
 >Als u geen conflicterende datasets hebt, zou u timestamp belangrijkheid voor uw samenvoegbeleid in plaats daarvan moeten plaatsen. Dit helpt ervoor te zorgen dat de recentste toestemming die door een klant wordt gespecificeerd de toestemmingsinstelling is die wordt gebruikt.
 
-Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de gebruikersgids van het samenvoegingsbeleid](../../../../profile/ui/merge-policies.md). Wanneer het opzetten van uw fusiebeleid, moet u ervoor zorgen dat uw profielen alle vereiste toestemmingsattributen omvatten die door de het schemagebiedgroep van de Inhoud &amp; van de Voorkeur worden verstrekt, zoals die in de gids over [datasetvoorbereiding](./dataset.md) worden geschetst.
+Voor meer informatie over hoe te met fusiebeleid te werken, begin door [overzicht van fusiebeleid te lezen](../../../../profile/merge-policies/overview.md). Wanneer het opzetten van uw fusiebeleid, moet u ervoor zorgen dat uw profielen alle vereiste toestemmingsattributen omvatten die door de het schemagebiedgroep van de Inhoud &amp; van de Voorkeur worden verstrekt, zoals die in de gids over [datasetvoorbereiding](./dataset.md) worden geschetst.
 
 ## Goedkeuringsgegevens in Platform plaatsen
 
@@ -97,7 +96,7 @@ Als in uw mobiele toepassing de voorkeursinstellingen voor toestemming van de kl
 
 Raadpleeg de documentatie bij de mobiele SDK voor [het configureren van de mobiele extensie voor toestemming](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) en [met behulp van de API voor toestemming](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference). Raadpleeg de sectie [Privacy en GDPR](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr) voor meer informatie over het omgaan met privacyproblemen met de Mobile SDK.
 
-### Voeg XDM-compatibele toestemmingsgegevens direct {#batch} in
+### Gegevens met XDM-compatibele machtigingen direct invoeren {#batch}
 
 U kunt XDM-Volgzame toestemmingsgegevens van een Csv- dossier door batch-opname in te voeren. Dit kan nuttig zijn als u een achterstand van eerder verzamelde toestemmingsgegevens hebt die nog in uw klantenprofielen moet worden geïntegreerd.
 
