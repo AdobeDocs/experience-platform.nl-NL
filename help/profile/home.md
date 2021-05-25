@@ -4,10 +4,9 @@ title: Overzicht van realtime-klantprofiel
 topic-legacy: guide
 description: Klantprofiel in realtime is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---
@@ -64,9 +63,11 @@ Elk bedrijf wil met zijn klanten op een manier communiceren die zich persoonlijk
 
 ### Beleid samenvoegen
 
-Wanneer het brengen van gegevensfragmenten uit veelvoudige bronnen en het combineren van hen om een volledige mening van elk van uw individuele klanten te zien, zijn het fusiebeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens zullen worden geprioriteerd en welke gegevens zullen worden gebruikt om het klantenprofiel tot stand te brengen. Wanneer er conflicterende gegevens van veelvoudige datasets zijn, zal het fusiebeleid bepalen hoe die gegevens moeten worden behandeld en welke waarde zou moeten worden gebruikt. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen.
+Wanneer het brengen van gegevensfragmenten uit veelvoudige bronnen en het combineren van hen om een volledige mening van elk van uw individuele klanten te zien, zijn het fusiebeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens zullen worden geprioriteerd en welke gegevens zullen worden gebruikt om het klantenprofiel tot stand te brengen.
 
-Voor meer informatie bij het werken met fusiebeleid gebruikend [!DNL Real-time Customer Profile] API, zie [de gids ](api/merge-policies.md)van het eindpunt van samenvoegingsbeleid. Om met samenvoegbeleid te werken gebruikend [!DNL Experience Platform] UI, verwijs naar [de gids UI van het samenvoegingsbeleid](ui/merge-policies.md).
+Wanneer er conflicterende gegevens van veelvoudige datasets zijn, bepaalt het fusiebeleid hoe die gegevens moeten worden behandeld en welke waarde zou moeten worden gebruikt. Via RESTful APIs of de gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen.
+
+Als u meer wilt weten over samenvoegingsbeleid en hun rol binnen het Experience Platform, leest u eerst het [overzicht van samenvoegingsbeleid](merge-policies/overview.md).
 
 ### Unieschema&#39;s {#profile-fragments-and-union-schemas}
 
