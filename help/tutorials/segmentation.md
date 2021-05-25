@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw gegevens in het realtime-klantprofiel. Deze segmenten worden centraal gevormd en gehandhaafd op Platform, en gemakkelijk toegankelijk door om het even welke oplossing van Adobe.
 exl-id: e45de6b5-ff71-4908-ad79-898084763704
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ Voor het exporteren van segmenten met [!DNL Profile]-gegevens moet eerst [een ge
 
 ## Samenvoegingsbeleid configureren
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Om met samenvoegbeleid in [!DNL Platform] UI te werken, bezoek [de gids van de gebruiker ](../profile/ui/merge-policies.md) van het samenvoegbeleid. Om met samenvoegbeleid te werken gebruikend [!DNL Real-time Customer Profile] API, zie [de gids van de ontwikkelaar van samenvoegingsbeleid](../profile/api/merge-policies.md).
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Als u meer wilt weten over samenvoegingsbeleid en de rol die deze spelen binnen het Experience Platform, leest u eerst het [overzicht van het samenvoegbeleid](../profile/merge-policies/overview.md).
 
 ## Compatibiliteit met gegevensgebruik voor segmenten afdwingen
 
