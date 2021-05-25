@@ -9,23 +9,20 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+exl-id: 4bb804f5-1ad7-47b0-bc38-ba22877490d4
+source-git-commit: 7283fcb2edde4598b1ef8e0ee1f1b002434ba492
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
-
 # Een samenvoegbeleid maken in de gebruikersinterface van het Experience Platform
 
-Deze video biedt een basisbegrip van het samenvoegbeleid in Adobe Experience Platform en schetst hoe u het samenvoegbeleid kunt definiëren in de gebruikersinterface van het Platform. Voor meer informatie over samenvoegingsbeleid, en hoe te om hen tot stand te brengen gebruikend het Platform UI, te bezoeken gelieve [beleidsgids UI ](../ui/merge-policies.md) samenvoegen.
-
-Als u in het werken met fusiebeleid gebruikend Real-time API van het Profiel van de Klant geinteresseerd bent, te bezoeken gelieve [de gids ](../api/merge-policies.md) van het de eindpunt van samenvoegingsbeleid.
+Deze video biedt een basisbegrip van het samenvoegbeleid in Adobe Experience Platform en schetst hoe u het samenvoegbeleid kunt definiëren in de gebruikersinterface van het Platform. Als u meer wilt weten over samenvoegingsbeleid, leest u eerst [Overzicht van samenvoegingsbeleid](../merge-policies/overview.md).
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar [beleidsgids UI](../ui/merge-policies.md) samenvoegen.
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar [beleidsgids UI](../merge-policies/ui-guide.md) samenvoegen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)
