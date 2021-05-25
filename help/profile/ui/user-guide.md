@@ -4,10 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel in realtime
 topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1290'
 ht-degree: 0%
 
 ---
@@ -50,7 +49,7 @@ Selecteer het tabblad **[!UICONTROL Browse]** om door profielen te bladeren op i
 
 Rechts op het tabblad **[!UICONTROL Browse]** staan verschillende belangrijke metriek voor uw profielgegevens, zoals het totale aantal [profielen](#profile-count) en een lijst met [profielen door naamruimte](#profiles-by-namespace).
 
-Deze profielmetriek worden geëvalueerd gebruikend het standaardsamenvoegbeleid van uw organisatie. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaard fusiebeleid te bepalen, zie [de gebruikersgids van het Beleid van de Fusie](merge-policies.md).
+Deze profielmetriek worden geëvalueerd gebruikend het standaardsamenvoegbeleid van uw organisatie. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaard fusiebeleid te bepalen, zie [overzicht van het fusiebeleid](../merge-policies/overview.md).
 
 Naast deze metriek, verstrekt de sectie van profielmetriek ook een laatste bijgewerkte datum en tijd, die tonen wanneer de metriek het laatst werden geëvalueerd.
 
@@ -74,7 +73,7 @@ Vergelijkbaar met de [profieltelling](#profile-count) metrisch, wanneer de opnam
 
 Met de kiezer **[!UICONTROL Merge policy]** wordt automatisch het standaardsamenvoegbeleid voor uw organisatie geselecteerd. Als u dat samenvoegbeleid niet wilt gebruiken, kunt u `X` naast het standaardsamenvoegbeleid selecteren om het **[!UICONTROL Select merge policy]** dialoogvenster te openen waarin u een ander samenvoegbeleid kunt kiezen.
 
-Meer over samenvoegingsbeleid en hun rol binnen Platform leren, zie [beleidsgids UI](merge-policies.md) samenvoegen.
+Meer over fusiebeleid en hun rol binnen Platform leren, zie [overzicht van fusiebeleid](../merge-policies/overview.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -112,9 +111,7 @@ U kunt aanvullende informatie over het afzonderlijke profiel weergeven door een 
 
 Selecteer in het hoofdmenu **[!UICONTROL Profiles]** het tabblad **[!UICONTROL Merge Policies]** om een lijst weer te geven met samenvoegbeleidsregels die bij uw organisatie horen. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en de schemaklasse die het op van toepassing is.
 
-Voor meer informatie over fusiebeleid, zie [beleidsgids UI](merge-policies.md) samenvoegen.
-
-Meer over het werken met fusiebeleid gebruikend Real-time het Profiel van de Klant API, gelieve te verwijzen naar [de gids ](../api/merge-policies.md) van het de eindpunt van samenvoegingsbeleid.
+Zie [Overzicht van samenvoegingsbeleid](../merge-policies/overview.md) voor meer informatie over samenvoegingsbeleid.
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
