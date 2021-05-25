@@ -5,10 +5,9 @@ description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke
 topic-legacy: guide
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -49,7 +48,7 @@ Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden weergeg
 >
 >In het vervolgkeuzemenu ziet u alleen samenvoegbeleid met betrekking tot de XDM Individual Profile Class. Als uw organisatie echter meerdere samenvoegingsbeleidsregels heeft gemaakt, moet u mogelijk schuiven om de volledige lijst met beschikbare samenvoegingsbeleidsregels weer te geven.
 
-Voor meer informatie over samenvoegbeleid, met inbegrip van hoe te om, een standaard fusiebeleid voor uw organisatie tot stand te brengen uit te geven en te verklaren, te bezoeken gelieve [beleidsgids UI van de fusie](../../profile/ui/merge-policies.md).
+Voor meer informatie over samenvoegbeleid, met inbegrip van hoe te om, een standaard fusiebeleid voor uw organisatie tot stand te brengen uit te geven en te verklaren, gelieve te beginnen door [overzicht van fusiebeleid te lezen](../../profile/merge-policies/overview.md).
 
 ![](../images/profiles/select-merge-policy.png)
 
