@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2590'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerki
 
 Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met de API voor samenvoegbeleid.
 
-Om met samenvoegbeleid te werken gebruikend UI, te verwijzen gelieve [beleidsgids UI](../ui/merge-policies.md) samenvoegen.
+Om met samenvoegbeleid te werken gebruikend UI, te verwijzen gelieve [beleidsgids UI](../merge-policies/ui-guide.md) samenvoegen. Om meer over samenvoegbeleid in het algemeen, en hun rol binnen Experience Platform te leren, gelieve te beginnen door [overzicht van fusiebeleid te lezen](../merge-policies/overview.md).
 
 ## Aan de slag
 
@@ -534,7 +533,7 @@ Een geslaagde reactie retourneert de details van het nieuwe samenvoegbeleid.
 
 Zie [componenten van samenvoegingsbeleid](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
-## Een samenvoegingsbeleid {#update} bijwerken
+## Een samenvoegingsbeleid bijwerken {#update}
 
 U kunt een bestaand samenvoegingsbeleid wijzigen door individuele attributen (PATCH) uit te geven of door het volledige fusiebeleid met nieuwe attributen (PUT) te beschrijven. Hieronder worden voorbeelden van beide weergegeven.
 
@@ -760,7 +759,7 @@ Als u een aangepaste tijdstempel wilt gebruiken, moet de [[!DNL External Source 
 
 Voor geleidelijke instructies bij het werken met schema&#39;s gebruikend de Registratie API van het Schema, met inbegrip van hoe te om gebiedsgroepen aan schema&#39;s toe te voegen, gelieve [zelfstudie voor het creëren van een schema te bezoeken gebruikend API](../../xdm/tutorials/create-schema-api.md).
 
-Als u met aangepaste tijdstempels wilt werken met de gebruikersinterface, raadpleegt u de sectie over [aangepaste tijdstempels](../ui/merge-policies.md#custom-timestamps) in de [Gebruikershandleiding voor samenvoegbeleid](../ui/merge-policies.md).
+Als u met aangepaste tijdstempels wilt werken met de gebruikersinterface, raadpleegt u de sectie over [aangepaste tijdstempels](../merge-policies/overview.md#custom-timestamps) in het [overzicht van het samenvoegbeleid](../merge-policies/overview.md).
 
 #### [!DNL External Source System Audit Details] veldgroepdetails  {#field-group-details}
 
