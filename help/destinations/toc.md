@@ -4,10 +4,10 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
-source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 0%
+source-wordcount: '477'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,6 @@ ht-degree: 0%
 
 * [Overzicht van doelen](./home.md)
 * [Doeltypen en -categorieën](./destination-types.md)
-* [Veelgestelde vragen over doelen](./destinations-faq.md)
 * API-zelfstudies {#api}
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API](./api/email-marketing.md)
@@ -135,4 +134,5 @@ ht-degree: 0%
       * [Invoc-tags, extensie](./catalog/voice/invoca.md)
       * [extensie Medallia](./catalog/voice/medallia.md)
       * [URL-inbox-extensie Talk](./catalog/voice/talkurl.md)
+* [Veelgestelde vragen](./destinations-faq.md)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
