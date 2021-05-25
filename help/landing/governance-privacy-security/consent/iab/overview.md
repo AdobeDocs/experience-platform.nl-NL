@@ -5,9 +5,9 @@ title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '2466'
+source-wordcount: '2465'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ De gegevens van de toestemming van de klant moeten naar datasets worden verzonde
 
 Zodra u een [!DNL Profile]-Toegelaten dataset voor het verzamelen van toestemmingsgegevens hebt gecreeerd, moet u ervoor zorgen dat uw samenvoegingsbeleid is gevormd om TCF toestemmingsgebieden in uw klantenprofielen altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
-Voor meer informatie over hoe te om met fusiebeleid te werken, verwijs naar [de gebruikersgids van het samenvoegingsbeleid](../../../../profile/ui/merge-policies.md). Wanneer het opzetten van uw samenvoegbeleid, moet u ervoor zorgen dat uw segmenten alle vereiste toestemmingsattributen omvatten die door de [XDM groep van het privacyschemagebied van het privacyschema worden verstrekt](./dataset.md#privacy-field-group), zoals die in de gids over datasetvoorbereiding wordt geschetst.
+Voor meer informatie over hoe te met fusiebeleid te werken, verwijs naar [overzicht van fusiebeleid](../../../../profile/merge-policies/overview.md). Wanneer het opzetten van uw samenvoegbeleid, moet u ervoor zorgen dat uw segmenten alle vereiste toestemmingsattributen omvatten die door de [XDM groep van het privacyschemagebied van het privacyschema worden verstrekt](./dataset.md#privacy-field-group), zoals die in de gids over datasetvoorbereiding wordt geschetst.
 
 ## Integreer de SDK van het Web van het Experience Platform om gegevens van de klantentoestemming te verzamelen {#sdk}
 
