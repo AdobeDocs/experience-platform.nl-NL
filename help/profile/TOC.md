@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Handleiding voor realtime-klantprofiel
 user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
 feature: Profielen
-source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '135'
 ht-degree: 6%
 
 ---
@@ -15,29 +15,32 @@ ht-degree: 6%
 
 * [[!DNL Profile] - overzicht](home.md)
 * [Profieloverzicht (video)](video/profile-overview.md)
-* [[!DNL Profile] guardrails](guardrails.md)
+* [[!DNL Profile] en segmentatiegids](guardrails.md)
+* [[!DNL Profile] dashboard](ui/profile-dashboard.md)
 * [!DNL Profile] API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Edge-prognoses](api/edge-projections.md)
    * [Entiteiten ([!DNL Profile] toegang)](api/entities.md)
    * [Exporttaken ([!DNL Profile] exporteren)](api/export-jobs.md)
-   * [Beleid samenvoegen](api/merge-policies.md)
    * [Voorbeeldstatus voorvertonen ([!DNL Profile] voorvertoning)](api/preview-sample-status.md)
    * [[!DNL Profile] systeemtaken (aanvragen verwijderen)](api/profile-system-jobs.md)
-* Profiel-UI-hulplijnen {#ui}
+* Profielinterface {#ui}
    * [[!DNL Profile] UI-hulplijn](ui/user-guide.md)
-   * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
    * [[!DNL Profile] detailaanpassing](ui/profile-customization.md)
-   * [UI-gids voor samenvoegen](ui/merge-policies.md)
-   * [Samenvoegbeleid maken (video)](video/create-merge-policies.md)
-   * [UI-hulplijn verenigingsschema](ui/union-schema.md)
-   * [Overzicht van Unieschema (video)](video/union-schemas-overview.md)
 * (Alpha) Berekende kenmerken {#computed-attributes}
    * [Overzicht](computed-attributes/overview.md)
    * [API voor berekende kenmerken](computed-attributes/ca-api.md)
    * [Veld voor berekende kenmerken configureren](computed-attributes/configure-api.md)
    * [Voorbeeldexpressies](computed-attributes/expressions.md)
+* Beleid {#merge-policies} samenvoegen
+   * [Overzicht](merge-policies/overview.md)
+   * [API voor beleid samenvoegen](api/merge-policies.md)
+   * [UI-gids voor samenvoegen](merge-policies/ui-guide.md)
+   * [Samenvoegbeleid maken (video)](video/create-merge-policies.md)
+* Unieschema&#39;s {#union-schemas}
+   * [UI-hulplijn verenigingsschema](ui/union-schema.md)
+   * [Overzicht van Unieschema (video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
    * [Gegevens toevoegen aan [!DNL Profile]](tutorials/add-profile-data.md)
    * [Vorm een dataset voor  [!DNL Profile] & [!DNL Identity] dienst](tutorials/dataset-configuration.md)
