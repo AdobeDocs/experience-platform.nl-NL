@@ -3,10 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-translation-type: tm+mt
-source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
+source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1147'
 ht-degree: 2%
 
 ---
@@ -132,3 +131,15 @@ Voor [!DNL Facebook], betekent een succesvolle activering dat een [!DNL Facebook
 >[!TIP]
 >
 >De integratie tussen Adobe Experience Platform en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden naar [!DNL Facebook] verzonden wanneer u de segmenten naar de bestemming activeert.
+
+## Problemen oplossen {#troubleshooting}
+
+### 400 Onjuist aanvraagfoutbericht {#bad-request}
+
+Wanneer u segmenten activeert op [!DNL Facebook], krijgt u mogelijk de volgende fout:
+
+`{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
+
+Deze fout treedt op wanneer klanten nieuwe accounts gebruiken en de [!DNL Facebook]-machtigingen nog niet actief zijn.
+
+Als u het foutbericht `400 Bad Request` ontvangt nadat u de stappen in [Voorwaarden voor Facebook-account](#facebook-account-prerequisites) hebt uitgevoerd, moet u een paar dagen toestaan voordat de [!DNL Facebook]-machtigingen van kracht worden.
