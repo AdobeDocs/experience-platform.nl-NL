@@ -1,18 +1,22 @@
 ---
 keywords: bestemmingen; vragen; veelgestelde vragen; faq; bestemmingen - vk
-title: Veelgestelde vragen over doelen
-seo-title: Veelgestelde vragen over doelen
-description: Antwoorden op de vaakst gestelde vragen over de Doelen van Adobe Experience Platform
-seo-description: Antwoorden op de vaakst gestelde vragen over de Doelen van Adobe Experience Platform
-source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
+title: Veelgestelde vragen
+seo-title: Veelgestelde vragen
+description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
+seo-description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 5%
+source-wordcount: '633'
+ht-degree: 6%
 
 ---
 
 
-# Veelgestelde vragen over doelen {#faq}
+# Veelgestelde vragen {#faq}
+
+## Overzicht {#overview}
+
+Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform-doelen. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en probleemoplossing met betrekking tot andere [!DNL Platform]-services, inclusief de problemen die zich in alle [!DNL Platform]-API&#39;s voordoen.
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
