@@ -2,22 +2,16 @@
 keywords: Experience Platform;profiel;segment;segmenten;segmentatie;gebruikersinterface;UI;aanpassing;segmentdashboard;dashboard
 title: Segmentdashboard
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
-topic-legacy: guide
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
-# (Beta) Segmentdashboard {#segment-dashboard}
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit die in dit document wordt beschreven is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Segmentdashboard {#segment-dashboard}
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw segmenten kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot en met het segmentdashboard in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
@@ -39,19 +33,27 @@ Als u naar het segmentdashboard in de interface van het Platform wilt navigeren,
 
 ![](../images/segments/dashboard-overview.png)
 
-### Een segment selecteren
+### Het dashboard [!UICONTROL Segments] wijzigen
 
-Het dashboard zal automatisch een segment selecteren om te tonen, maar u kunt het segment veranderen dat gebruikend het drop-down menu wordt getoond. Als u een ander segment wilt kiezen, selecteert u de vervolgkeuzelijst naast de segmentnaam en selecteert u het segment dat u wilt weergeven.
+U kunt de weergave van het [!UICONTROL Segments] dashboard wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot [!UICONTROL Widget library] om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
->[!NOTE]
->
->In het vervolgkeuzemenu ziet u alle segmenten die uw organisatie tot nu toe heeft gemaakt. Dit kan betekenen dat u zult moeten scrollen om de volledige lijst van beschikbare segmenten te bekijken.
+Raadpleeg de documentatie [modifying dashboards](../modify.md) and [widget library](../widget-library.md) voor meer informatie.
+
+## Een segment selecteren
+
+Het dashboard selecteert automatisch een segment aan vertoning, nochtans kunt u het segment veranderen door het drop-down menu of de segmentselecteur te gebruiken.
+
+Als u een ander segment wilt kiezen, selecteert u de vervolgkeuzelijst naast de segmentnaam of gebruikt u de segmentkiezer om het dialoogvenster voor segmentselectie te openen.
 
 ![](../images/segments/change-segment.png)
 
-### Widgets en metriek
+![](../images/segments/select-segment-dialog.png)
 
-Het segmentdashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over het geselecteerde segment verschaft. De datum en tijd &#39;laatst bijgewerkt&#39; op de widget geven aan wanneer de laatste momentopname van de gegevens is gemaakt.
+## Widgets en metriek
+
+Het segmentdashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over het geselecteerde segment verschaft.
+
+De datum en tijd &#39;laatst bijgewerkt&#39; op een widget geeft aan wanneer de laatste momentopname van de gegevens is gemaakt. De datum en het tijdstip van de momentopname worden in UTC vermeld; het bevindt zich niet in de tijdzone van de individuele gebruiker of IMS-organisatie.
 
 ![](../images/segments/widget-timestamp.png)
 
@@ -59,33 +61,46 @@ Het segmentdashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die bela
 
 Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw segment. Selecteer de naam van een widget hieronder voor meer informatie:
 
-* [[!UICONTROL Segment size]](#segment-size)
-* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
-* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
+* [[!UICONTROL Audience size]](#audience-size)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 
-### [!UICONTROL Segment size] {#segment-size}
+### [!UICONTROL Audience size] {#audience-size}
 
-De widget **[!UICONTROL Segment size]** geeft het totale aantal samengevoegde profielen weer binnen het geselecteerde segment op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
+De widget **[!UICONTROL Audience size]** geeft het totale aantal samengevoegde profielen weer binnen het geselecteerde segment op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
 
 Voor meer informatie over fragmenten en samengevoegde profielen, gelieve te beginnen door [overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
 
-![](../images/segments/segment-size.png)
+![](../images/segments/audience-size.png)
 
-### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+### [!UICONTROL Audience size trend] {#audience-size-trend}
 
-De widget **[!UICONTROL Profiles added over time]** biedt informatie over het totale aantal profielen in het segment dat is vastgelegd tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen. Deze widget geeft aan hoe de segmentgrootte over een periode van 30 dagen kan zijn verschoven omdat nieuwe profielen in aanmerking komen voor of het segment verlaten.
+De widget **[!UICONTROL Audience size trend]** biedt informatie over het totale aantal profielen in het segment dat is vastgelegd tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen, 90 dagen of 12 maanden. Deze widget geeft aan hoe de segmentgrootte in de loop der tijd kan zijn verschoven omdat nieuwe profielen in aanmerking komen voor of het segment verlaten.
 
 Raadpleeg de [documentatie bij Segmentatieservice](../../segmentation/home.md) voor meer informatie over segmentbeoordeling en hoe profielen in aanmerking komen en uit segmenten worden afgesloten.
 
-![](../images/segments/profiles-added-over-time.png)
+![](../images/segments/audience-size-trend.png)
 
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
+### [!UICONTROL Identity overlap] {#identity-overlap}
 
-Met de widget **[!UICONTROL Profiles by namespace]** wordt de indeling van naamruimten in alle samengevoegde profielen in het geselecteerde segment weergegeven. Het totale aantal profielen per naamruimte van de identiteit ([!UICONTROL ID namespace] in de widget) kan hoger zijn dan het totale aantal profielen in het segment omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke namespace worden getoond kan meer dan de totale profielen in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, veelvoudige namespaces met die individuele klant kunnen worden geassocieerd.
+De widget **[!UICONTROL Identity overlap]** geeft een Venn-diagram weer of stelt een diagram in waarin de overlapping van profielen in uw segment met meerdere identiteiten wordt getoond.
 
-Voor meer informatie over naamruimten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Nadat u de vervolgkeuzemenu&#39;s op de widget hebt gebruikt om de identiteiten te selecteren die u wilt vergelijken, worden cirkels weergegeven met de relatieve grootte van elke identiteit, waarbij het aantal profielen met beide naamruimten wordt weergegeven door de grootte van de overlapping tussen de cirkels.
 
-![](../images/segments/profiles-by-namespace.png)
+Als een klant op meer dan één kanaal met uw merk in wisselwerking staat, zullen de veelvoudige identiteiten met die individuele klant worden geassocieerd, daarom is het waarschijnlijk dat uw organisatie veelvoudige profielen zal hebben die fragmenten van meer dan één identiteit bevatten.
+
+Voor meer informatie over identiteiten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+![](../images/segments/identity-overlap.png)
+
+### [!UICONTROL Profiles by identity] {#profiles-by-identity}
+
+De widget **[!UICONTROL Profiles by identity]** geeft de indeling van de identiteiten in alle samengevoegde profielen in het geselecteerde segment weer. Het totale aantal profielen per identiteit kan hoger zijn dan het totale aantal profielen in het segment, omdat aan één profiel meerdere identiteiten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke identiteit worden getoond kan meer dan de totale publieksgrootte in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, de veelvoudige identiteiten met die individuele klant kunnen worden geassocieerd.
+
+Voor meer informatie over identiteiten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+![](../images/segments/profiles-by-identity.png)
 
 ## Volgende stappen
 
