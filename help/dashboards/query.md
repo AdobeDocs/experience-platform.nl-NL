@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Onbewerkte gegevenssets verkennen en verwerken waardoor Experience Platform-dashboards kunnen worden aangestuurd
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, segment, en bestemmingsdashboards in Experience Platform aandrijven.
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ U kunt de Dienst van de Vraag gebruiken om ruwe datasets voor profiel, segment, 
 
 Voor elk actief fusiebeleid in het Profiel van de Klant in real time, is er een dataset van de profielattributen beschikbaar in het gegevensmeer.
 
-De naamgevingsconventie van deze gegevensset is **Profielkenmerk** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+De naamgevingsconventie van deze gegevenssets is **Profielkenmerk** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-Om het volledige schema van de dataset te begrijpen, kunt u voorproef en het schema onderzoeken gebruikend de datasetkijker in Experience Platform UI.
+Om het volledige schema van elke dataset te begrijpen, kunt u voorproef en de datasets onderzoeken gebruikend de datasetkijker in Experience Platform UI.
 
 ### Gegevensset voor segmentmetagegevens
 
-Er is een dataset van segmentmeta-gegevens beschikbaar in het gegevensmeer voor elk van de segmenten van uw organisatie.
+Er is een dataset van segmentmeta-gegevens beschikbaar in het gegevensmeer die meta-gegevens voor elk van de segmenten van uw organisatie bevatten.
 
 De naamgevingsconventie van deze gegevensset is **Profielsegmentdefinitie** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-Het volgende beeld toont het schema van de dataset van segmentmeta-gegevens.
+Om het volledige schema van de dataset te begrijpen, kunt u voorproef en het schema onderzoeken gebruikend de datasetkijker in Experience Platform UI.
 
 ![](images/query/segment-metadata.png)
 
 ### Gegevensset met doelmetagegevens
 
-De meta-gegevens voor uw geactiveerde bestemmingen zijn beschikbaar als ruwe dataset in het gegevenshoeveelje.
+De meta-gegevens voor elk van de geactiveerde bestemmingen van uw organisatie is beschikbaar als ruwe dataset in het gegevensmeer.
 
 De noemende overeenkomst van deze dataset is **DIM_Destination**.
 
-Het volgende beeld toont het schema van de dataset van bestemmingsmeta-gegevens.
+Om het volledige schema van de dataset te begrijpen, kunt u voorproef en het schema onderzoeken gebruikend de datasetkijker in Experience Platform UI.
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### Aantal Geactiveerde Segmenten per Bestemming voor alle Doelen
 
 ## Volgende stappen
 
