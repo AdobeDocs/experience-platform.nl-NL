@@ -2,25 +2,19 @@
 keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;vergunningsgebruik
 title: Widget-widget-bibliotheek gebruiken om dashboardwidgets toe te voegen en te maken
 description: 'Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets en het maken van aangepaste widgets voor het visualiseren van dashboardgegevens in Adobe Experience Platform. '
-topic-legacy: guide
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 63f855d7dd3c3591da76a23ca8d673477378c1c3
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
 
-# (bèta) Widgetbibliotheek {#widget-library}
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Widget-bibliotheek {#widget-library}
 
 In de Adobe Experience Platform-gebruikersinterface kunt u de gegevens van uw organisatie bekijken en ermee werken met meerdere dashboards. U kunt een aantal van deze dashboards ook bijwerken door nieuwe widgets aan uw dashboardmening toe te voegen. Naast de standaardwidgets die door Adobe worden geboden, kunt u aangepaste widgets maken en deze delen in uw organisatie.
 
-Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets en het maken van aangepaste widgets om de informatie aan te passen die wordt weergegeven in de [!UICONTROL Profiles]- en [!UICONTROL Segments]-dashboards in de gebruikersinterface van het Platform.
+Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets en het maken van aangepaste widgets om de informatie aan te passen die wordt weergegeven in de [!UICONTROL Profiles]-, [!UICONTROL Segments]- en [!UICONTROL Destinations]-dashboards in de gebruikersinterface van het Platform.
 
 Raadpleeg de [handleiding voor het wijzigen van dashboards](modify.md) voor informatie over het wijzigen van de locatie en grootte van widgets in de [!UICONTROL Profiles]-, [!UICONTROL Destinations]- en [!UICONTROL Segments]-dashboards.
 
@@ -40,6 +34,8 @@ Vanuit elk dashboard (bijvoorbeeld het dashboard Profielen) kunt u **[!UICONTROL
 
 ![](images/customization/widget-library-button.png)
 
+## De widgetbibliotheek weergeven
+
 De [!UICONTROL Widget library] bevat twee tabbladen: [!UICONTROL Standard] en [!UICONTROL Custom].
 
 * Het tabblad **[!UICONTROL Standard]** bevat widgets die door Adobe zijn gemaakt en waarmee u het dashboard kunt bijwerken met behulp van deze standaardmetriek. Zie de sectie [standaardwidgets](#standard-widgets) in deze handleiding voor meer informatie over het toevoegen van standaardwidgets aan het dashboard.
@@ -49,7 +45,9 @@ De [!UICONTROL Widget library] bevat twee tabbladen: [!UICONTROL Standard] en [!
 
 ## Standaardwidgets {#standard-widgets}
 
-Het tabblad **[!UICONTROL Standard]** bevat widgets die door Adobe zijn gemaakt en die zijn onderverdeeld in categorieën. Als u een categorie selecteert, worden de beschikbare widgets voor dat dashboard weergegeven. Elke widget wordt weergegeven als een kaart met de titel, beschrijving en een voorbeeldvisualisatie van de metrische code.
+Het tabblad **[!UICONTROL Standard]** bevat widgets die door Adobe zijn gemaakt, en die zijn onderverdeeld in categorieën op basis van de beschikbare dashboards. De geselecteerde categorie komt overeen met het dashboard waaruit u de widgetbibliotheek hebt ingevoerd. Met andere woorden, als u de widgetbibliotheek hebt geselecteerd in het [!UICONTROL Profiles]-dashboard, wordt de categorie [!UICONTROL Profiles] geselecteerd en worden de andere categorieën grijs weergegeven.
+
+De beschikbare widgets voor de geselecteerde categorie worden weergegeven. Elke widget wordt weergegeven als een kaart met de titel, beschrijving en een voorbeeldvisualisatie van de metrische code.
 
 >[!NOTE]
 >
@@ -57,27 +55,31 @@ Het tabblad **[!UICONTROL Standard]** bevat widgets die door Adobe zijn gemaakt 
 
 ![](images/customization/standard-widgets.png)
 
+### Standaardwidget toevoegen aan dashboard
+
 Als u een standaardwidget wilt kiezen die u aan het dashboard wilt toevoegen, markeert u de widget en schakelt u het selectievakje voor de widget in. Als er ten minste één widget is geselecteerd, wordt de knop **[!UICONTROL Add widget]** verlicht.
 
 >[!NOTE]
 >
 >De teller in de hoger-juiste hoek van de widgetbibliotheek toont het totale aantal geselecteerde widgets.
 
-Selecteer **[!UICONTROL Add widget]** om geselecteerde widgets aan uw dashboard toe te voegen.
+Selecteer **[!UICONTROL Add widget]** om de geselecteerde widgets aan uw dashboard toe te voegen.
 
 ![](images/customization/add-widget.png)
 
 ## Aangepaste widgets {#custom-widgets}
 
+Als u de weergave van dashboards in het Experience Platform verder wilt aanpassen, kunt u widgets maken en deze delen met andere gebruikers in uw organisatie.
+
 >[!IMPORTANT]
 >
 >Uw organisatie kan maximaal 20 aangepaste widgets maken in de widgetbibliotheek.
 
-Als u de weergave van dashboards in het Experience Platform verder wilt aanpassen, kunt u widgets maken en deze delen met andere gebruikers in uw organisatie. Selecteer in de widgetbibliotheek het tabblad **[!UICONTROL Custom]** om aangepaste widgets te maken. Op het tabblad [!UICONTROL Custom] zijn alle widgets die door uw organisatie zijn gemaakt zichtbaar. In dit voorbeeld zijn nog geen aangepaste widgets gemaakt.
+Selecteer in de widgetbibliotheek het tabblad **[!UICONTROL Custom]** om aangepaste widgets te maken of om aangepaste widgets weer te geven die uw organisatie al heeft gemaakt.
 
 ![](images/customization/custom-widgets.png)
 
-### Kenmerken selecteren
+### Schema bewerken
 
 Als u aangepaste widgets wilt maken, moeten de kenmerken van het realtime-klantprofiel worden geïdentificeerd om ervoor te zorgen dat de gegevens worden opgenomen als onderdeel van de dagelijkse momentopname. Als uw organisatie geen profielkenmerken heeft geselecteerd, verschijnt de knop [!UICONTROL Configure schema] in de rechterbovenhoek van de widgetbibliotheek.
 
