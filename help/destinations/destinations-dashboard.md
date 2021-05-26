@@ -2,22 +2,16 @@
 keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiksdashboard;dashboard;licentiegebruik;machtiging;consumptie
 title: Doeldashboard
 description: 'De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken. '
-topic-legacy: guide
 type: Documentation
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) [!UICONTROL Destinations] dashboard {#destinations-dashboard}
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!UICONTROL Destinations] dashboard  {#destinations-dashboard}
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over de actieve bestemmingen van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen.
 
