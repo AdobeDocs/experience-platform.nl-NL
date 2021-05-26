@@ -1,23 +1,18 @@
 ---
 solution: Experience Platform
 title: Inleiding tot Experience Platform-dashboards
-topic-legacy: overview
 type: Documentation
 description: Ontdek meerdere dashboards in Adobe Experience Platform om belangrijke informatie over de gegevens van uw organisatie te bekijken, zoals die tijdens dagelijkse momentopnamen worden vastgelegd.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
-# (Beta) Overzicht van dashboards {#dashboards}
 
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Overzicht van dashboards {#dashboards}
 
 Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
@@ -39,4 +34,4 @@ De gegevens in de momentopname geven de gegevens precies zo weer als op het spec
 
 Er zijn momenteel meerdere dashboards beschikbaar binnen Experience Platform, elk die transparantie in de klantengegevens van uw organisatie verstrekken.
 
-Voor meer informatie over deze dashboards en hun beschikbare metriek, gelieve te selecteren van de lijst van beschikbare dashboards in de documentennavigatie.
+Voor meer informatie over deze dashboards en hun metriek selecteert u een dashboard in de lijst met beschikbare dashboards in de documentatienavigatie.
