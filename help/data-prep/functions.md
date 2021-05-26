@@ -5,10 +5,9 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3934'
 ht-degree: 2%
 
 ---
@@ -35,7 +34,7 @@ Gegevens binnen subvelden zijn toegankelijk met behulp van de puntnotatie. Als e
 
 In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven, inclusief voorbeeldexpressies en de resulterende uitvoer.
 
-### Tekenreeksfuncties {#string}
+### Reeksfuncties {#string}
 
 >[!NOTE]
 >
@@ -144,6 +143,8 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | str_to_object | Maakt een object van de invoertekenreeks. | <ul><li>TEKENREEKS: **Required** De tekenreeks die wordt geparseerd om een object te maken.</li><li>VALUE_DELIMITER: *Optioneel* Het scheidingsteken dat een veld van de waarde scheidt. Het standaardscheidingsteken is `:`.</li><li>FIELD_DELIMITER: *Optioneel* Het scheidingsteken tussen waardeparen van velden. Het standaardscheidingsteken is `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | phone - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | is_set | Controleert of het object bestaat in de brongegevens. | <ul><li>INVOER: **Required** De weg om te controleren als het binnen de brongegevens bestaat.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | true |
 | opheffen | Stelt de waarde van het kenmerk in op `null`. Dit zou moeten worden gebruikt wanneer u niet het gebied aan het doelschema wilt kopiëren. |  | nullify() | nullify() | `null` |
+| get_keys | Parseert de sleutel/waardeparen en retourneert alle sleutels. | <ul><li>OBJECT: **Required** Het object waar de toetsen uit worden geëxtraheerd.</li></ul> | get_keys(OBJECT) | get_keys({&quot;boek1&quot;: &quot;Pride and Prerechterlijke&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
+| get_values | Parseert de sleutel/waardeparen en retourneert de waarde van de tekenreeks op basis van de opgegeven sleutel. | <ul><li>TEKENREEKS: **Required** De tekenreeks die u wilt parseren.</li><li>SLEUTEL: **Required** De sleutel waarvoor de waarde moet worden geëxtraheerd.</li><li>VALUE_DELIMITER: **Required** Het scheidingsteken dat het veld en de waarde scheidt. Als een `null` of een lege tekenreeks wordt opgegeven, is deze waarde `:`.</li><li>FIELD_DELIMITER: *Optioneel* Het scheidingsteken tussen veld- en waardeparen. Als een `null` of een lege tekenreeks wordt opgegeven, is deze waarde `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena, phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
 {style=&quot;table-layout:auto&quot;}
 
