@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
+source-git-commit: 91f75f5b6a8e5adb251455f65bc2b693934ef8e2
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '1070'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,8 @@ Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Verbeterde controle (bèta) | Verhoogde mogelijkheden van controle voor bestemmingen, met inbegrip van informatie voor zowel partij als het stromen bestemmingen |
+| [Sneller bestanden exporteren (bèta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | De mogelijkheid om incrementele bestanden om de 3, 6, 8 of 12 uur naar bestemmingen te exporteren is toegevoegd. <br> <br>Deze mogelijkheid is momenteel beschikbaar in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Klanten die geen bètaversie zijn, kunnen incrementele bestanden eenmaal per dag exporteren. |
+| [Ondersteuning voor Deduplication Key (bèta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | De mogelijkheid toegevoegd om naamruimten of profielkenmerken in te stellen als deduplicatietoetsen. Deduplicatietoetsen maken het onmogelijk meerdere records van hetzelfde profiel in één exportbestand te hebben. <br> <br>Deze mogelijkheid is momenteel beschikbaar in bèta en is alleen beschikbaar voor een beperkt aantal klanten. |
 
 Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
 
