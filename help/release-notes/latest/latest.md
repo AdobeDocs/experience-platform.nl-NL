@@ -1,14 +1,13 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform voor 21 april 2021.
+description: Opmerkingen bij de release van Experience Platform voor 26 mei 2021.
 doc-type: release notes
-last-update: April 21, 2021
+last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -16,28 +15,54 @@ ht-degree: 1%
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 21 april 2021**
+**Releasedatum: 26 mei 2021**
+
+Nieuwe functies in Adobe Experience Platform:
+
+- [Dashboards](#dashboards)
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL Sources]](#sources)
+- [Klantprofiel in realtime](#profile)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+
+| Functie | Beschrijving |
+| --- | --- |
+| Profielinzichten | Het profieldashboard verstrekt een dagelijks overzicht van de metriek van het Profiel van de Klant in real time voor elk organisatorisch samenvoegbeleid in Experience Platform. Deze profielinzichten zijn beschikbaar aan alle gebruikers met de mogelijkheid om tot de gegevens van het Profiel binnen Platform toegang te hebben en te bekijken. |
+| Inzichten van het publiek | Het segmentdashboard verstrekt publiek-gerelateerde inzichten aan alle gebruikers met toegang tot meningssegmenten binnen Platform. Het dashboard biedt een dagelijks overzicht van de publieksmeetgegevens voor soorten publiek die zijn gemaakt met de gebruikersinterface van Segment Builder of die zijn geïmporteerd uit Adobe Audience Manager. |
+| Activeringsinzichten | Het bestemmingendashboard is beschikbaar aan alle gebruikers met de capaciteit om tot bestemmingen toegang te hebben en te bekijken. Het dashboard geeft een dagelijks overzicht van de activeringsmetriek voor activering voor alle bestemmingen. |
+| Gebruikersspecifieke inzichten | De weergave van dashboards kan door elke gebruiker worden aangepast, inclusief de mogelijkheid om de lay-out van het dashboard te wijzigen door widgets toe te voegen, te verwijderen, te vergroten of te verkleinen en opnieuw te rangschikken. |
+| Widget maken en beheren | Alle standaard- en aangepaste widgets zijn toegankelijk voor marketers in een gecentraliseerde opslagplaats voor het democratiseren van inzicht in het maken en delen van inzichten:<br/><ul><li>Het standaardtabblad bevat door Adobe verschafte widgets die toegankelijk zijn binnen de dashboardcontext. </li><li>Het aangepaste tabblad bevat aangepaste widgets die door de organisatie zijn gemaakt, waaronder een optie om widgets te verbergen voor weergave.</li><li>Met de workflow voor het maken van widgets in profielen en inzichten van het publiek kunt u aangepaste widgets bewerken, selecteren, voorvertonen en publiceren.</li></ul> |
+| Aangepaste inzichten | Met toegangsmachtigingen kunnen gegevensontwikkelaars en marketingspecialisten profielkenmerken aanpassen die beschikbaar zijn voor het maken van widgets. |
+
+Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door [dashboards overzicht](../../dashboards/home.md) te lezen.
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
-**Nieuwe functies**
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Te mild foutwaarschuwingen | De foutberichten van de Data Prep Mapper zijn nu soepeler, omdat er waarschuwingen worden gegeven in plaats van fouten en gedeeltelijk getransformeerde rijen. |
+| Nieuwe functies | Toegevoegde functies voor het ophalen van sleutels, het toevoegen van elementen aan een bestaande array, het toevoegen van elementen van meerdere arrays aan een bestaande array, het gebruik van objecten voor het bouwen van arrays en het gebruik van de naam van het JSON-object als letterlijke tekenreeks. |
+
+Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor het bewerken van toewijzingen voor bestaande gegevensstromen | U kunt nu de sets met toewijzingen van een bestaande gegevensstroom bijwerken. U kunt geen toewijzingssets bijwerken voor gegevensstromen die voor eenmalig gebruik waren gepland. Deze functie wordt niet ondersteund voor HTTP API, Adobe Analytics, Adobe Audience Manager en [!DNL Marketo Engage]. Voor meer informatie, zie de zelfstudie over [het bijwerken van bronnen dataflows in UI](../../sources/tutorials/ui/update-dataflows.md). |
-| Ondersteuning voor streaming-opname | U kunt nu functies van het gegevensvoorvoegsel gebruiken wanneer u een streamingbronverbinding maakt. Zie de zelfstudie over het maken van een streamingbronverbinding in de UI](../../sources/tutorials/ui/create/streaming/http.md) voor meer informatie.[ |
+| Verbeterde controle (bèta) | Verhoogde mogelijkheden van controle voor bestemmingen, met inbegrip van informatie voor zowel partij als het stromen bestemmingen |
 
-Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
+Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
@@ -45,57 +70,15 @@ Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wo
 
 | Functie | Beschrijving |
 | --- | --- |
-| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en groepen van het schemagebied in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Raadpleeg de documentatie bij [industriedomodellen](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten met elkaar betrekking hebben voor verschillende gevallen van industrieel gebruik. |
+| Schema veldgroepen | De term &quot;mixin&quot; is bijgewerkt naar &quot;veldgroep&quot;. Deze wijziging wordt weerspiegeld in de gebruikersinterface van Adobe Experience Platform. Bovendien heeft de Registratie API van het Schema een nieuw [gebiedsgroepseindpunt](../../xdm/api/field-groups.md), terwijl het mixineindpunt is afgekeurd als erfeniseindpunt. Zie [XDM documentatie](../../xdm/home.md) voor meer informatie. |
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## Klantprofiel in realtime {#profile}
 
-Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
-
-### Customer AI
-
-AI van de klant beschikbaar in het Platform van de Gegevens van de Klant in real time, wordt gebruikt om douanescores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor Adobe Analytics-gegevens | Bijgewerkte functionaliteit om de datasets van Adobe Analytics via de bron van Analytics schakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
-| Ondersteuning voor Adobe Audience Manager-gegevens | Bijgewerkte functionaliteit om de datasets van Adobe Audience Manager via de Audience Manager bronschakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
-| Overzicht van modelprestaties | AI van de klant heeft nu een [overzicht van de modelprestaties tabel](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) op de pagina met inzichten van de serviceversie. Op het tabblad Modelprestaties worden alle werkelijke conversie- en koelingssnelheden weergegeven. Hierdoor kun je ontcijferen en begrijpen wat er gebeurt in elk van je nevenemmers. |
+| Workflowupdates voor samenvoegen | Wanneer het creëren van en het bijwerken van fusiebeleid in UI, kunnen de gebruikers nu voorproef 20 steekproefprofielen die op het unieschema worden gebaseerd. Op deze manier kunnen gebruikers een voorvertoning weergeven van de profielen van klanten voordat ze configuraties met samenvoegbeleid opslaan. Voor meer informatie, zie [de gids UI van het samenvoegbeleid](../../profile/merge-policies/ui-guide.md). |
+| Gegevensset-overlappingsrapport | Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van de opslag van het Profiel door de datasets bloot te stellen die het meest aan adresseerbare publiek bijdragen. Dit rapport biedt niet alleen inzichten in profielgegevens, maar helpt gebruikers ook actie te ondernemen om het gebruik van licenties te optimaliseren, zoals het instellen van een limiet voor de levensduur van bepaalde gegevens. Om meer te leren, volg het leerprogramma op [het produceren van de datasetoverlapping rapport](../../profile/tutorials/dataset-overlap-report.md). |
 
-Voor meer informatie over gesteunde datasets, te zien [[!DNL Intelligent Services] de documentatie van de gegevensvoorbereiding](../../intelligent-services/data-preparation.md).
-
-### Attribution AI
-
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Ondersteuning voor Adobe Analytics-gegevens | Bijgewerkte functionaliteit om de datasets van Adobe Analytics via de bron van Analytics schakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
-
-Voor meer informatie over gesteunde datasets, te zien [[!DNL Intelligent Services] de documentatie van de gegevensvoorbereiding](../../intelligent-services/data-preparation.md).
-
-## Segmenteringsservice {#segmentation}
-
-Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt bouwen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile]-gegevens. Deze segmenten worden centraal gevormd en gehandhaafd op Platform, die hen gemakkelijk toegankelijk maken door om het even welke toepassing van de Adobe.
-
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Aanvullende aggregatiefuncties | De functies van de telling zijn toegevoegd in de Bouwer van het Segment. Met telfuncties kunt u tellen hoe vaak de opgegeven gebeurtenis is uitgevoerd. Meer informatie over de tellingsfuncties kan in de sectie van tellingsfuncties van [de gids van de Bouwer van het Segment](../../segmentation/ui/segment-builder.md#count-functions) worden gevonden |
-
-Voor meer informatie over [!DNL Segmentation Service], te zien gelieve [Segmentatieoverzicht](../../segmentation/home.md).
-
-## [!DNL Sources] {#sources}
-
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
-
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| [!DNL Marketo Engage] (bèta) | U kunt nu een [!DNL Marketo Engage] bronverbinding tot stand brengen gebruikend UI om B2B gegevens aan Platform te brengen en deze gegevens bijgewerkt te houden gebruikend Platform-verbonden toepassingen. Zie de [[!DNL Marketo Engage] documentatie van de bronconnector](../../sources/connectors/adobe-applications/marketo/marketo.md) voor meer informatie. |
-| Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
-
-Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
+Voor meer informatie over het profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door [Overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
