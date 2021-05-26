@@ -4,11 +4,10 @@ user-guide-title: Help bij Adobe Experience Platform-dashboards
 breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Visualiseer Experience Platforms op aanpasbare dashboards.
 feature: Gegevensbeheer
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a07658709f28783612cf9d53b2be65bc127c866e
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 7%
+source-wordcount: '46'
+ht-degree: 6%
 
 ---
 
@@ -16,6 +15,7 @@ ht-degree: 7%
 # Adobe Experience Platform-dashboards {#dashboards}
 
 * [Overzicht van dashboards](home.md)
+* [Toegangsrechten voor dashboard](permissions.md)
 * Beschikbare dashboards {#guides}
    * [Profielen](guides/profiles.md)
    * [Segmenten](guides/segments.md)
@@ -23,4 +23,5 @@ ht-degree: 7%
    * [Licentiegebruik](guides/license-usage.md)
 * [Dashboards wijzigen](modify.md)
 * [Widget-bibliotheek](widget-library.md)
+* [Gegevensbestanden van het query-dashboard](query.md)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
