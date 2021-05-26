@@ -2,22 +2,16 @@
 keywords: Experience Platform;profiel;real-time klantprofiel;gebruikersinterface;UI;aanpassing;profiel dashboard;dashboard
 title: Profieldashboard
 description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over uw gegevens van het profiel van de Klant in real time kunt bekijken.
-topic-legacy: guide
 type: Documentation
 exl-id: 2c99cbb3-515f-4982-9f2a-84e1ab14542e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!UICONTROL Profiles] dashboard {#profile-dashboard}
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!UICONTROL Profiles] dashboard  {#profile-dashboard}
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw [!DNL Real-time Customer Profile] gegevens kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen.
 
