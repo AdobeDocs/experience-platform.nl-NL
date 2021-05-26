@@ -2,23 +2,17 @@
 keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;vergunningsgebruik
 title: Platform-dashboards wijzigen in de gebruikersinterface
 description: 'Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop de Adobe Experience Platform-gegevens van uw organisatie worden weergegeven in dashboards. '
-topic-legacy: guide
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 63f855d7dd3c3591da76a23ca8d673477378c1c3
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-# (bèta) dashboards wijzigen {#modify-dashboards}
+# De dashboards {#modify-dashboards} wijzigen
 
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
-
-Binnen de gebruikersinterface van Adobe Experience Platform (UI), kunt u met de gegevens van uw organisatie bekijken en in wisselwerking staan gebruikend veelvoudige dashboards. De standaardwidgets en metriek die in de dashboards worden getoond kunnen op individueel gebruikersniveau worden aangepast om aangewezen gegevens en widgets te tonen kunnen worden gecreeerd en tussen gebruikers in de zelfde organisatie worden gedeeld.
+Binnen de gebruikersinterface van Adobe Experience Platform (UI), kunt u met de gegevens van uw organisatie bekijken en in wisselwerking staan gebruikend veelvoudige dashboards. De standaardwidgets en metriek die in de dashboards worden getoond kunnen op individueel gebruikersniveau worden aangepast om aangewezen gegevens te tonen, en widgets kunnen tussen gebruikers in de zelfde organisatie worden gecreeerd en worden gedeeld.
 
 Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop dashboardgegevens worden weergegeven in de [!UICONTROL Profiles]-, [!UICONTROL Segments]- en [!UICONTROL Destinations]-dashboards in de gebruikersinterface van het Platform.
 
@@ -34,13 +28,13 @@ Vanuit elk dashboard (bijvoorbeeld het dashboard [!UICONTROL Profiles]) kunt u *
 
 ## Widgets opnieuw ordenen
 
-Nadat u ervoor hebt gekozen het dashboard te wijzigen, kunt u de widgets opnieuw ordenen door de widgettitel te selecteren en de widgets in de gewenste volgorde te slepen. In dit voorbeeld wordt de widget **[!UICONTROL Profiles by identity namespace]** naar de bovenste rij verplaatst en wordt de widget [!UICONTROL Profile Count] nu in de tweede rij weergegeven.
+Nadat u ervoor hebt gekozen het dashboard te wijzigen, kunt u de widgets opnieuw ordenen door de widgettitel te selecteren en de widgets in de gewenste volgorde te slepen. In dit voorbeeld wordt de widget **[!UICONTROL Profiles count trend]** naar de bovenste rij verplaatst en wordt de widget [!UICONTROL Profile Count] nu in de tweede rij weergegeven.
 
 ![](images/customization/move-widget.png)
 
 ## Widgets vergroten/verkleinen
 
-U kunt de grootte van een widget ook wijzigen door het hoeksymbool in de rechterbenedenhoek van de widget (`⌟`) te selecteren en de widget naar de gewenste grootte te slepen. In dit voorbeeld wordt de grootte van de **[!UICONTROL Profiles by identity namespace]**-widget aangepast om de gehele bovenste rij te vullen, waarbij de andere widgets automatisch naar de tweede rij worden verplaatst. Let op hoe de horizontale as wordt aangepast voor gedetailleerdere stappen naarmate de widget groter wordt.
+U kunt de grootte van een widget ook wijzigen door het hoeksymbool in de rechterbenedenhoek van de widget (`⌟`) te selecteren en de widget naar de gewenste grootte te slepen. In dit voorbeeld wordt de grootte van de **[!UICONTROL Profiles by identity]**-widget aangepast om de gehele bovenste rij te vullen, waarbij de andere widgets automatisch naar de tweede rij worden verplaatst. Let op hoe de horizontale as wordt aangepast voor gedetailleerdere stappen naarmate de widget groter wordt.
 
 >[!NOTE]
 >
@@ -56,9 +50,11 @@ Nadat u het bewegen en het resizing widgets hebt gebeëindigd, uitgezocht **[!UI
 
 ## Widget-bibliotheek
 
-Naast het wijzigen van het formaat en het opnieuw ordenen van widgets kunt u in de [!UICONTROL Profiles] en [!UICONTROL Segments] dashboards meer widgets selecteren om widgets te tonen of tot stand te brengen gebruikend **[!UICONTROL Widget library]**.
+Als u **[!UICONTROL Modify dashboard]** selecteert in de [!UICONTROL Profiles]-, [!UICONTROL Segments]- en [!UICONTROL Destinations]-dashboards, kunt u niet alleen het formaat van widgets wijzigen en de volgorde ervan wijzigen, maar ook toegang krijgen tot **[!UICONTROL Widget library]**, waar u meer widgets kunt vinden om aangepaste widgets weer te geven of te maken voor uw organisatie.
 
 Voor geleidelijke instructies op hoe te om tot [!UICONTROL Widget library] toegang te hebben en met te werken, verwijs naar [de gids van de widgetbibliotheek](widget-library.md).
+
+![](images/customization/widget-library.png)
 
 ## Volgende stappen
 
