@@ -5,10 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-translation-type: tm+mt
-source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
@@ -35,6 +34,12 @@ Het is ook belangrijk om twee belangrijke termen te kennen die in dit document w
 Selecteer **[!UICONTROL Segments]** in de linkernavigatie in [[!DNL Experience Platform] UI](https://platform.adobe.com/) om het tabblad **[!UICONTROL Overview]** te openen. Dit tabblad bevat koppelingen naar documentatie en video&#39;s waarmee u segmenten kunt begrijpen en bewerken.
 
 ![](../images/ui/overview/segment-overview.png)
+
+### Segmentdashboard
+
+Voor sommige gebruikers bevat het selecteren van **[!UICONTROL Segments]** in de linkernavigatie en het openen van het tabblad **[!UICONTROL Overview]** een dashboard met een overzicht van de belangrijkste meetgegevens die betrekking hebben op uw segmentgegevens.
+
+Voor meer informatie gaat u naar de [segmentdashboardgids](segment-dashboard.md).
 
 ## Bladeren
 
