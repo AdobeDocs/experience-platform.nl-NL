@@ -2,26 +2,20 @@
 keywords: Experience Platform;profiel;real-time klantprofiel;gebruikersinterface;UI;aanpassing;profiel dashboard;dashboard
 title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
-topic-legacy: guide
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!UICONTROL Destinations] dashboard
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit die in dit document wordt beschreven is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!UICONTROL Destinations] dashboard
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over de actieve bestemmingen van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot het dashboard van bestemmingen in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de metriek die in het dashboard wordt getoond.
 
-Voor een overzicht van bestemmingen, evenals een catalogus van alle beschikbare bestemmingen binnen Experience Platform, gelieve [bestemmingen overzicht](../../destinations/home.md) te bezoeken.
+Voor een overzicht van bestemmingen, evenals een catalogus van alle beschikbare bestemmingen binnen Experience Platform, gelieve [doeldocumentatie](../../destinations/home.md) te bezoeken.
 
 ## [!UICONTROL Destinations] dashboardgegevens  {#destinations-dashboard-data}
 
