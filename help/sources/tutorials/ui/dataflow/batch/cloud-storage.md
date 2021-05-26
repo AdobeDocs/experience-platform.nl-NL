@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5478143e681257c6885d99d83380a35de263ed3d
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1923'
 ht-degree: 0%
 
 ---
@@ -36,6 +35,7 @@ Daarnaast vereist deze zelfstudie dat u beschikt over een gevestigde account voo
 * Door scheidingstekens gescheiden waarden (DSV): Elke waarde van één teken kan worden gebruikt als scheidingsteken voor gegevensbestanden met DSV-indeling.
 * [!DNL JavaScript Object Notation] (JSON): Gegevensbestanden met JSON-indeling moeten XDM-compatibel zijn.
 * [!DNL Apache Parquet]: Gegevensbestanden met parketindeling moeten XDM-compatibel zijn.
+* Gecomprimeerde bestanden: JSON- en gescheiden bestanden kunnen als volgt worden gecomprimeerd: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` en `tar`.
 
 ## Gegevens selecteren
 
@@ -87,6 +87,16 @@ U kunt een aangepast scheidingsteken instellen bij het invoegen van gescheiden b
 Als u de gegevensindeling hebt geselecteerd en het scheidingsteken hebt ingesteld, selecteert u **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
+
+### Gecomprimeerde bestanden samenvoegen
+
+U kunt gecomprimeerde JSON- of gescheiden bestanden opnemen door het compressietype ervan op te geven.
+
+Selecteer in de stap [!UICONTROL Select data] een gecomprimeerd bestand voor inname en selecteer vervolgens het juiste bestandstype en of het al dan niet compatibel is met XDM. Selecteer vervolgens **[!UICONTROL Compression type]** en selecteer het juiste gecomprimeerde bestandstype voor de brongegevens.
+
+Selecteer **[!UICONTROL Next]** om door te gaan met een gecomprimeerd bestandstype.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
@@ -207,8 +217,8 @@ U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeer
 
 Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om gegevens van een externe wolkenopslag in te brengen, en hebt u inzicht gekregen in de controle van datasets. Als u meer wilt weten over het maken van gegevensstromen, kunt u uw studie aanvullen door de onderstaande video te bekijken. Bovendien kunnen inkomende gegevens nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] overzicht](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace] overzicht](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] - overzicht](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] - overzicht](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
