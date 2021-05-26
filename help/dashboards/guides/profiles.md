@@ -2,21 +2,16 @@
 keywords: Experience Platform;profiel;real-time klantprofiel;gebruikersinterface;UI;aanpassing;profiel dashboard;dashboard
 title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
-topic-legacy: guide
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!UICONTROL Profiles] dashboard
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit die in dit document wordt beschreven is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!UICONTROL Profiles] dashboard
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw [!DNL Real-time Customer Profile] gegevens kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot en met het [!UICONTROL Profiles] dashboard in UI toegang te hebben en te werken en verstrekt informatie betreffende de metriek die in het dashboard wordt getoond.
 
@@ -38,9 +33,17 @@ Als u naar het [!UICONTROL Profiles]-dashboard in de interface van het Platform 
 
 ![](../images/profiles/dashboard-overview.png)
 
-### Samenvoegbeleid selecteren
+### Het dashboard [!UICONTROL Profiles] wijzigen
 
-De metriek die in [!UICONTROL Profiles] dashboard wordt getoond zijn gebaseerd op samenvoegbeleid dat op uw gegevens van het Profiel van de Klant in real time wordt toegepast. Wanneer gegevens uit veelvoudige bronnen worden samengebracht, is het mogelijk voor de gegevens om conflicterende waarden (bijvoorbeeld, kan één dataset een klant als &quot;enig&quot;vermelden terwijl een andere dataset de klant als &quot;gehuwd&quot;kan vermelden) en het is de baan van het fusiebeleid om te bepalen welke gegevens aan prioriteit en vertoning als deel van het profiel moeten.
+U kunt de weergave van het [!UICONTROL Profiles] dashboard wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot [!UICONTROL Widget library] om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
+
+Raadpleeg de documentatie [modifying dashboards](../modify.md) and [widget library](../widget-library.md) voor meer informatie.
+
+## Beleid samenvoegen
+
+De metriek die in [!UICONTROL Profiles] dashboard wordt getoond zijn gebaseerd op samenvoegbeleid dat op uw gegevens van het Profiel van de Klant in real time wordt toegepast. Wanneer gegevens uit veelvoudige bronnen worden samengebracht om het klantenprofiel tot stand te brengen, is het mogelijk voor de gegevens om conflicterende waarden te bevatten (bijvoorbeeld, kan één dataset een klant als &quot;enig&quot;vermelden terwijl een andere dataset de klant als &quot;gehuwd&quot;kan vermelden). Het is de taak van het fusiebeleid om te bepalen welke gegevens aan prioriteren en vertoning als deel van het profiel moeten.
+
+Voor meer informatie over samenvoegbeleid, met inbegrip van hoe te om, een standaard fusiebeleid voor uw organisatie tot stand te brengen uit te geven en te verklaren, gelieve te beginnen door [overzicht van fusiebeleid te lezen](../../profile/merge-policies/overview.md).
 
 Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden weergegeven, maar u kunt het samenvoegbeleid dat is geselecteerd wijzigen in het keuzemenu. Als u een ander samenvoegbeleid wilt kiezen, selecteert u de vervolgkeuzelijst naast de naam van het samenvoegbeleid en selecteert u vervolgens het samenvoegbeleid dat u wilt weergeven.
 
@@ -48,71 +51,67 @@ Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden weergeg
 >
 >In het vervolgkeuzemenu ziet u alleen samenvoegbeleid met betrekking tot de XDM Individual Profile Class. Als uw organisatie echter meerdere samenvoegingsbeleidsregels heeft gemaakt, moet u mogelijk schuiven om de volledige lijst met beschikbare samenvoegingsbeleidsregels weer te geven.
 
-Voor meer informatie over samenvoegbeleid, met inbegrip van hoe te om, een standaard fusiebeleid voor uw organisatie tot stand te brengen uit te geven en te verklaren, gelieve te beginnen door [overzicht van fusiebeleid te lezen](../../profile/merge-policies/overview.md).
-
 ![](../images/profiles/select-merge-policy.png)
 
-### Widgets en metriek
+## Widgets en metriek
 
-Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over uw profielgegevens verschaft. De datum en tijd &#39;laatst bijgewerkt&#39; op een widget geeft aan wanneer de laatste momentopname van de gegevens is gemaakt.
+Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over uw profielgegevens verschaft.
 
-![](../images/profiles/dashboard-timestamp.png)
+De datum en tijd &#39;laatst bijgewerkt&#39; op een widget geeft aan wanneer de laatste momentopname van de gegevens is gemaakt. De datum en het tijdstip van de momentopname worden in UTC vermeld; het bevindt zich niet in de tijdzone van de individuele gebruiker of IMS-organisatie.
 
 ## Beschikbare widgets
 
 Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw profielgegevens. Selecteer de naam van een widget hieronder voor meer informatie:
 
-* [[!UICONTROL Audience size]](#audience-size)
+* [[!UICONTROL Profile count]](#profile-count)
 * [[!UICONTROL Profiles added]](#profiles-added)
-* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
-* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
-* [[!UICONTROL Namespace overlap]](#namespace-overlap)
+* [[!UICONTROL Profiles count trend]](#profiles-count-trend)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
 
-### [!UICONTROL Audience size] {#audience-size}
+### [!UICONTROL Profile count] {#profile-count}
 
-De widget **[!UICONTROL Audience size]** geeft het totale aantal samengevoegde profielen weer in de profielgegevensopslag op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+De widget **[!UICONTROL Profile count]** geeft het totale aantal samengevoegde profielen weer in de profielgegevensopslag op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
 Lees voor meer informatie over fragmenten en samengevoegde profielen eerst de sectie *Profielfragmenten vs samengevoegde profielen* van het [Real-time Customer Profile overview](../../profile/home.md).
 
->[!NOTE]
->
->Het samenvoegbeleid dat wordt gebruikt om deze metrische waarde te berekenen is niet het zelfde als het systeem-geproduceerde fusiebeleid dat wordt gebruikt om [!UICONTROL Addressable audiences] in het [!UICONTROL License usage] dashboard te berekenen, daarom zal de publiekstelling in [!UICONTROL Profiles] en [!UICONTROL License usage] dashboards waarschijnlijk niet precies het zelfde zijn.
-
-![](../images/profiles/audience-size.png)
+![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profiles added] {#profiles-added}
 
-De widget **[!UICONTROL Profiles added]** geeft het totale aantal samengevoegde profielen weer dat sinds de laatste momentopname is gemaakt, aan de profielgegevensopslag is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+De widget **[!UICONTROL Profiles added]** geeft het totale aantal samengevoegde profielen weer dat met ingang van de laatste momentopname die is gemaakt, aan de gegevensopslagruimte Profiel is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+
+U kunt de keuzekiezer gebruiken om de profielen weer te geven die in de afgelopen 30 dagen, 90 dagen of 12 maanden zijn toegevoegd.
 
 ![](../images/profiles/profiles-added.png)
 
-### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+### [!UICONTROL Profiles count trend] {#profiles-count-trend}
 
-De widget **[!UICONTROL Profiles added over time]** geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen dagelijks is toegevoegd aan de opslag van profielgegevens. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen.
+De widget **[!UICONTROL Profiles count trend]** geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks is toegevoegd aan de profielgegevensopslag. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen.
 
 Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
-![](../images/profiles/profiles-added-over-time.png)
+![](../images/profiles/profile-count-trend.png)
 
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
+### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
-Met de widget **[!UICONTROL Profiles by namespace]** wordt de indeling van naamruimten in alle samengevoegde profielen in het archief Profiel weergegeven. Het totale aantal profielen per [!UICONTROL ID namespace] (met andere woorden, het optellen van de waarden die voor elke naamruimte worden weergegeven) kan hoger zijn dan het totale aantal samenvoegprofielen omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
+Met de widget **[!UICONTROL Profiles by identity]** wordt de indeling van de identiteiten in alle samengevoegde profielen in de winkel Profiel weergegeven. Het totale aantal profielen op basis van identiteit (met andere woorden, door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan het totale aantal samengevoegde profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
-Voor meer informatie over naamruimten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Voor meer informatie over identiteiten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/profiles/profiles-by-namespace.png)
+![](../images/profiles/profiles-by-identity.png)
 
-### [!UICONTROL Namespace overlap] {#namespace-overlap}
+### [!UICONTROL Identity overlap] {#identity-overlap}
 
-De widget **[!UICONTROL Namespace overlap]** geeft een Venn-diagram weer of stelt een diagram in waarin de overlapping van profielen in uw profielenarchief met meerdere naamruimten wordt getoond.
+De widget **[!UICONTROL Identity overlap]** geeft een Venn-diagram weer of stelt een diagram in waarin de overlapping van profielen in de winkel Profiel met meerdere identiteiten wordt weergegeven.
 
-Nadat u de vervolgkeuzemenu&#39;s op de widget hebt gebruikt om de naamruimten te selecteren die u wilt vergelijken, worden cirkels weergegeven met de relatieve grootte van elke naamruimte, waarbij het aantal profielen met beide naamruimten wordt weergegeven door de grootte van de overlapping tussen de cirkels.
+Nadat u de vervolgkeuzemenu&#39;s op de widget hebt gebruikt om de identiteiten te selecteren die u wilt vergelijken, worden cirkels weergegeven met de relatieve grootte van elke identiteit, waarbij het aantal profielen met beide naamruimten wordt weergegeven door de grootte van de overlapping tussen de cirkels.
 
-Als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd, daarom is het waarschijnlijk dat uw organisatie veelvoudige profielen zal hebben die fragmenten van meer dan één identiteitsnaamruimte bevatten.
+Als een klant op meer dan één kanaal met uw merk in wisselwerking staat, zullen de veelvoudige identiteiten met die individuele klant worden geassocieerd, daarom is het waarschijnlijk dat uw organisatie veelvoudige profielen zal hebben die fragmenten van meer dan één identiteit bevatten.
 
-Voor meer informatie over naamruimten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Voor meer informatie over identiteiten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/profiles/namespace-overlap.png)
+![](../images/profiles/identity-overlap.png)
 
 ## Volgende stappen
 
