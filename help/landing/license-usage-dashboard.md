@@ -2,22 +2,16 @@
 keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiksdashboard;dashboard;licentiegebruik;machtiging;consumptie
 title: Licentiegebruiksdashboard
 description: 'De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over het gebruik van licenties voor uw organisatie kunt bekijken. '
-topic-legacy: guide
 type: Documentation
 exl-id: 8cf34653-acf6-4af3-af7b-6c07e68bbc03
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5b5acd22f2dbdeef704b3e790ca603901ebc882a
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!UICONTROL License usage] dashboard {#license-usage-dashboard}
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!UICONTROL License usage] dashboard  {#license-usage-dashboard}
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen.
 
@@ -25,4 +19,4 @@ Voor gedetailleerde instructies op om tot het dashboard van het vergunningsgebru
 
 Voor een overzicht van alle dashboardfuncties in Experience Platform, gelieve te beginnen door [dashboardoverzicht](../dashboards/home.md) te lezen.
 
-![](images/license-usage-dashboard/dashboard-overview.png)
+![](../dashboards/images/license-usage/dashboard-overview.png)
