@@ -4,9 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel in realtime
 topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,7 @@ Selecteer **[!UICONTROL Profiles]** in de linkernavigatie in de interface van he
 
 ![](../images/user-guide/profiles-overview.png)
 
-### (Alfa) Profieldashboard
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+### Profieldashboard
 
 Voor sommige gebruikers bevat het selecteren van **[!UICONTROL Profiles]** in de linkernavigatie en het openen van het tabblad **[!UICONTROL Overview]** een dashboard met een overzicht van de belangrijkste maatstaven voor de profielgegevens.
 
