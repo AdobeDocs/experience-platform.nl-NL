@@ -5,10 +5,9 @@ title: Overzicht van id-naamruimte
 topic-legacy: overview
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-translation-type: tm+mt
-source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
+source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -74,15 +73,21 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Platform worde
 | TNTID | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [Doel](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) voor meer informatie. |
 | Windows-ID | A namespace that represents a Windows Advertising ID. Zie het volgende document op [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) voor meer informatie. |
 
-Als u standaardnaamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UICONTROL Identities]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Browse]** om een lijst weer te geven met standaardnaamruimten die toegankelijk zijn voor uw organisatie. U kunt de naamruimten alfabetisch sorteren op **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]** of **[!UICONTROL Owner]**. U kunt de naamruimten ook chronologisch sorteren op de meest recente updatedatum.
+Als u naamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UICONTROL Identities]** in de linkernavigatie en selecteert u **[!UICONTROL Browse]**.
 
-Selecteer een naamruimte voor meer specifieke informatie over de rechterrail.
+![doorbladeren](./images/browse.png)
 
->[!NOTE]
->
->Platform biedt ook naamruimten voor integratiedoeleinden. Deze naamruimten zijn standaard verborgen omdat ze worden gebruikt om verbinding te maken met andere systemen en niet om identiteiten aan te sluiten. Selecteer **[!UICONTROL View integration identities]** om integratienamen weer te geven.
+Er wordt een lijst met naamruimten voor identiteiten weergegeven in de hoofdinterface van de pagina. Deze lijst bevat informatie over de namen, identiteitssymbolen, de datum die als laatste is bijgewerkt en of het een standaard- of een aangepaste naamruimte betreft. De rechterrail bevat informatie over [!UICONTROL Unique identities] en [!UICONTROL Identity graph strength]. [!UICONTROL Unique identities] verwijst naar het aantal identiteiten in de specifieke zandbak die u gebruikt, terwijl de  [!UICONTROL Identity graph strength] sterkte informatie over het aantal koekje en niet-koekjesidentiteitskaarts binnen uw zandbak toont.
 
-![](./images/browse-namespaces.png)
+![identiteiten](./images/identities.png)
+
+Platform biedt ook naamruimten voor integratiedoeleinden. Deze naamruimten zijn standaard verborgen omdat ze worden gebruikt om verbinding te maken met andere systemen en niet om identiteiten aan te sluiten. Selecteer **[!UICONTROL View integration identities]** om integratienamen weer te geven.
+
+![view-integration-identities](./images/view-integration-identities.png)
+
+Selecteer een naamruimte voor identiteit in de lijst om informatie over een specifieke naamruimte weer te geven. Als u een naamruimte voor identiteiten selecteert, wordt de weergave op de rechtertrack bijgewerkt met metagegevens over de naamruimte die u hebt geselecteerd, inclusief het aantal ingevoerde identiteiten en het aantal mislukte en overgeslagen records.
+
+![select-namespace](./images/select-namespace.png)
 
 ## Aangepaste naamruimten beheren {#manage-namespaces}
 
@@ -90,9 +95,9 @@ Afhankelijk van uw organisatorische gegevens en gebruiksgevallen hebt u mogelijk
 
 Als u een aangepaste naamruimte wilt maken met de gebruikersinterface, navigeert u naar de werkruimte **[!UICONTROL Identities]**, selecteert u **[!UICONTROL Browse]** en selecteert u **[!UICONTROL Create identity namespace]**.
 
-![](./images/create.png)
+![select-create](./images/select-create.png)
 
-Het dialoogvenster **[!UICONTROL Create identity namespace]** wordt weergegeven. Geef een uniek **[!UICONTROL Display name]** en **[!UICONTROL Identity symbol]** op en selecteer het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen aan meer informatie over de naamruimte. Alle identiteitstypen, behalve **Niet-personentype**, volgen hetzelfde gedrag bij het stitching. Als u **Niet-persoonlijke id** selecteert als type identiteit bij het maken van een naamruimte, vindt het stitching niet plaats. Voor specifieke informatie betreffende elk identiteitstype, verwijs naar de lijst op [identiteitstypes](#identity-types).
+Het dialoogvenster **[!UICONTROL Create identity namespace]** wordt weergegeven. Geef een uniek **[!UICONTROL Display name]** en **[!UICONTROL Identity symbol]** op en selecteer het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen om meer informatie over de naamruimte toe te voegen. Alle identiteitstypen, behalve **Niet-personentype**, volgen hetzelfde gedrag bij het stitching. Als u **Niet-persoonlijke id** selecteert als type identiteit bij het maken van een naamruimte, vindt het stitching niet plaats. Voor specifieke informatie betreffende elk identiteitstype, verwijs naar de lijst op [identiteitstypes](#identity-types).
 
 Selecteer **[!UICONTROL Create]** als u klaar bent.
 
@@ -100,7 +105,7 @@ Selecteer **[!UICONTROL Create]** als u klaar bent.
 >
 >De naamruimten die u definieert, zijn persoonlijk voor uw organisatie en vereisen een uniek identiteitssymbool om te kunnen worden gemaakt.
 
-![](./images/create-namespace.png)
+![create-identity-namespace](./images/create-identity-namespace.png)
 
 Net als bij standaardnaamruimten kunt u een aangepaste naamruimte selecteren op het tabblad **[!UICONTROL Browse]** om de details weer te geven. Met een aangepaste naamruimte kunt u echter ook de weergavenaam en de beschrijving van de naamruimte wijzigen vanuit het detailgebied.
 
