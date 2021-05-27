@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f13afbd70db18e5faa1a101300f3dc7ec944baa3
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '744'
 ht-degree: 0%
 
 ---
@@ -20,7 +19,7 @@ ht-degree: 0%
 >
 >De [!DNL Google PubSub] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-In deze zelfstudie wordt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) gebruikt om u door de stappen te laten lopen om [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot; genoemd) te verbinden met Adobe Experience Platform.
+Deze zelfstudie begeleidt u door de stappen om [!DNL Google PubSub] (verder genoemd als &quot;[!DNL PubSub]&quot;) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -29,7 +28,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL PubSub]-bronverbinding met de [!DNL Flow Service]-API te kunnen maken.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om [!DNL PubSub] met succes te kunnen verbinden met een Platform via de [!DNL Flow Service]-API.
 
 ### Vereiste referenties verzamelen
 
@@ -39,36 +38,23 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL PubSub], moet u waarden
 | ---------- | ----------- |
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `credentials` | De referentie of sleutel die is vereist voor verificatie [!DNL PubSub]. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en brondoelverbindingen terug. De [!DNL PubSub] ID van de verbindingsspecificatie is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-Zie het volgende [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication)-document voor meer informatie over deze waarden. Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zie [PubSub gids](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
+Voor meer informatie over deze waarden, zie dit [[!DNL PubSub] authentificatie](https://cloud.google.com/pubsub/docs/authentication) document. Om de op rekening-gebaseerde authentificatie van de dienst te gebruiken, zie deze [[!DNL PubSub] gids bij het creëren van de dienstrekeningen](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
 
 >[!TIP]
 >
 >Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zorg ervoor dat u voldoende gebruikerstoegang tot uw de dienstrekening hebt verleend en dat er geen extra witte ruimten in JSON zijn, wanneer het kopiëren en het kleven van uw geloofsbrieven.
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+De eerste stap bij het creëren van een bronverbinding moet uw [!DNL PubSub] bron voor authentiek verklaren en een identiteitskaart van de basisverbinding produceren. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in Experience Platform, inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL PubSub]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere gegevensstromen te maken die verschillende gegevens opleveren.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL PubSub] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -77,14 +63,6 @@ POST /connections
 ```
 
 **Verzoek**
-
-Als u een [!DNL PubSub]-verbinding wilt maken, moet u de provider-id en de verbindingsspecificatie-id opgeven als onderdeel van het verzoek om POST. De provider-id is `521eee4d-8cbe-4906-bb48-fb6bd4450033` en de verbindingsspecificatie-id is `70116022-a743-464a-bbfe-e226a7f8210c`.
-
-**API-indeling**
-
-```http
-POST /connections
-```
 
 ```shell
 curl -X POST \
@@ -97,7 +75,6 @@ curl -X POST \
     -d '{
         "name": "Google PubSub connection",
         "description": "Google PubSub connection",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "auth": {
             "specName": "Google PubSub authentication credentials",
             "params": {
@@ -120,7 +97,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert verbindingsidentiteitskaart van uw onlangs gecreeerd [!DNL PubSub] verbinding terug. Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze basis verbindings identiteitskaart wordt vereist in de volgende stap om een bronverbinding tot stand te brengen.
 
 ```json
 {
@@ -129,6 +106,69 @@ Een succesvolle reactie keert verbindingsidentiteitskaart van uw onlangs gecreee
 }
 ```
 
+## Een bronverbinding maken {#source}
+
+Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en een identiteitskaart van de bronverbinding nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie IMS.
+
+Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan het `/sourceConnections` eindpunt van [!DNL Flow Service] API.
+
+**API-indeling**
+
+```http
+POST /sourceConnections
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'content-type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_Org}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -d '{
+        "name": "Google PubSub source connection",
+        "description": "A source connection for Google PubSub",
+        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+        "connectionSpec": {
+            "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+            "version": "1.0"
+        },
+        "data": {
+            "format": "json"
+        },
+        "params": {
+            "topicId": "{TOPIC_ID}",
+            "subscriptionId": "{SUBSCRIPTION_ID}",
+            "dataType": "raw"
+        }
+    }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
+| `description` | Een optionele waarde die u kunt opgeven voor meer informatie over uw bronverbinding. |
+| `baseConnectionId` | De basis verbindingsID van uw [!DNL PubSub] bron die in de vorige stap werd geproduceerd. |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. Deze id is: `70116022-a743-464a-bbfe-e226a7f8210c` |
+| `data.format` | De indeling van de [!DNL PubSub]-gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
+| `params.topicId` | De onderwerpidentiteitskaart bepaalt het specifieke genoemde middel dat de berichten door uitgevers worden verzonden |
+| `params.subscriptionId` | Abonnement ID bepaalt het specifieke genoemde middel dat de stroom van berichten van één enkel, specifiek onderwerp vertegenwoordigt, dat aan de het abonneren toepassing moet worden geleverd. |
+| `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm`. |
+
+**Antwoord**
+
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is vereist in de volgende zelfstudie om een gegevensstroom te maken.
+
+```json
+{
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
+}
+```
+
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een [!DNL PubSub] verbinding gebruikend [!DNL Flow Service] API gecreeerd en zijn unieke verbindingsidentiteitskaart verworven. Met deze verbindings-id kunt u streaming gegevens [verzamelen met behulp van de Flow Service API](../../collect/streaming.md).
+Door deze zelfstudie te volgen, hebt u een [!DNL PubSub] bronverbinding tot stand gebracht gebruikend [!DNL Flow Service] API. U kunt deze bron verbindings-id in de volgende zelfstudie gebruiken om een streaminggegevensstroom te maken met de API [!DNL Flow Service] API](../../collect/streaming.md).[
