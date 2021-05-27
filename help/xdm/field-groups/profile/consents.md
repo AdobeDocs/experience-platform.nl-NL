@@ -4,10 +4,9 @@ title: Privacy/Persoonlijke voorkeuren/Marketing (Inhoud) - Groep met schemaveld
 topic-legacy: overview
 description: Dit document bevat een overzicht van de veldgroep Privacy/Personalization/Marketing Preferences (Consents).
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '2263'
+source-wordcount: '2287'
 ht-degree: 0%
 
 ---
@@ -20,7 +19,7 @@ ht-degree: 0%
 >
 >Aangezien deze veldgroep alleen compatibel is met [!DNL XDM Individual Profile], kan deze niet worden gebruikt voor [!DNL XDM ExperienceEvent]-schema&#39;s. Als u toestemmings en voorkeursgegevens in uw schema van de Gebeurtenis van de Ervaring wilt omvatten, voeg [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype](../../data-types/consents.md) aan het schema door het gebruik van [douaneveldgroep](../../ui/resources/field-groups.md#create) in plaats daarvan toe.
 
-## Veldgroepstructuur {#structure}
+## Groepsstructuur van veld {#structure}
 
 >[!IMPORTANT]
 >
@@ -108,7 +107,7 @@ Het volgende JSON toont een voorbeeld van het type gegevens dat de [!DNL Consent
 >U kunt steekproefJSON gegevens voor om het even welk XDM schema produceren dat u in Experience Platform bepaalt helpen visualiseren hoe uw klantentoestemming en voorkeursgegevens zouden moeten in kaart worden gebracht. Raadpleeg de volgende documentatie voor meer informatie:
 >
 >* [Voorbeeldgegevens genereren in de gebruikersinterface](../../ui/sample.md)
->* [Voorbeeldgegevens genereren in de API](../../api/sample-data.md)
+* [Voorbeeldgegevens genereren in de API](../../api/sample-data.md)
 
 
 ## Veldgebruikkwesties
@@ -129,6 +128,8 @@ De gebruiksgevallen die voor elk van deze velden zijn bedoeld, worden in de onde
 | --- | --- |
 | `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `share`
 
 `share` staat voor de toestemming van de klant om te bepalen of zijn gegevens kunnen worden gedeeld met (of verkocht aan) derden of derden.
@@ -143,15 +144,15 @@ De gebruiksgevallen die voor elk van deze velden zijn bedoeld, worden in de onde
 | --- | --- |
 | `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `personalize` {#personalize}
 
 `personalize` vangt klantenvoorkeur met betrekking tot welke manieren hun gegevens voor verpersoonlijking kunnen worden gebruikt. Klanten kunnen afzien van specifieke gevallen van persoonlijk gebruik of volledig afzien van personalisatie.
 
 >[!IMPORTANT]
->
->`personalize` heeft geen betrekking op gevallen van gebruik bij het in de handel brengen. Bijvoorbeeld, als een klant uit verpersoonlijking voor alle kanalen opteert, zouden zij niet moeten ophouden ontvangend mededelingen door die kanalen. De berichten die ze ontvangen, moeten eerder algemeen zijn en niet gebaseerd op hun profiel.
->
->In hetzelfde voorbeeld geldt dat als een klant voor alle kanalen (via `marketing`, toegelicht in [volgende sectie](#marketing)) kiest voor het uit de directe marketing halen, die klant geen berichten mag ontvangen, zelfs niet als personalisatie is toegestaan.
+`personalize` heeft geen betrekking op gevallen van gebruik bij het in de handel brengen. Bijvoorbeeld, als een klant uit verpersoonlijking voor alle kanalen opteert, zouden zij niet moeten ophouden ontvangend mededelingen door die kanalen. De berichten die ze ontvangen, moeten eerder algemeen zijn en niet gebaseerd op hun profiel.
+In hetzelfde voorbeeld geldt dat als een klant voor alle kanalen (via `marketing`, toegelicht in [volgende sectie](#marketing)) kiest voor het uit de directe marketing halen, die klant geen berichten mag ontvangen, zelfs niet als personalisatie is toegestaan.
 
 ```json
 "personalize": {
@@ -165,6 +166,8 @@ De gebruiksgevallen die voor elk van deze velden zijn bedoeld, worden in de onde
 | --- | --- |
 | `content` | Vertegenwoordigt de voorkeuren van de klant voor gepersonaliseerde inhoud op uw website of toepassing. |
 | `val` | De door de klant opgegeven voorkeur voor personalisatie voor het opgegeven gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis de personalisatie moet plaatsvinden. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `marketing` {#marketing}
 
@@ -199,6 +202,8 @@ De gebruiksgevallen die voor elk van deze velden zijn bedoeld, worden in de onde
 | `val` | De voorkeur van de klant voor het gespecificeerde gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis het geval van het gebruik in de handel moet plaatsvinden. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
 | `time` | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. Als de tijdstempel voor een bepaalde voorkeur gelijk is aan de tijdstempel die wordt opgegeven onder `metadata`, hoeft dit veld niet te worden ingesteld voor die voorkeur. |
 | `reason` | Wanneer een klant kiest uit een geval van het marketinggebruik, vertegenwoordigt dit koordgebied de reden waarom de klant uit opteerde. |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### `subscriptions` {#subscriptions}
 
@@ -243,6 +248,8 @@ De `email`-, `push`- en `sms`-eigenschappen van het `marketing`-object kunnen kl
 | `type` | Het abonnementstype. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is. |
 | `subscribers` | Een optioneel veld van het type map dat een set id&#39;s vertegenwoordigt (zoals e-mailadressen of telefoonnummers) die zijn geabonneerd op een bepaald abonnement. Elke sleutel in dit object vertegenwoordigt de id in kwestie en bevat twee subeigenschappen: <ul><li>`time`: Een tijdstempel volgens ISO 8601 van het tijdstip waarop de identiteit is geabonneerd, indien van toepassing.</li><li>`source`: De bron die de abonnee van voortkwam. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 
 ### `metadata`
 
@@ -258,16 +265,16 @@ De `email`-, `push`- en `sms`-eigenschappen van het `marketing`-object kunnen kl
 | --- | --- |
 | `time` | Een ISO 8601-tijdstempel voor de laatste keer dat de toestemming en voorkeuren van de klant zijn bijgewerkt. Dit veld kan worden gebruikt in plaats van tijdstempels toe te passen op individuele voorkeuren om het laden en de complexiteit te verminderen. Als u een waarde `time` opgeeft onder een individuele voorkeur, wordt de tijdstempel `metadata` voor die bepaalde voorkeur genegeerd. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `idSpecific`
 
 `idSpecific` kan worden gebruikt wanneer een bepaalde toestemming of voorkeur niet universeel op een klant van toepassing is, maar tot één enkel apparaat of identiteitskaart beperkt is. Zo kan een klant ervoor kiezen geen e-mails naar het ene adres te ontvangen, terwijl e-mails naar een ander adres mogelijk worden toegestaan.
 
 >[!IMPORTANT]
->
->De toestemmingen en de voorkeur op kanaalniveau (d.w.z. die onder `consents` buiten `idSpecific` worden verstrekt) zijn op identiteitskaart binnen dat kanaal van toepassing. Alle toestemming en voorkeuren op kanaalniveau worden daarom rechtstreeks toegepast, ongeacht of de equivalente id- of apparaatspecifieke instellingen worden gerespecteerd:
->
->* Als de klant ervoor kiest om op kanaalniveau uit te schakelen, worden gelijkwaardige toestemmingen of voorkeuren in `idSpecific` genegeerd.
->* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld, of de klant heeft ervoor gekozen, worden de equivalente toestemmingen of voorkeuren in `idSpecific` gerespecteerd.
+De toestemmingen en de voorkeur op kanaalniveau (d.w.z. die onder `consents` buiten `idSpecific` worden verstrekt) zijn op identiteitskaart binnen dat kanaal van toepassing. Alle toestemming en voorkeuren op kanaalniveau worden daarom rechtstreeks toegepast, ongeacht of de equivalente id- of apparaatspecifieke instellingen worden gerespecteerd:
+* Als de klant ervoor kiest om op kanaalniveau uit te schakelen, worden gelijkwaardige toestemmingen of voorkeuren in `idSpecific` genegeerd.
+* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld, of de klant heeft ervoor gekozen, worden de equivalente toestemmingen of voorkeuren in `idSpecific` gerespecteerd.
 
 
 Elke sleutel in het `idSpecific`-object vertegenwoordigt een specifieke naamruimte die wordt herkend door de Adobe Experience Platform Identity Service. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-time klantprofiel te reduceren. Zie [Naamruimte overzicht van naamruimte](../../../identity-service/namespaces.md) in de documentatie bij Identiteitsservice voor meer informatie over naamruimten.
@@ -332,8 +339,7 @@ De `adID`-toestemming geeft de toestemming weer van de klant voor het feit of ee
 ```
 
 >[!NOTE]
->
->Deze waarde wordt niet rechtstreeks ingesteld, aangezien de Adobe Experience Platform Mobile SDK deze waarde automatisch instelt wanneer dit van toepassing is.
+Deze waarde wordt niet rechtstreeks ingesteld, aangezien de Adobe Experience Platform Mobile SDK deze waarde automatisch instelt wanneer dit van toepassing is.
 
 ## Gegevens invoegen met de veldgroep {#ingest}
 
@@ -342,16 +348,14 @@ Om de [!DNL Consents & Preferences] gebiedsgroep te gebruiken om toestemmingsgeg
 Zie de zelfstudie over [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gebiedsgroepen aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met [!DNL Consents & Preferences] gebiedsgroep bevat, verwijs naar de sectie over [het creëren van een dataset](../../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
->
->Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!DNL Consents & Preferences] gebiedsgroep bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
->
->Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [samenvoegbeleid](../../../rtcdp/profile/merge-policies.md) voor meer informatie.
+Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!DNL Consents & Preferences] gebiedsgroep bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
+Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [samenvoegbeleid](../../../rtcdp/profile/merge-policies.md) voor meer informatie.
 
 ## Verwerking van toestemmings- en voorkeurswijzigingen
 
 Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten deze wijzigingen worden verzameld en onmiddellijk worden doorgevoerd met de [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
 
-## Bijlage {#appendix}
+## Aanhangsel {#appendix}
 
 De onderstaande secties bevatten aanvullende informatie over de veldgroep [!DNL Consents & Preferences].
 
@@ -359,7 +363,7 @@ De onderstaande secties bevatten aanvullende informatie over de veldgroep [!DNL 
 
 In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
-| Value | Titel | Beschrijving |
+| Waarde | Titel | Beschrijving |
 | --- | --- | --- |
 | `y` | Ja | De klant heeft ervoor gekozen de toestemming of voorkeur te geven. Met andere woorden, zij **do** stemmen in met het gebruik van hun gegevens zoals aangegeven door de toestemming of voorkeur in kwestie. |
 | `n` | Nee | De klant heeft ervoor gekozen geen toestemming of voorkeur te geven. Met andere woorden, zij **stemmen niet** in met het gebruik van hun gegevens zoals aangegeven door de toestemming of voorkeur in kwestie. |
@@ -370,6 +374,8 @@ In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 | `CP` | Naleving van een wettelijke verplichting | De verzameling van gegevens voor het gespecificeerde doel is vereist om te voldoen aan de wettelijke verplichtingen van het bedrijf. |
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Geaccepteerde waarden voor `preferred` {#preferred-values}
 
@@ -390,6 +396,8 @@ In de volgende tabel worden de toegestane waarden voor `preferred` weergegeven:
 | `other` | Een kanaal dat niet in een standaardcategorie past. |
 | `none` | Geen voorkeurskanaal. |
 | `unknown` | Het voorkeurkanaal is onbekend. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Volledig [!DNL Consents & Preferences]-schema {#full-schema}
 
