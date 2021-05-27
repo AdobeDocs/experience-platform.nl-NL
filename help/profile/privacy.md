@@ -5,10 +5,9 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-translation-type: tm+mt
-source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,13 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Privacy Service] verwerkt verzoeken van klanten om toegang tot hun persoonsgegevens, om te weigeren deze te verkopen of om hun persoonsgegevens te verwijderen, zoals gedefinieerd in privacyregels zoals de algemene gegevensbeschermingsverordening (GDPR) en [!DNL California Consumer Privacy Act] (CCPA).
 
-Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor [!DNL Real-time Customer Profile].
+In dit document worden essentiële concepten besproken die betrekking hebben op het verwerken van privacyverzoeken voor [!DNL Real-time Customer Profile] in Adobe Experience Platform.
+
+>[!NOTE]
+>
+>In deze handleiding wordt alleen uitgelegd hoe u privacyverzoeken voor de profielgegevensopslag in Experience Platform kunt indienen. Als u ook privacyverzoeken voor het meer van Gegevens van het Platform wilt indienen, verwijs naar de gids op [privacyverzoekverwerking in het meer van Gegevens](../catalog/privacy.md) naast deze zelfstudie.
+>
+>Raadpleeg de [documentatie bij de Privacy Service](../privacy-service/experience-cloud-apps.md) voor meer informatie over het indienen van privacyverzoeken voor andere Adobe Experience Cloud-toepassingen.
 
 ## Aan de slag
 
@@ -35,7 +40,7 @@ De Dienst van de identiteit handhaaft een opslag van globaal bepaalde (standaard
 
 Voor meer informatie over identiteitsnaamruimten in [!DNL Experience Platform], zie [identity namespace overzicht](../identity-service/namespaces.md).
 
-## Verzoeken {#submit} verzenden
+## Verzoeken indienen {#submit}
 
 In de onderstaande secties wordt beschreven hoe u met de API of UI van [!DNL Privacy Service] privacyverzoeken voor [!DNL Real-time Customer Profile] kunt indienen. Voordat u deze secties leest, wordt u ten zeerste aangeraden de [Privacy Service-API](../privacy-service/api/getting-started.md) of [Privacy Service-UI](../privacy-service/ui/overview.md) documentatie te controleren voor volledige stappen voor het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvraagladingen.
 
@@ -95,7 +100,6 @@ curl -X POST \
     "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
 ```
