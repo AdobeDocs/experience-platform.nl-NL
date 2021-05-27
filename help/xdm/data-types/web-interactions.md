@@ -5,10 +5,9 @@ title: Gegevenstype webinteractie
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Data Model (XDM) van het webinteractiemodel.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '185'
 ht-degree: 2%
 
 ---
@@ -25,6 +24,8 @@ ht-degree: 2%
 | `URL` | Tekenreeks | De werkelijke koppeling of URL die voor deze webinteractie wordt gebruikt. |
 | `name` | Tekenreeks | De normatieve naam die voor deze webkoppeling wordt gebruikt. Dit wordt gebruikt voor classificatiedoeleinden. |
 | `type` | Tekenreeks | Het koppelingstype. Deze eigenschap moet gelijk zijn aan een van de volgende opsommingswaarden: <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
