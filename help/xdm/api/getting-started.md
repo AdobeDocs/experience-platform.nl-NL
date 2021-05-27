@@ -5,10 +5,9 @@ title: Aan de slag met de API voor schemaregistratie
 description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -154,7 +153,7 @@ Een succesvolle reactie keert informatie betreffende het gebruik van [!DNL Schem
  }
 ```
 
-## `CONTAINER_ID` {#container} begrijpen
+## `CONTAINER_ID` begrijpen {#container}
 
 Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de container `global` en de container `tenant`.
 
@@ -197,7 +196,7 @@ Oproepen aan [!DNL Schema Registry] API zullen of URL-Gecodeerde `$id` URI of `m
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
-## Koptekst {#accept} accepteren
+## Koptekst accepteren {#accept}
 
 Bij het uitvoeren van lijst en raadplegings (GET) verrichtingen in [!DNL Schema Registry] API, wordt een `Accept` kopbal vereist om het formaat van de gegevens te bepalen die door API worden teruggekeerd. Wanneer het omhoog kijken van specifieke middelen, moet een versieaantal ook in `Accept` kopbal worden omvat.
 
@@ -213,11 +212,13 @@ De volgende tabel bevat compatibele `Accept`-headerwaarden, inclusief waarden me
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Beschrijvers worden opgenomen. |
 
+{style=&quot;table-layout:auto&quot;}
+
 >[!NOTE]
 >
 >Platform steunt momenteel slechts één belangrijke versie voor elk schema (`1`). Daarom moet de waarde voor `version` altijd `1` zijn wanneer het uitvoeren van raadplegingsverzoeken om de recentste minder belangrijke versie van het schema terug te keren. Zie de subsectie hieronder voor meer informatie over schemaversie.
 
-### Schemaversie {#versioning}
+### Schema versioning {#versioning}
 
 De versies van het schema worden van verwijzingen voorzien door `Accept` kopballen in de Registratie API van het Schema en in `schemaRef.contentType` eigenschappen in stroomafwaartse de dienstlading van de Platform API.
 
