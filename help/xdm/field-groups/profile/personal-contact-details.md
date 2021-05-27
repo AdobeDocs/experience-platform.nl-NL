@@ -5,10 +5,9 @@ title: Persoonlijke veldgroep contactgegevens
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Persoonlijke het schemagebiedgroep van de Details van het Contact.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-translation-type: tm+mt
-source-git-commit: 4755f9b7666efd8354a5f15aeed40a7da4a06efe
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
@@ -31,6 +30,8 @@ ht-degree: 0%
 | `homePhone` | [Telefoonnummer](../../data-types/phone-number.md) | Beschrijft het huistelefoonaantal van de persoon. |
 | `mobilePhone` | [Telefoonnummer](../../data-types/phone-number.md) | Beschrijft het mobiele telefoonnummer van de persoon. |
 | `personalEmail` | [E-mailadres](../../data-types/email-address.md) | Beschrijft het e-mailadres van de persoon. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
