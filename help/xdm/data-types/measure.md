@@ -5,10 +5,9 @@ title: Gegevenstype meten
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van het het gegevenstype van het Model van de Gegevens van de Ervaring van de Meetlat (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -23,6 +22,8 @@ ht-degree: 0%
 | --- | --- | --- |
 | `id` | Tekenreeks | De unieke id van deze maatregel. In geval van gegevensverzameling met communicatiekanalen met verlies, zoals mobiele apps of websites met offlinefunctionaliteit waarbij de verzending van maatregelen niet kan worden gegarandeerd, bevat deze eigenschap een door de klant gegenereerde, unieke id van de genomen maatregel. Het is de beste praktijk om dit voldoende lang te maken om voldoende willekeur te waarborgen. <br><br> Als informatie zoals timestamp, apparaatID, IP, het adres van MAC, of andere potentieel gebruiker-identificerende waarden in de generatie van  `id`wordt opgenomen, zou het resultaat moeten worden gehakt. Dit zorgt ervoor dat geen PII in de waarde wordt gecodeerd, aangezien het doel niet is om een gebruiker of een apparaat te identificeren, maar de specifieke maatregel in tijd. |
 | `value` | Dubbel | De kwantificeerbare waarde van deze maatregel. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
