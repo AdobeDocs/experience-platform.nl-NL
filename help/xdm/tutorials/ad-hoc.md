@@ -6,10 +6,9 @@ description: In specifieke omstandigheden, kan het noodzakelijk zijn om een sche
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '832'
 ht-degree: 1%
 
 ---
@@ -87,6 +86,8 @@ curl -X POST \
 | `$ref` | Het gegevensgedrag voor de nieuwe klasse. Voor ad-hocklassen moet deze waarde worden ingesteld op `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Een object dat de aangepaste velden voor de klasse bevat, uitgedrukt als sleutel-waardeparen van veldnamen en gegevenstypen. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Een succesvolle reactie keert de details van de nieuwe klasse terug, die de naam van `properties._adhoc` met een GUID vervangt die een systeem-geproduceerde, read-only uniek herkenningsteken voor de klasse is. Het `meta:datasetNamespace` attribuut wordt ook automatisch geproduceerd en inbegrepen in de reactie.
@@ -147,6 +148,8 @@ Een succesvolle reactie keert de details van de nieuwe klasse terug, die de naam
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `$id` | Een URI die fungeert als de alleen-lezen; door het systeem gegenereerde unieke id voor de nieuwe ad-hocklasse. Deze waarde wordt gebruikt in de volgende stap voor het maken van een ad-hocschema. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Een ad-hocschema maken
 
@@ -238,6 +241,8 @@ GET /tenant/schemas/{SCHEMA_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het ad-hocschema dat u wilt openen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
