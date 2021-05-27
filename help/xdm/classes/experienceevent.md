@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-klasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent en aanbevolen procedures voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,8 @@ De klasse [!DNL XDM ExperienceEvent] zelf verstrekt verscheidene op tijd-reeksen
 | `producedBy` | Een tekenreekswaarde die de producent of oorsprong van de gebeurtenis beschrijft. Dit veld kan worden gebruikt om bepaalde gebeurtenisproducenten uit te filteren als dat voor segmentatiedoeleinden nodig is.<br><br>Sommige voorgestelde waarden voor deze eigenschap zijn opgenomen in de  [appendix sectie](#producedBy). Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen kunt gebruiken om verschillende gebeurtenisproducenten te vertegenwoordigen. |
 | `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor de persoon op wie de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Als u dit veld correct wilt gebruiken voor [Real-time klantprofiel](../../profile/home.md), moet u niet handmatig de inhoud van het veld bijwerken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in de  [grondbeginselen van schemacompositie voor meer informatie ](../schema/composition.md#identityMap) over hun gebruiksgeval. |
 | `timestamp` | Een tijdstempel volgens ISO 8601 van het tijdstip van de gebeurtenis, opgemaakt volgens [RFC 339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Deze tijdstempel moet in het verleden voorkomen. Zie de sectie hieronder op [timestamps](#timestamps) voor beste praktijken op het gebruik van dit gebied. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Aanbevolen procedures voor het modelleren van gebeurtenissen
 
@@ -74,7 +76,7 @@ De volgende sectie bevat aanvullende informatie over de klasse [!UICONTROL XDM E
 
 In de volgende tabel worden de geaccepteerde waarden voor `eventType` beschreven, samen met de bijbehorende definities:
 
-| Value | Definitie |
+| Waarde | Definitie |
 | --- | --- |
 | `advertising.completes` | Een getimede media-element is gecontroleerd op voltooiing. Dit betekent niet noodzakelijkerwijs dat de viewer de hele video heeft bekeken, aangezien de viewer vooruit had kunnen overgeslagen. |
 | `advertising.timePlayed` | Beschrijft de hoeveelheid tijd die door een gebruiker aan een specifiek getimed media activa wordt doorgebracht. |
@@ -100,6 +102,8 @@ In de volgende tabel worden de geaccepteerde waarden voor `eventType` beschreven
 | `delivery.feedback` | Feedbackgebeurtenissen voor een levering, zoals een e-maillevering. |
 | `message.feedback` | Feedbackgebeurtenissen zoals verzonden/stuit/fout voor berichten die naar een klant worden verzonden. |
 | `message.tracking` | Gebeurtenissen bijhouden zoals open/klikken/aangepaste handelingen voor berichten die naar een klant worden verzonden. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Voorgestelde waarden voor `producedBy` {#producedBy}
 
