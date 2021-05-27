@@ -4,10 +4,9 @@ title: Gegevenstype van algemeen voorkeurenveld voor personalisatie
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Algemene voorkeur voor personalisatie.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -26,9 +25,11 @@ ht-degree: 1%
 | --- | --- | --- |
 | `val` | Tekenreeks | De door de klant opgegeven voorkeurskeuze voor deze gebruikszaak voor personalisatie. Zie de onderstaande tabel voor toegestane waarden en definities. |
 
+{style=&quot;table-layout:auto&quot;}
+
 In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
-| Value | Titel | Beschrijving |
+| Waarde | Titel | Beschrijving |
 | --- | --- | --- |
 | `y` | Ja | De klant heeft zich aangemeld voor de voorkeur. Met andere woorden, zij **do** stemmen in met het gebruik van hun gegevens zoals aangegeven door de betrokken voorkeur. |
 | `n` | Nee | De klant heeft ervoor gekozen deze voorkeur niet toe te passen. Met andere woorden, zij **stemmen niet** in met het gebruik van hun gegevens zoals aangegeven door de betrokken voorkeur. |
@@ -39,6 +40,8 @@ In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 | `CP` | Naleving van een wettelijke verplichting | De verzameling van gegevens voor het gespecificeerde doel is vereist om te voldoen aan de wettelijke verplichtingen van het bedrijf. |
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
