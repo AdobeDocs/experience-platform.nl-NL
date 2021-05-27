@@ -5,10 +5,9 @@ title: Gegevenstype interessdetails
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Details.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '192'
 ht-degree: 3%
 
 ---
@@ -29,6 +28,8 @@ ht-degree: 3%
 | `name` | Tekenreeks | Een naam die aan de POI is gegeven. |
 | `poiID` | Tekenreeks | Een unieke id van de POI. |
 | `type` | Tekenreeks | Het algemene type van POI die een typend die schema gebruikt door de beheerder van de POI definities wordt geselecteerd. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
