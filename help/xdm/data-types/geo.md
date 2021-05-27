@@ -5,10 +5,9 @@ title: Geo-gegevenstype
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '196'
 ht-degree: 3%
 
 ---
@@ -29,6 +28,8 @@ ht-degree: 3%
 | `msaID` | Geheel | Het statistische metropolitane gebied in de Verenigde Staten waar de waarneming plaatsvond. |
 | `postalCode` | Tekenreeks | De postcode van de locatie. Postcodes zijn niet voor alle landen beschikbaar. In sommige landen zal dit slechts een deel van de postcode bevatten. |
 | `stateProvince` | Tekenreeks | De staat of provincie van de observatie. De notatie volgt de [ISO 3166-2 (land en deelsector)](http://www.unece.org/cefact/locode/subdivisions.html) standaard. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
