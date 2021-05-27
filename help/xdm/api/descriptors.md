@@ -5,10 +5,9 @@ title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ Het `/descriptors` eindpunt in [!DNL Schema Registry] API staat u toe om beschri
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
-## Een lijst met descriptoren {#list} ophalen
+## Een lijst met descriptoren ophalen {#list}
 
 U kunt een lijst maken van alle beschrijvers die door uw organisatie zijn bepaald door een GET verzoek aan `/tenant/descriptors` te richten.
 
@@ -62,6 +61,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | `application/vnd.adobe.xdm+json` | Hiermee wordt een array van uitgebreide beschrijvingsobjecten geretourneerd |
 | `application/vnd.adobe.xdm-v2+json` | Deze `Accept` kopbal moet worden gebruikt om het pagineren mogelijkheden te gebruiken. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Het antwoord bevat een array voor elk beschrijvende type waarvoor beschrijvingen zijn gedefinieerd. Met andere woorden, als er geen beschrijvers van een bepaald `@type` gedefinieerd zijn, retourneert het register geen lege array voor dat beschrijvende type.
@@ -84,7 +85,7 @@ Wanneer u de koptekst `link` `Accept` gebruikt, wordt elke descriptor weergegeve
 }
 ```
 
-## Een descriptor {#lookup} opzoeken
+## Een descriptor opzoeken {#lookup}
 
 Als u de details van een specifieke beschrijver wilt bekijken, kunt u omhoog (GET) kijken een individuele beschrijver gebruikend zijn `@id`.
 
@@ -97,6 +98,8 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DESCRIPTOR_ID}` | De `@id` van de descriptor die u wilt opzoeken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -135,7 +138,7 @@ Een geslaagde reactie retourneert de details van de descriptor, inclusief `@type
 }
 ```
 
-## Een descriptor {#create} maken
+## Een descriptor maken {#create}
 
 U kunt een nieuwe beschrijver tot stand brengen door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
 
@@ -191,7 +194,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 }
 ```
 
-## Een descriptor {#put} bijwerken
+## Een descriptor bijwerken {#put}
 
 U kunt een beschrijver bijwerken door zijn `@id` in de weg van een verzoek van de PUT te omvatten.
 
@@ -204,6 +207,8 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DESCRIPTOR_ID}` | De `@id` van de descriptor die u wilt bijwerken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -246,7 +251,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en `@id` van de bijg
 
 Wanneer u een [lookup (GET) request](#lookup) uitvoert om de descriptor weer te geven, wordt weergegeven dat de velden nu zijn bijgewerkt met de wijzigingen die zijn verzonden in het verzoek om PUT.
 
-## Een descriptor {#delete} verwijderen
+## Een descriptor verwijderen {#delete}
 
 Het kan voorkomen dat u een descriptor moet verwijderen die u in de [!DNL Schema Registry] hebt gedefinieerd. Dit wordt gedaan door een verzoek van de DELETE te maken die `@id` van de beschrijver van verwijzingen voorzien u wenst om te verwijderen.
 
@@ -259,6 +264,8 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DESCRIPTOR_ID}` | De `@id` van de descriptor die u wilt verwijderen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -312,6 +319,8 @@ Een identiteitsbeschrijver geeft aan dat &quot;[!UICONTROL sourceProperty]&quot;
 | `xdm:property` | Of `xdm:id` of `xdm:code`, afhankelijk van `xdm:namespace` gebruikt. |
 | `xdm:isPrimary` | Een optionele booleaanse waarde. Indien waar (true), wordt het veld als de primaire identiteit aangegeven. Schema&#39;s mogen slechts één primaire identiteit bevatten. |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### Beschrijvende naam
 
 Met beschrijvingen van naadloze namen kan een gebruiker de waarden `title`, `description` en `meta:enum` van de kernvelden van het bibliotheekschema wijzigen. Dit is vooral handig wanneer u werkt met &quot;eVars&quot; en andere &quot;generieke&quot; velden die u wilt labelen voor informatie die specifiek is voor uw organisatie. De gebruikersinterface kan deze gebruiken om een vriendelijkere naam weer te geven of om alleen velden met een vriendelijke naam weer te geven.
@@ -346,6 +355,8 @@ Met beschrijvingen van naadloze namen kan een gebruiker de waarden `title`, `des
 | `xdm:description` | Een optionele beschrijving kan samen met de titel worden toegevoegd. |
 | `meta:enum` | Als het veld dat wordt aangegeven door `xdm:sourceProperty` een tekenreeksveld is, bepaalt `meta:enum` de lijst met voorgestelde waarden voor het veld in de gebruikersinterface [!DNL Experience Platform]. Het is belangrijk om op te merken dat `meta:enum` geen opsomming verklaart of om het even welke gegevensbevestiging voor het XDM gebied verstrekt.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe worden gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de eigenschap `meta:enum` van het veld rechtstreeks bewerken via een PATCH-aanvraag naar de bovenliggende bron van het veld. |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### Relatiebeschrijving
 
 Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#39;s, die op de eigenschappen worden gesloten die in `sourceProperty` en `destinationProperty` worden beschreven. Zie de zelfstudie over [het definiëren van een relatie tussen twee schema&#39;s](../tutorials/relationship-api.md) voor meer informatie.
@@ -373,6 +384,8 @@ Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#
 | `xdm:destinationSchema` | De URI `$id` van het doelschema waarmee deze descriptor een relatie definieert. |
 | `xdm:destinationVersion` | De belangrijkste versie van het bestemmingsschema. |
 | `xdm:destinationProperty` | Optioneel pad naar een doelveld binnen het doelschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 #### Referentie-identiteitsdescriptor
