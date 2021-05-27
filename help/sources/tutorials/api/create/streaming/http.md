@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-translation-type: tm+mt
-source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -416,3 +415,59 @@ Als de `Authorization` kopbal niet aanwezig is, of een ongeldig/verlopen toegang
     }
 }
 ```
+
+### Onbewerkte gegevens die moeten worden ingevoerd op Platform {#ingest-data} plaatsen
+
+Nu u uw stroom hebt gecreeerd, kunt u uw JSON bericht naar het het stromen eindpunt verzenden u eerder creeerde.
+
+**API-indeling**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | De `id`-waarde van de nieuwe streamingverbinding. |
+
+**Verzoek**
+
+Het voorbeeldverzoek neemt onbewerkte gegevens aan het het stromen eindpunt op dat eerder werd gecreeerd.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Antwoord**
+
+Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgenomen informatie.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
+| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
+| `receivedTimeMs` | Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
