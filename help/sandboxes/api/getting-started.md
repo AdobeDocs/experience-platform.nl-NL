@@ -5,10 +5,9 @@ title: API-handleiding voor sandbox
 topic-legacy: developer guide
 description: Met de sandbox-API kunnen ontwikkelaars sandboxen in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Deze handleiding voor ontwikkelaars bevat stappen waarmee u sandbox-API kunt geb
 
 ## Aan de slag met de sandbox-API
 
-Als u sandboxen voor uw IMS-organisatie wilt beheren, moet u beschikken over de bevoegdheden voor Sandbox-beheer. Gebruikers zonder toegangsrechten kunnen alleen het eindpunt gebruiken voor het [weergeven van actieve sandboxen voor de huidige gebruiker](./list-active-sandboxes.md). Zie [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over hoe te om zandbaktoestemmingen voor Experience Platform toe te wijzen.
+Als u sandboxen voor uw IMS-organisatie wilt beheren, moet u beschikken over de bevoegdheden voor Sandbox-beheer. Gebruikers zonder toegangsmachtigingen kunnen het [beschikbare sandboxeindpunt](./available.md) alleen gebruiken om actieve sandboxen voor de huidige gebruiker weer te geven. Zie [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over hoe te om zandbaktoestemmingen voor Experience Platform toe te wijzen.
 
 ### API-voorbeeldaanroepen lezen
 
