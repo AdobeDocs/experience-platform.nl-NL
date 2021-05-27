@@ -5,10 +5,9 @@ title: Gegevenstype abonnement
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Subscription Experience Data Model (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '414'
 ht-degree: 8%
 
 ---
@@ -45,6 +44,8 @@ ht-degree: 8%
 | `termUnitOfTime` | Tekenreeks | De tijdseenheid voor de periode. |
 | `topUp` | Tekenreeks | Beschrijft de overeengekomen voorwaarden voor hoe de verbruiksaspecten van een abonnement tijdens een factureringsperiode worden teruggekocht. |
 | `type` | Tekenreeks | De omvang van het recht in verhouding tot het aantal personen dat onder het abonnement valt. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
