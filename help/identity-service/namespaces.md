@@ -5,9 +5,9 @@ title: Overzicht van id-naamruimte
 topic-legacy: overview
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,8 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Platform worde
 | Telefoon (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | TNTID | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [Doel](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) voor meer informatie. |
 | Windows-ID | A namespace that represents a Windows Advertising ID. Zie het volgende document op [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) voor meer informatie. |
+
+### Identiteitsnaamruimten weergeven
 
 Als u naamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UICONTROL Identities]** in de linkernavigatie en selecteert u **[!UICONTROL Browse]**.
 
