@@ -5,9 +5,9 @@ title: Gebruiksaanwijzing voor sandbox
 topic-legacy: user guide
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,28 @@ Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogven
 
 ![opnieuw bevestigen](../images/ui/reset-confirm.png)
 
+Na enkele ogenblikken wordt onder aan het scherm een bevestigingsvak weergegeven om te bevestigen dat het opnieuw instellen is gelukt.
+
+![succes](../images/ui/success.png)
+
+### Foutberichten
+
+Een standaardproductiesandbox die CDA-gegevens bevat, kan niet worden hersteld en retourneert de volgende fout.
+
+![cda](../images/ui/cda.png)
+
+Een standaardproductiesandbox die PBD-gegevens bevat, kan ook niet opnieuw worden ingesteld en retourneert de volgende fout.
+
+![pbd](../images/ui/pbd.png)
+
+Een standaardproductiesandbox die gegevens voor zowel CDA als PBD bevat kan ook niet worden teruggesteld en keert de volgende fout terug.
+
+![beide](../images/ui/both.png)
+
+Een productiesandbox die voor bidirectioneel segment het delen met Adobe Audience Manager of de Dienst van de Kern van de Audience wordt gebruikt kan ook niet worden teruggesteld en de volgende fout terugkeren.
+
+![seg](../images/ui/seg.png)
+
 ## Een sandbox verwijderen
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen.
 Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Continue]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+Een productiestandaard die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of Audience Core Service kan niet worden verwijderd en retourneert de volgende fout.
+
+![seg](../images/ui/seg.png)
 
 ## Volgende stappen
 
