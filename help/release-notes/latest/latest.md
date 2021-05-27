@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 0cef5f1a0033bed987799c26b99e71145a85c1a9
+source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1340'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Klantprofiel in realtime](#profile)
+- [Sandboxen](#sandboxes)
 - [Bronnen](#sources)
 
 ## Dashboards {#dashboards}
@@ -85,6 +86,22 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 | Gegevensset-overlappingsrapport | Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van de opslag van het Profiel door de datasets bloot te stellen die het meest aan adresseerbare publiek bijdragen. Dit rapport biedt niet alleen inzichten in profielgegevens, maar helpt gebruikers ook actie te ondernemen om het gebruik van licenties te optimaliseren, zoals het instellen van een limiet voor de levensduur van bepaalde gegevens. Om meer te leren, volg het leerprogramma op [het produceren van de datasetoverlapping rapport](../../profile/tutorials/dataset-overlap-report.md). |
 
 Voor meer informatie over het profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door [Overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Meerdere productiesandboxen | U kunt nu meerdere productiesandboxen maken en beheren in uw IMS-organisatie en specifieke productiesandboxen toewijzen aan afzonderlijke bedrijfsonderdelen, merken, projecten of regio&#39;s. Zie de zelfstudies over het maken van een productiesandbox [in de gebruikersinterface](../../sandboxes/ui/user-guide.md) of [met behulp van de API](../../sandboxes/api/overview.md) voor meer informatie. |
+
+### Bekende beperkingen
+
+- Elke Experience Cloud-organisatie wordt geleverd met een vooraf gemaakte standaardproductiesandbox. Deze sandbox fungeert als standaardbestemming voor elke aanvraag die naar het Platform wordt verzonden vanuit een andere Adobe- of niet-Adobe-toepassing die (nog) niet voldoet aan de sandbox-standaard. De standaardproductiefandbox kan niet worden teruggesteld als de identiteitsgrafiek binnen het ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) eigenschap wordt ontvangen, of als de identiteitsgrafiek binnen het wordt ontvangen ook door Adobe Audience Manager voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) eigenschap wordt gebruikt.
+- De zandbakken van de productie die voor bidirectioneel segmentdelen met Adobe Audience Manager of de Dienst van de Kern van de Audience worden gebruikt kunnen niet worden teruggesteld noch worden geschrapt.
+- Alle door de gebruiker gemaakte productie- en ontwikkelingssandboxen kunnen worden verwijderd, met uitzondering van de standaardproductiefandbox.
+
+Zie het [overzicht van sandboxen](../../sandboxes/home.md) voor meer informatie over sandboxen.
 
 ## [!DNL Sources] {#sources}
 
