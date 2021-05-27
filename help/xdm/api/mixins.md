@@ -5,10 +5,9 @@ title: Mixins API-eindpunt
 description: Het /mixins eindpunt in de Registratie API van het Schema staat u toe om mengsels XDM binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---
@@ -28,7 +27,7 @@ Mixins zijn herbruikbare componenten die een of meer velden definiëren die een 
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
-## Een lijst met mixen {#list} ophalen
+## Een lijst met mengsels ophalen {#list}
 
 U kunt alle mengsels onder de `global` of `tenant` container van een lijst maken door een verzoek van de GET aan `/global/mixins` of `/tenant/mixins`, respectievelijk te richten.
 
@@ -46,6 +45,8 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | De container u mengsels van wilt terugwinnen van: `global` voor door Adobe gemaakte mixen of `tenant` voor mixen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie [appendix document](./appendix.md#query) voor een lijst van beschikbare parameters. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -67,6 +68,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-mix voor elke bron, inclusief origineel `$ref` en `allOf`. (Limiet: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -129,6 +132,8 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | De container die de mix bevat die u wilt ophalen: `global` voor een door Adobe gemaakt mengsel of `tenant` voor een mengsel dat eigendom is van uw organisatie. |
 | `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de mix die u wilt opzoeken. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Verzoek**
 
 Het volgende verzoek wint een mengeling door zijn `meta:altId` waarde terug die in de weg wordt verstrekt.
@@ -152,6 +157,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | `application/vnd.adobe.xed-notext+json; version=1` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -387,7 +394,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een lading die de
 
 Als u een verzoek van de GET aan [list alle mixins](#list) in de huurderscontainer zou uitvoeren zou nu de mengsel van de Details van het Bezit omvatten, of u kunt [een raadplegingsverzoek (GET) uitvoeren ](#lookup) gebruikend URL-Gecodeerde `$id` URI om de nieuwe mixin direct te bekijken.
 
-## Een mix {#put} bijwerken
+## Een mix bijwerken {#put}
 
 U kunt een volledige mix door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een mengeling door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die worden vereist wanneer [het creëren van een nieuwe mixin](#create) in een verzoek van de POST.
 
@@ -404,6 +411,8 @@ PUT /tenant/mixins/{MIXIN_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de mix die u wilt herschrijven. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -570,7 +579,7 @@ Een succesvolle reactie retourneert de details van de bijgewerkte mix.
 }
 ```
 
-## Een gedeelte van een mixin {#patch} bijwerken
+## Een gedeelte van een mix bijwerken {#patch}
 
 U kunt een gedeelte van een mix bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] steunt alle standaardverrichtingen van het Reparatie JSON, met inbegrip van `add`, `remove`, en `replace`. Voor meer informatie over Reparatie JSON, zie [API fundamentals gids](../../landing/api-fundamentals.md#json-patch).
 
@@ -587,6 +596,8 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{MIXIN_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de mix die u wilt bijwerken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -711,7 +722,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 }
 ```
 
-## Een mix {#delete} verwijderen
+## Een mix verwijderen {#delete}
 
 Het kan soms nodig zijn een mengsel uit het Schemaregister te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met mixin identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
@@ -724,6 +735,8 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{MIXIN_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de mix die u wilt verwijderen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
