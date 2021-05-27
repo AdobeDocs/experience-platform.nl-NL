@@ -4,10 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor veldgroepen
 description: Het /fieldgroups eindpunt in de Registratie API van het Schema staat u toe om groepen van het XDM schemagebied binnen uw ervaringstoepassing programmatically te beheren.
 topic: ontwikkelaarsgids
-translation-type: tm+mt
-source-git-commit: b25c545e86c8ffd6b5832893152aef597feaf71f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ De de gebiedsgroepen van het schema zijn herbruikbare componenten die één of m
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
-## Een lijst met veldgroepen {#list} ophalen
+## Een lijst met veldgroepen ophalen {#list}
 
 U kunt alle veldgroepen weergeven onder de container `global` of `tenant` door een GET-aanvraag in te dienen bij `/global/fieldgroups` of `/tenant/fieldgroups`.
 
@@ -39,6 +38,8 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | De container waaruit u veldgroepen wilt ophalen: `global` voor door Adobe gemaakte veldgroepen of `tenant` voor veldgroepen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie [appendix document](./appendix.md#query) voor een lijst van beschikbare parameters. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -60,6 +61,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-veldgroep voor elke bron, inclusief het origineel `$ref` en `allOf`. (Limiet: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -107,7 +110,7 @@ In de bovenstaande aanvraag is de `application/vnd.adobe.xed-id+json` `Accept`-h
 }
 ```
 
-## Een veldgroep {#lookup} opzoeken
+## Een veldgroep opzoeken {#lookup}
 
 U kunt een specifieke veldgroep opzoeken door de id van de veldgroep op te nemen in het pad van een GET-aanvraag.
 
@@ -121,6 +124,8 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{CONTAINER_ID}` | De container die de veldgroep bevat die u wilt ophalen: `global` voor een door Adobe gemaakte veldgroep of `tenant` voor een veldgroep die eigendom is van uw organisatie. |
 | `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de veldgroep die u wilt opzoeken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -145,6 +150,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -209,7 +216,7 @@ Als de reactie is geslaagd, worden de details van de veldgroep geretourneerd. We
 }
 ```
 
-## Een veldgroep {#create} maken
+## Een veldgroep maken {#create}
 
 U kunt een aangepaste veldgroep definiëren onder de container `tenant` door een POST-aanvraag in te dienen.
 
@@ -380,7 +387,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 
 Als u een verzoek van de GET om alle veldgroepen [in de huurderscontainer te vermelden nu uitvoert, bevat dit de veldgroep Eigenschapdetails, of u kunt [een opzoekverzoek (GET) uitvoeren](#lookup) met de URL-gecodeerde `$id` URI om de nieuwe veldgroep direct weer te geven.](#list)
 
-## Een veldgroep {#put} bijwerken
+## Een veldgroep bijwerken {#put}
 
 U kunt een volledige gebiedsgroep door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gebiedsgroep door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die worden vereist wanneer [het creëren van een nieuwe gebiedsgroep](#create) in een verzoek van de POST.
 
@@ -397,6 +404,8 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de veldgroep die u opnieuw wilt schrijven. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -563,7 +572,7 @@ Met een geslaagde reactie worden de details van de bijgewerkte veldgroep geretou
 }
 ```
 
-## Een gedeelte van een veldgroep {#patch} bijwerken
+## Een gedeelte van een veldgroep bijwerken {#patch}
 
 U kunt een gedeelte van een veldgroep bijwerken met een PATCH-aanvraag. [!DNL Schema Registry] steunt alle standaardverrichtingen van het Reparatie JSON, met inbegrip van `add`, `remove`, en `replace`. Voor meer informatie over Reparatie JSON, zie [API fundamentals gids](../../landing/api-fundamentals.md#json-patch).
 
@@ -580,6 +589,8 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de veldgroep die u wilt bijwerken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -704,7 +715,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 }
 ```
 
-## Een veldgroep {#delete} verwijderen
+## Een veldgroep verwijderen {#delete}
 
 Soms is het nodig een veldgroep uit het schemaregister te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met gebiedsgroep identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
@@ -717,6 +728,8 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de veldgroep die u wilt verwijderen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
