@@ -5,10 +5,9 @@ title: Gegevenstype e-mailadres
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor e-mailadressen.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -27,6 +26,8 @@ ht-degree: 0%
 | `status` | Geeft aan of het e-mailadres momenteel kan worden gebruikt |
 | `statusReason` | Een beschrijving van de huidige `status`. |
 | `type` | De manier waarop de account betrekking heeft op de persoon (zoals `work` of `personal`). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het e-mailadres:
