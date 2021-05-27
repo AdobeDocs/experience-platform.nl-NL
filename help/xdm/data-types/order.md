@@ -5,10 +5,9 @@ title: Gegevenstype Volgorde
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Order Experience Data Model (XDM).
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '185'
 ht-degree: 2%
 
 ---
@@ -26,6 +25,8 @@ ht-degree: 2%
 | `priceTotal` | Dubbel | De totale prijs van deze bestelling nadat alle kortingen en belastingen zijn toegepast. |
 | `purchaseID` | Tekenreeks | Een unieke id die door de verkoper is toegewezen voor deze aankoop of dit contract. Omdat deze is gedefinieerd door de verkoper, is er geen garantie dat de id uniek is. |
 | `purchaseOrderNumber` | Tekenreeks | De unieke id die door de koper voor deze aankoop of dit contract is toegewezen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
