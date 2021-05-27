@@ -5,10 +5,9 @@ title: Gegevenstype baken
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 2%
 
 ---
@@ -26,6 +25,8 @@ ht-degree: 2%
 | `proximity` | Tekenreeks | Geschatte afstand tot het baken. Zie [appendix](#proximity) voor geaccepteerde waarden en definities. |
 | `proximityUUID` | Tekenreeks | Een nabijheid UUID (Universally Unique Identifier) is een speciaal type herkenningsteken dat wordt gebruikt om bakens in uw netwerk van alle andere bakens in netwerken buiten uw controle te onderscheiden. De nabijheid UUID wordt gevormd in een baken, dat aan mobiele apparaten in waaier moet worden overgebracht om de bakens van een organisatie te identificeren. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
@@ -39,7 +40,7 @@ De volgende sectie bevat aanvullende informatie over het gegevenstype [!UICONTRO
 
 In de volgende tabel worden de geaccepteerde waarden voor `proximity` en de bijbehorende betekenissen weergegeven:
 
-| Value | Beschrijving |
+| Waarde | Beschrijving |
 | --- | --- |
 | `immediate` | Binnen enkele centimeter. |
 | `near` | Op minder dan 10 meter afstand. |
