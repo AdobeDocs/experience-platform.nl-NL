@@ -5,10 +5,9 @@ title: API-eindpunten exporteren/importeren
 description: Met de eindpunten /export en /import in de API voor schemaregistratie kunt u XDM-bronnen delen tussen IMS-organisaties en sandboxen.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -23,7 +22,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [[!
 
 De uitvoer/de invoereindpunten maken deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC eindpunten geen extra kopballen zoals `Accept` of `Content-Type`, en gebruiken geen `CONTAINER_ID`. In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroepen hieronder.
 
-## Hiermee wordt een exportlading opgehaald voor een resource {#export}
+## Een exportlading ophalen voor een resource {#export}
 
 Voor om het even welk bestaand schema, gebiedsgroep, of gegevenstype in [!DNL Schema Library], kunt u een de uitvoerlading produceren door een verzoek van de GET tot `/export` eindpunt te richten, verstrekkend identiteitskaart van het middel in de weg.
 
@@ -36,6 +35,8 @@ GET /rpc/export/{RESOURCE_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de XDM-bron die u wilt exporteren. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -195,7 +196,7 @@ Merk op dat alle instanties van huurder ID van het middel door `<XDM_TENANTID_PL
 ]
 ```
 
-## Een bron {#import} importeren
+## Een bron importeren {#import}
 
 Zodra u [geproduceerde een de uitvoerlading](#export) voor een middel XDM hebt, kunt u die nuttige lading in een verzoek van de POST aan het `/import` eindpunt gebruiken om die middel in een doelIMS Org en zandbak in te voeren.
 
