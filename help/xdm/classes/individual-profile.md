@@ -5,9 +5,9 @@ title: Afzonderlijke XDM-profielklasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,8 @@ De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-gepr
 | `personID` | Een unieke id voor de individuele persoon waarop deze record betrekking heeft. Dit veld vertegenwoordigt niet noodzakelijkerwijs een identiteit die betrekking heeft op de persoon, tenzij het ook wordt aangeduid als een [identiteitsveld](../schema/composition.md#identity). |
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Compatibele veldgroepen {#field-groups}
 
