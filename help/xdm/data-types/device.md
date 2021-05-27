@@ -5,10 +5,9 @@ title: Gegevenstype apparaat
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het apparaat.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '326'
 ht-degree: 3%
 
 ---
@@ -32,6 +31,8 @@ ht-degree: 3%
 | `typeID` | Tekenreeks | Een id voor het apparaat. Dit kan een herkenningsteken van DeviceAtlas of een andere dienst zijn die de hardware identificeert die wordt gebruikt. |
 | `typeIDService` | Tekenreeks | De naamruimte van de service die wordt gebruikt om het apparaattype te identificeren. Zie [appendix](#typeIDService) voor meer informatie over toegestane waarden. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
@@ -45,7 +46,7 @@ De volgende sectie bevat aanvullende informatie over het gegevenstype [!UICONTRO
 
 In de volgende tabel worden de geaccepteerde waarden voor `typeIDService` en de bijbehorende betekenissen weergegeven:
 
-| Value | Beschrijving |
+| Waarde | Beschrijving |
 | --- | --- |
 | `https://ns.adobe.com/xdm/external/deviceatlas` | Het apparaat is geïdentificeerd met DeviceAtlas. |
 | `https://ns.adobe.com/xdm/external/adobecampaign` | Het apparaat is geïdentificeerd met Adobe Campaign. |
