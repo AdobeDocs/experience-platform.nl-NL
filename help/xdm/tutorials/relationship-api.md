@@ -6,10 +6,9 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een éé
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1369'
 ht-degree: 0%
 
 ---
@@ -231,6 +230,8 @@ Een geslaagde reactie retourneert de details van de nieuwe veldgroep.
 | --- | --- |
 | `$id` | De alleen-lezen, door het systeem gegenereerde unieke id van de nieuwe veldgroep. De vorm van een URI. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Registreer `$id` URI van de gebiedsgroep, die in de volgende stap van het toevoegen van de gebiedsgroep aan het bronschema moet worden gebruikt.
 
 ### De veldgroep toevoegen aan het bronschema
@@ -246,6 +247,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het bronschema. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -275,6 +278,8 @@ curl -X PATCH \
 | `op` | De uit te voeren PATCH-bewerking. Dit verzoek gebruikt de `add` verrichting. |
 | `path` | De weg aan het schemagebied waar het nieuwe middel zal worden toegevoegd. Wanneer u veldgroepen toevoegt aan schema&#39;s, moet de waarde &quot;/allOf/-&quot; zijn. |
 | `value.$ref` | De `$id` van de veldgroep die moet worden toegevoegd. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -378,6 +383,8 @@ curl -X POST \
 | `sourceProperty` | Het pad naar het primaire identiteitsveld van het doelschema. |
 | `xdm:identityNamespace` | De naamruimte van de identiteit van het verwijzingsveld. Dit moet dezelfde naamruimte zijn die wordt gebruikt wanneer het veld wordt gedefinieerd als de primaire identiteit van het schema. Zie [Naamruimte overzicht](../../identity-service/home.md) voor meer informatie. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Een succesvolle reactie keert de details van de pas gecreëerde verwijzingsbeschrijver voor het bestemmingsschema terug.
@@ -436,6 +443,8 @@ curl -X POST \
 | `xdm:destinationSchema` | De `$id` URL van het bestemmingsschema. |
 | `xdm:destinationVersion` | Het versienummer van het doelschema. |
 | `xdm:destinationProperty` | Het pad naar het verwijzingsveld in het doelschema. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Antwoord
 
