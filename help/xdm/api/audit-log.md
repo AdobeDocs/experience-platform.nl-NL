@@ -5,11 +5,10 @@ title: Logboek-API-eindpunt controleren
 description: Het /auditlog eindpunt in de Registratie API van het Schema staat u toe om een chronologische lijst van veranderingen terug te winnen die aan een bestaand middel XDM zijn aangebracht.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 1%
+source-wordcount: '406'
+ht-degree: 0%
 
 ---
 
@@ -36,6 +35,8 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de bron waarvan het controlelogboek u wilt terugwinnen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -96,3 +97,5 @@ Een succesvolle reactie keert een chronologische lijst van veranderingen terug d
 | `action` | Het type wijziging dat is aangebracht. |
 | `path` | Een [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer)-tekenreeks die het pad naar het specifieke veld aangeeft dat is gewijzigd of toegevoegd. |
 | `value` | De waarde die is toegewezen aan het nieuwe of bijgewerkte veld. |
+
+{style=&quot;table-layout:auto&quot;}
