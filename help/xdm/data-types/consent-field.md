@@ -4,10 +4,9 @@ title: Gegevenstype algemeen toestemmingsveld
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Algemeen akkoord.
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '469'
 ht-degree: 1%
 
 ---
@@ -26,9 +25,11 @@ ht-degree: 1%
 | --- | --- | --- |
 | `val` | Tekenreeks | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie de onderstaande tabel voor toegestane waarden en definities. |
 
+{style=&quot;table-layout:auto&quot;}
+
 In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
-| Value | Titel | Beschrijving |
+| Waarde | Titel | Beschrijving |
 | --- | --- | --- |
 | `y` | Ja | De klant heeft ervoor gekozen de toestemming te verlenen. Met andere woorden, zij **do** stemmen in met het gebruik van hun gegevens zoals aangegeven in de betreffende toestemming. |
 | `n` | Nee | De klant heeft ervoor gekozen niet akkoord te gaan. Met andere woorden, zij **stemmen niet** in met het gebruik van hun gegevens zoals aangegeven door de betrokken toestemming. |
@@ -39,6 +40,8 @@ In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 | `CP` | Naleving van een wettelijke verplichting | De verzameling van gegevens voor het gespecificeerde doel is vereist om te voldoen aan de wettelijke verplichtingen van het bedrijf. |
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
