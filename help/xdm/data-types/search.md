@@ -5,10 +5,9 @@ title: Gegevenstype zoeken
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Search Experience Data Model (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '182'
 ht-degree: 2%
 
 ---
@@ -28,6 +27,8 @@ ht-degree: 2%
 | `searchEngine` | Tekenreeks | Het zoekprogramma dat door de zoekopdracht wordt gebruikt. |
 | `searchEngineID` | Tekenreeks | De toepassingsspecifieke id die wordt gebruikt om het zoekprogramma te identificeren. |
 | `slot` | Tekenreeks | De benoemde sectie van de pagina waar het zoekresultaat werd weergegeven. De waarde van deze eigenschap moet gelijk zijn aan een van de bekende opsommingswaarden die u definieert, zoals `top`, `side` of `bottom`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
