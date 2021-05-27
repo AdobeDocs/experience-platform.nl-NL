@@ -5,10 +5,9 @@ title: Gegevenstype webpagina Details
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Experience Data Model (XDM) van de webpagina voor details.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '404'
 ht-degree: 2%
 
 ---
@@ -31,6 +30,8 @@ Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van
 | `server` | Tekenreeks | De normatieve of gebruikelijke server die de webpagina host. Dit kan al dan niet de gastheer of de server zijn die eigenlijk de paginainteractie aandiende. |
 | `siteSection` | Tekenreeks | De normatieve naam van de sitesectie waarin deze webpagina zich bevindt. Dit kan worden gebruikt om de interactie te classificeren of te categoriseren. |
 | `viewName` | Tekenreeks | De naam van de weergave, binnen een pagina. Deze eigenschap wordt meestal gebruikt bij toepassingen of pagina&#39;s van één pagina die tabs of besturingselementen hebben die het merendeel van de paginalay-out wijzigen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
