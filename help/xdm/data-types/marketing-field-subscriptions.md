@@ -4,10 +4,9 @@ title: Algemeen veld met voorkeursgegevens voor marketing met abonnementen
 topic-legacy: overview
 description: Dit document biedt een overzicht van het veld Algemene marketingvoorkeur met XDM-gegevenstypen voor abonnementen.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '721'
 ht-degree: 1%
 
 ---
@@ -31,11 +30,13 @@ ht-degree: 1%
 | `time` | DateTime | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. |
 | `val` | Tekenreeks | De door de klant opgegeven voorkeursoptie voor dit marketinggeval. Zie [volgende sectie](#val) voor geaccepteerde waarden en definities. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## `val` {#val}
 
 In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
-| Value | Titel | Beschrijving |
+| Waarde | Titel | Beschrijving |
 | --- | --- | --- |
 | `y` | Ja | De klant heeft zich aangemeld voor de voorkeur. Met andere woorden, zij **do** stemmen in met het gebruik van hun gegevens zoals aangegeven door de betrokken voorkeur. |
 | `n` | Nee | De klant heeft ervoor gekozen deze voorkeur niet toe te passen. Met andere woorden, zij **stemmen niet** in met het gebruik van hun gegevens zoals aangegeven door de betrokken voorkeur. |
@@ -46,6 +47,8 @@ In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 | `CP` | Naleving van een wettelijke verplichting | De verzameling van gegevens voor het gespecificeerde doel is vereist om te voldoen aan de wettelijke verplichtingen van het bedrijf. |
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `subscriptions` {#subscriptions}
 
@@ -90,6 +93,8 @@ De volgende JSON vertegenwoordigt een voorbeeld marketing gebied voor een telefo
 | --- | --- |
 | `type` | Het abonnementstype. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is. |
 | `subscribers` | Een optioneel veld van het type map dat een set id&#39;s vertegenwoordigt (zoals e-mailadressen of telefoonnummers) die zijn geabonneerd op een bepaald abonnement. Elke sleutel in dit object vertegenwoordigt de id in kwestie en bevat twee subeigenschappen: <ul><li>`time`: Een tijdstempel volgens ISO 8601 van het tijdstip waarop de identiteit is geabonneerd, indien van toepassing.</li><li>`source`: De bron die de abonnee van voortkwam. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Aanvullende bronnen
 
