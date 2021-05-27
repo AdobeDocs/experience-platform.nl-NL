@@ -5,10 +5,9 @@ title: Unions API-eindpunt
 description: Het /union eindpunt in de Registratie API van het Schema staat u toe om XDM vakingsschema's in uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -35,7 +34,7 @@ De `timeSeriesEvents` serie is een lijst van tijd-reeksgebeurtenissen die op de 
 
 De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken correct worden uitgevoerd met de [Segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan. Zie de zelfstudie over [het maken van segmenten met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
 
-## Een lijst met samenvoegingen {#list} ophalen
+## Een lijst met vakbonden ophalen {#list}
 
 Wanneer u de `union` markering op een schema plaatst, [!DNL Schema Registry] voegt automatisch het schema aan de unie voor de klasse toe waarop het schema wordt gebaseerd. Als er voor de betreffende klasse geen vakbond bestaat, wordt automatisch een nieuwe vakbond gemaakt. De `$id` voor de union is vergelijkbaar met de standaard `$id` voor andere [!DNL Schema Registry]-bronnen, waarbij het enige verschil bestaat uit twee onderstrepingen en het woord &quot;union&quot; (`__union`).
 
@@ -66,6 +65,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-klasse voor elke bron, met origineel `$ref` en `allOf` inbegrepen. (Limiet: 300) |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results`-array in de hoofdtekst van de reactie. Als vakbonden zijn gedefinieerd, worden de gegevens voor elke samenvoeging als objecten in de array gegeven. Als er geen samenvoegingen zijn gedefinieerd, wordt HTTP status 200 (OK) nog steeds geretourneerd, maar is de array `results` leeg.
@@ -89,7 +90,7 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results`-array in
 }
 ```
 
-## Samenvoeging {#lookup} opzoeken
+## Vereniging opzoeken {#lookup}
 
 U kunt een specifieke vereniging bekijken door een verzoek uit te voeren van de GET dat `$id` en, afhankelijk van de Accept kopbal, sommige of alle details van de unie omvat.
 
@@ -107,6 +108,8 @@ GET /tenant/schemas/{UNION_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{UNION_ID}` | De URL-gecodeerde `$id` URI van de union die u wilt opzoeken. URI&#39;s voor union-schema&#39;s worden toegevoegd met &quot;__union&quot;. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -128,6 +131,8 @@ De volgende Accept- kopballen zijn beschikbaar voor de raadplegingen van het uni
 | -------|------------ |
 | `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf`. Hier vindt u titels en beschrijvingen. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Hier vindt u titels en beschrijvingen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -174,7 +179,7 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 }
 ```
 
-## Schema&#39;s voor samenvoegingslidmaatschap inschakelen {#enable}
+## Een schema voor samenvoeging inschakelen {#enable}
 
 Om een schema in de unie voor zijn klasse te omvatten, moet een `union` markering aan `meta:immutableTags` attributen van het schema worden toegevoegd. U kunt dit bereiken door een verzoek van PATCH te doen om een `meta:immutableTags` serie met één enkele koordwaarde van `union` aan het betrokken schema toe te voegen. Zie [schema&#39;s eindpuntgids](./schemas.md#union) voor een gedetailleerd voorbeeld.
 
@@ -191,6 +196,8 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CLASS_ID}` | De `$id` van de klasse waarvan unie-Toegelaten schema&#39;s u wilt een lijst maken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -212,6 +219,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-schema voor elke bron, inclusief origineel `$ref` en `allOf`. (Limiet: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
