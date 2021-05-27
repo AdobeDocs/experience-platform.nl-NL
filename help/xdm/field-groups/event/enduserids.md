@@ -5,10 +5,9 @@ title: Detailsveldgroep eindgebruiker - ID
 topic-legacy: overview
 description: Dit document bevat een overzicht van de veldgroep Eindgebruikersgegevens.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -34,6 +33,8 @@ ht-degree: 0%
 | `mcid` | [Identiteit](../../data-types/identity.md) | Adobe Marketing Cloud-id. |
 | `phonenumberid` | [Identiteit](../../data-types/identity.md) | Telefoonnummer-id&#39;s. |
 | `tntid` | [Identiteit](../../data-types/identity.md) | Eindgebruiker-id&#39;s voor Adobe Target. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
