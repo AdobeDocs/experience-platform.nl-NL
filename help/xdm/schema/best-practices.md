@@ -5,10 +5,9 @@ title: Aanbevolen procedures voor gegevensmodellering
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2520'
 ht-degree: 1%
 
 ---
@@ -55,6 +54,8 @@ Zodra u een ERD hebt gecreeerd om de essentiële entiteiten te identificeren u i
 | Entiteiten opzoeken | Opzoekentiteiten zijn concepten die betrekking kunnen hebben op een individuele persoon, maar die niet rechtstreeks kunnen worden gebruikt om de persoon te identificeren. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door schema&#39;s die zijn gebaseerd op **aangepaste klassen**. |
 | Gebeurtenisentiteiten | Gebeurtenisentiteiten vertegenwoordigen concepten met betrekking tot acties die een klant kan uitvoeren, systeemgebeurtenissen of andere concepten waarbij u wijzigingen in de loop van de tijd wilt bijhouden. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door schema&#39;s op basis van de **[!DNL XDM ExperienceEvent]-klasse**. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Overwegingen bij het sorteren van entiteiten
 
 In de volgende secties vindt u meer informatie over het sorteren van entiteiten in de bovenstaande categorieën.
@@ -77,6 +78,8 @@ Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der 
 | 1234567 | Verwijderen | 275098 | 1 | 1 okt. 10:33 |
 | 1234567 | Toevoegen | 486502 | 1 | 1 okt. 10:41 |
 | 1234567 | Toevoegen | 910482 | 5 | 3 okt. 14:15 |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Gebruiksgevallen voor segmentatie
 
@@ -118,6 +121,8 @@ In de volgende tabel worden enkele gemeenschappelijke entiteitsrelaties en de ca
 | Klanten en winkelwagentjes | Eén naar vele | Eén klant kan veel winkelwagentjes hebben, dit zijn gebeurtenissen die in de loop der tijd kunnen worden bijgehouden. Klanten zouden daarom een profielentiteit zijn, terwijl winkelwagentjes een gebeurtenisentiteit zouden zijn. |
 | Klanten en klantenaccounts | Eén op één | Één enkele klant kan slechts één loyaliteitsrekening hebben, en vice versa. Aangezien de relatie één-op-één is, vertegenwoordigen zowel Klanten als Loyalty&#39;s profielentiteiten. |
 | Klanten en abonnementen | Eén naar vele | Eén klant kan vele abonnementen hebben. Aangezien het bedrijf slechts met de huidige abonnementen van een klant betrokken is, zijn de Klanten een profielentiteit, terwijl de Abonnementen een raadplegingsentiteit is. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Pros en cons van verschillende entiteitsklassen {#pros-and-cons}
 
