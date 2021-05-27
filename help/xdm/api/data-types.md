@@ -4,10 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor gegevenstypen
 description: Het /datatypes eindpunt in de Registratie API van het Schema staat u toe om gegevenstypes programmatically te beheren XDM binnen uw ervaringstoepassing.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -20,7 +19,7 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
-## Een lijst met gegevenstypen {#list} ophalen
+## Een lijst met gegevenstypen ophalen {#list}
 
 U kunt alle gegevenstypen weergeven onder de container `global` of `tenant` door een GET-aanvraag in te dienen bij `/global/datatypes` of `/tenant/datatypes`.
 
@@ -38,6 +37,8 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | De container waarvan u gegevenstypen wilt ophalen: `global` voor door Adobe gemaakte gegevenstypen of `tenant` voor gegevenstypen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie [appendix document](./appendix.md#query) voor een lijst van beschikbare parameters. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -59,6 +60,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-gegevenstype voor elke bron, inclusief origineel `$ref` en `allOf`. (Limiet: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -109,6 +112,8 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | De container waarin het gegevenstype is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt gegevenstype of `tenant` voor een gegevenstype dat eigendom is van uw organisatie. |
 | `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gegevenstype dat u wilt opzoeken. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Verzoek**
 
 Met het volgende verzoek wordt een gegevenstype opgehaald op basis van de waarde `meta:altId` in het pad.
@@ -132,6 +137,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | `application/vnd.adobe.xed-notext+json; version=1` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -214,7 +221,7 @@ Een geslaagde reactie retourneert de details van het gegevenstype. Welke velden 
 }
 ```
 
-## Een gegevenstype {#create} maken
+## Een gegevenstype maken {#create}
 
 U kunt een type van douanegegevens onder de `tenant` container bepalen door een verzoek van de POST te doen.
 
@@ -326,7 +333,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een lading die de
 
 Als u een verzoek van de GET aan [list alle gegevenstypes](#list) in de huurderscontainer zou uitvoeren zou nu het gegevenstype van de Details van het Bezit omvatten, of u kunt [een raadpleging (GET) verzoek](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe gegevenstype direct te bekijken.
 
-## Een gegevenstype {#put} bijwerken
+## Een gegevenstype bijwerken {#put}
 
 U kunt een volledig gegevenstype door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gegevenstype door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die worden vereist wanneer [het creëren van een nieuw gegevenstype](#create) in een verzoek van de POST.
 
@@ -343,6 +350,8 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gegevenstype u wilt herschrijven. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -455,7 +464,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte gegevenstype.
 }
 ```
 
-## Een gedeelte van een gegevenstype {#patch} bijwerken
+## Een gedeelte van een gegevenstype bijwerken {#patch}
 
 U kunt een gedeelte van een gegevenstype bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] steunt alle standaardverrichtingen van het Reparatie JSON, met inbegrip van `add`, `remove`, en `replace`. Voor meer informatie over Reparatie JSON, zie [API fundamentals gids](../../landing/api-fundamentals.md#json-patch).
 
@@ -472,6 +481,8 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DATA_TYPE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het gegevenstype dat u wilt bijwerken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -596,7 +607,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 }
 ```
 
-## Een gegevenstype {#delete} verwijderen
+## Een gegevenstype verwijderen {#delete}
 
 Het kan soms noodzakelijk zijn om een gegevenstype uit de Registratie van het Schema te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met gegevenstype identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
@@ -609,6 +620,8 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DATA_TYPE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het gegevenstype dat u wilt verwijderen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
