@@ -5,11 +5,10 @@ title: Toegang tot gegevens in Jupyterlab-laptops
 topic-legacy: Developer Guide
 description: Deze gids concentreert zich op hoe te om Notities van Jupyter te gebruiken, die binnen de Werkruimte van de Wetenschap van Gegevens worden gebouwd om tot uw gegevens toegang te hebben.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 9%
+source-wordcount: '3220'
+ht-degree: 8%
 
 ---
 
@@ -355,7 +354,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 ```
 
-### %dataset gebruiken om te lezen en te schrijven met een PySpark 3-laptop {#magic}
+### Het gebruiken van %dataset om met een PySpark 3 notitieboekje te lezen en te schrijven {#magic}
 
 Met de introductie van [!DNL Spark] 2.4 wordt `%dataset` aangepaste magie geleverd voor gebruik in PySpark 3 ([!DNL Spark] 2.4) laptops. Voor meer details over magische bevelen beschikbaar in de pitkern IPython, bezoek [de magische documentatie van IPython](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
 
@@ -385,6 +384,18 @@ Een aangepaste [!DNL Data Science Workspace] toveropdracht voor het lezen of sch
 
 - **Voorbeeld** lezen:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Voorbeeld** schrijven:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+
+>[!IMPORTANT]
+>
+> Gegevens in cache plaatsen met `df.cache()` voordat gegevens worden geschreven, kan de prestaties van de laptop aanzienlijk verbeteren. Dit kan helpen als u een van de volgende fouten ontvangt:
+> 
+> - Taak afgebroken vanwege een fout in het werkgebied... RDD&#39;s met hetzelfde aantal elementen in elke partitie kunnen alleen worden gecomprimeerd.
+> - Externe RPC-client uitgeschakeld en andere geheugenfouten.
+> - Slechte prestaties bij het lezen en schrijven van datasets.
+
+> 
+> 
+Raadpleeg de [gids voor probleemoplossing](../troubleshooting-guide.md) voor meer informatie.
 
 U kunt de bovenstaande voorbeelden automatisch genereren bij het aanschaffen van JupyterLab met de volgende methode:
 
@@ -476,6 +487,18 @@ val spark = SparkSession
 
 In Scala, kunt u `clientContext` invoeren om Platforms waarden te krijgen en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken` te bepalen. In het Scala voorbeeld hieronder, wordt `clientContext` gebruikt om alle vereiste waarden te krijgen en terug te keren nodig voor het lezen van een dataset.
 
+>[!IMPORTANT]
+>
+> Gegevens in cache plaatsen met `df.cache()` voordat gegevens worden geschreven, kan de prestaties van de laptop aanzienlijk verbeteren. Dit kan helpen als u een van de volgende fouten ontvangt:
+> 
+> - Taak afgebroken vanwege een fout in het werkgebied... RDD&#39;s met hetzelfde aantal elementen in elke partitie kunnen alleen worden gecomprimeerd.
+> - Externe RPC-client uitgeschakeld en andere geheugenfouten.
+> - Slechte prestaties bij het lezen en schrijven van datasets.
+
+> 
+> 
+Raadpleeg de [gids voor probleemoplossing](../troubleshooting-guide.md) voor meer informatie.
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -520,6 +543,18 @@ en
 ### Naar een gegevensset {#scala-write-dataset} schrijven
 
 In Scala, kunt u `clientContext` invoeren om Platforms waarden te krijgen en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken` te bepalen. In het Scala voorbeeld hieronder, wordt `clientContext` gebruikt om alle vereiste waarden te bepalen en terug te keren nodig om aan een dataset te schrijven.
+
+>[!IMPORTANT]
+>
+> Gegevens in cache plaatsen met `df.cache()` voordat gegevens worden geschreven, kan de prestaties van de laptop aanzienlijk verbeteren. Dit kan helpen als u een van de volgende fouten ontvangt:
+> 
+> - Taak afgebroken vanwege een fout in het werkgebied... RDD&#39;s met hetzelfde aantal elementen in elke partitie kunnen alleen worden gecomprimeerd.
+> - Externe RPC-client uitgeschakeld en andere geheugenfouten.
+> - Slechte prestaties bij het lezen en schrijven van datasets.
+
+> 
+> 
+Raadpleeg de [gids voor probleemoplossing](../troubleshooting-guide.md) voor meer informatie.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
