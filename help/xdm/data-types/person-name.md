@@ -5,10 +5,9 @@ title: Gegevenstype naam persoon
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Personnaam.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -29,6 +28,8 @@ Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen w
 | `lastName` | Het laatste segment van de naam in de schrijfvolgorde dat het meest wordt geaccepteerd in de taal van de naam. |
 | `middleName` | Midden-, alternatieve of aanvullende namen opgegeven tussen de voornaam en achternaam. |
 | `suffix` | Een groep letters die na de naam van een persoon wordt opgegeven voor aanvullende informatie (zoals `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, enzovoort). |
+
+{style=&quot;table-layout:auto&quot;}
 
 Voor meer details over het gegevenstype van de persoonnaam, verwijs naar de openbare bewaarplaats XDM:
 
