@@ -5,10 +5,9 @@ title: XDM-velden definiëren in de gebruikersinterface
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1256'
 ht-degree: 3%
 
 ---
@@ -39,7 +38,7 @@ Als u een nieuw veld aan de bron wilt toevoegen, selecteert u het pictogram **pl
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-## Een veld definiëren voor een resource {#define}
+## Een veld definiëren voor een bron {#define}
 
 Nadat u het pictogram **plus (+)** hebt geselecteerd, wordt een **[!UICONTROL New field]** weergegeven in het canvas, dat zich bevindt binnen een basisobject dat is naamloos voor uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle velden die via aangepaste klassen en veldgroepen aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten met andere velden van door Adobe verschafte klassen en veldgroepen te voorkomen.
 
@@ -52,6 +51,8 @@ In het juiste spoor onder **[!UICONTROL Field properties]**, kunt u de details v
 | [!UICONTROL Field name] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen.<br><br>De naam moet idealiter in camelCase worden geschreven. Het kan alfanumerieke, streepje- of onderstrepingstekens bevatten, maar **mag niet** met een onderstrepingsteken beginnen.<ul><li>**Juist**:  `fieldName`</li><li>**Aanvaardbaar:** `field_name2`,  `Field-Name`,  `field-name_3`</li><li>**Onjuist**:  `_fieldName`</li></ul> |
 | [!UICONTROL Display name] | Een mensvriendelijke naam voor het veld. |
 | [!UICONTROL Type] | Het type gegevens dat het veld zal bevatten. In dit vervolgkeuzemenu kunt u een van de [standaard scalaire typen](../../schema/field-constraints.md) selecteren die door XDM worden ondersteund, of een van de multiveld [gegevenstypen](../resources/data-types.md) die eerder zijn gedefinieerd in [!DNL Schema Registry].<br><br>U kunt ook selecteren  **[!UICONTROL Advanced type search]** om bestaande gegevenstypen te zoeken en te filteren en het gewenste type gemakkelijker te vinden. |
+
+{style=&quot;table-layout:auto&quot;}
 
 U kunt het veld ook voorzien van een optionele leesbare **[!UICONTROL Description]** voor meer context met betrekking tot het beoogde gebruik van het veld.
 
@@ -90,6 +91,8 @@ Wanneer u een nieuw veld definieert, kunnen er extra configuratieopties worden w
 | [!UICONTROL Maximum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde geaccepteerd. Wanneer het gebruiken van deze beperking, &quot;[!UICONTROL Exclusive maximum value]&quot;beperking moet leeg worden gelaten. |
 | [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Minimum value]&quot; (niet-exclusief) leeg blijven. |
 | [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, moet de beperking &quot;[!UICONTROL Maximum value]&quot; (niet-exclusief) leeg blijven. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Speciale veldtypen {#special}
 
