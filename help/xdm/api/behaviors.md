@@ -5,10 +5,9 @@ title: Eindpunt van gedrags-API
 description: Het /behavior eindpunt in de Registratie API van het Schema staat u toe om al beschikbaar gedrag in de globale container terug te winnen.
 topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '426'
 ht-degree: 1%
 
 ---
@@ -32,7 +31,7 @@ Het `/behaviors` eindpunt in [!DNL Schema Registry] API staat u toe om beschikba
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
-## Een lijst met gedragingen {#list} ophalen
+## Een lijst met gedragingen ophalen {#list}
 
 U kunt een lijst van al beschikbaar gedrag terugwinnen door een verzoek van de GET aan het `/behaviors` eindpunt te doen.
 
@@ -102,6 +101,8 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{BEHAVIOR_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gedrag dat u wilt opzoeken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
