@@ -1,212 +1,50 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslaggegevens;streaming gegevens;streaming
 solution: Experience Platform
-title: Streaming gegevens verzamelen met bronconnectors en API's
+title: Een gegevensstroom voor streaming maken voor Raw-gegevens met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-translation-type: tm+mt
-source-git-commit: c7cbf6812e2c600aa1e831b91f15982d7bf82cdb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1111'
 ht-degree: 0%
 
 ---
 
-# Streaming gegevens verzamelen met bronconnectors en API&#39;s
+# Een streaminggegevensstroom maken voor onbewerkte gegevens met de [!DNL Flow Service]-API
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
-
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een streamingbronaansluiting en het overbrengen van deze gegevens naar [!DNL Experience Platform] met de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Deze zelfstudie behandelt de stappen voor het ophalen van onbewerkte gegevens van een streamingbronaansluiting en het naar Experience Platform brengen van deze gegevens met de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u een geldige verbinding-id hebt voor een streamingconnector. Als u deze informatie niet hebt, raadpleegt u de volgende zelfstudies over het maken van een streamingbronverbinding voordat u deze zelfstudie probeert:
-
-- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
-- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../create/streaming/http.md)
-- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
-
-Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
+Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Handleiding](../../../../xdm/api/getting-started.md) voor ontwikkelaars van het schemaregister: Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen  [!DNL Experience Platform].
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming opname voor  [!DNL Platform] biedt gebruikers een methode om gegevens van client- en serverapparaten  [!DNL Experience Platform] in real-time te verzenden.
-- [Sandboxen](../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming opname voor Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
+- [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om streaming gegevens met de [!DNL Flow Service]-API te kunnen verzamelen.
+### Platform-API&#39;s gebruiken
 
-### API-voorbeeldaanroepen lezen
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../landing/api-guide.md).
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+### Een bronverbinding maken {#source}
 
-### Waarden verzamelen voor vereiste koppen
+Deze zelfstudie vereist ook dat u een geldige bron-verbindings-id hebt voor een streamingconnector. Als u deze informatie niet hebt, raadpleegt u de volgende zelfstudies over het maken van een streamingbronverbinding voordat u deze zelfstudie probeert:
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-- `Content-Type: application/json`
-
-## Een bronverbinding maken {#source}
-
-U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan [!DNL Flow Service] API te doen. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
-
-Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
-
-Gebruik de volgende enum waarden voor op dossier-gebaseerde schakelaars:
-
-| Gegevensindeling | Enumwaarde |
-| ----------- | ---------- |
-| Gescheiden | `delimited` |
-| JSON | `json` |
-| Parquet | `parquet` |
-
-Voor alle op lijst-gebaseerde schakelaars, plaats de waarde aan `tabular`.
-
-**API-indeling**
-
-```http
-POST /sourceConnections
-```
-
-**Verzoek**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Test source connector for streaming data",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
-        "connectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-        "description": "Test source connector for streaming data",
-        "data": {
-            "format": "delimited"
-        },
-            "connectionSpec": {
-            "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-            "version": "1.0"
-        }
-    }'
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `providerId` | De provider-id van de streamingconnector. |
-| `connectionId` | De unieke verbindings-id van de streamingconnector. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die aan uw specifieke streamingconnector is gekoppeld. |
-
-**Antwoord**
-
-Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is later vereist om een gegevensstroom te maken.
-
-```json
-{
-    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
-    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
-}
-```
-
-## URL van streamingeindpunt ophalen {#get-endpoint}
-
-Wanneer de bronverbinding is gemaakt, kunt u nu de URL van het streamingeindpunt ophalen.
-
-**API-indeling**
-
-```http
-GET /flowservice/sourceConnections/{CONNECTION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | De `id` waarde van sourceConnections u eerder creeerde. |
-
-**Verzoek**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gevraagde verbinding terug. De URL van het streamingeindpunt wordt automatisch gemaakt met de verbinding en kan worden opgehaald met de waarde `inletUrl`.
-
-```json
-{
-    "items": [
-        {
-            "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
-            "createdAt": 1617743929826,
-            "updatedAt": 1617743930363,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
-            "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
-            "sandboxName": "prod",
-            "imsOrgId": "{IMS_ORG}",
-            "name": "Test source connector for streaming data",
-            "description": "Test source connector for streaming data",
-            "baseConnectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-            "state": "enabled",
-            "data": {
-                "format": "delimited",
-                "schema": null,
-                "properties": null
-            },
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "params": {
-                "sourceId": "Streaming raw data",
-                "inletUrl": "https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
-                "inletId": "2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
-                "dataType": "raw",
-                "name": "hgtest"
-            },
-            "version": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
-            "etag": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
-            "inheritedAttributes": {
-                "baseConnection": {
-                    "id": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-                    "connectionSpec": {
-                        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                        "version": "1.0"
-                    }
-                }
-            }
-        }
-    ]
-}
-```
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Als u de brongegevens wilt gebruiken in [!DNL Platform], moet u een doelschema maken om de brongegevens te structureren op basis van uw behoeften. Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de klasse XDM [!DNL Individual Profile] uit.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de klasse XDM [!DNL Individual Profile] uit.
 
-Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan [Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema uit te voeren.
+Om een doelXDM schema tot stand te brengen, doe een verzoek van de POST aan het `/schemas` eindpunt van [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **API-indeling**
 
@@ -314,7 +152,7 @@ Een succesvolle reactie keert details van het pas gecreëerde schema met inbegri
 
 ## Een doelgegevensset maken
 
-Een doeldataset kan worden gecreeerd door een verzoek van de POST aan [de Dienst API van de Catalogus ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
+Met een doelXDM gecreeerd schema en zijn uniek `$id` kunt u een doeldataset nu tot stand brengen om uw brongegevens te bevatten. Om een doeldataset tot stand te brengen, doe een verzoek van de POST aan het `dataSets` eindpunt van [de Dienst API van de Catalogus](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), terwijl het verstrekken van identiteitskaart van het doelschema binnen de lading.
 
 **API-indeling**
 
@@ -367,9 +205,9 @@ Een geslaagde reactie retourneert een array met de id van de nieuwe dataset in d
 
 ## Doelverbinding {#target-connection} maken
 
-Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste specificatie-id voor de verbinding opgeven die is gekoppeld aan het datumpeer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+De verbindingen van het doel leiden tot en leiden een bestemmingsverbinding aan Platform of om het even welke plaats waar de overgebrachte gegevens zullen landen. De verbindingen van het doel bevatten informatie betreffende gegevensbestemming, gegevensformaat, en identiteitskaart van de doelverbinding die wordt vereist om een gegevensstroom tot stand te brengen. De instanties van de doelverbinding zijn specifiek voor een huurder en IMS Organisatie.
 
-U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan gegevens meer. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+Om een doelverbinding tot stand te brengen, doe een verzoek van de POST aan het `/targetConnections` eindpunt van [!DNL Flow Service] API. Als onderdeel van de aanvraag moet u de gegevensindeling opgeven, de `dataSetId` die in de vorige stap is opgehaald en de vaste verbindingsspecificatie-id die aan [!DNL Data Lake] is gekoppeld. Deze id is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API-indeling**
 
@@ -402,15 +240,16 @@ curl -X POST \
             }
         },
         "params": {
-        "dataSetId": "5f7187bac6d00f194fb937c0"
+            "dataSetId": "5f7187bac6d00f194fb937c0"
         }
     }'
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die wordt gebruikt om verbinding te maken met het Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection specification ID used to connect to the [!DNL Data Lake]. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | De opgegeven indeling van de gegevens die u naar [!DNL Data Lake] verzendt. |
+| `params.dataSetId` | Identiteitskaart van de doeldataset die in de vorige stap wordt teruggewonnen. |
 
 **Antwoord**
 
@@ -423,21 +262,23 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 }
 ```
 
-## Een toewijzing {#mapping} maken
+## Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht de doeldataset volgt aan. Dit wordt bereikt door een verzoek van de POST aan de Dienst van de Omzetting met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
+Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
+
+Om een mappingsreeks tot stand te brengen, doe een verzoek van de POST aan het `mappingSets` eindpunt van [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
 
 **API-indeling**
 
 ```http
-POST /conversion/mappingSets
+POST /mappingSets
 ```
 
 **Verzoek**
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -483,20 +324,21 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 }
 ```
 
-## Gegevensstroomspecificaties opzoeken {#specs}
+## Een lijst met gegevensstroomspecificaties ophalen {#specs}
 
-Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in [!DNL Platform]. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen door een verzoek van de GET aan [!DNL Flow Service] API uit te voeren. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een streamingconnector.
+Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen door een verzoek van de GET aan [!DNL Flow Service] API uit te voeren.
+
 **API-indeling**
 
 ```http
-GET /flowSpecs?property=name=="Steam data with transformation"
+GET /flowSpecs
 ```
 
 **Verzoek**
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name=="Steam data with transformation"' \
+    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
@@ -504,23 +346,26 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de dataflow specificatie terug die voor het brengen van gegevens van uw het stromen schakelaar in [!DNL Platform] verantwoordelijk is. Deze id is vereist in de volgende stap om een nieuwe gegevensstroom te maken.
+Een succesvolle reactie keert een lijst van dataflow specificaties terug. De gegevensstroomspecificatie-id die u moet ophalen om een gegevensstroom te maken met een van [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] of [!DNL Google PubSub], is `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
     "items": [
         {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "name": "Steam data with transformation",
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
+            "name": "Stream data with optional transformation",
             "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
             "version": "1.0",
             "sourceConnectionSpecIds": [
-                "d27d4907-7351-47dd-bbc2-05a04365703d",
-                "51ae16c2-bdad-42fd-9fce-8d5dfddaf140",
-                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb"
+                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "86043421-563b-46ec-8e6c-e23184711bf6",
+                "70116022-a743-464a-bbfe-e226a7f8210c"
             ],
             "targetConnectionSpecIds": [
-                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                "db4fe783-ef79-4a12-bda9-32b2b1bc3b2c"
             ],
             "transformationSpecs": [
                 {
@@ -528,23 +373,18 @@ Een succesvolle reactie keert de details van de dataflow specificatie terug die 
                     "spec": {
                         "$schema": "http://json-schema.org/draft-07/schema#",
                         "type": "object",
-                        "description": "defines various params required for different mapping from Raw to XDM",
+                        "description": "defines various params required for different mapping from source to target",
                         "properties": {
                             "mappingId": {
                                 "type": "string"
                             }
-                        },
-                        "required": [
-                            "mappingId"
-                        ]
+                        }
                     }
                 }
             ],
             "attributes": {
                 "uiAttributes": {
                     "apiFeatures": {
-                        "deleteSupported": false,
-                        "updateSupported": false,
                         "flowRunsSupported": false
                     }
                 }
@@ -569,7 +409,7 @@ Een succesvolle reactie keert de details van de dataflow specificatie terug die 
                     }
                 ]
             }
-        }
+        },
     ]
 }
 ```
@@ -604,7 +444,7 @@ curl -X POST \
         "name": "Streaming dataflow",
         "description": "Streaming dataflow",
         "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
             "version": "1.0"
         },
         "sourceConnectionIds": [
@@ -643,65 +483,9 @@ Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd datafl
 }
 ```
 
-## Onbewerkte gegevens plaatsen die {#ingest-data} moeten worden ingevoerd
-
-Nu u uw stroom hebt gecreeerd, kunt u uw JSON bericht naar het het stromen eindpunt verzenden u eerder creeerde.
-
-**API-indeling**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | De `id`-waarde van de nieuwe streamingverbinding. |
-
-**Verzoek**
-
-Het voorbeeldverzoek neemt onbewerkte gegevens aan het het stromen eindpunt op dat eerder werd gecreeerd.
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male"
-      "birthday": {
-          "year": 1984
-          "month": 6
-          "day": 9
-      }
-  }'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgenomen informatie.
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
-| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
-| `receivedTimeMs`: Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
-
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt voor het verzamelen van streaminggegevens via de streamingconnector. Binnenkomende gegevens kunnen nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt voor het verzamelen van streaminggegevens via de streamingconnector. Binnenkomende gegevens kunnen nu worden gebruikt door downstreamservices voor Platforms zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
