@@ -5,10 +5,9 @@ title: Gegevenstype toepassing
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Application Experience Data Model (XDM).
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '432'
 ht-degree: 1%
 
 ---
@@ -32,6 +31,8 @@ ht-degree: 1%
 | `name` | Tekenreeks | De naam van de toepassing. |
 | `userPerspective` | Tekenreeks | Het perspectief of de fysieke relatie tussen de gebruiker en de app of het merk op het moment dat een gebeurtenis plaatsvond. Als u het perspectief van de gebruiker ten opzichte van de app begrijpt, kunt u beter sessies op de juiste wijze genereren omdat het grootste deel van de tijd dat u geen gebeurtenissen `background` en `detached` wilt opnemen als onderdeel van een &quot;actieve&quot; sessie. De waarde van deze eigenschap moet gelijk zijn aan een van de onderstaande opsommingswaarden. <li> `foreground`: De gebruiker en de toepassing communiceren rechtstreeks met elkaar. </li> <li> `background`: De toepassing en de gebruiker communiceren indirect met elkaar. De app kan bijvoorbeeld een waarde meten en vernieuwen terwijl het scherm vergrendeld is of een andere app op de voorgrond wordt gebruikt.  </li> <li> `detached`: Ontkoppeld betekent dat de gebeurtenis gerelateerd was aan de app, maar niet rechtstreeks afkomstig was uit de app, zoals het verzenden van een e-mail- of pushmelding vanuit een extern systeem. |
 | `version` | Tekenreeks | De versie van de toepassing. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
