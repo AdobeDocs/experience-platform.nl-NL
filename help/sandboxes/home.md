@@ -5,10 +5,9 @@ title: Overzicht van sandboxen
 topic-legacy: overview
 description: Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -23,9 +22,19 @@ Dit document biedt een overzicht op hoog niveau van sandboxen in Experience Plat
 
 ## Sandboxen
 
-Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Een instantie van het Experience Platform steunt één productie zandbak en veelvoudige niet productiesandboxen, waarbij elke zandbak zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.) handhaaft.  Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen.
+Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Er worden twee soorten sandboxen ondersteund op het Experience Platform:
 
-Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt in totaal maximaal 75 sandboxen toevoegen aan pakketten van tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
+* **Productiesandbox**: Een productiesandbox is bedoeld voor gebruik met profielen in uw productieomgeving. Met Platform kunt u meerdere productie-sandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. De zandbakken van de productie steunen een volume productieprofielen tot uw vergunning [!DNL Profile] verplichting (die cumulatief over al uw geoorloofde productiesanddozen wordt gemeten). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten in al uw geautoriseerde productiesandboxen).
+* **Ontwikkelingssandbox**: Een ontwikkelingssandbox is een sandbox die uitsluitend kan worden gebruikt voor ontwikkeling en testen met niet-productieprofielen. De zandbakken van de ontwikkeling steunen een volume van non-production profielen tot 10% van uw vergunning [!DNL Profile] verplichting (die cumulatief over al uw erkende ontwikkelingszandbakken wordt gemeten). U hebt recht op maximaal:
+   * een gemiddelde rijkheid van het non-production profiel van 75 kilobytes per geautoriseerd niet-productieprofiel (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen);
+   * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
+   * Een gemiddelde van 120 [!DNL Profile] API vraag, per [!DNL Profile], per jaar (cumulatief die over al uw erkende ontwikkelingszandbakken wordt gemeten.
+
+Een instantie van het Experience Platform steunt veelvoudige productie en ontwikkelingszandbakken, met elke zandbak die zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.) handhaaft. Bovendien hebben zowel productie als ontwikkelingszandbakken een terugstellende eigenschap die alle klant-gecreeerde middelen uit de zandbak verwijdert. Ontwikkelingssandboxen kunnen niet worden geconverteerd naar productiesandboxen.
+
+Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal. Deze extra sandboxen kunnen worden gebruikt om zowel productie- als ontwikkelingssandboxen te maken. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
+
+Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt gecreeerd wanneer een IMS Org voor het eerst wordt gecreeerd. Met de standaardproductiesandbox kunt u gegevens van het Platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten.
 
 >[!NOTE]
 >
@@ -66,7 +75,7 @@ Als `x-sandbox-name` niet in een API vraag inbegrepen is, zal het systeem een st
 
 ### Sandbox-API
 
-Met de sandbox-API kunt u sandboxen beheren met behulp van RESTful-API-bewerkingen. Zie de [sandboxontwikkelaarsgids](api/getting-started.md) voor gedetailleerde informatie over het gebruik van de API, inclusief correct opgemaakte aanvragen en voorbeeldantwoorden.
+Met de sandbox-API kunt u sandboxen beheren met behulp van RESTful-API-bewerkingen. Zie de [sandboxontwikkelaarsgids](api/overview.md) voor gedetailleerde informatie over het gebruik van de API, inclusief correct opgemaakte aanvragen en voorbeeldantwoorden.
 
 ## Volgende stappen
 
