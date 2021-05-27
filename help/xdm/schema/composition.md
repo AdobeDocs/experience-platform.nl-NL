@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '3580'
+source-wordcount: '3583'
 ht-degree: 0%
 
 ---
@@ -293,6 +293,8 @@ Bij het ontwerpen van uw schema&#39;s moet u rekening houden met een aantal bela
 | --- | --- |
 | Meer nesten | Minder of geen nesten |
 | Hiermee maakt u logische veldgroepen | Velden worden op ad-hoclocaties geplaatst |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Objecten
 
