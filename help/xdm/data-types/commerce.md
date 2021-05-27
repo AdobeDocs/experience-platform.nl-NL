@@ -5,10 +5,9 @@ title: Gegevenstype Handel
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van het gegevenstype van het Model van de Gegevens van de Ervaring van de Handel (XDM).
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
@@ -33,6 +32,8 @@ ht-degree: 0%
 | `productViews` | [[!UICONTROL Measure]](./measure.md) | Beschrijft wanneer een mening of meningen van een individueel product zijn voorgekomen. |
 | `purchases` | [[!UICONTROL Measure]](./measure.md) | Wordt gebruikt om bij te houden wanneer een bestelling is geaccepteerd. De aankoopgebeurtenis is de enige vereiste actie bij een commerciële conversie. Er moet naar de aankoopgebeurtenis worden verwezen in een productlijst. |
 | `saveForLaters` | [[!UICONTROL Measure]](./measure.md) | Een productlijst wordt opgeslagen voor toekomstig gebruik, zoals een verlanglijst. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
