@@ -5,10 +5,9 @@ title: Arrayvelden definiëren in de gebruikersinterface
 description: Leer hoe u een arrayveld definieert in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -32,6 +31,8 @@ De extra configuratiecontroles voor series zijn als volgt:
 | [!UICONTROL Minimum length] | Het minimale aantal items dat de array moet bevatten om de opname te laten slagen. |
 | [!UICONTROL Maximum length] | Het maximum aantal items dat de array moet bevatten om de opname te laten slagen. |
 | [!UICONTROL Unique items only] | Indien ingesteld op &quot;[!UICONTROL True]&quot;, moet elk item in de array uniek zijn om de opname te laten slagen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Wanneer u klaar bent met het configureren van het veld, selecteert u **[!UICONTROL Apply]** om de wijziging toe te passen op het schema.
 
