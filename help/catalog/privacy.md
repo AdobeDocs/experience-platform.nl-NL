@@ -5,11 +5,10 @@ title: De verwerking van het privacy- verzoek in het meer van Gegevens
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 0%
+source-wordcount: '1345'
+ht-degree: 1%
 
 ---
 
@@ -18,6 +17,12 @@ ht-degree: 0%
 Adobe Experience Platform [!DNL Privacy Service] verwerkt verzoeken van klanten om toegang te krijgen tot, zich uit verkoop te sluiten van, of hun persoonlijke gegevens te schrappen zoals bepaald door wettelijke en organisatorische privacyregels.
 
 Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die zijn opgeslagen in [!DNL Data Lake].
+
+>[!NOTE]
+>
+>In deze handleiding wordt alleen uitgelegd hoe u een verzoek om privacy kunt indienen voor het Data Lake in Experience Platform. Als u ook privacyverzoeken wilt indienen voor de gegevensopslag van het Profiel van de Klant in real time, raadpleegt u de handleiding over [verwerking van privacyverzoeken voor Profiel](../profile/privacy.md) naast deze zelfstudie.
+>
+>Raadpleeg de [documentatie bij de Privacy Service](../privacy-service/experience-cloud-apps.md) voor meer informatie over het indienen van privacyverzoeken voor andere Adobe Experience Cloud-toepassingen.
 
 ## Aan de slag
 
@@ -61,7 +66,7 @@ In de [!DNL Experience Platform ]gebruikersinterface, staat **[!UICONTROL Schema
 
 Als u de juiste velden in het schema hebt ingesteld als identiteitsvelden, kunt u doorgaan naar de volgende sectie over [het indienen van privacyverzoeken](#submit).
 
-### API {#identity-api} gebruiken
+### De API gebruiken {#identity-api}
 
 >[!NOTE]
 >
@@ -129,7 +134,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 }
 ```
 
-## Verzoeken {#submit} verzenden
+## Verzoeken indienen {#submit}
 
 >[!NOTE]
 >
