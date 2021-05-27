@@ -5,10 +5,9 @@ title: Gegevenstype betalingsobject
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Data Model (XDM) van het betalingsitemervaringsgegevensmodel.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '160'
 ht-degree: 2%
 
 ---
@@ -25,6 +24,8 @@ ht-degree: 2%
 | `paymentAmount` | Dubbel | De waarde van de betaling. |
 | `paymentType` | Tekenreeks | De betalingsmethode voor deze bestelling. Tot de geaccepteerde opsommingswaarden behoren: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | Tekenreeks | De unieke transactie-id voor dit betalingsobject. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
