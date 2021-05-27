@@ -5,10 +5,9 @@ title: Demografische details schema-veldgroep
 topic-legacy: overview
 description: Dit document biedt een overzicht van de veldgroep Demographic Details.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-translation-type: tm+mt
-source-git-commit: f5beb57acf4cc1827bf08b549cd2b3a02fd82b18
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '278'
 ht-degree: 2%
 
 ---
@@ -34,6 +33,8 @@ ht-degree: 2%
 | `person.martialStatus` | Tekenreeks | Beschrijft de verhouding van een persoon met significante andere. |
 | `person.nationality` | Tekenreeks | De juridische relatie tussen een persoon en zijn staat die wordt vertegenwoordigd door middel van de ISO 3166-1 Alpha-2-code. |
 | `person.taxId` | Tekenreeks | De belasting-/fiscale ID van de persoon, zoals het TIN in de VS of het CIF/NIF in Spanje. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
