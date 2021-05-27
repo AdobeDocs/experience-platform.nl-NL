@@ -5,10 +5,9 @@ title: Klassen API-eindpunt
 description: Het /classes eindpunt in de Registratie API van het Schema staat u toe om klassen programmatically te beheren XDM binnen uw ervaringstoepassing.
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -30,7 +29,7 @@ Het `/classes` eindpunt in [!DNL Schema Registry] API staat u toe om klassen bin
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
-## Een lijst met klassen {#list} ophalen
+## Een lijst met klassen ophalen {#list}
 
 U kunt alle klassen weergeven onder de container `global` of `tenant` door een GET-aanvraag in te dienen bij `/global/classes` of `/tenant/classes`.
 
@@ -48,6 +47,8 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | De container waarvan u klassen wilt ophalen: `global` voor klassen die met Adobe zijn gemaakt of `tenant` voor klassen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie [appendix document](./appendix.md#query) voor een lijst van beschikbare parameters. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -69,6 +70,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-klasse voor elke bron, met origineel `$ref` en `allOf` inbegrepen. (Limiet: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -110,7 +113,7 @@ In de bovenstaande aanvraag is de `application/vnd.adobe.xed-id+json` `Accept`-h
 }
 ```
 
-## Een klasse {#lookup} opzoeken
+## Een klasse opzoeken {#lookup}
 
 U kunt een specifieke klasse opzoeken door de id van de klasse op te nemen in het pad van een GET-aanvraag.
 
@@ -124,6 +127,8 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | --- | --- |
 | `{CONTAINER_ID}` | De container die de klasse bevat die u wilt ophalen: `global` voor een door Adobe gemaakte klasse of `tenant` voor een klasse die eigendom is van uw organisatie. |
 | `{CLASS_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de klasse die u wilt opzoeken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -148,6 +153,8 @@ De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag w
 | `application/vnd.adobe.xed-notext+json; version=1` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -240,7 +247,7 @@ Een geslaagde reactie retourneert de details van de klasse. Welke velden worden 
 }
 ```
 
-## Een klasse {#create} maken
+## Een klasse maken {#create}
 
 U kunt een aangepaste klasse definiëren onder de container `tenant` door een POST-aanvraag in te dienen.
 
@@ -314,6 +321,8 @@ curl -X POST \
 | `_{TENANT_ID}` | De naamruimte `TENANT_ID` voor uw organisatie. Alle middelen die door uw organisatie worden gecreeerd moeten dit bezit omvatten om botsingen met andere middelen in [!DNL Schema Registry] te vermijden. |
 | `allOf` | Een lijst met bronnen waarvan de eigenschappen door de nieuwe klasse moeten worden overgeërfd. Een van de `$ref`-objecten in de array definieert het gedrag van de klasse. In dit voorbeeld overerft de klasse het gedrag &#39;record&#39;. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de nieuwe klasse, zoals `$id`, `meta:altId` en `version`. Deze drie waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
@@ -382,7 +391,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 
 Wanneer u een GET-aanvraag uitvoert om alle klassen [weer te geven in de container `tenant`, wordt nu de klasse Property opgenomen. ](#list) U kunt [een raadpleging (GET) verzoek ](#lookup) ook uitvoeren gebruikend URL-Gecodeerd `$id` om de nieuwe klasse direct te bekijken.
 
-## Een klasse {#put} bijwerken
+## Een klasse bijwerken {#put}
 
 U kunt een volledige klasse door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een klasse door een PUT verzoek, moet het lichaam alle gebieden omvatten die wanneer [het creëren van een nieuwe klasse](#create) in een POST verzoek worden vereist.
 
@@ -399,6 +408,8 @@ PUT /tenant/classes/{CLASS_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CLASS_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de klasse u wilt herschrijven. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -517,7 +528,7 @@ Een geslaagde reactie retourneert de details van de bijgewerkte klasse.
 }
 ```
 
-## Een gedeelte van een klasse {#patch} bijwerken
+## Een gedeelte van een klasse bijwerken {#patch}
 
 U kunt een deel van een klasse bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] steunt alle standaardverrichtingen van het Reparatie JSON, met inbegrip van `add`, `remove`, en `replace`. Voor meer informatie over Reparatie JSON, zie [API fundamentals gids](../../landing/api-fundamentals.md#json-patch).
 
@@ -534,6 +545,8 @@ PATCH /tenant/class/{CLASS_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CLASS_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de klasse u wilt bijwerken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
@@ -621,7 +634,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 }
 ```
 
-## Een klasse {#delete} verwijderen
+## Een klasse verwijderen {#delete}
 
 Het kan soms nodig zijn om een klasse uit de Registratie van het Schema te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met klassenidentiteitskaart uit te voeren die in de weg wordt verstrekt.
 
@@ -634,6 +647,8 @@ DELETE /tenant/classes/{CLASS_ID}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CLASS_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de klasse die u wilt verwijderen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
