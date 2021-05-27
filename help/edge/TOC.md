@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
 feature: Gegevensbeheer
-source-git-commit: 4ed738b2b71332db1602d5571797ed61214afc2d
+source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '152'
 ht-degree: 14%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 14%
    * [Gebeurtenisgegevens samenvoegen](fundamentals/merging-event-data.md)
    * [Een CSP configureren](fundamentals/configuring-a-csp.md)
    * [Interactie met meerdere eigenschappen](fundamentals/interacting-with-multiple-properties.md)
+   * [Ondersteunde gebruiksgevallen](fundamentals/supported-use-cases.md)
 * Identiteit {#identity}
    * [Overzicht](identity/overview.md)
 * Gegevensverzameling {#data-collection}
