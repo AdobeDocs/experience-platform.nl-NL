@@ -5,10 +5,9 @@ title: Gegevenstype telefoonnummer
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van het het gegevenstype van het Aantal van de Telefoon XDM.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -27,6 +26,8 @@ ht-degree: 0%
 | `status` | Geeft aan of het telefoonnummer momenteel kan worden gebruikt. |
 | `statusReason` | Een beschrijving van de huidige status. |
 | `validity` | Een niveau van technische correctheid van het telefoonaantal. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Voor meer details op het gegevenstype van het telefoonaantal, verwijs naar de openbare bewaarplaats XDM:
 
