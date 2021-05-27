@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3591'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ Deze zelfstudie vereist een goed begrip van de verschillende aspecten van Adobe 
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, groepen van het schemagebied, gegevenstypes, en individuele gebieden.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-## De [!UICONTROL Schemas] werkruimte {#browse} openen
+## De werkruimte [!UICONTROL Schemas] openen {#browse}
 
 De [!UICONTROL Schemas] werkruimte in [!DNL Platform] UI verstrekt een visualisatie van [!DNL Schema Library], die u toestaat om de schema&#39;s te bekijken beschikbaar voor uw organisatie. De werkruimte omvat ook [!DNL Schema Editor], het canvas waarop u een schema door dit leerprogramma kunt samenstellen.
 
@@ -203,6 +202,8 @@ Bij het definiëren van velden in de [!DNL Schema Editor] zijn er enkele extra o
 | [!UICONTROL Enum] | Geeft aan dat dit veld een van de waarden uit een opsommingslijst met mogelijke waarden moet bevatten. |
 | [!UICONTROL Identity] | Geeft aan dat dit veld een identiteitsveld is. Meer informatie over identiteitsgebieden wordt verstrekt [later in dit leerprogramma](#identity-field). |
 | [!UICONTROL Relationship] | Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het samenvoegingsschema en [!DNL Real-time Customer Profile], is dit alleen van toepassing op schema&#39;s die dezelfde klasse delen. De [!UICONTROL Relationship] beperking wijst erop dat dit gebied verwijzingen de primaire identiteit van een schema dat op een verschillende klasse wordt gebaseerd, die een verhouding tussen de twee schema&#39;s impliceert. Zie de zelfstudie over [het definiëren van een relatie](./relationship-ui.md) voor meer informatie. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
