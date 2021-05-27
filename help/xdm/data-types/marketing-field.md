@@ -4,10 +4,9 @@ title: Gegevenstype van voorkeursveld voor algemene marketing
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Generic Marketing Preference.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '528'
 ht-degree: 1%
 
 ---
@@ -30,9 +29,11 @@ ht-degree: 1%
 | `time` | DateTime | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. |
 | `val` | Tekenreeks | De door de klant opgegeven voorkeursoptie voor dit marketinggeval. Zie de onderstaande tabel voor toegestane waarden en definities. |
 
+{style=&quot;table-layout:auto&quot;}
+
 In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
-| Value | Titel | Beschrijving |
+| Waarde | Titel | Beschrijving |
 | --- | --- | --- |
 | `y` | Ja | De klant heeft zich aangemeld voor de voorkeur. Met andere woorden, zij **do** stemmen in met het gebruik van hun gegevens zoals aangegeven door de betrokken voorkeur. |
 | `n` | Nee | De klant heeft ervoor gekozen deze voorkeur niet toe te passen. Met andere woorden, zij **stemmen niet** in met het gebruik van hun gegevens zoals aangegeven door de betrokken voorkeur. |
@@ -43,6 +44,8 @@ In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 | `CP` | Naleving van een wettelijke verplichting | De verzameling van gegevens voor het gespecificeerde doel is vereist om te voldoen aan de wettelijke verplichtingen van het bedrijf. |
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
