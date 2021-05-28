@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een GreenPlum-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '450'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL GreenPlum]-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
-> De [!DNL GreenPlum] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL GreenPlum]-bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
