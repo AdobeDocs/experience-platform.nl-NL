@@ -2,7 +2,7 @@
 title: Ondersteunde gebruiksgevallen met de Adobe Experience Platform Web SDK
 description: Leer welke gebruiksgevallen worden ondersteund met de Adobe Experience Platform Web SDK.
 keywords: web sdk;use cases
-source-git-commit: 245983363571bdc63ead992771c01b405c067b8a
+source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 7%
@@ -23,7 +23,7 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Cursustoestemming |  |
 | IAB 2.0 toestemmingskoorden | [IAB TCF 2.0-ondersteuning](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
 | Verzamel fijnkorrelige toestemming | [De SDK van het Web integreren met Adobe 2.0 toestemming](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
-| ECID-ondersteuning | Voor informatie over het terugwinnen van ECID zie onze documentatie [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) en [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) |
+| ECID-ondersteuning | Zie de documentatie [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) en [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) voor informatie over het ophalen van de ECID |
 | Meerdere entiteiten verzamelen |  |
 | Ondersteuning voor apparaatgrafiek (openbaar/privé) | [Documentatie](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
 | Gegevens verzenden naar meerdere organen op de pagina | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
