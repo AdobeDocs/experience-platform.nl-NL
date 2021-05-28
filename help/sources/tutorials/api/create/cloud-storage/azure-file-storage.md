@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Azure File Storage met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '571'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Azure File Storage]-bronverbinding maken met de [!DNL Flow Service]-API
-
->[!NOTE]
->
->De [!DNL Azure File Storage] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
