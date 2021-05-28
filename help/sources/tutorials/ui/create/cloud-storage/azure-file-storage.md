@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure File Storage-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '451'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Azure File Storage]-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
->De [!DNL Azure File Storage] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een [!DNL Azure File Storage]-bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
