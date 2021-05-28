@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om Adobe Experience Platform met HubSpot te verbinden gebruikend de Dienst API van de Stroom.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL HubSpot]-bronverbinding maken met de [!DNL Flow Service]-API
-
->[!NOTE]
->
->De [!DNL HubSpot] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
