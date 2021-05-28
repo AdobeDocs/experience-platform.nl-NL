@@ -5,19 +5,14 @@ title: Overzicht van de HubSpot Source Connector
 topic-legacy: overview
 description: Leer hoe te om HubSpot met Adobe Experience Platform te verbinden gebruikend APIs of het gebruikersinterface.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL HubSpot]-connector
-
->[!NOTE]
->
->De [!DNL HubSpot] schakelaar is in bèta. Zie [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# [!DNL HubSpot] connector
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
