@@ -5,19 +5,14 @@ title: Overzicht van ServiceNow Source Connector
 topic-legacy: overview
 description: Leer hoe u ServiceNow met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL ServiceNow]-connector
-
->[!NOTE]
->
->De [!DNL ServiceNow] schakelaar is in bèta. Zie [Bronnen overzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# [!DNL ServiceNow] connector
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
