@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om een HubSpot bronverbinding tot stand te brengen gebruikend Adobe Experience Platform UI.
 exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '452'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL HubSpot]-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
-> De [!DNL HubSpot] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL HubSpot]-bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
