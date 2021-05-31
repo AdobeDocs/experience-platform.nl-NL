@@ -3,9 +3,9 @@ title: Vorm uw DataStream voor het Web SDK van het Experience Platform
 description: 'Leer hoe u de gegevensstromen configureert. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;edge configuratie-id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container-id;Sandbox;Streaming Inlet;Event-gegevensset;target;client-code;Property Token;Target Environment-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport-suite-id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5642fa155d487982f01d25fa765bb36ad5c3bb21
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Gegevensstromen kunnen in Adobe [!DNL Experience Platform Launch] worden gecreee
 
 >[!NOTE]
 >
->Het hulpprogramma voor de configuratie van gegevensstromen is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Experience Platform Launch] als tagbeheer gebruiken. Bovendien, vereisen de gebruikers ontwikkeltoestemmingen in [!DNL Experience Platform Launch]. Zie het [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) artikel in [!DNL Experience Platform Launch] documentatie voor meer details.
+>Het hulpprogramma voor de configuratie van gegevensstromen is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Experience Platform Launch] als tagbeheer gebruiken. Bovendien, vereisen de gebruikers ontwikkeltoestemmingen in [!DNL Experience Platform Launch]. Zie het [User Permissions](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) artikel in [!DNL Experience Platform Launch] documentatie voor meer details.
 
 Maak een gegevensstroom door op **[!UICONTROL New Datastream]** in de rechterbovenhoek van het scherm te klikken. Nadat u een naam en een beschrijving hebt opgegeven, wordt u gevraagd om de standaardinstellingen voor elke omgeving. De beschikbare instellingen worden hieronder beschreven.
 
@@ -83,13 +83,13 @@ De unieke id voor een doelaccount. Als u dit wilt zoeken, navigeert u naar [!UIC
 
 ### [!UICONTROL Property Token]
 
-[!DNL Target] staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. Details vindt u in het gedeelte [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) van de [!DNL Target]-documentatie.
+[!DNL Target] staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. Details vindt u in het gedeelte [Enterprise Permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) van de [!DNL Target]-documentatie.
 
 Het eigenschapstoken vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
 ### [!UICONTROL Target Environment ID]
 
-[Met ](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) omgevingen in Adobe Target kunt u uw implementatie in alle ontwikkelingsfasen beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
+[Met ](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) omgevingen in Adobe Target kunt u uw implementatie in alle ontwikkelingsfasen beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
 
 Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `prod`-gegevensstroomomgevingen om de zaken eenvoudig te houden. Als u echter al Adobe Target-omgevingen hebt gedefinieerd, kunt u deze gebruiken.
 
@@ -101,11 +101,11 @@ U kunt deze sectie alleen inschakelen als u gegevens naar Adobe Audience Manager
 
 ### [!UICONTROL Cookie Destinations Enabled]
 
-Staat SDK toe om segmentinformatie via [Cookie Doelen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) van [!DNL Audience Manager] te delen.
+Staat SDK toe om segmentinformatie via [Cookie Doelen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) van [!DNL Audience Manager] te delen.
 
 ### [!UICONTROL URL Destinations Enabled]
 
-Staat SDK toe om segmentinformatie via [URL Doelen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) te delen. Deze worden gevormd in [!DNL Audience Manager].
+Staat SDK toe om segmentinformatie via [URL Doelen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) te delen. Deze worden gevormd in [!DNL Audience Manager].
 
 ## Adobe Analytics-instellingen
 
