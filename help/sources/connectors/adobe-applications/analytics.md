@@ -5,11 +5,10 @@ title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 topic-legacy: overview
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-translation-type: tm+mt
-source-git-commit: af5ad975bbfd6a67fe66c90e33da1365d49c8899
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 1%
+source-wordcount: '511'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +26,7 @@ Dit document biedt een overzicht van [!DNL Analytics] en beschrijft de gebruiksg
 
 Op een hoog niveau verzamelt [!DNL Analytics] gegevens via verschillende digitale kanalen en meerdere datacenters over de hele wereld. Zodra de gegevens worden verzameld, worden de de Identificatie van de Bezoeker, de Regels van de Segmentatie en van de Transformatie van de Architectuur (VISTA), en verwerkingsregels toegepast om de inkomende gegevens te vormen. Nadat de ruwe gegevens door deze lichtgewichtverwerking zijn gegaan, wordt het dan beschouwd klaar voor consumptie door [!DNL Real-time Customer Profile]. In een parallel aan het bovenstaande proces worden dezelfde verwerkte gegevens op micro-basis gebatcheerd en opgenomen in gegevenssets met Platforms voor gebruik door [!DNL Data Science Workspace], [!DNL Query Service] en andere toepassingen voor gegevensdetectie.
 
-Zie [verwerkingsregels overzicht](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules.html) voor meer informatie over verwerkingsregels.
+Zie [verwerkingsregels overzicht](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) voor meer informatie over verwerkingsregels.
 
 ## Experience Data Model (XDM)
 
