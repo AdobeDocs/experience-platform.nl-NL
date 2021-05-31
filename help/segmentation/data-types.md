@@ -5,11 +5,10 @@ title: Ondersteunde gegevenstypen in Segmentatieservice
 topic-legacy: overview
 description: Alle gegevenstypes van het Model van de Gegevens van de Ervaring (XDM) worden gesteund binnen de Dienst van de Segmentatie van Adobe. De regels die een segmentdefinitie vormen worden contextualiseerd door de volgende gegevenstypes.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 2%
+source-wordcount: '510'
+ht-degree: 1%
 
 ---
 
@@ -51,15 +50,15 @@ Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergeg
 | Knop Tijdregel toepassen | Bevat datumgegevens. |
 | Gelijk aan, niet gelijk aan, begint met, niet met, eindigt niet met, eindigt niet met, bevat, bevat, niet bevat, bestaat, niet bestaat | Bevat tekenreeksgegevens. |
 
-### Delen van doelgroepen
+### Doelgroepen delen
 
 Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan het nieuwe segment.
 
-Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruik van Adobe Audience Manager-soorten publiek met Platform vindt u in de [handleiding voor het delen van publiek in de documentatie van Adobe Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruik van Adobe Audience Manager-soorten publiek met Platform vindt u in de [handleiding voor het delen van publiek in de documentatie van Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Segment delen
 
-Segmenten die in Platform zijn gemaakt, kunnen binnen andere [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/nl-NL/core-services/interface/experience-cloud.html) worden gebruikt. Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
+Segmenten die in Platform zijn gemaakt, kunnen binnen andere [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) worden gebruikt. Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
 
 ## Andere gegevenstypen
 
