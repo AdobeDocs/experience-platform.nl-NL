@@ -2,18 +2,17 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1130'
 ht-degree: 1%
 
 ---
 
-
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
-Dit document behandelt de releaseopmerkingen voor de Adobe Experience Platform Web SDK-extensie voor Adobe Experience Platform Launch. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html).
+Dit document behandelt de releaseopmerkingen voor de Adobe Experience Platform Web SDK-extensie voor Adobe Experience Platform Launch. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## 9 maart 2020
 
@@ -70,7 +69,7 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 #### Functies
 
 * Wijziging van regeleinde: Verwijder de `syncIdentity` actie en steun die IDs in de `sendEvent` actie in plaats daarvan overgaan. Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
-* Bijwerken naar versie 2.1.0 ([Opmerkingen bij de release](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html))
+* Bijwerken naar versie 2.1.0 ([Opmerkingen bij de release](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
 * Ondersteuning voor IAB 2.0 Consent Standard in de handeling `setConsent`.
 * Ondersteuning voor het overschrijven van de gegevensset-id in de handeling `sendEvent`.
 * Voeg een nieuw gegevenselement van type `IdentityMap` toe dat kan worden gebruikt om de `identityMap` ingang in het Element van de Gegevens van Objecten te bevolken XDM dat nu wordt toegelaten, en in `setConsent` actie.
