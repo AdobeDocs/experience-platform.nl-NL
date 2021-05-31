@@ -5,11 +5,10 @@ title: Identiteitsgegevens voor privacyverzoeken
 topic-legacy: overview
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens voor privacyverzoeken van klanten op te halen.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d316c199c7e2d87d175015c1828af6fd0d57f32a
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 1%
+source-wordcount: '646'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +30,9 @@ Adobe Experience Platform Identity Service bewaart een opslag van wereldwijd ged
 
 ## ECID en Opt-in Service
 
-Adobe Experience Cloud [!DNL Identity Service] fungeert als een gemeenschappelijk identificatiekader voor [!DNL Experience Cloud] en wijst een unieke, permanente id toe aan elke sitebezoeker. Met de [!DNL Experience Cloud]-id (ECID) wordt de activiteit van een klant bijgehouden via het gebruik van een cookie van de eerste partij, kan een apparaat in meerdere toepassingen op unieke wijze worden geïdentificeerd en kunt u dezelfde sitebezoeker en de gegevens ervan identificeren in verschillende [!DNL Experience Cloud]-toepassingen. Zie [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) voor meer informatie.
+Adobe Experience Cloud [!DNL Identity Service] fungeert als een gemeenschappelijk identificatiekader voor [!DNL Experience Cloud] en wijst een unieke, permanente id toe aan elke sitebezoeker. Met de [!DNL Experience Cloud]-id (ECID) wordt de activiteit van een klant bijgehouden via het gebruik van een cookie van de eerste partij, kan een apparaat in meerdere toepassingen op unieke wijze worden geïdentificeerd en kunt u dezelfde sitebezoeker en de gegevens ervan identificeren in verschillende [!DNL Experience Cloud]-toepassingen. Zie [Experience Cloud Identity Service overview](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) voor meer informatie.
 
-De open-binnen Dienst, een uitbreiding van [!DNL Experience Cloud Identity Service], staat u opstellingsprotocollen op uw toepassing toe om bezoekers te laten bepalen of u een koekje op het apparaat of browser van de bezoeker kunt plaatsen. Raadpleeg de [Opt-in-servicedocumentatie](https://docs.adobe.com/content/help/nl-NL/id-service/using/implementation/opt-in-service/optin-overview.html) voor gedetailleerde informatie over de aanmeldingsservice, inclusief hoe u de service voor uw toepassing kunt instellen.
+De open-binnen Dienst, een uitbreiding van [!DNL Experience Cloud Identity Service], staat u opstellingsprotocollen op uw toepassing toe om bezoekers te laten bepalen of u een koekje op het apparaat of browser van de bezoeker kunt plaatsen. Raadpleeg de [Opt-in-servicedocumentatie](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) voor gedetailleerde informatie over de aanmeldingsservice, inclusief hoe u de service voor uw toepassing kunt instellen.
 
 Nadat aan uw sitebezoekers ECID&#39;s zijn toegewezen, kunt u de Adobe gebruiken om die id&#39;s op te halen voor gebruik in privacyverzoeken, zoals beschreven in de volgende sectie.[!DNL Privacy JavaScript Library]
 
