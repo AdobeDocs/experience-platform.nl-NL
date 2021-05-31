@@ -3,9 +3,9 @@ title: De SDK van Adobe Experience Platform Web installeren
 description: Leer hoe te om het Web SDK van het Experience Platform te installeren.
 keywords: web sdk installatie;installeren web sdk;Internet Explorer;promise;npm pakket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Er zijn drie ondersteunde manieren om Adobe Experience Platform Web SDK te gebru
 
 ## Optie 1: De Adobe Experience Platform Launch-extensie installeren
 
-Raadpleeg de [startdocumentatie](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) voor documentatie over de Adobe Experience Platform Launch-extensie
+Raadpleeg de [startdocumentatie](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) voor documentatie over de Adobe Experience Platform Launch-extensie
 
 ## Optie 2: De vooraf gebouwde zelfstandige versie installeren
 
