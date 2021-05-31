@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om HP Vertica met Adobe Experience Platform te verbinden gebruikend de Dienst API van de Stroom.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
@@ -28,8 +27,8 @@ Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te lope
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html):  [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren in kaart te brengen en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [Sandboxen](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html):  [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren in kaart te brengen en te verbeteren gebruikend de  [!DNL Platform] diensten.
+* [Sandboxen](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met HP [!DNL Vertica] gebruikend [!DNL Flow Service] API te verbinden.
 
