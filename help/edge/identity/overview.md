@@ -3,14 +3,13 @@ title: Experience Cloud-id's ophalen met de SDK van Adobe Experience Platform We
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) ophaalt met de Adobe Experience Platform Web SDK.
 seo-description: Meer weten over Adobe Experience Cloud-id?
 keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;primaire;Identiteitskaart Namespace;Naamruimte ID;AuthentificatieStaat;hashEnabled;
-translation-type: tm+mt
-source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Cloud-id&#39;s ophalen
 
@@ -34,7 +33,7 @@ Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies mig
 
 ## Functies voor migratie bijwerken
 
-Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten deze gegevens tijdens het migreren worden omgezet in signalen. Uw kenmerken moeten worden bijgewerkt met de nieuwe sleutels die XDM biedt. Dit proces wordt gemakkelijker gemaakt door het [hulpmiddel BAAAM](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) te gebruiken die Audience Manager heeft gecreeerd.
+Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten deze gegevens tijdens het migreren worden omgezet in signalen. Uw kenmerken moeten worden bijgewerkt met de nieuwe sleutels die XDM biedt. Dit proces wordt gemakkelijker gemaakt door het [hulpmiddel BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) te gebruiken die Audience Manager heeft gecreeerd.
 
 ## Server Side Forwarding
 
@@ -91,7 +90,7 @@ alloy("sendEvent", {
 });
 ```
 
-Elke eigenschap in `identityMap` vertegenwoordigt identiteiten die behoren tot een bepaalde [naamruimte](../../identity-service/namespaces.md). De eigenschapnaam moet het naamruimtesymbool voor de identiteit zijn, dat u kunt vinden in de Adobe Experience Platform-gebruikersinterface onder &quot;[!UICONTROL Identiteiten]&quot;. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
+Elke eigenschap in `identityMap` vertegenwoordigt identiteiten die behoren tot een bepaalde [naamruimte](../../identity-service/namespaces.md). De eigenschapnaam moet het naamruimtesymbool voor de identiteit zijn. Dit wordt weergegeven in de Adobe Experience Platform-gebruikersinterface onder &quot;[!UICONTROL Identities]&quot;. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
 
 Elk identiteitsobject in de array identities is als volgt gestructureerd:
 
