@@ -3,10 +3,10 @@ title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 4%
+source-wordcount: '828'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +63,7 @@ Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
 
 1. Adobe Experience Platform ingeschakeld in uw [datastream](../../fundamentals/datastreams.md) en schakel het vakje &quot;Offer decisioning&quot; in
    ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
-2. Volg de instructies om de SDK [te installeren ](../../fundamentals/installing-the-sdk.md) (De SDK kan standalone of door [Adobe Experience Platform Launch](http://launch.adobe.com/) worden geïnstalleerd. Hier volgt een [snelstartgids voor Platform launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html)).
+2. Volg de instructies om de SDK [te installeren ](../../fundamentals/installing-the-sdk.md) (De SDK kan standalone of door [Adobe Experience Platform Launch](http://launch.adobe.com/) worden geïnstalleerd. Hier volgt een [snelstartgids voor Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
 3. [Vorm ](../../fundamentals/configuring-the-sdk.md) SDK voor Offer decisioning. Hieronder vindt u aanvullende specifieke stappen voor Offer decisioning.
    * Zelfstandige geïnstalleerde SDK
       1. Vorm de &quot;sendEvent&quot;actie met uw `decisionScopes`
@@ -79,20 +79,20 @@ Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
       ```
 
    * SDK voor platform launch geïnstalleerd
-      1. [Een Platform launch-eigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
-      2. [De Platform launch Embed Code toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Datastream u enkel creeerde door de configuratie van de &quot;Datasstream&quot;daling te selecteren. Zie de documentatie op [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      1. [Een Platform launch-eigenschap maken](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      2. [De Platform launch Embed Code toevoegen](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Datastream u enkel creeerde door de configuratie van de &quot;Datasstream&quot;daling te selecteren. Zie de documentatie op [extensions](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Maak de benodigde [Data Elements](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). Bij het absolute minimum, moet u een Identiteitskaart van SDK van het Web van het Platform en een gegevenselement van de Objecten van SDK van het Web van het Platform XDM tot stand brengen.
+      4. Maak de benodigde [Data Elements](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html). Bij het absolute minimum, moet u een Identiteitskaart van SDK van het Web van het Platform en een gegevenselement van de Objecten van SDK van het Web van het Platform XDM tot stand brengen.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
-      5. Maak uw [Regels](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html).
+      5. Maak uw [Regels](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
          * Voeg een Platform SDK toe verzendt de actie van de Gebeurtenis en voeg relevante `decisionScopes` aan de configuratie van die actie toe
             ![send-event-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
-      6. [Creeer en publiceer een bibliotheek ](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) die alle relevante Regels, de Elementen van Gegevens, en Uitbreidingen bevat u hebt gevormd
+      6. [Creeer en publiceer een bibliotheek ](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) die alle relevante Regels, de Elementen van Gegevens, en Uitbreidingen bevat u hebt gevormd
 
 
 
