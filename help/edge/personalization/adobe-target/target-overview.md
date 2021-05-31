@@ -3,16 +3,16 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 2%
+source-wordcount: '652'
+ht-degree: 1%
 
 ---
 
 # Adobe Target gebruiken met de SDK van het Web van het Platform
 
-Adobe Experience Platform [!DNL Web SDK] kan persoonlijke ervaringen die in Adobe Target worden beheerd, aanbieden en weergeven op het webkanaal. U kunt een redacteur WYSIWYG, genoemd [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), of een niet-visuele interface, [Op vorm-gebaseerde Composer van de Ervaring](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), gebruiken om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
+Adobe Experience Platform [!DNL Web SDK] kan persoonlijke ervaringen die in Adobe Target worden beheerd, aanbieden en weergeven op het webkanaal. U kunt een redacteur WYSIWYG, genoemd [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), of een niet-visuele interface, [Op vorm-gebaseerde Composer van de Ervaring](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), gebruiken om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
 
 De volgende functies zijn getest en worden momenteel ondersteund in Target:
 
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 ## Soorten publiek in XDM
 
-Wanneer het bepalen van Publiek voor uw activiteiten van het Doel die via het Web SDK van Adobe Experience Platform worden geleverd, [XDM](https://docs.adobe.com/content/help/nl-NL/experience-platform/xdm/home.html) moet worden bepaald en worden gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u een het publieksregel van het Doel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen Doel, XDM- gegevensvertoningen in de Bouwer van de Publiek als douaneparameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld, `web.webPageDetails.name`).
+Wanneer het bepalen van Publiek voor uw activiteiten van het Doel die via het Web SDK van Adobe Experience Platform worden geleverd, [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) moet worden bepaald en worden gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u een het publieksregel van het Doel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen Doel, XDM- gegevensvertoningen in de Bouwer van de Publiek als douaneparameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld, `web.webPageDetails.name`).
 
 Als u activiteiten van het Doel met vooraf bepaald publiek hebt die douaneparameters of een gebruikersprofiel gebruiken, worden zij niet correct geleverd via SDK. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box publiek dat zich richt op velden die worden ondersteund via Adobe Experience Platform Web SDK en waarvoor geen XDM vereist is. Deze velden zijn beschikbaar in de doelinterface waarvoor geen XDM vereist is:
 
