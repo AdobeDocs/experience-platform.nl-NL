@@ -2,9 +2,9 @@
 title: Overzicht van Adobe Experience Platform Web SDK-extensie
 description: Meer informatie over de Adobe Experience Platform Web SDK Extension voor Adobe Experience Platform Launch
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: b70fe5f3a4de2501730cc799125a7181b61186c0
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ De [!UICONTROL IMS Organization ID] is de organisatie waarnaar u de gegevens wil
 
 ### **[!UICONTROL Edge Domain]**
 
-[!UICONTROL Edge Domain] is het domein dat de uitbreiding van Adobe Experience Platform verzendt en gegevens van ontvangt. De uitbreiding vereist dat u 1st-partij CNAME voor productieverkeer gebruikt. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html).
+[!UICONTROL Edge Domain] is het domein dat de uitbreiding van Adobe Experience Platform verzendt en gegevens van ontvangt. De uitbreiding vereist dat u 1st-partij CNAME voor productieverkeer gebruikt. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
 ## [!UICONTROL Datastreams]
 
