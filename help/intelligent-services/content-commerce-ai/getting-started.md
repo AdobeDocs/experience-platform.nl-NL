@@ -5,10 +5,9 @@ title: Aan de slag met AI voor Inhoud en Handel
 topic-legacy: Getting started
 description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. Om vraag aan Adobe I/O APIs en de I/O Integratie van de Console te maken, moet u het authentificatieleerprogramma eerst voltooien.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -73,6 +72,6 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 Zodra u al uw geloofsbrieven hebt, bent u klaar aan opstelling een douanearbeider voor [!DNL Content and Commerce AI]. De volgende documenten helpen bij het begrijpen van het uitbreidingsframework en de omgeving.
 
-Om meer over het Kader van de Rekbaarheid te leren, begin door [inleiding aan rekbaarheid](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) document te lezen. In dit document worden de voorwaarden en de inrichtingsvereisten beschreven.
+Om meer over het Kader van de Rekbaarheid te leren, begin door [inleiding aan rekbaarheid](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) document te lezen. In dit document worden de voorwaarden en de inrichtingsvereisten beschreven.
 
-Als u meer wilt weten over het instellen van een omgeving voor [!DNL Content and Commerce AI], begint u met het lezen van de handleiding voor het instellen van een ontwikkelomgeving](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). [ Dit document bevat instellingsinstructies waarmee u de service Asset compute kunt ontwikkelen.
+Als u meer wilt weten over het instellen van een omgeving voor [!DNL Content and Commerce AI], begint u met het lezen van de handleiding voor het instellen van een ontwikkelomgeving](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). [ Dit document bevat instellingsinstructies waarmee u de service Asset compute kunt ontwikkelen.
