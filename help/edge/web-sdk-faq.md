@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 5ead9dc72b8b9fe89e0a1bc8365ceff8affd3c85
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1843'
 ht-degree: 1%
 
 ---
@@ -149,7 +149,7 @@ Later in 2020, zal Experience Platform Launch server-kant het door:sturen eigens
 
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
-Meer informatie over een CNAME is beschikbaar in de [Adobe documentatie](https://docs.adobe.com/content/help/en/id-service/using/reference/analytics-reference/cname.html)
+Meer informatie over een CNAME is beschikbaar in de [Adobe documentatie](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
 
 ## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
 
@@ -169,5 +169,5 @@ De SDK van Adobe Experience Platform Web is ontworpen om optimaal te werken in d
 
 ## Waar kan ik meer informatie krijgen over Adobe Experience Platform Web SDK?
 
-* [Documentatie](https://docs.adobe.com/content/help/nl-NL/experience-platform/edge/home.html)
+* [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
 * [Broncode](https://github.com/adobe/alloy)
