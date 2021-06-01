@@ -3,15 +3,21 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;versie nota's;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.5.0, juni 2021
+
+* Toegevoegde ondersteuning voor aanpassingsmogelijkheden.
+* Automatisch verzamelde viewport breedten en hoogten die negatieve waarden zijn zullen niet meer naar de server worden verzonden.
+* Wanneer een gebeurtenis wordt geannuleerd door `false` van een `onBeforeEventSend` callback terug te keren, wordt een bericht nu geregistreerd.
+* Probleem verholpen waarbij specifieke onderdelen van XDM-gegevens die bestemd waren voor één gebeurtenis, waren opgenomen in meerdere gebeurtenissen.
 
 ## Versie 2.4.0, maart 2021
 
