@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;XDM;XDM-systeem;XDM individueel profiel;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceData model;Experience gegevensmodel;Experience Data Model;Data Model;Data Model;Data Model;Schema;Problemen;FAQ;Unieschema;UNION PROFILE;union profile
+keywords: Experience Platform;home;populaire onderwerpen;XDM;XDM systeem;XDM individueel profiel;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceDataModel;Experience gegevensmodel;Experience Data Model;Data Model;Data Model;Data Model;schema;Problemen;FAQ;Unieschema;UNION PROFILE;union profile;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;
 solution: Experience Platform
 title: XDM System Troubleshooting Guide
-description: Dit document biedt antwoorden op veelgestelde vragen over het model van de Gegevens van de Ervaring (XDM) en het Systeem XDM in Adobe Experience Platform, evenals een het oplossen van problemengids voor gemeenschappelijke fouten.
+description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 415938f6f3aeec342774b73d1ae5f2dc0e27349c
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 # Handleiding voor probleemoplossing voor XDM-systemen
 
-Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) en XDM System in Adobe Experience Platform en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services van Platforms.
+Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) en XDM System in Adobe Experience Platform, inclusief een gids voor probleemoplossing voor algemene fouten. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services van Platforms.
 
 **[!DNL Experience Data Model](XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methode waarop [!DNL Experience Platform] wordt gebouwd, **XDM System**, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door [!DNL Platform] diensten. **[!DNL Schema Registry]** verstrekt een gebruikersinterface en een RESTful API om tot **[!DNL Schema Library]** binnen [!DNL Experience Platform] toegang te hebben. Zie [XDM documentatie](home.md) voor meer informatie.
 
@@ -25,9 +24,9 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over XDM System 
 
 ### Hoe voeg ik velden toe aan een schema?
 
-U kunt velden toevoegen aan een schema met behulp van een schemaveldgroep. Elke veldgroep is compatibel met een of meer klassen, zodat de veldgroep kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industrieveldgroepen hun eigen vooraf gedefinieerde velden biedt, kunt u uw eigen velden aan een schema toevoegen door nieuwe veldgroepen te maken met behulp van de API of de gebruikersinterface.
+U kunt velden toevoegen aan een schema met behulp van een schemaveldgroep. Elke veldgroep is compatibel met een of meer klassen, zodat de veldgroep kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industrieveldgroepen hun eigen vooraf gedefinieerde velden biedt, kunt u uw eigen velden aan een schema toevoegen door aangepaste veldgroepen te maken met behulp van de API of de gebruikersinterface.
 
-Voor details bij het creëren van nieuwe gebiedsgroepen in [!DNL Schema Registry] API, zie [de gids van het gebiedseindpunt ](api/field-groups.md#create). Als u UI gebruikt, zie [het leerprogramma van de Redacteur van het Schema](./tutorials/create-schema-ui.md).
+Voor details bij het creëren van gebiedsgroepen in [!DNL Schema Registry] API, zie [de gids van het gebiedseindpunt ](api/field-groups.md#create). Als u UI gebruikt, zie [het leerprogramma van de Redacteur van het Schema](./tutorials/create-schema-ui.md).
 
 ### Wat zijn de beste toepassingen voor veldgroepen versus gegevenstypen?
 
@@ -39,7 +38,7 @@ Voor details bij het creëren van nieuwe gebiedsgroepen in [!DNL Schema Registry
 
 Alle [!DNL Schema Registry] middelen (schema&#39;s, gebiedsgroepen, gegevenstypes, klassen) hebben URI die als unieke identiteitskaart voor verwijzing en raadplegingsdoeleinden dienst doet. Wanneer het bekijken van een schema in API, kan het in top-level `$id` en `meta:altId` attributen worden gevonden.
 
-Zie de sectie [resource identification](api/getting-started.md#resource-identification) in de [!DNL Schema Registry] API developer guide voor meer informatie.
+Zie de sectie [resource identification](api/getting-started.md#resource-identification) in de API-handleiding [!DNL Schema Registry] voor meer informatie.
 
 ### Wanneer begint een schema het breken van veranderingen te verhinderen?
 
@@ -73,11 +72,11 @@ Voor meer details over het beheren van identiteiten in UI, zie de sectie over [h
 
 ### Heeft mijn schema een primaire identiteit nodig?
 
-Primaire id&#39;s zijn optioneel omdat schema&#39;s er 0 of 1 kunnen hebben. Nochtans, moet een schema een primaire identiteit hebben opdat het schema voor gebruik in [!DNL Real-time Customer Profile] wordt toegelaten. Zie de sectie [identity](./tutorials/create-schema-ui.md#identity-field) van de zelfstudie van de Redacteur van het Schema voor meer informatie.
+Primaire identiteiten zijn optioneel, omdat schema&#39;s ofwel nul ofwel één ervan kunnen hebben. Nochtans, moet een schema een primaire identiteit hebben opdat het schema voor gebruik in [!DNL Real-time Customer Profile] wordt toegelaten. Zie de sectie [identity](./tutorials/create-schema-ui.md#identity-field) van de zelfstudie van de Redacteur van het Schema voor meer informatie.
 
 ### Hoe laat ik een schema voor gebruik in [!DNL Real-time Customer Profile] toe?
 
-De schema&#39;s worden toegelaten voor gebruik in [[!DNL Real-time Customer Profile]](../profile/home.md) door de toevoeging van een &quot;unie&quot;markering, die in `meta:immutableTags` attributen van het schema wordt gevestigd. Het toelaten van een schema voor gebruik met [!DNL Profile] kan worden gedaan gebruikend API of de gebruikersinterface.
+De schema&#39;s worden toegelaten voor gebruik in [[!DNL Real-time Customer Profile]](../profile/home.md) door de toevoeging van een &quot;unie&quot;markering binnen het `meta:immutableTags` attribuut van het schema. Het toelaten van een schema voor gebruik met [!DNL Profile] kan worden gedaan gebruikend API of de gebruikersinterface.
 
 #### Bezig met inschakelen van een bestaand schema voor [!DNL Profile] met behulp van de API
 
@@ -96,7 +95,7 @@ Zie de sectie over [gebruik in Real-time Klantprofiel](./tutorials/create-schema
 
 Unieschema&#39;s zijn alleen-lezen en worden automatisch gegenereerd door het systeem. Ze kunnen niet rechtstreeks worden bewerkt. Unieschema&#39;s worden voor een specifieke klasse gemaakt wanneer een tag union wordt toegevoegd aan een schema dat die klasse implementeert.
 
-Voor meer informatie over unies in XDM, zie [union](./api/unions.md) sectie in [!DNL Schema Registry] API ontwikkelaarsgids.
+Voor meer informatie over unies in XDM, zie [union](./api/unions.md) sectie in de [!DNL Schema Registry] API gids.
 
 ### Hoe moet ik mijn gegevensbestand formatteren om gegevens in mijn schema in te voeren?
 
@@ -106,79 +105,149 @@ Voor meer informatie over unies in XDM, zie [union](./api/unions.md) sectie in [
 
 Hieronder volgt een lijst met foutberichten die kunnen optreden wanneer u werkt met de API [!DNL Schema Registry].
 
-### Object niet gevonden
+### Bron niet gevonden
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1010-404",
+    "title": "Resource not found",
     "status": 404,
-    "title": "NotFoundError",
-    "detail": "Object https://ns.adobe.com/incorrectTenantId/schemas/ee067e31b08514d21e2b82577813409d 
-      with version 1 not found"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "The requested class resource https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 with version 1 is not found.",
+        "sub-errors": []
+    },
+    "detail": "The requested class resource https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 with version 1 is not found."
 }
 ```
 
 Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinden. De bron kan zijn verwijderd of het pad in de API-aanroep is ongeldig. Controleer of u een geldig pad voor uw API-aanroep hebt ingevoerd voordat u het opnieuw probeert. U kunt willen controleren dat u correcte identiteitskaart voor het middel bent ingegaan, en dat de weg behoorlijk namespaced met de aangewezen container (globaal of huurder) is.
 
+>[!NOTE]
+>
+>Afhankelijk van het middeltype dat wordt teruggewonnen, kan deze fout om het even welke volgende `type` URIs gebruiken:
+>
+>* `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+
+
 Voor meer informatie bij het construeren van raadplegingswegen in API, zie [container](./api/getting-started.md#container) en [middelidentificatie](api/getting-started.md#resource-identification) secties in [!DNL Schema Registry] ontwikkelaarsgids.
 
-### Titel moet uniek zijn
+### Titel is niet uniek
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1521-400",
+    "title": "Title not unique",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "Title must be unique. An object 
-      https://ns.adobe.com/{TENANT_ID}/schemas/26f6833e55db1dd8308aa07a64f2042d 
-      already exists with the same title."
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "Object titles must be unique. An object https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 already exists with the same title",
+        "sub-errors": []
+    },
+    "detail": "Object titles must be unique. An object https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 already exists with the same title"
 }
 ```
 
 Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met een titel die al door een andere bron wordt gebruikt. Titels moeten uniek zijn voor alle typen bronnen. Als u bijvoorbeeld een veldgroep probeert te maken met een titel die al wordt gebruikt door een schema, ontvangt u deze fout.
 
-### Aangepaste velden moeten een veld op hoofdniveau gebruiken
+### Validatiefout naamruimte
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1021-400",
+    "title": "Namespace validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "For custom fields, you must use a top level field named _{TENANT_ID}
-       and all the other fields must be defined under it"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "A custom field is defined under an invalid namespace. All custom fields must be defined under a top-level field named {TENANT_ID}.",
+        "sub-errors": []
+    },
+    "detail": "A custom field is defined under an invalid namespace. All custom fields must be defined under a top-level field named {TENANT_ID}."
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u een nieuwe veldgroep probeert te maken met velden met een onjuiste naam. Veldgroepen die door uw IMS-organisatie zijn gedefinieerd, moeten hun velden naamruimte geven met een `TENANT_ID` om conflicten met andere bronnen in de branche en de leverancier te voorkomen. Gedetailleerde voorbeelden van juiste gegevensstructuren voor veldgroepen vindt u in de [eindgids voor veldgroepen](./api/field-groups.md#create).
+Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met velden met een onjuiste naam of wanneer u onjuist benoemde velden toevoegt aan een bestaande bron.
 
+De middelen die door uw organisatie IMS worden bepaald moeten hun gebieden onder uw huurdersidentiteitskaart namespace om conflicten met andere industrie en verkopersmiddelen te vermijden. Wanneer het bouwen van een schema gebruikend standaardgebiedsgroepen, om het even welke douanegebieden die u binnen de structuur van die gebiedsgroepen toevoegt moeten ook namespaced onder uw huurdersidentiteitskaart zijn.
+
+>[!NOTE]
+>
+>Afhankelijk van de specifieke aard van de naamruimtefout kan deze fout elk van de volgende `type` URI&#39;s gebruiken samen met verschillende berichtdetails:
+>
+>* `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+
+
+Gedetailleerde voorbeelden van juiste gegevensstructuren voor XDM-bronnen vindt u in de handleiding Schema Registry API:
+
+* [Een aangepaste klasse maken](./api/classes.md#create)
+* [Een aangepaste veldgroep maken](./api/field-groups.md#create)
+* [Een aangepast gegevenstype maken](./api/data-types.md#create)
+
+### Koptekst accepteren is ongeldig
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/XDM-1006-400",
+    "title": "Accept header invalid",
+    "status": 400,
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "The supplied Accept header is not valid: application/vnd.adobe.xed+json;version=1 - A valid Accept value should look like application/vnd.adobe.{xed|xdm}+json",
+        "sub-errors": []
+    },
+    "detail": "The supplied Accept header is not valid: application/vnd.adobe.xed+json;version=1 - A valid Accept value should look like application/vnd.adobe.{xed|xdm}+json"
+}
+```
+
+Voor aanvragen van GET in de [!DNL Schema Registry] API is een `Accept`-header vereist, zodat het systeem kan bepalen hoe de reactie moet worden opgemaakt. Deze fout treedt op wanneer een vereiste `Accept`-koptekst ongeldig is of ontbreekt.
+
+Afhankelijk van het eindpunt u gebruikt, wijst het `detailed-message` bezit erop wat een geldige `Accept` kopbal als voor een succesvolle reactie zou moeten kijken. Controleer of u de juiste `Accept`-header hebt ingevoerd die compatibel is met het API-verzoek dat u wilt uitvoeren, voordat u het opnieuw probeert.
+
+>[!NOTE]
+>
+>Afhankelijk van het eindpunt dat wordt gebruikt, kan deze fout om het even welke volgende `type` URIs gebruiken:
+>
+>* `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+
+
+Voor lijsten van compatibele Accept kopballen voor verschillende API verzoeken, gelieve te verwijzen naar hun overeenkomstige secties in [de ontwikkelaarsgids van de Registratie van het Schema](./api/overview.md).
 
 ### [!DNL Real-time Customer Profile] fouten
 
-De volgende foutberichten zijn gekoppeld aan bewerkingen die zijn betrokken bij het inschakelen van schema&#39;s voor [!DNL Real-time Customer Profile]. Zie de [union](./api/unions.md) sectie in de [!DNL Schema Registry] API ontwikkelaarsgids voor meer informatie.
-
-#### Om profieldatasets toe te laten zou het schema geldig moeten zijn
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 400,
-    "title": "BadRequestError",
-    "detail": "To enable profile datasets the schema should be valid"
-}
-```
-
-Dit foutenbericht toont wanneer u probeert om een profieldataset voor een schema toe te laten dat niet voor [!DNL Real-time Customer Profile] is toegelaten. Zorg ervoor dat het schema een verenigingsmarkering bevat alvorens de dataset toe te laten.
+De volgende foutberichten zijn gekoppeld aan bewerkingen die zijn betrokken bij het inschakelen van schema&#39;s voor [!DNL Real-time Customer Profile]. Zie de [union](./api/unions.md) sectie in de [!DNL Schema Registry] API gids voor meer informatie.
 
 #### Er moet een identiteitsbeschrijving voor verwijzingen zijn
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1526-400",
+    "title": "Union descriptor validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "For a schema to be able to participate in union, if any of its 
-      property is associated with a xdm:descriptorOneToOne descriptor, there must 
-      be a xdm:descriptorReferenceIdentity descriptor for that property"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "If a schema contains properties that are associated with an xdm:descriptorOneToOne descriptor, those properties must also have a xdm:descriptorReferenceIdentity descriptor for that schema to participate in a union.",
+        "sub-errors": []
+    },
+    "detail": "If a schema contains properties that are associated with an xdm:descriptorOneToOne descriptor, those properties must also have a xdm:descriptorReferenceIdentity descriptor for that schema to participate in a union."
 }
 ```
 
@@ -188,95 +257,38 @@ Dit foutenbericht toont wanneer u probeert om een schema voor [!DNL Profile] toe
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1527-400",
+    "title": "Union descriptor validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "If both schemas from an already defined xdm:descriptorOneToOne 
-      descriptor are promoted to union, and if there is a primary identity on one of 
-      the schemas from the xdm:descriptorOneToOne descriptor, the 
-      xdm:identityNamespace of the sourceSchema's descriptorReferenceIdentity and the 
-      xdm:namespace field of the xdm:descriptorIdentity for the destinationSchema must 
-      match"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "If both schemas from an existing xdm:descriptorOneToOne descriptor are promoted to union, and one of those schemas contains a primary identity, the xdm:identityNamespace of the source schema's descriptorReferenceIdentity field must match the xdm:namespace field of destination schema's xdm:descriptorIdentity field.",
+        "sub-errors": []
+    },
+    "detail": "If both schemas from an existing xdm:descriptorOneToOne descriptor are promoted to union, and one of those schemas contains a primary identity, the xdm:identityNamespace of the source schema's descriptorReferenceIdentity field must match the xdm:namespace field of destination schema's xdm:descriptorIdentity field."
 }
 ```
 
 Om schema&#39;s toe te laten die relatiebeschrijvers voor gebruik in [!DNL Profile] bevatten, moet namespace van het brongebied en primaire namespace van het doelgebied het zelfde zijn. Dit foutbericht wordt weergegeven wanneer u een schema wilt inschakelen dat een naamruimte zonder overeenkomst bevat voor de verwijzingsidentiteitsbeschrijving. Zorg ervoor dat de `xdm:namespace`-waarde van het identiteitsveld van het doelschema overeenkomt met die van de eigenschap `xdm:identityNamespace` in de verwijzingsidentiteitsbeschrijving van het bronveld om dit probleem op te lossen.
 
-Zie de sectie over [standaardnaamruimten](../identity-service/namespaces.md) in het overzicht van naamruimte voor identiteiten voor een lijst met ondersteunde naamruimtecodes.
+Zie de sectie over [standaardnaamruimten](../identity-service/namespaces.md) in het overzicht van naamruimte voor identiteiten voor een lijst met standaardnaamruimtecodes.
 
-### Koptekstfouten accepteren
-
-De meeste verzoeken van GET in [!DNL Schema Registry] API vereisen een Accept kopbal zodat het systeem bepaalt hoe te om de reactie te formatteren. Hieronder volgt een lijst met veelvoorkomende fouten die aan de koptekst Accepteren zijn gekoppeld. Voor lijsten van compatibele Accept kopballen voor verschillende API verzoeken, gelieve te verwijzen naar hun overeenkomstige secties in [de ontwikkelaarsgids van de Registratie van het Schema](api/getting-started.md).
-
-#### Accepteren van headerparameter is vereist
+#### Het schema moet een identityMap of primaire identiteit bevatten
 
 ```json
 {
-    "type": "/placeholder/type/uri",
-    "status": 406,
-    "title": "NotAcceptableError",
-    "detail": "Accept header parameter is required"
-}
-```
-
-Dit foutbericht wordt weergegeven wanneer een Accept-koptekst ontbreekt in een API-aanvraag. Zorg ervoor dat de koptekst Accepteren is opgenomen voordat u het opnieuw probeert.
-
-#### Onbekende media accepteren opgegeven
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 406,
-    "title": "NotAcceptableError",
-    "detail": "Unknown Accept media supplied: xed+json"
-}
-```
-
-Dit foutbericht wordt weergegeven wanneer de header Accepteren ongeldig is. Controleer of u een Accept-header hebt ingevoerd die compatibel is met de API-aanvraag die u wilt uitvoeren voordat u het opnieuw probeert.
-
-#### Onbekende indeling voor accepteren beschikbaar
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 406,
-    "title": "NotAcceptableError",
-    "detail": "Unknown Accept format available "
-}
-```
-
-Dit foutbericht wordt weergegeven wanneer de koptekst Accepteren onjuist is opgegeven bij het opzoeken van een descriptor. Zorg ervoor dat u correct een van de [ondersteunde koppen voor Accepteren voor beschrijvingen hebt ingevoerd ](./api/descriptors.md) voordat u het opnieuw probeert.
-
-#### Versie moet worden opgegeven in de header Accepteren
-
-```json
-{
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1528-400",
+    "title": "Union descriptor validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "version must be supplied in the accept header. Example: 
-      application/vnd.adobe.xed-full-notext+json; version=1"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "To participate in a union, a schema must include an identityMap fieldgroup or a primary identity descriptor.",
+        "sub-errors": []
+    },
+    "detail": "To participate in a union, a schema must include an identityMap fieldgroup or a primary identity descriptor."
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer er geen versienummer is opgenomen in de koptekst Accepteren. Voor bepaalde elementen, zoals schema&#39;s, moet een versie worden opgegeven wanneer u afzonderlijke instanties opzoekt. Een Accept-koptekst met een versienummer ziet er ongeveer als volgt uit:
-
-```plaintext
-application/vnd.adobe.xed+json; version=1
-```
-
-Voor een lijst van gesteunde Accept kopballen, zie [Accept kopbal](api/getting-started.md#accept) sectie in de [!DNL Schema Registry] ontwikkelaarsgids.
-
-#### Versie mag niet worden opgegeven in de header Accepteren
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 400,
-    "title": "BadRequestError",
-    "detail": "version must not be supplied in the accept header. Example: 
-      application/vnd.adobe.xed-full+json"
-}
-```
-
-Als u probeert een versie op te nemen in de koptekst Accepteren bij het weergeven van bronnen (GET), wordt deze fout weergegeven. Versies zijn alleen vereist wanneer u een opzoekaanvraag probeert uit te voeren voor één resource. Verwijder de versie uit de koptekst Accepteren om de fout op te lossen.
+Alvorens een schema voor Profiel toe te laten, moet u eerst [een primaire identiteitsbeschrijver](./api/descriptors.md#create) voor het schema creëren, of een gebied van de identiteitskaart omvatten om bij de primaire identiteit in plaats daarvan te handelen.
