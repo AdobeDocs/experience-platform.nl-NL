@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,17 @@ ht-degree: 1%
 
 Dit document behandelt de releaseopmerkingen voor de Adobe Experience Platform Web SDK-extensie voor Adobe Experience Platform Launch. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 9 maart 2020
+## 1 juni 2021
+
+### Adobe Experience Platform Web SDK 2.5.0
+
+Bevat versie 2.5.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+
+* Een veld `data` toegevoegd aan de handeling Gebeurtenis verzenden. De komende documentatie zal beschrijven hoe dit in bepaalde scenario&#39;s kan worden gebruikt.
+* In de gegevenselementweergave van het XDM-object is een probleem opgelost waarbij een fout is gegenereerd als de gebruiker toegang had tot Adobe Experience Platform-sandboxen maar niet tot de sandbox die als standaard voor de organisatie is geconfigureerd.
+* In de weergave van het gegevenselement XDM Object is een probleem opgelost waarbij een vereist schemaveld als ongeldig wordt beschouwd, zelfs als het bovenliggende object geen waarden bevat.
+
+## 9 maart 2021
 
 ### Adobe Experience Platform Web SDK 2.4.0
 
