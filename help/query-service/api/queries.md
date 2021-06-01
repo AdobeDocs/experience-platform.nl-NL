@@ -5,8 +5,7 @@ title: API-eindpunt voor query's
 topic-legacy: queries
 description: De volgende secties lopen door vraag u het gebruiken van het /query eindpunt in de Dienst API van de Vraag kunt maken.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -142,7 +141,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -d '{
         "dbName": "prod:all",
         "sql": "SELECT * FROM accounts;",
-        "name": "Sample Query"
+        "name": "Sample Query",
         "description": "Sample Description"
     }  
 ```
