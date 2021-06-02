@@ -3,9 +3,9 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 32bc4fc3c8a33c5ba91f6edb0d859691046bccaf
+source-git-commit: 835fbee335c1b125f22a33f1806680514dfd9a6f
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '812'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,10 @@ Zie [Categorieën voor soorten publiek](https://experienceleague.adobe.com/docs/
 Met [!DNL Platform Web SDK] kunt u het profiel bijwerken naar het [!DNL Target]-profiel en naar [!DNL Platform Web SDK] als een ervaringsgebeurtenis.
 
 Als u een [!DNL Target]-profiel wilt bijwerken, moet u ervoor zorgen dat de profielgegevens worden doorgegeven met het volgende:
+
+* Onder `“data {“`
+* Onder `“__adobe”`
+* Voorvoegsel `“profile.”` bijv. als hieronder
 
 | Sleutel | Type | Beschrijving |
 | --- | --- | --- |
