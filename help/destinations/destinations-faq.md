@@ -4,10 +4,10 @@ title: Veelgestelde vragen
 seo-title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 seo-description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 6%
+source-wordcount: '730'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,18 @@ ht-degree: 6%
 ## Overzicht {#overview}
 
 Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform-doelen. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en probleemoplossing met betrekking tot andere [!DNL Platform]-services, inclusief de problemen die zich in alle [!DNL Platform]-API&#39;s voordoen.
+
+## Algemene vragen over bestemmingen {#general}
+
+**Waarom zie ik verschillende profieltellingen in het Experience Platform UI en in de uitgevoerde Csv- dossiers?**
+
+Dit is een normaal gedrag als gevolg van de manier waarop Experience Platform segmentatie uitvoert.
+
+De het stromen segmentatie werkt het profielaantal voor het stromen segmenten door de dag bij, terwijl de partijsegmentatie de profieltelling voor partijsegmenten eens in de 24 uur bijwerkt.
+
+Wanneer het segment de uitvoerschema verschilt van het segmenteringsprogramma, zal het profieltellingen tussen UI en het uitgevoerde [!DNL CSV] dossier verschillend zijn, vooral wanneer het over het stromen segmenten komt.
+
+Zie de [documentatie voor segmentatieservice](../segmentation/home.md) voor meer informatie.
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
