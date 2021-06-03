@@ -1,21 +1,20 @@
 ---
-keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google Admanager
+keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google Admanager; DFP
 title: Google Ad Manager-verbinding
-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.  '
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+description: Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
+exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
+source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Google Ad Manager] verbinding
 
 ## Overzicht {#overview}
 
-[!DNL Google Ad Manager], voorheen bekend  [!DNL DoubleClick] bij Publishers of  [!DNL DoubleClick AdX], is een advertentieplatform van  [!DNL Google] waaruit uitgevers de middelen krijgen om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
+[!DNL Google Ad Manager], voorheen bekend als  [!DNL DoubleClick for Publishers] (DFP) of  [!DNL DoubleClick AdX], is een platform voor advertenties van  [!DNL Google] waaruit uitgevers de middelen krijgen om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 
 ## Doelspecificaties {#specifics}
 
