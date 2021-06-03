@@ -5,10 +5,9 @@ title: Overzicht van identiteitsservice
 topic-legacy: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 288f24351788ed4b8a0c68cffe5eb5c91ed01691
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -114,6 +113,10 @@ Zowel de verslagen als de tijdreeksregelingen verstrekken de middelen om identit
 ### XDM-velden als identiteit markeren
 
 Om het even welk gebied van type `string` in schema&#39;s die of verslag of tijdreeks XDM klassen uitvoeren kan als identiteitsgebied worden geëtiketteerd. Als gevolg hiervan worden alle gegevens die in dat veld worden ingevoerd, beschouwd als identiteitsgegevens.
+
+>[!NOTE]
+>
+>Array- en toewijzingsvelden worden niet ondersteund en kunnen niet worden gemarkeerd en gelabeld als identiteitsvelden.
 
 Identiteitsvelden maken het ook mogelijk om identiteiten te koppelen als ze gemeenschappelijke PII-gegevens delen.
 Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te etiketteren, [!DNL Identity Service] automatisch verhoudingen met de andere individuen die worden gevonden om het zelfde telefoonaantal te gebruiken.
