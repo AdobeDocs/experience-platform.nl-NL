@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3616'
 ht-degree: 0%
 
 ---
@@ -108,13 +108,15 @@ Naarmate de aard van de digitale ervaringen zich blijft ontwikkelen, moeten de s
 
 Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schemaevolutie is, [!DNL Experience Platform] handhaaft een zuiver additief versieringsbeginsel om ervoor te zorgen dat om het even welke herzieningen aan het schema slechts in niet-destructieve updates en veranderingen resulteren. Met andere woorden: **afbrekende wijzigingen worden niet ondersteund.**
 
-| Ondersteunde wijzigingen | Wijzigingen doorlopen (niet ondersteund) |
-|------------------------------------|---------------------------------|
-| <ul><li>Nieuwe velden toevoegen aan een bestaand schema</li><li>Een verplicht veld optioneel maken</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Nieuwe verplichte velden invoegen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Kenmerken verplaatsen naar een andere locatie in de structuur</li></ul> |
-
 >[!NOTE]
 >
->Als een schema nog niet is gebruikt om gegevens in [!DNL Experience Platform] op te nemen, kunt u een breekverandering in dat schema introduceren. Nochtans, zodra het schema in [!DNL Platform] is gebruikt, moet het aan het additieve versieringsbeleid houden.
+>Als een schema nog niet is gebruikt om gegevens in [!DNL Experience Platform] in te gaan en niet voor gebruik in het Profiel van de Klant in real time is toegelaten, kunt u een breekverandering in dat schema introduceren. Nochtans, zodra het schema in [!DNL Platform] is gebruikt, moet het aan het additieve versieringsbeleid houden.
+
+In de volgende tabel wordt aangegeven welke wijzigingen worden ondersteund bij het bewerken van schema&#39;s, veldgroepen en gegevenstypen:
+
+| Ondersteunde wijzigingen | Wijzigingen doorlopen (niet ondersteund) |
+| --- | --- |
+| <ul><li>Nieuwe velden toevoegen aan de bron</li><li>Een verplicht veld optioneel maken</li><li>De weergavenaam en beschrijving van de bron wijzigen</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Nieuwe verplichte velden invoegen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Kenmerken verplaatsen naar een andere locatie in de structuur</li></ul> |
 
 ### Schema&#39;s en gegevensinvoer
 
