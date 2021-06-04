@@ -5,10 +5,9 @@ title: Woordenlijst met gegevensgebruikslabels
 topic-legacy: labels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -24,7 +23,7 @@ In dit document worden de basislabels voor gegevensgebruik beschreven die moment
 De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of met het beleid van het gegevensbeheer van uw organisatie verwant zijn.
 
 | Label | Definitie |
-|---|---|
+| --- | --- |
 | **C1** | Gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerde vorm, zonder individuele of apparaat-id&#39;s. [Meer informatie...](#c1) |
 | **C2** | Gegevens kunnen niet naar derden worden geëxporteerd. [Meer informatie...](#c2) |
 | **C3** | Gegevens kunnen niet met rechtstreeks identificeerbare informatie worden gecombineerd of anderszins worden gebruikt. [Meer informatie...](#c3) |
@@ -35,13 +34,14 @@ De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te catego
 | **C8** | Gegevens kunnen niet worden gebruikt voor het meten van de websites of apps van uw organisatie. [Meer informatie...](#c8) |
 | **C9** | Gegevens kunnen niet worden gebruikt in Data Science-workflows. [Meer informatie...](#c9) |
 | **C10** | Gegevens kunnen niet worden gebruikt voor activering van een gestikte identiteit. [Meer informatie...](#c10) |
+| **C11** | De gegevens kunnen niet met de partners van de Aanpassing van het Segment worden gedeeld. [Meer informatie...](#c11) |
 
 ## Identiteitslabels
 
 De etiketten van de identiteit &quot;I&quot;worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren.
 
 | Label | Definitie |
-|---|---|
+| --- | --- |
 | **I1** | Direct identificeerbare gegevens die een specifieke persoon kunnen identificeren of contacteren, eerder dan een apparaat. |
 | **I2** | Indirect identificeerbare gegevens die in combinatie met andere gegevens kunnen worden gebruikt om een specifieke persoon te identificeren of contact op te nemen. |
 
@@ -52,7 +52,7 @@ De gevoelige etiketten &quot;S&quot;worden gebruikt om gegevens te categoriseren
 Eén type gegevens dat u als gevoelig kunt aanmerken, kan verschillende typen geografische gegevens zijn. deze categorie is echter niet beperkt tot geografische gegevens .
 
 | Label | Definitie |
-|---|---|
+| --- | --- |
 | **S1** | Gegevens die breedte- en lengtegraad aangeven die kunnen worden gebruikt om de precieze locatie van een apparaat te bepalen. |
 | **S2** | Gegevens die kunnen worden gebruikt om een breed gedefinieerd geofence-gebied te bepalen. |
 
@@ -98,7 +98,7 @@ DAA: Online gedragsreclame. Gegevens van een bepaalde computer of een bepaald ap
 
 #### C6 {#c6}
 
-Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties zijn gescheiden van on-site inhoud en worden gedekt door label [C7](#c7). Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond, en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. *[Zie label C5 voor deze vereisten.](#c5)*
+Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties zijn gescheiden van on-site inhoud en worden gedekt door label [C7](#c7). Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond, en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. *[Zie label C5 voor deze vereisten.](#c5)*
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
 
@@ -127,3 +127,7 @@ Sommige contracten bevatten expliciete verbodsbepalingen voor het gebruik van ge
 #### C10 {#c10}
 
 Sommige beleidsregels voor gegevensgebruik beperken het gebruik van verankerde identiteitsgegevens voor personalisatie. Het label C10 wordt automatisch toegepast op segmenten als in het samenvoegbeleid de optie &quot;particuliere grafiek&quot; wordt gebruikt.
+
+#### C11 {#c11}
+
+Met Adobe Experience Platform Segment Match kunt u eersteklas segmenten afstemmen op privacy- en toestemmingsvoorkeuren, waardoor beter ontwikkelde profielen en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in processen [!DNL Segment Match]. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
