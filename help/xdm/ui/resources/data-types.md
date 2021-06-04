@@ -6,17 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: bcacf2ebe99c3e397cfd5ceaf418a51bec74e659
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
 
 # Gegevenstypen maken en bewerken met de gebruikersinterface
 
-In het Model van Gegevens van de Ervaring (XDM), worden de gegevenstypes gebruikt als verwijzing-type gebieden in klassen of de groepen van het schemagebied op de zelfde manier zoals fundamentele letterlijke gebieden, met het belangrijkste verschil dat de gegevenstypes veelvoudige subfields kunnen bepalen. Hoewel gelijkaardig aan gebiedsgroepen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd.
+In het Model van Gegevens van de Ervaring (XDM), herbruikbare gebieden die veelvoudige subfields bevatten. Terwijl gelijkaardig aan de groepen van het schemagebied in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd.
 
 Adobe Experience Platform biedt vele standaardgegevenstypen die kunnen worden gebruikt voor een groot aantal gangbare praktijkbeheertoepassingen. U kunt echter ook uw eigen aangepaste gegevenstypen definiëren om aan uw unieke bedrijfsbehoeften te voldoen.
 
@@ -30,7 +29,7 @@ Hoewel niet vereist voor deze gids, wordt het geadviseerd dat u het leerprogramm
 
 ## [!DNL Schema Editor] openen voor een gegevenstype
 
-Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform om de werkruimte [!UICONTROL Schemas] te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]**. Een lijst van beschikbare gegevenstypes wordt getoond, met inbegrip van die door Adobe worden bepaald evenals die die door uw organisatie worden gecreeerd.
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform om de werkruimte [!UICONTROL Schemas] te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]**. Een lijst van beschikbare gegevenstypes wordt getoond, met inbegrip van die door Adobe en die door uw organisatie worden bepaald.
 
 ![](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -54,6 +53,10 @@ Deze zelfstudie maakt een gegevenstype dat een restauratie-eigenschap beschrijft
 Van hier, kunt u vooruit naar [volgende sectie ](#add-fields) overslaan om gebieden aan het nieuwe gegevenstype toe te voegen.
 
 ### Een bestaand gegevenstype bewerken
+
+>[!NOTE]
+>
+>Zodra een bestaand gegevenstype in een schema wordt gebruikt dat voor gebruik in het Profiel van de Klant in real time is toegelaten, slechts kunnen niet-destructieve veranderingen daarna in dat gegevenstype worden aangebracht. Zie [regels van schemaevolutie](../../schema/composition.md#evolution) voor meer informatie.
 
 Alleen aangepaste gegevenstypen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Als u de weergegeven lijst wilt verkleinen, selecteert u het filterpictogram (![Filter Pictogram](../../images/ui/resources/data-types/filter.png)) om besturingselementen voor filtering weer te geven op basis van [!UICONTROL Owner]. Selecteer **[!UICONTROL Customer]** om alleen aangepaste gegevenstypen weer te geven die eigendom zijn van uw organisatie.
 
