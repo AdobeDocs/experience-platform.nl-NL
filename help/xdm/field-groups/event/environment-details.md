@@ -5,7 +5,7 @@ title: Environment Details Schema Field Group
 topic-legacy: overview
 description: Dit document biedt een overzicht van de veldgroep met de gegevens van het schema ExperienceEvent Environment.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Environment Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) klasse die wordt gebruikt om informatie betreffende omgevingsdetails met betrekking tot een Gebeurtenis van de Ervaring zoals apparatendetails, browser informatie, lokale tijd, en andere geografische informatie te vangen.
+[!UICONTROL Environment Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) klasse die wordt gebruikt om informatie betreffende omgevingsdetails met betrekking tot een Gebeurtenis van de Ervaring zoals apparatendetails, browser informatie, lokale tijd, en andere geografische informatie te vangen.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
