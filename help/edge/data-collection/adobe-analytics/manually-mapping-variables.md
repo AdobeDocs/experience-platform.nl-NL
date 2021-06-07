@@ -4,9 +4,9 @@ description: Leer hoe te om variabelen in Adobe Analytics manueel in kaart te br
 seo-description: Wijs manueel variabelen in Adobe Analytics toe gebruikend verwerkingsregels met Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Web SDK] kan bepaalde variabelen automatisch toe
 
 Voor XDM-gegevens die niet automatisch worden toegewezen aan [!DNL Analytics], kunt u [contextgegevens](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) gebruiken om uw [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) aan te passen. Vervolgens kan het worden toegewezen aan [!DNL Analytics] met behulp van [verwerkingsregels](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) om [!DNL Analytics] variabelen te vullen.
 
-U kunt ook een standaardset handelingen en productlijsten gebruiken om gegevens te verzenden of op te halen met Adobe Experience Platform Web SDK. Zie [Producten](https://experienceleague.adobe.com/docs/experience-platform/edge/implement/commerce.html) om dit te doen.
+U kunt ook een standaardset handelingen en productlijsten gebruiken om gegevens te verzenden of op te halen met Adobe Experience Platform Web SDK. Om dit te doen, zie [Verzamel handel en productinformatie](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
 ## Contextgegevens
 
