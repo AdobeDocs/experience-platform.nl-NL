@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
+source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 7%
 
 ---
@@ -23,24 +23,29 @@ ht-degree: 7%
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
    * Industriële gegevensmodellen {#industries}
       * [Overzicht](./schema/industries/overview.md)
-      * [Detailgegevensmodel ERD](./schema/industries/retail.md)
-      * [Gegevensmodel financiële diensten ERD](./schema/industries/financial.md)
-      * [Gegevensmodel reis- en gastvrijheid ERD](./schema/industries/travel-hospitality.md)
+      * [Detailhandel](./schema/industries/retail.md)
+      * [Financiële diensten](./schema/industries/financial.md)
+      * [Reizen en gastvrijheid](./schema/industries/travel-hospitality.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
 * Schema veldgroepen {#field-groups}
    * Profielveldgroepen {#profile}
-      * [IdentityMap](./field-groups/profile/identitymap.md)
       * [Demografische details](./field-groups/profile/demographic-details.md)
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Loyalty-details](./field-groups/profile/loyalty-details.md)
       * [Persoonlijke contactgegevens](./field-groups/profile/personal-contact-details.md)
+      * [Voorkeuren voor privacy/persoonlijke voorkeur/marketing (inhoud)](./field-groups/profile/consents.md)
       * [Details segmentlidmaatschap](./field-groups/profile/segmentation.md)
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
-      * [Voorkeuren voor privacy/persoonlijke voorkeur/marketing (inhoud)](./field-groups/profile/consents.md)
    * Groepen van gebeurtenisvelden {#event}
+      * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
+      * [Kanaaldetails](./field-groups/event/channel-details.md)
+      * [Handelsgegevens](./field-groups/event/commerce-details.md)
       * [Gegevens van eindgebruiker](./field-groups/event/enduserids.md)
       * [Omgevingsdetails](./field-groups/event/environment-details.md)
+      * [Webdetails](./field-groups/event/web-details.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
 * Datatypen {#data-types}
    * [Toepassing](./data-types/application.md)
@@ -51,6 +56,7 @@ ht-degree: 7%
    * [Apparaat](./data-types/device.md)
    * [E-mailadres](./data-types/email-address.md)
    * [Omgeving](./data-types/environment.md)
+   * [Experience Channel](./data-types/experience-channel.md)
    * [Veld voor algemene toestemming](./data-types/consent-field.md)
    * [Algemeen veld Voorkeuren voor marketing](./data-types/marketing-field.md)
    * [Algemeen veld Voorkeuren voor marketing met abonnementen](./data-types/marketing-field-subscriptions.md)
@@ -61,6 +67,7 @@ ht-degree: 7%
    * [Gegevens over geointeractie](./data-types/geo-interaction-details.md)
    * [Geo-vorm](./data-types/geo-shape.md)
    * [Identiteit](./data-types/identity.md)
+   * [Marketing](./data-types/marketing.md)
    * [Meetlat](./data-types/measure.md)
    * [Volgorde](./data-types/order.md)
    * [Betalingsobject](./data-types/payment-item.md)
@@ -71,9 +78,11 @@ ht-degree: 7%
    * [Details van POI](./data-types/poi-details.md)
    * [POI-interactie](./data-types/poi-interaction.md)
    * [Postadres](./data-types/postal-address.md)
+   * [Product lijstitem](./data-types/product-list-item.md)
    * [Zoeken](./data-types/search.md)
    * [Abonnement](./data-types/subscription.md)
-   * [Webinteractie](./data-types/web-interactions.md)
+   * [Webinformatie](./data-types/web-information.md)
+   * [Webinteractie](./data-types/web-interaction.md)
    * [Webpaginadetails](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] Gebruikersinterface {#ui}
    * [Overzicht](./ui/overview.md)
