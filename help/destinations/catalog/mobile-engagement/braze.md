@@ -2,14 +2,13 @@
 keywords: mobiel; schil; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
+source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) [!DNL Braze] verbinding
 
@@ -41,7 +40,7 @@ Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten,
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Google Ad Manager] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
+[!DNL Braze] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -149,4 +148,3 @@ Controleer uw [!DNL Braze]-account om te controleren of gegevens naar de [!DNL B
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Zie [Overzicht gegevensbeheer](../../../data-governance/home.md) voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt.
-
