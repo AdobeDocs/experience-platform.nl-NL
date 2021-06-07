@@ -5,7 +5,7 @@ title: Gegevenstype webpagina Details
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Experience Data Model (XDM) van de webpagina voor details.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!UICONTROL Web page details] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat details over een Web-pagina beschrijft die net is geladen en bekeken, zoals geregistreerd door een ExperienceEvent.
 
-Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen die uit één pagina bestaan (SPA). Zie het gegevenstype [webinteractie](./web-interactions.md) voor interacties die plaatsvinden op een geladen pagina die geen nieuwe paginading activeren.
+Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen die uit één pagina bestaan (SPA). Zie het gegevenstype [webinteractie](./web-interaction.md) voor interacties die plaatsvinden op een geladen pagina die geen nieuwe paginading activeren.
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
