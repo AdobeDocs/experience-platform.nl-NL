@@ -5,7 +5,7 @@ title: Detailsveldgroep eindgebruiker - ID
 topic-legacy: overview
 description: Dit document bevat een overzicht van de veldgroep Eindgebruikersgegevens.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
 
-[!UICONTROL End User ID Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven. De veldgroep biedt een `endUserIDs`-object op hoofdniveau, dat zelf een alleen-lezen `_experience`-veld bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
+[!UICONTROL End User ID Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/experienceevent.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven. De veldgroep biedt een `endUserIDs`-object op hoofdniveau, dat zelf een alleen-lezen `_experience`-veld bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
