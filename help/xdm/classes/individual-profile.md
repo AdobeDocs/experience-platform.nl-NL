@@ -5,9 +5,9 @@ title: Afzonderlijke XDM-profielklasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-gepr
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `_repo` | Een object met de volgende velden [!UICONTROL DateTime]: <ul><li>`createDate`: De datum en tijd waarop de bron in de gegevensopslag werd gemaakt, bijvoorbeeld wanneer gegevens voor het eerst werden ingevoerd.</li><li>`modifyDate`: De datum en het tijdstip waarop de bron voor het laatst is gewijzigd.</li></ul> |
-| `_id` | Een unieke id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br>Het is belangrijk te onderscheiden dat dit veld  **geen identiteit** bevat die verband houdt met een individuele persoon, maar eerder met de gegevens zelf. Identiteitsgegevens die betrekking hebben op een persoon moeten in plaats daarvan worden beperkt tot [identiteitsvelden](../schema/composition.md#identity). |
+| `_id` | Een unieke tekenreeks-id voor de record. Dit veld wordt gebruikt om de uniciteit van een individueel record te volgen, om te voorkomen dat gegevens worden herhaald en om die record op te zoeken in downstreamservices. In sommige gevallen kan `_id` een [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) of [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) zijn.<br><br>Als u gegevens streamt vanuit een bronverbinding of rechtstreeks vanuit een Parquet-bestand opgeeft, moet u deze waarde genereren door een bepaalde combinatie van velden samen te voegen die de record uniek maken, zoals een primaire id, tijdstempel, recordtype, enzovoort. De samengevoegde waarde moet een tekenreeks met de indeling `uri-reference` zijn. Dit houdt in dat alle dubbele tekens moeten worden verwijderd. Daarna, zou de samengevoegde waarde moeten worden gehakt gebruikend SHA-256 of een ander algoritme van uw keus.<br><br>Het is belangrijk om te onderscheiden dat  **dit veld geen identiteit vertegenwoordigt die verband houdt met een individuele persoon**, maar eerder de registratie van gegevens zelf. Identiteitsgegevens die betrekking hebben op een persoon moeten worden overgebracht naar [identiteitsvelden](../schema/composition.md#identity) die in plaats daarvan door compatibele veldgroepen worden verschaft. |
 | `createdByBatchID` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. |
 | `modifiedByBatchID` | De id van de laatst opgenomen batch die ervoor zorgde dat de record werd bijgewerkt. |
 | `personID` | Een unieke id voor de individuele persoon waarop deze record betrekking heeft. Dit veld vertegenwoordigt niet noodzakelijkerwijs een identiteit die betrekking heeft op de persoon, tenzij het ook wordt aangeduid als een [identiteitsveld](../schema/composition.md#identity). |
