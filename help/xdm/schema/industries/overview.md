@@ -4,10 +4,9 @@ title: Overzicht van industriemodellen
 topic-legacy: overview
 description: Leer over de gestandaardiseerde gegevensmodellen voor diverse de industrietakken die kunnen worden geconstrueerd gebruikend de componenten van het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -34,18 +33,6 @@ Om ERDs te lezen die in deze gids van verwijzingen wordt voorzien, moet u een we
 Het wordt ook geadviseerd dat u [gegevens het modelleren beste praktijken gids](../../schema/best-practices.md) voor algemene richtlijnen over hoe te om uw gegevens aan XDM in kaart te brengen controleert.
 
 ## Bedrijfs gegevensmodel ERDs {#erds}
-
-De verticale industriemodellen die hieronder door de ERD&#39;s worden vertegenwoordigd, worden opzettelijk op een gedenormaliseerde manier gecreëerd en met inachtneming van de wijze waarop gegevens in Platform worden opgeslagen.
-
-Voor een bepaalde ERD is elke entiteit die wordt weergegeven in gebaseerd op een onderliggende XDM-klasse. Voor een bepaalde entiteit vertegenwoordigt elke rij die in **bold** wordt gemarkeerd, een veldgroep of een gegevenstype, met de relevante velden die hieronder in onbolle tekst worden weergegeven. De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
-
->[!NOTE]
->
->Sommige entiteiten kunnen het veld &quot;_ID&quot; bevatten. Dit vertegenwoordigt unieke herkenningsteken (`_id`) dat Platform automatisch aan gebeurtenis of profielentiteiten toewijst wanneer zij worden opgenomen. U kunt er echter desgewenst voor kiezen om uw eigen unieke id-waarden voor dit veld te gebruiken.
-
-Alle eigenschappen die zouden kunnen worden gebruikt om individuele klanten te identificeren zijn duidelijk als &quot;identiteit&quot;, met één van deze eigenschappen duidelijk als &quot;primaire identiteit&quot;.
-
-Entiteitsrelaties zijn gemarkeerd als niet-afhankelijk, omdat op cookies gebaseerde gebeurtenissen vaak niet kunnen bepalen wie de transactie heeft uitgevoerd.
 
 ERD&#39;s zijn beschikbaar voor de volgende verticale handelslijnen:
 
