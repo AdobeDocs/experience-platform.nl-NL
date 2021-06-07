@@ -2,14 +2,13 @@
 title: Adobe Experience Platform Web SDK - Overzicht
 description: Leer hoe u de Adobe Experience Platform Web SDK kunt gebruiken om de mogelijkheden van het Platform in uw website te integreren.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
+source-git-commit: 7607f01109de1f6207f2e910a8620698c60b89d4
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht Adobe Experience Platform Web SDK
 
@@ -61,7 +60,7 @@ In de volgende video worden Adobe Experience Platform [!DNL Web SDK] en Adobe Ex
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Als u de nieuwste ontwikkelingen wilt bijhouden, bekijkt u ons [ondersteunde toetsenbord](https://github.com/adobe/alloy/projects/5). Wij houden dit bij met de gebruiksgevallen die wij momenteel steunen en de gevallen waarin wij aan het werk zijn om u in staat te stellen de beste beslissingen te nemen.
+Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Raadpleeg de pagina [supported use cases page](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html) voor meer informatie. Deze pagina bevat een overzicht van de gebruiksgevallen die momenteel worden ondersteund, met koppelingen naar meer informatie indien beschikbaar.
 
 * **Gebruik nog niet ondersteunde gevallen:** dit zijn gebruiksgevallen die op onze routekaart staan en in de toekomst worden ondersteund.
 * **Gebruiksgevallen in uitvoering:** Dit zijn de gebruiksgevallen die het team momenteel aan voltooiing voor versie werkt.
