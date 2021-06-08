@@ -3,10 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -59,13 +58,9 @@ Voordat u een [!DNL Google Customer Match]-bestemming in Experience Platform ins
 
 ### Lijst van gewenste personen {#allowlist}
 
->[!NOTE]
->
->U moet de eerste [!DNL Google Customer Match]-bestemming in het Experience Platform eerst aan de lijst van gewenste personen van Google toevoegen. Controleer of Google het hieronder beschreven lijst van gewenste personen-proces heeft voltooid voordat u een bestemming maakt.
+Voordat u de [!DNL Google Customer Match]-bestemming in Experience Platform maakt, moet u ervoor zorgen dat uw [!DNL Google Ads]-account voldoet aan het [Google Customer Match-beleid](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Voordat u de [!DNL Google Customer Match]-bestemming in Experience Platform maakt, moet u contact opnemen met Google en de instructies voor de lijst van gewenste personen volgen in [Customer Match partners gebruiken om uw gegevens te uploaden](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) in de Google-documentatie.
-
-Er is ook een tweede Google-lijst van gewenste personen waaraan u uw account moet toevoegen als u gegevens wilt uploaden met de [Gebruikersnaam](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id) van Google. Neem contact op met uw Google-accountmanager om uw account aan de lijst van gewenste personen toe te voegen.
+Klanten met compatibele accounts worden automatisch door Google aangeboden.
 
 ## Overeenkomende vereisten {#id-matching-requirements}
 
@@ -166,7 +161,7 @@ Raadpleeg de [officiële documentatie van Google](https://developers.google.com/
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
-Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van het segment, alleen vullen met meer dan 100 actieve gebruikers.
+Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
 
 Wanneer u een segment toewijst aan zowel [!DNL IDFA] als [!DNL GAID] mobiele id&#39;s, maakt [!DNL Google Customer Match] een afzonderlijk segment voor elke id-toewijzing. Uw [!DNL Google Ads]-account toont twee verschillende segmenten, een voor de [!DNL IDFA] en een voor de [!DNL GAID]-toewijzing.
 
