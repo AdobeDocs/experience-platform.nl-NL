@@ -5,10 +5,9 @@ title: Analyse van werkruimte voor gegevenswetenschap
 topic-legacy: Walkthrough
 description: Dit document biedt een analyse voor de Adobe Experience Platform Data Science Workspace. Specifiek de algemene werkstroom zou een gegevenswetenschapper een probleem oplossen gebruikend machine het leren.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7d98340e7949aadc744513415c4fc7469efd2403
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1688'
 ht-degree: 0%
 
 ---
@@ -47,7 +46,7 @@ Selecteer **[!UICONTROL Notebooks]** in de gebruikersinterface van Adobe Experie
 
 In deze zelfstudie wordt [!DNL Python] 3 in [!DNL JupyterLab Notebooks] gebruikt om te tonen hoe u de gegevens kunt openen en verkennen. Op de pagina Launcher staan voorbeelden van laptops. De voorbeeldlaptop **[!UICONTROL Retail Sales]** wordt gebruikt in de onderstaande voorbeelden.
 
-### {#setup} instellen
+### Instellen {#setup}
 
 Als de Retail Sales-laptop is geopend, moet u eerst de bibliotheken laden die nodig zijn voor uw workflow. De volgende lijst bevat een korte beschrijving van alle bibliotheken die in de voorbeelden in latere stappen worden gebruikt.
 
@@ -220,4 +219,4 @@ In dit document wordt een algemene workflow voor gegevenswetenschappers besproke
 - Daarna, wordt de eigenschaptechniek gebruikt om wijzigingen in uw detailhandelsdataset te maken.
 - Ten slotte maakt u modellen van de gegevens en selecteert u het model dat de beste prestaties levert voor het voorspellen van toekomstige verkopen.
 
-Als u klaar bent, leest u eerst de [JupyterLab-gebruikershandleiding](./jupyterlab/overview.md) voor een kort overzicht van laptops in de Adobe Experience Platform Data Science Workspace. Bovendien, als u in het leren over Modellen en Ontvangt geinteresseerd bent, begin door het [kleinhandelsverkoopschema en dataset](./models-recipes/create-retails-sales-dataset.md) leerprogramma te lezen. Deze zelfstudie bereidt u voor op volgende zelfstudies voor de werkruimte voor wetenschap van gegevens die kunnen worden weergegeven in de werkruimte voor wetenschap van gegevens [zelfstudies op pagina](../tutorials/data-science-workspace.md).
+Als u klaar bent, leest u eerst de [JupyterLab-gebruikershandleiding](./jupyterlab/overview.md) voor een kort overzicht van laptops in de Adobe Experience Platform Data Science Workspace. Bovendien, als u in het leren over Modellen en Ontvangt geinteresseerd bent, begin door het [kleinhandelsverkoopschema en dataset](./models-recipes/create-retails-sales-dataset.md) leerprogramma te lezen.
