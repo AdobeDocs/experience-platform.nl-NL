@@ -5,9 +5,9 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
+source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
 workflow-type: tm+mt
-source-wordcount: '3934'
+source-wordcount: '3935'
 ht-degree: 2%
 
 ---
@@ -115,7 +115,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | now | Hiermee wordt de huidige tijd opgehaald. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Hiermee wordt de huidige Unix-tijd opgehaald. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | <ul><li>DATUM: **Required** De inputdatum, als voorwerp ZonedDateTime, die u wilt formatteren.</li><li>INDELING: **Required** Het formaat dat u de datum wilt veranderen in.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | <ul><li>TIJDSTEMPEL: **Required** De tijdstempel u wilt formatteren. Dit wordt geschreven in milliseconden.</li><li>INDELING: **Required** De indeling waarin u de tijdstempel wilt wijzigen.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-okt-2019 11:24&quot; |
+| dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | <ul><li>TIJDSTEMPEL: **Required** De tijdstempel u wilt formatteren. Dit wordt geschreven in milliseconden.</li><li>INDELING: **Required** De indeling waarin u de tijdstempel wilt wijzigen.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Required** De tekenreeks die de datum vertegenwoordigt.</li><li>INDELING: **Required** The string representing the format of the date.</li><li>DEFAULT_DATE: **Required** De teruggekeerde standaarddatum, als de verstrekte datum ongeldig is.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Required** De tekenreeks die de datum vertegenwoordigt.</li><li>INDELING: **Required** The string representing the format of the date.</li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Required** De tekenreeks die de datum vertegenwoordigt.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
