@@ -5,7 +5,7 @@ title: Afzonderlijke XDM-profielklasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -42,10 +42,12 @@ De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-gepr
 
 Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL XDM Individual Profile]. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
-* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md)
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
 
 Voor een volledige lijst van alle compatibele gebiedsgroepen voor [!DNL XDM Individual Profile], verwijs naar [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
