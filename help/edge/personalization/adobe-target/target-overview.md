@@ -3,10 +3,10 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
+source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 1%
+source-wordcount: '908'
+ht-degree: 3%
 
 ---
 
@@ -21,6 +21,7 @@ De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target
 * [Automated Personalization-activiteiten](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Gerichte ervaring](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [MVT (Multivariate Tests)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendations-activiteiten](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Native doelindruk en conversiemelding](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC-ondersteuning](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -176,13 +177,42 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30
+        "profile.age": 30,
+	"entity.id" : "123",
+	"entity.genre" : "Drama"
       }
     }
   }
 }) 
 .then(console.log);
 ```
+
+## Aanbevelingen aanvragen
+
+In de volgende tabel worden de [!DNL Recommendations]-kenmerken weergegeven en wordt aangegeven of elk kenmerk wordt ondersteund via de [!DNL Platform Web SDK]:
+
+| Categorie | Kenmerk | Ondersteuningsstatus |
+| --- | --- | --- |
+| Recommendations - Kenmerken van standaardentiteiten | entity.id | Ondersteund |
+|  | entity.name | Ondersteund |
+|  | entity.categoryId | Ondersteund |
+|  | entity.pageUrl | Ondersteund |
+|  | entity.thumbnailUrl | Ondersteund |
+|  | entity.message | Ondersteund |
+|  | entity.value | Ondersteund |
+|  | entity.inventory | Ondersteund |
+|  | entity.brand | Ondersteund |
+|  | entity.margin | Ondersteund |
+|  | entity.event.detailsOnly | Ondersteund |
+| Recommendations - Aangepaste entiteitskenmerken | entity.yourCustomAttributeName | Ondersteund |
+| Recommendations - Gereserveerde parameters mbox/page | excludeIds | Ondersteund |
+|  | cartIds | Ondersteund |
+|  | productPurchasedId | Ondersteund |
+| Pagina- of itemcategorie voor categorie-affiniteit | user.categoryId | Ondersteund |
+
+## Foutopsporing
+
+mboxTrace en mboxDebug zijn afgekeurd. Gebruik [[!DNL Platform Web SDK] foutopsporing](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminologie
 
