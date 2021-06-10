@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2600'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,11 @@ Selecteer in de **[!UICONTROL Activate destination]**-workflow op de **[!UICONTR
 ![segmenten-naar-bestemming](../assets/ui/activate-destinations/email-select-segments.png)
 
 ## [!UICONTROL Mapping] stap {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Transformatie toepassen"
+>abstract="Schakel deze optie in als u niet-gehashte bronvelden gebruikt, zodat Adobe Experience Platform deze automatisch verbergt bij activering."
 
 Van toepassing op: sociale bestemmingen en Google Customer Match-advertentiebestemming
 
@@ -239,6 +244,12 @@ Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk 
 
 ### Verplichte kenmerken {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="Verplichte kenmerken"
+>abstract="Selecteer de XDM-schemakenmerken die alle geëxporteerde profielen moeten bevatten. Profielen zonder de verplichte sleutel worden niet naar de bestemming geëxporteerd. Als u geen verplichte sleutel selecteert, worden alle gekwalificeerde profielen geëxporteerd, ongeacht hun kenmerken."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Meer informatie in documentatie"
+
 U kunt kenmerken als verplicht markeren om ervoor te zorgen dat [!DNL Platform] alleen de profielen exporteert die het specifieke kenmerk bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Het markeren van een kenmerk als verplicht is **niet** vereist.
 
 Als u geen verplicht kenmerk selecteert, worden alle gekwalificeerde profielen geëxporteerd, ongeacht de kenmerken ervan.
@@ -246,6 +257,12 @@ Als u geen verplicht kenmerk selecteert, worden alle gekwalificeerde profielen g
 Men adviseert dat één van de attributen een [unieke herkenningsteken](../../destinations/catalog/email-marketing/overview.md#identity) van uw schema is. Raadpleeg de identiteitssectie in de documentatie [E-mailmarketingdoelen](../../destinations/catalog/email-marketing/overview.md#identity) voor meer informatie over verplichte kenmerken.
 
 ### Deduplicatietoetsen {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="Deduplicatietoetsen"
+>abstract="U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. Selecteer één naamruimte of maximaal twee XDM-schemakenmerken als een deduplicatietoets. Als u geen deduplicatietoets selecteert, kan dit leiden tot dubbele profielvermeldingen in de exportbestanden."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Meer informatie in documentatie"
 
 >[!IMPORTANT]
 >
