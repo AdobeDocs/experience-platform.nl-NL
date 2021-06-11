@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 4febcef82c6da4534051cbe68820984814786224
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,45 @@ Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert 
 ## Exporttype {#export-type}
 
 **Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
+
+## Vereiste [!DNL Amazon Kinesis] machtigingen {#required-kinesis-permission}
+
+Om gegevens met succes te verbinden en naar uw [!DNL Amazon Kinesis] stromen uit te voeren, heeft het Experience Platform toestemmingen voor de volgende acties nodig:
+
+* `kinesis:ListStreams`
+* `kinesis:PutRecord`
+* `kinesis:PutRecords`
+
+Deze toestemmingen worden geschikt door de [!DNL Kinesis] console en door Platform gecontroleerd zodra u uw bestemming van Kinesis in het gebruikersinterface van het Platform vormt.
+
+In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die zijn vereist om gegevens te kunnen exporteren naar een [!DNL Kinesis]-bestemming.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:ListStreams",
+                "kinesis:PutRecord",
+                "kinesis:PutRecords"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:us-east-2:901341027596:stream/*"
+            ]
+        }
+    ]
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `kinesis:ListStreams` | Een handeling waarmee uw Amazon Kinesis-gegevensstromen worden vermeld. |
+| `kinesis:PutRecord` | Een handeling waarmee één gegevensrecord in een Kinesis-gegevensstroom wordt geschreven. |
+| `kinesis:PutRecords` | Een handeling die meerdere gegevensrecords in één aanroep naar een Kinesis-gegevensstroom schrijft. |
+
+Lees voor meer informatie over het beheren van toegang voor [!DNL Kinesis] gegevensstromen het volgende [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## Doel {#connect-destination} verbinden
 
