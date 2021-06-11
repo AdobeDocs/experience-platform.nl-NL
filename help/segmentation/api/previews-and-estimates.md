@@ -5,10 +5,9 @@ title: Voorvertoningen en schattingen van API-eindpunten
 topic-legacy: developer guide
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '978'
 ht-degree: 1%
 
 ---
@@ -75,7 +74,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile"
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "none"
     }'
 ```
 
@@ -84,6 +84,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | De uitdrukking PQL om de gegevens door te vragen. |
 | `predicateType` | Het predikaat type voor de vraaguitdrukking onder `predicateExpression`. Momenteel is de enige toegestane waarde voor deze eigenschap `pql/text`. |
 | `predicateModel` | De naam van de schemaklasse [!DNL Experience Data Model] (XDM) de profielgegevens is gebaseerd op. |
+| `graphType` | Het grafiektype waarvan u de cluster wilt ophalen. De ondersteunde waarden zijn `none` (voert geen identiteitsstitching uit) en `pdg` (voert identiteitsstitching op basis van uw privé identiteitsgrafiek uit). |
 
 **Antwoord**
 
