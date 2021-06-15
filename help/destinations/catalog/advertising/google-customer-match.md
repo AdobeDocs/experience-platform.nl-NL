@@ -3,7 +3,7 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
+source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand va
 
 ## Gegevensbeheer voor [!DNL Google Customer Match] doelen {#data-governance}
 
-Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichtingen voor gegevens die worden verzonden naar of ontvangen van het bestemmingsplatform. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../..//data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
+Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichtingen voor gegevens die worden verzonden naar of ontvangen van het bestemmingsplatform. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../../data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
