@@ -5,9 +5,9 @@ title: Automatische beleidscontrole
 topic-legacy: guide
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: 59edc19267913e5156caaa49d01a687d04cf1c6f
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Deze handleiding vereist een goed begrip van de diensten van de Platform die bet
 * [Adobe Experience Platform Data Governance](../home.md): Het kader waardoor het Platform de naleving van het gegevensgebruik door het gebruik van etiketten en beleid afdwingt.
 * [Klantprofiel](../../profile/home.md) in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): De segmenteringsmotor binnen  [!DNL Platform] die wordt gebruikt om publiekssegmenten van uw klantenprofielen tot stand te brengen op klantengedrag en attributen worden gebaseerd.
-* [Doelen](../../destinations/home.md): Doelen zijn vooraf gebouwde integraties met veelgebruikte toepassingen die het mogelijk maken om gegevens van Platform naadloos te activeren voor kanaalmarketingcampagnes, e-mailcampagnes, gerichte reclame en nog veel meerY.
+* [Doelen](../../destinations/home.md): Doelen zijn vooraf gebouwde integraties met veelgebruikte toepassingen die het mogelijk maken om gegevens van Platform naadloos te activeren voor kanaalmarketingcampagnes, e-mailcampagnes, gerichte reclame en meer.
 
 ## Handelingenstroom {#flow}
 
@@ -65,6 +65,12 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 | Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie [Overzicht van samenvoegingsbeleid](../../profile/merge-policies/overview.md) voor meer informatie. |
 | Segment | De regels van het segment bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het segment alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een segment activeert waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van het geval van marketinggebruik. |
 | Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid voor gegevensgebruik. Met andere woorden, bepaalt het marketinggeval dat u voor een bestemming definieert, welk beleid voor gegevensgebruik op die bestemming van toepassing is. Beleidsovertredingen treden op als u een segment activeert waarvan de gebruikslabels zijn beperkt door het toepasselijke beleid van de doelbestemming. |
+
+>[!IMPORTANT]
+>
+>Sommige beleidsregels voor gegevensgebruik kunnen twee of meer labels met een AND-relatie opgeven. Een beleid kan bijvoorbeeld een marketingactie beperken als labels `C1` EN `C2` beide aanwezig zijn, maar beperkt dezelfde actie niet als slechts een van deze labels aanwezig is.
+>
+>Wat de automatische handhaving betreft, wordt in het kader van gegevensbeheer de activering van afzonderlijke segmenten naar een bestemming niet als een combinatie van gegevens beschouwd. Daarom is het `C1 AND C2` beleid **NOT** gedwongen als deze etiketten in afzonderlijke segmenten inbegrepen zijn. In plaats daarvan, wordt dit beleid slechts afgedwongen wanneer beide etiketten in het zelfde segment na activering aanwezig zijn.
 
 Wanneer beleidsschendingen voorkomen, verstrekken de resulterende berichten die in UI verschijnen nuttige hulpmiddelen om de schending bijdragende gegevenslijn te onderzoeken helpen de kwestie oplossen. Meer details worden verstrekt in de volgende sectie.
 
