@@ -5,17 +5,16 @@ title: UI-gids voor zoekservice
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-translation-type: tm+mt
-source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
+source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '605'
+ht-degree: 1%
 
 ---
 
 # [!DNL Query Service] hulplijn
 
-Adobe Experience Platform [!DNL Query Service] verstrekt een gebruikersinterface die kan worden gebruikt om vragen te schrijven en uit te voeren, eerder uitgevoerde vragen te bekijken, en tot vragen toegang te hebben die door gebruikers binnen uw IMS Organisatie worden bewaard. Om tot UI binnen [Adobe Experience Platform][platform-ui] toegang te hebben, selecteer **[!UICONTROL Queries]** in de linkernavigatie.
+Adobe Experience Platform [!DNL Query Service] verstrekt een gebruikersinterface die kan worden gebruikt om vragen te schrijven en uit te voeren, eerder uitgevoerde vragen te bekijken, en tot vragen toegang te hebben die door gebruikers binnen uw IMS Organisatie worden bewaard. Om tot UI binnen [Adobe Experience Platform](https://platform.adobe.com) toegang te hebben, selecteer **[!UICONTROL Queries]** in de linkernavigatie.
 
 ## [!DNL Query Editor]
 
@@ -23,7 +22,7 @@ Met [!DNL Query Editor] kunt u query&#39;s schrijven en uitvoeren zonder een ext
 
 ![Image](../images/ui/overview/overview.png)
 
-[!DNL Query Editor] biedt bewerkruimte waarin u een query kunt typen. Terwijl u typt, voltooit de redacteur automatisch SQL gereserveerde woorden, lijsten, en gebiedsnamen binnen lijsten. Wanneer het gebeëindigd schrijven van uw vraag, selecteer **Spel** knoop om de vraag in werking te stellen. Het **[!UICONTROL Console]** lusje onder de redacteur toont wat [!DNL Query Service] momenteel doet, erop wijzend wanneer een vraag is teruggekeerd. Het **[!UICONTROL Result]** lusje, naast de Console, toont vraagresultaten. Zie [de gids van de Redacteur van de Vraag][query-editor] voor meer informatie bij het gebruiken van [!DNL Query Editor].
+[!DNL Query Editor] biedt bewerkruimte waarin u een query kunt typen. Terwijl u typt, voltooit de redacteur automatisch SQL gereserveerde woorden, lijsten, en gebiedsnamen binnen lijsten. Wanneer het gebeëindigd schrijven van uw vraag, selecteer **Spel** knoop om de vraag in werking te stellen. Het **[!UICONTROL Console]** lusje onder de redacteur toont wat [!DNL Query Service] momenteel doet, erop wijzend wanneer een vraag is teruggekeerd. Het **[!UICONTROL Result]** lusje, naast de Console, toont vraagresultaten. Zie [de gids van de Redacteur van de Vraag](./user-guide.md) voor meer informatie bij het gebruiken van [!DNL Query Editor].
 
 ![Afbeelding](../images/ui/overview/query-editor.png)
 
@@ -58,14 +57,10 @@ Het tabblad **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn
 
 ## Credentials
 
-Op het tabblad **[!UICONTROL Credentials]** worden uw [!DNL Postgres]-referenties weergegeven. Selecteer het **[!UICONTROL Copy]** pictogram naast om het even welk gebied om zijn inhoud in uw toetsenbordbuffer op te slaan. Lees voor meer informatie over het gebruik van deze referenties om verbinding te maken met externe clients de [handleiding voor verbindingen met clients][connect-clients].
+Op het tabblad **[!UICONTROL Credentials]** worden uw [!DNL Postgres]-referenties weergegeven. Selecteer het **[!UICONTROL Copy]** pictogram naast om het even welk gebied om zijn inhoud in uw toetsenbordbuffer op te slaan. Lees voor meer informatie over het gebruik van deze referenties om verbinding te maken met externe clients de [handleiding voor verbindingen met clients](../clients/overview.md).
 
 ![Afbeelding](../images/ui/overview/credentials.png)
 
 ## Volgende stappen
 
-Nu u met [!DNL Query Service] gebruikersinterface op [!DNL Platform] vertrouwd bent, kunt u tot [!DNL Query Editor] toegang hebben beginnen creërend uw eigen vraagprojecten om met andere gebruikers in uw organisatie te delen. Voor meer informatie over creatie en het runnen van vragen in [!DNL Query Editor], zie [de gebruikersgids van de Redacteur van de Vraag][query-editor].
-
-[platform-ui]: https://platform.adobe.com
-[query-editor]: user-guide.md
-[connect-clients]: ../clients/overview.md
+Nu u met [!DNL Query Service] gebruikersinterface op [!DNL Platform] vertrouwd bent, kunt u tot [!DNL Query Editor] toegang hebben beginnen creërend uw eigen vraagprojecten om met andere gebruikers in uw organisatie te delen. Voor meer informatie over creatie en het runnen van vragen in [!DNL Query Editor], zie [de gebruikersgids van de Redacteur van de Vraag](./user-guide.md).
