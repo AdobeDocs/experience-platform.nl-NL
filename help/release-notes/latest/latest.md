@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
+source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1306'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,6 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Workflowupdates voor samenvoegen | Wanneer het creëren van en het bijwerken van fusiebeleid in UI, kunnen de gebruikers nu voorproef 20 steekproefprofielen die op het unieschema worden gebaseerd. Op deze manier kunnen gebruikers een voorvertoning weergeven van de profielen van klanten voordat ze configuraties met samenvoegbeleid opslaan. Voor meer informatie, zie [de gids UI van het samenvoegbeleid](../../profile/merge-policies/ui-guide.md). |
 | Gegevensset-overlappingsrapport | Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van de opslag van het Profiel door de datasets bloot te stellen die het meest aan adresseerbare publiek bijdragen. Dit rapport biedt niet alleen inzichten in profielgegevens, maar helpt gebruikers ook actie te ondernemen om het gebruik van licenties te optimaliseren, zoals het instellen van een limiet voor de levensduur van bepaalde gegevens. Om meer te leren, volg het leerprogramma op [het produceren van de datasetoverlapping rapport](../../profile/tutorials/dataset-overlap-report.md). |
 
 Voor meer informatie over het profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door [Overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
