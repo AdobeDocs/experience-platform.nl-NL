@@ -5,10 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
@@ -230,6 +229,34 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 - `IF EXISTS`: Als dit is opgegeven, wordt geen uitzondering gegenereerd als de tabel  **** niet bestaat.
 
+## DATABASE DROP
+
+Met de opdracht `DROP DATABASE` wordt een bestaande database neergezet.
+
+```sql
+DROP DATABASE [IF EXISTS] db_name
+```
+
+**Parameters**
+
+- `IF EXISTS`: Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het gegevensbestand  **** niet bestaat.
+
+## DROP SCHEMA
+
+Met de opdracht `DROP SCHEMA` laat u een bestaand schema vallen.
+
+```sql
+DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
+```
+
+**Parameters**
+
+- `IF EXISTS`: Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het schema  **** niet bestaat.
+
+- `RESTRICT`: Standaardwaarde voor de modus. Als dit wordt gespecificeerd, zal het schema slechts worden gelaten vallen als het **geen** om het even welke lijsten bevat.
+
+- `CASCADE`: Als dit wordt gespecificeerd, zal het schema samen met alle lijsten huidig in het schema worden gelaten vallen.
+
 ## WEERGAVE MAKEN
 
 De volgende syntaxis bepaalt een `CREATE VIEW` vraag:
@@ -407,7 +434,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 - `num_of_rows`: Het aantal rijen dat moet worden opgehaald.
 - `cursor_name`: De naam van de curseur u informatie van terugwint.
 
-### {#prepare} VOORBEREIDEN
+### PREPARE {#prepare}
 
 Met de opdracht `PREPARE` kunt u een voorbereide instructie maken. Een voorbereide instructie is een serverobject dat kan worden gebruikt om vergelijkbare SQL-instructies te sjablonen.
 
