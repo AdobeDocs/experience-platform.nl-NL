@@ -5,11 +5,10 @@ title: UI-gids voor zoekprogramma
 topic-legacy: query editor
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-translation-type: tm+mt
-source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
+source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1055'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Query Editor] is een interactief hulpmiddel dat door Adobe Experience Platform wordt verstrekt  [!DNL Query Service], dat u toestaat om, vragen voor klantenervaringsgegevens binnen het  [!DNL Experience Platform] gebruikersinterface te schrijven te bevestigen en in werking te stellen. [!DNL Query Editor] ondersteunt het ontwikkelen van query&#39;s voor analyse en gegevensexploratie, en staat u toe om interactieve query&#39;s voor ontwikkelingsdoeleinden en niet-interactieve query&#39;s uit te voeren om datasets in te vullen  [!DNL Experience Platform].
 
-Voor meer informatie over de concepten en de eigenschappen van [!DNL Query Service], zie [Overzicht van de Dienst van de Vraag][query-service-overview]. Meer over hoe te om het gebruikersinterface van de Dienst van de Vraag op [!DNL Platform] te navigeren, zie [overzicht UI van de Dienst van de Vraag][query-service-ui].
+Voor meer informatie over de concepten en de eigenschappen van [!DNL Query Service], zie [Overzicht van de Dienst van de Vraag](../home.md). Meer over hoe te om het gebruikersinterface van de Dienst van de Vraag op [!DNL Platform] te navigeren, zie [overzicht UI van de Dienst van de Vraag](./overview.md).
 
 ## Aan de slag
 
@@ -91,7 +90,7 @@ In dit deelvenster kunt u rechtstreeks vanuit de gebruikersinterface een uitvoer
 
 Alle query&#39;s die worden uitgevoerd vanuit [!DNL Query Editor] worden vastgelegd in de logbestandentabel. U kunt de onderzoeksfunctionaliteit op **[!UICONTROL Log]** lusje gebruiken om vraaguitvoeringen te vinden. Opgeslagen query&#39;s worden weergegeven op het tabblad **[!UICONTROL Browse]**.
 
-Zie [Overzicht van de Dienst UI van de Vraag][query-service-ui] voor meer informatie.
+Zie [Overzicht van de Dienst UI van de Vraag](./overview.md) voor meer informatie.
 
 >[!NOTE]
 >
@@ -113,7 +112,7 @@ De console verstrekt informatie over de status en de verrichting van [!DNL Query
 
 ### Zoekresultaten
 
-Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Results]**, naast het tabblad **[!UICONTROL Console]**. In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren. Zie [het produceren van datasetleerprogramma][query-service-create-datasets] voor instructies op hoe te om een dataset van vraagresultaten in [!DNL Query Editor] te produceren.
+Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Results]**, naast het tabblad **[!UICONTROL Console]**. In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren. Zie [het produceren van datasetleerprogramma](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten in [!DNL Query Editor] te produceren.
 
 ![Afbeelding](../images/ui/query-editor/query-results.png)
 
@@ -125,9 +124,4 @@ In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Pl
 
 ## Volgende stappen
 
-Nu u weet welke functies beschikbaar zijn in [!DNL Query Editor] en hoe u door de toepassing kunt navigeren, kunt u uw eigen query&#39;s rechtstreeks schrijven in [!DNL Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets in [!DNL Data Lake], zie de gids op [lopende query][query-service-running-queries].
-
-[query-service-overview]: ../home.md
-[query-service-ui]: overview.md
-[query-service-running-queries]: ../best-practices/writing-queries.md
-[query-service-create-datasets]: ./create-datasets.md
+Nu u weet welke functies beschikbaar zijn in [!DNL Query Editor] en hoe u door de toepassing kunt navigeren, kunt u uw eigen query&#39;s rechtstreeks schrijven in [!DNL Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets in [!DNL Data Lake], zie de gids op [lopende query](../best-practices/writing-queries.md).
