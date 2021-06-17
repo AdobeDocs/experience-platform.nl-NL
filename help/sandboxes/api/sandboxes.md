@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor sandboxbeheer
 topic-legacy: developer guide
 description: Met het eindpunt /sandboxen in de sandbox-API kunt u sandboxen in Adobe Experience Platform programmatisch beheren.
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -348,11 +348,7 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) met de details van de zoj
 
 ## Een sandbox opnieuw instellen {#reset}
 
->[!IMPORTANT]
->
->De standaardproductiefandbox kan niet worden teruggesteld als de identiteitsgrafiek binnen het ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) eigenschap wordt ontvangen, of als de identiteitsgrafiek binnen het wordt ontvangen ook door Adobe Audience Manager voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) eigenschap wordt gebruikt.
-
-Ontwikkelingssandboxen beschikken over een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een verzoek voor een PUT in te dienen dat de sandbox `name` bevat in het aanvraagpad.
+Sandboxen hebben een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een verzoek voor een PUT in te dienen dat de sandbox `name` bevat in het aanvraagpad.
 
 **API-indeling**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{SANDBOX_NAME}` | De eigenschap `name` van de sandbox die u wilt herstellen. |
+| `validationOnly` | Een optionele parameter waarmee u een controle voorafgaand aan de vlucht kunt uitvoeren op de sandbox-herstelbewerking zonder de eigenlijke aanvraag in te dienen. Stel deze parameter in op `validationOnly=true` om te controleren of de sandbox die u wilt herstellen gegevens bevat over het delen van Adobe Analytics, Adobe Audience Manager of segmenten. |
 
 **Verzoek**
 
@@ -370,7 +367,7 @@ Met de volgende aanvraag wordt een sandbox met de naam &quot;acme-dev&quot; opni
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **Antwoord**
 
+>[!NOTE]
+>
+>Wanneer een sandbox opnieuw is ingesteld, duurt het ongeveer 30 seconden voordat het systeem de sandbox heeft ingericht.
+
 Een succesvol antwoord retourneert de details van de bijgewerkte sandbox, waarbij wordt getoond dat `state` opnieuw wordt ingesteld.
 
 ```json
@@ -399,18 +400,76 @@ Een succesvol antwoord retourneert de details van de bijgewerkte sandbox, waarbi
 }
 ```
 
->[!NOTE]
->
->Wanneer een sandbox opnieuw is ingesteld, duurt het ongeveer 30 seconden voordat het systeem de sandbox heeft ingericht. Nadat de sandbox is ingericht, wordt `state` &quot;actief&quot; of &quot;mislukt&quot;.
+De standaardproductiesandbox en door de gebruiker gemaakte productiesandboxen kunnen niet opnieuw worden ingesteld als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Analytics wordt gebruikt voor de functie [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html), of als de identiteitsgrafiek die hierin wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de functie [People Based Destination (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
-De volgende tabel bevat mogelijke uitzonderingen die kunnen voorkomen dat een sandbox opnieuw wordt ingesteld:
+Hieronder volgt een lijst met mogelijke uitzonderingen die kunnen voorkomen dat een sandbox opnieuw wordt ingesteld:
 
-| Foutcode | Beschrijving |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+U kunt doorgaan met het herstellen van een productiestandaard die wordt gebruikt voor bidirectioneel segmentdelen met [!DNL Audience Manager] of [!DNL Audience Core Service] door de parameter `ignoreWarnings` aan uw verzoek toe te voegen.
+
+**API-indeling**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| Parameter | Beschrijving |
 | --- | --- |
-| `2074-400` | Deze sandbox kan niet opnieuw worden ingesteld omdat de identiteitsgrafiek die in deze sandbox wordt gehost, ook door Adobe Analytics wordt gebruikt voor de functie Cross Device Analytics (CDA). |
-| `2075-400` | Deze sandbox kan niet opnieuw worden ingesteld omdat de identiteitsgrafiek die in deze sandbox wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de functie Op personen gebaseerde doelen (PBD). |
-| `2076-400` | Deze sandbox kan niet opnieuw worden ingesteld omdat de identiteitsgrafiek in deze sandbox ook wordt gebruikt door Adobe Audience Manager voor de functie Op personen gebaseerde doelen (PBD) en door Adobe Analytics voor de functie Cross Device Analytics (CDA). |
-| `2077-400` | Waarschuwing: Sandbox `{SANDBOX_NAME}` wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of Audience Core Service. |
+| `{SANDBOX_NAME}` | De eigenschap `name` van de sandbox die u wilt herstellen. |
+| `ignoreWarnings` | Een optionele parameter waarmee u de validatiecontrole kunt overslaan en de voorinstelling van een productiesandbox kunt forceren die wordt gebruikt voor bidirectioneel segmentdelen met [!DNL Audience Manager] of [!DNL Audience Core Service]. Deze parameter kan niet worden toegepast op een standaardproductiesandbox. |
+
+**Verzoek**
+
+In het volgende verzoek wordt een productiesandbox met de naam &quot;acme&quot; opnieuw ingesteld.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**Antwoord**
+
+Een succesvol antwoord retourneert de details van de bijgewerkte sandbox, waarbij wordt getoond dat `state` opnieuw wordt ingesteld.
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## Een sandbox verwijderen {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{SANDBOX_NAME}` | De `name` van de sandbox die u wilt verwijderen. |
+| `validationOnly` | Een optionele parameter waarmee u een controle voorafgaand aan de vlucht kunt uitvoeren op de sandbox-verwijderbewerking zonder de eigenlijke aanvraag in te dienen. Stel deze parameter in op `validationOnly=true` om te controleren of de sandbox die u wilt herstellen gegevens bevat over het delen van Adobe Analytics, Adobe Audience Manager of segmenten. |
+| `ignoreWarnings` | Een optionele parameter waarmee u de validatiecontrole kunt overslaan en de verwijdering kunt forceren van een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met [!DNL Audience Manager] of [!DNL Audience Core Service]. Deze parameter kan niet worden toegepast op een standaardproductiesandbox. |
 
 **Verzoek**
 
-Met het volgende verzoek wordt een sandbox met de naam &quot;acme-dev&quot; verwijderd.
+Met het volgende verzoek wordt een productiesandbox met de naam &quot;acme&quot; verwijderd.
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ Een succesvol antwoord retourneert de bijgewerkte details van de sandbox, waarbi
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
