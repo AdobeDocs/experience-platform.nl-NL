@@ -5,9 +5,9 @@ title: Gebruiksaanwijzing voor sandbox
 topic-legacy: user guide
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe s
 
 >[!IMPORTANT]
 >
->De standaardproductiefandbox kan niet worden teruggesteld als de identiteitsgrafiek binnen het ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) eigenschap wordt ontvangen, of als de identiteitsgrafiek binnen het wordt ontvangen ook door Adobe Audience Manager voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) eigenschap wordt gebruikt. De zandbakken van de productie die voor bidirectioneel segment delen met Adobe Audience Manager of de Dienst van de Kern van de Publiek worden gebruikt kunnen ook niet worden teruggesteld.
+>De standaardproductiefandbox kan niet worden teruggesteld als de identiteitsgrafiek binnen het ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) eigenschap wordt ontvangen, of als de identiteitsgrafiek binnen het wordt ontvangen ook door Adobe Audience Manager voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) eigenschap wordt gebruikt.
 
 Als u een productie- of ontwikkelingssandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
 
@@ -88,29 +88,29 @@ Na enkele ogenblikken wordt onder aan het scherm een bevestigingsvak weergegeven
 
 ![succes](../images/ui/success.png)
 
-### Foutberichten
+### Waarschuwingen
 
-Een standaardproductiesandbox die CDA-gegevens bevat, kan niet worden hersteld en retourneert de volgende fout.
+Een standaardproductiesandbox die CDA-gegevens bevat, kan niet worden hersteld en retourneert de volgende waarschuwing.
 
 ![cda](../images/ui/cda.png)
 
-Een standaardproductiesandbox die PBD-gegevens bevat, kan ook niet opnieuw worden ingesteld en retourneert de volgende fout.
+Een standaardproductiesandbox die PBD-gegevens bevat, kan ook niet opnieuw worden ingesteld en retourneert de volgende waarschuwing.
 
 ![pbd](../images/ui/pbd.png)
 
-Een standaardproductiesandbox die gegevens voor zowel CDA als PBD bevat kan ook niet worden teruggesteld en keert de volgende fout terug.
+Een standaardproductiesandbox die gegevens voor zowel CDA als PBD bevat kan ook niet worden teruggesteld en de volgende waarschuwing terugkeert.
 
 ![beide](../images/ui/both.png)
 
-Een productiesandbox die voor bidirectioneel segment het delen met Adobe Audience Manager of de Dienst van de Kern van de Audience wordt gebruikt kan ook niet worden teruggesteld en de volgende fout terugkeren.
+U kunt een productiesandbox terugstellen die voor bidirectioneel segment het delen met [!DNL Audience Manager] of [!DNL Audience Core Service] wordt gebruikt. Selecteer [!UICONTROL Continue] om verder te gaan met het terugstellen.
 
-![seg](../images/ui/seg.png)
+![beide](../images/ui/seg.png)
 
 ## Een sandbox verwijderen
 
 >[!IMPORTANT]
 >
->De standaardproductiefandbox kan niet worden geschrapt en de productiestanddozen die voor bidirectioneel segment het delen met Adobe Audience Manager of de Dienst van de Kern van de Audience worden gebruikt kunnen ook niet worden geschrapt.
+>De standaardproductiesandbox kan niet worden verwijderd.
 
 Als u een productie- of ontwikkelingssandbox verwijdert, worden alle bronnen die aan die sandbox zijn gekoppeld, inclusief de machtigingen, permanent verwijderd.
 
@@ -126,9 +126,9 @@ Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogven
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-Een productiestandaard die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of Audience Core Service kan niet worden verwijderd en retourneert de volgende fout.
+Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met [!DNL Audience Manager] of [!DNL Audience Core Service] kan na de volgende waarschuwing nog steeds worden verwijderd.
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## Volgende stappen
 
