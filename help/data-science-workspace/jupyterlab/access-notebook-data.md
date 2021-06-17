@@ -5,9 +5,9 @@ title: Toegang tot gegevens in Jupyterlab-laptops
 topic-legacy: Developer Guide
 description: Deze gids concentreert zich op hoe te om Notities van Jupyter te gebruiken, die binnen de Werkruimte van de Wetenschap van Gegevens worden gebouwd om tot uw gegevens toegang te hebben.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
+source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
 workflow-type: tm+mt
-source-wordcount: '3220'
+source-wordcount: '3224'
 ht-degree: 8%
 
 ---
@@ -362,7 +362,7 @@ Met de introductie van [!DNL Spark] 2.4 wordt `%dataset` aangepaste magie geleve
 **Gebruik**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **Beschrijving**
@@ -373,8 +373,8 @@ Een aangepaste [!DNL Data Science Workspace] toveropdracht voor het lezen of sch
 | --- | --- | --- |
 | `{action}` | Het type van actie op de dataset uit te voeren. Er zijn twee handelingen beschikbaar: &quot;read&quot; of &quot;write&quot;. | Ja |
 | `--datasetId {id}` | Gebruikt om identiteitskaart van de dataset te leveren om te lezen of te schrijven. | Ja |
-| `--dataFrame {df}` | Het dataframe van de pandas. <ul><li> Wanneer de handeling &quot;read&quot; is, is {df} de variabele waar de resultaten van de bewerking voor het lezen van de gegevensset beschikbaar zijn. </li><li> Wanneer de actie &quot;schrijven&quot;is, wordt dit dataframe {df} geschreven aan de dataset. </li></ul> | Ja |
-| `--mode` | Een extra parameter die wijzigt hoe gegevens worden gelezen. Toegestane parameters zijn &quot;batch&quot; en &quot;interactief&quot;. De modus is standaard ingesteld op &quot;interactief&quot;. Het wordt aanbevolen de modus &quot;batch&quot; te gebruiken bij het lezen van grote hoeveelheden gegevens. | Nee |
+| `--dataFrame {df}` | Het dataframe van de pandas. <ul><li> Wanneer de handeling &quot;read&quot; is, is {df} de variabele waar de resultaten van de bewerking voor het lezen van de gegevensset beschikbaar zijn (zoals een dataframe). </li><li> Wanneer de actie &quot;schrijven&quot;is, wordt dit dataframe {df} geschreven aan de dataset. </li></ul> | Ja |
+| `--mode` | Een extra parameter die wijzigt hoe gegevens worden gelezen. Toegestane parameters zijn &quot;batch&quot; en &quot;interactief&quot;. De modus is standaard ingesteld op &quot;batch&quot;.<br> Het wordt geadviseerd u &quot;interactieve&quot;wijze voor verhoogde vraagprestaties op kleinere datasets. | Ja |
 
 >[!TIP]
 >
@@ -382,8 +382,8 @@ Een aangepaste [!DNL Data Science Workspace] toveropdracht voor het lezen of sch
 
 **Voorbeelden**
 
-- **Voorbeeld** lezen:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Voorbeeld** schrijven:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **Voorbeeld** lezen:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **Voorbeeld** schrijven:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
 
 >[!IMPORTANT]
 >
@@ -449,7 +449,7 @@ De volgende cellen filteren een [!DNL ExperienceEvent] dataset aan gegevens die 
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -511,7 +511,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -568,7 +568,7 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```
