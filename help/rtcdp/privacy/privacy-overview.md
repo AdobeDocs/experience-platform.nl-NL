@@ -4,14 +4,13 @@ title: Privacy in Real-time Platform van de Gegevens van de Klant
 seo-title: Privacy in Real-time Platform van de Gegevens van de Klant
 description: Het Platform van Gegevens van de Klant in real time staat u toe om het proces te stroomlijnen om uw gegevensverrichtingen in overeenstemming met privacyverordeningen te houden.
 seo-description: Het Platform van Gegevens van de Klant in real time staat u toe om het proces te stroomlijnen om uw gegevensverrichtingen in overeenstemming met privacyverordeningen te houden.
-translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
 
 ---
-
 
 # Privacy in Real-time Platform van de Gegevens van de Klant
 
@@ -27,7 +26,7 @@ Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDP
 
 [!DNL Real-time CDP] kunnen klanten ervoor kiezen hun persoonsgegevens niet in gevallen van segmentatiegebruik op te nemen. De opt-out voorkeur van klanten wordt gevangen en opgeslagen door [!DNL Real-time Customer Profile], en kan worden afgedwongen door gebruikers uit te sluiten die uit een segment gebruikend booleaanse logica (&quot;EN NIET&quot;) in de segmentpreiding hebben gekozen.
 
-Zie het document over [het naleven van opt-out verzoeken](../../segmentation/honoring-opt-outs.md) in de documentatie van de Dienst van de Segmentatie van Adobe Experience Platform voor meer informatie.
+Zie het document over [het naleven van opt-out verzoeken](../../segmentation/consents.md) in de documentatie van de Dienst van de Segmentatie van Adobe Experience Platform voor meer informatie.
 
 ## IAB TCF 2.0-ondersteuning
 
