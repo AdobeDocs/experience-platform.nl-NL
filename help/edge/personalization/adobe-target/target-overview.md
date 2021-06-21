@@ -3,9 +3,9 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
+source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '922'
 ht-degree: 3%
 
 ---
@@ -159,32 +159,24 @@ De typische [!DNL Platform Web SDK] code die dit bevel gebruikt kijkt als het vo
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
-   data: { // Freeform stuff (event & profile) }
+   data: { // Freeform data }
 });
 ```
 
-**Voorbeeldcode**
+**Profielkenmerken verzenden naar Adobe Target:**
 
 ```
 alloy("sendEvent", {
   renderDecisions: true,
-  xdm: {
-    device: {
-      screenWidth: 9999
-    }
-  },
   data: {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30,
-	"entity.id" : "123",
-	"entity.genre" : "Drama"
+        "profile.age": 30
       }
     }
   }
-}) 
-.then(console.log);
+});
 ```
 
 ## Aanbevelingen aanvragen
@@ -209,6 +201,22 @@ In de volgende tabel worden de [!DNL Recommendations]-kenmerken weergegeven en w
 |  | cartIds | Ondersteund |
 |  | productPurchasedId | Ondersteund |
 | Pagina- of itemcategorie voor categorie-affiniteit | user.categoryId | Ondersteund |
+
+**Recommendations-kenmerken verzenden naar Adobe Target:**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
 
 ## Foutopsporing
 
