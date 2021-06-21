@@ -4,7 +4,7 @@ title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Voor informatie over deze stap, verwijs naar [Uitgezochte attributen](../../ui/a
 Adobe adviseert dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Dit is het veld waarvan de gebruikers-id&#39;s zijn weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Raadpleeg de onderstaande tabel voor de meest gangbare unieke id&#39;s en hun XDM-veld in het schema.
 
 | Unieke id | XDM-veld in Unified Schema |
------------------ | ---------------------------
+|----------------- | ---------------------------|
 | E-mailadres | `personalEmail.address` |
 | Telefoon | `mobilePhone.number` |
 | ID Loyalty-programma | `Customer-defined XDM field` |
@@ -73,7 +73,7 @@ Adobe adviseert dat u een uniek herkenningsteken van uw [samenvoegingsschema](..
 Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt exporteren. Enkele aanbevolen opties zijn:
 
 | Schema | XDM-veld |
------- | ---------
+|------ | ---------|
 | Voornaam | `person.name.firstName` |
 | Achternaam | `person.name.lastName` |
 | Telefoon | `mobilePhone.number` |
