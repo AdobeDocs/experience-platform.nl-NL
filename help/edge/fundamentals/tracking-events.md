@@ -2,14 +2,13 @@
 title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
-translation-type: tm+mt
-source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
+exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
+source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
-
 
 # Gebeurtenissen bijhouden
 
@@ -75,9 +74,32 @@ In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardig
 >
 >Er geldt een limiet van 32 kB voor de gegevens die in elke gebeurtenis in het XDM-veld kunnen worden verzonden.
 
+
 ### Niet-XDM-gegevens verzenden
 
-Het verzenden van gegevens die niet overeenkomen met een XDM-schema wordt momenteel niet ondersteund. De steun is gepland voor een toekomstige datum.
+Gegevens die niet overeenkomen met een XDM-schema moeten worden verzonden met de optie `data` van de opdracht `sendEvent`. Deze eigenschap wordt gesteund in versies 2.5.0 en hoger van het Web SDK.
+
+Dit is handig als u een Adobe Target-profiel moet bijwerken of kenmerken van Target Recommendations moet verzenden. [Meer informatie over deze doelfuncties.](../personalization/adobe-target/target-overview.md#single-profile-update)
+
+In de toekomst kunt u de volledige gegevenslaag onder de optie `data` verzenden en toewijzen aan de XDM-serverzijde.
+
+**Profiel en Recommendations-kenmerken verzenden naar Adobe Target:**
+
+```
+alloy("sendEvent", {
+  data: {
+    __adobe: {
+      target: {
+        "profile.gender": "female",
+        "profile.age": 30,
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
+
 
 ### Instelling `eventType` {#event-types}
 
