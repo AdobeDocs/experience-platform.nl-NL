@@ -4,20 +4,28 @@ description: Leer hoe u Adobe Experience Cloud-id's (ECID's) ophaalt met de Adob
 seo-description: Meer weten over Adobe Experience Cloud-id?
 keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;primaire;Identiteitskaart Namespace;Naamruimte ID;AuthentificatieStaat;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Cloud-id&#39;s ophalen
+# Adobe Experience Cloud-id&#39;s
 
 Adobe Experience Platform Web SDK gebruikt [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
 ## Identiteit van eerste partij
 
-[!DNL Identity Service] slaat de identiteit in een koekje in een eerstepartijdomein op. De [!DNL Identity Service] probeert om het koekje te plaatsen gebruikend een kopbal van HTTP op het domein. Als dat mislukt, valt [!DNL Identity Service] terug naar het instellen van cookies via JavaScript. Adobe raadt u aan een CNAME in te stellen om ervoor te zorgen dat uw cookies niet worden beperkt door ITP-beperkingen aan de clientzijde.
+[!DNL Identity Service] slaat de identiteit in een koekje in een eerstepartijdomein op. De [!DNL Identity Service] probeert om het koekje te plaatsen gebruikend een kopbal van HTTP op het domein. Als dat mislukt, valt [!DNL Identity Service] terug naar het instellen van cookies met JavaScript. Men adviseert dat u opstelling een NAAM voor uw [Domein van de Rand config](../fundamentals/configuring-the-sdk.md#edgeConfigId).
+
+Elke klap die uit SDK van het Web van het Platform komt heeft ECID toegevoegd aan het door de Dienst van de Identiteit op het Netwerk van de Rand. Voor nieuwe bezoekers wordt de ECID gegenereerd en toegevoegd aan de lading. Voor herhaalde bezoekers wordt de ECID opgehaald uit het cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` en toegevoegd aan de payload.
+
+De ECID wordt toegevoegd onder het veld `identityMap` in uw `xdm`. Met het hulpprogramma dev van de browser kunt u de ECID in het antwoord onder de payload bekijken met het type: `identity:result`, maar u kunt ECID niet in het verzoek zien.
+
+De implementaties van CNAME staan u toe om het inzamelingsdomein aan te passen dat door Adobe wordt gebruikt zodat zij uw eigen domein aanpassen. Op deze manier kan Adobe cookies van de eerste partij op de server instellen in plaats van op de client via JavaScript. In het verleden golden voor deze eersteklas cookies aan de serverzijde geen beperkingen die waren opgelegd in het ITP-beleid (Intelligent Tracking Prevention, intelligente traceringspreventie) van Apple voor Safari-browsers. In november 2020 heeft Apple echter het beleid bijgewerkt, zodat deze beperkingen ook werden toegepast op cookies die via CNAME zijn ingesteld. Momenteel geldt dat zowel cookies die door CNAME op de server zijn ingesteld als cookies die door JavaScript op de client zijn ingesteld, beperkt zijn tot een vervaldatum van 7 dagen of 24 uur onder ITP. Voor meer informatie over het beleid ITP, zie dit document van Apple over [het volgen preventie](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp).
+
+Terwijl een implementatie CNAME geen voordelen in termen van koekjesleven verstrekt, kunnen er sommige andere voordelen zoals ad blokkers en minder gemeenschappelijke browsers zijn die gegevens verhinderen worden verzonden naar domeinen die zij als Trackers classificeren. In die gevallen, zou het gebruiken van een NAAM uw gegevensinzameling voor gebruikers kunnen verhinderen worden verstoord die deze hulpmiddelen gebruiken.
 
 ## Identiteit van derden
 
