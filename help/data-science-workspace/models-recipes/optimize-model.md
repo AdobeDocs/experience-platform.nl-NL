@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Het Model Insights Framework biedt de gegevenswetenschapper hulpmiddelen in de Data Science Workspace om snelle en geïnformeerde keuzes te maken voor optimale modellen voor machinaal leren op basis van experimenten.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -35,7 +34,7 @@ Momenteel ondersteunt het Model Insights Framework de volgende runtimes:
 
 Voorbeeldcode voor recepten vindt u in de gegevensopslagruimte [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) onder `recipes`. In deze zelfstudie wordt verwezen naar specifieke bestanden in deze opslagplaats.
 
-### Schalen {#scala}
+### Scala {#scala}
 
 Er zijn twee manieren om metriek in de recepten te brengen. Één moet de standaardevaluatiemetriek gebruiken die door SDK wordt verstrekt en andere moet de metriek van de douaneevaluatie schrijven.
 
@@ -44,7 +43,7 @@ Er zijn twee manieren om metriek in de recepten te brengen. Één moet de standa
 Standaardevaluaties worden berekend als onderdeel van de classificatiealgoritmen. Hier volgen enkele standaardwaarden voor beoordelaars die momenteel worden geïmplementeerd:
 
 | Evaluatorklasse | `evaluation.class` |
---- | ---
+|--- | ---|
 | DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
