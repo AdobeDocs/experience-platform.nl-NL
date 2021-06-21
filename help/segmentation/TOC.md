@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentatieservicehandleiding
 user-guide-description: Bouw segmenten en produceer publiek van uw gegevens van het Profiel van de Klant in real time.
 feature: Segmenten
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 5%
@@ -36,7 +36,7 @@ ht-degree: 5%
    - [Streaming segmentering](ui/streaming-segmentation.md)
    - [Streaming segmentatie (video)](video/streaming-segmentation-overview.md)
    - [Tijd beperkingen refactoring](ui/segment-refactoring.md)
-- [Optie-outs respecteren](honoring-opt-outs.md)
+- [Erkenning](consents.md)
 - [Segmentatie van meerdere entiteiten](multi-entity-segmentation.md)
 - Taal voor profielquery {#pql}
    - [Overzicht](pql/overview.md)
