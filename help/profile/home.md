@@ -4,7 +4,7 @@ title: Overzicht van realtime-klantprofiel
 topic-legacy: guide
 description: Klantprofiel in realtime is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol 
 
 ### Verzoeken om opt-out en privacy van gegevens verwerken
 
-[!DNL Experience Platform] biedt uw klanten de mogelijkheid om weigeren-aanvragen te verzenden met betrekking tot het gebruik en de opslag van hun gegevens binnen  [!DNL Real-time Customer Profile]. Raadpleeg de documentatie over [het afhandelen van aanvragen voor opt-out](../segmentation/honoring-opt-outs.md) voor meer informatie over de manier waarop aanvragen voor opt-out worden afgehandeld.
+[!DNL Experience Platform] biedt uw klanten de mogelijkheid om weigeren-aanvragen te verzenden met betrekking tot het gebruik en de opslag van hun gegevens binnen  [!DNL Real-time Customer Profile]. Raadpleeg de documentatie over [het afhandelen van aanvragen voor opt-out](../segmentation/consents.md) voor meer informatie over de manier waarop aanvragen voor opt-out worden afgehandeld.
 
 ## Volgende stappen en extra bronnen
 
