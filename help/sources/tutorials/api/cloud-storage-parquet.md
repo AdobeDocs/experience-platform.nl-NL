@@ -6,11 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Apache Parquet-gegevens van een extern cloudopslagsysteem in te voeren.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 0%
+source-wordcount: '1099'
+ht-degree: 1%
 
 ---
 
@@ -43,7 +42,7 @@ Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelf
 
 Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
-- `x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
@@ -308,7 +307,7 @@ Een geslaagde reactie retourneert een array met de id van de nieuwe dataset in d
 ]
 ```
 
-## Doelverbinding {#target} maken
+## Een doelverbinding maken {#target}
 
 U hebt nu de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
