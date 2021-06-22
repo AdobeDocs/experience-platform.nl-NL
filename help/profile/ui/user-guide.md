@@ -4,9 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel in realtime
 topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,19 @@ Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] serv
 
 ## Overzicht
 
-Selecteer **[!UICONTROL Profiles]** in de linkernavigatie in de interface van het Experience Platform om het tabblad **[!UICONTROL Overview]** te openen. Op dit tabblad vindt u koppelingen naar documentatie en video&#39;s die u helpen bij het begrijpen van profielen en het werken met profielen.
+Selecteer **[!UICONTROL Profiles]** in de linkernavigatie in de interface van het Experience Platform om het tabblad **[!UICONTROL Overview]** met het dashboard [!UICONTROL Profiles] te openen.
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is [!UICONTROL Profiles] dashboard niet zichtbaar. In plaats daarvan bevat het tabblad [!UICONTROL Overview] koppelingen en documentatie waarmee u aan de slag kunt gaan met het realtime profiel van de klant.
 
-### Profieldashboard
+### [!UICONTROL Profiles] dashboard  {#profile-dashboard}
 
-Voor sommige gebruikers bevat het selecteren van **[!UICONTROL Profiles]** in de linkernavigatie en het openen van het tabblad **[!UICONTROL Overview]** een dashboard met een overzicht van de belangrijkste maatstaven voor de profielgegevens.
+Het dashboard **[!UICONTROL Profiles]** bevat een overzicht van de belangrijkste maatstaven voor de profielgegevens van uw organisatie.
 
-Voor meer informatie gaat u naar de [dashboardhulplijn van het profiel](profile-dashboard.md).
+Voor meer informatie gaat u naar de [dashboardhulplijn van het profiel](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Bladeren
 
