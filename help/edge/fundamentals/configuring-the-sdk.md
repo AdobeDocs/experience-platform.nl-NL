@@ -4,11 +4,10 @@ description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-translation-type: tm+mt
-source-git-commit: 2895975b9c103e6afba7db221223b4ef2116caf3
+source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 4%
+source-wordcount: '839'
+ht-degree: 3%
 
 ---
 
@@ -94,7 +93,7 @@ Uw toegewezen [!DNL Experience Cloud] organisatie-id. Wanneer het vormen van vee
 
 {style=&quot;table-layout:auto&quot;}
 
-Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch worden verzameld. Zie [Automatische koppeling bijhouden](../data-collection/track-links.md#automaticLinkTracking) voor meer informatie.
+Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch worden verzameld. Zie [Automatische koppeling bijhouden](../data-collection/track-links.md#automaticLinkTracking) voor meer informatie. Koppelingen worden ook gelabeld als downloadkoppelingen als deze een downloadkenmerk bevatten of als de koppeling eindigt met een bestandsextensie. De de verbindingsbepalers van de download kunnen met een regelmatige uitdrukking worden gevormd. De standaardwaarde is `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
