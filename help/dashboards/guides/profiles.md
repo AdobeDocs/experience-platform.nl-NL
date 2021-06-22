@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 ## Het dashboard [!UICONTROL Profiles] verkennen
 
 Als u naar het [!UICONTROL Profiles]-dashboard in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
+
+>[!NOTE]
+>
+>Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is [!UICONTROL Profiles] dashboard niet zichtbaar. In plaats daarvan bevat het tabblad [!UICONTROL Overview] koppelingen en documentatie waarmee u aan de slag kunt gaan met het realtime profiel van de klant.
 
 ![](../images/profiles/dashboard-overview.png)
 
