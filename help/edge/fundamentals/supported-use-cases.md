@@ -2,9 +2,9 @@
 title: Ondersteunde gebruiksgevallen met de Adobe Experience Platform Web SDK
 description: Leer welke gebruiksgevallen worden ondersteund met de Adobe Experience Platform Web SDK.
 keywords: web sdk;use cases
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '574'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | --- | --- |
 | Gebeurtenissen verzenden |  |
 | offer decisioning | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| Gegevens verzenden naar realtime gegevensprofiel van de klant met lage latentie |
+| Als dataset voor profiel wordt toegelaten, capaciteit om gegevens naar het Profiel van de Gegevens van de Klant in real time in real time te verzenden |  |
 | Gegevens in realtime naar Customer Journey Analytics verzenden |  |
 | Goedkeuring voor profiel schrijven | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | Gegevensserver-kant in real-time doorsturen naar derden | [Documentatie](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Ondersteuning voor bezoekerkenmerken |  |
 | Profielscripts |  |
 | XDM wordt mbox-parameters |  |
+| Aanbiedingen doorsturen die worden ondersteund met A4T-rapportage | [Documentatie](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Het doelprofiel bijwerken | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Aanbevelingen |  |
+| mBox-id van derden |  |
 
 {style=&quot;table-layout:auto&quot;}
 
