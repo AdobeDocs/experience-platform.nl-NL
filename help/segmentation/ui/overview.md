@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1523'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,19 @@ Het is ook belangrijk om twee belangrijke termen te kennen die in dit document w
 
 ## Overzicht
 
-Selecteer **[!UICONTROL Segments]** in de linkernavigatie in [[!DNL Experience Platform] UI](https://platform.adobe.com/) om het tabblad **[!UICONTROL Overview]** te openen. Dit tabblad bevat koppelingen naar documentatie en video&#39;s waarmee u segmenten kunt begrijpen en bewerken.
+Selecteer **[!UICONTROL Segments]** in de linkernavigatie in de interface van het Experience Platform om het tabblad **[!UICONTROL Overview]** met het dashboard [!UICONTROL Segments] te openen.
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is [!UICONTROL Segments] dashboard niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met segmenten.
 
-### Segmentdashboard
+### [!UICONTROL Segments] dashboard  {#segments-dashboard}
 
-Voor sommige gebruikers bevat het selecteren van **[!UICONTROL Segments]** in de linkernavigatie en het openen van het tabblad **[!UICONTROL Overview]** een dashboard met een overzicht van de belangrijkste meetgegevens die betrekking hebben op uw segmentgegevens.
+Het dashboard **[!UICONTROL Segments]** bevat een overzicht van de belangrijkste metriek voor de segmentgegevens van uw organisatie.
 
-Voor meer informatie gaat u naar de [segmentdashboardgids](segment-dashboard.md).
+Voor meer informatie gaat u naar de [segmentdashboardgids](../../dashboards/guides/segments.md).
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Bladeren
 
@@ -99,7 +103,7 @@ Bovendien kunt u het segment bewerken. Als u **[!UICONTROL Edit segment]** selec
 
 In de sectie **[!UICONTROL Total audience in segment]** wordt het totale aantal profielen weergegeven dat in aanmerking komt voor het segment.
 
-Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in [schattingsgeneratiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de schepingsleerprogramma van het segment worden gevonden.
+Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de voorbeeldgegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in [schattingsgeneratiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de schepingsleerprogramma van het segment worden gevonden.
 
 ### Geactiveerde doelen
 
