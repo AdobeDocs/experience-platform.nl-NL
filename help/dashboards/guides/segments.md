@@ -4,9 +4,9 @@ title: Segmentdashboard
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,11 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het segmentdashboard verkennen
 
-Als u naar het segmentdashboard in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Segments]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het [!UICONTROL Segments]-dashboard in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Segments]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
+
+>[!NOTE]
+>
+>Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is [!UICONTROL Segments] dashboard niet zichtbaar. In plaats daarvan, toont het [!UICONTROL Overview] lusje verbindingen en documentatie om u te helpen met segmentatie beginnen.
 
 ![](../images/segments/dashboard-overview.png)
 
