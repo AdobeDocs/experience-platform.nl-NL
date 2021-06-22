@@ -2,14 +2,13 @@
 keywords: 'reclame; borden; '
 title: Microsoft Bing-verbinding
 description: Met de de verbindingsbestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
+source-git-commit: 2931efa6f67a042255fb1d31c0683f73d817b55b
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Microsoft Bing] verbinding  {#bing-destination}
 
@@ -25,7 +24,7 @@ Als markator, wil ik segmenten kunnen gebruiken die van [!DNL Microsoft Advertis
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
 
 | Doelidentiteit | Beschrijving |
 |---|---|
