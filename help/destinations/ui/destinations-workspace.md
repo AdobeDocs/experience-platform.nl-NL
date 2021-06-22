@@ -4,23 +4,30 @@ title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-translation-type: tm+mt
-source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 1%
+source-wordcount: '792'
+ht-degree: 0%
 
 ---
 
 # Werkruimte Doelen {#destinations-workspace}
 
-## Overzicht {#overview}
-
 Selecteer in Adobe Experience Platform **[!UICONTROL Destinations]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Destinations] te openen.
 
-De werkruimte [!UICONTROL Destinations] bestaat uit vier secties, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], en [!UICONTROL System View], die in de hieronder secties worden beschreven.
+De werkruimte [!UICONTROL Destinations] bestaat uit vijf secties, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], en [!UICONTROL System View], die in de hieronder secties worden beschreven.
 
-![Overzicht van bestemmingen](../assets/ui/workspace/destinations-workspace.png)
+![Overzicht van bestemmingen](../assets/ui/workspace/destinations-overview.png)
+
+## [!UICONTROL Overview] {#overview}
+
+Op het tabblad **[!UICONTROL Overview]** wordt het dashboard [!UICONTROL Destinations] weergegeven, met daarin belangrijke meetgegevens voor de doelgegevens van uw organisatie. Voor meer informatie gaat u naar de [[!UICONTROL Destinations] dashboardgids](../../dashboards/guides/destinations.md).
+
+>[!NOTE]
+>
+>Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, zijn [!UICONTROL Destinations] dashboard en [!UICONTROL Overview] tabel niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt [[!UICONTROL Catalog] tab](#catalog) weergegeven.
+
+![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
