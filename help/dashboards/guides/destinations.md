@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '744'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Het [!UICONTROL Destinations] dashboard toont een momentopname van de bestemming
 ## Het dashboard voor doelen verkennen
 
 Als u naar het doeldashboard in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Destinations]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
+
+>[!NOTE]
+>
+>Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, zijn [!UICONTROL Destinations] dashboard en [!UICONTROL Overview] tabel niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt het tabblad [!UICONTROL Catalog] weergegeven. Raadpleeg de [[!UICONTROL Destinations]-werkruimtegids](../../destinations/ui/destinations-workspace.md) voor meer informatie over de tab [!UICONTROL Catalog].
 
 ![](../images/destinations/dashboard-overview.png)
 
