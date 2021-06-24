@@ -5,10 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-translation-type: tm+mt
-source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
+source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -31,13 +30,13 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen worden ing
 
 - [Overzicht Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
 - [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Overzicht Adobe Analytics Classifications Data Connector](connectors/adobe-applications/classifications.md)
+- [Overzicht van Adobe Analytics Classifications Data Source Connection](connectors/adobe-applications/classifications.md)
 - [Een gegevensbronverbinding voor Adobe Analytics Classifications maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Overzicht Adobe Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
+- [Overzicht van Adobe Analytics Report Suite-gegevensbronverbinding](connectors/adobe-applications/analytics.md)
 - [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] connectoroverzicht](connectors/adobe-applications/marketo/marketo.md)
-- [Een  [!DNL Marketo Engage] bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Creeer a [!DNL Marketo Engage] bronverbinding in UI](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Reclame
 
@@ -143,7 +142,7 @@ De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combin
 
 Voor meer informatie over de beschikbare toestemmingen die door de Admin Console, met inbegrip van die vier bronnen worden verleend, zie [toegangsbeheeroverzicht](../access-control/home.md).
 
-## Voorwaarden {#terms-and-conditions}
+## Voorwaarden en bepalingen {#terms-and-conditions}
 
 Door om het even welke bronnen te gebruiken die als bèta (&quot;Beta&quot;) worden geëtiketteerd, bevestigt u hierbij dat Beta ***&quot;zoals is&quot;zonder garantie van om het even welke soort*** wordt verstrekt.
 
