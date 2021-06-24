@@ -5,9 +5,9 @@ title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 topic-legacy: overview
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,8 @@ Voor gedetailleerde informatie over de gebiedstoewijzing die tussen [!DNL Analyt
 
 ## Wat is de verwachte latentie voor de Gegevens van Analytics over Platform?
 
+De verwachte latentie voor Analytics Data on Platform wordt in de onderstaande tabel beschreven. De latentie zal afhankelijk van klantenconfiguratie, gegevensvolumes, en de toepassingen van de consument variëren. Bijvoorbeeld, als de implementatie van Analytics met `A4T` wordt gevormd zal de latentie aan Pijpleiding tot 5-10 minuten stijgen.
+
 | Analysegegevens | Verwachte vertraging |
 | -------------- | ---------------- |
 | Nieuwe gegevens naar [!DNL Real-time Customer Profile] (A4T **not** ingeschakeld) | &lt; 2=&quot;&quot; minutes=&quot;&quot;> |
@@ -53,7 +55,7 @@ Voor gedetailleerde informatie over de gebiedstoewijzing die tussen [!DNL Analyt
 
 >[!NOTE]
 >
->De latentie zal afhankelijk van klantenconfiguratie, gegevensvolumes, en de toepassingen van de consument variëren. Bijvoorbeeld, als [!DNL Analytics] implementatie met `A4T` wordt gevormd zal de latentie aan Pijpleiding tot 5-10 minuten stijgen.
+>De gegevens van de analysebackfill worden niet opgenomen in [!DNL Profile] en worden daarom niet administratief verwerkt in vergunningsprofielen.
 
 ## Primaire id&#39;s in [!DNL Analytics]-gegevens
 
