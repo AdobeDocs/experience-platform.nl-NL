@@ -2,11 +2,11 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd;profiel;rtcp;XDM-grafieken
 title: Overzicht van realtime-klantprofiel
 topic-legacy: guide
-description: Klantprofiel in realtime is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
+description: In realtime Klantprofiel worden gegevens uit verschillende bronnen samengevoegd en biedt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,7 @@ De profielopslag gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Pl
 
 Experience Platform biedt een reeks instructies om u te helpen voorkomen dat u [XDM-schema&#39;s (Experience Data Model) maakt](../xdm/home.md) die niet kunnen worden ondersteund door het realtime profiel van de klant. Dit omvat zachte grenzen die in prestatiesdegradatie zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Lees de [Profielhulplijnen](guardrails.md) documentatie voor meer informatie, zoals een lijst met richtlijnen en voorbeelden van gebruiksgevallen.
 
-### (Beta) Profieldashboard {#profile-dashboard}
-
->[!IMPORTANT]
->
->De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+### Profieldashboard {#profile-dashboard}
 
 De interface van het Experience Platform biedt een dashboard waarmee u belangrijke informatie over uw gegevens van het Profiel van de Klant in real time kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Raadpleeg de [Handleiding voor het dashboard van het profiel](ui/profile-dashboard.md) voor meer informatie over de toegang tot en het werken met het dashboard [!DNL Profile] in de gebruikersinterface en voor gedetailleerde informatie over de metriek die in het dashboard wordt weergegeven.
 
@@ -69,7 +65,7 @@ Wanneer er conflicterende gegevens van veelvoudige datasets zijn, bepaalt het fu
 
 Als u meer wilt weten over samenvoegingsbeleid en hun rol binnen het Experience Platform, leest u eerst het [overzicht van samenvoegingsbeleid](merge-policies/overview.md).
 
-### Unieschema&#39;s {#profile-fragments-and-union-schemas}
+### Unieregelingen {#profile-fragments-and-union-schemas}
 
 Een van de belangrijkste functies van [!DNL Real-time Customer Profile] is de mogelijkheid om multikanaalgegevens te verenigen. Wanneer [!DNL Real-time Customer Profile] wordt gebruikt om tot een entiteit toegang te hebben, kan het u van een samengevoegde mening van alle profielfragmenten voor die entiteit over datasets voorzien, die als &quot;verenigingsmening&quot;wordt bedoeld en door wat als verenigingsschema wordt bekend gemaakt mogelijk gemaakt.
 
