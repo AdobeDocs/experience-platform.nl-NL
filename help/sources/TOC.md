@@ -4,10 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
-translation-type: tm+mt
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 5%
 
 ---
@@ -230,7 +229,8 @@ ht-degree: 5%
       - [Gegevensstroom betalingsverbinding](tutorials/ui/dataflow/payments.md)
       - [Dataflow van protocolverbinding](tutorials/ui/dataflow/protocols.md)
    - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
-   - [Dataflows bewaken](tutorials/ui/monitor.md)
+   - [Batchgegevens controleren](tutorials/ui/monitor.md)
+   - [Streaming gegevens bijhouden](tutorials/ui/monitor-streaming.md)
    - [Accounts bijwerken](tutorials/ui/update.md)
    - [Gegevensstromen bijwerken](tutorials/ui/update-dataflows.md)
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
