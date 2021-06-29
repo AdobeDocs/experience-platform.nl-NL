@@ -3,12 +3,12 @@ keywords: doel activeren;doelen activeren;gegevens activeren
 title: Profielen en segmenten naar een doel activeren
 type: Tutorial
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2600'
+source-wordcount: '2738'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Activeer de gegevens in [!DNL Adobe Experience Platform] door segmenten aan best
 
 Om gegevens aan bestemmingen te activeren, moet u met succes [een bestemming](./connect-destination.md) hebben aangesloten. Als u dit niet reeds hebt gedaan, ga naar [doelcatalogus](../catalog/overview.md), doorblader de gesteunde bestemmingen, en opstelling één of meerdere bestemmingen.
 
-## Gegevens {#activate-data} activeren
+## Gegevens activeren {#activate-data}
 
 De stappen in de activeringswerkstroom variëren enigszins per doeltype. De volledige werkstroom voor alle bestemmingstypes wordt hieronder geschetst.
 
-## Selecteer welk doel om gegevens te activeren naar {#select-destination}
+## Selecteer het doel waarop de gegevens moeten worden geactiveerd {#select-destination}
 
 Van toepassing op: Alle bestemmingen
 
@@ -37,7 +37,7 @@ Navigeer in de Adobe Experience Platform-gebruikersinterface naar **[!UICONTROL 
 
 Voer de stappen in de volgende sectie uit om de segmenten te selecteren die u wilt activeren.
 
-## [!UICONTROL Select Segments] stap  {#select-segments}
+## [!UICONTROL Select Segments] stap {#select-segments}
 
 Van toepassing op: Alle bestemmingen
 
@@ -149,10 +149,15 @@ Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een voll
    >
    >De optie om bestanden op een bepaald tijdstip te exporteren bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten.
 
+   >[!IMPORTANT]
+   >
+   >Afhankelijk van het moment waarop de uitvoertaak van het profiel is voltooid en wanneer de doelservice de segmentactiveringstaak start, bevat de eerste incrementele of volledige bestandsuitvoer mogelijk niet alle benodigde gegevens voor de backfill. Om ervoor te zorgen dat er volledige en meest actuele backfill gegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raden we u aan de eerste exporttijd van het bestand in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
 
-### Incrementele bestanden {#export-incremental-files} exporteren
+
+### Incrementele bestanden exporteren {#export-incremental-files}
 
 Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporteerde bestanden alleen de profielen bevatten die voor dat segment zijn gekwalificeerd sinds de laatste exportbewerking.
 
@@ -173,12 +178,16 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 
    >[!IMPORTANT]
    >
-   >De optie om de tijd van de dag voor de uitvoer te selecteren is slechts beschikbaar aan een geselecteerd aantal klanten. Klanten die geen bèta zijn, kunnen incrementele bestanden eenmaal per dag om 12:00 uur UTC (7:00 UUR EST) exporteren.
+   >De optie om de tijd van de dag voor de uitvoer te selecteren is slechts beschikbaar aan een geselecteerd aantal klanten.
+
+   >[!IMPORTANT]
+   >
+   >Afhankelijk van het moment waarop de uitvoertaak van het profiel is voltooid en wanneer de doelservice de segmentactiveringstaak start, bevat de eerste incrementele of volledige bestandsuitvoer mogelijk niet alle benodigde gegevens voor de backfill. Om ervoor te zorgen dat er volledige en meest actuele backfill gegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raden we u aan de eerste exporttijd van het bestand in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
 
-### Bestandsnamen {#file-names} configureren
+### Bestandsnamen configureren {#file-names}
 
 De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen.
 
@@ -204,7 +213,7 @@ Selecteer **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 
 Nadat u alle segmenten hebt geconfigureerd, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-## **[!UICONTROL Segment schedule]** stap  {#segment-schedule}
+## **[!UICONTROL Segment schedule]** stap {#segment-schedule}
 
 Van toepassing op: reclamebestemmingen, sociale bestemmingen
 
@@ -224,7 +233,7 @@ Op **[!UICONTROL Segment schedule]** pagina, kunt u de begindatum voor het verze
 
 ![app-id invoeren](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Select attributes]** stap  {#select-attributes}
+## **[!UICONTROL Select attributes]** stap {#select-attributes}
 
 Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
 
@@ -427,7 +436,7 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Fi
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
-### E-mailmarketingdoelen en cloudopslagdoelen {#esp-and-cloud-storage}
+### E-mailmarketingbestemmingen en cloudopslagbestemmingen {#esp-and-cloud-storage}
 
 Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een door tabs gescheiden `.csv`-bestand op de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De standaardbestandsindeling is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
@@ -454,7 +463,7 @@ Voor [!DNL Facebook], betekent een succesvolle activering dat een [!DNL Facebook
 >
 >De integratie tussen Adobe Experience Platform en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden naar [!DNL Facebook] verzonden wanneer u de segmenten naar de bestemming activeert.
 
-## Activering {#disable-activation} uitschakelen
+## Activering uitschakelen {#disable-activation}
 
 Volg onderstaande stappen om een bestaande activeringsstroom uit te schakelen:
 
