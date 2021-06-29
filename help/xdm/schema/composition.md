@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
+source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
 workflow-type: tm+mt
-source-wordcount: '3616'
+source-wordcount: '3667'
 ht-degree: 0%
 
 ---
@@ -59,13 +59,18 @@ Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen dat de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht op [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen uw klanten digitale ervaringen te bieden.
 
+Er zijn twee manieren om identiteitsgegevens naar Platform te verzenden:
+
+1. Identiteitsbeschrijvingen toevoegen aan afzonderlijke velden, via de [Schema-editor UI](../ui/fields/identity.md) of met de [Schemaregistratie-API](../api/descriptors.md#create)
+1. Een [`identityMap`-veld](#identityMap) gebruiken
+
 #### `identityMap` {#identityMap}
 
 `identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
 
-Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteiten ingesloten worden in de gegevens en daardoor minder zichtbaar worden. Als u onbewerkte gegevens opneemt, moet u in plaats daarvan afzonderlijke identiteitsvelden definiëren binnen de daadwerkelijke schemastructuur.
+Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteiten ingesloten worden in de gegevens en daardoor minder zichtbaar worden. Als u onbewerkte gegevens opneemt, moet u in plaats daarvan afzonderlijke identiteitsvelden definiëren binnen de daadwerkelijke schemastructuur. Schema&#39;s die `identityMap` gebruiken, kunnen ook niet deelnemen aan relaties.
 
-Identiteitskaarten kunnen echter vooral handig zijn als u gegevens opneemt van bronnen waarin identiteiten worden opgeslagen, zoals [!DNL Airship] of Adobe Audience Manager. Daarnaast zijn identiteitskaarten vereist als u de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) gebruikt.
+Identiteitskaarten kunnen echter bijzonder nuttig zijn als u gegevens opneemt uit bronnen die identiteiten samen opslaan (zoals [!DNL Airship] of Adobe Audience Manager), of als er een variabel aantal identiteiten voor een schema is. Daarnaast zijn identiteitskaarten vereist als u de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) gebruikt.
 
 Een voorbeeld van een eenvoudige identiteitskaart zou als het volgende kijken:
 
