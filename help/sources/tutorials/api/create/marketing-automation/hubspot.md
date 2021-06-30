@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;hubspot;Hubspot
 solution: Experience Platform
-title: Creeer een Verbinding van de Bron van HubSpot Gebruikend de Dienst API van de Stroom
+title: Creeer een Verbinding van de Basis HubSpot Gebruikend de Dienst API van de Stroom
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om Adobe Experience Platform met HubSpot te verbinden gebruikend de Dienst API van de Stroom.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 143f3b4a113c6f36cb1bb0c3624c8503f158a16d
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL HubSpot]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL HubSpot] basisverbinding maken met de [!DNL Flow Service]-API
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te leiden om [!DNL Experience Platform] aan [!DNL HubSpot] te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL HubSpot] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -38,33 +38,19 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL HubSpot], moet u de vol
 | `clientSecret` | Het clientgeheim dat is gekoppeld aan uw [!DNL HubSpot]-toepassing. |
 | `accessToken` | Het toegangstoken werd verkregen toen aanvankelijk het voor authentiek verklaren van uw integratie OAuth. |
 | `refreshToken` | Het vernieuwingstoken dat wordt verkregen toen aanvankelijk het voor authentiek verklaren van uw integratie OAuth. |
-| `connectionSpec` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL HubSpot] is: `cc6a4487-9e91-433e-a3a3-9cf6626c1806` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL HubSpot] is: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 Voor meer informatie over begonnen worden, verwijs naar dit [document HubSpot](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL HubSpot]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL HubSpot] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -74,7 +60,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL HubSpot] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL HubSpot] is `cc6a4487-9e91-433e-a3a3-9cf6626c1806`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL HubSpot]:
 
 ```shell
 curl -X POST \
@@ -85,8 +71,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "connection for hubspot",
-        "description": "connection for hubspot",
+        "name": "connection for HubSpot",
+        "description": "connection for HubSpot",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -109,6 +95,7 @@ curl -X POST \
 | `auth.params.clientSecret` | Het clientgeheim dat is gekoppeld aan uw [!DNL HubSpot]-toepassing. |
 | `auth.params.accessToken` | Het toegangstoken werd verkregen toen aanvankelijk het voor authentiek verklaren van uw integratie OAuth. |
 | `auth.params.refreshToken` | Het vernieuwingstoken dat wordt verkregen toen aanvankelijk het voor authentiek verklaren van uw integratie OAuth. |
+| `connectionSpec.id` | De [!DNL HubSpot] ID van de verbindingsspecificatie: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **Antwoord**
 
