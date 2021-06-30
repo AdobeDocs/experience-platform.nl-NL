@@ -5,10 +5,9 @@ title: Overzicht van de Salesforce Source Connector
 topic-legacy: overview
 description: Leer hoe u Salesforce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -27,11 +26,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Salesforce] 
 
 ## Verbind [!DNL Salesforce] met [!DNL Platform] gebruikend APIs
 
-- [Een Salesforce-bronverbinding maken met de Flow Service API](../../tutorials/api/create/crm/salesforce.md)
-- [Een CRM-systeem verkennen met de Flow Service API](../../tutorials/api/explore/crm.md)
-- [CRM-gegevens verzamelen met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
+- [Een Salesforce-basisverbinding maken met de Flow Service API](../../tutorials/api/create/crm/salesforce.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/crm.md)
+- [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
 
 ## [!DNL Salesforce] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Salesforce-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/salesforce.md)
-- [Een gegevensstroom configureren voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)
+- [Een gegevensstroom maken voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)
