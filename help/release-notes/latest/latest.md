@@ -1,80 +1,27 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform voor 26 mei 2021.
+description: Opmerkingen bij de release van Experience Platform voor 30 juni 2021.
 doc-type: release notes
-last-update: May 26, 2021
-author: ens72741
+last-update: June 30, 2021
+author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
+source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 1%
+source-wordcount: '530'
+ht-degree: 2%
 
 ---
 
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 26 mei 2021**
-
-Nieuwe functies in Adobe Experience Platform:
-
-- [Dashboards](#dashboards)
+**Releasedatum: 30 juni 2021**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Klantprofiel in realtime](#profile)
 - [Sandboxen](#sandboxes)
 - [Bronnen](#sources)
-
-## Dashboards {#dashboards}
-
-Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
-
-| Functie | Beschrijving |
-| --- | --- |
-| Profielinzichten | Het profieldashboard verstrekt een dagelijks overzicht van de metriek van het Profiel van de Klant in real time voor elk organisatorisch samenvoegbeleid in Experience Platform. Deze profielinzichten zijn beschikbaar aan alle gebruikers met de mogelijkheid om tot de gegevens van het Profiel binnen Platform toegang te hebben en te bekijken. |
-| Inzichten van het publiek | Het segmentdashboard verstrekt publiek-gerelateerde inzichten aan alle gebruikers met toegang tot meningssegmenten binnen Platform. Het dashboard biedt een dagelijks overzicht van de publieksmeetgegevens voor soorten publiek die zijn gemaakt met de gebruikersinterface van Segment Builder of die zijn geïmporteerd uit Adobe Audience Manager. |
-| Activeringsinzichten | Het bestemmingendashboard is beschikbaar aan alle gebruikers met de capaciteit om tot bestemmingen toegang te hebben en te bekijken. Het dashboard geeft een dagelijks overzicht van de activeringsmetriek voor activering voor alle bestemmingen. |
-| Gebruikersspecifieke inzichten | De weergave van dashboards kan door elke gebruiker worden aangepast, inclusief de mogelijkheid om de lay-out van het dashboard te wijzigen door widgets toe te voegen, te verwijderen, te vergroten of te verkleinen en opnieuw te rangschikken. |
-| Widget maken en beheren | Alle standaard- en aangepaste widgets zijn toegankelijk voor marketers in een gecentraliseerde opslagplaats voor het democratiseren van inzicht in het maken en delen van inzichten:<br/><ul><li>Het standaardtabblad bevat door Adobe verschafte widgets die toegankelijk zijn binnen de dashboardcontext. </li><li>Het aangepaste tabblad bevat aangepaste widgets die door de organisatie zijn gemaakt, waaronder een optie om widgets te verbergen voor weergave.</li><li>Met de workflow voor het maken van widgets in profielen en inzichten van het publiek kunt u aangepaste widgets bewerken, selecteren, voorvertonen en publiceren.</li></ul> |
-| Aangepaste inzichten | Met toegangsmachtigingen kunnen gegevensontwikkelaars en marketingspecialisten profielkenmerken aanpassen die beschikbaar zijn voor het maken van widgets. |
-
-Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door [dashboards overzicht](../../dashboards/home.md) te lezen.
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Te mild foutwaarschuwingen | De foutberichten van de Data Prep Mapper zijn nu soepeler, omdat er waarschuwingen worden gegeven in plaats van fouten en gedeeltelijk getransformeerde rijen. |
-| Nieuwe functies | Toegevoegde functies voor het ophalen van sleutels, het toevoegen van elementen aan een bestaande array, het toevoegen van elementen van meerdere arrays aan een bestaande array, het gebruik van objecten voor het bouwen van arrays en het gebruik van de naam van het JSON-object als letterlijke tekenreeks. |
-
-Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Verbeterde controle (bèta) | Verhoogde mogelijkheden van controle voor bestemmingen, met inbegrip van informatie voor zowel partij als het stromen bestemmingen |
-| [Sneller bestanden exporteren (bèta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | De mogelijkheid om incrementele bestanden om de 3, 6, 8 of 12 uur naar bestemmingen te exporteren is toegevoegd. <br> <br>Deze mogelijkheid is momenteel beschikbaar in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Klanten die geen bètaversie zijn, kunnen incrementele bestanden eenmaal per dag exporteren. |
-| [Ondersteuning voor Deduplication Key (bèta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | De mogelijkheid toegevoegd om naamruimten of profielkenmerken in te stellen als deduplicatietoetsen. Deduplicatietoetsen maken het onmogelijk meerdere records van hetzelfde profiel in één exportbestand te hebben. <br> <br>Deze mogelijkheid is momenteel beschikbaar in bèta en is alleen beschikbaar voor een beperkt aantal klanten. |
-
-Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
-
-## [!DNL Experience Data Model (XDM)] {#xdm}
-
-Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wordt ontworpen om de kracht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
-
-| Functie | Beschrijving |
-| --- | --- |
-| Schema veldgroepen | De term &quot;mixin&quot; is bijgewerkt naar &quot;veldgroep&quot;. Deze wijziging wordt weerspiegeld in de gebruikersinterface van Adobe Experience Platform. Bovendien heeft de Registratie API van het Schema een nieuw [gebiedsgroepseindpunt](../../xdm/api/field-groups.md), terwijl het mixineindpunt is afgekeurd als erfeniseindpunt. Zie [XDM documentatie](../../xdm/home.md) voor meer informatie. |
 
 ## Klantprofiel in realtime {#profile}
 
@@ -82,27 +29,20 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Gegevensset-overlappingsrapport | Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van de opslag van het Profiel door de datasets bloot te stellen die het meest aan adresseerbare publiek bijdragen. Dit rapport biedt niet alleen inzichten in profielgegevens, maar helpt gebruikers ook actie te ondernemen om het gebruik van licenties te optimaliseren, zoals het instellen van een limiet voor de levensduur van bepaalde gegevens. Om meer te leren, volg het leerprogramma op [het produceren van de datasetoverlapping rapport](../../profile/tutorials/dataset-overlap-report.md). |
+| Workflowupdates voor samenvoegen | Wanneer het creëren van en het bijwerken van fusiebeleid in UI, kunnen de gebruikers nu voorproef 20 steekproefprofielen die op het unieschema worden gebaseerd. Op deze manier kunnen gebruikers een voorvertoning weergeven van de profielen van klanten voordat ze configuraties met samenvoegbeleid opslaan. Voor meer informatie, zie [de gids UI van het samenvoegbeleid](../../profile/merge-policies/ui-guide.md). |
+| Rapport voor overlappen van identiteit | Het rapport voor identiteitsoverlap maakt deel uit van de Real-Time Customer Profile API en biedt zichtbaarheid in de samenstelling van de Profile Store. Gebruikend het `/previewsamplestatus` eindpunt, blootlegt het identiteitsoverlap rapport de identiteiten die het meest aan adresseerbare publiek bijdragen. Voor meer informatie gaat u naar de [voorbeeldstatus API-eindpuntgids](../../profile/api/preview-sample-status.md). |
 
 Voor meer informatie over het profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door [Overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
 
-## [!DNL Sandboxes] {#sandboxes}
+## Sandboxen {#sandboxes}
 
 Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Meerdere productiesandboxen | U kunt nu meerdere productiesandboxen maken en beheren in uw IMS-organisatie en specifieke productiesandboxen toewijzen aan afzonderlijke bedrijfsonderdelen, merken, projecten of regio&#39;s. Zie de zelfstudies over het maken van een productiesandbox [in de gebruikersinterface](../../sandboxes/ui/user-guide.md) of [met behulp van de API](../../sandboxes/api/overview.md) voor meer informatie. |
+| Verbeteringen voor het opnieuw instellen van de productiessandbox | U kunt nu productiesandboxen herstellen die voor bidirectioneel segment delen met Adobe Audience Manager of de Dienst van de Kern van de Audience worden gebruikt. Dit kan of van UI, of door de nieuwe `validationOnly` en `ignoreWarnings` parameters in API te gebruiken worden gedaan. Zie de zelfstudies over het opnieuw instellen van een sandbox in de UI](../../sandboxes/ui/user-guide.md) en [het opnieuw instellen van een sandbox in de API](../../sandboxes/api/sandboxes.md) voor meer informatie.[ |
 
-### Bekende beperkingen
-
-- Elke Experience Cloud-organisatie wordt geleverd met een vooraf gemaakte standaardproductiesandbox. Deze sandbox fungeert als standaardbestemming voor elke aanvraag die naar het Platform wordt verzonden vanuit een andere Adobe- of niet-Adobe-toepassing die (nog) niet voldoet aan de sandbox-standaard. De standaardproductiefandbox kan niet worden teruggesteld als de identiteitsgrafiek binnen het ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) eigenschap wordt ontvangen, of als de identiteitsgrafiek binnen het wordt ontvangen ook door Adobe Audience Manager voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) eigenschap wordt gebruikt.
-- De zandbakken van de productie die voor bidirectioneel segmentdelen met Adobe Audience Manager of de Dienst van de Kern van de Audience worden gebruikt kunnen niet worden teruggesteld noch worden geschrapt.
-- Alle door de gebruiker gemaakte productie- en ontwikkelingssandboxen kunnen worden verwijderd, met uitzondering van de standaardproductiefandbox.
-
-Zie het [overzicht van sandboxen](../../sandboxes/home.md) voor meer informatie over sandboxen.
-
-## [!DNL Sources] {#sources}
+## Bronnen {#sources}
 
 Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
@@ -110,7 +50,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| UI-ondersteuning voor het opnemen van gecomprimeerde bestanden | U kunt nu gecomprimeerde JSON- of gescheiden bestanden voorvertonen en opnemen met bronnen voor cloudopslag in de gebruikersinterface. Voor meer informatie, zie de zelfstudie over [het vormen van een dataflow voor een bronverbinding van de wolkenopslag in UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
-| Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
+| [!DNL Veeva CRM] (bèta) | U kunt [!DNL Veeva CRM] nu met Experience Platform verbinden gebruikend [!DNL Flow Service] API of UI. Zie [[!DNL Veeva CRM] connectoroverzicht](../../sources/connectors/crm/veeva.md) voor meer informatie. |
+| Ondersteuning voor het controleren van streaming-gegevensstromen | U kunt de werkruimte van bronUI nu gebruiken om de activiteiten van de gegevensopname van het stromen bronnen met overeenkomstige metriek en status te controleren. Zie de zelfstudie over het [controleren van streaminggegevens](../../sources/tutorials/ui/monitor-streaming.md) voor meer informatie. |
 
 Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
