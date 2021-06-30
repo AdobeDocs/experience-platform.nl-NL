@@ -3,14 +3,13 @@ keywords: Experience Platform;home;populaire onderwerpen;Paypal;paypal;PayPal
 solution: Experience Platform
 title: Overzicht van de PayPal-bronconnector
 description: Leer hoe u PayPal met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
-translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
-
 
 # (Bèta) [!DNL PayPal]-connector
 
@@ -30,11 +29,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL PayPal] kunt
 
 ## Verbind [!DNL PayPal] met [!DNL Platform] gebruikend APIs
 
-- [Een PayPal-bronverbinding maken met de Flow Service API](../../tutorials/api/create/payments/paypal.md)
-- [Een betalingstoepassing verkennen met de Flow Service API](../../tutorials/api/explore/payments.md)
-- [Gegevens verzamelen van een betalingstoepassing met behulp van de Flow Service API](../../tutorials/api/collect/payments.md)
+- [Een Paypal-basisverbinding maken met de Flow Service API](../../tutorials/api/create/payments/paypal.md)
+- [De gegevensstructuur en inhoud van een betalingsbron verkennen met de Flow Service API](../../tutorials/api/explore/payments.md)
+- [Een gegevensstroom maken voor een betalingsbron met behulp van de Flow Service API](../../tutorials/api/collect/payments.md)
 
 ## [!DNL PayPal] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een PayPal-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/payments/paypal.md)
-- [Een gegevensstroom configureren voor een betalingsverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/payments.md)
+- [Een gegevensstroom maken voor een verbinding met een betalingsbron in de gebruikersinterface](../../tutorials/ui/dataflow/payments.md)
