@@ -5,10 +5,9 @@ title: Overzicht van HP Vertica Source Connector
 topic-legacy: overview
 description: Leer hoe te om HP Vertica met Adobe Experience Platform te verbinden gebruikend APIs of de gebruikersinterface.
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -32,10 +31,10 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL HP Vertica] 
 ## Verbind [!DNL HP Vertica] met [!DNL Platform] gebruikend APIs
 
 - [Creeer een HP Vertica bronverbinding gebruikend de Dienst API van de Stroom](../../tutorials/api/create/databases/hp-vertica.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## [!DNL HP Vertica] verbinden met [!DNL Platform] gebruikend UI
 
 - [Creeer een HP Vertica bronverbinding in UI](../../tutorials/ui/create/databases/hp-vertica.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
