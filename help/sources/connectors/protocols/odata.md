@@ -5,10 +5,9 @@ title: Generic OData Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Generic OData met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Generic ODat
 
 ## Verbind [!DNL Generic OData] met [!DNL Platform] gebruikend APIs
 
-- [Een Generic OData-bronverbinding maken met de Flow Service API](../../tutorials/api/create/protocols/odata.md)
-- [Een protocoltoepassing verkennen met de Flow Service API](../../tutorials/api/explore/protocols.md)
-- [Gegevens verzamelen van een protocoltoepassing met behulp van de Flow Service API](../../tutorials/api/collect/protocols.md)
+- [Een algemene OData-basisverbinding maken met de Flow Service API](../../tutorials/api/create/protocols/odata.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een protocolbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/protocols.md)
+- [Creeer een dataflow voor een protocolbron gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/protocols.md)
 
 ## [!DNL Generic OData] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Generic OData-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/protocols/odata.md)
-- [Een gegevensstroom configureren voor een protocolverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/protocols.md)
+- [Creeer een dataflow voor een verbinding van de protocolbron in UI](../../tutorials/ui/dataflow/protocols.md)
