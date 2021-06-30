@@ -5,10 +5,9 @@ title: Overzicht van IBM DB2 Source Connector
 topic-legacy: overview
 description: Leer hoe u IBM DB2 met behulp van API's of de gebruikersinterface kunt verbinden met Adobe Experience Platform.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ In de onderstaande documentatie vindt u informatie over het tot stand brengen va
 
 ## IBM DB2 met API&#39;s verbinden met [!DNL Platform]
 
-- [Een IBM DB2-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/ibm-db2.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een IBM DB2-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/ibm-db2.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbind IBM DB2 met [!DNL Platform] gebruikend UI
 
 - [Een IBM DB2-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/ibm-db2.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
