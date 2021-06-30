@@ -5,10 +5,9 @@ title: Azure Table Storage Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Azure Table Storage kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -35,11 +34,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure Table 
 
 ## Verbind [!DNL Azure Table Storage] met [!DNL Platform] gebruikend APIs
 
-- [Een Azure Table Storage-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/ats.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een Azure Table Storage-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/ats.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## [!DNL Azure Table Storage] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Azure Table Storage-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/ats.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
