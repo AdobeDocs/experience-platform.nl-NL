@@ -5,10 +5,9 @@ title: Overzicht van SQL Server Source Connector
 topic-legacy: overview
 description: Leer hoe u Microsoft SQL Server met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ De documentatie hieronder verstrekt informatie over hoe te om [!DNL Microsoft] S
 
 ## Verbind [!DNL Microsoft] SQL Server met [!DNL Platform] gebruikend APIs
 
-- [Een Microsoft SQL Server-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/sql-server.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een Microsoft SQL Server-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/sql-server.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbind [!DNL Microsoft] SQL Server met [!DNL Platform] gebruikend UI
 
 - [Een Microsoft SQL Server-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/sql-server.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
