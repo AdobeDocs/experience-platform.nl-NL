@@ -5,10 +5,9 @@ title: Overzicht van Google AdWords Source Connector
 topic-legacy: overview
 description: Leer hoe u Google AdWords met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa3b83372db557d7f0aed16303cef4124c7dd897
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -27,17 +26,17 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
 
-## [!DNL Google AdWords] verbinden met [!DNL Platform]
+## [!DNL Google AdWords] verbinden met Platform
 
-In de onderstaande documentatie vindt u informatie over hoe u [!DNL Google AdWords] kunt verbinden met [!DNL Platform] via API&#39;s of de gebruikersinterface:
+De onderstaande documentatie biedt informatie over hoe u [!DNL Google AdWords] kunt verbinden met een Platform via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
-- [Een Google AdWords-bronverbinding maken met de Flow Service API](../../tutorials/api/create/advertising/ads.md)
-- [Een reclamesysteem verkennen met de Flow Service API](../../tutorials/api/explore/advertising.md)
-- [Reclamegegevens verzamelen met behulp van de Flow Service API](../../tutorials/api/collect/advertising.md)
+- [Een Google AdWords-basisverbinding maken met de Flow Service API](../../tutorials/api/create/advertising/ads.md)
+- [De gegevensstructuur en inhoud van een advertentiebron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/advertising.md)
+- [Een gegevensstroom maken voor een advertentiebron met behulp van de Flow Service API](../../tutorials/api/collect/advertising.md)
 
 ### De gebruikersinterface gebruiken
 
 - [Een Google AdWords-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/advertising/ads.md)
-- [Een gegevensstroom configureren voor een advertentieverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/advertising.md)
+- [Een gegevensstroom maken voor een verbinding met een advertentiebron in de gebruikersinterface](../../tutorials/ui/dataflow/advertising.md)
