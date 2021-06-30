@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Oracle;oracle
 solution: Experience Platform
-title: Creeer een Verbinding van de Bron van het Oracle gebruikend de Dienst API van de Stroom
+title: Creeer een Verbinding van de Basis van het Oracle gebruikend de Dienst API van de Stroom
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Oracle met Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Oracle]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Oracle] basisverbinding maken met de [!DNL Flow Service]-API
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te leiden om [!DNL Oracle] aan [!DNL Experience Platform] te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Oracle] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -32,43 +31,29 @@ De volgende secties bevatten aanvullende informatie die u moet weten om een verb
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met [!DNL Oracle]. Het patroon van de [!DNL Oracle] verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Zie [dit Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) voor meer informatie over aan de slag gaan.
+Raadpleeg dit [[!DNL Oracle] document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) voor meer informatie over aan de slag gaan.
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Oracle]-account is slechts één connector vereist omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Oracle] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
-```http
+```https
 POST /connections
 ```
 
 **Verzoek**
 
-Om een [!DNL Oracle] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL Oracle]:
 
 ```shell
 curl -X POST \
