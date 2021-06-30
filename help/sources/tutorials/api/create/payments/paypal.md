@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;PayPal-aansluiting;paypal;Paypal
 solution: Experience Platform
-title: Een PayPal-bronverbinding maken met de Flow Service API
+title: Een PayPal-basisverbinding maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u PayPal met Adobe Experience Platform verbindt via de Flow Service API.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5cb853da21e41b38c88f25a4989a602dbcfceabc
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL PayPal]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL PayPal] basisverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
 >De [!DNL PayPal] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te leiden om [!DNL PayPal] aan Experience Platform te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL PayPal] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -42,33 +41,19 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL PayPal], moet u waarden
 | `host` | De URL van de instantie [!DNL PayPal]. (standaard: api.sandbox.paypal.com). |
 | `clientId` | De client-id die is gekoppeld aan uw [!DNL PayPal]-toepassing. |
 | `clientSecret` | Het clientgeheim dat is gekoppeld aan uw [!DNL PayPal]-toepassing. |
-| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL PayPal] is: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PayPal] is: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 Zie [dit PayPal-document](https://developer.paypal.com/docs/api/overview/#get-credentials) voor meer informatie over aan de slag gaan.
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL PayPal]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL PayPal] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -78,7 +63,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL PayPal] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL PayPal] is `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL PayPal]:
 
 ```shell
 curl -X POST \
