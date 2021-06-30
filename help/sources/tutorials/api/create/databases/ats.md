@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ATS;ats;Azure table storage
+keywords: Experience Platform;home;populaire onderwerpen;[!DNL Azure Table Storage];[!DNL Azure Table Storage];Azure table storage
 solution: Experience Platform
-title: Een Azure Table Storage Source Connection maken met de Flow Service API
+title: Een Azure Table Storage Base Connection maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Azure Table Storage met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Azure Table Storage]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure Table Storage] basisverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
 >De [!DNL Azure Table Storage] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om u door de stappen te laten lopen om [!DNL Azure Table Storage] (hierna &quot;ATS&quot; genoemd) te verbinden met [!DNL Experience Platform].
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Azure Table Storage] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -31,42 +30,28 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met ATS tot stand te brengen met de API [!DNL Flow Service].
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met [!DNL Azure Table Storage] met de [!DNL Flow Service]-API tot stand te brengen.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Flow Service] wilt laten verbinden met ATS, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Azure Table Storage], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een ATS-instantie. Het patroon van de verbindingstekenreeks voor ATS is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | De id die wordt gebruikt om een verbinding te genereren. De vaste specificatie-id van de verbinding voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een [!DNL Azure Table Storage]-instantie. Het patroon van de verbindingstekenreeks voor [!DNL Azure Table Storage] is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-Raadpleeg [dit ATS-document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) voor meer informatie over het verkrijgen van een verbindingstekenreeks.
+Raadpleeg [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) voor meer informatie over het verkrijgen van een verbindingstekenreeks.
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per ATS-account is slechts één connector vereist omdat deze kan worden gebruikt om meerdere gegevensstromen te maken die verschillende gegevens opleveren.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Azure Table Storage] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -76,7 +61,7 @@ POST /connections
 
 **Verzoek**
 
-Als u een ATS-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van het verzoek om POST. De verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL Azure Table Storage]:
 
 ```shell
 curl -X POST \
@@ -104,8 +89,8 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een ATS-instantie. Het patroon van de verbindingstekenreeks voor ATS is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | De specificatie-id van de ATS-verbinding is: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een [!DNL Azure Table Storage]-instantie. Het patroon van de verbindingstekenreeks voor [!DNL Azure Table Storage] is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | De [!DNL Azure Table Storage] ID van de verbindingsspecificatie: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Antwoord**
 
@@ -120,4 +105,4 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een ATS-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
+Door deze zelfstudie te volgen hebt u een [!DNL Azure Table Storage]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
