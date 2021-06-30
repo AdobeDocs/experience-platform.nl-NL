@@ -5,10 +5,9 @@ title: Overzicht van de cloudbronverbinding van de Salesforce-service
 topic-legacy: overview
 description: Leer hoe u Salesforce Service Cloud kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -27,11 +26,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Salesforce S
 
 ## [!DNL Salesforce Service Cloud ]verbinding maken met [!DNL Platform] met behulp van API&#39;s
 
-- [Een Salesforce Service Cloud-bronverbinding maken met de Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
-- [Ontdek een systeem voor klantensucces met behulp van de Flow Service API](../../tutorials/api/explore/customer-success.md)
-- [Gegevens verzamelen van een systeem voor klantensucces met behulp van de Flow Service API](../../tutorials/api/collect/customer-success.md)
+- [Een basisverbinding voor de Salesforce Service Cloud maken met de Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een bron van het klantensucces gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/customer-success.md)
+- [Maak een dataflow voor een bron van het klantsucces met behulp van de Flow Service API](../../tutorials/api/collect/customer-success.md)
 
 ## [!DNL Salesforce Service Cloud] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Salesforce Service Cloud-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-- [Gegevensstroom voor een verbinding van het klantensucces in UI vormen](../../tutorials/ui/dataflow/customer-success.md)
+- [Gegevensstroom maken voor een bronverbinding voor klantensucces in de gebruikersinterface](../../tutorials/ui/dataflow/customer-success.md)
