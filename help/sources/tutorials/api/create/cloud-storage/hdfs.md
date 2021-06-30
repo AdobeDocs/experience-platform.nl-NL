@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
-title: Een Apache HDFS-bronverbinding maken met de Flow Service API
+title: Een Apache HDFS-basisverbinding maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Apache Hadoop Distributed File System met de Flow Service API kunt verbinden.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '465'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Apache] HDFS-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Apache] HDFS-basisverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
 >De Apache HDFS-connector is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen die naar Adobe Experience Platform worden overgebracht. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om een Apache Hadoop Distributed File System (hierna &quot;HDFS&quot; genoemd) aan [!DNL Experience Platform] te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Apache Hadoop Distributed File System] (verder genoemd als &quot;[!DNL HDFS]&quot;) tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -31,38 +30,24 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om een verbinding met HDFS met de [!DNL Flow Service]-API tot stand te brengen.
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met [!DNL HDFS] met de [!DNL Flow Service]-API tot stand te brengen.
 
 ### Vereiste referenties verzamelen
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `url` | De URL definieert de auteparams die vereist zijn om anoniem verbinding te maken met HDFS. Raadpleeg [dit HDFS-document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html) voor meer informatie over het verkrijgen van deze waarde. |
-| `connectionSpec.id` | De id die nodig is om een verbinding te maken. De vaste specificatie-id van de verbinding voor HDFS is `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `url` | De URL definieert de auteparams die nodig zijn om anoniem verbinding te maken met [!DNL HDFS]. Voor meer informatie over hoe te om deze waarde te verkrijgen, verwijs naar [this [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AdWords] is: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding vereist per HDFS-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL HDFS] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -72,7 +57,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe HDFS-verbinding gemaakt, geconfigureerd door de eigenschappen die in de payload worden opgegeven:
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL HDFS]:
 
 ```shell
 curl -X POST \
@@ -100,8 +85,8 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.url` | De URL die automatische parameters definieert die vereist zijn voor anonieme verbinding met HDFS |
-| `connectionSpec.id` | De ID van de HDFS-verbindingsspecificatie: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `auth.params.url` | De URL die automatische parameters definieert die vereist zijn voor het anoniem verbinden met [!DNL HDFS] |
+| `connectionSpec.id` | De [!DNL HDFS] ID van de verbindingsspecificatie: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Antwoord**
 
@@ -116,4 +101,4 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een HDFS-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken wanneer u leert hoe u een externe cloudopslag kunt verkennen met de Flow Service API](../../explore/cloud-storage.md).[
+Door deze zelfstudie te volgen hebt u een [!DNL HDFS]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken wanneer u leert hoe u een externe cloudopslag kunt verkennen met de Flow Service API](../../explore/cloud-storage.md).[
