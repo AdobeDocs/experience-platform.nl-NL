@@ -5,21 +5,24 @@ title: Een advertentiesysteem verkennen met de Flow Service API
 topic-legacy: overview
 description: De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten. Deze zelfstudie gebruikt de Flow Service API om advertentiesystemen te verkennen.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 0%
+source-wordcount: '506'
+ht-degree: 1%
 
 ---
 
 # Een advertentiesysteem verkennen met de API [!DNL Flow Service]
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Als er een basisverbinding is gemaakt, kunt u nu de unieke basis-verbindings-id gebruiken om te navigeren en de gegevensstructuur en inhoud van uw bron te verkennen. Zo kunt u de specifieke items en hun respectievelijke gegevenstypen en indelingen identificeren voordat u een gegevensstroom maakt en deze naar Adobe Experience Platform overbrengt.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om advertentiesystemen te verkennen.
+Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). het verkennen van reclamesystemen.
 
 ## Aan de slag
+
+>[!IMPORTANT]
+
+Voor deze zelfstudie moet u beschikken over de unieke basis-verbindings-id voor uw advertentiebron. Als u deze id niet hebt, raadpleegt u de zelfstudie [Een advertentiebron verbinden met Platform](../../api/create/advertising/ads.md).
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
@@ -28,29 +31,9 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een advertentiesysteem met de API [!DNL Flow Service].
 
-### Vereiste referenties verzamelen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie vereist dat u een geldige verbinding hebt met de externe advertentietoepassing waarvan u gegevens wilt invoeren. Een geldige verbinding heeft betrekking op de verbindingsspecificatie-id en de verbinding-id van uw toepassing. Meer informatie over het maken van een advertentieverbinding en het ophalen van deze waarden vindt u in de zelfstudie [Een advertentiebron verbinden met Platform](../../api/create/advertising/ads.md).
-
-### API-voorbeeldaanroepen lezen
-
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
-
-### Waarden verzamelen voor vereiste koppen
-
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../landing/api-guide.md).
 
 ## Uw gegevenstabellen verkennen
 
