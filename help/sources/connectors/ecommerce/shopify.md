@@ -5,10 +5,9 @@ title: Overzicht van de Source Connector uitwerken
 topic-legacy: overview
 description: Leer hoe u via API's of de gebruikersinterface verbinding kunt maken met Shopify met Adobe Experience Platform.
 exl-id: 636b31a7-e5f9-434a-acd1-226096522495
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
@@ -23,11 +22,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Shopify] kun
 
 ## Verbind [!DNL Shopify] met [!DNL Platform] gebruikend APIs
 
-- [Een Shopify-bronverbinding maken met de Flow Service API](../../tutorials/api/create/ecommerce/shopify.md)
-- [Ontdek een eCommerce-verbinding met de Flow Service API](../../tutorials/api/explore/ecommerce.md)
-- [Verzamel eCommerce-gegevens met behulp van de Flow Service API](../../tutorials/api/collect/ecommerce.md)
+- [Een Shopify-basisverbinding maken met de Flow Service API](../../tutorials/api/create/ecommerce/shopify.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een eCommerce-bron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/ecommerce.md)
+- [Maak een gegevensstroom voor een eCommerce-bron met behulp van de Flow Service API](../../tutorials/api/collect/ecommerce.md)
 
 ## [!DNL Shopify] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Shopify-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/ecommerce/shopify.md)
-- [Een gegevensstroom configureren voor een eCommerce-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/ecommerce.md)
+- [Een gegevensstroom maken voor een eCommerce-bronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/ecommerce.md)
