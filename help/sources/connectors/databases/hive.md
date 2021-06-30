@@ -5,10 +5,9 @@ title: Apache Hive op Azure HDInsights Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Apache Hive op Azure HDInsights kunt aansluiten op Adobe Experience Platform met behulp van API's of de gebruikersinterface.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Apache Hive]
 
 ## Verbind [!DNL Apache Hive] op [!DNL Azure HDInsights] met [!DNL Platform] gebruikend APIs
 
-- [Een Apache Hive maken op Azure HDInsights-bronverbinding met behulp van de Flow Service API](../../tutorials/api/create/databases/hive.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een Apache Hive maken op Azure HDInsights-basisverbinding met behulp van de Flow Service API](../../tutorials/api/create/databases/hive.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbind [!DNL Apache Hive] op [!DNL Azure HDInsights] met [!DNL Platform] gebruikend UI
 
 - [Een Apache Hive maken op Azure HDInsights-bronverbinding in de gebruikersinterface](../../tutorials/ui/create/databases/hive.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
