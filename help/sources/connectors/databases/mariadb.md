@@ -4,14 +4,13 @@ solution: Experience Platform
 title: Overzicht van MariaDB-bronverbinding
 topic-legacy: overview
 description: Leer hoe u MariaDB met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL MariaDB] connector
 
@@ -27,11 +26,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL MariaDB] kun
 
 ## Verbind [!DNL MariaDB] met [!DNL Platform] gebruikend APIs
 
-- [Een MariaDB-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/mariadb.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een MariaDB-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/mariadb.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## [!DNL MariaDB] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een MariaDB-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/mariadb.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
