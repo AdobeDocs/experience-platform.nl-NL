@@ -5,9 +5,9 @@ title: Overzicht van Google BigQuery Source Connector
 topic-legacy: overview
 description: Leer hoe u Google BigQuery via API's of de gebruikersinterface met Adobe Experience Platform kunt verbinden.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 9d68e54baa894ebeff4603c7df01a1fe42aa217f
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ De onderstaande documentatie biedt informatie over hoe u [!DNL Google BigQuery] 
 
 ### API&#39;s gebruiken
 
-- [Een Google BigQuery-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/bigquery.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een Google BigQuery-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/bigquery.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ### De gebruikersinterface gebruiken
 
 - [Een Google BigQuery-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/bigquery.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
