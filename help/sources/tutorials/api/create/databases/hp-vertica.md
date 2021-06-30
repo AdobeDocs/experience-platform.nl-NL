@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Vertica;vertica
 solution: Experience Platform
-title: Een HP Vertica Source Connection maken met de Flow Service API
+title: Creeer een Verbinding van de Basis van HP Vertica gebruikend de Dienst API van de Stroom
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om HP Vertica met Adobe Experience Platform te verbinden gebruikend de Dienst API van de Stroom.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
 
-# Een HP [!DNL Vertica]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL HP Vertica] basisverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->De HP [!DNL Vertica] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL HP Vertica] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te lopen om HP [!DNL Vertica] aan [!DNL Experience Platform] te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL HP Vertica] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -30,52 +30,39 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [Bronnen](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html):  [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren in kaart te brengen en te verbeteren gebruikend de  [!DNL Platform] diensten.
 * [Sandboxen](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met HP [!DNL Vertica] gebruikend [!DNL Flow Service] API te verbinden.
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met [!DNL HP Vertica] met de [!DNL Flow Service]-API tot stand te brengen.
 
 ### Vereiste referenties verzamelen
 
-[!DNL Flow Service] om met HP [!DNL Vertica] te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Als u [!DNL Flow Service] wilt laten verbinden met [!DNL HP Vertica], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om met uw instantie van HP [!DNL Vertica] te verbinden. Het patroon van de verbindingstekenreeks voor HP [!DNL Vertica] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | De id die nodig is om een verbinding te maken. De vaste identiteitskaart van de verbindingsspecificatie voor HP [!DNL Vertica] is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL HP Vertica]-instantie. Het patroon van de verbindingstekenreeks voor [!DNL HP Vertica] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL HP Vertica] is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 Voor meer informatie bij het verwerven van een verbindingskoord, verwijs naar [dit document van HP Vertica](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Slechts één verbinding wordt vereist per HP [!DNL Vertica] rekening aangezien het kan worden gebruikt om veelvoudige bronschakelaars tot stand te brengen om verschillende gegevens in te brengen.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL HP Vertica] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
-```http
+```https
 POST /connections
 ```
 
 **Verzoek**
 
-Om een verbinding van HP [!DNL Vertica] tot stand te brengen, moet zijn unieke verbindingsidentiteitskaart als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificiteits identiteitskaart voor HP [!DNL Vertica] is `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL HP Vertica]:
+
 
 ```shell
 curl -X POST \
@@ -103,8 +90,8 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die is gekoppeld aan uw HP [!DNL Vertica]-account. Het patroon van het verbindingstekenreeks voor HP [!DNL Vertica] is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De HP [!DNL Vertica] verbinding specificatie ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die is gekoppeld aan uw [!DNL HP Vertica]-account. Het patroon van de verbindingstekenreeks voor [!DNL HP Vertica] is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | De [!DNL HP Vertica] ID van de verbindingsspecificatie: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Antwoord**
 
@@ -119,4 +106,4 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding van HP [!DNL Vertica] gebruikend [!DNL Flow Service] API gecreeerd en de unieke waarde van identiteitskaart van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
+Door deze zelfstudie te volgen hebt u een [!DNL HP Vertica]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
