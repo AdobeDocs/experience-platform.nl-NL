@@ -3,12 +3,12 @@ keywords: doel activeren;doelen activeren;gegevens activeren
 title: Profielen en segmenten naar een doel activeren
 type: Tutorial
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
-seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
+seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0f0a71d8c1c3f36d6966ab37bd9749a59bc4aecf
+source-git-commit: a670823139eab37d319e834de5e3025d44e9c9b4
 workflow-type: tm+mt
-source-wordcount: '2586'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -148,10 +148,7 @@ Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een voll
    >[!IMPORTANT]
    >
    >De optie om bestanden op een bepaald tijdstip te exporteren bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten.
-
-   <!-- >[!IMPORTANT]
-      >
-      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
+   ><br> <br> Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle noodzakelijke backfill gegevens bevatten.  <br> <br> Om ervoor te zorgen dat er volledige en meest actuele backfill gegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raden we u aan de eerste exporttijd van het bestand in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
@@ -178,11 +175,7 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 
    >[!IMPORTANT]
    >
-   >De optie om de tijd van de dag voor de uitvoer te selecteren is slechts beschikbaar aan een geselecteerd aantal klanten.
-
-   <!-- >[!IMPORTANT]
-     >
-     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
+   >De optie om de tijd van de dag voor de uitvoer te selecteren is slechts beschikbaar aan een geselecteerd aantal klanten. <br> <br> Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle noodzakelijke backfill gegevens bevatten.  <br> <br> Om ervoor te zorgen dat er volledige en meest actuele backfill gegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raden we u aan de eerste exporttijd van het bestand in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
