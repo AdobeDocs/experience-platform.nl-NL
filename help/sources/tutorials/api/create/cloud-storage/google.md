@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;google cloud-opslag;google;Google
 solution: Experience Platform
-title: Een Google Cloud Storage Source Connection maken met de Flow Service API
+title: Een Google Cloud Storage Base Connection maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google Cloud Storage-account met behulp van de Flow Service API.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Google Cloud Storage]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Google Cloud Storage] basisverbinding maken met de [!DNL Flow Service]-API
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om u door de stappen te laten lopen om [!DNL Experience Platform] te verbinden met een [!DNL Google Cloud Storage]-account.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Google Cloud Storage] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -35,34 +34,20 @@ Als u [!DNL Flow Service] wilt laten verbinden met uw [!DNL Google Cloud Storage
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| Toegangstoets-id | Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt om uw [!DNL Google Cloud Storage]-account te verifiëren voor Platform. |
-| Geheime toegangstoets | Een 40-karakter, basis-64-gecodeerde koord dat wordt gebruikt om uw [!DNL Google Cloud Storage] rekening aan Platform voor authentiek te verklaren. |
+| `accessKeyId` | Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt om uw [!DNL Google Cloud Storage]-account te verifiëren voor Platform. |
+| `secretAccessKey` | Een 40-karakter, basis-64-gecodeerde koord dat wordt gebruikt om uw [!DNL Google Cloud Storage] rekening aan Platform voor authentiek te verklaren. |
 
 Zie de handleiding [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) voor meer informatie over deze waarden. Voor stappen op hoe te om uw eigen toegangs zeer belangrijke identiteitskaart en geheime toegangssleutel te produceren, verwijs naar [[!DNL Google Cloud Storage] overzicht](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Google Cloud Storage]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Google Cloud Storage] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -72,7 +57,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Google Cloud Storage] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Google Cloud Storage] is `32e8f412-cdf7-464c-9885-78184cb113fd`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL Google Cloud Storage]:
 
 ```shell
 curl -X POST \
