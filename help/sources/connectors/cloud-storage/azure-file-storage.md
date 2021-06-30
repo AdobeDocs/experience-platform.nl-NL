@@ -5,9 +5,9 @@ title: Azure File Storage Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Azure File Storage kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure File S
 
 ### API&#39;s gebruiken
 
-- [Een Azure File Storage-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Een Azure File Storage-basisverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [De gegevensstructuur en inhoud van een cloudopslagbron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+- [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### De gebruikersinterface gebruiken
 
 - [Een Azure File Storage-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
