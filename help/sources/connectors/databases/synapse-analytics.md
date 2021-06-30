@@ -5,9 +5,9 @@ title: Overzicht van azure synapse Analytics Source Connector
 topic-legacy: overview
 description: Leer hoe u Azure synapse Analytics met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure Synaps
 
 ## Verbind [!DNL Azure Synapse Analytics] met [!DNL Platform] gebruikend APIs
 
-- [Een Azure synapse Analytics-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een basisverbinding voor Azure synapse Analytics maken met de Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## [!DNL Azure Synapse Analytics] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Azure synapse Analytics-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
