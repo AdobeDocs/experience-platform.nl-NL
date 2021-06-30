@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;MariaDB;mariadb
 solution: Experience Platform
-title: Een MariaDB-bronverbinding maken met de Flow Service API
+title: Een MariaDB-basisverbinding maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met MariaDB verbindt met behulp van de Flow Service API.
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
 
+# Een [!DNL MariaDB] basisverbinding maken met de [!DNL Flow Service]-API
 
-# Een [!DNL MariaDB]-bronverbinding maken met de [!DNL Flow Service]-API
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
-
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te leiden om [!DNL Experience Platform] aan [!DNL MariaDB] te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL MariaDB] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -36,43 +35,29 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL MariaDB], moet u de vol
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die is gekoppeld aan uw [!DNL MariaDB]-verificatie. Het patroon van de [!DNL MariaDB] verbindingstekenreeks is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De id die wordt gebruikt om een verbinding te genereren. De vaste specificatie-id van de verbinding voor [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Raadpleeg [dit MariaDB-document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) voor meer informatie over het verkrijgen van een verbindingstekenreeks.
+Voor meer informatie over het verkrijgen van een verbindingstekenreeks, verwijs naar dit [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL MariaDB]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL MariaDB] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
-```http
+```https
 POST /connections
 ```
 
 **Verzoek**
 
-Om een [!DNL MariaDB] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL MariaDB]:
 
 ```shell
 curl -X POST \
@@ -101,7 +86,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `auth.params.connectionString` | De verbindingstekenreeks die is gekoppeld aan uw [!DNL MariaDB]-verificatie. Het patroon van de [!DNL MariaDB] verbindingstekenreeks is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De [!DNL MariaDB]-verbindingsspecificatie-id is: `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionSpec.id` | De [!DNL MariaDB] ID van de verbindingsspecificatie is: `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Antwoord**
 
