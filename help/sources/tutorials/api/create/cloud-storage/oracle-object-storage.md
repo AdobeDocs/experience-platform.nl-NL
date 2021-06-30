@@ -1,22 +1,23 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle object storage
 solution: Experience Platform
-title: Een Oracle Object Storage-bronverbinding maken met de Flow Service API
+title: Een Oracle Object Storage Base-verbinding maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Oracle Object Storage.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 0%
+source-wordcount: '559'
+ht-degree: 1%
 
 ---
 
-# Een [!DNL Oracle Object Storage]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Oracle Object Storage] basisverbinding maken met de [!DNL Flow Service]-API
 
-Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) om u door de stappen te laten lopen om Adobe Experience Platform met [!DNL Oracle Object Storage] te verbinden.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
+
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Oracle Object Storage] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -38,32 +39,19 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Oracle Object Storage],
 | `secretKey` | Het [!DNL Oracle Object Storage] wachtwoord vereist voor authentificatie. |
 | `bucketName` | De toegestane emmernaam wordt vereist als de gebruiker toegang beperkt heeft. De naam van het emmertje moet tussen drie en 63 lange karakters zijn, moet beginnen en met of een brief of een aantal beëindigen, en kan slechts kleine letters, aantallen, of koppeltekens (`-`) bevatten. De emmernaam kan niet als IP adres worden geformatteerd. |
 | `folderPath` | Het toegestane mappad dat is vereist als de gebruiker de toegang heeft beperkt. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle Object Storage] is: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 Voor meer informatie over hoe te om deze waarden te verkrijgen, verwijs naar [de authentificatiegids van de Opslag van de Objecten van het Oracle](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Oracle Object Storage]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Oracle Object Storage] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -73,7 +61,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Oracle Object Storage] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Oracle Object Storage] is `c85f9425-fb21-426c-ad0b-405e9bd8a46c`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL Oracle Object Storage]:
 
 ```shell
 curl -X POST \
