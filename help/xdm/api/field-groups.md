@@ -3,10 +3,10 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: API-eindpunt voor veldgroepen
 description: Het /fieldgroups eindpunt in de Registratie API van het Schema staat u toe om groepen van het XDM schemagebied binnen uw ervaringstoepassing programmatically te beheren.
-topic: ontwikkelaarsgids
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+topic-legacy: developer guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
