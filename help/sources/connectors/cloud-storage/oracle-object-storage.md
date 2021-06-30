@@ -5,10 +5,9 @@ title: Overzicht van oracle Object Storage Source Connector
 topic-legacy: overview
 description: Leer hoe u Oracle Object Storage met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -40,11 +39,11 @@ In de onderstaande documentatie vindt u informatie over het tot stand brengen va
 
 ### API&#39;s gebruiken
 
-- [Een Oracle Object Storage-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
-- [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Een basisverbinding voor Oracle Object Storage maken met de Flow Service API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [De gegevensstructuur en inhoud van een cloudopslagbron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+- [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### De gebruikersinterface gebruiken
 
 - [Een Oracle Object Storage-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
-- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
