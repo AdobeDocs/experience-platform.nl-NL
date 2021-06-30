@@ -5,9 +5,9 @@ title: Overzicht van ServiceNow Source Connector
 topic-legacy: overview
 description: Leer hoe u ServiceNow met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL ServiceNow] 
 
 ## Verbind [!DNL ServiceNow] met [!DNL Platform] gebruikend APIs
 
-- [Creeer een ServiceNow bronverbinding gebruikend de Dienst API van de Stroom](../../tutorials/api/create/customer-success/servicenow.md)
-- [Ontdek een systeem voor klantensucces met behulp van de Flow Service API](../../tutorials/api/explore/customer-success.md)
-- [Gegevens verzamelen van een systeem voor klantensucces met behulp van de Flow Service API](../../tutorials/api/collect/customer-success.md)
+- [Creeer een ServiceNow basisverbinding gebruikend de Dienst API van de Stroom](../../tutorials/api/create/customer-success/servicenow.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een bron van het klantensucces gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/customer-success.md)
+- [Maak een dataflow voor een bron van het klantsucces met behulp van de Flow Service API](../../tutorials/api/collect/customer-success.md)
 
 ## [!DNL ServiceNow] verbinden met [!DNL Platform] gebruikend UI
 
 - [Creeer een ServiceNow bronverbinding in UI](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Gegevensstroom voor een verbinding van het klantensucces in UI vormen](../../tutorials/ui/dataflow/customer-success.md)
+- [Gegevensstroom maken voor een bronverbinding voor klantensucces in de gebruikersinterface](../../tutorials/ui/dataflow/customer-success.md)
