@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Data Lake Storage Gen2;azure data Lake storage;Azure
 solution: Experience Platform
-title: Een Azure Data Lake Storage Gen2 Source Connection maken met behulp van de Flow Service API
+title: Een Azure Data Lake Storage Gen2 Base Connection maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Azure Data Lake Storage Gen2 met behulp van de Flow Service API.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 0%
+source-wordcount: '524'
+ht-degree: 1%
 
 ---
 
-# Een [!DNL Azure] Data Lake Storage Gen2-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure Data Lake Storage Gen2] basisverbinding maken met de [!DNL Flow Service]-API
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om u door de stappen te laten lopen om [!DNL Experience Platform] te verbinden met [!DNL Azure] Data Lake Storage Gen2 (hierna &quot;ADLS Gen2&quot; genoemd).
+In deze zelfstudie worden de stappen doorlopen waarmee u een basisverbinding voor [!DNL Azure Data Lake Storage Gen2] (hierna &quot;ADLS Gen2&quot; genoemd) kunt maken met de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -35,36 +34,23 @@ De volgende secties bevatten aanvullende informatie die u moet weten om een ADLS
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `url` | De adres-URL. |
+| `url` | Het eindpunt voor ADLS Gen2. Het eindpuntpatroon is: `https://<accountname>.dfs.core.windows.net`. |
 | `servicePrincipalId` | De client-id van de toepassing. |
 | `servicePrincipalKey` | De sleutel van de toepassing. |
 | `tenant` | De huurdersinformatie die uw toepassing bevat. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
 
 Raadpleeg [dit ADLS Gen2-document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage) voor meer informatie over deze waarden.
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per ADLS Gen2-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw authentificatie ADLS Gen2 als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -74,7 +60,7 @@ POST /connections
 
 **Verzoek**
 
-Om een verbinding tot stand te brengen ADLS-Gen2, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor ADLS-Gen2 is `0ed90a81-07f4-4586-8190-b40eccef1c5a`.
+Met het volgende verzoek wordt een basisverbinding voor ADLS Gen2 gemaakt:
 
 ```shell
 curl -X POST \
@@ -113,7 +99,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw cloudopslag in de volgende stap te verkennen.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
