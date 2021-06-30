@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Azure;Azure File Storage;Azure-bestandsopslag
 solution: Experience Platform
-title: Een Azure File Storage Source Connection maken met de Flow Service API
+title: Een Azure File Storage Base Connection maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Azure File Storage met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Azure File Storage]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure File Storage] basisverbinding maken met de [!DNL Flow Service]-API
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te leiden om [!DNL Azure File Storage] aan [!DNL Experience Platform] te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Azure File Storage] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -37,33 +37,19 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Azure File Storage], mo
 | `host` | Het eindpunt van de instantie [!DNL Azure File Storag]e waartoe u toegang hebt. |
 | `userId` | De gebruiker met voldoende toegang tot het [!DNL Azure File Storage] eindpunt. |
 | `password` | Het wachtwoord voor uw [!DNL Azure File Storage]-instantie |
-| Verbindingsspecificatie-id | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 Raadpleeg [dit Azure File Storage-document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) voor meer informatie over aan de slag gaan.
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Azure File Storage]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Azure File Storage] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -73,7 +59,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Azure File Storage] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Azure File Storage] is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL Azure File Storage]:
 
 ```shell
 curl -X POST \
@@ -110,7 +96,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
