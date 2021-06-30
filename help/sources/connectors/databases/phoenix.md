@@ -5,10 +5,9 @@ title: Overzicht van Phoenix Source Connector
 topic-legacy: overview
 description: Leer hoe u Phoenix met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Phoenix] kun
 
 ## Verbind [!DNL Phoenix] met [!DNL Platform] gebruikend APIs
 
-- [Een Phoenix-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/phoenix.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een Phoenix-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/phoenix.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## [!DNL Phoenix] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Phoenix-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/phoenix.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
