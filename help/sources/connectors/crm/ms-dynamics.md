@@ -5,10 +5,9 @@ title: Overzicht van Microsoft Dynamics Source Connector
 topic-legacy: overview
 description: Leer hoe u Microsoft Dynamics met Adobe Experience Platform verbindt via API's of de gebruikersinterface.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '279'
 ht-degree: 1%
 
 ---
@@ -31,11 +30,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Microsoft Dy
 
 ## Verbind [!DNL Microsoft Dynamics] met [!DNL Platform] gebruikend APIs
 
-- [Een Microsoft Dynamics-bronverbinding maken met de Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
-- [Een CRM-systeem verkennen met de Flow Service API](../../tutorials/api/explore/crm.md)
-- [CRM-gegevens verzamelen met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
+- [Creeer een de basisverbinding van de Dynamica van Microsoft gebruikend de Dienst van de Stroom API](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/crm.md)
+- [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
 
 ## [!DNL Microsoft Dynamics] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Microsoft Dynamics-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/dynamics.md)
-- [Een gegevensstroom configureren voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)
+- [Een gegevensstroom maken voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)
