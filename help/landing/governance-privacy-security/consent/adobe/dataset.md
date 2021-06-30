@@ -5,9 +5,9 @@ title: Een gegevensset configureren voor het vastleggen van toestemmings- en voo
 topic-legacy: getting started
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: 3f6191bb3ddfdd24b1c2ed19ba4293402f56d2e5
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ De veldgroep biedt één objecttype veld, `consents`, waarvan de subeigenschappe
 >
 >Voor meer informatie over de structuur en betekenis van de subeigenschappen in `consents`, zie het overzicht op [het gegevenstype van de Inhoud &amp; van de Voorkeur](../../../../xdm/data-types/consents.md).
 
-## Voeg de de gebiedsgroep van de Inhoud &amp; van de Voorkeur aan uw [!DNL Profile] schema {#add-field-group} toe
+## Voeg de de gebiedsgroep van de Inhoud &amp; van de Voorkeur aan uw [!DNL Profile] schema toe {#add-field-group}
 
 In Platform UI, selecteer **[!UICONTROL Schemas]** in de linkernavigatie, dan selecteer **[!UICONTROL Browse]** tabel om een lijst van bestaande schema&#39;s te tonen. Van hier, selecteer de naam van [!DNL Profile]-Toegelaten schema dat u toestemmingsgebieden aan wilt toevoegen. De schermafbeeldingen in deze sectie gebruiken het schema &quot;van de Leden van de Loyalty&quot;dat in [schemaaanmaakzelfstudie](../../../../xdm/tutorials/create-schema-ui.md) als voorbeeld wordt gebouwd.
 
@@ -164,11 +164,13 @@ De volgende sectie bevat extra informatie over het creëren van een dataset om k
 
 ### Aangepaste toestemmings- en voorkeursvelden toevoegen aan het schema {#custom-consent}
 
-Als u extra toestemmingssignalen buiten die moet vangen die door de standaard [!DNL Consents & Preferences] gebiedsgroep worden vertegenwoordigd, kunt u douaneXDM componenten gebruiken om uw toestemmingsschema te verbeteren om uw bijzondere bedrijfsbehoeften aan te passen. In deze sectie worden de basisbeginselen beschreven voor het aanpassen van het toestemmingsschema op een manier die compatibel is met de opdrachten voor het wijzigen van de instemming van Adobe Experience Platform Mobile en Web SDK&#39;s.
+Als u extra toestemmingssignalen buiten die moet vangen die door de standaard [!DNL Consents & Preferences] gebiedsgroep worden vertegenwoordigd, kunt u douaneXDM componenten gebruiken om uw toestemmingsschema te verbeteren om uw bijzondere bedrijfsbehoeften aan te passen. In deze sectie worden de basisbeginselen beschreven voor het aanpassen van uw toestemmingsschema om deze signalen in Profiel in te voeren.
 
 >[!IMPORTANT]
 >
->U moet de [!DNL Consents & Preferences] gebiedsgroep als basislijn voor de structuur van uw toestemmingsgegevens gebruiken en extra gebieden toevoegen zoals nodig, eerder dan het proberen om de volledige structuur van kras tot stand te brengen.
+>Het Web van het Platform en Mobiele SDKs steunt geen douanegebieden in hun toestemming-verandering bevelen. Momenteel is de enige manier om aangepaste toestemmingsgebieden in Profiel in te voeren door [batch-opname](../../../../ingestion/batch-ingestion/overview.md) of een [bronverbinding](../../../../sources/home.md).
+
+Het wordt ten zeerste aanbevolen de veldgroep [!DNL Consents & Preferences] te gebruiken als basislijn voor de structuur van uw toestemmingsgegevens en extra gebieden toe te voegen zoals nodig, eerder dan te proberen om de volledige structuur van kras tot stand te brengen.
 
 Als u aangepaste velden wilt toevoegen aan de structuur van een standaardveldgroep, moet u eerst een aangepaste veldgroep maken. Nadat u de [!DNL Consents & Preferences]-veldgroep aan het schema hebt toegevoegd, selecteert u het **plus-pictogram (+)** in de sectie **[!UICONTROL Field groups]** en selecteert u **[!UICONTROL Create new field group]**. Geef een naam en een optionele beschrijving voor de veldgroep op en selecteer **[!UICONTROL Add field group]**.
 
@@ -198,7 +200,5 @@ Het toestemmings- of voorkeursveld wordt toegevoegd aan de schemastructuur. De n
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
 
 Voer de bovenstaande stappen uit om door te gaan met het toevoegen van de toestemmings- en voorkeurvelden die u nodig hebt. Als u klaar bent, selecteert u **[!UICONTROL Save]** om uw wijzigingen te bevestigen.
-
-Als het schema u uitgeeft door [!UICONTROL Profile Dataset] wordt gebruikt die in uw de randconfiguratie van SDK van het Web van Platforms wordt gespecificeerd, zal die dataset nu de nieuwe toestemmingsgebieden omvatten. U kunt nu naar [toestemmingsverwerkingsgids](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform te vormen om toestemmingsgegevens te verwerken.
 
 Als u geen dataset voor dit schema hebt gecreeerd, ga aan de sectie op [creërend een dataset](#dataset) verder.
