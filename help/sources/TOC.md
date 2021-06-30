@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '619'
 ht-degree: 5%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 5%
    - Streaming {#streaming}
       - [HTTP API-connector](connectors/streaming/http.md)
 - API-zelfstudies {#api-tutorials}
-   - Een bronverbinding maken {#create}
+   - Een basisverbinding maken {#create}
       - Reclame {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloudopslag {#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 5%
       - [Gegevens over cloudopslag verkennen](tutorials/api/explore/cloud-storage.md)
       - [CRM-gegevens verkennen](tutorials/api/explore/crm.md)
       - [Ontdek de succesgegevens van klanten](tutorials/api/explore/customer-success.md)
-      - [Database- of NoSQL-gegevens verkennen](tutorials/api/explore/database-nosql.md)
+      - [Databasegegevens verkennen](tutorials/api/explore/database-nosql.md)
       - [Gegevens over eCommerce verkennen](tutorials/api/explore/ecommerce.md)
       - [Gegevens over marketingautomatisering verkennen](tutorials/api/explore/marketing-automation.md)
       - [Betalingsgegevens verkennen](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 5%
       - [Gegevens over cloudopslag verzamelen](tutorials/api/collect/cloud-storage.md)
       - [CRM-gegevens verzamelen](tutorials/api/collect/crm.md)
       - [Gegevens over succes van klanten verzamelen](tutorials/api/collect/customer-success.md)
-      - [Database- of NoSQL-gegevens verzamelen](tutorials/api/collect/database-nosql.md)
+      - [Databasegegevens verzamelen](tutorials/api/collect/database-nosql.md)
       - [Gegevens over eCommerce verzamelen](tutorials/api/collect/ecommerce.md)
       - [Gegevens over marketingautomatisering verzamelen](tutorials/api/collect/marketing-automation.md)
       - [Betalingsgegevens verzamelen](tutorials/api/collect/payments.md)
