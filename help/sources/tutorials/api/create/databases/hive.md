@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Apache-bijenkorf;hive;Hive
 solution: Experience Platform
-title: Een Apache Hive maken op Azure HDInsights Source Connection met behulp van de Flow Service API
+title: Een Apache Hive maken op Azure HDInsights Base Connection met behulp van de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Apache Hive op Azure HDInsights kunt aansluiten op Adobe Experience Platform met behulp van de Flow Service API.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Apache Hive] maken op [!DNL Azure HDInsights]-bronverbinding met de [!DNL Flow Service]-API
+# Een [!DNL Apache Hive] maken op [!DNL Azure HDInsights] basisverbinding met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
 >De [!DNL Apache Hive] op [!DNL Azure HDInsights] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om [!DNL Apache Hive] op [!DNL Azure HDInsights] aan [!DNL Experience Platform] te verbinden.
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Apache Hive] op [!DNL Azure HDInsights] (verder genoemd als &quot;[!DNL Hive]&quot;) tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -39,46 +38,32 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Hive], moet u waarden o
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | IP-adres of hostnaam van de [!DNL Hive]-server. |
+| `host` | Het IP-adres of de hostnaam van de [!DNL Hive]-server. |
 | `username` | De gebruikersnaam die u gebruikt om toegang te krijgen tot de [!DNL Hive]-server. |
 | `password` | Het wachtwoord dat overeenkomt met de gebruiker. |
-| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
 Zie [dit Hive-document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted) voor meer informatie over aan de slag gaan.
 
-#### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per Hive-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Hive] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
-```http
+```https
 POST /connections
 ```
 
 **Verzoek**
 
-Om een [!DNL Hive] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Hive] is `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL Hive]:
 
 ```shell
 curl -X POST \
