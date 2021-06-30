@@ -5,9 +5,9 @@ title: GreenPlum Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u GreenPlum met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL GreenPlum] k
 
 ## Verbind [!DNL GreenPlum] met [!DNL Platform] gebruikend APIs
 
-- [Een GreenPlum-bronverbinding maken met de Flow Service API](../../tutorials/api/create/databases/greenplum.md)
-- [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Een GroenPlum-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/greenplum.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## [!DNL GreenPlum] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een GreenPlum-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/greenplum.md)
-- [Een gegevensstroom configureren voor een databaseverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
+- [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
