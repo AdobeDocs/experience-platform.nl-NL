@@ -5,9 +5,9 @@ title: Overzicht van de HubSpot Source Connector
 topic-legacy: overview
 description: Leer hoe te om HubSpot met Adobe Experience Platform te verbinden gebruikend APIs of het gebruikersinterface.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL HubSpot] kun
 
 ## Verbind [!DNL HubSpot] met [!DNL Platform] gebruikend APIs
 
-- [Creeer een HubSpot bronverbinding gebruikend de Dienst API van de Stroom](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Een systeem voor marketingautomatisering verkennen met de Flow Service API](../../tutorials/api/explore/marketing-automation.md)
-- [Gegevens over marketingautomatisering verzamelen met behulp van de Flow Service API](../../tutorials/api/collect/marketing-automation.md)
+- [Creeer een basisverbinding HubSpot gebruikend de Dienst API van de Stroom](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een bron van de marketing automatisering gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/marketing-automation.md)
+- [Een gegevensstroom maken voor een marketingautomatiseringsbron met behulp van de Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## [!DNL HubSpot] verbinden met [!DNL Platform] gebruikend UI
 
 - [Creeer een HubSpot bronverbinding in UI](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Een gegevensstroom configureren voor een verbinding voor marketingautomatisering in de gebruikersinterface](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Een gegevensstroom maken voor een bronverbinding voor marketingautomatisering in de gebruikersinterface](../../tutorials/ui/dataflow/marketing-automation.md)
