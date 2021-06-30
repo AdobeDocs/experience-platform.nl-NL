@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Veeva CRM;veeva crm;veeva;crm
 solution: Experience Platform
-title: Overzicht van Source Connector
+title: Overzicht van Veva CRM Source Connector
 topic-legacy: overview
 description: Leer hoe u Veeva CRM met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
-source-git-commit: 5b8c6ae7c45048e026b018b6c91478648fdbea85
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ De onderstaande documentatie biedt informatie over hoe u [!DNL Veeva CRM] kunt v
 
 ## Verbind [!DNL Veeva CRM] met [!DNL Platform] gebruikend APIs
 
-- [Een Veeva CRM-bronverbinding maken met de Flow Service API](../../tutorials/api/create/crm/veeva.md)
-- [Een CRM-systeem verkennen met de Flow Service API](../../tutorials/api/explore/crm.md)
-- [CRM-gegevens verzamelen met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
+- [Een Veeva CRM-basisverbinding maken met de Flow Service API](../../tutorials/api/create/crm/veeva.md)
+- [Onderzoek de gegevensstructuur en de inhoud van een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/crm.md)
+- [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
 
 ## [!DNL Veeva CRM] verbinden met [!DNL Platform] gebruikend UI
 
 - [Een Microsoft Dynamics-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/veeva.md)
-- [Een gegevensstroom configureren voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)
+- [Een gegevensstroom maken voor een CRM-bronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)
