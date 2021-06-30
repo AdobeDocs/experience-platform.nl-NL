@@ -1,24 +1,23 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;ssc;SSC;Salesforce Service Cloud;salesforce-serviccloud
+keywords: Experience Platform;home;populaire onderwerpen;Salesforce Service Cloud;salesforce-servicelolm
 solution: Experience Platform
 title: Een Cloud Source Connection van de Salesforce-service maken met behulp van de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Salesforce Service Cloud.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff0f6bc6b8a57b678b329fe2b47c53919e0e2d64
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Salesforce Service Cloud]-bronverbinding maken met de [!DNL Flow Service]-API
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om u door de stappen te laten lopen om [!DNL Experience Platform] te verbinden met [!DNL Salesforce Service Cloud] (hierna &quot;SSC&quot; genoemd).
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Salesforce Service Cloud] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -27,43 +26,30 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met SSC gebruikend [!DNL Flow Service] API te verbinden.
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met [!DNL Salesforce Service Cloud] met de [!DNL Flow Service]-API tot stand te brengen.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Flow Service] wilt laten verbinden met SSC, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Salesforce Service Cloud], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `username` | De gebruikersnaam voor de gebruikersaccount. |
-| `password` | Het wachtwoord voor de gebruikersaccount. |
-| `securityToken` | Het beveiligingstoken voor de gebruikersaccount. |
+| `username` | De gebruikersnaam voor uw [!DNL Salesforce Service Cloud]-gebruikersaccount. |
+| `password` | Het wachtwoord voor uw [!DNL Salesforce Service Cloud]-account. |
+| `securityToken` | Het beveiligingstoken voor uw [!DNL Salesforce Service Cloud]-account. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 Raadpleeg [dit document van de Salesforce Service Cloud](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm) voor meer informatie over aan de slag gaan.
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per SSC-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Salesforce Service Cloud] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -73,7 +59,7 @@ POST /connections
 
 **Verzoek**
 
-Om een verbinding tot stand te brengen SSC, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De identiteitskaart van de verbindingsspecificatie voor SSC is `b66ab34-8619-49cb-96d1-39b37ede86ea`.
+Het volgende verzoek leidt tot een basisverbinding voor [!DNL Salesforce Service Cloud]:
 
 ```shell
 curl -X POST \
@@ -103,10 +89,10 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.username` | De gebruikersnaam die aan uw SSC-account is gekoppeld. |
-| `auth.params.password` | Het wachtwoord dat is gekoppeld aan uw SSC-account. |
-| `auth.params.securityToken` | Het beveiligingstoken dat aan uw SSC-account is gekoppeld. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van uw rekening SSC die in de vorige stap wordt teruggewonnen. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL Salesforce Service Cloud]-account is gekoppeld. |
+| `auth.params.password` | Het wachtwoord dat is gekoppeld aan uw [!DNL Salesforce Service Cloud]-account. |
+| `auth.params.securityToken` | Het beveiligingstoken dat aan uw [!DNL Salesforce Service Cloud]-account is gekoppeld. |
+| `connectionSpec.id` | De [!DNL Salesforce Service Cloud] ID van de verbindingsspecificatie: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Antwoord**
 
@@ -121,4 +107,4 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een SSC-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindingsID in de volgende zelfstudie gebruiken aangezien u leert hoe te om [systemen van het klantensucces te onderzoeken gebruikend de Dienst API van de Stroom](../../explore/customer-success.md).
+Door deze zelfstudie te volgen hebt u een [!DNL Salesforce Service Cloud]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindingsID in de volgende zelfstudie gebruiken aangezien u leert hoe te om [systemen van het klantensucces te onderzoeken gebruikend de Dienst API van de Stroom](../../explore/customer-success.md).
