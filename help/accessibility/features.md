@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd;profiel;rtcp;XDM-grafieken
 title: Algemene toegankelijkheidsfuncties in Platform
-topic: hulplijn
+topic-legacy: guide
 type: Documentation
 description: Meer informatie over de algemene toegankelijkheidsfuncties die door Adobe Experience Platform worden ondersteund, zoals toetsenbordnavigatie, kleurenpaletten en contrast, en ondersteuning voor ondersteunende hulpmiddelen.
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
