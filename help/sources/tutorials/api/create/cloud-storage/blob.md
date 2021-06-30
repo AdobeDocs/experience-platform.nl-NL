@@ -1,22 +1,23 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Azure;azure blob;blob;Blob
 solution: Experience Platform
-title: Een Azure Blob Source Connection maken met de Flow Service API
+title: Een Azure Blob Base Connection maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Azure Blob met behulp van de Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Azure Blob]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure Blob] basisverbinding maken met de [!DNL Flow Service]-API
 
-In deze zelfstudie wordt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) gebruikt om u door de stappen te laten lopen om [!DNL Azure Blob] (hierna &quot;Blob&quot; genoemd) te verbinden met Adobe Experience Platform.
+Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
+
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Azure Blob] (verder genoemd als &quot;[!DNL Blob]&quot;) tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -35,35 +36,21 @@ Als u [!DNL Flow Service] wilt laten verbinden met uw [!DNL Blob]-opslag, moet u
 | ---------- | ----------- |
 | `connectionString` | Een tekenreeks die de machtigingsgegevens bevat die nodig zijn om [!DNL Blob] te verifiëren bij Experience Platform. Het patroon van de [!DNL Blob] verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Voor meer informatie over verbindingskoorden, zie dit [!DNL Blob] document op [vormend verbindingskoorden](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `sasUri` | De URI van de handtekening voor gedeelde toegang die u kunt gebruiken als alternatief verificatietype om uw [!DNL Blob]-account aan te sluiten. Het [!DNL Blob] SAS URI-patroon is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Voor meer informatie, zie dit [!DNL Blob] document op [gedeelde toegangshandtekening URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
-| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Blob] is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Blob] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
-### API-voorbeeldaanroepen lezen
+### Platform-API&#39;s gebruiken
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
 
-### Waarden verzamelen voor vereiste koppen
+## Een basisverbinding maken
 
-Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Blob] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
-Alle bronnen in Experience Platform, inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+### Creeer een [!DNL Blob] basisverbinding gebruikend op koord-gebaseerde authentificatie van de verbinding
 
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Verbinding maken
-
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Blob]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere gegevensstromen te maken die verschillende gegevens opleveren.
-
-### Een [!DNL Blob]-verbinding maken met verificatie op basis van een verbindingstekenreeks
-
-Als u een [!DNL Blob]-verbinding wilt maken via verificatie op basis van een verbindingstekenreeks, dient u een verzoek in bij de [!DNL Flow Service]-API terwijl u [!DNL Blob] `connectionString` opgeeft.
+Als u een [!DNL Blob] basisverbinding wilt maken met behulp van verificatie op basis van een verbindingstekenreeks, dient u een verzoek van de POST in bij de [!DNL Flow Service]-API terwijl u [!DNL Blob] `connectionString` opgeeft.
 
 **API-indeling**
 
@@ -73,7 +60,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Blob] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Blob] is `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+Met het volgende verzoek wordt een basisverbinding voor [!DNL Blob] gemaakt met verificatie op basis van een verbindingstekenreeks:
 
 ```shell
 curl -X POST \
@@ -106,7 +93,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -115,11 +102,11 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 }
 ```
 
-### Een [!DNL Blob]-verbinding maken met URI voor gedeelde toegangshandtekening
+### Een [!DNL Blob] basisverbinding maken met URI voor gedeelde toegangshandtekening
 
 Een gedeelde toegangshandtekening (SAS) URI staat veilige gedelegeerde autorisatie toe aan uw [!DNL Blob]-account. Met SAS kunt u verificatiereferenties maken met verschillende toegangsgraden, aangezien een SAS-gebaseerde verificatie u in staat stelt machtigingen, begin- en vervaldatums en bepalingen voor specifieke bronnen in te stellen.
 
-Als u een [!DNL Blob]-verbinding wilt maken met de URI van een handtekening voor gedeelde toegang, dient u een POST-aanvraag in bij de [!DNL Flow Service]-API en geeft u waarden op voor uw [!DNL Blob] `sasUri`.
+Als u een [!DNL Blob] blob-verbinding wilt maken met de URI van een handtekening voor gedeelde toegang, dient u een POST-aanvraag in bij de [!DNL Flow Service] API en geeft u waarden op voor uw [!DNL Blob] `sasUri`.
 
 **API-indeling**
 
@@ -128,6 +115,8 @@ POST /connections
 ```
 
 **Verzoek**
+
+Met het volgende verzoek wordt een basisverbinding voor [!DNL Blob] gemaakt met URI voor gedeelde toegangshandtekening:
 
 ```shell
 curl -X POST \
@@ -160,7 +149,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
