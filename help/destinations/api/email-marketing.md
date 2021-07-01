@@ -6,10 +6,9 @@ description: Dit document behandelt het maken van e-mailmarketingdoelen met de A
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1699'
 ht-degree: 0%
 
 ---
@@ -69,7 +68,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de [documentatie van de Dienst API van de Stroom op Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
 
-## Hiermee wordt de lijst met beschikbare doelen opgehaald {#get-the-list-of-available-destinations}
+## Krijg de lijst van beschikbare bestemmingen {#get-the-list-of-available-destinations}
 
 ![Overzicht doelstappen 1](../assets/api/email-marketing/step1.png)
 
@@ -121,7 +120,7 @@ Een succesvolle reactie bevat een lijst van beschikbare bestemmingen en hun unie
 }
 ```
 
-## Verbind met uw [!DNL Experience Platform] gegevens {#connect-to-your-experience-platform-data}
+## Verbinden met uw [!DNL Experience Platform] gegevens {#connect-to-your-experience-platform-data}
 
 ![Overzicht doelstappen 2](../assets/api/email-marketing/step2.png)
 
@@ -183,7 +182,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpatiespecificatieidentiteitskaart voor de Verenigde Dienst van het Profiel -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor profielservice -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
@@ -195,7 +194,7 @@ Een succesvolle reactie bevat het unieke herkenningsteken van de basisverbinding
 }
 ```
 
-### Verbind met uw [!DNL Experience Platform] gegevens {#connect-to-platform-data}
+### Verbinden met uw [!DNL Experience Platform] gegevens {#connect-to-platform-data}
 
 **API-indeling**
 
@@ -217,7 +216,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
-  "name": "Connecting to Unified Profile Service",
+  "name": "Connecting to Profile Service",
   "description": "Optional",
   "baseConnectionId": "{BASE_CONNECTION_ID}",
   "connectionSpec": {
@@ -241,7 +240,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -257,11 +256,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Gebruik de id die u in de vorige stap hebt gekregen.
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor  [!DNL Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe bronverbinding naar [!DNL Unified Profile Service]. Dit bevestigt dat u verbinding hebt gemaakt met uw [!DNL Experience Platform] gegevens. Sla deze waarde op zoals deze in een latere stap wordt vereist.
+Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe bronverbinding naar [!DNL Profile Service]. Dit bevestigt dat u verbinding hebt gemaakt met uw [!DNL Experience Platform] gegevens. Sla deze waarde op zoals deze in een latere stap wordt vereist.
 
 ```json
 {
