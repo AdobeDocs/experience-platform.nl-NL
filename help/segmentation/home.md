@@ -5,10 +5,9 @@ title: Overzicht van segmentatieservice
 topic-legacy: overview
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3e92494351e487468e6292c34763e5b2281fd6c5
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -44,6 +43,8 @@ Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de 
 >[!NOTE]
 >
 >Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie bij het aanpassen van [!DNL Experience Data Model] (XDM), bezoek [de zelfstudie van de Redacteur van het Schema](../xdm/tutorials/create-schema-ui.md).
+>
+>Bovendien, als time-to-live (TTL) op de dataset wordt toegelaten, zou dit het lidmaatschap van het gecreeerde segment kunnen beïnvloeden. Voor meer informatie over TTL en hoe het segmentatie kan beïnvloeden, te lezen gelieve [de gids van TTL van de Dienst van het Profiel](../profile/apply-ttl.md).
 
 ## Segmenten evalueren
 
