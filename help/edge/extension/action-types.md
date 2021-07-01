@@ -4,9 +4,9 @@ description: Leer meer over de verschillende actietypen die door de uitbreiding 
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 27b26605cd03ff6d83a9a5bd308e55fcdc955da6
+source-git-commit: 17ebf50965136f2c075f21eb3ecdcb1ce6da0b7d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,7 @@ Verzendt een gebeurtenis naar Adobe [!DNL Experience Platform] zodat Adobe Exper
 Er zijn een paar andere gebieden in het Send actietype van de Gebeurtenis die ook afhankelijk van uw implementatie nuttig zouden kunnen zijn. Deze velden zijn allemaal optioneel.
 
 - **Type:** In dit veld kunt u een gebeurtenistype opgeven dat wordt opgenomen in uw XDM-schema. Zie [documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) voor meer informatie over de standaardgebeurtenistypen.
+- **Gegevens:** Gegevens die geen XDM-schema aanpassen kunnen worden verzonden gebruikend dit gebied. Dit veld is handig als u probeert een Adobe Target-profiel bij te werken of Recommendations-kenmerken van het doel te verzenden. Bekijk bijvoorbeeld onze [documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
 - **Id samenvoegen:** Als u een  [samenvoegings-](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) id wilt opgeven voor de gebeurtenis, kunt u dit in dit veld doen. Houd er rekening mee dat de oplossingen verderop uw gebeurtenisgegevens momenteel niet kunnen samenvoegen.
 - **Dataset-id:** Als u gegevens naar een andere gegevensset moet verzenden dan de gegevensset die u in de gegevensstroom hebt opgegeven, kunt u die gegevensset-id hier opgeven.
 - **Document wordt verwijderd:** Als u er zeker van wilt zijn dat de gebeurtenissen de server bereiken, zelfs als de gebruiker van de pagina weg navigeert, schakelt u het  **[!UICONTROL Document will unload]** selectievakje in. Hierdoor kunnen gebeurtenissen de server bereiken, maar reacties worden genegeerd.
