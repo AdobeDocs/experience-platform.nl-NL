@@ -6,10 +6,9 @@ description: In dit document wordt beschreven hoe u streaming doelen kunt maken 
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2019'
 ht-degree: 0%
 
 ---
@@ -45,7 +44,7 @@ Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieve
 * Voor [!DNL Amazon Kinesis] verbindingen: `accessKeyId`, `secretKey`, `region` of `connectionUrl`
 * Voor [!DNL Azure Event Hubs] verbindingen: `sasKeyName`, `sasKey`, `namespace`
 
-### Voorbeeld-API-aanroepen lezen {#reading-sample-api-calls}
+### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
 Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
 
@@ -69,11 +68,11 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-### Documentatie {#swagger-docs}
+### Documentatie voor de wagenbak {#swagger-docs}
 
 In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de [documentatie van de Dienst API van de Stroom op Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
 
-## Hiermee wordt de lijst met beschikbare streamingdoelen {#get-the-list-of-available-streaming-destinations} opgehaald
+## Hiermee wordt de lijst met beschikbare streamingdoelen opgehaald {#get-the-list-of-available-streaming-destinations}
 
 ![Overzicht doelstappen 1](../assets/api/streaming-destination/step1.png)
 
@@ -117,7 +116,7 @@ Een succesvolle reactie bevat een lijst van beschikbare bestemmingen en hun unie
 }
 ```
 
-## Verbinden met uw gegevens van het Experience Platform {#connect-to-your-experience-platform-data}
+## Verbinden met uw Experience Platform gegevens {#connect-to-your-experience-platform-data}
 
 ![Overzicht doelstappen 2](../assets/api/streaming-destination/step2.png)
 
@@ -155,7 +154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpatiespecificatieidentiteitskaart voor de Verenigde Dienst van het Profiel -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor profielservice -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
@@ -167,7 +166,7 @@ Een succesvolle reactie bevat het unieke herkenningsteken van de basisverbinding
 }
 ```
 
-### Verbinden met uw gegevens van het Experience Platform {#connect-to-platform-data}
+### Verbinden met uw Experience Platform gegevens {#connect-to-platform-data}
 
 **API-indeling**
 
@@ -185,7 +184,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -200,11 +199,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Gebruik de id die u in de vorige stap hebt gekregen.
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpatiespecificatieidentiteitskaart voor de Verenigde Dienst van het Profiel -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor profielservice -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
-Een succesvolle reactie keert het unieke herkenningsteken (`id`) voor de pas gecreëerde bronverbinding aan de Verenigde Dienst van het Profiel terug. Hiermee bevestigt u dat u verbinding hebt gemaakt met de gegevens van uw Experience Platform. Sla deze waarde op zoals deze in een latere stap wordt vereist.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) voor de pas gecreëerde bronverbinding aan de Dienst van het Profiel terug. Hiermee bevestigt u dat u verbinding hebt gemaakt met de gegevens van uw Experience Platform. Sla deze waarde op zoals deze in een latere stap wordt vereist.
 
 ```json
 {
@@ -213,7 +212,7 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) voor de pas gec
 ```
 
 
-## Verbinden met streamingdoel {#connect-to-streaming-destination}
+## Verbinding maken met streamingdoel {#connect-to-streaming-destination}
 
 ![Overzicht doelstappen 3](../assets/api/streaming-destination/step3.png)
 
@@ -594,7 +593,7 @@ De geretourneerde reactie moet in de parameter `transformations` de segmenten en
 }
 ```
 
-## Het gebruiken van de inzamelingen van Postman om met het stromen bestemmingen {#collections} te verbinden
+## Het gebruiken van de inzamelingen van Postman om met het stromen bestemmingen te verbinden  {#collections}
 
 Als u op een meer gestroomlijnde manier verbinding wilt maken met de streamingdoelen die in deze zelfstudie worden beschreven, kunt u [[!DNL Postman]](https://www.postman.com/) gebruiken.
 
