@@ -3,9 +3,9 @@ title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Als u gebeurtenisgegevens naar Adobe Experience Cloud wilt verzenden, gebruikt u
 Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee categorieën:
 
 * XDM-gegevens
-* Niet-XDM-gegevens (momenteel niet ondersteund)
+* Niet-XDM-gegevens
 
 ## XDM-gegevens verzenden
 
@@ -75,7 +75,7 @@ In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardig
 >Er geldt een limiet van 32 kB voor de gegevens die in elke gebeurtenis in het XDM-veld kunnen worden verzonden.
 
 
-### Niet-XDM-gegevens verzenden
+## Niet-XDM-gegevens verzenden
 
 Gegevens die niet overeenkomen met een XDM-schema moeten worden verzonden met de optie `data` van de opdracht `sendEvent`. Deze eigenschap wordt gesteund in versies 2.5.0 en hoger van het Web SDK.
 
@@ -85,7 +85,7 @@ In de toekomst kunt u de volledige gegevenslaag onder de optie `data` verzenden 
 
 **Profiel en Recommendations-kenmerken verzenden naar Adobe Target:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -231,7 +231,7 @@ alloy("sendEvent", {
   });
 ```
 
-## Globaal wijzigen van gebeurtenissen {#modifying-events-globally}
+## Gebeurtenissen globaal wijzigen {#modifying-events-globally}
 
 Als u, velden van de gebeurtenis globaal wilt toevoegen verwijderen of wijzigen, kunt u een `onBeforeEventSend` callback vormen.  Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden.  Deze callback wordt doorgegeven in een gebeurtenisobject met een veld `xdm`.  Wijzig `content.xdm` om de gegevens te wijzigen die met de gebeurtenis worden verzonden.
 
