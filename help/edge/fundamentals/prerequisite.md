@@ -2,21 +2,20 @@
 title: Vereisten voor het Gebruiken van het Web SDK van Adobe Experience Platform
 description: Leer over de eerste vereisten voor het gebruiken van SDK van het Web van Adobe Experience Platform.
 keywords: 1st-partijdomein;CNAME;schema;creeer schema;lancering;aep Web sdk uitbreiding;uitbreiding;configuratie identiteitskaart;configuratiehulpmiddel;gegevenselement;creeer gegevenselement;XDM Voorwerp;sendEvent;send Gebeurtenis;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
+source-git-commit: 5f3b82edbc52d96cad13932be1d201e275780f3c
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
-
 
 # Vereisten voor het gebruik van de Adobe Experience Platform Web SDK
 
 Om SDK van het Web van het Platform te gebruiken, moet u eerst:
 
 - Uw organisatie voorzien hebben voor deze eigenschap. (De toegang tot het Web SDK van het Platform is vrij, als u toegang zou willen krijgen gelieve te bereiken tot uw Manager van het Succes van de Klant (CSM)).
-- Heb een 1st-partijdomein (CNAME) toegelaten. Als je al een CNAME voor Adobe Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME, maar u hebt één nodig alvorens u aan productie gaat.
+- Het wordt aanbevolen om domein van de eerste partij (CNAME) ingeschakeld te hebben. Als je al een CNAME voor Adobe Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME, maar Adobe adviseert om één te hebben alvorens u aan productie gaat. Hoewel een CNAME-implementatie geen voordelen biedt in termen van de levensduur van cookies, kan het voorkomen dat bepaalde advertentieblokkers en minder gebruikelijke browsers SDK-aanvragen blokkeren. In die gevallen, zou het gebruiken van een NAAM uw gegevensinzameling voor gebruikers kunnen verhinderen worden verstoord die deze hulpmiddelen gebruiken.
 
 >[!IMPORTANT]
 >
