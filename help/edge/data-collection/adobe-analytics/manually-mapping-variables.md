@@ -4,9 +4,9 @@ description: Leer hoe te om variabelen in Adobe Analytics manueel in kaart te br
 seo-description: Wijs manueel variabelen in Adobe Analytics toe gebruikend verwerkingsregels met Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ U kunt ook een standaardset handelingen en productlijsten gebruiken om gegevens 
 
 ## Contextgegevens
 
-Te gebruiken door [!DNL Analytics], worden de gegevens XDM afgevlakt gebruikend puntaantekening en ter beschikking gesteld als `contextData`. In de volgende lijst met waardeparen ziet u een voorbeeld van `context data`:
+Te gebruiken door [!DNL Analytics], worden de gegevens XDM afgevlakt gebruikend puntaantekening en ter beschikking gesteld als `contextData`. De volgende lijst van waardeparen toont een voorbeeld van hoe `context data` kijkt wanneer het wordt afgevlakt:
 
 ```json
 {
