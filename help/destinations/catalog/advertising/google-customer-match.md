@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
+source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Een vooraanstaande technologiebedrijf lanceerde een nieuwe telefoon. Om dit nieu
 
 Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand van CRM in Experience Platform, gebruikend de e-mailadressen als herkenningstekens. De segmenten worden gecreeerd gebaseerd op klanten die oudere telefoonmodellen bezitten. Vervolgens worden segmenten verzonden naar [!DNL Google Customer Match], zodat het bedrijf zich kan richten op huidige klanten, klanten die eigenaar zijn van oudere telefoonmodellen en vergelijkbare klanten op [!DNL YouTube].
 
-## Gegevensbeheer voor [!DNL Google Customer Match] doelen {#data-governance}
+## Gegevensbeheer voor [!DNL Google Customer Match]-doelen {#data-governance}
 
 Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichtingen voor gegevens die worden verzonden naar of ontvangen van het bestemmingsplatform. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../../data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
 
@@ -48,13 +48,15 @@ Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichti
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [sectie Identiteitsaanpassing ](#id-matching-requirements-id-matching-requirements) en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
 | user_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 
-## Type exporteren {#export-type}
+## Exporttype {#export-type}
 
 **De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, en anderen) die in de  [!DNL Google Customer Match] bestemming worden gebruikt.
 
-## [!DNL Google Customer Match] accountvereisten  {#google-account-prerequisites}
+## [!DNL Google Customer Match] accountvereisten {#google-account-prerequisites}
 
 Voordat u een [!DNL Google Customer Match]-bestemming in Experience Platform instelt, moet u het Google-beleid voor het gebruik van [!DNL Customer Match] lezen en volgen. Dit wordt beschreven in de [Google-ondersteuningsdocumentatie](https://support.google.com/google-ads/answer/6299717).
+
+Controleer vervolgens of uw [!DNL Google]-account is geconfigureerd voor een [!DNL Standard] of hoger toegangsniveau. Raadpleeg de [documentatie van Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.
 
 ### Lijst van gewenste personen {#allowlist}
 
@@ -62,7 +64,7 @@ Voordat u de [!DNL Google Customer Match]-bestemming in Experience Platform maak
 
 Klanten met compatibele accounts worden automatisch door Google aangeboden.
 
-## Overeenkomende vereisten {#id-matching-requirements}
+## Vereisten voor id-afstemming {#id-matching-requirements}
 
 [!DNL Google] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom kan het publiek dat aan [!DNL Google Customer Match] wordt geactiveerd *hashed* herkenningstekens, zoals e-mailadressen of telefoonaantallen worden afgevinkt.
 
@@ -161,7 +163,7 @@ Raadpleeg de [officiële documentatie van Google](https://developers.google.com/
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
-Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
+Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van het segment, alleen vullen met meer dan 100 actieve gebruikers.
 
 Wanneer u een segment toewijst aan zowel [!DNL IDFA] als [!DNL GAID] mobiele id&#39;s, maakt [!DNL Google Customer Match] een afzonderlijk segment voor elke id-toewijzing. Uw [!DNL Google Ads]-account toont twee verschillende segmenten, een voor de [!DNL IDFA] en een voor de [!DNL GAID]-toewijzing.
 
