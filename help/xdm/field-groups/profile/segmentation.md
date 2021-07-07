@@ -5,7 +5,7 @@ title: Segment Membership Details Schema Field Group
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van het Lidmaatschap van het Segment.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -84,5 +84,5 @@ Hier volgt een voorbeeld van een `segmentMembership`-kaart die door het systeem 
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
