@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: API-eindpunt voor beleid samenvoegen
 topic-legacy: guide
 type: Documentation
-description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
+description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '2590'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklass
 
 ### Object voor samenvoegbeleid voltooien
 
-Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee aspecten van het samenvoegen van profielfragmenten worden beheerd.
+The complete merge policy object represents a set of preferences controlling aspects of merging profile fragments.
 
 **Beleidsobject samenvoegen**
 
@@ -66,12 +66,12 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 |---|---|
 | `id` | Door het systeem gegenereerde unieke id die tijdens het maken is toegewezen |
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
-| `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
-| `identityGraph` | [Identificatietraject ](#identity-graph) dat de identiteitsgrafiek aangeeft waarvan de verwante identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
+| `imsOrgId` | Organization ID to which this merge policy belongs |
+| `identityGraph` | [Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged. |
 | `attributeMerge` | [Kenmerk ](#attribute-merge) samenvoegen-object dat aangeeft op welke manier in het samenvoegbeleid profielkenmerken voorrang krijgen in het geval van gegevensconflicten. |
-| `schema.name` | Als onderdeel van het [`schema`](#schema)-object bevat het veld `name` de XDM-schemaklasse waarop het samenvoegbeleid betrekking heeft. Lees de [XDM-documentatie](../../xdm/home.md) voor meer informatie over schema&#39;s en klassen. |
+| `schema.name` | Part of the [`schema`](#schema) object, the `name` field contains the XDM schema class to which the merge policy relates. Lees de [XDM-documentatie](../../xdm/home.md) voor meer informatie over schema&#39;s en klassen. |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
-| `version` | [!DNL Platform] onderhouden versie van samenvoegingsbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
+| `version` | [!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated. |
 | `updateEpoch` | Datum van de laatste update van het samenvoegbeleid. |
 
 **Voorbeeld van samenvoegingsbeleid**
@@ -96,7 +96,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
     }
 ```
 
-### Identiteitsgrafiek {#identity-graph}
+### Identity graph {#identity-graph}
 
 [Met Adobe Experience Platform Identity ](../../identity-service/home.md) Services worden de identiteitsgrafieken weergegeven die globaal en voor elke organisatie op worden gebruikt  [!DNL Experience Platform]. Het `identityGraph` attribuut van het samenvoegbeleid bepaalt hoe te om de verwante identiteiten voor een gebruiker te bepalen.
 
@@ -121,11 +121,11 @@ waarbij `{IDENTITY_GRAPH_TYPE}` een van de volgende is:
     }
 ```
 
-### Kenmerken samenvoegen {#attribute-merge}
+### Kenmerk samenvoegen {#attribute-merge}
 
 Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een bepaalde gebruiker bestaan. Wanneer het gebruikte type identiteitsgrafiek meer dan één identiteit resulteert, is er een potentieel voor conflicterende profielattributen en de prioriteit moet worden gespecificeerd. Met `attributeMerge` kunt u opgeven welke profielkenmerken prioriteit moeten krijgen in geval van een samenvoegconflict tussen de gegevenssets van het type Key Value (recordgegevens).
 
-**Object attributeMerge**
+**attributeMerge object**
 
 ```json
     "attributeMerge": {
@@ -133,11 +133,11 @@ Een profielfragment is de profielinformatie voor slechts één identiteit uit de
     }
 ```
 
-waarbij `{ATTRIBUTE_MERGE_TYPE}` een van de volgende is:
+Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
 * **`timestampOrdered`**: (standaardwaarde) Geef prioriteit aan het profiel dat het laatst is bijgewerkt. Met dit fusietype, wordt het `data` attribuut niet vereist. `timestampOrdered` ondersteunt ook aangepaste tijdstempels die voorrang hebben bij het samenvoegen van profielfragmenten binnen of tussen gegevenssets. Zie de sectie Bijlage op [met aangepaste tijdstempels](#custom-timestamps) voor meer informatie.
-* **`dataSetPrecedence`** : Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer het gebruiken van dit fusietype, wordt het `order` attribuut vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
-   * **`order`**: Wanneer &quot;dataSetPrecision&quot; wordt gebruikt, moet een  `order` array worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De array `order` geeft een overzicht van de id&#39;s van de gegevenssets in volgorde van prioriteit.
+* **`dataSetPrecedence`** : Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. This could be used when information present in one dataset is preferred or trusted over data in another dataset. Wanneer het gebruiken van dit fusietype, wordt het `order` attribuut vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
+   * **`order`**: When &quot;dataSetPrecedence&quot; is used, an `order` array must be supplied with a list of datasets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De array `order` geeft een overzicht van de id&#39;s van de gegevenssets in volgorde van prioriteit.
 
 #### Voorbeeld `attributeMerge`-object met het type `dataSetPrecedence`
 
@@ -153,7 +153,7 @@ waarbij `{ATTRIBUTE_MERGE_TYPE}` een van de volgende is:
     }
 ```
 
-#### Voorbeeld `attributeMerge`-object met het type `timestampOrdered`
+#### Example `attributeMerge` object using `timestampOrdered` type
 
 ```json
     "attributeMerge": {
@@ -185,7 +185,7 @@ Waar de waarde van `name` de naam van de klasse XDM is waarop het schema verbond
 
 Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren, begin door [XDM systeemoverzicht](../../xdm/home.md) te lezen.
 
-## Beleid {#access-merge-policies} voor samenvoegen openen
+## Beleid voor samenvoegen openen {#access-merge-policies}
 
 Gebruikend [!DNL Real-time Customer Profile] API, staat het `/config/mergePolicies` eindpunt u een raadplegingsverzoek toe om een specifiek fusiebeleid door zijn identiteitskaart te bekijken, of toegang tot elk samenvoegbeleid in uw IMS Organisatie, die door specifieke criteria wordt gefiltreerd. U kunt het `/config/mergePolicies/bulk-get` eindpunt ook gebruiken om veelvoudige fusiebeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
 
@@ -201,9 +201,9 @@ GET /config/mergePolicies/{mergePolicyId}
 
 | Parameter | Beschrijving |
 |---|---|
-| `{mergePolicyId}` | De id van het samenvoegbeleid dat u wilt verwijderen. |
+| `{mergePolicyId}` | The identifier of the merge policy you want to delete. |
 
-**Verzoek**
+**Request**
 
 ```shell
 curl -X GET \
@@ -338,9 +338,9 @@ Zie [componenten van samenvoegingsbeleid](#components-of-merge-policies) sectie 
 
 ### Meerdere vormen van samenvoegingsbeleid weergeven op basis van criteria
 
-U kunt van veelvoudige fusiebeleid binnen uw IMS Organisatie een lijst maken door een verzoek van de GET aan het `/config/mergePolicies` eindpunt uit te geven en facultatieve vraagparameters te gebruiken om, de reactie te filtreren te orde te geven en te pagineren. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
+U kunt van veelvoudige fusiebeleid binnen uw IMS Organisatie een lijst maken door een verzoek van de GET aan het `/config/mergePolicies` eindpunt uit te geven en facultatieve vraagparameters te gebruiken om, de reactie te filtreren te orde te geven en te pagineren. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Making a call to this endpoint with no parameters will retrieve all merge policies available for your organization.
 
-**API-indeling**
+**API format**
 
 ```http
 GET /config/mergePolicies?{QUERY_PARAMS}
@@ -350,17 +350,17 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |---|---|
 | `default` | Een Booleaanse waarde die het resultaat is van filters, ongeacht of het samenvoegbeleid de standaardinstelling voor een schemaklasse is. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. Standaardwaarde: 20 |
-| `orderBy` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend, zoals in `orderBy=name` of `orderBy=+name` om op naam te sorteren in oplopende volgorde, of `orderBy=-name` om in aflopende volgorde te sorteren. Als u deze waarde weglaat, wordt `name` standaard in oplopende volgorde gesorteerd. |
+| `orderBy` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend, zoals in `orderBy=name` of `orderBy=+name` om op naam te sorteren in oplopende volgorde, of `orderBy=-name` om in aflopende volgorde te sorteren. Omitting this value results in the default sorting of `name` in ascending order. |
 | `schema.name` | Naam van het schema waarvoor om beschikbaar samenvoegbeleid terug te winnen. |
-| `identityGraph.type` | Hiermee filtert u de resultaten op basis van het type identiteitsgrafiek. Mogelijke waarden zijn &quot;none&quot; en &quot;pdg&quot; (privégrafiek). |
-| `attributeMerge.type` | Filterresultaten op basis van het gebruikte samenvoegtype voor kenmerken. Mogelijke waarden zijn &quot;timestampOrdered&quot; en &quot;dataSetPrecedence&quot;. |
-| `start` | Paginaverschuiving - geef de eerste id op voor de gegevens die moeten worden opgehaald. Standaardwaarde: 0 |
-| `version` | Geef dit op als u een specifieke versie van het samenvoegbeleid wilt gebruiken. Standaard wordt de nieuwste versie gebruikt. |
+| `identityGraph.type` | Hiermee filtert u de resultaten op basis van het type identiteitsgrafiek. Possible values include &quot;none&quot; and &quot;pdg&quot; (Private graph). |
+| `attributeMerge.type` | Filters results by the attribute merge type used. Possible values include &quot;timestampOrdered&quot; and &quot;dataSetPrecedence&quot;. |
+| `start` | Page offset - specify the starting ID for data to retrieve. Default value: 0 |
+| `version` | Specify this if you are looking to use a specific version of the merge policy. By default, the latest version will be used. |
 
 Voor meer informatie betreffende `schema.name`, `identityGraph.type`, en `attributeMerge.type`, verwijs naar [componenten van samenvoegbeleid](#components-of-merge-policies) sectie die vroeger in deze gids wordt verstrekt.
 
 
-**Verzoek**
+**Request**
 
 In het volgende verzoek worden alle samenvoegingsbeleidsregels voor een bepaald schema weergegeven:
 
@@ -451,7 +451,7 @@ Een succesvolle reactie keert een gepagineerde lijst van fusiebeleid terug dat a
 
 U kunt een nieuw fusiebeleid voor uw organisatie tot stand brengen door een verzoek van de POST aan het `/config/mergePolicies` eindpunt te doen.
 
-**API-indeling**
+**API format**
 
 ```http
 POST /config/mergePolicies
@@ -549,7 +549,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 | Parameter | Beschrijving |
 |---|---|
-| `{mergePolicyId}` | De id van het samenvoegbeleid dat u wilt verwijderen. |
+| `{mergePolicyId}` | The identifier of the merge policy you want to delete. |
 
 **Verzoek**
 
@@ -574,7 +574,7 @@ curl -X PATCH \
 |---|---|
 | `op` | Geeft de bewerking aan die moet worden uitgevoerd. Voorbeelden van andere PATCH-bewerkingen vindt u in de [JSON-patchdocumentatie](http://jsonpatch.com) |
 | `path` | Het pad van het veld dat moet worden bijgewerkt. Accepteerde waarden zijn: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
-| `value` | De waarde waarop het opgegeven veld moet worden ingesteld. |
+| `value` | The value to set the specified field to. |
 
 Raadpleeg de sectie [componenten van het samenvoegbeleid](#components-of-merge-policies) voor meer informatie.
 
@@ -665,11 +665,11 @@ curl -X PUT \
 |---|---|
 | `name` | Een mensvriendelijke naam waarmee het samenvoegbeleid in lijstweergaven kan worden geïdentificeerd. |
 | `identityGraph` | De identiteitsgrafiek waaruit gerelateerde identiteiten moeten worden opgehaald om samen te voegen. |
-| `attributeMerge` | De manier waarop aan profielkenmerkwaarden in het geval van gegevensconflicten voorrang moet worden gegeven. |
+| `attributeMerge` | The manner by which to prioritize profile attribute values in the case of data conflicts. |
 | `schema` | De XDM-schemaklasse die aan het samenvoegbeleid is gekoppeld. |
-| `default` | Geeft aan of dit samenvoegbeleid het standaardbeleid voor het schema is. |
+| `default` | Specifies whether this merge policy is the default for the schema. |
 
-Raadpleeg de sectie [componenten van het samenvoegbeleid](#components-of-merge-policies) voor meer informatie.
+Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
 
 
 **Antwoord**
@@ -706,9 +706,9 @@ Een geslaagde reactie retourneert de details van het bijgewerkte samenvoegingsbe
 }
 ```
 
-## Een samenvoegingsbeleid verwijderen
+## Delete a merge policy
 
-Een samenvoegingsbeleid kan worden geschrapt door een verzoek van de DELETE aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
+A merge policy can be deleted by making a DELETE request to the `/config/mergePolicies` endpoint and including the ID of the merge policy that you wish to delete in the request path.
 
 **API-indeling**
 
@@ -735,7 +735,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om de schrapping te bevestigen succesvol was, kunt u een verzoek van de GET uitvoeren om het fusiebeleid door zijn identiteitskaart te bekijken. Als het samenvoegbeleid is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
+A successful delete request returns HTTP Status 200 (OK) and an empty response body. To confirm the deletion was successful, you can perform a GET request to view the merge policy by its ID. If the merge policy was deleted, you will receive an HTTP Status 404 (Not Found) error.
 
 ## Volgende stappen
 
@@ -761,9 +761,9 @@ Voor geleidelijke instructies bij het werken met schema&#39;s gebruikend de Regi
 
 Als u met aangepaste tijdstempels wilt werken met de gebruikersinterface, raadpleegt u de sectie over [aangepaste tijdstempels](../merge-policies/overview.md#custom-timestamps) in het [overzicht van het samenvoegbeleid](../merge-policies/overview.md).
 
-#### [!DNL External Source System Audit Details] veldgroepdetails  {#field-group-details}
+#### [!DNL External Source System Audit Details] veldgroepdetails {#field-group-details}
 
-In het volgende voorbeeld worden correct gevulde velden in de veldgroep [!DNL External Source System Audit Details] weergegeven. De volledige gebiedsgroep JSON kan ook in [het Model van de Gegevens van de Ervaring (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) op GitHub worden bekeken.
+In het volgende voorbeeld worden correct gevulde velden in de veldgroep [!DNL External Source System Audit Details] weergegeven. De volledige gebiedsgroep JSON kan ook in [het Model van de Gegevens van de Ervaring (XDM) repo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) op GitHub worden bekeken.
 
 ```json
 {
