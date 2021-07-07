@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Campagne Marketing Details Schema Veld Groep
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van de Marketing van de Campagne.
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -30,5 +30,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)
