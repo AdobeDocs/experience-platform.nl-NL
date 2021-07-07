@@ -5,7 +5,7 @@ title: Persoonlijke veldgroep contactgegevens
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Persoonlijke het schemagebiedgroep van de Details van het Contact.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -35,5 +35,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
