@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
 workflow-type: tm+mt
-source-wordcount: '3685'
+source-wordcount: '3588'
 ht-degree: 0%
 
 ---
@@ -66,13 +66,13 @@ Er zijn twee manieren om identiteitsgegevens naar Platform te verzenden:
 
 #### `identityMap` {#identityMap}
 
-`identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
+`identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
 
 Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteiten ingesloten worden in de gegevens en daardoor minder zichtbaar worden. Als u onbewerkte gegevens opneemt, moet u in plaats daarvan afzonderlijke identiteitsvelden definiëren binnen de daadwerkelijke schemastructuur. Schema&#39;s die `identityMap` gebruiken, kunnen ook niet deelnemen aan relaties.
 
-Identiteitskaarten kunnen echter bijzonder nuttig zijn als u gegevens opneemt uit bronnen die identiteiten samen opslaan (zoals [!DNL Airship] of Adobe Audience Manager), of als er een variabel aantal identiteiten voor een schema is. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+Identiteitskaarten kunnen echter bijzonder nuttig zijn als u gegevens opneemt uit bronnen die identiteiten samen opslaan (zoals [!DNL Airship] of Adobe Audience Manager), of als er een variabel aantal identiteiten voor een schema is. Daarnaast zijn identiteitskaarten vereist als u de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) gebruikt.
 
-An example of a simple identity map would look like the following:
+Een voorbeeld van een eenvoudige identiteitskaart zou als het volgende kijken:
 
 ```json
 "identityMap": {
@@ -101,7 +101,7 @@ An example of a simple identity map would look like the following:
 }
 ```
 
-Zoals in het bovenstaande voorbeeld wordt getoond, vertegenwoordigt elke sleutel in het `identityMap`-object een naamruimte van de identiteit. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. Raadpleeg de [!DNL Identity Service] documentatie voor een [lijst met standaardnaamruimten](../../identity-service/troubleshooting-guide.md#standard-namespaces) die door Adobe-toepassingen worden herkend.
+Zoals in het bovenstaande voorbeeld wordt getoond, vertegenwoordigt elke sleutel in het `identityMap`-object een naamruimte van de identiteit. De waarde voor elke sleutel is een array van objecten die de identiteitswaarden (`id`) voor de respectievelijke naamruimte vertegenwoordigt. Raadpleeg de [!DNL Identity Service] documentatie voor een [lijst met standaardnaamruimten](../../identity-service/troubleshooting-guide.md#standard-namespaces) die door Adobe-toepassingen worden herkend.
 
 >[!NOTE]
 >
@@ -109,13 +109,13 @@ Zoals in het bovenstaande voorbeeld wordt getoond, vertegenwoordigt elke sleutel
 
 ### Beginselen voor de ontwikkeling van schema&#39;s {#evolution}
 
-As the nature of digital experiences continues to evolve, so must the schemas used to represent them. Een goed ontworpen schema kan daarom aanpassen en evolueren zoals nodig, zonder destructieve veranderingen in vorige versies van het schema te veroorzaken.
+Naarmate de aard van de digitale ervaringen zich blijft ontwikkelen, moeten de schema&#39;s die gebruikt worden om ze te vertegenwoordigen ook worden gebruikt. Een goed ontworpen schema kan daarom aanpassen en evolueren zoals nodig, zonder destructieve veranderingen in vorige versies van het schema te veroorzaken.
 
 Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schemaevolutie is, [!DNL Experience Platform] handhaaft een zuiver additief versieringsbeginsel. Dit beginsel zorgt ervoor dat om het even welke revisies aan het schema slechts in niet-destructieve updates en veranderingen resulteren. Met andere woorden: **afbrekende wijzigingen worden niet ondersteund.**
 
 >[!NOTE]
 >
->If a schema has not yet been used to ingest data into [!DNL Experience Platform] and hasn&#39;t been enabled for use in Real-time Customer Profile, you may introduce a breaking change to that schema. Nochtans, zodra het schema in [!DNL Platform] is gebruikt, moet het aan het additieve versieringsbeleid houden.
+>Als een schema nog niet is gebruikt om gegevens in [!DNL Experience Platform] in te gaan en niet voor gebruik in het Profiel van de Klant in real time is toegelaten, kunt u een breekverandering in dat schema introduceren. Nochtans, zodra het schema in [!DNL Platform] is gebruikt, moet het aan het additieve versieringsbeleid houden.
 
 In de volgende tabel wordt aangegeven welke wijzigingen worden ondersteund bij het bewerken van schema&#39;s, veldgroepen en gegevenstypen:
 
@@ -159,9 +159,15 @@ Veldgroepen definiëren met welke klasse(n) ze compatibel zijn op basis van het 
 
 [!DNL Experience Platform] omvat vele standaard Adobe gebiedsgroepen terwijl ook het toestaan van verkopers om gebiedsgroepen voor hun gebruikers te bepalen, en individuele gebruikers om gebiedsgroepen voor hun eigen specifieke concepten te bepalen.
 
-For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and &quot;[!UICONTROL Home Address]&quot; for your &quot;[!UICONTROL Loyalty Members]&quot; schema, you would be able to use standard field groups that define those common concepts. Nochtans, hebben de concepten die voor minder vaak gebruiksgevallen specifiek zijn (zoals &quot;[!UICONTROL Loyalty Program Level]&quot;) vaak geen vooraf bepaalde gebiedsgroep. In this case, you must define your own field group to capture this information.
+Bijvoorbeeld, om details zoals &quot;[!UICONTROL First Name]&quot;en &quot;[!UICONTROL Home Address]&quot;voor uw &quot;[!UICONTROL Loyalty Members]&quot;schema te vangen, zou u standaardgebiedsgroepen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Nochtans, hebben de concepten die voor minder vaak gebruiksgevallen specifiek zijn (zoals &quot;[!UICONTROL Loyalty Program Level]&quot;) vaak geen vooraf bepaalde gebiedsgroep. In dit geval moet u uw eigen veldgroep definiëren om deze gegevens vast te leggen.
 
-Remember that schemas are composed of &quot;zero or more&quot; field groups, so this means that you could compose a valid schema without using any field groups at all.
+>[!NOTE]
+>
+>Het wordt sterk geadviseerd dat u standaardgebiedsgroepen wanneer mogelijk in uw schema&#39;s gebruikt, aangezien deze gebieden impliciet door de diensten [!DNL Experience Platform] worden begrepen en grotere consistentie wanneer gebruikt over [!DNL Platform] componenten verstrekken.
+>
+>Velden die door standaardcomponenten worden verschaft (zoals &quot;Voornaam&quot; en &quot;E-mailadres&quot;), bevatten toegevoegde verbindingen die verder gaan dan elementaire scalaire veldtypen en geven [!DNL Platform] door dat velden met hetzelfde gegevenstype zich op dezelfde manier gedragen. Dit gedrag kan worden vertrouwd om verenigbaar te zijn ongeacht waar de gegevens uit komen, of waarin [!DNL Platform] dienst de gegevens wordt gebruikt.
+
+Herinner dat de schema&#39;s uit &quot;nul of meer&quot;gebiedsgroepen worden samengesteld, zodat betekent dit dat u een geldig schema kon samenstellen zonder enige gebiedsgroepen bij allen te gebruiken.
 
 De volgende schermafbeelding laat zien hoe veldgroepen worden weergegeven in de gebruikersinterface van het Platform. In dit voorbeeld wordt één veldgroep ([!UICONTROL Demographic Details]) toegevoegd aan een schema, dat een groepering van velden aan de structuur van het schema biedt.
 
@@ -175,19 +181,19 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 [!DNL Experience Platform] bevat een aantal gangbare gegevenstypen als onderdeel van het programma  [!DNL Schema Registry] ter ondersteuning van het gebruik van standaardpatronen voor het beschrijven van gemeenschappelijke gegevensstructuren. Dit wordt meer gedetailleerd uitgelegd in de [!DNL Schema Registry] zelfstudies, waar het duidelijker wordt wanneer u door de stappen gaat om gegevenstypen te definiëren.
 
-De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de gebruikersinterface van het Platform. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the &quot;[!UICONTROL Person name]&quot; data type, as indicated by the text following the pipe character (`|`) next to the field&#39;s name. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
+De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de gebruikersinterface van het Platform. Een van de velden die wordt verschaft door de veldgroep [!UICONTROL Demographic Details], gebruikt het gegevenstype &quot;[!UICONTROL Person name]&quot;, zoals wordt aangegeven door de tekst na het teken voor de pipe (`|`) naast de naam van het veld. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
 
 ![](../images/schema-composition/data-type.png)
 
 Raadpleeg de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/tree/master/components/datatypes) voor de meest actuele lijst met beschikbare standaard XDM-gegevenstypen. Alternatief, kunt u naar de gids op [het onderzoeken van componenten XDM](../ui/explore.md) verwijzen als u verkiest om middelen in UI te bekijken.
 
-### Field
+### Veld
 
-Een veld is de eenvoudigste bouwsteen van een schema. Velden bieden beperkingen met betrekking tot het type gegevens dat ze kunnen bevatten door een specifiek gegevenstype te definiëren. These basic data types define a single field, whereas the [data types](#data-type) previously mentioned allow you to define multiple sub-fields and re-use the same multi-field structure throughout various schemas. So, in addition to defining a field&#39;s &quot;data type&quot; as one of the data types defined in the registry, [!DNL Experience Platform] supports basic scalar types such as:
+Een veld is de eenvoudigste bouwsteen van een schema. Velden bieden beperkingen met betrekking tot het type gegevens dat ze kunnen bevatten door een specifiek gegevenstype te definiëren. Deze basisgegevenstypen definiëren één veld, terwijl u met de eerder genoemde [gegevenstypen](#data-type) meerdere subvelden kunt definiëren en dezelfde structuur voor meerdere velden kunt gebruiken in verschillende schema&#39;s. Naast het definiëren van het &quot;gegevenstype&quot; van een veld als een van de gegevenstypen die in het register zijn gedefinieerd, ondersteunt [!DNL Experience Platform] basistypen van scalaire aard, zoals:
 
 * Tekenreeks
-* Integer
-* Double
+* Geheel
+* Dubbel
 * Boolean
 * Array
 * Object
@@ -210,24 +216,6 @@ De geldige waaiers van deze scalaire types kunnen verder tot bepaalde patronen, 
 >
 >Het &quot;kaart&quot;gebiedstype staat voor sleutel-waarde paargegevens, met inbegrip van veelvoudige waarden voor één enkele sleutel toe. Kaarten kunnen alleen op systeemniveau worden gedefinieerd. Dit betekent dat u een kaart in een door de industrie of leverancier gedefinieerd schema tegenkomt, maar dat deze kaart niet beschikbaar is voor gebruik in velden die u definieert. De [Handleiding voor ontwikkelaars van de API voor schemaregistratie](../api/getting-started.md) bevat meer informatie over het definiëren van veldtypen.
 
-Sommige gegevensverrichtingen die door stroomafwaartse diensten en toepassingen worden gebruikt dwingen beperkingen op specifieke gebiedstypes af. De betrokken diensten omvatten, maar zijn niet beperkt tot:
-
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)
-* [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Segmentation]](../../segmentation/home.md)
-* [[!DNL Query Service]](../../query-service/home.md)
-* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
-
-Alvorens een schema voor gebruik in de stroomafwaartse diensten te creëren, te herzien gelieve de aangewezen documentatie voor die diensten om de gebiedsvereisten en de beperkingen voor de gegevensverrichtingen beter te begrijpen het schema voor bedoeld is.
-
-### XDM-velden
-
-Naast basisvelden en de mogelijkheid om uw eigen gegevenstypen te definiëren, biedt XDM een standaardset velden en gegevenstypen die impliciet worden begrepen door [!DNL Experience Platform]-services en die zorgen voor grotere consistentie bij gebruik in [!DNL Platform]-componenten.
-
-Deze velden, zoals &quot;Voornaam&quot; en &quot;E-mailadres&quot;, bevatten extra aantekeningen die verder gaan dan de elementaire scalaire veldtypen en die [!DNL Platform] aangeven dat velden die hetzelfde XDM-gegevenstype delen, zich op dezelfde manier gedragen. Dit gedrag kan worden vertrouwd om verenigbaar te zijn ongeacht waar de gegevens uit komen, of waarin [!DNL Platform] dienst de gegevens wordt gebruikt.
-
-Zie [XDM gebiedwoordenboek](field-dictionary.md) voor een volledige lijst van beschikbare gebieden XDM. Aanbevolen wordt om XDM-velden en gegevenstypen waar mogelijk te gebruiken ter ondersteuning van consistentie en standaardisering in [!DNL Experience Platform].
-
 ## Compositievoorbeeld
 
 De schema&#39;s vertegenwoordigen het formaat en de structuur van gegevens die in [!DNL Platform] zullen worden opgenomen, en gebruikend een samenstellingsmodel worden gebouwd. Zoals eerder vermeld, zijn deze schema&#39;s samengesteld uit een klasse en nul of meer gebiedsgroepen die met die klasse compatibel zijn.
@@ -242,23 +230,23 @@ In het onderstaande diagram worden deze schema&#39;s en de velden weergegeven di
 
 ### Samenvoegen {#union}
 
-While [!DNL Experience Platform] allows you to compose schemas for particular use cases, it also allows you to see a &quot;union&quot; of schemas for a specific class type. The previous diagram shows two schemas based on the XDM ExperienceEvent class and two schemas based on [!DNL XDM Individual Profile] class. The union, shown below, aggregates the fields of all schemas that share the same class ([!DNL XDM ExperienceEvent] and [!DNL XDM Individual Profile], respectively).
+Hoewel [!DNL Experience Platform] u toestaat om schema&#39;s voor bepaalde gebruiksgevallen samen te stellen, staat het u ook toe om een &quot;unie&quot;van schema&#39;s voor een specifiek klassentype te zien. Het vorige diagram toont twee schema&#39;s die op de klasse XDM ExperienceEvent en twee schema&#39;s worden gebaseerd die op [!DNL XDM Individual Profile] klasse worden gebaseerd. De Vereniging, hieronder getoond, voegt de gebieden van alle schema&#39;s samen die de zelfde klasse ([!DNL XDM ExperienceEvent] en [!DNL XDM Individual Profile], respectievelijk) delen.
 
 ![](../images/schema-composition/union.png)
 
-By enabling a schema for use with [!DNL Real-time Customer Profile], it will be included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes as well as a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] gebruikt de verenigingsmening om deze gegevens te vertegenwoordigen en een holistische mening van elke individuele klant te verstrekken.
+Door een schema voor gebruik met [!DNL Real-time Customer Profile] toe te laten, zal het in de unie voor dat klassentype worden omvat. [!DNL Profile] levert robuuste, gecentraliseerde profielen van klantenattributen evenals een timestamped rekening van elke gebeurtenis die de klant over om het even welk systeem heeft gehad dat met  [!DNL Platform]wordt geïntegreerd. [!DNL Profile] gebruikt de verenigingsmening om deze gegevens te vertegenwoordigen en een holistische mening van elke individuele klant te verstrekken.
 
-For more information on working with [!DNL Profile], see the [Real-time Customer Profile overview](../../profile/home.md).
+Voor meer informatie bij het werken met [!DNL Profile], zie [Overzicht van het Profiel van de Klant in real time](../../profile/home.md).
 
 ## Gegevensbestanden toewijzen aan XDM-schema&#39;s
 
-Alle gegevensbestanden die in [!DNL Experience Platform] worden opgenomen moeten met de structuur van een XDM- schema in overeenstemming zijn. Voor meer informatie over hoe te om gegevensdossiers te formatteren om aan hiërarchieën XDM (met inbegrip van steekproefdossiers) te voldoen, zie het document op [steekproefETL transformaties](../../etl/transformations.md). For general information about ingesting datafiles into [!DNL Experience Platform], see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
+Alle gegevensbestanden die in [!DNL Experience Platform] worden opgenomen moeten met de structuur van een XDM- schema in overeenstemming zijn. Voor meer informatie over hoe te om gegevensdossiers te formatteren om aan hiërarchieën XDM (met inbegrip van steekproefdossiers) te voldoen, zie het document op [steekproefETL transformaties](../../etl/transformations.md). Voor algemene informatie over het opnemen van gegevensbestanden in [!DNL Experience Platform], zie [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
 
-## Schemas for external segments
+## Schema&#39;s voor externe segmenten
 
 Als u segmenten van externe systemen in Platform brengt, moet u de volgende componenten gebruiken om hen in uw schema&#39;s te vangen:
 
-* [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
+* [[!UICONTROL Segment definition] klasse](../classes/segment-definition.md): Gebruik deze standaardklasse om zeer belangrijke attributen van een externe segmentdefinitie te vangen.
 * [[!UICONTROL Segment Membership Details] veldgroep](../field-groups/profile/segmentation.md): Voeg deze veldgroep aan uw  [!UICONTROL XDM Individual Profile] schema toe om klantenprofielen met specifieke segmenten te associëren.
 
 ## Volgende stappen
@@ -280,9 +268,9 @@ Als u de [!DNL Schema Registry]-API wilt gebruiken, begint u met het lezen van d
 
 De volgende secties bevatten extra informatie betreffende de beginselen van schemacompositie.
 
-### Relational tables versus embedded objects {#embedded}
+### Relatieve tabellen versus ingesloten objecten {#embedded}
 
-When working with relational databases, best practices involve normalizing data, or taking an entity and dividing it into discrete pieces that are then displayed across multiple tables. Om de gegevens als geheel te lezen of de entiteit bij te werken, lees en schrijf verrichtingen over vele individuele lijsten moeten worden gemaakt gebruikend JOIN.
+Wanneer het werken met relationele gegevensbestanden, impliceren de beste praktijken het normaliseren van gegevens, of het nemen van een entiteit en het verdelen van het in discrete stukken die dan over veelvoudige lijsten worden getoond. Om de gegevens als geheel te lezen of de entiteit bij te werken, lees en schrijf verrichtingen over vele individuele lijsten moeten worden gemaakt gebruikend JOIN.
 
 Door het gebruik van ingebedde voorwerpen, kunnen de schema&#39;s XDM complexe gegevens direct vertegenwoordigen en het opslaan in op zichzelf staande documenten met een hiërarchische structuur. Één van de belangrijkste voordelen aan deze structuur is dat het u toestaat om de gegevens te vragen zonder het moeten de entiteit door dure verbindingen aan veelvoudige gedenormaliseerde lijsten reconstrueren. Er zijn geen harde beperkingen aan hoeveel niveaus uw schemahiërarchie kan zijn.
 
@@ -329,4 +317,4 @@ De voor- en nadelen van het gebruik van vrije-formuliervelden op objecten worden
 
 **Cons**:
 
-* The location of free-form fields within the schema is ad hoc, meaning they appear in alphabetical order within the Schema Editor. Hierdoor kunnen schema&#39;s minder gestructureerd worden, en vergelijkbare vrije-vormgebieden kunnen uiteindelijk ver worden gescheiden afhankelijk van hun namen.
+* De locatie van vrije-formuliervelden in het schema is ad hoc. Dit betekent dat deze velden in alfabetische volgorde worden weergegeven in de Schema-editor. Hierdoor kunnen schema&#39;s minder gestructureerd worden, en vergelijkbare vrije-vormgebieden kunnen uiteindelijk ver worden gescheiden afhankelijk van hun namen.
