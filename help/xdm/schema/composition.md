@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
+source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
 workflow-type: tm+mt
-source-wordcount: '3667'
+source-wordcount: '3685'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Standaardisering is een essentieel concept achter [!DNL Experience Platform]. XD
 
 De infrastructuur waarop [!DNL Experience Platform] wordt gebouwd, die als [!DNL XDM System] wordt bekend, vergemakkelijkt op schema-gebaseerde werkschema&#39;s en omvat [!DNL Schema Registry], [!DNL Schema Editor], schemameta-gegevens, en de patronen van het de dienstconsumptie. Zie [XDM System overview](../home.md) voor meer informatie.
 
-Er zijn verscheidene belangrijke voordelen aan de bouw en het gebruiken van schema&#39;s in [!DNL Experience Platform]. In de eerste plaats zorgen schema&#39;s voor een beter gegevensbeheer en gegevensminimalisering, wat vooral belangrijk is met privacyregels. Ten tweede, staat het bouwen van schema&#39;s met standaard componenten Adobe voor uit-van-de-doos inzichten en gebruik van de diensten AI/ML met minimale aanpassingen toe. Ten slotte bieden schema&#39;s infrastructuren voor het uitwisselen van inzichten in gegevens en een efficiënte orchestratie.
+Er zijn verscheidene belangrijke voordelen aan het leveraging van schema&#39;s in [!DNL Experience Platform]. In de eerste plaats zorgen schema&#39;s voor een beter gegevensbeheer en gegevensminimalisering, wat vooral belangrijk is met privacyregels. Ten tweede, staat het bouwen van schema&#39;s met standaard componenten Adobe voor uit-van-de-doos inzichten en gebruik van de diensten AI/ML met minimale aanpassingen toe. Ten slotte bieden schema&#39;s infrastructuren voor het uitwisselen van inzichten in gegevens en een efficiënte orchestratie.
 
 ## Uw schema plannen
 
@@ -111,7 +111,7 @@ Zoals in het bovenstaande voorbeeld wordt getoond, vertegenwoordigt elke sleutel
 
 Naarmate de aard van de digitale ervaringen zich blijft ontwikkelen, moeten de schema&#39;s die gebruikt worden om ze te vertegenwoordigen ook worden gebruikt. Een goed ontworpen schema kan daarom aanpassen en evolueren zoals nodig, zonder destructieve veranderingen in vorige versies van het schema te veroorzaken.
 
-Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schemaevolutie is, [!DNL Experience Platform] handhaaft een zuiver additief versieringsbeginsel om ervoor te zorgen dat om het even welke herzieningen aan het schema slechts in niet-destructieve updates en veranderingen resulteren. Met andere woorden: **afbrekende wijzigingen worden niet ondersteund.**
+Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schemaevolutie is, [!DNL Experience Platform] handhaaft een zuiver additief versieringsbeginsel. Dit beginsel zorgt ervoor dat om het even welke revisies aan het schema slechts in niet-destructieve updates en veranderingen resulteren. Met andere woorden: **afbrekende wijzigingen worden niet ondersteund.**
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ In de volgende tabel wordt aangegeven welke wijzigingen worden ondersteund bij h
 
 | Ondersteunde wijzigingen | Wijzigingen doorlopen (niet ondersteund) |
 | --- | --- |
-| <ul><li>Nieuwe velden toevoegen aan de bron</li><li>Een verplicht veld optioneel maken</li><li>De weergavenaam en beschrijving van de bron wijzigen</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Nieuwe verplichte velden invoegen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Kenmerken verplaatsen naar een andere locatie in de structuur</li></ul> |
+| <ul><li>Nieuwe velden toevoegen aan de bron</li><li>Een verplicht veld optioneel maken</li><li>De weergavenaam en beschrijving van de bron wijzigen</li><li>Het schema toestaan om aan Profiel deel te nemen</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Nieuwe verplichte velden invoegen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Bestaande velden verplaatsen naar een andere locatie in de structuur</li><li>Het schema verwijderen</li><li>Het schema uitschakelen om deel te nemen aan profiel</li></ul> |
 
 ### Schema&#39;s en gegevensinvoer
 
