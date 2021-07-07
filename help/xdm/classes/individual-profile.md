@@ -5,16 +5,16 @@ title: Afzonderlijke XDM-profielklasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 79fcc44ec5e08f63bfd5eed6e90d7538273f4dab
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
 
 # [!DNL XDM Individual Profile] class
 
-[!DNL XDM Individual Profile] is een standaard XDM-klasse (Experience Data Model) die een enkelvoudige representatie (of &quot;profiel&quot;) van een individuele persoon vormt. Met name worden in de klasse (en de compatibele mixen) de kenmerken en belangen vastgelegd van zowel geïdentificeerde als gedeeltelijk geïdentificeerde personen die met uw merk communiceren.
+[!DNL XDM Individual Profile] is een standaard XDM-klasse (Experience Data Model) die een enkelvoudige representatie (of &quot;profiel&quot;) van een individuele persoon vormt. Specifiek, vangen de klasse (en zijn compatibele gebiedsgroepen) de attributen en de belangen van zowel geïdentificeerde als gedeeltelijk geïdentificeerde individuen die met uw merk in wisselwerking staan.
 
 Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) tot sterk geïdentificeerde profielen met gedetailleerde informatie zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identiteiten, contactgegevens en communicatievoorkeuren voor een individu. Voor meer informatie op hoog niveau over het gebruik van deze klasse in het Platform ecosysteem, verwijs naar [XDM overzicht](../home.md#data-behaviors).
 
@@ -50,4 +50,4 @@ Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL 
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
 
-Voor een volledige lijst van alle compatibele gebiedsgroepen voor [!DNL XDM Individual Profile], verwijs naar [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+Voor een volledige lijst van alle compatibele gebiedsgroepen voor [!DNL XDM Individual Profile], verwijs naar [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).
