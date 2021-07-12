@@ -5,10 +5,10 @@ title: Privacy Service- en Experience Cloud-toepassingen
 topic-legacy: overview
 description: Dit document bevat een referentie voor het configureren van verschillende Experience Cloud-toepassingen voor bewerkingen met betrekking tot privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 55d6d8ad7b0fc5457dc0fdc981aaa92717adbe68
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 7%
+source-wordcount: '600'
+ht-degree: 6%
 
 ---
 
@@ -46,9 +46,12 @@ Hieronder volgt een lijst met [!DNL Experience Cloud]-toepassingen die niet zijn
 
 | Toepassing | Documentatiebeschrijving |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/EN/ACC_GDPR.html) | Een overzicht van GDPR-functies voor Adobe Campaign Classic. |
-| [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Een overzicht van hoe een beheerder van de klantenprivacy of AEM beheerder GDPR- verzoeken kan behandelen. |
+| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Een overzicht van GDPR-functies voor Adobe Campaign Classic. |
+| [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Een overzicht van hoe een beheerder van de klantenprivacy of AEM beheerder GDPR- verzoeken kan behandelen. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Stappen voor het maken van GDPR toegang en schrapping verzoeken gebruikend Livefyre. |
-| [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Hoe ontwikkelaars uitbreidingen en de regelbouwer kunnen gebruiken om opt-in en opt-out oplossingen te bepalen. |
+| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | Hoe ontwikkelaars uitbreidingen en de regelbouwer kunnen gebruiken om opt-in en opt-out oplossingen te bepalen. |
+| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Zorg ervoor dat uw Magento Commerce-installaties voldoen aan de vereisten van specifieke privacywetgeving. |
+| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Leer hoe privacyregels van toepassing zijn op Marketo. |
+| [Werkruimte](https://www.workfront.com/privacy-notice) | Leer hoe Workfront persoonlijke gegevens verzamelt en hoe een betrokkene een privacyaanvraag kan indienen via een formulier. |
 
 {style=&quot;table-layout:auto&quot;}
