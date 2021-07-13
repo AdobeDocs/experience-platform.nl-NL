@@ -6,83 +6,84 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 44d7e11e79ed0e6041ff2e4438ddb7141ae3532d
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 # Een dataset maken voor het exporteren van een publiekssegment
 
-[!DNL Adobe Experience Platform] staat u toe om klantenprofielen in publiek gemakkelijk te segmenteren die op specifieke attributen worden gebaseerd. Zodra de segmenten zijn gecreeerd, kunt u dat publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld. Opdat de uitvoer succesvol is, moet de dataset behoorlijk worden gevormd.
+[!DNL Adobe Experience Platform] staat u toe om klantenprofielen in publiek te segmenteren dat op specifieke attributen wordt gebaseerd. Zodra een segment wordt gecreeerd, kunt u dat publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld. Opdat de uitvoer succesvol is, moet de dataset behoorlijk worden gevormd.
 
-Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend [!DNL Experience Platform] UI.
+Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die kan worden gebruikt om een publiekssegment uit te voeren gebruikend [!DNL Experience Platform] UI.
 
-Deze zelfstudie houdt rechtstreeks verband met de stappen die worden beschreven in de zelfstudie voor [het evalueren en benaderen van segmentresultaten](./evaluate-a-segment.md). De evaluatie van een segmentzelfstudie verstrekt stappen voor het creëren van een dataset gebruikend [!DNL Catalog Service] API, terwijl dit leerprogramma stappen beschrijft om een dataset tot stand te brengen gebruikend [!DNL Experience Platform] UI.
+Deze zelfstudie houdt rechtstreeks verband met de stappen die worden beschreven in de zelfstudie over [het evalueren en benaderen van segmentresultaten](./evaluate-a-segment.md). De zelfstudie van de segmentevaluatie biedt stappen voor het maken van een dataset met de [!DNL Catalog Service] API, terwijl deze zelfstudie stappen beschrijft om een dataset te maken met de [!DNL Experience Platform] UI.
 
 ## Aan de slag
 
-Als u een segment wilt exporteren, moet de gegevensset zijn gebaseerd op [!DNL XDM Individual Profile Union Schema]. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van alle schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de [!DNL XDM Individual Profile] klasse is. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve [sectie van het Profiel van de Klant in real time van de Ontwikkelaar van het Registratie van het Schema gids](../../xdm/schema/composition.md#union).
+Als u een segment wilt exporteren, moet de gegevensset zijn gebaseerd op [!DNL XDM Individual Profile Union Schema]. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van alle schema&#39;s samenvoegt die de zelfde klasse delen. Voor meer informatie over verenigingsschema&#39;s, verwijs naar de gids op [de grondbeginselen van schemacompositie](../../xdm/schema/composition.md#union).
 
-Om verenigingsschema&#39;s in UI te bekijken, klik **[!UICONTROL Profiles]** in de linkernavigatie, dan klik op **[!UICONTROL Union schema]** tabel zoals hieronder getoond.
+Om verenigingsschema&#39;s in UI te bekijken, selecteer **[!UICONTROL Profiles]** in de linkernavigatie, dan uitgezocht **[!UICONTROL Union Schema]** zoals hieronder getoond.
 
-![Verenigingsschema-tabblad in gebruikersinterface van Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Verenigingsschema-tabblad in gebruikersinterface van Experience Platform](../images/tutorials/segment-export-dataset/union.png)
 
 
 ## Werkruimte Gegevensbestanden
 
-De datasetwerkruimte binnen [!DNL Experience Platform] UI staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe te creëren.
+Met de werkruimte [!UICONTROL Datasets] kunt u alle gegevenssets voor uw organisatie weergeven en beheren.
 
-Als u de werkruimte van de gegevenssets wilt weergeven, klikt u op **[!UICONTROL Datasets]** in de linkernavigatie en klikt u op het tabblad **[!UICONTROL Browse]**. De werkruimte van datasets bevat een lijst van datasets, met inbegrip van kolommen die naam tonen, (datum en tijd), bron, schema, en laatste partijstatus, evenals de datum en de tijd de dataset het laatst werd bijgewerkt. Afhankelijk van de breedte van elke kolom moet u mogelijk naar links of rechts schuiven om alle kolommen weer te geven.
+Selecteer **[!UICONTROL Datasets]** in de linkernavigatie om tot de werkruimte toegang te hebben, dan uitgezocht **[!UICONTROL Browse]**. Dit lusje toont een lijst van datasets en hun details. Afhankelijk van de breedte van elke kolom moet u mogelijk naar links of rechts schuiven om alle kolommen weer te geven.
 
 >[!NOTE]
 >
->Klik op het filterpictogram naast de zoekbalk om filtermogelijkheden te gebruiken om alleen die datasets weer te geven die zijn ingeschakeld voor [!DNL Real-time Customer Profile].
+>Selecteer het filterpictogram naast de onderzoeksbar om het filtreren mogelijkheden te gebruiken om slechts die datasets te bekijken die voor [!DNL Real-time Customer Profile] worden toegelaten.
 
-![Alle gegevenssets weergeven](../images/tutorials/segment-export-dataset/datasets-workspace.png)
+![Gegevensbestanden weergeven](../images/tutorials/segment-export-dataset/browse.png)
 
 ## Een gegevensset maken
 
-Als u een gegevensset wilt maken, klikt u op **[!UICONTROL Create Dataset]** in de rechterbovenhoek van de werkruimte **[!UICONTROL Datasets]**.
+Selecteer **[!UICONTROL Create Dataset]** om een gegevensset te maken.
 
-![Klik op Gegevensset maken](../images/tutorials/segment-export-dataset/dataset-click-create.png)
+![Gegevensset maken selecteren](../images/tutorials/segment-export-dataset/create-dataset.png)
 
-Klik op **[!UICONTROL Create Dataset]** in het scherm **[!UICONTROL Create Dataset from Schema]** om door te gaan.
+Selecteer **[!UICONTROL Create Dataset from Schema]** in het volgende scherm.
 
-![Gegevensbron selecteren](../images/tutorials/segment-export-dataset/create-dataset.png)
+![Gegevensbron selecteren](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## XDM Individueel profiel verenigingsschema selecteren
 
-Om [!DNL XDM Individual Profile Union Schema] voor gebruik in uw dataset te selecteren, vind &quot;[!UICONTROL XDM Individual Profile]&quot;schema met een type van &quot;[!UICONTROL Union]&quot;op het **[!UICONTROL Select Schema]** scherm.
+Om [!DNL XDM Individual Profile Union Schema] voor gebruik in uw dataset te selecteren, vind &quot;[!UICONTROL XDM Individual Profile]&quot;schema op **[!UICONTROL Select Schema]** scherm. Zodra u het schema selecteert, kunt u bevestigen of het het verenigingsschema onder **[!UICONTROL API Usage]** in het juiste spoor is. Als de weg [!UICONTROL Schema] met `_union` beëindigt, is het een verenigingsschema.
 
-Selecteer het keuzerondje naast **[!UICONTROL XDM Individual Profile]** en klik vervolgens op **[!UICONTROL Next]** in de rechterbovenhoek.
+>[!NOTE]
+>
+>Ondanks het feit dat de unieschema&#39;s aan het Profiel van de Klant in real time door definitie deelnemen, zijn zij vermeld als &quot;Niet toegelaten&quot;wegens het feit dat zij niet voor Profiel op de zelfde manier zoals traditionele schema&#39;s worden toegelaten.
+
+Selecteer het keuzerondje naast **[!UICONTROL XDM Individual Profile]** en selecteer **[!UICONTROL Next]**.
 
 ![Schema selecteren](../images/tutorials/segment-export-dataset/select-schema.png)
 
 ## Gegevensset configureren
 
-Op het **[!UICONTROL Configure Dataset]** scherm, zult u worden vereist om uw dataset een naam te geven en kan een beschrijving van de dataset ook verstrekken.
+Op het volgende scherm, moet u uw dataset een naam geven. U kunt ook een optionele beschrijving toevoegen.
 
-**Opmerkingen over gegevenssetnamen:**
-- De namen van gegevenssets moeten kort en beschrijvend zijn, zodat de gegevensset later gemakkelijk in de bibliotheek kan worden gevonden.
-- Dataset-namen moeten uniek zijn, wat betekent dat ze ook specifiek genoeg moeten zijn om in de toekomst niet opnieuw te worden gebruikt.
-- Het is beste praktijken om extra informatie over de dataset te verstrekken gebruikend het beschrijvingsgebied, aangezien het andere gebruikers kan helpen tussen datasets in de toekomst differentiëren.
+**Opmerkingen over namen van gegevenssets:**
+* De namen van gegevenssets moeten kort en beschrijvend zijn, zodat de gegevensset later gemakkelijk in de bibliotheek kan worden gevonden.
+* Dataset-namen moeten uniek zijn, wat betekent dat ze ook specifiek genoeg moeten zijn om in de toekomst niet opnieuw te worden gebruikt.
+* Het is beste praktijken om extra informatie over de dataset te verstrekken gebruikend het beschrijvingsgebied, aangezien het andere gebruikers kan helpen tussen datasets in de toekomst differentiëren.
 
-Als de gegevensset een naam en een beschrijving heeft, klikt u op **[!UICONTROL Finish]**.
+Als de gegevensset een naam en een beschrijving heeft, selecteert u **[!UICONTROL Finish]**.
 
 ![Gegevensset configureren](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## Gegevensactiviteit
 
-Er is nu een lege dataset gemaakt en u bent teruggestuurd naar het tabblad **[!UICONTROL Dataset Activity]** in de werkruimte **[!UICONTROL Datasets]**. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
+Zodra de dataset wordt gecreeerd, wordt u gebracht de activiteitenpagina voor die dataset. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-Rechts in de werkruimte Datasets ziet u het tabblad **[!UICONTROL Info]** met informatie over uw nieuwe dataset, zoals id, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad **[!UICONTROL Info]** bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
+De juiste spoorlijn bevat informatie met betrekking tot uw nieuwe dataset zoals dataset ID, naam, beschrijving, schema, en meer. Noteer **[!UICONTROL Dataset ID]**, omdat deze waarde is vereist om de workflow voor het exporteren van het publiekssegment te voltooien.
 
-Noteer **[!UICONTROL Dataset ID]**, omdat deze waarde is vereist om de workflow voor het exporteren van het publiekssegment te voltooien.
-
-![Gegevensactiviteit](../images/tutorials/segment-export-dataset/dataset-activity.png)
+![Gegevensactiviteit](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Volgende stappen
 
