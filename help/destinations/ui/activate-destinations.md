@@ -3,12 +3,12 @@ keywords: doel activeren;doelen activeren;gegevens activeren
 title: Profielen en segmenten naar een doel activeren
 type: Tutorial
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2836'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,9 @@ Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een voll
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
 
+>[!IMPORTANT]
+>
+>Als u het schema voor het exporteren van bestanden wijzigt, van een planningsconfiguratie naar een volledige bestandsuitvoer, waarbij **[!UICONTROL Frequency]** is ingesteld op **[!UICONTROL Once]** voor segmenten die al zijn geëxporteerd, wordt er geen nieuw backfill-bestand geëxporteerd. Als u een nieuw backfill-bestand met een ander programma wilt exporteren, moet u een nieuwe doelinstantie maken. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 ### Incrementele bestanden exporteren {#export-incremental-files}
 
@@ -178,6 +181,10 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
+
+>[!IMPORTANT]
+>
+>Als u het schema voor het exporteren van bestanden wijzigt, van een planningsconfiguratie naar een volledige bestandsuitvoer, waarbij **[!UICONTROL Frequency]** is ingesteld op **[!UICONTROL Once]** voor segmenten die al zijn geëxporteerd, wordt er geen nieuw backfill-bestand geëxporteerd. Als u een nieuw backfill-bestand met een ander programma wilt exporteren, moet u een nieuwe doelinstantie maken. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 ### Bestandsnamen configureren {#file-names}
 
