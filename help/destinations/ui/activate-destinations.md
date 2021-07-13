@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
+source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
 workflow-type: tm+mt
-source-wordcount: '2836'
+source-wordcount: '2800'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een voll
 
 >[!IMPORTANT]
 >
->Als u het schema voor het exporteren van bestanden wijzigt, van een planningsconfiguratie naar een volledige bestandsuitvoer, waarbij **[!UICONTROL Frequency]** is ingesteld op **[!UICONTROL Once]** voor segmenten die al zijn geëxporteerd, wordt er geen nieuw backfill-bestand geëxporteerd. Als u een nieuw backfill-bestand met een ander programma wilt exporteren, moet u een nieuwe doelinstantie maken. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+>Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn geëxporteerd, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 ### Incrementele bestanden exporteren {#export-incremental-files}
 
@@ -184,7 +184,7 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 
 >[!IMPORTANT]
 >
->Als u het schema voor het exporteren van bestanden wijzigt, van een planningsconfiguratie naar een volledige bestandsuitvoer, waarbij **[!UICONTROL Frequency]** is ingesteld op **[!UICONTROL Once]** voor segmenten die al zijn geëxporteerd, wordt er geen nieuw backfill-bestand geëxporteerd. Als u een nieuw backfill-bestand met een ander programma wilt exporteren, moet u een nieuwe doelinstantie maken. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+>Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn geëxporteerd, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 ### Bestandsnamen configureren {#file-names}
 
