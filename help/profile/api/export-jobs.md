@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: In realtime klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -66,9 +65,6 @@ curl -X POST \
         "schemaRef": {
           "id": "https://ns.adobe.com/xdm/context/profile__union",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-        },
-        "fileDescription": {
-          "persisted": true
         }
       }'
 ```
@@ -77,7 +73,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Een beschrijvende naam voor de gegevensset. |
 | `schemaRef.id` | Identiteitskaart van de verenigingsmening (schema) dat de dataset zal worden geassocieerd met. |
-| `fileDescription.persisted` | Een Booleaanse waarde; als de waarde is ingesteld op `true`, kan de gegevensset blijven staan in de samenvoegweergave. |
 
 **Antwoord**
 
@@ -89,7 +84,7 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 ] 
 ```
 
-### Exporttaak {#initiate} starten
+### Exporttaak starten {#initiate}
 
 Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` eindpunt in Real-time het Profiel van de Klant te richten API en de details van de gegevens te verstrekken u in het lichaam van het verzoek wenst om uit te voeren.
 
