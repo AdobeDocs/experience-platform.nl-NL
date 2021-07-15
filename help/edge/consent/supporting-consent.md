@@ -3,10 +3,9 @@ title: Voorkeuren voor toestemming van de klant ondersteunen met de Adobe Experi
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK.
 keywords: toestemming;defaultConsent;default toestemming;setConsent;Profile Privacy field group;Experience Event Privacy field group;Privacy field group;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -54,7 +53,7 @@ De SDK ondersteunt versies 1.0 en 2.0 van de Adobe Experience Platform toestemmi
 
 ### De Adobe-standaardversie 2.0 gebruiken
 
-Als u Adobe Experience Platform gebruikt, moet u een privacyschemaveldgroep opnemen in uw profielschema. Zie [Beheer, privacy en beveiliging in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) voor meer informatie over de standaardversie van Adobe 2.0. U kunt gegevens toevoegen binnen het waardeobject hieronder die overeenkomen met het schema van het veld `consents` van de profielgroep van Inhoud en voorkeuren.
+Als u Adobe Experience Platform gebruikt, moet u een privacyschemaveldgroep opnemen in uw profielschema. Zie [Beheer, privacy en beveiliging in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) voor meer informatie over de standaardversie van Adobe 2.0. U kunt gegevens toevoegen binnen het waardeobject hieronder die overeenkomen met het schema van het veld `consents` van de profielveldgroep [!UICONTROL Consents and Preferences].
 
 Als de gebruiker binnen kiest, voer `setConsent` bevel met de inzamelingsvoorkeur uit die aan `y` wordt geplaatst als volgt:
 
