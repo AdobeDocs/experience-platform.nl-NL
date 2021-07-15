@@ -5,7 +5,7 @@ title: Afzonderlijke XDM-profielklasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 79fcc44ec5e08f63bfd5eed6e90d7538273f4dab
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL 
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md)
+* [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
 
