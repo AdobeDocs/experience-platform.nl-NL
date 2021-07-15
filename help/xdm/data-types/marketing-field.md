@@ -4,7 +4,7 @@ title: Gegevenstype van voorkeursveld voor algemene marketing
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Generic Marketing Preference.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] gebiedsgroep](../field-groups/profile/consents.md) als basislijn.
+>Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Consents and Preferences] gebiedsgroep](../field-groups/profile/consents.md) als basislijn.
 >
 >Als u een `subscriptions` kaart voor een bepaald marketing voorkeurgebied vereist, moet u [marketing gebied met abonnees gegevenstype](./marketing-field-subscriptions.md) in plaats daarvan gebruiken.
 
