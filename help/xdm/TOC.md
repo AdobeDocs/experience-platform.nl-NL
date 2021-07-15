@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '310'
 ht-degree: 7%
 
 ---
@@ -33,10 +33,11 @@ ht-degree: 7%
 * Schema veldgroepen {#field-groups}
    * Profielveldgroepen {#profile}
       * [Demografische details](./field-groups/profile/demographic-details.md)
+      * [IAB TCF 2.0 Toestemming](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [Loyalty-details](./field-groups/profile/loyalty-details.md)
       * [Persoonlijke contactgegevens](./field-groups/profile/personal-contact-details.md)
-      * [Voorkeuren voor privacy/persoonlijke voorkeur/marketing (inhoud)](./field-groups/profile/consents.md)
+      * [Inhoud en voorkeuren](./field-groups/profile/consents.md)
       * [Details segmentlidmaatschap](./field-groups/profile/segmentation.md)
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
    * Groepen van gebeurtenisvelden {#event}
@@ -45,6 +46,7 @@ ht-degree: 7%
       * [Handelsgegevens](./field-groups/event/commerce-details.md)
       * [Gegevens van eindgebruiker](./field-groups/event/enduserids.md)
       * [Omgevingsdetails](./field-groups/event/environment-details.md)
+      * [IAB TCF 2.0 Toestemming](./field-groups/event/iab.md)
       * [Webdetails](./field-groups/event/web-details.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
 * Datatypen {#data-types}
@@ -52,6 +54,7 @@ ht-degree: 7%
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
    * [Commerce](./data-types/commerce.md)
+   * [Constante tekenreeks](./data-types/consent-string.md)
    * [Inhoud en voorkeuren](./data-types/consents.md)
    * [Apparaat](./data-types/device.md)
    * [E-mailadres](./data-types/email-address.md)
@@ -90,7 +93,7 @@ ht-degree: 7%
    * Bronnen maken en bewerken {#resources}
       * [Schemas](./ui/resources/schemas.md)
       * [Klassen](./ui/resources/classes.md)
-      * [Veldengroepen](./ui/resources/field-groups.md)
+      * [Veldgroepen](./ui/resources/field-groups.md)
       * [Datatypen](./ui/resources/data-types.md)
    * Veld {#fields} definiëren
       * [Overzicht](./ui/fields/overview.md)
