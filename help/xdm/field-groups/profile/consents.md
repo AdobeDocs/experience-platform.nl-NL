@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: Privacy/Persoonlijke voorkeuren/Marketing (Inhoud) - Groep met schemavelden
+title: Inhoud en Voorkeuren voor schemaveldgroep
 topic-legacy: overview
-description: Dit document bevat een overzicht van de veldgroep Privacy/Personalization/Marketing Preferences (Consents).
+description: Dit document bevat een overzicht van de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '2287'
+source-wordcount: '2276'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] veldgroep
+# [!UICONTROL Consents and Preferences] veldgroep
 
-[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (hierna de  [!DNL Privacy & Consents] veldgroep genoemd) is een standaardveldgroep voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md) die wordt gebruikt om toestemming van de klant en voorkeursinformatie vast te leggen.
+[!UICONTROL Consents and Preferences]is een standaardveldgroep voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md), die wordt gebruikt om toestemming van de klant en voorkeurinformatie te vangen.
 
 >[!NOTE]
 >
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De veldgroep [!DNL Consents & Preferences] is ontworpen voor een reeks gevallen waarin toestemming wordt gegeven en gebruik wordt gemaakt van het voorkeurenbeheer. Dit document beschrijft daarom in algemene termen het gebruik van de velden in de veldgroep en geeft alleen suggesties voor de manier waarop u het gebruik van deze velden moet interpreteren. Neem contact op met het juridische team voor privacy om de structuur van de veldgroep af te stemmen op de manier waarop uw organisatie deze toestemmings- en voorkeurskeuzen interpreteert en presenteert aan uw klanten.
+>De veldgroep [!UICONTROL Consents and Preferences] is ontworpen voor een reeks gevallen waarin toestemming wordt gegeven en gebruik wordt gemaakt van het voorkeurenbeheer. Dit document beschrijft daarom in algemene termen het gebruik van de velden in de veldgroep en geeft alleen suggesties voor de manier waarop u het gebruik van deze velden moet interpreteren. Neem contact op met het juridische team voor privacy om de structuur van de veldgroep af te stemmen op de manier waarop uw organisatie deze toestemmings- en voorkeurskeuzen interpreteert en presenteert aan uw klanten.
 
-De [!DNL Consents & Preferences] gebiedsgroep verstrekt verscheidene gebieden die worden gebruikt om **toestemming** en **voorkeur** informatie te vangen.
+De [!UICONTROL Consents and Preferences] gebiedsgroep verstrekt verscheidene gebieden die worden gebruikt om **toestemming** en **voorkeur** informatie te vangen.
 
 Een toestemming is een optie die een klant toestaat om te specificeren hoe hun gegevens kunnen worden gebruikt. De meeste toestemmingen hebben een juridisch aspect, in die zin dat sommige jurisdicties een vergunning vereisen alvorens de gegevens op een bepaalde manier kunnen worden gebruikt, of vereisen dat de klant een optie heeft om dat gebruik tegen te houden (opt-out) als de bevestigende toestemming niet wordt vereist.
 
@@ -42,7 +42,7 @@ De volgende schermafbeelding laat zien hoe de structuur van de veldgroep wordt w
 >
 >Zie de gids op [het onderzoeken van de middelen XDM](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel van XDM op te zoeken en zijn structuur in het Platform UI te inspecteren.
 
-Het volgende JSON toont een voorbeeld van het type gegevens dat de [!DNL Consents & Preferences] gebiedsgroep kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
+Het volgende JSON toont een voorbeeld van het type gegevens dat de [!UICONTROL Consents and Preferences] gebiedsgroep kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
 
 ```json
 {
@@ -343,12 +343,12 @@ Deze waarde wordt niet rechtstreeks ingesteld, aangezien de Adobe Experience Pla
 
 ## Gegevens invoegen met de veldgroep {#ingest}
 
-Om de [!DNL Consents & Preferences] gebiedsgroep te gebruiken om toestemmingsgegevens van uw klanten in te voeren, moet u een dataset tot stand brengen die op een schema wordt gebaseerd dat die gebiedsgroep bevat.
+Om de [!UICONTROL Consents and Preferences] gebiedsgroep te gebruiken om toestemmingsgegevens van uw klanten in te voeren, moet u een dataset tot stand brengen die op een schema wordt gebaseerd dat die gebiedsgroep bevat.
 
-Zie de zelfstudie over [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gebiedsgroepen aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met [!DNL Consents & Preferences] gebiedsgroep bevat, verwijs naar de sectie over [het creëren van een dataset](../../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
+Zie de zelfstudie over [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gebiedsgroepen aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met [!UICONTROL Consents and Preferences] gebiedsgroep bevat, verwijs naar de sectie over [het creëren van een dataset](../../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
-Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!DNL Consents & Preferences] gebiedsgroep bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
+Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!UICONTROL Consents and Preferences] gebiedsgroep bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
 Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [samenvoegbeleid](../../../rtcdp/profile/merge-policies.md) voor meer informatie.
 
 ## Verwerking van toestemmings- en voorkeurswijzigingen
@@ -357,7 +357,7 @@ Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten d
 
 ## Aanhangsel {#appendix}
 
-De onderstaande secties bevatten aanvullende informatie over de veldgroep [!DNL Consents & Preferences].
+De onderstaande secties bevatten aanvullende informatie over de veldgroep [!UICONTROL Consents and Preferences].
 
 ### Geaccepteerde waarden voor `val` {#choice-values}
 
@@ -399,6 +399,6 @@ In de volgende tabel worden de toegestane waarden voor `preferred` weergegeven:
 
 {style=&quot;table-layout:auto&quot;}
 
-### Volledig [!DNL Consents & Preferences]-schema {#full-schema}
+### Volledig schema [!UICONTROL Consents and Preferences] {#full-schema}
 
-Als u het volledige schema voor de [!DNL Consents & Preferences]-veldgroep wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Als u het volledige schema voor de [!UICONTROL Consents and Preferences]-veldgroep wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
