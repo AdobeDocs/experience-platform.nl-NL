@@ -4,18 +4,18 @@ title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 1%
 
 ---
 
-# [!DNL Consents & Preferences] gegevenstype
+# [!UICONTROL Consents and Preferences] gegevenstype
 
-Het gegevenstype [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] (hierna genoemd &quot;[!DNL Consents & Preferences] gegevenstype&quot;) is een [!DNL Experience Data Model] (XDM) gegevenstype dat is bedoeld om de inzameling van klantentoestemmingen en voorkeur te steunen die door de Platforms van het Beheer van de Toestemming (CMPs) en andere bronnen van uw gegevensverrichtingen worden geproduceerd.
+Het gegevenstype [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] (hierna genoemd &quot;[!UICONTROL Consents and Preferences] gegevenstype&quot;) is een [!DNL Experience Data Model] (XDM) gegevenstype dat is bedoeld om de inzameling van klantentoestemmingen en voorkeur te steunen die door de Platforms van het Beheer van de Toestemming (CMPs) en andere bronnen van uw gegevensverrichtingen worden geproduceerd.
 
-Dit document behandelt de structuur en het beoogde gebruik van de velden die worden verschaft door het gegevenstype [!DNL Consents & Preferences].
+Dit document behandelt de structuur en het beoogde gebruik van de velden die worden verschaft door het gegevenstype [!UICONTROL Consents and Preferences].
 
 ## Vereisten {#prerequisites}
 
@@ -28,9 +28,9 @@ Dit document vereist een werkend begrip van XDM en het gebruik van de schema&#39
 
 >[!IMPORTANT]
 >
->Het gegevenstype [!DNL Consents & Preferences] is ontworpen voor een reeks gevallen waarin toestemming wordt gegeven en gebruik wordt gemaakt van voorkeursbeheer. Dit document beschrijft daarom in algemene termen het gebruik van de velden van het gegevenstype en geeft alleen suggesties voor de manier waarop u het gebruik van deze velden moet interpreteren. Neem contact op met het juridische team voor privacy om de structuur van het gegevenstype af te stemmen op de manier waarop uw organisatie deze toestemmings- en voorkeurskeuzen interpreteert en presenteert aan uw klanten.
+>Het gegevenstype [!UICONTROL Consents and Preferences] is ontworpen voor een reeks gevallen waarin toestemming wordt gegeven en gebruik wordt gemaakt van voorkeursbeheer. Dit document beschrijft daarom in algemene termen het gebruik van de velden van het gegevenstype en geeft alleen suggesties voor de manier waarop u het gebruik van deze velden moet interpreteren. Neem contact op met het juridische team voor privacy om de structuur van het gegevenstype af te stemmen op de manier waarop uw organisatie deze toestemmings- en voorkeurskeuzen interpreteert en presenteert aan uw klanten.
 
-Het gegevenstype [!DNL Consents & Preferences] biedt verschillende velden die worden gebruikt voor het vastleggen van **toestemmings**- en **preferentie**-informatie.
+Het gegevenstype [!UICONTROL Consents and Preferences] biedt verschillende velden die worden gebruikt voor het vastleggen van **toestemmings**- en **preferentie**-informatie.
 
 Een toestemming is een optie die een klant toestaat om te specificeren hoe hun gegevens kunnen worden gebruikt. De meeste toestemmingen hebben een juridisch aspect, in die zin dat sommige jurisdicties een vergunning vereisen alvorens de gegevens op een bepaalde manier kunnen worden gebruikt, of vereisen dat de klant een optie heeft om dat gebruik tegen te houden (opt-out) als de bevestigende toestemming niet wordt vereist.
 
@@ -47,7 +47,7 @@ De volgende schermafbeelding laat zien hoe de structuur van het gegevenstype wor
 >
 >Zie de gids op [het onderzoeken van de middelen XDM](../ui/explore.md) aan voor stappen op hoe te om het even welk middel van XDM op te zoeken en zijn structuur in het Platform UI te inspecteren.
 
-Het volgende JSON toont een voorbeeld van het type gegevens dat het gegevenstype [!DNL Consents & Preferences] kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
+Het volgende JSON toont een voorbeeld van het type gegevens dat het gegevenstype [!UICONTROL Consents and Preferences] kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
 
 ```json
 {
@@ -251,12 +251,12 @@ In hetzelfde voorbeeld geldt dat als een klant voor alle kanalen (via `marketing
 
 ## Gegevens invoegen met behulp van het gegevenstype {#ingest}
 
-Als u het gegevenstype [!DNL Consents & Preferences] wilt gebruiken om gegevens met toestemming van uw klanten in te voeren, moet u een dataset maken die is gebaseerd op een schema dat dat gegevenstype bevat.
+Als u het gegevenstype [!UICONTROL Consents and Preferences] wilt gebruiken om gegevens met toestemming van uw klanten in te voeren, moet u een dataset maken die is gebaseerd op een schema dat dat gegevenstype bevat.
 
-Zie de zelfstudie over [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gegevenstypes aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met [!DNL Consents & Preferences] gegevenstype bevat, verwijs naar de sectie over [het creëren van een dataset](../../catalog/datasets/user-guide.md#create) in de gids van de datasetgebruiker, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
+Zie de zelfstudie over [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gegevenstypes aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met [!UICONTROL Consents and Preferences] gegevenstype bevat, verwijs naar de sectie over [het creëren van een dataset](../../catalog/datasets/user-guide.md#create) in de gids van de datasetgebruiker, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
-Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!DNL Consents & Preferences] gegevenstype bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
+Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!UICONTROL Consents and Preferences] gegevenstype bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
 Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [samenvoegbeleid](../../rtcdp/profile/merge-policies.md) voor meer informatie.
 
 ## Verwerking van toestemmings- en voorkeurswijzigingen
@@ -265,7 +265,7 @@ Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten d
 
 ## Aanhangsel {#appendix}
 
-De onderstaande secties bevatten aanvullende informatie over het gegevenstype [!DNL Consents & Preferences].
+De onderstaande secties bevatten aanvullende informatie over het gegevenstype [!UICONTROL Consents and Preferences].
 
 ### Geaccepteerde waarden voor `val` {#choice-values}
 
@@ -307,6 +307,6 @@ In de volgende tabel worden de toegestane waarden voor `preferred` weergegeven:
 
 {style=&quot;table-layout:auto&quot;}
 
-### Volledig [!DNL Consents & Preferences]-schema {#full-schema}
+### Volledig schema [!UICONTROL Consents and Preferences] {#full-schema}
 
-Als u het volledige schema voor het gegevenstype [!DNL Consents & Preferences] wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Als u het volledige schema voor het gegevenstype [!UICONTROL Consents and Preferences] wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
