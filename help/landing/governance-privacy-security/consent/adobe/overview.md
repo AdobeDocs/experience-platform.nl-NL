@@ -5,9 +5,9 @@ title: Verwerking van toestemming in Adobe Experience Platform
 topic-legacy: getting started
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1561'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ In de huidige versie van de steun van de toestemmingsverwerking in Platform, sle
 
 >[!NOTE]
 >
->Voor meer informatie over de structuur van de XDM toestemmingsgebieden hierboven, verwijs naar de gids op [het gegevenstype van de Inhoud &amp; van de Voorkeur ](../../../../xdm/data-types/consents.md).
+>Raadpleeg de handleiding bij het gegevenstype [[!UICONTROL Consents and Preferences] voor meer informatie over de structuur van de bovenstaande XDM-toestemmingsvelden.](../../../../xdm/data-types/consents.md)
 
 Zodra het systeem is gevormd, interpreteert het Web SDK van het Platform de waarde van de gegevensinzamelingstoestemming voor de huidige gebruiker om te bepalen als de gegevens naar het Netwerk van de Rand van Adobe Experience Platform zouden moeten worden verzonden, van de cliënt, zouden moeten worden gelaten vallen, of tot de toestemming van de gegevensinzameling aan of ja of nr wordt geplaatst.
 
-## Bepaal hoe u gegevens over klanttoestemming binnen uw CMP {#consent-data} kunt genereren
+## Bepalen hoe gegevens over klanttoestemming binnen uw CMP worden gegenereerd {#consent-data}
 
 Aangezien elk CMP-systeem uniek is, moet u de beste manier bepalen om uw klanten toestemming te geven wanneer ze met uw service communiceren. Een algemene manier om dit te bereiken is door gebruik te maken van een dialoogvenster voor cookie-toestemming, vergelijkbaar met het volgende voorbeeld:
 
@@ -68,7 +68,7 @@ De gegevens van de toestemming van de klant moeten naar een [!DNL Profile]-Toege
 
 Raadpleeg de zelfstudie over [het configureren van een gegevensset voor het vastleggen van toestemmingsgegevens](./dataset.md) voor gedetailleerde stappen over het toevoegen van deze vereiste velden aan een [!DNL Profile]-compatibele gegevensset voordat u doorgaat met deze handleiding.
 
-## [!DNL Profile] samenvoegbeleid bijwerken om gegevens over toestemming {#merge-policies} op te nemen
+## Het samenvoegbeleid [!DNL Profile] bijwerken en gegevens over de toestemming opnemen {#merge-policies}
 
 Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw fusiebeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
@@ -76,7 +76,7 @@ Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerking
 >
 >Als u geen conflicterende datasets hebt, zou u timestamp belangrijkheid voor uw samenvoegbeleid in plaats daarvan moeten plaatsen. Dit helpt ervoor te zorgen dat de recentste toestemming die door een klant wordt gespecificeerd de toestemmingsinstelling is die wordt gebruikt.
 
-Voor meer informatie over hoe te met fusiebeleid te werken, begin door [overzicht van fusiebeleid te lezen](../../../../profile/merge-policies/overview.md). Wanneer het opzetten van uw fusiebeleid, moet u ervoor zorgen dat uw profielen alle vereiste toestemmingsattributen omvatten die door de het schemagebiedgroep van de Inhoud &amp; van de Voorkeur worden verstrekt, zoals die in de gids over [datasetvoorbereiding](./dataset.md) worden geschetst.
+Voor meer informatie over hoe te met fusiebeleid te werken, begin door [overzicht van fusiebeleid te lezen](../../../../profile/merge-policies/overview.md). Wanneer het opzetten van uw fusiebeleid, moet u ervoor zorgen dat uw profielen alle vereiste toestemmingsattributen omvatten die door de [!UICONTROL Consents and Preferences] schemagebiedgroep worden verstrekt, zoals die in de gids op [datasetvoorbereiding](./dataset.md) worden geschetst.
 
 ## Goedkeuringsgegevens in Platform plaatsen
 
@@ -86,11 +86,11 @@ Hoofdzakelijk, zou u SDK van het Web van Adobe Experience Platform moeten gebrui
 
 Nadere bijzonderheden over elk van deze methoden zijn te vinden in de onderstaande punten.
 
-### Vorm het Web SDK van het Experience Platform om toestemmingsgegevens {#web-sdk} te verwerken
+### Vorm het Web SDK van het Experience Platform om toestemmingsgegevens te verwerken {#web-sdk}
 
 Zodra u uw CMP hebt gevormd om op toestemming-verandering gebeurtenissen op uw website te luisteren, kunt u het Web SDK van het Experience Platform integreren om de bijgewerkte toestemmingsmontages te ontvangen en hen te verzenden naar Platform op elke paginading en wanneer de toestemming-verandering gebeurtenissen voorkomt. Zie de gids op [het vormen van SDK van het Web om de gegevens van de klantentoestemming te verwerken](./sdk.md) voor meer informatie.
 
-### Configureer de Experience Platform Mobile SDK voor het verwerken van toestemmingsgegevens {#mobile-sdk}
+### De Experience Platform Mobile SDK configureren voor het verwerken van toestemmingsgegevens {#mobile-sdk}
 
 Als in uw mobiele toepassing de voorkeursinstellingen voor toestemming van de klant zijn vereist, kunt u de Experience Platform Mobile SDK integreren om toestemmingsinstellingen op te halen en bij te werken en deze naar het Platform te verzenden wanneer de API voor toestemming wordt aangeroepen.
 
@@ -102,7 +102,7 @@ U kunt XDM-Volgzame toestemmingsgegevens van een Csv- dossier door batch-opname 
 
 Volg de zelfstudie over [het toewijzen van een CSV-bestand aan XDM](../../../../ingestion/tutorials/map-a-csv-file.md) om te leren hoe u uw gegevensvelden omzet in XDM en deze in Platform in te voeren. Wanneer het selecteren van [!UICONTROL Destination] voor de afbeelding, zorg ervoor dat u **[!UICONTROL Use existing dataset]** optie selecteert en [!DNL Profile]-Toegelaten toestemmingsdataset kiest u eerder creeerde.
 
-## Implementatie {#test-implementation} testen
+## Implementatie testen {#test-implementation}
 
 Nadat u de gegevens van de klantentoestemming in uw [!DNL Profile]-Toegelaten dataset hebt opgenomen, kunt u uw bijgewerkte profielen controleren om te zien of zij toestemmingsattributen bevatten.
 
