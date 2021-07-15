@@ -5,9 +5,9 @@ title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2550'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Zodra TCF toestemmingsgegevens met succes is opgenomen, vinden de volgende proce
 
 De rest van de secties in dit document verstrekken begeleiding op hoe te om Platform en uw gegevensverrichtingen te vormen om de inzameling en handhavingsvereisten te voldoen die hierboven worden beschreven.
 
-## Bepaal hoe u gegevens over klanttoestemming binnen uw CMP {#consent-data} kunt genereren
+## Bepalen hoe gegevens over klanttoestemming binnen uw CMP worden gegenereerd {#consent-data}
 
 Aangezien elk CMP-systeem uniek is, moet u de beste manier bepalen om uw klanten toestemming te geven wanneer ze met uw service communiceren. Een gemeenschappelijke manier om dit te bereiken is door het gebruik van een dialoog van de koekjesinstemming, gelijkend op het volgende voorbeeld:
 
@@ -87,7 +87,7 @@ In dit dialoogvenster moet de klant de mogelijkheid hebben om in of uit te gaan 
 | **Doelstellingen** | Doel bepaalt voor welke advertentietechnische doeleinden een merk de gegevens van een klant kan gebruiken. Het volgende doel moet worden gekozen opdat het Platform klant IDs verwerkt: <ul><li>**Doel 1**: Informatie opslaan en/of openen op een apparaat</li><li>**Doel 10**: Producten ontwikkelen en verbeteren</li></ul> |
 | **Machtigingen leverancier** | Naast technische doeleinden moet de dialoog de klant ook de mogelijkheid bieden om ervoor te kiezen om hun gegevens te gebruiken door specifieke leveranciers, waaronder Adobe Experience Platform (565). |
 
-### Toegestane tekenreeksen {#consent-strings}
+### Constante tekenreeksen {#consent-strings}
 
 Ongeacht de methode u gebruikt om de gegevens te verzamelen, is het doel een koordwaarde te produceren die op de toestemmingsopties wordt gebaseerd die door de klant worden gekozen, genoemd een toestemmingskoord.
 
@@ -97,9 +97,9 @@ Constante tekenreeksen kunnen alleen worden gemaakt door een CMP die is geregist
 
 ## Gegevenssets maken met TCF-toestemmingsvelden {#datasets}
 
-De gegevens van de toestemming van de klant moeten naar datasets worden verzonden waarvan de schema&#39;s TCF toestemmingsgebieden bevatten. Raadpleeg de zelfstudie over het maken van gegevenssets voor het vastleggen van TCF 2.0-toestemming](./dataset.md) voor het maken van de twee vereiste gegevenssets voordat u doorgaat met deze handleiding.[
+De gegevens van de toestemming van de klant moeten naar datasets worden verzonden waarvan de schema&#39;s TCF toestemmingsgebieden bevatten. Raadpleeg de zelfstudie over het maken van gegevenssets voor het vastleggen van TCF 2.0-toestemming](./dataset.md) voor het maken van de vereiste profielgegevensset (en een optionele Experience Event-gegevensset) voordat u doorgaat met deze handleiding.[
 
-## [!DNL Profile] samenvoegbeleid bijwerken om gegevens over toestemming {#merge-policies} op te nemen
+## Het samenvoegbeleid [!DNL Profile] bijwerken en gegevens over de toestemming opnemen {#merge-policies}
 
 Zodra u een [!DNL Profile]-Toegelaten dataset voor het verzamelen van toestemmingsgegevens hebt gecreeerd, moet u ervoor zorgen dat uw samenvoegingsbeleid is gevormd om TCF toestemmingsgebieden in uw klantenprofielen altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
@@ -123,12 +123,12 @@ SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuw
 
 Nadat u een unieke naam voor de configuratie hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 
-| Edge-configuratieveld | Value |
+| Edge-configuratieveld | Waarde |
 | --- | --- |
 | [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../../sandboxes/home.md) dat de vereiste streamingverbinding en datasets bevat om de randconfiguratie in te stellen. |
 | [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie over [het maken van een streamingverbinding](../../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streamingingang hebt. |
-| [!UICONTROL Event Dataset] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets) wordt gecreeerd. |
-| [!UICONTROL Profile Dataset] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets) wordt gecreeerd. |
+| [!UICONTROL Event Dataset] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets) wordt gecreeerd. Als u [[!UICONTROL IAB TCF 2.0 Consent] gebiedsgroep](../../../../xdm/field-groups/event/iab.md) in het schema van deze dataset opnam, kunt u toestemming-verandering gebeurtenissen in tijd volgen gebruikend het [`sendEvent`](#sendEvent) bevel, die gegevens in deze dataset opslaan. Onthoud dat de in deze gegevensset opgeslagen toestemmingswaarden **niet** worden gebruikt in automatische handhavingswerkstromen. |
+| [!UICONTROL Profile Dataset] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets) wordt gecreeerd. Wanneer het antwoorden aan CMP toestemmings-verandering haken gebruikend het [`setConsent`](#setConsent) bevel, zullen de verzamelde gegevens in deze dataset worden opgeslagen. Aangezien deze dataset profiel-toegelaten is, worden de toestemmingswaarden die in deze dataset worden opgeslagen gehouden tijdens automatische handhavingswerkschema&#39;s. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -142,7 +142,7 @@ Zodra u de randconfiguratie hebt gecreeerd die in de vorige sectie wordt beschre
 >
 >Voor een inleiding aan de gemeenschappelijke syntaxis voor alle bevelen van SDK van het Platform, zie het document op [uitvoerend bevelen](../../../../edge/fundamentals/executing-commands.md).
 
-#### Kantaarnhaken voor wijziging van CMP-toestemming gebruiken
+#### Kantaarnhaken voor wijziging van CMP-toestemming gebruiken {#setConsent}
 
 Vele CMPs verstrekt uit-van-de-doos haken die aan toestemmings-verandering gebeurtenissen luisteren. Wanneer deze gebeurtenissen zich voordoen, kunt u de opdracht `setConsent` gebruiken om de gegevens van de toestemming van die klant bij te werken.
 
@@ -189,7 +189,7 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### Gebeurtenissen gebruiken
+#### Gebeurtenissen gebruiken {#sendEvent}
 
 U kunt TCF 2.0 toestemmingsgegevens over elke gebeurtenis ook verzamelen die in Platform door `sendEvent` bevel wordt teweeggebracht te gebruiken.
 
@@ -239,13 +239,13 @@ Klanten moeten instemmen met de volgende doeleinden (zoals beschreven in [TCF 2.
 * **Doel 1**: Informatie opslaan en/of openen op een apparaat
 * **Doel 10**: Producten ontwikkelen en verbeteren
 
-TCF 2.0 vereist ook dat de bron van gegevens de de verkoperstoestemming van de bestemming moet controleren alvorens gegevens naar die bestemming te verzenden. Als dusdanig, controleert het Platform als de de verkoperstoestemming van de bestemming binnen aan voor alle IDs in de cluster alvorens gegevens te omvatten die aan die bestemming worden gebonden.
+TCF 2.0 vereist ook dat de bron van gegevens de toestemming van de leverancier van de bestemming moet controleren alvorens gegevens naar die bestemming te verzenden. Als dusdanig, controleert het Platform als de de verkoperstoestemming van de bestemming binnen aan voor alle IDs in de cluster alvorens gegevens te omvatten die aan die bestemming worden gebonden.
 
 >[!NOTE]
 >
 >Om het even welke segmenten die met Adobe Audience Manager worden gedeeld zullen de zelfde TCF 2.0 toestemmingswaarden zoals hun Platform tegenhangers bevatten. Aangezien [!DNL Audience Manager] dezelfde leverancier-id deelt als Platform (565), zijn dezelfde doeleinden en machtiging van de leverancier vereist. Zie het document op [Adobe Audience Manager plug-in voor IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) voor meer informatie.
 
-## Implementatie {#test-implementation} testen
+## Implementatie testen {#test-implementation}
 
 Zodra u uw implementatie TCF 2.0 hebt gevormd en segmenten naar bestemmingen uitgevoerd, zullen om het even welke gegevens die toestemmingsvereisten niet voldoen niet worden uitgevoerd. Nochtans, om te zien of de juiste klantenprofielen tijdens de uitvoer werden gefiltreerd, moet u de gegevensopslag op uw bestemmingen manueel controleren om te zien of werd de toestemming behoorlijk gehandhaafd.
 
