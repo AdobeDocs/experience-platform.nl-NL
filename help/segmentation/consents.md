@@ -5,7 +5,7 @@ title: Constante waarderen in segmenten
 topic-legacy: overview
 description: Leer hoe u de voorkeursinstellingen voor toestemming van klanten voor het verzamelen van persoonlijke gegevens en het delen van gegevens in gesegmenteerde bewerkingen naleeft.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Voor het respecteren van de waarden voor instemming van de klant is een goed beg
 
 ## Goedgekeurde schemavelden
 
-Om de instemming en voorkeuren van de klant te respecteren, moet een van de schema&#39;s die deel uitmaken van uw [!UICONTROL XDM Individual Profile]-samenvoegingsschema de standaardveldgroep **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** bevatten.
+Om de instemming en voorkeuren van de klant te respecteren, moet een van de schema&#39;s die deel uitmaken van uw [!UICONTROL XDM Individual Profile]-samenvoegingsschema de standaardveldgroep **[!UICONTROL Consents and Preferences]** bevatten.
 
 Zie de [handleiding voor toestemmingen en voorkeuren](../xdm/field-groups/profile/consents.md) voor meer informatie over de structuur en het beoogde gebruik van alle kenmerken die door de veldgroep worden geleverd. Voor geleidelijke instructies op hoe te om een gebiedsgroep aan een schema toe te voegen, verwijs naar [XDM UI gids](../xdm/ui/resources/schemas.md#add-field-groups).
 
