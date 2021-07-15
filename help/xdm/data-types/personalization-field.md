@@ -4,7 +4,7 @@ title: Gegevenstype van algemeen voorkeurenveld voor personalisatie
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Algemene voorkeur voor personalisatie.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] gebiedsgroep](../field-groups/profile/consents.md) als basislijn.
+>Dit gegevenstype is bedoeld om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend [[!UICONTROL Consents and Preferences] gebiedsgroep](../field-groups/profile/consents.md) als basislijn.
 
 ![](../images/data-types/personalization-field.png)
 
