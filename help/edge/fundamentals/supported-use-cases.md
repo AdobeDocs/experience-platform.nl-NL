@@ -2,9 +2,9 @@
 title: Ondersteunde gebruiksgevallen met de Adobe Experience Platform Web SDK
 description: Leer welke gebruiksgevallen worden ondersteund met de Adobe Experience Platform Web SDK.
 keywords: web sdk;use cases
-source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '565'
 ht-degree: 7%
 
 ---
@@ -43,7 +43,7 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Als dataset voor profiel wordt toegelaten, capaciteit om gegevens naar het Profiel van de Gegevens van de Klant in real time in real time te verzenden |  |
 | Gegevens in realtime naar Customer Journey Analytics verzenden |  |
 | Goedkeuring voor profiel schrijven | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| Gegevensserver-kant in real-time doorsturen naar derden | [Documentatie](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| Gegevensserver-kant in real-time doorsturen naar derden | [Documentatie](../../tags/ui/event-forwarding/overview.md) |
 | Ondersteuning voor naamruimte van identiteit |  |
 
 {style=&quot;table-layout:auto&quot;}
