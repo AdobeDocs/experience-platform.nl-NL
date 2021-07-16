@@ -5,9 +5,9 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: a150c23dffde9431953a019509e9554159052d21
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '313'
 ht-degree: 2%
 
 ---
@@ -43,6 +43,6 @@ Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netw
 
 ## Gegevens snel en veilig transformeren, verrijken en verzenden
 
-[Adobe Experience Platform Launch Server ](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html) Sidecan tikt in om het even welke Platform gegevensstroom. U kunt gegevens transformeren, verrijken en verzenden naar elke niet-Adobe-bestemming met extreme lage latentie zonder enige code van derden toe te voegen aan het clientapparaat voor snellere en veiligere gegevensverzameling en -distributie.
+[Het door:sturen van gebeurtenissen in het Platform van de Ervaring van Adobe ](../tags/ui/event-forwarding/overview.md) kan in om het even welke gegevensstroom van het Platform tikken. U kunt gegevens transformeren, verrijken en verzenden naar elke niet-Adobe-bestemming met extreme lage latentie zonder enige code van derden toe te voegen aan het clientapparaat voor snellere en veiligere gegevensverzameling en -distributie.
 
 ![](./images/launch.png)
