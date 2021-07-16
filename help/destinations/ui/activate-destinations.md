@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
+source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
 workflow-type: tm+mt
-source-wordcount: '2800'
+source-wordcount: '2801'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Selecteer in de **[!UICONTROL Activate destination]**-workflow op de **[!UICONTR
 
 ![segmenten-naar-bestemming](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Mapping] stap {#mapping}
+## Toewijzingsstap {#mapping}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
