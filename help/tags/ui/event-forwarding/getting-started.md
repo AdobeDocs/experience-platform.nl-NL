@@ -1,9 +1,9 @@
 ---
 title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -110,7 +110,7 @@ Creeer uw bezit in de Inzameling UI van Gegevens, dan gebruik de uitbreiding van
 
 1. Selecteer het Edge-domein.
 
-Zie [de uitbreidingsdocumentatie van SDK van het Web](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) voor meer configuratieopties.
+Zie [de uitbreidingsdocumentatie van SDK van het Web](../../extensions/web/sdk/overview.md) voor meer configuratieopties.
 
 ## Creeer een markeringsregel om gegevens naar het Web SDK van het Platform te verzenden
 
