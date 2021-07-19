@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype webgegevens
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype van het XDM (Web Information Experience Data Model).
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
@@ -27,5 +27,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.schema.json)
