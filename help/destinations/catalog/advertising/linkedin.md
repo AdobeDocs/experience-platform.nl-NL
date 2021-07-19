@@ -1,17 +1,16 @@
 ---
-keywords: LinkedIn;linkedin;LinkedIn;LinkedIn Insight Tag;insight-tag;Insight-tag
-title: LinkedIn Insight-tagextensie
-description: De LinkedIn-tag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+keywords: linkedIn;linkedIn;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
+title: linkedIn Insight Tag-extensie
+description: De extensie LinkedIn Insight Tag is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL LinkedIn Insight Tag] extension  {#linkedin-insights-extension}
+# [!DNL LinkedIn Insight Tag] extension {#linkedin-insights-extension}
 
 ## Overzicht {#overview}
 
@@ -21,7 +20,7 @@ Installeer [!DNL LinkedIn Insight Tag] voor het gebruik van functies voor het bi
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Platform launch in Platform werken, zie [overzicht van de uitbreidingen van Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
-![Extensie LinkedIn Insight-tag](../../assets/catalog/advertising/linkedin/catalog.png)
+![linkedIn Insight Tag-extensie](../../assets/catalog/advertising/linkedin/catalog.png)
 
 ## Vereisten {#prerequisites}
 
@@ -29,7 +28,7 @@ Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klant
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot Adobe Experience Platform Launch nodig. platform launch wordt aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot de Platform launch te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u extensies kunt installeren.
 
-## Extensie {#install-extension} installeren
+## Extensie installeren {#install-extension}
 
 De extensie [!DNL LinkedIn Insight Tag] installeren:
 
@@ -39,21 +38,21 @@ Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
 Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]** in de rechtertrack. Als het **[!UICONTROL Configure]** besturingselement grijs is, ontbreekt u de **[!UICONTROL manage_properties]** toestemming. Zie [Eerste vereisten](#prerequisites).
 
-Selecteer in het venster **[!UICONTROL Select available Platform Launch property]** de eigenschap Platform launch waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in de Platform launch. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) van de documentatie bij Platform launches.
+Selecteer in het venster **[!UICONTROL Select available Platform Launch property]** de eigenschap Platform launch waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in de Platform launch. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) van de documentatie bij Platform launches.
 
 De werkstroom neemt u aan Platform launch om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie [LinkedIn Markering van het Inzicht](https://business.linkedin.com/marketing-solutions/insight-tag).
+Zie [LinkedIn Insight Tag](https://business.linkedin.com/marketing-solutions/insight-tag) voor informatie over de configuratieopties voor extensies en installatieondersteuning.
 
-U kunt de extensie ook rechtstreeks installeren in de [Adobe Experience Platform Launch-interface](https://launch.adobe.com/). Zie [Een nieuwe extensie toevoegen](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) in de documentatie van de Platform launch.
+U kunt de extensie ook rechtstreeks installeren in de [Adobe Experience Platform Launch-interface](https://launch.adobe.com/). Zie [Een nieuwe extensie toevoegen](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de documentatie van de Platform launch.
 
-## De extensie {#how-to-use} gebruiken
+## De extensie gebruiken {#how-to-use}
 
 Nadat u de extensie hebt geïnstalleerd, kunt u rechtstreeks in Platform launch regels voor de extensie instellen.
 
-In Platform launch, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Zie [Documentatie van regels](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html) voor meer informatie over instellingsregels voor uw extensies.
+In Platform launch, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Zie [Documentatie van regels](../../../tags/ui/managing-resources/rules.md) voor meer informatie over instellingsregels voor uw extensies.
 
-## De uitbreiding {#configure-upgrade-delete} vormen, bevorderen en schrappen
+## De extensie configureren, upgraden en verwijderen {#configure-upgrade-delete}
 
 U kunt extensies configureren, upgraden en verwijderen in de interface van de Platform launch.
 
@@ -61,4 +60,4 @@ U kunt extensies configureren, upgraden en verwijderen in de interface van de Pl
 >
 >Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt **[!UICONTROL Install]** voor de extensie nog steeds weergegeven in de interface van het Platform. Kies de installatieworkflow zoals beschreven in [Extensie installeren](#install-extension) om de Platform launch te starten en uw extensie te configureren of te verwijderen.
 
-Om uw uitbreiding te bevorderen, zie [Uitbreiding verbetering](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in de documentatie van de Platform launch.
+Om uw uitbreiding te bevorderen, zie [Uitbreiding verbetering](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de documentatie van de Platform launch.
