@@ -1,9 +1,9 @@
 ---
 title: Adobe Media Analytics (3.x SDK) voor overzicht van audio- en videoextensie
 description: Meer informatie over de Adobe Media Analytics (3.x SDK) voor de extensie van de tags Audio en Video in Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markering-toegelaten project
 | API&#39;s exporteren naar vensterobject | Het exporteren van media-API&#39;s voor analyse naar een algemeen bereik in- of uitschakelen |
 | Naam variabele | Een variabele die u gebruikt om media Analytics API&#39;s te exporteren onder het object `window` |
 
-**Herinnering:** De extensie MA vereist de  [](../analytics/overview.md) Analytics en  [Experience Cloud ](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) IDextensions. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
+**Herinnering:** De extensie MA vereist de  [](../analytics/overview.md) Analytics en  [Experience Cloud ](../id-service/overview.md) IDextensions. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
 
 ## De extensie MA gebruiken
 
@@ -109,4 +109,4 @@ De extensie MA stelt `media` als een gedeelde module aan andere extensies beschi
 
 >[!NOTE]
 >
->**Testen:** voor deze release moet u de extensie uploaden naar het  [Platform](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com), waar u toegang hebt tot alle afhankelijke extensies.
+>**Testen:** voor deze release moet u de extensie uploaden naar het  [Platform](../../../extension-dev/submit/upload-and-test.md), waar u toegang hebt tot alle afhankelijke extensies.
