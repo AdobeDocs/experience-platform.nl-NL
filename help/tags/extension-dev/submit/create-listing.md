@@ -44,6 +44,7 @@ Als u al een bedrijfsaccount hebt of als u niet van plan bent om uw aanbieding t
    >[!NOTE]
    >
    >Dit is een andere bestandsindeling dan de extensiecode. De extensie zelf bevat een svg-bestand als het [pictogram](../manifest.md).
+   
    - **Aanbevolen afbeelding**  - Let op met een afbeelding die zelfstandig kan worden gebruikt en uw merk weergeeft en uw toepassing markeert. De aanbevolen afbeelding is de afbeelding die wordt weergegeven wanneer iemand een link naar je aanbieding op de beurs deelt of er berichten over plaatst op sociale media. Het moet daarom een modelweergave van uw merk zijn.
    - **Logo**  van uitgever van app - Dit is uw bedrijfslogo, zorg ervoor het pictogram de aangewezen afmetingen van 1280 x 720, of 2560 x 1440 (16:9) in png of jpg formaat heeft.
    - **Configuratieinstructies**  - Informeer klanten hoe u uw Adobe Experience Platform-extensie kunt configureren. Zorg ervoor zij om het even welke vereiste montages en volgende stappen begrijpen wanneer uw [configuratiemening](../configuration.md) onmiddellijk na het installeren van uw uitbreiding in een bezit verschijnt. 
