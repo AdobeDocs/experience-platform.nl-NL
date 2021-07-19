@@ -1,7 +1,7 @@
 ---
 title: End-to-end testen uploaden en implementeren voor een extensie
 description: Leer hoe u uw extensie kunt valideren, uploaden en testen in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '2390'
 ht-degree: 0%
@@ -228,9 +228,3 @@ Wanneer u veranderingen ontdekt die aan uw uitbreidingspakket moeten worden aang
 1. Wijzig middelen - als de configuratie voor om het even welk van uw uitbreidingscomponenten is veranderd, zult u die middelen in de Inzameling van Gegevens UI moeten bijwerken.
 1. Voeg de meest recente wijzigingen toe aan uw bibliotheek en maak de bibliotheek opnieuw.
 1. Voltooi nog een testronde.
-
-<!--
-## Document {#document}
-
-Your [exchange listing](./create-listing.md) is a great place for marketing and support information for your extension, but our tags [Help Docs](https://experienceleague.adobe.com/docs/launch/using/overview.html) are used every day by our customers. We encourage you to submit a pull request to [add your extension documentation](https://github.com/AdobeDocs/launch.en/blob/master/help/extension-reference/3rd-party-extensions.md) into the tags user docs. Open source docs for the win! 🚀
--->
