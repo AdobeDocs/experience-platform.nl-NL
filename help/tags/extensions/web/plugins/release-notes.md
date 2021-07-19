@@ -1,14 +1,22 @@
 ---
 title: Opmerkingen bij de release Common Analytics Plugins Extension
 description: De meest recente release bevat de extensie Common Analytics Plugins in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 6%
+source-wordcount: '314'
+ht-degree: 5%
 
 ---
 
 # Opmerkingen bij de release Common Analytics Plugins
+
+## 23 juni 2021
+
+### Common Analytics Plugins Extension 3.0.6
+
+#### Opgeloste problemen
+
+* getPercentPageViewed werd afgebroken bij gebruik van speciale tekens. Dit probleem is nu opgelost.
 
 ## 20 mei 2021
 
