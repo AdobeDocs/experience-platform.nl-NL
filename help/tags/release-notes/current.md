@@ -1,10 +1,10 @@
 ---
 title: Release-opmerkingen
 description: De meest recente releaseopmerkingen voor tags in Adobe Experience Platform.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 1%
+source-wordcount: '498'
+ht-degree: 0%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 19 juli 2021
+
+**Aanpassingen aan het recht**  &quot;Eigenschappen beheren&quot;: het recht Eigenschappen beheren heeft een probleem aangetroffen waarbij een gebruiker toestemming had om een nieuwe eigenschap te maken, maar deze eigenschap niet kon zien nadat deze was gemaakt (zoals  [hier](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176) in de communitythread wordt beschreven). Een moeilijke situatie is nu levend met toestemmingen die worden afgedwongen zoals die in het artikel worden beschreven.
+
+>[!NOTE]
+>
+>Als u het nieuwe recht &quot;Edit Bezit&quot;aan een gebruikersgroep toewijst, zal UI niet bijwerken om de gebieden in het scherm van de bezitsconfiguratie toe te laten. In een volgende release wordt een oplossing voor dit probleem geïmplementeerd.
 
 ## 17 mei 2021
 
