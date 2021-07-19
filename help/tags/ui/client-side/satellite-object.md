@@ -1,9 +1,9 @@
 ---
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1123'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Als de [!DNL Adobe Experience Cloud ID] uitbreiding op het bezit wordt geïnstalleerd, keert deze methode de instantie van identiteitskaart van de Bezoeker terug. Raadpleeg de [Experience Cloud ID Service documentation](https://forums.adobe.com/external-link.jspa?url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Fen_US%2Fmcvid%2F) voor meer informatie.
+Als de [!DNL Adobe Experience Cloud ID] uitbreiding op het bezit wordt geïnstalleerd, keert deze methode de instantie van identiteitskaart van de Bezoeker terug. Raadpleeg de [Experience Cloud ID Service documentation](https://experienceleague.adobe.com/docs/id-service/using/home.html) voor meer informatie.
 
 ## `logger`
 
