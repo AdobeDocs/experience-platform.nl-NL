@@ -4,9 +4,9 @@ title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1862'
 ht-degree: 1%
 
 ---
@@ -309,4 +309,4 @@ In de volgende tabel worden de toegestane waarden voor `preferred` weergegeven:
 
 ### Volledig schema [!UICONTROL Consents and Preferences] {#full-schema}
 
-Als u het volledige schema voor het gegevenstype [!UICONTROL Consents and Preferences] wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Als u het volledige schema voor het gegevenstype [!UICONTROL Consents and Preferences] wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
