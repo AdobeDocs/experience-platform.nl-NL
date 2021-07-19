@@ -5,9 +5,9 @@ title: Gegevenstype postadres
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor postadres.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -44,5 +44,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het postadres:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)
