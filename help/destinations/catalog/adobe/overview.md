@@ -2,14 +2,13 @@
 keywords: doelen;ervaring met cloudoplossingen; doel;doelbestemming; en cloud; reclame-cloud; publieksmanager; doelbestemming adobe; doel; bestemming van de publieksbeheerder;
 title: Overzicht van Adobe-doelen
 description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
-translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
+source-git-commit: d42756bcfaa4c420362e60672b097ae667a8782b
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van Adobe-doelen {#adobe-destinations}
 
@@ -20,6 +19,7 @@ Beheer uw klantervaring door uw gegevens in Adobe Experience Platform aan te slu
 Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindingen](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
 - [Adobe Campaign-verbinding](../email-marketing/adobe-campaign.md)
+- [Marketo Engage-verbinding](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ## Extensies
 
@@ -35,7 +35,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Uitbreid
 - [Experience Cloud ID Service-extensie](../personalization/adobe-ecid.md)
 - [Marketo-extensie](../email/marketo.md)
 - [Marketo Munchkin-extensie](../email/marketo-munchkin.md)
-- [Marketo Web Personalization extension](../personalization/marketo-web-personalization.md)
+- [Marketo Web Personalization-extensie](../personalization/marketo-web-personalization.md)
 
 ## Delen van Experience Platform
 
