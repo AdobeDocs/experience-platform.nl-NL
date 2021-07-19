@@ -5,9 +5,9 @@ title: Gegevenstype Interactie punt
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Interaction.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -28,5 +28,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)
