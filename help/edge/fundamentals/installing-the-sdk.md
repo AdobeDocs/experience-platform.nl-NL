@@ -3,14 +3,14 @@ title: De SDK van Adobe Experience Platform Web installeren
 description: Leer hoe te om het Web SDK van het Experience Platform te installeren.
 keywords: web sdk installatie;installeren web sdk;Internet Explorer;promise;npm pakket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
 
-# SDK {#installing-the-sdk} installeren
+# De SDK installeren {#installing-the-sdk}
 
 Er zijn drie ondersteunde manieren om Adobe Experience Platform Web SDK te gebruiken:
 
@@ -20,7 +20,7 @@ Er zijn drie ondersteunde manieren om Adobe Experience Platform Web SDK te gebru
 
 ## Optie 1: De Adobe Experience Platform Launch-extensie installeren
 
-Raadpleeg de [startdocumentatie](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) voor documentatie over de Adobe Experience Platform Launch-extensie
+Raadpleeg de [startdocumentatie](../../tags/extensions/web/sdk/overview.md) voor documentatie over de Adobe Experience Platform Launch-extensie
 
 ## Optie 2: De vooraf gebouwde zelfstandige versie installeren
 
@@ -35,7 +35,7 @@ Bijvoorbeeld:
 * Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
 
 
-### De code {#adding-the-code} toevoegen
+### De code toevoegen {#adding-the-code}
 
 Voor de vooraf samengestelde zelfstandige versie is een &quot;basiscode&quot; vereist die rechtstreeks aan de pagina wordt toegevoegd. Kopieer en plak de volgende &quot;basiscode&quot; zo hoog mogelijk in de `<head>`-tag van uw HTML:
 
@@ -93,7 +93,7 @@ Met deze tag wordt een script geladen waarmee wordt gegarandeerd dat `window.Pro
 >
 >Als u ervoor kiest om een andere Promise-implementatie te laden, moet u ervoor zorgen dat `Promise.prototype.finally` wordt ondersteund.
 
-### Het JavaScript-bestand synchroon {#loading-javascript-synchronously} laden
+### Het JavaScript-bestand synchroon laden {#loading-javascript-synchronously}
 
 Zoals uitgelegd in de sectie [De code toevoegen](#adding-the-code), laadt de basiscode u in HTML van uw website hebt gekopieerd en gekleefd een extern dossier. Het externe bestand bevat de kernfunctionaliteit van de SDK. Elke opdracht die u probeert uit te voeren terwijl dit bestand wordt geladen, wordt in de wachtrij geplaatst en verwerkt nadat het bestand is geladen. Het asynchroon laden van het bestand is de best presterende installatiemethode.
 
