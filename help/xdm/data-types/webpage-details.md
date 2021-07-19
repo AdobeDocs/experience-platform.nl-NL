@@ -5,7 +5,7 @@ title: Gegevenstype webpagina Details
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Experience Data Model (XDM) van de webpagina voor details.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 2%
@@ -35,5 +35,5 @@ Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webpagedetails.example.2.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webpagedetails.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)
