@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '438'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ### Adobe Target v2-extensie 0.14
 
-- Een nieuwe handeling Load Target with [On-Device Decisioning](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=en#load-target-with-on-device-decisioning) toegevoegd, die wordt geladen op 0,js 2.5 met mogelijkheden voor het bepalen van het apparaat
+- Een nieuwe handeling Load Target with [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning) toegevoegd, die wordt geladen op 0,js 2.5 met mogelijkheden voor het bepalen van het apparaat
 - Bijgewerkt om.js tot 2.5
 
 
