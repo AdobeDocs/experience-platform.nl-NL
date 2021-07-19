@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van afstemming van segment
 topic-legacy: overview
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ De controle van de opt-in en opt-out toestemming bepaalt of u met de toestemming
 
 De standaardtoestemmingsconfiguratie voor [!DNL Segment Match] wordt geplaatst aan `opt-out`. Als u een aanmeldingsmodel voor uw gegevens wilt afdwingen, stuurt u een e-mailverzoek naar uw accountmanager van Adobe.
 
-Voor meer informatie over het `share` attribuut dat wordt gebruikt om gegeven-delend toestemmingswaarde te plaatsen, zie de volgende documentatie op [privacy en toestemmingsgebiedgroep](../../xdm/field-groups/profile/consents.md). Voor informatie over de specifieke gebiedsgroep die wordt gebruikt om de toestemming van de consument voor inzameling en gebruik van gegevens te vangen met betrekking tot privacy, verpersoonlijking en marketing voorkeur, zie het volgende [Toestemming voor Privacy, Personalisatie en het In de handel brengen Voorkeur GitHub voorbeeld](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md).
+Voor meer informatie over het `share` attribuut dat wordt gebruikt om gegeven-delend toestemmingswaarde te plaatsen, zie de volgende documentatie op [privacy en toestemmingsgebiedgroep](../../xdm/field-groups/profile/consents.md). Voor informatie over de specifieke gebiedsgroep die wordt gebruikt om de toestemming van de consument voor inzameling en gebruik van gegevens te vangen met betrekking tot privacy, verpersoonlijking en marketing voorkeur, zie het volgende [Toestemming voor Privacy, Personalisatie en het In de handel brengen Voorkeur GitHub voorbeeld](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
 ### Gegevensgebruikslabels configureren
 
