@@ -1,9 +1,9 @@
 ---
 title: Overzicht van extensie Adobe Analytics-producttekenreeks
 description: Meer informatie over de extensie van de Adobe Analytics Product String-tag in Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -93,4 +93,4 @@ Deze actie moet vergezeld gaan van een actie &quot;Adobe Analytics - Set Variabl
 ### Vereisten
 
 * Een op object gebaseerde [gegevenslaag](https://theblog.adobe.com/data-layers-buzzword-best-practice/) met variabelen voor alle productgerelateerde gegevens (zoals product-id, hoeveelheid, prijs). Deze extensie werkt niet met op arrays gebaseerde gegevenslagen.
-* De extensie [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) moet worden geïnstalleerd.
+* De extensie [Adobe Analytics](../analytics/overview.md) moet worden geïnstalleerd.
