@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1211'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Ondersteuning voor CSP Nonce**  - De Core-extensie heeft nu een optionele configuratieparameter. U kunt een gegevenselement toevoegen dat naar één keer verwijst. Als dit is geconfigureerd, gebruiken alle inlinescripts die door een tag aan de pagina worden toegevoegd de nonce die u hebt geconfigureerd. Deze verandering steunt het gebruik van een Beleid van de Veiligheid van de Inhoud met één keer zodat de manuscripten van de Platform launch nog in een CSP milieu kunnen laden.  U kunt meer lezen over het gebruiken van Platform launch met CSP [hier](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/content-security-policy.html).
+* **Ondersteuning voor CSP Nonce**  - De Core-extensie heeft nu een optionele configuratieparameter. U kunt een gegevenselement toevoegen dat naar één keer verwijst. Als dit is geconfigureerd, gebruiken alle inlinescripts die door een tag aan de pagina worden toegevoegd de nonce die u hebt geconfigureerd. Deze verandering steunt het gebruik van een Beleid van de Veiligheid van de Inhoud met één keer zodat de manuscripten van de Platform launch nog in een CSP milieu kunnen laden.  U kunt meer lezen over het gebruiken van Platform launch met CSP [hier](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juni 2019
 
