@@ -5,9 +5,9 @@ title: Gegevenstype baken
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '250'
 ht-degree: 2%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 2%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.schema.json)
+* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.example.1.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.schema.json)
 
 ## Aanhangsel
 
