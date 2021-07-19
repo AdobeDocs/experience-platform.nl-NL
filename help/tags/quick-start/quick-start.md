@@ -1,9 +1,9 @@
 ---
 title: Snelstartgids
 description: Leer hoe u snel aan de slag kunt met tags in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1530'
 ht-degree: 0%
 
 ---
@@ -134,8 +134,6 @@ Voor meer informatie over de verschillende staten en de opties beschikbaar tijde
 ## Aanvullende bronnen
 
 Raadpleeg de volgende bronnen voor meer informatie over tags:
-
-[https://forums.adobe.com/community/experience-cloud/platform/](https://forums.adobe.com/community/experience-cloud/platform/launchAsk) launchAskand beantwoordt vragen, legt ideeën voor, stemt over de ideeën van anderen. Meld u aan bij uw Adobe ID.
 
 * **[Gemeenschap](https://forums.adobe.com/community/experience-cloud/platform/launch)** voor gegevensverzameling: Stel vragen en beantwoord vragen, geef ideeën en stem over de ideeën van anderen. Meld u aan bij uw Adobe ID.
 * **[Developer Docs](https://developer.adobelaunch.com/)**: Neem contact op met de ontwikkelaarscommunity voor tags om extensies te maken of de tags-API&#39;s te gebruiken
