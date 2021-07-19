@@ -3,9 +3,9 @@ title: Vorm uw DataStream voor het Web SDK van het Experience Platform
 description: 'Leer hoe u de gegevensstromen configureert. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;edge configuratie-id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container-id;Sandbox;Streaming Inlet;Event-gegevensset;target;client-code;Property Token;Target Environment-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport-suite-id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Gegevensstromen kunnen in Adobe [!DNL Experience Platform Launch] worden gecreee
 
 >[!NOTE]
 >
->Het hulpprogramma voor de configuratie van gegevensstromen is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Experience Platform Launch] als tagbeheer gebruiken. Bovendien, vereisen de gebruikers ontwikkeltoestemmingen in [!DNL Experience Platform Launch]. Zie het [User Permissions](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) artikel in [!DNL Experience Platform Launch] documentatie voor meer details.
+>Het hulpprogramma voor de configuratie van gegevensstromen is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Experience Platform Launch] als tagbeheer gebruiken. Bovendien, vereisen de gebruikers ontwikkeltoestemmingen in [!DNL Experience Platform Launch]. Zie het [User Permissions](../../tags/ui/administration/user-permissions.md) artikel in [!DNL Experience Platform Launch] documentatie voor meer details.
 
 Maak een gegevensstroom door op **[!UICONTROL New Datastream]** in de rechterbovenhoek van het scherm te klikken. Nadat u een naam en een beschrijving hebt opgegeven, wordt u gevraagd om de standaardinstellingen voor elke omgeving. De beschikbare instellingen worden hieronder beschreven.
 
