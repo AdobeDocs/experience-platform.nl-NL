@@ -3,10 +3,9 @@ title: Gegevens met toestemming van de klant verwerken met de Adobe Experience P
 topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten in Adobe Experience Platform te verwerken met behulp van de Adobe 2.0-standaard.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -27,19 +26,19 @@ Bovendien is voor deze handleiding een goed begrip nodig van Adobe Experience Pl
 * [Snelstartgids](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
 * [Overzicht van publicatie](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
 
-## Een randconfiguratie instellen
+## Een gegevensstroom instellen
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u een bestaande randconfiguratie voor Platform hebt ingesteld in Adobe Experience Platform Launch. Bovendien [!UICONTROL Profile Dataset] moet u voor de configuratie selecteren gestandaardiseerde toestemmingsgebieden bevatten.
+SDK kan alleen gegevens naar Experience Platform verzenden als er een bestaande gegevensstroom voor Platform is ingesteld in Adobe Experience Platform Launch. Bovendien [!UICONTROL Profile Dataset] moet u voor de configuratie selecteren gestandaardiseerde toestemmingsgebieden bevatten.
 
 Nadat u een nieuwe configuratie hebt gemaakt of een bestaande configuratie hebt geselecteerd die u wilt bewerken, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de hieronder vermelde waarden om het formulier in te vullen.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Edge-configuratieveld | Value |
+| Veld DataStream | Waarde |
 | --- | --- |
-| [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../../sandboxes/home.md) dat de vereiste streamingverbinding en datasets bevat om de randconfiguratie in te stellen. |
+| [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../../sandboxes/home.md) dat de vereiste streamingverbinding en datasets bevat om de gegevensstroom in te stellen. |
 | [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie over [het maken van een streamingverbinding](../../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streamingingang hebt. |
-| [!UICONTROL Event Dataset] | Een [!DNL XDM ExperienceEvent] dataset die u bij het verzenden van gebeurtenisgegevens naar het gebruiken van SDK van plan bent. Terwijl u een gebeurtenisdataset moet verstrekken om een configuratie van de randconfiguratie van het Platform tot stand te brengen, gelieve te merken op dat het verzenden van toestemmingsgegevens direct via gebeurtenissen momenteel niet wordt gesteund. |
+| [!UICONTROL Event Dataset] | Een [!DNL XDM ExperienceEvent] dataset die u bij het verzenden van gebeurtenisgegevens naar het gebruiken van SDK van plan bent. Hoewel u een gebeurtenisdataset moet verstrekken om een gegevensstroom van het Platform tot stand te brengen, gelieve te merken op dat het verzenden van toestemmingsgegevens direct via gebeurtenissen momenteel niet wordt gesteund. |
 | [!UICONTROL Profile Dataset] | De [!DNL Profile]-ingeschakelde dataset met de gebieden van de klantentoestemming die u eerder creeerde. |
 
 Wanneer gebeëindigd, selecteer **[!UICONTROL Save]** bij de bodem van het scherm en ga na om het even welke extra herinneringen verder om de configuratie te voltooien.
@@ -47,11 +46,11 @@ Wanneer gebeëindigd, selecteer **[!UICONTROL Save]** bij de bodem van het scher
 
 ## Installeer en vorm de uitbreiding van SDK van het Web van het Platform
 
-Zodra u een randconfiguratie zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap Platform launch is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door het tabblad **[!UICONTROL Catalog]**. Selecteer vervolgens **[!UICONTROL Install]** onder de extensie SDK van Platform in de lijst met beschikbare extensies.
+Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap Platform launch is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door het tabblad **[!UICONTROL Catalog]**. Selecteer vervolgens **[!UICONTROL Install]** onder de extensie SDK van Platform in de lijst met beschikbare extensies.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Wanneer het vormen van SDK, onder **[!UICONTROL Edge Configurations]**, selecteer de configuratie u in de vorige stap creeerde.
+Wanneer het vormen van SDK, onder **[!UICONTROL Edge Configurations]**, selecteer de gegevensstroom u in de vorige stap creeerde.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
