@@ -5,9 +5,9 @@ title: Een gegevensset configureren voor het vastleggen van toestemmings- en voo
 topic-legacy: getting started
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1386'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Het canvas verschijnt weer en geeft aan dat het object `consents` is toegevoegd 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-Als het schema u uitgeeft door [!UICONTROL Profile Dataset] wordt gebruikt die in uw de randconfiguratie van SDK van het Web van Platforms wordt gespecificeerd, zal die dataset nu de nieuwe toestemmingsgebieden omvatten. U kunt nu naar [toestemmingsverwerkingsgids](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform te vormen om toestemmingsgegevens te verwerken.
+Als het schema u uitgeeft door [!UICONTROL Profile Dataset] wordt gebruikt die in uw gegevensbestand van SDK van het Web van Platforms wordt gespecificeerd, zal die dataset nu de nieuwe toestemmingsgebieden omvatten. U kunt nu naar [toestemmingsverwerkingsgids](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform te vormen om toestemmingsgegevens te verwerken.
 
 Als u geen dataset voor dit schema hebt gecreeerd, volg de stappen in de volgende sectie.
 
@@ -150,7 +150,7 @@ Tot slot selecteer **[!UICONTROL Enable]** in bevestigingspopover om het schema 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-De dataset wordt nu bewaard en toegelaten voor gebruik in [!DNL Profile]. Als u van plan bent gebruikend het Web SDK van het Platform om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] selecteren wanneer vestiging uw [randconfiguratie](../../../../edge/fundamentals/datastreams.md).
+De dataset wordt nu bewaard en toegelaten voor gebruik in [!DNL Profile]. Als u van plan bent gebruikend het Web SDK van het Platform om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] selecteren wanneer vestiging uw [datastream](../../../../edge/fundamentals/datastreams.md).
 
 ## Volgende stappen
 
