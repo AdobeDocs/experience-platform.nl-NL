@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
+source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
 workflow-type: tm+mt
-source-wordcount: '2801'
+source-wordcount: '2951'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,21 @@ Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een voll
 ![Volledige bestanden exporteren](../assets/ui/activate-destinations/export-full-files.png)
 
 1. Met de kiezer **[!UICONTROL Frequency]** kunt u kiezen tussen één keer (**[!UICONTROL Once]**) of **[!UICONTROL Daily]** exporteren. Wanneer u een volledig bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST).
+
+   >[!IMPORTANT]
+   >
+   >Wanneer u de begin- en einddatum instelt, geeft de **[!UICONTROL Start Date]** aan wanneer het exporteren van het bestand volgens de planning moet worden gestart en geeft de **[!UICONTROL End Date]** aan wanneer het exporteren van het bestand volgens de planning moet worden gestopt. Het exporteren van het bestand begint op **[!UICONTROL Start Date]**, maar bevat niet **[!UICONTROL End Date]**.
+   >
+   >Stel bijvoorbeeld het volgende schema in:
+   >
+   >* Exporteren: Stapsgewijs om de 3 uur
+   >* Begindatum: 07-19
+   >* Einddatum: 21-07-21
+
+   >
+   >Bestanden worden vanaf 7/19 geëxporteerd en worden op 23:59:59 UTC 7/20 niet meer geëxporteerd. Er worden geen bestanden geleverd op 21 september.
+
+
 2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden. Wanneer u een bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum op het moment dat u selecteert.
 
    >[!IMPORTANT]
@@ -167,11 +182,27 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 ![Incrementele bestanden exporteren](../assets/ui/activate-destinations/export-incremental-files.png)
 
 1. Met de kiezer **[!UICONTROL Frequency]** kunt u kiezen tussen **[!UICONTROL Daily]** of **[!UICONTROL Hourly]** exporteren. Wanneer u een incrementeel bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST).
+
+
+   >[!IMPORTANT]
+   >
+   >Wanneer u de begin- en einddatum instelt, geeft de **[!UICONTROL Start Date]** aan wanneer het exporteren van het bestand volgens de planning moet worden gestart en geeft de **[!UICONTROL End Date]** aan wanneer het exporteren van het bestand volgens de planning moet worden gestopt. Het exporteren van het bestand begint op **[!UICONTROL Start Date]**, maar bevat niet **[!UICONTROL End Date]**.
+   >
+   >Stel bijvoorbeeld het volgende schema in:
+   >
+   >* Exporteren: Stapsgewijs om de 3 uur
+   >* Begindatum: 07-19
+   >* Einddatum: 21-07-21
+
+   >
+   >Bestanden worden vanaf 7/19 geëxporteerd en worden op 23:59:59 UTC 7/20 niet meer geëxporteerd. Er worden geen bestanden geleverd op 21 september.
+
    * Wanneer u **[!UICONTROL Hourly]** selecteert, gebruikt u de **[!UICONTROL Every]**-kiezer om te kiezen tussen de uuropties **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** en **[!UICONTROL 12]**.
 
       >[!IMPORTANT]
       >
       >De optie om incrementele bestanden om de 3, 6, 8 of 12 uur te exporteren, bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten. Klanten die geen bètaversie zijn, kunnen incrementele bestanden eenmaal per dag exporteren.
+
 
 2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
 
