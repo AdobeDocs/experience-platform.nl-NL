@@ -5,10 +5,9 @@ title: Gegevensinname controleren
 topic-legacy: overview
 description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-translation-type: tm+mt
-source-git-commit: 6bedd5ec0865e858a337155deb80309a54e30892
+source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -55,6 +54,10 @@ De details van een mislukte streamingrecord geven dezelfde informatie weer als e
 
 Bovendien bevatten mislukte records details over de fouten die zijn opgetreden tijdens het verwerken van de batch. In het onderstaande voorbeeld is een parseringsfout opgetreden bij het converteren of valideren van de gegevens.
 
+>[!NOTE]
+>
+>Als er fouten in opgenomen rijen zijn, zullen deze rijen **not** worden gelaten vallen tenzij het resulterende bericht in ongeldige XDM resulteert.
+
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Gegevens van begin tot einde bijhouden in batch
@@ -76,5 +79,9 @@ De details van een mislukte partij tonen de zelfde informatie zoals een succesvo
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
 Bovendien geven mislukte batches details over de fouten die zijn opgetreden tijdens de verwerking van de batch. In het onderstaande voorbeeld is er een fout opgetreden met de ingevoerde batch omdat deze het maximumaantal identiteiten voor de persoon heeft.
+
+>[!NOTE]
+>
+>Als er fouten in opgenomen rijen zijn, zullen deze rijen **not** worden gelaten vallen tenzij het resulterende bericht in ongeldige XDM resulteert.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)
