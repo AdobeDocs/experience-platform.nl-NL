@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '572'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,30 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 20 juli 2021
+
+### Adobe Target v2-extensie 0.15.1
+
+- Probleem verholpen met een functienaamconflict `stringify`, dat ertoe leidde dat onjuiste UUID-waarden werden gegenereerd voor `sessionId`, `requestId` enzovoort.
+
+## 16 juli 2021
+
+### Adobe Target v2-extensie 0.15.0
+
+- Veilige kenmerken aan cookies toevoegen wanneer de SecureOnly-instellingen van at.js op true zijn ingesteld
+- Reactietokens zijn nu beschikbaar wanneer u `triggerView()` gebruikt
+- Oplossing voor een fout met betrekking tot de gebeurtenis `CONTENT_RENDERING_NO_OFFERS`. Nu wordt deze correct geactiveerd wanneer er geen inhoud is geretourneerd van Target
+- A4T klik metrieke details correct zijn teruggekeerd wanneer het gebruiken van prefetch verzoeken
+- UUID-generatie gebruikt `Math.random()` niet meer, maar is afhankelijk van `window.crypto`
+- `sessionId` de vervaldatum van het koekje wordt correct uitgebreid op elke netwerkvraag
+- SPA de initialisatie van het weergavecache wordt nu correct afgehandeld en voldoet aan de `viewsEnable`-instellingen
+
+## 2 juni 2021
+
+### Adobe Target v2-extensie 0.14.2
+
+- Los een insect op waar de definitieve bundel van de Lancering twee at.js versies bevat, één met Beslissing op Apparaat en één zonder.
 
 ## 19 mei 2021
 
