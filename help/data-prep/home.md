@@ -5,10 +5,9 @@ title: Overzicht van Data Prep
 topic-legacy: overview
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-translation-type: tm+mt
-source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
+source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -25,6 +24,10 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 - Een voorvertoning weergeven van de gegevens terwijl deze worden bewerkt in Voorvertoning gegevens
 
 De Prep van gegevens past verscheidene intrinsieke gegevensbevestigingen ook toe om ervoor te zorgen dat de gegevensintegriteit wordt gehandhaafd aangezien het wordt opgenomen. Waar mogelijk worden met Gegevensvoorbeeld de inkomende gegevensschema&#39;s automatisch toegewezen aan XDM. De ingenieurs van gegevens kunnen, de voorgestelde afbeeldingen veranderen verbeteren en schrappen en hen vervangen met de afbeeldingen zoals aangewezen.
+
+>[!NOTE]
+>
+>Tenzij het resulterende bericht ongeldige XDM zal zijn, zullen om het even welke transformatiefouten in Prep van Gegevens in die attributen resulteren die worden geplaatst aan `null`, terwijl de rest van de rij zal worden opgenomen. Als de rij aan ongeldige XDM oplossen, zal de rij **not** worden opgenomen. In beide gevallen wordt de fout gedocumenteerd.
 
 ## Toewijzing
 
