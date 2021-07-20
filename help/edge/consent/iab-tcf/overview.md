@@ -3,10 +3,9 @@ title: IAB TCF 2.0 Steun in de SDK van het Web van Adobe Experience Platform
 description: Leer hoe u IAB TCF 2.0-voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK
 keywords: toestemming;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -31,9 +30,9 @@ Om het Web SDK met IAB TCF 2.0 uit te voeren, moet u een werkend inzicht in het 
 Als u toestemmingsgegevens naar Adobe Experience Platform wilt verzenden met behulp van de SDK, is het volgende vereist:
 
 - Een dataset het waarvan schema gebaseerd is op de [!DNL XDM Individual Profile] klasse en TCF 2.0 toestemmingsgebieden bevat, die voor gebruik in [!DNL Real-time Customer Profile] worden toegelaten.
-- Een randconfiguratie opstelling met Platform en de profiel-Toegelaten dataset hierboven vermeld.
+- Een gegevensstroomopstelling met Platform en de profiel-Toegelaten dataset hierboven vermeld.
 
-Raadpleeg de handleiding bij [TCF 2.0-compatibiliteit](../../../landing/governance-privacy-security/consent/iab/overview.md) voor instructies voor het maken van de vereiste datasets en randconfiguratie.
+Raadpleeg de handleiding bij [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) voor instructies over het maken van de vereiste datasets en datastream.
 
 ## Audience Manager-integratie
 
@@ -41,7 +40,7 @@ Adobe Audience Manager (AAM) omvat steun voor IAB TCF 2.0, die u toelaat om, kla
 
 >[!TIP]
 >
->Om met Audience Manager door het Web SDK van Adobe Experience Platform te integreren, zorg ervoor u een randconfiguratie opstelling hebt om aan Adobe Audience Manager door:sturen.
+>Om met Audience Manager door het Web SDK van Adobe Experience Platform te integreren, zorg ervoor u een gegevensstroom hebt die opstelling aan Adobe Audience Manager door:sturen.
 
 ## Experience Events en Adobe Analytics-integratie
 
@@ -50,7 +49,7 @@ Terwijl CDP in real time en het publiek van de Audience Manager spoor van de hui
 Om toestemmingsinformatie over gebeurtenissen te verzamelen, wordt het volgende vereist:
 
 - Een dataset die op de [!DNL XDM Experience Event] klasse, met de [!DNL Experience Event] de gebiedsgroep van het privacyschema wordt gebaseerd.
-- Een randconfiguratie opstelling met de [!DNL XDM Experience Event] dataset hierboven.
+- Een gegevensstroom opstelling met de [!DNL XDM Experience Event] dataset hierboven.
 
 Voor meer informatie over hoe te om een Gebeurtenis van de Ervaring XDM in een hit van de Analyse om te zetten, begin door [Analytics te lezen overzicht](../../data-collection/adobe-analytics/analytics-overview.md) documentatie.
 
