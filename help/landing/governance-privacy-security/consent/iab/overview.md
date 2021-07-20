@@ -5,9 +5,9 @@ title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2545'
 ht-degree: 0%
 
 ---
@@ -117,15 +117,15 @@ Zodra u CMP hebt gevormd om toestemmingskoorden te produceren, moet u het Web SD
 
 **De SDK interface niet met CMP&#39;s uit het vak**. Het is aan u om te bepalen hoe te om SDK in uw website te integreren, naar toestemmingsveranderingen in CMP te luisteren, en het aangewezen bevel te roepen.
 
-### Een nieuwe randconfiguratie maken
+### Een nieuwe gegevensstroom maken
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe randconfiguratie voor Platform maakt in [!DNL Adobe Experience Platform Launch]. Specifieke stappen voor hoe te om een nieuwe configuratie tot stand te brengen worden verstrekt in [SDK documentatie](../../../../edge/fundamentals/datastreams.md).
+SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe gegevensstroom voor Platform maakt in [!DNL Adobe Experience Platform Launch]. Specifieke stappen voor hoe te om een nieuwe configuratie tot stand te brengen worden verstrekt in [SDK documentatie](../../../../edge/fundamentals/datastreams.md).
 
 Nadat u een unieke naam voor de configuratie hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 
-| Edge-configuratieveld | Waarde |
+| Veld DataStream | Waarde |
 | --- | --- |
-| [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../../sandboxes/home.md) dat de vereiste streamingverbinding en datasets bevat om de randconfiguratie in te stellen. |
+| [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../../sandboxes/home.md) dat de vereiste streamingverbinding en datasets bevat om de gegevensstroom in te stellen. |
 | [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie over [het maken van een streamingverbinding](../../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streamingingang hebt. |
 | [!UICONTROL Event Dataset] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets) wordt gecreeerd. Als u [[!UICONTROL IAB TCF 2.0 Consent] gebiedsgroep](../../../../xdm/field-groups/event/iab.md) in het schema van deze dataset opnam, kunt u toestemming-verandering gebeurtenissen in tijd volgen gebruikend het [`sendEvent`](#sendEvent) bevel, die gegevens in deze dataset opslaan. Onthoud dat de in deze gegevensset opgeslagen toestemmingswaarden **niet** worden gebruikt in automatische handhavingswerkstromen. |
 | [!UICONTROL Profile Dataset] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets) wordt gecreeerd. Wanneer het antwoorden aan CMP toestemmings-verandering haken gebruikend het [`setConsent`](#setConsent) bevel, zullen de verzamelde gegevens in deze dataset worden opgeslagen. Aangezien deze dataset profiel-toegelaten is, worden de toestemmingswaarden die in deze dataset worden opgeslagen gehouden tijdens automatische handhavingswerkschema&#39;s. |
@@ -136,7 +136,7 @@ Wanneer gebeëindigd, selecteer **[!UICONTROL Save]** bij de bodem van het scher
 
 ### Opdrachten voor wijzigen van toestemming maken
 
-Zodra u de randconfiguratie hebt gecreeerd die in de vorige sectie wordt beschreven, kunt u beginnen SDK bevelen te gebruiken om toestemmingsgegevens naar Platform te verzenden. De volgende secties verstrekken voorbeelden van hoe elk bevel van SDK in verschillende scenario&#39;s kan worden gebruikt.
+Nadat u de in de vorige sectie beschreven gegevensstroom hebt gemaakt, kunt u beginnen met het gebruik van SDK-opdrachten om gegevens met toestemming naar het Platform te verzenden. De volgende secties verstrekken voorbeelden van hoe elk bevel van SDK in verschillende scenario&#39;s kan worden gebruikt.
 
 >[!NOTE]
 >
