@@ -5,10 +5,9 @@ title: 'Edge Segmentation met de API '
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -31,7 +30,7 @@ Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Adobe Exp
 
 Om met succes vraag aan [!DNL Data Prep] API eindpunten te maken, te lezen gelieve de gids op [Aan de slag met Platform APIs](../../landing/api-guide.md) om over vereiste kopballen en hoe te om steekproefAPI vraag te lezen.
 
-## Type randsegmenteringsquery {#query-types}
+## Type Edge-segmenteringsquery {#query-types}
 
 Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag aan de volgende richtlijnen in overeenstemming zijn:
 
@@ -168,7 +167,7 @@ Een succesvolle reactie keert een serie van segmenten in uw IMS Organisatie teru
 
 ## Een segment maken dat is ingeschakeld voor randsegmentatie
 
-U kunt een segment tot stand brengen dat voor randsegmentatie door een verzoek van de POST aan het `/segment/definitions` eindpunt wordt toegelaten te doen. Naast het aanpassen van één van de [de types van randsegmenteringsvraag hierboven](#query-types), moet u de `evaluationInfo.synchronous.enabled` vlag in de nuttige lading aan waar plaatsen.
+U kunt een segment tot stand brengen dat voor randsegmentatie door een verzoek van de POST aan het `/segment/definitions` eindpunt wordt toegelaten dat één van de [de types van de vraagvraag van de randsegmentatie hierboven](#query-types) aanpast.
 
 **API-indeling**
 
@@ -201,18 +200,9 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "synchronous": {
-            "enabled": true
-        }
     }
 }'
 ```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `evaluationInfo.synchronous.enabled` | Het `evaluationInfo` voorwerp bepaalt het type van evaluatie de segmentdefinitie zal ondergaan. Als u randsegmentatie wilt gebruiken, stelt u `evaluationInfo.synchronous.enabled` in met een waarde `true`. |
 
 **Antwoord**
 
