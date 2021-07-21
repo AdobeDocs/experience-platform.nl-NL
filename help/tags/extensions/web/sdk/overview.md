@@ -1,9 +1,9 @@
 ---
 title: Overzicht van Web SDK-extensie
 description: Meer informatie over de Web SDK-tagextensie in Adobe Experience Platform.
-source-git-commit: de35da5a2c59b3df310b928265f2acc3648e66e5
+source-git-commit: 934e74528a5bde72f3cbd216f56157b18f884cba
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
@@ -16,4 +16,4 @@ ht-degree: 0%
 
 De Adobe Experience Platform Web SDK-extensie verzendt gegevens vanuit wegeigenschappen naar de Adobe Experience Cloud via het Adobe Experience Platform Edge Network. De uitbreiding van SDK van het Web van het Platform staat voor het stromen gegevens in platform toe, die identiteiten synchroniseren, opt-in en automatisch het verzamelen van contextgegevens.
 
-Voor details over het vormen van de uitbreiding van SDK van het Web van het Platform, zie de [documentatie van SDK van het Web van Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=en#extension).
+Voor details over het vormen van de uitbreiding van SDK van het Web van het Platform, zie de [documentatie van SDK van het Web van Adobe Experience Platform](../../../../edge/extension/web-sdk-extension-configuration.md).
