@@ -5,10 +5,9 @@ title: gebruikersgids voor Edge Segmentation
 topic-legacy: ui guide
 description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-translation-type: tm+mt
-source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
+source-git-commit: 8375d5a35ef652335c60b4b8b4571bf42ec1924a
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -32,9 +31,7 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 | Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keer plaatsvindt. |  |
 | Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |  |
 
-Als de vraag om het even welke bovengenoemde vraagtypes aanpast, kunt u het voor randsegmentatie toelaten door **[!UICONTROL Evaluate as streaming segment on the edge]** knevel aan te zetten.
-
-![](../images/ui/edge-segmentation/mark-on-edge.png)
+Als de vraag om het even welke bovengenoemde vraagtypes aanpast, zal het automatisch worden geëvalueerd gebruikend randsegmentatie.
 
 De volgende vraagtypes zijn **not** momenteel gesteund voor randsegmentatie:
 
