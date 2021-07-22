@@ -6,7 +6,7 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
+source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
 workflow-type: tm+mt
 source-wordcount: '2951'
 ht-degree: 0%
@@ -169,7 +169,7 @@ Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een voll
 
 >[!IMPORTANT]
 >
->Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn geëxporteerd, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+>Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn opgeslagen, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 ### Incrementele bestanden exporteren {#export-incremental-files}
 
@@ -215,7 +215,7 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 
 >[!IMPORTANT]
 >
->Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn geëxporteerd, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+>Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn opgeslagen, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 ### Bestandsnamen configureren {#file-names}
 
