@@ -1,7 +1,7 @@
 ---
 title: Overzicht van extensieontwikkeling
 description: In deze video ziet u de belangrijkste componenten van verschillende extensietypen en het ontwikkelingsproces voor extensies in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Een van de belangrijkste doelstellingen van Adobe Experience Platform is het maken van een open ecosysteem waar technici buiten het kerntechnische team extra functionaliteit kunnen blootstellen via tags. Dit gebeurt via Reactor-extensies. Nadat een gebruiker een extensie op een eigenschap tag heeft geïnstalleerd, wordt de functionaliteit van die extensie beschikbaar voor gebruik door alle gebruikers van de eigenschap.
+Een van de belangrijkste doelstellingen van Adobe Experience Platform is het maken van een open ecosysteem waar technici buiten het kerntechnische team extra functionaliteit kunnen blootstellen via tags. Dit wordt gedaan door markeringsuitbreidingen. Nadat een gebruiker een extensie op een eigenschap tag heeft geïnstalleerd, wordt de functionaliteit van die extensie beschikbaar voor gebruik door alle gebruikers van de eigenschap.
 
 In dit document worden de primaire componenten van verschillende extensietypen beschreven en vindt u koppelingen voor verdere documentatie om u te begeleiden bij het ontwikkelingsproces van de extensie.
 
