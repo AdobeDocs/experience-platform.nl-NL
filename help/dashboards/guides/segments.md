@@ -4,9 +4,9 @@ title: Segmentdashboard
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Als u naar het [!UICONTROL Segments]-dashboard in de interface van het Platform 
 
 ### Het dashboard [!UICONTROL Segments] wijzigen
 
-U kunt de weergave van het [!UICONTROL Segments] dashboard wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot [!UICONTROL Widget library] om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
+U kunt de weergave van het [!UICONTROL Segments] dashboard wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
-Raadpleeg de documentatie [modifying dashboards](../modify.md) and [widget library](../widget-library.md) voor meer informatie.
+Raadpleeg de documentatie [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) voor meer informatie.
 
 ## Een segment selecteren
 
@@ -61,9 +61,11 @@ De datum en tijd &#39;laatst bijgewerkt&#39; op een widget geeft aan wanneer de 
 
 ![](../images/segments/widget-timestamp.png)
 
-## Beschikbare widgets
+## Standaardwidgets
 
-Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw segment. Selecteer de naam van een widget hieronder voor meer informatie:
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende maateenheden voor uw segmenten. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst het [overzicht van de widgetbibliotheek](../customize/widget-library.md).
+
+Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [[!UICONTROL Audience size]](#audience-size)
 * [[!UICONTROL Audience size trend]](#audience-size-trend)
