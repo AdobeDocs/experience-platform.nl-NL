@@ -1,9 +1,9 @@
 ---
 title: Extension Manifest
 description: Leer hoe u een JSON-manifestbestand configureert dat Adobe Experience Platform informeert over de juiste manier om uw extensie te gebruiken.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Een extensiemanifest moet uit het volgende bestaan:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `name` | De naam van de extensie. Deze moet uniek zijn van alle andere reactoruitbreidingen en moet voldoen aan [naamgevingsregels](#naming-rules). **Dit wordt gebruikt door tags als id en mag niet worden gewijzigd nadat u de extensie hebt gepubliceerd.** |
+| `name` | De naam van de extensie. Deze moet uniek zijn vanuit alle andere extensies en moet voldoen aan [naamgevingsregels](#naming-rules). **Dit wordt gebruikt door tags als id en mag niet worden gewijzigd nadat u de extensie hebt gepubliceerd.** |
 | `platform` | Het platform voor uw extensie. De enige waarde die op dit moment wordt geaccepteerd, is `web`. |
 | `version` | De versie van uw extensie. Het moet het [semver](http://semver.org/) versioning formaat volgen. Dit is consistent met [npm versieveld](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | De leesbare naam van de extensie. Dit zal aan de gebruikers van de Platform worden getoond. &quot;tags&quot; of &quot;extensie&quot; hoeven niet te worden vermeld; gebruikers weten al dat ze een tagextensie bekijken . |
@@ -79,7 +79,7 @@ Het configuratieobject moet als volgt zijn gestructureerd:
   "eigenschappen": {
     "vertraging": {
       "type": "number",
-      "minimum": 3
+      "minimum": 1
     }
   },
   "vereist": [
