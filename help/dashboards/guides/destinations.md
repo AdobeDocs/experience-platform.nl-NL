@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboar
 
 Voor een overzicht van bestemmingen, evenals een catalogus van alle beschikbare bestemmingen binnen Experience Platform, gelieve [doeldocumentatie](../../destinations/home.md) te bezoeken.
 
-## [!UICONTROL Destinations] dashboardgegevens  {#destinations-dashboard-data}
+## [!UICONTROL Destinations] dashboardgegevens {#destinations-dashboard-data}
 
 Het [!UICONTROL Destinations] dashboard toont een momentopname van de bestemmingen die uw organisatie binnen het Profiel van de Ervaring heeft toegelaten. De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het dashboard van bestemmingen werkt niet in echt bij - tijd.
 
@@ -35,9 +35,17 @@ Als u naar het doeldashboard in de interface van het Platform wilt navigeren, se
 
 ![](../images/destinations/dashboard-overview.png)
 
-## Beschikbare widgets
+### Het dashboard voor doelen wijzigen
 
-Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw doelen. Selecteer de naam van een widget hieronder voor meer informatie:
+U kunt de verschijning van het dashboard van bestemmingen wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
+
+Raadpleeg de documentatie [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) voor meer informatie.
+
+## Standaardwidgets
+
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens voor uw doelen. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst het [overzicht van de widgetbibliotheek](../customize/widget-library.md).
+
+Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [[!UICONTROL Most used destinations]](#most-used-destinations)
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
