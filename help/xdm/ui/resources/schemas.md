@@ -5,10 +5,9 @@ title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 6402499535b71f43c158fcec7e2b0065437bed51
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ Deze handleiding biedt een overzicht van het maken, bewerken en beheren van XDM-
 
 Deze handleiding vereist een goed begrip van XDM System. Verwijs naar [XDM overzicht](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van het Experience Platform, en de [grondbeginselen van schemacompositie](../../schema/composition.md) voor een overzicht van hoe de schema&#39;s worden geconstrueerd.
 
-## Nieuw schema maken {#create}
+## Een nieuw schema maken {#create}
 
 Selecteer **[!UICONTROL Create schema]** in de werkruimte [!UICONTROL Schemas] in de rechterbovenhoek. In het vervolgkeuzemenu dat wordt weergegeven, kunt u kiezen tussen **[!UICONTROL XDM Individual Profile]** en **[!UICONTROL XDM ExperienceEvent]** als basisklasse voor het schema. U kunt ook **[!UICONTROL Browse]** selecteren in de volledige lijst met beschikbare klassen of [een nieuwe aangepaste klasse maken](./classes.md#create).
 
@@ -39,7 +38,7 @@ Nadat u een klasse hebt geselecteerd, wordt [!DNL Schema Editor] weergegeven en 
 
 U kunt nu beginnen de structuur van het schema te bouwen door [groepen van het schemagebied toe te voegen](#add-field-groups).
 
-## Bewerk een bestaand schema {#edit}
+## Een bestaand schema bewerken {#edit}
 
 >[!NOTE]
 >
@@ -97,7 +96,7 @@ De [!DNL Schema Editor] verschijnt opnieuw met de door de veld-groep verschafte 
 
 ![](../../images/ui/resources/schemas/field-groups-added.png)
 
-## Een schema inschakelen voor realtime klantprofiel {#profile}
+## Een schema voor realtime klantprofiel inschakelen {#profile}
 
 [Klantprofielen ](../../../profile/home.md) in real time komen gegevens uit verschillende bronnen voor om een volledig overzicht van elke individuele klant te maken. Als u de gegevens wilt die door een schema worden gevangen aan dit proces deelnemen, moet u het schema voor gebruik in [!DNL Profile] toelaten.
 
@@ -125,13 +124,15 @@ Als u het proces wilt voltooien, selecteert u **[!UICONTROL Save]** om het schem
 
 Het schema is nu ingeschakeld voor gebruik in het Real-time profiel van de Klant. Wanneer het Platform gegevens in datasets opneemt die op dit schema worden gebaseerd, zullen die gegevens in uw samengevoegde gegevens van het Profiel worden opgenomen.
 
-## Geef vertoningsnamen voor schemagebieden {#display-names} uit
+## Weergavenamen voor schemavelden bewerken {#display-names}
 
 Nadat u een klasse hebt toegewezen en veldgroepen aan een schema hebt toegevoegd, kunt u de weergavenamen van de velden van een schema bewerken, ongeacht of die velden zijn voorzien door standaard- of aangepaste XDM-bronnen.
 
 >[!NOTE]
 >
 >Onthoud dat de weergavenamen van velden die tot standaardklassen of -veldgroepen behoren, alleen kunnen worden bewerkt in de context van een specifiek schema. Met andere woorden, het veranderen van de vertoningsnaam van een standaardgebied in één schema beïnvloedt andere schema&#39;s niet die de zelfde bijbehorende klasse of de gebiedsgroep gebruiken.
+>
+>Zodra u veranderingen de vertoningsnamen voor de gebieden van een schema aanbrengt, worden die veranderingen onmiddellijk weerspiegeld in om het even welke bestaande datasets die op dat schema worden gebaseerd.
 
 Als u de weergavenaam van een schemaveld wilt bewerken, selecteert u het veld op het canvas. Geef in de rechtertrack de nieuwe naam op onder **[!UICONTROL Display name]**.
 
@@ -141,7 +142,7 @@ Selecteer **[!UICONTROL Apply]** in het rechterspoor, en het canvas werkt bij om
 
 ![](../../images/ui/resources/schemas/display-name-changed.png)
 
-## Klasse {#change-class} van een schema wijzigen
+## De klasse van een schema wijzigen {#change-class}
 
 U kunt de klasse van een schema op om het even welk punt tijdens het aanvankelijke samenstellingsproces veranderen alvorens het schema is bewaard.
 
