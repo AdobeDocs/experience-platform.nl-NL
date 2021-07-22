@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1180'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Als u naar het [!UICONTROL Profiles]-dashboard in de interface van het Platform 
 
 ### Het dashboard [!UICONTROL Profiles] wijzigen
 
-U kunt de weergave van het [!UICONTROL Profiles] dashboard wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot [!UICONTROL Widget library] om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
+U kunt de weergave van het [!UICONTROL Profiles] dashboard wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
-Raadpleeg de documentatie [modifying dashboards](../modify.md) and [widget library](../widget-library.md) voor meer informatie.
+Raadpleeg de documentatie [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) voor meer informatie.
 
 ## Beleid samenvoegen
 
@@ -63,9 +63,11 @@ Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke
 
 De datum en tijd &#39;laatst bijgewerkt&#39; op een widget geeft aan wanneer de laatste momentopname van de gegevens is gemaakt. De datum en het tijdstip van de momentopname worden in UTC vermeld; het bevindt zich niet in de tijdzone van de individuele gebruiker of IMS-organisatie.
 
-## Beschikbare widgets
+## Standaardwidgets
 
-Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw profielgegevens. Selecteer de naam van een widget hieronder voor meer informatie:
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw profielgegevens. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst het [overzicht van de widgetbibliotheek](../customize/widget-library.md).
+
+Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [[!UICONTROL Profile count]](#profile-count)
 * [[!UICONTROL Profiles added]](#profiles-added)
