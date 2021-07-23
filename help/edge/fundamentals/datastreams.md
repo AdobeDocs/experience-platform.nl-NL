@@ -3,7 +3,7 @@ title: Vorm uw DataStream voor het Web SDK van het Experience Platform
 description: 'Leer hoe u de gegevensstromen configureert. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container-id;Sandbox;Streaming Inlet;Event-gegevensset;target;client-code;Property Token;Target Environment-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport-suite-id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Voor deze functie moet uw organisatie zijn ingericht. Neem contact op met uw Cus
 
 Gegevensstromen kunnen in Adobe [!DNL Experience Platform Launch] worden gecreeerd gebruikend het hulpmiddel van de configuratie DataStream.
 
-![gegevensstromen, gereedschapnavigatie](../../assets/datastreams_config.png)
+![gegevensstromen, gereedschapnavigatie](../images/datastreams/config.png)
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Hieronder vindt u de beschikbare instellingen voor elke configuratieomgeving. De
 
 De sectie met de id van derden is de enige sectie die altijd is ingeschakeld. Er zijn twee beschikbare instellingen: &quot;[!UICONTROL Third Party ID Sync Enabled]&quot; en &quot;[!UICONTROL Third Party ID Sync Container ID]&quot;.
 
-![Het gedeelte Identiteit van de configuratie-interface](../../assets/edge_configuration_identity.png)
+![Het gedeelte Identiteit van de configuratie-interface](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL Third Party ID Sync Enabled]
 
@@ -53,7 +53,7 @@ De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschi
 
 Met de hier vermelde instellingen kunt u gegevens naar Adobe Experience Platform verzenden. Schakel deze sectie alleen in als u de Adobe Experience Platform hebt aangeschaft.
 
-![Adobe Experience Platform-instellingenblok](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform-instellingenblok](../images/datastreams/edge_configuration_aep.png)
 
 ### [!UICONTROL Sandbox]
 
@@ -71,7 +71,7 @@ De stromen van gegevens steunen verzendend gegevens naar datasets die een schema
 
 Als u Adobe Target wilt configureren, moet u een clientcode opgeven. De andere velden zijn optioneel.
 
-![Adobe Target-instellingenblok](../../assets/edge_configuration_target.png)
+![Adobe Target-instellingenblok](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `
 
 U kunt deze sectie alleen inschakelen als u gegevens naar Adobe Audience Manager wilt verzenden. De andere instellingen zijn optioneel, maar worden aangemoedigd.
 
-![Adobe Publiek beheren, instellingenblok](../../assets/edge_configuration_aam.png)
+![Adobe Publiek beheren, instellingenblok](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL Cookie Destinations Enabled]
 
@@ -111,7 +111,7 @@ Staat SDK toe om segmentinformatie via [URL Doelen](https://experienceleague.ado
 
 Bepaalt of gegevens naar Adobe Analytics worden verzonden. De extra details zijn in [Overzicht Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
+![Adobe Analytics Settings Block](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL Report Suite ID]
 
