@@ -3,8 +3,7 @@ title: Identiteiten synchroniseren tussen Audience Manager en Adobe Experience P
 description: Leer hoe te om identiteiten tussen Audience Manager en Adobe Experience Platform te synchroniseren gebruikend het Web SDK van het Platform
 seo-description: Leer hoe u identiteiten kunt synchroniseren met Adobe Audience Manager met Experience Platform Web SDK
 keywords: publieksmanager;naam;identiteiten;synchronisatieidentiteiten;naamruimte;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Adobe Experience Platform Web SDK ondersteunt de mogelijkheid om klant-id&#39;s 
 
 Kies uw naamruimten in de naamruimten [Identiteitsservice](../../identity/../identity-service/namespaces.md) om de context aan te geven waarop een identiteit betrekking heeft, door de waarden in de kolom Identiteitssymbool te gebruiken:
 
-![Weergave van de interface Namespaces](../../assets/edge_namespaceUI_identity-symbol.png)
+![Weergave van de interface Namespaces](../images/identity/edge_namespaceUI_identity-symbol.png)
 
 Als klant van de Audience Manager, al uw bestaande Gegevensbronnen die het Type van identiteitskaart gebruiken: Apparaatoverschrijdend heeft automatisch een overeenkomende naamruimte voor identiteit. Als u de overeenkomende naamruimte voor de gegevensbron van uw Audience Manager wilt zoeken, meldt u zich aan bij Adobe Experience Platform en navigeert u naar de sectie Identiteiten.
 
