@@ -1,9 +1,9 @@
 ---
 title: Adobe Media Analytics (3.x SDK) voor overzicht van audio- en videoextensie
 description: Meer informatie over de Adobe Media Analytics (3.x SDK) voor de extensie van de tags Audio en Video in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ U kunt de voorbeeldspeler hier verkrijgen: [Voorbeeldspeler van MA](https://gith
 
 ### Werken met andere extensies
 
-De extensie MA stelt `media` als een gedeelde module aan andere extensies beschikbaar. (Voor extra informatie over Gedeelde Modules, zie [Gedeelde documentatie van Modules](https://developer.adobelaunch.com/extensions/shared_modules/).)
+De extensie MA stelt `media` als een gedeelde module aan andere extensies beschikbaar. (Voor extra informatie over Gedeelde Modules, zie [Gedeelde documentatie van Modules](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
