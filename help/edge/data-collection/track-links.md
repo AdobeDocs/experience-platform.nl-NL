@@ -2,14 +2,13 @@
 title: Koppelingen bijhouden met de Adobe Experience Platform Web SDK
 description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page views;link tracking;links;track links;clickCollection;click collection;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
+source-git-commit: b22eccb34e98ca2da47fe849492ee464d679d2a0
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
-
 
 # Koppelingen bijhouden
 
@@ -27,8 +26,8 @@ alloy("sendEvent", {
         "linkClicks": {
             "value":1
       },
-      "name":"My Custom Link", //Name that shows up in the custom links report
-      "URL":"https://myurl.com", //the URL of the link
+      "name":"My Custom Link", // Name that shows up in the custom links report
+      "URL":"https://myurl.com", // The URL of the link
       "type":"other", // values: other, download, exit
       }
     }
@@ -41,6 +40,8 @@ Het verbindingstype kan één van drie waarden zijn:
 * **`other`:** Een aangepaste koppeling
 * **`download`:** Een downloadkoppeling
 * **`exit`:** Een afsluitkoppeling
+
+Deze waarden worden [automatisch toegewezen](adobe-analytics/automatically-mapped-vars.md) in Adobe Analytics als [configured](adobe-analytics/analytics-overview.md) dit doet.
 
 ## Automatisch koppelingen bijhouden {#automaticLinkTracking}
 
@@ -67,3 +68,25 @@ downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xls
 De verbindingen worden geëtiketteerd als uitgangsverbinding als het domein van het verbindingsdoel van huidige `window.location.hostname` verschilt.
 
 Koppelingen die niet als download- of afsluitkoppeling worden gekwalificeerd, worden aangeduid als &quot;other&quot;.
+
+### Hoe kunnen link-volgende waarden worden gefiltreerd?
+
+De gegevens die met automatische verbinding het volgen worden verzameld kunnen worden geïnspecteerd en worden gefiltreerd door een [onBeforeEventSend callback functie](../fundamentals/tracking-events.md#modifying-events-globally) te verstrekken.
+
+Het filteren van gegevens voor het bijhouden van koppelingen kan handig zijn bij het voorbereiden van gegevens voor rapportage via Analytics. Bij het automatisch bijhouden van koppelingen worden zowel de naam als de URL van de koppeling vastgelegd. In analyserapporten heeft de naam van de koppeling voorrang op de URL van de koppeling. Als u de URL van de koppeling wilt rapporteren, moet de naam van de koppeling worden verwijderd. In het volgende voorbeeld wordt een functie `onBeforeEventSend` getoond die de naam van de koppeling voor downloadkoppelingen verwijdert:
+
+```javascript
+alloy("configure", {
+  onBeforeEventSend: function(options) {
+    if (options
+      && options.xdm
+      && options.xdm.web
+      && options.xdm.web.webInteraction) {
+        if (options.xdm.web.webInteraction.type === "download") {
+          options.xdm.web.webInteraction.name = undefined;
+        }
+    }
+  }
+});
+```
+
