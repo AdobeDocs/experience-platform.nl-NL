@@ -1,9 +1,9 @@
 ---
 title: Overzicht van Adobe Media-analyse voor audio- en videoextensie
 description: Meer informatie over de extensie Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '973'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ De extensie MA exporteert de MediaHeartbone-API&#39;s in het algemene vensterobj
 
 ### Werken met andere extensies
 
-De uitbreiding van MA stelt `get-instance` en `media-heartbeat` gedeelde modules aan andere uitbreidingen bloot. (Voor extra informatie over Gedeelde Modules, zie [Gedeelde documentatie van Modules](https://developer.adobelaunch.com/extensions/shared_modules/).)
+De uitbreiding van MA stelt `get-instance` en `media-heartbeat` gedeelde modules aan andere uitbreidingen bloot. (Voor extra informatie over Gedeelde Modules, zie [Gedeelde documentatie van Modules](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
