@@ -5,7 +5,7 @@ title: Adobe Experience Platform - Overzicht
 topic-legacy: getting started
 description: Adobe Experience Platform stelt organisaties in staat klantgegevens te centraliseren en te standaardiseren voordat ze dataletterdheid en computerleren toepassen, zodat ze het ontwerp en de levering van rijke, persoonlijke ervaringen aanzienlijk kunnen verbeteren.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 5fae56fcfc395984d29c74e90cb56b3964d99767
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 1%
@@ -50,7 +50,7 @@ Ga naar de [Experience Platform zelfstudies](https://www.adobe.com/go/platform-t
 * [**Verklarende woordenlijst**](glossary.md)\
    Adobe Experience Platform-terminologie controleren.
 
-* [**Aanvullende informatie**](https://www.adobe.com/go/platform-release-notes.en)\
+* [**Aanvullende informatie**](https://www.adobe.com/go/platform-release-notes-en)\
    Zoek informatie over de meest recente [!DNL Experience Platform] versie en herzie vorige versies.
 
 * [**Handleiding voor probleemoplossing**](troubleshooting.md)\
