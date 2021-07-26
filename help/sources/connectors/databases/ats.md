@@ -5,22 +5,18 @@ title: Azure Table Storage Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Azure Table Storage kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Azure Table Storage]-connector
+# [!DNL Azure Table Storage] connector
 
->[!NOTE]
->
->De [!DNL Azure Table Storage] schakelaar is in bèta. Zie [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
-
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Tot de ondersteuning voor databaseproviders behoren [!DNL Azure Table Storage].
+Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het Platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Tot de ondersteuning voor databaseproviders behoren [!DNL Azure Table Storage].
 
 ## IP adres lijst van gewenste personen
 
@@ -30,15 +26,15 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 >
 >De [!DNL Azure Table Storage] bronschakelaar steunt momenteel zelfde-gebiedconnectiviteit aan Platform niet. Dit betekent dat als uw Azure-instantie hetzelfde netwerkgebied gebruikt als Platform, een verbinding met bronnen van Platforms niet tot stand kan worden gebracht. Momenteel wordt alleen connectiviteit tussen regio&#39;s ondersteund. Neem contact op met uw Adobe-accountmanager voor meer informatie.
 
-In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure Table Storage] kunt verbinden met [!DNL Platform] via API&#39;s of de gebruikersinterface:
+De onderstaande documentatie biedt informatie over hoe u [!DNL Azure Table Storage] kunt verbinden met een Platform via API&#39;s of de gebruikersinterface:
 
-## Verbind [!DNL Azure Table Storage] met [!DNL Platform] gebruikend APIs
+## [!DNL Azure Table Storage] verbinden met Platform met behulp van API&#39;s
 
 - [Een Azure Table Storage-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/ats.md)
 - [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
 - [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## [!DNL Azure Table Storage] verbinden met [!DNL Platform] gebruikend UI
+## [!DNL Azure Table Storage] verbinden met Platform gebruikend UI
 
 - [Een Azure Table Storage-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/ats.md)
 - [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
