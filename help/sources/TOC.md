@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
-source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '628'
 ht-degree: 5%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 5%
       - [Shopify-connector](connectors/ecommerce/shopify.md)
    - Marketingautomatisering {#marketing-automation}
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
+      - [Salesforce-Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Betalingen {#payments}
       - [PayPal-connector](connectors/payments/paypal.md)
    - Protocollen {#protocols}
@@ -127,6 +128,7 @@ ht-degree: 5%
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketingautomatisering {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocollen {#protocols}
@@ -214,6 +216,7 @@ ht-degree: 5%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
       - Marketingautomatisering {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocollen {#protocols}
