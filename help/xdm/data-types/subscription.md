@@ -5,9 +5,9 @@ title: Gegevenstype abonnement
 topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Subscription Experience Data Model (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d99ddc65849a88350bf61977b399b07989554426
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 8%
 
 ---
