@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Amazon Redshift-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 600b216932a7d19440534c4b190fb2f3766c8785
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Amazon Redshift]-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
->De [!DNL Amazon Redshift] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Amazon Redshift] (hierna &quot;[!DNL Redshift]&quot; genoemd) bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
