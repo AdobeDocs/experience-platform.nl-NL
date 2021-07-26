@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Gegevensmodel telecommunicatiesector ERD
 topic-legacy: overview
 description: Bekijk een diagram van de entiteitverhouding (ERD) dat een gestandaardiseerd gegevensmodel voor de telecommunicatiesector beschrijft, compatibel met het Model van de Gegevens van de Ervaring (XDM) voor gebruik in Adobe Experience Platform.
-source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # [!UICONTROL Telecommunications] bedrijfsgegevensmodel ERD
 
 Het volgende entiteitsrelatiediagram (ERD) vertegenwoordigt een gestandaardiseerd gegevensmodel voor de telecomindustrie. De ERD wordt opzettelijk op een gedenormaliseerde wijze gepresenteerd en er wordt rekening mee gehouden hoe gegevens in Adobe Experience Platform worden opgeslagen.
+
+>[!NOTE]
+>
+>De ERD zoals beschreven is een aanbeveling voor hoe u uw gegevens moet modelleren voor deze branche-gebruikscase. Om van dit gegevensmodel in Platform gebruik te maken, moet u de geadviseerde schema&#39;s en hun verhoudingen zelf construeren. Zie de gidsen over het beheren van [schema&#39;s](../../ui/resources/schemas.md) en [verhoudingen](../../tutorials/relationship-ui.md) in UI voor meer informatie.
 
 Gebruik de volgende legenda om dit ERD te interpreteren:
 
