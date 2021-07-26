@@ -3,9 +3,9 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
+source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '1205'
 ht-degree: 3%
 
 ---
@@ -24,6 +24,22 @@ De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target
 * [Recommendations-activiteiten](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Native doelindruk en conversiemelding](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC-ondersteuning](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+
+## [!DNL Platform Web SDK] systeemdiagram
+
+Het volgende diagram helpt u het werkschema van [!DNL Target] en [!DNL Platform Web SDK] randbesluit begrijpen.
+
+![Diagram van de randbeslissing van Adobe Target met het Web SDK van het Platform](./assets/target-platform-web-sdk.png)
+
+| Bellen | Details |
+| --- | --- |
+| 1 | Het apparaat laadt [!DNL Platform Web SDK]. [!DNL Platform Web SDK] verzendt een verzoek naar het randnetwerk met XDM gegevens, identiteitskaart van het Milieu van Gegevensstromen, overgegaan parameters, en identiteitskaart van de Klant (facultatief). De pagina (of containers) is vooraf verborgen. |
+| 2 | Het Edge-netwerk verzendt de aanvraag naar de Edge-services om deze te verrijken met de informatie over de bezoeker-id, toestemming en andere bezoekerscontext, zoals geolocatie en apparaatvriendelijke namen. |
+| 3 | Het Edge-netwerk verzendt het verrijkte aanpassingsverzoek naar de [!DNL Target]-rand met de Bezoeker-id en doorgegeven-in-parameters. |
+| 4 | Profielscripts worden uitgevoerd en vervolgens opgenomen in de profielopslag van [!DNL Target]. De opslag van het profiel haalt segmenten van [!UICONTROL Audience Library] (bijvoorbeeld, segmenten die van [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform] worden gedeeld). |
+| 5 | Op basis van URL-aanvraagparameters en -profielgegevens bepaalt [!DNL Target] welke activiteiten en ervaringen moeten worden weergegeven voor de bezoeker voor de huidige paginaweergave en voor toekomstige vooraf ingestelde weergaven. [!DNL Target] stuurt dit vervolgens terug naar het Edge-netwerk. |
+| 6 | a. Het randnetwerk verzendt de verpersoonlijkingsreactie terug naar de pagina, naar keuze met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in Één enkele Toepassing van de Pagina (SPA) worden getoond wordt in het voorgeheugen ondergebracht zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. &#x200B;<br>c. Het Edge-netwerk verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie enzovoort. |
+| 7 | Het Edge-netwerk stuurt [!UICONTROL Analytics for Target] (A4T) details (activiteit, ervaring en conversiemetagegevens) door naar de [!DNL Analytics] Edge-&#x200B;. |
 
 ## [!DNL Adobe Target] inschakelen
 
