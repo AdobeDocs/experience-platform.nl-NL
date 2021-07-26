@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u PayPal met Adobe Experience Platform verbindt via de Flow Service API.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 5cb853da21e41b38c88f25a4989a602dbcfceabc
+source-git-commit: 6b6bd67e70267e81c144c37549b0dcba20534eb6
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL PayPal] basisverbinding maken met de [!DNL Flow Service]-API
-
->[!NOTE]
->
->De [!DNL PayPal] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
