@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure Table Storage-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '461'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Azure Table Storage]-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
->De [!DNL Azure Table Storage] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL Azure Table Storage] (hierna &quot;ATS&quot; genoemd) bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
