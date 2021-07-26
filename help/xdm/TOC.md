@@ -4,10 +4,10 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 7%
+source-wordcount: '319'
+ht-degree: 6%
 
 ---
 
@@ -40,11 +40,13 @@ ht-degree: 7%
       * [Persoonlijke contactgegevens](./field-groups/profile/personal-contact-details.md)
       * [Inhoud en voorkeuren](./field-groups/profile/consents.md)
       * [Details segmentlidmaatschap](./field-groups/profile/segmentation.md)
+      * [Telecom-abonnement](./field-groups/profile/telecom-subscription.md)
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
    * Groepen van gebeurtenisvelden {#event}
       * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
       * [Kanaaldetails](./field-groups/event/channel-details.md)
       * [Handelsgegevens](./field-groups/event/commerce-details.md)
+      * [Device Trade-In-details](./field-groups/event/device-trade-in-details.md)
       * [Gegevens van eindgebruiker](./field-groups/event/enduserids.md)
       * [Omgevingsdetails](./field-groups/event/environment-details.md)
       * [IAB TCF 2.0 Toestemming](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 7%
    * [Commerce](./data-types/commerce.md)
    * [Constante tekenreeks](./data-types/consent-string.md)
    * [Inhoud en voorkeuren](./data-types/consents.md)
+   * [Valuta](./data-types/currency.md)
    * [Apparaat](./data-types/device.md)
    * [E-mailadres](./data-types/email-address.md)
    * [Omgeving](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 7%
    * [Product lijstitem](./data-types/product-list-item.md)
    * [Zoeken](./data-types/search.md)
    * [Abonnement](./data-types/subscription.md)
+   * [Telecom-abonnement](./data-types/telecom-subscription.md)
    * [Webinformatie](./data-types/web-information.md)
    * [Webinteractie](./data-types/web-interaction.md)
    * [Webpaginadetails](./data-types/webpage-details.md)
