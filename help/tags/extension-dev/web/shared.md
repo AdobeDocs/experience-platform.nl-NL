@@ -1,9 +1,9 @@
 ---
 title: Gedeelde Modules in webextensies
 description: Leer hoe u gedeelde bibliotheekmodules voor webextensies in Adobe Experience Platform definieert.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,22 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Een gedeelde module is een mechanisme waardoor u met andere uitbreidingen kunt communiceren. In implementaties JavaScript, worden alle gedeelde modules geconcretiseerd gebruikend de [`getSharedModule`](../turbine.md#shared) methode die door de `turbine` vrije variabele wordt verstrekt.
+Een gedeelde module is een mechanisme waardoor u met andere uitbreidingen kunt communiceren. Zo kan Extension A bijvoorbeeld een stukje gegevens asynchroon laden en beschikbaar maken voor Extension B via een [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-Wanneer u uw eigen tagextensie ontwikkelt, kunt u gedeelde modules definiëren die u wilt voorzien van deze extensie. U kunt bijvoorbeeld een module maken die een gebruikers-id asynchroon laadt en vervolgens de gebruikers-id deelt met een andere extensie via een [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+In implementaties JavaScript, worden alle gedeelde modules geconcretiseerd gebruikend de [`getSharedModule`](../turbine.md#shared) methode die door de `turbine` vrije variabele wordt verstrekt.
+
+Gedeelde modules worden opgenomen in tagbibliotheken, zelfs als ze nooit worden aangeroepen vanuit andere extensies. Als u de bibliotheekgrootte niet onnodig wilt vergroten, moet u voorzichtig zijn met wat u als gedeelde module beschikbaar maakt.
+
+De gedeelde modules hebben geen meningscomponent.
+
+Wanneer u uw eigen tagextensie ontwikkelt, kunt u gedeelde modules definiëren die u wilt voorzien van deze extensie. U kunt bijvoorbeeld een module maken die een gebruikers-id asynchroon laadt en vervolgens de gebruikers-id deelt met een andere extensie via een promise:
 
 ```javascript
-var userIdPromise = new Promise(/* load user id, then resolve promise */);
+var userIdPromise = new Promise(/* load user ID, then resolve promise */);
 module.exports = userIdPromise;
 ```
 
-In [extension manifest](../manifest.md) moet u een naam voor deze gedeelde module verstrekken. Als u het `user-id-promise` noemt, kon een verschillende uitbreiding tot deze gedeelde module dan als volgt toegang hebben:
+In [extension manifest](../manifest.md), moet u een naam voor deze gedeelde module verstrekken. Als u het `user-id-promise` noemt, kon een verschillende uitbreiding tot deze gedeelde module dan als volgt toegang hebben:
 
 ```javascript
 var userIdPromise = turbine.getSharedModule('user-extension', 'user-id-promise');
