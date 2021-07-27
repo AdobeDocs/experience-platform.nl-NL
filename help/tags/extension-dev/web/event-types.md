@@ -1,24 +1,33 @@
 ---
 title: Gebeurtenistypen voor webextensies
 description: Leer hoe u een bibliotheekmodule voor het type gebeurtenis definieert voor een webextensie in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 5a6549577c61817f6fe239e1e9e47ab06d2bc807
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
 
-# Gebeurtenistypen
+# Gebeurtenistypen voor webextensies
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Een module van de gebeurtenistype bibliotheek wordt ontworpen om te ontdekken wanneer een activiteit gebeurt en dan een functie te roepen om een bijbehorende regel in brand te steken. De gebeurtenis die wordt gedetecteerd, kan worden aangepast. Kan het detecteren wanneer een gebruiker een bepaalde beweging maakt, snel schuift of iets dergelijks doet?
+In een labelregel is een gebeurtenis een activiteit die moet plaatsvinden voordat een regel kan worden geactiveerd. Een webextensie kan bijvoorbeeld een &#39;gebaargebeurtenis&#39; leveren die controleert of een bepaalde muis- of aanraakbeweging plaatsvindt. Zodra de beweging voorkomt, zou de gebeurtenislogica de regel in brand steken.
+
+Een module van de gebeurtenistype bibliotheek wordt ontworpen om te ontdekken wanneer een activiteit gebeurt en dan een functie te roepen om een bijbehorende regel in brand te steken. De gebeurtenis die wordt gedetecteerd, kan worden aangepast. Bijvoorbeeld, kon ontdekken wanneer een gebruiker een bepaalde beweging maakt, snel scrolt, of met iets in wisselwerking staat.
+
+In dit document wordt beschreven hoe u gebeurtenistypen voor een webextensie in Adobe Experience Platform definieert.
 
 >[!NOTE]
 >
->In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze worden geïntegreerd in tagextensies. Zie het overzicht op [bibliotheekmodule formatteren](./format.md) voor een inleiding aan hun implementatie alvorens aan deze gids terug te keren.
+>In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Zie het overzicht op [bibliotheekmodule formatteren](./format.md) voor een inleiding aan hun implementatie alvorens aan deze gids terug te keren.
+
+Gebeurtenistypen worden gedefinieerd door extensies en bestaan doorgaans uit de volgende kenmerken:
+
+1. Een [weergave](./views.md) wordt weergegeven in de gebruikersinterface voor gegevensverzameling waarmee gebruikers instellingen voor de gebeurtenis kunnen wijzigen.
+2. Een bibliotheekmodule die wordt uitgegeven in de tagruntime-bibliotheek om de instellingen te interpreteren en te controleren of een bepaalde activiteit plaatsvindt.
 
 `module.exports` accepteer zowel de  `settings` als de  `trigger` parameters. Dit maakt het aanpassen van het gebeurtenistype mogelijk.
 
@@ -95,9 +104,9 @@ trigger({
 
 ## Regelvolgorde respecteren
 
-Met tags in Adobe Experience Platform kunnen gebruikers regels bestellen. Een gebruiker kan bijvoorbeeld twee regels maken die zowel het gebeurtenistype oriëntatie wijzigen als de volgorde waarin de regels worden doorlopen. Ervan uitgaande dat de Adobe Experience Platform-gebruiker een bestelwaarde van `2` opgeeft voor de gebeurtenis die de oriëntatiewijziging in Regel A veroorzaakt en een orderwaarde van `1` voor de gebeurtenis die de oriëntatiewijziging in Regel B veroorzaakt. Dit geeft aan dat wanneer de oriëntatie op een mobiel apparaat verandert, regel B vóór regel A moet worden geactiveerd (regels met lagere volgordewaarden worden eerst geactiveerd).
+Met labels kunnen gebruikers regels bestellen. Een gebruiker kan bijvoorbeeld twee regels maken die zowel het gebeurtenistype oriëntatie wijzigen als de volgorde waarin de regels worden doorlopen. Ervan uitgaande dat de Adobe Experience Platform-gebruiker een bestelwaarde van `2` opgeeft voor de gebeurtenis die de oriëntatiewijziging in Regel A veroorzaakt en een orderwaarde van `1` voor de gebeurtenis die de oriëntatiewijziging in Regel B veroorzaakt. Dit geeft aan dat wanneer de oriëntatie op een mobiel apparaat verandert, regel B vóór regel A moet worden geactiveerd (regels met waarden in een lagere volgorde worden eerst geactiveerd).
 
-Zoals eerder vermeld, zal de uitgevoerde functie in onze gebeurtenismodule eens voor elke regel worden geroepen die om ons gebeurtenistype is gevormd te gebruiken. Elke keer dat de geëxporteerde functie wordt aangeroepen, wordt deze een unieke functie `trigger` doorgegeven die aan een specifieke regel is gekoppeld. In het zojuist beschreven scenario wordt onze geëxporteerde functie één keer aangeroepen met een functie `trigger` gekoppeld aan regel B en vervolgens opnieuw met een functie `trigger` gekoppeld aan regel A. Regel B komt eerst omdat de gebruiker het een lagere ordewaarde dan Regel A heeft gegeven. Wanneer onze bibliotheekmodule een oriëntatiewijziging detecteert, is het belangrijk dat we de `trigger`-functies in dezelfde volgorde aanroepen als de functies die aan de bibliotheekmodule zijn toegewezen.
+Zoals eerder vermeld, zal de uitgevoerde functie in onze gebeurtenismodule eens voor elke regel worden geroepen die om ons gebeurtenistype is gevormd te gebruiken. Elke keer dat de geëxporteerde functie wordt aangeroepen, wordt deze een unieke functie `trigger` doorgegeven die aan een specifieke regel is gekoppeld. In het zojuist beschreven scenario wordt onze geëxporteerde functie één keer aangeroepen met een functie `trigger` gekoppeld aan regel B en vervolgens opnieuw met een functie `trigger` gekoppeld aan regel A. Regel B komt eerst omdat de gebruiker het een lager-ordewaarde dan Regel A heeft gegeven. Wanneer onze bibliotheekmodule een oriëntatiewijziging detecteert, is het belangrijk dat we de `trigger`-functies in dezelfde volgorde aanroepen als de functies die aan de bibliotheekmodule zijn toegewezen.
 
 In de voorbeeldcode hieronder, merk op dat wanneer een oriëntatieverandering wordt ontdekt, de trekkerfuncties in de zelfde orde worden geroepen zij aan onze uitgevoerde functie werden verstrekt:
 
