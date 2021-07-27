@@ -5,9 +5,9 @@ title: UI-gids voor zoekprogramma
 topic-legacy: query editor
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1533'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,57 @@ Terwijl u een vraag in [!DNL Query Editor] bekijkt, **[!UICONTROL Query Details]
 
 ![Afbeelding](../images/ui/query-editor/query-details.png)
 
-In dit deelvenster kunt u rechtstreeks vanuit de gebruikersinterface een uitvoergegevensset genereren, de weergegeven query verwijderen of een naam geven en de SQL-code in een gemakkelijk te kopiëren indeling weergeven op het tabblad **[!UICONTROL SQL Query]**. In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste keer dat de query werd gewijzigd en de eventuele wijziging. Selecteer **[!UICONTROL Output Dataset]** om een gegevensset te genereren. Het dialoogvenster **[!UICONTROL Output Dataset]** wordt weergegeven. Voer een naam en beschrijving in en selecteer **[!UICONTROL Run Query]**. De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** tabel op [!DNL Query Service] gebruikersinterface op [!DNL Platform].
+Dit paneel staat u toe om een outputdataset direct van UI te produceren, de getoonde vraag te schrappen of te noemen, en een programma aan de vraag toe te voegen.
+
+In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste keer dat de query werd gewijzigd en de eventuele wijziging. Selecteer **[!UICONTROL Output Dataset]** om een gegevensset te genereren. Het dialoogvenster **[!UICONTROL Output Dataset]** wordt weergegeven. Voer een naam en beschrijving in en selecteer **[!UICONTROL Run Query]**. De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** tabel op [!DNL Query Service] gebruikersinterface op [!DNL Platform].
+
+### Geplande query&#39;s {#scheduled-queries}
+
+>[!NOTE]
+>
+> U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd. Bovendien, zult u **not** een programma aan een parameterized vraag kunnen toevoegen.
+
+Om een programma aan een vraag toe te voegen, selecteer **[!UICONTROL Add schedule]**.
+
+![Afbeelding](../images/ui/query-editor/add-schedule.png)
+
+De pagina **[!UICONTROL Schedule details]** wordt weergegeven. Op deze pagina, kunt u de frequentie van de geplande vraag kiezen, de data de geplande vraag zal lopen, evenals welke dataset om de vraag naar uit te voeren.
+
+![Afbeelding](../images/ui/query-editor/schedule-details.png)
+
+U kunt de volgende opties kiezen voor **[!UICONTROL Frequency]**:
+
+- **[!UICONTROL Hourly]**: De geplande vraag zal elk uur voor de datumperiode lopen u selecteerde.
+- **[!UICONTROL Daily]**: De geplande query wordt elke X dagen uitgevoerd op het moment en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd zich in **UTC** bevindt en niet in uw lokale tijdzone.
+- **[!UICONTROL Weekly]**: De geselecteerde query wordt uitgevoerd op de dagen van de week, tijd en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd zich in **UTC** bevindt en niet in uw lokale tijdzone.
+- **[!UICONTROL Monthly]**: De geselecteerde vraag zal elke maand op de dag, de tijd, en de datumperiode lopen u selecteerde. Houd er rekening mee dat de geselecteerde tijd zich in **UTC** bevindt en niet in uw lokale tijdzone.
+- **[!UICONTROL Yearly]**: De geselecteerde vraag zal elk jaar op de dag, de maand, de tijd, en de datumperiode lopen u selecteerde. Houd er rekening mee dat de geselecteerde tijd zich in **UTC** bevindt en niet in uw lokale tijdzone.
+
+Voor de dataset, hebt u de optie om of een bestaande dataset te gebruiken of een nieuwe dataset tot stand te brengen.
+
+>[!IMPORTANT]
+>
+> Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, moet u **not** of `INSERT INTO` als deel van de vraag omvatten, aangezien de datasets reeds worden geplaatst. `CREATE TABLE AS SELECT` Het opnemen van `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van uw geplande vragen zal in een fout resulteren.
+
+Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om een schema te maken.
+
+De pagina van vraagdetails verschijnt opnieuw, en nu het tonen van de details van het pas gecreëerde programma, met inbegrip van planningsidentiteitskaart, het programma zelf, en de de outputdataset van het programma. U kunt programmaidentiteitskaart gebruiken om meer informatie over de looppas van de geplande vraag zelf te zoeken. Lees voor meer informatie de [Geplande handleiding voor de eindpunten van querybewerkingen](../api/runs-scheduled-queries.md).
+
+>[!NOTE]
+>
+> U kunt **one** vraagmalplaatje slechts plannen gebruikend UI. Als u extra programma&#39;s aan een vraagmalplaatje wilt toevoegen, zult u API moeten gebruiken. Als een programma reeds gebruikend API is toegevoegd, zult u **not** extra programma&#39;s gebruikend UI toevoegen. Als de veelvoudige programma&#39;s reeds in bijlage aan een vraagmalplaatje zijn, slechts zal het oudste programma worden getoond. Om te leren hoe te om programma&#39;s toe te voegen gebruikend API, te lezen gelieve [geplande gids van het vraageindpunt](../api/scheduled-queries.md).
+>
+> Bovendien, zou u de pagina moeten verfrissen als u wilt verzekeren u de recentste staat voor het programma hebt u bekijkt.
+
+#### Een schema verwijderen
+
+U kunt een programma schrappen door **[!UICONTROL Delete a schedule]** te selecteren.
+
+![Afbeelding](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> Als u een programma voor een vraag wilt schrappen, moet u eerst het programma onbruikbaar maken.
 
 ### Bezig met opslaan van query&#39;s
 
