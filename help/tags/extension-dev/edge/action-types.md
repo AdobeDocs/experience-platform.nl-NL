@@ -1,9 +1,9 @@
 ---
 title: Typen handelingen voor randextensies
 description: Leer hoe u een bibliotheekmodule van het type action definieert voor een tagextensie in een randeigenschap.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,22 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Een actie-type bibliotheekmodule wordt ontworpen om een vooraf bepaalde actie te nemen. Het effect van deze handeling wordt volledig gedefinieerd door de auteur. De module zou als baken kunnen worden gecreeerd of zelfs sommige gegevens van de gebeurtenis transformeren.
+In een markeringsregel, is een actie iets dat wordt uitgevoerd nadat de regelvoorwaarden evaluatie hebben overgegaan. Actietypen worden geleverd door extensies en de effecten ervan worden volledig gedefinieerd door de auteur van de extensie.
+
+Een extensie kan bijvoorbeeld een actietype &#39;showsupport chat&#39; weergeven, dat een dialoogvenster voor supportchatten kan weergeven om gebruikers te helpen die problemen kunnen ondervinden bij het uitchecken.
+
+In dit document wordt beschreven hoe u actietypen voor een randextensie in Adobe Experience Platform definieert.
 
 >[!IMPORTANT]
 >
->Dit document behandelt actietypen voor randuitbreidingen. Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids over [actietypes voor Webuitbreidingen](../web/action-types.md).
+>Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids over [actietypes voor Webuitbreidingen](../web/action-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze worden geïntegreerd in tagextensies. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+
+Handelingstypen bestaan doorgaans uit:
+
+1. Een mening die binnen UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor de actie te wijzigen.
+2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en een actie uit te voeren.
 
 Bijvoorbeeld, kan een module om sommige gegevens aan een derdeeindpunt door:sturen als dit kijken.
 
