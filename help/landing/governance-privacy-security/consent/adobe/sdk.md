@@ -3,9 +3,9 @@ title: Gegevens met toestemming van de klant verwerken met de Adobe Experience P
 topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten in Adobe Experience Platform te verwerken met behulp van de Adobe 2.0-standaard.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1253'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 0%
 Met de Adobe Experience Platform Web SDK kunt u de door CMP&#39;s (Consent Management Platforms) gegenereerde toestemmingssignalen van klanten ophalen en deze naar Adobe Experience Platform verzenden wanneer er een gebeurtenis plaatsvindt waarbij de toestemming wordt gewijzigd.
 
 **De SDK interface niet met CMP&#39;s uit het vak**. Het is aan u om te bepalen hoe te om SDK in uw website te integreren, naar toestemmingsveranderingen in CMP te luisteren, en het aangewezen bevel te roepen. Dit document biedt algemene richtlijnen voor het integreren van uw CMP met de Web SDK van het Platform.
+
+>[!NOTE]
+>
+>Deze gids doorloopt de stappen om SDK door een markeringsuitbreiding in de Inzameling van Gegevens UI te integreren. Raadpleeg de volgende documenten als u in plaats daarvan de zelfstandige versie van de SDK wilt gebruiken:
+>
+>* [Een gegevensstroom configureren](../../../../edge/fundamentals/datastreams.md)
+* [De SDK installeren](../../../../edge/fundamentals/installing-the-sdk.md)
+* [De SDK configureren voor toestemmingsopdrachten](../../../../edge/consent/supporting-consent.md)
+
 
 ## Vereisten
 
@@ -44,7 +53,7 @@ Nadat u een nieuwe configuratie hebt gemaakt of een bestaande configuratie hebt 
 Wanneer gebeëindigd, selecteer **[!UICONTROL Save]** bij de bodem van het scherm en ga na om het even welke extra herinneringen verder om de configuratie te voltooien.
 
 
-## Installeer en vorm de uitbreiding van SDK van het Web van het Platform
+## De SDK van het Web Platform installeren en configureren
 
 Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap Platform launch is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door het tabblad **[!UICONTROL Catalog]**. Selecteer vervolgens **[!UICONTROL Install]** onder de extensie SDK van Platform in de lijst met beschikbare extensies.
 
@@ -86,7 +95,7 @@ Zodra het gegevenselement wordt gecreeerd, navigeer terug naar de de uitbreiding
 
 Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Raadpleeg de [publicatiegids](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in de documentatie van de Platform launch voor gedetailleerde informatie over hoe te om uw bijgewerkte bibliotheek op te stellen bouwt.
 
-## Opdrachten voor wijzigen van toestemming maken
+## Opdrachten voor wijzigen van toestemming maken {#commands}
 
 Nadat u de SDK-extensie hebt geïntegreerd in uw website, kunt u de opdracht `setConsent` van Web SDK van Platform gebruiken om gegevens met toestemming naar het Platform te verzenden.
 
@@ -96,8 +105,7 @@ Er zijn twee scenario&#39;s waarin `setConsent` op uw plaats zou moeten worden g
 1. Als onderdeel van een CMP-haak of gebeurtenislistener die wijzigingen in toestemmingsinstellingen detecteert
 
 >[!NOTE]
->
->Voor een inleiding aan de gemeenschappelijke syntaxis voor de bevelen van SDK van het Platform, zie het document op [uitvoerend bevelen](../../../../edge/fundamentals/executing-commands.md).
+Voor een inleiding aan de gemeenschappelijke syntaxis voor de bevelen van SDK van het Platform, zie het document op [uitvoerend bevelen](../../../../edge/fundamentals/executing-commands.md).
 
 De opdracht `setConsent` verwacht twee argumenten:
 
@@ -138,8 +146,7 @@ alloy("setConsent", {
 | `value` | De bijgewerkte toestemmingsinformatie van de klant, die als voorwerp XDM wordt verstrekt die aan de structuur van de profiel-Toegelaten de toestemmingsgebieden van de dataset in overeenstemming is. |
 
 >[!NOTE]
->
->Als u andere toestemmingsnormen samen met `Adobe` (zoals `IAB TCF`) gebruikt, kunt u extra voorwerpen aan `consent` serie voor elke norm toevoegen. Elk object moet geschikte waarden voor `standard`, `version` en `value` bevatten voor de toestemmingsstandaard die ze vertegenwoordigen.
+Als u andere toestemmingsnormen samen met `Adobe` (zoals `IAB TCF`) gebruikt, kunt u extra voorwerpen aan `consent` serie voor elke norm toevoegen. Elk object moet geschikte waarden voor `standard`, `version` en `value` bevatten voor de toestemmingsstandaard die ze vertegenwoordigen.
 
 In het volgende JavaScript ziet u een voorbeeld van een functie die de voorkeurswijzigingen voor toestemming op een website verwerkt. Deze functie kan worden gebruikt als callback in een gebeurtenislistener of een CMP-haak:
 
