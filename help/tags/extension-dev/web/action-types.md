@@ -1,9 +1,9 @@
 ---
 title: Typen handelingen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het type action definieert voor een tagextensie in een webeigenschap.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,22 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Een bibliotheekmodule van het handelingstype is bedoeld om een vooraf gedefinieerde handeling uit te voeren. Wat deze actie doet, is volledig aan u. Wilt u een baken verzenden, een aanbieding tonen, de gebruiker bedanken voor het bezoeken, sparen een koekje, of een steunpraatje openen?
+In de context van de markeringen van de gegevensinzameling, is een actie iets dat wordt uitgevoerd nadat een regelgebeurtenis is voorgekomen en alle voorwaarden evaluatie hebben overgegaan.
+
+Een extensie kan bijvoorbeeld een actietype &#39;showsupport chat&#39; weergeven, dat een dialoogvenster voor supportchatten kan weergeven om gebruikers te helpen die problemen kunnen ondervinden bij het uitchecken.
+
+In dit document wordt beschreven hoe u actietypen voor een webextensie in Adobe Experience Platform definieert.
 
 >[!IMPORTANT]
 >
 >In dit document worden actietypen voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [actietypes voor randuitbreidingen](../edge/action-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze worden geïntegreerd in tagextensies. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+
+Handelingstypen bestaan doorgaans uit:
+
+1. Een [mening](./views.md) getoond binnen de UI van de Inzameling van Gegevens die gebruikers toestaat om montages voor de actie te wijzigen.
+2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en een actie uit te voeren.
 
 ```js
 module.exports = function(settings) {
