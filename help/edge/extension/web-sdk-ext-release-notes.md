@@ -3,10 +3,10 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
+source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 1%
+source-wordcount: '1096'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +14,16 @@ ht-degree: 1%
 
 Dit document behandelt de releaseopmerkingen voor de Adobe Experience Platform Web SDK-extensie voor Adobe Experience Platform Launch. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 1 juni 2021
+## Versie 2.6.0 - 27 juli 2021
 
-### Adobe Experience Platform Web SDK 2.5.0
+* De etiketten, de beschrijvingen, en de foutenmeldingen die de term &quot;randconfiguratie&quot;gebruiken zijn veranderd om de term &quot;datastream&quot;te gebruiken om zich aan de recentste terminologie van Adobe Experience Platform te richten.
+* In de mening van de uitbreidingsconfiguratie, werd de steun toegevoegd voor de behandeling van grote aantallen gegevensstromen en gegevensstroommilieu&#39;s.
+* In de het gegevenselementenmening van Objecten XDM, werd de steun toegevoegd voor de behandeling van grote aantallen schema&#39;s.
+* Er is een gebeurtenistype Send Event Complete toegevoegd, dat kan worden gebruikt om een regel uit te voeren nadat een gebeurtenis naar de server is verzonden en een reactie is ontvangen. Meer documentatie is binnenkort beschikbaar.
+* Het gebeurtenistype Besluiten ontvangen is afgekeurd. Gebruik in plaats hiervan het gebeurtenistype Send Event Complete.
+* De gebruikersinterface en foutafhandeling zijn over het algemeen verbeterd.
+
+## Versie 2.5.0 - 1 juni 2021
 
 Bevat versie 2.5.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
@@ -24,9 +31,7 @@ Bevat versie 2.5.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 * In de gegevenselementweergave van het XDM-object is een probleem opgelost waarbij een fout is gegenereerd als de gebruiker toegang had tot Adobe Experience Platform-sandboxen maar niet tot de sandbox die als standaard voor de organisatie is geconfigureerd.
 * In de weergave van het gegevenselement XDM Object is een probleem opgelost waarbij een vereist schemaveld als ongeldig wordt beschouwd, zelfs als het bovenliggende object geen waarden bevat.
 
-## 9 maart 2021
-
-### Adobe Experience Platform Web SDK 2.4.0
+## Versie 2.4.0 - 9 maart 2021
 
 Bevat versie 2.4.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
@@ -37,46 +42,25 @@ Bevat versie 2.4.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 * Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
 * Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
-## 4 november 2020
-
-### Adobe Experience Platform Web SDK 2.3.0
+## Versie 2.3.0 - 4 november 2020
 
 Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
-
-#### Functies
 
 * Toegevoegde steun voor het gebruiken van een gegevenselement wanneer het vormen van standaardtoestemming.
 * Toegevoegde mogelijkheid om te zoeken naar XDM-schema&#39;s met het gegevenstype XDM Object.
 * Het toegevoegde klonen van XDM gegevens binnen het Send actietype van de Gebeurtenis om ervoor te zorgen dat om het even welke verdere veranderingen in het XDM gegevensvoorwerp niet in het verzoek zullen worden weerspiegeld.
 
-## 1 oktober 2020
-
-### Adobe Experience Platform Web SDK 2.2.0
-
-#### Opgeloste problemen
+## Versie 2.2.0 - 1 oktober 2020
 
 * Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. API die Platform roept is zich nu bewust van milieu&#39;s zodat worden de gebruikers slechts voorgesteld van die schema&#39;s die zij toegang hebben om uit te geven.
-
-#### Functies
-
 * Wanneer u het gegevenselement `identityMap` gebruikt, worden de naamruimten nu vooraf ingevuld in een vervolgkeuzelijst, zodat u deze niet handmatig hoeft in te vullen.
 * De interface voor het gegevenselement `xdmObject` is vernieuwd. In de nieuwe UI, kunt u zien welke gebieden zijn bevolkt zonder het moeten elk punt in het voorwerp ingaan.
 
-
-## 26 augustus 2020
-
-### Adobe Experience Platform Web SDK 2.1.1
-
-#### Functies
+## Versie 2.1.1 - 26 augustus 2020
 
 * Hiermee wordt een probleem verholpen waarbij Adobe Experience Platform-sandboxen in de weergave XDM-object onjuist worden weergegeven. Als bij het gebruik van deze versie van de extensie een verwachte sandbox niet in de lijst wordt weergegeven, moet de gebruiker bij de Adobe Experience Platform-beheerder controleren of de toegangsrechten correct zijn ingesteld.
 
-
-## 5 augustus 2020
-
-### Adobe Experience Platform Web SDK 2.1.0
-
-#### Functies
+## Versie 2.1.0 - 5 augustus 2020
 
 * Wijziging van regeleinde: Verwijder de `syncIdentity` actie en steun die IDs in de `sendEvent` actie in plaats daarvan overgaan. Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
 * Bijwerken naar versie 2.1.0 ([Opmerkingen bij de release](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
@@ -86,21 +70,11 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 * Ondersteuning voor het doorgeven van een identiteitsoverzicht in de handeling `setConsent`.
 * Ondersteuning voor het kiezen van een Platform-sandbox in het XDM Object Data Element.
 
-
-## 26 mei 2020
-
-### Adobe Experience Platform Web SDK 1.0.0
-
-#### Functies
+## Versie 1.0.0 - 26 mei 2020
 
 * Steun die het milieu van de Dienst van de Configuratie selecteert.
 
-
-## 4 mei 2020
-
-### Adobe Experience Platform Web SDK 0.1.2
-
-#### Functies
+## Versie 0.1.2 - 4 mei 2020
 
 * Naam gewijzigd in `configId` in `edgeConfigId`.
 * Naam gewijzigd in `viewStart` in `renderDecisions`, standaard ingesteld op false. Indien ingesteld op true, worden aanbiedingen voor personalisatie opgehaald en automatisch weergegeven.
@@ -117,20 +91,12 @@ Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aa
 * Als u foutopsporing inschakelt met `_satellite`, wordt foutopsporing nu ingeschakeld in de SDK van het Adobe Experience Platform-web.
 * Toegevoegde ondersteuning voor getypte waarden in het XDM-object: Booleaanse cijfers, getallen en decimalen.
 
-## 16 maart 2020
-
-### Adobe Experience Platform Web SDK 0.0.10
-
-#### Functies
+## Versie 0.0.10 - 16 maart 2020
 
 * Gecombineerd de concepten Opt-In &amp; Opt-Out onder `Consent`, en voegde een nieuw `setConsent` bevel toe.
 * Er is een nieuw gegevenselement van het type `XDM Object` toegevoegd dat toewijzing van JavaScript/JSON aan XDM toestaat.
 
-## 18 februari 2020
-
-### Adobe Experience Platform Web SDK 0.0.7
-
-#### Functies
+## Versie 0.0.7 - 18 februari 2020
 
 * Verwijderd idSyncContainerId, datasetId, schemaId, urlDestinationEnabled en cookieDesturesEnabled opties
 * Toegevoegde ondersteuning voor afbreekstreepjes in de waarde van de optie edgeDomain
@@ -139,61 +105,17 @@ Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aa
 * Wanneer het uitvoeren van een ongeldig bevel, zal een lijst van geldige bevelnamen in de console worden geregistreerd
 * Selectievakje toegevoegd voor het schakelen van Cookie-ondersteuning van derden naar de Adobe Experience Platform Launch-extensie. Dit maakt vraag aan demdex.net onbruikbaar
 
-## 20 december 2019
-
-### Adobe Experience Platform Web SDK 0.0.5
-
-#### Functies
+## Versie 0.0.5 - 20 december 2019
 
 * Activiteitenbeheer toevoegen aan Platform launch Extension
 * EventType en EventMergeId beschikbaar maken voor de opdracht event
 * OnBeforeEventSend config toevoegen aan Platform launch Extension
 * EdgeBasePath-configuratie toevoegen aan Platform launch Extension
 
-#### Bijwerken naar Alloy versie 0.0.10 met de volgende wijzigingen:
-
-* Clientopslag implementeren: De status en cookies die logica naar de server zijn verplaatst
-* EventType en EventMergeId beschikbaar maken voor de opdracht event
-* Gebruik sendBeacon voor verbinding het volgen buiten uitgangsverbindingen
-* ID-syntaxis na controle op vervaldatum terughalen
-* setCustomerIds command not hashing ids on non-SSL (http) pages
-* Geef het APEX-domein door aan de server die moet worden gebruikt voor het instellen van status/cookies
-* De ECID van het antwoord oppakken met een nieuw type greep
-* Standaardinstellingen voor activering en identiteitsconfiguratie verwijderen
-* Naam wijzigen + queryopties verplaatsen naar meta
-* Oudere ECID-migratie
-
-#### Opgeloste problemen
-
-* Voor onverwachte statuscode parseert en formatteert de reactielichaam voor foutenmelding
-* Het runnen zuivert bevel of het gebruiken van alloy_debug wordt overschreven door configuratie
-
-## 25 november 2019
-
-### Adobe Experience Platform Web SDK 0.0.3
-
-#### Functies
+## Versie 0.0.3 - 25 november 2019
 
 * De nieuwe gebieden van de Fusie ID en van het Type op de Send actie van de Gebeurtenis. Identiteitskaart van de fusie brengt aan `xdm.eventMergeID` in het XDM schema en het Type brengt aan `xdm.eventType` in het XDM schema in kaart.
-* Verbeterde foutafhandeling en -rapportage
-* Gebruikt nu `sendBeacon` voor alle koppelingen
 
-#### Opgeloste problemen
+## Versie 0.0.2 - 18 november 2019
 
-* Probleem verholpen waarbij foutopsporing door een querytekenreeksparameter of de opdracht `debug` niet zou blijven bestaan tijdens de sessie.
-
-## 18 november 2019
-
-### Adobe Experience Platform Web SDK 0.0.2
-
-#### Functies
-
-* Extensie is in gebruik genomen
-* ECID-ondersteuning zonder extra aanroepen van bibliotheken of netwerken
-* Ondersteuning voor aanmelden
-* Ondersteuning voor het verzenden van XDM naar Platform
-* Ondersteuning voor eerste domein
-* Browsercontext automatisch verzamelen
-* Volledige open bron ([extension](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
-* Gedetailleerde logboekregistratie
-* Mogelijkheid om fouten in de productie te verbergen
+* Eerste release
