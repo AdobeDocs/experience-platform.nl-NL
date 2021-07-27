@@ -5,10 +5,9 @@ title: Het geplande Eindpunt van Vragen API
 topic-legacy: scheduled queries
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -125,7 +124,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vra
 
 ### Nieuwe geplande query maken
 
-U kunt een nieuwe geplande vraag tot stand brengen door een verzoek van de POST aan het `/schedules` eindpunt te doen.
+U kunt een nieuwe geplande vraag tot stand brengen door een verzoek van de POST aan het `/schedules` eindpunt te doen. Wanneer u een geplande query maakt in de API, kunt u deze ook zien in de Query-editor. Voor meer informatie over geplande vragen in UI, te lezen gelieve [de documentatie van de Redacteur van de Vraag](../ui/user-guide.md#scheduled-queries).
 
 **API-indeling**
 
