@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
+source-git-commit: 1b750f0dc51983251d39515de15cd0286f5b51c1
 workflow-type: tm+mt
-source-wordcount: '2951'
+source-wordcount: '2854'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een voll
 
    >[!IMPORTANT]
    >
-   >De optie om bestanden op een bepaald tijdstip te exporteren bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten.<br> <br> Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten.  <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+   >Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten. <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
@@ -199,19 +199,15 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 
    * Wanneer u **[!UICONTROL Hourly]** selecteert, gebruikt u de **[!UICONTROL Every]**-kiezer om te kiezen tussen de uuropties **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** en **[!UICONTROL 12]**.
 
-      >[!IMPORTANT]
-      >
-      >De optie om incrementele bestanden om de 3, 6, 8 of 12 uur te exporteren, bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten. Klanten die geen bètaversie zijn, kunnen incrementele bestanden eenmaal per dag exporteren.
 
-
-2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
+1. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
 
    >[!IMPORTANT]
    >
-   >De optie om de tijd van de dag voor de uitvoer te selecteren is slechts beschikbaar aan een geselecteerd aantal klanten. <br> <br> Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten.  <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+   >Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten. <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
-3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
-4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
+1. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
+1. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
 
 >[!IMPORTANT]
 >
@@ -302,10 +298,6 @@ Men adviseert dat één van de attributen een [unieke herkenningsteken](../../de
 >title="Deduplicatietoetsen"
 >abstract="U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. Selecteer één naamruimte of maximaal twee XDM-schemakenmerken als een deduplicatietoets. Als u geen deduplicatietoets selecteert, kan dit leiden tot dubbele profielvermeldingen in de exportbestanden."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Meer informatie in documentatie"
-
->[!IMPORTANT]
->
->De optie om deduplicatietoetsen te gebruiken is momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten.
 
 Deduplicatietoetsen maken het onmogelijk meerdere records van hetzelfde profiel in één exportbestand te hebben.
 
