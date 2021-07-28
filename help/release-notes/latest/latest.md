@@ -1,46 +1,51 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform voor 30 juni 2021.
+description: Opmerkingen bij de release van Experience Platform voor 28 juli 2021.
 doc-type: release notes
-last-update: June 30, 2021
+last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
+source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 2%
+source-wordcount: '387'
+ht-degree: 3%
 
 ---
 
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 30 juni 2021**
+**Releasedatum: 28 juli 2021**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Klantprofiel in realtime](#profile)
-- [Sandboxen](#sandboxes)
+- [Werkruimte voor gegevenswetenschap](#dsw)
+- [Experience Data Model (XDM)](#xdm)
 - [Bronnen](#sources)
 
-## Klantprofiel in realtime {#profile}
+## Werkruimte voor gegevenswetenschap {#dsw}
 
-Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
 
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Workflowupdates voor samenvoegen | Wanneer het creëren van en het bijwerken van fusiebeleid in UI, kunnen de gebruikers nu voorproef 20 steekproefprofielen die op het unieschema worden gebaseerd. Op deze manier kunnen gebruikers een voorvertoning weergeven van de profielen van klanten voordat ze configuraties met samenvoegbeleid opslaan. Voor meer informatie, zie [de gids UI van het samenvoegbeleid](../../profile/merge-policies/ui-guide.md). |
-| Rapport voor overlappen van identiteit | Het rapport voor identiteitsoverlap maakt deel uit van de Real-Time Customer Profile API en biedt zichtbaarheid in de samenstelling van de Profile Store. Gebruikend het `/previewsamplestatus` eindpunt, blootlegt het identiteitsoverlap rapport de identiteiten die het meest aan adresseerbare publiek bijdragen. Voor meer informatie gaat u naar de [voorbeeldstatus API-eindpuntgids](../../profile/api/preview-sample-status.md). |
-
-Voor meer informatie over het profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door [Overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
-
-## Sandboxen {#sandboxes}
-
-Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+**Nieuwe functies**
 
 | Functie | Beschrijving |
-| ------- | ----------- |
-| Verbeteringen voor het opnieuw instellen van de productiessandbox | U kunt nu productiesandboxen herstellen die voor bidirectioneel segment delen met Adobe Audience Manager of de Dienst van de Kern van de Audience worden gebruikt. Dit kan of van UI, of door de nieuwe `validationOnly` en `ignoreWarnings` parameters in API te gebruiken worden gedaan. Zie de zelfstudies over het opnieuw instellen van een sandbox in de UI](../../sandboxes/ui/user-guide.md) en [het opnieuw instellen van een sandbox in de API](../../sandboxes/api/sandboxes.md) voor meer informatie.[ |
+| --- | --- |
+| Bibliotheek- en besturingssysteemupdates | De Werkruimte van de Wetenschap van gegevens heeft significante bibliotheek en OS updates gemaakt om functionaliteit en bruikbaarheid te verbeteren. Dit omvat JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 met CUDA 11 en CUDNN 8 steun, en meer. Meer informatie over het weergeven van de beschikbare bibliotheken in JupyterLab vindt u in de sectie [Ondersteunde bibliotheken](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) in de documentatie bij het overzicht van JupyterLab-laptops. |
+
+Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, verwijs naar [Overzicht van de Werkruimte van de Wetenschap van Gegevens](../../data-science-workspace/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wordt ontworpen om de kracht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor gegevens in de vorm van schema&#39;s, die om het even welke toepassing toestaan om met de diensten van de Platform te communiceren.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Telecommunicatie-industrie, filter | Wanneer het toevoegen van gebiedsgroepen aan een schema in UI, kunt u nu door de telecommunicatiesector filtreren. Zie het [diagram van de de entiteitverhouding van de telecommunicatiesector (ERD)](../../xdm/schema/industries/telecom.md) om een geadviseerd gegevensmodel voor telecomgebruiksgevallen te zien. |
+
+Voor meer algemene informatie over XDM in Platform, verwijs naar [XDM System overview](../../xdm/home.md).
 
 ## Bronnen {#sources}
 
@@ -50,7 +55,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!DNL Veeva CRM] (bèta) | U kunt [!DNL Veeva CRM] nu met Experience Platform verbinden gebruikend [!DNL Flow Service] API of UI. Zie [[!DNL Veeva CRM] connectoroverzicht](../../sources/connectors/crm/veeva.md) voor meer informatie. |
-| Ondersteuning voor het controleren van streaming-gegevensstromen | U kunt de werkruimte van bronUI nu gebruiken om de activiteiten van de gegevensopname van het stromen bronnen met overeenkomstige metriek en status te controleren. Zie de zelfstudie over het [controleren van streaminggegevens](../../sources/tutorials/ui/monitor-streaming.md) voor meer informatie. |
+| Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
+| [!DNL Salesforce Marketing Cloud] (bèta) | U kunt [!DNL Salesforce Marketing Cloud] nu met Experience Platform verbinden gebruikend [!DNL Flow Service] API of UI. Zie [[!DNL Salesforce Marketing Cloud] connectoroverzicht](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md) voor meer informatie. |
 
 Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
