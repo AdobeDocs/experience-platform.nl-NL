@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ab868a813815e10b520cda2a0abe76e3acdd2ac6
+source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '802'
 ht-degree: 3%
 
 ---
@@ -20,8 +20,10 @@ ht-degree: 3%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Werkruimte voor gegevenswetenschap](#dsw)
+- [Gegevensstromen](#destinations)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Query-service](#query)
 - [Bronnen](#sources)
 
 ## Werkruimte voor gegevenswetenschap {#dsw}
@@ -35,6 +37,20 @@ De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunst
 | Bibliotheek- en besturingssysteemupdates | De Werkruimte van de Wetenschap van gegevens heeft significante bibliotheek en OS updates gemaakt om functionaliteit en bruikbaarheid te verbeteren. Dit omvat JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 met CUDA 11 en CUDNN 8 steun, en meer. Meer informatie over het weergeven van de beschikbare bibliotheken in JupyterLab vindt u in de sectie [Ondersteunde bibliotheken](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) in de documentatie bij het overzicht van JupyterLab-laptops. |
 
 Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, verwijs naar [Overzicht van de Werkruimte van de Wetenschap van Gegevens](../../data-science-workspace/home.md).
+
+## Gegevensstromen {#dataflows}
+
+In Platform, worden de gegevens opgenomen van vele verschillende bronnen, binnen het systeem geanalyseerd, en geactiveerd aan een brede verscheidenheid van bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
+
+Gegevensstromen zijn een weergave van taken die gegevens over het Platform verplaatsen. Deze gegevensstromen worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Doeldashboard | U kunt het controledashboard nu gebruiken om dataflows voor bestemmingen te controleren. Lees voor meer informatie de zelfstudie over [controledoelen in de gebruikersinterface](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
+
+Voor meer algemene informatie over gegevensstromen, verwijs naar [dataflows overzicht](../../dataflows/home.md). Meer over bestemmingen leren, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
 
 ## Doelen {#destinations}
 
@@ -51,13 +67,25 @@ Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelij
 
 Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wordt ontworpen om de kracht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor gegevens in de vorm van schema&#39;s, die om het even welke toepassing toestaan om met de diensten van de Platform te communiceren.
 
-**Nieuwe functies**
-
 | Functie | Beschrijving |
 | --- | --- |
 | Telecommunicatie-industrie, filter | Wanneer het toevoegen van gebiedsgroepen aan een schema in UI, kunt u nu door de telecommunicatiesector filtreren. Zie het [diagram van de de entiteitverhouding van de telecommunicatiesector (ERD)](../../xdm/schema/industries/telecom.md) om een geadviseerd gegevensmodel voor telecomgebruiksgevallen te zien. |
 
 Voor meer algemene informatie over XDM in Platform, verwijs naar [XDM System overview](../../xdm/home.md).
+
+## Query-service {#query}
+
+De Dienst van de vraag verstrekt de capaciteit om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken, ondersteunend een verscheidenheid van analyse en gegevensbeheer gebruiksgevallen. Het is een serverloos hulpmiddel dat u toestaat om zich bij datasets van het meer van Gegevens aan te sluiten en de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time te vangen.
+
+U kunt de Dienst van de Vraag gebruiken om de ecosystemen van de gegevensanalyse te bouwen, die tot een beeld van klanten over hun diverse interactiekanalen leiden. Deze kanalen kunnen verkooppunt, Web, mobiele, of CRM systemen omvatten.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Geplande query&#39;s | U kunt vragen in Platform nu plannen gebruikend de Redacteur van de Vraag. Lees voor meer informatie de documentatie in de [Query Editor](../../query-service/ui/user-guide.md#scheduled-queries). |
+
+Raadpleeg de documentatie [Query Service](../../query-service/home.md) voor meer informatie.
 
 ## Bronnen {#sources}
 
