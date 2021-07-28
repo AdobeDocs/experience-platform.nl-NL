@@ -6,7 +6,7 @@ title: Gegevensstromen van de monitor voor Doelen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 029e990f5b30713ceea5da80ace8002368ac5652
+source-git-commit: 96855ec4e42e7adb17dc36a734561f63f926693b
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 0%
@@ -117,7 +117,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Het dashboard Bestemmingen controleren
+## Het dashboard Bestemmingen controleren {#monitoring-destinations-dashboard}
 
 Als u het [!UICONTROL Monitoring]-dashboard wilt openen, selecteert u **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)
 ) in de linkernavigatie. Selecteer [!UICONTROL Destinations] eenmaal op de pagina [!UICONTROL Monitoring]. Het dashboard [!UICONTROL Monitoring] bevat metriek en informatie over de banen van de bestemmingslooppas.
