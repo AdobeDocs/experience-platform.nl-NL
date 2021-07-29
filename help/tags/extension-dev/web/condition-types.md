@@ -1,9 +1,9 @@
 ---
 title: Voorwaardetypen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het type condition definieert voor een tagextensie in een webeigenschap.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 In de context van een regel wordt een voorwaarde geëvalueerd nadat een gebeurtenis heeft plaatsgevonden. Alle voorwaarden moeten waar terugkeren opdat de regel verder verwerkt. De uitzondering is wanneer de gebruikers uitdrukkelijk voorwaarden in een &quot;uitzondering&quot;emmer plaatsen, in welk geval alle voorwaarden binnen het emmertje vals voor de regel moeten terugkeren om verwerking voort te zetten.
 
