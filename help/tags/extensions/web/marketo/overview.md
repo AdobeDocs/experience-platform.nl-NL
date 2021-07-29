@@ -1,9 +1,9 @@
 ---
 title: Overzicht van Marketo Munchkin-extensie
 description: Meer informatie over de Marketo Munchkin-tagextensie in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Gebruik deze extensie om de JavaScript-code [!DNL Marketo Munchkin] voor bijhouden in uw eigenschap te integreren. [!DNL Marketo Munchkin] JavaScript maakt het mogelijk bezoeken van eindgebruikerspagina&#39;s bij te houden en naar uw Marketo-bestemmingspagina&#39;s en externe webpagina&#39;s te navigeren.
 
