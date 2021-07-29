@@ -1,9 +1,9 @@
 ---
 title: Gebruikerstoegang verlenen
 description: Stel de gebruikersaccounts en machtigingen voor tags van uw teamleden in Adobe Experience Platform in.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '717'
 ht-degree: 2%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Voordat u aan de slag gaat met uw extension_package, moet u uw teamleden instellen met gebruikersaccounts en machtigingen.  Dit wordt verwezenlijkt in [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -39,7 +39,7 @@ Sommigen van u hebben toegang tot meer dan één organisatie (Org). Als u de mog
 
 Een productprofiel is een groep. De individuele rechten worden toegewezen aan productprofielen en om het even welke gebruikers in het profiel zullen die rechten erven.
 
-Kies de **[!UICONTROL Products]** verbinding bij de bovenkant, en **[!UICONTROL Experience Cloud]** op de linkerzijde. Als u Adobe Experience Platform Launch niet hebt vermeld, moeten klanten contact opnemen met hun accountteam en moeten partners <ExchangeTechEC@adobe.com> per e-mail verzenden.
+Kies de **[!UICONTROL Products]** verbinding bij de bovenkant, en **[!UICONTROL Experience Cloud]** op de linkerzijde. Als u de interface voor gegevensverzameling niet hebt vermeld, moeten klanten contact opnemen met hun accountteam en moeten partners <ExchangeTechEC@adobe.com> per e-mail verzenden.
 
 ![Tabblad Producten voor beheerconsole](../images/getting-started/admin-console-products-launch.png)
 
