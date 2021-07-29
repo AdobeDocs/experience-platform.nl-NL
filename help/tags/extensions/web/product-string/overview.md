@@ -1,9 +1,9 @@
 ---
 title: Overzicht van extensie Adobe Analytics-producttekenreeks
 description: Meer informatie over de extensie van de Adobe Analytics Product String-tag in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Met de variabele `products` wordt bijgehouden hoe gebruikers met producten op uw site werken. Met de variabele `products` kunt u bijvoorbeeld bijhouden hoe vaak een product wordt weergegeven, aan het winkelwagentje worden toegevoegd, uitgecheckt en aangeschaft. U kunt ook de relatieve effectiviteit van de handelscategorieën op uw site volgen.
 
