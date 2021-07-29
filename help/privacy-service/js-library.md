@@ -5,10 +5,9 @@ title: Overzicht van Adobe Privacy JavaScript-bibliotheek
 topic-legacy: overview
 description: Met de Adobe Privacy JavaScript-bibliotheek kunt u gegevenssubject-id's ophalen voor gebruik in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-translation-type: tm+mt
-source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '944'
 ht-degree: 4%
 
 ---
@@ -47,7 +46,7 @@ Aangezien alle drie functies asynchrone processen vertegenwoordigen, moeten om h
 Als u de [!DNL Privacy JS Library] wilt gaan gebruiken, moet u deze op een van de volgende manieren op uw computer installeren:
 
 * Installeer met npm door de volgende opdracht uit te voeren: `npm install @adobe/adobe-privacy`
-* Installeer de extensie Adobe Privacy met [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en) onder de naam `AdobePrivacy`
+* [Adobe Privacy-tagextensie](../tags/extensions/web/privacy/overview.md) installeren onder de naam `AdobePrivacy`
 * Download van de [Experience Cloud GitHub-gegevensopslagruimte](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instantiëren van [!DNL Privacy JS Library]
@@ -67,7 +66,7 @@ Voor een volledige lijst van gesteunde parameters voor verschillende oplossingen
 
 ## Codevoorbeelden
 
-De volgende codesteekproeven tonen aan hoe te om [!DNL Privacy JS Library] voor verscheidene gemeenschappelijke scenario&#39;s te gebruiken, op voorwaarde dat u [!DNL Platform Launch] niet gebruikt.
+De volgende codesteekproeven tonen aan hoe te om [!DNL Privacy JS Library] voor verscheidene gemeenschappelijke scenario&#39;s te gebruiken, op voorwaarde dat u geen markeringen gebruikt.
 
 ### Identiteiten ophalen
 
