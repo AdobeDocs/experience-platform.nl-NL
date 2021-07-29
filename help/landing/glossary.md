@@ -5,10 +5,9 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '7147'
+source-wordcount: '7219'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 **Toegangstoets-id**: Een toegangs zeer belangrijke identiteitskaart is een uniek herkenningsteken dat met een  [!DNL Amazon] S3 geheime toegangssleutel wordt geassocieerd. De toegangs belangrijkste identiteitskaart en geheime toegangssleutel worden gebruikt samen om [!DNL Amazon Web Services] (AWS) verzoeken te ondertekenen.
 
-**Actie**: In  [!DNL Platform Launch], is een actie een specifiek type van regelcomponent die bepaalt wat zou moeten gebeuren nadat een gebeurtenis voorkomt en de voorwaarden worden geëvalueerd en overgegaan.
+**Actie**: In de context van labels is een handeling een specifiek type regelcomponent die definieert wat er moet gebeuren nadat een gebeurtenis plaatsvindt en de voorwaarden worden geëvalueerd en doorgegeven.
 
 **Activeren**: Activate is de actie die door een gebruiker wordt ondernomen om een segment of profielen aan een bestemming zoals in kaart te brengen,  [!DNL Oracle Eloqua]of  [!DNL Google]  [!DNL Salesforce Marketing Cloud].
 
@@ -32,8 +31,6 @@ ht-degree: 0%
 **Adobe Admin Console**: Adobe Admin Console biedt een centrale locatie voor het beheer van Adobe-productrechten en toegang voor uw organisatie. Via de console kunnen beheerders groepen gebruikers toegangsmachtigingen verlenen voor verschillende functies van het Platform, zoals &quot;Datasets beheren&quot;, &quot;Datasets weergeven&quot; of &quot;Profielen beheren&quot;.
 
 **Adobe Experience Platform**: Adobe Experience Platform standaardiseert gegevens en inhoud in de hele onderneming, biedt realtime consumentenprofielen, maakt gegevenswetenschap mogelijk en versnelt de snelheid van de inhoud om de persoonlijke functionaliteit van de klant te verbeteren.
-
-**Adobe Experience Platform Launch**:  [!DNL Platform Launch] is een ecosysteem voor tags en SDK-beheer, geïntegreerd met Experience Platform en  [!DNL Experience Cloud] toepassingen. [!DNL Platform Launch] biedt tools voor het implementeren, verenigen en beheren van analyses, marketing en advertentie-integratie die nodig zijn om relevante ervaringen van klanten op alle clientapparaten te benutten.
 
 **Adobe Experience Platform Query Service**: Laat gegevensanalisten toe om gebeurtenissen en profielen voor gebruik in analytische en machine het leren te vragen. Met de Dienst van de Vraag, kunnen de gegevenswetenschappers en de analisten al hun datasets trekken die in Experience Platform (met inbegrip van gedragsgegevens evenals verkooppunt (POS), het beheer van de klantenverhouding (CRM), en meer) worden opgeslagen en die datasets vragen om specifieke vragen over de gegevens te beantwoorden.
 
@@ -81,7 +78,7 @@ ht-degree: 0%
 
 **Batchsegmentatie**: De segmentatie van de partij is een alternatief aan een aan de gang zijnde proces van de gegevensselectie en beweegt alle profielgegevens onmiddellijk door segmentdefinities om het overeenkomstige publiek te veroorzaken. Zodra gecreeerd, wordt dit segment bewaard en opgeslagen zodat kan het voor gebruik worden uitgevoerd.
 
-**Samenstellen**: Een build is  [!DNL Platform Launch]in feite een bestand of set bestanden met alle configuraties en code die nodig zijn om de bedrijfslogica in een bibliotheek uit te voeren, zodat u die bibliotheek kunt implementeren op uw website of mobiele app.
+**Samenstellen**: In de context van tags is een build een bestand of set bestanden met alle configuraties en code die nodig zijn om de bedrijfslogica in een bibliotheek uit te voeren, zodat u die bibliotheek kunt implementeren op uw website of mobiele app.
 
 **Business Intelligence-tools**: De hulpmiddelen van de bedrijfsintelligentie (BI) zijn hoofdzakelijk geïntegreerd met  [!DNL Experience Platform Query Service]. BI-gereedschappen zijn typen toepassingssoftware die grote hoeveelheden ongestructureerde gegevens van interne en externe systemen verzamelen en verwerken.
 
@@ -105,7 +102,7 @@ ht-degree: 0%
 
 **Compositie**: Een samenstelling is een groepering van componenten die samen vormen om omhoog het schema te maken.
 
-**Voorwaarde**: In  [!DNL Platform Launch], is een voorwaarde een regelcomponent die een logische verklaring evalueert die moet terugkeren  `true` of  `false`. Alle voorwaarden moeten aan `true` evalueren en alle uitzonderingsvoorwaarden moeten aan `false` evalueren alvorens om het even welke acties op de regel worden uitgevoerd.
+**Voorwaarde**: In de context van tags is een voorwaarde een regelcomponent die een logische instructie evalueert die moet worden geretourneerd  `true` of  `false`. Alle voorwaarden moeten aan `true` evalueren en alle uitzonderingsvoorwaarden moeten aan `false` evalueren alvorens om het even welke acties op de regel worden uitgevoerd.
 
 **Console**: In  [!DNL Query Service], verstrekt de console informatie over de status en de verrichting van een vraag. De console toont de verbindingsstatus aan [!DNL Query Service], vraagverrichtingen die, en om het even welke foutenmeldingen worden uitgevoerd die uit die vragen voortvloeien.
 
@@ -147,13 +144,13 @@ ht-degree: 0%
 
 ## D
 
-**Gegevenswoordenboek**: Een gegevenswoordenboek  [!DNL Platform Launch](ook wel een gegevenskaart genoemd) is een set gegevenselementen die zijn gedefinieerd in een eigenschap.
+**Gegevenswoordenboek**: In de context van tags is een gegevenswoordenboek (ook wel een gegevenskaart genoemd) een set gegevenselementen die zijn gedefinieerd binnen een eigenschap.
 
-**Gegevenselement**: Een gegevenselement is  [!DNL Platform Launch]een aanwijzer die wordt gebruikt binnen regels en uitbreidingen om te wijzen naar een specifiek stuk gegevens dat op het clientapparaat bestaat.
+**Gegevenselement**: In de context van tags is een gegevenselement een aanwijzer die wordt gebruikt binnen regels en extensies om te wijzen naar een specifiek stukje gegevens dat op het clientapparaat bestaat.
 
 **Gegevensinvoer**: Gegevensinvoer is het proces waarbij gegevens van een bron aan een Experience Platform worden toegevoegd. Gegevens kunnen op verschillende manieren in Platform worden ingevoerd, zoals streaming, batches of via bronconnectors worden toegevoegd.
 
-**Gegevenslaag**: Een gegevenslaag  [!DNL Platform Launch]is een gegevensstructuur die op het clientapparaat aanwezig is en die metagegevens bevat over de context waarin een pagina of scherm wordt weergegeven.
+**Gegevenslaag**: In de context van tags is een gegevenslaag een gegevensstructuur die op het clientapparaat aanwezig is en die metagegevens bevat over de context waarin een pagina of scherm wordt weergegeven.
 
 **Gegevensbeheer**: Gegevensbeheer omvat de strategieën en technologieën die worden gebruikt om ervoor te zorgen dat gegevens in overeenstemming zijn met de regelgeving en het organisatiebeleid met betrekking tot gegevensgebruik.
 
@@ -195,7 +192,7 @@ ht-degree: 0%
 
 **Doelcatalogus**: Een doelcatalogus is een lijst van beschikbare bestemmingen in Experience Platform.
 
-**Regels** voor directe oproepen: In  [!DNL Platform Launch], is een direct-vraagregel een regel die uitvoert wanneer het direct van de pagina wordt geroepen, die gebeurtenis-opsporing en raadplegingssystemen omzeilt.
+**Regels** voor directe oproepen: In de context van markeringen, is een direct-vraagregel een regel die uitvoert wanneer het direct van de pagina wordt geroepen, die gebeurtenis-opsporing en raadplegingssystemen omzeilt.
 
 **Weergavenaam**: In het Model van Gegevens van de Ervaring (XDM), is een vertoningsnaam een gebruikersvriendelijke naam voor een gebied dat in UI wordt getoond.
 
@@ -207,15 +204,15 @@ ht-degree: 0%
 
 **Marketingactie** e-mail gericht: A marketing action that uses data in email targeting campagnes.
 
-**Code** insluiten: De insluitcode  [!DNL Platform Launch]is in feite een scripttag die in de HTML op een site of omgeving is geplaatst. De insluitcode instrueert browser waar te om de bouwstijl terug te winnen.
+**Code** insluiten: In de context van tags is de insluitcode een scripttag die in de HTML-code op een site of omgeving wordt geplaatst. De insluitcode instrueert browser waar te om de bouwstijl terug te winnen.
 
 **Opsomming**: Een opsomming (enum) is een XDM-veld dat is beperkt tot een set vooraf gedefinieerde waarden.
 
-**Omgeving**: In  [!DNL Platform Launch], is een milieu een reeks plaatsingsinstructies die de gastheerlevering en dossierformaat van een bouwstijl specificeert. Een bibliotheek moet met een milieu worden gecombineerd alvorens het kan worden gebouwd.
+**Omgeving**: In de context van markeringen, is een milieu een reeks plaatsingsinstructies die de gastheerlevering en dossierformaat van een bouwstijl specificeert. Een bibliotheek moet met een milieu worden gecombineerd alvorens het kan worden gebouwd.
 
 **Foutdiagnostiek**: Bij foutdiagnostiek kunnen gedetailleerde foutberichten voor ingesloten batches worden gegenereerd. De foutendrempel staat u toe om het percentage aanvaardbare fouten te vormen alvorens een partij ontbreekt.
 
-**Gebeurtenis**: In  [!DNL Platform Launch], is een gebeurtenis een specifiek type van regelcomponent, die een trekker is die op een cliëntapparaat voorkomt om met de uitvoering van een regel te beginnen.
+**Gebeurtenis**: In de context van labels is een gebeurtenis een specifiek type regelcomponent. Dit is een trigger die op een clientapparaat optreedt om met de uitvoering van een regel te beginnen.
 
 **Gebeurtenisentiteiten**: In de context van gegevensmodellering, vertegenwoordigen gebeurtenisentiteiten concepten met betrekking tot acties een klant kan nemen, systeemgebeurtenissen, of een ander concept waar u veranderingen in tijd kunt willen volgen. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door schema&#39;s op basis van de klasse [!DNL XDM ExperienceEvent].
 
@@ -227,9 +224,9 @@ ht-degree: 0%
 
 **Experience Event**: Een Experience Event vertegenwoordigt een momentopname van het systeem wanneer een interactie of een gebeurtenis met betrekking tot een klantenervaring plaatsvindt. De Gebeurtenissen van de ervaring zijn onveranderlijke feitenverslagen van wat voorkwam en vertegenwoordigen wat gebeurde zonder samenvoeging of interpretatie. In het Model van de Gegevens van de Ervaring (XDM), wordt dit concept gevangen door de [!DNL XDM ExperienceEvent] klasse.
 
-**Extensie**: Een extensie is  [!DNL Platform Launch]een pakket met functionaliteit dat aan een  [!DNL Platform Launch] eigenschap wordt toegevoegd. Een uitbreiding is gewoonlijk geconcentreerd rond een bepaalde marketing of analyseoplossing en verstrekt de hulpmiddelen nodig om die technologie in een cliëntmilieu op te stellen.
+**Extensie**: In de context van tags is een extensie een pakket met functionaliteit dat wordt toegevoegd aan een tag-eigenschap. Een uitbreiding is gewoonlijk geconcentreerd rond een bepaalde marketing of analyseoplossing en verstrekt de hulpmiddelen nodig om die technologie in een cliëntmilieu op te stellen.
 
-**Extensiepakket**: Een extensiepakket is  [!DNL Platform Launch]een ZIP-bestand dat is gemaakt en geüpload door een extensieontwikkelaar die alles bevat wat  [!DNL Platform Launch] gebruikers nodig hebben om de extensie binnen hun eigenschap te installeren. Een extensiepakket bevat een manifest dat informatie bevat over de extensie, de HTML/JavaScript die eindgebruikers nodig hebben om het gedrag van de extensie [!DNL Platform Launch] te configureren en het uitvoerbare JavaScript dat aan de clientomgeving wordt geleverd (indien vereist).
+**Extensiepakket**: In de context van tags is een extensiepakket een ZIP-bestand dat is gemaakt en geüpload door een extensieontwikkelaar die alles bevat wat gebruikers nodig hebben om de extensie binnen hun eigenschap te installeren. Een extensiepakket bevat een manifest dat informatie bevat over de extensie, de HTML/JavaScript die eindgebruikers nodig hebben om het gedrag van de tagextensie te configureren, en het uitvoerbare JavaScript dat aan de clientomgeving wordt geleverd (indien vereist).
 
 ## F
 
@@ -255,7 +252,7 @@ ht-degree: 0%
 
 ## H
 
-**Host**: In  [!DNL Platform Launch], specificeert een gastheer de plaats, het domein, en gebruikersgeloofsbrieven noodzakelijk voor  [!DNL Platform Launch] om een bouwstijl te leveren.
+**Host**: In de context van markeringen, specificeert een gastheer de plaats, het domein, en gebruikersgeloofsbrieven noodzakelijk voor het systeem om een bouwstijl te leveren.
 
 ## I
 
@@ -307,7 +304,7 @@ ht-degree: 0%
 
 ## L
 
-**Bibliotheek**: In  [!DNL Platform Launch], is een bibliotheek een reeks bedrijfslogica die instructies voor bevat hoe de  [!DNL Platform Launch] bibliotheek zich op het cliëntapparaat zou moeten gedragen.
+**Bibliotheek**: In de context van tags is een bibliotheek een set bedrijfslogica die instructies bevat voor hoe de tagbibliotheek zich moet gedragen op het clientapparaat.
 
 **Entiteiten** opzoeken: In de context van gegevensmodellering, vertegenwoordigen de raadplegingsentiteiten concepten die op een individuele persoon kunnen betrekking hebben, maar niet direct kunnen worden gebruikt om het individu te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op de klassen van het Model van de Gegevens van de Douane van de Ervaring (XDM) worden gebaseerd.
 
@@ -327,7 +324,7 @@ ht-degree: 0%
 
 **Mengsel**: Zie &quot;Schema field group&quot;.
 
-**Module**: In  [!DNL Platform Launch]een module is een fragment van uitvoerbaar JavaScript dat door een extensie wordt geleverd. Hiermee worden handelingen in een clientomgeving uitgevoerd zonder dat een regel hoeft te worden gemaakt.
+**Module**: In de context van tags is een module een fragment van uitvoerbaar JavaScript dat door een extensie wordt aangeboden. Hiermee worden handelingen in een clientomgeving uitgevoerd zonder dat een regel hoeft te worden gemaakt.
 
 ## N
 
@@ -391,7 +388,7 @@ ht-degree: 0%
 
 **Profiel-id**: Een profiel-id is een automatisch gegenereerde id die is gekoppeld aan een identiteitstype en die een profiel vertegenwoordigt.
 
-**Eigenschap**: In  [!DNL Platform Launch], is een bezit een container voor alles nodig om een reeks markeringen op te stellen.
+**Eigenschap**: In de context van tags is een eigenschap een container voor alles wat nodig is om een set tags te implementeren.
 
 ## Q
 
@@ -415,13 +412,13 @@ ht-degree: 0%
 
 **Weergave**: In  [!DNL Offer Decisioning], is een vertegenwoordiging informatie die door een kanaal wordt gebruikt om een aanbieding, zoals plaats of taal te tonen.
 
-**Bron**: In  [!DNL Platform Launch], is een middel een generische termijn die naar opties verwijst de  [!DNL Platform Launch] gebruiker binnen het cliëntmilieu, met inbegrip van uitbreidingen, gegevenselementen, en regels kan vormen.
+**Bron**: In de context van markeringen, is een middel een generische termijn die naar opties verwijst de gebruiker kan binnen het cliëntmilieu vormen, met inbegrip van uitbreidingen, gegevenselementen, en regels.
 
 **Op rollen gebaseerd toegangsbeheer**: Op rol-gebaseerde toegangscontrole laat beheerders toe om toegang en toestemmingen aan gebruikers van Experience Platform toe te wijzen. De toestemmingen omvatten de capaciteit om de eigenschappen van het Experience Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets.
 
-**Regel**: In  [!DNL Platform Launch], is een regel een inzameling van componenten die een specifieke reeks gebeurtenissen, voorwaarden, en acties bepalen die logisch zouden moeten worden gegroepeerd.
+**Regel**: In de context van tags is een regel een verzameling componenten die een specifieke set gebeurtenissen, voorwaarden en handelingen definiëren die logisch moeten worden gegroepeerd.
 
-**component** Regel: In  [!DNL Platform Launch], zijn de regelcomponenten de gebeurtenissen, de voorwaarden, en de acties die omhoog een regel maken.
+**component** Regel: In de context van labels zijn regelcomponenten de gebeurtenissen, voorwaarden en handelingen die een regel vormen.
 
 **Runtime**: Runtime specificeert een runtime milieu voor een machine-leert recept. [!DNL Python]Met de runtimes R,  [!DNL Spark], PySpark en Tensorflow kunt u een URL invoeren naar een Docker-afbeelding voor een verwerkingsbron.
 
@@ -500,6 +497,8 @@ ht-degree: 0%
 **Systeemweergave**: De Mening van het systeem is een visuele vertegenwoordiging van brondatasets die door  [!DNL Real-time Customer Profile] aan bestemmingen stromen.
 
 ## T
+
+**Tags**: In Adobe Experience Platform bieden tags tools voor het implementeren, verenigen en beheren van integratie van analyses, marketing en advertenties die nodig zijn om relevante ervaringen van klanten op alle clientapparaten te benutten.
 
 **Doelfuncties**: In eigenschapafbeelding, is een doeleigenschap de eigenschap die door een model wordt voorspeld.
 
