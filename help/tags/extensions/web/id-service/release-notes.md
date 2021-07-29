@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Cloud Identity Service Extension
 description: De meest recente release bevat informatie over de extensie van de Adobe Experience Cloud Identity Service in Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 5%
+source-wordcount: '521'
+ht-degree: 4%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Raadpleeg voor opmerkingen bij de release de Experience Cloud Identity Service zelf en niet alleen de Adobe Experience Platform-tagextensie: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)
 
