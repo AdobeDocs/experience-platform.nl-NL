@@ -1,9 +1,9 @@
 ---
 title: Een extensie ontwikkelen
 description: Dit document biedt een algemeen overzicht van het ontwikkelingsproces van de tagextensie met koppelingen naar verdere documentatie voor meer gedetailleerde processen.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Een uitbreiding van een tag moet worden beschouwd als een (klein) product met eigen vereisten. Bepalen hoe een Adobe Experience Platform-gebruiker de extensie wil gebruiken, kan u helpen de functionaliteit te sorteren op welke gebeurtenistypen, gebeurtenistypen, actietypen en gegevenselementen uw extensie moet bieden.
 
