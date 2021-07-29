@@ -3,9 +3,9 @@ title: IAB TCF 2.0 Steun in de SDK van het Web van Adobe Experience Platform
 description: Leer hoe u IAB TCF 2.0-voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK
 keywords: toestemming;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 De Adobe Experience Platform Web SDK biedt ondersteuning voor het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). In deze handleiding worden de vereisten voor ondersteuning van IAB TCF 2.0 via Adobe Experience Platform Web SDK weergegeven, die geïntegreerd zijn met Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics en Experience Edge.
 
-Bovendien zijn de volgende gidsen beschikbaar om in het leren te helpen hoe te om IAB TCF 2.0 met en zonder Adobe Experience Platform Launch te integreren.
+Bovendien zijn de volgende gidsen beschikbaar om in het leren te helpen hoe te om IAB TCF 2.0 met en zonder markeringen te integreren.
 
-- [Met Adobe Experience Platform Launch](./with-launch.md)
-- [Zonder Adobe Experience Platform Launch](./without-launch.md)
+- [Met tags](./with-launch.md)
+- [Zonder tags](./without-launch.md)
 
 ## Aan de slag
 
@@ -90,4 +90,4 @@ Lees de documentatie over [gebeurtenissen bijhouden](../../fundamentals/tracking
 
 ## Volgende stappen
 
-Nu u een basisbegrip van IAB Transparency &amp; Consent Kader 2.0 hebt, gelieve te verwijzen naar één van beide gidsen bij het gebruiken van IAB TCF 2.0 [met Adobe Experience Platform Launch](./with-launch.md) of [zonder Adobe Experience Platform Launch](./without-launch.md).
+Nu u een basisbegrip van IAB Transparantie &amp; Consent Kader 2.0 hebt, gelieve te verwijzen naar één van beide gidsen bij het gebruiken van IAB TCF 2.0 [met markeringen](./with-launch.md) of [zonder markeringen](./without-launch.md).
