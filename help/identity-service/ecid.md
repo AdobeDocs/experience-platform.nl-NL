@@ -5,10 +5,9 @@ title: ECID-overzicht
 topic-legacy: overview
 description: De Experience Cloud-id (ECID) is de clientmodule die toegang biedt tot identiteitsbeheer en drie primaire functies verzorgt.
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -33,6 +32,6 @@ De volgende documentatie biedt meer informatie over ECID in verschillende Platfo
 
 * Raadpleeg de documentatie voor [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en) als u ECID wilt gebruiken bij de implementatie van de website.
 * Raadpleeg de documentatie voor [bijhouden van bezoekers tussen een app en mobiel web](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios) voor informatie over het gebruik van ECID bij apps en mobiele webinhoud.
-* Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig zijn als u [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=en) gebruikt.
+* Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig zijn als u [tags](../tags/home.md) gebruikt.
 * Raadpleeg de [documentatie bij de Privacy Service](../privacy-service/identity-data.md) voor informatie over het gebruik van ECID om naleving van privacyregels zoals GDPR te vergemakkelijken.
 * Voor meer informatie over ECID met de context van Platform, zie [Overzicht van de Dienst van de Identiteit](./home.md) en [overzicht van identiteitsnaamruimten](./namespaces.md).
