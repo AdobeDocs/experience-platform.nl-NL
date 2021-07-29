@@ -1,9 +1,9 @@
 ---
 title: Publishing Flow
 description: Leer meer over het maken van bibliotheken, het testen van builds en het goedkeuren van deze voor productie in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1397'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 De publicatiestroom voor tags in Adobe Experience Platform verwijst naar het proces van het maken van bibliotheken, het testen van builds en het goedkeuren van deze voor productie.
 
@@ -63,7 +63,7 @@ In de volgende tabel worden de beschikbare acties voor een bibliotheek in de sta
 | [!UICONTROL Submit & Build to Staging] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Deze actie maakt de toewijzing van de bibliotheek uit de ontwikkelomgeving ongedaan, verplaatst de bibliotheek naar de status [!UICONTROL Submitted] en bouwt de bibliotheek aan het opvoeren milieu. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
 | [!UICONTROL Approve for Publishing] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Deze actie verwijdert de toewijzing van de bibliotheek uit de ontwikkelomgeving en verplaatst deze naar de status [!UICONTROL Approved] - waarbij de testomgeving en de status [!UICONTROL Submitted] volledig worden overgeslagen. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
 | [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met de rechten Ontwikkelen, Goedkeuren en Publiceren. Deze actie verwijdert de bibliotheek van de ontwikkelomgeving, verplaatst het naar de [!UICONTROL Approved] staat, en publiceert aan productie. Nadat de productiebuild is voltooid, wordt de bibliotheek verplaatst naar de status [!UICONTROL Published]. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
-| [!UICONTROL Delete] | Verwijder de bibliotheek uit de Platform launch. Hierdoor wordt de build niet uit de omgeving verwijderd. |
+| [!UICONTROL Delete] | Verwijder de bibliotheek van het systeem. Hierdoor wordt de build niet uit de omgeving verwijderd. |
 
 ### [!UICONTROL Submitted] {#submitted}
 
