@@ -1,9 +1,9 @@
 ---
 title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Het doorsturen van gebeurtenissen in Adobe Experience Platform vermindert het gewicht van de webpagina en de toepassing door Adobe Experience Platform Edge Network te gebruiken om taken uit te voeren die normaal op de client worden uitgevoerd. De gebeurtenis die regels door:sturen kan gegevens omzetten en verzenden naar nieuwe bestemmingen zonder cliënt-zijimplementaties te veranderen.
 
