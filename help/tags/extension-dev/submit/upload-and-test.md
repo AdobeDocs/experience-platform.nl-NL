@@ -1,9 +1,9 @@
 ---
 title: End-to-end testen uploaden en implementeren voor een extensie
 description: Leer hoe u uw extensie kunt valideren, uploaden en testen in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2391'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Als u de extensies van tags in Adobe Experience Platform wilt testen, gebruikt u de API-tags en/of opdrachtregelprogramma&#39;s om de extensiepakketten te uploaden. Vervolgens gebruikt u de UI voor gegevensverzameling om het extensiepakket te installeren op een eigenschap en de mogelijkheden ervan uit te oefenen in een tagbibliotheek en te bouwen.
 
