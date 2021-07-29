@@ -3,9 +3,9 @@ title: Vorm uw DataStream voor het Web SDK van het Experience Platform
 description: 'Leer hoe u de gegevensstromen configureert. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container-id;Sandbox;Streaming Inlet;Event-gegevensset;target;client-code;Property Token;Target Environment-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport-suite-id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,17 @@ Voor deze functie moet uw organisatie zijn ingericht. Neem contact op met uw Cus
 
 ## Een DataStream-configuratie maken
 
-Gegevensstromen kunnen in Adobe [!DNL Experience Platform Launch] worden gecreeerd gebruikend het hulpmiddel van de configuratie DataStream.
+De stromen van gegevens kunnen in de Inzameling UI van Gegevens worden gecreeerd gebruikend het hulpmiddel van de de configuratieconfiguratie DataStream.
 
 ![gegevensstromen, gereedschapnavigatie](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->Het hulpprogramma voor de configuratie van gegevensstromen is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Experience Platform Launch] als tagbeheer gebruiken. Bovendien, vereisen de gebruikers ontwikkeltoestemmingen in [!DNL Experience Platform Launch]. Zie het [User Permissions](../../tags/ui/administration/user-permissions.md) artikel in [!DNL Experience Platform Launch] documentatie voor meer details.
+>Het hulpprogramma voor de configuratie van gegevensstromen is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze Platform als tagbeheer gebruiken. Bovendien vereisen gebruikers ontwikkelmachtigingen. Zie het artikel [gebruikersmachtigingen](../../tags/ui/administration/user-permissions.md) in de tagdocumentatie voor meer informatie.
 
 Maak een gegevensstroom door op **[!UICONTROL New Datastream]** in de rechterbovenhoek van het scherm te klikken. Nadat u een naam en een beschrijving hebt opgegeven, wordt u gevraagd om de standaardinstellingen voor elke omgeving. De beschikbare instellingen worden hieronder beschreven.
 
-Bij het maken van een gegevensstroom worden automatisch drie omgevingen met identieke instellingen gemaakt. Deze drie omgevingen zijn *dev*, *stage* en *prod*. Ze komen overeen met de drie standaardomgevingen in [!DNL Experience Platform Launch]. Wanneer u een [!DNL Experience Platform Launch] bibliotheek aan een ontwikkelomgeving bouwt, gebruikt de bibliotheek automatisch het dev milieu van uw configuratie. U kunt instellingen in afzonderlijke omgevingen naar wens bewerken.
+Bij het maken van een gegevensstroom worden automatisch drie omgevingen met identieke instellingen gemaakt. Deze drie omgevingen zijn *dev*, *stage* en *prod*. Ze komen overeen met de drie standaardomgevingen voor tags. Wanneer u een markeringsbibliotheek aan een ontwikkelomgeving bouwt, gebruikt de bibliotheek automatisch het dev milieu van uw configuratie. U kunt instellingen in afzonderlijke omgevingen naar wens bewerken.
 
 De id die in de SDK als `edgeConfigId` wordt gebruikt, is een samengestelde id die de configuratie en de omgeving opgeeft (bijvoorbeeld `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Als er geen omgeving aanwezig is in de samengestelde id (bijvoorbeeld `stage` in het vorige voorbeeld), wordt de productieomgeving gebruikt.
 
