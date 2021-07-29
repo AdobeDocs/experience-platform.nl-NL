@@ -1,9 +1,9 @@
 ---
 title: Extension Manifest
 description: Leer hoe u een JSON-manifestbestand configureert dat Adobe Experience Platform informeert over de juiste manier om uw extensie te gebruiken.
-source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2646'
+source-wordcount: '2647'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 In de basismap van uw extensie moet u een bestand met de naam `extension.json` maken. Dit bevat belangrijke informatie over uw extensie waarmee Adobe Experience Platform deze correct kan gebruiken. Een deel van de inhoud wordt gevormd na de wijze van [npm `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -139,7 +139,7 @@ Een typedefinitie is een voorwerp dat wordt gebruikt om een gebeurtenis, een voo
   "eigenschappen": {
     "vertraging": {
       "type": "number",
-      "minimum": 1
+      "minimum": 3
     }
   },
   "vereist": [
