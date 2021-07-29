@@ -1,18 +1,17 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
-seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
+description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
-Dit document behandelt de releaseopmerkingen voor de Adobe Experience Platform Web SDK-extensie voor Adobe Experience Platform Launch. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## Versie 2.6.0 - 27 juli 2021
 
@@ -103,14 +102,14 @@ Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aa
 * Verzoek die tijdens de migratie van identiteitskaart wordt gemaakt wordt verzonden naar demdex eindpunt om dwars-domeinidentificatie te verbeteren wanneer de demdex koekje niet wordt geplaatst
 * Aanvraag die tijdens de migratie van id&#39;s is gemaakt, verwacht altijd een reactie om ervoor te zorgen dat het identiteitscookie wordt ingesteld
 * Wanneer het uitvoeren van een ongeldig bevel, zal een lijst van geldige bevelnamen in de console worden geregistreerd
-* Selectievakje toegevoegd voor het schakelen van Cookie-ondersteuning van derden naar de Adobe Experience Platform Launch-extensie. Dit maakt vraag aan demdex.net onbruikbaar
+* Selectievakje toegevoegd om cookie-ondersteuning van derden in- en uit te schakelen voor de tagextensie. Dit maakt vraag aan demdex.net onbruikbaar
 
 ## Versie 0.0.5 - 20 december 2019
 
-* Activiteitenbeheer toevoegen aan Platform launch Extension
+* Activiteitenbeheer toevoegen vormt een tag-extensie
 * EventType en EventMergeId beschikbaar maken voor de opdracht event
-* OnBeforeEventSend config toevoegen aan Platform launch Extension
-* EdgeBasePath-configuratie toevoegen aan Platform launch Extension
+* OnBeforeEventSend config toevoegen aan tagextensie
+* EdgeBasePath-config toevoegen aan tagextensie
 
 ## Versie 0.0.3 - 25 november 2019
 
