@@ -1,9 +1,9 @@
 ---
 title: Overzicht van Core Event Forwarding Extension
 description: Leer over de gebeurtenis van de Kern door:sturen uitbreiding in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 De de gebeurtenis-door:sturen uitbreiding van de Kern verstrekt de standaardgebeurtenissen, de voorwaarden, en de gegevenstypes voor gebeurtenis door:sturen in Adobe Experience Platform.
 
@@ -165,7 +165,7 @@ Als u toegang wilt krijgen tot de waarde van een gegevenselement in aangepaste c
 getDataElementValue('productName') 
 ```
 
-De Server van de platform launch acties voeren opeenvolgend uit. Het is ook mogelijk dat aangepaste code in één actie een waarde retourneert die in een volgende actie kan worden gebruikt. De teruggekeerde waarde kan uit code binnen die actie, of van het reactielichaam van een vraag komen die aan een externe bron wordt gemaakt. Als u wilt verwijzen naar gegevens van een eerder uitgevoerde handeling binnen één regel waarin de Core-extensie wordt gebruikt, maakt u een gegevenselement van het type `Path` en gebruikt u het volgende pad om te verwijzen naar de waarde van een variabele met de naam `productCategory` die is gedefinieerd in aangepaste code binnen de Core-extensie:
+Gebeurtenis die acties door:sturen voert opeenvolgend uit. Het is ook mogelijk dat aangepaste code in één actie een waarde retourneert die in een volgende actie kan worden gebruikt. De teruggekeerde waarde kan uit code binnen die actie, of van het reactielichaam van een vraag komen die aan een externe bron wordt gemaakt. Als u wilt verwijzen naar gegevens van een eerder uitgevoerde handeling binnen één regel waarin de Core-extensie wordt gebruikt, maakt u een gegevenselement van het type `Path` en gebruikt u het volgende pad om te verwijzen naar de waarde van een variabele met de naam `productCategory` die is gedefinieerd in aangepaste code binnen de Core-extensie:
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
