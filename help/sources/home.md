@@ -5,7 +5,7 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Bronnen in Experience Platform worden ingedeeld in de volgende categorieën:
 
 ### Adobe-toepassingen
 
-Met Experience Platform kunnen gegevens van andere Adobe-toepassingen worden ingesloten, zoals Adobe Analytics, Adobe Audience Manager en [!DNL Experience Platform Launch]. Zie de volgende verwante documenten voor meer informatie:
+Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager, worden ingesloten. Zie de volgende verwante documenten voor meer informatie:
 
 - [Overzicht Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
 - [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
