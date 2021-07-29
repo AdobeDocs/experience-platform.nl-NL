@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform Web SDK-configuratie
-description: Meer informatie over de Adobe Experience Platform Web SDK Extension voor Adobe Experience Platform Launch
+description: Meer informatie over de tagextensie Adobe Experience Platform Web SDK.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 De Adobe Experience Platform Web SDK-extensie verzendt gegevens van wegeigenschappen naar Adobe Experience Cloud via het Adobe Experience Platform Edge Network. Met de extensie kunt u gegevens streamen naar een Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
 
-In dit document wordt beschreven hoe u de extensie configureert in de gebruikersinterface van Adobe Experience Platform Launch.
+Dit document behandelt hoe te om de uitbreiding in de Inzameling UI van Gegevens te vormen.
 
 ## De extensie configureren
 
-Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in Platform launch UI en selecteer **[!UICONTROL Extensions]** tabel. Selecteer **[!UICONTROL Configure]** onder Web SDK van Platform.
+Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in de Inzameling UI van Gegevens en selecteer **[!UICONTROL Extensions]** tabel. Selecteer **[!UICONTROL Configure]** onder Web SDK van Platform.
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ De configuratieopties boven aan de pagina vertellen Adobe Experience Platform wa
 
 ### [!UICONTROL Name]
 
-De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met één enkele configuratie van de Platform launch te verzenden.
+De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden.
 
 De naam van de extensie is standaard &quot;[!DNL alloy]&quot;. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
 
