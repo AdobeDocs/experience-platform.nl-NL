@@ -3,9 +3,9 @@ keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost p
 title: PebblePost-extensie
 description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/o
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags die aan Adobe Experience Cloud-klanten worden aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren. en vraag ze om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u uitbreidingen kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren. en vraag ze om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u uitbreidingen kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
