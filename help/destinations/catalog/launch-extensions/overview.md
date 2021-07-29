@@ -1,59 +1,55 @@
 ---
-keywords: extensies starten;extensie starten;doelen starten; platform launch extensies;platform launch extensie;platform launch doelen
-title: Adobe Experience Platform Launch-extensie
-description: Adobe Experience Platform Launch is de volgende generatie mogelijkheden voor tagbeheer van Adobe. platform launch biedt klanten een eenvoudige manier om alle benodigde analytische, marketing- en advertentietags te implementeren en te beheren om de ervaring van klanten te verbeteren.
+keywords: tagextensies;tagextensie;lanceerdoelen; platformtagextensies;platform tagextensie;platform launch-bestemmingen
+title: Tagextensies in Adobe Experience Platform
+description: Adobe Experience Platform biedt de volgende generatie mogelijkheden voor tagbeheer van Adobe. Platform biedt u een eenvoudige manier om alle analyses, marketing en reclametags te implementeren en te beheren die nodig zijn om de ervaring van klanten te verbeteren.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Launch-extensies
+# Extensies labelen in Adobe Experience Platform
 
-Adobe Experience Platform Launch is de volgende generatie mogelijkheden voor tagbeheer van Adobe. platform launch biedt klanten een eenvoudige manier om alle benodigde analytische, marketing- en advertentietags te implementeren en te beheren om de ervaring van klanten te verbeteren. platform launch wordt aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element.
+Adobe Experience Platform biedt de volgende generatie mogelijkheden voor tagbeheer van Adobe. Platform biedt u een eenvoudige manier om alle analyses, marketing en reclametags te implementeren en te beheren die nodig zijn om de ervaring van klanten te verbeteren. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element.
 
-Zie de volgende bronnen voor een inleiding op de mogelijkheden van Experience Platforms Launch:
+Zie de volgende bronnen voor een inleiding op tags:
 
-- Adobe Experience Platform Launch [documentatie](https://experienceleague.adobe.com/docs/launch/using/home.html)
-- Adobe Experience Platform Launch [Quick start videos](../../../tags/quick-start/videos.md). Begin met [Inleiding aan Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) en [Overzicht van het publicatieproces](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), dan ga op de volgende concepten verder.
+- [Overzicht van codes](https://experienceleague.adobe.com/docs/launch/using/home.html)
+- [Snelle startgids](../../../tags/quick-start/quick-start.md)
 
-## Hoe te om de uitbreidingen van de Platform launch in de interface van het Platform te vinden {#how-to-find-extensions-in-interface}
+## Hoe te om markeringsuitbreidingen in de interface van het Platform te vinden {#how-to-find-extensions-in-interface}
 
-Blader naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** en selecteer **[!UICONTROL Extensions]** in het filter **[!UICONTROL Types]** om de extensies van Platform launches te zoeken in de interface van het Platform.
+Als u de extensies wilt zoeken in de interface Platform, bladert u naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** en selecteert u **[!UICONTROL Extensions]** in het filter **[!UICONTROL Types]**.
 
 ![Extensies, filter in de interface](../../assets/catalog/launch-extensions/filter.png)
 
-## De werking van extensies voor Platform launches {#how-extensions-work}
+## Hoe werken tagextensies? {#how-extensions-work}
 
-platform launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](../personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](../voice/confirmit-digital-feedback.md).
+Extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](../personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](../voice/confirmit-digital-feedback.md).
 
 **Profiel/segment** Exportbestemmingen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen, passen segmentatie toe, en exporteer segmenten en gekwalificeerde profielen naar bestemmingen. Voorbeelden hiervan zijn de [Amazon S3 cloudopslagbestemming](../cloud-storage/amazon-s3.md) of de [Google Display &amp; Video 360 advertentiebestemming](../advertising/google-dv360.md).
 
-![Extensies van Experience Platforms Launch vergeleken met andere bestemmingen](../../assets/common/launch-and-other-destinations.png)
+![Extensies labelen in vergelijking met andere doelen](../../assets/common/launch-and-other-destinations.png)
 
-## Voordelen van het gebruik van extensies voor Platform launches {#extensions-benefits}
+## Voordelen van het gebruik van tagextensies {#extensions-benefits}
 
-Adobe Experience Platform Launch is gratis voor bestaande Experience Cloud-klanten. platform launch vereenvoudigt de implementatie van tags op uw website via eenvoudig te gebruiken extensies die u kunt installeren, configureren, bijwerken en verwijderen. platform launch heeft een kleine voetafdruk op uw website en zorgt ervoor dat uw pagina&#39;s snel blijven laden.
+De mogelijkheden voor tags van Platform zijn gratis voor bestaande Experience Cloud-klanten. Het systeem vereenvoudigt de implementatie van tags op uw website via eenvoudig te gebruiken extensies die u kunt installeren, configureren, bijwerken en verwijderen. Met labels blijft er een kleine voetafdruk op uw website staan, zodat uw pagina&#39;s snel kunnen worden geladen.
 
->[!IMPORTANT]
->
->Hoewel u segmenten niet kunt activeren voor extensies van Platform launches, kunt u regels instellen om alleen gebeurtenisgegevens in bepaalde situaties door te sturen. Lees hieronder meer.
+Hoewel u segmenten niet kunt activeren om extensies te labelen, kunt u regels instellen om alleen gebeurtenisgegevens in bepaalde situaties door te sturen. Met deze krachtige functionaliteit kunt u gebeurtenisgegevens alleen in bepaalde situaties doorsturen, in tegenstelling tot het verzenden van gebeurtenisgegevens voor elke interactie. Lees voor meer informatie de regels in de [tagdocumentatie](../../../tags/ui/managing-resources/rules.md).
 
-U kunt *regels* tot stand brengen die bepalen wanneer om gebeurtenisgegevens aan uitbreidingen door:sturen. Met deze krachtige functionaliteit kunt u gebeurtenisgegevens alleen in bepaalde situaties doorsturen, in tegenstelling tot het verzenden van gebeurtenisgegevens voor elke interactie. Lees voor meer informatie de regels in de [Adobe Experience Platform Launch-documentatie](../../../tags/ui/managing-resources/rules.md).
+## Voorbeeld van gebruik voor extensies {#extensions-use-cases}
 
-## Voorbeelden van gebruiksscenario&#39;s voor extensies van Platform launches {#extensions-use-cases}
-
-De uitbreidingen van de platform launch laten u toe om diverse klantengebruiksgevallen tevreden te stellen. Voorbeelden hiervan zijn:
+De uitbreidingen laten u toe om diverse klantengebruiksgevallen tevreden te stellen. U kunt bijvoorbeeld extensies gebruiken in de volgende gevallen:
 
 - U kunt website- of native toepassingsgegevens naar Facebook verzenden via de Facebook-pixelextensie. Facebook Pixel geeft aan naar welke delen van uw site of app een bezoeker is genavigeerd, die informatie doorstuurt naar Facebook en u uw bezoeker kunt richten via Facebook.
 - U kunt gebeurtenisgegevens van uw websites en apps doorsturen naar Google Analytics om deze te analyseren en beslissingen te nemen op basis van die gegevens.
-- U kunt op het juiste moment een chatbox-app voor de client inschakelen op basis van de manier waarop uw gebruikers met uw pagina&#39;s communiceren, volgens de regels die u in de Platform launch instelt.
+- U kunt op het juiste moment een chatbox-app voor de client inschakelen op basis van de manier waarop uw gebruikers met uw pagina&#39;s communiceren, volgens de regels die u instelt.
 
 ## Extensiecategorieën {#extension-categories}
 
-De uitbreidingen van de platform launch kunnen onder de volgende categorieën in Platform vallen:
+Extensies kunnen in Platform onder de volgende categorieën vallen:
 
 - [Reclame](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
