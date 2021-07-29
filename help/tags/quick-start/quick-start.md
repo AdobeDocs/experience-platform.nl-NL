@@ -1,9 +1,9 @@
 ---
 title: Snelstartgids
 description: Leer hoe u snel aan de slag kunt met tags in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Tags zijn Adobe Experience Platform van de volgende generatie technologie voor tagbeheer. Het wordt van de grond opgebouwd om een open en duurzaam ecosysteem te steunen waar iedereen zijn eigen integraties kan bouwen die de klanten van de Adobe aan hun plaatsen kunnen opstellen. Het is een eerste API-toepassing, dus alles wat u kunt doen via de UI, kunt u ook programmatisch doen via een API.
 
@@ -26,8 +26,6 @@ De basisworkflow voor labels:
 6. Test in uw ontwikkelomgeving.
 7. Bevorderen tot de productie.
 
-Zie de [inleidende video&#39;s](videos.md) documentatie voor een inleidende video.
-
 ## 1. Groepen en gebruikers instellen
 
 Tags zijn volledig geïntegreerd met uw Adobe ID. De toestemmingen van de gebruiker worden beheerd door de Admin Console met andere producten en oplossingen van Adobe van [!DNL Creative Cloud], [!DNL Document Cloud], en Experience Cloud.
@@ -38,7 +36,7 @@ Voor gedetailleerde instructies op hoe te om groepen tot stand te brengen en geb
 
 ## 2. Aanmelden
 
-Nadat de markeringsrechten aan uw Adobe ID zijn toegevoegd, moet u login aan de UI van de Inzameling van Gegevens. U kunt dit doen door rechtstreeks aan het [Experience Cloud login scherm ](https://experiencecloud.adobe.com) te navigeren, en **[!UICONTROL Launch / Data Collection]** van het Snelle lusje van de Toegang te selecteren.
+Nadat de markeringsrechten aan uw Adobe ID zijn toegevoegd, moet u login aan de UI van de Inzameling van Gegevens. U kunt dit doen door rechtstreeks aan het [Experience Cloud login scherm ](https://experiencecloud.adobe.com) te navigeren, en de UI van de Inzameling van Gegevens van het Snelle lusje van de Toegang te selecteren.
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ Een uitbreiding is een integratie die door Adobe of een partner van Adobe wordt 
 
 Bij alle nieuwe eigenschappen wordt de [Core-extensie](../extensions/web/core/overview.md) geïnstalleerd. Mobiele eigenschappen worden geleverd met extra extensies. De uitbreiding van de Kern wordt gebouwd door Adobe om een robuuste standaardreeks gegevenselementtypes voor uw gegevenslaag en gebeurtenistypen voor uw regels te verstrekken. De meeste handelingen die u wilt uitvoeren (een ECID ophalen, [!DNL Adobe Analytics]-bakens verzenden, het globale [!DNL Target]-tekstvak laden, enzovoort) komen uit extensies die u uit de catalogus installeert.
 
-Wat tags in Platform echt uniek maakt, is dat deze extensies door iedereen kunnen worden gemaakt. Moet u een Facebook-hermarketingpixel op uw site neerzetten? Bekijk de extensie die Facebook heeft gemaakt. Wilt u hetzelfde voor Twitter of Gekoppeld in? Gebruik deze extensies. Moet u een enquête uitvoeren? Kijk naar Vraag Pro of Voorzien. Moet u privacy en toestemming van uw eindgebruikers beheren om met [!DNL GDPR] te helpen? Kijk goed naar Evidon en Vertrouwboog. Wilt u een gedetailleerd inzicht zien in het gedrag van individuele gebruikers op uw site? Kijk eens naar Clicktale. Zie [Een nieuwe extensie toevoegen](../ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
+Wat tags in Platform echt uniek maakt, is dat deze extensies door iedereen kunnen worden gemaakt. Moet u een Facebook-hermarketingpixel op uw site neerzetten? Bekijk de extensie die Facebook heeft gemaakt. Wilt u hetzelfde voor Twitter of Gekoppeld in? Gebruik deze extensies. Moet u een enquête uitvoeren? Kijk naar Vraag Pro of Voorzien. Moet u privacy en toestemming van uw eindgebruikers beheren om met [!DNL GDPR] te helpen? Kijk goed naar Evidon en Vertrouwboog. Wilt u een gedetailleerd inzicht zien in het gedrag van individuele gebruikers op uw site? Kijk eens naar Clicktale. Voor meer informatie, voor meer informatie, zie de sectie over [toevoegend een nieuwe uitbreiding](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Gegevenselementen en regels maken
 
