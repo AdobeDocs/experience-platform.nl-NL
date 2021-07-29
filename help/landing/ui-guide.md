@@ -5,8 +5,7 @@ title: Overzicht gebruikersinterface Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1695'
 ht-degree: 1%
@@ -79,7 +78,7 @@ Als u de schakeloptie selecteert, wordt een vervolgkeuzemenu geopend met IMS-org
 
 ### Overschakelen op toepassingen
 
-Het volgende punt op de rechterkant van de hoogste navigatie is **toepassingsschakelaar**, die door ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) pictogram wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw IMS-organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en Launch.
+Het volgende punt op de rechterkant van de hoogste navigatie is **toepassingsschakelaar**, die door ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) pictogram wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw IMS-organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en andere.
 
 ### Help
 
