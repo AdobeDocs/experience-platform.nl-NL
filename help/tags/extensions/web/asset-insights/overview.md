@@ -1,9 +1,9 @@
 ---
 title: Overzicht van de extensie Asset Insights AEM
 description: Meer informatie over de tagextensie AEM Asset Insights in Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Deze extensie is bedoeld voor gebruik in combinatie met [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). Meer bepaald vervangt deze code het proces pageTracker en sluit deze in. Als deze extensie is geconfigureerd, verzendt deze extensie Asset *Impression* en *Click* metrics naar Adobe Analytics, waarna deze worden geïmporteerd in de rapporten AEM Asset Insights. De gegevens van de activa kunnen dan worden gerapporteerd door of AEM Inzichten van Activa of de Werkruimten van het Project van Adobe Analytics te gebruiken.
 
