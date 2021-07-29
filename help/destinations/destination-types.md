@@ -3,14 +3,13 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 seo-title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
-
 
 # Doeltypen en -categorieën
 
@@ -42,15 +41,15 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 ## Extensies {#extensions}
 
-Platform maakt gebruik van de kracht en flexibiliteit van Adobe Experience Platform Launch om Platform launch-extensies op te nemen in de interface van het Platform.
+Platform maakt gebruik van de kracht en flexibiliteit van tagbeheer, zodat u tagextensies kunt configureren in de gebruikersinterface voor gegevensverzameling.
 
 >[!TIP]
 >
->Zie [Overzicht van Adobe Experience Platform Launch-extensies](./catalog/launch-extensions/overview.md) voor gedetailleerde informatie over Adobe Experience Platform Launch-extensies, zoals use cases en hoe u deze kunt vinden in de interface.
+>Zie [overzicht van tagextensies](./catalog/launch-extensions/overview.md) voor gedetailleerde informatie over tagextensies, waaronder gebruiksgevallen en het zoeken van deze extensies in de interface.
 
-platform launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](./catalog/personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](./catalog/voice/confirmit-digital-feedback.md).
+Met uitbreidingen worden onbewerkte gebeurtenisgegevens doorgestuurd naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](./catalog/personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](./catalog/voice/confirmit-digital-feedback.md).
 
-![Extensies van Experience Platforms Launch vergeleken met andere bestemmingen](./assets/common/launch-and-other-destinations.png)
+![Extensies labelen in vergelijking met andere doelen](./assets/common/launch-and-other-destinations.png)
 
 ## Wanneer gebruikt u verbindingen en extensies
 
@@ -65,4 +64,3 @@ Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeli
 De verbindingen en extensies in de [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Reclame**, **Cloudopslag**, **Beoordelingsplatforms**, **E-mailmarketing**, enz.), afhankelijk van de marketingactie die zij u helpen bereiken. Zie de [documentatie bij de catalogus Doelen](./catalog/overview.md) voor meer informatie over elk van de categorieën en de bestemmingen die in elke categorie zijn opgenomen.
 
 ![Doelcategorieën](./assets/destination-types/destination-categories-menu.png)
-
