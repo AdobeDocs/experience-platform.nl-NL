@@ -1,9 +1,9 @@
 ---
 title: Properties
 description: Leer hoe uw extensies, omgevingen en bibliotheken zijn georganiseerd en gegroepeerd voor uw organisatie in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 ## Web-eigenschappen
 
@@ -21,8 +21,6 @@ Een webeigenschap is een verzameling regels, gegevenselementen, geconfigureerde 
 ## Mobiele eigenschappen
 
 Een eigenschap van het type mobile kan meerdere toepassingen bevatten. In een mobiele eigenschap kunt u bijvoorbeeld dezelfde set regels en extensies beheren voor meerdere iOS- en Android-toepassingen.
-
-Zie [Uw eerste eigenschap maken](../../quick-start/videos.md) voor een videozelfstudie.
 
 ## Aanbevolen procedures voor het plannen van eigenschappen {#best-practices-for-planning-properties}
 
