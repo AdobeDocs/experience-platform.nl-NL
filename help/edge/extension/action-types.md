@@ -1,19 +1,19 @@
 ---
 title: Handelingstypen in de Adobe Experience Platform Web SDK-extensie
-description: Leer meer over de verschillende actietypen die door de uitbreiding van SDK van het Web van Adobe Experience Platform in Adobe Experience Platform Launch worden verstrekt.
+description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 53864097af7d3278f56a3f23186de4eb405bcb51
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
 # Typen handelingen
 
-Nadat u de [uitbreiding van SDK van het Web van Adobe Experience Platform ](web-sdk-extension-configuration.md) voor [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html) vormt, vorm uw actietypes.
+Nadat u de [Adobe Experience Platform Web SDK markeringsuitbreiding ](web-sdk-extension-configuration.md) vormt, vorm uw actietypes.
 
 Op deze pagina worden de beschikbare actietypen beschreven.
 
