@@ -1,9 +1,9 @@
 ---
 title: Asynchrone implementatie
 description: Leer hoe u Adobe Experience Platform-tagbibliotheken asynchroon op uw website kunt implementeren.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Prestaties en niet-blokkerende implementatie van de JavaScript-bibliotheken die vereist zijn voor onze producten zijn steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) raden gebruikers aan hun manier van implementatie van de Adobe-bibliotheken op hun site te wijzigen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
 
@@ -74,7 +74,7 @@ Houd rekening met het volgende wanneer u deze principes toepast op uw eigen webs
 * **Een regel die gebruikmaakt van het gebeurtenistype Bibliotheek Geladen kan worden uitgevoerd voordat de gegevenslaag volledig is geladen.**  Dit kan ertoe leiden dat de handelingen van de regel met ontbrekende gegevens worden uitgevoerd omdat de gegevens nog niet beschikbaar op de pagina waren. Deze soorten kwesties kunnen worden verlicht door uw regelconfiguratie aan te passen. Als voorbeeld, in plaats van het hebben van een regel die door het Bibliotheek Geladen gebeurtenistype wordt teweeggebracht, kon u in plaats daarvan het gebeurtenistype van de Gebeurtenis van de Douane of van de Vraag gebruiken die door uw paginacode worden teweeggebracht zodra uw gegevenslaag het laden beëindigt.
 * **Het gebeurtenistype Pagina onder biedt niet in het bijzonder waarde wanneer de bibliotheek asynchroon wordt geladen.**  Overweeg in plaats daarvan de geladen bibliotheek, DOM Ready, Window Loaded of andere gebeurtenistypen.
 
-Als u dingen die uit orde voorkomen ziet, is het waarschijnlijk dat u sommige timingkwesties hebt om door te werken. De plaatsingen die nauwkeurige timing vereisen zouden gebeurtenisluisteraars en het gebeurtenistype van de Gebeurtenis van de Douane of Directe Vraag kunnen moeten gebruiken om hun implementaties robuuster en consistenter te maken.
+Als u dingen die uit orde voorkomen ziet, is het waarschijnlijk dat u wat timingkwesties hebt om door te werken. De plaatsingen die nauwkeurige timing vereisen zouden gebeurtenisluisteraars en het gebeurtenistype van de Gebeurtenis van de Douane of Directe Vraag kunnen moeten gebruiken om hun implementaties robuuster en consistenter te maken.
 
 ## De ingesloten code van tags asynchroon laden
 
