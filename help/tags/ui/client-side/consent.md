@@ -1,9 +1,9 @@
 ---
 title: JavaScript-tags gebruiken om de toestemming van de klant te beheren
 description: Leer hoe u in Adobe Experience Platform de keuze- en opt-outsignalen van klanten voor verschillende Adobe-oplossingen kunt beheren.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 De combinatie van de [Algemene Verordening inzake gegevensbescherming (GDPR)](https://gdpr-info.eu/art-7-gdpr/) en [ePrivacy](https://medium.com/mydata/consent-lost-gdpr-and-found-eprivacy-e85cf881ffb) wetgeving vereist dat bedrijven toestemming voor hun gebruikers kunnen beheren. Adobe-klanten kunnen bezoekers vragen zich aan te melden voordat Adobe-oplossingen voor een bepaalde bezoeker worden uitgevoerd. Bezoekers moeten hun opt-in- en opt-out-status kunnen beheren.
 
