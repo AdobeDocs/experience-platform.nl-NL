@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release Adobe Analytics Product String Extension
 description: De meest recente release bevat informatie over de tagextensie Adobe Analytics Product String in Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '131'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 ## 31 januari 2020
 
