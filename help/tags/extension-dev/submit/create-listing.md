@@ -1,7 +1,7 @@
 ---
 title: Een Exchange-aanbieding voor een extensie maken
 description: Leer hoe u uw extensie toevoegt aan de openbare catalogus in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Adobe Experience Platform heeft één enkele verenigde catalogus waar de gebruikers markeringsuitbreidingen kunnen bekijken die voor installatie beschikbaar zijn. Deze catalogus is beschikbaar in het product en bevat extensies van drie typen:
 
@@ -44,7 +44,6 @@ Als u al een bedrijfsaccount hebt of als u niet van plan bent om uw aanbieding t
    >[!NOTE]
    >
    >Dit is een andere bestandsindeling dan de extensiecode. De extensie zelf bevat een svg-bestand als het [pictogram](../manifest.md).
-   
    - **Aanbevolen afbeelding**  - Let op met een afbeelding die zelfstandig kan worden gebruikt en uw merk weergeeft en uw toepassing markeert. De aanbevolen afbeelding is de afbeelding die wordt weergegeven wanneer iemand een link naar je aanbieding op de beurs deelt of er berichten over plaatst op sociale media. Het moet daarom een modelweergave van uw merk zijn.
    - **Logo**  van uitgever van app - Dit is uw bedrijfslogo, zorg ervoor het pictogram de aangewezen afmetingen van 1280 x 720, of 2560 x 1440 (16:9) in png of jpg formaat heeft.
    - **Configuratieinstructies**  - Informeer klanten hoe u uw Adobe Experience Platform-extensie kunt configureren. Zorg ervoor zij om het even welke vereiste montages en volgende stappen begrijpen wanneer uw [configuratiemening](../configuration.md) onmiddellijk na het installeren van uw uitbreiding in een bezit verschijnt. 
@@ -69,4 +68,4 @@ Wanneer u uw uitbreiding bijwerkt, of enkel uw lijst van de Uitwisseling moet bi
 
 ## Het extensiepakket aan je aanbieding koppelen
 
-Nadat je aanbieding is goedgekeurd en openbaar is gemaakt, raden we je aan een koppeling naar de openbare aanbieding op te geven in het veld `exchange_url` van het bestand `extension.json` in het uitbreidingspakket.  Hiermee wordt een koppeling Meer informatie gemaakt in de extensiecatalogus van de Platform launch, zodat gebruikers in het product uw aanbieding kunnen vinden en er extra informatie over kunnen vinden.
+Nadat je aanbieding is goedgekeurd en openbaar is gemaakt, raden we je aan een koppeling naar de openbare aanbieding op te geven in het veld `exchange_url` van het bestand `extension.json` in het uitbreidingspakket.  Hiermee wordt een koppeling Meer informatie gemaakt in de tagextensiecatalogus, zodat gebruikers in het product je aanbieding kunnen vinden en er extra informatie over is.
