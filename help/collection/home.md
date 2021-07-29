@@ -5,10 +5,10 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 2%
+source-wordcount: '304'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,8 @@ Gegevensverzameling wordt ondersteund voor de volgende clientbronnen:
 De technologieën van de gegevensinzameling die door Experience Platform worden verstrekt richten zich op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets. Deze technologieën omvatten:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Tags](../tags/home.md)
+* [Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Experience Data Model (XDM)](../xdm/home.md)
 
@@ -37,7 +38,7 @@ SDK&#39;s van Adobe Experience Platform Web en Mobile vouwen alle Adobe-productb
 
 ## Flip-the-switch-proces voor de implementatie van Adobe-technologie
 
-Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met behulp van Platform launch kunt u [gegevensstreams](../edge/fundamentals/datastreams.md) instellen voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder code op de client te wijzigen.
+Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met tags kunt u [gegevensstreams](../edge/fundamentals/datastreams.md) instellen voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder code op de client te wijzigen.
 
 ![](./images/deploy.png)
 
