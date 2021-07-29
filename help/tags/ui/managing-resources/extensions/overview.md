@@ -1,9 +1,9 @@
 ---
 title: Extensies
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Een extensie is een set verpakte code die de functionaliteit uitbreidt die wordt geboden door tags of het doorsturen van gebeurtenissen.
 
@@ -26,15 +26,13 @@ Extensies bepalen de elementen die beschikbaar zijn bij het bouwen van eigenscha
 
 Gebruik de koppelingen boven aan de lijst Extensies om geïnstalleerde extensies, de catalogus met extensies of updates weer te geven.
 
-Selecteer een extensie en selecteer [!UICONTROL Configure] om de instellingen van de extensie weer te geven en te wijzigen. Zie [Een nieuwe extensie toevoegen](#add-a-new-extension) voor informatie over extensieopties.
+Selecteer een extensie en selecteer [!UICONTROL Configure] om de instellingen van de extensie weer te geven en te wijzigen. Zie de sectie over [het toevoegen van een nieuwe extensie](#add-a-new-extension) voor meer informatie over extensieopties.
 
 >[!IMPORTANT]
 >
 >Wijzigingen worden pas van kracht als ze [gepubliceerd](../../publishing/overview.md) zijn.
 
 Standaard biedt Adobe extensies die algemene integratie ondersteunen. Extensies kunnen worden gewijzigd met aangepaste configuraties. Configuraties worden geleverd via de extensies. Als u een configuratie wilt maken, selecteert u de extensiekaart en selecteert u **[!UICONTROL Add New Configuration]**.
-
-Voor een videoinleiding, zie [Uitbreidingen](../../../quick-start/videos.md).
 
 ## Extensiecatalogus
 
