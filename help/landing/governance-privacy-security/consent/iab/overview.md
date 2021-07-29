@@ -5,9 +5,9 @@ title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2549'
 ht-degree: 0%
 
 ---
@@ -119,9 +119,9 @@ Zodra u CMP hebt gevormd om toestemmingskoorden te produceren, moet u het Web SD
 
 ### Een nieuwe gegevensstroom maken
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe gegevensstroom voor Platform maakt in [!DNL Adobe Experience Platform Launch]. Specifieke stappen voor hoe te om een nieuwe configuratie tot stand te brengen worden verstrekt in [SDK documentatie](../../../../edge/fundamentals/datastreams.md).
+SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe gegevensstroom voor Platform maakt in de gebruikersinterface voor gegevensverzameling. Specifieke stappen voor hoe te om een nieuwe gegevensstroom tot stand te brengen worden verstrekt in [SDK documentatie](../../../../edge/fundamentals/datastreams.md).
 
-Nadat u een unieke naam voor de configuratie hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
+Nadat u een unieke naam voor de gegevensstroom hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 
 | Veld DataStream | Waarde |
 | --- | --- |
@@ -239,7 +239,7 @@ Klanten moeten instemmen met de volgende doeleinden (zoals beschreven in [TCF 2.
 * **Doel 1**: Informatie opslaan en/of openen op een apparaat
 * **Doel 10**: Producten ontwikkelen en verbeteren
 
-TCF 2.0 vereist ook dat de bron van gegevens de toestemming van de leverancier van de bestemming moet controleren alvorens gegevens naar die bestemming te verzenden. Als dusdanig, controleert het Platform als de de verkoperstoestemming van de bestemming binnen aan voor alle IDs in de cluster alvorens gegevens te omvatten die aan die bestemming worden gebonden.
+TCF 2.0 vereist ook dat de bron van gegevens de de verkoperstoestemming van de bestemming moet controleren alvorens gegevens naar die bestemming te verzenden. Als dusdanig, controleert het Platform als de de verkoperstoestemming van de bestemming binnen aan voor alle IDs in de cluster alvorens gegevens te omvatten die aan die bestemming worden gebonden.
 
 >[!NOTE]
 >
