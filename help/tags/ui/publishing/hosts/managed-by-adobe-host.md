@@ -1,9 +1,9 @@
 ---
 title: Overzicht van door Adobe beheerde hosts
 description: Leer meer over de standaardhostingoptie voor het implementeren van builds van tagbibliotheken in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Gastheren met Adobe-beheer zijn de standaardhostinstelling voor het implementeren van uw tagbibliotheek-builds in Adobe Experience Platform. Wanneer u een nieuw bezit door het gebruikersinterface van de Inzameling van Gegevens creeert, wordt een standaard Adobe-geleide gastheer gecreeerd voor u.
 
@@ -89,7 +89,7 @@ De cache-control headers worden alleen toegepast op de hoofdbibliotheek. Eventue
 
 ## Het gebruiken van Adobe-beheerde ontvangen in de UI van de Inzameling van Gegevens
 
-Wanneer u eerst een bezit in [de Inzameling UI](http://launch.adobe.com/) van Gegevens creeert, wordt een Adobe-geleide gastheer automatisch gecreeerd voor u. Alle beschikbare milieu&#39;s die onmiddellijk bruikbare eigenschappen hebben worden ook toegewezen aan de Adobe-beheerde gastheer door gebrek.
+Wanneer u eerst een bezit in [de Inzameling UI](https://experience.adobe.com/#/data-collection/) van Gegevens creeert, wordt een Adobe-geleide gastheer automatisch gecreeerd voor u. Alle beschikbare milieu&#39;s die onmiddellijk bruikbare eigenschappen hebben worden ook toegewezen aan de Adobe-beheerde gastheer door gebrek.
 
 >[!NOTE]
 >
