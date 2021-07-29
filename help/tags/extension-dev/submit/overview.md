@@ -1,9 +1,9 @@
 ---
 title: Overzicht van het verzendproces voor extensies
 description: Leer de stappen voor het verzenden van uw extensie in Adobe Experience Platform van ontwikkeling naar release.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Het indienen van een extensie voor de catalogus voor gegevensverzameling in Adobe Experience Platform kan een enorme opgave zijn. In dit document wordt stapsgewijs uitgelegd hoe u uw extensie kunt verzenden met behulp van afzonderlijke opeenvolgende hulplijnen. Als u de extensie wilt verzenden, moet u de volgende stappen uitvoeren:
 
