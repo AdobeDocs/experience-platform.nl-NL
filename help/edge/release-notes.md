@@ -3,14 +3,18 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.6.1 - 29 juli 2021
+
+* Probleem verholpen waarbij het renderen van de personalisatie voor een app-weergave van één pagina zonder personalisatie-inhoud een fout zou veroorzaken en ertoe zou leiden dat de belofte die is geretourneerd van de opdracht `sendEvent` wordt afgewezen.
 
 ## Versie 2.6.0 - 27 juli 2021
 
