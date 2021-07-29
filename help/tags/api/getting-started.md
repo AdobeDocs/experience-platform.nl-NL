@@ -1,9 +1,9 @@
 ---
 title: Aan de slag met de Reactor-API
 description: Leer hoe u aan de slag kunt met de Reactor-API, inclusief stappen voor het genereren van de vereiste toegangsreferenties.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ In het volgende scherm wordt u gevraagd een of meer productprofielen te selecter
 
 >[!NOTE]
 >
->Productprofielen worden door uw organisatie beheerd via de Adobe Admin Console en bevatten specifieke sets rechten voor korrelfuncties in Adobe Experience Platform Launch. Productprofielen en hun machtigingen kunnen alleen worden beheerd door gebruikers met beheerdersrechten binnen uw organisatie. Neem contact op met de beheerder als u niet zeker weet welke productprofielen u voor de API moet selecteren.
+>Productprofielen worden door uw organisatie beheerd via de Adobe Admin Console en bevatten specifieke sets rechten voor korrelfuncties. Productprofielen en hun machtigingen kunnen alleen worden beheerd door gebruikers met beheerdersrechten binnen uw organisatie. Neem contact op met de beheerder als u niet zeker weet welke productprofielen u voor de API moet selecteren.
 
 Selecteer in de lijst de gewenste productprofielen en selecteer vervolgens **geconfigureerde API** opslaan om de API-registratie te voltooien.
 
@@ -98,7 +98,7 @@ Er wordt een nieuw toegangstoken gegenereerd en er wordt een knop opgegeven waar
 
 #### Toegangstokens programmatisch genereren {#program}
 
-Als u uw integratie van de Lancering voor een toepassing gebruikt, kunt u toegangstokens programmatically produceren door API verzoeken. Hiervoor hebt u de volgende waarden nodig:
+Als u uw integratie voor een toepassing gebruikt, kunt u programmatically toegangstokens door API verzoeken produceren. Hiervoor hebt u de volgende waarden nodig:
 
 * Client-id (`{API_KEY}`)
 * Clientgeheim (`{SECRET}`)
