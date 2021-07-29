@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
 feature: Data management
-source-git-commit: a1fcea17432954e2b81ff1657d18a1f865270adc
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 16%
+source-wordcount: '139'
+ht-degree: 17%
 
 ---
 
@@ -50,9 +50,9 @@ ht-degree: 16%
    * [Ondersteunende toestemming](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Overzicht](consent/iab-tcf/overview.md)
-      * [Integreren met Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-      * [Integreren zonder Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
-* Web SDK-extensie voor Adobe Experience Platform Launch {#extension}
+      * [Integreren met tags](consent/iab-tcf/with-launch.md)
+      * [Integreren zonder tags](consent/iab-tcf/without-launch.md)
+* Web SDK-tagextensie {#extension}
    * [Web SDK-extensie](extension/web-sdk-extension-configuration.md)
    * [Typen handelingen](extension/action-types.md)
    * [Gegevenstelelementtypen](extension/data-element-types.md)
