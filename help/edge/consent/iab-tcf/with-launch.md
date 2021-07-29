@@ -1,24 +1,23 @@
 ---
-title: Integreer de Steun van IAB TCF 2.0 gebruikend Platform launch en de Uitbreiding van SDK van het Web van het Platform
-description: Leer hoe u IAB TCF 2.0 instelt voor toestemming met Adobe Experience Platform Launch en de Adobe Experience Platform Web SDK-extensie.
+title: Integreer de Steun van IAB TCF 2.0 gebruikend markeringen en de Uitbreiding van SDK van het Web van het Platform
+description: Leer hoe u IAB TCF 2.0-toestemming voor tags en de Adobe Experience Platform Web SDK-extensie instelt.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
 
-# Integreer IAB TCF 2.0 steun gebruikend Platform launch en de uitbreiding van SDK van het Web van het Platform
+# Integreer IAB TCF 2.0 steun gebruikend markeringen en de uitbreiding van SDK van het Web van het Platform
 
-Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een bezit van Adobe Experience Platform Launch voor het verzenden van IAB TCF 2.0 toestemmingsinformatie aan Adobe gebruikend de uitbreiding van SDK van het Web van Adobe Experience Platform voor Experience Platform Launch.
+Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een markeringsbezit voor het verzenden van IAB TCF 2.0 toestemmingsinformatie naar Adobe gebruikend de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform.
 
-Als u Experience Platform Launch niet wenst te gebruiken, te verwijzen gelieve naar de gids op [gebruikend IAB TCF 2.0 zonder Experience Platform Launch](./without-launch.md).
+Als u geen markeringen wenst te gebruiken, te verwijzen gelieve naar de gids op [gebruikend IAB TCF 2.0 zonder markeringen](./without-launch.md).
 
 ## Aan de slag
 
-Om IAB TCF 2.0 met Experience Platform Launch en de uitbreiding van SDK van het Web van het Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
+Om IAB TCF 2.0 met markeringen en de uitbreiding van SDK van het Web van het Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
 
 Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwing de [Adobe Experience Platform Web SDK overview](../../home.md) en de [Veelgestelde vragen](../../web-sdk-faq.md) documentatie.
 
@@ -30,7 +29,7 @@ Voor meer informatie over hoe te om standaardtoestemming te vormen, verwijs naar
 
 ## Profiel bijwerken met toestemmingsinformatie {#consent-code-1}
 
-Als u de handeling `setConsent` wilt aanroepen wanneer uw klanten hun voorkeuren hebben gewijzigd, moet u een nieuwe regel voor Experience Platforms Launch maken. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype van de &quot;Code van de Douane&quot;van de uitbreiding van de Kern.
+Als u de handeling `setConsent` wilt aanroepen wanneer uw klanten hun voorkeuren hebben gewijzigd, moet u een nieuwe tagregel maken. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype van de &quot;Code van de Douane&quot;van de uitbreiding van de Kern.
 
 Gebruik het volgende codevoorbeeld voor uw nieuwe gebeurtenis:
 
