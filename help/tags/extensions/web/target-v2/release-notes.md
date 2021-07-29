@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
-source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 ## 20 juli 2021
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ### Adobe Target v2-extensie 0.14.2
 
-- Los een insect op waar de definitieve bundel van de Lancering twee at.js versies bevat, één met Beslissing op Apparaat en één zonder.
+- Los een insect op waar de definitieve bundel twee at.js versies, één met Op Apparaat Beslissing en één zonder bevat.
 
 ## 19 mei 2021
 
