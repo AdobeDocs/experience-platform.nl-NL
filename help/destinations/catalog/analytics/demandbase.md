@@ -3,9 +3,9 @@ keywords: demandbase-extensie;demandbase;demandbase-bestemming
 title: Demandbase-extensie
 description: De extensie Demandbase is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 112a9575-4527-4a32-9610-a9d18ffd84f1
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Bekijk [!DNL Demandbase] B2B-accountinzichten direct in Adobe Analytics waar u v
 
 [!DNL Demandbase] is een uitbreiding voor analysemogelijkheden in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.101605.html).
 
-Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Platform launch in Platform werken, zie [overzicht van de uitbreidingen van Adobe Experience Platform Launch](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/overview.md) voor meer informatie over de werking van labelextensies in Platform.
 
 ![Demandbase-extensie](../../assets/catalog/analytics/demandbase/catalog.png)
 
@@ -26,7 +26,7 @@ Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie 
 
 Deze extensie is beschikbaar in de catalogus Doelen voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot Adobe Experience Platform Launch nodig. platform launch wordt aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot de Platform launch te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u extensies kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags die aan Adobe Experience Cloud-klanten worden aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
@@ -38,26 +38,26 @@ Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
 Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]** in de rechtertrack. Als het **[!UICONTROL Configure]** besturingselement grijs is, ontbreekt u de **[!UICONTROL manage_properties]** toestemming. Zie [Eerste vereisten](#prerequisites).
 
-Selecteer in het venster **[!UICONTROL Select available Platform Launch property]** de eigenschap Platform launch waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in de Platform launch. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) van de documentatie bij Platform launches.
+Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) in de tagdocumentatie.
 
-De werkstroom neemt u aan Platform launch om de installatie te voltooien.
+Het werkschema begeleidt u door de stappen om de installatie te voltooien.
 
 Voor informatie over de opties van de uitbreidingsconfiguratie, zie [Vereis de uitbreidingspagina](https://exchange.adobe.com/experiencecloud.details.101605.html) op de Uitwisseling van Adobe.
 
-U kunt de extensie ook rechtstreeks installeren in de [Adobe Experience Platform Launch-interface](https://launch.adobe.com/). Zie [Een nieuwe extensie toevoegen](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de documentatie van de Platform launch.
+U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de sectie over [het toevoegen van een nieuwe extensie](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de tagdocumentatie voor meer informatie.
 
 ## De extensie gebruiken {#how-to-use}
 
-Nadat u de extensie hebt geïnstalleerd, kunt u rechtstreeks in Platform launch regels voor de extensie instellen.
+Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen.
 
-In Platform launch, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Zie [Documentatie van regels](../../../tags/ui/managing-resources/rules.md) voor meer informatie over instellingsregels voor uw extensies.
+U kunt regels instellen voor geïnstalleerde extensies, zodat gebeurtenisgegevens alleen in bepaalde situaties naar de extensiebestemming worden verzonden. Raadpleeg de documentatie [tags](../../../tags/ui/managing-resources/rules.md) voor meer informatie over instellingsregels voor uw extensies.
 
 ## De extensie configureren, upgraden en verwijderen {#configure-upgrade-delete}
 
-U kunt extensies configureren, upgraden en verwijderen in de interface van de Platform launch.
+U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface voor gegevensverzameling.
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt **[!UICONTROL Install]** voor de extensie nog steeds weergegeven in de interface van het Platform. Kies de installatieworkflow zoals beschreven in [Extensie installeren](#install-extension) om de Platform launch te starten en uw extensie te configureren of te verwijderen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt **[!UICONTROL Install]** voor de extensie nog steeds weergegeven in de interface van het Platform. Kies de installatieworkflow zoals beschreven in [Extensie installeren](#install-extension) om de extensie te configureren of te verwijderen.
 
-Om uw uitbreiding te bevorderen, zie [Uitbreiding verbetering](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de documentatie van de Platform launch.
+Als u de extensie wilt bijwerken, raadpleegt u de handleiding bij het [upgradeproces van de extensie](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de documentatie bij de codes.
