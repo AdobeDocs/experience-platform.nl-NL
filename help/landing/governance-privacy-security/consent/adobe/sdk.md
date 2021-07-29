@@ -3,9 +3,9 @@ title: Gegevens met toestemming van de klant verwerken met de Adobe Experience P
 topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten in Adobe Experience Platform te verwerken met behulp van de Adobe 2.0-standaard.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,15 @@ Met de Adobe Experience Platform Web SDK kunt u de door CMP&#39;s (Consent Manag
 
 In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens over machtigingen binnen uw CMP kunt genereren en een gegevensset hebt gemaakt met machtigingsvelden die zijn ingeschakeld voor Real-time klantprofiel. Voor meer informatie over deze stappen, zie het overzicht over [toestemmingsverwerking in Experience Platform](./overview.md) alvorens aan deze gids terug te keren.
 
-Bovendien is voor deze handleiding een goed begrip nodig van Adobe Experience Platform Launch-extensies en de manier waarop deze in webtoepassingen worden geïnstalleerd. Raadpleeg de volgende documentatie voor meer informatie:
+Bovendien is voor deze handleiding een goed begrip vereist van de extensies van tags en de manier waarop deze worden geïnstalleerd in webtoepassingen. Raadpleeg de volgende documentatie voor meer informatie:
 
-* [Overzicht van platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [Snelstartgids](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
-* [Overzicht van publicatie](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
+* [Overzicht van codes](../../../../tags/home.md)
+* [Snelstartgids](../../../../tags/quick-start/quick-start.md)
+* [Overzicht van publicatie](../../../../tags/ui/publishing/overview.md)
 
 ## Een gegevensstroom instellen
 
-SDK kan alleen gegevens naar Experience Platform verzenden als er een bestaande gegevensstroom voor Platform is ingesteld in Adobe Experience Platform Launch. Bovendien [!UICONTROL Profile Dataset] moet u voor de configuratie selecteren gestandaardiseerde toestemmingsgebieden bevatten.
+SDK kan alleen gegevens naar Experience Platform verzenden als u een bestaande gegevensstroom voor Platform hebt ingesteld in de gebruikersinterface voor gegevensverzameling. Bovendien [!UICONTROL Profile Dataset] moet u voor de configuratie selecteren gestandaardiseerde toestemmingsgebieden bevatten.
 
 Nadat u een nieuwe configuratie hebt gemaakt of een bestaande configuratie hebt geselecteerd die u wilt bewerken, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de hieronder vermelde waarden om het formulier in te vullen.
 
@@ -55,7 +55,7 @@ Wanneer gebeëindigd, selecteer **[!UICONTROL Save]** bij de bodem van het scher
 
 ## De SDK van het Web Platform installeren en configureren
 
-Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap Platform launch is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door het tabblad **[!UICONTROL Catalog]**. Selecteer vervolgens **[!UICONTROL Install]** onder de extensie SDK van Platform in de lijst met beschikbare extensies.
+Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap tag is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door het tabblad **[!UICONTROL Catalog]**. Selecteer vervolgens **[!UICONTROL Install]** onder de extensie SDK van Platform in de lijst met beschikbare extensies.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -72,16 +72,16 @@ Als de SDK-extensie is geïnstalleerd, kunt u een gegevenselement maken dat de w
 In dit geval kunt u het volgende implementeren om standaardtoestemming in te stellen op basis van het gebied van de gebruiker:
 
 1. Bepaal het gebied van de gebruiker op de Webserver.
-1. Geef vóór de scripttag Platform launch (code insluiten) op de webpagina een aparte scripttag weer die een variabele `adobeDefaultConsent` instelt op basis van het gebied van de gebruiker.
+1. Voordat de `script`-tag (insluitcode) op de webpagina wordt weergegeven, moet u een afzonderlijke `script`-tag renderen die een `adobeDefaultConsent`-variabele instelt op basis van het gebied van de gebruiker.
 1. Stel een gegevenselement in dat de JavaScript-variabele `adobeDefaultConsent` gebruikt en gebruik dit gegevenselement als de standaardwaarde voor de toestemming voor de gebruiker.
 
 Als het gebied van de gebruiker door CMP wordt bepaald, kunt u de volgende stappen in plaats daarvan gebruiken:
 
 1. Verwerk de gebeurtenis &quot;CMP geladen&quot; op de pagina.
-1. In de gebeurtenismanager, plaats een `adobeDefaultConsent` variabele die op het gebied van de gebruiker wordt gebaseerd, en laad dan het de bibliotheekmanuscript van de Platform launch gebruikend JavaScript.
+1. Stel in de gebeurtenishandler een variabele `adobeDefaultConsent` in op basis van het gebied van de gebruiker en laad vervolgens het script van de tagbibliotheek met JavaScript.
 1. Stel een gegevenselement in dat de JavaScript-variabele `adobeDefaultConsent` gebruikt en gebruik dit gegevenselement als de standaardwaarde voor de toestemming voor de gebruiker.
 
-Als u een gegevenselement wilt maken in de gebruikersinterface van de Platform launch, selecteert u **[!UICONTROL Data Elements]** in de linkernavigatie en selecteert u **[!UICONTROL Add Data Element]** om naar het dialoogvenster voor het maken van gegevenselementen te navigeren.
+Als u een gegevenselement wilt maken in de gebruikersinterface voor gegevensverzameling, selecteert u **[!UICONTROL Data Elements]** in de linkernavigatie en selecteert u **[!UICONTROL Add Data Element]** om naar het dialoogvenster voor het maken van gegevenselementen te navigeren.
 
 Van hier, moet u een [!UICONTROL JavaScript Variable] gegevenselement tot stand brengen dat op `adobeDefaultConsent` wordt gebaseerd. Selecteer **[!UICONTROL Save]** wanneer gebeëindigd.
 
@@ -93,7 +93,7 @@ Zodra het gegevenselement wordt gecreeerd, navigeer terug naar de de uitbreiding
 
 ### De extensie op uw website implementeren
 
-Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Raadpleeg de [publicatiegids](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in de documentatie van de Platform launch voor gedetailleerde informatie over hoe te om uw bijgewerkte bibliotheek op te stellen bouwt.
+Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Raadpleeg de [publicatiegids](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in de tagdocumentatie voor gedetailleerde informatie over het implementeren van de bijgewerkte bibliotheek.
 
 ## Opdrachten voor wijzigen van toestemming maken {#commands}
 
