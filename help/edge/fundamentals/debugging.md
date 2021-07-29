@@ -3,9 +3,9 @@ title: Foutopsporing in de SDK van Adobe Experience Platform Web
 description: Leer hoe te om het zuiveren mogelijkheden in de SDK van het Web van het Experience Platform van een knevel te voorzien.
 keywords: foutopsporing in de web-SDK;foutopsporing;configureren;configureren, opdracht;foutopsporing, opdracht;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -78,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Het opgegeven object `libraryInfo` bevat momenteel de volgende eigenschappen:
 
-* `version` Dit is de versie van de geladen bibliotheek. Als de versie van de bibliotheek die wordt geladen bijvoorbeeld 1,0,0 was, zou de waarde `1.0.0` zijn. Wanneer de bibliotheek binnen de uitbreiding van Adobe Experience Platform Launch (genoemd &quot;AEP Web SDK&quot;) in werking wordt gesteld, is de versie de bibliotheekversie en de versie van de Platform launch uitbreiding werd aangesloten bij met een &quot;+&quot;teken. Als de versie van de bibliotheek bijvoorbeeld 1.0.0 was en de versie van de extensie Platform launch 1.2.0, zou de waarde `1.0.0+1.2.0` zijn.
+* `version` Dit is de versie van de geladen bibliotheek. Als de versie van de bibliotheek die wordt geladen bijvoorbeeld 1,0,0 was, zou de waarde `1.0.0` zijn. Wanneer de bibliotheek wordt uitgevoerd binnen de tagextensie (genaamd &quot;AEP Web SDK&quot;), is de versie de bibliotheekversie en wordt de versie van de tagextensie gekoppeld aan een plusteken (+). Als de versie van de bibliotheek bijvoorbeeld 1.0.0 was en de versie van de tagextensie 1.2.0, zou de waarde `1.0.0+1.2.0` zijn.
