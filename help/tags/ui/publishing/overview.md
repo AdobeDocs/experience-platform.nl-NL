@@ -1,9 +1,9 @@
 ---
 title: Overzicht van publicatie
 description: Meer informatie over het publiceren van wijzigingen in uw codebibliotheken voor tagbeheer in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
 Met Adobe Experience Platform kunt u wijzigingen in uw code voor tagbeheer inkapselen in afzonderlijke bibliotheken. Aangezien meerdere bibliotheken nu parallel door verschillende teams kunnen worden ontwikkeld, moeten deze bibliotheken een weloverwogen, toegestane procedure volgen voor het samenvoegen van wijzigingen voordat ze naar uw productieomgeving worden geduwd.
 
