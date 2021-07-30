@@ -5,7 +5,7 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
+source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
 workflow-type: tm+mt
 source-wordcount: '2223'
 ht-degree: 0%
@@ -99,7 +99,7 @@ Attribution AI geeft de volgende uitvoer:
 
 ![](./images/input-output/schema_output.gif)
 
-### Onbewerkte korrelige scores {#raw-granular-scores}
+### Ruw granulaat {#raw-granular-scores}
 
 Attribution AI geeft de toewijzingsscores in het meest granulaire niveau weer, zodat u de scores met elke gewenste scorekolom kunt segmenteren en dichten. Als u deze scores in de gebruikersinterface wilt weergeven, leest u de sectie op [Raw-score weergeven](#raw-score-path). Als u de scores wilt downloaden met de API, gaat u naar [scores downloaden in Attribution AI](./download-scores.md)-document.
 
@@ -141,12 +141,12 @@ In de volgende tabel worden de schemavelden in de voorbeelduitvoer van onbewerkt
 | identity (Object) | Onwaar | Bevat de details van de gebruiker die wordt gebruikt om het model zoals `id` en `namespace` te bouwen. |
 | id (String) | Waar | Identiteitskaart van de gebruiker zoals koekje identiteitskaart of identiteitskaart of MCID etc. <br> **Voorbeeld:** 1734876272540865634468320891369597404 |
 | namespace (String) | Waar | Naamruimte die wordt gebruikt om de paden en daardoor het model samen te stellen. <br> **Voorbeeld:** id |
-| touchpointsDetail (Object Array) | Waar | De lijst met aanraakpuntdetails die leiden tot de conversie die wordt geordend door het aantal aanraakpunten of het tijdstempel. |
+| touchpointsDetail (Object Array) | Waar | De lijst met gegevens van aanraakpunten die leiden tot de conversie die is besteld door | aanraakpunt of tijdstempel. |
 | touchpointName (String) | Waar | Naam van touchpoint dat tijdens opstelling werd gevormd. <br> **Voorbeeld:** PAID_SEARCH_CLICK |
 | scores (Object) | Waar | Aanraakpuntbijdrage voor deze conversie als score. Zie de sectie [Samengevoegde kenmerkingsscores](#aggregated-attribution-scores) voor meer informatie over de scores die in dit object worden geproduceerd. |
 | touchPoint (Object) | Waar | Metagegevens aanraakpunt. Zie de sectie [Samengevoegde scores](#aggregated-scores) voor meer informatie over de scores die in dit object worden geproduceerd. |
 
-### Raw-muziekpaden (UI) {#raw-score-path} weergeven
+### Onbewerkte muziekpaden weergeven (UI) {#raw-score-path}
 
 U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van het Platform en zoek en selecteer vervolgens het schema voor de AI-score van uw kenmerk op het tabblad **[!UICONTROL Browse]**.
 
@@ -157,7 +157,7 @@ Selecteer vervolgens een veld in het venster **[!UICONTROL Structure]** van de g
 ![Een schema kiezen](./images/input-output/field_properties.png)
 
 
-### Geaggregeerde attributiescores {#aggregated-attribution-scores}
+### Geaggregeerde delingsscores {#aggregated-attribution-scores}
 
 Geaggregeerde scores kunnen in CSV-indeling worden gedownload via de gebruikersinterface van het Platform als het datumbereik minder dan 30 dagen bedraagt.
 
