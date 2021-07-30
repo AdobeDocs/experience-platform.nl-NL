@@ -3,9 +3,9 @@ keywords: twitter;Twitter;twitter Universal website-tag;Twitter Universal websit
 title: Twitter Universal Website Tag-extensie
 description: De extensie Twitter Universal Website Tag is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Twitter Universal Website Tag] biedt acties om bakens naar de Twitter UWT-tag te verzenden.
 
-[!DNL Twitter Universal Website Tag] is een advertentie-uitbreiding in Adobe Experience Platform. Zie [Geavanceerde omzetcontrole](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html) voor meer informatie over de extensiefunctionaliteit.
+[!DNL Twitter Universal Website Tag] is een advertentie-uitbreiding in Adobe Experience Platform. Zie [Conversie bijhouden](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) in de documentatie van Twitter voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/overview.md) voor meer informatie over de werking van labelextensies in Platform.
 
