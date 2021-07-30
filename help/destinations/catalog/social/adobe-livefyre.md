@@ -3,9 +3,9 @@ keywords: livefyre;livefyre, extensie
 title: Adobe Livefyre-extensie
 description: De Adobe Livefyre-extensie is een sociale bestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Met Adobe Livefyre kunt u een constante stroom door gebruikers gegenereerde inhoud op uw website detecteren, ordenen en publiceren om authentieke en zeer persoonlijke ervaringen te creëren.
 
-Adobe Livefyre is een sociale extensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre is een sociale extensie in Adobe Experience Platform. Lees voor meer informatie over de Adobe Livefyre de [LiveCycle-implementatiegids](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
 
 Dit doel is een tagextensie. Zie [overzicht van tagextensies](../launch-extensions/overview.md) voor meer informatie over de manier waarop tagextensies werken in Platform.
 
@@ -42,10 +42,7 @@ Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook ee
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [Adobe Levensmiddelenpagina op de Uitwisseling van de Adobe](https://exchange.adobe.com/experiencecloud.details.100464.html).
-
 U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de gids op [toevoegend een nieuwe uitbreiding](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
-
 
 ## De extensie gebruiken {#how-to-use}
 
