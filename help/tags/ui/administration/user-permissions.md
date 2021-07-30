@@ -1,7 +1,7 @@
 ---
 title: Gebruikersmachtigingen
 description: Meer informatie over de verschillende beschikbare tagmachtigingen voor Adobe Experience Platform-gebruikers.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e93cb075dc8c8d01fcda3edf0014f86a47b5b710
 workflow-type: tm+mt
 source-wordcount: '2378'
 ht-degree: 0%
@@ -75,7 +75,6 @@ De rechten in deze groep zijn:
 De rechten van het bedrijf zijn op toestemmingen van toepassing die veelvoudige eigenschappen overspannen.  Er zijn momenteel drie:
 
 * **Eigenschappen beheren:** hiermee kunt u nieuwe eigenschappen maken in de gebruikersinterface voor gegevensverzameling en de metagegevens en instellingen wijzigen op eigenschapsniveau. U kunt ook eigenschappen verwijderen. Lees de [eigenschappendocumentatie](companies-and-properties.md) voor meer informatie. Beheerders voeren deze rol gewoonlijk uit.
-* 
 * Hiermee kunt u nieuwe eigenschappen maken en de metagegevens en instellingen op eigenschapsniveau wijzigen. U kunt ook eigenschappen verwijderen.  Meer informatie over eigenschappen [hier](companies-and-properties.md). Beheerders voeren deze rol gewoonlijk uit.
 * **Ontwikkelextensies:** hiermee kunt u extensiepakketten maken en wijzigen die eigendom zijn van het bedrijf, waaronder persoonlijke releases en verzoeken om openbare release.
 * **App Configurations beheren:** dit is alleen beschikbaar voor klanten met een licentie voor Adobe Journey Optimizer of een andere oplossing die hen toegang biedt tot mobiele communicatie in de app en pushberichten.  Op deze manier kunt u de apps beheren waarvan Experience Cloud kennis heeft, samen met de vereiste pushgegevens die nodig zijn om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification Service.
