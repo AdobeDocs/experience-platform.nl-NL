@@ -3,9 +3,9 @@ keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Pe
 title: Marketo Web Personalization-extensie
 description: De extensie Marketo Web Personalization is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Deze uitbreiding stelt het manuscript voor [!DNL Marketo’s] de Toepassingen van het Web Personalization en ContentAI op. [!DNL Marketo] Webpersonalisatie identificeert en personaliseert inhoud op unieke wijze aan de kenmerken van webbezoekers, zoals zelfafbeeldingen voor anonieme bezoekers en een breed scala aan gedragskenmerken binnen het Platform  [!DNL Marketo] Betrokkenheid voor bekende bezoekers. [!DNL Marketo] ContentAI bevat mogelijkheden voor door AI aangedreven aanbevelingen en personalisatie voor web- en e-mailcampagnes die uniek zijn voor B2B-klanten.
 
-[!DNL Marketo Web Personalization] is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
+[!DNL Marketo Web Personalization] is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over Webverpersoonlijking en ContentAI in Marketo, lees [Overzicht van de Aanpassing van het Web](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
 
 Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/overview.md) voor meer informatie over de werking van labelextensies in Platform.
 
@@ -41,8 +41,6 @@ Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]*
 Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) in de tagdocumentatie.
 
 Het werkschema begeleidt u door de stappen om de installatie te voltooien.
-
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [pagina van de Personalisatie van het Web van Marketo op de Uitwisseling van Adobe](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
 
 U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de sectie over [het toevoegen van een nieuwe extensie](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de tagdocumentatie voor meer informatie.
 
