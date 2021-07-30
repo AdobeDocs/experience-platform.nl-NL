@@ -3,9 +3,9 @@ keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin, extensie;marketo m
 title: Marketo Munchkin-extensie
 description: De Marketo Munchkin-extensie is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [!DNL Marketo’s Munchkin] Met JavaScript kunt u bezoeken aan eindgebruikerspagina&#39;s bijhouden en op uw  [!DNL Marketo] openingspagina&#39;s en externe webpagina&#39;s klikken.
 
-[!DNL Marketo Munchkin] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
+[!DNL Marketo Munchkin] is een e-mailextensie in Adobe Experience Platform. Lees [Lead Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in de Marketo-documentatie voor meer informatie over Marketo Munchkin.
 
 Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/overview.md) voor meer informatie over de werking van labelextensies in Platform.
 
@@ -43,8 +43,6 @@ Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]*
 Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) in de tagdocumentatie.
 
 Het werkschema begeleidt u door de stappen om de installatie te voltooien.
-
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie [Marketo Munchkin pagina op de Uitwisseling van Adobe](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
 
 U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de sectie over [het toevoegen van een nieuwe extensie](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de tagdocumentatie voor meer informatie.
 
