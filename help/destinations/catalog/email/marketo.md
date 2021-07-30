@@ -3,7 +3,7 @@ keywords: Marketo;marketo;Marketo-extensie;Marketo-extensie
 title: Marketo-extensie
 description: De extensie Marketo is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Marketo]De krachtige software voor marketingautomatisering helpt marketers de kunst en wetenschap van digitale marketing te master om klanten en vooruitzichten te betrekken.
 
-[!DNL Marketo] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie [uitbreidingspagina op Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+[!DNL Marketo] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie [uitbreidingspagina op Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/overview.md) voor meer informatie over de werking van labelextensies in Platform.
 
@@ -38,7 +38,7 @@ De extensie [!DNL Marketo] installeren:
 4. Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) in de tagdocumentatie.
 5. Het werkschema begeleidt u door de stappen om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [Marketo pagina op de Uitwisseling van Adobe](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [Marketo pagina op de Uitwisseling van Adobe](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de sectie over [het toevoegen van een nieuwe extensie](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de tagdocumentatie voor meer informatie.
 
