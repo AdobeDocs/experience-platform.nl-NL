@@ -3,9 +3,9 @@ keywords: bizible;bizible extension;bizible destination
 title: Bizible-extensie
 description: De Bizible-extensie is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL Bizible] is de toonaangevende B2B-attributieoplossing die u een ongekende zichtbaarheid in uw gegevens geeft, zodat u slimme beslissingen kunt nemen die de groei stimuleren.
+[!DNL Bizible] is de toonaangevende B2B-attributieoplossing die u een ongeëvenaarde zichtbaarheid in uw gegevens biedt, zodat u slimme beslissingen kunt nemen die de groei stimuleren.
 
-[!DNL Bizible] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] is een e-mailextensie in Adobe Experience Platform. Lees [Marketing Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) in de Bizible-overzichtsbronnen voor meer informatie over Bizible.
 
 Dit doel is een tagextensie. Zie [overzicht van tagextensies](../launch-extensions/overview.md) voor meer informatie over de manier waarop tagextensies werken in Platform.
 
@@ -41,8 +41,6 @@ Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]*
 Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de [tagdocumentatie](../../../tags/ui/administration/companies-and-properties.md).
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
-
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie [Bizible pagina op de Uitwisseling van Adobe](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de gids op [toevoegend een nieuwe uitbreiding](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 
