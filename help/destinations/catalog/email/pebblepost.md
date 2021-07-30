@@ -3,9 +3,9 @@ keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost p
 title: PebblePost-extensie
 description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL PebblePost's Programmatic Direct Mail®] Met deze oplossing kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden geconverteerd. Marktdeelnemers kunnen de aangepaste gegevenssegmenten die ze in Adobe hebben gemaakt, benutten om zich nu te richten op consumenten met een relevante, langere indruk van de interne media. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
 
-[!DNL PebblePost] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [Adobe Uitwisseling](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] is een e-mailextensie in Adobe Experience Platform. Lees voor meer informatie over PebblePost de [integratieblogpost](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 
 Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/overview.md) voor meer informatie over de werking van labelextensies in Platform.
 
@@ -41,8 +41,6 @@ Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]*
 Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) in de tagdocumentatie.
 
 Het werkschema begeleidt u door de stappen om de installatie te voltooien.
-
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie [PebblePost pagina op de Uitwisseling van Adobe](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de sectie over [het toevoegen van een nieuwe extensie](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de tagdocumentatie voor meer informatie.
 
