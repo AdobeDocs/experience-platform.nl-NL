@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.6.2 - 4 augustus 2021
+
+Bevat versie 2.6.2 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
 ## Versie 2.6.1 - juli 2021
 
