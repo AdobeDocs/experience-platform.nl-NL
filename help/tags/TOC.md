@@ -4,9 +4,9 @@ user-guide-title: Help bij tags
 breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Gegevensverzameling
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '385'
 ht-degree: 25%
 
 ---
@@ -88,6 +88,9 @@ ht-degree: 25%
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Overzicht](./extensions/web/asset-insights/overview.md)
          * [Aanvullende informatie](./extensions/web/asset-insights/release-notes.md)
+      * Adobe Experience Manager Forms {#forms}
+         * [Overzicht](./extensions/web/forms/overview.md)
+         * [Aanvullende informatie](./extensions/web/forms/release-notes.md)
       * Adobe Media-analyse voor audio en video {#media-analytics}
          * [Overzicht](./extensions/web/media-analytics/overview.md)
          * [Aanvullende informatie](./extensions/web/media-analytics/release-notes.md)
