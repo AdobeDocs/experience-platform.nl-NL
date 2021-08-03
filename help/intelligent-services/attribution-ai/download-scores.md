@@ -5,10 +5,9 @@ title: Scores downloaden in Attribution AI
 topic-legacy: Downloading scores
 description: Dit document dient als richtlijn voor het downloaden van scores voor Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -23,7 +22,7 @@ Met Attribution AI kunt u scores downloaden in de Parquet-bestandsindeling. Deze
 
 Bovendien, om tot scores voor Attribution AI toegang te hebben, moet u een de dienstinstantie hebben met een succesvolle looppasstatus beschikbaar. Als u een nieuwe service-instantie wilt maken, gaat u naar de [Gebruikershandleiding voor Attribution AI](./user-guide.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
 
-## Uw gegevensset-id {#dataset-id} zoeken
+## Uw gegevensset-id zoeken {#dataset-id}
 
 Binnen uw de dienstinstantie voor Attribution AI inzichten, klik *Meer acties* dropdown in de top-juiste navigatie dan uitgezocht **[!UICONTROL Access scores]**.
 
@@ -33,7 +32,7 @@ Er wordt een nieuw dialoogvenster weergegeven met een koppeling naar de document
 
 ![Dataset-id](../customer-ai/images/download-scores/access-scores.png)
 
-## De batch-id {#retrieve-your-batch-id} ophalen
+## Batch-id ophalen {#retrieve-your-batch-id}
 
 Gebruikend uw dataset identiteitskaart van de vorige stap, moet u een vraag aan de Catalogus API maken om een partijidentiteitskaart terug te winnen. Voor deze API-aanroep worden aanvullende queryparameters gebruikt om de laatste succesvolle batch te retourneren in plaats van een lijst met batches die bij uw organisatie horen. Om extra partijen terug te keren, verhoog het aantal voor de `limit` vraagparameter tot de gewenste hoeveelheid u wenst om te zijn teruggekeerd. Voor meer informatie over de types van vraagparameters beschikbaar, bezoek de gids over [het filtreren van de gegevens van de Catalogus gebruikend vraagparameters](../../catalog/api/filter-data.md).
 
@@ -166,7 +165,7 @@ Een geslaagde reactie retourneert een payload die een object `_links` bevat. Bin
 }
 ```
 
-## Bestanden {#retrieving-your-files} ophalen
+## Bestanden ophalen {#retrieving-your-files}
 
 Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw verzoek van de GET om uw dossierfolder terug te winnen.
 
@@ -261,7 +260,7 @@ Het antwoord downloadt het bestand dat u in de huidige map hebt aangevraagd. In 
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-De gedownloade scores hebben de Parquet-indeling en hebben een [!DNL Spark]-shell of een Parquet-lezer nodig om de scores weer te geven. Voor het bekijken van onbewerkte scores kunt u [Apache Parquet-gereedschappen](https://github.com/apache/parquet-mr/tree/master/parquet-tools) gebruiken. Met de gereedschappen Parquet kunt u de gegevens analyseren met [!DNL Spark].
+De gedownloade scores hebben de Parquet-indeling en hebben een [!DNL Spark]-shell of een Parquet-lezer nodig om de scores weer te geven. Voor het bekijken van onbewerkte scores kunt u [Apache Parquet-gereedschappen](https://parquet.apache.org/documentation/latest/) gebruiken. Met de gereedschappen Parquet kunt u de gegevens analyseren met [!DNL Spark].
 
 ## Volgende stappen
 
