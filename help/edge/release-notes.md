@@ -1,16 +1,20 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;versie nota's;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.6.2 - 4 augustus 2021
+
+* Probleem verholpen waarbij een waarschuwing over de veroudering van `result.decisions` (verstrekt door het `sendEvent` bevel) aan de console zou worden geregistreerd zelfs wanneer het `result.decisions` bezit niet werd betreden. Er wordt geen waarschuwing geregistreerd wanneer de eigenschap `result.decisions` wordt benaderd, maar de eigenschap is nog steeds afgekeurd.
 
 ## Versie 2.6.1 - 29 juli 2021
 
