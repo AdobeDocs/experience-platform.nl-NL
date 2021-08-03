@@ -4,7 +4,7 @@ description: Leer meer over de verschillende actietypen die door de de marktexte
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 Nadat u de [Adobe Experience Platform Web SDK markeringsuitbreiding ](web-sdk-extension-configuration.md) vormt, vorm uw actietypes.
 
 Op deze pagina worden de beschikbare actietypen beschreven.
+
 
 ## Gebeurtenis verzenden
 
