@@ -3,12 +3,11 @@ keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populair
 solution: Experience Platform
 title: Overzicht van de gebruikersinterface van JupyterLab
 topic-legacy: Overview
-description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
+description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91003bf142008bcb1277269b45d8a55234ea6564
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -38,7 +37,7 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 >
 >Aanvullende bibliotheken zijn alleen beschikbaar voor de sessie waarin ze zijn geïnstalleerd. Wanneer u nieuwe sessies start, moet u alle extra bibliotheken die u nodig hebt opnieuw installeren.
 
-## Integratie met andere [!DNL Platform] services {#service-integration}
+## Integratie met andere [!DNL Platform]-services {#service-integration}
 
 Standaardisering en interoperabiliteit zijn belangrijke concepten achter [!DNL Experience Platform]. Dankzij de integratie van [!DNL JupyterLab] op [!DNL Platform] als een ingesloten IDE kan de toepassing communiceren met andere [!DNL Platform]-services, zodat u [!DNL Platform] volledig kunt benutten. De volgende [!DNL Platform] services zijn beschikbaar in [!DNL JupyterLab]:
 
@@ -68,7 +67,7 @@ Selecteer **[!UICONTROL Notebooks]** in [Adobe Experience Platform](https://plat
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### [!DNL JupyterLab] interface  {#jupyterlab-interface}
+### [!DNL JupyterLab] interface {#jupyterlab-interface}
 
 De interface [!DNL JupyterLab] bestaat uit een menubalk, een doen ineenstorten linkerzijbalk, en het belangrijkste het werkgebied dat lusjes van documenten en activiteiten bevat.
 
@@ -152,7 +151,7 @@ Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreve
 | **R** | Ja | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
 | **Scala** | Nee | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
 
-### Kernelsessies {#kernel-sessions}
+### Kernel-sessies {#kernel-sessions}
 
 Elke actieve laptop of activiteit op [!DNL JupyterLab] gebruikt een kernel-sessie. Alle actieve sessies kunt u vinden door het tabblad **Doorlopende terminals en kernels** vanuit de linkerzijbalk uit te vouwen. Het type en de toestand van de kernel voor een laptop kunnen worden geïdentificeerd door de laptop rechtsboven te volgen. In het onderstaande diagram is de bijbehorende kernel van de laptop **[!DNL Python]3** en de huidige toestand wordt weergegeven door een grijze cirkel naar rechts. Een holle cirkel impliceert een nutteloze kernel en een stevige cirkel impliceert een bezige kernel.
 
@@ -162,7 +161,7 @@ Als de kernel gedurende langere tijd wordt afgesloten of niet actief is, dan **G
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### Starten {#launcher}
+### Launcher {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -255,6 +254,11 @@ Voor meer informatie over elk van de ondersteunde laptops en hoe deze te gebruik
 
 ## Ondersteunde bibliotheken {#supported-libraries}
 
-Voor een lijst van gesteunde pakketten in Python, R, en PySpark, kopieer en deeg `!pip list --format=columns` in een nieuwe cel, dan stel de cel in werking. Een lijst met ondersteunde pakketten wordt in alfabetische volgorde gevuld.
+Voor een lijst van gesteunde pakketten in Python, R, en PySpark, kopieer en deeg `!conda list` in een nieuwe cel, dan stel de cel in werking. Een lijst met ondersteunde pakketten wordt in alfabetische volgorde gevuld.
 
 ![voorbeeld](../images/jupyterlab/user-guide/libraries.PNG)
+
+Bovendien worden de volgende gebiedsdelen gebruikt maar niet vermeld:
+* CUDA 11.2
+* CUDNN 8.1
+
