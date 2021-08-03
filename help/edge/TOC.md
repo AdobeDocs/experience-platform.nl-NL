@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
 feature: Data management
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 17%
+source-wordcount: '144'
+ht-degree: 16%
 
 ---
 
@@ -44,6 +44,7 @@ ht-degree: 17%
    * Adobe Target {#adobe-target}
       * [Overzicht](personalization/adobe-target/target-overview.md)
       * [Implementatie van één pagina](personalization/adobe-target/spa-implementation.md)
+      * [Toegang krijgen tot reactietokens](personalization/adobe-target/accessing-response-tokens.md)
    * offer decisioning {#offer-decisioning}
       * [Overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Toestemming {#consent}
@@ -54,6 +55,7 @@ ht-degree: 17%
       * [Integreren zonder tags](consent/iab-tcf/without-launch.md)
 * Web SDK-tagextensie {#extension}
    * [Web SDK-extensie](extension/web-sdk-extension-configuration.md)
+   * [Gebeurtenistypen](extension/event-types.md)
    * [Typen handelingen](extension/action-types.md)
    * [Gegevenstelelementtypen](extension/data-element-types.md)
    * [Toegang tot de ECID](extension/accessing-the-ecid.md)
