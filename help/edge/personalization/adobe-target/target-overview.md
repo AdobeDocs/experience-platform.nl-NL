@@ -3,9 +3,9 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
+source-git-commit: 930756b4e10c42edf2d58be16c51d71df207d1af
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1266'
 ht-degree: 3%
 
 ---
@@ -42,8 +42,8 @@ Het volgende diagram helpt u het werkschema van [!DNL Target] en [!DNL Platform 
 | 3 | Het Edge-netwerk verzendt het verrijkte aanpassingsverzoek naar de [!DNL Target]-rand met de Bezoeker-id en doorgegeven-in-parameters. |
 | 4 | Profielscripts worden uitgevoerd en vervolgens opgenomen in de profielopslag van [!DNL Target]. De opslag van het profiel haalt segmenten van [!UICONTROL Audience Library] (bijvoorbeeld, segmenten die van [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform] worden gedeeld). |
 | 5 | Op basis van URL-aanvraagparameters en -profielgegevens bepaalt [!DNL Target] welke activiteiten en ervaringen moeten worden weergegeven voor de bezoeker voor de huidige paginaweergave en voor toekomstige vooraf ingestelde weergaven. [!DNL Target] stuurt dit vervolgens terug naar het Edge-netwerk. |
-| 6 | a. Het randnetwerk verzendt de verpersoonlijkingsreactie terug naar de pagina, naar keuze met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in Één enkele Toepassing van de Pagina (SPA) worden getoond wordt in het voorgeheugen ondergebracht zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. &#x200B;<br>c. Het Edge-netwerk verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie enzovoort. |
-| 7 | Het Edge-netwerk stuurt [!UICONTROL Analytics for Target] (A4T) details (activiteit, ervaring en conversiemetagegevens) door naar de [!DNL Analytics] Edge-&#x200B;. |
+| 6 | a. Het randnetwerk verzendt de verpersoonlijkingsreactie terug naar de pagina, naar keuze met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in Één enkele Toepassing van de Pagina (SPA) worden getoond wordt in het voorgeheugen ondergebracht zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br>c. Het Edge-netwerk verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie enzovoort. |
+| 7 | Het Edge-netwerk stuurt [!UICONTROL Analytics for Target] (A4T) details (activiteit, ervaring en conversiemetagegevens) door naar de [!DNL Analytics] rand. |
 
 ## [!DNL Adobe Target] inschakelen
 
@@ -63,79 +63,9 @@ Als u de VEC met een [!DNL Platform Web SDK]-implementatie wilt gebruiken, insta
 
 Voor meer informatie, zie [de helperuitbreiding van de Composer van de Visuele Ervaring](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in *Adobe Target gids*.
 
-## VEC-activiteiten automatisch renderen
+## Aangepaste inhoud renderen
 
-De [!DNL Adobe Experience Platform Web SDK] heeft de macht om uw ervaringen automatisch terug te geven die via VEC van [!DNL Adobe Target] op het Web voor uw gebruikers worden bepaald. Als u aan [!DNL Experience Platform Web SDK] wilt aangeven dat VEC-activiteiten automatisch moeten worden gerenderd, verzendt u een gebeurtenis met `renderDecisions = true`:
-
-```javascript
-alloy
-("sendEvent", 
-  { 
-  "renderDecisions": true, 
-  "xdm": {
-    "commerce": { 
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3", 
-         "purchaseOrderNumber": "VAU3123", 
-         "currencyCode": "USD", 
-         "priceTotal": 999.98 
-         } 
-      } 
-    }
-  }
-);
-```
-
-## De op formulieren gebaseerde composer gebruiken
-
-De [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) is een niet-visuele interface die nuttig is voor het configureren van [!UICONTROL A/B Tests]-, [!UICONTROL Experience Targeting]-, [!UICONTROL Automated Personalization]- en [!UICONTROL Recommendations]-activiteiten met verschillende typen reacties, zoals JSON, HTML, Image, enz. Afhankelijk van het reactietype of de beslissing die door [!DNL Target] zijn teruggekeerd, kan uw kernbedrijfslogica worden uitgevoerd. Om besluiten voor uw op vorm-Gebaseerde Composer activiteiten terug te winnen, verzend een gebeurtenis met alle &quot;DecisionScopes&quot;u een besluit voor wilt terugwinnen.
-
-```javascript
-alloy
-  ("sendEvent", { 
-    decisionScopes: [
-      "foo", "bar"], 
-      "xdm": {
-        "commerce": { 
-          "order": { 
-            "purchaseID": "a8g784hjq1mnp3", 
-            "purchaseOrderNumber": "VAU3123", 
-            "currencyCode": "USD", 
-            "priceTotal": 999.98 
-          } 
-        } 
-      } 
-    }
-  );
-```
-
-## Beslissingsgebieden
-
-`decisionScopes` definieert secties, locaties of delen van uw pagina&#39;s waar u een persoonlijke ervaring wilt weergeven. Deze `decisionScopes` zijn aanpasbaar en user-defined. Voor huidige [!DNL Target]-klanten wordt `decisionScopes` ook wel ‘mboxes’ genoemd. In [!DNL Target] UI, `decisionScopes` verschijnen als &quot;plaatsen.&quot;
-
-## Het `__view__`-bereik
-
-[!DNL Experience Platform Web SDK] verstrekt functionaliteit om acties terug te winnen VEC zonder zich het verlaten van SDK om de acties VEC voor u terug te geven. Verzend een gebeurtenis met `__view__` die als `decisionScopes` wordt bepaald.
-
-```javascript
-alloy("sendEvent", {
-      "decisionScopes": ["__view__", "foo", "bar"], 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-            "name": "Home Page"
-          }
-        } 
-      }
-    }
-  ).then(function(results) {
-    for (decision of results.decisions) {
-      if (decision.decisionScope === "__view__") {
-        console.log(decision.content)
-      }
-    }
-  });
-```
+Zie [Rendering personalization content](../rendering-personalization-content.md) voor meer informatie.
 
 ## Soorten publiek in XDM
 
@@ -153,6 +83,86 @@ Als u [!DNL Target] activiteiten met vooraf bepaald publiek hebt die douaneparam
 * Tijdschema
 
 Zie [Categorieën voor soorten publiek](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in de *Adobe Target-gids* voor meer informatie.
+
+### Reactietokens
+
+Responstkens worden vooral gebruikt om metagegevens naar derden te verzenden, zoals Google, Facebook, enz. Respontokens worden geretourneerd
+in het veld `meta` in `propositions` -> `items`. Hier volgt een voorbeeld:
+
+```
+{
+  "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+  "scope": "__view__",
+  "scopeDetails": ...,
+  "renderAttempted": true,
+  "items": [
+    {
+      "id": "0",
+      "schema": "https://ns.adobe.com/personalization/dom-action",
+      "meta": {
+        "experience.id": "0",
+        "activity.id": "126736",
+        "offer.name": "Default Content",
+        "offer.id": "0"
+      }
+    }
+  ]
+}
+```
+
+Als u de reactietokens wilt verzamelen, moet u zich abonneren op `alloy.sendEvent` promise, doorlopen `propositions`
+en haalt u de details uit `items` -> `meta`. Elke `proposition` heeft een `renderAttempted` booleveld
+die aangeeft of de `proposition` is gerenderd. Zie het onderstaande voorbeeld:
+
+```
+alloy("sendEvent",
+  {
+    renderDecisions: true,
+    decisionScopes: [
+      "hero-container"
+    ]
+  }).then(result => {
+    const { propositions } = result;
+
+    // filter rendered propositions
+    const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
+
+    // collect the item metadata that represents the response tokens
+    const collectMetaData = (items) => {
+      return items.filter(item => item.meta !== undefined).map(item => item.meta);
+    }
+
+    const pageLoadResponseTokens = renderedPropositions
+      .map(proposition => collectMetaData(proposition.items))
+      .filter(e => e.length > 0)
+      .flatMap(e => e);
+  });
+  
+```
+
+Wanneer automatische rendering is ingeschakeld, bevat de proposities-array:
+
+#### Bij laden van pagina:
+
+* Op formulier gebaseerde composer `propositions` met `renderAttempted` vlag ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen met `renderAttempted` vlag ingesteld op `true`
+* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van de toepassing Eén pagina met een `renderAttempted`-vlag ingesteld op `true`
+
+#### Bij weergave - wijzigen (voor weergaven in cache):
+
+* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van de toepassing Eén pagina met een `renderAttempted`-vlag ingesteld op `true`
+
+Wanneer automatische rendering is uitgeschakeld, bevat de proposities-array:
+
+#### Bij laden van pagina:
+
+* Op formulier gebaseerde composer `propositions` met `renderAttempted` vlag ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen met `renderAttempted` vlag ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van de toepassing Eén pagina met een `renderAttempted`-vlag ingesteld op `false`
+
+#### Bij weergave - wijzigen (voor weergaven in cache):
+
+* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van de toepassing Eén pagina met een `renderAttempted`-vlag ingesteld op `false`
 
 ### Eén profiel bijwerken
 
@@ -244,7 +254,7 @@ mboxTrace en mboxDebug zijn afgekeurd. Gebruik [[!DNL Platform Web SDK] foutopsp
 
 ## Terminologie
 
-__Besluiten:__ In  [!DNL Target]verband hebben beslissingen betrekking op de ervaring die is gekozen uit een activiteit.
+__Proposities:__ In  [!DNL Target]correleert de voorstelling met de ervaring die u hebt geselecteerd op basis van een activiteit.
 
 __Schema:__ Het schema van een besluit is het soort aanbod in  [!DNL Target].
 
