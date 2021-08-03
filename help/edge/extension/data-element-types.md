@@ -2,9 +2,9 @@
 title: Typen gegevenselementen in de Adobe Experience Platform Web SDK-extensie
 description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,7 @@ ht-degree: 0%
 Nadat u de [actietypen](action-types.md) in [Adobe Experience Platform Web SDK markeringsuitbreiding](web-sdk-extension-configuration.md) plaatst, vorm uw types van gegevenselement.
 
 Op deze pagina worden de beschikbare gegevenselemetypen beschreven.
+
 
 ## Samenvoegings-id gebeurtenis
 
