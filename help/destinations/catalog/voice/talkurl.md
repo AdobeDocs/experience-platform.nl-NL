@@ -3,7 +3,7 @@ keywords: Talk URL Inbox;talk url inbox;talk URL inbox;talk URL inbox;talk URL i
 title: URL-inbox-extensie Talk
 description: De Inbox van de Bespreking uitbreiding URL is een stem van de klantenbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie [!DNL Talk URL Inbox] installeren:
 
-Ga in [Platform interface](http://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Ga in [Platform interface](https://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
