@@ -3,7 +3,7 @@ keywords: adform extension;adform
 title: Adform Website Tracking extension
 description: De extensie Adform is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: f616ecbf-6833-40cd-86be-7c13afe31180
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie Adform installeren:
 
-Ga in [Platform interface](http://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Ga in [Platform interface](https://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
