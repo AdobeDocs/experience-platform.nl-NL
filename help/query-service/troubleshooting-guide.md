@@ -5,10 +5,10 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e3557fe75680153f051b8a864ad8f6aca5f743ee
+source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 1%
+source-wordcount: '525'
+ht-degree: 5%
 
 ---
 
@@ -51,8 +51,8 @@ SELECT a._company AS _company,
 a._id AS _id,
 a.timestamp AS timestamp
 FROM actual_dataset a
-WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
-AND timestamp < To_timestamp('2021-01-21 13:00:00')
+WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
+AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
@@ -85,15 +85,20 @@ U kunt geen vervangingen gebruiken om alle gegevens van uw rijen te krijgen, aan
 
 ## PostSQL API-fouten
 
-| Foutcode en verbindingsstatus | Beschrijving | Mogelijke oorzaak |
-| ------------------------------- | ----------- | -------------- |
-| **28P01** Opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
-| **28000** Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword` zijn. |
-| **42P12** Opstarten - verificatie | Geen tabellen gevonden | Geen tabellen gevonden voor gebruik |
-| **42601** Query | Syntaxisfout | Ongeldige opdracht- of syntaxisfout |
-| **58000** Query | Systeemfout | Interne systeemfout |
-| **42P01** Query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
-| **42P07** Query | Tabel bestaat | Tabel bestaat al met dezelfde naam (CREATE TABLE) |
-| **53400** Query | LIMIT overschrijdt max. waarde | Gebruiker heeft een LIMIT-component opgegeven die hoger is dan 100.000 |
-| **53400** Query | Time-out instructie | De ingediende liveverklaring nam meer dan maximaal 10 minuten in beslag |
-| **08P01** N.v.t. | Niet-ondersteund berichttype | Niet-ondersteund berichttype |
+| Foutcode | Verbindingsstatus | Beschrijving | Mogelijke oorzaak |
+| ---------- | ---------------- | ----------- | -------------- |
+| **08P01** | N.v.t. | Niet-ondersteund berichttype | Niet-ondersteund berichttype |
+| **28P01** | Opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
+| **28000** | Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword` zijn. |
+| **42P12** | Opstarten - verificatie | Geen tabellen gevonden | Geen tabellen gevonden voor gebruik |
+| **42601** | Query | Syntaxisfout | Ongeldige opdracht- of syntaxisfout |
+| **42P01** | Query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
+| **42P07** | Query | Tabel bestaat | Er bestaat al een tabel met dezelfde naam (CREATE TABLE) |
+| **53400** | Query | LIMIT overschrijdt max. waarde | Gebruiker heeft een LIMIT-component opgegeven die hoger is dan 100.000 |
+| **53400** | Query | Time-out instructie | De ingediende liveverklaring nam meer dan maximaal 10 minuten in beslag |
+| **58000** | Query | Systeemfout | Interne systeemfout |
+| **0A000** | Query/opdracht | Niet ondersteund | De functie/functionaliteit in de query/opdracht wordt niet ondersteund |
+| **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend de `CREATE TABLE` verklaring |
+| **42501** | DROP TABLE-query | Tabel niet gemaakt door de geverifieerde gebruiker | De lijst die wordt gelaten vallen werd niet gecreeerd door de momenteel het programma geopende gebruiker |
+| **42P01** | DROP TABLE-query | Tabel niet gevonden | De tabel die in de query is opgegeven, is niet gevonden |
+| **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: gelieve te controleren `dbName` | Er zijn geen tabellen gevonden in de huidige database |
