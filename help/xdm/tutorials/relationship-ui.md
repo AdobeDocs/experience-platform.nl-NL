@@ -6,10 +6,9 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een verb
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -50,9 +49,21 @@ Het bronschema &quot;[!DNL Loyalty Members]&quot;is gebaseerd op [!DNL XDM Indiv
 
 ### [!DNL Hotels] schema
 
-Het bestemmingsschema &quot;[!DNL Hotels]&quot;is gebaseerd op een douane &quot;[!DNL Hotels]&quot;klasse, en bevat gebieden die een hotel beschrijven. Het veld `hotelId` fungeert als primaire identiteit voor het schema onder een aangepaste naamruimte `hotelId`. Net als het schema [!DNL Loyalty Members] is dit schema ook ingeschakeld voor [!DNL Real-time Customer Profile].
+Het bestemmingsschema &quot;[!DNL Hotels]&quot;is gebaseerd op een douane &quot;[!DNL Hotels]&quot;klasse, en bevat gebieden die een hotel beschrijven.
 
 ![](../images/tutorials/relationship/hotels.png)
+
+Om aan een verhouding deel te nemen, moet het bestemmingsschema een primaire identiteit hebben. In dit voorbeeld wordt het veld `hotelId` gebruikt als de primaire identiteit met een aangepaste naamruimte &#39;Hotel ID&#39;.
+
+![Primaire identiteit van hotel](../images/tutorials/relationship/hotel-identity.png)
+
+>[!NOTE]
+>
+>Raadpleeg de [documentatie bij Identiteitsservice](../../identity-service/namespaces.md#manage-namespaces) voor meer informatie over het maken van aangepaste naamruimten.
+
+Zodra de primaire identiteit is geplaatst, moet het bestemmingsschema dan voor [!DNL Real-time Customer Profile] worden toegelaten.
+
+![Inschakelen voor profiel](../images/tutorials/relationship/hotel-profile.png)
 
 ## Een veldgroep met een relatieschema maken
 
