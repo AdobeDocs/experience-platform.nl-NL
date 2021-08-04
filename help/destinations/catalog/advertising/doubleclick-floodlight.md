@@ -3,7 +3,7 @@ keywords: Dubbelklik op Vullingslicht;dubbelklik op de extensie Dumlight;dubbelk
 title: DoubleClick Floodlight (bèta)-extensie
 description: De extensie DoubleClick Floodlight (Beta) is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 64e1f964-a58e-43d2-8b1a-3baa6104ab3a
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 U installeert als volgt de extensie DoubleClick Floodlight (Beta):
 
-Ga in [Platform interface](http://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Ga in [Platform interface](https://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
