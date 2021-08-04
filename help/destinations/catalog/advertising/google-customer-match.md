@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1525'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Vorm bestemming - videoanalyse {#video}
 
-In de onderstaande video ziet u de stappen voor het configureren van een [!DNL Google Customer Match]-bestemming en het activeren van segmenten. De stappen worden ook achtereenvolgens beschreven in de volgende secties.
+In de onderstaande video ziet u de stappen voor het configureren van een sociale bestemming en het activeren van segmenten. De video gebruikt LinkedIn als voorbeeld, maar de stappen zijn gelijkaardig over sociale bestemmingen, met inbegrip van [!DNL Google Customer Match]. De stappen in de video worden ook achtereenvolgens geplaatst in de volgende secties.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -163,7 +163,7 @@ Raadpleeg de [officiële documentatie van Google](https://developers.google.com/
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
-Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van het segment, alleen vullen met meer dan 100 actieve gebruikers.
+Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
 
 Wanneer u een segment toewijst aan zowel [!DNL IDFA] als [!DNL GAID] mobiele id&#39;s, maakt [!DNL Google Customer Match] een afzonderlijk segment voor elke id-toewijzing. Uw [!DNL Google Ads]-account toont twee verschillende segmenten, een voor de [!DNL IDFA] en een voor de [!DNL GAID]-toewijzing.
 
