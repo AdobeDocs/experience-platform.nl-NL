@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1163'
 ht-degree: 2%
 
 ---
@@ -48,11 +48,11 @@ Daarna, kunnen zij hun off-line gegevens met inbegrip van bijbehorende lidmaatsc
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [sectie Identiteitsaanpassing ](#id-matching-requirements-id-matching-requirements) en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 
-## Type exporteren {#export-type}
+## Exporttype {#export-type}
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in de Facebook-bestemming worden gebruikt.
 
-## Facebook-accountvoorwaarden {#facebook-account-prerequisites}
+## Voorwaarden voor facebook-accounts {#facebook-account-prerequisites}
 
 Voordat u publiekssegmenten kunt verzenden naar [!DNL Facebook], moet u controleren of aan de volgende vereisten is voldaan:
 
@@ -63,7 +63,7 @@ Voordat u publiekssegmenten kunt verzenden naar [!DNL Facebook], moet u controle
    > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **Manage campagnes** toestemming toelaten. De toestemming wordt vereist voor de integratie [!DNL Adobe Experience Platform].
 - Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, waarbij `accountID` uw [!DNL Facebook Ad Account ID] is.
 
-## Overeenkomende vereisten {#id-matching-requirements}
+## Vereisten voor id-afstemming {#id-matching-requirements}
 
 [!DNL Facebook] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom kan het publiek dat aan [!DNL Facebook] wordt geactiveerd *hashed* herkenningstekens, zoals e-mailadressen of telefoonaantallen worden afgevinkt.
 
@@ -112,7 +112,7 @@ Voordat u de naamruimte `Extern_ID` kunt gebruiken om gegevens te verzenden naar
 
 Als u verbinding wilt maken met de [!DNL Facebook]-bestemming, raadpleegt u [Workflow voor verificatie van sociale doelen](./workflow.md).
 
-In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook]-bestemming en het activeren van segmenten.
+In de onderstaande video ziet u ook de stappen voor het configureren van een sociale bestemming en het activeren van segmenten. De video gebruikt LinkedIn als voorbeeld, maar de stappen zijn gelijkaardig over sociale bestemmingen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
