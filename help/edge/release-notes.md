@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;versie nota's;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
+source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Versie 2.6.0 - 27 juli 2021
 
-* Verstrekt meer verpersoonlijkingsinhoud in de `sendEvent` opgeloste belofte, met inbegrip van de reactietekenen van Adobe Target. Wanneer de opdracht `sendEvent` wordt uitgevoerd, wordt een belofte geretourneerd die uiteindelijk wordt omgezet met een `result`-object dat informatie bevat die van de server is ontvangen. Dit resultaatobject bevat een eigenschap met de naam `decisions`. Deze eigenschap `decisions` is vervangen. Er is een nieuwe eigenschap toegevoegd, `propositions`. Deze nieuwe eigenschap biedt klanten toegang tot meer personalisatie-inhoud, inclusief reactietokens. Meer documentatie is binnenkort beschikbaar.
+* Verstrekt meer verpersoonlijkingsinhoud in de `sendEvent` opgeloste belofte, met inbegrip van de reactietekenen van Adobe Target. Wanneer de opdracht `sendEvent` wordt uitgevoerd, wordt een belofte geretourneerd die uiteindelijk wordt omgezet met een `result`-object dat informatie bevat die van de server is ontvangen. Eerder, omvatte dit resultaatvoorwerp een bezit genoemd `decisions`. Deze eigenschap `decisions` is vervangen. Er is een nieuwe eigenschap toegevoegd, `propositions`. Deze nieuwe eigenschap biedt klanten toegang tot meer personalisatie-inhoud, waaronder [responstokens](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
 
 ## Versie 2.5.0 - juni 2021
 
