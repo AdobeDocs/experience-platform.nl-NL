@@ -1,9 +1,9 @@
 ---
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1258'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,13 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 Dit registreert een waarschuwing aan de browser console. Het bericht wordt weergegeven of foutopsporing van tags is ingeschakeld door de gebruiker.
 
-## `cookie`
+## `cookie` {#cookie}
+
+`_satellite.cookie` bevat functies voor het lezen en schrijven van cookies. Het is een belichte kopie van de externe bibliotheek js-cookie. Raadpleeg de [js-cookie documentatie](https://www.npmjs.com/package/js-cookie#basic-usage) voor meer informatie over geavanceerd gebruik van deze bibliotheek.
+
+### Een cookie instellen {#cookie-set}
+
+Als u een cookie wilt instellen, gebruikt u `_satellite.cookie.set()`.
 
 **Code**
 
@@ -138,9 +144,41 @@ Dit registreert een waarschuwing aan de browser console. Het bericht wordt weerg
 _satellite.cookie.set(name: string, value: string[, attributes: Object])
 ```
 
+>[!NOTE]
+>
+>In de oude [`setCookie`](#setCookie) methode om koekjes te plaatsen, was het derde (facultatieve) argument aan deze functievraag een geheel dat op tijd-aan-levende (TTL) van het koekje wees. In deze nieuwe methode wordt een object &quot;attributes&quot; geaccepteerd als een derde argument. Als u een TTL voor een koekje wilt plaatsen gebruikend de nieuwe methode, moet u een `expires` bezit in het attributenvoorwerp verstrekken en het plaatsen aan de gewenste waarde. Dit wordt in het onderstaande voorbeeld getoond.
+
+**Voorbeeld**
+
+Met de volgende functieaanroep wordt een cookie geschreven die in een week verloopt.
+
+```javascript
+_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
+```
+
+### Een cookie ophalen {#cookie-get}
+
+Als u een cookie wilt ophalen, gebruikt u `_satellite.cookie.get()`.
+
+**Code**
+
 ```javascript
 _satellite.cookie.get(name: string) => string
 ```
+
+**Voorbeeld**
+
+De volgende functieaanroep leest een eerder ingesteld cookie.
+
+```javascript
+var product = _satellite.cookie.get('product');
+```
+
+### Een cookie verwijderen {#cookie-remove}
+
+Als u een cookie wilt verwijderen, gebruikt u `_satellite.cookie.remove()`.
+
+**Code**
 
 ```javascript
 _satellite.cookie.remove(name: string)
@@ -148,22 +186,11 @@ _satellite.cookie.remove(name: string)
 
 **Voorbeeld**
 
-```javascript
-// Writing a cookie that expires in one week.
-_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
-```
+De volgende functieaanroep verwijdert een eerder ingestelde cookie.
 
 ```javascript
-// Reading a previously set cookie.
-var product = _satellite.cookie.get('product');
-```
-
-```javascript
-// Removing a previously set cookie.
 _satellite.cookie.remove('product');
 ```
-
-Dit is een hulpprogramma voor het lezen en schrijven van cookies. Het is een belichte kopie van de externe bibliotheek js-cookie. Voor geavanceerder gebruik raadpleegt u de [js-cookie gebruiksdocumentatie](https://www.npmjs.com/package/js-cookie#basic-usage) (externe koppeling).
 
 ## `buildInfo`
 
@@ -236,11 +263,11 @@ Een facultatief registrerenniveau kan worden overgegaan dat het stileren en het 
 
 Als u geen registrerenniveau verstrekt of geen andere niveauwaarde overgaat, zal het bericht als regelmatig bericht worden geregistreerd.
 
-## `setCookie`
+## `setCookie` {#setCookie}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Deze methode is vervangen. Gebruik in plaats hiervan `_satellite.cookie.set()`.
+>Deze methode is vervangen. Gebruik in plaats hiervan [`_satellite.cookie.set()`](#cookie-set).
 
 **Code**
 
@@ -258,9 +285,9 @@ Hiermee wordt een cookie ingesteld in de browser van de gebruiker. Het cookie bl
 
 ## `readCookie`
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Deze methode is vervangen. Gebruik in plaats hiervan `_satellite.cookie.get()`.
+>Deze methode is vervangen. Gebruik in plaats hiervan [`_satellite.cookie.get()`](#cookie-get).
 
 **Code**
 
@@ -280,7 +307,7 @@ Dit leest een koekje van browser van de gebruiker.
 
 >[!NOTE]
 >
->Deze methode is vervangen. Gebruik in plaats hiervan `_satellite.cookie.remove()`.
+>Deze methode is vervangen. Gebruik in plaats hiervan [`_satellite.cookie.remove()`](#cookie-remove).
 
 **Code**
 
