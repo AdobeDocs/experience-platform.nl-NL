@@ -5,10 +5,9 @@ title: Segment Definition API Endpoint
 topic-legacy: developer guide
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1188'
 ht-degree: 1%
 
 ---
@@ -23,7 +22,7 @@ Deze gids verstrekt informatie om u te helpen segmentdefinities beter begrijpen 
 
 De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om oproepen aan API, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen met succes te maken.
 
-## Hiermee wordt een lijst met segmentdefinities {#list} opgehaald
+## Een lijst met segmentdefinities ophalen {#list}
 
 U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen.
 
@@ -255,7 +254,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | `id` | Een door het systeem gegenereerde id van de zojuist gemaakte segmentdefinitie. |
 | `evaluationInfo` | Een systeem-geproduceerd voorwerp dat vertelt welk type van evaluatie de segmentdefinitie zal ondergaan. Het kan batch, ononderbroken (ook wel streaming genoemd) of synchrone segmentatie zijn. |
 
-## Hiermee wordt een specifieke segmentdefinitie {#get} opgehaald
+## Een specifieke segmentdefinitie ophalen {#get}
 
 U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg terug te winnen.
 
@@ -473,6 +472,10 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 ## Een specifieke segmentdefinitie verwijderen {#delete}
 
 U kunt verzoeken om een specifieke segmentdefinitie te schrappen door een verzoek van DELETE aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg te schrappen.
+
+>[!NOTE]
+>
+> U zult **niet** een segment kunnen schrappen dat in een bestemmingsactivering wordt gebruikt.
 
 **API-indeling**
 
