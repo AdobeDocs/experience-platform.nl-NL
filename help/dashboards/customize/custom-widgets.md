@@ -3,9 +3,9 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Aangepaste widgets maken voor dashboards
 description: 'Deze handleiding bevat stapsgewijze instructies voor het maken van aangepaste widgets voor gebruik in Adobe Experience Platform-dashboards. '
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
+source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -41,11 +41,11 @@ Selecteer het tabblad **[!UICONTROL Custom]** om aangepaste widgets te maken of 
 
 ## Een aangepaste widget maken
 
-Als u een aangepaste widget wilt maken, selecteert u **[!UICONTROL Create]** in het midden van de widgetbibliotheek. Als er al aangepaste widgets zijn gemaakt, selecteert u **[!UICONTROL Create widget]** in de rechterbovenhoek van de widgetbibliotheek.
+Als u een aangepaste widget wilt maken, selecteert u **[!UICONTROL Create widget]** in de rechterbovenhoek van de widgetbibliotheek of selecteert u **[!UICONTROL Create]** in het midden van de widgetbibliotheek als dit de eerste aangepaste widget van uw organisatie is.
 
 ![](../images/customization/create-widget.png)
 
-In het dialoogvenster **[!UICONTROL Create widget]** kunt u een titel en beschrijving opgeven voor de nieuwe widget en het kenmerk kiezen dat u de widget wilt weergeven.
+Geef in het dialoogvenster **[!UICONTROL Create widget]** een titel en beschrijving op voor de nieuwe widget en kies het kenmerk dat u de widget wilt weergeven.
 
 >[!NOTE]
 >
@@ -59,23 +59,59 @@ Als u een kenmerk wilt kiezen, selecteert u het keuzerondje naast het kenmerk da
 
 ![](../images/customization/create-widget-dialog.png)
 
-## Aangepaste widget voorvertonen
+## Selecteer een visualisatie
 
-Er wordt een voorvertoning van de nieuwe widget weergegeven in het dialoogvenster en er wordt een horizontale staafgrafiek met mokgegevens weergegeven.
+Nadat u een kenmerk hebt geselecteerd, wordt een voorvertoning van de nieuwe widget weergegeven in het dialoogvenster. Kunstmatige intelligentie wordt gebruikt om automatisch een visualisatie te selecteren die de attributengegevens het best past, en om extra visualisatieopties te verstrekken die u manueel kunt selecteren.
+
+Afhankelijk van het kenmerk raadt de AI verschillende visualisatieopties aan. De volledige lijst met visualisaties bevat:
+
+* Horizontaal staafdiagram: Horizontale lijnen worden gebruikt om waarden te vertegenwoordigen.
+* Verticaal staafdiagram: Verticale lijnen worden gebruikt om waarden te vertegenwoordigen.
+* Donut-grafiek: Net als bij een cirkeldiagram worden waarden weergegeven als delen of delen van een geheel.
+* Spreiding: Hiermee geeft u een horizontale en verticale as op om waarden aan te geven.
+* Lijndiagram: Waarden worden op één regel weergegeven om wijzigingen gedurende een bepaalde periode weer te geven.
+* Nummerkaart: Geeft een samenvattingsnummer weer dat een enkele sleutelwaarde vertegenwoordigt.
+* Gegevenstabel: Waarden worden als rijen in een tabel weergegeven.
 
 >[!NOTE]
 >
->De enige metrische waarde die momenteel voor alle kenmerken wordt ondersteund, is het aantal profielen en de enige visualisatie die momenteel wordt ondersteund voor aangepaste widgets is een horizontale staafgrafiek.
+>De enige metrische waarde die momenteel voor alle kenmerken wordt ondersteund, is het aantal profielen.
 >
 >De gegevens in de voorbeeldwidget dienen alleen ter illustratie. In de voorvertoning worden geen feitelijke gegevens van uw organisatie weergegeven.
 
+Als u de nieuwe widget wilt opslaan en wilt terugkeren naar het tabblad [!UICONTROL Custom], selecteert u **[!UICONTROL Create]**.
+
 ![](../images/customization/create-widget-select-attribute.png)
 
-Als u de nieuwe widget wilt opslaan en wilt terugkeren naar het tabblad [!UICONTROL Custom], selecteert u **[!UICONTROL Create]**. Uw nieuwe widget kan nu aan een dashboard worden toegevoegd door de widget in de bibliotheek te kiezen en **[!UICONTROL Add widget]** te selecteren.
+Uw nieuwe widget kan nu aan een dashboard worden toegevoegd door de widget in de bibliotheek te kiezen en **[!UICONTROL Add widget]** te selecteren.
 
-## Een aangepaste widget archiveren
+![](../images/customization/custom-widgets-new.png)
 
-Nadat een widget aan de bibliotheek is toegevoegd, kan het worden gearchiveerd gebruikend **[!UICONTROL Archive]** knoop. U kunt de widget ook bewerken om de titel- of beschrijvingsvelden bij te werken.
+## Een aangepaste widget verbergen
+
+Nadat een widget aan de bibliotheek is toegevoegd, kan het worden verborgen door de ellipsen (`...`) op de widgetkaart te selecteren en dan **[!UICONTROL Hide widget]** te selecteren. U kunt de widget ook voorvertonen en bewerken vanuit dezelfde vervolgkeuzelijst.
+
+Als u verborgen widgets wilt weergeven, selecteert u **[!UICONTROL Show hidden widgets]** in de rechterbovenhoek van de widgetbibliotheek.
+
+>[!WARNING]
+>
+>Als u een widget verbergt in de bibliotheek, wordt de widget niet verwijderd uit de dashboards van individuele gebruikers. Als een widget niet meer in uw organisatie moet worden gebruikt, moet u dit rechtstreeks doorgeven aan alle gebruikers van het Platform, omdat zij de widget uit hun dashboards moeten verwijderen.
+
+![](../images/customization/hide-widget.png)
+
+## Een aangepaste widget bewerken
+
+U kunt aangepaste widgets in de widgetbibliotheek bewerken door de ellipsen (`...`) op de widgetkaart te selecteren en vervolgens **[!UICONTROL Edit]** te selecteren in het vervolgkeuzemenu.
+
+![](../images/customization/custom-widget-edit.png)
+
+In het dialoogvenster **[!UICONTROL Edit widget]** kunt u de titel en beschrijving van de widget bewerken en een voorvertoning weergeven en verschillende visualisaties selecteren. Nadat u de gewenste wijzigingen hebt aangebracht, selecteert u **[!UICONTROL Save]** om de wijzigingen op te slaan en terug te keren naar het tabblad Aangepaste widgets.
+
+>[!WARNING]
+>
+>Als u een widget in de bibliotheek bewerkt, wordt de widget niet voor individuele gebruikers bijgewerkt. Als een widget is bijgewerkt, dient u dit rechtstreeks door te geven aan alle gebruikers van het Platform, aangezien zij de verouderde widget uit hun dashboards moeten verwijderen en vervolgens de bijgewerkte widget uit de widgetbibliotheek moeten selecteren en toevoegen.
+
+![](../images/customization/edit-widget.png)
 
 ## Volgende stappen
 
