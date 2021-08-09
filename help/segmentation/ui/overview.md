@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1539'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Selecteer **[!UICONTROL Segments]** in de linkernavigatie in de interface van he
 >
 >Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is [!UICONTROL Segments] dashboard niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met segmenten.
 
-### [!UICONTROL Segments] dashboard  {#segments-dashboard}
+### [!UICONTROL Segments] dashboard {#segments-dashboard}
 
 Het dashboard **[!UICONTROL Segments]** bevat een overzicht van de belangrijkste metriek voor de segmentgegevens van uw organisatie.
 
@@ -83,9 +83,13 @@ De rechterzijbalk bevat informatie over alle segmenten binnen de IMS-organisatie
 
 Het selecteren van de rij van de segmentdefinitie verstrekt een samenvatting van de segmentdefinitie, met inbegrip van opties om of het segment uit te geven of te schrappen, het gekwalificeerde publiek voor het segment, de totale publieksgrootte, naast de naam van het segment, beschrijving, evaluatiemethode, gecreeerd datum, en laatst gewijzigde datum.
 
+>[!NOTE]
+>
+> U zult **niet** een segment kunnen schrappen dat in een bestemmingsactivering wordt gebruikt.
+
 ![](../images/ui/overview/segment-browse-details.png)
 
-## Details segmentdefinitie {#segment-details}
+## Segmentdefinitiedetails {#segment-details}
 
 Om meer details over een specifieke segmentdefinitie te zien, selecteer de naam van een segment binnen **[!UICONTROL Browse]** tabel.
 
@@ -103,7 +107,7 @@ Bovendien kunt u het segment bewerken. Als u **[!UICONTROL Edit segment]** selec
 
 In de sectie **[!UICONTROL Total audience in segment]** wordt het totale aantal profielen weergegeven dat in aanmerking komt voor het segment.
 
-Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de voorbeeldgegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in [schattingsgeneratiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de schepingsleerprogramma van het segment worden gevonden.
+Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in [schattingsgeneratiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de schepingsleerprogramma van het segment worden gevonden.
 
 ### Geactiveerde doelen
 
@@ -155,7 +159,7 @@ Zodra de segmentdefinities zijn gecreeerd, kunt u hen door op bestelling of gepl
 
 De evaluatie op bestelling impliceert het gebruiken van API om evaluatie uit te voeren en publiek te bouwen zoals nodig, terwijl de geplande evaluatie (die ook als &quot;geplande segmentatie&quot;wordt bekend) u toestaat om een terugkerend programma tot stand te brengen om segmentdefinities op een specifieke tijd (bij een maximum, eenmaal per dag) te evalueren.
 
-### Geplande segmentatie {#enable-scheduled-segmentation} inschakelen
+### Geplande segmentatie inschakelen {#enable-scheduled-segmentation}
 
 Het toelaten van uw segmentdefinities voor geplande evaluatie kan worden gedaan gebruikend UI of API. Ga in de gebruikersinterface terug naar het tabblad **[!UICONTROL Browse]** in **[!UICONTROL Segments]** en schakel **[!UICONTROL Add all segments to schedule]** in. Dit zal ertoe leiden dat alle segmenten worden geëvalueerd gebaseerd op het programma dat door uw organisatie wordt geplaatst.
 
@@ -167,7 +171,7 @@ Planningen kunnen momenteel alleen worden gemaakt met behulp van de API. Voor ge
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
 
-## Streaming segmentatie {#streaming-segmentation}
+## Streaming segmentering {#streaming-segmentation}
 
 Streaming segmentatie is de mogelijkheid om segmentatie uit te voeren op [!DNL Platform] in bijna realtime, terwijl de nadruk ligt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in [!DNL Platform] landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen.
 
