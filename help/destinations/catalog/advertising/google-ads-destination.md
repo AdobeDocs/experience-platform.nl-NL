@@ -1,15 +1,14 @@
 ---
 keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
 title: Google Ads-verbinding
-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
+exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 0%
+source-wordcount: '700'
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Google Ads] verbinding
 
@@ -62,10 +61,10 @@ Neem nota van de volgende details die voor [!DNL Google Ads] bestemmingen specif
 
 Voordat u de [!DNL Google Ads]-bestemming in Platform maakt, moet u contact opnemen met [!DNL Google] om Adobe op de lijst met toegestane gegevensproviders te plaatsen en om uw account aan de lijst van gewenste personen toe te voegen. Neem contact op met [!DNL Google] en geef de volgende informatie op:
 
-* **Account-id** : Dit is Adobe account-ID met  [!DNL Google]. Neem contact op met de klantenservice van Adobe of uw Adobe om deze id te verkrijgen.
-* **Klant-id** : Dit is Adobe-klant-id met  [!DNL Google]. Neem contact op met de klantenservice van Adobe of uw Adobe om deze id te verkrijgen.
+* **Account-id**: Adobe-account-id met Google. Account-id: 87933855.
+* **Klant-id**: Adobe&#39;s klant account-id met Google. Klant-id: 89690775.
 * Je accounttype: **AdWords**
-* **Google AdWords-id** : Dit is je ID met  [!DNL Google]. De id-indeling heeft doorgaans de notatie 123-456-7890.
+* **Google AdWords-id**: Dit is je ID met  [!DNL Google]. De id-indeling heeft doorgaans de notatie 123-456-7890.
 
 ## Doel configureren
 
