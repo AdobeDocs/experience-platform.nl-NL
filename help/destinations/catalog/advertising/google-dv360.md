@@ -2,14 +2,13 @@
 keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave en video 360;weergave 360;video 360;Video 360;Weergave 360;weergave en video
 title: Google Display en Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Display & Video 360] verbinding
 
@@ -56,8 +55,8 @@ Neem nota van de volgende details die voor [!DNL Google Display & Video 360] bes
 
 Voordat u de [!DNL Google Display & Video 360]-bestemming in Platform maakt, moet u contact opnemen met Google om Adobe op te nemen in de lijst met toegestane gegevensproviders en om uw account toe te voegen aan de lijst van gewenste personen. Neem contact op met Google en geef de volgende informatie op:
 
-* **Account-id** : Dit is Adobe account-ID bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe om deze id te verkrijgen.
-* **Klant-id** : Dit is Adobe-klant-id bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe om deze id te verkrijgen.
+* **Account-id**: Adobe-account-id met Google. Account-id: 87933855.
+* **Klant-id**: Adobe&#39;s klant account-id met Google. Klant-id: 89690775.
 * **Je accounttype**: gebruik  **[!DNL Invite advertiser]** om het publiek alleen te laten delen naar een specifiek merk in uw Display &amp; Video 360-account of gebruik  **[!DNL Invite partner]** om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
 
 ## Doel configureren
