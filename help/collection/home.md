@@ -5,9 +5,9 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
@@ -36,11 +36,15 @@ De technologieën van de gegevensinzameling die door Experience Platform worden 
 
 SDK&#39;s van Adobe Experience Platform Web en Mobile vouwen alle Adobe-productbibliotheken samen tot één ontwikkelkit voor web- of mobiele platforms. Als u deze bibliotheken comprimeert, wordt de gegevensverzameling versneld en worden bewerkingen in één stream geconsolideerd, van client-side apparaten tot Adobe Experience Platform Edge Network.
 
-## Flip-the-switch-proces voor de implementatie van Adobe-technologie
+## Flip-the-switch-proces voor de implementatie van Adobe-technologie {#edge}
 
 Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met tags kunt u [gegevensstreams](../edge/fundamentals/datastreams.md) instellen voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder code op de client te wijzigen.
 
 ![](./images/deploy.png)
+
+>[!NOTE]
+>
+>Voor een inleiding op hoog niveau aan het Netwerk van de Rand van het Platform, verwijs naar de volgende [interactieve producttour](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Gegevens snel en veilig transformeren, verrijken en verzenden
 
