@@ -5,9 +5,9 @@ title: Toegang tot en functies van Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: Het volgende document schetst de toestemmingen van de Werkruimte van de Wetenschap van Gegevens en toegang tot eigenschappen.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Om de Werkruimte van de Wetenschap van Gegevens te gebruiken, moet de toestemmin
 
 ## Sandbox-ondersteuning
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke instantie van het Platform steunt veelvoudige productie zandbak en niet-productie zandbakken, elk handhaven zijn eigen bibliotheek van Platform middelen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Zie het [overzicht van sandboxen](../sandboxes/home.md) voor meer informatie over sandboxen.
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke instantie van het Platform steunt veelvoudige productie en niet productie zandbakken, elk die zijn eigen bibliotheek van Platform middelen handhaven. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Zie het [overzicht van sandboxen](../sandboxes/home.md) voor meer informatie over sandboxen.
 
 Momenteel geldt voor de Data Science Workspace de volgende sandbox-beperking:
 
