@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-translation-type: tm+mt
-source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -189,7 +188,7 @@ Vervolgens voegt u een [identiteitsdescriptor](../../xdm/api/descriptors.md) toe
 
 1. Het werk-e-mailadres wordt een verplicht veld. Dit betekent dat berichten die zonder dit veld worden verzonden, niet worden gevalideerd en niet worden ingevoerd.
 
-2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon samen te voegen.
+2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon te koppelen.
 
 ### Verzoek
 
@@ -304,13 +303,13 @@ Met de dataset, het stromen verbinding, en het gemaakte dataflow, kunt u XDM-Gef
 **API-indeling**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | De `id`-waarde van de nieuwe streamingverbinding. |
-| `synchronousValidation` | Een optionele query-parameter voor ontwikkelingsdoeleinden. Als ingesteld op `true`, kan deze worden gebruikt voor directe feedback om te bepalen of het verzoek is verzonden. Deze waarde wordt standaard ingesteld op `false`. |
+| `syncValidation` | Een optionele query-parameter voor ontwikkelingsdoeleinden. Als ingesteld op `true`, kan deze worden gebruikt voor directe feedback om te bepalen of het verzoek is verzonden. Deze waarde wordt standaard ingesteld op `false`. Houd er rekening mee dat als u deze queryparameter instelt op `true` dat de aanvraag een snelheid heeft die beperkt is tot 60 keer per minuut per `CONNECTION_ID`. |
 
 **Verzoek**
 
@@ -325,7 +324,7 @@ In de onderstaande voorbeeldaanvraag worden tijdreeksgegevens met een ontbrekend
 >Zowel `xdmEntity._id` als `xdmEntity.timestamp` zijn de enige vereiste gebieden voor tijdreeksgegevens. Bovendien vereist de volgende API-aanroep **not** geen verificatiekoppen.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{
     "header": {
@@ -412,7 +411,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de zojuist ges
     "inletId": "{CONNECTION_ID}",
     "xactionId": "1584479347507:2153:240",
     "receivedTimeMs": 1584479347507,
-    "synchronousValidation": {
+    "syncValidation": {
         "status": "pass"
     }
 }
@@ -423,7 +422,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de zojuist ges
 | `{CONNECTION_ID}` | De `inletId` van de eerder gemaakte streamingverbinding. |
 | `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
 | `receivedTimeMs`: Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
-| `synchronousValidation.status` | Aangezien de vraagparameter `synchronousValidation=true` werd toegevoegd, zal deze waarde verschijnen. Als de validatie is voltooid, is de status `pass`. |
+| `syncValidation.status` | Aangezien de vraagparameter `syncValidation=true` werd toegevoegd, zal deze waarde verschijnen. Als de validatie is voltooid, is de status `pass`. |
 
 ## De nieuw ingevoerde tijdreeksgegevens ophalen
 
