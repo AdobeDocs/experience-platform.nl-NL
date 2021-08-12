@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 1b750f0dc51983251d39515de15cd0286f5b51c1
+source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
 workflow-type: tm+mt
-source-wordcount: '2854'
+source-wordcount: '2857'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Selecteer in de **[!UICONTROL Activate destination]**-workflow op de **[!UICONTR
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Transformatie toepassen"
->abstract="Schakel deze optie in als u niet-gehashte bronvelden gebruikt, zodat Adobe Experience Platform deze automatisch verbergt bij activering."
+>abstract="Schakel deze optie in wanneer u niet-gehashte bronvelden gebruikt (zoals *PersonalEmail.address* **PersonalEmail.address** `personalEmail.address`), zodat Adobe Experience Platform deze automatisch bij activering verbergt."
 
 Van toepassing op: sociale bestemmingen en Google Customer Match-advertentiebestemming
 
