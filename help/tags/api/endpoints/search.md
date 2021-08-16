@@ -1,9 +1,9 @@
 ---
 title: Zoekeindpunt
 description: Leer hoe te om vraag aan het /search eindpunt in Reactor API te maken.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -43,25 +43,15 @@ Voor meer diepgaande informatie over hoe te om deze functionaliteit te gebruiken
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
 
-## Een lijst met regels ophalen {#list}
+## Een zoekopdracht uitvoeren {#perform}
 
-U kunt een lijst van regels terugwinnen die tot een bezit behoren door te omvatten door een verzoek van de GET te doen.
+U kunt een zoekopdracht uitvoeren door een POST aan te vragen.
 
 **API-indeling**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `PROPERTY_ID` | De `id` van de eigenschap waarvan u de componenten wilt weergeven. |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->Gebruikend vraagparameters, kunnen de vermelde regels worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
