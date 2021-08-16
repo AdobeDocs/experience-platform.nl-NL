@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
+source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,17 @@ ht-degree: 0%
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Versie 2.7.0 - 16 augustus 2021
+
+Bevat versie 2.6.3 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+
+* Wanneer u het gegevenstype Identity Map gebruikt, worden id&#39;s waarvan de id&#39;s worden omgezet in waarden die niet-gevulde tekenreeksen zijn, nu automatisch verwijderd uit de identiteitskaart.
+* Oplossing voor een fout die zou optreden wanneer werd geprobeerd een gegevenselement op te slaan met het gegevenstype XDM Object en er was geen schema geselecteerd.
+* Verbeterde typografie van de gebruikersinterface.
+
 ## Versie 2.6.2 - 4 augustus 2021
 
-Bevat versie 2.6.2 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
 ## Versie 2.6.1 - juli 2021
 
