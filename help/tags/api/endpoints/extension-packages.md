@@ -1,10 +1,10 @@
 ---
 title: Extensiepakketten, eindpunt
 description: Leer hoe te om vraag aan het /extension_packages eindpunt in Reactor API te maken.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 0%
+source-wordcount: '955'
+ht-degree: 1%
 
 ---
 
@@ -23,6 +23,32 @@ Een extensiepakket behoort tot het [bedrijf](./companies.md) van de ontwikkelaar
 ## Aan de slag
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+
+Naast het begrip hoe te om vraag aan Reactor API te maken, is het ook belangrijk om te begrijpen hoe de attributen `status` en `availability` van een uitbreidingspakket beïnvloeden welke acties u op het kunt uitvoeren. Deze worden in de volgende secties uitgelegd.
+
+### Status
+
+Extensiepakketten hebben drie mogelijke statussen: `pending`, `succeeded` en `failed`.
+
+| Status | Beschrijving |
+| --- | --- |
+| `pending` | Wanneer een extensiepakket wordt gemaakt, wordt `status` ervan ingesteld op `pending`. Dit geeft aan dat het systeem de informatie voor het extensiepakket heeft ontvangen en met de verwerking zal beginnen. Extensiepakketten met de status `pending` zijn niet beschikbaar voor gebruik. |
+| `succeeded` | De status van een extensiepakket wordt bijgewerkt naar `succeeded` als de verwerking is voltooid. |
+| `failed` | De status van een extensiepakket wordt bijgewerkt naar `failed` als de verwerking is voltooid. Een extensiepakket met de status `failed` kan worden bijgewerkt totdat de verwerking is voltooid. Extensiepakketten met de status `failed` zijn niet beschikbaar voor gebruik. |
+
+### Beschikbaarheid
+
+Er zijn niveaus van beschikbaarheid voor een uitbreidingspakket: `development`, `private` en `public`.
+
+| Beschikbaarheid | Beschrijving |
+| --- | --- |
+| `development` | Een extensiepakket in `development` is alleen zichtbaar voor en beschikbaar binnen het bedrijf dat eigenaar is van het pakket. Bovendien kan het slechts op eigenschappen worden gebruikt die voor uitbreidingsontwikkeling worden gevormd. |
+| `private` | Een `private` extensiepakket is alleen zichtbaar voor het bedrijf dat de extensie in eigendom heeft en kan alleen worden geïnstalleerd op eigenschappen die het bedrijf in eigendom heeft. |
+| `public` | Een extensiepakket `public` is zichtbaar en beschikbaar voor alle bedrijven en eigenschappen. |
+
+>[!NOTE]
+>
+>Wanneer een extensiepakket wordt gemaakt, wordt `availability` ingesteld op `development`. Nadat het testen is voltooid, kunt u het extensiepakket overbrengen naar `private` of `public`.
 
 ## Een lijst met extensiepakketten ophalen {#list}
 
@@ -46,6 +72,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -231,6 +258,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -441,11 +469,11 @@ Een geslaagde reactie retourneert de details van het extensiepakket, inclusief d
 }
 ```
 
-## Een extensiepakket maken of bijwerken {#create}
+## Een extensiepakket maken {#create}
 
 Extensiepakketten worden gemaakt met een basisgereedschap Node.js en opgeslagen op uw lokale computer voordat ze worden verzonden naar de Reactor-API. Voor meer informatie bij het vormen van een uitbreidingspakket, verwijs naar de gids op [Aan de slag met uitbreidingsontwikkeling](../../extension-dev/getting-started.md).
 
-Nadat u het bestand met het extensiepakket hebt gemaakt, kunt u het verzenden naar de Reactor-API via een verzoek om POST. Als het extensiepakket al in de API bestaat, werkt deze aanroep het pakket bij naar een nieuwe versie.
+Nadat u het bestand met het extensiepakket hebt gemaakt, kunt u het verzenden naar de Reactor-API via een verzoek om POST.
 
 **API-indeling**
 
@@ -676,12 +704,12 @@ Een geslaagde reactie retourneert de details van het nieuwe uitbreidingspakket.
 
 ## Een extensiepakket bijwerken {#update}
 
-U kunt een extensiepakket bijwerken door de id ervan op te nemen in het pad van een POST-aanvraag.
+U kunt een extensiepakket bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag.
 
 **API-indeling**
 
 ```http
-POST /extension_packages/{EXTENSION_PACKAGE_ID}
+PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
 | Parameter | Beschrijving |
@@ -695,7 +723,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}
 Net als bij [het maken van een extensiepakket](#create) moet een lokale versie van het bijgewerkte pakket worden geüpload via formuliergegevens.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -934,7 +962,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Een privérelease wordt bereikt door een `action` met de waarde `release_private` in `meta` van de aanvraaggegevens te leveren.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1179,7 +1207,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Een privérelease wordt bereikt door een `action` met de waarde `release_private` in `meta` van de aanvraaggegevens te leveren.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1275,6 +1303,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
