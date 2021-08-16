@@ -1,7 +1,7 @@
 ---
 title: Einde bibliotheken
 description: Leer hoe te om vraag aan het /libraries eindpunt in Reactor API te maken.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 Een bibliotheek is een verzameling tagbronnen ([extensions](./extensions.md), [rules](./rules.md) en [data elements](./data-elements.md)) die het gewenste gedrag van een [eigenschap](./properties.md) vertegenwoordigen. Het `/libraries` eindpunt in Reactor API staat u toe om bibliotheken binnen uw markeringseigenschappen programmatically te beheren.
 
-Een bibliotheek behoort tot precies één eigenschap. Een eigenschap kan vele bibliotheken bevatten.
+Een bibliotheek behoort tot precies één eigenschap. Een eigenschap kan veel bibliotheken bevatten.
 
 ## Aan de slag
 
@@ -48,6 +48,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -169,6 +170,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -427,7 +429,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 Met de volgende aanvraag worden twee gegevenselementen aan een bibliotheek toegevoegd.
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -624,7 +626,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 **Verzoek**
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -684,7 +686,7 @@ PATCH /libraries/{LIBRARY_ID}
 Met het volgende verzoek wordt de status van een bestaande bibliotheek gewijzigd op basis van de waarde van `meta.action` die in de payload wordt opgegeven. De beschikbare acties voor een bibliotheek zijn afhankelijk van de huidige publicatiestatus, zoals wordt beschreven in de [publicatiestroom](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -934,6 +936,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1074,6 +1077,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1204,6 +1208,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1316,6 +1321,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1427,6 +1433,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1549,6 +1556,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
