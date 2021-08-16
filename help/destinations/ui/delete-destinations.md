@@ -4,15 +4,14 @@ title: Doelen verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen waarmee een bestaand doel in de gebruikersinterface van Adobe Experience Platform kan worden verwijderd
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
 
-# Doelen {#delete-destinations} verwijderen
+# Doelen verwijderen {#delete-destinations}
 
 ## Overzicht {#overview}
 
@@ -22,10 +21,14 @@ Als u een bestemming verwijdert, worden bestaande gegevensstromen naar die beste
 
 Er zijn twee manieren u bestemmingen van [!DNL Platform] [!DNL UI] kunt schrappen. U kunt:
 
-* [Doelen van het  [!UICONTROL Browse] tabblad verwijderen](#delete-browse-tab)
+* [Doelen verwijderen via het tabblad [!UICONTROL Browse]](#delete-browse-tab)
 * [Doelen verwijderen van de pagina met bestemmingsdetails](#delete-destination-details-page)
 
-## Doelen verwijderen van het tabblad Bladeren{#delete-browse-tab}
+>[!IMPORTANT]
+>
+>Hoewel u bestaande *verbindingen aan bestemmingen* kunt schrappen, zoals die in dit artikel wordt beschreven, staat het Platform momenteel niet u toe om bestaande *[bestemmingsrekeningen](/help/destinations/ui/destinations-workspace.md#accounts)* te schrappen.
+
+## Doelen verwijderen op het tabblad Bladeren{#delete-browse-tab}
 
 Voer de onderstaande stappen uit om een doel te verwijderen uit het tabblad [!UICONTROL Browse].
 
@@ -45,7 +48,7 @@ Voer de onderstaande stappen uit om een doel te verwijderen uit het tabblad [!UI
    ![Doel verwijderen bevestigen](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
 
-## Doelen verwijderen uit de pagina met doeldetails{#delete-destination-details-page}
+## Doelen verwijderen van de pagina met bestemmingsdetails{#delete-destination-details-page}
 
 Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina met doeldetails.
 
