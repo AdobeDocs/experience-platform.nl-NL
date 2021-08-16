@@ -1,16 +1,20 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;versie nota's;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
+source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.6.3 - 16 augustus 2021
+
+* Probleem verholpen waarbij objecten die niet voor openbaar gebruik zijn bedoeld, werden getoond via de opgeloste belofte van de opdracht `configure`.
 
 ## Versie 2.6.2 - 4 augustus 2021
 
