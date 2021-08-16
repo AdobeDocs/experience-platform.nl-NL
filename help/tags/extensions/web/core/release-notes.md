@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1293'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,16 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 11 augustus 2021
+
+v3.0.0
+
+* PDCL-6153: Hiermee voegt u ondersteuning toe om de volledig gekwalificeerde URL voor aangepaste codehandelingen in de cache op betrouwbare wijze te verkrijgen.
+
+v3.0.0 van de Core-extensie is gekoppeld aan wijzigingen in [v27.2.0 van de Turbinewestruntime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), die gebruikers in staat stelt hun bibliotheek te laden tussen vele hostgebieden met Adobe-beheer als het bedrijf van de gebruiker Premium CDN ondersteunt.
+
+Deze upgrade is optioneel en achterwaarts compatibel voor gebruikers zonder Premium CDN en is verplicht voor klanten die Premium CDN op hun bedrijf hebben ingeschakeld.
 
 ## 20 mei 2021
 
