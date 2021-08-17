@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 3%
@@ -60,8 +60,8 @@ Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelij
 
 | Functie | Beschrijving |
 | --- | --- |
-| [Sneller bestanden exporteren](../../destinations/ui/activate-destinations.md#export-incremental-files) | U kunt nu incrementele bestandsexporten plannen voor op bestanden gebaseerde doelen om de 3, 6, 8 en 12 uur. Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn opgeslagen, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt. |
-| [Ondersteuning voor deduplicatietoetsen](../../destinations/ui/activate-destinations.md#deduplication-keys) | U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. U kunt één naamruimte of maximaal twee XDM-schemakenmerken selecteren als een deduplicatietoets. |
+| [Sneller bestanden exporteren](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | U kunt nu incrementele bestandsexporten plannen voor op bestanden gebaseerde doelen om de 3, 6, 8 en 12 uur. Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn opgeslagen, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt. |
+| [Ondersteuning voor deduplicatietoetsen](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. U kunt één naamruimte of maximaal twee XDM-schemakenmerken selecteren als een deduplicatietoets. |
 
 ## Experience Data Model (XDM) {#xdm}
 
