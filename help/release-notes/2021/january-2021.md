@@ -4,14 +4,13 @@ description: Opmerkingen bij de release van Experience Platform 27 januari 2021
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
-translation-type: tm+mt
-source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
+exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
-
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
@@ -50,7 +49,7 @@ Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Geavanceerde id-overeenkomsten | De verhogingen aan de mogelijkheden van de publieksverhouding in [!DNL Facebook Custom Audiences] en [!DNL Google Customer Match], door steun voor extra identiteitsaanpassing, zoals externe IDs, telefoonaantallen, en mobiele apparaat IDs toe te voegen. Raadpleeg de volgende documentatie voor meer informatie: <ul><li>[Facebook-bestemming](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Profielen en segmenten naar een doel activeren](../../destinations/ui/activate-destinations.md)</li></ul> |
+| Geavanceerde id-overeenkomsten | De verhogingen aan de mogelijkheden van de publieksverhouding in [!DNL Facebook Custom Audiences] en [!DNL Google Customer Match], door steun voor extra identiteitsaanpassing, zoals externe IDs, telefoonaantallen, en mobiele apparaat IDs toe te voegen. Raadpleeg de volgende documentatie voor meer informatie: <ul><li>[Facebook-bestemming](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
 Voor meer informatie gaat u naar [bestemmingen overview](../../destinations/home.md).
 
