@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-klasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent en aanbevolen procedures voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,11 @@ Bepaalde interacties in uw ervaringstoepassingen kunnen resulteren in meerdere g
 
 [Met Adobe Experience Platform Data ](../../data-prep/home.md) kunt u gegevens toewijzen, transformeren en valideren naar en van XDM. Met behulp van de beschikbare [toewijzingsfuncties](../../data-prep/functions.md) die door de service worden geboden, kunt u logische operatoren aanroepen om gegevens uit records met meerdere gebeurtenissen te prioriteren, te transformeren en/of te consolideren wanneer deze in Experience Platform worden opgenomen. In het bovenstaande voorbeeld kunt u `eventType` aanwijzen als een berekend veld dat voorrang geeft aan een &quot;productweergave&quot; boven een &quot;paginaweergave&quot; wanneer deze beide voorkomen.
 
-Als u gegevens handmatig via de gebruikersinterface in het Platform invoert, raadpleegt u de handleiding bij [het toewijzen van een CSV-bestand aan XDM](../../ingestion/tutorials/map-a-csv-file.md) voor specifieke stappen voor het maken van berekende velden.
+Als u gegevens handmatig via de gebruikersinterface in het Platform invoert, raadpleegt u de handleiding [berekende velden hulplijn](../../data-prep/calculated-fields.md) voor specifieke stappen voor het maken van berekende velden.
 
 Als u gegevens aan Platform stroomt gebruikend een bronverbinding, kunt u de bron vormen om berekende gebieden in plaats daarvan te gebruiken. Raadpleeg de [documentatie voor uw specifieke bron](../../sources/home.md) voor instructies over hoe te om berekende gebieden uit te voeren wanneer het vormen van de verbinding.
 
-## Compatibele schemagebiedgroepen {#field-groups}
+## Compatibele schemaveldgroepen {#field-groups}
 
 >[!NOTE]
 >
