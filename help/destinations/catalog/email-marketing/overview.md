@@ -4,61 +4,37 @@ title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 0%
+source-wordcount: '382'
+ht-degree: 2%
 
 ---
 
 # Overzicht van e-mailmarketingdoelen {#email-marketing-destinations}
 
+## Overzicht {#overview}
+
 Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Adobe Experience Platform integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
 
-Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden.
+Platform exporteert uw segmenten als `.csv`-bestanden en levert deze naar de gewenste locatie. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die is ingeschakeld in [!DNL Platform]. Het proces om gegevens in te voeren varieert voor elke partner. Lees de afzonderlijke bestemmingsartikelen voor meer informatie.
 
-Verbinding maken met marketingdoelen voor e-mail is een proces in drie stappen ([configure destination](#connect-destination), [activate segments](#select-segments), [import data from storage location into the destination](#import-data-into-destination)). Elk van de stappen wordt hieronder verder beschreven op deze pagina.
+## Ondersteunde e-mailmarketingdoelen {#supported-destinations}
 
-In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven, verbind met of [!DNL Amazon S3] of [!DNL SFTP]. Platform exporteert uw segmenten als `.csv`-bestanden en levert deze naar de gewenste locatie. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die is ingeschakeld in [!DNL Platform]. Het proces om gegevens in te voeren varieert voor elke partner. Lees de afzonderlijke bestemmingsartikelen voor meer informatie.
+Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 
-## Doel {#connect-destination} configureren
+* [Adobe Campaign](adobe-campaign.md)
+* [Oracle Eloqua](oracle-eloqua.md)
+* [Oracle Responsys](oracle-responsys.md)
+* [Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
 
-Selecteer in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** de e-mailmarketingbestemming waarmee u verbinding wilt maken en selecteer **[!UICONTROL Configure]**.
+## Verbinding maken met een nieuwe marketingbestemming voor e-mail {#connect-destination}
 
-![Verbinden met doel](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
+Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het instellen van een nieuwe bestemming.
 
-Als u in de stap **[!UICONTROL Account]** eerder een verbinding met uw e-mailmarketingbestemming had ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding met uw e-mailmarketingbestemming in te stellen. In de **[!UICONTROL Connection type]** selecteur, kunt u tussen [!UICONTROL Amazon S3], [!UICONTROL Azure Blob], [!UICONTROL SFTP with Password], of [!UICONTROL SFTP with SSH Key] selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, dan uitgezocht **[!UICONTROL Connect]**.
+## Tips en trucs bij het activeren van het publiek naar marketingbestemmingen via e-mail {#best-practices}
 
-- Voor **S3 verbindingen**, moet u uw Sleutelidentiteitskaart van de Toegang van Amazon en Geheime Sleutel van de Toegang verstrekken.
-- Voor **SFTP met Wachtwoord** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Wachtwoord voor uw server SFTP verstrekken.
-- Voor **SFTP met SSH Key** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH voor uw server van SFTP verstrekken.
-
-U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
-
-Voer in de stap **[!UICONTROL Authentication]** een naam en beschrijving in voor uw nieuwe bestemming en de bestandsindeling voor de geëxporteerde bestanden.
-
-Als u in de vorige stap Amazon S3 als opslagoptie hebt geselecteerd, voegt u de naam van het emmertje en het mappad in de opslaglocatie van de cloud in waar de bestanden worden geleverd. Voeg voor de opslagoptie SFTP het mappad in waar de bestanden worden geleverd.
-
-Bij deze stap kunt u ook elke marketingactie selecteren die op deze bestemming moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Lees voor meer informatie over marketingacties het [Overzicht van het beleid voor gegevensgebruik](../../../data-governance/policies/overview.md).
-
-![E-mailinstallatiestap](../../assets/catalog/email-marketing/overview/email-setup-step.png)
-
-## Selecteer welke segmentleden u wilt opnemen in uw doelexport {#select-segments}
-
-Selecteer op de pagina **[!UICONTROL Select Segments]** welke segmenten naar het doel moeten worden verzonden. Meer informatie over de velden in de onderstaande secties vindt u.
-
-![Segmenten selecteren](../../assets/common/email-select-segments.png)
-
-## Bestandsnamen configureren
-
-Voor informatie over het segmentprogramma en dossier - noem het uitgeven opties, verwijs naar [vorm](../../ui/activate-destinations.md#configure) stap in de activerende bestemmingszelfstudie.
-
-## Kenmerken selecteren - Selecteer welke schemavelden u als doelkenmerken wilt gebruiken in uw geëxporteerde bestanden {#destination-attributes}
-
-In deze stap selecteert u welke velden u wilt exporteren naar marketingdoelen per e-mail en geeft u aan welke velden verplicht zijn.
-Voor informatie over deze stap, verwijs naar [Uitgezochte attributen](../../ui/activate-destinations.md#select-attributes) stap in de activerende bestemmingsleerprogramma.
-
-## Identiteit {#identity}
+### Identiteitsselectie {#identity}
 
 Adobe adviseert dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Dit is het veld waarvan de gebruikers-id&#39;s zijn weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Raadpleeg de onderstaande tabel voor de meest gangbare unieke id&#39;s en hun XDM-veld in het schema.
 
@@ -68,7 +44,7 @@ Adobe adviseert dat u een uniek herkenningsteken van uw [samenvoegingsschema](..
 | Telefoon | `mobilePhone.number` |
 | ID Loyalty-programma | `Customer-defined XDM field` |
 
-## Andere doelkenmerken
+### Andere doelkenmerken
 
 Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt exporteren. Enkele aanbevolen opties zijn:
 
@@ -83,20 +59,20 @@ Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt
 | Geboortedatum | `person.birthDayAndMonth` |
 | Segmentlidmaatschap | `segmentMembership.status` |
 
-## Gegevens van uw opslaglocatie importeren naar de bestemming {#import-data-into-destination}
+## Gegevens van de opslaglocatie naar de bestemming importeren {#import-data-into-destination}
 
 Lees de afzonderlijke artikelen van de e-mailmarketing bestemming om te leren hoe te om gegevens van uw opslagplaats in bestemmingen in te voeren:
 
-- [Adobe Campaign](./adobe-campaign.md#import-data-into-campaign)
-- [Oracle Eloqua](./oracle-eloqua.md#import-data-into-eloqua)
-- [Oracle Responsys](./oracle-responsys.md#import-data-into-responsys)
-- [Salesforce-Marketing Cloud](./salesforce-marketing-cloud.md#import-data-into-salesforce)
+* [Adobe Campaign](adobe-campaign.md)
+* [Oracle Eloqua](oracle-eloqua.md)
+* [Oracle Responsys](oracle-responsys.md)
+* [Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
 
-## Segmenten activeren voor e-mailmarketingdoelen
+## Segmenten activeren voor e-mailmarketingdoelen {#activate}
 
 Voor instructies op hoe te om segmenten aan e-mail marketing bestemmingen te activeren, verwijs naar [profielen en segmenten aan een bestemming ](../../ui/activate-destinations.md) activeren.
 
 ## Aanvullende bronnen
 
-- [Gegevens naar doelen activeren](../../ui/activate-destinations.md)
-- [E-mailmarketingdoelen maken en gegevens activeren met de Flow Service API](../../api/email-marketing.md)
+* [Gegevens naar doelen activeren](../../ui/activate-destinations.md)
+* [E-mailmarketingdoelen maken en gegevens activeren met de Flow Service API](../../api/email-marketing.md)
