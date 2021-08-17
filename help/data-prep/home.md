@@ -5,9 +5,9 @@ title: Overzicht van Data Prep
 topic-legacy: overview
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,12 @@ De Prep van gegevens past verscheidene intrinsieke gegevensbevestigingen ook toe
 Een afbeelding is een koppeling van een invoerkenmerk of berekend veld naar één XDM-kenmerk. Eén kenmerk kan aan meerdere XDM-kenmerken worden toegewezen door afzonderlijke toewijzingen te maken.
 
 Lees de [handleiding voor toewijzingsfuncties](./functions.md) voor meer informatie over de verschillende toewijzingsfuncties.
+
+### Berekende velden
+
+Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
+
+Lees voor meer informatie over berekende velden de handleiding [Berekende velden](./functions.md#calculated-fields).
 
 ## Toewijzingsset
 
