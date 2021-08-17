@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten toe te wijzen aan segmentstreamingdoelen.
 seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten toe te wijzen aan segmentstreamingdoelen.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1113'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,11 @@ Gebruik de controledozen links van de segmentnamen om de segmenten te selecteren
 ![Segmenten selecteren](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## Kenmerken en identiteiten toewijzen {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Transformatie toepassen"
+>abstract="Schakel deze optie in als u niet-gehashte bronvelden gebruikt, zodat Adobe Experience Platform deze automatisch verbergt bij activering."
 
 >[!IMPORTANT]
 >
