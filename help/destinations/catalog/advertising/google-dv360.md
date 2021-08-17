@@ -3,9 +3,9 @@ keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave 
 title: Google Display en Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '667'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens
 
