@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,6 @@ ht-degree: 1%
       * [De extensie Tekstomzetting bijhouden](./catalog/analytics/yext.md)
    * Opslagdoelen voor cloud {#cloud-storage}
       * [Overzicht van Cloud Storage-bestemmingen](./catalog/cloud-storage/overview.md)
-      * [Een bestemming voor cloudopslag maken](./catalog/cloud-storage/workflow.md)
       * [(Beta) Amazon Kinesis-verbinding](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-verbinding](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-verbinding](./catalog/cloud-storage/azure-blob.md)
@@ -119,7 +118,6 @@ ht-degree: 1%
       * [Marketo Web Personalization-extensie](./catalog/personalization/marketo-web-personalization.md)
    * Sociale doelen{#social}
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
-      * [Een sociale bestemming maken](./catalog/social/workflow.md)
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [linkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
