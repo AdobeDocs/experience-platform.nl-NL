@@ -3,9 +3,9 @@ keywords: mobiel; schil; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -46,42 +46,29 @@ Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten,
 |---|---|---|
 | external_id | Aangepaste [!DNL Braze]-id die het toewijzen van elke identiteit ondersteunt. | U kunt elke [identity](../../../identity-service/namespaces.md) naar de [!DNL Braze] bestemming verzenden, zolang u het aan [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation) in kaart brengt. |
 
-## Type exporteren {#export-type}
+## Exporttype {#export-type}
 
 **[!DNL Profile-based]** - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing.
 [!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar  [!DNL Braze] onder het  `AdobeExperiencePlatformSegments` kenmerk.
 
-## Verbinden met doel {#connect-destination}
+## Verbinden met de bestemming {#connect}
 
-Selecteer [!DNL Braze] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-![Braze bestemming configureren](../../assets/catalog/mobile-engagement/braze/configure.png)
+### Verbindingsparameters {#parameters}
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
->
->![Braze doel activeren](../../assets/catalog/mobile-engagement/braze/activate.png)
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
-In de stap [!UICONTROL Account] moet u uw [!DNL Braze] accounttoken opgeven. Dit is uw [!DNL Braze] [!DNL API] sleutel. Hier vindt u gedetailleerde instructies voor het verkrijgen van uw [!DNL API]-toets: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Voer het token in en klik op **[!UICONTROL Connect to destination]**.
-
-![Stap Braze-doelaccount](../../assets/catalog/mobile-engagement/braze/account.png)
-
-Klik op **[!UICONTROL Next]**. In de stap [!UICONTROL Authentication] moet u de verbindingsgegevens [!DNL Braze] invoeren:
+* **[!UICONTROL Braze account token]**: Dit is uw  [!DNL Braze] [!DNL API] sleutel. Hier vindt u gedetailleerde instructies voor het verkrijgen van uw [!DNL API]-toets: [REST API Key Overview](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL Name]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
 * **[!UICONTROL Endpoint Instance]**: Vraag uw  [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken.
-* **[!UICONTROL Marketing action]**: marketingacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
-![Verificatiestap Braze](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## Segmenten naar dit doel activeren {#activate}
 
-Klik op **[!UICONTROL Create destination]**. Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** klikken als u segmenten later wilt activeren, of u kunt **[!UICONTROL Next]** selecteren om de werkstroom voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
-## Segmenten {#activate-segments} activeren
-
-Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
-
-## Veld toewijzen {#field-mapping}
+## Toewijzingsoverwegingen {#mapping-considerations}
 
 Om uw publieksgegevens van [!DNL Adobe Experience Platform] aan [!DNL Braze] bestemming correct te verzenden, moet u door de stap van de gebiedstoewijzing gaan.
 
