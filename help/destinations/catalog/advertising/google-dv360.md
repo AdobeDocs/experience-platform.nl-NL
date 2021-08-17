@@ -3,10 +3,10 @@ keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave 
 title: Google Display en Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 0%
+source-wordcount: '665'
+ht-degree: 1%
 
 ---
 
@@ -59,19 +59,13 @@ Voordat u de [!DNL Google Display & Video 360]-bestemming in Platform maakt, moe
 * **Klant-id**: Adobe&#39;s klant account-id met Google. Klant-id: 89690775.
 * **Je accounttype**: gebruik  **[!DNL Invite advertiser]** om het publiek alleen te laten delen naar een specifiek merk in uw Display &amp; Video 360-account of gebruik  **[!DNL Invite partner]** om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
 
-## Doel configureren
+## Verbinden met de bestemming {#connect}
 
-Selecteer [!DNL Google Display & Video 360] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-![Connect Google Display en Video 360-doel](../../assets/catalog/advertising/google-dv360/catalog.png)
+### Verbindingsparameters {#parameters}
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen [!UICONTROL Activate] en [!UICONTROL Configure] de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
-
-In **Opstelling** stap van creeer bestemmingswerkschema, vul [!UICONTROL Basic Information] voor de bestemming, evenals de marketing acties in die op deze bestemming zouden moeten van toepassing zijn.
-
-![Basisinformatie over Google Display en Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
@@ -79,15 +73,14 @@ In **Opstelling** stap van creeer bestemmingswerkschema, vul [!UICONTROL Basic I
    * Gebruik `Invite Advertiser` om het publiek toe te staan om slechts aan een specifiek merk in uw Vertoning &amp; Video 360 rekening worden gedeeld.
    * Gebruik `Invite Partner` om publiek toe te staan om aan alle merken in uw Vertoning &amp; Video 360 rekening worden gedeeld.
 * **[!UICONTROL Account ID]**: Vul uw  **[!DNL Invite partner]** of  **[!DNL Invite advertiser]** account-id in met Google. Dit is doorgaans een ID van zes of zeven cijfers.
-* **[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Display & Video 360]-bestemming instelt, werkt u samen met uw [!DNL Google Account Manager]- of Adobe-vertegenwoordiger om te begrijpen welk accounttype u hebt.
+>Wanneer u een [!DNL Google Display & Video 360]-bestemming instelt, werkt u samen met uw [!DNL Google Account Manager]- of Adobe-medewerker om te begrijpen welk accounttype u hebt.
 
-## Segmenten activeren naar [!DNL Google Display & Video 360]
+## Segmenten naar dit doel activeren {#activate}
 
-Zie [Gegevens naar doelen activeren](../../ui/activate-destinations.md) voor instructies over het activeren van segmenten naar [!DNL Google Display & Video 360].
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
 ## Geëxporteerde gegevens
 
