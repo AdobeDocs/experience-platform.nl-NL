@@ -3,9 +3,9 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 >Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht door [!DNL Platform].
 > Kenmerkbrongegevens worden niet automatisch gehasht.
 > 
-> Tijdens de stap [Identiteitstoewijzing](../../ui/activate-destinations.md#mapping), wanneer uw brongebied ongehakte attributen bevat, controleer **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] automatisch te hebben de gegevens over activering hakt.
+> Tijdens de stap [Identiteitstoewijzing](../../ui/activate-segment-streaming-destinations.md#mapping), wanneer uw brongebied ongehakte attributen bevat, controleer **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] automatisch te hebben de gegevens over activering hakt.
 > 
 > De optie **[!UICONTROL Apply transformation]** wordt alleen weergegeven wanneer u kenmerken als bronvelden selecteert. Deze wordt niet weergegeven wanneer u naamruimten kiest.
 
@@ -99,7 +99,7 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
