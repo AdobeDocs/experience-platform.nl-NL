@@ -5,10 +5,10 @@ seo-title: Overzicht van doelen
 description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
 seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerst
 ## Doelstappen {#steps}
 
 * Kies uit een [zelfbedieningencatalogus](./catalog/overview.md) van alle bestemmingen beschikbaar in Platform.
-* Gebruik bestemmingen om [te activeren](./ui/activate-destinations.md) en profielen of segmenten naar marketing automatiseringsplatforms, digitale reclameplatforms, en meer te verzenden.
+* Gebruik bestemmingen om profielen of segmenten te verzenden naar marketingautomatiseringsplatforms, digitale advertentieplatforms en meer.
 * De gegevens van het programma voeren regelmatig naar uw aangewezen bestemmingen uit.
 
 ## Besturingselementen {#controls}
@@ -66,4 +66,8 @@ Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platfo
 * [E-mailmarketingdoelen](./catalog/email-marketing/overview.md)
 * [Sociale bestemmingen](./catalog/social/overview.md)
 
-Voor meer informatie over de schendingen van gegevensbeleid in het werkschema van de segmentactivering, zie de stap van het Overzicht in [Activate profielen en segmenten aan een bestemming](./ui/activate-destinations.md#review).
+Zie de stap Controleren in de volgende handleidingen voor meer informatie over schendingen van gegevensbeleid in de workflow voor segmentactivering:
+
+* [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](./ui/activate-segment-streaming-destinations.md#review)
+* [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md#review)
+* [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](./ui/activate-batch-profile-destinations.md#review)
