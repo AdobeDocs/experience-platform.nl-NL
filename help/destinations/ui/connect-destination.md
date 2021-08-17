@@ -4,7 +4,7 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die u moet uitvoeren om verbinding te maken met een doel in Adobe Experience Platform
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -65,4 +65,4 @@ Voer de verbindingsgegevens van het doelplatform in en selecteer **[!UICONTROL C
 
    ![Verbinden met doel](../assets/ui/connect-destinations/connect-destination.png)
 
-1. Selecteer **[!UICONTROL Save & Exit]** om de bestemmingsconfiguratie te bewaren, of **[!UICONTROL Next]** te selecteren om aan de publieksgegevens [activeringsstroom](activate-destinations.md) te werk te gaan.
+1. Selecteer **[!UICONTROL Save & Exit]** om de bestemmingsconfiguratie te bewaren, of **[!UICONTROL Next]** te selecteren om aan de publieksgegevens [activeringsstroom](activation-overview.md) te werk te gaan.
