@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;salesforce bestemmi
 title: Verbinding met Salesforce-Marketing Cloud
 seo-description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -28,31 +28,35 @@ Bij het vestigen van e-mail marketing bestemmingen met opslag SFTP, adviseert Ad
 
 Verwijs naar [IP adreslijst van gewenste personen voor wolkenopslagbestemmingen ](../cloud-storage/ip-address-allow-list.md) als u Adobe IPs aan uw lijst van gewenste personen moet toevoegen.
 
-## Doel {#connect-destination} verbinden
+## Verbinden met de bestemming {#connect}
 
-Selecteer **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.[!DNL Salesforce Marketing Cloud]
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-![Verbinding maken met Salesforce](../../assets/catalog/email-marketing/salesforce/catalog.png)
+Dit doel ondersteunt de volgende verbindingstypen:
 
-Als u in de stap **[!UICONTROL Account]** eerder een verbinding met uw bestemming voor cloudopslag hebt ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u een van uw bestaande verbindingen. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. Voor [!DNL Salesforce Marketing Cloud], kunt u tussen **[!UICONTROL SFTP with Password]** en **[!UICONTROL SFTP with SSH Key]** selecteren.
+* **[!UICONTROL SFTP with Password]**
+* **[!UICONTROL SFTP with SSH Key]**
 
-![Connect Salesforce-Marketing Cloud-account](../../assets/catalog/email-marketing/salesforce/connection-type.png)
+### Verbindingsparameters {#parameters}
 
-Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Configure]**.
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
-- Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], en [!UICONTROL Password] verstrekken.
-- Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], en [!UICONTROL SSH Key] verstrekken.
+* Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u verstrekken:
+   * [!UICONTROL Domain]
+   * [!UICONTROL Port]
+   * [!UICONTROL Username]
+   * [!UICONTROL Password]
+* Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u verstrekken:
+   * [!UICONTROL Domain]
+   * [!UICONTROL Port]
+   * [!UICONTROL Username]
+   * [!UICONTROL SSH Key]
 
-U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
-
-![Salesforce-informatie invullen](../../assets/catalog/email-marketing/salesforce/account-info.png)
-
-Vul in de stap **[!UICONTROL Authentication]** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
-- **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
-- **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
-- **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV- of tabgescheiden bestanden indient.
-- **[!UICONTROL File Format]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
-- **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
+* U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
+* **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
+* **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
+* **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV- of tabgescheiden bestanden indient.
+* **[!UICONTROL File Format]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
 
 <!--
 
@@ -62,17 +66,13 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![Basisinformatie over Salesforce](../../assets/catalog/email-marketing/salesforce/basic-information.png)
+## Segmenten naar dit doel activeren {#activate}
 
-Klik op **[!UICONTROL Create destination]** nadat u de bovenstaande velden hebt ingevuld. Uw doel is nu verbonden en u kunt segmenten [activeren](../../ui/activate-destinations.md) aan de bestemming.
-
-## Segmenten {#activate-segments} activeren
-
-Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinations.md) voor informatie over de workflow voor segmentactivering.
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
 ## Doelkenmerken {#destination-attributes}
 
-Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan [!DNL Salesforce Marketing Cloud] bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [Selecteer welke schemagebieden om als bestemmingsattributen in uw uitgevoerde dossiers te gebruiken](./overview.md#destination-attributes).
+Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan deze bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [Selecteer welke schemagebieden om als bestemmingsattributen in uw uitgevoerde dossiers te gebruiken](./overview.md#destination-attributes).
 
 ## Geëxporteerde gegevens {#exported-data}
 
