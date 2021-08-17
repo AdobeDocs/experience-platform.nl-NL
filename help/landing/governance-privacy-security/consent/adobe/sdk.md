@@ -3,9 +3,9 @@ title: Gegevens met toestemming van de klant verwerken met de Adobe Experience P
 topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten in Adobe Experience Platform te verwerken met behulp van de Adobe 2.0-standaard.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Zodra het gegevenselement wordt gecreeerd, navigeer terug naar de de uitbreiding
 
 ### De extensie op uw website implementeren
 
-Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Raadpleeg de [publicatiegids](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in de tagdocumentatie voor gedetailleerde informatie over het implementeren van de bijgewerkte bibliotheek.
+Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Raadpleeg de [publicatiegids](../../../../tags/ui/publishing/overview.md) in de tagdocumentatie voor gedetailleerde informatie over het implementeren van de bijgewerkte bibliotheek.
 
 ## Opdrachten voor wijzigen van toestemming maken {#commands}
 
