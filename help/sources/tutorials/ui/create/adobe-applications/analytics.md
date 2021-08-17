@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1346'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ De volgende documentatie verstrekt verdere middelen bij het begrip Prep van Gege
 
 * [Overzicht van Data Prep](../../../../../data-prep/home.md)
 * [Toewijzingsfuncties van Data Prep](../../../../../data-prep/functions.md)
-* [Een CSV-bestand toewijzen aan een XDM-schema en berekende velden toevoegen](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [Berekende velden toevoegen](../../../../../data-prep/calculated-fields.md)
 
 ### Gegevens over gegevensstroom opgeven
 
