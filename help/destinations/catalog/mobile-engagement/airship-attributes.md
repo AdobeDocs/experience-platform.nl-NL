@@ -3,9 +3,9 @@ keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van luchtschip
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Gebruik kenmerken van Adobe Experience Platform om [!DNL Airship]-profielen verd
 
 ## Verbinden met de bestemming {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 ### Verbindingsparameters {#parameters}
 
@@ -82,7 +82,7 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 
