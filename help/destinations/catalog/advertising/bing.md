@@ -3,14 +3,14 @@ keywords: 'reclame; borden; '
 title: Microsoft Bing-verbinding
 description: Met de de verbindingsbestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 2931efa6f67a042255fb1d31c0683f73d817b55b
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '376'
 ht-degree: 1%
 
 ---
 
-# [!DNL Microsoft Bing] verbinding  {#bing-destination}
+# [!DNL Microsoft Bing] verbinding {#bing-destination}
 
 ## Overzicht {#overview}
 
@@ -30,7 +30,7 @@ Als markator, wil ik segmenten kunnen gebruiken die van [!DNL Microsoft Advertis
 |---|---|
 | GEMAAKT | Microsoft Advertising ID |
 
-## Type exporteren {#export-type}
+## Exporttype {#export-type}
 
 **[!DNL Segment Export]** - u exporteert alle leden van een segment (publiek) naar de  [!DNL Microsoft Bing] bestemming.
 
@@ -42,38 +42,25 @@ Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
 * [!UICONTROL Account ID]: Dit is uw  [!DNL Bing Ads CID]geheel getal.
 
-## Verbinden met doel {#connect-destination}
+## Verbinden met de bestemming {#connect}
 
-Selecteer [!DNL Microsoft Bing] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-![Bestemming Microsoft Bing configureren](../../assets/catalog/advertising/bing/configure.png)
+### Verbindingsparameters {#parameters}
 
-Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
-
-![Microsoft Bing-doel activeren](../../assets/catalog/advertising/bing/activate.png)
-
-## Verificatiestap {#authentication}
-
-In de stap **[!UICONTROL Authentication]** moet u de gegevens van de bestemmingsverbinding invoeren:
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Account ID]**: Uw [!DNL Bing Ads CID].
-* **[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
-![Verificatie van Microsoft Bing-bestemming](../../assets/catalog/advertising/bing/authentication.png)
+## Segmenten naar dit doel activeren {#activate}
 
-Klik op **[!UICONTROL Create destination]**. Uw doel is nu gemaakt. U kunt [!UICONTROL Save & Exit] klikken als u segmenten later wilt activeren, of u kunt [!UICONTROL Next] klikken om de werkstroom voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
-
-## Segmenten {#activate-segments} activeren
-
-Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
 In [Segmentprogramma](../../ui/activate-destinations.md#segment-schedule) stap, moet u uw segmenten aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in de bestemming manueel in kaart brengen.
 
 Wanneer het in kaart brengen van segmenten, adviseren wij u de [!DNL Platform] segmentnaam of een kortere vorm van het, voor gemak van gebruik te gebruiken. Nochtans, te hoeven segmentidentiteitskaart of de naam in uw bestemming niet om in uw [!DNL Platform] rekening aan te passen. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
-
-![Id voor segmenttoewijzing](../../assets/common/segment-mapping-id.png)
 
 ## Geëxporteerde gegevens {#exported-data}
 
