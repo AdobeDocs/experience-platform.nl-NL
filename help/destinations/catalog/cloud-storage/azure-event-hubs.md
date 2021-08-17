@@ -3,9 +3,9 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (Beta) !DNL Azure Event Hubs] verbinding
 description: Creeer een uitgaande verbinding in real time aan uw !DNL Azure Event Hubs] opslag aan stroomgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert 
 
 ## Exporttype {#export-type}
 
-**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
+**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met kenmerken selecteren van de workflow voor  [activering](../../ui/activate-streaming-profile-destinations.md#select-attributes) van het publiek.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -54,7 +54,7 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen profiel de uitvoerbestemmingen ](../../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
