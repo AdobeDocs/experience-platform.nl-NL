@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbest
 
 ## Exporttype {#export-type}
 
-**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
+**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-batch-profile-destinations.md).
 
 ![Op SFTP-profiel gebaseerd exporttype](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
@@ -45,7 +45,7 @@ U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteli
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL SFTP] bestemmingen, leidt het Platform tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+Voor [!DNL SFTP] bestemmingen, leidt het Platform tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [Activate publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) in de zelfstudie van de segmentactivering.
 
 ## IP adres lijst van gewenste personen
 
