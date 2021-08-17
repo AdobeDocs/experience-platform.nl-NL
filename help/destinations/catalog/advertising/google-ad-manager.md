@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 0%
+source-wordcount: '645'
+ht-degree: 1%
 
 ---
 
@@ -59,19 +59,13 @@ Voordat u de [!DNL Google Ad Manager]-bestemming in Platform maakt, moet u conta
 * **Koppelings-id**  publiek: dit is je account met  [!DNL Google Ad Manager]
 * Je accounttype. DFP door koper van Google of AdX.
 
-## Doel configureren
+## Verbinden met de bestemming {#connect}
 
-Selecteer **[!DNL Google Ad Manager]** in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-![Doel van Google Ad Manager verbinden](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### Verbindingsparameters {#parameters}
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
-
-In **Opstelling** stap van creeer bestemmingswerkschema, vul [!UICONTROL Basic Information] voor de bestemming in.
-
-![Basisinformatie Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
@@ -79,15 +73,14 @@ In **Opstelling** stap van creeer bestemmingswerkschema, vul [!UICONTROL Basic I
    * `DFP by Google` gebruiken voor [!DNL DoubleClick] voor uitgevers
    * `AdX buyer` gebruiken voor [!DNL Google AdX]
 * **[!UICONTROL Account ID]**: Vul je account-id in met  [!DNL Google]. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
-* **[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Ad Manager]-bestemming instelt, werkt u samen met uw [!DNL Google Account Manager]- of Adobe-vertegenwoordiger om te begrijpen welk accounttype u hebt.
+>Wanneer u een [!DNL Google Ad Manager]-bestemming instelt, werkt u samen met uw [!DNL Google Account Manager]- of Adobe-medewerker om te begrijpen welk accounttype u hebt.
 
-## Segmenten activeren naar [!DNL Google Ad Manager]
+## Segmenten naar dit doel activeren {#activate}
 
-Zie [Gegevens naar doelen activeren](../../ui/activate-destinations.md) voor instructies over het activeren van segmenten naar [!DNL Google Ad Manager].
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
 ## Geëxporteerde gegevens
 
