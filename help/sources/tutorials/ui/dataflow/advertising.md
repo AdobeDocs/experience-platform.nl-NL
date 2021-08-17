@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw advertentieaccount.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -79,7 +78,7 @@ Het dialoogvenster **[!UICONTROL Select schema]** wordt weergegeven. Selecteer h
 
 ![selectieschema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md) voor meer informatie over gegevenstoewijzing en mapperfuncties.[
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor meer informatie over mapperfuncties en berekende velden raadpleegt u de [handleiding voor gegevenprepfuncties](../../../../data-prep/functions.md) of de [handleiding voor berekende velden](../../../../data-prep/calculated-fields.md).
 
 >[!TIP]
 >
