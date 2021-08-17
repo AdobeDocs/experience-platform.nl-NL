@@ -3,9 +3,9 @@ keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -66,29 +66,22 @@ Voordat u de [!DNL Google Ads]-bestemming in Platform maakt, moet u contact opne
 * Je accounttype: **AdWords**
 * **Google AdWords-id**: Dit is je ID met  [!DNL Google]. De id-indeling heeft doorgaans de notatie 123-456-7890.
 
-## Doel configureren
+## Verbinden met de bestemming {#connect}
 
-Selecteer [!DNL Google Ads] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-![Google Ads-doel verbinden](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### Verbindingsparameters {#parameters}
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
-
-In **Opstelling** stap van creeer bestemmingswerkschema, vul [!UICONTROL Basic Information] voor de bestemming in.
-
-![Basisinformatie over Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Account Type]**: De enige beschikbare optie is AdvertentieWoorden.
 * **[!UICONTROL Account ID]**: Vul je account-id in met  [!DNL Google Ads]. De id-indeling heeft doorgaans de notatie 123-456-7890.
-* **[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
-## Segmenten activeren naar [!DNL Google Ads]
+## Segmenten naar dit doel activeren {#activate}
 
-Zie [Gegevens naar doelen activeren](../../ui/activate-destinations.md) voor instructies over het activeren van segmenten naar [!DNL Google Ads].
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
 ## Geëxporteerde gegevens
 
