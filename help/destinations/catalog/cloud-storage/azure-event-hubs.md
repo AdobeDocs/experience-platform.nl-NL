@@ -3,9 +3,9 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (Beta) !DNL Azure Event Hubs] verbinding
 description: Creeer een uitgaande verbinding in real time aan uw !DNL Azure Event Hubs] opslag aan stroomgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ U kunt een uitgaande verbinding in real time met uw [!DNL Azure Event Hubs]-opsl
 
 ![AWS Kinesis in de gebruikersinterface](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
-## Gevallen {#use-cases} gebruiken
+## Gevallen gebruiken {#use-cases}
 
 Door het stromen bestemmingen zoals [!DNL Azure Event Hubs] te gebruiken, kunt u high-value segmenteringsgebeurtenissen en bijbehorende profielattributen in uw systemen van keus gemakkelijk invoeren.
 
@@ -38,31 +38,23 @@ Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert 
 
 **Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
 
-## Doel {#connect-destination} verbinden
+## Verbinden met de bestemming {#connect}
 
-Zie [Workflow ](./workflow.md)voor cloudopslagdoelen voor instructies voor het maken van een verbinding met uw cloudopslagdoelen, inclusief [!DNL Azure Event Hubs].
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-Voor [!DNL Azure Event Hubs] bestemmingen, ga de volgende informatie in tot bestemmingswerkschema:
+### Verbindingsparameters {#parameters}
 
-## Accountstap {#account-step}
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL SAS Key Name]** en  **[!UICONTROL SAS Key]**: Vul uw SAS-sleutelnaam en -sleutel in. Meer informatie over het verifiëren van [!DNL Azure Event Hubs] met SAS sleutels in [de documentatie van Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Vul de  [!DNL Azure Event Hubs] naamruimte in. Meer informatie over [!DNL Azure Event Hubs] naamruimten in de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-
-![Invoer vereist in de accountstap](../../assets/catalog/cloud-storage/event-hubs/account.png)
-
-## Verificatiestap {#authentication-step}
-
 * **[!UICONTROL Name]**: Geef een naam op voor de verbinding met  [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Geef een beschrijving van de verbinding op.  Voorbeelden: &quot;Klanten met de hoogste rang&quot;, &quot;Males die geïnteresseerd zijn in keukenvorming&quot;.
 * **[!UICONTROL eventHubName]**: Geef een naam voor de stream op naar uw  [!DNL Azure Event Hubs] bestemming.
-* **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
-![Gegevens vereist in de verificatiestap](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+## Segmenten naar dit doel activeren {#activate}
 
-## Segmenten {#activate-segments} activeren
-
-Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinations.md) voor informatie over de workflow voor segmentactivering.
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
 ## Geëxporteerde gegevens {#exported-data}
 
