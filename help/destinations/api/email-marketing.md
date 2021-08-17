@@ -6,9 +6,9 @@ description: Dit document behandelt het maken van e-mailmarketingdoelen met de A
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ In deze zelfstudie wordt de Adobe Campaign-bestemming in alle voorbeelden gebrui
 
 ![Overzicht - de stappen om een bestemming tot stand te brengen en segmenten te activeren](../assets/api/email-marketing/overview.png)
 
-Zie de [Zelfstudies Een doel verbinden](../ui/connect-destination.md) en [Profielen en segmenten activeren aan een doel](../ui/activate-destinations.md) als u liever de gebruikersinterface in Platform gebruikt.
+Als u de gebruikersinterface in Platform liever gebruikt om een bestemming aan te sluiten en gegevens te activeren, raadpleegt u de [Zelfstudies Een doel verbinden](../ui/connect-destination.md) en [publieksgegevens activeren om exportdoelen voor batchprofielen te activeren](../ui/activate-batch-profile-destinations.md).
 
 ## Aan de slag
 
