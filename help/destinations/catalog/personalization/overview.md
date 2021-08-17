@@ -2,26 +2,29 @@
 keywords: personalisatie;Personalisatie
 title: Overzicht van personalisatiedoelen
 description: Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
+# Overzicht van personalisatiedoelen {#personalization-destinations}
 
-# Overzicht van persoonlijke doelen {#personalization-destinations}
+## Overzicht {#overview}
 
 Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
 
+## Ondersteunde verpersoonlijkingsbestemmingen {#supported-destinations}
+
 Momenteel, steunt Platform de verpersoonlijkingsbestemmingen die hieronder worden vermeld. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
-* [Adobe Target-extensie](./adobe-target.md)
-* [Adobe Target v2-extensie](./adobe-target-v2.md)
-* [Beemray-extensie](./beemray.md)
-* [D&amp;B Bezoeker Intelligence-extensie](./dnb.md)
-* [Experience Cloud ID Service-extensie](./adobe-ecid.md)
-* [Verkenningsextensie](./gainsight.md)
-* [Kickfire-extensie](./kickfire.md)
-* [Marketo Web Personalization extension](./marketo-web-personalization.md)
+* [Adobe Target-extensie](adobe-target.md)
+* [Adobe Target v2-extensie](adobe-target-v2.md)
+* [Beemray-extensie](beemray.md)
+* [D&amp;B Bezoeker Intelligence-extensie](dnb.md)
+* [Experience Cloud ID Service-extensie](adobe-ecid.md)
+* [Verkenningsextensie](gainsight.md)
+* [Kickfire-extensie](kickfire.md)
+* [Marketo Web Personalization-extensie](marketo-web-personalization.md)
