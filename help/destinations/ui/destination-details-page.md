@@ -4,10 +4,9 @@ title: Doelgegevens weergeven
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -22,7 +21,7 @@ In de gebruikersinterface van Adobe Experience Platform, kunt u de attributen en
 >
 >De pagina met doeldetails maakt deel uit van de [!UICONTROL Destinations] werkruimte in [!DNL Platform] [!DNL UI]. Zie het [[!UICONTROL Destinations] overzicht van de werkruimte](./destinations-workspace.md) voor meer informatie.
 
-## Doeldetails {#view-details} weergeven
+## Doelgegevens weergeven {#view-details}
 
 Voer de onderstaande stappen uit om meer informatie over een bestaand doel weer te geven.
 
@@ -52,7 +51,7 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 
 | Rechterspoor | Beschrijving |
 | --- | --- |
-| [!UICONTROL Activate] | Selecteer deze controle om uit te geven welke segmenten aan de bestemming in kaart worden gebracht. Zie de gids op [activerende segmenten aan een bestemming](./activate-destinations.md) voor meer informatie. |
+| [!UICONTROL Activate] | Selecteer deze controle om uit te geven welke segmenten aan de bestemming in kaart worden gebracht. Zie de gidsen op [het activeren van publieksgegevens aan segment het stromen bestemmingen](./activate-segment-streaming-destinations.md), [het activeren van publieksgegevens aan batch op profiel-gebaseerde bestemmingen](./activate-batch-profile-destinations.md), en [het activeren van publieksgegevens aan het stromen op profiel-gebaseerde bestemmingen](./activate-streaming-profile-destinations.md) voor meer informatie. |
 | [!UICONTROL Delete] | Hiermee kunt u deze gegevensstroom verwijderen en de toewijzingen van eerder geactiveerde segmenten ongedaan maken, indien aanwezig. |
 | [!UICONTROL Destination name] | Dit veld kan worden bewerkt om de naam van het doel bij te werken. |
 | [!UICONTROL Description] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel toe te voegen. |
