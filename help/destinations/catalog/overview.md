@@ -5,8 +5,7 @@ seo-title: Overzicht van de doelcatalogus
 description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 seo-description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -23,14 +22,14 @@ Blader in de catalogus om te bepalen welke doelplatforms het beste zijn voor uw 
 
 Je kunt je gegevens activeren naar verschillende doelcategorieën in Adobe Experience Platform. De onderstaande koppelingen bevatten meer informatie over elke doelcategorie:
 
-- [Overzicht van Adobe-doelen](./adobe/overview.md)
-- [Overzicht van advertentiebestemmingen](./advertising/overview.md)
-- [Overzicht van analysedoelen](./analytics/overview.md)
-- [Overzicht van opslagdoelen voor cloud](./cloud-storage/overview.md)
-- [Overzicht van DMP-doelen (Data Management Platform)](./data-management/overview.md)
-- [Overzicht van e-mailmarketingdoelen](./email-marketing/overview.md)
-- [Overzicht van mobiele betrokkenheidsdoelen](./mobile-engagement/overview.md)
-- [Overzicht van personalisatiedoelen](./personalization/overview.md)
-- [Overzicht van sociale bestemmingen](./social/overview.md)
-- [Overzicht van de enquêtedoelen](./survey/overview.md)
-- [Stem van het overzicht van de bestemmingen van de Klant](./voice/overview.md)
+- [Overzicht van Adobe-doelen](adobe/overview.md)
+- [Overzicht van advertentiebestemmingen](advertising/overview.md)
+- [Overzicht van analysedoelen](analytics/overview.md)
+- [Overzicht van opslagdoelen voor cloud](cloud-storage/overview.md)
+- [Overzicht van DMP-doelen (Data Management Platform)](data-management/overview.md)
+- [Overzicht van e-mailmarketingdoelen](email-marketing/overview.md)
+- [Overzicht van mobiele betrokkenheidsdoelen](mobile-engagement/overview.md)
+- [Overzicht van personalisatiedoelen](personalization/overview.md)
+- [Overzicht van sociale bestemmingen](social/overview.md)
+- [Overzicht van de enquêtedoelen](survey/overview.md)
+- [Stem van het overzicht van de bestemmingen van de Klant](voice/overview.md)
