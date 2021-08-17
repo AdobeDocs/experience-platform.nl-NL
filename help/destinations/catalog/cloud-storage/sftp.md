@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -26,15 +26,22 @@ Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbest
 
 ![Op SFTP-profiel gebaseerd exporttype](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Doel {#connect-destination} verbinden
+## Verbinden met de bestemming {#connect}
 
-Raadpleeg de [workflow voor cloudopslagdoelen ](./workflow.md) voor instructies over hoe u verbinding kunt maken met uw cloudopslagdoelen, inclusief SFTP.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-Voor bestemmingen SFTP, ga de volgende informatie in creeer bestemmingswerkschema, in **Authentificatie** stap in:
+### Verbindingsparameters {#parameters}
+
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **Host**: Het adres van uw opslagplaats SFTP
 * **Gebruikersnaam**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie
 * **Wachtwoord**: Het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie
+* **[!UICONTROL Name]**: Voer een naam in die u helpt deze bestemming te identificeren.
+* **[!UICONTROL Description]**: Voer een beschrijving van deze bestemming in.
+* **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+
+U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -42,4 +49,4 @@ Voor [!DNL SFTP] bestemmingen, leidt het Platform tot een lusje-afgebakend `.csv
 
 ## IP adres lijst van gewenste personen
 
-Verwijs naar [IP adreslijst van gewenste personen voor wolkenopslagbestemmingen ](./ip-address-allow-list.md) als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
+Verwijs naar [IP adreslijst van gewenste personen voor wolkenopslagbestemmingen ](ip-address-allow-list.md) als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
