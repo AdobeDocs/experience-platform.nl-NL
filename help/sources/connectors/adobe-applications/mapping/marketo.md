@@ -5,7 +5,7 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 1%
@@ -176,7 +176,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 {style=&quot;table-layout:auto&quot;}
 
-## Statisch lijstlidmaatschap {#static-list-memnberships}
+## Statische lijstlidmaatschap {#static-list-memnberships}
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -244,7 +244,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 {style=&quot;table-layout:auto&quot;}
 
-## Opportunity-contactrollen {#opportunity-contact-roles}
+## Contactrollen opportunity {#opportunity-contact-roles}
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -310,7 +310,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 >[!NOTE]
 >
->Het bronveld `to_object('ECID',arrays_to_objects('id',explode(ecids)))` is een berekend veld dat moet worden toegevoegd met de optie [!UICONTROL Add calculated field] in de gebruikersinterface van het Platform. Zie de zelfstudie op [berekende velden toevoegen](../../../../ingestion/tutorials/map-a-csv-file.md) voor meer informatie.
+>Het bronveld `to_object('ECID',arrays_to_objects('id',explode(ecids)))` is een berekend veld dat moet worden toegevoegd met de optie [!UICONTROL Add calculated field] in de gebruikersinterface van het Platform. Zie de zelfstudie op [berekende velden toevoegen](../../../../data-prep/calculated-fields.md) voor meer informatie.
 
 ## Volgende stappen
 
