@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1235'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 In de stap **[!UICONTROL Segment schedule]** moet u [!UICONTROL App ID] verstrekken wanneer het verzenden van [!DNL IDFA] of [!DNL GAID] segmenten naar [!DNL Google Customer Match].
 
