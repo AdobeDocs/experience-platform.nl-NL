@@ -3,10 +3,9 @@ keywords: reclame; de handelsdienst; reclamebureau
 title: De verbinding van de handelsbureau
 description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -35,7 +34,7 @@ Als markeerteken, wil ik segmenten kunnen gebruiken die van [!DNL Trade Desk IDs
 | IDFA | [!DNL Apple ID for Advertisers] |
 | Handelsbureau-id | Advertiser-id in het Trade Desk-platform |
 
-## Type exporteren {#export-type}
+## Exporttype {#export-type}
 
 **[!DNL Segment export]** - u exporteert alle leden van een segment (publiek) naar de bestemming.
 
@@ -43,25 +42,18 @@ Als markeerteken, wil ik segmenten kunnen gebruiken die van [!DNL Trade Desk IDs
 
 Als u uw eerste bestemming met [!DNL The Trade Desk] wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL The Trade Desk] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
 
-## Verbinden met doel {#connect-destination}
+## Verbinden met de bestemming {#connect}
 
-Selecteer [!DNL The Trade Desk] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
-![Vorm de bestemming van de handelsbureau](../../assets/catalog/advertising/tradedesk/configure.png)
+### Verbindingsparameters {#parameters}
 
-Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
-
-![Activeer de bestemming van het handelsbureau](../../assets/catalog/advertising/tradedesk/activate.png)
-
-## Verificatiestap {#authentication}
-
-In de stap **[!UICONTROL Authentication]** moet u [!DNL The Trade Desk] verbindingsdetails ingaan:
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Account ID]**: Uw [!DNL Trade Desk] [!UICONTROL Account ID].
 * **[!UICONTROL Server Location]**: Vraag uw  [!DNL Trade Desk] vertegenwoordiger welke regionale server u zou moeten gebruiken. Dit zijn de beschikbare regionale servers waaruit u kunt kiezen:
-
    * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapore]**
    * **[!UICONTROL Tokyo]**
@@ -69,19 +61,13 @@ In de stap **[!UICONTROL Authentication]** moet u [!DNL The Trade Desk] verbindi
    * **[!UICONTROL North America West]**
    * **[!UICONTROL Latin America]**
 
-* **[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+## Segmenten naar dit doel activeren {#activate}
 
-![De Stap van de Authentificatie van het Handelsbureau](../../assets/catalog/advertising/tradedesk/authenticate.png)
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
-Klik op **[!UICONTROL Create destination]**. Uw doel is nu gemaakt. U kunt [!UICONTROL Save & Exit] klikken als u segmenten later wilt activeren, of u kunt [!UICONTROL Next] selecteren om de werkstroom voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
+In [Segmentprogramma](../../ui/activate-destinations.md#segment-schedule) stap, moet u uw segmenten aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in het bestemmingsplatform manueel in kaart brengen.
 
-## Segmenten {#activate-segments} activeren
-
-Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
-
-In [Segmentprogramma](../../ui/activate-destinations.md#segment-schedule) stap, moet u uw segmenten aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in de bestemming manueel in kaart brengen.
-
-Wanneer het in kaart brengen van segmenten, adviseren wij u de [!DNL Platform] segmentnaam of een kortere vorm van het, voor gemak van gebruik te gebruiken. Nochtans, te hoeven segmentidentiteitskaart of de naam in uw bestemming niet om in uw [!DNL Platform] rekening aan te passen. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
+Wanneer het in kaart brengen van segmenten, adviseren wij u de naam van het Platform of een kortere vorm van het, voor gebruiksgemak gebruiken. Nochtans, te hoeven segmentidentiteitskaart of de naam in uw bestemming niet om in uw rekening van het Platform aan te passen. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
 
 Als u veelvoudige apparatenafbeeldingen (koekje IDs, [!DNL IDFA], [!DNL GAID]) gebruikt, zorg ervoor om de zelfde toewijzingswaarde voor alle drie afbeeldingen te gebruiken. [!DNL The Trade Desk] zij zullen allen in één enkel segment, met een apparaat-vlakke onderbreking bijeenvoegen.
 
