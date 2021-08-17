@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle eloqua;oracle
 title: Oracle Eloqua-verbinding
 description: Oracle Eloqua is een softwareplatform als service (SaaS) voor marketingautomatisering dat door Oracle wordt aangeboden en dat bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkooplood te beheren.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -26,35 +26,35 @@ Bij het vestigen van e-mail marketing bestemmingen met opslag SFTP, adviseert Ad
 
 Verwijs naar [IP adreslijst van gewenste personen voor wolkenopslagbestemmingen ](../cloud-storage/ip-address-allow-list.md) als u Adobe IPs aan uw lijst van gewenste personen moet toevoegen.
 
-## Verbinden met doel {#connect-destination}
+## Verbinden met de bestemming {#connect}
 
-Selecteer **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.[!DNL Oracle Eloqua]
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen [!UICONTROL Activate] en [!UICONTROL Configure] de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
+Dit doel ondersteunt de volgende verbindingstypen:
 
-![Verbinden met Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
+* **[!UICONTROL SFTP with Password]**
+* **[!UICONTROL SFTP with SSH Key]**
 
-Als u in de stap **[!UICONTROL Account]** eerder een verbinding met uw bestemming voor cloudopslag hebt ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u een van uw bestaande verbindingen. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. Voor [!DNL Oracle Eloqua], kunt u tussen **[!UICONTROL SFTP with Password]** en **[!UICONTROL SFTP with SSH Key]** selecteren.
+### Verbindingsparameters {#parameters}
 
-![Connect Eloqua-account](../../assets/catalog/email-marketing/oracle-eloqua/connection-type.png)
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
-Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Connect to destination]**.
+* Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u verstrekken:
+   * [!UICONTROL Domain]
+   * [!UICONTROL Port]
+   * [!UICONTROL Username]
+   * [!UICONTROL Password]
+* Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u verstrekken:
+   * [!UICONTROL Domain]
+   * [!UICONTROL Port]
+   * [!UICONTROL Username]
+   * [!UICONTROL SSH Key]
 
-- Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], en [!UICONTROL Password] verstrekken.
-- Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], en [!UICONTROL SSH Key] verstrekken.
-
-U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
-
-![Eloqua-verbinding met doel](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
-
-Vul in de stap **[!UICONTROL Authentication]** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
-- **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
-- **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
-- **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV- of tabgescheiden bestanden indient.
-- **[!UICONTROL File Format]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
-- **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
+* U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
+* **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
+* **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
+* **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV- of tabgescheiden bestanden indient.
+* **[!UICONTROL File Format]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
 
 <!--
 
@@ -64,17 +64,13 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![Basisinformatie over Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
+## Segmenten naar dit doel activeren {#activate}
 
-Klik op **[!UICONTROL Create destination]** nadat u de bovenstaande velden hebt ingevuld. Uw bestemming wordt nu gecreeerd en u kunt segmenten [activeren ](../../ui/activate-destinations.md) aan de bestemming.
-
-## Segmenten {#activate-segments} activeren
-
-Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinations.md) voor informatie over de workflow voor segmentactivering.
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
 ## Doelkenmerken {#destination-attributes}
 
-Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan [!DNL Oracle Eloqua] bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [Selecteer welke schemagebieden om als bestemmingsattributen in uw uitgevoerde dossiers te gebruiken](./overview.md#destination-attributes).
+Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan deze bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [Selecteer welke schemagebieden om als bestemmingsattributen in uw uitgevoerde dossiers te gebruiken](./overview.md#destination-attributes).
 
 ## Geëxporteerde gegevens {#exported-data}
 
