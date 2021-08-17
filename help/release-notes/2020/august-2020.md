@@ -4,14 +4,13 @@ description: Opmerkingen bij de release van Experience Platform, 10 augustus 202
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
-translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
 source-wordcount: '568'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
@@ -52,8 +51,8 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 | Functie | Beschrijving |
 |------- | -----------|
-| Aangepaste bestandsnaameditor | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud waarmee u de naam van de geëxporteerde bestanden kunt bewerken. Voor meer informatie, verwijs naar [ vorm stap](../../destinations/ui/activate-destinations.md#configure) in het activeringswerkschema. |
-| Aanbevolen kenmerken | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud die aanbevolen kenmerken bevat om aan de geëxporteerde bestanden toe te voegen. Raadpleeg voor meer informatie de stap [Kenmerken selecteren](../../destinations/ui/activate-destinations.md#select-attributes) in de activeringsworkflow. |
+| Aangepaste bestandsnaameditor | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud waarmee u de naam van de geëxporteerde bestanden kunt bewerken. Voor meer informatie, verwijs naar [ vorm stap](../../destinations/ui/activate-batch-profile-destinations.md) in het activeringswerkschema. |
+| Aanbevolen kenmerken | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud die aanbevolen kenmerken bevat om aan de geëxporteerde bestanden toe te voegen. Raadpleeg voor meer informatie de stap [Kenmerken selecteren](../../destinations/ui/activate-batch-profile-destinations.md) in de activeringsworkflow. |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
@@ -77,7 +76,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bewaking van de stroom | Gebruikers kunnen alle flowuitvoering controleren en een gedetailleerde weergave van elke uitvoering bekijken, zoals voltooiingsstatus, uitvoerduur, lijst met verwerkte bestanden, fouten en metriek. Zie [dataflows ](../../sources/tutorials/ui/monitor.md) document voor meer informatie. |
+| Bewaking van de stroom | Gebruikers kunnen alle flowuitvoering controleren en een gedetailleerde weergave van elke uitvoering bekijken, zoals voltooiingsstatus, uitvoerduur, lijst met verwerkte bestanden, fouten en metriek. Zie [dataflows](../../sources/tutorials/ui/monitor.md) document voor meer informatie. |
 | Meldingen voor stroomuitvoering | Gebruikers kunnen zich abonneren op gebeurtenissen en websites registreren om realtime meldingen te ontvangen over de status, metriek en fouten met betrekking tot flowuitvoering. |
 | Verbeteringen in gebruikerscatalogus | Updates voor het catalogusscherm van bronnen zodat u gemakkelijker toegang hebt tot primaire acties van geselecteerde objecten. |
 
