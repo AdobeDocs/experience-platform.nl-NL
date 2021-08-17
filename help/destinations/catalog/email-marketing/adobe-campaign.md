@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Als u segmentgegevens naar Adobe Campaign wilt verzenden, moet u eerst [de beste
 
 ## Exporttype {#export-type}
 
-**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in de  **[!UICONTROL Select attributes]** stap van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
+**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in de  **[!UICONTROL Select attributes]** stap van de  [workflow](../../ui/activate-batch-profile-destinations.md#select-attributes) voor publieksactivering.
 
 ## IP adres lijst van gewenste personen {#allow-list}
 
@@ -59,15 +59,15 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van de activering om profieluitvoer bestemmingen ](../../ui/activate-batch-profile-destinations.md) voor instructies te plaatsen bij het activeren van publiekssegmenten aan deze bestemming.
 
-## Doelkenmerken {#destination-attributes}
+### Doelkenmerken {#destination-attributes}
 
-Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan deze bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [Selecteer welke schemagebieden om als bestemmingsattributen in uw uitgevoerde dossiers te gebruiken](./overview.md#destination-attributes).
+Wanneer het activeren van segmenten aan deze bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [beste praktijken wanneer het activeren van publiek aan e-mail marketing bestemmingen](overview.md#best-practices).
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Adobe Campaign] bestemmingen, [!DNL Platform] leidt tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+Voor [!DNL Adobe Campaign] bestemmingen, [!DNL Platform] leidt tot een lusje-afgebakend `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [verifieer segmentactivering](../../ui/activate-batch-profile-destinations.md#verify) in de zelfstudie van de segmentactivering.
 
 ## Gegevensimport instellen in Adobe Campaign {#import-data-into-campaign}
 
