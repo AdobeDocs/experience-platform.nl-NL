@@ -3,9 +3,9 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: e413933920028e3239f6044111d9cf215c865eba
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 
