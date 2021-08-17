@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan a [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw eCommerce-account.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1254'
 ht-degree: 0%
 
 ---
@@ -78,7 +77,7 @@ Het dialoogvenster **[!UICONTROL Select schema]** wordt weergegeven. Selecteer h
 
 ![selectieschema](../../../images/tutorials/dataflow/ecommerce/select-schema.png)
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md) voor meer informatie over gegevenstoewijzing en mapperfuncties.[
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor meer informatie over mapperfuncties en berekende velden raadpleegt u de [handleiding voor gegevenprepfuncties](../../../../data-prep/functions.md) of de [handleiding voor berekende velden](../../../../data-prep/calculated-fields.md).
 
 >[!TIP]
 >
@@ -160,5 +159,5 @@ U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeer
 
 Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om **[!UICONTROL eCommerce]** gegevens in te brengen en inzicht verworven in de controle datasets. Binnenkomende gegevens kunnen nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-- [[!DNL Real-time Customer Profile] overzicht](../../../../profile/home.md)
-- [[!DNL Data Science Workspace] overzicht](../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] - overzicht](../../../../profile/home.md)
+- [[!DNL Data Science Workspace] - overzicht](../../../../data-science-workspace/home.md)
