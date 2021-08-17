@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 5478143e681257c6885d99d83380a35de263ed3d
+source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
 workflow-type: tm+mt
-source-wordcount: '1923'
+source-wordcount: '1925'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Het dialoogvenster **[!UICONTROL Select schema]** wordt weergegeven. Selecteer h
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../../ingestion/tutorials/map-a-csv-file.md) voor meer informatie over gegevenstoewijzing en mapperfuncties.[
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor meer informatie over mapperfuncties en berekende velden raadpleegt u de [handleiding voor gegevenprepfuncties](../../../../../data-prep/functions.md) of de [handleiding voor berekende velden](../../../../../data-prep/calculated-fields.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
