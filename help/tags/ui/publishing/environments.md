@@ -1,9 +1,9 @@
 ---
 title: Omgevingen
 description: Leer meer over het concept van labelomgevingen en hoe deze werken in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1456'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Zie de handleiding over [asynchrone implementatie](../client-side/asynchronous-d
 
 #### Synchrone implementatie
 
-Wanneer de browser een ingesloten code leest met een synchrone implementatie, wordt de tagbibliotheek opgehaald en uitgevoerd voordat de pagina verder wordt geladen. Dit is ook hoe [Dynamic Tag Management (DTM)](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html) werkt.
+Wanneer de browser een ingesloten code leest met een synchrone implementatie, wordt de tagbibliotheek opgehaald en uitgevoerd voordat de pagina verder wordt geladen.
 
 Synchrone insluitcodes bestaan uit twee `<script>`-tags die in de HTML van uw website moeten worden geplaatst. Een `<script>`-tag moet in het document `<head>` worden geplaatst, terwijl de andere tag net voor de afsluitende `</body>`-tag moet worden geplaatst.
 
