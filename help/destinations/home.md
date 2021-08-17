@@ -5,15 +5,14 @@ seo-title: Overzicht van doelen
 description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
 seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
 source-wordcount: '488'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# [!DNL Destinations] overzicht  {#overview}
+# [!DNL Destinations] - overzicht {#overview}
 
 ![Overzicht van doelen banner](./assets/overview/destinations-overview-banner.png)
 
@@ -43,13 +42,13 @@ Met de besturingselementen in de [werkruimte Doelen](./ui/destinations-workspace
 
 Voor gedetailleerde informatie, zie [bestemmingstypes en categorieën overzicht](./destination-types.md).
 
-## Bestemmingen en toegangscontroles {#access-controls}
+## Doelen en toegangscontroles {#access-controls}
 
 De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en rol neer aan de bodem van de pagina.
 
 Voor meer informatie over toegangscontroles, zie [de gebruikershandleiding van het Toegangsbeheer](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] beperkingen op het activeren van gegevens naar bestemmingen  {#data-governance}
+## [!DNL Data Governance] beperkingen op het activeren van gegevens naar bestemmingen {#data-governance}
 
 Het gegevensbeheer wordt afgedwongen voor bestemmingen in de Platform via:
 
@@ -60,11 +59,11 @@ Zie [!DNL Data Governance] in de documentatie van het Platform voor meer informa
 
 Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platform voor meer informatie over het selecteren van marketingacties in de workflow Doel maken:
 
-* [Reclamebestemmingen - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
+* [Reclamebestemmingen - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
 * [Reclamebestemmingen - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Advertentiebestemmingen - Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
-* [Opslagdoelen voor cloud](./catalog/cloud-storage/workflow.md)
+* [Advertentiebestemmingen - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Opslagdoelen voor cloud](./catalog/cloud-storage/overview.md)
 * [E-mailmarketingdoelen](./catalog/email-marketing/overview.md)
-* [Sociale bestemmingen](./catalog/social/workflow.md)
+* [Sociale bestemmingen](./catalog/social/overview.md)
 
 Voor meer informatie over de schendingen van gegevensbeleid in het werkschema van de segmentactivering, zie de stap van het Overzicht in [Activate profielen en segmenten aan een bestemming](./ui/activate-destinations.md#review).
