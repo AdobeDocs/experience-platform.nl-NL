@@ -4,9 +4,9 @@ title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 2%
 
 ---
@@ -70,9 +70,9 @@ Lees de afzonderlijke artikelen van de e-mailmarketing bestemming om te leren ho
 
 ## Segmenten activeren voor e-mailmarketingdoelen {#activate}
 
-Voor instructies op hoe te om segmenten aan e-mail marketing bestemmingen te activeren, verwijs naar [profielen en segmenten aan een bestemming ](../../ui/activate-destinations.md) activeren.
+Voor instructies op hoe te om segmenten aan e-mail marketing bestemmingen te activeren, verwijs naar [Activate publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md).
 
 ## Aanvullende bronnen
 
-* [Gegevens naar doelen activeren](../../ui/activate-destinations.md)
+* [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md)
 * [E-mailmarketingdoelen maken en gegevens activeren met de Flow Service API](../../api/email-marketing.md)
