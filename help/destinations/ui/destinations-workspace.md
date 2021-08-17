@@ -4,9 +4,9 @@ title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 
 >[!TIP]
 >
-> * Gebruik ![Add segmentknoop](../assets/ui/workspace/add-data-symbol.png) in **[!UICONTROL Name]** kolom aan [activate](activate-destinations.md) meer segmenten aan die bestemming.
+> * Gebruik ![Add segmentknoop](../assets/ui/workspace/add-data-symbol.png) in **[!UICONTROL Name]** kolom om segmenten naar die bestemming te verzenden.
 > * Gebruik ![de knoop van bestemmingen ](../assets/ui/workspace/delete-destination-symbol.png) in **[!UICONTROL Name]** kolom aan [delete](delete-destinations.md) een bestaande verbinding aan een bestemming.
 
 
@@ -88,7 +88,7 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 | [!UICONTROL Username] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
 | [!UICONTROL Activation Data] | Geeft het aantal segmenten aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement voor meer informatie over de geactiveerde segmenten. Raadpleeg [Activeringsgegevens](/help/destinations/ui/destination-details-page.md#activation-data) op de pagina met doeldetails voor meer informatie over de geactiveerde segmenten. |
 | [!UICONTROL Created] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. |
-| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of gegevens op dit doel worden geactiveerd. Zie [Activering uitschakelen](./activate-destinations.md#disable-activation) om de status te bewerken. |
+| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of gegevens op dit doel worden geactiveerd. |
 
 Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaaf te tonen.
 
