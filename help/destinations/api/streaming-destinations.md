@@ -6,9 +6,9 @@ description: In dit document wordt beschreven hoe u streaming doelen kunt maken 
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ In deze zelfstudie wordt in alle voorbeelden het doel [!DNL Amazon Kinesis] gebr
 
 ![Overzicht - de stappen om een het stromen bestemming tot stand te brengen en segmenten te activeren](../assets/api/streaming-destination/overview.png)
 
-Als u de gebruikersinterface in Platform liever gebruikt om verbinding te maken met een doel en gegevens te activeren, raadpleegt u de [Connect a destination](../ui/connect-destination.md) en [Profielen en segmenten activeren aan een doel](../ui/activate-destinations.md)-zelfstudies.
+Als u verkiest om de gebruikersinterface in Platform te gebruiken om met een bestemming te verbinden en gegevens te activeren, zie [een bestemming](../ui/connect-destination.md) en [de publieksgegevens van de Activate aan het stromen segment uitvoerbestemmingen](../ui/activate-segment-streaming-destinations.md) leerprogramma&#39;s.
 
 ## Aan de slag
 
