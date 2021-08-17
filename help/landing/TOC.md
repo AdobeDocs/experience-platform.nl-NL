@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen in real-time aan uw klanten te leveren.
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: abd09eb26e7487442e4ded5b7aa4258df6b6c5fe
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 5%
+source-wordcount: '197'
+ht-degree: 6%
 
 ---
 
@@ -51,8 +50,10 @@ ht-degree: 5%
       * IAB TCF 2.0 {#iab}
          * [Overzicht](./governance-privacy-security/consent/iab/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
+   * Controlelogboeken (bèta) {#audit-logs}
+      * [Overzicht](./governance-privacy-security/audit-logs/overview.md)
 * [Het gebruiksdashboard voor licenties](license-usage-dashboard.md)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2 gegevensmeermigratie](adls2-gen2-migration.md)
-* [Verklarende woordenlijst](glossary.md)
+* [Woordenlijst](glossary.md)
 * [Aanvullende informatie](https://www.adobe.com/go/platform-release-notes-en)
