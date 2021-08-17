@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert 
 
 ## Exporttype {#export-type}
 
-**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
+**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met kenmerken selecteren van de workflow voor  [activering](../../ui/activate-streaming-profile-destinations.md#select-attributes) van het publiek.
 
 ## Vereiste [!DNL Amazon Kinesis]-machtigingen {#required-kinesis-permission}
 
@@ -101,7 +101,7 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen profiel de uitvoerbestemmingen ](../../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
