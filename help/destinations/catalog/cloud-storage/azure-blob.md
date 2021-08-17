@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om periodiek door tabs gescheiden of CSV-gegevensbestanden vanuit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '393'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
    * [Zelfstudie](../../../xdm/tutorials/create-schema-ui.md) Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u al een geldig [!DNL Blob] doel hebt, kunt u de rest van dit document overslaan en aan het leerprogramma op [activerende segmenten aan uw bestemming ](../../ui/activate-destinations.md) te werk gaan.
+Als u al een geldig [!DNL Blob] doel hebt, kunt u de rest van dit document overslaan en aan het leerprogramma op [activerende segmenten aan uw bestemming ](../../ui/activate-batch-profile-destinations.md) te werk gaan.
 
 ## Ondersteunde bestandsindelingen {#file-formats}
 
 [!DNL Experience Platform] ondersteunt de volgende bestandsindeling die moet worden geëxporteerd naar  [!DNL Blob]:
 
-* Door scheidingstekens gescheiden waarden (DSV): De ondersteuning voor gegevensbestanden met DSV-indeling is momenteel beperkt tot door komma&#39;s gescheiden waarden. Algemene DSV-bestanden worden in de toekomst ondersteund. Lees voor meer informatie over ondersteunde bestanden het gedeelte cloudopslag in de zelfstudie over [het activeren van doelen](../../ui/activate-destinations.md#esp-and-cloud-storage).
+* Door scheidingstekens gescheiden waarden (DSV): De ondersteuning voor gegevensbestanden met DSV-indeling is momenteel beperkt tot door komma&#39;s gescheiden waarden. Algemene DSV-bestanden worden in de toekomst ondersteund.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -54,4 +54,4 @@ U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteli
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van de activering om profieluitvoer bestemmingen ](../../ui/activate-batch-profile-destinations.md) voor instructies te plaatsen bij het activeren van publiekssegmenten aan deze bestemming.
