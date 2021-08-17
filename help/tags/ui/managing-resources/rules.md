@@ -1,7 +1,7 @@
 ---
 title: Regels
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 0%
@@ -168,7 +168,7 @@ Adobe kan niet garanderen dat andere regels daadwerkelijk in werking zullen tred
 * **JavaScript:** Het JavaScript wordt als normale tekst vanaf de server geladen, in een scripttag opgenomen en met Postscript aan het document toegevoegd. Als de regel meerdere aangepaste JavaScript-scripts heeft, worden deze parallel van de server geladen, maar in dezelfde volgorde uitgevoerd als in de regel.
 * **HTML:** De HTML wordt geladen van de server en aan het document toegevoegd gebruikend Postscript. Als de regel veelvoudige manuscripten van douaneHTML heeft, worden zij geladen parallel van de server, maar in de zelfde orde uitgevoerd die in de regel werd gevormd.
 
-## Regelcomponentvolgorde
+## Regelcomponentvolgorde {#sequencing}
 
 Het gedrag van de runtimeomgeving van de tag hangt af van het feit of **[!UICONTROL Run rule components in sequence]** voor uw eigenschap is in- of uitgeschakeld.
 
