@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 1%
+source-wordcount: '1210'
+ht-degree: 0%
 
 ---
 
@@ -109,6 +109,7 @@ In de volgende tabel worden de beschikbare machtigingen voor [!DNL Experience Pl
 | [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
+| [!DNL Data Governance] | [!UICONTROL View Audit Log] | Alleen-lezen toegang tot opgenomen [auditlogbestanden](../landing/governance-privacy-security/audit-logs/overview.md) van activiteiten van het Platform. |
 | [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Alleen-lezen toegang om het dashboard voor het licentiegebruik weer te geven. |
 | [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Voeg douanekenmerken toe die nog niet in het gegevenspakhuis zijn. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Toegang tot het lezen, maken, bewerken en verwijderen van gestructureerde SQL-query&#39;s voor Platform-gegevens. |
