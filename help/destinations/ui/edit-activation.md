@@ -6,15 +6,14 @@ seo-title: Activeringsstromen bewerken
 description: Voer de stappen in dit artikel uit om een bestaande activeringsstroom in Adobe Experience Platform te bewerken.
 seo-description: Voer de stappen in dit artikel uit om een bestaande activeringsstroom in Adobe Experience Platform te bewerken.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
-# Activeringsstromen {#edit-activation-flows} bewerken
+# Activeringsstromen bewerken {#edit-activation-flows}
 
 Voer de onderstaande stappen uit om bestaande activeringsstromen in Adobe Experience Platform te bewerken:
 
@@ -34,4 +33,4 @@ Voer de onderstaande stappen uit om bestaande activeringsstromen in Adobe Experi
 
    ![Doelgegevens](../assets/ui/edit-activation/destination-details.png)
 
-5. Raadpleeg [Profielen en segmenten activeren naar een doel](activate-destinations.md) voor meer informatie over het activeren van nieuwe segmenten.
+5. Raadpleeg [Activeringsoverzicht](activation-overview.md) voor meer informatie over het activeren van nieuwe segmenten.
