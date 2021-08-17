@@ -2,14 +2,13 @@
 keywords: streaming;
 title: HTTP-verbinding
 description: Met de HTTP-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
-
 
 # (Alpha) [!DNL HTTP] verbinding
 
@@ -23,60 +22,45 @@ De [!DNL HTTP] bestemming is een [!DNL Adobe Experience Platform] het stromen be
 
 Als u profielgegevens naar [!DNL HTTP] eindpunten wilt verzenden, moet u eerst verbinding maken met het doel in [[!DNL Adobe Experience Platform]](#connect-destination).
 
-## Gevallen {#use-cases} gebruiken
+## Gebruiksscenario’s {#use-cases}
 
 Het doel [!DNL HTTP] is gericht op klanten die XDM profielgegevens en publiekssegmenten naar generische [!DNL HTTP] eindpunten moeten uitvoeren.
 
 [!DNL HTTP] de eindpunten kunnen of de systemen van klanten of derdeoplossingen zijn.
 
-## Verbinden met Doel {#connect-destination}
+## Verbinden met de bestemming {#connect}
 
-Selecteer [!DNL HTTP API] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../ui/connect-destination.md) worden beschreven.
 
-![HTTP-bestemming activeren](../assets/catalog/http/activate.png)
+### Verbindingsparameters {#parameters}
 
-Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
+Terwijl [vestiging](../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
-![HTTP-bestemming activeren](../assets/catalog/http/connect.png)
+* **[!UICONTROL httpEndpoint]**: de waarde  [!DNL URL] van het HTTP-eindpunt waarnaar u de profielgegevens wilt verzenden.
+   * Naar keuze, kunt u vraagparameters aan [!UICONTROL httpEndpoint] [!DNL URL] toevoegen.
+* **[!UICONTROL authEndpoint]**: het  [!DNL URL] eindpunt van HTTP dat voor  [!DNL OAuth2] authentificatie wordt gebruikt.
+* **[!UICONTROL Client ID]**: de  [!DNL clientID] parameter die in de  [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
+* **[!UICONTROL Client Secret]**: de  [!DNL clientSecret] parameter die in de  [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
 
-In de stap [!UICONTROL Account] moet u de details van de HTTP-eindpuntverbinding definiëren. Selecteer **[!UICONTROL New account]** en ga de verbindingsdetails voor het eindpunt van HTTP in dat u wilt verbinden met.
-- **[!UICONTROL httpEndpoint]**: de volledige voltooiing  [!DNL URL] van het eindpunt van HTTP dat u de profielgegevens wilt verzenden naar.
-   - Naar keuze kunt u vraagparameters aan [!UICONTROL httpEndpoint] [!DNL URL] toevoegen.
-- **[!UICONTROL authEndpoint]**: het volledige eindpunt  [!DNL URL] van HTTP dat voor  [!DNL OAuth2] authentificatie wordt gebruikt.
-- **[!UICONTROL Client ID]**: de  [!DNL clientID] parameter die in de  [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
-- **[!UICONTROL Client Secret]**: de  [!DNL clientSecret] parameter die in de  [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
+   >[!NOTE]
+   >
+   >Momenteel worden alleen [!DNL OAuth2] clientreferenties ondersteund.
 
->[!NOTE]
->
->Momenteel worden alleen [!DNL OAuth2] clientreferenties ondersteund.
+* **[!UICONTROL Name]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
+* **[!UICONTROL Description]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
+* **[!UICONTROL Custom Headers]**: Ga om het even welke douanekopballen in die u in de bestemmingsvraag, volgend dit formaat wilt worden omvat:  `header1:value1,header2:value2,...headerN:valueN`.
 
-![HTTP-eindpuntverbinding](../assets/catalog/http/connect.png)
+   >[!IMPORTANT]
+   >
+   >Voor de huidige implementatie is ten minste één aangepaste header vereist. Deze beperking wordt opgelost in een toekomstige update.
 
-Klik op **[!UICONTROL Connect to destination]**. Klik op **[!UICONTROL Next]** nadat de verbinding tot stand is gebracht.
+## Segmenten naar dit doel activeren {#activate}
 
-Voer in de stap [!UICONTROL Authentication] de verificatiereferenties van de account in:
-- **[!UICONTROL Name]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
-- **[!UICONTROL Description]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
-- **[!UICONTROL Custom Headers]**: Ga om het even welke douanekopballen in die u in de bestemmingsvraag, volgend dit formaat wilt worden omvat:  `header1:value1,header2:value2,...headerN:valueN`.
-- **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](/help/data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](/help/data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+Zie [Profielen en segmenten activeren aan een doel](../ui/activate-destinations.md#select-attributes) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
->[!IMPORTANT]
->
->Voor de huidige implementatie is ten minste één aangepaste header vereist. Deze beperking wordt opgelost in een toekomstige update.
+## Doelkenmerken {#attributes}
 
-![HTTP-verificatie](../assets/catalog/http/authenticate.png)
-
-**[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../data-governance/policies/overview.md).
-
-Klik op **[!UICONTROL Create destination]**.
-
-## Segmenten activeren
-
-Zie [Profielen en segmenten activeren naar een doel](../ui/activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
-
-## Doelkenmerken
-
-Tijdens de [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes) stap, wanneer [het activeren van segmenten](../ui/activate-destinations.md) aan een [!DNL HTTP] bestemming, adviseren wij dat u een uniek herkenningsteken van uw [union schema](../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
+In de [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes) stap, wanneer [het activeren van segmenten](../ui/activate-destinations.md) aan een [!DNL HTTP] bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [union schema](../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
 ## Geëxporteerde gegevens {#exported-data}
 
