@@ -5,8 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 1%
@@ -78,7 +77,7 @@ Zie [bestemmingscatalogus](../../destinations/catalog/overview.md) voor informat
 
 **Bekende beperkingen**
 
-* Het besturingselement voor aangepaste activeringsschema&#39;s in de [activeringsstroom](../../destinations/ui/activate-destinations.md#activate-data) (Planningsstap) is niet beschikbaar bij de eerste release.
+* Het besturingselement voor aangepaste activeringsschema&#39;s in de activeringsstroom (stap Planning) is niet beschikbaar bij de eerste release.
 * Er is momenteel geen manier om een bestemmingsconfiguratie uit te geven of te schrappen. Om rond deze beperking te werken, kunt u de bestemming in de hoogste juiste hoek van [bestemmingsdetailpagina toelaten of onbruikbaar maken](../../destinations/ui/destination-details-page.md).
 * Er is momenteel geen validatie voor accountdetails, paden of referenties wanneer verbinding wordt gemaakt met uw doel- of opslagaccount. Controleer of u de juiste referenties invoert en dubbelklik op spelfouten of typefouten.
 * Er zijn geen referentie-verlengingen beschikbaar bij de eerste release. Als een account is verlopen of moet worden vernieuwd, moet u een nieuwe doelverbinding maken en de eerder toegewezen segmenten opnieuw toewijzen.
@@ -116,7 +115,7 @@ Met Adobe Experience Platform [!DNL Data Science Workspace] kunnen gegevensweten
 
 Voor meer informatie, zie [Overzicht van de Werkruimte van de Wetenschap van Gegevens](../../data-science-workspace/home.md).
 
-## [!DNL Experience Data Model] (XDM) System  {#xdm}
+## [!DNL Experience Data Model] (XDM) System {#xdm}
 
 Standaardisering en interoperabiliteit zijn belangrijke concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
