@@ -3,9 +3,9 @@ keywords: streaming;
 title: HTTP-verbinding
 description: Met de HTTP-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -56,11 +56,11 @@ Terwijl [vestiging](../ui/connect-destination.md) deze bestemming, u de volgende
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [Profielen en segmenten activeren aan een doel](../ui/activate-destinations.md#select-attributes) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
+Zie [De publieksgegevens van Activate aan het stromen profiel de uitvoerbestemmingen ](../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
-## Doelkenmerken {#attributes}
+### Doelkenmerken {#attributes}
 
-In de [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes) stap, wanneer [het activeren van segmenten](../ui/activate-destinations.md) aan een [!DNL HTTP] bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [union schema](../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
+In [[!UICONTROL Select attributes]](../ui/activate-streaming-profile-destinations.md#select-attributes) stap, adviseert Adobe dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
 ## Geëxporteerde gegevens {#exported-data}
 
