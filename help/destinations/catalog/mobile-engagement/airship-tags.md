@@ -3,10 +3,9 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
@@ -77,57 +76,25 @@ U kunt een-op-een berichten in real-time activeren wanneer gebruikers binnen of 
 
 Een detailhandelaar stelt bijvoorbeeld een merkspecifiek segment voor jeans in Platform in. Deze detailhandelaar kan nu een mobiel bericht activeren zodra iemand zijn jeans-voorkeur op een bepaald merk instelt.
 
-## Verbinden met [!DNL Airship Tags] {#connect-airship-tags}
+## Verbinden met de bestemming {#connect}
 
-Blader in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar de categorie **[!UICONTROL Mobile Engagement]**. Selecteer **[!DNL Airship Tags]** en selecteer **[!UICONTROL Configure]**.
+Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
+### Verbindingsparameters {#parameters}
 
-![Verbinden met luchtvaartcodes](../../assets/catalog/mobile-engagement/airship-tags/catalog.png)
+Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
-Als u in de stap **Account** eerder een verbinding met uw [!DNL Airship Tags]-doel hebt ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding in te stellen met [!DNL Airship Tags]. Selecteer **[!UICONTROL Connect to destination]** om Adobe Experience Platform met uw [!DNL Airship] project te verbinden gebruikend het dragerteken dat u van het [!DNL Airship] dashboard produceerde.
+* **[!UICONTROL Bearer token]**: De token die u hebt gegenereerd van het  [!DNL Airship] dashboard.
+* **[!UICONTROL Name]**: Voer een naam in die u helpt deze bestemming te identificeren.
+* **[!UICONTROL Description]**: Voer een beschrijving in voor deze bestemming.
+* **[!UICONTROL Domain]**: Selecteer een Amerikaans of EU-datacenter, afhankelijk van het  [!DNL Airship] datacenter dat op dit doel van toepassing is.
 
->[!NOTE]
->
->Adobe Experience Platform ondersteunt validatie van referenties in het verificatieproces en geeft een foutbericht weer als u onjuiste gegevens hebt ingevoerd voor uw [!DNL Airship]-account. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
 
-![Verbinden met luchtvaartcodes](../../assets/catalog/mobile-engagement/airship-tags/connect-account.png)
+## Segmenten naar dit doel activeren {#activate}
 
-Nadat uw referenties zijn bevestigd en Adobe Experience Platform is verbonden met uw [!DNL Airship]-project, kunt u **[!UICONTROL Next]** selecteren om door te gaan naar de stap **[!UICONTROL Setup]**.
+Zie [Profielen en segmenten activeren aan een doel](../../ui/activate-destinations.md) voor instructies bij het activeren van publiekssegmenten aan bestemmingen.
 
-Voer in de stap **[!UICONTROL Authentication]** een **[!UICONTROL Name]** en een **[!UICONTROL Description]** in voor de activeringsstroom.
-
-In deze stap kunt u ook Amerikaans of EU-datacenter selecteren, afhankelijk van welk [!DNL Airship] datacenter op dit doel van toepassing is. Tot slot selecteer één of meerdere **[!UICONTROL Marketing Actions]** waarvoor de gegevens naar de bestemming zullen worden uitgevoerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen acties maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
-
-Selecteer **[!UICONTROL Create Destination]** nadat u de bovenstaande velden hebt ingevuld.
-
-![Verbinden met luchtvaartcodes](../../assets/catalog/mobile-engagement/airship-tags/select-domain.png)
-
-Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Next]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
-
-## Segmenten {#activate-segments} activeren
-
-Volg onderstaande stappen om segmenten te activeren naar [!DNL Airship Tags]:
-
-Selecteer in **[!UICONTROL Destinations > Browse]** de bestemming [!DNL Airship Tags] waar u de segmenten wilt activeren.
-
-![activeren-flow](../../assets/catalog/mobile-engagement/airship-tags/browse.png)
-
-Klik op de naam van het doel. Hiermee gaat u naar de flow Activeren.
-
-Merk op dat als een activeringsstroom reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel naar de bestemming worden verzonden. Selecteer **[!UICONTROL Edit activation]** in het rechterspoor en volg de onderstaande stappen om de activeringsdetails te wijzigen.
-
-![activeren-flow](../../assets/catalog/mobile-engagement/airship-tags/activate.png)
-
-Selecteer **[!UICONTROL Activate]**. Selecteer in de **[!UICONTROL Activate destination]**-workflow op de **[!UICONTROL Select Segments]**-pagina welke segmenten naar [!DNL Airship Tags] moeten worden verzonden.
-
-![segmenten-naar-bestemming](../../assets/catalog/mobile-engagement/airship-tags/select-segments.png)
-
-In de **[!UICONTROL Mapping]** stap, selecteer welke attributen en identiteiten van [XDM](../../../xdm/home.md) schema aan kaart aan het bestemmingsschema. Selecteer **[!UICONTROL Add new mapping]** om uw schema te doorbladeren en hen in kaart te brengen aan de overeenkomstige doelidentiteit.
-
-![startscherm voor identiteitstoewijzing](../../assets/catalog/mobile-engagement/airship-tags/identity-mapping.png)
+## Toewijzingsoverwegingen {#mapping-considerations}
 
 [!DNL Airship] tags kunnen worden ingesteld op een kanaal dat apparaatinstantie vertegenwoordigt, bijvoorbeeld iPhone, of een benoemde gebruiker, die alle apparaten van een gebruiker toewijst aan een gemeenschappelijke id, zoals een klant-id. Als u gewone (niet-gehakte) e-mailadressen als primaire identiteit in uw schema hebt, selecteer het e-mailgebied in uw **[!UICONTROL Source Attributes]** en kaart aan [!DNL Airship] genoemde gebruiker in de juiste kolom onder **[!UICONTROL Target Identities]**, zoals hieronder getoond.
 
@@ -138,21 +105,6 @@ Voor herkenningstekens die aan een kanaal, d.w.z., een apparaat moeten worden in
 ![Verbinden met ](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
 ![Airship TagsVerbinden met ](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
 ![Airship TagsChannel-toewijzing](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
-
-Op de pagina **[!UICONTROL Segment schedule]** is planning momenteel uitgeschakeld. Klik op **[!UICONTROL Next]** om door te gaan naar de revisiestap.
-
-Op de **[!UICONTROL Review]** pagina, kunt u een samenvatting van uw selectie zien. Selecteer **[!UICONTROL Cancel]** om de stroom te verbreken, **[!UICONTROL Back]** om uw montages te wijzigen, of **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
-
->[!IMPORTANT]
->
->In deze stap controleert Adobe Experience Platform op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe te om beleidsschendingen op te lossen, zie [Beleidshandhaving](../../../data-governance/enforcement/auto-enforcement.md) in de sectie van de documentatie van het gegevensbeheer.
-
-![selectie bevestigen](../../assets/common/data-policy-violation.png)
-
-Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
-
-![selectie bevestigen](../../assets/catalog/mobile-engagement/airship-tags/review.png)
-
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
