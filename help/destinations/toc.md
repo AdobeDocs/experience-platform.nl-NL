@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '492'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,13 @@ ht-degree: 1%
    * [Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API](./api/email-marketing.md)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
-   * [Verbinding maken met een doel](./ui/connect-destination.md)
+   * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
+   * De publieksgegevens van Activa aan bestemmingen{#activate}
+      * [Overzicht van activering](./ui/activation-overview.md)
+      * [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](./ui/activate-segment-streaming-destinations.md)
+      * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md)
+      * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](./ui/activate-batch-profile-destinations.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
-   * [Profielen en segmenten naar een doel activeren](./ui/activate-destinations.md)
    * [Doelaccounts bijwerken](./ui/update-accounts.md)
    * [Activeringsstromen bewerken](./ui/edit-activation.md)
    * [Doelen verwijderen](./ui/delete-destinations.md)
