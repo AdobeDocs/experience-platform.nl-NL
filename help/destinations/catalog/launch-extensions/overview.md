@@ -3,9 +3,9 @@ keywords: tagextensies;tagextensie;lanceerdoelen; platformtagextensies;platform 
 title: Tagextensies in Adobe Experience Platform
 description: Adobe Experience Platform biedt de volgende generatie mogelijkheden voor tagbeheer van Adobe. Platform biedt u een eenvoudige manier om alle analyses, marketing en reclametags te implementeren en te beheren die nodig zijn om de ervaring van klanten te verbeteren.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform biedt de volgende generatie mogelijkheden voor tagbehe
 
 Zie de volgende bronnen voor een inleiding op tags:
 
-- [Overzicht van codes](https://experienceleague.adobe.com/docs/launch/using/home.html)
+- [Overzicht van codes](../../../tags/home.md)
 - [Snelle startgids](../../../tags/quick-start/quick-start.md)
 
 ## Hoe te om markeringsuitbreidingen in de interface van het Platform te vinden {#how-to-find-extensions-in-interface}
