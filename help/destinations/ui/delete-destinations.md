@@ -4,9 +4,9 @@ title: Doelen verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen waarmee een bestaand doel in de gebruikersinterface van Adobe Experience Platform kan worden verwijderd
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -40,10 +40,10 @@ Voer de onderstaande stappen uit om een doel te verwijderen uit het tabblad [!UI
 
    ![Filterdoelen](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecteer de ![knop Verwijderen](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** in de kolom **[!UICONTROL Platform]** om een bestaand doel te verwijderen.
+3. Selecteer de ![Meer knoop](../assets/ui/delete-destinations/more-icon.png) in de kolom van de Naam en selecteer dan ![knoop van de Schrapping](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** om een bestaande bestemmingsverbinding te verwijderen.
    ![Doelen verwijderen](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Selecteer **[!UICONTROL Delete]** om de verwijdering van de bestemming te bevestigen.
+4. Selecteer **[!UICONTROL Delete]** om de verwijdering van de bestemmingsverbinding te bevestigen.
 
    ![Doel verwijderen bevestigen](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
