@@ -5,7 +5,7 @@ seo-title: Overzicht van advertentiebestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindi
 * [Google Ads-extensie](google-ads-extension.md)
 * [Google-tag-extensie](gtag-advertising.md)
 * [linkedIn Insight Tag-extensie](linkedin.md)
-* [Pinterest Conversion Tracking-extensie](pinterest.md)
+* [Pinterest Conversion Tracking-extensie](pinterest-extension.md)
 * [Twitter Universal Website Tag-extensie](twitter-uwt.md)
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
