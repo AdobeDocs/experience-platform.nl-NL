@@ -4,7 +4,7 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
-source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%
@@ -57,7 +57,7 @@ ht-degree: 1%
       * [Google-tag-extensie](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
-      * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest.md)
+      * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [Twitter Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
    * Analysedoelen {#analytics}
