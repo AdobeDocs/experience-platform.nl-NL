@@ -4,9 +4,9 @@ title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '794'
 ht-degree: 0%
 
 ---
@@ -72,8 +72,8 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 
 >[!TIP]
 >
-> * Gebruik ![Add segmentknoop](../assets/ui/workspace/add-data-symbol.png) in **[!UICONTROL Name]** kolom om segmenten naar die bestemming te verzenden.
-> * Gebruik ![de knoop van bestemmingen ](../assets/ui/workspace/delete-destination-symbol.png) in **[!UICONTROL Name]** kolom aan [delete](delete-destinations.md) een bestaande verbinding aan een bestemming.
+> * Selecteer de drie punten op [!UICONTROL Name] kolom en gebruik ![Add segmentknoop ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**om segmenten naar die bestemming te verzenden.
+> * Selecteer de drie punten op de [!UICONTROL Name] kolom en gebruik ![de knoop van bestemmingen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**aan [remove](delete-destinations.md) een bestaande verbinding aan een bestemming.
 
 
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ Het tabblad **[!UICONTROL System View]** geeft een grafische weergave weer van d
 
 ![Gegevensstromen1](../assets/ui/workspace/data-flows1.png)
 
-Selecteer om het even welke bestemmingen die op de pagina worden getoond en klik **[!UICONTROL View flows]** om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
+Selecteer om het even welke bestemmingen die op de pagina worden getoond en klik **[!UICONTROL View dataflows]** om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
 
 ![Gegevensstromen2](../assets/ui/workspace/data-flows2.png)
