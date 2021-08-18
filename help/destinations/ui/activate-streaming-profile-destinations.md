@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
 seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -86,16 +86,42 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Fi
 
 ## Segmentactivering verifiëren {#verify}
 
+Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in JSON-indeling in uw doelbestemming geplaatst. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
 
-Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een door tabs gescheiden `.csv`-bestand op de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De standaardbestandsindeling is:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
-
-De bestanden die u op drie opeenvolgende dagen ontvangt, kunnen er als volgt uitzien:
-
-```console
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
+```json
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
-
-De aanwezigheid van deze bestanden op de opslaglocatie bevestigt dat de activering is gelukt. Als u wilt weten hoe de geëxporteerde bestanden zijn gestructureerd, kunt u [een voorbeeld-CSV-bestand](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) downloaden. Dit voorbeeldbestand bevat de profielkenmerken `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` en `personalEmail.address`.
