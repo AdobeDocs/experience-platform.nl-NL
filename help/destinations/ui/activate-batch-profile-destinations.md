@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '1943'
+source-wordcount: '1940'
 ht-degree: 0%
 
 ---
@@ -270,7 +270,7 @@ Laten we eens kijken naar de volgende twee profielen.
 }
 ```
 
-### Gebruiksscenario voor deduplicatie 1: geen deduplicatie
+### Gebruiksscenario voor deduplicatie 1: geen deduplicatie {#deduplication-use-case-1}
 
 Als u geen deduplicatie gebruikt, bevat het exportbestand de volgende items.
 
@@ -280,7 +280,7 @@ Als u geen deduplicatie gebruikt, bevat het exportbestand de volgende items.
 | johndoe@example.com | John | D |
 
 
-### Gebruiksscenario 2 van deduplicatie: deduplicatie op basis van naamruimte van identiteit
+### Gebruiksscenario 2 van deduplicatie: deduplicatie op basis van naamruimte van identiteit {#deduplication-use-case-2}
 
 Als deduplicatie wordt verondersteld door de naamruimte [!DNL Email], bevat het exportbestand de volgende items. Profiel B is het meest recente profiel dat in aanmerking komt voor het segment. Het is dus de enige die wordt geëxporteerd.
 
@@ -289,7 +289,7 @@ Als deduplicatie wordt verondersteld door de naamruimte [!DNL Email], bevat het 
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
 
-### Gebruiksscenario voor deduplicatie 3: deduplicatie op basis van één profielkenmerk
+### Gebruiksscenario voor deduplicatie 3: deduplicatie op basis van één profielkenmerk {#deduplication-use-case-3}
 
 Ervan uitgaande dat het kenmerk `personal Email` deduplicatie bevat, bevat het exportbestand de volgende vermelding. Profiel B is het meest recente profiel dat in aanmerking komt voor het segment. Het is dus de enige die wordt geëxporteerd.
 
@@ -298,7 +298,7 @@ Ervan uitgaande dat het kenmerk `personal Email` deduplicatie bevat, bevat het e
 | johndoe@example.com | John | D |
 
 
-### Gebruiksscenario voor deduplicatie 4: deduplicatie op basis van twee profielkenmerken (samengestelde deduplicatietoets)
+### Gebruiksscenario voor deduplicatie 4: deduplicatie op basis van twee profielkenmerken {#deduplication-use-case-4}
 
 Als deduplicatie wordt verondersteld met de samengestelde sleutel `personalEmail + lastName`, bevat het exportbestand de volgende items.
 
