@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
-source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
+source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1926'
 ht-degree: 0%
 
 ---
@@ -58,24 +58,28 @@ Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt
 
 ### Volledige bestanden exporteren {#export-full-files}
 
-Selecteer **[!UICONTROL Export full files]** om uw uitgevoerde dossiers een volledige momentopname van alle profielen te hebben die voor dat segment kwalificeren.
+Selecteer **[!UICONTROL Export full files]** om de uitvoer van een dossier te teweegbrengen dat een volledige momentopname van alle profielkwalificaties voor het geselecteerde segment bevat.
 
 ![Volledige bestanden exporteren](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. Met de kiezer **[!UICONTROL Frequency]** kunt u kiezen tussen één keer (**[!UICONTROL Once]**) of **[!UICONTROL Daily]** exporteren. Wanneer u een volledig bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST).
-2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden. Wanneer u een bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum op het moment dat u selecteert.
+1. Gebruik de selector **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
+
+   * **[!UICONTROL Once]**: een eenmalige bestandsexport plannen.
+   * **[!UICONTROL Daily]**: plannen de volledige dossieruitvoer eens per dag, elke dag, van de begindatum tot de einddatum om 12:00 UTC (7:00 PM EST).
+
+1. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden. Wanneer u een bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum op het moment dat u selecteert.
 
    >[!IMPORTANT]
    >
-   >De optie om bestanden op een bepaald tijdstip te exporteren bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten.<br> <br> Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten.  <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+   >Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten. <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
-3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
-4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
+1. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
+1. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
 
 
 ### Incrementele bestanden exporteren {#export-incremental-files}
 
-Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporteerde bestanden alleen de profielen bevatten die voor dat segment zijn gekwalificeerd sinds de laatste exportbewerking.
+Selecteer **[!UICONTROL Export incremental files]** om een export te activeren waarbij het eerste bestand een volledige momentopname is van alle profielkwalificaties voor het geselecteerde segment, en volgende bestanden zijn incrementele profielkwalificaties sinds de vorige export.
 
 >[!IMPORTANT]
 >
@@ -83,12 +87,10 @@ Selecteer **[!UICONTROL Export incremental files]** als u wilt dat uw geëxporte
 
 ![Incrementele bestanden exporteren](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. Met de kiezer **[!UICONTROL Frequency]** kunt u kiezen tussen **[!UICONTROL Daily]** of **[!UICONTROL Hourly]** exporteren. Wanneer u een incrementeel bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST).
-   * Wanneer u **[!UICONTROL Hourly]** selecteert, gebruikt u de **[!UICONTROL Every]**-kiezer om te kiezen tussen de uuropties **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** en **[!UICONTROL 12]**.
+1. Gebruik de selector **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
-      >[!IMPORTANT]
-      >
-      >De optie om incrementele bestanden om de 3, 6, 8 of 12 uur te exporteren, bevindt zich momenteel in de bètaversie en is alleen beschikbaar voor een geselecteerd aantal klanten. Klanten die geen bètaversie zijn, kunnen incrementele bestanden eenmaal per dag exporteren.
+   * **[!UICONTROL Daily]**: plant de incrementele bestandsuitvoer eenmaal per dag, elke dag, van de begindatum tot de einddatum om 12:00 uur UTC (7:00 PM EST).
+   * **[!UICONTROL Hourly]**: geplande incrementele bestandsuitvoer om de 3,6,7 of 12 uur.
 
 2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
 
@@ -164,6 +166,8 @@ Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk 
 >abstract="Selecteer de XDM-schemakenmerken die alle geëxporteerde profielen moeten bevatten. Profielen zonder de verplichte sleutel worden niet naar de bestemming geëxporteerd. Als u geen verplichte sleutel selecteert, worden alle gekwalificeerde profielen geëxporteerd, ongeacht hun kenmerken."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Meer informatie in documentatie"
 
+Een verplicht kenmerk is een selectievakje dat door de gebruiker is ingeschakeld en dat ervoor zorgt dat alle profielrecords het geselecteerde kenmerk bevatten. Bijvoorbeeld: alle geëxporteerde profielen bevatten een e-mailadres. &#x200B;
+
 U kunt kenmerken als verplicht markeren om ervoor te zorgen dat [!DNL Platform] alleen de profielen exporteert die het specifieke kenmerk bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Het markeren van een kenmerk als verplicht is **niet** vereist.
 
 Als u geen verplicht kenmerk selecteert, worden alle gekwalificeerde profielen geëxporteerd, ongeacht de kenmerken ervan.
@@ -178,9 +182,7 @@ Men adviseert dat één van de attributen een [unieke herkenningsteken](../../de
 >abstract="U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. Selecteer één naamruimte of maximaal twee XDM-schemakenmerken als een deduplicatietoets. Als u geen deduplicatietoets selecteert, kan dit leiden tot dubbele profielvermeldingen in de exportbestanden."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Meer informatie in documentatie"
 
->[!IMPORTANT]
->
->De optie om deduplicatietoetsen te gebruiken is momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten.
+Een deduplicatiesleutel is een door de gebruiker gedefinieerde primaire sleutel waarmee de identiteit wordt bepaald waarmee gebruikers hun profielen willen dedupliceren. &#x200B;
 
 Deduplicatietoetsen maken het onmogelijk meerdere records van hetzelfde profiel in één exportbestand te hebben.
 
