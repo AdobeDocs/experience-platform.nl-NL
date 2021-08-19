@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
-source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
+source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1870'
 ht-degree: 0%
 
 ---
@@ -64,10 +64,10 @@ Selecteer **[!UICONTROL Export full files]** om de uitvoer van een dossier te te
 
 1. Gebruik de selector **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
-   * **[!UICONTROL Once]**: een eenmalige bestandsexport plannen.
-   * **[!UICONTROL Daily]**: plannen de volledige dossieruitvoer eens per dag, elke dag, van de begindatum tot de einddatum om 12:00 UTC (7:00 PM EST).
+   * **[!UICONTROL Once]**: U kunt een eenmalige volledige bestandsexport plannen.
+   * **[!UICONTROL Daily]**: Plan de volledige bestandsuitvoer eenmaal per dag, elke dag, op het door u opgegeven tijdstip.
 
-1. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden. Wanneer u een bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum op het moment dat u selecteert.
+1. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
 
    >[!IMPORTANT]
    >
@@ -89,14 +89,14 @@ Selecteer **[!UICONTROL Export incremental files]** om een export te activeren w
 
 1. Gebruik de selector **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
-   * **[!UICONTROL Daily]**: plant de incrementele bestandsuitvoer eenmaal per dag, elke dag, van de begindatum tot de einddatum om 12:00 uur UTC (7:00 PM EST).
+   * **[!UICONTROL Daily]**: plant de incrementele bestandsuitvoer eenmaal per dag, elke dag, op het door u opgegeven tijdstip.
    * **[!UICONTROL Hourly]**: geplande incrementele bestandsuitvoer om de 3,6,7 of 12 uur.
 
 2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
 
    >[!IMPORTANT]
    >
-   >De optie om de tijd van de dag voor de uitvoer te selecteren is slechts beschikbaar aan een geselecteerd aantal klanten. <br> <br> Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten.  <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
+   >Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten. <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Dit is een beperking die in toekomstige versies zal worden aangepakt.
 
 3. Gebruik de kiezer **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden.
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
