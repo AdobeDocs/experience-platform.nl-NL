@@ -4,9 +4,9 @@ user-guide-title: Help bij tags
 breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Gegevensverzameling
-source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
+source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 25%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 25%
    * [Overzicht](./ui/administration/overview.md)
    * [Bedrijven en eigendommen](./ui/administration/companies-and-properties.md)
    * [Gebruikersmachtigingen](./ui/administration/user-permissions.md)
+   * [Machtigingen beheren](./ui/administration/manage-permissions.md)
 * Extensies {#extensions}
    * [Overzicht](./extensions/overview.md)
    * Adobe-extensies {#adobe}
