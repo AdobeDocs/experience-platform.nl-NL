@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten toe te wijzen aan segmentstreamingdoelen.
 seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten toe te wijzen aan segmentstreamingdoelen.
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
@@ -43,14 +43,9 @@ Gebruik de controledozen links van de segmentnamen om de segmenten te selecteren
 
 ## Kenmerken en identiteiten toewijzen {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="Transformatie toepassen"
->abstract="Schakel deze optie in als u niet-gehashte bronvelden gebruikt, zodat Adobe Experience Platform deze automatisch verbergt bij activering."
-
 >[!IMPORTANT]
 >
->Deze stap is slechts op sommige segment het stromen bestemmingen van toepassing. Als uw bestemmingen geen **[!UICONTROL Mapping]** stap hebben, overslaan aan [de segmentuitvoer van het Programma](#scheduling).
+>Deze stap is slechts op sommige segment het stromen bestemmingen van toepassing. Als uw bestemming geen **[!UICONTROL Mapping]** stap heeft, overslaan aan [de segmentuitvoer van het Programma](#scheduling).
 
 Voor sommige segment streamingdoelen moet u bronkenmerken of naamruimten selecteren om toe te wijzen als doelidentiteiten in de bestemming.
 
@@ -76,8 +71,17 @@ Voor sommige segment streamingdoelen moet u bronkenmerken of naamruimten selecte
 
 1. Herhaal stap 1 tot en met 5 om meer toewijzingen toe te voegen.
 
+### Transformatie toepassen {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Transformatie toepassen"
+>abstract="Schakel deze optie in als u niet-gehashte bronvelden gebruikt, zodat Adobe Experience Platform deze automatisch verbergt bij activering."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Meer informatie in documentatie"
 
+Wanneer u ongehashte bronkenmerken toewijst aan doelkenmerken die de bestemming verwacht te worden gehasht (bijvoorbeeld: `email_lc_sha256` of `phone_sha256`), controleer **Transformatie** toepassen optie om Adobe Experience Platform automatisch te hebben de bronattributen bij activering hakken.
+
+![Identiteitskaart](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## Segmentexport plannen {#scheduling}
