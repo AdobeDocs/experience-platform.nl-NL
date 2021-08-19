@@ -1,9 +1,9 @@
 ---
-title: Veelgestelde vragen
+title: Handleiding voor het oplossen van problemen met tags
 description: Antwoorden op veelgestelde vragen over tags in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '1055'
 ht-degree: 0%
 
 ---
@@ -92,6 +92,16 @@ De meeste Adobe-clients maken gebruik van modernere webplatformfuncties in de hu
 ## Werken labels voor systeemeigen mobiele apps?
 
 Ja! Tags ondersteunen nu mobiele eigenschappen en configuratie voor de nieuwe Adobe Experience Platform [Mobile SDK&#39;s](https://sdkdocs.com) om gegevensverzameling en -levering te implementeren in een systeemeigen mobiele app-omgeving. Raadpleeg [documentatie](https://sdkdocs.com) voor meer informatie.
+
+## Waarom zegt de UI dat er een fout is opgetreden bij het laden van mijn account?
+
+Als u een bericht ontvangt met de mededeling dat er een fout is opgetreden bij het laden van uw account, betekent dit dat uw account niet tot productprofielen voor tags behoort. Zie de gids op [het beheren van toestemmingen](./ui/administration/manage-permissions.md) leren hoe te om een productprofiel in Adobe Admin Console te vormen om toegang tot de UI van de Inzameling van Gegevens te verlenen.
+
+## Waarom kan ik geen eigenschappen in UI toevoegen?
+
+Als u geen nieuwe eigenschappen kunt maken wanneer u zich aanmeldt bij de gebruikersinterface voor gegevensverzameling, betekent dit dat uw account niet behoort tot een productprofiel dat het recht Eigenschappen beheren heeft.
+
+Zie de handleiding bij [het beheren van toestemmingen](./ui/administration/manage-permissions.md) om te leren hoe te om een productprofiel in Adobe Admin Console te vormen om het Manage juiste bezit te verlenen. Voor meer informatie over de verschillende rechten voor markeringen, zie het overzicht op [gebruikerstoestemmingen voor markeringen](./ui/administration/user-permissions.md).
 
 ## Wat als ik andere vragen heb?
 
