@@ -2,9 +2,9 @@
 title: Ondersteunde gebruiksgevallen met de Adobe Experience Platform Web SDK
 description: Leer welke gebruiksgevallen worden ondersteund met de Adobe Experience Platform Web SDK.
 keywords: web sdk;use cases
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 8%
 
 ---
@@ -91,6 +91,7 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Het doelprofiel bijwerken | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | Aanbevelingen |  |
 | mBox-id van derden |  |
+| Reactietokens | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
