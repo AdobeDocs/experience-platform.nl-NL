@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '639'
 ht-degree: 5%
 
 ---
@@ -73,6 +73,8 @@ ht-degree: 5%
       - [PostgreSQL-connector](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Shopify-connector](connectors/ecommerce/shopify.md)
+   - Lokaal systeem {#local-system}
+      - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
    - Marketingautomatisering {#marketing-automation}
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
       - [Salesforce-Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -214,6 +216,8 @@ ht-degree: 5%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
+      - Lokaal systeem {#local-system}
+         - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketingautomatisering {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
