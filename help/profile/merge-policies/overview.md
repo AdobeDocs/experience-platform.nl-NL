@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;samenvoegbeleid;UI;g
 title: Overzicht van beleid samenvoegen
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen.
-source-git-commit: c2cc1428e3a70cf987adab583e9f9fb5d5140c74
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Wanneer de gegevens van veelvoudige bronnen conflicten (bijvoorbeeld één fragm
 
 Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. U kunt ook een standaardsamenvoegbeleid opgeven dat wordt gebruikt als er niet expliciet een wordt opgegeven. Zie de sectie over [standaardsamenvoegbeleid](#default-merge-policy) later in dit document voor meer informatie.
 
-## Methoden {#merge-methods} samenvoegen
+## Methoden samenvoegen {#merge-methods}
 
 Elk profielfragment bevat informatie voor slechts één identiteit van het totale aantal identiteiten dat voor een individu zou kunnen bestaan. Wanneer het samenvoegen van die gegevens om een klantenprofiel te vormen, is er het potentieel voor die informatie aan conflict en de prioriteit moet worden gespecificeerd.
 
@@ -44,10 +44,9 @@ Het selecteren van een fusiemethode staat u toe om te specificeren welke dataset
 Er zijn twee mogelijke samenvoegmethoden beschikbaar voor het samenvoegbeleid. Elk van deze methoden wordt hieronder samengevat met aanvullende informatie in de volgende secties:
 
 * **[!UICONTROL Dataset precedence]:** In geval van een conflict, geef prioriteit aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Wanneer het selecteren van deze optie, moet u de verwante datasets en hun orde van prioriteit kiezen. Leer meer over de [datasetbelangrijkheid](#dataset-precedence) fusiemethode.
-* **[!UICONTROL Timestamp ordered]:** In geval van een conflict, wordt de prioriteit gegeven aan het profielfragment dat onlangs werd bijgewerkt. Meer informatie over [geordende tijdstempel](#timestamp-ordered) samenvoegmethode.
-   * **Aangepaste tijdstempels:** De methode voor geordende samenvoegingen met tijdstempels ondersteunt ook aangepaste tijdstempels die voorrang hebben op systeemtijdstempels bij het samenvoegen van gegevens binnen dezelfde gegevensset (meerdere identiteiten) of over gegevenssets heen. Zie de sectie over [aangepaste tijdstempels](#custom-timestamps) voor meer informatie.
+* **[!UICONTROL Timestamp ordered]:** In geval van een conflict, wordt de prioriteit gegeven aan het profielfragment dat onlangs werd bijgewerkt. Meer informatie over de [geordende tijdstempel](#timestamp-ordered)-samenvoegmethode.
 
-### Datasetprioriteit {#dataset-precedence}
+### Dataset-prioriteit {#dataset-precedence}
 
 Wanneer **[!UICONTROL Dataset precedence]** als fusiemethode voor een fusiebeleid wordt geselecteerd, kunt u prioriteit aan profielfragmenten geven die op de dataset worden gebaseerd waaruit zij kwamen. Een geval van het voorbeeldgebruik zou zijn als uw organisatie informatie aanwezig in één dataset had die over gegevens in een andere dataset voorkeur of vertrouwd is.
 
@@ -57,23 +56,7 @@ Om een samenvoegbeleid tot stand te brengen gebruikend **[!UICONTROL Dataset pre
 
 Aangezien profielverslagen in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Als **[!UICONTROL Timestamp ordered]** is geselecteerd als samenvoegmethode voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
 
-#### Aangepaste tijdstempels gebruiken {#custom-timestamps}
-
-Soms zijn er gebruiksgevallen waarin het nodig is een aangepaste tijdstempel op te geven en het samenvoegbeleid de aangepaste tijdstempel moet gebruiken in plaats van de systeemtijdstempel. Voorbeelden hiervan zijn het terugvullen van gegevens of het garanderen van de juiste volgorde van gebeurtenissen als records buiten de bestelling worden opgenomen.
-
-Als u een aangepaste tijdstempel wilt gebruiken, moet de schemaveldgroep **[!UICONTROL External Source System Audit Details]worden toegevoegd aan uw profielschema.** Nadat de aangepaste tijdstempel is toegevoegd, kan deze worden ingevuld met het veld `lastUpdatedDate`. Wanneer een verslag met het `lastUpdatedDate` gebied wordt opgenomen bevolkt, zal het Experience Platform dat gebied gebruiken om verslagen over datasets samen te voegen. Als `lastUpdatedDate` niet aanwezig, of niet bevolkt is, zal het Platform blijven gebruiken timestamp van het systeem.
-
->[!NOTE]
->
->U moet ervoor zorgen dat de tijdstempel `lastUpdatedDate` wordt gevuld wanneer u een update in dezelfde record invoegt.
-
-In de volgende schermafbeelding worden de velden in de veldgroep [!UICONTROL External Source System Audit Details] weergegeven. Voor geleidelijke instructies bij het werken met schema&#39;s gebruikend het Platform UI, met inbegrip van hoe te om gebiedsgroepen aan schema&#39;s toe te voegen, gelieve [zelfstudie voor het creëren van een schema te bezoeken gebruikend UI](../../xdm/tutorials/create-schema-ui.md).
-
-![](../images/merge-policies/custom-timestamp-field-group.png)
-
-Als u met aangepaste tijdstempels wilt werken met de API, raadpleegt u de sectie [Bindpuntgids voor samenvoegbeleid bij het gebruik van aangepaste tijdstempels](../api/merge-policies.md#custom-timestamps).
-
-## Identiteitskoppeling {#id-stitching}
+## Identiteitsstitatie {#id-stitching}
 
 Identiteitsstitching ([!UICONTROL ID stitching]) is het proces om gegevensfragmenten te identificeren en hen te combineren om een volledig profielverslag te vormen. Om het verschillende stitching gedrag te illustreren, overweeg één enkele klant die met een merk gebruikend twee verschillende e-mailadressen interactie aangaat.
 
