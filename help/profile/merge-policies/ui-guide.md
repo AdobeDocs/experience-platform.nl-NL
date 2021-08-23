@@ -4,7 +4,7 @@ title: UI-gids voor samenvoegingsbeleid
 type: Documentation
 description: Wanneer het brengen van gegevens uit veelvoudige bronnen samen in Experience Platform, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen. Deze handleiding bevat stapsgewijze instructies voor het werken met samenvoegbeleidsregels via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
 source-wordcount: '2070'
 ht-degree: 0%
@@ -94,7 +94,7 @@ Als u **[!UICONTROL Timestamp ordered]** selecteert als samenvoegmethode, hebben
 
 ![](../images/merge-policies/timestamp-ordered.png)
 
-### Datasetprioriteit {#dataset-precedence-profile}
+### Dataset-prioriteit {#dataset-precedence-profile}
 
 Als u **[!UICONTROL Dataset precedence]** selecteert als samenvoegmethode, moet u de gegevenssets Profiel selecteren en handmatig voorrang geven aan de gegevenssets. Elke vermelde dataset omvat ook de status van de laatste partij die wordt opgenomen of toont een bericht dat geen partijen in die dataset zijn opgenomen.
 
@@ -124,7 +124,7 @@ Als u **[!UICONTROL Timestamp ordered]** als fusiemethode voor de datasets van h
 
 ![](../images/merge-policies/timestamp-experienceevent.png)
 
-### Datasetprioriteit {#dataset-precedence-experienceevent}
+### Dataset-prioriteit {#dataset-precedence-experienceevent}
 
 Als u **[!UICONTROL Dataset precedence]** als fusiemethode voor de datasets van het Profiel selecteerde, zult u de datasets moeten selecteren ExperienceEvent om te omvatten. U kunt tot 50 datasets ExperienceEvent van de datasetlijst selecteren.
 
@@ -156,7 +156,7 @@ In de tabel **[!UICONTROL Preview data]** worden voorbeeldprofielrecords weergeg
 
 ![](../images/merge-policies/timestamp-review.png)
 
-### Datasetprioriteit {#dataset-precedence-review}
+### Dataset-prioriteit {#dataset-precedence-review}
 
 Als u **[!UICONTROL Dataset precedence]** als fusiemethode voor uw samenvoegbeleid selecteerde, omvatten de lijsten van Profiel en datasets ExperienceEvent slechts de datasets van het Profiel en van de ExperienceEvent die u tijdens het creatiewerkschema selecteerde, respectievelijk. De orde van de datasets van het Profiel zou de belangrijkheid moeten aanpassen die u tijdens verwezenlijking specificeerde. Als dit niet het geval is, gebruikt u de knop [!UICONTROL Back] om terug te keren naar de vorige workflowstappen en de prioriteit aan te passen.
 
