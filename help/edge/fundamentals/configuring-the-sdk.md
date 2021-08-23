@@ -4,9 +4,9 @@ description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
+source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '856'
 ht-degree: 3%
 
 ---
@@ -31,6 +31,10 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 ## Algemene opties
 
 ### `edgeConfigId`
+
+>[!NOTE]
+>
+>**Edge Configurations zijn omgedoopt tot gegevensstreams. Een gegevensstroom ID is het zelfde als een configuratieidentiteitskaart**
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
