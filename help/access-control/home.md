@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
+source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,8 @@ In de volgende tabel worden de beschikbare machtigingen voor [!DNL Experience Pl
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Mogelijkheid om gegevens te activeren naar actieve doelen die zijn gemaakt. Deze toestemming vereist of &quot;de Doelen van de Mening&quot;of &quot;leidt [!UICONTROL Destinations”] om aan de gebruiker worden verleend die bestemmingen zal activeren. |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en geverifieerde bronnen op het tabblad **[!UICONTROL Browse]**. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | De toegang om partnerhandvatten tot stand te brengen, goed te keuren en te verwerpen om twee organisaties te verbinden IMS en stromen [!DNL Segment Match] toe te laten. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Toegang tot het lezen, maken, bewerken en publiceren van [!DNL Segment Match]-feeds met actieve partners. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Toegang tot lezen, maken, bewerken en verwijderen in [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
