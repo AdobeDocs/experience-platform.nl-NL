@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van afstemming van segment
 topic-legacy: overview
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1903'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,17 @@ Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op b
 [!DNL Segment Match] gebruikt het etiket C11, een contractetiket specifiek voor  [!DNL Segment Match] dat u aan om het even welke datasets of attributen manueel kunt toevoegen om ervoor te zorgen dat zij van het  [!DNL Segment Match] partner-delend proces worden uitgesloten. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in processen [!DNL Segment Match]. Nadat u hebt bepaald welke datasets en/of gebieden u van [!DNL Segment Match] wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door de [!DNL Segment Match] werkschema. [!DNL Segment Match] het  [!UICONTROL Restrict data sharing] kernbeleid wordt automatisch ingeschakeld. Voor specifieke instructies op hoe te om de etiketten van het gegevensgebruik op datasets toe te passen, zie de zelfstudie over [het beheren van de etiketten van het gegevensgebruik in UI](../../data-governance/labels/user-guide.md).
 
 Voor een lijst van de etiketten van het gegevensgebruik en hun definities, zie [de verklarende woordenlijst van de etiketten van het gegevensgebruik](../../data-governance/labels/reference.md). Voor informatie over het beleid van het gegevensgebruik, zie [beleidsoverzicht van het gegevensgebruik](../../data-governance/policies/overview.md).
+
+### Inzicht in [!DNL Segment Match]-machtigingen
+
+Er zijn twee toestemmingen verbonden aan [!DNL Segment Match]:
+
+| Machtiging | Beschrijving |
+| --- | --- |
+| Verbindingen voor delen van publiek beheren | Deze toestemming staat u toe om het proces van de partnerhanddruk te voltooien, dat twee organisaties IMS verbindt om [!DNL Segment Match] stromen toe te laten. |
+| Aandelen van publiek beheren | Met deze machtiging kunt u feeds (het pakket gegevens dat wordt gebruikt voor [!DNL Segment Match]) maken, bewerken en publiceren met actieve partners (partners die zijn verbonden door de gebruiker met **[!UICONTROL Audience Share Connections]**-toegang). |
+
+Zie [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over toegangsbeheer en toestemmingen.
 
 ## [!DNL Segment Match] end-to-end workflow
 
