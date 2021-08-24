@@ -5,8 +5,7 @@ title: Abonneren op Privacy Service Events
 topic-legacy: privacy events
 description: Leer hoe te om aan de gebeurtenissen van de Privacy Service in te schrijven gebruikend een vooraf gevormde webhaak.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 1%
@@ -39,7 +38,7 @@ Raadpleeg de volgende documentatie bij de Privacy Service voordat u deze zelfstu
 
 Als u [!DNL Privacy Service Events] wilt ontvangen, moet u de Adobe Developer Console gebruiken om een webhaak te registreren voor uw [!DNL Privacy Service]-integratie.
 
-Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Privacy Service Events]** kiest als uw gebeurtenisprovider om toegang te krijgen tot de hierboven vermelde gebeurtenissen.
+Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Privacy Service Events]** kiest als uw gebeurtenisprovider om toegang te krijgen tot de hierboven vermelde gebeurtenissen.
 
 ## [!DNL Privacy Service Event] meldingen ontvangen
 
