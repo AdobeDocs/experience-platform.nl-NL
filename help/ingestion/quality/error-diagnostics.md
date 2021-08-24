@@ -5,10 +5,9 @@ title: Diagnostiek gegevensinscriptiefout ophalen
 topic-legacy: overview
 description: Dit document bevat informatie over het controleren van batch-inname, het beheren van fouten bij gedeeltelijke batch-inname en een verwijzing naar typen partiële batch-inname.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '979'
 ht-degree: 1%
 
 ---
@@ -46,11 +45,11 @@ Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Sche
 >
 >Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
-## Foutendiagnostiek {#download-diagnostics} downloaden
+## Foutendiagnostiek downloaden {#download-diagnostics}
 
 Met Adobe Experience Platform kunnen gebruikers de foutdiagnose van de invoerbestanden downloaden. De diagnostiek blijft maximaal 30 dagen binnen [!DNL Platform].
 
-### Invoerbestanden {#list-files} weergeven
+### Invoerbestanden weergeven {#list-files}
 
 Het volgende verzoek wint een lijst van alle dossiers terug die in een gefinaliseerde partij worden verstrekt.
 
@@ -107,7 +106,7 @@ Een succesvolle reactie retourneert JSON-objecten waarin wordt aangegeven waar d
 }
 ```
 
-### Diagnose invoerbestand {#retrieve-diagnostics} ophalen
+### Diagnose invoerbestand ophalen {#retrieve-diagnostics}
 
 Nadat u een lijst met alle verschillende invoerbestanden hebt opgehaald, kunt u de diagnostiek van het afzonderlijke bestand ophalen met de volgende aanvraag.
 
@@ -141,23 +140,25 @@ Een succesvolle reactie retourneert JSON-objecten met `path`-objecten waarin wor
 {"path": "etc/F2.json"}
 ```
 
-## Fouten bij het ophalen van batch {#retrieve-errors} ophalen
+## Fouten bij het ophalen van de batch {#retrieve-errors}
 
 Als de partijen mislukkingen bevatten, zou u fouteninformatie over deze mislukkingen moeten terugwinnen zodat kunt u de gegevens opnieuw opnemen.
 
-### Status {#check-status} controleren
+### Status controleren {#check-status}
 
-Als u de status van de ingesloten batch wilt controleren, moet u de id van de batch opgeven in het pad van een GET-aanvraag.
+Als u de status van de ingesloten batch wilt controleren, moet u de id van de batch opgeven in het pad van een GET-aanvraag. Meer over het gebruiken van deze API vraag, te lezen gelieve [de gids van het cataloguseindpunt ](../../catalog/api/list-objects.md).
 
 **API-indeling**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De `id` waarde van de partij u de status van wilt controleren. |
+| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Lees voor meer informatie de handleiding over het filteren van catalogusgegevens](../../catalog/api/filter-data.md).[ |
 
 **Verzoek**
 
@@ -297,7 +298,7 @@ Als de partij één of meerdere fouten heeft en toegelaten foutendiagnostiek hee
 
 Deze zelfstudie besprak hoe u fouten met gedeeltelijke inname van batch kunt controleren. Lees de [Handleiding voor ontwikkelaars van batch-inname](../batch-ingestion/api-overview.md) voor meer informatie over batch-inname.
 
-## Bijlage {#appendix}
+## Aanhangsel {#appendix}
 
 Deze sectie verstrekt aanvullende informatie over de types van inname fout.
 
