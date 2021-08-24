@@ -5,9 +5,9 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
 workflow-type: tm+mt
-source-wordcount: '7219'
+source-wordcount: '7380'
 ht-degree: 0%
 
 ---
@@ -144,6 +144,8 @@ ht-degree: 0%
 
 ## D
 
+**Dagelijks**: In de context van geplande dossieruitvoer, programma&#39;s volledig of stijgende dossieruitvoer eens per dag, elke dag, van de begindatum tot de einddatum op de tijd die door de gebruiker wordt gespecificeerd.
+
 **Gegevenswoordenboek**: In de context van tags is een gegevenswoordenboek (ook wel een gegevenskaart genoemd) een set gegevenselementen die zijn gedefinieerd binnen een eigenschap.
 
 **Gegevenselement**: In de context van tags is een gegevenselement een aanwijzer die wordt gebruikt binnen regels en extensies om te wijzen naar een specifiek stukje gegevens dat op het clientapparaat bestaat.
@@ -179,6 +181,8 @@ ht-degree: 0%
 **Gegevensset-id**: Een door Adobe gegenereerde id voor een opgenomen gegevensset.
 
 **Dataset-uitvoer**: De output van de gegevensset verstrekt een mechanisme om te bepalen wat de &quot;Create Lijst als Uitgezochte&quot;optie voor een bepaalde  [!DNL Query Service] looppas zal worden gebruikt.
+
+**Deduplicatietoets**: Een door de gebruiker gedefinieerde primaire sleutel waarmee de identiteit wordt bepaald waarmee gebruikers de profielen willen dedupliceren. &#x200B;
 
 **Deltakolom**: In een deltabkolom kunt u een brongegevensveld selecteren dat een tijdstempel voor incrementele opname vertegenwoordigt.
 
@@ -224,6 +228,10 @@ ht-degree: 0%
 
 **Experience Event**: Een Experience Event vertegenwoordigt een momentopname van het systeem wanneer een interactie of een gebeurtenis met betrekking tot een klantenervaring plaatsvindt. De Gebeurtenissen van de ervaring zijn onveranderlijke feitenverslagen van wat voorkwam en vertegenwoordigen wat gebeurde zonder samenvoeging of interpretatie. In het Model van de Gegevens van de Ervaring (XDM), wordt dit concept gevangen door de [!DNL XDM ExperienceEvent] klasse.
 
+**Volledig bestand** exporteren: Een exportbestand met een volledige opname van alle profielkwalificaties voor het geselecteerde segment.
+
+**Incrementele bestanden** exporteren: Een reeks geëxporteerde bestanden waarbij het eerste bestand een volledige momentopname is van alle profielkwalificaties voor het geselecteerde segment, en de volgende bestanden zijn incrementele profielkwalificaties sinds de vorige export.
+
 **Extensie**: In de context van tags is een extensie een pakket met functionaliteit dat wordt toegevoegd aan een tag-eigenschap. Een uitbreiding is gewoonlijk geconcentreerd rond een bepaalde marketing of analyseoplossing en verstrekt de hulpmiddelen nodig om die technologie in een cliëntmilieu op te stellen.
 
 **Extensiepakket**: In de context van tags is een extensiepakket een ZIP-bestand dat is gemaakt en geüpload door een extensieontwikkelaar die alles bevat wat gebruikers nodig hebben om de extensie binnen hun eigenschap te installeren. Een extensiepakket bevat een manifest dat informatie bevat over de extensie, de HTML/JavaScript die eindgebruikers nodig hebben om het gedrag van de tagextensie te configureren, en het uitvoerbare JavaScript dat aan de clientomgeving wordt geleverd (indien vereist).
@@ -253,6 +261,8 @@ ht-degree: 0%
 ## H
 
 **Host**: In de context van markeringen, specificeert een gastheer de plaats, het domein, en gebruikersgeloofsbrieven noodzakelijk voor het systeem om een bouwstijl te leveren.
+
+**Uur**: In de context van geplande het dossieruitvoer, programma&#39;s stijgende dossieruitvoer om de 3, 6, 7, of 12 uur.
 
 ## I
 
@@ -314,6 +324,8 @@ ht-degree: 0%
 
 **Model** voor machinaal leren: Een machine-leert model is een geval van een machine-leert recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen. In de Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform, worden machine-leert modellen genoemd recepten.
 
+**Verplicht kenmerk**: Een door de gebruiker ingeschakeld selectievakje dat ervoor zorgt dat alle profielrecords het geselecteerde kenmerk bevatten. Bijvoorbeeld: alle geëxporteerde profielen bevatten een e-mailadres.
+
 **Toewijzing**: Gegevenstoewijzing is het proces waarbij brongegevensvelden worden toegewezen aan verwante doelvelden in een doel.
 
 **Handeling** voor marketing: In het kader van gegevensbeheer is een marketingactie (ook wel een geval van marketinggebruik genoemd) een actie die een consument van gegevens in een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
@@ -343,6 +355,8 @@ ht-degree: 0%
 **Handeling** voor personalisatie op locatie: A marketing action that uses data for on-site content personalization. De persoonlijke verpersoonlijking ter plaatse is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over de belangen van gebruikers te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
 
 **On-site gerichte marketingactie**: Een marketingactie waarbij gegevens worden gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten.
+
+**Eenmaal**: In de context van geplande bestandsuitvoer plant u een eenmalige, on-demand, volledige bestandsuitvoer.
 
 **Opslagstrategie** overschrijven: De opslagstrategie &quot;Overschrijven&quot; is een optie voor het invoeren van gegevens van derden via een verbinding, waarbij u kunt opgeven of ingesloten gegevens volgens een bepaald schema worden overschreven.
 
