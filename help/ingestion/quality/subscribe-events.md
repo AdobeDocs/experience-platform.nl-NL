@@ -5,11 +5,10 @@ title: Gegevensinscriptie
 topic-legacy: overview
 description: Om bij het controleren van het innameproces te helpen, maakt Adobe Experience Platform het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van de status van de opgenomen gegevens en om het even welke mogelijke mislukkingen.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
 source-wordcount: '672'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -25,7 +24,7 @@ Als hulp bij het controleren van het innameproces, [!DNL Experience Platform] ma
 
 Als u meldingen over gegevensinvoer wilt ontvangen, moet u [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) gebruiken om een webhaak te registreren voor de integratie van uw Experience Platform.
 
-Volg de zelfstudie op [Abonneren op [!DNL Adobe I/O Event] notifications](../../observability/notifications/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
+Volg de zelfstudie op [Abonneren op [!DNL Adobe I/O Event] notifications](../../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
 
 >[!IMPORTANT]
 >
@@ -83,9 +82,9 @@ De volgende sectie bevat aanvullende informatie over het interpreteren van gegev
 
 In de volgende tabel staan de statusmeldingen voor gegevensinvoer waarop u zich kunt abonneren.
 
-| Gebeurteniscode | Platform Service | Status | Beschrijving van gebeurtenis |
+| Gebeurteniscode | Platform Service | Status | Beschrijving van een gebeurtenis |
 | --- | ---------------- | ------ | ----------------- |
-| `ing_load_success` | [!DNL Data Ingestion] | succes | Een partij werd succesvol opgenomen in een dataset binnen [!DNL Data Lake]. |
+| `ing_load_success` | [!DNL Data Ingestion] | success | Een partij werd succesvol opgenomen in een dataset binnen [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | fout | Een partij kon niet in een dataset binnen [!DNL Data Lake] worden opgenomen. |
 | `ps_load_success` | [!DNL Real-time Customer Profile] | succes | Een batch is opgenomen in de gegevensopslag [!DNL Profile]. |
 | `ps_load_failure` | [!DNL Real-time Customer Profile] | fout | Een batch kan niet worden ingevoerd in de [!DNL Profile] gegevensopslag. |
