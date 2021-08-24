@@ -5,10 +5,9 @@ title: Overzicht van waarnemingsinformatie
 topic-legacy: overview
 description: Adobe Experience Platform Observability Insights is een RESTful API die u toestaat om zeer belangrijke metriek op Platform activiteiten bloot te stellen. Deze cijfers verstrekken inzichten in de gebruiksstatistieken van het Platform, gezondheid-controles voor de diensten van het Platform, historische tendensen, en prestatiesindicatoren voor diverse functies van het Platform.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '290'
 ht-degree: 1%
 
 ---
@@ -23,11 +22,17 @@ De [!DNL Observability Insights] API is een RESTful API die u toestaat om zeer b
 
 Zie de [[!DNL Observability Insights] API-ontwikkelaarshandleiding](./api/overview.md) voor meer informatie over het werken met de API.
 
-## Gebeurtenismeldingen
+## Waarschuwingen (bèta)
 
-[!DNL Observability Insights] kunt u zich abonneren op gebeurtenismeldingen met betrekking tot Adobe Experience Platform-activiteiten. Door op gebeurtenissen in te schrijven, kunt u uw eigen stroomafwaartse protocollen opstelling voor wanneer een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke mislukkingen tijdens het proces voorkwamen.
+>[!IMPORTANT]
+>
+>Waarschuwingen in Adobe Experience Platform zijn nog niet voor alle gebruikers beschikbaar. Deze functie is in bèta en wordt nog getest. Deze sectie kan worden gewijzigd.
 
-Zie het overzicht op [gebeurtenisberichten](./notifications/overview.md) voor meer informatie.
+Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van specifieke waarden voor waarneming wanneer een bepaalde set voorwaarden in de bewerkingen van uw Platform wordt bereikt. Een waarschuwing kan de vorm aannemen van een eenmalige melding of kan worden herhaald over een vooraf bepaald tijdsinterval totdat de omstandigheden die de waarschuwing hebben veroorzaakt, zijn opgelost.
+
+Door op alarm in te tekenen, kunt u uw eigen stroomafwaartse protocollen opzetten voor wanneer een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke mislukkingen tijdens het proces voorkwamen.
+
+Zie het overzicht op [alarm](./alerts/overview.md) voor meer informatie.
 
 ## Volgende stappen
 
