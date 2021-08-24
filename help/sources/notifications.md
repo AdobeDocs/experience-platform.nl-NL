@@ -5,8 +5,7 @@ solution: Experience Platform
 title: Meldingen voor Flow Run
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
 source-wordcount: '771'
 ht-degree: 1%
@@ -33,7 +32,7 @@ Dit document vereist ook een goed begrip van webhaken en hoe te om een webhaak v
 
 Als u meldingen over flowuitvoering wilt ontvangen, moet u de Adobe Developer Console gebruiken om een webhaak te registreren voor uw [!DNL Experience Platform]-integratie.
 
-Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
+Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
 
 >[!IMPORTANT]
 >
@@ -324,7 +323,7 @@ U kunt nu een abonnement nemen op gebeurtenissen waarmee u realtime meldingen ku
 
 De volgende secties verstrekken extra informatie voor het werken met de berichten van de stroomlooppas.
 
-### Foutberichten {#errors}
+### Foutberichten begrijpen {#errors}
 
 Er kunnen ontsluitingsfouten optreden wanneer gegevens uit de bron worden gekopieerd of wanneer de gekopieerde gegevens naar [!DNL Platform] worden verwerkt. Zie de onderstaande tabel voor meer informatie over specifieke fouten.
 
