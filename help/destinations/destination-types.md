@@ -4,9 +4,9 @@ title: Doeltypen en -categorieën
 seo-title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,28 @@ In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbind
 
 ## Verbindingen {#connections}
 
-**[!UICONTROL Profile Export]** en  **[!UICONTROL Segment Export]** bestemmingen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om het  [Real-Time Klantprofiel](../profile/home.md) te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen te exporteren naar bestemmingen.
+**[!UICONTROL Profile Export]** en  **[!UICONTROL Streaming Segment Export]** bestemmingen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om het  [Real-Time Klantprofiel](../profile/home.md) te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen te exporteren naar bestemmingen.
 
 ## Profielexportdoelen
 
-Profielexportdoelen genereren een bestand met profielen en/of kenmerken. Deze bestemmingen gebruiken ruwe gegevens, vaak met e-mailadres als primaire sleutel. De [Amazon S3 wolkenopslagbestemming](./catalog/cloud-storage/amazon-s3.md) is een voorbeeld van bestemming waar u dossiers kunt neerzetten die profieluitvoer bevatten.
+Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als primaire sleutel. Experience Platform ondersteunt momenteel twee typen exportdoelen voor profielen:
 
-## Exportbestemmingen segment
+* [Streaming profiel exporteren doelen](#streaming-profile-export)
+* [Bestandsgebaseerde doelen](#file-based)
 
-De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Reclamebestemmingen zoals [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) of [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) zijn voorbeelden van deze soorten doelen.
+### Streaming profiel exporteren doelen {#streaming-profile-export}
 
-## Exportdoelen profiel en segment - video-overzicht
+Streaming profiel exportdoelen ontvangen segment- en profielgegevens als gegevensstreams voor Experience Platforms. [Amazon ](catalog/cloud-storage/amazon-kinesis.md) Kinesisand  [Azure Event ](catalog/cloud-storage/azure-event-hubs.md) Hubsare voorbeelden van dergelijke bestemmingen.
+
+### Bestandsgebaseerde doelen {#file-based}
+
+Bestandsdoelen ontvangen `.csv` bestanden met profielen en/of kenmerken. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is een voorbeeld van een bestemming waar u bestanden met geëxporteerde profielen kunt neerzetten.
+
+## Streaming segment exportdoelen
+
+De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentgegevens. Deze bestemmingen gebruiken segment IDs of gebruiker IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) en  [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) zijn voorbeelden van dergelijke bestemmingen.
+
+## Exporteren van profielen en segmentexportdoelen - video-overzicht
 
 In de onderstaande video worden de bijzonderheden van de twee soorten doelen uitgelegd:
 
