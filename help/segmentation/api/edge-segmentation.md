@@ -5,9 +5,9 @@ title: 'Edge Segmentation met de API '
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
+source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -38,8 +38,8 @@ Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag a
 | ---------- | ------- |
 | Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. |
 | Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. |
-| Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keer plaatsvindt. |
-| Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |
+| Binnenkomende hit met een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen 24 uur |
+| Inkomende hit die verwijst naar een profiel met een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen 24 uur en een of meer profielkenmerken |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -47,9 +47,9 @@ De volgende vraagtypes zijn **not** momenteel gesteund door randsegmentatie:
 
 | Type query | Details |
 | ---------- | ------- |
-| Het venster Relative-time | Als een vraag naar een tijdvenster verwijst, kan het niet worden geëvalueerd gebruikend randsegmentatie. |
-| Negatie | Als een vraag een negatie, of een `not` gebeurtenis bevat, kan het niet worden geëvalueerd gebruikend randsegmentatie. |
 | Meerdere gebeurtenissen | Als een query meer dan één gebeurtenis bevat, kan deze niet worden geëvalueerd met behulp van randsegmentatie. |
+| Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keer plaatsvindt. |
+| Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |
 
 {style=&quot;table-layout:auto&quot;}
 
