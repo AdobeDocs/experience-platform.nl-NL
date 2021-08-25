@@ -5,8 +5,7 @@ title: Aan de slag met Adobe Experience Platform API's
 topic-legacy: api guide
 description: Adobe Experience Platform biedt API-services die nauw met elkaar zijn verbonden. Deze gids bevat informatie over de beschikbare diensten, vereiste kopballen voor verrichtingen CRUD, foutenmeldingen, de inzamelingen van Postman, en de vraag van steekproefAPI.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -51,7 +50,7 @@ Postman is een samenwerkingsplatform voor API-ontwikkeling waarmee u omgevingen 
 
 Meer informatie over Postman met inbegrip van hoe te opstelling een milieu, een lijst van beschikbare inzamelingen, en hoe te om inzamelingen in te voeren, de [documentatie van Postman van het Platform](postman.md) te bezoeken.
 
-## Voorbeeld-API-aanroepen lezen {#sample-api}
+## API-voorbeeldaanroepen lezen {#sample-api}
 
 De aanvraagindelingen zijn afhankelijk van de Platform-API die wordt gebruikt. De beste manier om te leren hoe te om uw API vraag te structureren is door samen met de voorbeelden te volgen die in de documentatie voor de bepaalde dienst van het Platform worden verstrekt u gebruikt.
 
@@ -138,7 +137,7 @@ Voor meer informatie over specifieke eindpunten in Platform APIs, met inbegrip v
 | [[!DNL Segmentation Service] API-handleiding](.././segmentation/api/overview.md) | Met de API [!DNL Segmentation Service] kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Dit omvat het bouwen van segmenten en het produceren van publiek van uw gegevens van het Profiel van de Klant in real time. |
 | [[!DNL Sensei Machine Learning] API-handleiding](.././data-science-workspace/api/getting-started.md) <br>  (Data Science Workspace) | De [!DNL Sensei Machine Learning] API verstrekt een mechanisme voor gegevenswetenschappers om machine het leren (ML) diensten van algoritme op het instappen, experimenteren, en aan de dienstplaatsing te organiseren en te beheren. |
 
-Raadpleeg de [API-naslagdocumentatie](http://www.adobe.com/go/platform-api-reference-en) op Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
+Raadpleeg de [API-naslagdocumentatie](https://www.adobe.com/go/platform-api-reference-en) op Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
 
 ## Volgende stappen
 
