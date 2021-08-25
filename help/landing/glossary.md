@@ -5,7 +5,7 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7380'
 ht-degree: 0%
@@ -262,7 +262,7 @@ ht-degree: 0%
 
 **Host**: In de context van markeringen, specificeert een gastheer de plaats, het domein, en gebruikersgeloofsbrieven noodzakelijk voor het systeem om een bouwstijl te leveren.
 
-**Uur**: In de context van geplande het dossieruitvoer, programma&#39;s stijgende dossieruitvoer om de 3, 6, 7, of 12 uur.
+**Uur**: In de context van geplande het dossieruitvoer, programma&#39;s stijgende dossieruitvoer om de 3, 6, 8, of 12 uur.
 
 ## I
 
