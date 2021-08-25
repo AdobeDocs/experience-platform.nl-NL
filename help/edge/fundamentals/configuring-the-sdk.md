@@ -1,12 +1,12 @@
 ---
 title: De SDK van Adobe Experience Platform Web configureren
 description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
-seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
+seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '826'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,6 @@ Geeft aan of foutopsporing is ingeschakeld. Als u deze configuratie instelt op `
 
 | **Functie** | **-functie** |
 | ---------------------- | ------------------ |
-| Synchrone validatie | Valideert de gegevens die worden verzameld op basis van het schema en retourneert een fout in de reactie onder het volgende label: `collect:error OR success` |
 | Logboek van console | Laat het zuiveren berichten toe om in de console van JavaScript van browser worden getoond |
 
 {style=&quot;table-layout:auto&quot;}
