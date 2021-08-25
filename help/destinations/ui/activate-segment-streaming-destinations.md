@@ -2,12 +2,12 @@
 keywords: segment streamingdoelen activeren;segment streamingdoelen activeren;gegevens activeren
 title: De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen
 type: Tutorial
-seo-title: De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen
+seo-title: Activate audience data to streaming segment export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten toe te wijzen aan segmentstreamingdoelen.
-seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten toe te wijzen aan segmentstreamingdoelen.
-source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ Om gegevens aan bestemmingen te activeren, moet u [met succes hebben verbonden m
 
 ## Kies uw bestemming {#select-destination}
 
-1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer het tabblad **[!UICONTROL Browse]**.
+1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer het tabblad **[!UICONTROL Catalog]**.
 
-   ![Tabblad Doelbladeren](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+   ![Tabblad Doelcatalogus](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Selecteer de **[!UICONTROL Add segments]** knoop die aan de bestemming beantwoordt waar u uw segmenten wilt activeren, zoals aangetoond in het hieronder beeld.
+1. Selecteer **[!UICONTROL Activate segments]** op de kaart die overeenkomt met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-   ![Knoppen activeren](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+   ![Knoppen activeren](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. Selecteer de doelverbinding die u wilt gebruiken om uw segmenten te activeren en selecteer **[!UICONTROL Next]**.
+
+   ![Doel selecteren](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Ga naar de volgende sectie naar [selecteer uw segmenten](#select-segments).
 
@@ -81,10 +85,17 @@ Voor sommige segment streamingdoelen moet u bronkenmerken of naamruimten selecte
 
 Wanneer u ongehashte bronkenmerken toewijst aan doelkenmerken die de bestemming verwacht te worden gehasht (bijvoorbeeld: `email_lc_sha256` of `phone_sha256`), controleer **Transformatie** toepassen optie om Adobe Experience Platform automatisch te hebben de bronattributen bij activering hakken.
 
-![Identiteitskaart](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![Identiteitskaart](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Segmentexport plannen {#scheduling}
+
+Standaard worden op de pagina [!UICONTROL Segment schedule] alleen de zojuist geselecteerde segmenten weergegeven die u hebt gekozen in de huidige activeringsstroom.
+
+![Nieuwe segmenten](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+Om alle segmenten te zien die aan uw bestemming worden geactiveerd, gebruik de het filtreren optie en maak **[!UICONTROL Show new segments only]** filter onbruikbaar.
+
+![Alle segmenten](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. Selecteer elk segment op de pagina **[!UICONTROL Segment schedule]** en gebruik vervolgens de kiezers **[!UICONTROL Start date]** en **[!UICONTROL End date]** om het tijdsinterval voor het verzenden van gegevens naar uw bestemming te configureren.
 
@@ -120,7 +131,7 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Fi
 
 ## Segmentactivering verifiëren {#verify}
 
-Controleer uw doelaccount. Als de activering is gelukt, worden de doelgroepen ingevuld in het doelplatform.
+Raadpleeg de [documentatie voor doelbewaking](../../dataflows/ui/monitor-destinations.md) voor gedetailleerde informatie over hoe u de gegevensstroom naar uw doelen kunt controleren.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
