@@ -2,12 +2,12 @@
 keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; e-mailmarketingbestemmingen activeren; cloudopslagdoelen activeren
 title: De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen
 type: Tutorial
-seo-title: De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen
+seo-title: Activate audience data to streaming profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
-seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
-source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
+source-git-commit: d13920250fafd2ba4ff37dd5d4a45d417ed3ecc7
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ Om gegevens aan bestemmingen te activeren, moet u [met succes hebben verbonden m
 
 ## Kies uw bestemming {#select-destination}
 
-1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer het tabblad **[!UICONTROL Browse]**.
+1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer het tabblad **[!UICONTROL Catalog]**.
 
-   ![Tabblad Doelbladeren](../assets/ui/activate-streaming-profile-destinations/browse-tab.png)
+   ![Tabblad Doelcatalogus](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Selecteer de **[!UICONTROL Add segments]** knoop die aan de bestemming beantwoordt waar u uw segmenten wilt activeren, zoals aangetoond in het hieronder beeld.
+1. Selecteer **[!UICONTROL Activate segments]** op de kaart die overeenkomt met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-   ![Knoppen activeren](../assets/ui/activate-streaming-profile-destinations/activate-buttons-browse.png)
+   ![Knop Segmenten activeren](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+
+1. Selecteer de doelverbinding die u wilt gebruiken om uw segmenten te activeren en selecteer **[!UICONTROL Next]**.
+
+   ![Doel selecteren](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Ga naar de volgende sectie naar [selecteer uw segmenten](#select-segments).
 
