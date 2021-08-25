@@ -5,7 +5,7 @@ title: Het geplande Eindpunt van Vragen API
 topic-legacy: scheduled queries
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
+source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | De naam van de database waarvoor u een geplande query maakt. |
 | `query.sql` | De SQL-query die u wilt maken. |
 | `query.name` | De naam van de geplande query. |
-| `schedule.schedule` | Het uitsnijdschema voor de query. Lees de [indeling van de expressie voor uitsnijden](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie voor meer informatie over uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br>U kunt ook de volgende steno-expressies gebruiken:<ul><li>`@once`: De query wordt maar één keer uitgevoerd.</li><li>`@hourly`: De vraag loopt elk uur aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *`.</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *`.</li><li>`@weekly`: De query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0`.</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *`.</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `1 0 0 1 1 *`. |
+| `schedule.schedule` | Het uitsnijdschema voor de query. Lees de [indeling van de expressie voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie voor meer informatie over uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br>U kunt ook de volgende steno-expressies gebruiken:<ul><li>`@once`: De query wordt maar één keer uitgevoerd.</li><li>`@hourly`: De vraag loopt elk uur aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *`.</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *`.</li><li>`@weekly`: De query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0`.</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *`.</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `1 0 0 1 1 *`. |
 | `schedule.startDate` | De begindatum voor uw geplande query, geschreven als een UTC-tijdstempel. |
 
 **Antwoord**
@@ -364,7 +364,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Geplande queryplanning bijwerken
 
-U kunt `/schedule/schedule` gebruiken om het cron programma van de geplande vraag bij te werken. Lees de [indeling van de expressie voor uitsnijden](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie voor meer informatie over uitsnijdschema&#39;s.
+U kunt `/schedule/schedule` gebruiken om het cron programma van de geplande vraag bij te werken. Lees de [indeling van de expressie voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie voor meer informatie over uitsnijdschema&#39;s.
 
 **API-indeling**
 
