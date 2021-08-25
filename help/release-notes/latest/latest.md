@@ -1,13 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform voor 28 juli 2021.
-doc-type: release notes
-last-update: July 28, 2021
-author: ens60013
+description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '459'
 ht-degree: 3%
 
 ---
@@ -15,77 +12,35 @@ ht-degree: 3%
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 28 juli 2021**
+**Releasedatum: 25 augustus 2021**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Werkruimte voor gegevenswetenschap](#dsw)
-- [Gegevensstromen](#destinations)
-- [Doelen](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Query-service](#query)
+- [Waarnembaarheidsinzichten](#observability)
+- [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
 
-## Werkruimte voor gegevenswetenschap {#dsw}
+## Waarnembaarheidsinzichten {#observability}
 
-De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
+Met behulp van observability Insights kunt u de activiteiten van Platforms volgen aan de hand van statistische gegevens en gebeurtenismeldingen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bibliotheek- en besturingssysteemupdates | De Werkruimte van de Wetenschap van gegevens heeft significante bibliotheek en OS updates gemaakt om functionaliteit en bruikbaarheid te verbeteren. Dit omvat JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 met CUDA 11 en CUDNN 8 steun, en meer. Meer informatie over het weergeven van de beschikbare bibliotheken in JupyterLab vindt u in de sectie [Ondersteunde bibliotheken](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) in de documentatie bij het overzicht van JupyterLab-laptops. |
+| Waarschuwingen | U kunt zich nu abonneren op belangrijke waarschuwingen met betrekking tot workflows die op het Platform worden uitgevoerd. Nadat u zich hebt geabonneerd op specifieke waarschuwingsregels, ontvangt u meldingen en e-mails in de gebruikersinterface wanneer een belangrijke levenscyclusgebeurtenis plaatsvindt (zoals het opnemen van gegevens) of als er problemen zijn die uw aandacht vereisen (zoals het mislukken van een innamestroom of het langer duren dan u had verwacht van een segmenttaak). Voor meer informatie, zie [alarm overzicht](../../observability/alerts/overview.md). |
 
-Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, verwijs naar [Overzicht van de Werkruimte van de Wetenschap van Gegevens](../../data-science-workspace/home.md).
+Zie [Overzicht van de Inzichten van de Waarnembaarheid](../../observability/home.md) voor meer informatie over de dienst.
 
-## Gegevensstromen {#dataflows}
+## Klantprofiel in realtime {#profile}
 
-In Platform, worden de gegevens opgenomen van vele verschillende bronnen, binnen het systeem geanalyseerd, en geactiveerd aan een brede verscheidenheid van bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
-
-Gegevensstromen zijn een weergave van taken die gegevens over het Platform verplaatsen. Deze gegevensstromen worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
-
-**Nieuwe functies**
+Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Doeldashboard | U kunt het controledashboard nu gebruiken om dataflows voor bestemmingen te controleren. Lees voor meer informatie de zelfstudie over [controledoelen in de gebruikersinterface](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
+| Bladeren door profielen op samenvoegbeleid of identiteit | Wanneer u door profielen in Experience Platform bladert, kunt u nu door samenvoegbeleid bladeren om een voorvertoning weer te geven van 20 voorbeeldprofielen op basis van het geselecteerde samenvoegbeleid. U kunt ook op identiteit bladeren om naar een specifiek profiel te zoeken dat een naamruimte van de identiteit en verwante identiteitswaarde gebruikt. Voor meer informatie, zie [Realtime gids UI van het Profiel van de Klant](../../profile/ui/user-guide.md). |
 
-Voor meer algemene informatie over gegevensstromen, verwijs naar [dataflows overzicht](../../dataflows/home.md). Meer over bestemmingen leren, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
-
-## Doelen {#destinations}
-
-Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| [Sneller bestanden exporteren](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | U kunt nu incrementele bestandsexporten plannen voor op bestanden gebaseerde doelen om de 3, 6, 8 en 12 uur. Het wijzigen van het schema voor het exporteren van bestanden voor segmenten die al zijn opgeslagen, wordt momenteel niet ondersteund. Om segmenten met een verschillend programma opnieuw uit te voeren, moet u een nieuwe bestemmingsinstantie tot stand brengen. Dit is een beperking die in toekomstige versies zal worden aangepakt. |
-| [Ondersteuning voor deduplicatietoetsen](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. U kunt één naamruimte of maximaal twee XDM-schemakenmerken selecteren als een deduplicatietoets. |
-
-## Experience Data Model (XDM) {#xdm}
-
-Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wordt ontworpen om de kracht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor gegevens in de vorm van schema&#39;s, die om het even welke toepassing toestaan om met de diensten van de Platform te communiceren.
-
-| Functie | Beschrijving |
-| --- | --- |
-| Telecommunicatie-industrie, filter | Wanneer het toevoegen van gebiedsgroepen aan een schema in UI, kunt u nu door de telecommunicatiesector filtreren. Zie het [diagram van de de entiteitverhouding van de telecommunicatiesector (ERD)](../../xdm/schema/industries/telecom.md) om een geadviseerd gegevensmodel voor telecomgebruiksgevallen te zien. |
-
-Voor meer algemene informatie over XDM in Platform, verwijs naar [XDM System overview](../../xdm/home.md).
-
-## Query-service {#query}
-
-De Dienst van de vraag verstrekt de capaciteit om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken, ondersteunend een verscheidenheid van analyse en gegevensbeheer gebruiksgevallen. Het is een serverloos hulpmiddel dat u toestaat om zich bij datasets van het meer van Gegevens aan te sluiten en de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time te vangen.
-
-U kunt de Dienst van de Vraag gebruiken om de ecosystemen van de gegevensanalyse te bouwen, die tot een beeld van klanten over hun diverse interactiekanalen leiden. Deze kanalen kunnen verkooppunt, Web, mobiele, of CRM systemen omvatten.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Geplande query&#39;s | U kunt vragen in Platform nu plannen gebruikend de Redacteur van de Vraag. Lees voor meer informatie de documentatie in de [Query Editor](../../query-service/ui/user-guide.md#scheduled-queries). |
-
-Raadpleeg de documentatie [Query Service](../../query-service/home.md) voor meer informatie.
+Als u meer wilt weten over Real-time klantprofiel, inclusief zelfstudies en aanbevolen procedures voor het werken met profielgegevens, leest u eerst het [Real-time Customer Profile overview](../../profile/home.md).
 
 ## Bronnen {#sources}
 
@@ -95,7 +50,6 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
-| [!DNL Salesforce Marketing Cloud] (bèta) | U kunt [!DNL Salesforce Marketing Cloud] nu met Experience Platform verbinden gebruikend [!DNL Flow Service] API of UI. Zie [[!DNL Salesforce Marketing Cloud] connectoroverzicht](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md) voor meer informatie. |
+| Bronaansluiting voor lokale bestandsupload | De categorie voor het opnemen van bestanden is hernoemd naar het lokale systeem, zodat u lokale bestanden rechtstreeks naar het Platform kunt brengen via de lokale connector voor het uploaden van bestanden. De gegevens die door deze schakelaar worden opgenomen kunnen door het Dashboard van de Controle worden gecontroleerd. Zie het [overzicht van de bron voor het uploaden van lokale bestanden](../../sources/connectors/local-system/local-file-upload.md) voor meer informatie. |
 
 Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
