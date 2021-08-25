@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
@@ -16,9 +16,22 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Doelen](#destinations)
 - [Waarnembaarheidsinzichten](#observability)
 - [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
+
+## Doelen {#destinations}
+
+Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [Verbeteringen van de bruikbaarheid van bestemmingen](../../destinations/ui/activation-overview.md) | De verbeteringen van de bruikbaarheid aan bestemmingen laten marketers toe om segmenten aan bestaande bestemmingen naadloos te activeren. |
+
+Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
 
 ## Waarnembaarheidsinzichten {#observability}
 
