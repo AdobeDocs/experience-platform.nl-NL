@@ -5,8 +5,7 @@ title: Postman in Adobe Experience Platform
 topic-legacy: api guide
 description: Dit document bevat stappen waarin wordt beschreven hoe u een Postman-omgeving instelt, Postman-verzamelingen importeert en een lijst met beschikbare verzamelingen voor elke Platform-service.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
@@ -23,15 +22,15 @@ De volgende videohandleiding geeft een overzicht van het maken en instellen van 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Postmancollecties {#collections}
+## Postcollecties {#collections}
 
-Een omslag die alle beschikbare inzamelingen van Postman bevat kan door worden gevonden, bezoekend de [Experience Platform Postman steekproeven GitHub bewaarplaats](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). U kunt ook een postmanverzamelingskoppeling vinden in elk afzonderlijk wagerbestand in de [API-naslagdocumentatie](http://www.adobe.com/go/platform-api-reference-en) op Adobe I/O.
+Een omslag die alle beschikbare inzamelingen van Postman bevat kan door worden gevonden, bezoekend de [Experience Platform Postman steekproeven GitHub bewaarplaats](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). U kunt ook een postmanverzamelingskoppeling vinden in elk afzonderlijk wagerbestand in de [API-naslagdocumentatie](https://www.adobe.com/go/platform-api-reference-en) op Adobe I/O.
 
 Om een inzameling van Postman te downloaden, selecteer **[!DNL Raw]** van de pagina GitHub om het ruwe JSON dossier in een nieuw lusje te laden. Klik vervolgens met de rechtermuisknop en selecteer **[!DNL Save as]** om het bestand op te slaan naar een andere lokale bestemming.
 
 ![raw JSON](./images/api-guide/raw-collection.PNG)
 
-## Een Postmanverzameling {#import} importeren
+## Een postmanverzameling importeren {#import}
 
 Als u een [Postman-verzameling](#collections) wilt gebruiken, moet u een omgeving hebben ingesteld. Nadat u de omgeving hebt ingesteld, selecteert u de **[!DNL Manage Environments]**-kiezer in de rechterbovenhoek.
 
