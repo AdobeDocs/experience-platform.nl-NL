@@ -1,7 +1,7 @@
 ---
 title: Een Exchange-aanbieding voor een extensie maken
 description: Leer hoe u uw extensie toevoegt aan de openbare catalogus in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8705cfa65cb1d3a738610821ece827c2af33615
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -41,9 +41,9 @@ Als u al een bedrijfsaccount hebt of als u niet van plan bent om uw aanbieding t
 1. Geef je objectgegevens op. Voor gedetailleerde informatie over App Manager checkt u het volledige [artikel](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931) uit. De informatie van de lijst zou zeer duidelijk moeten zijn over wat de uitbreiding doet en waarom het nuttig is. Deze aanbieding fungeert als marketingruimte voor uw app. Promoot hier uw extensie met duidelijke beschrijvingen, koppelingen naar bestemmingspagina&#39;s op uw site, koppelingen naar Help-documenten of ondersteuning van e-mailadressen enzovoort. Hoewel de ruimte in uitbreidingsmeningen beperkt is, biedt de lijst van de Uitwisseling een kans om zowel uw uitbreiding als uw bedrijf te bevorderen. Hieronder volgen suggesties om de uitbreiding beter te promoten:
    - **App-pictogram**  - zorg ervoor dat het pictogram voor de Exchange-lijst de juiste afmetingen heeft: 512 x 512 voor png of een hoogte-breedteverhouding van 1:1 voor jpg.
 
-   >[!NOTE]
-   >
-   >Dit is een andere bestandsindeling dan de extensiecode. De extensie zelf bevat een svg-bestand als het [pictogram](../manifest.md).
+      >[!NOTE]
+      >
+      >Dit is een andere bestandsindeling dan de extensiecode. De extensie zelf bevat een svg-bestand als het [pictogram](../manifest.md).
 
    - **Aanbevolen afbeelding**  - Let op met een afbeelding die zelfstandig kan worden gebruikt en uw merk weergeeft en uw toepassing markeert. De aanbevolen afbeelding is de afbeelding die wordt weergegeven wanneer iemand een link naar je aanbieding op de beurs deelt of er berichten over plaatst op sociale media. Het moet daarom een modelweergave van uw merk zijn.
    - **Logo**  van uitgever van app - Dit is uw bedrijfslogo, zorg ervoor het pictogram de aangewezen afmetingen van 1280 x 720, of 2560 x 1440 (16:9) in png of jpg formaat heeft.
