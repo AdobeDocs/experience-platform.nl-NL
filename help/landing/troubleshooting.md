@@ -7,8 +7,7 @@ landing-page-description: Vind antwoorden op vaak gestelde vragen en een gids vo
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-translation-type: tm+mt
-source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 1%
@@ -25,7 +24,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 ## Wat zijn [!DNL Experience Platform] API&#39;s? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot  [!DNL Platform] middelen gebruiken toegang te hebben. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH), en (DELETE) middelen uit te geven. Raadpleeg de [API-naslagdocumentatie](http://www.adobe.com/go/platform-api-reference-en) op Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
+[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot  [!DNL Platform] middelen gebruiken toegang te hebben. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH), en (DELETE) middelen uit te geven. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.com/go/platform-api-reference-en) op Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
 
 ## Hoe kan ik een API-aanvraag opmaken? {#how-do-i-format-an-api-request}
 
@@ -97,7 +96,7 @@ De volgende statuscodes kunnen worden aangetroffen op elke [!DNL Experience Plat
 
 ## Koptekstfouten aanvragen {#request-header-errors}
 
-Alle API vraag in [!DNL Platform] vereist specifieke verzoekkopballen. Zie de [API-naslagdocumentatie](http://www.adobe.com/go/platform-api-reference-en) om te zien welke headers vereist zijn voor afzonderlijke services. Zie de [zelfstudie Verificatie](https://www.adobe.com/go/platform-api-authentication-en) voor informatie over de waarden voor de vereiste verificatieheaders. Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
+Alle API vraag in [!DNL Platform] vereist specifieke verzoekkopballen. Zie de [API-naslagdocumentatie](https://www.adobe.com/go/platform-api-reference-en) om te zien welke headers vereist zijn voor afzonderlijke services. Zie de [zelfstudie Verificatie](https://www.adobe.com/go/platform-api-authentication-en) voor informatie over de waarden voor de vereiste verificatieheaders. Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
 
 ### OAuth-token ontbreekt {#oauth-token-is-missing}
 
