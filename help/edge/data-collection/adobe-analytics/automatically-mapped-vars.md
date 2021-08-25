@@ -1,12 +1,12 @@
 ---
 title: Automatisch toegewezen Adobe Analytics-variabelen in de Adobe Experience Platform Web SDK
 description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SDK van het Experience Platform worden toegewezen
-seo-description: Leer welke variabelen automatisch in Adobe Analytics worden toegewezen met de Adobe Experience Platform Web SDK
+seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
+source-git-commit: 09c6986fcd3682377725ded389496d5076e9e1e2
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,8 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | `placeContext.geo.postalCode` | `zip` | Zoekparameter ZIP-toewijzing voor AppMeasurement-query. |
 | `placeContext.geo.stateProvince` | `state` | STATE-toewijzing voor queryparameter AppMeturement. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement-queryparameterparameters Products Merchandise Events/Evars mapping. |
-| `productlistitems.[N].name` | `products` | Toewijzing van naam van toepassingsparameter voor queryparameter voor producten. |
+| `productListItems[N].lineItemId` | `products` | Toewijzing van naam van toepassingsparameter voor queryparameter voor producten. |
+| `productlistitems.[N].name` | `products` | Toewijzing van de categorie Producten van de vraagparameter AppMeasurement. |
 | `productlistitems.[N].priceTotal` | `products` | AppMeasurement-queryparameter Products Price mapping. |
 | `productlistitems.[N].quantity` | `products` | AppMeasurement de parameterproducten van de vraagparameterProducts Quantity mapping. |
 | `web.webInteraction.URL` | `pev1` | Toepassingsmetingqueryparameter PAGE_EVENT_VAR1-toewijzing. |
