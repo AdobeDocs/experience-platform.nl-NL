@@ -5,9 +5,9 @@ title: Overzicht van waarnemingsinformatie
 topic-legacy: overview
 description: Adobe Experience Platform Observability Insights is een RESTful API die u toestaat om zeer belangrijke metriek op Platform activiteiten bloot te stellen. Deze cijfers verstrekken inzichten in de gebruiksstatistieken van het Platform, gezondheid-controles voor de diensten van het Platform, historische tendensen, en prestatiesindicatoren voor diverse functies van het Platform.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
+source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '262'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,7 @@ De [!DNL Observability Insights] API is een RESTful API die u toestaat om zeer b
 
 Zie de [[!DNL Observability Insights] API-ontwikkelaarshandleiding](./api/overview.md) voor meer informatie over het werken met de API.
 
-## Waarschuwingen (bèta)
-
->[!IMPORTANT]
->
->Waarschuwingen in Adobe Experience Platform zijn nog niet voor alle gebruikers beschikbaar. Deze functie is in bèta en wordt nog getest. Deze sectie kan worden gewijzigd.
+## Waarschuwingen
 
 Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van specifieke waarden voor waarneming wanneer een bepaalde set voorwaarden in de bewerkingen van uw Platform wordt bereikt. Een waarschuwing kan de vorm aannemen van een eenmalige melding of kan worden herhaald over een vooraf bepaald tijdsinterval totdat de omstandigheden die de waarschuwing hebben veroorzaakt, zijn opgelost.
 
