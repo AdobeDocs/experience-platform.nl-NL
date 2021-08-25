@@ -2,12 +2,12 @@
 keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; e-mailmarketingbestemmingen activeren; cloudopslagdoelen activeren
 title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
-seo-title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
+seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
-seo-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '1842'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Selecteer **[!UICONTROL Export incremental files]** om een export te activeren w
 1. Gebruik de selector **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
    * **[!UICONTROL Daily]**: plant de incrementele bestandsuitvoer eenmaal per dag, elke dag, op het door u opgegeven tijdstip.
-   * **[!UICONTROL Hourly]**: geplande incrementele bestandsuitvoer om de 3,6,7 of 12 uur.
+   * **[!UICONTROL Hourly]**: schema incrementele het dossieruitvoer om de 3, 6, 8, of 12 uur.
 
 2. Gebruik de kiezer **[!UICONTROL Time]** om het tijdstip van de dag in [!DNL UTC]-indeling te kiezen wanneer het exporteren moet plaatsvinden.
 
@@ -320,8 +320,7 @@ Adobe raadt u aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID]- of 
 >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
 
 >
-> 
-Bijvoorbeeld, als het gebied `person.name.firstName` bepaalde etiketten van het gegevensgebruik heeft die met de marketing van de bestemming actie in conflict brengen, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Zie [Gegevensbeheer in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations) voor meer informatie.
+> Bijvoorbeeld, als het gebied `person.name.firstName` bepaalde etiketten van het gegevensgebruik heeft die met de marketing van de bestemming actie in conflict brengen, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Zie [Gegevensbeheer in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations) voor meer informatie.
 
 ## Controleren {#review}
 
