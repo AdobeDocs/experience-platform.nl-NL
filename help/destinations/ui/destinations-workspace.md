@@ -2,11 +2,11 @@
 keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen ui;catalogus;doelcatalogus;
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
-seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
@@ -40,14 +40,14 @@ De [!DNL Platform] gebruikersinterface verstrekt verscheidene onderzoek en filte
 * Schakelen tussen [!UICONTROL All destinations] en [!UICONTROL My destinations]. Wanneer u **[!UICONTROL All destinations]** selecteert, worden alle beschikbare [!DNL Platform] bestemmingen getoond. Wanneer u **[!UICONTROL My destinations]** selecteert, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
 * Selecteer deze optie om **[!UICONTROL Connections]** en/of **[!UICONTROL Extensions]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, zie [De Types van Bestemming en Categorieën](../destination-types.md).
 
-![doelen filteren en zoeken, demo](../assets/ui/workspace/destinations-search-and-filter.gif)
+![Catalogus](../assets/ui/workspace/catalog.png)
 
-De bestemmingskaarten bevatten of een **[!UICONTROL Configure]** of **[!UICONTROL Activate]** controle, en een secundaire controle die meer opties omhoog brengt. Deze besturingselementen worden hieronder beschreven:
+De bestemmingskaarten bevatten of een **[!UICONTROL Set up]** of **[!UICONTROL Activate segments]** controle, en een secundaire controle die meer opties omhoog brengt. Deze besturingselementen worden hieronder beschreven:
 
 | Control | Beschrijving |
 |---------|----------|
-| [!UICONTROL Configure] | Hiermee kunt u verbinding maken met het doel. |
-| [!UICONTROL Activate] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten activeren. |
+| [!UICONTROL Set up] | Hiermee kunt u verbinding maken met het doel. |
+| [!UICONTROL Activate segments] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten activeren. |
 | [!UICONTROL View account] | Bekijk de accounts waarmee u verbinding hebt gemaakt voor een bestemming. |
 | [!UICONTROL View dataflows] | Bekijk de gegevensactiveringsstromen die voor een bestemming bestaan. |
 | [!UICONTROL View documentation] | Opent een verbinding aan de documentatiepagina voor die specifieke bestemming, voor meer informatie en om u te helpen opstelling het. |
@@ -72,7 +72,7 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 
 >[!TIP]
 >
-> * Selecteer de drie punten op [!UICONTROL Name] kolom en gebruik ![Add segmentknoop ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**om segmenten naar die bestemming te verzenden.
+> * Selecteer de drie punten op [!UICONTROL Name] kolom en gebruik ![Add segmentknoop ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]**om segmenten naar die bestemming te verzenden.
 > * Selecteer de drie punten op de [!UICONTROL Name] kolom en gebruik ![de knoop van bestemmingen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**aan [remove](delete-destinations.md) een bestaande verbinding aan een bestemming.
 
 
