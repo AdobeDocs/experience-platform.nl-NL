@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: fc59ad026a746bc75192fc6b314989894f8f6c45
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ De rechterzijbalk bevat informatie over alle segmenten binnen de IMS-organisatie
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
-Het selecteren van de rij van de segmentdefinitie verstrekt een samenvatting van de segmentdefinitie, met inbegrip van opties om of het segment uit te geven of te schrappen, het gekwalificeerde publiek voor het segment, de totale publieksgrootte, naast de naam van het segment, beschrijving, evaluatiemethode, gecreeerd datum, en laatst gewijzigde datum.
+Het selecteren van de rij van de segmentdefinitie verstrekt een samenvatting van de segmentdefinitie, met inbegrip van opties om of het segment uit te geven of te schrappen, het segment aan een bestemming, het gekwalificeerde publiek voor het segment, de totale publieksgrootte, naast de naam van het segment, beschrijving, evaluatiemethode, gecreeerde datum, en laatst gewijzigde datum te activeren.
 
 >[!NOTE]
 >
@@ -101,7 +101,13 @@ De pagina met segmentdetails wordt weergegeven. Bovenaan, is er een samenvatting
 
 De sectie **[!UICONTROL Segment summary]** bevat informatie zoals de id, naam, beschrijving en details van de kenmerken.
 
-Bovendien kunt u het segment bewerken. Als u **[!UICONTROL Edit segment]** selecteert, wordt de [!DNL Segment Builder] weergegeven. Lees de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md) voor meer informatie over het gebruik van de [!DNL Segment Builder]-werkruimte.
+Bovendien, krijgt u de optie om of het segment aan een bestemming te activeren of het segment uit te geven. Als u **[!UICONTROL Activate to destination]** selecteert, kunt u het segment activeren op een bestemming. Lees het [activeringsoverzicht](../../destinations/ui/activation-overview.md) voor meer informatie over het activeren van een segment op een bestemming.
+
+![](../images/ui/overview/segment-details-activate.png)
+
+Als u **[!UICONTROL Edit segment]** selecteert, wordt de [!DNL Segment Builder] weergegeven. Lees de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md) voor meer informatie over het gebruik van de [!DNL Segment Builder]-werkruimte.
+
+![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### Totaal aantal deelnemers in segment
 
