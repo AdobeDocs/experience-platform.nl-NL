@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 De Dienst van de Vraag van Adobe Experience Platform verstrekt de capaciteit om standaardANSI SQL voor `SELECT` verklaringen en andere beperkte bevelen te gebruiken. In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door [!DNL Query Service].
 
-## query&#39;s SELECTEREN {#select-queries}
+## Vragen SELECTEREN {#select-queries}
 
 De volgende syntaxis bepaalt een `SELECT` vraag die door [!DNL Query Service] wordt gesteund:
 
@@ -117,6 +117,15 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 Een `SNAPSHOT`-component werkt met een tabel- of tabelalias, maar niet boven op een subquery of weergave. Een `SNAPSHOT` clausule zal overal werken `SELECT` vraag op een lijst kan worden toegepast.
 
 Daarnaast kunt u `HEAD` en `TAIL` gebruiken als speciale verschuivingswaarden voor momentopnameclausules. Het gebruiken van `HEAD` verwijst naar een compensatie vóór de eerste momentopname, terwijl `TAIL` naar een compensatie na de laatste momentopname verwijst.
+
+>[!NOTE]
+>
+>Als u tussen twee momentopname IDs vraagt en de beginmomentopname is verlopen, kunnen de volgende twee scenario&#39;s voorkomen, afhankelijk van als de facultatieve fallback gedragsvlag (`resolve_fallback_snapshot_on_failure`) wordt geplaatst:
+>
+>- Als de facultatieve fallback gedragsvlag wordt geplaatst, zal de Dienst van de Vraag de vroegste beschikbare momentopname kiezen, zal het als beginmomentopname plaatsen, en de gegevens tussen de vroegste beschikbare momentopname en de gespecificeerde eindmomentopname terugkeren. Deze gegevens zijn **inclusief** van de vroegste beschikbare momentopname.
+>
+>- Als de optionele fallback-gedragmarkering niet is ingesteld, wordt een fout geretourneerd.
+
 
 ### WHERE-component
 
