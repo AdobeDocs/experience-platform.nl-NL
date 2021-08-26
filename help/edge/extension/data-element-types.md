@@ -2,10 +2,10 @@
 title: Typen gegevenselementen in de Adobe Experience Platform Web SDK-extensie
 description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+source-git-commit: 4caab19e1f58fc5cec5a3c56c43e47786d49c3dc
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: '497'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,19 @@ Dit gegevenselement verstrekt een identiteitskaart van de gebeurtenisfusie wanne
 
 ## Identiteitskaart
 
-Met het gegevenselement voor identiteitskaarten kunt u identiteiten maken op basis van andere gegevenselementen of andere waarden die u opgeeft. Alle identiteiten die u maakt, moeten worden gekoppeld aan een bijbehorende naamruimte. Dit gegevenselement bevat een vervolgkeuzelijst met alle standaardnaamruimten en alle gemaakte naamruimten.
+Met een identiteitsoverzicht kunt u identiteiten instellen voor de bezoeker van uw webpagina. Een identiteitsoverzicht bestaat uit namespaces, zoals _phone_ of _email_, met elke namespace die één of meerdere herkenningstekens bevatten. Als de persoon op uw website bijvoorbeeld twee telefoonnummers heeft opgegeven, moet uw naamruimte voor de telefoon twee id&#39;s bevatten.
+
+In het [!UICONTROL Identity map] gegevenselement, zult u de volgende stukken informatie voor elk herkenningsteken verstrekken:
+
+* **[!UICONTROL ID]**: De waarde die de bezoeker identificeert. Als de id bijvoorbeeld tot de naamruimte _phone_ behoort, kan [!UICONTROL ID] _555-555-555_ zijn. Deze waarde wordt doorgaans afgeleid van een JavaScript-variabele of een ander stukje gegevens op de pagina. Het is daarom verstandig een gegevenselement te maken dat verwijst naar de paginagegevens en vervolgens te verwijzen naar het gegevenselement in het veld [!UICONTROL ID] in het gegevenselement [!UICONTROL Identity map]. Als de id op de pagina wordt uitgevoerd en de id-waarde alleen een gevulde tekenreeks is, wordt de id automatisch verwijderd uit het identiteitsoverzicht.
+* **[!UICONTROL Authenticated state]**: Een selectie die aangeeft of de bezoeker is geverifieerd.
+* **[!UICONTROL Primary]**: Een selectie die aangeeft of de id moet worden gebruikt als primaire id voor de persoon. Als er geen id als primair wordt gemarkeerd, wordt de ECID gebruikt als primaire id.
+
+U moet geen ECID opgeven wanneer u een identiteitsoverzicht maakt. Wanneer u de SDK gebruikt, wordt automatisch een ECID gegenereerd op de server en opgenomen in het identiteitsoverzicht.
+
+Het gegevenselement van de identiteitskaartgegevens wordt vaak gebruikt in combinatie met het [[!UICONTROL XDM object] gegevenstype](#xdm-object) en het [[!UICONTROL Set consent] handelingstype](action-types.md#set-consent).
+
+Meer informatie over [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=nl).
 
 ![](./assets/identity-map-data-element.png)
 
