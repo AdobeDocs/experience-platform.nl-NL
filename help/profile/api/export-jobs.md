@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: In realtime klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1521'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. De publiekssegmenten van [!DNL Profile]-gegevens kunnen bijvoorbeeld worden geëxporteerd voor activering en profielkenmerken kunnen worden geëxporteerd voor rapportage.
 
-Dit document bevat stapsgewijze instructies voor het maken en beheren van exporttaken met de [profiel-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Dit document bevat stapsgewijze instructies voor het maken en beheren van exporttaken met de [profiel-API](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >

@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het profiel in real-time te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1316'
 ht-degree: 1%
 
 ---
@@ -23,7 +22,7 @@ Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en r
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 ## Verzoeken om verwijderen weergeven
 
@@ -99,7 +98,7 @@ De reactie bevat een array &#39;children&#39; met een object voor elke verwijder
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden zijn `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
 | `metrics` | Een voorwerp dat het aantal verslagen omvat die (`"recordsProcessed"`) en de tijd in seconden zijn verwerkt dat het verzoek is verwerkt, of hoe lang het verzoek om (`"timeTakenInSec"`) heeft te voltooien. |
 
-## Een verwijderverzoek maken {#create-a-delete-request}
+## Een verwijderaanvraag maken {#create-a-delete-request}
 
 Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een verzoek van de POST aan het `/systems/jobs` eindpunt, waar identiteitskaart van de te schrappen dataset of partij in het lichaam van het verzoek wordt verstrekt.
 
@@ -225,7 +224,7 @@ Als u probeert om een schrappingsverzoek voor een partij van de dataset van het 
 }
 ```
 
-## Een specifiek verwijderingsverzoek {#view-a-specific-delete-request} weergeven
+## Een specifiek verwijderingsverzoek weergeven {#view-a-specific-delete-request}
 
 Om een specifiek schrappingsverzoek, met inbegrip van details zoals zijn status te bekijken, kunt u een raadpleging (GET) verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek in de weg omvatten.
 

@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot gegevens van het profiel Real-time klanten met behulp van RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ Met Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profil
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
 ## Profielgegevens benaderen op identiteit
 
@@ -771,7 +770,7 @@ Een geslaagde reactie retourneert een gepagineerde lijst met gebeurtenissen uit 
 
 In dit voorbeeldantwoord, verstrekt het eerste vermelde profiel (&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;) een waarde voor `_links.next.payload`, betekenend dat er extra pagina&#39;s van resultaten voor dit profiel zijn. Zie de volgende sectie over [toegang tot extra resultaten](#access-additional-results) voor details op hoe te om tot die extra resultaten toegang te hebben.
 
-### Aanvullende resultaten benaderen {#access-additional-results}
+### Toegang tot extra resultaten {#access-additional-results}
 
 Wanneer het terugwinnen van de gebeurtenissen van de tijdreeks kan er vele resultaten zijn die, daarom worden teruggekeerd vaak gepagineerd de resultaten. Als er volgende pagina&#39;s van resultaten voor een bepaald profiel zijn, zal de `_links.next.payload` waarde voor dat profiel een ladingsvoorwerp bevatten.
 
@@ -891,11 +890,11 @@ Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als e
 
 Door deze handleiding te volgen hebt u toegang gekregen tot [!DNL Real-time Customer Profile] gegevensvelden, profielen en tijdreeksgegevens. Als u wilt leren hoe u andere gegevensbronnen kunt openen die zijn opgeslagen in [!DNL Platform], raadpleegt u [Overzicht van gegevenstoegang](../../data-access/home.md).
 
-## Bijlage {#appendix}
+## Aanhangsel {#appendix}
 
 In de volgende sectie vindt u aanvullende informatie over de toegang tot [!DNL Profile]-gegevens met behulp van de API.
 
-### Query-parameters {#query-parameters}
+### Parameters query {#query-parameters}
 
 De volgende parameters worden gebruikt in de weg voor GET verzoeken aan het `/access/entities` eindpunt. Ze dienen om de profielentiteit te identificeren die u wilt benaderen en de gegevens te filteren die in de reactie worden geretourneerd. De vereiste parameters worden geëtiketteerd, terwijl de rest facultatief is.
 

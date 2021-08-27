@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-time handleiding voor de API voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 De [!DNL Real-time Customer Profile] API bevat meerdere eindpunten, die hieronder worden beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar [begonnen gids](getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Real-time API-referentiewagen voor klantprofiel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Real-time API-referentiewagen voor klantprofiel](https://www.adobe.com/go/profile-apis-en).
 
 Voor een gids voor het werken met [!DNL Real-time Customer Profile] gegevens in [!DNL Experience Platform] UI, gelieve te verwijzen naar [de gebruikershandleiding van het Profiel](../ui/user-guide.md).
 
@@ -32,7 +32,7 @@ Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkome
 
 U kunt gegevens verwerkte attributen tot stand brengen, bekijken, uitgeven en schrappen gebruikend het `config/computedAttributes` eindpunt. Meer informatie over het gebruik van berekende kenmerken vindt u in het [overzicht van berekende kenmerken](../computed-attributes/overview.md). Voor API verrichtingen, bezoek [gegevens verwerkte attributen API eindgids](../computed-attributes/ca-api.md).
 
-## Randprojecties {#edge-projections}
+## Edge-prognoses {#edge-projections}
 
 Adobe Experience Platform maakt het mogelijk om de ervaringen van klanten in real time aan te passen door gegevens gemakkelijk toegankelijk te maken op strategisch gelegen servers die &quot;randen&quot; worden genoemd. De [!DNL Real-time Customer Profile] API verstrekt eindpunten voor het werken met randen door componenten genoemd &quot;projecties.&quot; Dit omvat projectieconfiguraties om te bepalen welke gegevens aan elke rand moeten worden geprojecteerd, evenals projectiebestemmingen om te bepalen waar te om een projectie te leiden. Voor gedetailleerde informatie over het werken met randprojecties, gelieve [projectieconfiguraties en bestemmingseindpuntgids](edge-projections.md) te bezoeken.
 
@@ -44,13 +44,13 @@ Via Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profil
 
 [!DNL Real-time Customer Profile] de gegevens kunnen naar een dataset voor verdere verwerking, zoals het uitvoeren van publiekssegmenten voor activering of profielattributen voor rapportering worden uitgevoerd. Exporttaken voor publiekssegmenten maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Lees de [segmentatie-eindgebruikershandleiding voor exporttaken](../../profile/api/export-jobs.md) voor meer informatie. Voor stapsgewijze instructies over het maken en beheren van exporttaken voor profielkenmerken gaat u naar de [gids voor het eindpunt van exporttaken](export-jobs.md).
 
-## Beleid {#merge-policies} samenvoegen
+## Beleid samenvoegen {#merge-policies}
 
 Wanneer het brengen van gegevens uit veelvoudige bronnen in [!DNL Experience Platform], is het fusieprincipe de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens zullen worden geprioriteerd en welke gegevens zullen worden gecombineerd om individuele klantenprofielen tot stand te brengen. Met de [!DNL Real-time Customer Profile]-API kunt u een nieuw samenvoegbeleid maken, bestaand beleid beheren en een standaardsamenvoegbeleid voor uw organisatie instellen. Als u met samenvoegbeleid wilt werken met de API, gaat u naar de [eindhulplijn voor samenvoegbeleidsregels](merge-policies.md).
 
 Als u meer wilt weten over samenvoegingsbeleid en hun rol in het Platform, begint u met het lezen van het [overzicht van samenvoegingsbeleid](../merge-policies/overview.md).
 
-## Voorbeeldstatus voorvertoning ([!DNL Profile] voorvertoning) {#profile-preview}
+## Voorbeeldstatus voorvertonen ([!DNL Profile] voorvertoning) {#profile-preview}
 
 Aangezien de gegevens die voor Profiel worden toegelaten in Experience Platform worden opgenomen, wordt het opgeslagen binnen het de gegevensopslag van het Profiel. Aangezien het aantal verslagen in de opslag van het Profiel stijgt of vermindert, wordt een steekproefbaan in werking gesteld die informatie betreffende hoeveel profielfragmenten en samengevoegde profielen in de gegevensopslag omvat. Met behulp van de profiel-API kunt u een voorvertoning weergeven van het meest recente voorbeeld en van de distributie van het lijstprofiel via gegevensset en naamruimte. Als u wilt beginnen met het gebruik van het `/profilepreviewstatus`-eindpunt, raadpleegt u de [voorbeeldstatuseindhulplijn](preview-sample-status.md).
 

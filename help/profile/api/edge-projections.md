@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform kunt u in real-time zorgen voor een gecoördineerde, consistente en gepersonaliseerde ervaring voor uw klanten op meerdere kanalen, door de juiste gegevens direct beschikbaar te maken en voortdurend bij te werken naarmate de wijzigingen zich voordoen. Dit wordt gedaan door het gebruik van randen, een geografisch geplaatste server die gegevens opslaat en het gemakkelijk toegankelijk voor toepassingen maakt.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1959'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
 >[!NOTE]
 >

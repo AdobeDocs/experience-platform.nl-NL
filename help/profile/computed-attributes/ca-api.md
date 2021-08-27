@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding laat zien hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2272'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Als u meer wilt weten over berekende kenmerken, leest u eerst [berekende kenmerk
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [Real-time het Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [Real-time het Profiel van de Klant API](https://www.adobe.com/go/profile-apis-en).
 
 Voordat u verdergaat, bekijkt u eerst de [Aan de slag-handleiding voor profiel-API](../api/getting-started.md) voor koppelingen naar aanbevolen documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen die in dit document worden weergegeven en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API met succes uit te voeren.
 
@@ -284,7 +283,7 @@ De stappen voor beide toegangspatronen worden beschreven in dit document. Select
 * **[Alle bestaande berekende kenmerken](#list-all-computed-attributes) weergeven:** retourneren een lijst met alle bestaande berekende kenmerken die uw organisatie heeft gemaakt.
 * **[Bekijk een specifiek gegevens verwerkt attribuut](#view-a-computed-attribute):** keer de details van één enkel gegevens verwerkt attribuut door zijn identiteitskaart tijdens het verzoek te specificeren.
 
-### Alle berekende kenmerken {#list-all-computed-attributes} weergeven
+### Alle berekende kenmerken weergeven {#list-all-computed-attributes}
 
 Uw IMS Organisatie kan veelvoudige gegevens verwerkte attributen tot stand brengen, en het uitvoeren van een verzoek van de GET aan het `/config/computedAttributes` eindpunt staat u toe om van alle bestaande gegevens verwerkte attributen voor uw organisatie een lijst te maken.
 
@@ -422,7 +421,7 @@ De reactie bevat ook een `children`-array die bestaat uit een of meer objecten, 
 | `id` | Een unieke, alleen-lezen, door het systeem gegenereerde waarde die automatisch wordt toegewezen aan een berekend kenmerk wanneer dit wordt gemaakt. Voor meer informatie over de componenten van een gegevens verwerkt attribuut voorwerp, te zien gelieve de sectie over [het creëren van een gegevens verwerkt attribuut](#create-a-computed-attribute) vroeger in deze zelfstudie. |
 | `_links.next` | Als één pagina met berekende kenmerken wordt geretourneerd, is `_links.next` een leeg object, zoals in de voorbeeldreactie hierboven wordt getoond. Als uw organisatie veel berekende kenmerken heeft, worden deze geretourneerd op meerdere pagina&#39;s die u kunt openen door een GET-aanvraag in te dienen bij de waarde `_links.next`. |
 
-### Een berekend kenmerk {#view-a-computed-attribute} weergeven
+### Een berekend kenmerk weergeven {#view-a-computed-attribute}
 
 U kunt een specifiek gegevens verwerkt attribuut bekijken door een verzoek van de GET aan het `/config/computedAttributes` eindpunt en met inbegrip van gegevens verwerkte kenmerkidentiteitskaart in de verzoekweg te richten.
 
