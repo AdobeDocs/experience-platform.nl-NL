@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het overbrengen van gegevens naar Adobe Experience Platform met behulp van bronconnectors en API's.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-translation-type: tm+mt
-source-git-commit: c7cbf6812e2c600aa1e831b91f15982d7bf82cdb
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -229,7 +228,7 @@ Een succesvolle reactie keert details van het pas gecreëerde schema met inbegri
 
 ## Een doelgegevensset maken
 
-Een doeldataset kan worden gecreeerd door een verzoek van de POST aan [de Dienst API van de Catalogus ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan [de Dienst API van de Catalogus ](https://www.adobe.io/experience-platform-apis/references/catalog/) uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
 
 **API-indeling**
 
@@ -271,7 +270,7 @@ Een geslaagde reactie retourneert een array met de id van de nieuwe dataset in d
 ]
 ```
 
-## Doelverbinding {#target-connection} maken
+## Een doelverbinding maken {#target-connection}
 
 Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -326,7 +325,7 @@ curl -X POST \
 }
 ```
 
-## Een toewijzing {#mapping} maken
+## Een toewijzing maken {#mapping}
 
 Opdat de brongegevens in een doeldataset worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht de doeldataset volgt aan. Dit wordt bereikt door een verzoek van de POST aan [!DNL Conversion Service] API met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
@@ -399,7 +398,7 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 }
 ```
 
-## Gegevensstroomspecificaties opzoeken {#specs}
+## Specificaties voor gegevensstroom opzoeken {#specs}
 
 Een dataflow is verantwoordelijk voor het verzamelen van gegevens uit bronnen, en het brengen van hen in Platform. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen die voor het verzamelen van de gegevens van de marketing automatisering verantwoordelijk zijn.
 

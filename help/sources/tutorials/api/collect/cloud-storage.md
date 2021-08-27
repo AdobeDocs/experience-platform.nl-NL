@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
@@ -77,7 +76,7 @@ Stel voor alle op tabellen gebaseerde bronnen de waarde in op `tabular`.
 POST /sourceConnections
 ```
 
-### Een bronverbinding maken met aangepaste, gescheiden bestanden {#using-custom-delimited-files}
+### Een bronverbinding maken met behulp van aangepaste, gescheiden bestanden {#using-custom-delimited-files}
 
 **Verzoek**
 
@@ -302,7 +301,7 @@ Een succesvolle reactie keert details van het pas gecreëerde schema met inbegri
 
 ## Een doelgegevensset maken
 
-Een doeldataset kan worden gecreeerd door een verzoek van de POST aan [de Dienst API van de Catalogus ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan [de Dienst API van de Catalogus ](https://www.adobe.io/experience-platform-apis/references/catalog/) uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
 
 **API-indeling**
 
@@ -344,7 +343,7 @@ Een geslaagde reactie retourneert een array met de id van de nieuwe dataset in d
 ]
 ```
 
-## Doelverbinding {#target-connection} maken
+## Een doelverbinding maken {#target-connection}
 
 Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -403,7 +402,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 }
 ```
 
-## Een toewijzing {#mapping} maken
+## Een toewijzing maken {#mapping}
 
 Opdat de brongegevens in een doeldataset worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht de doeldataset volgt aan. Dit wordt bereikt door een verzoek van de POST aan de Dienst van de Omzetting met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
@@ -723,7 +722,7 @@ Aan de hand van deze zelfstudie hebt u een bronaansluiting gemaakt om gegevens v
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
 
-## Bijlage {#appendix}
+## Aanhangsel {#appendix}
 
 In de volgende sectie worden de verschillende connectors voor bronnen voor cloudopslag en de bijbehorende verbindingsspecificaties weergegeven.
 

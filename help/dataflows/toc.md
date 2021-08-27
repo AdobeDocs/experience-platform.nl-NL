@@ -2,11 +2,10 @@
 audience: user
 user-guide-title: Gegevensstroomgids
 user-guide-description: Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen.
-feature: Gegevensbeheer, gegevensinname
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Management, Data Ingestion
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
@@ -20,4 +19,4 @@ ht-degree: 0%
 - UI-hulplijnen {#ui}
    - [Dataflows in doelen bewaken](./ui/monitor-destinations.md)
    - [Gegevensstromen in bronnen controleren](./ui/monitor-sources.md)
-- [Flow Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
+- [Flow Service-API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

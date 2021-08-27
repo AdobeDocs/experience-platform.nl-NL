@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -62,7 +61,7 @@ Voordat u de [!DNL Data Access] API kunt gebruiken, moet u de locatie identifice
 - `GET /batches`: Retourneert een lijst met batches onder uw organisatie
 - `GET /dataSetFiles`: Hiermee wordt een lijst met bestanden binnen uw organisatie geretourneerd
 
-Raadpleeg de [API-naslaggids](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) voor een uitgebreide lijst met eindpunten in de [!DNL Catalog]-API.
+Raadpleeg de [API-naslaggids](https://www.adobe.io/experience-platform-apis/references/catalog/) voor een uitgebreide lijst met eindpunten in de [!DNL Catalog]-API.
 
 ## Een lijst met batches ophalen onder uw IMS-organisatie
 
@@ -193,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Een volledige lijst van parameters en filters kan in [Catalog API verwijzing](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) worden gevonden.
+Een volledige lijst van parameters en filters kan in [Catalog API verwijzing](https://www.adobe.io/experience-platform-apis/references/catalog/) worden gevonden.
 
 ## Een lijst ophalen van alle bestanden die tot een bepaalde batch behoren
 
@@ -250,7 +249,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 | -------- | ----------- |
 | `data._links.self.href` | De URL voor toegang tot dit bestand. |
 
-De reactie bevat een gegevensarray met alle bestanden in de opgegeven batch. De bestanden worden voorzien van hun bestands-id, die u vindt in het veld `dataSetFileId`.
+De reactie bevat een gegevensarray met alle bestanden in de opgegeven batch. De bestanden worden verwezen door hun bestands-id, die u vindt in het veld `dataSetFileId`.
 
 ## Een bestand openen met een bestands-id
 

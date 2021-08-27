@@ -3,17 +3,16 @@ audience: user
 user-guide-title: Help bij Adobe Experience Platform-gegevensverwerking
 breadcrumb-title: Handleiding voor gegevensinname
 user-guide-description: Breng uw gegevens in Platform door partij of het stromen ingestie.
-feature: Gegevensinname
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Ingestion
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 4%
+source-wordcount: '117'
+ht-degree: 5%
 
 ---
 
 
-# Adobe Experience Platform-gegevensinname {#ingestion}
+# Adobe Experience Platform-gegevensinscriptie {#ingestion}
 
 - [Overzicht van gegevensinname](home.md)
 - Streaming opname {#streaming}
@@ -42,5 +41,5 @@ ht-degree: 4%
    - [Validatie van gestreamde invoer](quality/streaming-validation.md)
    - [Meldingen voor gegevensinvoer](quality/subscribe-events.md)
 - [Bronaansluitingen](source-connectors.md)
-- [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [API-referentie](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

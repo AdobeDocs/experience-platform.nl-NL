@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ Een succesvolle reactie keert details van het pas gecreëerde schema met inbegri
 
 ## Een doelgegevensset maken
 
-Met een doelXDM gecreeerd schema en zijn uniek `$id` kunt u een doeldataset nu tot stand brengen om uw brongegevens te bevatten. Om een doeldataset tot stand te brengen, doe een verzoek van de POST aan het `dataSets` eindpunt van [de Dienst API van de Catalogus](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), terwijl het verstrekken van identiteitskaart van het doelschema binnen de lading.
+Met een doelXDM gecreeerd schema en zijn uniek `$id` kunt u een doeldataset nu tot stand brengen om uw brongegevens te bevatten. Om een doeldataset tot stand te brengen, doe een verzoek van de POST aan het `dataSets` eindpunt van [de Dienst API van de Catalogus](https://www.adobe.io/experience-platform-apis/references/catalog/), terwijl het verstrekken van identiteitskaart van het doelschema binnen de lading.
 
 **API-indeling**
 
@@ -203,7 +203,7 @@ Een geslaagde reactie retourneert een array met de id van de nieuwe dataset in d
 ]
 ```
 
-## Doelverbinding {#target-connection} maken
+## Een doelverbinding maken {#target-connection}
 
 De verbindingen van het doel leiden tot en leiden een bestemmingsverbinding aan Platform of om het even welke plaats waar de overgebrachte gegevens zullen landen. De verbindingen van het doel bevatten informatie betreffende gegevensbestemming, gegevensformaat, en identiteitskaart van de doelverbinding die wordt vereist om een gegevensstroom tot stand te brengen. De instanties van de doelverbinding zijn specifiek voor een huurder en IMS Organisatie.
 

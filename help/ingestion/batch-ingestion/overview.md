@@ -5,11 +5,10 @@ title: Overzicht van batchverwerking
 topic-legacy: overview
 description: Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 0%
+source-wordcount: '1218'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die met een bekend schema in [!DNL Experience Data Model] (XDM) register in overeenstemming zijn.
 
-De [Referentie van de API van de Ingestie van Gegevens](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) verstrekt extra informatie over deze API vraag.
+De [Referentie van de API van de Ingestie van Gegevens](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) verstrekt extra informatie over deze API vraag.
 
 Het volgende diagram schetst het proces van partijingestie:
 

@@ -5,17 +5,16 @@ title: Handleiding voor de API voor batchverwerking
 topic-legacy: developer guide
 description: Dit document biedt een uitgebreid overzicht van het gebruik van batch-opname-API's.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2552'
 ht-degree: 3%
 
 ---
 
 # Handleiding voor inname van batch-API
 
-Dit document biedt een uitgebreid overzicht van het gebruik van [batch ingestion API&#39;s](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Dit document biedt een uitgebreid overzicht van het gebruik van [batch ingestion API&#39;s](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 De bijlage bij dit document bevat informatie over [het opmaken van gegevens die moeten worden gebruikt voor inname](#data-transformation-for-batch-ingestion), inclusief voorbeeld-CSV- en JSON-gegevensbestanden.
 
@@ -59,7 +58,7 @@ Bij het opnemen van gegevens is het belangrijk om te begrijpen hoe [!DNL Experie
 
 Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batch mislukken met een `TypeCompatibilityException`.
 
-JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ISO 8061 geformatteerde koorden](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) of Unix Tijd geformatteerd in milliseconden (1531263 959000) en worden bij inname omgezet in het doel-XDM-type.
+JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ISO 8061 geformatteerde koorden](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) of Unix Tijd geformatteerd in milliseconden (15312633 959000) en worden bij inname omgezet in het doel-XDM-type.
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
@@ -783,7 +782,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Een batch {#delete-a-batch} verwijderen
+## Een batch verwijderen {#delete-a-batch}
 
 Een partij kan worden geschrapt door het volgende POST verzoek met `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
 

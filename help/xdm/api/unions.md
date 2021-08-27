@@ -5,9 +5,9 @@ title: Unions API-eindpunt
 description: Het /union eindpunt in de Registratie API van het Schema staat u toe om XDM vakingsschema's in uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ De `timeSeriesEvents` serie is een lijst van tijd-reeksgebeurtenissen die op de 
 
 ### Segmentlidmaatschapstoewijzing
 
-De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken correct worden uitgevoerd met de [Segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan. Zie de zelfstudie over [het maken van segmenten met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
+De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken correct worden uitgevoerd met de [Segmentatie-API](https://www.adobe.io/experience-platform-apis/references/segmentation/), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan. Zie de zelfstudie over [het maken van segmenten met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
 
 ## Een lijst met vakbonden ophalen {#list}
 
@@ -183,7 +183,7 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 
 Om een schema in de unie voor zijn klasse te omvatten, moet een `union` markering aan `meta:immutableTags` attributen van het schema worden toegevoegd. U kunt dit bereiken door een verzoek van PATCH te doen om een `meta:immutableTags` serie met één enkele koordwaarde van `union` aan het betrokken schema toe te voegen. Zie [schema&#39;s eindpuntgids](./schemas.md#union) voor een gedetailleerd voorbeeld.
 
-## Schema&#39;s weergeven in een samenvoeging {#list-schemas}
+## Schema&#39;s weergeven in een union {#list-schemas}
 
 Om te zien welke schema&#39;s deel van een specifieke unie uitmaken, kunt u een verzoek van de GET aan het `/tenant/schemas` eindpunt uitvoeren. Met behulp van de query-parameter `property` kunt u de reactie alleen configureren voor retourschema&#39;s met een veld `meta:immutableTags` en een veld `meta:class` dat gelijk is aan de klasse waartoe u toegang hebt.
 

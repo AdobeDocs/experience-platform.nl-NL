@@ -4,10 +4,9 @@ title: API-handleiding voor segmentatieservice
 topic-legacy: guide
 description: Met de segmentatieservice-API kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 0%
 
 De [!DNL Segmentation Service] API verstrekt veelvoudige eindpunten die u toestaan om uw segmenteringsverrichtingen in [!DNL Experience Platform] programmatically te beheren. Dit overzichtsdocument verstrekt inleiding op hoog niveau aan elk van deze eindpunten, en verbindingen aan hun bijbehorende eindpuntgidsen voor details. Alvorens de individuele eindpuntgidsen te lezen, gelieve te verwijzen naar [begonnen gids](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt u de [API-referentie voor segmentatieservice](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt u de [API-referentie voor segmentatieservice](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
 ## Exporttaken
 
@@ -34,7 +33,7 @@ Schattingen bieden statistische informatie voor segmentdefinities, zoals de gepr
 
 Lees voor meer informatie over het gebruik van deze eindpunten de [handleiding voor voorvertoningen en schattingen van eindpunten](./previews-and-estimates.md).
 
-## Planningen
+## Planner
 
 Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren. U kunt het `/config/schedules` eindpunt gebruiken om een lijst van programma&#39;s terug te winnen, een nieuw programma tot stand te brengen, details van een specifiek programma terug te winnen, een specifiek programma bij te werken, of een specifiek programma te schrappen.
 

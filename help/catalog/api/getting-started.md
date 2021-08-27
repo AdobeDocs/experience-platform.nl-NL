@@ -5,10 +5,9 @@ title: API-handleiding voor Catalogusservice
 topic-legacy: developer guide
 description: Met de API voor catalogusservice kunnen ontwikkelaars metagegevens voor gegevenssets beheren in Adobe Experience Platform. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -65,6 +64,6 @@ Aangezien sommige vragen een zware lading op API kunnen zetten, zijn de globale 
 
 In dit document wordt de vereiste kennis behandeld die nodig is om aanroepen te kunnen uitvoeren naar de [!DNL Catalog] API. U kunt nu aan de steekproefvraag verdergaan die in deze ontwikkelaarsgids wordt verstrekt en samen met hun instructies volgen.
 
-De meeste voorbeelden in deze handleiding gebruiken het `/dataSets` eindpunt, maar de principes kunnen op andere eindpunten binnen [!DNL Catalog] (zoals `/batches` en `/accounts`) worden toegepast. Zie [Referentie van de Dienst API van de Catalogus ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) voor een volledige lijst van alle vraag en verrichtingen beschikbaar voor elk eindpunt.
+De meeste voorbeelden in deze handleiding gebruiken het `/dataSets` eindpunt, maar de principes kunnen op andere eindpunten binnen [!DNL Catalog] (zoals `/batches` en `/accounts`) worden toegepast. Zie [Referentie van de Dienst API van de Catalogus ](https://www.adobe.io/experience-platform-apis/references/catalog/) voor een volledige lijst van alle vraag en verrichtingen beschikbaar voor elk eindpunt.
 
 Voor een geleidelijke werkschema dat aantoont hoe [!DNL Catalog] API met gegevensopname geïmpliceerd is, zie de zelfstudie op [het creëren van een dataset](../datasets/create.md).
