@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor sandboxbeheer
 topic-legacy: developer guide
 description: Met het eindpunt /sandboxen in de sandbox-API kunt u sandboxen in Adobe Experience Platform programmatisch beheren.
-source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1436'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen w
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 ## Een lijst met sandboxen ophalen {#list}
 

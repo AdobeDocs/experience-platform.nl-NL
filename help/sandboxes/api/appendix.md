@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bijlage sandbox API-handleiding
 description: Dit document bevat aanvullende informatie over het werken met de sandbox-API.
 topic-legacy: developer guide
-source-git-commit: e4067f79e9da106fe2d2a86fa0024c2e5fe5d0ba
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '124'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Dit document bevat aanvullende informatie over het werken met de [!DNL Sandbox]-
 
 ## Query-parameters gebruiken {#query}
 
-De [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het van een lijst maken van zandbakken.
+De [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het van een lijst maken van zandbakken.
 
 >[!NOTE]
 >

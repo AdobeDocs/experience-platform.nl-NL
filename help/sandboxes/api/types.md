@@ -5,9 +5,9 @@ title: API-eindpunt voor sandboxtypen
 topic-legacy: developer guide
 description: U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door een verzoek van de GET aan het /sandboxTypes eindpunt te richten.
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: e644fe9a2faf8692617f6bbee2b91a52c323ff5d
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '162'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 ## Een lijst met ondersteunde sandboxtypen ophalen
 
