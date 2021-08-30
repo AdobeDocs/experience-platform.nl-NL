@@ -5,9 +5,9 @@ title: Handleiding voor probleemoplossing voor identiteitsservice
 topic-legacy: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2177'
 ht-degree: 0%
 
 ---
@@ -78,11 +78,11 @@ Standaardnaamruimten zijn naamruimten die beschikbaar zijn voor alle organisatie
 
 ## Waar kan ik de lijst van identiteitsnamespaces beschikbaar voor mijn organisatie vinden?
 
-Met de [Identiteitsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) kunt u alle beschikbare naamruimten voor uw organisatie weergeven door een GET-aanvraag in te dienen bij het `/idnamespace/identities`-eindpunt. Zie de sectie over [het vermelden van beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice API voor meer informatie.
+Met de [Identiteitsservice-API](https://www.adobe.io/experience-platform-apis/references/identity-service) kunt u alle beschikbare naamruimten voor uw organisatie weergeven door een GET-aanvraag in te dienen bij het `/idnamespace/identities`-eindpunt. Zie de sectie over [het vermelden van beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice API voor meer informatie.
 
 ## Hoe maak ik een aangepaste naamruimte voor mijn organisatie?
 
-Met de [Identiteitsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) kunt u een aangepaste naamruimte voor uw organisatie maken door een POST-aanvraag in te dienen bij het `/idnamespace/identities`-eindpunt. Zie de sectie over [het creëren van een douanenamespace](./api/create-custom-namespace.md) in het overzicht van de Dienst API van de Identiteit voor meer informatie.
+Met de [Identiteitsservice-API](https://www.adobe.io/experience-platform-apis/references/identity-service) kunt u een aangepaste naamruimte voor uw organisatie maken door een POST-aanvraag in te dienen bij het `/idnamespace/identities`-eindpunt. Zie de sectie over [het creëren van een douanenamespace](./api/create-custom-namespace.md) in het overzicht van de Dienst API van de Identiteit voor meer informatie.
 
 ## Wat zijn samengestelde identiteiten en XIDs?
 

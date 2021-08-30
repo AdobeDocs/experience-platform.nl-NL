@@ -5,10 +5,9 @@ title: Identiteitsservice-API-handleiding
 topic-legacy: API guide
 description: Met de Identiteitsservice-API kunnen ontwikkelaars de identificatie van uw klanten via verschillende apparaten, kanalen en in de buurt van realtime beheren met behulp van identiteitsgrafieken in Adobe Experience Platform. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -80,7 +79,7 @@ Wanneer een identiteit wordt voortgeduurd, [!DNL Identity Service] produceert en
 
 Om de lading in reacties te beperken, passen APIs hun reacties aan het type van gebruikte identiteitsconstructie aan. Als u XID doorgeeft aan uw reacties, hebben XID&#39;s als u samengestelde identiteiten doorgeeft, volgt de reactie de structuur die in de aanvraag wordt gebruikt.
 
-De voorbeelden in dit document hebben geen betrekking op de volledige functionaliteit van de [!DNL Identity Service]-API. Zie [Bron voor de volledige API.](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
+De voorbeelden in dit document hebben geen betrekking op de volledige functionaliteit van de [!DNL Identity Service]-API. Zie [Bron voor de volledige API.](https://www.adobe.io/experience-platform-apis/references/identity-service)
 
 >[!NOTE]
 >
