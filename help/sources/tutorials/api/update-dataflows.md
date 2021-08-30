@@ -6,17 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het bijwerken van een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma, gebruikend de Dienst API van de Stroom.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
 
 # Dataflows bijwerken met de Flow Service API
 
-Deze zelfstudie behandelt de stappen voor het bijwerken van een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Deze zelfstudie behandelt de stappen voor het bijwerken van een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 

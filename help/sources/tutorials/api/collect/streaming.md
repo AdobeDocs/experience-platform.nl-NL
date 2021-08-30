@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
 
 # Een streaminggegevensstroom maken voor onbewerkte gegevens met de [!DNL Flow Service]-API
 
-Deze zelfstudie behandelt de stappen voor het ophalen van onbewerkte gegevens van een streamingbronaansluiting en het naar Experience Platform brengen van deze gegevens met de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Deze zelfstudie behandelt de stappen voor het ophalen van onbewerkte gegevens van een streamingbronaansluiting en het naar Experience Platform brengen van deze gegevens met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 

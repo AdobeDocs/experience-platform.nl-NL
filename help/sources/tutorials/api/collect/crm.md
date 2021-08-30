@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een systeem van derdeCRM en het brengen van hen in Platform gebruikend bronschakelaars en APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1578'
 ht-degree: 0%
 
 ---
 
 # CRM-gegevens verzamelen met bronconnectors en API&#39;s
 
-In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een externe CRM en het opnemen ervan in Adobe Experience Platform via bronconnectors en de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe CRM en het opnemen ervan in Adobe Experience Platform via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 

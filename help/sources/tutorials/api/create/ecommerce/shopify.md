@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Shopify met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
-source-git-commit: e8c6620a6d2447a577bd56192030ff4353c62c62
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Shopify] (verder genoemd als &quot;[!DNL Shopify]&quot;) tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Shopify] (verder genoemd als &quot;[!DNL Shopify]&quot;) tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 

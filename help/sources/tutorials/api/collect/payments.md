@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
 
 # Betalingsgegevens verzamelen met behulp van bronconnectors en API&#39;s
 
-In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een externe toepassing voor betalingen en het opnemen ervan in het Platform via bronconnectors en de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een toepassing voor betalingen van derden en het opnemen van gegevens in het Platform via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 

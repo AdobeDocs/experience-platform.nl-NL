@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
 
 # Gegevens verzamelen van een database met bronconnectors en API&#39;s
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database van derden en het opnemen ervan in het Platform via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database van derden en het opnemen ervan in het Platform via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -30,7 +30,7 @@ Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
 * [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een derdegegevensbestand gebruikend [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API te verbinden.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een derdegegevensbestand gebruikend [!DNL Flow Service] API te verbinden.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -431,7 +431,7 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 
 ## Gegevensstroomspecificaties ophalen {#specs}
 
-Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Om een dataflow te creëren, moet u eerst de dataflow specificaties verkrijgen door een verzoek van de GET aan [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API uit te voeren. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een externe database of een NoSQL-systeem.
+Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen door een verzoek van de GET aan [!DNL Flow Service] API uit te voeren. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een externe database of een NoSQL-systeem.
 
 **API-indeling**
 
