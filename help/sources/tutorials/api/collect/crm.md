@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een systeem van derdeCRM en het brengen van hen in Platform gebruikend bronschakelaars en APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de klasse XDM [!DNL Individual Profile] uit.
 
-Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan [Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan [Registratie API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) van het Schema uit te voeren.
 
 **API-indeling**
 

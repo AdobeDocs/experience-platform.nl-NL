@@ -1,9 +1,9 @@
 ---
 title: Ondernemingen, eindpunt
 description: Leer hoe te om vraag aan het /companies eindpunt in Reactor API te maken.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Het `/companies` eindpunt in Reactor API staat u toe om de bedrijven programmati
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
 
 ## Een lijst met bedrijven ophalen {#list}
 

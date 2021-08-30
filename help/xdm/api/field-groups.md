@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor veldgroepen
 description: Het /fieldgroups eindpunt in de Registratie API van het Schema staat u toe om groepen van het XDM schemagebied binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ De de gebiedsgroepen van het schema zijn herbruikbare componenten die één of m
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 ## Een lijst met veldgroepen ophalen {#list}
 

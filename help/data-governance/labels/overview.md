@@ -5,10 +5,9 @@ title: Overzicht van labels voor gegevensgebruik
 topic-legacy: labels
 description: Met Adobe Experience Platform Data Governance kunt u gegevensgebruikslabels toepassen op gegevenssets en velden, waarbij elk veld wordt ingedeeld volgens het beleid voor het gebruik van verwante gegevens. Dit document biedt een overzicht van labels voor gegevensgebruik in Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -53,9 +52,9 @@ De **[!UICONTROL Policies]** werkruimte in [!DNL Experience Platform] UI staat u
 
 ### API&#39;s gebruiken
 
-Met het `/labels`-eindpunt in de [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) kunt u gegevensgebruikslabels programmatisch beheren, inclusief het maken van aangepaste labels. Verwijs naar [etiketeindpuntgids](../api/labels.md) voor meer informatie.
+Met het `/labels`-eindpunt in de [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) kunt u gegevensgebruikslabels programmatisch beheren, inclusief het maken van aangepaste labels. Verwijs naar [etiketeindpuntgids](../api/labels.md) voor meer informatie.
 
-De [Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) wordt gebruikt om labels voor gegevensset en velden te beheren. Zie de gids op [het beheren van datasetetiketten](./dataset-api.md) voor meer informatie.
+De [Dataset Service API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) wordt gebruikt om labels voor gegevensset en velden te beheren. Zie de gids op [het beheren van datasetetiketten](./dataset-api.md) voor meer informatie.
 
 ## Volgende stappen
 

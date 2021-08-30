@@ -4,10 +4,9 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
 breadcrumb-title: Handleiding voor Privacy Service
 user-guide-description: Beheer verzoeken om klantgegevens om te voldoen aan wettelijke privacyregels zoals GDPR en CCPA.
 feature: Privacy
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '82'
 ht-degree: 18%
 
 ---
@@ -33,5 +32,5 @@ ht-degree: 18%
    * [Veelgestelde vragen](regulations/faq.md)
    * [Terminologie](regulations/terminology.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
+* [API-referentie](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Aanvullende informatie](release-notes.md)

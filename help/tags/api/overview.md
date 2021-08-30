@@ -1,9 +1,9 @@
 ---
 title: Reactor-API
 description: Met de Reactor-API kunnen ontwikkelaars programmatisch alle bronnen voor tags in Adobe Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1035'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ De Reactor-API bevat verschillende eindpunten waarmee u programmatisch alle bron
 
 Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over het verifiëren van de API.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Reactor-API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml).
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Reactor-API-referentie](https://www.adobe.io/experience-platform-apis/references/reactor/).
 
 ## Bedrijven
 

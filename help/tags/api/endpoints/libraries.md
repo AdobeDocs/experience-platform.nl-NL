@@ -1,9 +1,9 @@
 ---
 title: Einde bibliotheken
 description: Leer hoe te om vraag aan het /libraries eindpunt in Reactor API te maken.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1584'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Een bibliotheek behoort tot precies één eigenschap. Een eigenschap kan veel bi
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
 
 Voordat u met bibliotheken gaat werken in de Reactor-API, is het belangrijk dat u de rollen begrijpt die de bibliotheekstatus en -omgevingen spelen bij het bepalen welke handelingen u op een bepaalde bibliotheek kunt uitvoeren. Zie de handleiding op de [bibliotheekpublicatiestroom](../../ui/publishing/publishing-flow.md) voor meer informatie.
 

@@ -5,9 +5,9 @@ title: API-eindpunt voor voorbeeldgegevens
 description: Het /sampledata eindpunt in de Registratie API van het Schema staat u toe om steekproefgegevens te produceren die aan de structuur van om het even welk bestaand schema XDM in kaart worden gebracht.
 topic-legacy: developer guide
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Met het `/sampledata` eindpunt in [!DNL Schema Registry] API, kunt u een voorwer
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 Het eindpunt van steekproefgegevens maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC eindpunten geen extra kopballen zoals `Accept` of `Content-Type`, en gebruiken geen `CONTAINER_ID`. In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals in de API-aanroep hieronder wordt getoond.
 

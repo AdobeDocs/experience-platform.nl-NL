@@ -5,10 +5,9 @@ title: API-eindpunt voor labels
 topic-legacy: developer guide
 description: Leer hoe u labels voor gegevensgebruik in Experience Platform beheert met de API voor beleidsservice.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '506'
 ht-degree: 1%
 
 ---
@@ -23,9 +22,9 @@ Met labels voor gegevensgebruik kunt u gegevens indelen volgens het gebruiksbele
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
-## Een lijst met labels {#list} ophalen
+## Een lijst met labels ophalen {#list}
 
 U kunt alle `core` of `custom` etiketten door een verzoek van de GET aan `/labels/core` of `/labels/custom`, respectievelijk te richten.
 
@@ -107,7 +106,7 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
 }
 ```
 
-## Label {#look-up} opzoeken
+## Een label opzoeken {#look-up}
 
 U kunt een specifiek etiket opzoeken door het `name` bezit van dat etiket in de weg van een verzoek van de GET aan [!DNL Policy Service] API te omvatten.
 

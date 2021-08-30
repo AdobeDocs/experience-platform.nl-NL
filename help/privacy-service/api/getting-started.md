@@ -5,10 +5,9 @@ title: Handleiding voor Privacy Service-API
 description: Met de Privacy Service-API kunnen ontwikkelaars hun verzoeken om toegang tot of verwijdering van hun persoonlijke gegevens in Experience Cloud-toepassingen maken en beheren, in overeenstemming met de wettelijke privacyregels. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u de persoonlijke gegevens van uw betrokkenen (klanten) in Adobe Experience Cloud-toepassingen kunt beheren (openen en verwijderen). [!DNL Privacy Service] voorziet ook een centraal controle en registrerenmechanisme dat u toestaat om tot de status en de resultaten van banen toegang te hebben die  [!DNL Experience Cloud] toepassingen impliceren.
 
-In deze handleiding wordt uitgelegd hoe u de API [!DNL Privacy Service] gebruikt. Voor details op hoe te om UI te gebruiken, zie [overzicht UI van de Privacy Service](../ui/overview.md). Zie de [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) voor een uitgebreide lijst met alle beschikbare eindpunten in de [!DNL Privacy Service]-API.
+In deze handleiding wordt uitgelegd hoe u de API [!DNL Privacy Service] gebruikt. Voor details op hoe te om UI te gebruiken, zie [overzicht UI van de Privacy Service](../ui/overview.md). Zie de [API-referentie](https://www.adobe.io/experience-platform-apis/references/privacy-service/) voor een uitgebreide lijst met alle beschikbare eindpunten in de [!DNL Privacy Service]-API.
 
 ## Aan de slag {#getting-started}
 

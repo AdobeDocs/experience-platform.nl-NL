@@ -5,10 +5,9 @@ title: API-eindpunt voor marketinghandelingen
 topic-legacy: developer guide
 description: Een marketingactie, in het kader van de Adobe Experience Platform Data Governance, is een actie die een consument van gegevens uit een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ U kunt marketing acties voor uw organisatie beheren door het `/marketingActions`
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
 ## Een lijst met marketingacties ophalen {#list}
 
@@ -217,7 +216,7 @@ Als de reactie succesvol was, worden de details van de marketingactie geretourne
 }
 ```
 
-## Een aangepaste marketingactie {#delete} verwijderen
+## Een aangepaste marketingactie verwijderen {#delete}
 
 U kunt een aangepaste marketingactie verwijderen door de naam ervan op te nemen in het pad van een DELETE-aanvraag.
 

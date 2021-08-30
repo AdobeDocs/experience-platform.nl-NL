@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het afdwingen van naleving van gegevensgebruik voor de publiekssegmenten van het Profiel van de Klant in real time die APIs gebruiken.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -57,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 - Inhoudstype: application/json
 
-## Een samenvoegingsbeleid opzoeken voor een segmentdefinitie {#merge-policy}
+## Een samenvoegingsbeleid voor een segmentdefinitie opzoeken {#merge-policy}
 
 Dit werkschema begint door tot een bekend publiekssegment toegang te hebben. De segmenten die voor gebruik in [!DNL Real-time Customer Profile] worden toegelaten bevatten een identiteitskaart van het fusiebeleid binnen hun segmentdefinitie. Dit samenvoegbeleid bevat informatie over welke datasets in het segment moeten worden omvat, die beurtelings om het even welke toepasselijke etiketten van het gegevensgebruik bevatten.
 
@@ -189,7 +188,7 @@ Een succesvolle reactie retourneert de details van het samenvoegbeleid.
 >
 > In deze stap wordt ervan uitgegaan dat u ten minste één actief beleid voor gegevensgebruik hebt dat voorkomt dat specifieke marketingacties worden uitgevoerd op gegevens die bepaalde labels bevatten. Als u geen van toepassing gebruiksbeleid voor de datasets hebt die worden geëvalueerd, gelieve [zelfstudie van de beleidsverwezenlijking ](../../data-governance/policies/create.md) te volgen om tot één te leiden alvorens met deze stap verder te gaan.
 
-Zodra u identiteitskaarts van de brondatasets van het fusiebeleid hebt verkregen, kunt u [de Dienst API van het Beleid](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gebruiken om die datasets tegen specifieke marketing acties te evalueren om op de schendingen van het beleid van het gegevensgebruik te controleren.
+Zodra u identiteitskaarts van de brondatasets van het fusiebeleid hebt verkregen, kunt u [de Dienst API van het Beleid](https://www.adobe.io/experience-platform-apis/references/policy-service/) gebruiken om die datasets tegen specifieke marketing acties te evalueren om op de schendingen van het beleid van het gegevensgebruik te controleren.
 
 Om de datasets te evalueren, moet u de naam van de marketing actie in de weg van een verzoek van de POST verstrekken, terwijl het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het voorbeeld hieronder.
 

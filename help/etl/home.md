@@ -5,9 +5,9 @@ title: Ontwikkeling van ETL-integratie voor Adobe Experience Platform
 topic-legacy: overview
 description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '4083'
+source-wordcount: '4075'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ In de ETL-integratiehandleiding worden algemene stappen beschreven voor het make
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Verificatie en autorisatie voor Experience Platform-API&#39;s](https://www.adobe.com/go/platform-api-authentication-en)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Deze handleiding bevat ook voorbeeld-API-aanroepen die moeten worden gebruikt bij het ontwerpen van een ETL-connector, met koppelingen naar documentatie waarin elke [!DNL Experience Platform]-service wordt beschreven en waarin meer in detail wordt ingegaan op het gebruik van de bijbehorende API.
 
@@ -257,7 +257,7 @@ Gelijkaardig aan de stappen voor [het bekijken van datasetschema](#view-dataset-
 
 >[!NOTE]
 >
->Wanneer het &quot;schema&quot;gebied leeg is of volledig ontbreekt, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en [de Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema zoals aangetoond in de vorige stappen gebruiken om [een datasetschema](#view-dataset-schema) te bekijken.
+>Wanneer het &quot;schema&quot;gebied leeg is of volledig ontbreekt, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en [de Registratie API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) van het Schema zoals aangetoond in de vorige stappen gebruiken om [een datasetschema](#view-dataset-schema) te bekijken.
 
 ### De eigenschap &quot;observableSchema&quot;
 

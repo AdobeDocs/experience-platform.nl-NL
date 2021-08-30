@@ -1,16 +1,16 @@
 ---
 title: Aan de slag met de Reactor-API
 description: Leer hoe u aan de slag kunt met de Reactor-API, inclusief stappen voor het genereren van de vereiste toegangsreferenties.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
 
 # Aan de slag met de Reactor-API
 
-Als u de [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) wilt gebruiken, moet elke aanvraag de volgende verificatiekoppen bevatten:
+Als u de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/) wilt gebruiken, moet elke aanvraag de volgende verificatiekoppen bevatten:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

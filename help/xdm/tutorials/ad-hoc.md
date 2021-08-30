@@ -6,9 +6,9 @@ description: In specifieke omstandigheden, kan het noodzakelijk zijn om een sche
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 In specifieke omstandigheden, kan het noodzakelijk zijn om een [!DNL Experience Data Model] (XDM) schema met gebieden tot stand te brengen die namespaced voor gebruik slechts door één enkele dataset zijn. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor [!DNL Experience Platform], met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
 
-Dit document bevat algemene stappen voor het maken van een ad-hocschema met de [Schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Het is bedoeld om samen met andere [!DNL Experience Platform] zelfstudies te worden gebruikt die het creëren van een ad hoc schema als deel van hun werkschema vereisen. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
+Dit document bevat algemene stappen voor het maken van een ad-hocschema met de [Schemaregistratie-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Het is bedoeld om samen met andere [!DNL Experience Platform] zelfstudies te worden gebruikt die het creëren van een ad hoc schema als deel van hun werkschema vereisen. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
 
 ## Aan de slag
 
@@ -187,7 +187,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van het onlangs gecreeerd schema, met inbegrip van zijn systeem-geproduceerde, read-only `$id` terug.
+Een geslaagde reactie retourneert de details van het nieuwe schema, inclusief de door het systeem gegenereerde, alleen-lezen `$id`.
 
 ```json
 {

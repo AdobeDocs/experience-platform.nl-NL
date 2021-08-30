@@ -5,10 +5,9 @@ title: API-eindpunten voor beleidsevaluatie
 topic-legacy: developer guide
 description: Zodra de marketing acties zijn gecreeerd en het beleid is bepaald, kunt u de Dienst API van het Beleid gebruiken om te evalueren of om het even welk beleid door bepaalde acties wordt geschonden. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1540'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ De evaluatieverzoeken kunnen op drie manieren worden ingediend:
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
 ## Evalueren voor beleidsovertredingen met labels voor gegevensgebruik {#labels}
 
@@ -122,7 +121,7 @@ Een succesvolle reactie omvat een `violatedPolicies` serie, die de details van h
 }
 ```
 
-## Evalueren voor beleidsovertredingen met behulp van datasets {#datasets}
+## Evalueren voor beleidsovertredingen die datasets gebruiken {#datasets}
 
 U kunt voor beleidsschendingen evalueren die op een reeks van één of meerdere datasets worden gebaseerd waaruit de etiketten van het gegevensgebruik kunnen worden verzameld. Dit wordt gedaan door een verzoek van de POST aan het `/constraints` eindpunt voor een specifieke marketing actie uit te voeren en een lijst van dataset IDs binnen het verzoeklichaam te verstrekken.
 
@@ -348,7 +347,7 @@ Een succesvolle reactie omvat een `violatedPolicies` serie, die de details van h
 | `duleLabels` | Het reactieobject bevat een `duleLabels`-array die een geconsolideerde lijst bevat met alle labels die worden gevonden in de opgegeven datasets. Deze lijst omvat dataset en gebied-vlakke etiketten op alle gebieden binnen de dataset. |
 | `discoveredLabels` | De reactie omvat ook een `discoveredLabels` serie die voorwerpen voor elke dataset bevat, die `datasetLabels` in dataset en gebied-vlakke etiketten uitgesplitst tonen. Op elk label op veldniveau wordt het pad naar het specifieke veld met dat label weergegeven. |
 
-## Evalueren voor beleidsovertredingen die specifieke datasetgebieden {#fields} gebruiken
+## Evalueren voor beleidsovertredingen gebruikend specifieke datasetgebieden {#fields}
 
 U kunt overtredingen van het beleid evalueren die op een ondergroep van gebieden van binnen één of meerdere datasets worden gebaseerd, zodat slechts de etiketten van het gegevensgebruik die die gebieden worden toegepast worden geëvalueerd.
 

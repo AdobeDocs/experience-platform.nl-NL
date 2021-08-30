@@ -1,10 +1,10 @@
 ---
 title: Overzicht controlelogboeken
 description: Leer hoe u met controlelogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
-source-git-commit: eb8144ace087c68a159aab89195832860df431e2
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 1%
+source-wordcount: '462'
+ht-degree: 2%
 
 ---
 
@@ -58,7 +58,7 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 ## Controlelogbestanden beheren in de API
 
-Alle acties die u in UI kunt uitvoeren kunnen ook worden gedaan gebruikend API vraag. Zie [API referentiedocument](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml) voor meer informatie.
+Alle acties die u in UI kunt uitvoeren kunnen ook worden gedaan gebruikend API vraag. Zie [API referentiedocument](https://www.adobe.io/experience-platform-apis/references/audit-query/) voor meer informatie.
 
 ## Controlelogbestanden voor Adobe Admin Console beheren
 

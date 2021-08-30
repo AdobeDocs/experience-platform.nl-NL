@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan [Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan [Registratie API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) van het Schema uit te voeren.
 
 **API-indeling**
 

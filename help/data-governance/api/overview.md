@@ -5,10 +5,9 @@ title: API-handleiding voor beleidsservice
 topic-legacy: developer guide
 description: Met de Beleidsservice-API kunnen ontwikkelaars labels en beleidsregels voor gegevensgebruik in Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens behere
 
 De [!DNL Policy Service] API verstrekt verscheidene eindpunten die u toestaan om de etiketten en het beleid van het gegevensgebruik programmatically te beheren, evenals marketing acties voor beleidsschendingen te evalueren. Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar [begonnen gids](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de API-wagen](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).[[!DNL Policy Service] 
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de API-wagen](https://www.adobe.io/experience-platform-apis/references/policy-service/).[[!DNL Policy Service] 
 
 ## Labels
 

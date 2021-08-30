@@ -4,10 +4,10 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 6%
+source-wordcount: '314'
+ht-degree: 7%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 6%
 # XDM-systeem (Experience Data Model) {#xdm}
 
 * [XDM System, overzicht](home.md)
-* Schemas {#schema}
+* Schema&#39;s {#schema}
    * [Basisbeginselen van de schemacompositie](schema/composition.md)
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
@@ -96,7 +96,7 @@ ht-degree: 6%
    * [Overzicht](./ui/overview.md)
    * [XDM-bronnen verkennen](./ui/explore.md)
    * Bronnen maken en bewerken {#resources}
-      * [Schemas](./ui/resources/schemas.md)
+      * [Schema&#39;s](./ui/resources/schemas.md)
       * [Klassen](./ui/resources/classes.md)
       * [Veldgroepen](./ui/resources/field-groups.md)
       * [Datatypen](./ui/resources/data-types.md)
@@ -113,7 +113,7 @@ ht-degree: 6%
 * Schema Registry API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
-   * [Schemas](api/schemas.md)
+   * [Schema&#39;s](api/schemas.md)
    * [Gedrag](api/behaviors.md)
    * [Klassen](api/classes.md)
    * [Schema veldgroepen](api/field-groups.md)
@@ -133,5 +133,5 @@ ht-degree: 6%
    * [Een relatie definiëren tussen twee schema&#39;s (API)](tutorials/relationship-api.md)
    * [Een ad-hocschema (API) maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [API-referentie](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

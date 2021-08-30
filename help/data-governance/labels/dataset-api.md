@@ -5,17 +5,16 @@ title: 'Labels voor gegevensgebruik voor gegevenssets beheren met API''s '
 topic-legacy: developer guide
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
 
 # Gegevensgebruikslabels voor gegevenssets beheren met behulp van API&#39;s
 
-Met [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API [!DNL Catalog Service] die metagegevens van gegevenssets beheert.
+Met [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API [!DNL Catalog Service] die metagegevens van gegevenssets beheert.
 
 Dit document behandelt hoe te om etiketten voor datasets en gebieden te beheren gebruikend [!DNL Dataset Service API]. Voor stappen op hoe te om de etiketten van het gegevensgebruik zelf te beheren gebruikend API vraag, zie [etiketeindgids](../api/labels.md) voor [!DNL Policy Service API].
 
@@ -25,7 +24,7 @@ Alvorens u deze gids leest, volg de stappen in [begonnen sectie](../../catalog/a
 
 Om vraag aan de eindpunten te maken die in dit document worden geschetst, moet u de unieke `id` waarde voor een specifieke dataset hebben. Als u deze waarde niet hebt, zie de gids op [het vermelden van de voorwerpen van de Catalogus](../../catalog/api/list-objects.md) om identiteitskaarts van uw bestaande datasets te vinden.
 
-## Labels opzoeken voor een gegevensset {#look-up}
+## De etiketten van de raadpleging voor een dataset {#look-up}
 
 U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande dataset zijn toegepast door een verzoek van de GET aan [!DNL Dataset Service] API te richten.
 
@@ -196,11 +195,11 @@ U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die
 
 Voor meer informatie over het beheren van datasets in [!DNL Experience Platform], zie [datasetoverzicht](../../catalog/datasets/overview.md).
 
-## Bijlage {#appendix}
+## Aanhangsel {#appendix}
 
 De volgende sectie bevat extra informatie over het werken met etiketten gebruikend de Dienst API van de Dataset.
 
-### [!DNL If-Match] header  {#if-match}
+### [!DNL If-Match] header {#if-match}
 
 Bij het maken van API vraag die de bestaande etiketten van een dataset (PUT en DELETE) bijwerken, moet een `If-Match` kopbal die op de huidige versie van de dataset-etiket entiteit in de Dienst van de Dataset wijst worden omvat. Om gegevensbotsingen te verhinderen, zal de dienst slechts de datasetentiteit bijwerken als inbegrepen `If-Match` koord de recentste versiemarkering aanpast die door het systeem voor die dataset wordt geproduceerd.
 

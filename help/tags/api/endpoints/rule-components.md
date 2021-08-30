@@ -1,9 +1,9 @@
 ---
 title: Het eindpunt van componenten van de regel
 description: Leer hoe te om vraag aan het /rule_components eindpunt in Reactor API te maken.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1202'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Een regelcomponent wordt verstrekt door precies één [extension](./extensions.m
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
 
 ## Een lijst met regelcomponenten ophalen {#list}
 

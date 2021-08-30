@@ -4,11 +4,10 @@ user-guide-title: Help bij Adobe Experience Platform Data Governance
 breadcrumb-title: Handleiding voor gegevensbeheer
 user-guide-description: Beperkingen voor gegevensgebruik afdwingen door labels, marketingacties en beleid te gebruiken.
 feature: Data Governance
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 9%
+source-wordcount: '94'
+ht-degree: 7%
 
 ---
 
@@ -36,5 +35,5 @@ ht-degree: 9%
    * [Beleid](api/policies.md)
    * [Marketingacties](api/marketing-actions.md)
    * [Evaluatie](api/evaluation.md)
-* [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [API-referentie](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

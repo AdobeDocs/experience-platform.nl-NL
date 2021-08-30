@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Deze zelfstudie vereist ook dat u een geldige bron-verbindings-id hebt voor een 
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de klasse XDM [!DNL Individual Profile] uit.
 
-Om een doelXDM schema tot stand te brengen, doe een verzoek van de POST aan het `/schemas` eindpunt van [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Om een doelXDM schema tot stand te brengen, doe een verzoek van de POST aan het `/schemas` eindpunt van [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API-indeling**
 

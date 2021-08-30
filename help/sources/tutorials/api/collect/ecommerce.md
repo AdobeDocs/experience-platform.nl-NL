@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een eCommerce-systeem van derden en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '1511'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 Als u de brongegevens wilt gebruiken in [!DNL Platform], moet u een doelschema maken om de brongegevens te structureren op basis van uw behoeften. Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de klasse XDM [!DNL Individual Profile] uit.
 
-Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan [Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan [Registratie API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) van het Schema uit te voeren.
 
 **API-indeling**
 

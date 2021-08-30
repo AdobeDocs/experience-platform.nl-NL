@@ -5,9 +5,9 @@ title: Overzicht van beleidsregels voor gegevensgebruik
 topic-legacy: policies
 description: Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen het Experience Platform, of dat u er een beperking voor hebt.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid
 
 Dit document biedt een overzicht op hoog niveau van het beleid voor gegevensgebruik en bevat koppelingen naar verdere documentatie voor het werken met het beleid in de gebruikersinterface of de API.
 
-## Handelingen voor marketing {#marketing-actions}
+## Marketingacties {#marketing-actions}
 
 Marketing-acties (ook wel marketinggebruiksgevallen genoemd) in het kader van het gegevensbeheerkader zijn acties die een [!DNL Experience Platform] gegevensconsument kan uitvoeren en waarvoor uw organisatie het gegevensgebruik wil beperken. Daarom wordt een beleid voor gegevensgebruik als volgt gedefinieerd:
 
@@ -31,7 +31,7 @@ Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naa
 >
 >Handelingen voor het in de handel brengen zelf beperken het gegevensgebruik niet. Ze moeten worden opgenomen in beleid voor ingeschakeld gegevensgebruik om ervoor te zorgen dat deze acties worden geëvalueerd op beleidsovertredingen.
 
-Wanneer het gegevensgebruik in de dienst van uw organisatie gebeurt, zouden de relevante marketing acties moeten worden vermeld zodat om het even welke beleidsschendingen kunnen worden geïdentificeerd. U kunt [Beleidsdienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) dan gebruiken om op beleidsschendingen in uw integratie te controleren.
+Wanneer het gegevensgebruik in de dienst van uw organisatie gebeurt, zouden de relevante marketing acties moeten worden vermeld zodat om het even welke beleidsschendingen kunnen worden geïdentificeerd. U kunt [Beleidsdienst API](https://www.adobe.io/experience-platform-apis/references/policy-service/) dan gebruiken om op beleidsschendingen in uw integratie te controleren.
 
 >[!NOTE]
 >

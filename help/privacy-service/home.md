@@ -5,10 +5,9 @@ title: Overzicht van Privacy Service
 topic-legacy: overview
 description: Met Privacy Service kunt u de automatische naleving van wettelijke privacyregels in uw gegevensbewerkingen met Experience Cloud vergemakkelijken.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1386'
 ht-degree: 0%
 
 ---
@@ -52,7 +51,7 @@ Naast wettelijke voorschriften, zouden om het even welke organisatie of industri
 
 Afhankelijk van de [!DNL Experience Cloud] toepassingen die u gebruikt, moet u de specifieke gegevensgebieden etiketteren die in antwoord op privacyverzoeken zouden moeten worden betreden of worden geschrapt. Het proces voor het etiketteren van gegevens varieert tussen toepassingen. Meer informatie over het labelen van gegevens voor elke ondersteunde Adobe-toepassing vindt u in het document op [Experience Cloud-toepassingen](./experience-cloud-apps.md).
 
-### Bepaal de soorten identiteitsgegevens die naar [!DNL Privacy Service] {#identity} moeten worden verzonden
+### Bepaal de soorten identiteitsgegevens die naar [!DNL Privacy Service] moeten worden verzonden {#identity}
 
 Als [!DNL Privacy Service] een privacyverzoek van een klant moet verwerken, moet ten minste één unieke identiteitswaarde voor die klant in het verzoek zelf worden opgegeven. Een unieke identiteitswaarde is alle informatie die kan worden gebruikt om een individuele persoon en zijn opgeslagen persoonlijke gegevens in uw [!DNL Experience Cloud] gegevensopslag te identificeren. [!DNL Privacy Service] gebruikt deze identiteitsgegevens om de persoonsgegevens van de klant te zoeken en te verwerken volgens de aard van de aanvraag (toegang, verwijdering of opt-out).
 
@@ -60,7 +59,7 @@ Afhankelijk van de [!DNL Experience Cloud] toepassingen uw systeem van CRM gebru
 
 Het document over [identiteitsgegevens voor privacyverzoeken](./identity-data.md) bevat gedetailleerdere informatie over de typen identiteitsgegevens die worden geaccepteerd voor [!DNL Privacy Service]. Het document biedt ook richtlijnen over hoe u Adobe-technologieën kunt gebruiken om de juiste identiteitsgegevens van uw klanten op te halen bij hun interactie met uw website en deze gegevens naar [!DNL Privacy Service] te verzenden in API-aanvragen.
 
-### Start met het indienen van privacyverzoeken {#requests}
+### Start met het indienen van privacyaanvragen {#requests}
 
 Zodra u de privacybehoeften van uw bedrijf hebt bepaald en hebt besloten welke identiteitswaarden naar [!DNL Privacy Service] moeten worden verzonden, kunt u beginnen met het indienen van privacyverzoeken. [!DNL Privacy Service] kunt u privacyverzoeken verzenden via de API of de gebruikersinterface.
 
@@ -74,7 +73,7 @@ Zodra u de privacybehoeften van uw bedrijf hebt bepaald en hebt besloten welke i
 
 #### De API gebruiken
 
-[[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) verstrekt verscheidene eindpunten voor het creëren van en het beheren van privacybanen gebruikend RESTful API vraag, die u toestaat om privacyregelgevende naleving voor uw [!DNL Experience Cloud] toepassingen programmatically te benaderen. Zie de [Handleiding voor ontwikkelaars van API voor Privacy Service](api/getting-started.md) voor gedetailleerde stappen over het gebruik van de API.
+[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) verstrekt verscheidene eindpunten voor het creëren van en het beheren van privacybanen gebruikend RESTful API vraag, die u toestaat om privacyregelgevende naleving voor uw [!DNL Experience Cloud] toepassingen programmatically te benaderen. Zie de [Handleiding voor ontwikkelaars van API voor Privacy Service](api/getting-started.md) voor gedetailleerde stappen over het gebruik van de API.
 
 #### De gebruikersinterface gebruiken
 
@@ -84,7 +83,7 @@ Zodra u de privacybehoeften van uw bedrijf hebt bepaald en hebt besloten welke i
 
 Met de interface [!DNL Privacy Service] kunt u met een grafische interface privacytaken maken en controleren. UI omvat een **[!UICONTROL Status Report]** widget die een visuele vertegenwoordiging van de status van alle actieve verzoeken verstrekt, en staat u toe om nieuwe verzoeken tot stand te brengen door ingebouwde **[!UICONTROL Request Builder]** te gebruiken of door JSON dossiers te uploaden. Voor meer informatie bij het gebruiken van UI, zie [Privacy Service gebruikersgids](ui/overview.md).
 
-### Privacytaken controleren {#monitor}
+### Privacy-taken controleren {#monitor}
 
 Nadat u een privacytaak hebt uitgevoerd, kunt u de status en de resultaten van deze taken op verschillende manieren controleren:
 

@@ -4,10 +4,9 @@ solution: Experience Platform
 title: 'Labels voor gegevensgebruik beheren met API''s '
 topic-legacy: developer guide
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1141'
 ht-degree: 1%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 1%
 
 Dit document bevat stappen voor het beheren van labels voor gegevensgebruik met de API [!DNL Policy Service] en [!DNL Dataset Service].
 
-[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) verstrekt verscheidene eindpunten die u toestaan om de etiketten van het gegevensgebruik voor uw organisatie tot stand te brengen en te beheren.
+[[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) verstrekt verscheidene eindpunten die u toestaan om de etiketten van het gegevensgebruik voor uw organisatie tot stand te brengen en te beheren.
 
 Met de [!DNL Dataset Service]-API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API [!DNL Catalog Service] die metagegevens van gegevenssets beheert.
 
@@ -27,7 +26,7 @@ Alvorens u deze gids leest, volg de stappen in [begonnen sectie](../../catalog/a
 
 Als u aanroepen wilt uitvoeren naar de [!DNL Dataset Service]-eindpunten die in dit document worden beschreven, moet u de unieke `id`-waarde voor een specifieke gegevensset hebben. Als u deze waarde niet hebt, zie de gids op [het vermelden van de voorwerpen van de Catalogus](../../catalog/api/list-objects.md) om identiteitskaarts van uw bestaande datasets te vinden.
 
-## Alle labels {#list-labels} weergeven
+## Alle labels weergeven {#list-labels}
 
 Met de [!DNL Policy Service] API kunt u alle `core`- of `custom`-labels weergeven door een GET-aanvraag in te dienen bij `/labels/core` of `/labels/custom`.
 
@@ -109,7 +108,7 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
 }
 ```
 
-## Label {#look-up-label} opzoeken
+## Een label opzoeken {#look-up-label}
 
 U kunt een specifiek etiket opzoeken door het `name` bezit van dat etiket in de weg van een verzoek van de GET aan [!DNL Policy Service] API te omvatten.
 
@@ -229,7 +228,7 @@ Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-
 }
 ```
 
-## Labels opzoeken voor een gegevensset {#look-up-dataset-labels}
+## De etiketten van de raadpleging voor een dataset {#look-up-dataset-labels}
 
 U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande dataset zijn toegepast door een verzoek van de GET aan [!DNL Dataset Service] API te richten.
 

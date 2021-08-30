@@ -1,9 +1,9 @@
 ---
 title: Punt voor App-configuraties
 description: Leer hoe te om vraag aan het /app_configuration eindpunt in Reactor API te maken.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '586'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Met toepassingsconfiguraties kunnen referenties worden opgeslagen en opgehaald v
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
 
 ## Een lijst met toepassingsconfiguraties ophalen {#list}
 
@@ -213,7 +213,7 @@ curl -X POST \
 | `platform` | Het platform waarop de toepassing wordt uitgevoerd (web of mobiel). Dit bepaalt welke overseinendiensten beschikbaar zijn. |
 | `messaging_service` | De berichtenservice die aan de app is gekoppeld, zoals [Apple Push Notification service (APNs)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) en [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Hiermee bepaalt u welke sleuteltypen kunnen worden gebruikt. |
 | `key_type` | Vertegenwoordigt het protocol dat een leverancier van de dupservice steunt en bepaalt het formaat van het `push_credential` voorwerp. Aangezien de protocollen voor overseinendiensten evolueren, worden de nieuwe `key_type` waarden gecreeerd om de bijgewerkte protocollen te steunen. |
-| `push_credential` | De eigenlijke credentiewaarde, die in rust wordt gecodeerd. Dit veld wordt gewoonlijk niet gedecodeerd of opgenomen in API-reacties. Alleen bepaalde Adobe-services kunnen een reactie krijgen die een ontsleutelde pushreferentie bevat. |
+| `push_credential` | De eigenlijke credentiewaarde, die in rust wordt gecodeerd. Dit veld wordt gewoonlijk niet gedecodeerd of opgenomen in API-reacties. Alleen bepaalde Adobe-services kunnen een antwoord krijgen met een gedecodeerde pushreferentie. |
 
 {style=&quot;table-layout:auto&quot;}
 

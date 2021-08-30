@@ -5,9 +5,9 @@ title: Handleiding voor schema-registratie-API
 description: Met de API voor het schemaregister kunnen ontwikkelaars programmatisch alle schema's en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele 
 >
 >XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Voordat u gaat werken met de Schema Registry API, wordt u ten zeerste aangeraden de [officiële JSON-schemadocumentatie](https://json-schema.org/) te raadplegen voor een beter inzicht in deze onderliggende technologie.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Referentie van de API voor schemaregistratie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Referentie van de API voor schemaregistratie](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Schema&#39;s
 

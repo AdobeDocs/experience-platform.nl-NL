@@ -5,10 +5,9 @@ title: API-eindpunt voor beleidsregels
 topic-legacy: developer guide
 description: Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen Experience Platform mag uitvoeren. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensgebruik.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---
@@ -19,9 +18,9 @@ Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven 
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
-## Hiermee wordt een lijst met beleidsregels {#list} opgehaald
+## Een lijst met beleidsregels ophalen {#list}
 
 U kunt alle `core` of `custom` beleid door een verzoek van de GET aan `/policies/core` of `/policies/custom`, respectievelijk te richten.
 
@@ -369,7 +368,7 @@ Een geslaagde reactie retourneert de details van het nieuwe beleid, inclusief `i
 }
 ```
 
-## Een aangepast beleid {#update} bijwerken
+## Een aangepast beleid bijwerken {#update}
 
 >[!IMPORTANT]
 >
@@ -469,7 +468,7 @@ Een succesvolle reactie keert de details van het bijgewerkte beleid terug.
 }
 ```
 
-## Een gedeelte van een aangepast beleid {#patch} bijwerken
+## Een gedeelte van een aangepast beleid bijwerken {#patch}
 
 >[!IMPORTANT]
 >
@@ -606,7 +605,7 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) met een lege hoofdtekst.
 
 U kunt de verwijdering bevestigen door te proberen het beleid opnieuw op te zoeken (GET). Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als het beleid is verwijderd.
 
-## Hiermee wordt een lijst met ingeschakelde kernbeleidsregels opgehaald {#list-enabled-core}
+## Een lijst met ingeschakelde kernbeleidsregels ophalen {#list-enabled-core}
 
 Door gebrek, slechts neemt het toegelaten beleid van het gegevensgebruik aan evaluatie deel. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan het `/enabledCorePolicies` eindpunt wordt toegelaten.
 
@@ -658,7 +657,7 @@ Een succesvolle reactie keert de lijst van toegelaten kernbeleid onder een `poli
 }
 ```
 
-## Werk de lijst van toegelaten kernbeleid {#update-enabled-core} bij
+## De lijst met ingeschakelde kernbeleidsregels bijwerken {#update-enabled-core}
 
 Door gebrek, slechts neemt het toegelaten beleid van het gegevensgebruik aan evaluatie deel. Door een verzoek van de PUT aan het `/enabledCorePolicies` eindpunt te doen, kunt u de lijst van toegelaten kernbeleid voor uw organisatie bijwerken gebruikend één enkele vraag.
 

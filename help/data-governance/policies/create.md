@@ -6,17 +6,16 @@ topic-legacy: policies
 type: Tutorial
 description: De dienst API van het Beleid staat u toe om het beleid van het gegevensgebruik tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten van het gegevensgebruik bevatten. Dit document verstrekt een geleidelijke zelfstudie voor het creëren van een beleid gebruikend de Dienst API van het Beleid.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
 
 # Een beleid voor gegevensgebruik maken in de API
 
-Met de [Beleidsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) kunt u beleid voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten.
+Met de [Beleidsservice-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) kunt u beleid voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten.
 
 Dit document bevat een stapsgewijze zelfstudie voor het maken van een beleid met de API [!DNL Policy Service]. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie [de de ontwikkelaarsgids van de Dienst van het Beleid](../api/getting-started.md).
 
@@ -40,7 +39,7 @@ De eerste stap bij het creëren van een beleid van het gegevensgebruik is te bep
 * [Een bestaande marketingactie opzoeken](#look-up)
 * [Nieuwe marketingactie maken](#create-new)
 
-### Bestaande marketingactie opzoeken {#look-up}
+### Een bestaande marketingactie opzoeken {#look-up}
 
 U kunt bestaande marketing acties opzoeken die door uw beleid moeten worden geëvalueerd door een verzoek van de GET aan één van `/marketingActions` eindpunten te richten.
 

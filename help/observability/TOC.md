@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Handleiding met informatie over waarneming
 user-guide-description: De activiteiten van het Platform volgen door gebruik te maken van statistische gegevens en meldingen van gebeurtenissen.
-feature: Data management
-source-git-commit: 905d364796911f35111d42c46c91744bc18304f2
+feature: Data Management
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 13%
+source-wordcount: '54'
+ht-degree: 11%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 13%
    * [Standaardwaarschuwingsregels](./alerts/rules.md)
    * [UI-hulplijn](./alerts/ui.md)
    * [Abonneren op I/O-gebeurtenismeldingen](./alerts/subscribe.md)
-* [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+* [API-referentie](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

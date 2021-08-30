@@ -6,9 +6,9 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een éé
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk o
 
 Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het samenvoegingsschema en [!DNL Real-time Customer Profile], is dit alleen van toepassing op schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema van verwijzingen voorziet.
 
-Dit document biedt een zelfstudie voor het definiëren van een een-op-een relatie tussen twee schema&#39;s die door uw organisatie zijn gedefinieerd met de [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Dit document biedt een zelfstudie voor het definiëren van een een-op-een relatie tussen twee schema&#39;s die door uw organisatie zijn gedefinieerd met de [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Aan de slag
 
@@ -32,7 +32,7 @@ Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) e
 
 Voordat u deze zelfstudie start, raadpleegt u de [ontwikkelaarshandleiding](../api/getting-started.md) voor belangrijke informatie die u moet weten om de [!DNL Schema Registry]-API te kunnen aanroepen. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht aan [!DNL Accept] kopbal en zijn mogelijke waarden).
 
-## Een bron- en doelschema {#define-schemas} definiëren
+## Een bron- en doelschema definiëren {#define-schemas}
 
 Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhouding zullen worden bepaald. Deze zelfstudie maakt een relatie tussen leden van het huidige loyaliteitsprogramma van een organisatie (gedefinieerd in een schema &quot;[!DNL Loyalty Members]&quot;) en hun favoriete hotels (gedefinieerd in een schema &quot;[!DNL Hotels]&quot;).
 
@@ -342,7 +342,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte schema, dat nu 
 }
 ```
 
-## Een identiteitsbeschrijvingsbestand voor verwijzingen maken {#reference-identity}
+## Een beschrijving voor een referentie-id maken {#reference-identity}
 
 Op schemavelden moet een identiteitsreferentie-descriptor zijn toegepast als deze worden gebruikt als referentie van andere schema&#39;s in een relatie. Aangezien het veld `favoriteHotel` in &quot;[!DNL Loyalty Members]&quot; verwijst naar het veld `hotelId` in &quot;[!DNL Hotels]&quot;, moet `hotelId` een beschrijvingsreferentie-id worden gegeven.
 
@@ -401,7 +401,7 @@ Een succesvolle reactie keert de details van de pas gecreëerde verwijzingsbesch
 }
 ```
 
-## Relatiebeschrijving maken {#create-descriptor}
+## Relatiebeschrijvingen maken {#create-descriptor}
 
 Relatiebeschrijvingen maken een één-op-één relatie tussen een bronschema en een doelschema. Zodra u een verwijzingsbeschrijver voor het bestemmingsschema hebt bepaald, kunt u een nieuwe relatiebeschrijver tot stand brengen door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
 
