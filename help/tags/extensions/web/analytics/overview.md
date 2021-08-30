@@ -1,7 +1,7 @@
 ---
 title: Overzicht Adobe Analytics-extensie
 description: Meer informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 2%
@@ -367,7 +367,7 @@ Gebruik de editor om uw aangepaste paginacode op te geven.
 
 Selecteer deze optie als u een paginaweergave wilt vergroten.
 
-#### Een paginaweergave niet verhogen - s.t()
+#### Een paginaweergave niet verhogen - s.tl()
 
 Selecteer deze optie als u een voorvertoning niet wilt vergroten.
 

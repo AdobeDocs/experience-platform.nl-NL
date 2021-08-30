@@ -5,8 +5,7 @@ title: Handleiding voor schema-registratie-API
 description: Met de API voor het schemaregister kunnen ontwikkelaars programmatisch alle schema's en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele 
 
 Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Referentie van de API voor schemaregistratie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
-## Schemas
+## Schema&#39;s
 
 De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat van gegevens die in Platform worden opgenomen. Een schema bestaat uit een klasse en nul of meer groepen schemavelden. U kunt schema&#39;s tot stand brengen, bekijken, uitgeven en schrappen gebruikend het `/schemas` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, zie [schemas eindgids](./schemas.md).
 
@@ -41,7 +40,7 @@ Het gedrag bepaalt de aard van gegevens die een schema beschrijft. Elke klasse X
 
 Een klasse definieert de basisstructuur van gemeenschappelijke eigenschappen die alle schema&#39;s die op die klasse zijn gebaseerd, moeten bevatten en bepaalt welke veldgroepen in aanmerking komen voor gebruik in die schema&#39;s. Elke klasse moet aan een bestaand gedrag worden geassocieerd. Zie [de gids van het klassen eindpunt](./classes.md) voor details bij het werken met klassen in API.
 
-## Veldengroepen
+## Veldgroepen
 
 Veldgroepen zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Zie [de gids van het gebiedsgroepseindpunt](./field-groups.md) leren hoe te met gebiedsgroepen in API werken.
 
