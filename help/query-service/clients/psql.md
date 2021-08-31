@@ -5,10 +5,9 @@ title: PSQL verbinden met Query Service
 topic-legacy: connect
 description: PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u PostgreSQL op uw computer installeert. U kunt het installeren door deze instructies te volgen.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '271'
 ht-degree: 1%
 
 ---
@@ -29,7 +28,7 @@ Selecteer het pictogram om de sectie te kopiëren geëtiketteerd **[!UICONTROL P
 
 >[!IMPORTANT]
 >
->Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord. Bovendien, als u versie 12.0 of groter gebruikt, zult u `PGGSSENCMODE=disable` aan uw verbindingskoord moeten toevoegen.
+>Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord. Als u versie 12.0 of groter gebruikt, zult u `PGGSSENCMODE=disable` aan uw verbindingskoord moeten toevoegen. Bovendien, als u niet-vervallende geloofsbrieven gebruikt, zorg ervoor u het wachtwoordgebied met het niet-vervallende credentiewachtwoord vervangt. Lees de [aanmeldingsgids](../ui/credentials.md) voor meer informatie over niet-verlopen referenties.
 
 U zou een resultaat als dit moeten zien:
 

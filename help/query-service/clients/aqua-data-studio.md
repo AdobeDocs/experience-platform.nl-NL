@@ -5,10 +5,9 @@ title: Connect Aqua Data Studio aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
@@ -34,7 +33,7 @@ Het dialoogvenster **[!DNL Register Server]** wordt weergegeven. Selecteer **[!D
 
 >[!NOTE]
 >
->Voor meer informatie bij het vinden van uw login geloofsbrieven, gastheer, haven, en gegevensbestandnaam, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
+>Voor meer informatie over het vinden van uw login geloofsbrieven, gastheer, haven, en gegevensbestandnaam, gelieve te lezen [geloofsbrieven gids](../ui/credentials.md). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 

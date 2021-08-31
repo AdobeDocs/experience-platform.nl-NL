@@ -5,9 +5,9 @@ title: UI-gids voor zoekservice
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '592'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Het tabblad **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn
 
 ## Credentials
 
-Op het tabblad **[!UICONTROL Credentials]** worden uw [!DNL Postgres]-referenties weergegeven. Selecteer het **[!UICONTROL Copy]** pictogram naast om het even welk gebied om zijn inhoud in uw toetsenbordbuffer op te slaan. Lees voor meer informatie over het gebruik van deze referenties om verbinding te maken met externe clients de [handleiding voor verbindingen met clients](../clients/overview.md).
+Het **[!UICONTROL Credentials]** lusje toont zowel uw het verlopen als niet-verlopen geloofsbrieven. Lees voor meer informatie over het gebruik van deze referenties om verbinding te maken met externe clients de [aanmeldingsgids](../clients/overview.md).
 
 ![Afbeelding](../images/ui/overview/credentials.png)
 
