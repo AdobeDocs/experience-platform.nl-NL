@@ -5,10 +5,9 @@ title: Een AI-instantie van een klant configureren
 topic-legacy: Instance creation
 description: Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b6fff24d6298bad968e16516f2e555927c3a4a12
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ De AI van de klant, als deel van de Intelligente Diensten staat u toe om de scor
 
 Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 
-## Instellen van de instantie {#set-up-your-instance}
+## Instellen van instantie {#set-up-your-instance}
 
 Selecteer **[!UICONTROL Services]** in de linkernavigatie in de interface van het Platform. De browser **[!UICONTROL Services]** wordt weergegeven en geeft alle beschikbare services weer die tot uw beschikking staan. Selecteer **[!UICONTROL Open]** in de container voor AI van de Klant.
 
@@ -98,7 +97,27 @@ U kunt bijvoorbeeld voorspellen of een klant een bepaalde URL of een webpagina m
 
 ![Elk voorbeeld](../images/user-guide/any-of.png)
 
-### Een schema *(optioneel)* {#configure-a-schedule} configureren
+### Aangepaste gebeurtenissen (*optioneel*) {#custom-events}
+
+Als u aanvullende informatie hebt naast de [standaard gebeurtenisvelden](../input-output.md#standard-events) die door de AI van de Klant worden gebruikt om eigenschapscores te genereren, wordt een optie voor aangepaste gebeurtenissen geboden. Als de dataset u selecteerde douanegebeurtenissen omvat die in uw schema worden bepaald, kunt u hen aan uw instantie toevoegen.
+
+![gebeurtenisfunctie](../images/user-guide/event-feature.png)
+
+Selecteer **[!UICONTROL Add custom event]** om een aangepaste gebeurtenis toe te voegen. Voer vervolgens een aangepaste naam voor de gebeurtenis in en wijs deze toe aan het gebeurtenisveld in uw schema. Aangepaste gebeurtenisnamen worden weergegeven in plaats van de veldwaarde wanneer wordt gekeken naar invloedrijke factoren en andere inzichten. Dit betekent dat gebruikers-id&#39;s, reserverings-id&#39;s, apparaatinformatie en andere aangepaste waarden worden vermeld met de naam van de aangepaste gebeurtenis in plaats van met de id/waarde van de gebeurtenis. Deze extra aangepaste gebeurtenissen worden door de AI van de Klant gebruikt om de kwaliteit van uw model te verbeteren en nauwkeurigere resultaten te bieden.
+
+![Veld Aangepaste gebeurtenis](../images/user-guide/custom-event.png)
+
+Selecteer vervolgens de operator die u wilt gebruiken in de vervolgkeuzelijst met beschikbare operatoren. Alleen operatoren die compatibel zijn met de gebeurtenis worden weergegeven.
+
+![Aangepaste gebeurtenis, operator](../images/user-guide/custom-operator.png)
+
+Voer ten slotte de veldwaarde(n) in als de geselecteerde operator er een nodig heeft. In dit voorbeeld hoeven we alleen maar te kijken of er een hotel- of restaurantreservering bestaat. Als we echter nauwkeuriger willen zijn, kunnen we de equals-operator gebruiken en een exacte waarde invoeren in de value prompt.
+
+![Waarde van aangepast gebeurtenisveld](../images/user-guide/custom-value.png)
+
+Selecteer **[!UICONTROL Next]** in de rechterbovenhoek als u wilt doorgaan.
+
+### Een schema *(optioneel)* configureren {#configure-a-schedule}
 
 De stap **[!UICONTROL Advanced]** wordt weergegeven. Deze facultatieve stap staat u toe om een programma te vormen om voorspellingslooppas te automatiseren, voorspellingsuitsluitingen te bepalen om bepaalde gebeurtenissen te filtreren, of **[!UICONTROL Finish]** te selecteren als niets nodig is.
 
@@ -106,9 +125,11 @@ Opstelling een het scoren programma door **[!UICONTROL Scoring Frequency]** te v
 
 ![](../images/user-guide/schedule.png)
 
-Onder de planningsconfiguratie, hebt u de capaciteit om voorspellingsuitsluitingen te bepalen om gebeurtenissen te verhinderen die aan bepaalde voorwaarden worden geëvalueerd wanneer het produceren van scores. Deze functie kan worden gebruikt om irrelevante gegevensinvoer uit te filteren.
+### Uitsluitingen op voorspelling
 
-Als u bepaalde gebeurtenissen wilt uitsluiten, selecteert u **[!UICONTROL Add exclusion]** en definieert u de gebeurtenis op dezelfde manier als waarop het doel wordt gedefinieerd. Als u een uitsluiting wilt verwijderen, selecteert u de ellipsen (**[!UICONTROL ...]**) rechtsboven in de gebeurteniscontainer en selecteert u **[!UICONTROL Remove Container]**.
+Als uw dataset kolommen bevatte die als testgegevens werden toegevoegd, kunt u die kolom of gebeurtenis toevoegen aan een uitsluitingslijst door **Uitsluiting toevoegen** te selecteren door het gebied in te gaan u wenst om uit te sluiten. Zo voorkomt u dat gebeurtenissen die aan bepaalde voorwaarden voldoen, worden geëvalueerd wanneer u scores genereert. Deze functie kan worden gebruikt om irrelevante gegevensinvoer of bepaalde promoties uit te filteren.
+
+Als u een gebeurtenis wilt uitsluiten, selecteert u **[!UICONTROL Add exclusion]** en definieert u de gebeurtenis. Als u een uitsluiting wilt verwijderen, selecteert u de ovalen (**[!UICONTROL ...]**) rechtsboven in de gebeurteniscontainer en selecteert u **[!UICONTROL Remove Container]**.
 
 ![](../images/user-guide/exclusion.png)
 

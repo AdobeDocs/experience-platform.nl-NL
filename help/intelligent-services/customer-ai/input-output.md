@@ -5,10 +5,9 @@ title: Invoer en uitvoer in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: c534b66d7617023df8dbac57115036146c2cab01
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2959'
 ht-degree: 0%
 
 ---
@@ -53,7 +52,7 @@ AI van de Klant steunt CEE, Adobe Analytics, en de datasets van Adobe Audience M
 
 Voor meer informatie over het in kaart brengen van de gegevens van Adobe Analytics of van de Audience Manager, bezoek [het gebiedsafbeeldingen van Analytics](../../sources/connectors/adobe-applications/analytics.md) of [Audience Manager van gebiedsafbeeldingen ](../../sources/connectors/adobe-applications/mapping/audience-manager.md) gids.
 
-### Standaardgebeurtenissen gebruikt door AI {#standard-events}
+### Standaardgebeurtenissen die door de AI van de Klant worden gebruikt {#standard-events}
 
 De Gebeurtenissen van de Ervaring XDM worden gebruikt voor het bepalen van diverse klantengedrag. Afhankelijk van de structuur van uw gegevens, omvatten de hieronder vermelde gebeurtenistypen mogelijk niet alle gedragingen van uw klant. Het is aan u om te bepalen welke gebieden de noodzakelijke gegevens hebben die nodig zijn om Webgebruikersactiviteit duidelijk en ondubbelzinnig te identificeren. Afhankelijk van uw voorspellingsdoel, kunnen de vereiste gebieden veranderen die nodig zijn.
 
@@ -88,6 +87,12 @@ Als u een veldgroep wilt weergeven in de interface van het Platform, selecteert 
 | [!UICONTROL Search Details] | zoeken | search.keywords |
 
 Bovendien kan de AI van de Klant abonnementsgegevens gebruiken om betere modellen van de Koor te bouwen. Abonnementsgegevens zijn nodig voor elk profiel met de indeling [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) voor gegevenstypen. De meeste velden zijn echter optioneel voor een optimaal churn-model. Het wordt echter ten zeerste aanbevolen gegevens op te geven voor zoveel mogelijk velden, zoals `startDate`, `endDate` en alle andere relevante details.
+
+### Aangepaste veldgroepen toevoegen
+
+Als u aanvullende informatie hebt die u wilt opnemen naast de [standaardgebeurtenisvelden](#standard-events) die door de AI van de Klant worden gebruikt. Een optie van douanegebeurtenissen wordt verstrekt tijdens uw [instantieconfiguratie](./user-guide/configure.md#custom-events).
+
+Als de dataset u selecteerde douanegebeurtenissen zoals een hotel of restaurantreserve omvat die in uw schema wordt bepaald, kunt u hen aan uw instantie toevoegen. Deze extra aangepaste gebeurtenissen worden door de AI van de Klant gebruikt om de kwaliteit van uw model te verbeteren en nauwkeurigere resultaten te bieden.
 
 ### Historische gegevens {#data-requirements}
 
@@ -262,7 +267,7 @@ De AI van de Klant produceert verscheidene attributen voor individuele profielen
 
 In de onderstaande tabel worden de verschillende kenmerken beschreven die in de uitvoer van AI van de Klant zijn aangetroffen:
 
-| Attribute | Beschrijving |
+| Kenmerk | Beschrijving |
 | ----- | ----------- |
 | Score | De relatieve waarschijnlijkheid voor een klant om het voorspelde doel binnen het bepaalde tijdkader te bereiken. Deze waarde moet niet worden beschouwd als een waarschijnlijkheidspercentage, maar veeleer als de waarschijnlijkheid dat een individu vergeleken wordt met de totale populatie. Deze score varieert van 0 tot 100. |
 | Waarschijnlijkheid | Deze eigenschap is de ware waarschijnlijkheid van een profiel voor het bereiken van het voorspelde doel binnen het bepaalde tijdkader. Bij het vergelijken van outputs over verschillende doelstellingen, wordt geadviseerd dat u waarschijnlijkheid over percentiel of score overweegt. Bij het bepalen van de gemiddelde waarschijnlijkheid in de in aanmerking komende populatie moet altijd rekening worden gehouden met de waarschijnlijkheid, aangezien de waarschijnlijkheid aan de onderkant ligt voor gebeurtenissen die niet vaak voorkomen. Waarden voor de waarschijnlijkheid liggen tussen 0 en 1. |
