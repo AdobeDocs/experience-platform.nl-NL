@@ -3,9 +3,9 @@ keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Neem nota van de volgende details die voor [!DNL Google Ads] bestemmingen specif
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
 
-## Vereisten
+## Vereisten {#prerequisites}
 
 ### Bestaande [!DNL Google Ads]-account
 
@@ -95,7 +95,7 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Deze fout treedt op wanneer klanten de bestemming proberen te configureren zonder een bestaande [!DNL Google Ads]-account.
+Deze fout treedt op wanneer de klantenaccounts niet voldoen aan de [voorwaarden](#prerequisites) of wanneer klanten de bestemming proberen te configureren zonder een bestaande [!DNL Google Ads]-account.
 
 [!DNL Google] heeft nieuwe  [!DNL Google Ads] cookieintegratie met derde verkopers vervangen. Als u de stappen [allow-list](#allow-listing) wilt uitvoeren, moet u een bestaande integratie met [!DNL Google Ads] hebben.
 
