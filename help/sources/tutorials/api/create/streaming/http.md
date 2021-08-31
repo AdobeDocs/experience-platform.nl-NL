@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
+source-git-commit: 0ff93d580482f44954321089659bd2fc062f3f61
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om door de stappen te lopen om een streamingverbinding te maken met behulp van de Flow Service API.
+Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om u door de stappen te laten lopen om een streamingverbinding te maken met behulp van de Flow Service API.
 
 ## Aan de slag
 
@@ -295,7 +295,9 @@ Een geslaagde reactie retourneert HTTP-status 201 met gedetailleerde informatie 
 
 ## Een doelverbinding maken
 
-Nadat u de bronverbinding hebt gemaakt, kunt u een doelverbinding maken. Wanneer het creëren van uw doelverbinding, zult u de `id` waarde van uw eerder gecreeerde dataset nodig hebben.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan het meer van Gegevens. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
 **API-indeling**
 
