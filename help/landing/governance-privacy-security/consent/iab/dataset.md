@@ -5,9 +5,9 @@ title: Datasets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemmi
 topic-legacy: privacy events
 description: Dit document verstrekt stappen voor vestiging de twee vereiste datasets om IAB TCF 2.0 toestemmingsgegevens te verzamelen.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 9b75a69cc6e31ea0ad77048a6ec1541df2026f27
+source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1566'
 ht-degree: 0%
 
 ---
@@ -39,19 +39,19 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## TCF 2.0 veldgroepen {#field-groups}
 
-De [!UICONTROL IAB TCF 2.0 Consent] schemagebiedgroep verstrekt de gebieden van de klantentoestemming die voor TCF 2.0 steun worden vereist. Er zijn twee versies van deze veldgroep: één compatibel met de [!DNL XDM Individual Profile] klasse, en andere met de [!DNL XDM ExperienceEvent] klasse.
+De [!UICONTROL IAB TCF 2.0 Consent Details] schemagebiedgroep verstrekt de gebieden van de klantentoestemming die voor TCF 2.0 steun worden vereist. Er zijn twee versies van deze veldgroep: één compatibel met de [!DNL XDM Individual Profile] klasse, en andere met de [!DNL XDM ExperienceEvent] klasse.
 
 In de volgende secties wordt de structuur van elk van deze veldgroepen uitgelegd, inclusief de gegevens die ze tijdens inname verwachten.
 
 ### Profielveldgroep {#profile-field-group}
 
-Voor schema&#39;s die op [!DNL XDM Individual Profile] worden gebaseerd, verstrekt de [!UICONTROL IAB TCF 2.0 Consent] gebiedsgroep één enkel kaart-type gebied, `identityPrivacyInfo`, dat klantenidentiteiten aan hun TCF toestemmingsvoorkeur in kaart brengt. Deze veldgroep moet in een op record gebaseerd schema worden opgenomen dat voor het Profiel van de Klant in real time wordt toegelaten voor automatische handhaving.
+Voor schema&#39;s die op [!DNL XDM Individual Profile] worden gebaseerd, verstrekt de [!UICONTROL IAB TCF 2.0 Consent Details] gebiedsgroep één enkel kaart-type gebied, `identityPrivacyInfo`, dat klantenidentiteiten aan hun TCF toestemmingsvoorkeur in kaart brengt. Deze veldgroep moet in een op record gebaseerd schema worden opgenomen dat voor het Profiel van de Klant in real time wordt toegelaten voor automatische handhaving.
 
 Zie [verwijzingsgids](../../../../xdm/field-groups/profile/iab.md) voor deze gebiedsgroep om meer over zijn structuur en gebruiksgeval te leren.
 
 ### Groep Gebeurtenisvelden {#event-field-group}
 
-Als u toestemming-verandering gebeurtenissen in tijd wilt volgen, kunt u [!UICONTROL IAB TCF 2.0 Consent] gebiedsgroep aan uw [!UICONTROL XDM ExperienceEvent] schema toevoegen.
+Als u toestemming-verandering gebeurtenissen in tijd wilt volgen, kunt u [!UICONTROL IAB TCF 2.0 Consent Details] gebiedsgroep aan uw [!UICONTROL XDM ExperienceEvent] schema toevoegen.
 
 Als u niet van plan bent om gebeurtenissen van de toestemmingsverandering in tijd te volgen, te hoeven u om deze gebiedsgroep niet in uw gebeurtenisschema te omvatten. Bij het automatisch afdwingen van TCF toestemmingswaarden, gebruikt het Experience Platform slechts de recentste toestemmingsinformatie die in de [profielgebiedgroep wordt opgenomen](#profile-field-group). Goedkeuringswaarden die door gebeurtenissen worden vastgelegd, nemen niet deel aan automatische workflows voor handhaving.
 
@@ -60,6 +60,8 @@ Zie [verwijzingsgids](../../../../xdm/field-groups/event/iab.md) voor deze gebie
 ## Goedkeuringsschema&#39;s voor klanten maken {#create-schemas}
 
 Om datasets tot stand te brengen die toestemmingsgegevens vangen, moet u XDM schema&#39;s eerst creëren om die datasets op te baseren.
+
+Zoals vermeld in de vorige sectie, wordt een schema dat de [!UICONTROL XDM Individual Profile] klasse gebruikt vereist om toestemming in stroomafwaartse werkschema&#39;s van het Platform af te dwingen. U kunt desgewenst ook een afzonderlijk schema maken op basis van [!UICONTROL XDM ExperienceEvent] als u wijzigingen in de toestemming wilt bijhouden. Beide schema&#39;s moeten een `identityMap` gebied en een aangewezen TCF 2.0 gebiedsgroep bevatten.
 
 Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform om de werkruimte [!UICONTROL Schemas] te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
 
@@ -75,11 +77,15 @@ Selecteer **[!UICONTROL Create schema]** en kies **[!UICONTROL XDM Individual Pr
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-Het dialoogvenster **[!UICONTROL Add field groups]** wordt weergegeven, zodat u meteen veldgroepen aan het schema kunt toevoegen. Selecteer **[!UICONTROL IAB TCF 2.0 Consent]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden. Wanneer de veldgroep is geselecteerd, selecteert u **[!UICONTROL Add field groups]**.
+Het dialoogvenster **[!UICONTROL Add field groups]** wordt weergegeven, zodat u meteen veldgroepen aan het schema kunt toevoegen. Selecteer **[!UICONTROL IAB TCF 2.0 Consent Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
-Het canvas verschijnt weer en geeft aan dat het veld `identityPrivacyInfo` is toegevoegd aan de schemastructuur.
+Zoek vervolgens de **[!UICONTROL IdentityMap]**-veldgroep in de lijst en selecteer deze ook. Selecteer **[!UICONTROL Add field groups]** als beide veldgroepen in de rechtertrack worden vermeld.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-identitymap.png)
+
+Het canvas verschijnt weer en geeft aan dat de velden `identityPrivacyInfo` en `identityMap` zijn toegevoegd aan de schemastructuur.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
@@ -87,18 +93,9 @@ Voordat u meer velden aan het schema toevoegt, selecteert u het basisveld dat **
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-profile.png)
 
-Als u een naam en beschrijving hebt opgegeven, selecteert u **[!UICONTROL Add]** onder de sectie **[!UICONTROL Field groups]** links op het canvas.
+Nadat u een naam en een beschrijving hebt verstrekt, kunt u naar keuze meer gebieden aan het schema toevoegen door **[!UICONTROL Add]** onder de **[!UICONTROL Field groups]** sectie op de linkerkant van het canvas te selecteren.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
-
-Van hier, gebruik de dialoog om de volgende extra gebiedsgroepen aan het schema toe te voegen:
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL Data capture region for Profile]
-* [!UICONTROL Demographic Details]
-* [!UICONTROL Personal Contact Details]
-
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 Als u een bestaand schema uitgeeft dat reeds voor gebruik in [!DNL Real-time Customer Profile] is toegelaten, uitgezocht **[!UICONTROL Save]** om uw veranderingen te bevestigen alvorens vooruit naar de sectie op [creërend een dataset op uw toestemmingsschema](#dataset) te slaan. Als u een nieuw schema maakt, gaat u verder met de stappen in de onderstaande subsectie.
 
@@ -110,7 +107,7 @@ Om het Platform in staat te stellen de toestemmingsgegevens te associëren het a
 >
 >Het voorbeeldschema dat in deze sectie wordt getoond gebruikt zijn `identityMap` gebied als zijn primaire identiteit. Als u een ander veld wilt instellen als primaire identiteit, moet u ervoor zorgen dat u een indirecte id gebruikt, zoals een cookie-id, en niet een rechtstreeks identificeerbaar veld dat niet mag worden gebruikt in op rente gebaseerde reclame, zoals een e-mailadres. Raadpleeg uw juridische adviseur als u niet zeker weet welke velden beperkt zijn.
 >
->De stappen op hoe te om een primair identiteitsgebied voor een schema te plaatsen kunnen in [zelfstudie van de schemaverwezenlijking worden gevonden](../../../../xdm/tutorials/create-schema-ui.md#identity-field).
+>De stappen op hoe te om een primair identiteitsgebied voor een schema te plaatsen kunnen in [[!UICONTROL Schemas] UI gids](../../../../xdm/ui/fields/identity.md) worden gevonden.
 
 Als u het schema voor [!DNL Profile] wilt inschakelen, selecteert u de naam van het schema in de linkertrack om de sectie **[!UICONTROL Schema properties]** te openen. Van hier, selecteer **[!UICONTROL Profile]** knevelknoop.
 
@@ -126,19 +123,24 @@ Tot slot selecteer **[!UICONTROL Save]** om uw veranderingen te bevestigen.
 
 ### Een schema voor gebeurtenismachtigingen maken {#event-schema}
 
+>[!NOTE]
+>
+>Regelingen voor toestemming voor gebeurtenissen worden alleen gebruikt om gebeurtenissen met betrekking tot wijziging van de toestemming in de loop der tijd te volgen en nemen niet deel aan workflows voor afdwinging stroomafwaarts. Als u toestemmingsveranderingen in tijd niet wilt volgen, kunt u vooruit naar de volgende sectie over [het creëren van toestemmingsdatasets](#datasets) overslaan.
+
 Selecteer **[!UICONTROL Schemas]** in de werkruimte **[!UICONTROL Create schema]** en kies **[!UICONTROL XDM ExperienceEvent]** in het vervolgkeuzemenu.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-Het dialoogvenster **[!UICONTROL Add field groups]** wordt weergegeven. Selecteer **[!UICONTROL IAB TCF 2.0 Consent]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden. Als u de veldgroep hebt gekozen, selecteert u **[!UICONTROL Add field groups]**.
+Het dialoogvenster **[!UICONTROL Add field groups]** wordt weergegeven. Selecteer **[!UICONTROL IAB TCF 2.0 Consent Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden.
 
->[!NOTE]
->
->Het opnemen van deze veldgroep in uw gebeurtenisschema is alleen vereist als u van plan bent om de gebeurtenissen van de toestemmingsverandering in de loop van de tijd te volgen. Als u deze gebeurtenissen niet wilt volgen, kunt u een gebeurtenisschema zonder deze gebieden in plaats daarvan gebruiken wanneer vestiging het Web SDK.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-Het canvas verschijnt weer en geeft aan dat het veld `consentStrings` is toegevoegd aan de schemastructuur.
+Zoek vervolgens de **[!UICONTROL IdentityMap]**-veldgroep in de lijst en selecteer deze ook. Selecteer **[!UICONTROL Add field groups]** als beide veldgroepen in de rechtertrack worden vermeld.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-identitymap.png)
+
+Het canvas verschijnt weer en geeft aan dat de velden `consentStrings` en `identityMap` zijn toegevoegd aan de schemastructuur.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
@@ -146,18 +148,11 @@ Voordat u meer velden aan het schema toevoegt, selecteert u het basisveld dat **
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-event.png)
 
-Als u een naam en beschrijving hebt opgegeven, selecteert u **[!UICONTROL Add]** onder de sectie **[!UICONTROL Field groups]** links op het canvas.
+Nadat u een naam en een beschrijving hebt verstrekt, kunt u naar keuze meer gebieden aan het schema toevoegen door **[!UICONTROL Add]** onder de **[!UICONTROL Field groups]** sectie op de linkerkant van het canvas te selecteren.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-Herhaal hier de bovenstaande stappen om de volgende extra veldgroepen aan het schema toe te voegen:
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL Environment Details]
-* [!UICONTROL Web Details]
-* [!UICONTROL Implementation Details]
-
-Nadat de veldgroepen zijn toegevoegd, voltooit u door **[!UICONTROL Save]** te selecteren.
+Nadat de gewenste veldgroepen zijn toegevoegd, selecteert u **[!UICONTROL Save]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
@@ -187,13 +182,13 @@ Selecteer in de rechtertrack de **[!UICONTROL Profile]**-schakeloptie en selecte
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
-Voer de bovenstaande stappen opnieuw uit om de andere vereiste gegevensset voor TCF 2.0-compatibiliteit te maken.
+Volg de bovenstaande stappen opnieuw om een op gebeurtenis-gebaseerde dataset tot stand te brengen als u een schema voor het creeerde.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u twee datasets gecreeerd die nu kunnen worden gebruikt om de gegevens van de klantentoestemming te verzamelen:
+Door deze zelfstudie te volgen, hebt u minstens één dataset gecreeerd die nu kan worden gebruikt om de gegevens van de klantentoestemming te verzamelen:
 
-* Een op verslag-gebaseerde dataset die voor gebruik in het Profiel van de Klant in real time wordt toegelaten.
-* Een op tijdreeksen gebaseerde dataset die niet voor [!DNL Profile] wordt toegelaten.
+* Een op verslag-gebaseerde dataset die voor gebruik in het Profiel van de Klant in real time wordt toegelaten. **(Vereist)**
+* Een op tijdreeksen gebaseerde dataset die niet voor [!DNL Profile] wordt toegelaten. (Optioneel)
 
 U kunt nu aan [IAB TCF 2.0 overzicht](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Platform voor naleving te vormen TCF 2.0.

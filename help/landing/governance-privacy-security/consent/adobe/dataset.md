@@ -5,9 +5,9 @@ title: Een gegevensset configureren voor het vastleggen van toestemmings- en voo
 topic-legacy: getting started
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
 workflow-type: tm+mt
-source-wordcount: '1386'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Dit document verstrekt stappen om een dataset te vormen om toestemmingsgegevens 
 
 >[!IMPORTANT]
 >
->In de voorbeelden in deze handleiding wordt een gestandaardiseerde set velden gebruikt voor de weergave van waarden voor de toestemming van de klant, zoals gedefinieerd door de schemaveldgroep [[!UICONTROL Consents and Preferences]. ](../../../../xdm/field-groups/profile/consents.md) De structuur van deze velden is bedoeld om een efficiënt gegevensmodel te bieden voor een groot aantal gemeenschappelijke gevallen waarin toestemming wordt gegeven.
+>In de voorbeelden in deze handleiding wordt een gestandaardiseerde set velden gebruikt voor de weergave van waarden voor de toestemming van de klant, zoals gedefinieerd door de schemaveldgroep [[!UICONTROL Consent and Preference Details]. ](../../../../xdm/field-groups/profile/consents.md) De structuur van deze velden is bedoeld om een efficiënt gegevensmodel te bieden voor een groot aantal gemeenschappelijke gevallen waarin toestemming wordt gegeven.
 >
 >U kunt echter ook uw eigen veldgroepen definiëren om toestemming te vertegenwoordigen op basis van uw eigen gegevensmodellen. Vraag uw juridische team om goedkeuring voor een gegevensmodel voor toestemming dat past bij uw bedrijfsbehoeften, op basis van de volgende opties:
 >
@@ -41,9 +41,9 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 >
 >In deze zelfstudie wordt ervan uitgegaan dat u het schema [!DNL Profile] in het Platform kent dat u wilt gebruiken om kenmerkgegevens van de klant vast te leggen. Ongeacht de methode u gebruikt om toestemmingsgegevens te verzamelen, moet dit schema [toegelaten voor het Profiel van de Klant in real time](../../../../xdm/ui/resources/schemas.md#profile) zijn. Bovendien kan de primaire identiteit van het schema geen direct identificeerbaar veld zijn dat niet mag worden gebruikt in op rente gebaseerde reclame, zoals een e-mailadres. Raadpleeg uw juridische adviseur als u niet zeker weet welke velden beperkt zijn.
 
-## [!UICONTROL Consents and Preferences] veldgroepstructuur {#structure}
+## [!UICONTROL Consent and Preference Details] veldgroepstructuur {#structure}
 
-De [!UICONTROL Consents and Preferences] gebiedsgroep verstrekt gestandaardiseerde toestemmingsgebieden aan een schema. Deze veldgroep is momenteel alleen compatibel met schema&#39;s die zijn gebaseerd op de klasse [!DNL XDM Individual Profile].
+De [!UICONTROL Consent and Preference Details] gebiedsgroep verstrekt gestandaardiseerde toestemmingsgebieden aan een schema. Deze veldgroep is momenteel alleen compatibel met schema&#39;s die zijn gebaseerd op de klasse [!DNL XDM Individual Profile].
 
 De veldgroep biedt één objecttype veld, `consents`, waarvan de subeigenschappen een set gestandaardiseerde toestemmingsvelden vastleggen. Het volgende JSON is een voorbeeld van het soort gegevens dat `consents` verwacht na gegevensinvoer:
 
@@ -92,9 +92,14 @@ De veldgroep biedt één objecttype veld, `consents`, waarvan de subeigenschappe
 
 >[!NOTE]
 >
->Voor meer informatie over de structuur en betekenis van de subeigenschappen in `consents`, zie het overzicht op [[!UICONTROL Consents and Preferences] gebiedsgroep](../../../../xdm/field-groups/profile/consents.md).
+>Voor meer informatie over de structuur en betekenis van de subeigenschappen in `consents`, zie het overzicht op [[!UICONTROL Consent and Preference Details] gebiedsgroep](../../../../xdm/field-groups/profile/consents.md).
 
-## Voeg de [!UICONTROL Consents and Preferences] gebiedsgroep aan uw [!DNL Profile] schema toe {#add-field-group}
+## Voeg vereiste gebiedsgroepen aan uw [!DNL Profile] schema toe {#add-field-group}
+
+Als u gegevens over toestemming wilt verzamelen met de Adobe-standaard, moet u een schema voor Profiel hebben dat de volgende twee veldgroepen bevat:
+
+* [!UICONTROL Consent and Preference Details]
+* [!UICONTROL IdentityMap] (vereist als het gebruiken van het Web van het Platform of Mobiele SDK om toestemmingssignalen te verzenden)
 
 In Platform UI, selecteer **[!UICONTROL Schemas]** in de linkernavigatie, dan selecteer **[!UICONTROL Browse]** tabel om een lijst van bestaande schema&#39;s te tonen. Van hier, selecteer de naam van [!DNL Profile]-Toegelaten schema dat u toestemmingsgebieden aan wilt toevoegen. De schermafbeeldingen in deze sectie gebruiken het schema &quot;van de Leden van de Loyalty&quot;dat in [schemaaanmaakzelfstudie](../../../../xdm/tutorials/create-schema-ui.md) als voorbeeld wordt gebouwd.
 
@@ -108,17 +113,23 @@ De [!DNL Schema Editor] verschijnt, die de structuur van het schema in het canva
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-Het dialoogvenster **[!UICONTROL Add field group]** wordt weergegeven. Selecteer **[!UICONTROL Consents and Preferences]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden. Wanneer de veldgroep is geselecteerd, selecteert u **[!UICONTROL Add field groups]**.
+Het dialoogvenster **[!UICONTROL Add field group]** wordt weergegeven. Selecteer **[!UICONTROL Consent and Preference Details]** in de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo de veldgroep gemakkelijker te vinden.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-Het canvas verschijnt weer en geeft aan dat het object `consents` is toegevoegd aan de schemastructuur. Als u extra toestemmings en voorkeursgebieden nodig hebt die niet door de standaardgebiedsgroep worden gevangen, zie de bijlage sectie op [toevoegend de gebieden van de douanetoestemming en voorkeur aan het schema](#custom-consent). Anders, selecteer **[!UICONTROL Save]** om de veranderingen in het schema te voltooien.
+Zoek vervolgens de **[!UICONTROL IdentityMap]**-veldgroep in de lijst en selecteer deze ook. Selecteer **[!UICONTROL Add field groups]** als beide veldgroepen in de rechtertrack worden vermeld.
+
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/identitymap.png)
+
+Het canvas verschijnt weer en geeft aan dat de velden `consents` en `identityMap` zijn toegevoegd aan de schemastructuur. Als u extra toestemmings en voorkeursgebieden nodig hebt die niet door de standaardgebiedsgroep worden gevangen, zie de bijlage sectie op [toevoegend de gebieden van de douanetoestemming en voorkeur aan het schema](#custom-consent). Anders, selecteer **[!UICONTROL Save]** om de veranderingen in het schema te voltooien.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-Als het schema u uitgeeft door [!UICONTROL Profile Dataset] wordt gebruikt die in uw gegevensbestand van SDK van het Web van Platforms wordt gespecificeerd, zal die dataset nu de nieuwe toestemmingsgebieden omvatten. U kunt nu naar [toestemmingsverwerkingsgids](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform te vormen om toestemmingsgegevens te verwerken.
+>[!IMPORTANT]
+>
+>Als u een nieuw schema creeert, of een bestaand schema uitgeeft dat niet voor Profiel is toegelaten, moet u het schema voor Profiel [toelaten alvorens op te slaan.](../../../../xdm/ui/resources/schemas.md#profile)
 
-Als u geen dataset voor dit schema hebt gecreeerd, volg de stappen in de volgende sectie.
+Als het schema u uitgeeft door [!UICONTROL Profile Dataset] wordt gebruikt die in uw gegevensbestand van SDK van het Web van Platforms wordt gespecificeerd, zal die dataset nu de nieuwe toestemmingsgebieden omvatten. U kunt nu naar [toestemmingsverwerkingsgids](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform te vormen om toestemmingsgegevens te verwerken. Als u geen dataset voor dit schema hebt gecreeerd, volg de stappen in de volgende sectie.
 
 ## Een gegevensset maken op basis van uw toestemmingsschema {#dataset}
 
@@ -164,15 +175,15 @@ De volgende sectie bevat extra informatie over het creëren van een dataset om k
 
 ### Aangepaste toestemmings- en voorkeursvelden toevoegen aan het schema {#custom-consent}
 
-Als u extra toestemmingssignalen buiten die moet vangen die door de standaard [!UICONTROL Consents and Preferences] gebiedsgroep worden vertegenwoordigd, kunt u douaneXDM componenten gebruiken om uw toestemmingsschema te verbeteren om uw bijzondere bedrijfsbehoeften aan te passen. In deze sectie worden de basisbeginselen beschreven voor het aanpassen van uw toestemmingsschema om deze signalen in Profiel in te voeren.
+Als u extra toestemmingssignalen buiten die moet vangen die door de standaard [!UICONTROL Consent and Preference Details] gebiedsgroep worden vertegenwoordigd, kunt u douaneXDM componenten gebruiken om uw toestemmingsschema te verbeteren om uw bijzondere bedrijfsbehoeften aan te passen. In deze sectie worden de basisbeginselen beschreven voor het aanpassen van uw toestemmingsschema om deze signalen in Profiel in te voeren.
 
 >[!IMPORTANT]
 >
 >Het Web van het Platform en Mobiele SDKs steunt geen douanegebieden in hun toestemming-verandering bevelen. Momenteel is de enige manier om aangepaste toestemmingsgebieden in Profiel in te voeren door [batch-opname](../../../../ingestion/batch-ingestion/overview.md) of een [bronverbinding](../../../../sources/home.md).
 
-Het wordt ten zeerste aanbevolen de veldgroep [!UICONTROL Consents and Preferences] te gebruiken als basislijn voor de structuur van uw toestemmingsgegevens en extra gebieden toe te voegen zoals nodig, eerder dan te proberen om de volledige structuur van kras tot stand te brengen.
+Het wordt ten zeerste aanbevolen de veldgroep [!UICONTROL Consent and Preference Details] te gebruiken als basislijn voor de structuur van uw toestemmingsgegevens en extra gebieden toe te voegen zoals nodig, eerder dan te proberen om de volledige structuur van kras tot stand te brengen.
 
-Als u aangepaste velden wilt toevoegen aan de structuur van een standaardveldgroep, moet u eerst een aangepaste veldgroep maken. Nadat u de [!UICONTROL Consents and Preferences]-veldgroep aan het schema hebt toegevoegd, selecteert u het **plus-pictogram (+)** in de sectie **[!UICONTROL Field groups]** en selecteert u **[!UICONTROL Create new field group]**. Geef een naam en een optionele beschrijving voor de veldgroep op en selecteer **[!UICONTROL Add field group]**.
+Als u aangepaste velden wilt toevoegen aan de structuur van een standaardveldgroep, moet u eerst een aangepaste veldgroep maken. Nadat u de [!UICONTROL Consent and Preference Details]-veldgroep aan het schema hebt toegevoegd, selecteert u het **plus-pictogram (+)** in de sectie **[!UICONTROL Field groups]** en selecteert u **[!UICONTROL Create new field group]**. Geef een naam en een optionele beschrijving voor de veldgroep op en selecteer **[!UICONTROL Add field group]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
