@@ -3,7 +3,7 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 1%
@@ -177,7 +177,7 @@ Voor [!DNL Facebook], betekent een succesvolle activering dat een [!DNL Facebook
 
 ### 400 Onjuist aanvraagfoutbericht {#bad-request}
 
-Wanneer u segmenten activeert op [!DNL Facebook], krijgt u mogelijk de volgende fout:
+Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 

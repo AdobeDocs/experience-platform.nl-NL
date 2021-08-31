@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1538'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichti
 
 Voordat u een [!DNL Google Customer Match]-bestemming in Experience Platform instelt, moet u het Google-beleid voor het gebruik van [!DNL Customer Match] lezen en volgen. Dit wordt beschreven in de [Google-ondersteuningsdocumentatie](https://support.google.com/google-ads/answer/6299717).
 
-Controleer vervolgens of uw [!DNL Google]-account is geconfigureerd voor een [!DNL Standard] of hoger toegangsniveau. Raadpleeg de [documentatie van Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.
+Controleer vervolgens of uw [!DNL Google]-account is geconfigureerd voor een [!DNL Standard] of hoger machtigingsniveau. Raadpleeg de [documentatie van Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.
 
 ### Lijst van gewenste personen {#allowlist}
 
@@ -174,6 +174,17 @@ Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTRO
 
 Wanneer u een segment toewijst aan zowel [!DNL IDFA] als [!DNL GAID] mobiele id&#39;s, maakt [!DNL Google Customer Match] een afzonderlijk segment voor elke id-toewijzing. Uw [!DNL Google Ads]-account toont twee verschillende segmenten, een voor de [!DNL IDFA] en een voor de [!DNL GAID]-toewijzing.
 
+## Problemen oplossen {#troubleshooting}
+
+### 400 Onjuist aanvraagfoutbericht {#bad-request}
+
+Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+Deze fout treedt op wanneer de klantenaccounts niet voldoen aan de [voorwaarden](#google-account-prerequisites). Als u dit probleem wilt verhelpen, neemt u contact op met Google en zorgt u ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een machtigingsniveau van [!DNL Standard] of hoger. Raadpleeg de [documentatie van Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.
+
 ## Extra bronnen {#additional-resources}
 
 * [Google Customer Match integreren - videozelfstudie](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+

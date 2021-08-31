@@ -3,9 +3,9 @@ keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '692'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Neem nota van de volgende details die voor [!DNL Google Ads] bestemmingen specif
 >
 > [!DNL Google] heeft nieuwe  [!DNL Google Ads] cookieintegratie met derde verkopers vervangen. Voor het uitvoeren van de stappen van de lijst van gewenste personen in de volgende sectie, moet u bestaande integratie met [!DNL Google Ads] hebben. Het gevolg hiervan is dat de aanbevolen benadering voor het gebruik van [!DNL Google Ads] het instellen van een [!DNL Google Customer Match]-integratie is. Lees de zelfstudie over het maken van een [!DNL Google Customer Match]-verbinding voor meer informatie over het maken van een [[!DNL Google Customer Match]](./google-customer-match.md)-verbinding.
 
-### Lijst van gewenste personen
+### Aanbieding toestaan {#allow-listing}
 
 >[!NOTE]
 >
@@ -83,7 +83,20 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
 
-
 ## Geëxporteerde gegevens
 
 Controleer uw [!DNL Google Ads]-account om te controleren of gegevens naar de [!DNL Google Ads]-bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+
+## Problemen oplossen {#troubleshooting}
+
+### 400 Onjuist aanvraagfoutbericht {#bad-request}
+
+Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+Deze fout treedt op wanneer klanten de bestemming proberen te configureren zonder een bestaande [!DNL Google Ads]-account.
+
+[!DNL Google] heeft nieuwe  [!DNL Google Ads] cookieintegratie met derde verkopers vervangen. Als u de stappen [allow-list](#allow-listing) wilt uitvoeren, moet u een bestaande integratie met [!DNL Google Ads] hebben.
+
+De geadviseerde benadering voor het gebruiken van [!DNL Google Ads] is vestiging een [[!DNL Google Customer Match]](google-customer-match.md) integratie.

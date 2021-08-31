@@ -3,9 +3,9 @@ keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave 
 title: Google Display en Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -45,13 +45,13 @@ Neem nota van de volgende details die voor [!DNL Google Display & Video 360] bes
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
 
-## Vereisten
+## Vereisten {#prerequisites}
 
-### Lijst van gewenste personen
+### Aanbieding toestaan
 
 >[!NOTE]
 >
->De lijst van gewenste personen is verplicht alvorens uw eerste [!DNL Google Display & Video 360] bestemming in Platform te plaatsen. Controleer of Google het hieronder beschreven lijst van gewenste personen-proces heeft voltooid voordat u een bestemming maakt.
+>Aanbieding toestaan is verplicht voordat uw eerste [!DNL Google Display & Video 360]-bestemming in Platform wordt ingesteld. Controleer of Google het hieronder beschreven proces voor het aanbieden van een aanbieding heeft voltooid voordat je een bestemming maakt.
 
 Voordat u de [!DNL Google Display & Video 360]-bestemming in Platform maakt, moet u contact opnemen met Google om Adobe op te nemen in de lijst met toegestane gegevensproviders en om uw account toe te voegen aan de lijst van gewenste personen. Neem contact op met Google en geef de volgende informatie op:
 
@@ -85,3 +85,13 @@ Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmi
 ## Geëxporteerde gegevens
 
 Controleer uw [!DNL Google Display & Video 360]-account om te controleren of gegevens naar de [!DNL Google Display & Video 360]-bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+
+## Problemen oplossen {#troubleshooting}
+
+### 400 Onjuist aanvraagfoutbericht {#bad-request}
+
+Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+Deze fout treedt op wanneer de klantenaccounts niet voldoen aan de [voorwaarden](#prerequisites). Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat je account op de lijst staat.
