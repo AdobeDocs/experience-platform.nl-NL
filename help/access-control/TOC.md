@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Toegangsbeheer in Adobe Experience Platform Help
 breadcrumb-title: Handleiding voor toegangsbeheer
 user-guide-description: Gebruik productprofielen in Adobe Admin Console om gebruikers te koppelen aan machtigingen en sandboxen.
-feature: Toegangsbeheer
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Access Control
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '94'
 ht-degree: 3%
 
 ---
@@ -28,5 +27,5 @@ ht-degree: 3%
    * [De namen van de lijst van toestemmingen en middeltypes](api/permissions-and-resource-types.md)
    * [Effectief beleid weergeven](api/effective-policies.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
+* [API-referentie](https://www.adobe.io/experience-platform-apis/references/access-control/)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

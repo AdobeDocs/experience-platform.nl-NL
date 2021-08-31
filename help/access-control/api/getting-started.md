@@ -5,10 +5,9 @@ title: API-handleiding voor toegangsbeheer
 topic-legacy: developer guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. De volgende secties verstrekken extra informatie die de ontwikkelaars zullen moeten weten om met succes vraag aan de Registratie API van het Schema te maken.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Access control] for  [!DNL Experience Platform] wordt toegediend via de  [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie [toegangsbeheeroverzicht](../home.md) voor meer informatie.
 
-Deze ontwikkelaarsgids verstrekt informatie over hoe te om uw verzoeken aan [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) te formatteren, en behandelt de volgende verrichtingen:
+Deze ontwikkelaarsgids verstrekt informatie over hoe te om uw verzoeken aan [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/) te formatteren, en behandelt de volgende verrichtingen:
 
 - [De namen van de lijst van toestemmingen en middeltypes](./permissions-and-resource-types.md)
 - [Effectief beleid voor de huidige gebruiker weergeven](./effective-policies.md)

@@ -7,9 +7,9 @@ landing-page-description: Vind antwoorden op vaak gestelde vragen en een gids vo
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f83e4150210af8d3e9e67285d1f9665b6e243f54
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1723'
 ht-degree: 1%
 
 ---
@@ -195,7 +195,7 @@ Hieronder volgt een lijst met probleemoplossingshulplijnen en API-naslagdocument
 
 | Service | API-referentie | Problemen oplossen |
 | --- | --- | --- |
-| Toegangsbeheer | [API voor toegangsbeheer](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Handleiding voor probleemoplossing bij toegangsbeheer](../access-control/troubleshooting-guide.md) |
+| Toegangsbeheer | [API voor toegangsbeheer](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Handleiding voor probleemoplossing bij toegangsbeheer](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform-gegevensinscriptie | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Handleiding voor ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[het oplossen van problemen bij het opnemen van batterijenHandleiding voor het oplossen van problemen bij het opnemen van streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] gids voor problemen](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
