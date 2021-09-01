@@ -2,14 +2,13 @@
 title: Opdrachten voor Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 keywords: Voer bevelen uit;commandName;Promises;getLibraryInfo;response voorwerpen;toestemming;
-translation-type: tm+mt
-source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
+exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
+source-git-commit: ca3ee230d510dfb9de400b6f573a612ec33c8f7a
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
 
 ---
-
 
 # Opdrachten uitvoeren
 
@@ -71,7 +70,7 @@ Alle beloftes die door opdrachten worden geretourneerd, worden opgelost met een 
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
-    console.log(results.libraryInfo.version);
+    console.log(result.libraryInfo.version);
   });
 ```
 
