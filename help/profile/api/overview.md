@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-time handleiding voor de API voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Als u meer wilt weten over samenvoegingsbeleid en hun rol in het Platform, begin
 
 ## Voorbeeldstatus voorvertonen ([!DNL Profile] voorvertoning) {#profile-preview}
 
-Aangezien de gegevens die voor Profiel worden toegelaten in Experience Platform worden opgenomen, wordt het opgeslagen binnen het de gegevensopslag van het Profiel. Aangezien het aantal verslagen in de opslag van het Profiel stijgt of vermindert, wordt een steekproefbaan in werking gesteld die informatie betreffende hoeveel profielfragmenten en samengevoegde profielen in de gegevensopslag omvat. Met behulp van de profiel-API kunt u een voorvertoning weergeven van het meest recente voorbeeld en van de distributie van het lijstprofiel via gegevensset en naamruimte. Als u wilt beginnen met het gebruik van het `/profilepreviewstatus`-eindpunt, raadpleegt u de [voorbeeldstatuseindhulplijn](preview-sample-status.md).
+Aangezien de gegevens in Platform worden opgenomen, wordt een steekproefbaan in werking gesteld om de profieltelling en andere gegevens-verwante metriek van het Profiel van de Klant in real time bij te werken. De resultaten van deze voorbeeldbaan kunnen worden bekeken gebruikend het `/previewsamplestatus` eindpunt, deel van Real-time API van het Profiel van de Klant. Dit eindpunt kan ook worden gebruikt om van profieldistributies door zowel dataset als identiteit namespace een lijst te maken, evenals veelvoudige rapporten te produceren om zicht in de samenstelling van de Opslag van het Profiel van uw organisatie te bereiken.  Als u wilt beginnen met het gebruik van het `/profilepreviewstatus`-eindpunt, raadpleegt u de [voorbeeldstatuseindhulplijn](preview-sample-status.md).
 
 ## Systeemtaken profiel {#profile-system-jobs}
 
