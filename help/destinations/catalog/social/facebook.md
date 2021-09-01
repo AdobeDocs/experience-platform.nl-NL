@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1502'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,9 @@ Voordat u publiekssegmenten kunt verzenden naar [!DNL Facebook], moet u controle
    >
    > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **Manage campagnes** toestemming toelaten. De toestemming wordt vereist voor de integratie [!DNL Adobe Experience Platform].
 * Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, waarbij `accountID` uw [!DNL Facebook Ad Account ID] is.
+   >[!IMPORTANT]
+   >
+   >Bij het ondertekenen van de [!DNL Facebook Custom Audiences] Servicevoorwaarden moet u dezelfde gebruikersaccount gebruiken als waarmee u zich in de Facebook API hebt geverifieerd.
 
 ## Vereisten voor id-afstemming {#id-matching-requirements}
 
