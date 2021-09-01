@@ -1,15 +1,15 @@
 ---
-title: Verizon MediaYahoo DataX-integratie
+title: Verizon MediaYahoo DataX-verbinding
 description: DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen.
-source-git-commit: 07c8a7afaf6cd2af249ad52eabfbc5f8cd6689ae
+source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
 
 
-# Verizon Media/Yahoo DataX
+# Verizon Media/Yahoo DataX-verbinding
 
 ## Overzicht {#overview}
 
