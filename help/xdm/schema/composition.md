@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
+source-git-commit: 2bd7c12209a1944aa954ba4490bb0c57f2a5ea61
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3643'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,11 @@ Er zijn twee manieren om identiteitsgegevens naar Platform te verzenden:
 
 `identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
 
-Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteiten ingesloten worden in de gegevens en daardoor minder zichtbaar worden. Als u onbewerkte gegevens opneemt, moet u in plaats daarvan afzonderlijke identiteitsvelden definiëren binnen de daadwerkelijke schemastructuur. Schema&#39;s die `identityMap` gebruiken, kunnen ook niet deelnemen aan relaties.
+Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteiten ingesloten worden in de gegevens en daardoor minder zichtbaar worden. Als u onbewerkte gegevens opneemt, moet u in plaats daarvan afzonderlijke identiteitsvelden definiëren binnen de daadwerkelijke schemastructuur.
+
+>[!NOTE]
+>
+>Een schema dat `identityMap` gebruikt kan als bronschema in een verhouding worden gebruikt, maar kan niet als bestemmingsschema worden gebruikt. Dit is omdat alle bestemmingsschema&#39;s een zichtbare identiteit moeten hebben die op een verwijzingsgebied binnen het bronschema kan worden in kaart gebracht. Verwijs naar de gids UI op [relaties](../tutorials/relationship-ui.md) voor meer informatie over de vereisten van bron en bestemmingsschema&#39;s.
 
 Identiteitskaarten kunnen echter bijzonder nuttig zijn als u gegevens opneemt uit bronnen die identiteiten samen opslaan (zoals [!DNL Airship] of Adobe Audience Manager), of als er een variabel aantal identiteiten voor een schema is. Daarnaast zijn identiteitskaarten vereist als u de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) gebruikt.
 
