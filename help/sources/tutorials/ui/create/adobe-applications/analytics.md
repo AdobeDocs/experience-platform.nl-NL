@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1346'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
 
 # Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics-bronverbinding in de gebruikersinterface om gegevens van de [!DNL Analytics]-rapportsuite over te brengen naar Adobe Experience Platform.
+Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics-bronverbinding in de gebruikersinterface om [!DNL Analytics] Report Suite-gegevens over te brengen naar Adobe Experience Platform.
 
 ## Aan de slag
 
@@ -30,7 +30,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
 * **Standaardkenmerk**: Standaardkenmerken zijn alle kenmerken die vooraf door Adobe zijn gedefinieerd. Ze bevatten dezelfde betekenis voor alle klanten en zijn beschikbaar in de [!DNL Analytics] brongegevens en [!DNL Analytics] schemaveldgroepen.
-* **Aangepast kenmerk**: Aangepaste kenmerken zijn alle kenmerken in de aangepaste dimensie-hiërarchie in  [!DNL Analytics]. Zij zijn ook onder de Adobe-bepaalde schema&#39;s, maar kunnen verschillend door verschillende klanten worden geïnterpreteerd. Aangepaste kenmerken zijn eVars, props en lijsten. Raadpleeg de volgende [[!DNL Analytics] documentatie over conversievariabelen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) voor meer informatie over Vars.
+* **Aangepast kenmerk**: Aangepaste kenmerken zijn alle kenmerken in de aangepaste variabelenhiërarchie  [!DNL Analytics]. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een Reeks van het Rapport te vangen, en zij kunnen in hun gebruik van de Reeks van het Rapport aan de Reeks van het Rapport verschillen. Aangepaste kenmerken zijn eVars, props en lijsten. Raadpleeg de volgende [[!DNL Analytics] documentatie over conversievariabelen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) voor meer informatie over Vars.
 * **Willekeurig kenmerk in veldgroepen** Aangepast: Kenmerken die afkomstig zijn van veldgroepen die door klanten zijn gemaakt, zijn allemaal door de gebruiker gedefinieerd en worden beschouwd als standaard- of aangepaste kenmerken.
 * **Vriendelijke namen**: Vriendelijke namen zijn door mensen verschafte labels voor aangepaste variabelen in een  [!DNL Analytics] implementatie. Zie de volgende [[!DNL Analytics] documentatie over conversievariabelen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) voor meer informatie over vriendschappelijke namen.
 
@@ -46,15 +46,15 @@ Selecteer **[!UICONTROL Adobe applications]** onder de categorie **[!UICONTROL A
 
 ### Gegevens selecteren
 
-De stap **[!UICONTROL Analytics source add data]** wordt weergegeven. Selecteer **[!UICONTROL Report suite]** beginnen een bronverbinding voor de gegevens van de het rapportreeks van Analytics te creëren, en dan de rapportreeks te selecteren u zou willen opnemen. Selecteer **[!UICONTROL Next]** om door te gaan.
+De stap **[!UICONTROL Analytics source add data]** wordt weergegeven. Selecteer **[!UICONTROL Report Suite]** om een bronverbinding voor de gegevens van de Reeks van het Rapport van Analytics te beginnen, en dan de Reeks van het Rapport te selecteren u zou willen opnemen. Rapportsets die niet kunnen worden geselecteerd, zijn al opgenomen in deze sandbox of in een andere sandbox. Selecteer **[!UICONTROL Next]** om door te gaan.
 
 >[!NOTE]
 >
->Er kunnen meerdere interne verbindingen met een bron worden gemaakt om verschillende gegevens in te voeren.
+>De veelvoudige in-gebonden verbindingen kunnen worden gemaakt om veelvoudige Reeksen van het Rapport in te brengen, nochtans kan slechts één Reeks van het Rapport met het Platform van Gegevens van de Klant in real time tegelijkertijd worden gebruikt.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Toewijzing
 
@@ -66,7 +66,7 @@ De [!UICONTROL Mapping] pagina verstrekt een interface om brongebieden aan hun a
 
 >[!TIP]
 >
->Alleen schema&#39;s met de sjabloonveldgroep [!DNL Analytics] worden weergegeven in het menu Schema selecteren. Andere schema&#39;s worden weggelaten. Als er geen aangewezen schema&#39;s beschikbaar voor uw gegevens van de rapportreeks zijn, dan moet u een nieuw schema tot stand brengen. Voor gedetailleerde stappen bij het creëren van schema&#39;s, zie de gids op [het creëren van en het uitgeven van schema&#39;s in UI](../../../../../xdm/ui/resources/schemas.md).
+>Alleen schema&#39;s met de sjabloonveldgroep [!DNL Analytics] worden weergegeven in het menu Schema selecteren. Andere schema&#39;s worden weggelaten. Als er geen aangewezen schema&#39;s beschikbaar voor uw gegevens van de Reeks van het Rapport zijn, dan moet u een nieuw schema tot stand brengen. Voor gedetailleerde stappen bij het creëren van schema&#39;s, zie de gids op [het creëren van en het uitgeven van schema&#39;s in UI](../../../../../xdm/ui/resources/schemas.md).
 
 ![selectieschema](../../../../images/tutorials/create/analytics/select-schema.png)
 
@@ -74,9 +74,9 @@ In de sectie [!UICONTROL Map standard fields] worden deelvensters voor [!UICONTR
 
 | Standaardvelden toewijzen | Beschrijving |
 | --- | --- |
-| [!UICONTROL Standard mappings applied] | In het deelvenster [!UICONTROL Standard mappings applied] wordt het totale aantal toegewezen standaardkenmerken weergegeven. Standaardtoewijzingen hebben betrekking op sets van toewijzingen tussen standaardkenmerken in de [!DNL Analytics]-gegevens van de bron en standaardkenmerken in [!DNL Analytics]-veldgroep. Deze zijn vooraf toegewezen en kunnen niet worden bewerkt. |
-| [!UICONTROL Non matching standard mappings] | Het [!UICONTROL Non matching standard mappings] paneel verwijst naar het aantal in kaart gebrachte standaardattributen die vriendschappelijke naamconflicten bevatten. Deze conflicten verschijnen wanneer u een schema opnieuw gebruikt dat reeds een bevolkte reeks gebiedsbeschrijvers heeft. U kunt doorgaan met uw [!DNL Analytics]-gegevensstroom, zelfs met conflicten met vriendelijke namen. |
-| [!UICONTROL Custom mappings] | In het [!UICONTROL Custom mappings]-deelvenster wordt het aantal toegewezen aangepaste kenmerken weergegeven, waaronder eVars, props en lijsten. Aangepaste toewijzingen hebben betrekking op toewijzingssets tussen aangepaste kenmerken in de brongegevens [!DNL Analytics] en aangepaste kenmerken in [!DNL Analytics]-veldgroep. Aangepaste kenmerken kunnen worden toegewezen aan andere aangepaste kenmerken en aan standaardkenmerken. |
+| [!UICONTROL Standard mappings applied] | In het deelvenster [!UICONTROL Standard mappings applied] wordt het totale aantal toegewezen kenmerken weergegeven. Standaardtoewijzingen hebben betrekking op sets van toewijzingen tussen alle kenmerken in de [!DNL Analytics]-brongegevens en de bijbehorende kenmerken in [!DNL Analytics]-veldgroep. Deze zijn vooraf toegewezen en kunnen niet worden bewerkt. |
+| [!UICONTROL Non matching standard mappings] | Het [!UICONTROL Non matching standard mappings] paneel verwijst naar het aantal in kaart gebrachte attributen die vriendschappelijke naamconflicten bevatten. Deze conflicten verschijnen wanneer u een schema opnieuw gebruikt dat reeds een bevolkte reeks gebiedsbeschrijvers van een verschillende Reeks van het Rapport heeft. U kunt doorgaan met uw [!DNL Analytics]-gegevensstroom, zelfs met conflicten met vriendelijke namen. |
+| [!UICONTROL Custom mappings] | In het [!UICONTROL Custom mappings]-deelvenster wordt het aantal toegewezen aangepaste kenmerken weergegeven, waaronder eVars, props en lijsten. Aangepaste toewijzingen verwijzen naar toewijzingssets tussen aangepaste kenmerken in de brongegevens [!DNL Analytics] en -kenmerken in aangepaste veldgroepen die in het geselecteerde schema zijn opgenomen. |
 
 ![kaartstandaardvelden](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ Platform detecteert automatisch uw toewijzingssets voor eventuele conflicten met
 
 ![toewijzing](../../../../images/tutorials/create/analytics/mapping.png)
 
-Als er vriendschappelijke naamconflicten in uw kaartreeksen zijn, kunt u nog met uw [!DNL Analytics] dataflow verdergaan, erkennend dat de gebiedsbeschrijvers het zelfde zullen zijn. U kunt er ook voor kiezen om een nieuw schema te maken met een lege set beschrijvingen.
+Als er vriendschappelijke naamconflicten tussen uw bronRapport Suite en uw geselecteerde schema zijn, kunt u nog met uw [!DNL Analytics] dataflow verdergaan, erkennend dat de gebiedsbeschrijvers niet zullen worden veranderd. U kunt er ook voor kiezen om een nieuw schema te maken met een lege set beschrijvingen.
 
 Selecteer **[!UICONTROL Next]** om door te gaan.
 
@@ -147,7 +147,7 @@ De stap **[!UICONTROL Dataflow detail]** verschijnt, waar u een naam en een facu
 De stap [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevensstroom Analytics kunt bekijken voordat deze wordt gemaakt. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
 
 * [!UICONTROL Connection]: Toont het bronplatform van de verbinding.
-* [!UICONTROL Data type]: Toont de geselecteerde rapportreeks en zijn overeenkomstige identiteitskaart van de rapportreeks.
+* [!UICONTROL Data type]: Hiermee geeft u de geselecteerde rapportsuite en de bijbehorende rapportsuite-id weer.
 
 ![revisie](../../../../images/tutorials/create/analytics/review.png)
 
@@ -181,7 +181,7 @@ Als u een gegevensstroom wilt verwijderen, gaat u naar de [!UICONTROL Dataflows]
 
 ## Volgende stappen en extra bronnen
 
-Zodra de verbinding wordt gecreeerd, worden een doelschema en een gegevensstroom automatisch gecreeerd om de inkomende gegevens te bevatten. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, worden [!DNL Analytics] gegevens gebruikt en worden deze gebruikt door downstreamservices voor Platforms zoals [!DNL Real-time Customer Profile] en Segmentatieservice. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, worden [!DNL Analytics] gegevens gebruikt en worden deze gebruikt door downstreamservices voor Platforms zoals [!DNL Real-time Customer Profile] en Segmentatieservice. Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-time Customer Profile] - overzicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] - overzicht](../../../../../segmentation/home.md)
