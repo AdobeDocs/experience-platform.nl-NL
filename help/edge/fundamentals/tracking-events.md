@@ -3,9 +3,9 @@ title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -103,34 +103,7 @@ alloy("sendEvent", {
 
 ### Instelling `eventType` {#event-types}
 
-In een XDM ervaringsgebeurtenis, is er een facultatief `eventType` gebied. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd. [Lees meer in het openbare XDM-rapport](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
-
-
-| **Type gebeurtenis:** | **Definitie:** |
-| ---------------------------------- | ------------ |
-| advertising.completes | Geeft aan of een getimed media-element is gecontroleerd op voltooiing, wat niet noodzakelijkerwijs betekent dat de kijker de hele video heeft bekeken. viewer had voorsprong kunnen overslaan |
-| advertising.timePlayed | Beschrijft de hoeveelheid tijd die door een gebruiker aan een specifiek getimed media activa wordt doorgebracht |
-| advertising.federated | Geeft aan of een ervaringsgebeurtenis is gemaakt via gegevensfederatie (gegevensdeling tussen klanten) |
-| advertising.clicks | Klikken op acties op een advertentie |
-| advertising.conversions | Een vooraf gedefinieerde actie(s) van de klant die een gebeurtenis voor prestatiebeoordeling activeert |
-| advertising.firstQuartiles | Een digitale video heeft 25% van de duur bij normale snelheid afgespeeld |
-| advertising.impressions | Indrukking(en) van een advertentie voor een eindgebruiker met de mogelijkheid te worden bekeken |
-| advertising.midpoints | Een digitale video heeft 50% van de duur bij normale snelheid afgespeeld |
-| advertising.starts | Er is een digitale video afgespeeld |
-| advertising.thirdQuartiles | Een digitale video heeft 75% van de duur bij normale snelheid afgespeeld |
-| web.webpagedetails.pageViews | Weergave(s) van een webpagina is opgetreden |
-| web.webinteraction.linkClicks | Klik van een Web-verbinding is voorgekomen |
-| commerce.checkouts | Een actie tijdens een uitcheckproces van een productlijst, kan er meer dan één controlegebeurtenis zijn als er veelvoudige stappen in een controleproces zijn. Als er meerdere stappen zijn, worden de informatie over de tijd van de gebeurtenis en de pagina waarnaar wordt verwezen of de ervaring gebruikt om de stap te identificeren die individuele gebeurtenissen in volgorde vertegenwoordigen |
-| commerce.productListAdds | Toevoeging van een product aan de productlijst. Voorbeeld van een product dat aan een winkelwagentje wordt toegevoegd |
-| commerce.productListOpens | Initialisaties van een nieuwe productlijst. Voorbeeld van een winkelwagentje |
-| commerce.productListRemovals | Een product uit een productlijst verwijderen. Voorbeeld: een product wordt uit een winkelwagentje verwijderd |
-| commerce.productListReopens | Een productlijst die niet meer toegankelijk (verlaten) was is opnieuw geactiveerd door de gebruiker. Voorbeeld via een hermarketingactiviteit |
-| commerce.productListViews | Weergave(s) van een productlijst is opgetreden |
-| commerce.productViews | Weergave(s) van een product is/zijn opgetreden |
-| commerce.purchases | Er is een bestelling geaccepteerd. De aankoop is de enige vereiste actie in een handelsomzetting. De aanschaf moet een productlijst bevatten waarnaar wordt verwezen |
-| commerce.saveForLaters | De productlijst wordt opgeslagen voor toekomstig gebruik. Voorbeeld van een verlanglijst voor een product |
-| delivery.feedback | Feedbackgebeurtenissen voor een levering. Voorbeeld van feedbackgebeurtenissen voor een e-maillevering |
-
+In schema&#39;s XDM ExperienceEvent, is er een facultatief `eventType` gebied. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Raadpleeg de XDM-documentatie voor een [lijst met alle vooraf gedefinieerde gebeurtenistypen](../../xdm/classes/experienceevent.md#eventType).
 
 Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de tagextensie gebruikt of u kunt ze altijd zonder tags doorgeven. Ze kunnen worden doorgegeven als onderdeel van de optie `xdm`.
 

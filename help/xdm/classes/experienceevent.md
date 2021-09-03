@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-klasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent en aanbevolen procedures voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1728'
 ht-degree: 0%
 
 ---
@@ -82,18 +82,18 @@ In de volgende tabel worden de geaccepteerde waarden voor `eventType` beschreven
 
 | Waarde | Definitie |
 | --- | --- |
-| `advertising.completes` | Een getimede media-element is gecontroleerd op voltooiing. Dit betekent niet noodzakelijkerwijs dat de viewer de hele video heeft bekeken, aangezien de viewer vooruit had kunnen overgeslagen. |
-| `advertising.timePlayed` | Beschrijft de hoeveelheid tijd die door een gebruiker aan een specifiek getimed media activa wordt doorgebracht. |
-| `advertising.federated` | Geeft aan of een Experience Event is gemaakt via gegevensfederatie (gegevens delen tussen klanten). |
 | `advertising.clicks` | Klik op een handeling(en) op een advertentie. |
+| `advertising.completes` | Een getimede media-element is gecontroleerd op voltooiing. Dit betekent niet noodzakelijkerwijs dat de viewer de hele video heeft bekeken, aangezien de viewer vooruit had kunnen overgeslagen. |
 | `advertising.conversions` | Vooraf gedefinieerde actie(s) uitgevoerd door een klant die een gebeurtenis voor prestatiebeoordeling start. |
+| `advertising.federated` | Geeft aan of een Experience Event is gemaakt via gegevensfederatie (gegevens delen tussen klanten). |
 | `advertising.firstQuartiles` | Een digitale video heeft 25% van de duur bij normale snelheid afgespeeld. |
 | `advertising.impressions` | Indrukking(en) van een advertentie voor een klant die mogelijk wordt bekeken. |
 | `advertising.midpoints` | Een digitale video heeft 50% van zijn duur bij normale snelheid afgespeeld. |
 | `advertising.starts` | Er is een digitale video afgespeeld. |
 | `advertising.thirdQuartiles` | Een digitale video heeft 75% van zijn duur bij normale snelheid afgespeeld. |
-| `web.webpagedetails.pageViews` | Een webpagina heeft een of meer weergaven ontvangen. |
-| `web.webinteraction.linkClicks` | Een koppeling is een of meer keer geselecteerd. |
+| `advertising.timePlayed` | Beschrijft de hoeveelheid tijd die door een gebruiker aan een specifiek getimed media activa wordt doorgebracht. |
+| `application.close` | Een toepassing is gesloten of op de achtergrond geplaatst. |
+| `application.launch` | Er is een toepassing gestart of op de voorgrond geplaatst. |
 | `commerce.checkouts` | Er is een uitcheckgebeurtenis opgetreden voor een productlijst. Er kunnen meerdere uitcheckgebeurtenissen zijn als er meerdere stappen in een uitcheckproces zijn. Als er meerdere stappen zijn, worden de tijdstempel en de pagina/ervaring waarnaar wordt verwezen voor elke gebeurtenis gebruikt om elke afzonderlijke gebeurtenis (stap) in volgorde weer te geven. |
 | `commerce.productListAdds` | Er is een product toegevoegd aan de productlijst of winkelwagentje. |
 | `commerce.productListOpens` | Er is een nieuwe productlijst (winkelwagentje) geïnitialiseerd of gemaakt. |
@@ -103,9 +103,32 @@ In de volgende tabel worden de geaccepteerde waarden voor `eventType` beschreven
 | `commerce.productViews` | Een product heeft een of meer weergaven ontvangen. |
 | `commerce.purchases` | Er is een bestelling geaccepteerd. Dit is de enige vereiste actie in een commerciële omschakeling. Een aankoopgebeurtenis moet een productlijst hebben waarnaar wordt verwezen. |
 | `commerce.saveForLaters` | Er is een productlijst opgeslagen voor toekomstig gebruik, zoals een wenslijst voor een product. |
+| `decisioning.propositionDisplay` | Een beslissingsvoorstel is weergegeven aan een persoon. |
+| `decisioning.propositionInteract` | Een persoon had interactie met een beslissingsvoorstel. |
 | `delivery.feedback` | Feedbackgebeurtenissen voor een levering, zoals een e-maillevering. |
+| `directMarketing.emailBounced` | Een e-mail naar een persoon teruggestuurd. |
+| `directMarketing.emailBouncedSoft` | Een e-mail naar een persoon met een zachte buis. |
+| `directMarketing.emailClicked` | Een persoon heeft op een koppeling in een marketingbericht geklikt. |
+| `directMarketing.emailDelivered` | Er is een e-mailbericht verzonden naar de e-mailservice van een persoon |
+| `directMarketing.emailOpened` | Een persoon heeft een marketingbericht geopend. |
+| `directMarketing.emailUnsubscribed` | Een persoon die zich niet heeft geabonneerd op een marketingbericht. |
+| `leadOperation.convertLead` | Een lead is omgezet. |
+| `leadOperation.interestingMoment` | Er is een interessant moment opgenomen voor een persoon. |
+| `leadOperation.newLead` | Er is een lead gemaakt. |
+| `leadOperation.scoreChanged` | De waarde van het score-kenmerk van de lead is gewijzigd. |
+| `leadOperation.statusInCampaignProgressionChanged` | De status van een leider in een campagne is veranderd. |
+| `listOperation.addToList` | Er is een persoon toegevoegd aan een marketinglijst. |
+| `listOperation.removeFromList` | Een persoon is verwijderd uit een marketinglijst. |
 | `message.feedback` | Feedbackgebeurtenissen zoals verzonden/stuit/fout voor berichten die naar een klant worden verzonden. |
 | `message.tracking` | Gebeurtenissen bijhouden zoals open/klikken/aangepaste handelingen voor berichten die naar een klant worden verzonden. |
+| `opportunityEvent.addToOpportunity` | Er is een persoon toegevoegd aan een opportuniteit. |
+| `opportunityEvent.opportunityUpdated` | Er is een opportuniteit bijgewerkt. |
+| `opportunityEvent.removeFromOpportunity` | Een persoon is uit een kans verwijderd. |
+| `pushTracking.applicationOpened` | Een persoon heeft een toepassing geopend via een pushmelding. |
+| `pushTracking.customAction` | Een persoon heeft op een aangepaste actie in een pushbericht geklikt. |
+| `web.formFilledOut` | Een persoon heeft een formulier op een webpagina ingevuld. |
+| `web.webinteraction.linkClicks` | Een koppeling is een of meer keer geselecteerd. |
+| `web.webpagedetails.pageViews` | Een webpagina heeft een of meer weergaven ontvangen. |
 
 {style=&quot;table-layout:auto&quot;}
 
