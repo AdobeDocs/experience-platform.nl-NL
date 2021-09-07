@@ -1,9 +1,10 @@
 ---
 title: Variabele turbinevrij
 description: Leer meer over het turbineobject, een gratis variabele die specifieke informatie en hulpprogramma's voor de Adobe Experience Platform-tagruntime biedt.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -28,8 +29,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 {
     turbineVersion: "14.0.0",
     turbineBuildDate: "2016-07-01T18:10:34Z",
-    buildDate: "2016-03-30T16:27:10Z",
-    environment: "development"
+    buildDate: "2016-03-30T16:27:10Z"
 }
 ```
 
@@ -38,7 +38,27 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineVersion` | De [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine)-versie die in de huidige bibliotheek wordt gebruikt. |
 | `turbineBuildDate` | De ISO 8601-datum waarop de in de container gebruikte versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) is gemaakt. |
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
-| `environment` | De omgeving waarvoor deze bibliotheek is gemaakt. Accepteerde waarden zijn `development`, `staging` en `production`. |
+
+
+## [!DNL environment]
+
+```js
+console.log(turbine.environment.stage);
+```
+
+`turbine.environment` is een object dat informatie bevat over de omgeving waarin de bibliotheek is geïmplementeerd.
+
+```js
+{
+    id: "EN123456...",
+    stage: "development"
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `id` | De id van het milieu. |
+| `stage` | De omgeving waarvoor deze bibliotheek is gemaakt. Accepteerde waarden zijn `development`, `staging` en `production`. |
 
 
 ## [!DNL debugEnabled]

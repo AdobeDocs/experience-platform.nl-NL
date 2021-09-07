@@ -1,9 +1,10 @@
 ---
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in tags.
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1285'
 ht-degree: 1%
 
 ---
@@ -214,7 +215,31 @@ De ISO 8601-datum waarop de in de container gebruikte versie van [Turbine](https
 
 De ISO 8601-datum waarop de huidige bibliotheek is gemaakt.
 
-### `environment`
+In dit voorbeeld worden de objectwaarden getoond:
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**Code**
+
+```javascript
+_satellite.environment
+```
+
+Dit object bevat informatie over de omgeving waarin de huidige tagruntime-bibliotheek wordt geïmplementeerd. Het object bevat de volgende eigenschappen:
+
+### `id`
+
+De id van het milieu.
+
+### `stage`
 
 De omgeving waarvoor deze bibliotheek is gemaakt. De mogelijke waarden zijn:
 
@@ -226,10 +251,8 @@ In dit voorbeeld worden de objectwaarden getoond:
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
