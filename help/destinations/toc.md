@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 1%
       * [linkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
+      * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [Twitter Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-verbinding](./catalog/advertising/datax.md)
@@ -108,9 +109,9 @@ ht-degree: 1%
       * [Overzicht van de extensie Tag](./catalog/launch-extensions/overview.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
-      * [(bèta) Verbinding van kenmerken van het luchtschip](./catalog/mobile-engagement/airship-attributes.md)
-      * [(bèta) Verbinding van vliegtuigcodes](./catalog/mobile-engagement/airship-tags.md)
-      * [(Bèta) Braze verbinding](./catalog/mobile-engagement/braze.md)
+      * [Koppeling met kenmerken van luchtschip](./catalog/mobile-engagement/airship-attributes.md)
+      * [Koppeling met vliegtuigcodes](./catalog/mobile-engagement/airship-tags.md)
+      * [Braze verbinding](./catalog/mobile-engagement/braze.md)
    * Aanpassingsdoelen {#personalization}
       * [Overzicht van personalisatiedoelen](./catalog/personalization/overview.md)
       * [Adobe Target-extensie](./catalog/personalization/adobe-target.md)
