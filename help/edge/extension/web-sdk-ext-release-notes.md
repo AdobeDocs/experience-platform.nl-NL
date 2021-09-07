@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
+source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.7.1 - 7 september 2021
+
+Bevat versie 2.6.4 van de SDK-bibliotheek van Adobe Experience Platform Web.
 
 ## Versie 2.7.0 - 16 augustus 2021
 
@@ -23,7 +27,7 @@ Bevat versie 2.6.3 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 ## Versie 2.6.2 - 4 augustus 2021
 
-Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+Bevat versie 2.6.2 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
 ## Versie 2.6.1 - juli 2021
 
@@ -70,7 +74,7 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 ## Versie 2.2.0 - 1 oktober 2020
 
 * Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. API die Platform roept is zich nu bewust van milieu&#39;s zodat worden de gebruikers slechts voorgesteld van die schema&#39;s die zij toegang hebben om uit te geven.
-* Wanneer u het gegevenselement `identityMap` gebruikt, worden de naamruimten nu vooraf ingevuld in een vervolgkeuzelijst, zodat u deze niet handmatig hoeft in te vullen.
+* Wanneer u het gegevenselement `identityMap` gebruikt, worden de naamruimten nu vooraf ingevuld in een vervolgkeuzelijst, zodat u dit niet handmatig hoeft in te vullen.
 * De interface voor het gegevenselement `xdmObject` is vernieuwd. In de nieuwe UI, kunt u zien welke gebieden zijn bevolkt zonder het moeten elk punt in het voorwerp ingaan.
 
 ## Versie 2.1.1 - 26 augustus 2020

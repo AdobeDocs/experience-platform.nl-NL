@@ -3,7 +3,7 @@ title: De SDK van Adobe Experience Platform Web installeren
 description: Leer hoe te om het Web SDK van het Experience Platform te installeren.
 keywords: web sdk installatie;installeren web sdk;Internet Explorer;promise;npm pakket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 0%
@@ -31,8 +31,8 @@ URL-structuur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OF a
 Bijvoorbeeld:
 
 
-* Gepiliseerd: [https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js)
-* Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/2.6.3/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.3/alloy.js)
+* Gepiliseerd: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
+* Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
 
 
 ### De code toevoegen {#adding-the-code}
@@ -46,7 +46,7 @@ Voor de vooraf samengestelde zelfstandige versie is een &quot;basiscode&quot; ve
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
 ```
 
 De &quot;basiscode&quot; maakt een algemene functie met de naam `alloy`. Gebruik deze functie om te communiceren met de SDK. Als u de algemene functie een andere naam wilt geven, wijzigt u de naam `alloy` als volgt:
@@ -58,7 +58,7 @@ De &quot;basiscode&quot; maakt een algemene functie met de naam `alloy`. Gebruik
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
 ```
 
 In dit voorbeeld wordt de naam van de algemene functie gewijzigd in `mycustomname` in plaats van `alloy`.
@@ -108,7 +108,7 @@ Als u het bestand synchroon in plaats van asynchroon wilt laden, verwijdert u he
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js"></script>
 ```
 
 ## Optie 3: Het NPM-pakket gebruiken

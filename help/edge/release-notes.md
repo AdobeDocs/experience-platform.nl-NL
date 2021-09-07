@@ -3,14 +3,18 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.6.4 - 7 september 2021
+
+* Probleem verholpen waarbij de volledige `head`-inhoud werd vervangen door HTML Adobe Target-handelingen die waren ingesteld op het `head`-element. Stel nu HTML-handelingen in die worden toegepast op het element `head`. Deze worden gewijzigd in HTML toevoegen.
 
 ## Versie 2.6.3 - 16 augustus 2021
 
