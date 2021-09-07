@@ -1,7 +1,7 @@
 ---
 title: Verbinding met pinterest Customer List
 description: Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
-source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
+source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 1%
@@ -21,8 +21,8 @@ Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezoc
 
 ## Vereisten {#prerequisites}
 
-* De gebruiker moet zich verifiëren met een Pinterest-account dat toegang heeft tot het advertentieaccount waaraan hij of zij een publiek wil toevoegen. Meer informatie over het delen van adverteerderaccounts vindt u hier: https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts. Specifiek, zou de gebruiker de &quot;publiek&quot;toegangsniveaus nodig hebben.
-* Hier vindt u meer informatie over identiteitsindelingen van klantenlijsten: https://help.pinterest.com/en/business/article/audience-targeting.
+* De gebruiker moet zich verifiëren met een Pinterest-account dat toegang heeft tot het advertentieaccount waaraan hij of zij een publiek wil toevoegen. Meer informatie over het delen van adverteerderaccounts vindt u [hier](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Specifiek, zou de gebruiker de &quot;publiek&quot;toegangsniveaus nodig hebben.
+* Nadere gegevens over de identiteitsindelingen van de klantenlijst vindt u [hier](https://help.pinterest.com/en/business/article/audience-targeting).
 
 
 ## Ondersteunde identiteiten {#supported-identities}
@@ -76,4 +76,4 @@ Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid 
 
 ## Aanvullende bronnen {#additional-resources}
 
-Raadpleeg de pagina Pinterest Help Center (https://help.pinterest.com/en/business/article/audience-targeting) voor meer informatie.
+Raadpleeg de pagina [Pinterest Help Center](https://help.pinterest.com/en/business/article/audience-targeting) voor meer informatie.
