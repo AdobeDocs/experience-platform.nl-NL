@@ -1,15 +1,15 @@
 ---
 title: Verbinding met pinterest Customer List
 description: Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
-source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '512'
 ht-degree: 1%
 
 ---
 
-
-# Verbinding met pinterest Customer List
+# [!DNL Pinterest Customer List] verbinding
 
 ## Overzicht {#overview}
 
@@ -27,14 +27,14 @@ Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezoc
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De Pinterest Customer List-bestemming ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+De bestemming [!DNL Pinterest Customer List] steunt de activering van identiteiten die in de hieronder lijst worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 Wijs in [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de workflow voor doelactivering de gewenste identiteiten toe aan het doelveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| GAID | Google-advertentie-id | Wijs *GAID* bronidentiteitsnaamruimte toe aan het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
-| IDFA | Apple ID for Advertisers | Wijs *IDFA* bronidentiteitsnaamruimte toe aan het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Wijs *GAID* bronidentiteitsnaamruimte toe aan het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
+| IDFA | [!DNL Apple ID for Advertisers] | Wijs *IDFA* bronidentiteitsnaamruimte toe aan het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
 | EMAIL | E-mailadressen (tekst wissen of hashed met het algoritme SHA256) | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. <br> Wijs de naamruimte  ** van de  *bronidentiteit van de e-mail_LC_SHA256* aan het veld  *pinterest_publiek* van de doelidentiteit toe. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -45,7 +45,7 @@ Wijs in [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-desti
 
 ## Gevallen gebruiken {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Lijst van de Klant van Pinterest zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
+Om u beter te helpen begrijpen hoe en wanneer u [!DNL Pinterest Customer List] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
 
 
 ### Hoofdletters en kleine letters gebruiken 1

@@ -1,9 +1,10 @@
 ---
-description: 'Als deel van Doel SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u in het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen. '
+description: Als deel van Doel SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u in het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen.
 title: De doelconfiguratie testen
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -228,4 +229,4 @@ Raadpleeg [API-bewerkingen voor het testen van doelen](./destination-testing-api
 
 ## Volgende stappen
 
-Na het bevestigen dat uw bestemming correct wordt gevormd, gebruik de Adobe [zelfbediening documentatieproces](./docs-framework/documentation-instructions.md) om een documentatiepagina voor uw bestemming tot stand te brengen.
+Na het testen van uw bestemming en het bevestigen dat het correct wordt gevormd, gebruik [bestemmings het publiceren API](./destination-publish-api.md) om uw configuratie aan Adobe voor overzicht voor te leggen.

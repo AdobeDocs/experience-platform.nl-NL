@@ -3,18 +3,14 @@ keywords: mobiel; schil; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Braze] verbinding
-
->[!IMPORTANT]
->
->Het doel Braze in Adobe Experience Platform is momenteel in Bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!DNL Braze] verbinding
 
 ## Overzicht {#overview}
 
@@ -99,11 +95,9 @@ Klik in de sectie [!UICONTROL Target Field] op het koppelingspictogram rechts va
 
 ![Doel-toewijzing op lichtsterkte](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-In het venster [!UICONTROL Select target field] kunt u kiezen uit drie categorieën doelvelden:
-* [!UICONTROL Select attributes]: Gebruik deze optie om uw XDM-kenmerken toe te wijzen aan standaard [!DNL Braze] kenmerken.
+In het venster [!UICONTROL Select target field] kunt u kiezen uit twee categorieën doelvelden:
 * [!UICONTROL Select identity namespace]: Gebruik deze optie om  [!DNL Platform] naamruimten toe te wijzen aan  [!DNL Braze] naamruimten.
-* [!UICONTROL Select custom attributes]: Met deze optie kunt u XDM-kenmerken toewijzen aan aangepaste  [!DNL Braze] kenmerken die u in uw  [!DNL Braze] account hebt gedefinieerd.
-* U kunt deze optie ook gebruiken om de naam van bestaande XDM-kenmerken te wijzigen in [!DNL Braze]. Als bijvoorbeeld een `lastName` XDM-kenmerk wordt toegewezen aan een aangepast `Last_Name`-kenmerk in [!DNL Braze], wordt het `Last_Name`-kenmerk in [!DNL Braze] gemaakt als dit nog niet bestaat en wordt het XDM-kenmerk `lastName` eraan toegewezen.
+* [!UICONTROL Select custom attributes]: Met deze optie kunt u XDM-kenmerken toewijzen aan aangepaste  [!DNL Braze] kenmerken die u in uw  [!DNL Braze] account hebt gedefinieerd. <br> U kunt deze optie ook gebruiken om de naam van bestaande XDM-kenmerken te wijzigen in  [!DNL Braze]. Als bijvoorbeeld een `lastName` XDM-kenmerk wordt toegewezen aan een aangepast `Last_Name`-kenmerk in [!DNL Braze], wordt het `Last_Name`-kenmerk in [!DNL Braze] gemaakt als dit nog niet bestaat en wordt het XDM-kenmerk `lastName` eraan toegewezen.
 
 ![Doeltoewijzingsvelden van doel dempen](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 

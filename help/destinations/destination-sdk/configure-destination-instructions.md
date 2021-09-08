@@ -3,7 +3,8 @@ description: Deze pagina beschrijft hoe te om de verwijzingsinformatie in de opt
 seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
 seo-title: How to use Destination SDK to configure your destination
 title: Hoe te om Doel SDK te gebruiken om uw bestemming te vormen
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -161,7 +162,7 @@ Als deel van het proces om uw bestemming te testen, moet u het Experience Platfo
 
 ## Stap 7: Uw doel publiceren {#publish-destination}
 
-Na het vormen van en het testen van uw bestemming. gebruik [bestemmings het publiceren API](./destination-publish-api.md) om uw configuratie aan Adobe voor overzicht voor te leggen.
+Na het vormen van en het testen van uw bestemming, gebruik [bestemmings het publiceren API](./destination-publish-api.md) om uw configuratie aan Adobe voor overzicht voor te leggen.
 
 ## Stap 8: Uw doel documenteren {#document-destination}
 
