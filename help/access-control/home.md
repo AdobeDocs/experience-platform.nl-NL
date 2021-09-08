@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
+source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
@@ -103,6 +103,7 @@ In de volgende tabel worden de beschikbare machtigingen voor [!DNL Experience Pl
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Toegang tot het lezen, creëren, uitgeven, en onbruikbaar maken bestemmingen. |
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Alleen-lezen toegang tot beschikbare doelen op het tabblad **[!UICONTROL Catalog]** en geverifieerde doelen op het tabblad **[!UICONTROL Browse]**. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Mogelijkheid om gegevens te activeren naar actieve doelen die zijn gemaakt. Deze toestemming vereist of &quot;de Doelen van de Mening&quot;of &quot;leidt [!UICONTROL Destinations”] om aan de gebruiker worden verleend die bestemmingen zal activeren. |
+| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid om doelen te maken met behulp van [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en geverifieerde bronnen op het tabblad **[!UICONTROL Browse]**. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | De toegang om partnerhandvatten tot stand te brengen, goed te keuren en te verwerpen om twee organisaties te verbinden IMS en stromen [!DNL Segment Match] toe te laten. |
