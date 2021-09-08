@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '627'
 ht-degree: 1%
 
 ---
@@ -139,5 +139,38 @@ ht-degree: 1%
       * [Invoc-tags, extensie](./catalog/voice/invoca.md)
       * [extensie Medallia](./catalog/voice/medallia.md)
       * [URL-inbox-extensie Talk](./catalog/voice/talkurl.md)
+* Doel-SDK {#destination-sdk}
+   * [Overzicht](./destination-sdk/overview.md)
+   * [Integratievereisten](./destination-sdk/integration-prerequisites.md)
+   * [Aan de slag](./destination-sdk/getting-started.md)
+   * Functionaliteit van SDK van bestemming {#functionality}
+      * [Configuratieopties](./destination-sdk/configuration-options.md)
+      * [Doelconfiguratie](./destination-sdk/destination-configuration.md)
+      * [Server- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
+      * [Berichtindeling](./destination-sdk/message-format.md)
+      * [Metagegevensbeheer voor het publiek](./destination-sdk/audience-metadata-management.md)
+      * [Verificatieconfiguratie](./destination-sdk/credentials-configuration.md)
+      * [OAuth 2-verificatie](./destination-sdk/oauth2-authentication.md)
+      * Gereedschappen voor ontwikkelaars {#developer-tools}
+         * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/create-template.md)
+         * [De doelconfiguratie testen](./destination-sdk/test-destination.md)
+   * API-referentie {#api-reference}
+      * [API-bewerkingen voor bestemmingspunten](./destination-sdk/destination-configuration-api.md)
+      * [API-bewerkingen voor eindpunt doelserver](./destination-sdk/destination-server-api.md)
+      * [API-bewerkingen voor het eindpunt van metagegevens van het publiek](./destination-sdk/audience-metadata-api.md)
+      * [API-bewerkingen van het eindpunt Credentials](./destination-sdk/credentials-configuration-api.md)
+      * [API-bewerkingen voor eindpunten publiceren](./destination-sdk/destination-publish-api.md)
+      * Referentie voor ontwikkelaarsgereedschappen {#developer-tools-reference}
+         * [API-bewerkingen voor voorbeeldsjablonen ophalen](./destination-sdk/sample-template-api.md)
+         * [API-bewerkingen voor sjablonen renderen](./destination-sdk/render-template-api.md)
+         * [API-bewerkingen voor doeltesten](./destination-sdk/destination-testing-api.md)
+         * [Voorbeeld van API-bewerkingen voor het genereren van profielen](./destination-sdk/sample-profile-generation-api.md)
+   * Hulplijnen {#guides}
+      * [Doel SDK gebruiken om uw bestemming te configureren](./destination-sdk/configure-destination-instructions.md)
+   * Uw doel {#document-destination} documenteren
+      * [Uw doel documenteren in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Een teksteditor in uw lokale omgeving gebruiken om een doeldocumentatiepagina te maken](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Zelfservicesjabloon voor documentatie](./destination-sdk/docs-framework/self-service-template.md)
 * [Veelgestelde vragen](./destinations-faq.md)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
