@@ -29,7 +29,7 @@ Bevat versie 2.6.3 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 ## Versie 2.6.2 - 4 augustus 2021
 
-Bevat versie 2.6.2 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
 ## Versie 2.6.1 - juli 2021
 
