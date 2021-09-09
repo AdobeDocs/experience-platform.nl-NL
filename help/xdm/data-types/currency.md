@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Gegevenstype valuta
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor valuta.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
+source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '125'
 ht-degree: 1%
 
 ---
@@ -19,9 +20,9 @@ ht-degree: 1%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `amount` | Dubbel | Het aantal kleuren dat de weergave kan vertegenwoordigen. |
-| `conversionDate` | DateTime | Het aantal kleuren dat de weergave kan vertegenwoordigen. |
-| `currencyCode` | Tekenreeks | Het aantal kleuren dat de weergave kan vertegenwoordigen. |
+| `amount` | Dubbel | Het bedrag aan valuta zoals gedefinieerd door `currencyCode`. |
+| `conversionDate` | DateTime | Een tijdstempel met het tijdstip waarop de valutaomrekening is uitgevoerd. |
+| `currencyCode` | Tekenreeks | Een ISO 4217-code die het type valuta aangeeft dat `amount` vertegenwoordigt. |
 
 {style=&quot;table-layout:auto&quot;}
 
