@@ -3,18 +3,14 @@ keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van luchtschip
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Airship Attributes] verbinding {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->De bestemming [!DNL Airship Attributes] in Adobe Experience Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!DNL Airship Attributes] verbinding {#airship-attributes-destination}
 
 ## Overzicht {#overview}
 

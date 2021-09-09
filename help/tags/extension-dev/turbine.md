@@ -2,9 +2,9 @@
 title: Variabele turbinevrij
 description: Leer meer over het turbineobject, een gratis variabele die specifieke informatie en hulpprogramma's voor de Adobe Experience Platform-tagruntime biedt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Het `turbine` voorwerp is een &quot;vrije variabele&quot;binnen het werkingsgebied van de de bibliotheekmodules van uw uitbreiding. Deze biedt informatie en hulpprogramma&#39;s die specifiek zijn voor de Adobe Experience Platform-tagruntime en is altijd beschikbaar voor bibliotheekmodules zonder `require()` te gebruiken.
 
-## [!DNL buildInfo]
+## `buildInfo`
 
 ```js
 console.log(turbine.buildInfo.turbineBuildDate);
@@ -40,7 +40,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
 
 
-## [!DNL environment]
+## `environment`
 
 ```js
 console.log(turbine.environment.stage);
@@ -50,24 +50,24 @@ console.log(turbine.environment.stage);
 
 ```js
 {
-    id: "EN123456...",
+    id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
     stage: "development"
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van het milieu. |
-| `stage` | De omgeving waarvoor deze bibliotheek is gemaakt. Accepteerde waarden zijn `development`, `staging` en `production`. |
+| `id` | De id van de omgeving. |
+| `stage` | De omgeving waarvoor deze bibliotheek is gemaakt. Mogelijke waarden zijn `development`, `staging` en `production`. |
 
 
-## [!DNL debugEnabled]
+## `debugEnabled`
 
-Of foutopsporing van tags momenteel is ingeschakeld.
+Een booleaanse waarde die aangeeft of foutopsporing voor tags momenteel is ingeschakeld.
 
 Als u eenvoudig probeert om berichten te registreren, is het onwaarschijnlijk u dit zult moeten gebruiken. Meld in plaats daarvan altijd berichten met `turbine.logger` om ervoor te zorgen dat uw berichten alleen naar de console worden afgedrukt wanneer foutopsporing voor tags is ingeschakeld.
 
-### [!DNL getDataElementValue]
+### `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +75,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Retourneert de waarde van een gegevenselement.
 
-### [!DNL getExtensionSettings] {#get-extension-settings}
+### `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +85,7 @@ Retourneert het instellingsobject dat het laatst is opgeslagen in de weergave [e
 
 Waarden binnen de geretourneerde instellingen komen mogelijk uit gegevenselementen. Daarom kan het aanroepen van `getExtensionSettings()` op verschillende momenten verschillende resultaten opleveren als de waarden van de gegevenselementen zijn gewijzigd. Om de meest bijgewerkte waarden te krijgen, gelieve zo lang mogelijk te wachten alvorens `getExtensionSettings()` te roepen.
 
-### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
+### `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +96,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 De eigenschap [hostedLibFiles](./manifest.md) kan binnen de extensiemanifest worden gedefinieerd om verschillende bestanden te hosten samen met de tagruntime-bibliotheek. Deze module retourneert de URL waar het opgegeven bibliotheekbestand wordt gehost.
 
-### [!DNL getSharedModule] {#shared}
+### `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +104,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Hiermee wordt een module opgehaald die via een andere extensie is gedeeld. Als er geen overeenkomende module wordt gevonden, wordt `undefined` geretourneerd. Zie [Gedeelde modules implementeren](./web/shared.md) voor meer informatie over gedeelde modules.
 
-### [!DNL logger]
+### `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -118,13 +118,13 @@ Het logboeknut wordt gebruikt om berichten aan de console te registreren. De ber
 * `logger.error(message: string)`: Logs an error message to the console.
 * `logger.debug(message: string)`: Logs a zuivert bericht aan de console. (Alleen zichtbaar wanneer `verbose` logboekregistratie is ingeschakeld in uw browserconsole.)
 
-### [!DNL onDebugChanged]
+### `onDebugChanged`
 
 Door een callback functie in `turbine.onDebugChanged` over te gaan, zullen de markeringen uw callback roepen wanneer het zuiveren wordt geschakeld. Tags geven een Booleaanse waarde door aan de callback-functie die waar is als foutopsporing is ingeschakeld of onwaar als foutopsporing is uitgeschakeld.
 
 Als u eenvoudig probeert om berichten te registreren, is het onwaarschijnlijk u dit zult moeten gebruiken. Logberichten die `turbine.logger` gebruiken en tags zorgen er in plaats daarvan voor dat uw berichten alleen naar de console worden afgedrukt wanneer foutopsporing van tags is ingeschakeld.
 
-### [!DNL propertySettings] {#property-settings}
+### `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);

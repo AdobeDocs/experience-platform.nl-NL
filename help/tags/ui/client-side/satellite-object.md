@@ -2,9 +2,9 @@
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 1%
 
 ---
@@ -227,34 +227,27 @@ In dit voorbeeld worden de objectwaarden getoond:
 
 ## `environment`
 
+Dit object bevat informatie over de omgeving waarin de huidige tagruntime-bibliotheek wordt geïmplementeerd.
+
 **Code**
 
 ```javascript
 _satellite.environment
 ```
 
-Dit object bevat informatie over de omgeving waarin de huidige tagruntime-bibliotheek wordt geïmplementeerd. Het object bevat de volgende eigenschappen:
-
-### `id`
-
-De id van het milieu.
-
-### `stage`
-
-De omgeving waarvoor deze bibliotheek is gemaakt. De mogelijke waarden zijn:
-
-* ontwikkeling
-* fasering
-* productie
-
-In dit voorbeeld worden de objectwaarden getoond:
+Het object bevat de volgende eigenschappen:
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `id` | De id van het milieu. |
+| `stage` | De omgeving waarvoor deze bibliotheek is gemaakt. De mogelijke waarden zijn `development`, `staging` en `production`. |
 
 ## `notify`
 

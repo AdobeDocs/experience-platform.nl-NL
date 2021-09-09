@@ -3,18 +3,14 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Airship Tags] verbinding {#airship-tags-destination}
-
->[!IMPORTANT]
->
->De bestemming [!DNL Airship Tags] in Adobe Experience Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!DNL Airship Tags] verbinding {#airship-tags-destination}
 
 ## Overzicht
 
