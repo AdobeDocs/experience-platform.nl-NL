@@ -4,16 +4,15 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
-translation-type: tm+mt
-source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
+source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
 
-# Hulp {#rtcdp} bij realtime Platform klantgegevens
+# Hulp bij realtime Platform klantgegevens {#rtcdp}
 
 * [CDP-overzicht in realtime](overview.md)
 * Aan de slag {#intro}
