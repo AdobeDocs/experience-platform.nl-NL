@@ -1,7 +1,8 @@
 ---
 title: Gebruikersmachtigingen voor tags
 description: Leer over de verschillende soorten toestemmingen beschikbaar voor markeringen en sommige basisimplementatiestrategieën voor verschillende zaken van bedrijfsgebruik.
-source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 1%
@@ -39,7 +40,7 @@ Elke eigenschap tag heeft een platform. Er zijn momenteel twee platforms die u v
 
 Standaard bieden productprofielen toegang tot alle eigenschappen die binnen uw bedrijf bestaan, zowel momenteel als in de toekomst. Gebruikend dit toestemmingstype, kunt u toegang tot specifieke bestaande eigenschappen door naam beperken of verlenen.
 
-### Eigendomsrechten
+### Eigendomsrechten {#property-rights}
 
 Om het even welk bezit dat u in UI creeert van de Inzameling van Gegevens wordt beschikbaar in Admin Console, toestaand u om het bezit met specifieke bezitsrechten in het zelfde productprofiel te groeperen.
 
