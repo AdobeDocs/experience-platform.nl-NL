@@ -2,9 +2,9 @@
 title: Variabele turbinevrij
 description: Leer meer over het turbineobject, een gratis variabele die specifieke informatie en hulpprogramma's voor de Adobe Experience Platform-tagruntime biedt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -117,6 +117,7 @@ Het logboeknut wordt gebruikt om berichten aan de console te registreren. De ber
 * `logger.warn(message: string)`: Logs a warning message to the console.
 * `logger.error(message: string)`: Logs an error message to the console.
 * `logger.debug(message: string)`: Logs a zuivert bericht aan de console. (Alleen zichtbaar wanneer `verbose` logboekregistratie is ingeschakeld in uw browserconsole.)
+* `logger.deprecation(message: string)`: Logs een waarschuwingsbericht aan de console al dan niet de markering het zuiveren door de gebruiker wordt toegelaten.
 
 ### `onDebugChanged`
 
