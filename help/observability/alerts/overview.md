@@ -2,13 +2,14 @@
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 title: Overzicht van waarschuwingen
 description: Meer informatie over waarschuwingen in Adobe Experience Platform, waaronder de structuur van de definitie van waarschuwingsregels.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
-
 
 # Overzicht van waarschuwingen
 
@@ -56,6 +57,10 @@ U kunt waarschuwingen ontvangen en beheren via twee kanalen:
 U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor waarschuwingen over Platforms in de Adobe Developer Console. Zie de handleiding bij [abonneren op Adobe I/O Event notifications](./subscribe.md) voor specifieke stappen.
 
 ### UI Platform {#ui}
+
+Met de interface van het Platform kunt u ontvangen waarschuwingen weergeven en waarschuwingsregels beheren. De volgende video biedt een inleiding tot deze mogelijkheden.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Als u met waarschuwingen wilt werken in de gebruikersinterface van het Platform, moet u de volgende toegangsbeheermachtigingen hebben ingeschakeld via Adobe Admin Console:
 

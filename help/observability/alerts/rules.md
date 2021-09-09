@@ -1,14 +1,15 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 title: Standaardwaarschuwingsregels
-description: 'In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken. '
-source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
+description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
+feature: Alerts
+exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 8%
 
 ---
-
 
 # Standaardwaarschuwingsregels
 

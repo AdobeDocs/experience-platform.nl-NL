@@ -2,8 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 title: Abonneren op Adobe I/O-gebeurtenismeldingen
 description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. De informatie van de verwijzing betreffende beschikbare gebeurtenistypen wordt ook verstrekt, samen met verbindingen aan verdere documentatie over hoe te om teruggekeerde gebeurtenisgegevens voor elke toepasselijke  [!DNL Platform] dienst te interpreteren.
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '743'
 ht-degree: 0%
@@ -58,8 +59,8 @@ In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u
 >Als u onzeker bent welke gebeurtenissen om aan voor de dienst in te tekenen u met werkt, raadpleeg de dienst-specifieke berichtdocumentatie:
 >
 >* [[!DNL Privacy Service] meldingen](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] meldingen](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service (sources)] meldingen](../../sources/notifications.md)
+>* [[!DNL Data Ingestion] meldingen](../../ingestion/quality/subscribe-events.md)
+>* [[!DNL Flow Service (sources)] meldingen](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
