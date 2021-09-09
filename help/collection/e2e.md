@@ -1,18 +1,18 @@
 ---
-title: Einde-tot-einde overzicht van Adobe Experience Platform-gegevensverzameling
-description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van de Adobe Experience Platform-gegevensverzameling.
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: Einde-tot-eindoverzicht gegevensverzameling
+description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van de technologieën voor gegevensverzameling van Adobe Experience Platform.
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2486'
 ht-degree: 0%
 
 ---
 
-# Overzicht van end-to-end Adobe Experience Platform-gegevensverzameling
+# Overzicht van end-to-end gegevensverzameling
 
-Adobe Experience Platform Data Collection verstrekt verscheidene technologieën die samenwerken om uw gegevens naar andere producten van de Adobe of derdebestemmingen over te brengen. Als u gebeurtenisgegevens van uw toepassing naar het Adobe Experience Platform Edge-netwerk wilt verzenden, is het belangrijk dat u deze kerntechnologieën begrijpt en weet hoe u ze configureert om uw gegevens te leveren aan de doelen die u nodig hebt, wanneer u deze nodig hebt.
+In Adobe Experience Platform, verwijst de gegevensinzameling naar verscheidene technologieën die samenwerken om uw gegevens naar andere producten van de Adobe of derde bestemmingen over te brengen. Als u gebeurtenisgegevens van uw toepassing naar het Adobe Experience Platform Edge-netwerk wilt verzenden, is het belangrijk dat u deze kerntechnologieën begrijpt en weet hoe u ze configureert om uw gegevens te leveren aan de doelen die u nodig hebt, wanneer u deze nodig hebt.
 
-Deze gids verstrekt een high-level zelfstudie van hoe te om een gebeurtenis door het Netwerk van de Rand te verzenden gebruikend de technologieën van de Inzameling van Gegevens. Specifiek, loopt het leerprogramma door de stappen om de de marktextensie van SDK van het Web van Adobe Experience Platform binnen UI van de Inzameling van Gegevens te installeren en te vormen.
+Deze gids verstrekt een zelfstudie op hoog niveau van hoe te om een gebeurtenis door het Netwerk van de Rand te verzenden gebruikend de technologieën van de gegevensinzameling. Specifiek, loopt het leerprogramma door de stappen om de de marktextensie van SDK van het Web van Adobe Experience Platform binnen UI van de Inzameling van Gegevens te installeren en te vormen.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Zodra u gegevens naar het Netwerk van de Rand kunt verzenden, kunt u naar keuze 
 
 [Het Model van Gegevens van de ervaring (XDM)](../xdm/home.md) is een open-bronspecificatie die gemeenschappelijke structuren en definities voor gegevens in de vorm van schema&#39;s verstrekt. Met andere woorden, XDM is een manier om uw gegevens op een manier te structureren en te formatteren die door het Netwerk van de Rand en andere toepassingen van Adobe Experience Cloud kan actie ondernemen.
 
-De eerste stap in vestiging uw verrichtingen van de Inzameling van Gegevens moet een schema tot stand brengen XDM om uw gegevens te vertegenwoordigen. In een latere stap in deze zelfstudie wijst u de gegevens toe die u naar de structuur van dit schema wilt verzenden.
+De eerste stap in vestiging uw verrichtingen van de gegevensinzameling is een schema te creëren XDM om uw gegevens te vertegenwoordigen. In een latere stap in deze zelfstudie wijst u de gegevens toe die u naar de structuur van dit schema wilt verzenden.
 
 >[!NOTE]
 >
