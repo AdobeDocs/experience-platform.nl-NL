@@ -4,8 +4,7 @@ solution: Experience Platform
 title: UI-gids voor zoekservice
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
-exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: aabe89f236bc68a51f14ee1909687982f4fe5973
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 0%

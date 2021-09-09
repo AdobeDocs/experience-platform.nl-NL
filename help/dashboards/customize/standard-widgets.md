@@ -2,8 +2,7 @@
 keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;vergunningsgebruik
 title: Standaarddashboardwidgets
 description: 'Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets aan uw Adobe Experience Platform-dashboards. '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 16a8764fd27e6b1ae32bc37b3abcd521aaf88887
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
