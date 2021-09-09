@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
+source-git-commit: 07a280f906c5bcc69a0bffc529e1d1c8280f771a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Versie 2.7.1 - 7 september 2021
+## Versie 2.7.3 - 7 september 2021
 
 Bevat versie 2.6.4 van de SDK-bibliotheek van Adobe Experience Platform Web.
+
+* Er is niet langer een afgekeurde waarschuwing voor `container.buildInfo.environment.`
 
 ## Versie 2.7.0 - 16 augustus 2021
 
