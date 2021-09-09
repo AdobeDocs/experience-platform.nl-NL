@@ -5,10 +5,9 @@ title: Bronoplossing
 topic-legacy: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -74,3 +73,7 @@ Gedeeltelijke inname moet worden gebruikt als u **geen** beperkingen heeft, zoal
 ### Wat is de typische drempel voor gedeeltelijke inname?
 
 Er is geen &quot;typische foutendrempel&quot;voor gedeeltelijke inname. In plaats daarvan kan deze waarde variëren van het gebruik van hoofdletters en kleine letters. Standaard is de foutdrempel ingesteld op 5%.
+
+### Hoe lang duurt het voordat een status van een flowuitvoering wordt bijgewerkt nadat een nieuwe gegevensstroom is gemaakt?
+
+De looppas van de stroom wordt niet onmiddellijk geproduceerd en kan ongeveer twee tot drie minuten vergen om na zijn aangewezen `startTime` bij te werken. Als u de status van een flow-run inschakelt, wordt onmiddellijk na het maken van een nieuwe dataflow geen informatie over de `lastRunDetails` van de flow geretourneerd, omdat deze nog niet is uitgevoerd. Het wordt aanbevolen de gegevensstroom een paar minuten te laten genereren voordat de status van de flow wordt gecontroleerd.
