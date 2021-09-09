@@ -1,7 +1,8 @@
 ---
 title: Extensies
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
+source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -61,7 +62,7 @@ Tags zijn zeer uitbreidbaar. Extensies voegen kernfunctionaliteit toe aan tags. 
 1. Open het tabblad **[!UICONTROL Extensions]** op de overzichtspagina van een eigenschap.
 1. Selecteer een extensie.
 
-   ![]()../../../images/extensions.png)
+   ![Core Extension](../../../images/extensions.png)
 
    * Als de extensie bestaat, selecteert u deze in de extensiecatalogus.
    * Plaats de muis boven een extensie in de lijst om deze te configureren of uit te schakelen.
