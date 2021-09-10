@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
+source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '628'
 ht-degree: 1%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 1%
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [linkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
+      * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
    * Beoordelingsdoelen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
