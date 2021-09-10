@@ -1,7 +1,8 @@
 ---
 description: De server en malplaatjespecs kunnen in de Doel SDK van Adobe Experience Platform via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: Configuration options for server and template specs in Destination SDK
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 5%
@@ -23,7 +24,7 @@ De server- en sjabloonspecificaties kunnen worden geconfigureerd in Adobe Experi
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -49,7 +50,7 @@ Dit proces levert gebruikersgegevens als reeks berichten van HTTP aan uw bestemm
 |---|---|---|
 | `name` | Tekenreeks | Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
 | `destinationServerType` | Tekenreeks | `URL_BASED` is momenteel de enige beschikbare optie. |
-| `templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items` </li></ul> |
+| `templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items` </li></ul> |
 | `value` | Tekenreeks | Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
 
 {style=&quot;table-layout:auto&quot;}

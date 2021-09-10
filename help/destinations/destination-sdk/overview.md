@@ -2,9 +2,9 @@
 description: Adobe Experience Platform de Bestemming SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform-doelSDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -63,8 +63,8 @@ De toegang van SDK van de bestemming varieert gebaseerd op uw status als partner
 ---------|----------|
 | Independent Software Vendor (ISV) | Sluit aan [Adobe uitwisselingsprogramma](https://partners.adobe.com/exchangeprogram/experiencecloud.html) aan en verzoek om een zandbak van het Experience Platform te krijgen provisioned aan de toegang SDK van de Bestemming. |
 | Systeemintegrator (SI) | U moet op of het Niveau van het Goud of Platinum in [Adobe Programma van de Partner van de Oplossing ](https://solutionpartners.adobe.com/home.html) zijn, en u zult een zandbak van het Experience Platform provisioned en toegang tot Doel SDK krijgen. |
-| De klant van het Experience Platform op het pakket van de Activering | Standaard krijgt u toegang tot Experience Platform-sandboxen en de SDK van Doel. |
-| De klant van het Experience Platform op het pakket Real-time CDP | U hebt geen toegang tot Doel SDK, maar u hebt toegang tot alle geproduceerde bestemmingen die door andere bedrijven worden gevormd gebruikend de SDK van de Bestemming en die over de organisaties van het Experience Platform worden gepubliceerd. |
+| Klant van het Experience Platform op [Activeringspakket](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | Standaard krijgt u toegang tot Experience Platform-sandboxen en de SDK van Doel. |
+| De klant van het Experience Platform op [Real-time CDP pakket](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | U hebt geen toegang tot Doel SDK, maar u hebt toegang tot alle geproduceerde bestemmingen die door andere bedrijven worden gevormd gebruikend de SDK van de Bestemming en die over de organisaties van het Experience Platform worden gepubliceerd. |
 
 {style=&quot;table-layout:auto&quot;}
 

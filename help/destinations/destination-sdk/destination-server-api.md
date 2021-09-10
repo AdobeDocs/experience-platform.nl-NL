@@ -1,7 +1,8 @@
 ---
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in de Doel SDK van Adobe Experience Platform via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: API-bewerkingen voor eindpunt doelserver
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 2%
@@ -49,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -67,7 +68,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | Tekenreeks | Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
 | `destinationServerType` | Tekenreeks | `URL_BASED` is momenteel de enige beschikbare optie. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{endpoint.region}}/items`. </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Tekenreeks | Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
 | `urlBasedDestination.maxUsersPerRequest` | Geheel | Adobe kan veelvoudige uitgevoerde profielen in één enkele vraag van HTTP bijeenvoegen. Specificeer het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou Adobe om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br> Als uw server niet meerdere gebruikers per aanvraag accepteert, stelt u deze waarde in op 1. |
 | `urlBasedDestination.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een bepaalde naamruimte. |
@@ -216,7 +217,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -270,7 +271,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
