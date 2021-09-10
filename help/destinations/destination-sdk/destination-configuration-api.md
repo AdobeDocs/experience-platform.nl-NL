@@ -1,9 +1,10 @@
 ---
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination.
 title: API-eindpuntbewerkingen voor doelen
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 96755e9d-be62-432f-b985-91330575b395
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2381'
 ht-degree: 2%
 
 ---
@@ -383,7 +384,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
 | `uiAttributes.connectionType` | Tekenreeks | `Server-to-server` is momenteel de enige beschikbare optie. |
 | `uiAttributes.frequency` | Tekenreeks | `Streaming` is momenteel de enige beschikbare optie. |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolean | Hiermee geeft u aan of uw doel standaardprofielkenmerken accepteert. Gewoonlijk worden deze kenmerken gemarkeerd in de documentatie van onze partners. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Geeft aan of klanten aangepaste naamruimten kunnen instellen op uw bestemming. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Geeft aan of klanten aangepaste naamruimten kunnen instellen op uw bestemming. Meer informatie over [aangepaste naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) in Adobe Experience Platform. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | Tekenreeks | _Niet weergegeven in voorbeeldconfiguratie_. Wordt bijvoorbeeld gebruikt wanneer de [!DNL Platform]-klant gewone e-mailadressen als kenmerk heeft en uw platform alleen gehashte e-mails accepteert. Hier geeft u de transformatie op die moet worden toegepast (zet de e-mail bijvoorbeeld om in kleine letters en vervolgens in de hash). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _Niet weergegeven in voorbeeldconfiguratie_. Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
 | `destinationDelivery.authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform]-klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als klanten van het Platform zich bij uw systeem via een gebruikersbenaming en een wachtwoord, een dragerteken, of een andere methode van authentificatie aanmelden. U kunt deze optie bijvoorbeeld selecteren als u `authType: OAUTH2` of `authType:BEARER` ook in `customerAuthenticationConfigurations` hebt geselecteerd. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Platform]-klant geen verificatiegegevens hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [Credentials](./credentials-configuration.md) configuratie. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
@@ -396,6 +397,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment name. |
 | `segmentMappingConfig.audienceTemplateId` | Boolean | De `instanceId` van de [publieksmeta-gegevenssjabloon](./audience-metadata-management.md) die voor deze bestemming wordt gebruikt. Als u een sjabloon voor publieksmetagegevens wilt instellen, leest u de [API-naslaggids voor publieksmetagegevens](./audience-metadata-api.md). |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Een bestaande doelconfiguratie bijwerken {#update}
 

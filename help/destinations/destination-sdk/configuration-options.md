@@ -3,9 +3,10 @@ description: De bestemmingsdienst in Adobe Experience Platform gebruikt configur
 seo-description: The destinations service in Adobe Experience Platform uses configuration templates for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination partners, send custom messages, and activate profile data across the digital ecosystem.
 seo-title: Configuration options in Destination SDK
 title: Configuratieopties in SDK van bestemming
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -39,3 +40,5 @@ De pagina&#39;s hieronder verstrekken meer details over de functionaliteit en de
 | [Berichtindeling](./message-format.md) | - |
 | [Doelstelling testen](./test-destination.md) | [API-bewerkingen voor doeltesten](./destination-testing-api.md) |
 | [Publicatie van bestemming](./configure-destination-instructions.md#publish-destination) | [API-bewerkingen voor publiceren bestemming](./destination-publish-api.md) |
+
+{style=&quot;table-layout:auto&quot;}

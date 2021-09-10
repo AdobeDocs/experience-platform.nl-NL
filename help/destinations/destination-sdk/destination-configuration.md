@@ -1,9 +1,10 @@
 ---
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Opties voor doelconfiguratie voor doel-SDK
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -123,6 +124,8 @@ Hieronder ziet u een voorbeeldconfiguratie voor een fictieve bestemming, Moviest
 | `description` | Tekenreeks | Geef een beschrijving op die Adobe in de Experience Platform-doelcatalogus voor uw doelkaart zal gebruiken. Doel voor niet meer dan 4-5 zinnen. |
 | `status` | Tekenreeks | Geeft de levenscyclusstatus van de doelkaart aan. Accepteerde waarden zijn `TEST`, `PUBLISHED` en `DELETED`. Gebruik `TEST` wanneer u eerst uw bestemming vormt. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Verificatieconfiguraties van de klant {#customer-authentication-configurations}
 
 Deze sectie produceert de rekeningspagina in de gebruikersinterface van het Experience Platform, waar de gebruikers Experience Platform met de rekeningen verbinden zij met uw bestemming hebben. Afhankelijk van de verificatieoptie die u aangeeft in het veld `authType`, wordt de pagina Experience Platform als volgt voor de gebruikers gegenereerd:
@@ -145,6 +148,8 @@ De gebruikers selecteren **[!UICONTROL Connect to destination]** om OAuth 2 auth
 | `customerAuthenticationConfigurations` | Tekenreeks | Wijst op de configuratie die wordt gebruikt om de klanten van het Experience Platform aan uw server voor authentiek te verklaren. Zie `authType` hieronder voor geaccepteerde waarden. |
 | `authType` | Tekenreeks | Accepteerde waarden zijn `OAUTH2, BEARER`. <br><ul><li> Als uw bestemming OAuth 2 authentificatie steunt, selecteer `OAUTH2` waarde en voeg de vereiste gebieden voor OAuth 2, zoals aangetoond in de bestemmingsSDK OAuth 2 authentificatiepagina toe. Bovendien, zou u `authenticationRule=CUSTOMER_AUTHENTICATION` in [bestemmingsleveringssectie](./destination-configuration.md) moeten selecteren. </li><li>Selecteer `BEARER` en selecteer `authenticationRule=CUSTOMER_AUTHENTICATION` in de sectie [Doellevering](./destination-configuration.md) voor nauwkeurigere verificatie.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Gegevensvelden van de klant {#customer-data-fields}
 
 Deze sectie staat partners toe om douanegebieden te introduceren. In de voorbeeldconfiguratie hierboven, `customerDataFields` vereist gebruikers om een eindpunt in de authentificatiestroom te selecteren en op hun klantID met de bestemming te wijzen. De configuratie wordt weerspiegeld in de authentificatiestroom zoals hieronder getoond:
@@ -161,6 +166,8 @@ Deze sectie staat partners toe om douanegebieden te introduceren. In de voorbeel
 | `enum` | Tekenreeks | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
 | `pattern` | Tekenreeks | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` in dit veld in. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## UI-kenmerken {#ui-attributes}
 
 Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe voor uw bestemming in het gebruikersinterface van Adobe Experience Platform zou moeten gebruiken. Zie hieronder:
@@ -171,6 +178,8 @@ Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe
 | `category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html) voor meer informatie. Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | Tekenreeks | `Server-to-server` is momenteel de enige beschikbare optie. |
 | `frequency` | Tekenreeks | `Streaming` is momenteel de enige beschikbare optie. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Schemaconfiguratie in de toewijzingsstap {#schema-configuration}
 
@@ -184,6 +193,8 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de werkstroom 
 | `profileRequired` | Boolean | Gebruik `true` als de gebruikers profielattributen van Experience Platform aan douanekenmerken op de kant van uw bestemming, zoals aangetoond in de voorbeeldconfiguratie hierboven zouden moeten kunnen in kaart brengen. |
 | `segmentRequired` | Boolean | Altijd `segmentRequired:true` gebruiken. |
 | `identityRequired` | Boolean | Gebruik `true` als gebruikers naamruimten van Experience Platform aan uw gewenste schema zouden moeten kunnen in kaart brengen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Identiteiten en kenmerken {#identities-and-attributes}
 
@@ -205,6 +216,8 @@ Lees meer in [Naamruimte-overzicht](https://experienceleague.adobe.com/docs/expe
 | `allowedAttributesTransformation` | Tekenreeks | *Niet weergegeven in voorbeeldconfiguratie*. Wordt bijvoorbeeld gebruikt wanneer de [!DNL Platform]-klant gewone e-mailadressen als kenmerk heeft en uw platform alleen gehashte e-mails accepteert. Hier geeft u de transformatie op die moet worden toegepast (zet de e-mail bijvoorbeeld om in kleine letters en vervolgens in de hash). |
 | `acceptedGlobalNamespaces` | - | *Niet weergegeven in voorbeeldconfiguratie*. Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Levering bestemming {#destination-delivery}
 
 | Parameter | Type | Beschrijving |
@@ -212,6 +225,8 @@ Lees meer in [Naamruimte-overzicht](https://experienceleague.adobe.com/docs/expe
 | `authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform]-klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als klanten van het Platform zich bij uw systeem via een gebruikersbenaming en een wachtwoord, een dragerteken, of een andere methode van authentificatie aanmelden. U kunt deze optie bijvoorbeeld selecteren als u `authType: OAUTH2` of `authType:BEARER` ook in `customerAuthenticationConfigurations` hebt geselecteerd. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Platform]-klant geen verificatiegegevens hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [Credentials](./credentials-configuration.md) configuratie. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `destinationServerId` | Tekenreeks | De `instanceId` van de [doelserverconfiguratie](./destination-server-api.md) die voor deze bestemming wordt gebruikt. |
 | `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer segmenten worden geactiveerd naar de bestemming. <br> <ul><li> `true`:  [!DNL Platform] verzendt de historische gebruikersprofielen die voor het segment kwalificeren alvorens het segment wordt geactiveerd. </li><li> `false`:  [!DNL Platform] omvat alleen gebruikersprofielen die in aanmerking komen voor het segment nadat het segment is geactiveerd. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Configuratie segmenttoewijzing {#segment-mapping}
 

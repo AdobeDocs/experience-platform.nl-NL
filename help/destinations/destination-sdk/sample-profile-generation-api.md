@@ -1,9 +1,10 @@
 ---
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/sample-profiles` om voorbeeldprofielen te genereren voor gebruik in bestemmingstests.
 title: Voorbeeld van API-bewerkingen voor het genereren van profielen
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -47,6 +48,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | De id van de doelinstantie op basis waarvan u voorbeeldprofielen genereert. |
 | `{COUNT}` | *Optioneel*. Het aantal voorbeeldprofielen dat u genereert. De parameter kan waarden tussen `1 - 1000` nemen. <br> Als de telparameter niet wordt gespecificeerd, dan wordt het standaardaantal geproduceerde profielen bepaald door de  `maxUsersPerRequest` waarde in de configuratie [ van de ](./destination-server-api.md#create)bestemmingsserver. Als deze eigenschap niet is gedefinieerd, genereert Adobe één voorbeeldprofiel. |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 **Verzoek**
@@ -170,6 +173,7 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 | `xdm:status` | Geeft aan of het segmentlidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`existing`: Het profiel maakte al deel uit van het segment voorafgaand aan de aanvraag en blijft bij het lidmaatschap.</li><li>`realized`: Het profiel voert het segment in als onderdeel van de huidige aanvraag.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, lees [Basis van schemacompositie](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Voorbeeldprofielen genereren op basis van het doelschema {#generate-sample-profiles-target-schema}
 
@@ -191,6 +195,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | De id van de doelconfiguratie waarop u voorbeeldprofielen genereert. |
 | `{COUNT}` | *Optioneel*. Het aantal voorbeeldprofielen dat u genereert. De parameter kan waarden tussen `1 - 1000` nemen. <br> Als de telparameter niet wordt gespecificeerd, dan wordt het standaardaantal geproduceerde profielen bepaald door de  `maxUsersPerRequest` waarde in de configuratie [ van de ](./destination-server-api.md#create)bestemmingsserver. Als deze eigenschap niet is gedefinieerd, genereert Adobe één voorbeeldprofiel. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 

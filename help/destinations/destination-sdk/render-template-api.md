@@ -1,9 +1,10 @@
 ---
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/template/render ` API eindpunt, om uitgevoerde gegevens voor uw bestemming terug te geven, die op uw malplaatje van de berichttransformatie wordt gebaseerd.
 title: API-bewerkingen voor sjablonen renderen
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | De id van de doelconfiguratie waarvoor u geëxporteerde gegevens rendert. |
 | `template` | De op tekens gebaseerde versie van de sjabloon waarop u geëxporteerde gegevens rendert. |
 | `profiles` | Als u profielen aan het lichaam van de vraag zou willen toevoegen, kunt u wat produceren door [de generatie API van het Profiel van de Steekproef te gebruiken](./sample-profile-generation-api.md). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 U kunt geëxporteerde gegevens renderen, zoals in de volgende voorbeelden wordt getoond:
