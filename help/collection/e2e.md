@@ -2,9 +2,9 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van de technologieën voor gegevensverzameling van Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2537'
+source-wordcount: '2536'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Zie [toegangsbeheer UI overzicht](../access-control/ui/overview.md) leren hoe te
 
 ## Procesoverzicht
 
-Het configureren van Edge Network voor uw website kan als volgt worden samengevat:
+Het configureren van gegevensverzameling voor uw website kan als volgt worden samengevat:
 
 1. [Creeer een ](#schema) schema bepalen hoe uw gegevens wanneer verzonden naar het Netwerk van de Rand zullen worden gestructureerd.
 1. [Creeer een ](#datastream) gegevensstroom om te vormen welke bestemmingen u uw gegevens wilt worden verzonden naar.
