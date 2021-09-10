@@ -1,9 +1,10 @@
 ---
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van de technologieën voor gegevensverzameling van Adobe Experience Platform.
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2486'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform, verwijst de gegevensinzameling naar verscheidene technologieën die samenwerken om uw gegevens naar andere producten van de Adobe of derde bestemmingen over te brengen. Als u gebeurtenisgegevens van uw toepassing naar het Adobe Experience Platform Edge-netwerk wilt verzenden, is het belangrijk dat u deze kerntechnologieën begrijpt en weet hoe u ze configureert om uw gegevens te leveren aan de doelen die u nodig hebt, wanneer u deze nodig hebt.
 
-Deze gids verstrekt een zelfstudie op hoog niveau van hoe te om een gebeurtenis door het Netwerk van de Rand te verzenden gebruikend de technologieën van de gegevensinzameling. Specifiek, loopt het leerprogramma door de stappen om de de marktextensie van SDK van het Web van Adobe Experience Platform binnen UI van de Inzameling van Gegevens te installeren en te vormen.
+Deze gids verstrekt een zelfstudie op hoog niveau van hoe te om een gebeurtenis door het Netwerk van de Rand te verzenden gebruikend de technologieën van de gegevensinzameling. Specifiek, doorloopt het leerprogramma de stappen om de de marktextensie van SDK van het Web van Adobe Experience Platform binnen UI van de Inzameling van Gegevens (vroeger Adobe Experience Platform Launch) te installeren en te vormen.
 
 >[!NOTE]
 >
@@ -179,9 +180,26 @@ Nadat u de gegevens aan het schema hebt toegewezen, geeft u een naam voor het ge
 
 Nadat u het gegevenselement hebt opgeslagen, is de volgende stap een regel te creëren die het naar het Netwerk van de Rand zal verzenden wanneer een bepaalde gebeurtenis op uw website (zoals wanneer een klant een product aan een karretje toevoegt) voorkomt.
 
-Als voorbeeld, toont deze sectie hoe te om een regel tot stand te brengen die zal teweegbrengen wanneer een klant een punt aan een karretje toevoegt. U kunt echter regels instellen voor vrijwel elke gebeurtenis die op uw website kan plaatsvinden.
+U kunt regels instellen voor vrijwel elke gebeurtenis die op uw website kan plaatsvinden. In deze sectie wordt bijvoorbeeld getoond hoe u een regel maakt die wordt geactiveerd wanneer een klant een formulier verzendt. De volgende HTML vertegenwoordigt een eenvoudige webpagina met het formulier &quot;Toevoegen aan winkelwagentje&quot;, waarop de regel van toepassing is:
 
-Selecteer **[!UICONTROL Rules]** in de linkernavigatie, dan uitgezocht **[!UICONTROL Create New Rule]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+In de UI van de Inzameling van Gegevens, selecteer **[!UICONTROL Rules]** in de linkernavigatie, dan uitgezocht **[!UICONTROL Create New Rule]**.
 
 ![Regels](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ Geef in het volgende scherm een naam voor de regel op. Van hier, is de volgende 
 
 ![Naamregel](./images/e2e/name-rule.png)
 
-De pagina voor gebeurtenisconfiguratie wordt weergegeven. Als u een gebeurtenis wilt configureren, moet u eerst het gebeurtenistype selecteren. Gebeurtenistypen worden geleverd door extensies. Als u bijvoorbeeld een gebeurtenis &quot;form submit&quot; wilt instellen, selecteert u de extensie **[!UICONTROL Core]** en vervolgens het gebeurtenistype **[!UICONTROL Submit]** onder de categorie **[!UICONTROL Form]**. In het configuratievenster dat wordt weergegeven, kunt u de CSS-kiezer opgeven voor het formulier waarop u deze regel wilt toepassen.
+De pagina voor gebeurtenisconfiguratie wordt weergegeven. Als u een gebeurtenis wilt configureren, moet u eerst het gebeurtenistype selecteren. Gebeurtenistypen worden geleverd door extensies. Als u bijvoorbeeld een gebeurtenis &quot;form submit&quot; wilt instellen, selecteert u de extensie **[!UICONTROL Core]** en vervolgens het gebeurtenistype **[!UICONTROL Submit]** onder de categorie **[!UICONTROL Form]**.
 
 >[!NOTE]
 >
 >Zie de [referentie voor Adobe-extensies](../tags/extensions/web/overview.md) in de tagdocumentatie voor meer informatie over de verschillende gebeurtenistypen die worden geleverd door Adobe-webextensies, inclusief hoe u deze kunt configureren.
 
-Selecteer **[!UICONTROL Keep Changes]** om de gebeurtenis aan de regel toe te voegen.
+Met de gebeurtenis form submit kunt u een [CSS-kiezer](https://www.w3schools.com/css/css_selectors.asp) gebruiken om naar een specifiek element te verwijzen waarop de regel moet worden geactiveerd. In het onderstaande voorbeeld wordt de id `add-to-cart-form` gebruikt, zodat deze regel alleen wordt geactiveerd voor het formulier &quot;Toevoegen aan winkelwagentje&quot;. Selecteer **[!UICONTROL Keep Changes]** om de gebeurtenis aan de regel toe te voegen.
 
 ![Configuratie van gebeurtenissen](./images/e2e/event-config.png)
 
