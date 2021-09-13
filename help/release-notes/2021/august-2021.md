@@ -4,13 +4,13 @@ description: Opmerkingen bij de release van Experience Platform voor 25 augustus
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
+exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
+source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '709'
 ht-degree: 3%
 
 ---
-
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
@@ -27,10 +27,22 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | De bestemming Airship Attributes, voorheen in bèta, is nu algemeen beschikbaar. |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | De bestemming van de Markeringen van het Luchtschip, eerder in bèta, is nu algemeen beschikbaar. |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | De bestemming van het Waas, vroeger in bèta, is nu over het algemeen beschikbaar. |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | Met de Pinterest Customer List-bestemming kunt u een publiek maken op basis van uw klantlijsten, op basis van personen die uw site hebben bezocht of op basis van Pinterest al met uw inhoud hebben gewerkt. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd. |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen. |
+
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | De Doel SDK van Adobe Experience Platform is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald. |
 | [Verbeteringen van de bruikbaarheid van bestemmingen](../../destinations/ui/activation-overview.md) | De verbeteringen van de bruikbaarheid aan bestemmingen laten marketers toe om segmenten aan bestaande bestemmingen naadloos te activeren. |
 
 Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
