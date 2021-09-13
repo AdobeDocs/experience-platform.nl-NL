@@ -3,9 +3,9 @@ keywords: QuestionPro Intercept Surveys;questionPro onderscheppingsenquêtes;Que
 title: QuestionPro Intercept Surveys-extensie
 description: De extensie QuestionPro Intercept Surveys is een doel voor enquêtes in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: a0d6d46b-caac-48ae-94bc-4ebf24f9c94a
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/o
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren. en vraag ze om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u uitbreidingen kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 

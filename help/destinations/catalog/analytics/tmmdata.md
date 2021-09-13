@@ -3,9 +3,9 @@ keywords: TMMData;tmm-gegevens;tmmdata;TMM-gegevens
 title: TMMData-extensie
 description: De extensie TMMData is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/o
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren. en vraag ze om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u uitbreidingen kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 

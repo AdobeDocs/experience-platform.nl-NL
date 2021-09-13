@@ -3,9 +3,9 @@ keywords: Talk URL Inbox;talk url inbox;talk URL inbox;talk URL inbox;talk URL i
 title: URL-inbox-extensie Talk
 description: De Inbox van de Bespreking uitbreiding URL is een stem van de klantenbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/o
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren. en vraag ze om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u uitbreidingen kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 

@@ -3,9 +3,9 @@ keywords: Pinterest;pinterest;Pinterest-conversie bijhouden;pintrest-conversie b
 title: Pinterest Conversion Tracking-extensie
 description: De extensie Pinterest Conversion Tracking is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/o
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren. en vraag ze om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u uitbreidingen kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 

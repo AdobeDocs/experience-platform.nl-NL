@@ -3,9 +3,9 @@ keywords: Parseren. ly;parverse;Parse;parse.ly;Parse.ly
 title: Parse.ly Analytics-extensie
 description: De extensie Parse.ly Analytics is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Dit doel is een tagextensie. Zie [tagextensies overzicht](../launch-extensions/o
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren. en vraag ze om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u uitbreidingen kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
