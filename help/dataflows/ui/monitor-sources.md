@@ -6,15 +6,18 @@ title: De Dataflows van de monitor voor Bronnen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5b52d7cc2a39ce15b5a9568df14c86624ae069a
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
 
 # Dataflows controleren voor bronnen in de gebruikersinterface
+
+>[!IMPORTANT]
+>
+>Streaming bronnen, zoals de [HTTP API-bron](../../sources/connectors/streaming/http.md), worden momenteel niet ondersteund door het dashboard voor bewaking. Op dit moment kunt u het dashboard alleen gebruiken om batchbronnen te controleren.
 
 In Adobe Experience Platform worden gegevens uit een groot aantal verschillende bronnen opgenomen, binnen het Experience Platform geanalyseerd en geactiveerd voor een groot aantal verschillende bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
 
