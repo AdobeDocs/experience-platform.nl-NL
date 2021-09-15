@@ -2,13 +2,13 @@
 title: Ondersteunde gebruiksgevallen met de Adobe Experience Platform Web SDK
 description: Leer welke gebruiksgevallen worden ondersteund met de Adobe Experience Platform Web SDK.
 keywords: web sdk;use cases
-source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
+exl-id: e0643c2c-ceb3-4ea2-aafa-1e18e0c66453
+source-git-commit: ed092b85d74eaa0fdc29f3a8d28f84fe81ccca17
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 8%
+source-wordcount: '445'
+ht-degree: 10%
 
 ---
-
 
 # Ondersteunde gebruiksgevallen
 
@@ -21,12 +21,11 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Enkele gestroomlijnde SDK |  |
 | Globaal netwerk voor gegevensverzameling |  |
 | Cursustoestemming |  |
-| IAB 2.0 toestemmingskoorden | [IAB TCF 2.0-ondersteuning](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
-| Verzamel fijnkorrelige toestemming | [De SDK van het Web integreren met Adobe 2.0 toestemming](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
+| Verzamel toestemming van de klant volgens verschillende normen | <ul><li>[Adobe-ondersteuning 2.0](../../landing/governance-privacy-security/consent/adobe/overview.md)</li><li>[IAB TCF 2.0-ondersteuning](../../landing/governance-privacy-security/consent/iab/overview.md)</li><li>[Integreer SDK om toestemmingssignalen naar het Netwerk van Edge te verzenden](../../landing/governance-privacy-security/consent/sdk.md)</li></ul> |
 | ECID-ondersteuning | Zie de documentatie [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) en [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) voor informatie over het ophalen van de ECID |
 | Meerdere entiteiten verzamelen |  |
 | Ondersteuning voor apparaatgrafiek (openbaar/privé) | [Documentatie](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
-| Gegevens verzenden naar meerdere organen op de pagina | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
+| Gegevens verzenden naar meerdere organen op de pagina | [Documentatie](./interacting-with-multiple-properties.md) |
 | Gedetailleerde foutmeldingen en logbestanden |  |
 | Traceerverzoeken om client en server |  |
 | tagextensie | [Web SDK-uitbreidingsdocumenten](../../tags/extensions/web/sdk/overview.md) |
@@ -39,10 +38,10 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Gebruiksscenario | Meer informatie |
 | --- | --- |
 | Gebeurtenissen verzenden |  |
-| offer decisioning | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
+| offer decisioning | [Documentatie](../personalization/offer-decisioning/offer-decisioning-overview.md) |
 | Als dataset voor profiel wordt toegelaten, capaciteit om gegevens naar het Profiel van de Gegevens van de Klant in real time in real time te verzenden |  |
 | Gegevens in realtime naar Customer Journey Analytics verzenden |  |
-| Goedkeuring voor profiel schrijven | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
+| Goedkeuring voor profiel schrijven | [Documentatie](../../landing/governance-privacy-security/consent/sdk.md) |
 | Gegevensserver-kant in real-time doorsturen naar derden | [Documentatie](../../tags/ui/event-forwarding/overview.md) |
 | Ondersteuning voor naamruimte van identiteit |  |
 
@@ -59,14 +58,14 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Props, eVars en gebeurtenissen |  |
 | ListVar-ondersteuning voor Adobe Analytics |  |
 | Versie van besturingssysteem en browser |  |
-| Variabelen van het type Out-of-the-box | [Automatisch toegewezen variabelen](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=en#data-collection) |
+| Variabelen van het type Out-of-the-box | [Automatisch toegewezen variabelen](../data-collection/adobe-analytics/automatically-mapped-vars.md) |
 | VISTA-regels/verwerkingsregels |  |
 | Ondersteuning voor bezoekerkenmerken |  |
 | Ondersteuning voor Afsluiten |  |
 | Aangepaste koppelingen/downloadkoppelingen |  |
 | Status en handeling bijhouden |  |
 | Serienummering voor gebeurtenissen van het type Standaard |  |
-| Variabele voor producten | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
+| Variabele voor producten | [Documentatie](../data-collection/collect-commerce-data.md#actions-related-to-products) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,10 +74,10 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Gebruiksscenario | Meer informatie |
 | --- | --- |
 | Alle activiteitstypen |  |
-| Ondersteuning van native en SPA Visual Experience Composer | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=en#personalization) |
+| Ondersteuning van native en SPA Visual Experience Composer | [Documentatie](../personalization/adobe-target/spa-implementation.md) |
 | Op formulieren gebaseerde composer |  |
-| Ondersteuning voor algemene box | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) |
-| Aangepaste vakjes | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#manually-rendering-content) |
+| Ondersteuning voor algemene box | [Documentatie](../personalization/rendering-personalization-content.md#automatically-rendering-content) |
+| Aangepaste vakjes | [Documentatie](../personalization/rendering-personalization-content.md#manually-rendering-content) |
 | Analyses voor doel (A4T) |  |
 | Omgevingsondersteuning |  |
 | Werkruimteresupport |  |
@@ -88,10 +87,10 @@ Deze pagina maakt een lijst van de gesteunde gebruiksgevallen voor Web SDK, met 
 | Profielscripts |  |
 | XDM wordt mbox-parameters |  |
 | Aanbiedingen doorsturen die worden ondersteund met A4T-rapportage | [Documentatie](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
-| Het doelprofiel bijwerken | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Het doelprofiel bijwerken | [Documentatie](../personalization/adobe-target/target-overview.md#single-profile-update) |
 | Aanbevelingen |  |
 | mBox-id van derden |  |
-| Reactietokens | [Documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
+| Reactietokens | [Documentatie](../personalization/adobe-target/accessing-response-tokens.md) |
 
 {style=&quot;table-layout:auto&quot;}
 
