@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Berichtindeling
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
+source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '2056'
 ht-degree: 1%
 
 ---
@@ -775,17 +775,22 @@ In de onderstaande `json` worden de gegevens weergegeven die uit Adobe Experienc
 }
 ```
 
-### Een aggregatietoets opnemen in uw sjabloon om geëxporteerde profielen te groeperen op basis van verschillende criteria {#template-aggregation-key}
+### De samenvoegingssleutel in de sjabloon opnemen voor toegang tot geëxporteerde profielen die op verschillende criteria zijn gegroepeerd {#template-aggregation-key}
 
-Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, kunt u het malplaatje van de berichttransformatie uitgeven om de profielen te groeperen die naar uw bestemming op criteria zoals segmentidentiteitskaart, segmentalias, segmentlidmaatschap, of identiteitsnamespaces worden uitgevoerd, zoals aangetoond in de hieronder voorbeelden.
+Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, kunt u de profielen groeperen die naar uw bestemming op criteria zoals segmentidentiteitskaart, segmentalias, segmentlidmaatschap, of identiteitsnamespaces worden uitgevoerd.
+
+In het malplaatje van de berichttransformatie, kunt u tot de bovengenoemde samenvoegingssleutels toegang hebben, zoals aangetoond in de voorbeelden in de volgende secties. Hierdoor kunt u het uit Experience Platform geëxporteerde HTTP-bericht zo opmaken dat het overeenkomt met de indeling die door de bestemming wordt verwacht.
 
 #### Segment-id-aggregatietoets gebruiken in de sjabloon {#aggregation-key-segment-id}
 
-Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` aan waar plaatst, kunt u `segmentId` in het malplaatje aan groepsprofielen in de berichten van HTTP gebruiken die aan uw bestemming worden uitgevoerd:
+Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) en reeks `includeSegmentId` aan waar gebruikt, worden de profielen in de HTTP- berichten die naar uw bestemming worden uitgevoerd gegroepeerd door segmentidentiteitskaart. Zie hieronder hoe u tot segmentidentiteitskaart in het malplaatje kunt toegang hebben.
 
 **Invoer**
 
-Denk aan de vier onderstaande profielen, waarbij de eerste twee deel uitmaken van het segment met de segment-id `788d8874-8007-4253-92b7-ee6b6c20c6f3` en de andere twee deel uitmaken van het segment met de segment-id `8f812592-3f06-416b-bd50-e7831848a31a`.
+Bekijk de vier onderstaande profielen, waarbij:
+* de eerste twee maken deel uit van het segment met segmentidentiteitskaart `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* het derde profiel maakt deel uit van het segment met segment-id `8f812592-3f06-416b-bd50-e7831848a31a`
+* het vierde profiel maakt deel uit van beide segmenten hierboven .
 
 Profiel 1:
 
@@ -873,6 +878,10 @@ Profiel 4:
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
          }
       }
    }
@@ -885,24 +894,18 @@ Profiel 4:
 >
 >Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+Hieronder ziet u hoe `audienceId` in de sjabloon wordt gebruikt om toegang te krijgen tot segment-id&#39;s. Dit veronderstelt dat u `audienceId` voor segmentlidmaatschap in uw bestemmingstaxonomie gebruikt. U kunt in plaats daarvan elke andere veldnaam gebruiken, afhankelijk van uw eigen taxonomie.
+
 ```python
 {
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
-            {% for attribute in profile.attributes %}
-            "{{ attribute.key }}":
-                {% if attribute.value is empty %}
-                    null
-                {% else %}
-                    "{{ attribute.value.value }}"
-                {% endif %}
-            {% if not loop.last %},{% endif %}
-            {% endfor %}
+            "first_name": "{{ profile.attributes.firstName.value }}"
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
-    "audienceId": "{{input.aggregationKey.segmentId}}"
 }
 ```
 
@@ -912,49 +915,53 @@ Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groe
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Hermione",
-            "birthDate": null
-        },
-        {
-            "firstName": "Harry",
-            "birthDate": "1980/07/31"
-        }
-    ],
-    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione",
+         "birthDate":null
+      },
+      {
+         "firstName":"Harry",
+         "birthDate":"1980/07/31"
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Tom",
-            "birthDate": null
-        },
-        {
-            "firstName": "Jerry",
-            "birthDate": "1940/01/01"
-        }
-    ],
-    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom",
+         "birthDate":null
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 #### Segmentaliasaggregatietoets gebruiken in de sjabloon {#aggregation-key-segment-alias}
 
-Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) en reeks `includeSegmentId` aan waar gebruikt, kunt u segmentalias in het malplaatje aan groepsprofielen in de berichten van HTTP gebruiken die aan uw bestemming worden uitgevoerd.
+Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) en reeks `includeSegmentId` aan waar gebruikt, kunt u tot segment alias in het malplaatje ook toegang hebben.
 
-Voeg de onderstaande regel aan de sjabloon toe om geëxporteerde profielen te groeperen op basis van de segmentalias.
+Voeg de onderstaande regel toe aan de sjabloon voor toegang tot de geëxporteerde profielen die zijn gegroepeerd op segmentalias.
 
 ```python
-"customerList={{input.aggregationKey.segmentAlias}}"
+customerList={{input.aggregationKey.segmentAlias}}
 ```
 
 #### De aggregatietoets voor de segmentstatus in de sjabloon gebruiken {#aggregation-key-segment-status}
 
-Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` en `includeSegmentStatus` aan waar plaatst, kunt u de segmentstatus in het malplaatje aan groepsprofielen in de HTTP- berichten gebruiken die aan uw bestemming worden uitgevoerd op of de profielen zouden moeten worden toegevoegd of uit segmenten worden verwijderd.
+Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` en `includeSegmentStatus` aan waar plaatst, kunt u tot de segmentstatus in het malplaatje toegang hebben om profielen in de HTTP- berichten te groeperen die naar uw bestemming worden uitgevoerd op of de profielen zouden moeten worden toegevoegd of uit segmenten worden verwijderd.
 
 Mogelijke waarden zijn:
 
@@ -962,10 +969,10 @@ Mogelijke waarden zijn:
 * bestaand
 * verlaten
 
-Voeg op basis van bovenstaande waarden de onderstaande regel toe aan de sjabloon om profielen toe te voegen aan of te verwijderen uit segmenten.:
+Voeg op basis van de bovenstaande waarden de onderstaande regel toe aan de sjabloon om profielen toe te voegen aan of te verwijderen uit segmenten:
 
 ```python
-"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
 #### Naamruimteaggregatietoets gebruiken in de sjabloon {#aggregation-key-identity}
@@ -1024,6 +1031,8 @@ Profiel 2:
 >
 >Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+In de onderstaande sjabloon wordt `input.aggregationKey.identityNamespaces` gebruikt
+
 ```python
 {
             "profiles": [
@@ -1071,7 +1080,7 @@ In de onderstaande `json` worden de gegevens weergegeven die uit Adobe Experienc
 }
 ```
 
-#### De aggregatietoets in een URL-sjabloon gebruiken
+#### De aggregatietoets in een URL-sjabloon gebruiken {#aggregation-key-url-template}
 
 Afhankelijk van het gebruik dat u gebruikt, kunt u ook de hier in een URL beschreven aggregatietoetsen gebruiken, zoals hieronder wordt getoond:
 
