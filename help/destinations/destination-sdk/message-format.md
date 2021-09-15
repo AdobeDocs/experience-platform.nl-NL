@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Berichtindeling
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 1%
 
 ---
@@ -779,7 +779,7 @@ In de onderstaande `json` worden de gegevens weergegeven die uit Adobe Experienc
 
 Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, kunt u het malplaatje van de berichttransformatie uitgeven om de profielen te groeperen die naar uw bestemming op criteria zoals segmentidentiteitskaart, segmentalias, segmentlidmaatschap, of identiteitsnamespaces worden uitgevoerd, zoals aangetoond in de hieronder voorbeelden.
 
-#### Voorbeeld van het gebruik van de segment-ID-aggregatietoets in de sjabloon {#aggregation-key-segment-id}
+#### Segment-id-aggregatietoets gebruiken in de sjabloon {#aggregation-key-segment-id}
 
 Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` aan waar plaatst, kunt u `segmentId` in het malplaatje aan groepsprofielen in de berichten van HTTP gebruiken die aan uw bestemming worden uitgevoerd:
 
@@ -942,7 +942,7 @@ Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groe
 }
 ```
 
-#### Voorbeeld van het gebruik van de samenvoegingssleutel van segmenten in de sjabloon {#aggregation-key-segment-alias}
+#### Segmentaliasaggregatietoets gebruiken in de sjabloon {#aggregation-key-segment-alias}
 
 Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) en reeks `includeSegmentId` aan waar gebruikt, kunt u segmentalias in het malplaatje aan groepsprofielen in de berichten van HTTP gebruiken die aan uw bestemming worden uitgevoerd.
 
@@ -952,7 +952,7 @@ Voeg de onderstaande regel aan de sjabloon toe om geëxporteerde profielen te gr
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### Voorbeeld van het gebruik van de samenvoegingssleutel voor de segmentstatus in de sjabloon {#aggregation-key-segment-status}
+#### De aggregatietoets voor de segmentstatus in de sjabloon gebruiken {#aggregation-key-segment-status}
 
 Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` en `includeSegmentStatus` aan waar plaatst, kunt u de segmentstatus in het malplaatje aan groepsprofielen in de HTTP- berichten gebruiken die aan uw bestemming worden uitgevoerd op of de profielen zouden moeten worden toegevoegd of uit segmenten worden verwijderd.
 
@@ -968,7 +968,7 @@ Voeg op basis van bovenstaande waarden de onderstaande regel toe aan de sjabloon
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### Voorbeeld van het gebruik van aggregatietoets voor naamruimte in de sjabloon {#aggregation-key-identity}
+#### Naamruimteaggregatietoets gebruiken in de sjabloon {#aggregation-key-identity}
 
 Hieronder ziet u een voorbeeld waarin de [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de doelconfiguratie is ingesteld op het samenvoegen van geëxporteerde profielen via naamruimten, in de notatie `"identityNamespaces": ["email", "phone"]`
 
@@ -1071,7 +1071,7 @@ In de onderstaande `json` worden de gegevens weergegeven die uit Adobe Experienc
 }
 ```
 
-#### Voorbeeld van het gebruik van de samenvoegingssleutel in een URL-sjabloon
+#### De aggregatietoets in een URL-sjabloon gebruiken
 
 Afhankelijk van het gebruik dat u gebruikt, kunt u ook de hier in een URL beschreven aggregatietoetsen gebruiken, zoals hieronder wordt getoond:
 
