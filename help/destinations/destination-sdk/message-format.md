@@ -3,9 +3,10 @@ description: Gebruik de inhoud op deze pagina samen met de rest configuratieopti
 seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
 seo-title: Message format
 title: Berichtindeling
-source-git-commit: d60933d2083b7befcfa8beba4b1630f372c08cfa
+exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -93,17 +94,15 @@ Deze sectie verstrekt verscheidene voorbeelden van hoe deze transformaties, van 
 
 1. Eenvoudige transformatievoorbeelden. Leer hoe sjablonen werken met eenvoudige transformaties voor [Profielkenmerken](./message-format.md#attributes), [Segmentlidmaatschap](./message-format.md#segment-membership) en [Identiteitsvelden](./message-format.md#identities).
 2. Eenvoudigere voorbeelden van sjablonen waarin bovenstaande velden worden gecombineerd: [Maak een sjabloon voor het verzenden van segmenten en identiteiten](./message-format.md#segments-and-identities) en [Maak een sjabloon voor het verzenden van segmenten, identiteiten en profielkenmerken](./message-format.md#segments-identities-attributes).
-3. Duidelijke duik, die twee voorbeelden van malplaatjes van industriepartners toont.
+3. Sjablonen bevatten de aggregatietoets. Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, groepeert het Experience Platform de profielen die aan uw bestemming worden uitgevoerd die op criteria zoals segment ID, segmentstatus, of identiteitsnamespaces wordt gebaseerd.
 
 ### Profielkenmerken {#attributes}
 
 Als u de profielkenmerken die naar uw doel zijn geëxporteerd, wilt transformeren, raadpleegt u de JSON en de codevoorbeelden hieronder.
 
-
 >[!IMPORTANT]
 >
 >Zie [XDM-veldwoordenboek](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) voor een lijst met alle beschikbare profielkenmerken in Adobe Experience Platform.
-
 
 
 **Invoer**
@@ -776,7 +775,311 @@ In de onderstaande `json` worden de gegevens weergegeven die uit Adobe Experienc
 }
 ```
 
-### Referentie: Context en functies die worden gebruikt in de transformatiesjablonen
+### Een aggregatietoets opnemen in uw sjabloon om geëxporteerde profielen te groeperen op basis van verschillende criteria {#template-aggregation-key}
+
+Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, kunt u het malplaatje van de berichttransformatie uitgeven om de profielen te groeperen die naar uw bestemming op criteria zoals segmentidentiteitskaart, segmentalias, segmentlidmaatschap, of identiteitsnamespaces worden uitgevoerd, zoals aangetoond in de hieronder voorbeelden.
+
+#### Voorbeeld van het gebruik van de segment-ID-aggregatietoets in de sjabloon {#aggregation-key-segment-id}
+
+Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` aan waar plaatst, kunt u `segmentId` in het malplaatje aan groepsprofielen in de berichten van HTTP gebruiken die aan uw bestemming worden uitgevoerd:
+
+**Invoer**
+
+Denk aan de vier onderstaande profielen, waarbij de eerste twee deel uitmaken van het segment met de segment-id `788d8874-8007-4253-92b7-ee6b6c20c6f3` en de andere twee deel uitmaken van het segment met de segment-id `8f812592-3f06-416b-bd50-e7831848a31a`.
+
+Profiel 1:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profiel 2:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profiel 3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profiel 4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**Sjabloon**
+
+>[!IMPORTANT]
+>
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**Resultaat**
+
+Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groepen gesplitst op basis van hun segment-id.
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
+
+#### Voorbeeld van het gebruik van de samenvoegingssleutel van segmenten in de sjabloon {#aggregation-key-segment-alias}
+
+Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) en reeks `includeSegmentId` aan waar gebruikt, kunt u segmentalias in het malplaatje aan groepsprofielen in de berichten van HTTP gebruiken die aan uw bestemming worden uitgevoerd.
+
+Voeg de onderstaande regel aan de sjabloon toe om geëxporteerde profielen te groeperen op basis van de segmentalias.
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### Voorbeeld van het gebruik van de samenvoegingssleutel voor de segmentstatus in de sjabloon {#aggregation-key-segment-status}
+
+Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` en `includeSegmentStatus` aan waar plaatst, kunt u de segmentstatus in het malplaatje aan groepsprofielen in de HTTP- berichten gebruiken die aan uw bestemming worden uitgevoerd op of de profielen zouden moeten worden toegevoegd of uit segmenten worden verwijderd.
+
+Mogelijke waarden zijn:
+
+* gereed
+* bestaand
+* verlaten
+
+Voeg op basis van bovenstaande waarden de onderstaande regel toe aan de sjabloon om profielen toe te voegen aan of te verwijderen uit segmenten.:
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### Voorbeeld van het gebruik van aggregatietoets voor naamruimte in de sjabloon {#aggregation-key-identity}
+
+Hieronder ziet u een voorbeeld waarin de [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de doelconfiguratie is ingesteld op het samenvoegen van geëxporteerde profielen via naamruimten, in de notatie `"identityNamespaces": ["email", "phone"]`
+
+**Invoer**
+
+Profiel 1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+Profiel 2:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
+```
+
+**Sjabloon**
+
+>[!IMPORTANT]
+>
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**Resultaat**
+
+In de onderstaande `json` worden de gegevens weergegeven die uit Adobe Experience Platform zijn geëxporteerd.
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+#### Voorbeeld van het gebruik van de samenvoegingssleutel in een URL-sjabloon
+
+Afhankelijk van het gebruik dat u gebruikt, kunt u ook de hier in een URL beschreven aggregatietoetsen gebruiken, zoals hieronder wordt getoond:
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### Referentie: Context en functies die worden gebruikt in de transformatiesjablonen {#reference}
 
 De context die aan het malplaatje wordt verstrekt bevat `input` (de profielen/de gegevens die in deze vraag worden uitgevoerd) en `destination` (gegevens over de bestemming die Adobe gegevens naar verzendt, geldig voor alle profielen).
 

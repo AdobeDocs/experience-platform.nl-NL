@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Opties voor doelconfiguratie voor doel-SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1554'
 ht-degree: 2%
 
 ---
@@ -247,6 +247,8 @@ Deze sectie staat u toe om het samenvoegingsbeleid te plaatsen dat het Experienc
 Een samenvoegingsbeleid bepaalt hoe de uitgevoerde profielen samen in de gegevensuitvoer worden gecombineerd. Beschikbare opties zijn:
 * Beste inspanningsaggregatie
 * Configureerbare samenvoeging (weergegeven in de bovenstaande configuratie)
+
+Lees de sectie over [het gebruiken van templating](./message-format.md#using-templating) en [samenvoeging zeer belangrijke voorbeelden](./message-format.md#template-aggregation-key) om te begrijpen hoe te om het samenvoegingsbeleid in uw malplaatje van de berichttransformatie te omvatten dat op uw geselecteerd samenvoegingsbeleid wordt gebaseerd.
 
 ### Beste inspanningsaggregatie {#best-effort-aggregation}
 
