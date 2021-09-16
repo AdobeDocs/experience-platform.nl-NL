@@ -4,9 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel in realtime
 topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
@@ -75,15 +75,21 @@ Vergelijkbaar met de [profieltelling](#profile-count) metrisch, wanneer de opnam
 
 Op het tabblad **[!UICONTROL Browse]** kunt u voorbeeldprofielen weergeven met behulp van een samenvoegbeleid of specifieke profielen opzoeken met behulp van een naamruimte en waarde voor identiteit.
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### Bladeren op [!UICONTROL Merge policy]
 
-De **[!UICONTROL Browse by]** selecteur wordt geplaatst aan [!UICONTROL Merge policy] door gebrek en **[!UICONTROL Merge policy]** geselecteerd is het standaardsamenvoegbeleid voor uw organisatie.
+Het tabblad **[!UICONTROL Browse]** is standaard ingesteld op het standaardsamenvoegbeleid voor uw organisatie. Als u een ander samenvoegbeleid wilt kiezen, selecteert u `X` naast de naam van het samenvoegbeleid en opent u het dialoogvenster **[!UICONTROL Select merge policy]** met de kiezer.
 
-Meer over fusiebeleid en hun rol binnen Platform leren, zie [overzicht van fusiebeleid](../merge-policies/overview.md).
+>[!NOTE]
+>
+>Als er geen samenvoegbeleid is geselecteerd, gebruikt u de selectieknop naast het veld **[!UICONTROL Merge policy]** om het selectiedialoogvenster te openen.
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+Als u een samenvoegbeleid wilt kiezen in het dialoogvenster **[!UICONTROL Select merge policy]**, selecteert u het keuzerondje naast de naam van het beleid en gebruikt u **[!UICONTROL Select]** om terug te keren naar het tabblad [!UICONTROL Browse]. U kunt **[!UICONTROL View]** dan selecteren om de steekproefprofielen te verfrissen en een steekproef van profielen met het nieuwe toegepaste samenvoegingsbeleid te zien.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 De profielen die worden getoond vertegenwoordigen een steekproef van maximaal 20 profielen van de het profielopslag van uw organisatie, nadat het geselecteerde samenvoegbeleid is toegepast. De voorbeeldprofielen voor het geselecteerde samenvoegbeleid worden vernieuwd wanneer nieuwe gegevens worden toegevoegd aan de profielopslag van uw organisatie.
 
@@ -91,21 +97,16 @@ Als u de details van een van de voorbeeldprofielen wilt weergeven, selecteert u 
 
 ![](../images/user-guide/sample-profiles.png)
 
-Als u een ander samenvoegbeleid wilt kiezen, selecteert u `X` naast de naam van het samenvoegbeleid en opent u het dialoogvenster **[!UICONTROL Select merge policy]** met de kiezer.
+Meer over fusiebeleid en hun rol binnen Platform leren, zie [overzicht van fusiebeleid](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policy-select.png)
-
-Als u een samenvoegbeleid wilt kiezen in het dialoogvenster **[!UICONTROL Select merge policy]**, selecteert u het keuzerondje naast de naam van het beleid en gebruikt u **[!UICONTROL Select]** om terug te keren naar het tabblad [!UICONTROL Browse]. U kunt **[!UICONTROL View]** dan selecteren om de steekproefprofielen te verfrissen en een steekproef van profielen met het nieuwe toegepaste samenvoegingsbeleid te zien.
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### Bladeren op [!UICONTROL Identity]
 
-Met de kiezer **[!UICONTROL Browse by]** kunt u [!UICONTROL Identity] kiezen om een specifiek profiel op te zoeken aan de hand van een identiteitswaarde. Wanneer u bladert op basis van een identiteit, moet u ook een samenvoegbeleid, een naamruimte voor identiteit en een identiteitswaarde opgeven.
+Op het tabblad **[!UICONTROL Browse]** kunt u een naamruimte gebruiken om een specifiek profiel op te zoeken aan de hand van een identiteitswaarde. Als u bladert op basis van een identiteit, moet u een samenvoegbeleid, een naamruimte voor identiteit en een identiteitswaarde opgeven.
 
 ![](../images/user-guide/browse-by-identity.png)
 
-Met de kiezer **[!UICONTROL Merge policy]** opent u het dialoogvenster **[!UICONTROL Select merge policy]** en kiest u het samenvoegbeleid dat u wilt gebruiken.
+Gebruik indien nodig de kiezer **[!UICONTROL Merge policy]** om het dialoogvenster **[!UICONTROL Select merge policy]** te openen en kies het samenvoegbeleid dat u wilt gebruiken.
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
