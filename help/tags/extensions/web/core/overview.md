@@ -1,9 +1,10 @@
 ---
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '4895'
+source-wordcount: '5120'
 ht-degree: 0%
 
 ---
@@ -774,3 +775,36 @@ Enkele gangbare gebruiksgevallen zijn:
 * Als dit de landingspagina voor het bezoek is, vult u een metrische analyse in
 * Nieuwe aanbieding weergeven aan bezoeker na X-aantal aantal aantal sessies
 * Een nieuwsbrief weergeven als dit een eerste bezoeker is
+
+### Voorwaardelijke waarde
+
+Een omslag voor de [Vergelijking van de Waarde](#value-comparison-value-comparison) voorwaarde. Op basis van het resultaat van de vergelijking wordt een van de twee beschikbare waarden in het formulier geretourneerd. Kan hiermee &quot;if... Dan... Anders...&quot; scenario&#39;s zonder extra regels.
+
+### Runtimeomgeving
+
+Hiermee kunt u een van de volgende variabelen selecteren:
+
+* Het stadium van het milieu - Keert `_satellite.environment.stage` terug om tussen ontwikkelings/het opvoeren/productiemilieu&#39;s te onderscheiden.
+* Bouwstijldatum van bibliotheek - Keert `turbine.buildInfo.buildDate` terug die de zelfde waarde zoals `_satellite.buildInfo.buildDate` bevat.
+* Eigenschapnaam - Retourneert `_satellite.property.name` om de naam van de eigenschap Launch op te halen.
+* Eigenschap-id - retourneert `_satellite.property.id` om de id van de eigenschap Launch op te halen
+* Naam van regel - Retourneert `event.$rule.name` met daarin de naam van de uitgevoerde regel.
+* Regel ID - Keert `event.$rule.id` terug die identiteitskaart van de uitgevoerde regel bevatten.
+* Gebeurtenistype - Retourneert `event.$type` met het type gebeurtenis dat de regel heeft geactiveerd.
+* De detaillading van de gebeurtenis - keert `event.detail` terug die de lading van een Gebeurtenis van de Douane of de Directe Regel van de Vraag bevatten.
+* Directe vraagherkenningsteken - Keert `event.identifier` terug die herkenningsteken van een Directe Regel van de Vraag bevatten.
+
+### Apparaatkenmerken
+
+Retourneert een van de volgende kenmerken van het bezoekersapparaat:
+
+* Grootte browservenster
+* Schermgrootte
+
+### JavaScript-gereedschappen
+
+Dit is een omslag voor veelvoorkomende JavaScript-bewerkingen. Het ontvangt een gegevenselement als input. Het keert het resultaat van één van de volgende transformaties van de waarde van het gegevenselement terug:
+
+* Basisbewerkingen voor tekenreeksen (vervangen, subtekenreeks, regex overeenkomst, eerste en laatste index, splitsen, segment)
+* Elementaire array-bewerkingen (segment, verbinding, pop, shift)
+* Algemene universele bewerkingen (segment, lengte)

@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1417'
 ht-degree: 1%
 
 ---
@@ -13,6 +14,18 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 16 september 2021
+
+v3.1.0
+
+Er zijn nieuwe gegevenselementen toegevoegd:
+
+* Samengevoegd object - selecteer meerdere gegevenselementen die elk een object leveren. Deze objecten worden diep (recursief) samengevoegd om een nieuw object te maken.
+* Voorwaardelijke waarde - Retourneer een van twee waarden (conditionalValue of fallbackValue) op basis van het resultaat van de vergelijking.
+* Runtime Environment - Retourneer een van de volgende Launch-omgevingsvariabelen: het milieustadium, bibliotheek bouwt datum, bezitsnaam, bezits identiteitskaart, regelnaam, regel identiteitskaart, gebeurtenistype, gebeurtenisdetaillading, directe vraagherkenningsteken.
+* JavaScript-gereedschappen - Omsluitend voor veelgebruikte JavaScript-bewerkingen: eenvoudige tekenreeksmanipulatie (vervangen, subtekenreeks, regex-overeenkomst, eerste en laatste index, splitsen, segment), eenvoudige arraybewerkingen (segment, samenvoeging, pop, shift) en universele basisbewerkingen (segment, lengte).
+* Apparaatkenmerken - Retourapparaatkenmerken zoals venstergrootte of schermgrootte.
 
 ## 11 augustus 2021
 
