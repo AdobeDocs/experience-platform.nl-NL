@@ -2,9 +2,9 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5120'
+source-wordcount: '5247'
 ht-degree: 0%
 
 ---
@@ -708,6 +708,61 @@ Geef de naam van uw lokale opslagitem op in het veld Itemnaam lokale opslag.
 Lokale opslag biedt browsers een manier om informatie van pagina tot pagina op te slaan ([https://www.w3schools.com/html/html5\_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
 
 Gebruik het opgegeven veld om de waarde op te geven die u hebt gemaakt voor een lokaal opslagitem, zoals `lastProductViewed.`
+
+### Samengevoegde objecten
+
+Selecteer meerdere gegevenselementen die elk een object leveren. Deze objecten worden diep (recursief) samengevoegd om een nieuw object te maken. De bronobjecten worden niet gewijzigd. Als een eigenschap op dezelfde locatie op meerdere bronobjecten wordt gevonden, wordt de waarde van het laatste object gebruikt. Als een waarde van een broneigenschap `undefined` is, wordt een waarde van een eerder bronobject niet overschreven. Als arrays op dezelfde locatie op meerdere bronobjecten worden gevonden, worden de arrays samengevoegd.
+
+Stel bijvoorbeeld dat u een gegevenselement selecteert dat het volgende object biedt:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Stel dat u ook een ander gegevenselement selecteert dat het volgende object biedt:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+Het resultaat van het gegevenselement Samengevoegde objecten is het volgende object:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### Pagina-info
 
