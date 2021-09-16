@@ -2,9 +2,9 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met controlelogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
+source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '587'
 ht-degree: 2%
 
 ---
@@ -21,16 +21,18 @@ Eenvoudig gezegd, vertelt een controlelogboek **Who** uitgevoerde **wat** actie,
 
 Dit document behandelt controlelogboeken in Platform, met inbegrip van hoe te om hen in UI of API te bekijken en te beheren.
 
-## Gebeurtenistypen die zijn vastgelegd in auditlogboeken
+## Gebeurtenistypen die zijn vastgelegd in auditlogboeken {#category}
 
 In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlogboeken worden vastgelegd:
 
 | Resource | Acties |
 | --- | --- |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Herstellen</li><li>Verwijderen</li></ul> |
 | [Gegevensset](../../../catalog/datasets/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen voor [Real-time klantprofiel](../../../profile/home.md)</li></ul> |
 | [Schema](../../../xdm/schema/composition.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Veldgroep](../../../xdm/schema/composition.md#field-group) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Gegevenstype](../../../xdm/schema/composition.md#data-type) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Herstellen</li><li>Verwijderen</li></ul> |
 | [Bestemming](../../../destinations/home.md) | <ul><li>Activeren</li></ul> |
 
 ## Toegang tot auditlogboeken
@@ -50,6 +52,23 @@ Het systeem geeft alleen auditlogboeken van het laatste jaar weer. Logboeken die
 Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven.
 
 ![Gebeurtenisdetails](../../images/audit-logs/select-event.png)
+
+Selecteer het trechter-pictogram (![Filterpictogram](../../images/audit-logs/icon.png)) om een lijst met filterbesturingselementen weer te geven voor een kleiner resultaat.
+
+![Filters](../../images/audit-logs/filters.png)
+
+De volgende filters zijn beschikbaar voor controlegebeurtenissen in UI:
+
+| Filter | Beschrijving |
+| --- | --- |
+| [!UICONTROL Category] | Gebruik het vervolgkeuzemenu om de weergegeven resultaten te filteren op [category](#category). |
+| [!UICONTROL Action] | Filteren op handeling. Momenteel kunnen alleen [!UICONTROL Create]- en [!UICONTROL Delete]-handelingen worden gefilterd. |
+| [!UICONTROL Access Control Status] | Filter door of de actie was toegestaan (voltooid) of wegens gebrek aan [toegangsbeheer](../../../access-control/home.md) toestemmingen werd ontkend. |
+| [!UICONTROL Date] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. |
+
+Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** om alle filters te verwijderen.
+
+![Filters wissen](../../images/audit-logs/clear-filters.png)
 
 <!-- (Planned for post-beta release)
 ### Export an audit log
