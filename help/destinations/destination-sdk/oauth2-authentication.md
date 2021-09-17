@@ -2,9 +2,9 @@
 description: Deze pagina beschrijft de diverse OAuth 2 authentificatiestromen die door Doel SDK worden gesteund, en verstrekt instructies aan opstelling OAuth 2 authentificatie voor uw bestemming.
 title: OAuth 2-verificatie
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: e8625d6de7707b3a159f95d4471a73cbbed25d21
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2110'
 ht-degree: 3%
 
 ---
@@ -21,18 +21,15 @@ Deze pagina beschrijft de diverse OAuth 2 authentificatiestromen die door Doel S
 
 ### Vereisten in uw systeem {#prerequisites}
 
-Als eerste stap moet u in uw systeem een app voor Adobe Experience Platform maken of op een andere manier Experience Platform in uw systeem registreren. Het doel is een cliëntidentiteitskaart en cliëntgeheim te produceren, die nodig zijn om Experience Platform aan uw bestemming voor authentiek te verklaren. Als onderdeel van deze configuratie in uw systeem hebt u de Adobe Experience Platform OAuth 2-URL voor omleiding/callback nodig, die u uit de onderstaande tabel kunt ophalen.
+Als eerste stap moet u in uw systeem een app voor Adobe Experience Platform maken of op een andere manier Experience Platform in uw systeem registreren. Het doel is een cliëntidentiteitskaart en cliëntgeheim te produceren, die nodig zijn om Experience Platform aan uw bestemming voor authentiek te verklaren. Als onderdeel van deze configuratie in uw systeem hebt u de Adobe Experience Platform OAuth 2 omleiding/callback-URL&#39;s nodig, die u uit de onderstaande lijst kunt halen.
+
+* `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
 >De stap om een omleidings/callback URL voor Adobe Experience Platform in uw systeem te registreren wordt vereist slechts voor [OAuth 2 met de Code van de Toelating](./oauth2-authentication.md#authorization-code) subsidietype. Voor de andere twee gesteunde subsidietypes (wachtwoord en cliëntgeloofsbrieven), kunt u deze stap overslaan.
-
-| URL omleiden/terugbellen | Omgeving |
-|---------|----------|
-| `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | Productie |
-| `https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | Staging |
-
-{style=&quot;table-layout:auto&quot;}
 
 Aan het eind van deze stap, zou u moeten hebben:
 * een client-id;
@@ -466,7 +463,7 @@ Afhankelijk van uw authentificatieaanpassing, zou u tot gegevensgebieden in de a
 | response.body | HTTP-responsinstantie | ``{{ response.body.access_token }}`` |
 | response.status | HTTP-reactiestatus | ``{{ response.status }}`` |
 | response.headers | HTTP-antwoordheaders | ``{{ response.headers.server[0] }}`` |
-| authContext | Toegang tot informatie over de huidige verificatiepoging | <ul><li>`{{ authContext.sandboxName }} `</li><li>`{{ authContext.sandboxId }} `</li><li>`{{ authContext.imsOrgId }} `</li><li>`{{ authContext.client }} // the client executing the authentication attempt `</li></ul> |
+| userContext | Toegang tot informatie over de huidige verificatiepoging | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
