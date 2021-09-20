@@ -1,13 +1,13 @@
 ---
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 1f18e07af7ef0d90f882fa668c5659330bce5960
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
-
 
 # (bèta) Marketo Engage-bestemming {#beta-marketo-engage-destination}
 
@@ -32,18 +32,26 @@ De segmentschakelaar laat marketers toe om segmenten die in Adobe Experience Pla
 
 De Uitvoer van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) die in de bestemming van de Marketo Engage worden gebruikt.
 
-## Instellen {#set-up}
+## Doel instellen en segmenten activeren {#set-up}
 
-Hier vindt u instructies over het instellen van de bestemming [a1/>.](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)
+Lees [Push an Adobe Experience Platform Segment to a Marketo Static List](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in de documentatie van Marketo voor gedetailleerde instructies voor het instellen van de bestemming en het activeren van segmenten.
 
-## Verbinden met de bestemming {#connect}
+<!--
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+## Connect to the destination {#connect}
 
-## Gebruik en beheer van gegevens {#data-usage-governance}
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+
+-->
+
+## Gegevensgebruik en -beheer {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie [gegeven governance overzicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
-## Segmenten naar dit doel activeren {#activate}
+<!--
 
-Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
+## Activate segments to this destination {#activate}
+
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
+-->
