@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 17 september 2021
+
+v3.1.1
+
+* Corrigeer een JS-fout waardoor de weergave van de datumbereikvoorwaarde niet kon worden geladen.
 
 ## 16 september 2021
 
