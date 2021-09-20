@@ -2,10 +2,10 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '896'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -55,18 +55,17 @@ ht-degree: 0%
 
 **De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) die in de bestemming  ** YOURDESTINATION worden gebruikt.
 
-## Gevallen gebruiken
+## Gebruiksscenario’s
 
 Om u beter te helpen begrijpen hoe en wanneer u *UURDESTINATION* bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
 
-
-### Hoofdletters en kleine letters gebruiken 1
+### Hoofdletters gebruiken #1
 
 *Voor mobiele berichtenplatforms:*
 
 *Een homepage- en verkoopplatform wil mobiele meldingen naar Android- en iOS-apparaten van klanten doorsturen om hen te laten weten dat er 100 bijgewerkte aanbiedingen zijn in het gebied waar ze eerder naar een verhuur hebben gezocht.*
 
-### Hoofdletters en kleine letters gebruiken 2
+### Hoofdletters gebruiken #2
 
 *Voor sociale netwerkplatforms:*
 
