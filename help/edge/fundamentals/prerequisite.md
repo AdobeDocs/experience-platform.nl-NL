@@ -3,9 +3,9 @@ title: Vereisten voor het Gebruiken van het Web SDK van Adobe Experience Platfor
 description: Leer over de eerste vereisten voor het gebruiken van SDK van het Web van Adobe Experience Platform.
 keywords: 1st-partijdomein;CNAME;schema;creeer schema;lancering;aep Web sdk uitbreiding;uitbreiding;configuratie identiteitskaart;configuratiehulpmiddel;gegevenselement;creeer gegevenselement;XDM Voorwerp;sendEvent;send Gebeurtenis;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 5f3b82edbc52d96cad13932be1d201e275780f3c
+source-git-commit: 9d3965be1956de754f0d2a82178bf5dcd871e239
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -23,3 +23,17 @@ Om SDK van het Web van het Platform te gebruiken, moet u eerst:
 
 - Mag Adobe Experience Platform gebruiken. Als u Adobe Experience Platform niet hebt aangeschaft, biedt Adobe u zonder extra kosten de benodigde toegang om op beperkte wijze met de SDK te gebruiken.
 - Als uw website de [Experience Cloud ID Service](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) al op uw website gebruikt—via de Bezoeker-API of de Experience Cloud ID Service-extensie in Adobe Experience Platform Launch—en u wilt deze blijven gebruiken tijdens het migreren naar Adobe Experience Platform Web SDK, moet u de nieuwste versie van de Bezoeker-API of de Experience Cloud ID Service-extensie gebruiken. Zie [ID-migratie](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) voor meer informatie.
+
+## Machtigingen beheren voor Adobe Experience Platform Web SDK
+
+Het gebruiken van Adobe Experience Platform vereist geen speciale toestemming maar u moet het recht [toestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) hebben om uw schema&#39;s in Adobe Experience Platform tot stand te brengen. De minimale machtigingen die iemand nodig heeft, kunt u vinden in de categorie Gegevensmodellen en identiteiten.
+
+![](../images/AEP-permission-categories.png)
+
+Geef gebruikers binnen de categorie Gegevensmodellering de machtigingen Schema&#39;s beheren en Schema&#39;s weergeven.
+
+![](../images/data-modeling-permissions.png)
+
+Geef gebruikers binnen de categorie Identity Management de machtigingen Naamruimten beheren en Identiteitsnaamruimten weergeven.
+
+![](../images/identity-management-permissions.png)

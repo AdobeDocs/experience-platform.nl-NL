@@ -3,9 +3,9 @@ title: Foutopsporing in de SDK van Adobe Experience Platform Web
 description: Leer hoe te om het zuiveren mogelijkheden in de SDK van het Web van het Experience Platform van een knevel te voorzien.
 keywords: foutopsporing in de web-SDK;foutopsporing;configureren;configureren, opdracht;foutopsporing, opdracht;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,14 @@ ht-degree: 0%
 
 Wanneer het zuiveren wordt toegelaten, voert SDK berichten aan de browser console uit die in het zuiveren van uw implementatie en het begrijpen van kunnen nuttig zijn hoe SDK zich gedraagt.
 
-Foutopsporing is standaard uitgeschakeld, maar u kunt dit op drie verschillende manieren in- en uitschakelen:
+Foutopsporing is standaard uitgeschakeld, maar u kunt deze op vier verschillende manieren in- en uitschakelen:
 
 * `configure` command
 * `setDebug` command
 * querytekenreeks, parameter
+* Foutopsporing inschakelen in Adobe Experience Platform Debugger inschakelen in-/uitschakelen. Adobe Experience Platform is een krachtig hulpmiddel waarmee u uw webpagina&#39;s kunt controleren en waarmee u problemen met de implementatie van uw Experience Cloud-producten kunt opsporen. Adobe Experience Platform Debugger is beschikbaar als zowel een [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)- als [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)-extensie. Foutopsporing kan worden ingeschakeld op het tabblad Configuratie van de sectie AEP Web SDK.
+
+![](../images/enable-debugging.png)
 
 ## Foutopsporing schakelen met de opdracht Configureren
 
