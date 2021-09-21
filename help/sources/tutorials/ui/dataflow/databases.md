@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen om een nieuwe gegevensstroom te configureren met behulp van uw databaseaccount.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: b0b993842b1015f5503fe2ae5a23d9188eeaad48
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 Bovendien is het voor deze zelfstudie nodig dat u al een databaseaccount hebt gemaakt. Een lijst van leerprogramma&#39;s voor het creëren van verschillende gegevensbestandschakelaars in UI kan in [overzicht van bronschakelaars](../../../home.md) worden gevonden.
 
-## Gegevens selecteren
+## Gegevens toevoegen
 
-Nadat u uw databaseaccount hebt gemaakt, wordt de stap **[!UICONTROL Select data]** weergegeven en krijgt u een interactieve interface om de databasehiërarchie te verkennen.
+Nadat u uw databaseaccount hebt gemaakt, wordt de stap **[!UICONTROL Add data]** weergegeven en krijgt u een interactieve interface om de databasehiërarchie te verkennen.
 
-- De linkerhelft van de interface is een browser die de lijst met databases van uw account weergeeft.
+- De linkerhelft van de interface is een browser waarin de lijst met gegevenstabellen van uw account wordt weergegeven.
 - Met de rechterhelft van de interface kunt u maximaal 100 rijen met gegevens voorvertonen.
 
 Met de optie **[!UICONTROL Search]** boven aan de pagina kunt u snel de brongegevens identificeren die u wilt gebruiken.
@@ -41,7 +41,7 @@ Met de optie **[!UICONTROL Search]** boven aan de pagina kunt u snel de brongege
 >
 >De optie van onderzoeksbrongegevens is beschikbaar aan alle op tabelvorm-gebaseerde bronschakelaars behalve de Analytics, Classifications, de Hubs van de Gebeurtenis, en de schakelaars van Kinesis.
 
-Wanneer u de brongegevens hebt gevonden, selecteert u de map en klikt u op **[!UICONTROL Next]**.
+Wanneer u de brongegevens hebt gevonden, selecteert u de tabel en selecteert u **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 
