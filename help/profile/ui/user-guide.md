@@ -4,7 +4,7 @@ title: Gebruikershandleiding voor gebruikersprofiel in realtime
 topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Als u de details van een van de voorbeeldprofielen wilt weergeven, selecteert u 
 Meer over fusiebeleid en hun rol binnen Platform leren, zie [overzicht van fusiebeleid](../merge-policies/overview.md).
 
 
-### Bladeren op [!UICONTROL Identity]
+### Bladeren op [!UICONTROL Identity] {#browse-identity}
 
 Op het tabblad **[!UICONTROL Browse]** kunt u een naamruimte gebruiken om een specifiek profiel op te zoeken aan de hand van een identiteitswaarde. Als u bladert op basis van een identiteit, moet u een samenvoegbeleid, een naamruimte voor identiteit en een identiteitswaarde opgeven.
 

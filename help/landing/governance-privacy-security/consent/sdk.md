@@ -3,9 +3,9 @@ title: Gegevens met toestemming van de klant verwerken met de Adobe Experience P
 topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten te verwerken in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 1780e08a9e45fd87891bbb1727c464aadb0e9b31
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1299'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,10 @@ Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. R
 ## Opdrachten voor wijzigen van toestemming maken {#commands}
 
 Nadat u de SDK-extensie hebt geïntegreerd in uw website, kunt u de opdracht `setConsent` van Web SDK van Platform gebruiken om gegevens met toestemming naar het Platform te verzenden.
+
+>[!IMPORTANT]
+>
+>Met de opdracht `setConsent` worden alleen gegevens rechtstreeks bijgewerkt in de profielopslag en worden geen gegevens naar het gegevensmeer verzonden.
 
 Er zijn twee scenario&#39;s waarin `setConsent` op uw plaats zou moeten worden geroepen:
 
@@ -194,6 +198,8 @@ var setConsent = function () {
 ## Reacties in SDK verwerken
 
 Alle [!DNL Platform SDK] bevelen keren beloftes terug die erop wijzen of de vraag slaagde of ontbrak. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie de sectie over [het behandelen van succes of mislukking](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in de gids bij het uitvoeren van bevelen SDK voor specifieke voorbeelden.
+
+Nadat u `setConsent` aanroepen hebt uitgevoerd met de SDK, kunt u de profielviewer in de interface van het Platform gebruiken om te controleren of gegevens in de opslag Profiel staan. Zie de sectie over [browseringsprofielen op identiteit](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie.
 
 ## Volgende stappen
 
