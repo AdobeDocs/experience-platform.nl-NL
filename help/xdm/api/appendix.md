@@ -5,9 +5,9 @@ title: Aanhangsel voor schema-registratie-API
 description: Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `start` | Geef op waar de weergegeven resultaten moeten beginnen. Deze waarde kan uit het `_page.next` attribuut van een lijstreactie worden verkregen, en worden gebruikt om tot de volgende pagina van resultaten toegang te hebben. Als de waarde `_page.next` null is, is er geen extra pagina beschikbaar. |
-| `limit` | Beperk het aantal geretourneerde bronnen. Voorbeeld: `limit=5` retourneert een lijst met vijf bronnen. |
 | `orderby` | Resultaten sorteren op een bepaalde eigenschap. Voorbeeld: `orderby=title` sorteert de resultaten op titel in oplopende volgorde (A-Z). Als u een `-` toevoegt vóór de parameterwaarde (`orderby=-title`), worden items op titel gesorteerd in aflopende volgorde (Z-A). |
+| `limit` | Wanneer gebruikt samen met een `orderby` parameter, `limit` beperkt het maximumaantal punten die voor een bepaald verzoek zouden moeten zijn teruggekeerd. Deze parameter kan niet worden gebruikt zonder een aanwezige parameter `orderby`.<br><br>De  `limit` parameter specificeert een positief geheel (tussen  `0` en  `500`) als  ** wenken aan het maximumaantal punten dat zou moeten zijn teruggekeerd. `limit=5` retourneert bijvoorbeeld slechts vijf bronnen in de lijst. Deze waarde wordt echter niet strikt nageleefd. De werkelijke responsgrootte kan kleiner of groter zijn, zoals beperkt door de noodzaak om de betrouwbare werking van de parameter `start` te bieden, als er een wordt opgegeven. |
+| `start` | Wanneer gebruikt in combinatie met een `orderby` parameter, `start` specificeert waar de sub-vastgestelde lijst van punten zou moeten beginnen. Deze parameter kan niet worden gebruikt zonder een aanwezige parameter `orderby`. Deze waarde kan uit het `_page.next` attribuut van een lijstreactie worden verkregen, en worden gebruikt om tot de volgende pagina van resultaten toegang te hebben. Als de waarde `_page.next` null is, is er geen extra pagina beschikbaar.<br><br>Deze parameter wordt meestal weggelaten om de eerste pagina met resultaten te verkrijgen. Vervolgens moet `start` worden ingesteld op de maximumwaarde van de primaire sorteereigenschap van het veld `orderby` dat in de vorige pagina is ontvangen. De API reactie keert dan ingangen terug die met die beginnen die een primaire soortbezit van `orderby` strikt groter dan (voor het stijgen) of strikt minder dan (voor het dalende) de gespecificeerde waarde hebben.<br><br>Als de  `orderby` parameter bijvoorbeeld is ingesteld op  `orderby=name,firstname`, bevat de  `start` parameter een waarde voor de  `name` eigenschap. In dit geval, als u de volgende 20 ingangen van een middel onmiddellijk na de naam &quot;Miller&quot;wilde tonen, zou u gebruiken: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style=&quot;table-layout:auto&quot;}
 
