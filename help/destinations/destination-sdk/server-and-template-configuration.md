@@ -2,9 +2,9 @@
 description: De server en malplaatjespecs kunnen in de Doel SDK van Adobe Experience Platform via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: Configuration options for server and template specs in Destination SDK
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '419'
 ht-degree: 5%
 
 ---
@@ -48,10 +48,10 @@ Dit proces levert gebruikersgegevens als reeks berichten van HTTP aan uw bestemm
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
-| `destinationServerType` | Tekenreeks | `URL_BASED` is momenteel de enige beschikbare optie. |
-| `templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | Tekenreeks | Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
+| `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
+| `destinationServerType` | Tekenreeks | *Vereist.* `URL_BASED` is momenteel de enige beschikbare optie. |
+| `templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,10 +83,10 @@ Met de sjabloonspecificatie kunt u configureren hoe het geëxporteerde bericht n
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `httpMethod` | Tekenreeks | De methode die Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `templatingStrategy` | Tekenreeks | Gebruik `PEBBLE_V1`. |
-| `value` | Tekenreeks | Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform in het formaat omzet uw dienst verwacht. <br> Voor informatie hoe te om het malplaatje te schrijven, lees de  [Gebruikende malplaatjesectie](./message-format.md#using-templating). <br> Raadpleeg de  [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7) voor meer informatie over het escapen van tekens. <br> Zie  [Profielkenmerktransformatie voor een voorbeeld van een eenvoudige ](./message-format.md#attributes) transformatie. |
-| `contentType` | Tekenreeks | Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
+| `httpMethod` | Tekenreeks | *Vereist.* De methode die Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
+| `value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform in het formaat omzet uw dienst verwacht. <br> Voor informatie hoe te om het malplaatje te schrijven, lees de  [Gebruikende malplaatjesectie](./message-format.md#using-templating). <br> Raadpleeg de  [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7) voor meer informatie over het escapen van tekens. <br> Zie  [Profielkenmerktransformatie voor een voorbeeld van een eenvoudige ](./message-format.md#attributes) transformatie. |
+| `contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 

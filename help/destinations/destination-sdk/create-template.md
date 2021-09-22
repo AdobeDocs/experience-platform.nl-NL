@@ -1,9 +1,10 @@
 ---
 description: Als deel van Doel SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u in het vormen van en het testen van uw bestemming te helpen. Op deze pagina wordt beschreven hoe u een sjabloon voor berichttransformatie kunt maken en testen.
 title: Een sjabloon voor berichttransformatie maken en testen
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-Als de bestemmingsidentiteitskaart u verstrekt met een malplaatje van de bestemmingsserver met `maxUsersPerRequest=1` beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
+Als bestemmingsidentiteitskaart u verstrekt aan een bestemmingsconfiguratie met [beste inspanningssamenvoeging](./destination-configuration.md#best-effort-aggregation) en `maxUsersPerRequest=1` in het samenvoegingsbeleid beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ Als de bestemmingsidentiteitskaart u verstrekt met een malplaatje van de bestemm
 }
 ```
 
-Als de bestemmingsidentiteitskaart u verstrekt aan een malplaatje van de bestemmingsserver met `maxUsersPerRequest` groter dan één beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
+Als de bestemmingsidentiteitskaart u verstrekt aan een malplaatje van de bestemmingsserver met [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) of [beste inspanningssamenvoeging](./destination-configuration.md#best-effort-aggregation) met `maxUsersPerRequest` groter dan één beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

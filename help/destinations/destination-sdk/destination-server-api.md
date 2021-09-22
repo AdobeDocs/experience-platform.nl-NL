@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in de Doel SDK van Adobe Experience Platform via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: API-bewerkingen voor eindpunt doelserver
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 3ab19995d9520c35701912087158bf63755c55c8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '845'
 ht-degree: 2%
 
 ---
@@ -66,14 +66,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | Tekenreeks | Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
-| `destinationServerType` | Tekenreeks | `URL_BASED` is momenteel de enige beschikbare optie. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Tekenreeks | Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
-| `httpTemplate.httpMethod` | Tekenreeks | De methode die Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Tekenreeks | Gebruik `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Tekenreeks | Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [Gebruikend het malplaatjesectie](./message-format.md#using-templating). </li><li> Raadpleeg de [RFC JSON-standaard, sectie zeven](https://tools.ietf.org/html/rfc8259#section-7) voor meer informatie over het escapen van tekens. </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [transformatie van de Attributen van het Profiel](./message-format.md#attributes). </li></ul> |
-| `httpTemplate.contentType` | Tekenreeks | Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
+| `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
+| `destinationServerType` | Tekenreeks | *Vereist.* `URL_BASED` is momenteel de enige beschikbare optie. |
+| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
+| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpTemplate.requestBody.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht.  <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [Gebruikend het malplaatjesectie](./message-format.md#using-templating). </li><li> Raadpleeg de [RFC JSON-standaard, sectie zeven](https://tools.ietf.org/html/rfc8259#section-7) voor meer informatie over het escapen van tekens. </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [transformatie van de Attributen van het Profiel](./message-format.md#attributes). </li></ul> |
+| `httpTemplate.contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 

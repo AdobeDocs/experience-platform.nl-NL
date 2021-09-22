@@ -1,9 +1,10 @@
 ---
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/template/sample` API eindpunt, om een malplaatje van de testberichttransformatie voor uw bestemming te krijgen.
 title: API-bewerkingen voor voorbeeldsjablonen ophalen
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Een geslaagde reactie retourneert HTTP-status 200 met een voorbeeldsjabloon die u kunt bewerken om aan te passen aan de verwachte gegevensindeling.
 
-Als de bestemmingsidentiteitskaart u verstrekt met een malplaatje van de bestemmingsserver met `maxUsersPerRequest=1` beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
+Als bestemmingsidentiteitskaart u verstrekt aan een bestemmingsconfiguratie met [beste inspanningssamenvoeging](./destination-configuration.md#best-effort-aggregation) en `maxUsersPerRequest=1` in het samenvoegingsbeleid beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ Als de bestemmingsidentiteitskaart u verstrekt met een malplaatje van de bestemm
 }
 ```
 
-Als de bestemmingsidentiteitskaart u verstrekt aan een malplaatje van de bestemmingsserver met `maxUsersPerRequest` groter dan één beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
+Als de bestemmingsidentiteitskaart u verstrekt aan een malplaatje van de bestemmingsserver met [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) of [beste inspanningssamenvoeging](./destination-configuration.md#best-effort-aggregation) met `maxUsersPerRequest` groter dan één beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/sample-profiles` om voorbeeldprofielen te genereren voor gebruik in bestemmingstests.
 title: Voorbeeld van API-bewerkingen voor het genereren van profielen
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ U kunt steekproefprofielen produceren die op of het Adobe XDM bronschema, of het
 Alvorens verder te gaan, te herzien [begonnen gids](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmingsauteur en vereiste kopballen te verkrijgen.
 
 ## Voorbeeldprofielen genereren op basis van het bronschema {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Voeg de steekproefprofielen toe hier aan de vraag van HTTP worden geproduceerd wanneer [het testen van uw bestemming](./test-destination.md).
 
 U kunt steekproefprofielen produceren die op het bronschema worden gebaseerd door een verzoek van de GET tot het `authoring/sample-profiles/` eindpunt te richten en identiteitskaart van een bestemmingsinstantie te verstrekken die u op de bestemmingsconfiguratie baseerde die u wilt testen creeerde.
 
@@ -176,6 +180,10 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 {style=&quot;table-layout:auto&quot;}
 
 ## Voorbeeldprofielen genereren op basis van het doelschema {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Gebruik de voorbeeldprofielen die hier worden gegenereerd bij het maken van uw sjabloon in de stap [Sjabloon renderen](./render-template-api.md#multiple-profiles-with-body).
 
 U kunt steekproefprofielen produceren die op het doelschema worden gebaseerd die een verzoek van de GET tot het `authoring/sample-profiles/` eindpunt richten en bestemmingsidentiteitskaart van de bestemmingsconfiguratie verstrekken die op wordt gebaseerd die u uw malplaatje creeert.
 
