@@ -4,7 +4,7 @@ description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SD
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
+source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 4%
@@ -46,7 +46,7 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | environment.browserDetails.viewportWidth | bw | Query-parameter BROWSER_WIDTH voor AppMeasurement. |
 | environment.connectionType | ct | Toepassingsmetingqueryparameter CT_CONNECT_TYPE-toewijzing. |
 | environment.ipV4 | X-Forwarded-For | Dit is een HTTP-koptekstoewijzing, X-FORWARDED-FOR. |
-| identityMap.ECID.[0].id | midden | MID-toewijzing van queryparameter voor AppMeturement. |
+| identityMap.ECID[0].id | midden | MID-toewijzing van queryparameter voor AppMeturement. |
 | marketing.trackingCode | v0 | CAMPAIGN-toewijzing voor queryparameter voor AppMeasurement. |
 | media.mediaTimed.completes.value | c.a.media.complete | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | Contextgegevens van AppMeasurement. |
@@ -58,10 +58,10 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | Contextgegevens `c.a.media.pauseCount`-toewijzing voor AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.@id | c.a.media.asset | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | Contextgegevens `c.a.media.friendlyName`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | Contextgegevens van AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | Contextgegevens `c.a.media.episode`-toewijzing voor AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | Contextgegevens van AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | Contextgegevens `c.a.media.season`-toewijzing voor AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | Contextgegevens `a.media.name`-toewijzing voor AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | Contextgegevens `c.a.media.show`-toewijzing voor AppMeasurement. |
@@ -89,9 +89,9 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | placeContext.geo.postalCode | zip | Zoekparameter ZIP-toewijzing voor AppMeasurement-query. |
 | placeContext.geo.stateProvince | state | STATE-toewijzing voor queryparameter AppMeturement. |
 | productListItems[N].lineItemId | products | Toewijzing van de categorie Producten van de vraagparameter AppMeasurement. |
-| productitems.[N].name | producten | Toewijzing van naam van toepassingsparameter voor queryparameter voor producten. |
-| productitems.[N].priceTotal | producten | AppMeasurement-queryparameter Products Price mapping. |
-| productitems.[N].quantity | producten | AppMeasurement de parameterproducten van de vraagparameterProducts Quantity mapping. |
+| productlistitems[N].name | producten | Toewijzing van naam van toepassingsparameter voor queryparameter voor producten. |
+| productlistitems[N].priceTotal | producten | AppMeasurement-queryparameter Products Price mapping. |
+| productlistitems[N].quantity | producten | AppMeasurement de parameterproducten van de vraagparameterProducts Quantity mapping. |
 | web.webInteraction.URL | pev1 | Toepassingsmetingqueryparameter PAGE_EVENT_VAR1-toewijzing. |
 | web.webInteraction.name | pev2 | Toepassingsmetingqueryparameter PAGE_EVENT_VAR2-toewijzing. |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` naar  `pe=lnk_o`;  `web.webInteraction.type=download` naar  `pe=lnk_d`;  `web.webInteraction.type=exit` tot  `pe=lnk_e` |
