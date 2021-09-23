@@ -3,9 +3,9 @@ title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a688fed26a8f641347ed1c625bfe448004f75b0
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Het gebruik van Offer decisioning in de SDK van het Web van Adobe Experience Platform is momenteel beschikbaar in vroege toegang om gebruikers te selecteren. Deze functionaliteit is niet beschikbaar voor alle IMS-organisaties.
+>Het gebruik van Offer decisioning in de SDK van het Web van Adobe Experience Platform is beschikbaar in vroege toegang om gebruikers te selecteren. Deze functionaliteit is niet beschikbaar voor alle IMS-organisaties.
 
 Adobe Experience Platform [!DNL Web SDK] kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van de Offer decisioning.
 
@@ -30,7 +30,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
 * **Container:** Een container is een isolatiemechanisme om verschillende zorgen van elkaar te onderscheiden. De container-id is het eerste padelement voor alle gegevensopslagruimte-API&#39;s. Alle beslissingsobjecten bevinden zich in een container.
 
-* **Beslissingsbereiken:** Voor Offer decisioning, zijn dit de Base64 gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
+* **Beslissingsbereiken:** Voor Offer decisioning, zijn besluitvormingswerkingsgebied Base64 gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
 
    *Reikwijdte van de beschikking JSON:*
 
@@ -55,11 +55,11 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
 * **Gegevensstromen:** Lees de documentatie over  [](../../fundamentals/datastreams.md) gegevensstromen voor meer informatie.
 
-* **Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe de Identiteitsservice [ van ](../../identity/overview.md)Platform Web SDK wordt gebruikt.
+* **Identiteit**: Voor meer informatie, gelieve deze documentatie te lezen die schetst hoe het Web SDK van het  [Platform de Dienst](../../identity/overview.md) van de Identiteit gebruikt.
 
 ## Offer decisioning inschakelen
 
-Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
+Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
 1. Adobe Experience Platform ingeschakeld in uw [datastream](../../fundamentals/datastreams.md) en schakel het vakje &quot;Offer decisioning&quot; in
 
@@ -85,7 +85,7 @@ Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
 
       1. [Een tag-eigenschap maken](../../../tags/ui/administration/companies-and-properties.md)
       1. [De insluitcode toevoegen](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Datastream u enkel creeerde door de configuratie van de &quot;Datasstream&quot;daling te selecteren. Zie de documentatie op [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Datastream u door de configuratie van &quot;Datstream&quot;dropdown te selecteren creeerde. Zie de documentatie op [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -329,3 +329,7 @@ Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
 | `content` | De inhoud die aan de voorgestelde aanbieding in het formaat van een koord wordt geassocieerd. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | De afbeeldingsinhoud die aan de voorgestelde aanbieding is gekoppeld, wordt weergegeven in de vorm van een URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Kenmerken van de voorgestelde aanbieding in de vorm van een JSON-object. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+
+## Beperkingen
+
+Sommige aanbodbeperkingen worden momenteel niet ondersteund door de mobiele Edge-workflows voor beleving, bijvoorbeeld Afdekkingen. De waarde van het gebied van het Afschilderen specificeert het aantal tijden een aanbieding over alle gebruikers kan worden voorgesteld. Zie [Subsidiabiliteitsregels en beperkingen aanbieden in documentatie](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility) voor meer informatie.
