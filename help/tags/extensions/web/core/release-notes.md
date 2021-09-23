@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1522'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,22 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 23 september 2021
+
+v3.2.1
+
+* Probleem verholpen waarbij de initialisatie van de weergave van het element met voorwaardelijke waarde niet goed werkte als de veldwaarden 0 waren.
+
+## 23 september 2021
+
+v3.2.0
+
+De volgende wijzigingen zijn aangebracht in het gegevenselement Voorwaardelijke waarde:
+
+* Voeg een selectievakje voor de voorwaardelijke en terugvalwaarden toe waarmee de gebruiker kan kiezen of niet-gedefinieerde waarde de geretourneerde waarde moet zijn.
+* Getalwaarden worden weergegeven als getallen in het instellingenobject.
+* Voorwaardelijke waarde is niet meer vereist, zodat deze zich op dezelfde manier kan gedragen als de terugvalwaarde.
 
 ## 17 september 2021
 
