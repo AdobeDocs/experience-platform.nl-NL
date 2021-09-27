@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: cf0f0a46cc337d21c47a9b3a2fc12f8a7a6cb828
+source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '382'
 ht-degree: 6%
 
 ---
@@ -149,6 +149,7 @@ ht-degree: 6%
    * [Een schema maken (API)](tutorials/create-schema-api.md)
    * [Bepaal een verband tussen twee schema&#39;s (UI)](tutorials/relationship-ui.md)
    * [Een relatie definiëren tussen twee schema&#39;s (API)](tutorials/relationship-api.md)
+   * [Een relatie tussen twee schema&#39;s definiëren (B2B)](tutorials/relationship-b2b.md)
    * [Een ad-hocschema (API) maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

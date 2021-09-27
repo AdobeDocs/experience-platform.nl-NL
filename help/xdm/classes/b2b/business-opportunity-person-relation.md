@@ -1,10 +1,10 @@
 ---
 title: XDM Business Opportunity Person Relatie Klasse
 description: Dit document biedt een overzicht van de XDM Business Opportunity Person Relation-klasse in Experience Data Model (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 3%
+source-wordcount: '233'
+ht-degree: 2%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Deze klasse is alleen beschikbaar voor organisaties die toegang hebben tot de B2B-editie van Real-time Customer Data Platform.
+>Deze klasse is alleen beschikbaar voor organisaties die toegang hebben tot Real-time Customer Data Platform B2B Edition.
 
 [!UICONTROL XDM Business Opportunity Person Relation] is een standaard klasse van de Gegevens van de Ervaring Model (XDM) die de minimum vereiste eigenschappen van een persoon vangt die met een bedrijfskans wordt geassocieerd.
 
@@ -30,3 +30,5 @@ ht-degree: 3%
 | `isPrimary` | Boolean | Geeft aan of de persoon de primaire contactpersoon voor deze kans is. |
 | `personID` | Tekenreeks | Een unieke id voor de persoon in de opportuniterelatie. |
 | `personRole` | Tekenreeks | De rol voor de persoon in de opportuniteits-persoonverhouding. |
+
+Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

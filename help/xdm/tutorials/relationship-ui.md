@@ -6,14 +6,18 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een verb
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
+source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
 
 # Bepaal een verband tussen twee schema&#39;s gebruikend [!DNL Schema Editor]
+
+>[!NOTE]
+>
+>Als u Real-time Platform B2B Edition van de Gegevens van de Klant gebruikt, zie de gids op [het creëren van B2B verhoudingen](./relationship-b2b.md) in plaats daarvan.
 
 De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Door deze relaties te definiëren binnen de structuur van uw [!DNL Experience Data Model] (XDM)-schema&#39;s kunt u complexe inzichten in uw klantgegevens opdoen.
 
