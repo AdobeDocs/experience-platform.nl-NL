@@ -1,7 +1,8 @@
 ---
 description: Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u het malplaatje bepaalt, test en voorlegt, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 title: Metagegevensbeheer voor het publiek
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -54,7 +55,7 @@ U kunt het generische malplaatje gebruiken om [een nieuw publiekssjabloon te cre
 
 Het technische team van Adobe kan met u werken om het generische malplaatje met douanevelden uit te breiden als uw gebruiksgevallen het vereist.
 
-## Sjabloonvoorbeelden {#template-examples}
+## Configuratievoorbeelden {#configuration-examples}
 
 Deze sectie omvat drie voorbeelden van generische configuraties van publieksmeta-gegevens, voor uw verwijzing, samen met beschrijvingen van de belangrijkste secties van de configuratie. U ziet dat de URL, kopteksten, verzoeken en antwoorden verschillen tussen de drie voorbeeldconfiguraties. Dit komt door de verschillende specificaties van de marketing-API van de drie voorbeeldplatforms.
 
