@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '390'
 ht-degree: 6%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 6%
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
-   * B2B-klassen {#b2b}
+   * B2B-klassen (bèta) {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
       * [XDM Zakelijke account Person Relatie](./classes/b2b/business-account-person-relation.md)
       * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -145,11 +145,11 @@ ht-degree: 6%
    * [Mixinen (afgekeurd)](api/mixins.md)
    * [Aanhangsel](api/appendix.md)
 * Tutorials {#tutorials}
-   * [Een schema maken (UI)](tutorials/create-schema-ui.md)
-   * [Een schema maken (API)](tutorials/create-schema-api.md)
-   * [Bepaal een verband tussen twee schema&#39;s (UI)](tutorials/relationship-ui.md)
-   * [Een relatie definiëren tussen twee schema&#39;s (API)](tutorials/relationship-api.md)
-   * [Een relatie tussen twee schema&#39;s definiëren (B2B)](tutorials/relationship-b2b.md)
+   * [Een schema maken in de gebruikersinterface](tutorials/create-schema-ui.md)
+   * [Een schema maken in de API](tutorials/create-schema-api.md)
+   * [Een schemarelatie definiëren in de UI](tutorials/relationship-ui.md)
+   * [Een schemarelatie definiëren in de API](tutorials/relationship-api.md)
+   * [Definieer een schemarelatie in Real-time CDP B2B Edition (bèta)](tutorials/relationship-b2b.md)
    * [Een ad-hocschema (API) maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
