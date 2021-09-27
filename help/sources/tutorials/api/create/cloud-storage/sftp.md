@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een SFTP-server (Secure File Transfer Protocol) met behulp van de Flow Service API.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 9ad09fba3119b631576f22574a2151c74f91e07b
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL SFTP], moet u waarden o
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `host` | De naam of het IP adres verbonden aan uw [!DNL SFTP] server. |
+| `port` | De SFTP-serverpoort waarmee u verbinding maakt. Als deze waarde niet wordt opgegeven, wordt de standaardwaarde `22` gebruikt. |
 | `username` | De gebruikersnaam met toegang tot uw [!DNL SFTP]-server. |
 | `password` | Het wachtwoord voor uw [!DNL SFTP]-server. |
 | `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
@@ -55,7 +56,7 @@ Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip 
 
 Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL SFTP] authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
-### Een [!DNL SFTP]-verbinding maken met basisverificatie
+### Een [!DNL SFTP] basisverbinding maken met basisverificatie
 
 Als u een [!DNL SFTP]-basisverbinding wilt maken met behulp van basisverificatie, dient u een POST-aanvraag in bij de [!DNL Flow Service]-API en geeft u waarden op voor `host`, `userName` en `password` van uw verbinding.
 
@@ -113,7 +114,7 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 }
 ```
 
-### Een [!DNL SFTP]-verbinding maken met behulp van SSH-verificatie met openbare sleutel
+### Een [!DNL SFTP] basisverbinding maken met behulp van SSH-verificatie met openbare sleutel
 
 Als u een [!DNL SFTP]-basisverbinding wilt maken met behulp van SSH-verificatie met openbare sleutel, dient u een verzoek in bij de [!DNL Flow Service]-API en geeft u waarden op voor `host`, `userName`, `privateKeyContent` en `passPhrase` van uw POST.
 
