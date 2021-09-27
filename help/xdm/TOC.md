@@ -4,10 +4,10 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: cf0f0a46cc337d21c47a9b3a2fc12f8a7a6cb828
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 7%
+source-wordcount: '374'
+ht-degree: 6%
 
 ---
 
@@ -31,6 +31,15 @@ ht-degree: 7%
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
+   * B2B-klassen {#b2b}
+      * [XDM Business Account](./classes/b2b/business-account.md)
+      * [XDM Zakelijke account Person Relatie](./classes/b2b/business-account-person-relation.md)
+      * [XDM Business Campaign](./classes/b2b/business-campaign.md)
+      * [XDM Business Campaign-leden](./classes/b2b/business-campaign-members.md)
+      * [XDM Business Opportunity](./classes/b2b/business-opportunity.md)
+      * [XDM Business Opportunity Person Relatie](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
+      * [Leden van XDM Business Marketing List](./classes/b2b/business-marketing-list-members.md)
 * Schema veldgroepen {#field-groups}
    * Profielveldgroepen {#profile}
       * [Demografische details](./field-groups/profile/demographic-details.md)
@@ -42,6 +51,8 @@ ht-degree: 7%
       * [Details segmentlidmaatschap](./field-groups/profile/segmentation.md)
       * [Telecom-abonnement](./field-groups/profile/telecom-subscription.md)
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
+      * [XDM Business Person-componenten](./field-groups/profile/business-person-components.md)
+      * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
    * Groepen van gebeurtenisvelden {#event}
       * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
       * [Kanaaldetails](./field-groups/event/channel-details.md)
@@ -60,6 +71,7 @@ ht-degree: 7%
    * [Toepassing](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
+   * [B2B-bron](./data-types/b2b-source.md)
    * [Commerce](./data-types/commerce.md)
    * [Constante tekenreeks](./data-types/consent-string.md)
    * [Inhoud en voorkeuren](./data-types/consents.md)
@@ -68,6 +80,7 @@ ht-degree: 7%
    * [E-mailadres](./data-types/email-address.md)
    * [Omgeving](./data-types/environment.md)
    * [Experience Channel](./data-types/experience-channel.md)
+   * [Kenmerken externe bronsysteemcontrole](./data-types/external-source-system-audit-attributes.md)
    * [Veld voor algemene toestemming](./data-types/consent-field.md)
    * [Algemeen veld Voorkeuren voor marketing](./data-types/marketing-field.md)
    * [Algemeen veld Voorkeuren voor marketing met abonnementen](./data-types/marketing-field-subscriptions.md)

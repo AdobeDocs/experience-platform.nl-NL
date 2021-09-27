@@ -5,9 +5,9 @@ title: Afzonderlijke XDM-profielklasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -42,12 +42,17 @@ De [!DNL XDM Individual Profile] klasse zelf verstrekt verscheidene systeem-gepr
 
 Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL XDM Individual Profile]. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
+* [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Telecom Subscription]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL XDM Business Person Components]](../field-groups/profile/business-person-components.md)\*
+* [[!UICONTROL XDM Business Person Details]](../field-groups/profile/business-person-details.md)\*
+
+*\*Deze veldgroep is alleen beschikbaar voor organisaties met toegang tot de B2B-editie van Real-time Customer Data Platform.*
 
 Voor een volledige lijst van alle compatibele gebiedsgroepen voor [!DNL XDM Individual Profile], verwijs naar [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).
