@@ -4,9 +4,9 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
-source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
+source-git-commit: 89cd5a89bb33e4ea8b3412adebee49921e788ebd
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '113'
 ht-degree: 14%
 
 ---
@@ -37,6 +37,9 @@ ht-degree: 14%
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
    * [Handleiding voor het maken van segmenten](segmentation/segment-builder-guide.md)
    * [Customer AI](segmentation/customer-ai.md)
+* Schema&#39;s {#schemas}
+   * [Overzicht van schema&#39;s](schemas/overview.md)
+   * [Schema&#39;s in Real-time CDP B2B Edition](schemas/b2b.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
