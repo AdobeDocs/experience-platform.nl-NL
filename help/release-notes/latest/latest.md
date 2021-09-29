@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
+source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 2%
+source-wordcount: '381'
+ht-degree: 3%
 
 ---
 
@@ -15,8 +15,21 @@ ht-degree: 2%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Gegevensinname](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Bronnen](#sources)
+
+## Gegevensinname {#ingestion}
+
+De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor Platform gegevens uit diverse bronnen inneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door de stroomafwaartse diensten van het Platform worden voortgeduurd.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+|------- | -----------|
+| Upsert or patch Profile records using Batch-opname | Klantprofiel in realtime staat nu updates toe naar profielkenmerken in afzonderlijke profielrecordgegevens via batch-opname. Voor meer informatie raadpleegt u de handleiding [voor het ontwikkelen van batches](../../ingestion/batch-ingestion/api-overview.md). |
+
+Meer over het opnemen van gegevens in Platform, bezoek [de documentatie van de Ingestie van Gegevens](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
