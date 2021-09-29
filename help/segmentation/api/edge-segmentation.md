@@ -5,9 +5,9 @@ title: 'Edge Segmentation met de API '
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Adobe Exp
 - [[!DNL Segmentation]](../home.md): Verstrekt de capaciteit om segmenten en publiek van uw  [!DNL Real-time Customer Profile] gegevens tot stand te brengen.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Platform] klantenervaring worden georganiseerd.
 
-Om met succes vraag aan [!DNL Data Prep] API eindpunten te maken, te lezen gelieve de gids op [Aan de slag met Platform APIs](../../landing/api-guide.md) om over vereiste kopballen en hoe te om steekproefAPI vraag te lezen.
+Om met succes vraag aan om het even welk Experience Platform API eindpunten te maken, te lezen gelieve de gids op [begonnen te worden met Platform APIs](../../landing/api-guide.md) om over vereiste kopballen en te leren hoe te om steekproefAPI vraag te lezen.
 
 ## Type Edge-segmenteringsquery {#query-types}
 

@@ -5,9 +5,9 @@ title: Overzicht van id-naamruimte
 topic-legacy: overview
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Als u naamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UIC
 
 ![doorbladeren](./images/browse.png)
 
-Er wordt een lijst met naamruimten voor identiteiten weergegeven in de hoofdinterface van de pagina. Deze lijst bevat informatie over de namen, identiteitssymbolen, de datum die als laatste is bijgewerkt en of het een standaard- of een aangepaste naamruimte betreft. De rechterrail bevat informatie over [!UICONTROL Unique identities] en [!UICONTROL Identity graph strength]. [!UICONTROL Unique identities] verwijst naar het aantal identiteiten in de specifieke zandbak die u gebruikt, terwijl de  [!UICONTROL Identity graph strength] sterkte informatie over het aantal koekje en niet-koekjesidentiteitskaarts binnen uw zandbak toont.
+Er wordt een lijst met naamruimten voor identiteiten weergegeven in de hoofdinterface van de pagina. Deze lijst bevat informatie over de namen, identiteitssymbolen, de datum die als laatste is bijgewerkt en of het een standaard- of een aangepaste naamruimte betreft. De rechterrail bevat informatie over [!UICONTROL Identity graph strength].
 
 ![identiteiten](./images/identities.png)
 

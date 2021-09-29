@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform biedt een reeks instructies om u te helpen te voorkomen dat u gegevensmodellen maakt die niet kunnen worden ondersteund door het Real-Time Klantprofiel. In dit document worden aanbevolen procedures en beperkingen beschreven waarmee u rekening kunt houden bij het modelleren van profielgegevens.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
+source-git-commit: c351ee91367082cc5fbfc89da50aa2db5e415ea8
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1962'
 ht-degree: 1%
 
 ---
@@ -48,10 +48,6 @@ Het gegevensmodel van de [!DNL Profile] opslaggegevens bestaat uit twee kerneenh
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
-## Profielfragmenten
-
-Dit document bevat meerdere hulplijnen die verwijzen naar &quot;profielfragmenten&quot;. Het realtime klantprofiel bestaat uit meerdere profielfragmenten. Elk fragment vertegenwoordigt de gegevens voor de identiteit van een dataset waar het de primaire identiteit is. Dit betekent dat een fragment een primaire ID en gebeurtenisgegevens (tijdreeks) in een dataset XDM ExperienceEvent kan bevatten of het uit een primaire identiteitskaart en verslaggegevens (tijd-onafhankelijke attributen) in een dataset van het Profiel van XDM Individual kan worden samengesteld.
-
 ## Limiettypen
 
 Bij het definiëren van uw gegevensmodel is het raadzaam om binnen de beschikbare instructies te blijven, zodat u over de juiste prestaties beschikt en systeemfouten kunt voorkomen.
@@ -62,6 +58,10 @@ De instructies in dit document omvatten twee typen beperkingen:
 
 * **Harde limiet:** een harde limiet biedt een absoluut maximum voor het systeem. Het overschrijden van een harde limiet leidt tot breuken en fouten, waardoor het systeem niet naar behoren functioneert.
 
+## Profielfragmenten
+
+In dit document zijn er verschillende hulplijnen die naar &quot;profielfragmenten&quot; verwijzen. In Experience Platform worden meerdere profielfragmenten samengevoegd tot het realtime klantprofiel. Elk fragment vertegenwoordigt een unieke primaire identiteit en de overeenkomstige record- of gebeurtenisgegevens voor die id binnen een bepaalde gegevensset. Raadpleeg het [Profieloverzicht](home.md#profile-fragments-vs-merged-profiles) voor meer informatie over profielfragmenten.
+
 ## Handleidingen gegevensmodel
 
 Aanbevolen wordt de volgende instructies te gebruiken bij het maken van een gegevensmodel voor gebruik met [!DNL Real-time Customer Profile].
@@ -70,11 +70,13 @@ Aanbevolen wordt de volgende instructies te gebruiken bij het maken van een gege
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Aantal gegevenssets aanbevolen om bij te dragen aan het [!DNL Profile]-samenvoegingsschema | 20 | Zacht | **Een maximum van 20  [!DNL Profile]-Toegelaten datasets wordt geadviseerd.** Om een andere dataset voor toe te laten  [!DNL Profile], zou een bestaande dataset eerst moeten worden verwijderd of worden onbruikbaar gemaakt. |
+| Aantal voor profielen ingeschakelde gegevenssets | 20 | Zacht | **Een maximum van 20 datasets kan tot het  [!DNL Profile] unieschema bijdragen.** Om een andere dataset voor toe te laten  [!DNL Profile], zou een bestaande dataset eerst moeten worden verwijderd of worden onbruikbaar gemaakt. De 20 datasetgrens omvat datasets van andere oplossingen van Adobe (bijvoorbeeld, Adobe Analytics). |
+| Aantal gegevenssets van Adobe Analytics-rapportsuite ingeschakeld voor profiel | 1 | Zacht | **Een maximum van één (1) dataset van de het rapportreeks van Analytics zou voor Profiel moeten worden toegelaten.** Het proberen om veelvoudige datasets van de het rapportreeks van Analytics voor Profiel toe te laten kan onbedoelde gevolgen voor gegevenskwaliteit hebben. Zie de sectie over [Adobe Analytics-gegevenssets](#aa-datasets) in het aanhangsel bij dit document voor meer informatie. |
 | Aantal aanbevolen relaties met meerdere entiteiten | 5 | Zacht | **Er worden maximaal vijf relaties tussen primaire entiteiten en dimensie-entiteiten aanbevolen.** Aanvullende relatietoewijzingen moeten pas worden gemaakt wanneer een bestaande relatie is verwijderd of uitgeschakeld. |
 | Maximale JSON-diepte voor id-veld dat wordt gebruikt in een relatie met meerdere entiteiten | 4 | Zacht | **De aanbevolen maximale JSON-diepte voor een id-veld in relaties met meerdere entiteiten is 4.** Dit betekent dat in een hoogst genest schema, gebieden die meer dan 4 niveaus diep worden genesteld niet als gebied van identiteitskaart in een verhouding zouden moeten worden gebruikt. |
 | Arraycardinaliteit in een profielfragment | &lt;> | Zacht | **De optimale arraycardinaliteit in een profielfragment (tijdonafhankelijke gegevens) is  &lt;>** |
 | Array-kardinaliteit in ExperienceEvent | &lt;> | Zacht | **De optimale arraycardinaliteit in een ExperienceEvent (tijdreeksgegevens) is  &lt;>** |
+| Limiet voor het aantal identiteiten voor het individuele profiel Identiteitsgrafiek | 50 | Hard | **Het maximumaantal identiteiten in een identiteitsgrafiek voor een individueel profiel is 50.** Profielen met meer dan 50 identiteiten worden uitgesloten van segmentatie, export en lookups. |
 
 ### Dimension-entiteitsgeleidingen
 
@@ -98,8 +100,8 @@ De volgende instructies verwijzen naar de gegevensgrootte en worden aanbevolen o
 | --- | --- | --- | --- |
 | Maximale grootte ExperienceEvent | 10 KB | Hard | **De maximale grootte van een gebeurtenis is 10 kB.** De inname gaat door, maar alle gebeurtenissen die groter zijn dan 10 kB gaan verloren. |
 | Maximale recordgrootte profiel | 100 kB | Hard | **De maximale grootte van een profielrecord is 100 kB.** De inname gaat door, maar profielrecords die groter zijn dan 100 kB worden verwijderd. |
-| Maximale framegrootte profiel | 50 MB | Hard | **De maximale grootte van een profielfragment is 50 MB.** De segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welke  [profielfragmentatie ontbreken ](#profile-fragments) die groter is dan 50MB. |
-| Maximale grootte voor profielopslag | 50 MB | Zacht | **De maximale grootte van een opgeslagen profiel is 50 MB.** Het toevoegen van nieuwe  [profielfragmentaties ](#profile-fragments) aan een profiel dat groter is dan 50MB zal systeemprestaties beïnvloeden. |
+| Maximale framegrootte profiel | 50 MB | Hard | **De maximale grootte van één profielfragment is 50 MB.** De segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welke  [profielfragmentatie ontbreken ](#profile-fragments) die groter is dan 50MB. |
+| Maximale grootte voor profielopslag | 50 MB | Zacht | **De maximale grootte van een opgeslagen profiel is 50 MB.** Het toevoegen van nieuwe  [profielfragmentaties ](#profile-fragments) aan een profiel dat groter is dan 50MB zal systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | 90 | Zacht | **Het maximumaantal per dag ingenomen Profile of ExperienceEvent-batches is 90.** Dit houdt in dat het gecombineerde totaal van de elke dag ingeslikte Profile en ExperienceEvent batches niet meer dan 90 mag bedragen. Door extra batches in te voeren worden de systeemprestaties beïnvloed. |
 
 ### Dimension-entiteitsgeleidingen
@@ -119,3 +121,13 @@ De instructies in deze sectie verwijzen naar het aantal en de aard van de segmen
 | Maximumaantal segmenten per sandbox | 10K | Zacht | **Het maximumaantal segmenten dat een organisatie kan maken, is 10 kB per sandbox.** Een organisatie kan in totaal meer dan 10K segmenten hebben, zolang er minder dan 10.000 segmenten in elke individuele zandbak zijn. Het proberen om extra segmenten tot stand te brengen zal in verminderde systeemprestaties resulteren. |
 | Maximumaantal streamingsegmenten per sandbox | 500 | Zacht | **Het maximumaantal streamingsegmenten dat een organisatie kan maken, is 500 per sandbox.** Een organisatie kan in totaal meer dan 500 streaming segmenten hebben, zolang er zich in elke sandbox minder dan 500 streaming segmenten bevinden. Als u probeert extra streamingsegmenten te maken, neemt de systeemprestaties af. |
 | Maximum aantal batchsegmenten per sandbox | 10 kB | Zacht | **Het maximumaantal batchsegmenten dat een organisatie kan maken, is 10 kB per sandbox.** Een organisatie kan in totaal meer dan 10.000 batchsegmenten hebben, zolang er in elke sandbox minder dan 10.000 batchsegmenten zijn. Het proberen om extra partijsegmenten tot stand te brengen zal in verminderde systeemprestaties resulteren. |
+
+## Aanhangsel
+
+Deze sectie bevat aanvullende details voor afzonderlijke instructies.
+
+### Gegevenssets van de Adobe Analytics-rapportsuite in Platform {#aa-datasets}
+
+Een maximum van één (1) dataset van de het rapportreeks van Adobe Analytics zou voor Profiel moeten worden toegelaten. Dit is een zachte grens, die betekent dat u meer dan één dataset van de Analyse voor Profiel kunt toelaten, maar het wordt niet geadviseerd omdat het onbedoelde gevolgen voor uw gegevens kan hebben. Dit is toe te schrijven aan de verschillen tussen schema&#39;s van het Gegevensmodel van de Ervaring (XDM), die de semantische structuur voor gegevens in Experience Platform verstrekken en voor consistentie in gegevensinterpretatie, en de klantgerichte aard van eVars en omzettingsvariabelen in Adobe Analytics toestaan.
+
+In Adobe Analytics kan een enkele organisatie bijvoorbeeld meerdere rapportensuites hebben. Als rapportsuite A eVar 4 aanwijst als &#39;interne zoekterm&#39; en rapportsuite B eVar 4 aanwijst als &#39;verwijzend domein&#39;, worden deze waarden in hetzelfde veld in Profiel opgenomen, wat verwarring en een verslechterende gegevenskwaliteit veroorzaakt.

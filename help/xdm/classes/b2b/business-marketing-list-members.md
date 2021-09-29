@@ -1,9 +1,10 @@
 ---
 title: Klasse met XDM Business Marketing List-leden
 description: Dit document biedt een overzicht van de XDM Business Marketing List-klasse Leden in het XDM-model (Experience Data Model).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '215'
 ht-degree: 2%
 
 ---
@@ -28,5 +29,7 @@ ht-degree: 2%
 | `marketingListID` | Tekenreeks | Een unieke id voor de marketinglijst. |
 | `marketingListMemberID` | Tekenreeks | Een unieke id voor de entiteit die lid is van de marketinglijst. |
 | `personId` | Tekenreeks | Een unieke id voor de persoon. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

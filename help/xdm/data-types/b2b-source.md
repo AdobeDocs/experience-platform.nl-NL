@@ -1,18 +1,19 @@
 ---
 title: B2B-brongegevenstype
 description: Dit document biedt een overzicht van het gegevenstype B2B Source Experience Data Model (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL B2B Source] gegevenstype
+# [!UICONTROL B2B Source] gegevenstype (bèta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Dit gegevenstype is alleen beschikbaar voor organisaties die toegang hebben tot de B2B-editie van Real-time Customer Data Platform.
+>Dit gegevenstype is beschikbaar als onderdeel van Real-time Customer Data Platform B2B Edition, dat momenteel in bèta wordt weergegeven. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 [!UICONTROL B2B Source] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een samengestelde herkenningsteken voor een entiteit B2B (zoals een  [rekening](../classes/b2b/business-account.md), een  [kans](../classes/b2b/business-opportunity.md), of een  [campagne](../classes/b2b/business-campaign.md)) vertegenwoordigt.
 

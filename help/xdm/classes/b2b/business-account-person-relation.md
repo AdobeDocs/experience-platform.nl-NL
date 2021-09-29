@@ -1,9 +1,10 @@
 ---
 title: XDM Business Account Person Relation Class
 description: Dit document biedt een overzicht van de XDM Business Account Person Relation-klasse in Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '313'
 ht-degree: 2%
 
 ---
@@ -35,5 +36,7 @@ ht-degree: 2%
 | `personRole` | Tekenreeks | De rol van de persoon in de relatie tussen de rekeninghouder en de persoon. |
 | `relationEndDate` | DateTime | De datum waarop de relatie tussen de rekening en de persoon eindigde. |
 | `relationStartDate` | DateTime | De datum waarop de relatie tussen de rekening en de persoon is begonnen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

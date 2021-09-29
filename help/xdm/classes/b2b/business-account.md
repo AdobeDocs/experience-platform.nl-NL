@@ -1,9 +1,10 @@
 ---
 title: XDM Business Account-klasse
 description: Dit document biedt een overzicht van de XDM Business Account-klasse in Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '161'
 ht-degree: 1%
 
 ---
@@ -24,5 +25,7 @@ ht-degree: 1%
 | `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Als de rekening uit een extern bronsysteem komt, vangt dit voorwerp controleattributen voor dat systeem. |
 | `_id` | Tekenreeks | Een unieke id voor de record. Dit is een door het systeem gegenereerde waarde die los staat van `accountID`. |
 | `accountID` | Tekenreeks | Een unieke identificatiecode voor de rekeningentiteit. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

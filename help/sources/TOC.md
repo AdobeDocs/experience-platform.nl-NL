@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Data Ingestion, Sources
-source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '656'
 ht-degree: 5%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 5%
       - [Azure Blob-connector](connectors/cloud-storage/blob.md)
       - [Azure Event Hubs-connector](connectors/cloud-storage/eventhub.md)
       - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
+      - [Gegevenslandingszone](connectors/cloud-storage/data-landing-zone.md)
       - [FTP-aansluiting](connectors/cloud-storage/ftp.md)
       - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -97,6 +98,7 @@ ht-degree: 5%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure-bestandsopslag](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Gegevenslandingszone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud-opslag](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -185,6 +187,7 @@ ht-degree: 5%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure-bestandsopslag](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Gegevenslandingszone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud-opslag](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)

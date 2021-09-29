@@ -1,9 +1,10 @@
 ---
 title: XDM Business Campaign-klasse
 description: Dit document biedt een overzicht van de XDM Business Campaign-klasse in het XDM-model (Experience Data Model).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '180'
 ht-degree: 3%
 
 ---
@@ -27,5 +28,7 @@ ht-degree: 3%
 | `campaignID` | Tekenreeks | Een unieke id voor de campagneentiteit. |
 | `campaignName` | Tekenreeks | De naam van de campagne. |
 | `campaignType` | Tekenreeks | Het type campagne of doelpubliek. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

@@ -1,19 +1,19 @@
 ---
 title: XDM Business Person Details-schemaveldgroep
 description: Dit document biedt een overzicht van de XDM Business Person Details schema veldgroep.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
 
+# [!UICONTROL XDM Business Person Details] schemaveldgroep (bèta)
 
-# [!UICONTROL XDM Business Person Details] schemaveldgroep
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Deze veldgroep is alleen beschikbaar voor organisaties die toegang hebben tot de B2B-editie van Real-time Customer Data Platform.
+>Deze veldgroep is beschikbaar als onderdeel van Customer Data Platform B2B Edition in realtime, dat momenteel in bèta wordt weergegeven. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 [!UICONTROL XDM Business Person Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) klasse die informatie over een individuele persoon in de context van een zaken-aan-zaken (B2B) onderneming vangt.
 

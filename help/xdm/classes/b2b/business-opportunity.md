@@ -1,9 +1,10 @@
 ---
 title: XDM Business Opportunity-klasse
 description: Dit document biedt een overzicht van de XDM Business Opportunity-klasse in Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '208'
 ht-degree: 3%
 
 ---
@@ -30,5 +31,7 @@ ht-degree: 3%
 | `opportunityName` | Tekenreeks | De naam van de opportuniteit. |
 | `opportunityStage` | Tekenreeks | De verkoopfase van de opportuniteit. |
 | `opportunityType` | Tekenreeks | Het soort kans. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

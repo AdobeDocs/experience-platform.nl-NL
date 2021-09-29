@@ -4,9 +4,9 @@ title: Overzicht van realtime-klantprofiel
 topic-legacy: guide
 description: In realtime Klantprofiel worden gegevens uit verschillende bronnen samengevoegd en biedt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
+source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -43,13 +43,15 @@ De interface van het Experience Platform biedt een dashboard waarmee u belangrij
 
 Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken.
 
-Wanneer de gegevens uit meerdere bronnen conflicteren (bijvoorbeeld één fragment vermeldt de klant als &#39;single&#39;, terwijl de andere de klant als &#39;getrouwd&#39; vermeldt), bepaalt het [samenvoegbeleid](#merge-policies) welke informatie voorrang moet krijgen en in het profiel voor de persoon moet worden opgenomen. Daarom is het totale aantal profielfragmenten in Platform waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel uit meerdere fragmenten bestaat.
+Met andere woorden, profielfragmenten vertegenwoordigen een unieke primaire identiteit en de corresponderende [record](#record-data) of [event](#time-series-events) gegevens voor die id binnen een bepaalde dataset.
 
-### Gegevens opnemen
+Wanneer de gegevens van veelvoudige datasets (bijvoorbeeld één fragment maakt een lijst van de klant &quot;enig&quot;terwijl de andere de klant als &quot;gehuwd&quot;opsomt) [fusieprincipe](#merge-policies) bepaalt welke informatie om voorrang te geven en in het profiel voor het individu te omvatten. Daarom is het totale aantal profielfragmenten binnen Platform waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel typisch uit veelvoudige fragmenten van veelvoudige datasets bestaat.
+
+### Gegevens opnemen {#record-data}
 
 Een profiel is een weergave van een onderwerp, een organisatie of een individu, dat uit vele kenmerken bestaat (ook wel recordgegevens genoemd). Het profiel van een product kan bijvoorbeeld een SKU en een beschrijving bevatten, terwijl het profiel van een persoon informatie bevat zoals voornaam, achternaam en e-mailadres. Met [!DNL Experience Platform] kunt u profielen aanpassen om specifieke gegevens te gebruiken die relevant zijn voor uw bedrijf. De standaard [!DNL Experience Data Model] (XDM) klasse, [!DNL XDM Individual Profile], is de aangewezen klasse waarop om een schema te bouwen wanneer het beschrijven van de gegevens van het klantenverslag, en levert de gegevensintegraal aan vele interactie tussen de diensten van het Platform. Voor meer informatie bij het werken met schema&#39;s in [!DNL Experience Platform], gelieve te beginnen door [XDM systeemoverzicht](../xdm/home.md) te lezen.
 
-### Gebeurtenissen van tijdreeksen
+### Gebeurtenissen van tijdreeksen {#time-series-events}
 
 De gegevens van de tijdreeksen verstrekken een momentopname van het systeem op het tijdstip dat een actie of direct of indirect door een onderwerp werd genomen, evenals gegevens detailleert de gebeurtenis zelf. Deze tijdreeksgegevens worden vertegenwoordigd door de XDM ExperienceEvent-standaardschemaklasse en kunnen gebeurtenissen beschrijven, zoals items die aan een winkelwagentje worden toegevoegd, koppelingen waarop wordt geklikt en weergegeven video&#39;s. Gegevens uit tijdreeksen kunnen worden gebruikt om segmentatieregels te baseren op, en gebeurtenissen kunnen individueel worden benaderd in de context van een profiel.
 
@@ -108,6 +110,7 @@ Met observability Insights kunt u belangrijke metriek in Adobe Experience Platfo
 [!DNL Data governance] is een reeks strategieën en technologieën die worden gebruikt om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik.
 
 Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol binnen [!DNL Experience Platform] op diverse niveaus:
+
 * Labels voor gegevensgebruik
 * Beleid voor gegevenstoegang
 * Toegangscontrole van gegevens voor marketingacties
@@ -120,4 +123,4 @@ Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol 
 
 ## Volgende stappen en extra bronnen
 
-Als u meer wilt weten over het werken met [!DNL Real-time Customer Profile]-gegevens met de interface van het Experience Platform of de API voor profiel, leest u eerst de [Handleiding voor profiel-gebruikersinterface](ui/user-guide.md) of [API-ontwikkelaarshandleiding](api/overview.md).
+Als u meer wilt weten over het werken met realtime gegevens van het klantprofiel met de interface van het Experience Platform of de profiel-API, leest u eerst de [Handleiding voor de gebruikersinterface van het profiel](ui/user-guide.md) of [API-ontwikkelaarshandleiding](api/overview.md).

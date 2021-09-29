@@ -5,9 +5,9 @@ title: Overzicht van identiteitsservice
 topic-legacy: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,6 @@ Voordat u naar de details van [!DNL Identity Service] gaat, volgt een korte same
 | Naamruimte identiteit | Een naamruimte voor identiteiten maakt onderscheid tussen de context of het type van een identiteit. Een identiteit onderscheidt bijvoorbeeld &quot;name<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken en de context voor identiteitswaarden te verstrekken. Hierdoor kunt u bepalen dat twee [!DNL Profile] fragmenten die verschillende primaire id&#39;s bevatten, maar dezelfde waarde voor de naamruimte `email` hebben, in feite hetzelfde individu zijn. Zie [Naamruimte overzicht](./namespaces.md) voor meer informatie. |
 | Identiteitsgrafiek | Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten, die u toestaan om te visualiseren en beter te begrijpen welke klantenidentiteiten samen worden vastgemaakt, en hoe. Zie de zelfstudie op [de kijker van de identiteitsgrafiek](./ui/identity-graph-viewer.md) voor meer informatie. |
 | Persoonlijk identificeerbare informatie (PII) | PII is informatie die een klant, zoals een e-mailadres of een telefoonaantal direct kan identificeren. PII-waarden worden vaak gebruikt om overeen te komen. de meervoudige identiteit van een klant op verschillende systemen. |
-| Unieke identiteit | Een unieke identiteit is een identiteit die alleen in een bepaalde sandbox bestaat. |
 | Onbekende of anonieme identiteiten | Onbekende of anonieme identiteiten zijn indicatoren die apparaten isoleren zonder de werkelijke persoon te identificeren die het apparaat gebruikt. Onbekende en anonieme identiteiten zijn onder andere het IP-adres en de cookie-id van een bezoeker. Hoewel onbekende en anonieme identiteiten gedragsgegevens kunnen verstrekken, zijn zij beperkt tot een klant hun PII levert. |
 
 ## Wat is [!DNL Identity Service]?

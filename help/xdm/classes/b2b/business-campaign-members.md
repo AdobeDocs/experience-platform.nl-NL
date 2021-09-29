@@ -1,9 +1,10 @@
 ---
 title: Klasse XDM Business Campaign-leden
 description: Dit document biedt een overzicht van de klasse XDM Business Campaign members in Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -28,5 +29,7 @@ ht-degree: 2%
 | `campaignID` | Tekenreeks | Een unieke id voor de bijbehorende campagne. |
 | `campaignMemberID` | Tekenreeks | Een unieke id voor de entiteit die lid is van de campagne. |
 | `personId` | Tekenreeks | Een unieke id voor de persoon die lid is van de bijbehorende campagne. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

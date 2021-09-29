@@ -5,7 +5,7 @@ title: gebruikersgids voor Edge Segmentation
 topic-legacy: ui guide
 description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8f2540902cdcff99627393429424dbfe1de2d3da
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Edge-segmentatie bevindt zich momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-De segmentatie van de rand is de capaciteit om segmenten in Adobe Experience Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte.
+De segmentatie van de rand is de capaciteit om segmenten in Adobe Experience Platform onmiddellijk [op de rand](../../edge/home.md) te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 
 ## Type Edge-segmenteringsquery
 

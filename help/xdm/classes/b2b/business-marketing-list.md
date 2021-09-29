@@ -1,9 +1,10 @@
 ---
 title: XDM Business Marketing List-klasse
 description: Dit document biedt een overzicht van de XDM Business Marketing List-klasse in het XDM (Experience Data Model).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '197'
 ht-degree: 2%
 
 ---
@@ -26,5 +27,7 @@ ht-degree: 2%
 | `marketingListDescription` | Tekenreeks | Een beschrijving voor de marketinglijst. |
 | `marketingListID` | Tekenreeks | Een unieke id voor de marketinglijstentiteit. |
 | `marketingListName` | Tekenreeks | De naam van de marketinglijst. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie de gids op [schemaverhoudingen in Real-time CDP B2B Uitgave](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel met de andere B2B klassen verwant en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.
