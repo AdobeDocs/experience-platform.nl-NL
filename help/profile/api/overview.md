@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-time handleiding voor de API voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,10 @@ Aangezien de gegevens in Platform worden opgenomen, wordt een steekproefbaan in 
 ## Systeemtaken profiel {#profile-system-jobs}
 
 Profiel-toegelaten gegevens die in [!DNL Platform] worden opgenomen worden opgeslagen in [!DNL Data Lake] evenals [!DNL Real-time Customer Profile] gegevensopslag. Soms kan het nodig zijn om een dataset of batch uit de [!DNL Profile] opslag te verwijderen om gegevens te verwijderen die u niet meer nodig hebt of die bij fout zijn toegevoegd. Hiervoor moet u de API gebruiken om een [!DNL Profile System Job], ook wel &quot;[!DNL delete request]&quot; genoemd, te maken die u, indien nodig, kunt wijzigen, controleren of verwijderen. Als u wilt leren hoe u met verwijderingsverzoeken werkt met het `/system/jobs`-eindpunt in de [!DNL Real-time Customer Profile]-API, volgt u de stappen die worden beschreven in de [-gids voor het eindpunt van systeemtaken voor profielen](profile-system-jobs.md).
+
+## Profielkenmerken bijwerken {#update-profile}
+
+Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Dit kan door partij of het stromen opname worden gedaan en vereist een profiel-Toegelaten dataset die met een upsert markering wordt gevormd. Voor meer informatie over hoe te om een dataset voor attributenupdates te vormen, gelieve te verwijzen naar de zelfstudie voor [toelatend een dataset voor Profiel en upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Volgende stappen {#next-steps}
 

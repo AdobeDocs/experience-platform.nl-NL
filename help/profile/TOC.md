@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Handleiding voor realtime-klantprofiel
 user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
 feature: Profiles
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 6%
+source-wordcount: '136'
+ht-degree: 5%
 
 ---
 
@@ -43,8 +43,8 @@ ht-degree: 6%
    * [UI-hulplijn verenigingsschema](ui/union-schema.md)
    * [Overzicht van Unieschema (video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
-   * [Gegevens toevoegen aan [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Vorm een dataset voor  [!DNL Profile] & [!DNL Identity] dienst](tutorials/dataset-configuration.md)
+   * [Gegevens toevoegen aan realtime klantprofiel](tutorials/add-profile-data.md)
+   * [Een gegevensset voor profiel configureren](tutorials/dataset-configuration.md)
    * [Genereer het overlappingsrapport voor de gegevensset](tutorials/dataset-overlap-report.md)
    * [Meer zelfstudies](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Verwerking van privacyverzoeken](privacy.md)

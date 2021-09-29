@@ -4,10 +4,10 @@ user-guide-title: Help bij Adobe Experience Platform-gegevensverwerking
 breadcrumb-title: Handleiding voor gegevensinname
 user-guide-description: Breng uw gegevens in Platform door partij of het stromen ingestie.
 feature: Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 5%
+source-wordcount: '124'
+ht-degree: 4%
 
 ---
 
@@ -20,8 +20,9 @@ ht-degree: 5%
    - [Kafka-connector](streaming-ingestion/kafka.md)
    - [Problemen oplossen](streaming-ingestion/troubleshooting.md)
 - Batchopname{#batch}
-   - [Overzicht](batch-ingestion/overview.md)
-   - [Batchopname-API](batch-ingestion/api-overview.md)
+   - [Aan de slag met batch-opname-API&#39;s](batch-ingestion/getting-started.md)
+   - [API-overzicht](batch-ingestion/overview.md)
+   - [API-ontwikkelaarsgids](batch-ingestion/api-overview.md)
    - [Gedeeltelijke batch ingestie](batch-ingestion/partial.md)
    - [Problemen oplossen](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}

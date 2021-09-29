@@ -5,13 +5,13 @@ topic-legacy: tutorial
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe te voegen aan het realtime profiel van de klant.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
+
 
 # Gegevens toevoegen aan [!DNL Real-time Customer Profile]
 
@@ -40,3 +40,7 @@ Wanneer het uploaden van gegevens naar een nieuwe dataset voor het eerst, of als
 Met de API [!DNL Real-time Customer Profile] Access kunt u batchgegevens ophalen terwijl deze in een gegevensset worden geladen. Als u geen van de entiteiten kunt terugwinnen u verwacht, kan uw dataset niet voor [!DNL Profile] worden toegelaten. Na het bevestigen dat uw dataset is toegelaten, zorg ervoor dat uw brongegevensformaat en herkenningstekens uw verwachtingen steunen.
 
 Voor gedetailleerde instructies over hoe te om tot entiteiten toegang te hebben die [!DNL Real-time Customer Profile] API gebruiken, gelieve te verwijzen naar [de gids van het eindpunt van entiteiten](../api/entities.md), ook gekend als &quot;[!DNL Profile Access] API&quot;.
+
+## Profielopslaggegevens bijwerken
+
+Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Dit kan door partij of het stromen opname worden gedaan en vereist een profiel-Toegelaten dataset die met een upsert markering wordt gevormd. Voor meer informatie over hoe te om een dataset voor attributenupdates te vormen, gelieve te verwijzen naar de zelfstudie voor [toelatend een dataset voor Profiel en upsert](../../catalog/datasets/enable-upsert.md).

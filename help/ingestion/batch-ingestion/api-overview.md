@@ -2,90 +2,26 @@
 keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;inname;ontwikkelaarshandleiding;api-handleiding;upload;ingest Parquet;ingest json;
 solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
-topic-legacy: developer guide
-description: Dit document biedt een uitgebreid overzicht van het gebruik van batch-opname-API's.
+description: Dit document bevat een uitgebreide handleiding voor ontwikkelaars die werken met batch-opname-API's voor Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 3%
+source-wordcount: '2373'
+ht-degree: 1%
 
 ---
 
-# Handleiding voor inname van batch-API
+# Handleiding voor het ontwikkelen van batterijen
 
-Dit document biedt een uitgebreid overzicht van het gebruik van [batch ingestion API&#39;s](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+Dit document biedt een uitgebreide handleiding voor het gebruik van [batch ingestion API endpoints](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Voor een overzicht van batch-opname-API&#39;s, inclusief voorwaarden en aanbevolen procedures, begint u met het lezen van het API-overzicht [batch-opname](overview.md).
 
 De bijlage bij dit document bevat informatie over [het opmaken van gegevens die moeten worden gebruikt voor inname](#data-transformation-for-batch-ingestion), inclusief voorbeeld-CSV- en JSON-gegevensbestanden.
 
 ## Aan de slag
 
-Gegevensinvoer biedt een RESTful-API waarmee u standaard CRUD-bewerkingen kunt uitvoeren op de ondersteunde objecttypen.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [De Ingestie API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) van Gegevens. Gegevensinvoer biedt een RESTful-API waarmee u standaard CRUD-bewerkingen kunt uitvoeren op de ondersteunde objecttypen.
 
-De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben naast elkaar om met succes vraag aan de Ingestie API van de Partij te maken.
-
-Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
-
-- [Inname](./overview.md) in batch: Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren.
-- [[!DNL Experience Data Model (XDM)] Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-
-### API-voorbeeldaanroepen lezen
-
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
-
-### Waarden verzamelen voor vereiste koppen
-
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
-
-Verzoeken die een payload (POST, PUT, PATCH) bevatten, vereisen mogelijk een extra `Content-Type` header. De toegelaten waarden specifiek voor elke vraag worden verstrekt in de vraagparameters.
-
-## Typen
-
-Bij het opnemen van gegevens is het belangrijk om te begrijpen hoe [!DNL Experience Data Model] (XDM) schema&#39;s werken. Voor meer informatie over hoe de de gebiedstypes van XDM aan verschillende formaten in kaart brengen, te lezen gelieve [de ontwikkelaarsgids van de Registratie van het Schema](../../xdm/api/getting-started.md).
-
-Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batch mislukken met een `TypeCompatibilityException`.
-
-JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ISO 8061 geformatteerde koorden](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) of Unix Tijd geformatteerd in milliseconden (15312633 959000) en worden bij inname omgezet in het doel-XDM-type.
-
-In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
-
-| Binnenkomend (rij) vs. Doel (kolom) | Tekenreeks | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tekenreeks | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| Kort | X | X | X | X | X | X |  |  |  |  |
-| Geheel | X | X | X | X | X | X |  |  |  |  |
-| Lang | X | X | X | X | X | X | X | X |  |  |
-| Dubbel | X | X | X | X | X | X |  |  |  |  |
-| Datum |  |  |  |  |  |  | X |  |  |  |
-| Datum/tijd |  |  |  |  |  |  |  | X |  |  |
-| Object |  |  |  |  |  |  |  |  | X | X |
-| Kaart |  |  |  |  |  |  |  |  | X | X |
-
->[!NOTE]
->
->Booleaanse waarden en arrays kunnen niet naar andere typen worden geconverteerd.
-
-## Ingestiebeperkingen
-
-De gegevensinvoer in de batch heeft enkele beperkingen:
-- Maximumaantal bestanden per batch: 1500
-- Maximale batchgrootte: 100 GB
-- Maximumaantal eigenschappen of velden per rij: 10000
-- Maximumaantal batches per minuut per gebruiker: 138
+Lees voordat u doorgaat het [overzicht van de batch-opname-API](overview.md) en de [gids Aan de slag](getting-started.md).
 
 ## Ingest JSON-bestanden
 
@@ -157,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de batch-id uit het antwoord op het aanmaken van de batch gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 >[!NOTE]
 >
@@ -231,7 +167,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Bovenliggende bestanden samenvoegen
+## Bovenliggende bestanden samenvoegen {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -812,6 +748,21 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
+## Een batch repareren
+
+Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Adobe Experience Platform ondersteunt de update of patch van Profile Store-gegevens via een upsert-actie of &#39;patching a batch&#39;.
+
+>[!NOTE]
+>
+>Deze updates zijn alleen toegestaan voor profielrecords, geen gebeurtenissen.
+
+Het volgende is vereist om een batch te kunnen repareren:
+
+- **Een dataset die voor de updates van het Profiel en van attributen wordt toegelaten.** Dit wordt gedaan door datasetmarkeringen en vereist een specifieke  `isUpsert:true` markering wordt toegevoegd aan de  `unifiedProfile` serie. Voor detailstappen die tonen hoe te om een dataset tot stand te brengen of een bestaande dataset voor upsert te vormen, volg het leerprogramma voor [toelatend een dataset voor de updates van het Profiel](../../catalog/datasets/enable-upsert.md).
+- **Een Parket-bestand met de velden die moeten worden gerepareerd en identiteitsvelden voor het profiel.** De gegevensindeling voor het patchen van een batch is vergelijkbaar met het normale inslikproces voor batches. De vereiste invoer is een Parquet-bestand. Naast de velden die moeten worden bijgewerkt, moeten de geüploade gegevens de identiteitsvelden bevatten, zodat ze overeenkomen met de gegevens in het Profile Store.
+
+Zodra u een dataset hebt die voor Profiel en upsert wordt toegelaten, en een dossier van het Pakket die de gebieden bevat u wenst om evenals de noodzakelijke identiteitsgebieden te herstellen, kunt u de stappen voor [het opnemen van de dossiers van het Pakket ](#ingest-parquet-files) volgen om de flard via partijopname te voltooien.
+
 ## Een batch opnieuw afspelen
 
 Als u een reeds opgenomen partij wilt vervangen, kunt u dit met &quot;partij replay&quot;doen - deze actie is gelijkwaardig aan het schrappen van de oude partij en het opnemen van nieuwe in plaats daarvan.
@@ -963,6 +914,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```
 
 ## Aanhangsel
+
+De volgende sectie bevat aanvullende informatie voor het innemen van gegevens in Experience Platforms door middel van batch-inname.
 
 ### Gegevenstransformatie voor batch-opname
 

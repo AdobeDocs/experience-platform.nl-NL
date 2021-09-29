@@ -4,9 +4,9 @@ title: Overzicht van realtime-klantprofiel
 topic-legacy: guide
 description: In realtime Klantprofiel worden gegevens uit verschillende bronnen samengevoegd en biedt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
+source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,10 @@ Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten
 ### Metrische gegevens voor het opnemen van profielen
 
 Met observability Insights kunt u belangrijke metriek in Adobe Experience Platform onthullen. Naast [!DNL Experience Platform] gebruiksstatistieken en prestatie-indicatoren voor diverse functies [!DNL Platform], zijn er specifieke op profiel betrekking hebbende metriek die u toestaan om inzicht in inkomende verzoektarieven, succesvolle innametarieven, ingebedde verslaggrootte, en meer te krijgen. Voor meer informatie, begin door [Observability Insights API overzicht](../observability/api/overview.md) te lezen, en voor een volledige lijst van de metriek van het Profiel van de Klant in real time, zie de documentatie over [beschikbare metriek](../observability/api/metrics.md#available-metrics).
+
+## Profielopslaggegevens bijwerken
+
+Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Dit kan door partij of het stromen opname worden gedaan en vereist een profiel-Toegelaten dataset die met een upsert markering wordt gevormd. Voor meer informatie over hoe te om een dataset voor attributenupdates te vormen, gelieve te verwijzen naar de zelfstudie voor [toelatend een dataset voor Profiel en upsert](../catalog/datasets/enable-upsert.md).
 
 ## [!DNL Data governance] en [!DNL Privacy]
 

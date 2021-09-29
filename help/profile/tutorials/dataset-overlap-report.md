@@ -3,13 +3,13 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;rappo
 title: Het rapport Gegevensset-overlap genereren
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om het overlappingsrapport van de gegevensset te genereren met behulp van de Real-time Customer Profile API.
-source-git-commit: f30f87527f5e903c851a140e7cbaad1964a48803
+exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
 
 ---
-
 
 # Genereer het overlappingsrapport voor de gegevensset
 
@@ -99,7 +99,7 @@ Een succesvol verzoek keert HTTP status 200 (OK) en de dataset overlappen rappor
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
-## De rapportgegevens van de gegevensset overlappen {#interpret-the-report} interpreteren
+## Interpreteer de gegevens van het datasetoverlapping rapport {#interpret-the-report}
 
 Het gegenereerde rapport voor de overlapping van gegevenssets bevat een tijdstempel met de datum en tijd van het rapport en een gegevensobject met unieke combinaties van id&#39;s voor gegevenssets als door komma&#39;s gescheiden lijsten. De volgende secties verstrekken extra informatie betreffende de componenten van het rapport.
 
@@ -124,6 +124,7 @@ Om de resultaten van het rapport te interpreteren, overweeg het volgende voorbee
 ```
 
 Dit rapport bevat de volgende informatie:
+
 * Er zijn 123 profielen die van gegevens uit de volgende datasets worden samengesteld: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Er zijn 454.412 profielen samengesteld uit gegevens die uit deze twee datasets komen: `5d92921872831c163452edc8` en `5eb2cdc6fa3f9a18a7592a98`.
 * Er zijn 107 profielen die slechts van gegevens uit dataset `5eeda0032af7bb19162172a7` worden samengesteld.

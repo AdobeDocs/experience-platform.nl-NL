@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevensopname;partij;Partij;Gegevensset inschakelen;Overzicht van inname van batch;overzicht;overzicht;overzicht van inname van batch
 solution: Experience Platform
-title: Overzicht van batchverwerking
+title: Overzicht van de API voor batchverwerking
 topic-legacy: overview
 description: Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 1%
+source-wordcount: '1388'
+ht-degree: 4%
 
 ---
 
-# Overzicht van inname in batch
+# Overzicht van de API voor inname van batch
 
-Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die met een bekend schema in [!DNL Experience Data Model] (XDM) register in overeenstemming zijn.
+Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden ingesloten, kunnen profielgegevens zijn van een plat bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het XDM-register ([!DNL Experience Data Model]).
 
 De [Referentie van de API van de Ingestie van Gegevens](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) verstrekt extra informatie over deze API vraag.
 
@@ -22,14 +22,9 @@ Het volgende diagram schetst het proces van partijingestie:
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## De API gebruiken
+## Aan de slag
 
-Met de [!DNL Data Ingestion]-API kunt u gegevens als batches (een gegevenseenheid die bestaat uit een of meer bestanden die als één eenheid moeten worden ingevoerd) in [!DNL Experience Platform] invoeren in drie basisstappen:
-
-1. Maak een nieuwe batch.
-2. Upload dossiers aan een gespecificeerde dataset die het XDM schema van de gegevens aanpast.
-3. Geef het einde van de batch aan.
-
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [De Ingestie API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) van Gegevens. Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 ### [!DNL Data Ingestion] voorwaarden
 
@@ -43,33 +38,55 @@ Met de [!DNL Data Ingestion]-API kunt u gegevens als batches (een gegevenseenhei
 - De aanbevolen batch is tussen 256 MB en 100 GB.
 - Elke batch moet maximaal 1500 bestanden bevatten.
 
-Als u een bestand wilt uploaden dat groter is dan 512 MB, moet het bestand in kleinere delen worden verdeeld. Instructies voor het uploaden van een groot bestand vindt u [hier](#large-file-upload---create-file).
+### Beperkingen bij inname in batch
 
-### API-voorbeeldaanroepen lezen
+De gegevensinvoer in de batch heeft enkele beperkingen:
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
-
-### Waarden verzamelen voor vereiste koppen
-
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
-
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
+- Maximumaantal bestanden per batch: 1500
+- Maximale batchgrootte: 100 GB
+- Maximumaantal eigenschappen of velden per rij: 10000
+- Maximumaantal batches per minuut per gebruiker: 138
 
 >[!NOTE]
 >
->Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
+>Als u een bestand wilt uploaden dat groter is dan 512 MB, moet het bestand in kleinere delen worden verdeeld. Instructies voor het uploaden van een groot bestand vindt u in het gedeelte [grote bestandsupload van dit document](#large-file-upload---create-file).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
+### Typen
 
-- Inhoudstype: application/json
+Bij het opnemen van gegevens is het belangrijk om te begrijpen hoe [!DNL Experience Data Model] (XDM) schema&#39;s werken. Voor meer informatie over hoe de de gebiedstypes van XDM aan verschillende formaten in kaart brengen, te lezen gelieve [de ontwikkelaarsgids van de Registratie van het Schema](../../xdm/api/getting-started.md).
 
-### Een batch maken
+Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batch mislukken met een `TypeCompatibilityException`.
+
+JSON en CSV hebben bijvoorbeeld niet het type `date` of `date-time`. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ISO 8061 geformatteerde koorden](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) of Unix Tijd geformatteerd in milliseconden (15312633 959000) en worden bij inname omgezet in het doel-XDM-type.
+
+In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
+
+| Binnenkomend (rij) vs. Doel (kolom) | Tekenreeks | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Tekenreeks | X | X | X | X | X | X | X | X |  |  |
+| Byte | X | X | X | X | X | X |  |  |  |  |
+| Kort | X | X | X | X | X | X |  |  |  |  |
+| Geheel | X | X | X | X | X | X |  |  |  |  |
+| Lang | X | X | X | X | X | X | X | X |  |  |
+| Dubbel | X | X | X | X | X | X |  |  |  |  |
+| Datum |  |  |  |  |  |  | X |  |  |  |
+| Datum/tijd |  |  |  |  |  |  |  | X |  |  |
+| Object |  |  |  |  |  |  |  |  | X | X |
+| Kaart |  |  |  |  |  |  |  |  | X | X |
+
+>[!NOTE]
+>
+>Booleaanse waarden en arrays kunnen niet naar andere typen worden geconverteerd.
+
+## De API gebruiken
+
+Met de [!DNL Data Ingestion]-API kunt u gegevens als batches (een gegevenseenheid die bestaat uit een of meer bestanden die als één eenheid moeten worden ingevoerd) in [!DNL Experience Platform] invoeren in drie basisstappen:
+
+1. Maak een nieuwe batch.
+2. Upload dossiers aan een gespecificeerde dataset die het XDM schema van de gegevens aanpast.
+3. Geef het einde van de batch aan.
+
+## Een batch maken
 
 Voordat gegevens kunnen worden toegevoegd aan een gegevensset, moet deze worden gekoppeld aan een batch, die later wordt geüpload naar een opgegeven gegevensset.
 
@@ -130,7 +147,11 @@ U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw best
 
 >[!NOTE]
 >
->In de onderstaande voorbeelden wordt de bestandsindeling [Apache Parquet](https://parquet.apache.org/documentation/latest/) gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de handleiding [voor het ontwikkelen van batch-indelingen](./api-overview.md).
+>De inname van de partij kan worden gebruikt om gegevens in de Opslag van het Profiel stapsgewijs bij te werken. Zie de sectie over [het bijwerken van een batch](#patch-a-batch) in de [batch ingestion developer guide](api-overview.md) voor meer informatie.
+
+>[!INFO]
+>
+>In de onderstaande voorbeelden wordt de bestandsindeling [Apache Parquet](https://parquet.apache.org/documentation/latest/) gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de handleiding [voor het ontwikkelen van batch-indelingen](api-overview.md).
 
 ### Kleine bestandsupload
 

@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Handleiding voor catalogi en gegevenssets
 user-guide-description: Onderzoek gegevenslijn, meta-gegevens, dossierbeschrijvingen, folders, en datasets binnen het meer van Gegevens.
 feature: Data Management
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '116'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,8 @@ ht-degree: 1%
    * [Overzicht van gegevenssets](datasets/overview.md)
    * [Gebruikershandleiding voor gegevensbestanden](datasets/user-guide.md)
    * [Een gegevensset maken en vullen met API&#39;s](datasets/create.md)
+   * [Een gegevensset inschakelen voor profiel en identiteit](datasets/enable-for-profile.md)
+   * [Een gegevensset inschakelen voor profielupdates (upsert)](datasets/enable-upsert.md)
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
 * [Gegevensbescherming in Experience Platform](data-protection.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/catalog/)
