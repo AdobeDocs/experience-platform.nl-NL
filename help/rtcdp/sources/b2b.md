@@ -1,7 +1,8 @@
 ---
-title: Schema's in Real-time Customer Data Platform B2B Edition
+title: Bronnen in Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de rol van bronnen in Real-time Customer Data Platform B2B Edition.
-source-git-commit: 457a5729e936582f30851a11375a904916871096
+exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
+source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -16,5 +17,5 @@ De volgende documenten bieden meer informatie over het gebruik van [!DNL Marketo
 
 * Voor informatie over hoe te om uw [!DNL Marketo] gegevens aan Platform aan te sluiten, zie de zelfstudie over [het creëren van een bron van Marketo schakelaar in UI](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
 * Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met [!DNL Marketo] worden gebruikt, zie de documentatie voor [B2B namespaces en schema&#39;s](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
-* Raadpleeg de [[!DNL Marketo] verificatiegids](../../sources/connectors/adobe-applications/marketo/marketo-auth.md) voor informatie over het zoeken naar uw [!DNL Marketo]-insteekmodule en het genereren van uw referenties.
+* Raadpleeg de [[!DNL Marketo] verificatiegids](../../sources/connectors/adobe-applications/marketo/marketo-auth.md) voor informatie over het zoeken naar uw [!DNL Marketo] Munchkin-id en het genereren van uw referenties.
 * Voor informatie over de specifieke toewijzingsregels die op [!DNL Marketo] datasets van toepassing zijn, zie de documentatie over [[!DNL Marketo] gebiedsafbeeldingen](../../sources/connectors/adobe-applications//mapping/marketo.md).
