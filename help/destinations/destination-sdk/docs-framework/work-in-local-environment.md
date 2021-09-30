@@ -1,12 +1,10 @@
 ---
 title: Een teksteditor in uw lokale omgeving gebruiken om een doeldocumentatiepagina te maken
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om in uw lokale omgeving te werken aan de auteur van documentatie en een pull-verzoek in te dienen.
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: De instructies op deze pagina tonen u hoe te om een tekstredacteur te gebruiken om in uw lokale milieu te werken aan auteur een documentatiepagina voor uw Experience Platform bestemming en het voor overzicht voor te leggen.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e1e7d2f70c032d02f96b3999e4fca736070c6ca9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -28,9 +26,9 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 1. Navigeer in uw browser naar `https://github.com/AdobeDocs/experience-platform.en`
 2. Als u [vork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) wilt opslaan in de opslagplaats, klikt u op **Fork** zoals wordt weergegeven in de schermafbeelding.
 
-   ![Documentatieregister voor vork Adobe](./assets/ssd-fork-repo.png)
+   ![Documentatieregister voor vork Adobe](./assets/ssd-fork-repository.gif)
 
-3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Openen met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u [GitHub Desktop](https://desktop.github.com/) geïnstalleerd hebt. Lees [Een lokale kloon maken van de gegevensopslagruimte](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) in de handleiding voor Adobe-contribuanten voor meer informatie.
+3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Openen met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u [GitHub Desktop](https://desktop.github.com/) geïnstalleerd hebt. Lees [Een lokale kloon van de gegevensopslagruimte maken](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) in de handleiding voor Adobe-contribuanten voor meer informatie.
 
    ![Adobe-documentatieopslagplaats klonen naar lokale omgeving](./assets/clone-local.png)
 
@@ -39,13 +37,17 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 ## Auteur de documentatiepagina voor uw bestemming {#author-documentation}
 
 1. Uw documentatiepagina is gebaseerd op [self-service bestemmingsmalplaatje](./self-service-template.md). Download [doelsjabloon](assets/yourdestination-template.zip). Pak het uit en extraheer het bestand `yourdestination-template.md` naar de map die in stap 4 hierboven is vermeld.  Wijzig de naam van het bestand `YOURDESTINATION.md`, waarbij YOURDESTINATION de naam van uw bestemming in Adobe Experience Platform is. Als uw bedrijf bijvoorbeeld Moviestar heet, geeft u het bestand `moviestar.md` een naam.
-2. Open het nieuwe bestand in de teksteditor van uw keuze](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors). [ Adobe adviseert dat u [Visual Studio Code](https://code.visualstudio.com/) gebruikt en de de Authoring van de Prijsverhoging van de Adobe installeert. Als u de extensie wilt installeren, opent u Visual Studio-code, selecteert u het tabblad **[!DNL Extensions]** links van het scherm en zoekt u `adobe markdown authoring`. Selecteer de extensie en klik op **[!DNL Install]**.
+2. Open het nieuwe bestand in de teksteditor van uw keuze](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors). [ Adobe adviseert dat u [Visual Studio Code](https://code.visualstudio.com/) gebruikt en de de Authoring van de Markeringen van de Adobe uitbreiding installeert. Als u de extensie wilt installeren, opent u Visual Studio-code, selecteert u het tabblad **[!DNL Extensions]** links van het scherm en zoekt u `adobe markdown authoring`. Selecteer de extensie en klik op **[!DNL Install]**.
    ![Adobe Markdown Authoring-extensie installeren](./assets/install-adobe-markdown-extension.gif)
 3. Bewerk de sjabloon met relevante informatie voor uw doel. Volg de instructies in de sjabloon.
 4. Ga voor alle schermafbeeldingen of afbeeldingen die u wilt toevoegen aan de documentatie naar `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, waarbij `[...]` de gewenste categorie voor uw doel is. Als u bijvoorbeeld een verpersoonlijkingsbestemming aan Experience Platform toevoegt, selecteert u de map `personalization`. Maak een nieuwe map voor uw bestemming en sla uw afbeeldingen hier op. U moet er een koppeling naar maken vanaf de pagina die u ontwerpt. Zie [instructies voor het koppelen naar afbeeldingen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
 5. Sla het bestand waaraan u werkt op als u klaar bent.
 
 ## De documentatie ter controle verzenden {#submit-review}
+
+>[!TIP]
+>
+>U kunt hier niets breken. Door de instructies in deze sectie te volgen, stelt u eenvoudig een documentupdate voor. De door u voorgestelde update wordt goedgekeurd of bewerkt door het Adobe Experience Platform-documentatieteam.
 
 1. In de Desktop van GitHub, creeer een het werk tak voor uw updates en selecteer **Publish tak** om de tak aan GitHub te publiceren.
 
@@ -61,7 +63,7 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 
 1. In de het Webinterface van GitHub, open een trekkingsverzoek (PR) om uw werkende tak in de master tak van de de documentatiebewaarplaats van de Adobe samen te voegen. Zorg ervoor dat de vertakking waaraan u hebt gewerkt, is geselecteerd en selecteer **Verzoek opvullen**.
 
-   ![pull-verzoek maken](./assets/ssd-create-pull-request-1.png)
+   ![pull-verzoek maken](./assets/ssd-create-pull-request-1.gif)
 
 1. Zorg ervoor dat de basis en vergelijkingstakken correct zijn. Voeg een nota aan PR toe, beschrijvend uw update, en selecteer **Create trekkingsverzoek**. Dit opent een PR om de werkende tak van uw vork in de master tak van de opslagplaats van de Adobe samen te voegen.
    >[!TIP]
