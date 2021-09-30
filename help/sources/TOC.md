@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Data Ingestion, Sources
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 5%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 5%
       - [Bronconnector voor analyse](connectors/adobe-applications/analytics.md)
       - [Audience Manager-bronaansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantkenmerken bronaansluiting](connectors/adobe-applications/customer-attributes.md)
-      - Toewijzingen van toepassingsveld Adobe {#mapping}
+      - Veldtoewijzingen {#mapping}
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Toewijzingen doelveld](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage-veldtoewijzingen](connectors/adobe-applications/mapping/marketo.md)
-      - Marketo Engage {#marketo}
+      - B2B {#b2b}
          - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage-verificatiegids](connectors/adobe-applications/marketo/marketo-auth.md)
-         - [Marketo Engage-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Reclame {#advertising}
       - [Google AdWords-connector](connectors/advertising/ads.md)
    - Cloudopslag {#cloud-storage}

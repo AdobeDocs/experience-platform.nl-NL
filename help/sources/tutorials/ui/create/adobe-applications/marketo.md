@@ -6,20 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronconnector in de UI om B2B-gegevens over te brengen naar Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
+source-git-commit: 9c8b63bf577a4258a7ef87c11bc8f87c1a01cc20
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
 
-# (Bèta) creeer een [!DNL Marketo Engage] bronschakelaar in UI
+# Een [!DNL Marketo Engage]-bronconnector maken in de gebruikersinterface
 
->[!IMPORTANT]
->
->De bron [!DNL Marketo Engage] bevindt zich momenteel in bèta. Het kenmerk en de documentatie worden gewijzigd door het onderwerp. Bovendien moet u ervoor zorgen dat u een niet-productiesandbox wanneer het gebruiken van de schakelaar tijdens het bètaprogramma gebruikt. Raadpleeg de [Sandboxdocumentatie](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes) voor meer informatie over sandboxen.
-
-Deze zelfstudie biedt stappen voor het maken van een [!DNL Marketo Engage]-bronconnector (hierna &quot;[!DNL Marketo]&quot; genoemd) in de gebruikersinterface om consumentengegevens naar Adobe Experience Platform te brengen.
+Deze zelfstudie biedt stappen voor het maken van een [!DNL Marketo Engage]-bronconnector (hierna &quot;[!DNL Marketo]&quot; genoemd) in de UI om B2B-gegevens naar Adobe Experience Platform te brengen.
 
 ## Aan de slag
 

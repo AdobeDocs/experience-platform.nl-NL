@@ -4,20 +4,15 @@ solution: Experience Platform
 title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
-translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
+source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-
-# (Bèta) [!DNL Marketo Engage]-connector
-
->[!IMPORTANT]
->
->De bron [!DNL Marketo Engage] bevindt zich momenteel in bèta. De kenmerken en de documentatie van het programma kunnen worden gewijzigd.
+# [!DNL Marketo Engage] connector
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 

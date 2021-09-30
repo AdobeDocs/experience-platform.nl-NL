@@ -5,18 +5,14 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: 8680f0f3f67548cbf18c1aa0f0c68c5810c40f90
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 1%
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Marketo Engage] veldtoewijzingen
-
->[!IMPORTANT]
->
->De bron [!DNL Marketo Engage] bevindt zich momenteel in bèta. De kenmerken en de documentatie van het programma kunnen worden gewijzigd.
+# [!DNL Marketo Engage] veldtoewijzingen
 
 De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [!DNL Marketo]-gegevenssets en de bijbehorende XDM-velden (Experience Data Model).
 
@@ -25,8 +21,12 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
-| `personID` | `personID` | Primaire identiteit |
+| `"Marketo"` | `personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `personID` | `personKey.sourceID` |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `eventType` | `eventType` |
+| `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
@@ -38,9 +38,9 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `web.webPageDetails.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
 | `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters` |
 | `web.webReferrer.URL` | `web.webReferrer.URL` |
-| `listOperations.listID` | `listOperations.listID` |
+| `iif(${listOperations\.listID} != null && ${listOperations\.listID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", ${listOperations\.listID}, "sourceKey", concat(${listOperations\.listID},"@${MUNCHKIN_ID}.Marketo")), null)` | `listOperations.listKey` |
 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `iif(${opportunityEvent\.opportunityID} != null && ${opportunityEvent\.opportunityID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${opportunityEvent\.opportunityID}, "sourceKey", concat(${opportunityEvent\.opportunityID},"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityEvent.opportunityKey` |
 | `opportunityEvent.role` | `opportunityEvent.role` |
 | `leadOperation.newLead.createdDate` | `leadOperation.newLead.createdDate` |
 | `leadOperation.newLead.formName` | `leadOperation.newLead.formName` |
@@ -53,6 +53,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `leadOperation.convertLead.isSentNotificationEmail` | `leadOperation.convertLead.isSentNotificationEmail` |
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
+| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
@@ -75,10 +76,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `leadOperation.changeScore.scoreAttributeID` | `leadOperation.changeScore.scoreAttributeID` |
 | `leadOperation.changeScore.scoreAttributeName` | `leadOperation.changeScore.scoreAttributeName` |
 | `leadOperation.changeScore.urgency` | `leadOperation.changeScore.urgency` |
-| `opportunityEvent.dataValueChanges.attributeName` | `opportunityEvent.dataValueChanges.attributeName` |
-| `opportunityEvent.dataValueChanges.newValue` | `opportunityEvent.dataValueChanges.newValue` |
-| `opportunityEvent.dataValueChanges.oldValue` | `opportunityEvent.dataValueChanges.oldValue` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `json_to_object(${opportunityEvent\.dataValueChanges})` | `opportunityEvent.dataValueChanges` |
+| `iif(${leadOperation\.campaignProgression\.campaignID} != null && ${leadOperation\.campaignProgression\.campaignID} != "" , to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", ${leadOperation\.campaignProgression\.campaignID}, "sourceKey", concat(${leadOperation\.campaignProgression\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.campaignProgression.campaignKey` |
 | `leadOperation.campaignProgression.campaignID` | `leadOperation.campaignProgression.campaignID` |
 | `leadOperation.campaignProgression.isAcquiredBy` | `leadOperation.campaignProgression.isAcquiredBy` |
 | `leadOperation.campaignProgression.isSuccessful` | `leadOperation.campaignProgression.isSuccessful` |
@@ -87,6 +86,10 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `leadOperation.campaignProgression.oldStatusID` | `leadOperation.campaignProgression.oldStatusID` |
 | `leadOperation.campaignProgression.oldStatusName` | `leadOperation.campaignProgression.oldStatusName` |
 | `leadOperation.campaignProgression.reason` | `leadOperation.campaignProgression.reason` |
+| `leadOperation.interestingMoment.date` | `leadOperation.interestingMoment.date` |
+| `leadOperation.interestingMoment.description` | `leadOperation.interestingMoment.description` |
+| `leadOperation.interestingMoment.source` | `leadOperation.interestingMoment.source` |
+| `leadOperation.interestingMoment.type` | `leadOperation.interestingMoment.type` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -94,8 +97,11 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignID` | Primaire identiteit |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
+| `"Marketo"` | `campaignKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `id` | `campaignKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -104,8 +110,12 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `cost` | `actualCost.amount` |
-| `parentProgramId` | `parentCampaignID` |
+| `iif(parentProgramId != null && parentProgramId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", parentProgramId, "sourceKey", concat(parentProgramId,"@${MUNCHKIN_ID}.Marketo")), null)` | `parentCampaignKey` |
 | `integrationPartner` | `integrationPartnerName` |
+| `webinarSessionName` | `webinarSessionName` |
+| `webinarSessionDescription` | `webinarSessionDescription` |
+| `webinarHistorySyncStatus` | `webinarHistorySyncStatus` |
+| `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
 
@@ -115,10 +125,13 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignMemberID` | Primaire identiteit |
-| `programId` | `campaignID` | Relatie |
-| `leadId` | `personID` | Relatie |
-| `acquiredByCampaignID` | `acquiredByCampaignID` |
+| `"Marketo"` | `campaignMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `id` | `campaignMemberKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Relatie |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relatie |
+| `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
 | `reachedSuccess` | `hasReachedSuccess` |
 | `isExhausted` | `isExhausted` |
 | `statusName` | `memberStatus` |
@@ -129,7 +142,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `sfdc.crmId` | `extSourceSystemAudit.externalID` |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -142,8 +155,11 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Primaire identiteit |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `concat(id, ".mkto_org")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | Secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -160,7 +176,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
-| `mktoCdpParentOrgId` | `accountParentID` |
+| `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -168,7 +184,10 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `marketingListID` | Primaire identiteit |
+| `"Marketo"` | `marketingListKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` wordt vervangen als onderdeel van de API voor zoeken. |
+| `id` | `marketingListKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -176,13 +195,16 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 {style=&quot;table-layout:auto&quot;}
 
-## Statische lijstlidmaatschap {#static-list-memnberships}
+## Statische lijstlidmaatschap {#static-list-memberships}
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `staticListMemberID` | `marketingListMemberID` | Primaire identiteit |
-| `staticListID` | `marketingListID` | Relatie |
-| `personID` | `personID` | Relatie |
+| `"Marketo"` | `marketingListMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `staticListMemberID` | `marketingListMemberKey.sourceID` |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relatie |
+| `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relatie |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -195,8 +217,11 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Primaire identiteit |
-| `crmGuid` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -208,7 +233,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `logoUrl` | `accountOrganization.logoUrl` |
 | `numberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `name` | `accountName` |
-| `parentAccountId` | `accountParentID` |
+| `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -217,9 +242,11 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityID` | Primaire identiteit |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
-| `mktoCdpAccountOrgId` | `accountID` | Relatie |
+| `"Marketo"` | `opportunityKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `id` | `opportunityKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -237,7 +264,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | Aanbevolen alleen als u de Salesforce-integratie gebruikt. |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Deze brondataset is slechts beschikbaar aan gebruikers met de [!DNL Salesforce] integratie. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -248,10 +275,13 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityPersonID` | Primaire identiteit |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
-| `mktoCdpOpptyId` | `opportunityID` | Relatie |
-| `leadId` | `personID` | Relatie |
+| `"Marketo"` | `opportunityPersonKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `id` | `opportunityPersonKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt vervangen als onderdeel van de API voor zoeken. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
+| `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relatie |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relatie |
 | `role` | `personRole` |
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -263,8 +293,13 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` | Primaire identiteit |
-| `contactCompany` | `b2b.accountID` |
+| `"Marketo"` | `b2b.personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `id` | `b2b.personKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Als niet-geabonneerd `true` (bijvoorbeeld, waarde = `1`) is, dan plaats `consents.marketing.email.val` als (`n`). Als niet-geabonneerd `false` (bijvoorbeeld, waarde = `0`) is, dan plaats `consents.marketing.email.val` als `null`. |
+| `unsubscribedReason` | `consents.marketing.email.reason` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
 | `leadScore` | `b2b.personScore` |
@@ -272,10 +307,9 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `leadStatus` | `b2b.personStatus` |
 | `personType` | `b2b.personType` |
 | `leadPartitionId` | `b2b.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Secundaire identiteit |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -298,13 +332,12 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `leadStatus` | `personComponents.personStatus` |
 | `personType` | `personComponents.personType` |
 | `leadPartitionId` | `personComponents.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
-| `contactCompany` | `personComponents.sourceAccountID` |
-| `sfdcContactId` | `personComponents.sourceExternalID` | Aanbevolen alleen als u de Salesforce-integratie gebruikt. |
-| `id` | `personComponents.sourcePersonID` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceAccountKey` |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `personComponents.sourceExternalKey` |
+| `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
+| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Dit is een berekend veld. |
 
 {style=&quot;table-layout:auto&quot;}
 

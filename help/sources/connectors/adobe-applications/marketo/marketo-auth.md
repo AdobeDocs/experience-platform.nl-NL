@@ -4,20 +4,15 @@ solution: Experience Platform
 title: Verifieer uw Marketo-bronconnector
 topic-legacy: overview
 description: Dit document bevat informatie over hoe u uw Marketo-verificatiereferenties kunt genereren.
-translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
+source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
 
-
-# (Bèta) verifieer uw [!DNL Marketo Engage] bronschakelaar
-
->[!IMPORTANT]
->
->De bron [!DNL Marketo Engage] bevindt zich momenteel in bèta. De kenmerken en de documentatie van het programma kunnen worden gewijzigd.
+# Verifieer uw [!DNL Marketo Engage] bronschakelaar
 
 Voordat u een [!DNL Marketo Engage] (hierna &quot;[!DNL Marketo]&quot;genoemd) bronschakelaar kunt tot stand brengen, moet u eerst opstelling een douanedienst door de [!DNL Marketo] interface, evenals waarden voor uw Munchkin identiteitskaart, cliënt identiteitskaart, en cliëntgeheim terugwinnen.
 
