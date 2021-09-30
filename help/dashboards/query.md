@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
-title: Onbewerkte gegevenssets verkennen en verwerken waardoor Experience Platform-dashboards kunnen worden aangestuurd
+title: Onbewerkte gegevenssets verkennen en verwerken waardoor Platform-dashboards kunnen worden aangestuurd
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, segment, en bestemmingsdashboards in Experience Platform aandrijven.
-source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
+exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
+source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '738'
 ht-degree: 1%
 
 ---
-
 
 # Onderzoek, verifieer en proces dashboarddatasets gebruikend de Dienst van de Vraag
 
@@ -27,19 +27,36 @@ U kunt de Dienst van de Vraag gebruiken om ruwe datasets voor profiel, segment, 
 
 ### Gegevensbestanden van profielkenmerken
 
-Voor elk actief fusiebeleid in het Profiel van de Klant in real time, is er een dataset van de profielattributen beschikbaar in het gegevensmeer.
+De dashboardinzichten van het profiel zijn gebonden aan fusiebeleid dat door uw organisatie is bepaald. Voor elk actief fusiebeleid, is er een dataset van profielattributen beschikbaar in het gegevenspeer.
 
-De naamgevingsconventie van deze gegevenssets is **Profielkenmerk** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+De naamgevingsconventie van deze gegevenssets is **Profile-Snapshot-Export** gevolgd door een door het systeem gegenereerde, willekeurige alfanumerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Om het volledige schema van elke dataset te begrijpen, kunt u voorproef en de datasets onderzoeken gebruikend de datasetkijker in Experience Platform UI.
+Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets [onderzoeken gebruikend de datasetkijker](../catalog/datasets/user-guide.md) in Experience Platform UI.
+
+![](images/query/profile-attribute.png)
+
+#### Gegevenssets van profielkenmerken toewijzen om beleid-id&#39;s samen te voegen
+
+Elke profielkenmerkgegevensset heeft de naam **Profielmomentopname exporteren** gevolgd door een door het systeem gegenereerde, willekeurige alfanumerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+
+Deze alpha numerieke waarde is een door het systeem gegenereerde, willekeurige tekenreeks die is toegewezen aan een samenvoegbeleid-id van een van de samenvoegbeleidsregels die door uw organisatie zijn gemaakt. De afbeelding van elke identiteitskaart van het fusiebeleid aan zijn verwante reeks van de profielkenmerkdataset wordt gehandhaafd in de `adwh_dim_merge_policies` dataset.
+
+De `adwh_dim_merge_policies` dataset bevat de volgende gebieden:
+
+* `merge_policy_name`
+* `merge_policy_id`
+* `merge_policy`
+* `dataset_id`
+
+Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Meer over het gebruiken van de Redacteur van de Vraag, verwijs naar [de gids UI van de Redacteur van de Vraag](../query-service/ui/user-guide.md).
 
 ### Gegevensset voor segmentmetagegevens
 
 Er is een dataset van segmentmeta-gegevens beschikbaar in het gegevensmeer die meta-gegevens voor elk van de segmenten van uw organisatie bevatten.
 
-De naamgevingsconventie van deze gegevensset is **Profielsegmentdefinitie** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
+De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-Export** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Om het volledige schema van de dataset te begrijpen, kunt u voorproef en het schema onderzoeken gebruikend de datasetkijker in Experience Platform UI.
+Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets [onderzoeken gebruikend de datasetkijker](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
 ![](images/query/segment-metadata.png)
 
@@ -49,7 +66,7 @@ De meta-gegevens voor elk van de geactiveerde bestemmingen van uw organisatie is
 
 De noemende overeenkomst van deze dataset is **DIM_Destination**.
 
-Om het volledige schema van de dataset te begrijpen, kunt u voorproef en het schema onderzoeken gebruikend de datasetkijker in Experience Platform UI.
+Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset [onderzoeken gebruikend de datasetkijker](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
 ![](images/query/destinations-metadata.png)
 
@@ -59,7 +76,11 @@ De volgende voorbeeldvragen omvatten steekproef SQL die in de Dienst van de Vraa
 
 ### Aantal profielen op identiteit
 
-Dit profielinzicht verstrekt een verdeling van identiteiten over alle samengevoegde profielen in de dataset. Het totale aantal profielen op basis van identiteit (met andere woorden, door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan het totale aantal samengevoegde profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
+Dit profielinzicht verstrekt een verdeling van identiteiten over alle samengevoegde profielen in de dataset.
+
+>[!NOTE]
+>
+>Het totale aantal profielen op basis van identiteit (met andere woorden, door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan het totale aantal samengevoegde profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
 **Query**
 
@@ -72,7 +93,7 @@ Select
            Select
                explode(identitymap)
            from
-              profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+              Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
         )
      group by
         namespace;
@@ -96,7 +117,7 @@ Select
                   Select
                     explode(Segmentmembership)
                   from
-                    profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+                    Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by

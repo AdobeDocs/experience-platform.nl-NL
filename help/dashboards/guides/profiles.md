@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1442'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,9 @@ De widget **[!UICONTROL Profiles added]** geeft het totale aantal samengevoegde 
 
 >[!NOTE]
 >
->De widget [!UICONTROL Profiles added] geeft het aantal profielen weer dat na de eerste configuratie van uw organisatie aan het systeem is toegevoegd. Als tijdens de configuratie bijvoorbeeld vier miljoen profielen zijn toegevoegd en u de afgelopen 30 dagen een extra miljoen profielen hebt toegevoegd, geeft de widget [!UICONTROL Profiles added] &quot;1.000.000&quot; weer, terwijl de widget [!UICONTROL Profile count] &quot;5.000.000&quot; zou weergeven.
+>De widget [!UICONTROL Profiles added] geeft het aantal profielen weer dat na de eerste configuratie van uw organisatie aan het systeem is toegevoegd. Raadpleeg de [Real-time documentatie van het klantprofiel](../../profile/home.md) voor meer informatie over het toevoegen van profielen aan de profielopslag.
+>
+>Als tijdens de configuratie bijvoorbeeld vier miljoen profielen zijn toegevoegd en u de afgelopen 30 dagen een extra miljoen profielen hebt toegevoegd, geeft de widget [!UICONTROL Profiles added] &quot;1.000.000&quot; weer, terwijl de widget [!UICONTROL Profile count] &quot;5.000.000&quot; zou weergeven.
 
 ![](../images/profiles/profiles-added.png)
 
