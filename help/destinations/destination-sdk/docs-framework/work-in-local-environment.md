@@ -2,9 +2,9 @@
 title: Een teksteditor in uw lokale omgeving gebruiken om een doeldocumentatiepagina te maken
 description: De instructies op deze pagina tonen u hoe te om een tekstredacteur te gebruiken om in uw lokale milieu te werken aan auteur een documentatiepagina voor uw Experience Platform bestemming en het voor overzicht voor te leggen.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 ## Verbind met GitHub en opstelling uw lokale auteursmilieu {#set-up-environment}
 
 1. Navigeer in uw browser naar `https://github.com/AdobeDocs/experience-platform.en`
-2. Als u [vork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) wilt opslaan in de opslagplaats, klikt u op **Fork** zoals wordt weergegeven in de schermafbeelding.
+2. Als u [vork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) de opslagplaats wilt, klikt u op **Fork** zoals hieronder wordt weergegeven. Dit leidt tot een exemplaar van de bewaarplaats van het Experience Platform in uw eigen rekening GitHub.
 
    ![Documentatieregister voor vork Adobe](./assets/ssd-fork-repository.gif)
 
-3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Openen met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u [GitHub Desktop](https://desktop.github.com/) geïnstalleerd hebt. Lees [Een lokale kloon van de gegevensopslagruimte maken](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) in de handleiding voor Adobe-contribuanten voor meer informatie.
+3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Openen met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u [GitHub Desktop](https://desktop.github.com/) geïnstalleerd hebt. Lees [Een lokale kloon maken van de gegevensopslagruimte](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) in de handleiding voor Adobe-contribuanten voor meer informatie.
 
    ![Adobe-documentatieopslagplaats klonen naar lokale omgeving](./assets/clone-local.png)
 
@@ -61,7 +61,7 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 
    ![Push your commit](./assets/push-local-to-remote.png)
 
-1. In de het Webinterface van GitHub, open een trekkingsverzoek (PR) om uw werkende tak in de master tak van de de documentatiebewaarplaats van de Adobe samen te voegen. Zorg ervoor dat de vertakking waaraan u hebt gewerkt, is geselecteerd en selecteer **Verzoek opvullen**.
+1. In de het Webinterface van GitHub, open een trekkingsverzoek (PR) om uw werkende tak in de master tak van de de documentatiebewaarplaats van de Adobe samen te voegen. Controleer of de vertakking waaraan u hebt gewerkt, is geselecteerd en selecteer **Contribute > pull request** openen.
 
    ![pull-verzoek maken](./assets/ssd-create-pull-request-1.gif)
 
