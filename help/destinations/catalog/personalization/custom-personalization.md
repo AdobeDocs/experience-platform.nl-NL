@@ -1,10 +1,10 @@
 ---
 keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
-title: Aangepaste aanpassingsbestemming
+title: Aangepaste aanpassingsverbinding (bèta)
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt in real time 1:1 en verpersoonlijking die op het segmentlidmaatschap van een gebruikersprofiel wordt gebaseerd.
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ Deze integratie wordt aangedreven door [Adobe Experience Platform Web SDK](../..
 
 ## Exporttype {#export-type}
 
-**Verzoek**  van het profiel - u vraagt om alle segmenten die in de bestemming van de douaneverpersoonlijking voor één enkel profiel in kaart worden gebracht. De verschillende bestemmingen van de douaneverpersoonlijking kunnen opstelling voor verschillende gegevensstromen van de Inzameling van Gegevens van Adobe zijn.
+**Verzoek**  van het profiel - u vraagt om alle segmenten die in de bestemming van de douaneverpersoonlijking voor één enkel profiel in kaart worden gebracht. Verschillende aangepaste verpersoonlijkingsbestemmingen kunnen worden ingesteld voor verschillende [gegevensstromen van de Gegevensverzameling van Adobe.](../../../edge/fundamentals/datastreams.md)
 
 ## Gebruiksscenario’s {#use-cases}
 
-Deze bestemming deelt publiek met een advertentieservers en niet-Adobe verpersoonlijkingstoepassingen, die in real time moeten worden gebruikt, om te beslissen welke reclame gebruikers op een website zouden moeten zien.
+Deze bestemming deelt publiek met advertentieservers en niet-Adobe verpersoonlijkingstoepassingen, die in real time moeten worden gebruikt, om te beslissen welke reclame gebruikers op een website zouden moeten zien.
 
 ### Hoofdletters en kleine letters gebruiken 1
 
@@ -62,7 +62,7 @@ Lees [Activate profielen en segmenten aan profiel verzoekbestemmingen](../../ui/
 
 Als u [Adobe Tags](../../../tags/home.md) gebruikt om de SDK van het Web van het Experience Platform op te stellen, gebruik [gebeurtenis complete](../../../edge/extension/event-types.md) functionaliteit en uw actie van de douanecode zal een `event.destinations` variabele hebben die u kunt gebruiken om de uitgevoerde gegevens te zien.
 
-Als u [Adobe Tags](../../../tags/home.md) niet gebruikt om de SDK van het Web van het Experience Platform op te stellen, gebruik [behandelende reacties van gebeurtenissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionaliteit.
+Als u [Adobe Tags](../../../tags/home.md) niet gebruikt om de SDK van het Web van het Experience Platform op te stellen, gebruik [behandelende reacties van gebeurtenissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionaliteit om de uitgevoerde gegevens te zien.
 
 Het JSON-antwoord van Adobe Experience Platform kan worden geparseerd om de bijbehorende integratiealias te zoeken van de toepassing die u integreert met Adobe Experience Platform. De segment-id&#39;s kunnen als doelparameters worden doorgegeven aan de code van de toepassing. Hieronder ziet u een voorbeeld van hoe dit er specifiek uitziet voor de doelrespons.
 

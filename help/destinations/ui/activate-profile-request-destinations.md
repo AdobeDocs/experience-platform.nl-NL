@@ -1,13 +1,13 @@
 ---
 keywords: activeer profiel verzoek bestemmingen;activeer gegevens;profiel verzoek bestemmingen
-title: De publieksgegevens van de activering aan de bestemmingen van het profielverzoek
+title: De publieksgegevens van de activering aan de bestemmingen van het profielverzoek (Bèta)
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Leer hoe te om de publieksgegevens te activeren u in Adobe Experience Platform hebt door segmenten aan de bestemmingen van het profielverzoek in kaart te brengen.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Om gegevens aan bestemmingen te activeren, moet u [met succes hebben verbonden m
 
 ### Samenvoegingsbeleid segment {#merge-policy}
 
-De de verzoekbestemmingen van het profiel steunen momenteel slechts de activering van segmenten die het standaardsamenvoegbeleid gebruiken. Als u probeert segmenten met een ander samenvoegbeleid te activeren, treedt een fout op de pagina [[!UICONTROL Review]](#review) op.
+Momenteel, steunen de bestemmingen van het profielverzoek slechts de activering van segmenten die [standaardsamenvoegbeleid](../../segmentation/ui/segment-builder.md#merge-policies) gebruiken.
 
 ## Kies uw bestemming {#select-destination}
 
