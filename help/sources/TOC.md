@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Data Ingestion, Sources
-source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
+source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 5%
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Toewijzingen doelveld](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage-veldtoewijzingen](connectors/adobe-applications/mapping/marketo.md)
-      - B2B {#b2b}
+      - Marketo {#marketo}
          - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage-verificatiegids](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
