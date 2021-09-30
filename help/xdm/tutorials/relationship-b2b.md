@@ -1,14 +1,15 @@
 ---
 title: Definieer een relatie tussen twee schema's in Real-time Customer Data Platform B2B Edition
 description: Leer hoe te om een vele-aan-één verhouding tussen twee schema's in Platform B2B van de Gegevens van de Klant in real time te bepalen .
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
+source-git-commit: 2ad20a4c7a9d1cc71fc4e589de90d7eabf8c87b7
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
 
-# Definieer een relatie tussen twee schema&#39;s in Real-time Customer Data Platform B2B Edition
+# Definieer een relatie tussen twee schema&#39;s in Real-time Customer Data Platform B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
