@@ -5,9 +5,9 @@ title: Een nieuw productprofiel maken in Adobe Admin Console
 topic-legacy: user guide
 description: In dit document worden de stappen beschreven die nodig zijn om een nieuw productprofiel in de Adobe Admin Console te maken. Als u een nieuw profiel wilt maken, navigeert u naar het tabblad Productprofielen en klikt u op Nieuw profiel.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '302'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ In het volgende scherm wordt u gevraagd welke services voor Platforms u in het p
 
 Klanten die recht hebben op de B2B- of B2P-editie hebben toegang tot de B2B-gebruikersinterface. B2B UI kan voor gebruikers door [!UICONTROL Enable services menu] worden provisioned. Selecteer de schakeloptie naast [!UICONTROL B2B UI] om de service voor een bepaald productprofiel in te schakelen en selecteer **[!UICONTROL Save]**.
 
-Met de schakeloptie B2B-gebruikersinterface kunnen gebruikers B2B-workflows weergeven rondom het beheren van accounts en opportuniteiten en kunnen B2B-gerelateerde segmenten maken.
+Met de schakeloptie B2B-gebruikersinterface kunnen gebruikers B2B-workflows weergeven rondom het beheren van accounts en opportuniteiten en kunnen B2B-gerelateerde segmenten maken. Raadpleeg de documentatie bij [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md) voor meer informatie.
 
 ![enable-b2b](../images/enable-b2b.png)
 

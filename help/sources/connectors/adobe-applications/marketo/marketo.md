@@ -5,9 +5,9 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -70,3 +70,4 @@ In de volgende documentatie vindt u meer informatie over het maken van een [!DNL
 * Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met [!DNL Marketo] worden gebruikt, zie de documentatie voor [B2B namespaces en schema&#39;s](./marketo-namespaces.md).
 * Raadpleeg de [[!DNL Marketo] verificatiegids](./marketo-auth.md) voor informatie over het zoeken naar uw [!DNL Marketo]-insteekmodule en het genereren van uw referenties.
 * Voor informatie over de specifieke toewijzingsregels die op [!DNL Marketo] datasets van toepassing zijn, zie de documentatie over [[!DNL Marketo] gebiedsafbeeldingen](../mapping/marketo.md).
+* Zie de documentatie op [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md) voor algemene informatie over [!DNL Real-time Customer Data Platform B2B Edition] en de bijbehorende functies.
