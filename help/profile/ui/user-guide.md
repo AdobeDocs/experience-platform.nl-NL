@@ -4,9 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel in realtime
 topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1698'
 ht-degree: 0%
 
 ---
@@ -136,9 +136,33 @@ De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewij
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-U kunt aanvullende informatie over het afzonderlijke profiel weergeven door een andere beschikbare tabbladen te selecteren. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het segmentlidmaatschap dat de segmenten toont waarvoor het profiel momenteel gekwalificeerd is.
+U kunt aanvullende informatie met betrekking tot het individuele klantenprofiel bekijken door een andere beschikbare lusjes te selecteren. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het segmentlidmaatschap dat de segmenten toont waarvoor het profiel momenteel gekwalificeerd is.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### Tabblad Kenmerken
+
+Het tabblad **[!UICONTROL Attributes]** bevat een lijstweergave met een overzicht van alle kenmerken die betrekking hebben op één profiel, nadat het opgegeven samenvoegbeleid is toegepast.
+
+Deze kenmerken kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te klikken. Dit is handig voor gebruikers die beter willen begrijpen hoe de profielkenmerken in het Platform worden ingevoerd.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### Het tabblad Gebeurtenissen
+
+Het tabblad **[!UICONTROL Events]** bevat gegevens die betrekking hebben op ExperienceEvents die aan de klant zijn gekoppeld. Dit kan e-mails openen, winkelwagentjes, paginaweergaven en meer zijn. Als u **[!UICONTROL View all]** selecteert voor een afzonderlijke gebeurtenis, worden aanvullende velden en waarden weergegeven als onderdeel van de gebeurtenis.
+
+Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te klikken. Dit is handig om te begrijpen hoe gebeurtenissen in het Platform worden vastgelegd.
+
+![](../images/user-guide/profiles-events.png)
+
+### Tabblad Segmentlidmaatschap
+
+Op het tabblad **[!UICONTROL Segment membership]** wordt een lijst weergegeven met de naam en beschrijving van de segmenten waartoe het individuele klantprofiel momenteel behoort. Deze lijst wordt automatisch bijgewerkt wanneer het profiel in aanmerking komt of vervalt vanuit segmenten. Het totale aantal segmenten waarvoor het profiel momenteel is gekwalificeerd, wordt aan de rechterkant van het tabblad weergegeven.
+
+Voor meer informatie over segmentatie in Experience Platform, gelieve te verwijzen naar [de documentatie van de Dienst van de Segmentatie van het Experience Platform van Adobe](../../segmentation/home.md).
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## Beleid samenvoegen
 
