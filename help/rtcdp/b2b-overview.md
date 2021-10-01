@@ -4,9 +4,8 @@ title: Real-time CDP B2B Edition - Overzicht
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Overzicht van Real-time Customer Data Platform B2B Edition-account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
-hide: true
-hidefromtoc: true
-source-git-commit: 193e709ccf6d4cec0a1ce2182f0106cc20c155ab
+exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
+source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 Gebaseerd op het Platform van Gegevens van de Klant in real time (in real time CDP), is de Echte - tijdCDP B2B Uitgave speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
 
-Er zijn verbeteringen aan een verscheidenheid van de mogelijkheden van Adobe Experience Platform die Real-time CDP B2B Uitgave van zijn B2C tegenhanger onderscheiden. Zij omvatten verbeteringen aan het Model van de Gegevens van de Ervaring (XDM) voor B2B gebruiksgevallen, verbeteringen aan identiteitsresolutie en profielsegmentatie, evenals een douane-gebouwde schakelaar en bestemming voor [!DNL Marketo Engage]. Met de [!DNL Marketo]-connector kunnen B2B-merken hun toonaangevende B2B-betrokkenheidsgegevens verbinden met gedragsinformatie om leads te koesteren en marketingactiviteiten op basis van account te verbeteren.
+Er zijn verbeteringen aan een verscheidenheid van de mogelijkheden van Adobe Experience Platform die Real-time CDP B2B Uitgave van zijn B2C tegenhanger onderscheiden. Zij omvatten verbeteringen aan het Model van de Gegevens van de Ervaring (XDM) voor B2B gebruiksgevallen, verbeteringen aan identiteitsresolutie en profielsegmentatie, evenals een douane-gebouwde schakelaar en bestemming voor [!DNL Marketo Engage]. Met de [!DNL Marketo]-connector kunnen B2B-merken hun toonaangevende B2B-betrokkenheidsgegevens verbinden met gedragsinformatie, zodat leads kunnen worden opgebouwd en marketingactiviteiten op basis van account kunnen worden verbeterd.
 
 Met CDP B2B Edition in realtime kunt u:
 
