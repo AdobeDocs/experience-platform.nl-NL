@@ -1,16 +1,20 @@
 ---
-title: Op velden gebaseerde workflows in de Schema-editor
-description: Leer hoe u standaardvelden van door Adobe gedefinieerde veldgroepen afzonderlijk kunt toevoegen aan uw XDM-schema's (Experience Data Model).
+title: Op velden gebaseerde workflows in de Schema-editor (bèta)
+description: Leer hoe u velden van bestaande veldgroepen afzonderlijk kunt toevoegen aan uw XDM-schema's (Experience Data Model).
 hide: true
 hidefromtoc: true
-source-git-commit: 8947fbb815f3eda97fb218be6791cb67e6e66719
+source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '848'
 ht-degree: 0%
 
 ---
 
-# Op velden gebaseerde workflows in de Schema-editor
+# Op velden gebaseerde workflows in de Schema-editor (bèta)
+
+>[!IMPORTANT]
+>
+>De workflows die in dit document worden beschreven, zijn momenteel in bèta. De functionaliteit en documentatie kunnen worden gewijzigd.
 
 Adobe Experience Platform biedt een robuuste set gestandaardiseerde [veldgroepen](../schema/composition.md#field-group) voor gebruik in XDM-schema&#39;s (Experience Data Model). De structuur en de semantiek achter deze veldgroepen zijn zorgvuldig afgestemd op een grote verscheidenheid aan segmentatiegebruikstoepassingen en andere downstreamtoepassingen in Platform. U kunt ook uw eigen aangepaste veldgroepen definiëren voor unieke bedrijfsbehoeften.
 
