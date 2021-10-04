@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/destinationInstance/ ` API eindpunt, om te testen of uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 title: API-bewerkingen voor doeltesten
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u het g
 U doet verzoeken aan het het testen eindpunt met of zonder profielen aan de vraag toe te voegen. Als u geen profielen op het verzoek verzendt, zal Adobe die intern voor u produceren en hen toevoegen aan het verzoek.
 
 U kunt de [API voor het genereren van voorbeeldprofielen gebruiken om profielen te maken die moeten worden gebruikt in aanvragen voor de API voor het testen van doelen.](./sample-profile-generation-api.md)
+
+## Hoe te om bestemmingsID te krijgen {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >

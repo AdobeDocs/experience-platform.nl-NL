@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination.
 title: API-eindpuntbewerkingen voor doelen
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2352'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -85,7 +85,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -172,14 +176,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.isRequired` | Boolean | Geeft aan of dit veld vereist is in de workflow voor doelinstellingen. |
 | `customerDataFields.enum` | Tekenreeks | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
 | `customerDataFields.pattern` | Tekenreeks | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` in dit veld in. |
-| `uiAttributes.documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Catalogus van Doelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruik `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` de naam van uw bestemming is. Voor een bestemming genoemd Moviestar, zou u `http://www.adobe.com/go/destinations-moviestar-en` gebruiken. |
+| `uiAttributes.documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Catalogus van Doelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruik `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` de naam van uw bestemming is. Voor een bestemming genoemd Moviestar, zou u `https://www.adobe.com/go/destinations-moviestar-en` gebruiken. |
 | `uiAttributes.category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories) voor meer informatie. Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `uiAttributes.connectionType` | Tekenreeks | `Server-to-server` is momenteel de enige beschikbare optie. |
 | `uiAttributes.frequency` | Tekenreeks | `Streaming` is momenteel de enige beschikbare optie. |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolean | Hiermee geeft u aan of uw doel standaardprofielkenmerken accepteert. Gewoonlijk worden deze kenmerken gemarkeerd in de documentatie van onze partners. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Geeft aan of klanten aangepaste naamruimten kunnen instellen op uw bestemming. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | Tekenreeks | _Niet weergegeven in voorbeeldconfiguratie_. Wordt bijvoorbeeld gebruikt wanneer de [!DNL Platform]-klant gewone e-mailadressen als kenmerk heeft en uw platform alleen gehashte e-mails accepteert. Hier geeft u de transformatie op die moet worden toegepast (zet de e-mail bijvoorbeeld om in kleine letters en vervolgens in de hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _Niet weergegeven in voorbeeldconfiguratie_. Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. <br> Als u  `acceptedGlobalNamespaces`deze optie gebruikt, kunt u e-mailadressen of telefoonnummers in kleine letters  `"requiredTransformation":"sha256(lower($))"` en hashtags weergeven. Om te zien hoe deze parameter wordt gebruikt, bekijk de configuratie in de sectie verder onder [Werk een bestemmingsconfiguratie](./destination-configuration-api.md#update) bij. |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. <br> Als u  `acceptedGlobalNamespaces`deze optie gebruikt, kunt u e-mailadressen of telefoonnummers in kleine letters  `"requiredTransformation":"sha256(lower($))"` en hashtags weergeven. |
 | `destinationDelivery.authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform]-klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als klanten van het Platform zich bij uw systeem via een gebruikersbenaming en een wachtwoord, een dragerteken, of een andere methode van authentificatie aanmelden. U kunt deze optie bijvoorbeeld selecteren als u `authType: OAUTH2` of `authType:BEARER` ook in `customerAuthenticationConfigurations` hebt geselecteerd. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Platform]-klant geen verificatiegegevens hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [Credentials](./credentials-configuration.md) configuratie. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `destinationDelivery.destinationServerId` | Tekenreeks | De `instanceId` van de [doelserversjabloon](./destination-server-api.md) die voor deze bestemming wordt gebruikt. |
 | `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer segmenten worden geactiveerd naar de bestemming. <br> <ul><li> `true`:  [!DNL Platform] verzendt de historische gebruikersprofielen die voor het segment kwalificeren alvorens het segment wordt geactiveerd. </li><li> `false`:  [!DNL Platform] omvat alleen gebruikersprofielen die in aanmerking komen voor het segment nadat het segment is geactiveerd. </li></ul> |
@@ -279,7 +283,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
             }
          ],
          "uiAttributes":{
-            "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+            "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
             "category":"mobile",
             "connectionType":"Server-to-server",
             "frequency":"Streaming"
@@ -287,7 +291,12 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
          "identityNamespaces":{
             "external_id":{
                "acceptsAttributes":true,
-               "acceptsCustomNamespaces":true
+               "acceptsCustomNamespaces":true,
+               "acceptedGlobalNamespaces":{
+                  "Email":{
+                     
+                  }
+               }
             },
             "another_id":{
                "acceptsAttributes":true,
@@ -379,14 +388,14 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
 | `customerDataFields.isRequired` | Boolean | Geeft aan of dit veld vereist is in de workflow voor doelinstellingen. |
 | `customerDataFields.enum` | Tekenreeks | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
 | `customerDataFields.pattern` | Tekenreeks | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` in dit veld in. |
-| `uiAttributes.documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Catalogus van Doelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruik `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` de naam van uw bestemming is. Voor een bestemming genoemd Moviestar, zou u `http://www.adobe.com/go/destinations-moviestar-en` gebruiken |
+| `uiAttributes.documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Catalogus van Doelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruik `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` de naam van uw bestemming is. Voor een bestemming genoemd Moviestar, zou u `https://www.adobe.com/go/destinations-moviestar-en` gebruiken |
 | `uiAttributes.category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories) voor meer informatie. Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 | `uiAttributes.connectionType` | Tekenreeks | `Server-to-server` is momenteel de enige beschikbare optie. |
 | `uiAttributes.frequency` | Tekenreeks | `Streaming` is momenteel de enige beschikbare optie. |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolean | Hiermee geeft u aan of uw doel standaardprofielkenmerken accepteert. Gewoonlijk worden deze kenmerken gemarkeerd in de documentatie van onze partners. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Geeft aan of klanten aangepaste naamruimten kunnen instellen op uw bestemming. Meer informatie over [aangepaste naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) in Adobe Experience Platform. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | Tekenreeks | _Niet weergegeven in voorbeeldconfiguratie_. Wordt bijvoorbeeld gebruikt wanneer de [!DNL Platform]-klant gewone e-mailadressen als kenmerk heeft en uw platform alleen gehashte e-mails accepteert. Hier geeft u de transformatie op die moet worden toegepast (zet de e-mail bijvoorbeeld om in kleine letters en vervolgens in de hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _Niet weergegeven in voorbeeldconfiguratie_. Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
 | `destinationDelivery.authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform]-klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als klanten van het Platform zich bij uw systeem via een gebruikersbenaming en een wachtwoord, een dragerteken, of een andere methode van authentificatie aanmelden. U kunt deze optie bijvoorbeeld selecteren als u `authType: OAUTH2` of `authType:BEARER` ook in `customerAuthenticationConfigurations` hebt geselecteerd. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Platform]-klant geen verificatiegegevens hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [Credentials](./credentials-configuration.md) configuratie. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `destinationDelivery.destinationServerId` | Tekenreeks | De `instanceId` van de [doelserversjabloon](./destination-server-api.md) die voor deze bestemming wordt gebruikt. |
 | `inputSchemaId` | Tekenreeks | Dit veld wordt automatisch gegenereerd en vereist geen invoer. |
@@ -465,7 +474,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -473,7 +482,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -647,7 +660,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -655,7 +668,12 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
