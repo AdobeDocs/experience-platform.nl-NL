@@ -2,14 +2,18 @@
 title: Bronnen in Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de rol van bronnen in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
 # Bronnen in Real-time Customer Data Platform B2B Edition
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition bevindt zich momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 In real time de Gegevens van de Klant Platform B2B Uitgave staat u toe om uw B2B gegevens door de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) bronschakelaar te brengen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten.
 

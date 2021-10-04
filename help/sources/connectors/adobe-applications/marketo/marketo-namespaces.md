@@ -5,14 +5,18 @@ title: B2B-naamruimten en -schema's
 topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: a67e411c7d07bc5d94876b6bafbbea5056b7a9bc
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1588'
 ht-degree: 1%
 
 ---
 
-# B2B-naamruimten en -schema&#39;s
+# (bèta) B2B-naamruimten en -schema&#39;s
+
+>[!IMPORTANT]
+>
+>Deze functie is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 Dit document bevat informatie over de onderliggende instelling voor de naamruimten en schema&#39;s die met B2B-bronnen moeten worden gebruikt. Dit document bevat ook informatie over het instellen van uw Postman-automatiseringsprogramma dat nodig is voor het genereren van B2B-naamruimten en -schema&#39;s.
 

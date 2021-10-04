@@ -1,14 +1,18 @@
 ---
 title: Toegangsbeheer in Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de rol van toegangsbeheer in Real-time de Gegevens van de Klant Platform B2B Uitgave.
-source-git-commit: 4e52d77cce8fde1d0a9e8b86264f19e5db7ceef9
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
 
-# Toegangsbeheer in Real-time Customer Data Platform B2B Edition (bèta)
+# (Beta) Toegangsbeheer in Real-time Customer Data Platform B2B Edition
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition bevindt zich momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 Toegangsbeheer voor Real-time CDP B2B Edition wordt beheerd via de [Adobe Admin Console](http://adminconsole.adobe.com). Deze functionaliteit maakt gebruik van productprofielen in [!DNL Admin Console], zodat u gebruikers kunt koppelen aan machtigingen en sandboxen. Met deze functie kunnen beheerders toegang verlenen of beperken tot specifieke CDP-mogelijkheden in realtime, zoals B2B UI, voor gedefinieerde sets gebruikers.
 
