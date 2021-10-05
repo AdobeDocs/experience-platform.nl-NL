@@ -4,10 +4,10 @@ title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da6131494d80dbd2bbd4496876f044f5026b0e12
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 1%
+source-wordcount: '1996'
+ht-degree: 0%
 
 ---
 
@@ -89,7 +89,7 @@ Het volgende JSON toont een voorbeeld van het type gegevens dat het gegevenstype
 >U kunt steekproefJSON gegevens voor om het even welk XDM schema produceren dat u in Experience Platform bepaalt helpen visualiseren hoe uw klantentoestemming en voorkeursgegevens zouden moeten in kaart worden gebracht. Raadpleeg de volgende documentatie voor meer informatie:
 >
 >* [Voorbeeldgegevens genereren in de gebruikersinterface](../ui/sample.md)
-* [Voorbeeldgegevens genereren in de API](../api/sample-data.md)
+>* [Voorbeeldgegevens genereren in de API](../api/sample-data.md)
 
 
 ## `consents` {#choices}
@@ -179,8 +179,10 @@ Het volgende JSON toont een voorbeeld van het type gegevens dat het gegevenstype
 `personalize` vangt klantenvoorkeur met betrekking tot welke manieren hun gegevens voor verpersoonlijking kunnen worden gebruikt. Klanten kunnen afzien van specifieke gevallen van persoonlijk gebruik of volledig afzien van personalisatie.
 
 >[!IMPORTANT]
-`personalize` heeft geen betrekking op gevallen van gebruik bij het in de handel brengen. Bijvoorbeeld, als een klant uit verpersoonlijking voor alle kanalen opteert, zouden zij niet moeten ophouden ontvangend mededelingen door die kanalen. De berichten die ze ontvangen, moeten eerder algemeen zijn en niet gebaseerd op hun profiel.
-In hetzelfde voorbeeld geldt dat als een klant voor alle kanalen (via `marketing`, toegelicht in [volgende sectie](#marketing)) kiest voor het uit de directe marketing halen, die klant geen berichten mag ontvangen, zelfs niet als personalisatie is toegestaan.
+>
+>`personalize` heeft geen betrekking op gevallen van gebruik bij het in de handel brengen. Bijvoorbeeld, als een klant uit verpersoonlijking voor alle kanalen opteert, zouden zij niet moeten ophouden ontvangend mededelingen door die kanalen. De berichten die ze ontvangen, moeten eerder algemeen zijn en niet gebaseerd op hun profiel.
+>
+>In hetzelfde voorbeeld geldt dat als een klant voor alle kanalen (via `marketing`, toegelicht in [volgende sectie](#marketing)) kiest voor het uit de directe marketing halen, die klant geen berichten mag ontvangen, zelfs niet als personalisatie is toegestaan.
 
 ```json
 "personalize": {
@@ -256,8 +258,10 @@ Als u het gegevenstype [!UICONTROL Consents and Preferences] wilt gebruiken om g
 Zie de zelfstudie over [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gegevenstypes aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met [!UICONTROL Consents and Preferences] gegevenstype bevat, verwijs naar de sectie over [het creëren van een dataset](../../catalog/datasets/user-guide.md#create) in de gids van de datasetgebruiker, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
-Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!UICONTROL Consents and Preferences] gegevenstype bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
-Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [samenvoegbeleid](../../rtcdp/profile/merge-policies.md) voor meer informatie.
+>
+>Als u toestemmingsgegevens naar [!DNL Real-time Customer Profile] wilt verzenden, wordt het vereist dat u een [!DNL Profile]-Toegelaten schema op [!DNL XDM Individual Profile] klasse creeert die [!UICONTROL Consents and Preferences] gegevenstype bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile]-vereisten voor schema&#39;s en gegevenssets.
+>
+>Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [samenvoegbeleid](../../rtcdp/profile/merge-policies.md) voor meer informatie.
 
 ## Verwerking van toestemmings- en voorkeurswijzigingen
 
@@ -273,10 +277,12 @@ In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
 | Waarde | Titel | Beschrijving |
 | --- | --- | --- |
-| `y` | Ja | De klant heeft ervoor gekozen de toestemming of voorkeur te geven. Met andere woorden, zij **do** stemmen in met het gebruik van hun gegevens zoals aangegeven door de toestemming of voorkeur in kwestie. |
-| `n` | Nee | De klant heeft ervoor gekozen geen toestemming of voorkeur te geven. Met andere woorden, zij **stemmen niet** in met het gebruik van hun gegevens zoals aangegeven door de toestemming of voorkeur in kwestie. |
+| `y` | Ja (opt-in) | De klant heeft ervoor gekozen de toestemming of voorkeur te geven. Met andere woorden, zij **do** stemmen in met het gebruik van hun gegevens zoals aangegeven door de toestemming of voorkeur in kwestie. |
+| `n` | Nee (opt-out) | De klant heeft ervoor gekozen geen toestemming of voorkeur te geven. Met andere woorden, zij **stemmen niet** in met het gebruik van hun gegevens zoals aangegeven door de toestemming of voorkeur in kwestie. |
 | `p` | Verificatie in behandeling | Het systeem heeft nog geen definitieve toestemming of voorkeurswaarde ontvangen. Dit wordt het vaakst gebruikt als deel van een toestemming die uit twee stappen controle vereist. Als een klant bijvoorbeeld ervoor kiest e-mailberichten te ontvangen, wordt die toestemming ingesteld op `p` totdat de klant een koppeling in een e-mailbericht selecteert om te controleren of hij het juiste e-mailadres heeft opgegeven. Op dat moment wordt de toestemming bijgewerkt naar `y`.<br><br>Als deze toestemming of voorkeur geen tweesets verificatieproces gebruikt, kan in plaats daarvan de  `p` keuze worden gebruikt om aan te geven dat de klant nog niet heeft gereageerd op de bevestigingsprompt. U kunt bijvoorbeeld automatisch de waarde instellen op `p` op de eerste pagina van een website, voordat de klant heeft gereageerd op de vraag naar toestemming. In rechtsgebieden waarvoor geen uitdrukkelijke toestemming vereist is, kunt u deze ook gebruiken om aan te geven dat de klant niet expliciet heeft aangegeven dat de toestemming is geweigerd (met andere woorden, er wordt aangenomen dat de toestemming is verleend). |
 | `u` | Onbekend | De instemming- of voorkeursgegevens van de klant zijn onbekend. |
+| `dy` | Standaard van Ja (opt-in) | De klant heeft zelf geen waarde voor de toestemming opgegeven en wordt standaard als een opt-in (&quot;Yes&quot;) behandeld. Met andere woorden, instemming wordt verondersteld tot de klant anders aangeeft.<br><br>Merk op dat als wetten of veranderingen in het privacybeleid van uw bedrijf in veranderingen in de gebreken van sommige of alle gebruikers resulteren, u alle profielen manueel moet bijwerken die standaardwaarden bevatten. |
+| `dn` | Standaard van Geen (opt-out) | De klant heeft zelf geen waarde voor de toestemming opgegeven en wordt standaard als een &quot;nee&quot; behandeld. Met andere woorden, de klant wordt verondersteld toestemming te hebben geweigerd tot zij anders aangeven.<br><br>Merk op dat als wetten of veranderingen in het privacybeleid van uw bedrijf in veranderingen in de gebreken van sommige of alle gebruikers resulteren, u alle profielen manueel moet bijwerken die standaardwaarden bevatten. |
 | `LI` | Gewettigd belang | Het legitieme zakelijke belang om deze gegevens voor het opgegeven doel te verzamelen en te verwerken, weegt zwaarder dan de potentiële schade die het voor het individu oplevert. |
 | `CT` | Slinken | De verzameling van gegevens voor het opgegeven doel is vereist om te voldoen aan contractuele verplichtingen met de betrokkene. |
 | `CP` | Naleving van een wettelijke verplichting | De verzameling van gegevens voor het gespecificeerde doel is vereist om te voldoen aan de wettelijke verplichtingen van het bedrijf. |
