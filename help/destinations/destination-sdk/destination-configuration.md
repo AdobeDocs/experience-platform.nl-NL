@@ -2,7 +2,7 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Opties voor doelconfiguratie voor doel-SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 2%
@@ -92,7 +92,6 @@ Hieronder ziet u een voorbeeldconfiguratie voor een fictieve bestemming, Moviest
       "mapUserInput":false,
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{

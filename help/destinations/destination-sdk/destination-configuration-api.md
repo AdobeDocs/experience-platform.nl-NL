@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination.
 title: API-eindpuntbewerkingen voor doelen
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2340'
 ht-degree: 2%
 
 ---
@@ -365,7 +365,6 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
                "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
             }
          ],
-         "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
          "destConfigId":"410631b8-f6b3-4b7c-82da-7998aa3f327c",
          "backfillHistoricalProfileData":true
       }
@@ -398,7 +397,6 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
 | `destinationDelivery.authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform]-klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als klanten van het Platform zich bij uw systeem via een gebruikersbenaming en een wachtwoord, een dragerteken, of een andere methode van authentificatie aanmelden. U kunt deze optie bijvoorbeeld selecteren als u `authType: OAUTH2` of `authType:BEARER` ook in `customerAuthenticationConfigurations` hebt geselecteerd. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Platform]-klant geen verificatiegegevens hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [Credentials](./credentials-configuration.md) configuratie. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `destinationDelivery.destinationServerId` | Tekenreeks | De `instanceId` van de [doelserversjabloon](./destination-server-api.md) die voor deze bestemming wordt gebruikt. |
-| `inputSchemaId` | Tekenreeks | Dit veld wordt automatisch gegenereerd en vereist geen invoer. |
 | `destConfigId` | Tekenreeks | Dit veld wordt automatisch gegenereerd en vereist geen invoer. |
 | `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer segmenten worden geactiveerd naar de bestemming. <br> <ul><li> `true`:  [!DNL Platform] verzendt de historische gebruikersprofielen die voor het segment kwalificeren alvorens het segment wordt geactiveerd. </li><li> `false`:  [!DNL Platform] omvat alleen gebruikersprofielen die in aanmerking komen voor het segment nadat het segment is geactiveerd. </li></ul> |
 | `segmentMappingConfig.mapUserInput` | Boolean | Controls whether the segment mapping id in the destination activation workflow is input by user. |
@@ -586,7 +584,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
@@ -773,7 +770,6 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
