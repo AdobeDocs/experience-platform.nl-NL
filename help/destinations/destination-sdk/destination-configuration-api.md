@@ -2,10 +2,10 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination.
 title: API-eindpuntbewerkingen voor doelen
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
 workflow-type: tm+mt
-source-wordcount: '2340'
-ht-degree: 2%
+source-wordcount: '2407'
+ht-degree: 1%
 
 ---
 
@@ -125,33 +125,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -195,18 +168,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Boolean | Gebruik `true` als de gebruikers profielattributen van Experience Platform aan douanekenmerken op de kant van uw bestemming, zoals aangetoond in de voorbeeldconfiguratie hierboven zouden moeten kunnen in kaart brengen. |
 | `schemaConfig.segmentRequired` | Boolean | Altijd `segmentRequired:true` gebruiken. |
 | `schemaConfig.identityRequired` | Boolean | Gebruik `true` als u gebruikers identiteitsnaamruimten van Experience Platform aan uw gewenste schema zou moeten kunnen in kaart brengen. |
-| `aggregation.aggregationType` | - | Selecteer `BEST_EFFORT` of `CONFIGURABLE_AGGREGATION`. Terwijl de voorbeeldconfiguratie hierboven beide samenvoegingstypes omvat, wordt u slechts vereist om één van hen voor uw bestemming te selecteren. |
+| `aggregation.aggregationType` | - | Selecteer `BEST_EFFORT` of `CONFIGURABLE_AGGREGATION`. De voorbeeldconfiguratie hierboven omvat `BEST_EFFORT` samenvoeging. Voor een voorbeeld van `CONFIGURABLE_AGGREGATION`, verwijs naar de voorbeeldconfiguratie in [bestemmingsconfiguratie](./destination-configuration.md#example-configuration) document. Merk op dat de parameters relevant voor configureerbare samenvoeging hieronder in deze lijst worden gedocumenteerd. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-aanroep. Specificeer het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou het Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br> Als uw server niet meerdere gebruikers per aanvraag accepteert, stelt u deze waarde in op 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een bepaalde naamruimte. |
-| `aggregation.configurableAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een bepaalde naamruimte. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Geheel | *Maximumwaarde: 3600*. Samen met `maxNumEventsInBatch`, bepaalt dit hoe lang Experience Platform zou moeten wachten tot het verzenden van een API vraag naar uw eindpunt. <br> Als u bijvoorbeeld de maximumwaarde voor beide parameters gebruikt, wacht het Experience Platform 3600 seconden OF totdat er 10.000 gekwalificeerde profielen zijn voordat de API-aanroep wordt uitgevoerd, afhankelijk van wat zich het eerst voordoet. |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | Geheel | *Maximumwaarde: 10000*. Zie `maxBatchAgeInSecs` net boven. |
-| `aggregation.configurableAggregation.aggregationKey` | Boolean | Hiermee kunt u de geëxporteerde profielen samenvoegen die aan de bestemming zijn toegewezen op basis van de onderstaande parameters: <br> <ul><li>segment-id</li><li> segmentstatus </li><li> naamruimte identity </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Stel dit in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op segment-id. |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | U moet zowel `includeSegmentId:true` als `includeSegmentStatus:true` plaatsen als u profielen wilt groeperen die naar uw bestemming door segment ID EN segmentstatus worden uitgevoerd. |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Boolean | Stel dit in op `true` als u profielen wilt groeperen die naar uw doel worden geëxporteerd via naamruimte voor identiteit. |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Gebruik deze parameter om op te geven of u wilt dat de geëxporteerde profielen worden samengevoegd tot groepen met één identiteit (GAID, IDFA, telefoonnummers, e-mail, enz.). |
-| `aggregation.configurableAggregation.aggregationKey.groups` | Tekenreeks | Maak lijsten met identiteitsgroepen als u profielen wilt groeperen die naar uw doel zijn geëxporteerd door groepen naamruimte. U kunt bijvoorbeeld profielen die de mobiele id&#39;s IDFA en GAID bevatten, combineren in één aanroep naar uw bestemming en e-mails in een andere aanroep met behulp van de configuratie in het voorbeeld. |
+| `aggregation.configurableAggregation.splitUserById` | Boolean | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een bepaalde naamruimte. |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Geheel | *Maximumwaarde: 3600*. Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Samen met `maxNumEventsInBatch`, bepaalt dit hoe lang Experience Platform zou moeten wachten tot het verzenden van een API vraag naar uw eindpunt. <br> Als u bijvoorbeeld de maximumwaarde voor beide parameters gebruikt, wacht het Experience Platform 3600 seconden OF totdat er 10.000 gekwalificeerde profielen zijn voordat de API-aanroep wordt uitgevoerd, afhankelijk van wat zich het eerst voordoet. |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | Geheel | *Maximumwaarde: 10000*. Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Zie `maxBatchAgeInSecs` net boven. |
+| `aggregation.configurableAggregation.aggregationKey` | Boolean | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Hiermee kunt u de geëxporteerde profielen samenvoegen die aan de bestemming zijn toegewezen op basis van de onderstaande parameters: <br> <ul><li>segment-id</li><li> segmentstatus </li><li> naamruimte identity </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Stel dit in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op segment-id. |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). U moet zowel `includeSegmentId:true` als `includeSegmentStatus:true` plaatsen als u profielen wilt groeperen die naar uw bestemming door segment ID EN segmentstatus worden uitgevoerd. |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Boolean | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Stel dit in op `true` als u profielen wilt groeperen die naar uw doel worden geëxporteerd via naamruimte voor identiteit. |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Gebruik deze parameter om op te geven of u wilt dat de geëxporteerde profielen worden samengevoegd tot groepen met één identiteit (GAID, IDFA, telefoonnummers, e-mail, enz.). |
+| `aggregation.configurableAggregation.aggregationKey.groups` | Tekenreeks | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Maak lijsten met identiteitsgroepen als u profielen wilt groeperen die naar uw doel zijn geëxporteerd door groepen naamruimte. U kunt bijvoorbeeld profielen die de mobiele id&#39;s IDFA en GAID bevatten, combineren in één aanroep naar uw bestemming en e-mails in een andere aanroep met behulp van de configuratie in het voorbeeld. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -330,33 +303,6 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
             "bestEffortAggregation":{
                "maxUsersPerRequest":10,
                "splitUserById":false
-            }
-         },
-         "aggregation":{
-            "aggregationType":"CONFIGURABLE_AGGREGATION",
-            "configurableAggregation":{
-               "splitUserById":true,
-               "maxBatchAgeInSecs":0,
-               "maxNumEventsInBatch":0,
-               "aggregationKey":{
-                  "includeSegmentId":true,
-                  "includeSegmentStatus":true,
-                  "includeIdentity":true,
-                  "oneIdentityPerGroup":false,
-                  "groups":[
-                     {
-                        "namespaces":[
-                           "IDFA",
-                           "GAID"
-                        ]
-                     },
-                     {
-                        "namespaces":[
-                           "EMAIL"
-                        ]
-                     }
-                  ]
-               }
             }
          },
          "destinationDelivery":[
@@ -551,33 +497,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -735,33 +654,6 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
       "bestEffortAggregation":{
          "maxUsersPerRequest":10,
          "splitUserById":false
-      }
-   },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
       }
    },
    "destinationDelivery":[
