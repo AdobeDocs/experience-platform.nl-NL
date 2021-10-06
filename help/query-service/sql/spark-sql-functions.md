@@ -5,10 +5,9 @@ title: SQL-functies in Query Service parkeren
 topic-legacy: spark sql functions
 description: Deze documentatie bevat informatie over de functies van SQL van de Vonk die SQL functionaliteit uitbreiden.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3909'
 ht-degree: 0%
 
 ---
@@ -35,7 +34,7 @@ Voor meer gedetailleerde informatie over de functies, met inbegrip van hun synta
 - [Huidige informatie](#current-information)
 - [Functies voor hogere volgorde](#higher-order)
 
-## wiskundige en statistische operatoren en functies {#math}
+## Math- en statistische operatoren en functies {#math}
 
 | Operator/functie | Beschrijving |
 | ----------------- | ----------- |
@@ -154,8 +153,8 @@ Voor meer gedetailleerde informatie over de functies, met inbegrip van hun synta
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Retourneert de eerste dag na de invoer |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Retourneert het kwartaal van de invoer |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Retourneert de tweede tekenreeks |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Zet de tekenreeks om in een datum |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Zet de tekenreeks om in een tijdstempel |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Zet de tekenreeks om in een datum. **Opmerking:** de tekenreeks  **** moet de indeling hebben  `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Zet de tekenreeks om in een tijdstempel. **Opmerking:** de tekenreeks  **** moet de indeling hebben  `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Zet de tekenreeks om in een Unix-tijdstempel |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Zet de tekenreeks om in een UTC-tijdstempel |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Kort de datum in |

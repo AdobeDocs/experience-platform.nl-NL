@@ -5,10 +5,10 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
+source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '699'
+ht-degree: 4%
 
 ---
 
@@ -60,6 +60,10 @@ LIMIT 100;
 
 Wanneer u gegevens uit tijdreeksen opvraagt, moet u het tijdstempelfilter gebruiken wanneer dat mogelijk is voor nauwkeurigere analyse.
 
+>[!NOTE]
+>
+> De datumtekenreeks **must** heeft de notatie `yyyy-mm-ddTHH24:MM:SS`.
+
 Hieronder ziet u een voorbeeld van het gebruik van het tijdstempelfilter:
 
 ```sql
@@ -74,6 +78,60 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### Moet ik vervangingen, zoals * gebruiken om alle rijen van mijn datasets te krijgen?
 
 U kunt geen vervangingen gebruiken om alle gegevens van uw rijen te krijgen, aangezien de Dienst van de Vraag als **column-store** eerder dan een traditioneel op rij-gebaseerd opslagsysteem zou moeten worden behandeld.
+
+### Moet ik `NOT IN` in mijn SQL vraag gebruiken?
+
+De `NOT IN` exploitant wordt vaak gebruikt om rijen terug te winnen die niet in een andere lijst of SQL verklaring worden gevonden. Deze operator kan de prestaties vertragen en onverwachte resultaten opleveren als de kolommen die worden vergeleken `NOT NULL` accepteren of als u een groot aantal records hebt.
+
+In plaats van `NOT IN` te gebruiken, kunt u of `NOT EXISTS` of `LEFT OUTER JOIN` gebruiken.
+
+Als u bijvoorbeeld de volgende tabellen hebt gemaakt:
+
+```sql
+CREATE TABLE T1 (ID INT)
+CREATE TABLE T2 (ID INT)
+INSERT INTO T1 VALUES (1)
+INSERT INTO T1 VALUES (2)
+INSERT INTO T1 VALUES (3)
+INSERT INTO T2 VALUES (1)
+INSERT INTO T2 VALUES (2)
+```
+
+Als u de operator `NOT EXISTS` gebruikt, kunt u repliceren met de operator `NOT IN` door de volgende query te gebruiken:
+
+```sql
+SELECT ID FROM T1
+WHERE NOT EXISTS
+(SELECT ID FROM T2 WHERE T1.ID = T2.ID)
+```
+
+Als u de operator `LEFT OUTER JOIN` gebruikt, kunt u ook repliceren met de operator `NOT IN` door de volgende query te gebruiken:
+
+```sql
+SELECT T1.ID FROM T1
+LEFT OUTER JOIN T2 ON T1.ID = T2.ID
+WHERE T2.ID IS NULL
+```
+
+### Wat is het correcte gebruik van `OR` en `UNION` exploitanten?
+
+### Hoe gebruik ik correct de `CAST` exploitant om mijn timestamps in SQL vragen om te zetten?
+
+Wanneer u de operator `CAST` gebruikt om een tijdstempel om te zetten, moet u zowel de datum **als** tijd opnemen.
+
+Als bijvoorbeeld de tijdcomponent ontbreekt, zoals hieronder wordt weergegeven, resulteert dit in een fout:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021' AS timestamp)
+```
+
+Een correct gebruik van de `CAST` exploitant wordt getoond hieronder:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
+```
 
 ## REST API-fouten
 
