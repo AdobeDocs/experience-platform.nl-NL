@@ -1,17 +1,16 @@
 ---
 keywords: identities rtcdp;rtcdp-identiteiten;real-time cdp-identiteiten
-title: Identiteiten in Real-time Platform van de Gegevens van de Klant
+title: Identiteiten in Real-time Customer Data Platform
 description: Met de Adobe Experience Platform Identity Service kunt u uw klanten en hun gedrag beter zien door identiteiten tussen apparaten en systemen te combineren.
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
+source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
 
-
-# Identiteiten in Real-time Platform van de Gegevens van de Klant
+# Overzicht van identiteiten
 
 Met Adobe Experience Platform [!DNL Identity Service] kunt u uw klanten en hun gedrag beter zien door identiteiten tussen apparaten en systemen te combineren. Doorgaans communiceren uw klanten via meerdere kanalen met uw merk. U kunt onder andere online door uw website bladeren, een aankoop in de winkel doen, deelnemen aan uw loyaliteitsprogramma of een helpdesk bellen voor ondersteuning, om er een paar te noemen. In deze verschillende systemen is er een identiteit gemaakt voor die klant en met [!DNL Identity Service] kunnen deze identiteiten worden samengebracht om het volledige beeld te zien.
 
@@ -19,7 +18,7 @@ Nu, in plaats van vijf afzonderlijke klanten die met uw merk over vijf verschill
 
 ## Identiteitsnaamruimten
 
-Identiteitsnaamruimten zijn een onderdeel van [!DNL Identity Service] en dienen als indicatoren die aanvullende context bieden aan de identiteit van de klant. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. [!DNL Experience Platform] kunt u id-naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Zie het [overzicht van de profielviewer](/help/rtcdp/profile/profile-viewer.md) voor meer informatie over het weergeven van profielen. Voor meer informatie over identiteitsnaamruimten, zie [identity namespace overzicht](../../identity-service/namespaces.md).
+Identiteitsnaamruimten zijn een onderdeel van [!DNL Identity Service] en dienen als indicatoren die aanvullende context bieden aan de identiteit van de klant. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. [!DNL Experience Platform] kunt u id-naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Zie [bladeroverzicht van profiel](profile-browse.md) voor meer informatie over het weergeven van profielen. Voor meer informatie over identiteitsnaamruimten, zie [identity namespace overzicht](../../identity-service/namespaces.md).
 
 ## Identiteitsgrafieken
 
@@ -29,4 +28,4 @@ Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identi
 
 ## Volgende stappen
 
-De identiteiten en de onderlinge relaties worden door [!DNL Identity Service] gedefinieerd en onderhouden en door [!DNL Real-time Customer Profile] gebruikt om een volledig beeld van elke individuele klant en zijn interacties te maken. Voor meer informatie raadpleegt u de [Identiteitsdocumentatie](../../identity-service/home.md).
+De identiteiten en de onderlinge relaties worden door [!DNL Identity Service] gedefinieerd en onderhouden en door [!DNL Real-time Customer Profile] benut om een volledig beeld van elke individuele klant en zijn interacties op te bouwen. Voor meer informatie raadpleegt u de [Identiteitsdocumentatie](../../identity-service/home.md).

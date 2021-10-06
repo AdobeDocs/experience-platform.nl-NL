@@ -2,17 +2,17 @@
 product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 audience: user
-user-guide-title: Handleiding Platform voor realtime klantgegevens
+user-guide-title: Real-time Customer Data Platform Guide
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 9%
+source-wordcount: '160'
+ht-degree: 8%
 
 ---
 
 
-# Hulp bij realtime Platform klantgegevens {#rtcdp}
+# Real-time Customer Data Platform Help {#rtcdp}
 
 * [CDP-overzicht in realtime](overview.md)
 * [Real-time CDP B2B Edition-overzicht](b2b-overview.md)
@@ -24,19 +24,24 @@ ht-degree: 9%
       * [Aan de slag met CDP B2B Edition in realtime](./b2b-use-case.md)
 * Beheer {#admin}
    * [Overzicht van beheer](administration/admin-overview.md)
+* Accountprofielen {#account}
+   * [Overzicht van het accountprofiel](accounts/account-profile-overview.md)
+   * [Gebruikersgids voor accountprofielen](accounts/account-profile-ui-guide.md)
 * Datasets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
    * [Gegevenskwaliteit op Platform](datasets/data-quality.md)
 * Doelen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
+* Identiteiten {#identity}
+   * [Identiteiten en naamruimten](profile/identities-overview.md)
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
+* Beleid {#merge-policies} samenvoegen
+   * [Overzicht van beleid samenvoegen](profile/merge-policies.md)
 * Profielen {#profile}
    * [Profieloverzicht](profile/profile-overview.md)
-   * [Identiteiten en naamruimten](profile/identities-overview.md)
-   * [Beleid samenvoegen](profile/merge-policies.md)
-   * [Profielviewer](profile/profile-viewer.md)
+   * [Bladeren door profiel](profile/profile-browse.md)
 * Segmenten {#segmentation}
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
    * [Handleiding voor het maken van segmenten](segmentation/segment-builder-guide.md)
