@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Help bij tags
 breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
-feature: Gegevensverzameling
-source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
+feature: Data Collection
+source-git-commit: 549124c4c10677cc3691706c804894956c7ef592
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '378'
 ht-degree: 25%
 
 ---

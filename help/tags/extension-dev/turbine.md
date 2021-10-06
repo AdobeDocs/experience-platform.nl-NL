@@ -2,9 +2,9 @@
 title: Variabele turbinevrij
 description: Leer meer over het turbineobject, een gratis variabele die specifieke informatie en hulpprogramma's voor de Adobe Experience Platform-tagruntime biedt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
+source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | De ISO 8601-datum waarop de in de container gebruikte versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) is gemaakt. |
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `environment`
 
@@ -60,6 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | De id van de omgeving. |
 | `stage` | De omgeving waarvoor deze bibliotheek is gemaakt. Mogelijke waarden zijn `development`, `staging` en `production`. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `debugEnabled`
 
@@ -67,7 +69,7 @@ Een booleaanse waarde die aangeeft of foutopsporing voor tags momenteel is inges
 
 Als u eenvoudig probeert om berichten te registreren, is het onwaarschijnlijk u dit zult moeten gebruiken. Meld in plaats daarvan altijd berichten met `turbine.logger` om ervoor te zorgen dat uw berichten alleen naar de console worden afgedrukt wanneer foutopsporing voor tags is ingeschakeld.
 
-### `getDataElementValue`
+## `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +77,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Retourneert de waarde van een gegevenselement.
 
-### `getExtensionSettings` {#get-extension-settings}
+## `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +87,7 @@ Retourneert het instellingsobject dat het laatst is opgeslagen in de weergave [e
 
 Waarden binnen de geretourneerde instellingen komen mogelijk uit gegevenselementen. Daarom kan het aanroepen van `getExtensionSettings()` op verschillende momenten verschillende resultaten opleveren als de waarden van de gegevenselementen zijn gewijzigd. Om de meest bijgewerkte waarden te krijgen, gelieve zo lang mogelijk te wachten alvorens `getExtensionSettings()` te roepen.
 
-### `getHostedLibFileUrl` {#get-hosted-lib-file}
+## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +98,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 De eigenschap [hostedLibFiles](./manifest.md) kan binnen de extensiemanifest worden gedefinieerd om verschillende bestanden te hosten samen met de tagruntime-bibliotheek. Deze module retourneert de URL waar het opgegeven bibliotheekbestand wordt gehost.
 
-### `getSharedModule` {#shared}
+## `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +106,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Hiermee wordt een module opgehaald die via een andere extensie is gedeeld. Als er geen overeenkomende module wordt gevonden, wordt `undefined` geretourneerd. Zie [Gedeelde modules implementeren](./web/shared.md) voor meer informatie over gedeelde modules.
 
-### `logger`
+## `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -119,13 +121,13 @@ Het logboeknut wordt gebruikt om berichten aan de console te registreren. De ber
 * `logger.debug(message: string)`: Logs a zuivert bericht aan de console. (Alleen zichtbaar wanneer `verbose` logboekregistratie is ingeschakeld in uw browserconsole.)
 * `logger.deprecation(message: string)`: Logs een waarschuwingsbericht aan de console al dan niet de markering het zuiveren door de gebruiker wordt toegelaten.
 
-### `onDebugChanged`
+## `onDebugChanged`
 
 Door een callback functie in `turbine.onDebugChanged` over te gaan, zullen de markeringen uw callback roepen wanneer het zuiveren wordt geschakeld. Tags geven een Booleaanse waarde door aan de callback-functie die waar is als foutopsporing is ingeschakeld of onwaar als foutopsporing is uitgeschakeld.
 
 Als u eenvoudig probeert om berichten te registreren, is het onwaarschijnlijk u dit zult moeten gebruiken. Logberichten die `turbine.logger` gebruiken en tags zorgen er in plaats daarvan voor dat uw berichten alleen naar de console worden afgedrukt wanneer foutopsporing van tags is ingeschakeld.
 
-### `propertySettings` {#property-settings}
+## `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);
