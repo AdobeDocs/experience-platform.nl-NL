@@ -5,10 +5,9 @@ title: Azure Event Hubs Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Azure Event Hubs met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-translation-type: tm+mt
-source-git-commit: 6dac267be93241bffb4eb5092a6e8da5093c63a6
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -19,10 +18,6 @@ ht-degree: 0%
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure]. U kunt uw gegevens van deze systemen naar [!DNL Platform] brengen.
 
 Opslagbronnen in de cloud kunnen uw eigen gegevens naar [!DNL Platform] brengen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens  [!DNL Azure Event Hubs] in real-time invoeren.
-
-## IP adres lijst van gewenste personen
-
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
 
 ## [!DNL Azure Event Hubs] verbinden met [!DNL Platform]
 

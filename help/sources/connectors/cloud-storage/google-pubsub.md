@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Google PubSub;Google pubsub
 solution: Experience Platform
-title: Overzicht van Google PubSub Source Connector
+title: Overzicht van de Google PubSub Source Connector
 topic-legacy: overview
 description: Leer hoe u Google PubSub met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -22,10 +21,6 @@ ht-degree: 0%
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals [!DNL AWS], [!DNL Google Cloud Platform] en [!DNL Azure], zodat u gegevens van deze systemen in Platform kunt brengen voor gebruik in downstreamservices en -doelen.
 
 Met bronnen voor cloudopslag kunt u uw gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens van [!DNL Azure Event Hubs] in real-time invoeren.
-
-## IP adres lijst van gewenste personen
-
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
 
 ## [!DNL Google PubSub] verbinden met Platform
 
