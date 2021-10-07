@@ -5,9 +5,9 @@ title: Azure Table Storage Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Azure Table Storage kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ Experience Platform verleent steun voor het opnemen van gegevens van een derdege
 ## IP adres lijst van gewenste personen
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
-
->[!IMPORTANT]
->
->De [!DNL Azure Table Storage] bronschakelaar steunt momenteel zelfde-gebiedconnectiviteit aan Platform niet. Dit betekent dat als uw Azure-instantie hetzelfde netwerkgebied gebruikt als Platform, een verbinding met bronnen van Platforms niet tot stand kan worden gebracht. Momenteel wordt alleen connectiviteit tussen regio&#39;s ondersteund. Neem contact op met uw Adobe-accountmanager voor meer informatie.
 
 De onderstaande documentatie biedt informatie over hoe u [!DNL Azure Table Storage] kunt verbinden met een Platform via API&#39;s of de gebruikersinterface:
 

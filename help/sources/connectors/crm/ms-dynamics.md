@@ -3,12 +3,12 @@ keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;micr
 solution: Experience Platform
 title: Overzicht van Microsoft Dynamics Source Connector
 topic-legacy: overview
-description: Leer hoe u Microsoft Dynamics met Adobe Experience Platform verbindt via API's of de gebruikersinterface.
+description: Leer hoe u Microsoft Dynamics verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,15 +22,11 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
 
->[!IMPORTANT]
->
->De [!DNL Microsoft Dynamics] bronschakelaar steunt momenteel zelfde-gebiedconnectiviteit aan Platform niet. Dit betekent dat als uw Azure-instantie hetzelfde netwerkgebied gebruikt als Platform, een verbinding met bronnen van Platforms niet tot stand kan worden gebracht. Momenteel wordt alleen connectiviteit tussen regio&#39;s ondersteund. Neem contact op met uw Adobe-accountmanager voor meer informatie.
-
 In de onderstaande documentatie vindt u informatie over hoe u [!DNL Microsoft Dynamics] kunt verbinden met [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
 ## Verbind [!DNL Microsoft Dynamics] met [!DNL Platform] gebruikend APIs
 
-- [Creeer een de basisverbinding van de Dynamica van Microsoft gebruikend de Dienst van de Stroom API](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Een basisverbinding voor Microsoft Dynamics maken met de Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
 - [Onderzoek de gegevensstructuur en de inhoud van een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/crm.md)
 - [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
 
