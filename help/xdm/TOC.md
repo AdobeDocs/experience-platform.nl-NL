@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
+source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '397'
 ht-degree: 6%
 
 ---
@@ -65,6 +65,8 @@ ht-degree: 6%
       * [IAB TCF 2.0 Toestemming](./field-groups/event/iab.md)
       * [Voorbehoud voor indiening](./field-groups/event/lodging-reservation.md)
       * [Reserveringsdetails](./field-groups/event/reservation-details.md)
+      * [Upgradedetails](./field-groups/event/upgrade-details.md)
+      * [Details uploaden](./field-groups/event/upsell-details.md)
       * [Webdetails](./field-groups/event/web-details.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
 * Datatypen {#data-types}
@@ -91,6 +93,7 @@ ht-degree: 6%
    * [Gegevens over geointeractie](./data-types/geo-interaction-details.md)
    * [Geo-vorm](./data-types/geo-shape.md)
    * [Identiteit](./data-types/identity.md)
+   * [Impressies](./data-types/impressions.md)
    * [Marketing](./data-types/marketing.md)
    * [Meetlat](./data-types/measure.md)
    * [Volgorde](./data-types/order.md)
