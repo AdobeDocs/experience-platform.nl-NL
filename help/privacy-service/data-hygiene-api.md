@@ -3,9 +3,9 @@ title: Data Hygiene API (alfa)
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | Een array met verificatiegegevens voor uw organisatie. Het moet één object met de volgende eigenschappen bevatten: <ul><li>`namespace`: Moet worden ingesteld op  `imsOrgID`.</li><li>`value`: Uw IMS-organisatie-id. Dit is de zelfde waarde die in `x-gw-ims-org-id` kopbal wordt verstrekt.</li></ul> |
 | `users` | Een array met een verzameling van ten minste één gebruiker waarvan u de gegevens wilt verwijderen. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Moet één tekenreekswaarde bevatten: `delete`.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bevat de volgende eigenschappen: <ul><li>`namespace`: De  [identiteit ](../identity-service/namespaces.md) naamruimte die aan de id is gekoppeld. Dit kan een [standaardnaamruimte](./api/appendix.md#standard-namespaces) zijn die door het Platform wordt herkend, of het kan een aangepaste naamruimte zijn die door uw organisatie wordt gedefinieerd. Het type van gebruikte namespace moet in het `type` bezit worden weerspiegeld.</li><li>`value`: De identiteitswaarde.</li><li>`type`: Moet worden ingesteld op  `standard` als u een algemeen erkende naamruimte gebruikt of  `custom` als u een naamruimte gebruikt die door uw organisatie is gedefinieerd.</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
