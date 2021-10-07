@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Berichtindeling
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: a1e77520ba5555db42578eac261e01e77130aea2
+source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '1995'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,6 @@ Om het proces aan de kant van de Adobe te begrijpen, gelieve zich met de volgend
 
 * **Experience Data Model (XDM)**. [XDM ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) overviewand   [How to create an XDM schema in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Klasse**. [Maak en bewerk klassen in de gebruikersinterface](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **Veldgroep**. [Veldgroepdefinitie ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#field-group) en  [meer informatie over veldgroepen](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#field-group).
 * **IdentityMap**. Het identiteitsoverzicht is een kaart van alle eindgebruikersidentiteiten in Adobe Experience Platform. Raadpleeg `xdm:identityMap` in het [XDM-veldwoordenboek](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. Het [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM attribuut deelt welke segmenten een profiel een lid van is. Voor de drie verschillende waarden op het `status` gebied, lees de documentatie op [het schemagroep van de Details van het Lidmaatschap van het Segment ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
@@ -27,26 +26,30 @@ Om het proces aan de kant van de Adobe te begrijpen, gelieve zich met de volgend
 
 Gebruik de inhoud op deze pagina samen met de rest van [configuratieopties voor partnerbestemmingen](./configuration-options.md). Deze pagina richt het overseinenformaat van gegevens die van Adobe Experience Platform aan bestemmingen worden uitgevoerd, terwijl de andere pagina specifiek over het verbinden en het voor authentiek verklaren aan uw bestemming richt.
 
-Adobe Experience Platform exporteert gegevens naar een aanzienlijk aantal bestemmingen, in verschillende gegevensindelingen. Voorbeelden van doelsoorten zijn reclameplatforms (Google), sociale netwerken (Facebook), cloudopslaglocaties (Amazon S3, Azure Event Hubs).
+Adobe Experience Platform exporteert gegevens naar een aanzienlijk aantal bestemmingen, in verschillende gegevensindelingen. Voorbeelden van bestemmingstypen zijn reclameplatforms (Google), sociale netwerken (Facebook), cloudopslaglocaties (Amazon S3, Azure Event Hubs).
 
 Experience Platform kan de geëxporteerde berichtindeling aanpassen aan de verwachte indeling aan uw zijde. Om deze aanpassing te begrijpen, zijn de volgende concepten belangrijk:
 * Het XDM-bronschema (1) en het XDM-doelschema (2) in Adobe Experience Platform
-* Het berichtformaat aan de partnerkant (3), en
-* De transformatielaag tussen twee, die u kunt bepalen door een [berichttransformatiesjabloon](./message-format.md#using-templating) te creëren.
+* Het verwachte berichtformaat aan de partnerkant (3), en
+* De transformatielaag tussen XDM-schema en de verwachte berichtindeling, die u kunt definiëren door een [berichttransformatiesjabloon](./message-format.md#using-templating) te maken.
 
 ![Transformatie schema naar JSON](./assets/transformations-3-steps.png)
 
-Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven.
+Experience Platform gebruikt XDM-schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven.
 
-De gebruikers die gegevens aan uw bestemming willen activeren moeten de gebieden in kaart brengen die zij voor hun datasets in Experience Platform aan een schema gebruiken dat aan het verwachte formaat van uw bestemming vertaalt. Adobe zal een groep van het douanegebied voor uw bedrijf tot stand brengen om aan het doelschema toe te voegen. De velden in de veldgroep zijn afhankelijk van de profielkenmerkvelden die u kunt ontvangen.
+<!--
 
-**Bron-XDM-schema (1)**: Dit verwijst naar het schema dat een klant in Experience Platform gebruikt. In Experience Platform, in [toewijzingsstap](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) van het activerende bestemmingswerkschema, zouden de klanten gebieden van hun bronschema aan het doelschema van uw bestemming in kaart brengen (2).
+Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
 
-**Doel XDM-schema (2)**: Gebaseerd op het JSON standaardschema (3) dat u met Adobe deelt, zal het team bij Adobe een douaneschema voor uw bestemming tot stand brengen. Merk op dat in een [toekomstige fase van het project](./overview.md#phased-approach), u het douaneschema voor uw bestemming op uw kunt tot stand brengen.
+-->
 
-**JSON-standaardschema van uw kenmerken van het doelprofiel (3)**: Deel met ons een  [JSON-](https://json-schema.org/learn/miscellaneous-examples.html) schema met alle profielkenmerken die uw platform ondersteunt en de typen kenmerken ervan (bijvoorbeeld: object, tekenreeks, array). Voorbeelden van velden die uw doel kan ondersteunen, zijn `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` enzovoort.
+**Bron-XDM-schema (1)**: Dit punt verwijst naar het schema dat de klanten in Experience Platform gebruiken. In Experience Platform, in [toewijzingsstap](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) van het activerende bestemmingswerkschema, zouden de klanten gebieden van hun bronschema aan het doelschema van uw bestemming in kaart brengen (2).
 
-Gebaseerd op de hierboven beschreven schematransformaties, is hier hoe de structuur van een bericht tussen het bronXDM schema en het steekproefschema op de partnerkant verandert:
+**Doel XDM-schema (2)**: Op basis van het JSON-standaardschema (3) van de verwachte indeling van uw bestemming kunt u profielkenmerken en identiteiten definiëren in uw doel-XDM-schema. U kunt dit in de bestemmingsconfiguratie, in [schemaConfig](./destination-configuration.md#schema-configuration) en [identityNamespaces](./destination-configuration.md#identities-and-attributes) voorwerpen doen.
+
+**JSON-standaardschema van uw kenmerken van het doelprofiel (3)**: Dit item vertegenwoordigt een  [JSON-](https://json-schema.org/learn/miscellaneous-examples.html) schema van alle profielkenmerken die uw platform ondersteunt en de typen kenmerken ervan (bijvoorbeeld: object, tekenreeks, array). Voorbeelden van velden die uw doel kan ondersteunen, zijn `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` enzovoort. U hebt een [berichttransformatiesjabloon](./message-format.md#using-templating) nodig om de gegevens die uit het Experience Platform zijn geëxporteerd, af te stemmen op de verwachte indeling.
+
+Gebaseerd op de hierboven beschreven schematransformaties, is hier hoe de structuur van een bericht tussen het bronXDM schema en een steekproefschema op de partnerkant verandert:
 
 ![Voorbeeld van transformatieberichten](./assets/transformations-with-examples.png)
 
@@ -59,7 +62,7 @@ In het onderstaande voorbeeld worden drie algemene profielkenmerken in Adobe Exp
 
 >[!NOTE]
 >
->De klant wijst de attributen van het bronXDM schema aan het partnerXDM schema in Adobe Experience Platform UI, in **Toewijzing** stap van [activeert bestemmingswerkschema](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html#mapping) in kaart.
+>De klant wijst de attributen van het bronXDM schema aan het partnerXDM schema in Adobe Experience Platform UI, in **Toewijzing** stap van [activeert bestemmingswerkschema](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) in kaart.
 
 Stel dat uw platform een berichtindeling kan ontvangen zoals:
 
@@ -94,7 +97,7 @@ Deze sectie verstrekt verscheidene voorbeelden van hoe deze transformaties, van 
 
 1. Eenvoudige transformatievoorbeelden. Leer hoe sjablonen werken met eenvoudige transformaties voor [Profielkenmerken](./message-format.md#attributes), [Segmentlidmaatschap](./message-format.md#segment-membership) en [Identiteitsvelden](./message-format.md#identities).
 2. Eenvoudigere voorbeelden van sjablonen waarin bovenstaande velden worden gecombineerd: [Maak een sjabloon voor het verzenden van segmenten en identiteiten](./message-format.md#segments-and-identities) en [Maak een sjabloon voor het verzenden van segmenten, identiteiten en profielkenmerken](./message-format.md#segments-identities-attributes).
-3. Sjablonen bevatten de aggregatietoets. Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, groepeert het Experience Platform de profielen die aan uw bestemming worden uitgevoerd die op criteria zoals segment ID, segmentstatus, of identiteitsnamespaces wordt gebaseerd.
+3. Sjablonen die de aggregatietoets bevatten. Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, groepeert het Experience Platform de profielen die aan uw bestemming worden uitgevoerd die op criteria zoals segment ID, segmentstatus, of identiteitsnamespaces wordt gebaseerd.
 
 ### Profielkenmerken {#attributes}
 
@@ -139,7 +142,7 @@ Profiel 2:
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -237,7 +240,7 @@ Profiel 2:
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -341,7 +344,7 @@ Profiel 2:
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -479,7 +482,7 @@ Profiel 2:
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -661,7 +664,7 @@ Profiel 2:
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -779,7 +782,7 @@ In de onderstaande `json` worden de gegevens weergegeven die uit Adobe Experienc
 
 Wanneer u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, kunt u de profielen groeperen die naar uw bestemming op criteria zoals segmentidentiteitskaart, segmentalias, segmentlidmaatschap, of identiteitsnamespaces worden uitgevoerd.
 
-In het malplaatje van de berichttransformatie, kunt u tot de bovengenoemde samenvoegingssleutels toegang hebben, zoals aangetoond in de voorbeelden in de volgende secties. Hierdoor kunt u het uit Experience Platform geëxporteerde HTTP-bericht zo opmaken dat het overeenkomt met de indeling die door de bestemming wordt verwacht.
+In het malplaatje van de berichttransformatie, kunt u tot de bovengenoemde samenvoegingssleutels toegang hebben, zoals aangetoond in de voorbeelden in de volgende secties. Gebruik aggregatietoetsen om het uit Experience Platform geëxporteerde HTTP-bericht te structureren, zodat dit overeenkomt met de notatie- en tarieflimieten die door de bestemming worden verwacht.
 
 #### Segment-id-aggregatietoets gebruiken in de sjabloon {#aggregation-key-segment-id}
 
@@ -880,9 +883,9 @@ Profiel 4:
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Hieronder ziet u hoe `audienceId` in de sjabloon wordt gebruikt om toegang te krijgen tot segment-id&#39;s. Dit veronderstelt dat u `audienceId` voor segmentlidmaatschap in uw bestemmingstaxonomie gebruikt. U kunt in plaats daarvan elke andere veldnaam gebruiken, afhankelijk van uw eigen taxonomie.
+Hieronder ziet u hoe `audienceId` in de sjabloon wordt gebruikt om toegang te krijgen tot segment-id&#39;s. In dit voorbeeld wordt ervan uitgegaan dat u `audienceId` gebruikt voor segmentlidmaatschap in uw doeltaxonomie. U kunt in plaats daarvan elke andere veldnaam gebruiken, afhankelijk van uw eigen taxonomie.
 
 ```python
 {
@@ -944,7 +947,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### De aggregatietoets voor de segmentstatus in de sjabloon gebruiken {#aggregation-key-segment-status}
 
-Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` en `includeSegmentStatus` aan waar plaatst, kunt u tot de segmentstatus in het malplaatje toegang hebben om profielen in de HTTP- berichten te groeperen die naar uw bestemming worden uitgevoerd op of de profielen zouden moeten worden toegevoegd of uit segmenten worden verwijderd.
+Als u [configureerbare samenvoeging](./destination-configuration.md#configurable-aggregation) gebruikt en `includeSegmentId` en `includeSegmentStatus` aan waar plaatst, kunt u tot de segmentstatus in het malplaatje toegang hebben. Op deze manier kunt u profielen groeperen in de HTTP-berichten die naar uw bestemming worden geëxporteerd, op basis van het feit of de profielen moeten worden toegevoegd of verwijderd uit segmenten.
 
 Mogelijke waarden zijn:
 
@@ -960,7 +963,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Naamruimteaggregatietoets gebruiken in de sjabloon {#aggregation-key-identity}
 
-Hieronder ziet u een voorbeeld waarin de [configureerbare aggregatie](./destination-configuration.md#configurable-aggregation) in de doelconfiguratie is ingesteld op het samenvoegen van geëxporteerde profielen via naamruimten, in de notatie `"namespaces": ["email", "phone"]` en `"namespaces": ["GAID", "IDFA"]`. Verwijs naar de `groups` parameter in [de verwijzing van bestemmingsAPI](./destination-configuration-api.md) om te zien hoe dit wordt gedaan.
+Hieronder ziet u een voorbeeld waarin de [configureerbare aggregatie](./destination-configuration.md#configurable-aggregation) in de doelconfiguratie is ingesteld op het samenvoegen van geëxporteerde profielen via naamruimten, in de notatie `"namespaces": ["email", "phone"]` en `"namespaces": ["GAID", "IDFA"]`. Raadpleeg de parameter `groups` in de [API referentie voor doelconfiguratie](./destination-configuration-api.md) voor meer informatie over deze groepering.
 
 **Invoer**
 
@@ -1032,7 +1035,7 @@ Profiel 2:
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens, zoals dubbele aanhalingstekens `""`, weglaten voordat u de sjabloon invoegt in de configuratie [doelserver](./server-and-template-configuration.md#template-specs). Voor meer informatie over het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in [JSON norm](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 In de onderstaande sjabloon wordt `input.aggregationKey.identityNamespaces` gebruikt
 
@@ -1056,7 +1059,7 @@ In de onderstaande sjabloon wordt `input.aggregationKey.identityNamespaces` gebr
 
 **Resultaat**
 
-Als de profielen naar uw bestemming worden geëxporteerd, worden deze in twee groepen gesplitst op basis van hun naamruimte (e-mail en telefoon in de ene groep, GAID en IDFA in een andere groep).
+Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groepen gesplitst op basis van hun naamruimten. E-mail en telefoon zijn in één groep, terwijl GAID en IDFA in een andere zijn.
 
 ```json
 {
@@ -1108,7 +1111,7 @@ Als de profielen naar uw bestemming worden geëxporteerd, worden deze in twee gr
 
 #### De aggregatietoets in een URL-sjabloon gebruiken {#aggregation-key-url-template}
 
-Afhankelijk van het gebruik dat u gebruikt, kunt u ook de hier in een URL beschreven aggregatietoetsen gebruiken, zoals hieronder wordt getoond:
+Afhankelijk van het gebruik kunt u ook de hier in een URL beschreven aggregatietoetsen gebruiken, zoals hieronder wordt getoond:
 
 ```python
 https://api.example.com/audience/{{input.aggregationKey.segmentId}}
