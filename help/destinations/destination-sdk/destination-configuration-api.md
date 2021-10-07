@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination.
 title: API-eindpuntbewerkingen voor doelen
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2405'
 ht-degree: 1%
 
 ---
@@ -168,7 +168,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Boolean | Gebruik `true` als de gebruikers profielattributen van Experience Platform aan douanekenmerken op de kant van uw bestemming, zoals aangetoond in de voorbeeldconfiguratie hierboven zouden moeten kunnen in kaart brengen. |
 | `schemaConfig.segmentRequired` | Boolean | Altijd `segmentRequired:true` gebruiken. |
 | `schemaConfig.identityRequired` | Boolean | Gebruik `true` als u gebruikers identiteitsnaamruimten van Experience Platform aan uw gewenste schema zou moeten kunnen in kaart brengen. |
-| `aggregation.aggregationType` | - | Selecteer `BEST_EFFORT` of `CONFIGURABLE_AGGREGATION`. De voorbeeldconfiguratie hierboven omvat `BEST_EFFORT` samenvoeging. Voor een voorbeeld van `CONFIGURABLE_AGGREGATION`, verwijs naar de voorbeeldconfiguratie in [bestemmingsconfiguratie](./destination-configuration.md#example-configuration) document. Merk op dat de parameters relevant voor configureerbare samenvoeging hieronder in deze lijst worden gedocumenteerd. |
+| `aggregation.aggregationType` | - | Selecteer `BEST_EFFORT` of `CONFIGURABLE_AGGREGATION`. De voorbeeldconfiguratie hierboven omvat `BEST_EFFORT` samenvoeging. Voor een voorbeeld van `CONFIGURABLE_AGGREGATION`, verwijs naar de voorbeeldconfiguratie in [bestemmingsconfiguratie](./destination-configuration.md#example-configuration) document. De parameters relevant voor configureerbare samenvoeging zijn hieronder gedocumenteerd in deze lijst. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-aanroep. Specificeer het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou het Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br> Als uw server niet meerdere gebruikers per aanvraag accepteert, stelt u deze waarde in op 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een bepaalde naamruimte. |
 | `aggregation.configurableAggregation.splitUserById` | Boolean | Zie parameter in voorbeeldconfiguratie [here](./destination-configuration.md#example-configuration). Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een bepaalde naamruimte. |

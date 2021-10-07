@@ -4,9 +4,9 @@ seo-description: This page describes how to use the reference information in Con
 seo-title: How to use Destination SDK to configure your destination
 title: Hoe te om Doel SDK te gebruiken om uw bestemming te vormen
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 15626393bd69173195dd924c8817073b75df5a1e
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 ## Stap 2: Doelconfiguratie maken {#create-destination-configuration}
 
 Hieronder getoond is een voorbeeldconfiguratie voor een bestemmingsmalplaatje, die door het `/destinations` API eindpunt te gebruiken wordt gecreeerd. Voor meer informatie over dit malplaatje, verwijs naar [Configuratie van de Bestemming](./destination-configuration.md).
+
+Als u de server- en sjabloonconfiguratie in stap 1 wilt verbinden met deze doelconfiguratie, voegt u de instantie-id van de server en de sjabloonconfiguratie hier als `destinationServerId` toe.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -109,6 +111,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -138,20 +146,24 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 Gebaseerd op de ladingen die uw bestemming steunt, moet u een malplaatje creëren dat het formaat van de uitgevoerde gegevens van Adobe XDM formaat in een formaat omzet dat door uw bestemming wordt gesteund. Zie sjabloonvoorbeelden in de sectie [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en segmentlidmaatschap](./message-format.md#using-templating) en het [sjabloonontwerpgereedschap](./create-template.md) van Adobe gebruiken.
 
+Zodra u een malplaatje van de berichttransformatie hebt gecreeerd dat voor u werkt, voeg het aan de server en malplaatjeconfiguratie toe u in stap 1 creeerde.
+
 ## Stap 4: Configuratie van metagegevens voor het publiek maken {#create-audience-metadata-configuration}
 
-Voor sommige bestemmingen, vereist de Bestemming SDK dat u een malplaatje van publieksmeta-gegevens vormt om publiek in uw bestemming programmatically tot stand te brengen bij te werken of te schrappen. Raadpleeg [Metabeheer van publiek](./audience-metadata-management.md) voor informatie over wanneer u deze configuratie moet instellen en hoe u dit moet doen.
+Voor sommige bestemmingen, vereist de Bestemming SDK dat u een configuratie van publieksmeta-gegevens vormt om publiek in uw bestemming programmatically tot stand te brengen bij te werken of te schrappen. Raadpleeg [Metabeheer van publiek](./audience-metadata-management.md) voor informatie over wanneer u deze configuratie moet instellen en hoe u dit moet doen.
+
+Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bestemmingsconfiguratie verbinden u in stap 2 creeerde. Voeg instanceID van uw configuratie van publieksmeta-gegevens aan uw bestemmingsconfiguratie als `audienceTemplateId` toe.
 
 ## Stap 5: Referentieconfiguratie maken/verificatie instellen {#set-up-authentication}
 
 Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"authenticationRule": "PLATFORM_AUTHENTICATION"` in de bestemmingsconfiguratie hierboven specificeert, kunt u opstellingsauthentificatie voor uw bestemming door `/destination` of `/credentials` eindpunt te gebruiken.
 
-* **Meest voorkomende gevallen**: Als u selecteerde  `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en uw bestemming de OAuth 2 authentificatiemethode steunt, lees  [OAuth 2 authentificatie](./oauth2-authentication.md).
+* **Meest voorkomende gevallen**: Als u  `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in de bestemmingsconfiguratie selecteerde en uw bestemming de OAuth 2 authentificatiemethode steunt, lees  [OAuth 2 authentificatie](./oauth2-authentication.md).
 * Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"` selecteerde, verwijs naar [Credentials configuratie](./credentials-configuration.md) in de verwijzingsdocumentatie.
 
 ## Stap 6: Doel testen {#test-destination}
 
-Nadat u de bestemming hebt ingesteld met behulp van de sjablonen in de vorige stappen, kunt u het [doeltestgereedschap](./create-template.md) gebruiken om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
+Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de vorige stappen, kunt u het [testgereedschap voor de bestemming](./create-template.md) gebruiken om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
 
 Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Verwijs naar de twee hieronder middelen voor instructies hoe te om segmenten in Experience Platform tot stand te brengen:
 

@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Opties voor doelconfiguratie voor doel-SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1724'
 ht-degree: 2%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
+Met deze configuratie kunt u essentiële informatie zoals uw doelnaam, categorie, beschrijving, logo en nog veel meer aangeven. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
+
+Deze configuratie verbindt ook de andere configuraties die voor uw bestemming worden vereist aan het werk - bestemmingsserver en publieksmeta-gegevens - aan dit. Lees hoe u de twee configuraties in een [sectie verder onder](./destination-configuration.md#connecting-all-configurations) kunt van verwijzingen voorzien.
 
 U kunt de in dit document beschreven functionaliteit vormen door het `/authoring/destinations` API eindpunt te gebruiken. Lees [Doelen API eindpuntverrichtingen](./destination-configuration-api.md) voor een volledige lijst van verrichtingen u op het eindpunt kunt uitvoeren.
 
 ## Voorbeeldconfiguratie {#example-configuration}
 
-Hieronder ziet u een voorbeeldconfiguratie voor een fictieve bestemming, Moviestar, die eindpunten heeft op vier locaties over de hele wereld. De bestemming behoort tot de categorie mobiele bestemmingen. In de volgende secties wordt uitgelegd hoe deze configuratie wordt samengesteld.
+Hieronder ziet u een voorbeeldconfiguratie van een fictieve bestemming, Moviestar, die eindpunten heeft op vier plaatsen op de wereld. De bestemming behoort tot de categorie mobiele bestemmingen. In de volgende secties wordt uitgelegd hoe deze configuratie wordt samengesteld.
 
 ```json
 {
@@ -118,14 +120,15 @@ Hieronder ziet u een voorbeeldconfiguratie voor een fictieve bestemming, Moviest
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 ```
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `name` | Tekenreeks | Geeft de titel van het doel in de catalogus met Experience Platforms aan. |
-| `description` | Tekenreeks | Geef een beschrijving op die Adobe in de Experience Platform-doelcatalogus voor uw doelkaart zal gebruiken. Doel voor niet meer dan 4-5 zinnen. |
+| `description` | Tekenreeks | Geef een beschrijving voor uw doelkaart op in de catalogus met Experience Platforms doelen. Doel voor niet meer dan 4-5 zinnen. |
 | `status` | Tekenreeks | Geeft de levenscyclusstatus van de doelkaart aan. Accepteerde waarden zijn `TEST`, `PUBLISHED` en `DELETED`. Gebruik `TEST` wanneer u eerst uw bestemming vormt. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -193,7 +196,7 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de werkstroom 
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `profileFields` | Array | *Niet weergegeven in bovenstaande voorbeeldconfiguratie.* Wanneer u vooraf gedefinieerde kenmerken toevoegt  `profileFields`, kunnen gebruikers de kenmerken van het Experience Platform toewijzen aan de vooraf gedefinieerde kenmerken aan de zijde van het doel. |
+| `profileFields` | Array | *Niet weergegeven in bovenstaande voorbeeldconfiguratie.* Wanneer u vooraf gedefinieerd toevoegt  `profileFields`, hebben de gebruikers van het Experience Platform de optie om de attributen van het Platform aan de vooraf bepaalde attributen op de kant van uw bestemming in kaart te brengen. |
 | `profileRequired` | Boolean | Gebruik `true` als de gebruikers profielattributen van Experience Platform aan douanekenmerken op de kant van uw bestemming, zoals aangetoond in de voorbeeldconfiguratie hierboven zouden moeten kunnen in kaart brengen. |
 | `segmentRequired` | Boolean | Altijd `segmentRequired:true` gebruiken. |
 | `identityRequired` | Boolean | Gebruik `true` als gebruikers naamruimten van Experience Platform aan uw gewenste schema zouden moeten kunnen in kaart brengen. |
@@ -204,7 +207,7 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de werkstroom 
 
 De parameters in deze sectie bepalen hoe de doelidentiteiten en de attributen in de afbeeldingsstap van het gebruikersinterface van het Experience Platform worden bevolkt, waar de gebruikers hun schema&#39;s XDM aan het schema in uw bestemming in kaart brengen.
 
-Adobe moet weten welke [!DNL Platform] identiteiten klanten naar uw bestemming zullen kunnen uitvoeren. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] naamruimten die klanten kunnen toewijzen aan naamruimten vanaf uw bestemming.
+U moet aangeven welke [!DNL Platform] identiteiten klanten kunnen exporteren naar uw bestemming. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] naamruimten die klanten kunnen toewijzen aan naamruimten vanaf uw bestemming.
 
 Identiteitsnaamruimten vereisen geen 1-aan-1 correspondentie tussen [!DNL Platform] en uw bestemming.
 Klanten kunnen bijvoorbeeld een naamruimte [!DNL Platform] [!DNL IDFA] toewijzen aan een naamruimte [!DNL IDFA] van uw bestemming, of ze kunnen dezelfde naamruimte [!DNL Platform] [!DNL IDFA] toewijzen aan een naamruimte [!DNL Customer ID] in uw bestemming.
@@ -215,9 +218,9 @@ Lees meer in [Naamruimte-overzicht](https://experienceleague.adobe.com/docs/expe
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `acceptsAttributes` | Boolean | Hiermee geeft u aan of uw doel standaardprofielkenmerken accepteert. Gewoonlijk worden deze kenmerken gemarkeerd in de documentatie van onze partners. |
+| `acceptsAttributes` | Boolean | Hiermee geeft u aan of uw doel standaardprofielkenmerken accepteert. Gewoonlijk, worden deze attributen benadrukt in de documentatie van partners. |
 | `acceptsCustomNamespaces` | Boolean | Geeft aan of klanten aangepaste naamruimten kunnen instellen op uw bestemming. |
-| `allowedAttributesTransformation` | Tekenreeks | *Niet weergegeven in voorbeeldconfiguratie*. Wordt bijvoorbeeld gebruikt wanneer de [!DNL Platform]-klant gewone e-mailadressen als kenmerk heeft en uw platform alleen gehashte e-mails accepteert. Hier geeft u de transformatie op die moet worden toegepast (zet de e-mail bijvoorbeeld om in kleine letters en vervolgens in de hash). |
+| `allowedAttributesTransformation` | Tekenreeks | *Niet weergegeven in voorbeeldconfiguratie*. Wordt bijvoorbeeld gebruikt wanneer de [!DNL Platform]-klant gewone e-mailadressen als kenmerk heeft en uw platform alleen gehashte e-mails accepteert. In dit object kunt u de transformatie uitvoeren die moet worden toegepast (de e-mail bijvoorbeeld omzetten in kleine letters en vervolgens hash). Zie `requiredTransformation` in de [API-referentie voor doelconfiguratie](./destination-configuration-api.md#update) voor een voorbeeld. |
 | `acceptedGlobalNamespaces` | - | Wordt gebruikt voor gevallen waarin uw platform [standaard naamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) accepteert (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -242,13 +245,21 @@ Door `audienceTemplateId`, verbindt deze sectie ook deze configuratie met [publi
 
 De parameters die in de configuratie hierboven worden getoond worden beschreven in [de referenties van het bestemmingseindpunt API](./destination-configuration-api.md).
 
+## Hoe deze configuratie alle noodzakelijke informatie voor uw bestemming verbindt {#connecting-all-configurations}
+
+Sommige montages voor uw bestemming kunnen door de bestemmingsserver of het eindpunt van publiekmeta-gegevens worden gevormd. Het eindpunt van de bestemmingsconfiguratie verbindt al deze montages door de configuraties als volgt van verwijzingen te voorzien:
+
+* Gebruik `destinationServerId` om de bestemmingsserver en malplaatjeconfiguratie te verwijzen opstelling voor uw bestemming.
+* Gebruik `audienceMetadataId` om de configuratie van publieksmeta-gegevens te verwijzen opstelling voor uw bestemming.
+
+
 ## Samenvoegingsbeleid {#aggregation}
 
 ![Samenvoegingsbeleid in het configuratiesjabloon](./assets/aggregation-configuration.png)
 
-Deze sectie staat u toe om het samenvoegingsbeleid te plaatsen dat het Experience Platform zal gebruiken wanneer het uitvoeren van gegevens naar uw bestemming.
+Deze sectie staat u toe om het samenvoegingsbeleid te plaatsen dat het Experience Platform zou moeten gebruiken wanneer het uitvoeren van gegevens naar uw bestemming.
 
-Een samenvoegingsbeleid bepaalt hoe de uitgevoerde profielen samen in de gegevensuitvoer worden gecombineerd. Beschikbare opties zijn:
+Een samenvoegingsbeleid bepaalt hoe de uitgevoerde profielen in de gegevensuitvoer worden gecombineerd. Beschikbare opties zijn:
 * Beste inspanningsaggregatie
 * Configureerbare samenvoeging (weergegeven in de bovenstaande configuratie)
 
@@ -277,10 +288,10 @@ Met deze optie kunt u:
 
 Voor gedetailleerde verklaringen van de samenvoegingsparameters, verwijs naar [Doelen API eindpuntverrichtingen](./destination-configuration-api.md) verwijzingspagina, waar elke parameter wordt beschreven.
 
-<!--
+## Historische profielkwalificaties
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+U kunt de `backfillHistoricalProfileData` parameter in de bestemmingsconfiguratie gebruiken om te bepalen als de historische profielkwalificaties naar uw bestemming zouden moeten worden uitgevoerd.
 
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
+| Parameter | Type | Beschrijving |
+|---------|----------|------|
+| `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer segmenten worden geactiveerd naar de bestemming. <br> <ul><li> `true`:  [!DNL Platform] verzendt de historische gebruikersprofielen die voor het segment kwalificeren alvorens het segment wordt geactiveerd. </li><li> `false`:  [!DNL Platform] omvat alleen gebruikersprofielen die in aanmerking komen voor het segment nadat het segment is geactiveerd. </li></ul> |
