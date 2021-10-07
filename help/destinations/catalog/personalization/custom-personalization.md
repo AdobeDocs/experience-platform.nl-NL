@@ -2,9 +2,10 @@
 keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding (bèta)
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt in real time 1:1 en verpersoonlijking die op het segmentlidmaatschap van een gebruikersprofiel wordt gebaseerd.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -61,6 +62,28 @@ Lees [Activate profielen en segmenten aan profiel verzoekbestemmingen](../../ui/
 ## Geëxporteerde gegevens {#exported-data}
 
 Als u [Adobe Tags](../../../tags/home.md) gebruikt om de SDK van het Web van het Experience Platform op te stellen, gebruik [gebeurtenis complete](../../../edge/extension/event-types.md) functionaliteit en uw actie van de douanecode zal een `event.destinations` variabele hebben die u kunt gebruiken om de uitgevoerde gegevens te zien.
+
+Hier volgt een voorbeeldwaarde voor de variabele `event.destinations`:
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
 
 Als u [Adobe Tags](../../../tags/home.md) niet gebruikt om de SDK van het Web van het Experience Platform op te stellen, gebruik [behandelende reacties van gebeurtenissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionaliteit om de uitgevoerde gegevens te zien.
 
