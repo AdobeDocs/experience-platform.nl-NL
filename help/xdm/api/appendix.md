@@ -5,7 +5,7 @@ title: Aanhangsel voor schema-registratie-API
 description: Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
+source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 0%
@@ -77,50 +77,52 @@ Hieronder volgt een vergelijking naast elkaar van verjaardagsgerelateerde velden
   <tr>
   <td>
   <pre class=" language-json">
-        {
-          "xdm:bornDate": {
-              "titel": "Geboortedatum",
-              "type": "string",
-              "formaat": "date",
-          },
-          "xdm:bornDayAndMonth": {
-              "titel": "Geboortedatum",
-              "type": "string",
-              "patroon": "[0-1][0-9]-[0-9][0-9]",
-          },
-          "xdm:bornYear": {
-              "titel": "Geboortejaar",
-              "type": "integer",
-              "minimum": 1
-              "maximum": 32767
-        }
+{
+  "xdm:bornDate": {
+    "titel": "Geboortedatum",
+    "type": "string",
+    "formaat": "date"
+  },
+  "xdm:bornDayAndMonth": {
+    "titel": "Geboortedatum",
+    "type": "string",
+    "patroon": "[0-1][0-9]-[0-9][0-9]"
+  },
+  "xdm:bornYear": {
+    "titel": "Geboortejaar",
+    "type": "integer",
+    "minimum": 1
+    "maximum": 32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-        {
-          "geboortedatum": {
-              "titel": "Geboortedatum",
-              "type": "string",
-              "formaat": "date",
-              "meta:xdmField": "xdm:bornDate",
-              "meta:xdmType": "date"
-          },
-          "bornDayAndMonth": {
-              "titel": "Geboortedatum",
-              "type": "string",
-              "patroon": "[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField": "xdm:bornDayAndMonth",
-              "meta:xdmType": "string"
-          },
-          "geboortejaar": {
-              "titel": "Geboortejaar",
-              "type": "integer",
-              "minimum": 1
-              "maximum": 32767,
-              "meta:xdmField": "xdm:bornYear",
-              "meta:xdmType": "short"
-        }
+{
+  "geboortedatum": {
+    "titel": "Geboortedatum",
+    "type": "string",
+    "formaat": "date",
+    "meta:xdmField": "xdm:bornDate",
+    "meta:xdmType": "date"
+  },
+  "bornDayAndMonth": {
+    "titel": "Geboortedatum",
+    "type": "string",
+    "patroon": "[0-1][0-9]-[0-9][0-9]",
+    "meta:xdmField": "xdm:bornDayAndMonth",
+    "meta:xdmType": "string"
+  },
+  "geboortejaar": {
+    "titel": "Geboortejaar",
+    "type": "integer",
+    "minimum": 1
+    "maximum": 32767,
+    "meta:xdmField": "xdm:bornYear",
+    "meta:xdmType": "short"
+  }
+}
       </pre>
   </td>
   </tr>
