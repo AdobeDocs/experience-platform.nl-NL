@@ -1,15 +1,16 @@
 ---
-keywords: RTCDP;CDP;Real-time Platform van klantgegevens;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
-title: 'Voorbeeld: Hoofdlettergebruik voor Real-time Customer Data Platform B2B Edition'
-description: Dit voorbeeldscenario verstrekt een voorbeeld voor de configuratie van uw implementatie van de Uitgave van het Platform B2B van de Gegevens van de Klant in real time.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
+title: Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
+description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van uw implementatie van Real-time Customer Data Platform B2B Edition.
+exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
+source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
 
-# Voorbeeld: Hoofdlettergebruik voor Real-time Customer Data Platform B2B Edition
+# Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
 
 >[!IMPORTANT]
 >
@@ -18,8 +19,7 @@ ht-degree: 0%
 Real-time Customer Data Platform B2B Edition breidt het bestaande Real-time CDP- en Adobe Experience Platform-aanbod uit om B2B-gegevens en -workflows te ondersteunen. Dit document biedt een voorbeeld van een gebruiksgeval dat de extra voordelen aantoont die door de B2B Edition worden geboden. Deze omvatten:
 
 - Combineer persoon- en accountgegevens uit verschillende gegevensbronnen op dezelfde locatie om een uitgebreide weergave te maken die een beter inzicht in de klanten en een nauwkeuriger segmentering mogelijk maakt. Zie de documentatie over [het creëren van XDM schemaverhoudingen](./schemas/b2b.md) voor gebruik met gevarieerde B2B bronnen voor meer informatie.
-- Segmenteer een publiek op basis van kenmerken van verwante entiteiten. Dit omvat Rekeningen, Kansen, Campagnes, en de Lijst van de Marketing. Segmenten blijven niet langer beperkt tot alleen personekenmerken en Experience Events. Zie de documentatie over B2B-segmentatie voor meer voorbeelden van het maken van B2B-specifieke soorten publiek.
-   <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
+- Segmenteer een publiek op basis van kenmerken van verwante entiteiten. Dit omvat Rekeningen, Kansen, Campagnes, en de Lijst van de Marketing. Segmenten blijven niet langer beperkt tot alleen personekenmerken en Experience Events. Zie de [B2B-segmentatiedocumentatie](./segmentation/b2b.md) voor meer voorbeelden van het maken van B2B-specifieke soorten publiek.
 - Native ondersteuning bieden voor het gebruik van één persoon met betrekking tot meerdere rekeningen.
 
 ## Gebruiksscenario
@@ -97,12 +97,10 @@ Door dit document te lezen, bent u nu geïntroduceerd aan de soorten doelstellin
 
 De volgende documentatie wordt aanbevolen om meer inzicht te krijgen in B2B-specifieke functies:
 
-<!-- - [Marketo connector]() -->
-- [Schema&#39;s in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
-- [Marketo Engage-doeldocumentatie](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)
-- [Een bestemming voor een met LinkedIn overeenkomend publiek configureren](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
-
-<!-- PLACEHOLDER -->
-<!-- - [Account Profiles]() -->
-<!-- - [B2B Segmentation examples]() -->
-<!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->
+<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Bronnen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
+- [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+- [B2B-segmenteringsvoorbeelden](./segmentation/b2b.md)
+- [Overzicht van accountprofielen](./accounts/account-profile-overview.md)
+- [Doelen in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
+- [Een bestemming voor een met LinkedIn overeenkomend publiek configureren](../destinations/catalog/social/linkedin.md)

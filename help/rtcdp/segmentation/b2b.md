@@ -1,14 +1,15 @@
 ---
 title: Overzicht van de Gevallen van het Gebruik van de Segmentatie voor Echte - tijdCDP B2B Uitgave.
-description: Overzicht van de verschillende beschikbare gebruiksgevallen van CDP B2B Edition in real time.
-source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
+description: Een overzicht van de diverse beschikbare Echte - tijdCDP B2B de gebruiksgevallen van de Uitgave.
+exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
+source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
 
-# Overzicht van het gebruik van de Segmentatie gevallen voor de Gegevens van de Klant in real time Platform B2B Uitgave (Bèta)
+# Overzicht van de segmentatieuse cases voor Real-time Customer Data Platform B2B Edition (bèta)
 
 <!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
 
@@ -20,7 +21,7 @@ Dit document bevat voorbeelden met betrekking tot de segmentatie die beschikbaar
 
 >[!NOTE]
 >
->De kenmerken die vereist zijn voor deze gevallen van segmentatiegebruik zijn alleen beschikbaar voor klanten van het Platform B2B Edition in realtime voor klantgegevens. Om meer over CDP in real time, met inbegrip van de eigenschappen en de functionaliteit beschikbaar aan elk vergunningstype te leren, te beginnen door [CDP overzicht in real time](../overview.md) te lezen.
+>De kenmerken die vereist zijn voor deze segmentatieuse-gevallen zijn alleen beschikbaar voor Real-time Customer Data Platform B2B Edition-klanten. Om meer over CDP in real time, met inbegrip van de eigenschappen en de functionaliteit beschikbaar aan elk vergunningstype te leren, te beginnen door [CDP overzicht in real time](../overview.md) te lezen.
 
 ## Vereisten
 
@@ -55,7 +56,7 @@ Deze verhouding wordt weerspiegeld binnen de Bouwer van het Segment door het geb
 
 ![bron-zeer belangrijk voorbeeld gebruikend de segmentbouwer in de segmentatiewerkruimte](../assets/segmentation/source-key-segmentation-example.png)
 
-Raadpleeg de [schema&#39;s in Real-time Customer Data Platform B2B Edition-documentatie](../schemas/b2b.md) voor meer informatie over de beschikbare B2B-klassen.
+Raadpleeg de [schema&#39;s in de Real-time Customer Data Platform B2B Edition-documentatie](../schemas/b2b.md) voor meer informatie over de beschikbare B2B-klassen.
 
 De onderstaande gebruiksgevallen bevatten informatie over de klassen die worden gebruikt om relaties tussen de verschillende schema&#39;s tot stand te brengen om deze resultaten te bereiken. Deze voorbeelden kunnen worden gebruikt om u te helpen uw eigen segmenten tot stand brengen.
 

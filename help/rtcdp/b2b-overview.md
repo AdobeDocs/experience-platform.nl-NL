@@ -1,24 +1,24 @@
 ---
-keywords: RTCDP;CDP;B2B Edition;Real-time Platform van klantgegevens;real-time platform voor klantgegevens;real-time cdp;b2b;cdp;Customer AI
+keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;b2b;cdp;Customer AI
 title: Real-time CDP B2B Edition - Overzicht
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Overzicht van Real-time Customer Data Platform B2B Edition-account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
+source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1057'
 ht-degree: 0%
 
 ---
 
-# Real-time overzicht van Customer Data Platform B2B Edition
+# Overzicht van Real-time Customer Data Platform B2B Edition
 
 >[!IMPORTANT]
 >
 >CDP B2B Edition in realtime wordt momenteel in bèta uitgevoerd. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Gebaseerd op het Platform van Gegevens van de Klant in real time (in real time CDP), is de Echte - tijdCDP B2B Uitgave speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
+Gebaseerd op Real-time Customer Data Platform (Real-Time CDP), is de Echte - tijdCDP B2B Uitgave speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
 
 Er zijn verbeteringen aan een verscheidenheid van de mogelijkheden van Adobe Experience Platform die Real-time CDP B2B Uitgave van zijn B2C tegenhanger onderscheiden. Zij omvatten verbeteringen aan het Model van de Gegevens van de Ervaring (XDM) voor B2B gebruiksgevallen, verbeteringen aan identiteitsresolutie en profielsegmentatie, evenals een douane-gebouwde schakelaar en bestemming voor [!DNL Marketo Engage]. Met de [!DNL Marketo]-connector kunnen B2B-merken hun toonaangevende B2B-betrokkenheidsgegevens verbinden met gedragsinformatie, zodat leads kunnen worden opgebouwd en marketingactiviteiten op basis van account kunnen worden verbeterd.
 
@@ -69,22 +69,16 @@ Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het 
 >
 >De [!DNL Marketo]-bron is **not** vereist om CDP B2B Edition in real time te gebruiken.
 
-Zie de bronnen in Real-time CDP B2B Edition documentatie voor meer informatie over Marketo en het brengen van B2B gegevens in Platform.
-
-<!-- PLACEHOLDER [sources in Real-time CDP B2B Edition](./sources/b2b) -->
+Zie de [bronnen in Real-time CDP B2B Edition](./sources/b2b.md) documentatie voor meer informatie over Marketo en het brengen van B2B gegevens in Platform.
 
 ## B2B-bestemmingen
 
-Alle bestemmingen van het Experience Platform zoals [!DNL Google], [!DNL Linkedin], of [!DNL Facebook], zijn beschikbaar en volledig gesteund door Echte - tijd CDP B2B Uitgave. Er is ook een [!DNL Marketo Engage] bestemming die gegevens uit [!DNL Marketo] of uit Platform stroomt en het ter beschikking stelt als publiek.
+De bestemmingen van het Experience Platform zoals Google, Linkedin, en Facebook, zijn beschikbaar en volledig gesteund door CDP B2B Uitgave in real time. Er is ook een bestemming van de Marketo Engage die de gegevens van het streams segmentlidmaatschap uit Platform en het beschikbaar maakt als lijsten in Marketo.
 
-De bestemming [!DNL Marketo] verstrekt een naadloze en snelle manier om informatie van Experience Platform in [!DNL Marketo] te trekken. De bestemming laat marketers toe om segmenten te duwen die in Adobe Experience Platform aan [!DNL Marketo] worden gecreeerd. In [!DNL Marketo], zijn deze publiek dan beschikbaar als statische lijsten.
-
-Voor bedrijven met meer dan één CRM, verstrekt de Echte - tijdCDP B2B Uitgave de optie om bestemmingsschakelaars aan afzonderlijke instanties van [!DNL Marketo] of CRM te vormen. Indien vereist, kunt u bestemmingsschakelaars aan elke instantie vormen en publiek naar elk van de instanties van CRM onafhankelijk verzenden.
+Voor bedrijven met meer dan één CRM, verstrekt de Echte - tijdCDP B2B Uitgave de optie om bestemmingsschakelaars aan afzonderlijke instanties van Marketo of CRM te vormen. Indien vereist, kunt u bestemmingsschakelaars aan elke instantie vormen en publiek naar elk van de instanties van CRM onafhankelijk verzenden.
 
 ## Volgende stappen
 
 Nu u beter de voordelen voor marketers begrijpt die door Echte - tijd CDP B2B Uitgave, en verschillen tussen het en Echte - tijd CDP worden aangeboden, kunt u leren hoe te om deze eigenschappen op uw eigen IMS Organisatie toe te passen.
 
-<!-- PLACEHOLDER [example use case for Real-time CDP B2B Edition]() -->
-
-Om te begrijpen hoe de Echte - tijdCDP B2B Uitgave uw zaken-aan-zaken de dienstmodel kan ten goede komen, zie het voorbeeld gebruiksgeval voor Echte - tijdCDP B2B Uitgave. U kunt ook verwijzen naar de [schema&#39;s in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentatie voor specifiekere begeleiding bij het maken van schema&#39;s en het definiëren van relaties voor essentiële B2B-gegevensentiteiten.
+Om te begrijpen hoe de Echte - tijdCDP B2B Uitgave uw zaken-aan-zaken de dienstmodel kan ten goede komen, zie [voorbeeld gebruiksgeval voor Echte - tijdCDP B2B Uitgave](./b2b-use-case.md). U kunt ook naar de [schema&#39;s in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentatie verwijzen voor specifiekere begeleiding bij het maken van schema&#39;s en het definiëren van relaties voor essentiële B2B-gegevensentiteiten.
