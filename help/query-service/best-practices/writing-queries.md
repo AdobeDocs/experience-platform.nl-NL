@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Dit document bevat belangrijke details die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: c720b9e6f81ed4ad8bd3360a9b1a19bfcd21a0ef
+source-git-commit: b8306317bbbed58ab947753058129a75dfe64f19
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 2%
@@ -31,7 +31,7 @@ De interactieve vraaguitvoering heeft de volgende beperkingen:
 
 | Parameter | Beperking |
 | --------- | ---------- |
-| Time-out query | 30 minuten |
+| Time-out query | 10 minuten |
 | Maximumaantal geretourneerde rijen | 50 000 |
 | Maximum aantal gelijktijdige query&#39;s | 5 |
 
@@ -53,6 +53,7 @@ Om tot een gebied binnen een voorwerp in uw vraag toegang te hebben, kunt u of p
 SELECT endUserIds._experience.mcid
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -66,6 +67,7 @@ De volgende SQL-instructie gebruikt haakjesnotatie om het `endUserIds`-object om
 SELECT endUserIds['_experience']['mcid']
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -98,6 +100,7 @@ Wanneer de kolom alleen omlaag wordt gedeclareerd naar het object, wordt het geh
 SELECT endUserIds._experience.mcid.id
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -124,6 +127,7 @@ SELECT
   timestamp,
   web.webPageDetails.name
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -135,6 +139,7 @@ SELECT
   endUserIds._experience.mcid.id
 FROM {ANALYTICS_TABLE_NAME}
 WHERE web.webPageDetails.name = 'homepage'
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -153,6 +158,7 @@ FROM
     'column1' as no_space_column,
     'column2' as "space column"
 )
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 ```
 
 >[!NOTE]
@@ -167,6 +173,7 @@ Het achtercitaat `` ` `` wordt gebruikt om gereserveerde kolomnamen **only** te 
 SELECT 
   commerce.`order`
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -176,6 +183,7 @@ Achteraanhalingstekens worden ook gebruikt om toegang te krijgen tot een veld da
 SELECT
     commerce.`30_day_value`
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -185,6 +193,7 @@ Achter citaten zijn **niet** nodig als u steun-aantekening gebruikt.
  SELECT
   commerce['order']
  FROM {ANALYTICS_TABLE_NAME}
+ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
  LIMIT 10
 ```
 
@@ -286,7 +295,7 @@ LIMIT 50;
 | Windows 8 | 420024,0 |
 | Adobe AIR | 315032,0 |
 | Windows Vista | 173566,0 |
-| Mobiele iOS 6.1.3 | 119069,0 |
+| Mobile iOS 6.1.3 | 119069,0 |
 | Linux | 56516,0 |
 | OSX 10.6.8 | 53652,0 |
 | Android 4.0.4 | 46167,0 |
