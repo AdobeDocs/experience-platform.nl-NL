@@ -1,7 +1,8 @@
 ---
 title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f82bfac9-dc2d-44de-a308-651300f107df
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 1%
@@ -98,7 +99,7 @@ Daarna, vorm het Netwerk van de Rand om gegevens naar gebeurtenis door:sturen, e
 
 Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
-## Vorm de uitbreiding van SDK van het markeringWeb om gegevens naar eerder gecreeerd datastream te verzenden
+## Vorm de uitbreiding van SDK van het Web van het Platform om gegevens naar de eerder gemaakte gegevensstroom te verzenden
 
 Creeer uw bezit in de Inzameling UI van Gegevens, dan gebruik de uitbreiding van SDK van het Web van Adobe Experience Platform om het te vormen.
 
