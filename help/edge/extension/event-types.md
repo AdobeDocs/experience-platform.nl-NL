@@ -3,16 +3,17 @@ title: Gebeurtenistypen in de Adobe Experience Platform Web SDK-extensie
 description: Leer hoe u gebeurtenistypen gebruikt die door de Adobe Experience Platform Web SDK-extensie in Adobe Experience Platform Launch worden geleverd.
 solution: Experience Platform
 feature: Web SDK
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '972'
 ht-degree: 0%
 
 ---
 
 # Gebeurtenistypen
 
-Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt aan [bouwt regels](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) en zouden niet met het [`eventType` gebied in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html) moeten worden verward.
+Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt aan [bouwt regels](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) en zouden niet met het [`eventType` gebied in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html) moeten worden verward.
 
 ## [!UICONTROL Send event complete]
 
@@ -173,8 +174,8 @@ Op dit punt kunt u propositie-inhoud naar eigen inzicht renderen. In dit voorbee
 
 1. Extraheer voorstellingen uit het object `event`.
 1. Lijn door elk voorstel, zoekend het voorstel met een werkingsgebied van `discount`.
-1. Als u een voorstel vindt, doorloopt u elk item in het voorstel en zoekt u het item dat HTML-inhoud is. (Het is beter om te controleren dan om te veronderstellen.)
-1. Als u een item vindt dat HTML-inhoud bevat, zoekt u het element `daily-special` op de pagina en vervangt u de HTML van het item door de gepersonaliseerde inhoud.
+1. Als u een voorstel vindt, doorloopt u elk item in het voorstel en zoekt u het item dat de inhoud van HTML is. (Het is beter om te controleren dan om te veronderstellen.)
+1. Als u een punt vindt dat HTML inhoud bevat, vind `daily-special` element op de pagina en vervang zijn HTML met de gepersonaliseerde inhoud.
 
 Uw aangepaste code in de handeling [!UICONTROL Custom code] kan er als volgt uitzien:
 
@@ -260,8 +261,3 @@ if (propositions) {
   // them in some other way.
 }
 ```
-
-
-
-
-

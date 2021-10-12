@@ -3,7 +3,7 @@ keywords: Analyse-extensie;analytische extensie;doelanalyse
 title: Adobe Analytics-extensie
 description: De extensie Adobe Analytics is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook ee
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie [Adobe Analytics uitbreidingspagina](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) de markeringsdocumentatie.
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie [Adobe Analytics uitbreidingspagina](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) de markeringsdocumentatie.
 
 U kunt de extensie ook rechtstreeks installeren in de gebruikersinterface [Gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de gids op [toevoegend een nieuwe uitbreiding](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 
