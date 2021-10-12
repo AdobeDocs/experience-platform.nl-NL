@@ -2,13 +2,13 @@
 keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbeleid;realtime klantprofiel
 title: Gebruikersgids voor accountprofiel
 description: Door het gebruik van accountprofielen kunt u met Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
-
 
 # Gebruikersgids voor accountprofielen
 
@@ -24,17 +24,17 @@ Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze
 
 ## Accountprofielen zoeken
 
-Als u door accountprofielen wilt bladeren, selecteert u eerst **[!UICONTROL Profiles]** onder Accounts in de linkernavigatie.
+Als u door accountprofielen wilt bladeren, selecteert u **[!UICONTROL Profiles]** onder [!UICONTROL Accounts] in de linkernavigatie.
 
 ![](images/b2b-account-browse.png)
 
-Op het tabblad **[!UICONTROL Browse]** kunt u accountprofielen verkennen aan de hand van een account-id van een verbonden ondernemingsbron of door brongegevens rechtstreeks in te voeren.
+Op het tabblad **[!UICONTROL Browse]** kunt u accountprofielen verkennen aan de hand van een account-id van een verbonden bedrijfsbron of door brongegevens rechtstreeks in te voeren.
 
 ![](images/b2b-account-browse-by.png)
 
 ### Bladeren op [!UICONTROL Connected enterprise source]
 
-Als u door accountprofielen wilt bladeren op basis van een verbonden bedrijfsbron, moet u eerst een verbonden bron selecteren met de selectieknop naast het veld **[!UICONTROL Source]**.
+Als u door accountprofielen wilt bladeren op een verbonden ondernemingsbron, selecteert u **[!UICONTROL Connected enterprise source]** in het vervolgkeuzemenu **[!UICONTROL Browse by]** en kiest u vervolgens een verbonden bron met de selectieknop naast het veld **[!UICONTROL Source]**.
 
 ![](images/b2b-account-browse.png)
 
@@ -50,7 +50,7 @@ Raadpleeg het [overzicht van bronnen](../sources/sources-overview.md) voor meer 
 
 U kunt een bron kiezen door het keuzerondje naast de naam van de verbinding te selecteren en vervolgens **[!UICONTROL Select]** te gebruiken om terug te keren naar het tabblad [!UICONTROL Browse].
 
-Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account id]** invoeren die betrekking heeft op de bron. Als u bijvoorbeeld een Salesforce-bron selecteert, moet u een account-id invoeren in de Salesforce-instantie om het accountprofiel weer te geven dat aan die id is gekoppeld.
+Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account ID]** invoeren die betrekking heeft op de bron. Als u bijvoorbeeld een Salesforce-bron selecteert, moet u een account-id invoeren in de Salesforce-instantie om het accountprofiel weer te geven dat aan die id is gekoppeld.
 
 >[!NOTE]
 >
@@ -60,13 +60,15 @@ Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account id]** invoe
 
 ![](images/b2b-account-browse-id.png)
 
-### Bladeren op [!UICONTROL Other]
+### Bladeren op [!UICONTROL Others]
 
-CDP in real time, steunt de Uitgave B2B de capaciteit om een directe raadpleging uit te voeren door u toe te staan om **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account id]** voor een rekening in te gaan die u zou willen bekijken. Door de bronnaam en -instantie rechtstreeks in te voeren, geeft u de context op die Experience Platform nodig heeft om de juiste accountprofielgegevens te zoeken en weer te geven.
+CDP in real time, steunt de Uitgave B2B de capaciteit om een directe raadpleging uit te voeren door u toe te staan om **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account ID]** voor een rekening in te gaan die u zou willen bekijken. Door de bronnaam en -instantie rechtstreeks in te voeren, geeft u de context op die Experience Platform nodig heeft om de juiste accountprofielgegevens te zoeken en weer te geven.
 
 De mogelijkheid om een directe zoekopdracht uit te voeren is handig in omstandigheden waarin een bronverbinding rechtstreeks met de gegevens niet mogelijk is. Als uw organisatie bijvoorbeeld een beleid voor gegevensbeheer heeft dat directe verbinding met een CRM verhindert, kunt u die gegevens exporteren naar een systeem voor cloudopslag en deze vervolgens in Experience Platform opnemen.
 
 Een ander voorbeeld zou kunnen zijn dat u een transformatie op de gegevens uitvoert tussen de tijd het van een systeem verlaat en Platform ingaat. U kunt de directe raadplegingsfunctionaliteit gebruiken om context voor de gegevens te verstrekken (zoals specificerend dat het gegevens van Marketo is, ondanks het feit dat het uit een emmertje van Amazon S3, bijvoorbeeld) komt zodat het systeem weet waar te zoeken, en hoe te om behoorlijk terug te geven, de gegevens.
+
+Als u wilt beginnen met een directe zoekopdracht, selecteert u **[!UICONTROL Others]** in het vervolgkeuzemenu **[!UICONTROL Browse by]** en voert u **[!UICONTROL Source name]**, **[!UICONTROL Source instance]** en **[!UICONTROL Account ID]** in voor de account die u wilt weergeven.
 
 ![](images/b2b-account-browse-adhoc.png)
 
