@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
+source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1543'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,13 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 8 oktober 2021
+
+v3.2.2
+
+* Het JSON-schema voor voorwaardelijke-waardengegevens corrigeren voor alle beschikbare operatoren.
+* https://github.com/adobe/reactor-extension-core/issues/64 herstellen.
 
 ## 23 september 2021
 
@@ -108,13 +115,13 @@ v1.8.3
 
 v1.8.2
 
-* Probleem verholpen waarbij de aangepaste code-actie een fout genereerde voor HTML-code die tokens zonder tagnaam bevat (bijvoorbeeld opmerkingen).
+* Probleem verholpen waarbij de aangepaste code een fout veroorzaakte voor HTML-code die tokens zonder tagnaam bevat (bijvoorbeeld opmerkingen).
 
 ## 10 juli 2020
 
 v1.8.1
 
-* Probleem verholpen waarbij aangepaste HTML-entiteiten in kenmerken van `script`- en `style`-tags niet correct werden gedecodeerd voordat deze naar de pagina werden geschreven.&quot;
+* Probleem verholpen waarbij aangepaste HTML-entiteiten binnen kenmerken van `script`- en `style`-tags niet correct werden gedecodeerd voordat ze naar de pagina werden geschreven.&quot;
 * Probleem verholpen waarbij een fout optreedt wanneer een externe aangepaste code-actie geen inhoud bevat. Externe aangepaste code-actie is de actie die wordt geladen vanuit een ander bestand dan de bibliotheek (dit gebeurt wanneer de gebeurtenis die de regel veroorzaakt, niet libraryLoaded of pageBottom is)
 
 ## 6 juli 2020
@@ -122,7 +129,7 @@ v1.8.1
 v1.8.0
 
 * **Beloften in Aangepaste code**  - Aangepaste codevoorwaarden en JavaScript-handelingen die niet in het algemene bereik worden uitgevoerd, kunnen nu Promises retourneren.  U kunt deze gebruiken om volgende voorwaarden en handelingen te laten wachten tot een asynchroon proces in de aangepaste code is voltooid voordat u naar het volgende item gaat.
-* **Callbacks in Acties**  van de Code van de Douane van HTML - u kunt het zelfde ding in de acties van de Code van de Douane van HTML bereiken gebruikend  `onCustomCodeSuccess()` en  `onCustomCodeFailure()` callbacks.
+* **Callbacks in de Acties**  van de Code van de Douane van de HTML - u kunt het zelfde ding in de acties van de Code van de HTML bereiken gebruikend de  `onCustomCodeSuccess()` en  `onCustomCodeFailure()` callbacks.
 
 Raadpleeg de [Referentie voor kernextensie](./overview.md) in Voorwaarden > Aangepaste code en handelingen > Aangepaste code voor meer informatie.
 
