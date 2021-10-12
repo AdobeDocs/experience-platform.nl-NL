@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: De gedeelde Detectie van het Apparaat identificeert verschillende voor authentiek verklaarde gebruikers van het zelfde apparaat, die voor een nauwkeurigere vertegenwoordiging van klantengegevens in identiteitsgrafieken toestaan
 hide: true
 hidefromtoc: true
-source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
+source-git-commit: 1cdab6ce71c748ae174700ce50f50b143e46b40f
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform [!DNL Identity Service] kunt u een beter beeld krijgen van uw klant en zijn gedrag door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-[!DNL Shared Device] heeft betrekking op apparaten die door meer dan één persoon worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken. Met de functie [!DNL Shared Device Detection] kunnen verschillende gebruikers van hetzelfde apparaat niet worden samengevoegd in één identiteit, waardoor een nauwkeurigere weergave mogelijk is.
+[!DNL Shared Device] heeft betrekking op apparaten die door meer dan één persoon worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken. Met de functie [!DNL Shared Device Detection] kunnen verschillende gebruikers van hetzelfde apparaat niet worden samengevoegd tot één identiteit, waardoor een individu nauwkeuriger kan worden weergegeven.
 
 Met [!DNL Shared Device Detection] kunt u:
 
@@ -31,7 +31,7 @@ Met [!DNL Shared Device Detection] kunt u:
 
 >[!TIP]
 >
->Configuraties voor [!DNL Shared Device Detection] moeten worden voltooid alvorens [!DNL Profile] voor dataset toe te laten omdat u montages niet meer kunt herzien, zodra de grafieken in [!DNL Identity Service] worden geproduceerd.
+>Configuraties voor [!DNL Shared Device Detection] moeten worden voltooid alvorens Profiel voor dataset toe te laten omdat u montages niet meer kunt herzien zodra de grafieken in [!DNL Identity Service] worden geproduceerd.
 
 ## Aan de slag
 
@@ -66,7 +66,7 @@ Selecteer **[!UICONTROL Enable]** om uw gedeelde apparatenmontages te beginnen w
 
 ![enable-shared-device](../images/shared-device/enable-shared-device.png)
 
-De [!UICONTROL Shared Identity Namespace] en [!UICONTROL User Identity Namespace] configuratieopties verschijnen, toestaand u om de identiteitsnamespaces te wijzigen die u wilt gebruiken.
+The [!UICONTROL Shared Identity Namespace] and [!UICONTROL User Identity Namespace] configuration options appear, allowing you to modify the identity namespaces that you want to use.
 
 ![set-namespaces](../images/shared-device/set-namespaces.png)
 
