@@ -4,10 +4,11 @@ solution: Experience Platform
 title: API-eindpunt voor sandboxbeheer
 topic-legacy: developer guide
 description: Met het eindpunt /sandboxen in de sandbox-API kunt u sandboxen in Adobe Experience Platform programmatisch beheren.
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 0%
+source-wordcount: '1489'
+ht-degree: 1%
 
 ---
 
@@ -190,6 +191,10 @@ Een geslaagde reactie retourneert de details van de sandbox, inclusief `name`, `
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |
 
 ## Een sandbox maken {#create}
+
+>[!NOTE]
+>
+>Wanneer een nieuwe zandbak wordt gecreeerd, moet u die nieuwe zandbak aan uw productprofiel in [Adobe Admin Console](https://adminconsole.adobe.com/) eerst toevoegen alvorens u de nieuwe zandbak kunt beginnen te gebruiken. Zie de documentatie over [het beheren van toestemmingen voor een productprofiel](../../access-control/ui/permissions.md) voor informatie over hoe te om een zandbak aan een productprofiel te verstrekken.
 
 U kunt een nieuwe ontwikkeling of productiestandaard tot stand brengen door een verzoek van de POST aan het `/sandboxes` eindpunt te doen.
 

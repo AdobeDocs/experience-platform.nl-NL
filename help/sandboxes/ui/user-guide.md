@@ -5,9 +5,9 @@ title: Gebruiksaanwijzing voor sandbox
 topic-legacy: user guide
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,10 @@ U kunt door de lijst van zandbakken navigeren beschikbaar aan u door de onderzoe
 ![](../images/ui/sandbox-search.png)
 
 ## Een nieuwe sandbox maken
+
+>[!NOTE]
+>
+>Wanneer een nieuwe zandbak wordt gecreeerd, moet u die nieuwe zandbak aan uw productprofiel in [Adobe Admin Console](https://adminconsole.adobe.com/) eerst toevoegen alvorens u de nieuwe zandbak kunt beginnen te gebruiken. Zie de documentatie over [het beheren van toestemmingen voor een productprofiel](../../access-control/ui/permissions.md) voor informatie over hoe te om een zandbak aan een productprofiel te verstrekken.
 
 Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen in Experience Platform.
 
@@ -86,7 +90,7 @@ Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogven
 
 Na enkele ogenblikken wordt onder aan het scherm een bevestigingsvak weergegeven om te bevestigen dat het opnieuw instellen is gelukt.
 
-![succes](../images/ui/success.png)
+![success](../images/ui/success.png)
 
 ### Waarschuwingen
 
