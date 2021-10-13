@@ -2,9 +2,8 @@
 title: Handelingstypen in de Adobe Experience Platform Web SDK-extensie
 description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
 solution: Experience Platform
-feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 67b73321b8e147b934ad4015f03c9a5364f2b9ea
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

@@ -1,7 +1,9 @@
 ---
 title: Overzicht van Core Event Forwarding Extension
 description: Leer over de gebeurtenis van de Kern door:sturen uitbreiding in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+feature: Event Forwarding
+exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 0%

@@ -4,11 +4,11 @@ audience: user
 user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
-feature: Data management
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+feature: Web SDK
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 16%
+source-wordcount: '142'
+ht-degree: 15%
 
 ---
 

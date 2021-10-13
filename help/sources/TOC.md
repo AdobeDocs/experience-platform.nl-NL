@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 5%
@@ -67,7 +67,7 @@ ht-degree: 5%
       - [HP Vertica-connector](connectors/databases/hp-vertica.md)
       - [IBM DB2-connector](connectors/databases/ibm-db2.md)
       - [MariaDB-connector](connectors/databases/mariadb.md)
-      - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
+      - [Microsoft SQL Server-connector](connectors/databases/sql-server.md)
       - [MySQL-connector](connectors/databases/mysql.md)
       - [Oracle-aansluiting](connectors/databases/oracle.md)
       - [Phoenix-aansluiting](connectors/databases/phoenix.md)
@@ -100,7 +100,7 @@ ht-degree: 5%
          - [Azure-bestandsopslag](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Gegevenslandingszone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google Cloud-opslag](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -189,7 +189,7 @@ ht-degree: 5%
          - [Azure-bestandsopslag](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Gegevenslandingszone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Google Cloud-opslag](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)

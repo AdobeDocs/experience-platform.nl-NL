@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Help bij Adobe Experience Platform-dashboards
 breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Visualiseer Experience Platforms op aanpasbare dashboards.
-feature: Data management
-source-git-commit: 168960692605b96324533ca295544c2f855481b1
+feature: Dashboards
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 11%
+source-wordcount: '58'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 * [Overzicht van dashboards](home.md)
 * [Toegangsrechten voor dashboard](permissions.md)
-* [Dashboards naar PDF downloaden](download.md)
+* [Dashboards downloaden naar PDF](download.md)
 * Beschikbare dashboards {#guides}
    * [Profielen](guides/profiles.md)
    * [Segmenten](guides/segments.md)

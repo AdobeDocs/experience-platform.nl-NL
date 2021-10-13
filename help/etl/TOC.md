@@ -3,17 +3,16 @@ audience: user
 user-guide-title: Adobe Experience Platform ETL Guide
 breadcrumb-title: ETL-gids
 user-guide-description: Leer de algemene stappen voor het creëren van veilige, krachtige schakelaars voor het opnemen van gegevens in Platform.
-feature: Gegevensbeheer, gegevensinname
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Ingestion
+source-git-commit: d1f50cc228cc6bc31a94981edb3109d07378911f
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
 
-# Proces extraheren, transformeren en laden in Experience Platform {#etl}
+# Procedures voor het extraheren, transformeren en laden in Experience Platform {#etl}
 
 - [Ontwikkeling van ETL-integratie](home.md)
 - [ETL-transformatie](transformations.md)
