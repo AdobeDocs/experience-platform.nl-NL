@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
+source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1262'
 ht-degree: 3%
 
 ---
@@ -14,6 +14,15 @@ ht-degree: 3%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 16 september 2021
+
+### Adobe Analytics Extension 1.8.7
+
+#### Opgeloste problemen
+
+* Bijgewerkte AppMeasurement naar v2.2.2.2.
+* Verwijderd afgekeurd buildInfo.environment
 
 ## 24 augustus 2021
 
