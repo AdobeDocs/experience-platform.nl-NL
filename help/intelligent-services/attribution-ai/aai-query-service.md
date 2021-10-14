@@ -1,12 +1,11 @@
 ---
 keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Kenmerkscores analyseren met Query-service
 topic-legacy: Attribution AI queries
 description: Leer hoe u Adobe Experience Platform Query Service kunt gebruiken om de Attribution AI-scores te analyseren.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%

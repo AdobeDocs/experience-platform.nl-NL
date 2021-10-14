@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;downloadscores;klantenservice;populaire onderwerpen;Exporteren;exporteren;klantenservice downloaden;klantenservice scores
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Scores downloaden in AI van klant
 topic-legacy: Downloading scores
 description: Met AI van de klant kunt u scores downloaden in de Parquet-bestandsindeling.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Er zijn momenteel twee manieren om AI-scores van klanten te downloaden:
 1. Als u de scores op het individuele niveau wilt downloaden en/of geen In real time toegelaten Profiel van de Klant wilt hebben, begin door aan [zoekend uw dataset ID](#dataset-id) te navigeren.
 2. Als u Profiel hebt ingeschakeld en segmenten wilt downloaden die u hebt geconfigureerd met Customer AI, navigeert u naar [een segment downloaden dat is geconfigureerd met Customer AI](#segment).
 
-## Uw gegevensset-id {#dataset-id} zoeken
+## Uw gegevensset-id zoeken {#dataset-id}
 
 Binnen uw de dienstinstantie voor Inzichten van de Klant AI, klik *Meer acties* dropdown in de top-right navigatie dan uitgezocht **[!UICONTROL Access scores]**.
 
@@ -38,7 +38,7 @@ Er wordt een nieuw dialoogvenster weergegeven met een koppeling naar de document
 
 ![Dataset-id](../images/download-scores/access-scores.png)
 
-## De batch-id {#retrieve-your-batch-id} ophalen
+## Batch-id ophalen {#retrieve-your-batch-id}
 
 Gebruikend uw dataset identiteitskaart van de vorige stap, moet u een vraag aan de Catalogus API maken om een partijidentiteitskaart terug te winnen. Voor deze API-aanroep worden aanvullende queryparameters gebruikt om de laatste succesvolle batch te retourneren in plaats van een lijst met batches die bij uw organisatie horen. Om extra partijen terug te keren, verhoog het aantal voor de parameter van de grensvraag tot de gewenste hoeveelheid u wenst om te zijn teruggekeerd. Voor meer informatie over de types van vraagparameters beschikbaar, bezoek de gids over [het filtreren van de gegevens van de Catalogus gebruikend vraagparameters](../../../catalog/api/filter-data.md).
 
@@ -167,7 +167,7 @@ Een geslaagde reactie retourneert een payload die een object `_links` bevat. Bin
 }
 ```
 
-## Bestanden {#retrieving-your-files} ophalen
+## Bestanden ophalen {#retrieving-your-files}
 
 Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw verzoek van de GET om uw dossierfolder terug te winnen.
 

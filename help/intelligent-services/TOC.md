@@ -4,10 +4,9 @@ audience: user
 user-guide-title: Help bij Intelligente services
 breadcrumb-title: Handleiding voor intelligente services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken van uw gegevens over marketinggebeurtenissen.
-feature: Werkruimte voor gegevenswetenschap
-source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '121'
 ht-degree: 4%
 
 ---

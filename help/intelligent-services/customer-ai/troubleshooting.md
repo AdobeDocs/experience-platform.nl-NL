@@ -1,17 +1,18 @@
 ---
 keywords: Experience Platform;aan de slag;klantenondersteuning;populaire onderwerpen;input van klantenondersteuning;klantenservice uitvoer;problemen oplossen;fouten in klantenondersteuning
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Probleemoplossing van AI-fouten van klant
 topic-legacy: Getting started
 description: Zoek antwoorden op algemene fouten in Customer AI.
 type: Documentation
-source-git-commit: ceb203899cda83aa79b994d45798d6147c3ff3b8
+exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%
 
 ---
-
 
 # Probleemoplossing van AI-fouten van klant
 
@@ -44,4 +45,3 @@ Als uw gegevens niet het probleem lijken te zijn, probeert u de toelatingsvoorwa
 Als het beperken van de toelatingspopulatie niet werkte of niet mogelijk is, verander uw voorspellingsvenster.
 
 - Probeer het voorspellingsvenster te wijzigen in 7 dagen en controleer of de fout zich blijft voordoen. Als de fout niet meer voorkomt, wijst dit erop dat u niet genoeg gegevens voor uw bepaalde voorspellingsvenster kunt hebben.
-

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klantenai inzichten
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Inzichten met Customer AI ontdekken
 topic-legacy: Discovering insights
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 0%
@@ -95,7 +95,7 @@ De knop **[!UICONTROL More actions]** bevindt zich in de navigatie rechtsboven n
 
 ![meer acties](../images/insights/more-actions.png)
 
-## Scoresamenvatting {#scoring-summary}
+## Overzicht van scores {#scoring-summary}
 
 In het overzicht met de scores wordt het totale aantal profielen weergegeven met een score en worden de profielen ingedeeld in emmers met een hoge, gemiddelde en lage dichtheid. De dichtheidsemmers worden bepaald op basis van het score-bereik, laag is minder dan 24, gemiddeld 25 tot 74 en hoog is boven 74. Elk emmertje heeft een kleur die overeenkomt met de legenda.
 

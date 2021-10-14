@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;inzichten;attributie ai;populaire onderwerpen;attributie ai inzichten
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Inzichten in Attribution AI ontdekken
 topic-legacy: Attribution AI insights
 description: Dit document fungeert als richtlijn voor het communiceren met de inzichten van serviceversies in de gebruikersinterface van Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 0%

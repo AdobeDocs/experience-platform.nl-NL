@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;gebruikershandleiding;attributie ai;populaire onderwerpen;regio
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Handleiding voor Attribution AI-gebruikersinterface
 topic-legacy: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 0%
@@ -79,7 +78,7 @@ Er zijn drie verschillende typen invoergegevens die worden gebruikt voor het def
 - **Lookback-venster:** biedt een tijdframe dat aangeeft hoeveel dagen voor de conversiegebeurtenis de aanraakpunten moeten worden opgenomen.
 - **Aanraakpunten:marketinggebeurtenissen op** ontvangerniveau, op individuele basis of op cookieniveau die worden gebruikt om het numerieke of op inkomsten gebaseerde effect van conversies te evalueren.
 
-### Conversiegebeurtenissen {#define-conversion-events} definiëren
+### Conversiegebeurtenissen definiëren {#define-conversion-events}
 
 Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door te klikken op het vervolgkeuzemenu **Veldnaam invoeren**.
 
@@ -109,7 +108,7 @@ Als u meerdere conversies nodig hebt, klikt u op **Conversie toevoegen** om een 
 
 ![conversie toevoegen](./images/user-guide/add_conversion.png)
 
-### Opzoekvenster {#lookback-window} definiëren
+### Opzoekvenster definiëren {#lookback-window}
 
 Nadat u de conversie hebt gedefinieerd, moet u het terugzoekvenster bevestigen. Geef met de pijltoetsen of door op de standaardwaarde (56) te klikken op hoeveel dagen vóór de conversiegebeurtenis u aanraakpunten wilt opnemen. Aanraakpunten worden gedefinieerd in de volgende stap.
 
@@ -185,7 +184,7 @@ Door gebrek, wordt een score dataset gecreeerd voor elke de dienstinstantie in e
 
 ![optellen van kolom met scoregegevens](./images/user-guide/Add-score-dataset.png)
 
-### Regionaal modelleren (facultatief) {#region-based-modeling-optional}
+### Regionaal modelleren (optioneel) {#region-based-modeling-optional}
 
 Het gedrag van uw klanten kan per land en geografische regio aanzienlijk verschillen. Voor globale ondernemingen, die op land-gebaseerde of op regio-gebaseerde modellen gebruiken kan attributienauwkeurigheid verhogen. Elk toegevoegd gebied leidt tot een nieuw model met de gegevens van dat gebied.
 
