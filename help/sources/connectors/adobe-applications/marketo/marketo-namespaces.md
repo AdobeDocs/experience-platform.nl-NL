@@ -5,9 +5,9 @@ title: B2B-naamruimten en -schema's
 topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 15fd870565d50bd4e320a1acf61413f45c1f537c
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1679'
 ht-degree: 1%
 
 ---
@@ -87,6 +87,7 @@ De volgende tabel bevat informatie over de onderliggende instelling voor B2B-naa
 | B2B Campagne-lid | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
 | B2B-marketinglijst | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
 | B2B Marketing List Member | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
+| B2B Betrekking van rekeningpersoon | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -115,6 +116,7 @@ De volgende tabel bevat informatie over de onderliggende opstelling van B2B-sche
 | B2B-marketinglijst | XDM Business Marketing List | Geen | Ingeschakeld | `marketingListKey.sourceKey` in de basisklasse | B2B-marketinglijst | Geen | Geen | Geen | De statische Lijst wordt niet gesynchroniseerd van [!DNL Salesforce] en heeft daarom geen secundaire identiteit. |
 | B2B Marketing List Member | Leden van XDM Business Marketing List | Geen | Ingeschakeld | `marketingListMemberKey.sourceKey` in de basisklasse | B2B Marketing List Member | Geen | Geen | **Eerste relatie**<ul><li>`PersonKey.sourceKey` in de basisklasse</li><li>Type: Veel-op-één</li><li>Referentieschema: B2B-persoon</li><li>Naamruimte: B2B-persoon</li><li>Eigenschap van bestemming: `b2b.personKey.sourceKey`</li><li>Relatienaam uit huidig schema: Persoon</li><li>Relatienaam van referentieschema: Marketinglijsten</li></ul>**Tweede relatie**<ul><li>`marketingListKey.sourceKey` in de basisklasse</li><li>Type: Veel-op-één</li><li>Referentieschema: B2B-marketinglijst</li><li>Naamruimte: B2B-marketinglijst</li><li>Eigenschap van bestemming: `marketingListKey.sourceKey`</li><li>Relatienaam uit huidig schema: Marketinglijst</li><li>Relatienaam van referentieschema: Mensen</li></ul> | Het statische lijstlid wordt niet gesynchroniseerd van [!DNL Salesforce] en heeft daarom geen secundaire identiteit. |
 | B2B-activiteit | XDM ExperienceEvent | <ul><li>Webpagina bezoeken</li><li>Nieuwe lead</li><li>Regelafstand omzetten</li><li>Toevoegen aan lijst</li><li>Verwijderen uit lijst</li><li>Toevoegen aan opportunity</li><li>Verwijderen uit opportunity</li><li>Formulier ingevuld</li><li>Koppelingsklikken</li><li>E-mail bezorgd</li><li>E-mail geopend</li><li>E-mail geklikt</li><li>E-mail verzonden</li><li>Door e-mail teruggekaatst</li><li>E-mail niet geabonneerd</li><li>Gewijzigde score</li><li>Opportunity bijgewerkt</li><li>Status in gewijzigde campagnevoortgang</li><li>Persoon-id</li><li>Marketo-webURL</li><li>Interessant moment</li></ul> | Ingeschakeld | `personKey.sourceKey` van Person Identifier-veldgroep | B2B-persoon | Geen | Geen | **Eerste relatie**<ul><li>`listOperations.listKey.sourceKey` field</li><li>Type: één-op-één</li><li>Referentieschema: B2B-marketinglijst</li><li>Naamruimte: B2B-marketinglijst</li></ul>**Tweede relatie**<ul><li>`opportunityEvent.opportunityKey.sourceKey` field</li><li>Type: één-op-één</li><li>Referentieschema: B2B-opportuniteit</li><li>Naamruimte: B2B-opportuniteit</li></ul>**Derde relatie**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` field</li><li>Type: één-op-één</li><li>Referentieschema: B2B-campagne</li><li>Naamruimte: B2B-campagne</li></ul> | `ExperienceEvent` verschilt van entiteiten. De identiteitsgebeurtenis is de persoon die de activiteit heeft uitgevoerd. |
+| B2B Betrekking van rekeningpersoon | XDM Zakelijke account Person Relatie | Identiteitskaart | Ingeschakeld | `accountPersonKey.sourceKey` in de basisklasse | B2B Betrekking van rekeningpersoon | Geen | Geen | **Eerste relatie**<ul><li>`personKey.sourceKey` in de basisklasse</li><li>Type: Veel-op-één</li><li>Referentieschema: B2B-persoon</li><li>Naamruimte: B2B-persoon</li><li>Eigenschap van bestemming: `b2b.personKey.SourceKey`</li><li>Relatienaam uit huidig schema: Mensen</li><li>Relatienaam van referentieschema: Account</li></ul>**Tweede relatie**<ul><li>`accountKey.sourceKey` in de basisklasse</li><li>Type: Veel-op-één</li><li>Referentieschema: B2B-account</li><li>Naamruimte: B2B-account</li><li>Eigenschap van bestemming: `accountKey.sourceKey`</li><li>Relatienaam uit huidig schema: Account</li><li>Relatienaam van referentieschema: Mensen</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
