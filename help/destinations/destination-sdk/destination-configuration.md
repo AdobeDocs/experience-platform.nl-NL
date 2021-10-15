@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Opties voor doelconfiguratie voor doel-SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
+source-git-commit: fd025932b9210d61e986b252e8d977ce4b83f6ff
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1754'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-Met deze configuratie kunt u essentiële informatie zoals uw doelnaam, categorie, beschrijving, logo en nog veel meer aangeven. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
+Deze configuratie staat u toe om essentiële informatie zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 
 Deze configuratie verbindt ook de andere configuraties die voor uw bestemming worden vereist aan het werk - bestemmingsserver en publieksmeta-gegevens - aan dit. Lees hoe u de twee configuraties in een [sectie verder onder](./destination-configuration.md#connecting-all-configurations) kunt van verwijzingen voorzien.
 
@@ -135,17 +135,17 @@ Hieronder ziet u een voorbeeldconfiguratie van een fictieve bestemming, Moviesta
 
 ## Verificatieconfiguraties van de klant {#customer-authentication-configurations}
 
-Deze sectie produceert de rekeningspagina in de gebruikersinterface van het Experience Platform, waar de gebruikers Experience Platform met de rekeningen verbinden zij met uw bestemming hebben. Afhankelijk van de verificatieoptie die u aangeeft in het veld `authType`, wordt de pagina Experience Platform als volgt voor de gebruikers gegenereerd:
+Deze sectie in de bestemmingsconfiguratie produceert [Vorm nieuwe bestemmings](/help/destinations/ui/connect-destination.md) pagina in het gebruikersinterface van het Experience Platform, waar de gebruikers Experience Platform met de rekeningen verbinden zij met uw bestemming hebben. Afhankelijk van de verificatieoptie die u aangeeft in het veld `authType`, wordt de pagina Experience Platform als volgt voor de gebruikers gegenereerd:
 
 **Waardere verificatie**
 
-De gebruikers worden vereist om het dragerteken in te voeren dat zij van uw bestemming verkrijgen.
+Wanneer u het dragerauthentificatietype vormt, worden de gebruikers vereist om het dragerteken in te voeren dat zij uit uw bestemming verkrijgen.
 
 ![UI-weergave met dragerverificatie](./assets/bearer-authentication-ui.png)
 
 **OAuth 2-verificatie**
 
-De gebruikers selecteren **[!UICONTROL Connect to destination]** om OAuth 2 authentificatiestroom aan uw bestemming teweeg te brengen.
+De gebruikers selecteren **[!UICONTROL Connect to destination]** om de OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de Twitter Getagde bestemming van het Publiek teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingsparameter, lees specifieke [bestemmingsSDK OAuth 2 authentificatiepagina](./oauth2-authentication.md).
 
 ![UI-weergave met OAuth 2-verificatie](./assets/oauth2-authentication-ui.png)
 
@@ -153,7 +153,7 @@ De gebruikers selecteren **[!UICONTROL Connect to destination]** om OAuth 2 auth
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Tekenreeks | Wijst op de configuratie die wordt gebruikt om de klanten van het Experience Platform aan uw server voor authentiek te verklaren. Zie `authType` hieronder voor geaccepteerde waarden. |
-| `authType` | Tekenreeks | Accepteerde waarden zijn `OAUTH2, BEARER`. <br><ul><li> Als uw bestemming OAuth 2 authentificatie steunt, selecteer `OAUTH2` waarde en voeg de vereiste gebieden voor OAuth 2, zoals aangetoond in de bestemmingsSDK OAuth 2 authentificatiepagina toe. Bovendien, zou u `authenticationRule=CUSTOMER_AUTHENTICATION` in [bestemmingsleveringssectie](./destination-configuration.md) moeten selecteren. </li><li>Selecteer `BEARER` en selecteer `authenticationRule=CUSTOMER_AUTHENTICATION` in de sectie [Doellevering](./destination-configuration.md) voor nauwkeurigere verificatie.</li></ul> |
+| `authType` | Tekenreeks | Accepteerde waarden zijn `OAUTH2, BEARER`. <br><ul><li> Als uw bestemming OAuth 2 authentificatie steunt, selecteer `OAUTH2` waarde en voeg de vereiste gebieden voor OAuth 2 toe, zoals aangetoond in [Bestemming SDK OAuth 2 authentificatiepagina](./oauth2-authentication.md). Bovendien, zou u `authenticationRule=CUSTOMER_AUTHENTICATION` in [bestemmingsleveringssectie](./destination-configuration.md) moeten selecteren. </li><li>Selecteer `BEARER` en selecteer `authenticationRule=CUSTOMER_AUTHENTICATION` in de sectie [Doellevering](./destination-configuration.md) voor nauwkeurigere verificatie.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,9 +205,9 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de werkstroom 
 
 ## Identiteiten en kenmerken {#identities-and-attributes}
 
-De parameters in deze sectie bepalen hoe de doelidentiteiten en de attributen in de afbeeldingsstap van het gebruikersinterface van het Experience Platform worden bevolkt, waar de gebruikers hun schema&#39;s XDM aan het schema in uw bestemming in kaart brengen.
+De parameters in deze sectie bepalen welke identiteiten uw bestemming goedkeurt. Deze configuratie bevolkt ook de doelidentiteiten en de attributen in [mappingstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van het gebruikersinterface van het Experience Platform, waar de gebruikers identiteiten en attributen van hun XDM- schema&#39;s aan het schema in uw bestemming in kaart brengen.
 
-U moet aangeven welke [!DNL Platform] identiteiten klanten kunnen exporteren naar uw bestemming. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] naamruimten die klanten kunnen toewijzen aan naamruimten vanaf uw bestemming.
+U moet aangeven welke [!DNL Platform] identiteiten klanten kunnen exporteren naar uw bestemming. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] naamruimten die klanten kunnen toewijzen aan naamruimten vanaf uw bestemming. U kunt ook aangeven of klanten aangepaste naamruimten kunnen toewijzen aan identiteiten die door uw doel worden ondersteund.
 
 Identiteitsnaamruimten vereisen geen 1-aan-1 correspondentie tussen [!DNL Platform] en uw bestemming.
 Klanten kunnen bijvoorbeeld een naamruimte [!DNL Platform] [!DNL IDFA] toewijzen aan een naamruimte [!DNL IDFA] van uw bestemming, of ze kunnen dezelfde naamruimte [!DNL Platform] [!DNL IDFA] toewijzen aan een naamruimte [!DNL Customer ID] in uw bestemming.
@@ -231,7 +231,6 @@ Lees meer in [Naamruimte-overzicht](https://experienceleague.adobe.com/docs/expe
 |---------|----------|------|
 | `authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform]-klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als klanten van het Platform zich bij uw systeem via een gebruikersbenaming en een wachtwoord, een dragerteken, of een andere methode van authentificatie aanmelden. U kunt deze optie bijvoorbeeld selecteren als u `authType: OAUTH2` of `authType:BEARER` ook in `customerAuthenticationConfigurations` hebt geselecteerd. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Platform]-klant geen verificatiegegevens hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [Credentials](./credentials-configuration.md) configuratie. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `destinationServerId` | Tekenreeks | De `instanceId` van de [doelserverconfiguratie](./destination-server-api.md) die voor deze bestemming wordt gebruikt. |
-| `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer segmenten worden geactiveerd naar de bestemming. <br> <ul><li> `true`:  [!DNL Platform] verzendt de historische gebruikersprofielen die voor het segment kwalificeren alvorens het segment wordt geactiveerd. </li><li> `false`:  [!DNL Platform] omvat alleen gebruikersprofielen die in aanmerking komen voor het segment nadat het segment is geactiveerd. </li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -244,14 +243,6 @@ Deze sectie van de bestemmingsconfiguratie heeft op hoe segmentmeta-gegevens zoa
 Door `audienceTemplateId`, verbindt deze sectie ook deze configuratie met [publieksmeta-gegevensconfiguratie](./audience-metadata-management.md).
 
 De parameters die in de configuratie hierboven worden getoond worden beschreven in [de referenties van het bestemmingseindpunt API](./destination-configuration-api.md).
-
-## Hoe deze configuratie alle noodzakelijke informatie voor uw bestemming verbindt {#connecting-all-configurations}
-
-Sommige montages voor uw bestemming kunnen door de bestemmingsserver of het eindpunt van publiekmeta-gegevens worden gevormd. Het eindpunt van de bestemmingsconfiguratie verbindt al deze montages door de configuraties als volgt van verwijzingen te voorzien:
-
-* Gebruik `destinationServerId` om de bestemmingsserver en malplaatjeconfiguratie te verwijzen opstelling voor uw bestemming.
-* Gebruik `audienceMetadataId` om de configuratie van publieksmeta-gegevens te verwijzen opstelling voor uw bestemming.
-
 
 ## Samenvoegingsbeleid {#aggregation}
 
@@ -282,16 +273,23 @@ Deze optie werkt het best als u eerder grote partijen, met duizenden profielen o
 Met deze optie kunt u:
 * Stel de maximale tijd en het maximale aantal profielen in dat moet worden samengevoegd voordat een API-aanroep naar uw bestemming wordt uitgevoerd.
 * De geëxporteerde profielen bundelen die aan de bestemming zijn toegewezen op basis van:
-   * segment-id
-   * segmentstatus
-   * identiteit of groepen van identiteiten
+   * Segment-id;
+   * segmentstatus;
+   * Identiteit of groepen van identiteiten.
 
 Voor gedetailleerde verklaringen van de samenvoegingsparameters, verwijs naar [Doelen API eindpuntverrichtingen](./destination-configuration-api.md) verwijzingspagina, waar elke parameter wordt beschreven.
 
-## Historische profielkwalificaties
+## Historische profielkwalificaties {#profile-backfill}
 
 U kunt de `backfillHistoricalProfileData` parameter in de bestemmingsconfiguratie gebruiken om te bepalen als de historische profielkwalificaties naar uw bestemming zouden moeten worden uitgevoerd.
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer segmenten worden geactiveerd naar de bestemming. <br> <ul><li> `true`:  [!DNL Platform] verzendt de historische gebruikersprofielen die voor het segment kwalificeren alvorens het segment wordt geactiveerd. </li><li> `false`:  [!DNL Platform] omvat alleen gebruikersprofielen die in aanmerking komen voor het segment nadat het segment is geactiveerd. </li></ul> |
+
+## Hoe deze configuratie alle noodzakelijke informatie voor uw bestemming verbindt {#connecting-all-configurations}
+
+Sommige van uw bestemmingsmontages moeten door [bestemmingsserver](./server-and-template-configuration.md) of [publieksmeta-gegevensconfiguratie](./audience-metadata-management.md) worden gevormd. De bestemmingsconfiguratie die hier wordt beschreven verbindt al deze montages door de twee andere configuraties als volgt van verwijzingen te voorzien:
+
+* Gebruik `destinationServerId` om de bestemmingsserver en malplaatjeconfiguratie te verwijzen opstelling voor uw bestemming.
+* Gebruik `audienceMetadataId` om de configuratie van publieksmeta-gegevens te verwijzen opstelling voor uw bestemming.

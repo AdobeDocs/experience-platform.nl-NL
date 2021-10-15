@@ -1,9 +1,10 @@
 ---
-description: Deze configuratie bepaalt hoe de gebruikers van Adobe Experience Platform voor authentiek verklaren aan uw bestemmingshindpunt om gegevens te activeren.
-title: Configuratieopties voor referenties in doel-SDK
-source-git-commit: 11f6421665acc2041aa9483b1e0efb6fe48b6dfb
+description: Gebruik de ondersteunde verificatieconfiguraties in Adobe Experience Platform Destination SDK om gebruikers te verifiëren en gegevens te activeren op het eindpunt van uw bestemming.
+title: Verificatieconfiguratie
+exl-id: 33eaab24-f867-4744-b424-4ba71727373c
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 ## Ondersteunde verificatietypen {#supported-authentication-types}
 
-Adobe Experience Platform ondersteunt verschillende verificatietypen:
+Adobe Experience Platform Destination SDK ondersteunt verschillende verificatietypen:
 
 * Waardere verificatie
 * OAuth 2 met vergunningscode

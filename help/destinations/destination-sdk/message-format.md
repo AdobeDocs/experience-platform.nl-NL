@@ -1,12 +1,10 @@
 ---
-description: Gebruik de inhoud op deze pagina samen met de rest configuratieopties voor partnerbestemmingen. Deze pagina richt het overseinenformaat van gegevens die van Adobe Experience Platform aan bestemmingen worden uitgevoerd, terwijl de andere pagina specifiek over het verbinden en het voor authentiek verklaren aan uw bestemming richt.
-seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
-seo-title: Message format
+description: Deze pagina is gericht op de berichtindeling en de profieltransformatie in gegevens die van Adobe Experience Platform naar bestemmingen worden geëxporteerd.
 title: Berichtindeling
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1981'
 ht-degree: 1%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 1%
 
 ## Voorwaarden - Adobe Experience Platform-concepten {#prerequisites}
 
-Om het proces aan de kant van de Adobe te begrijpen, gelieve zich met de volgende concepten van het Experience Platform vertrouwd te maken:
+Om het berichtformaat en het proces van de profielconfiguratie en transformatie aan de kant van de Adobe te begrijpen, gelieve zich met de volgende concepten van het Experience Platform vertrouwd te maken:
 
 * **Experience Data Model (XDM)**. [XDM ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) overviewand   [How to create an XDM schema in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Klasse**. [Maak en bewerk klassen in de gebruikersinterface](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
@@ -24,11 +22,11 @@ Om het proces aan de kant van de Adobe te begrijpen, gelieve zich met de volgend
 
 ## Overzicht {#overview}
 
-Gebruik de inhoud op deze pagina samen met de rest van [configuratieopties voor partnerbestemmingen](./configuration-options.md). Deze pagina richt het overseinenformaat van gegevens die van Adobe Experience Platform aan bestemmingen worden uitgevoerd, terwijl de andere pagina specifiek over het verbinden en het voor authentiek verklaren aan uw bestemming richt.
+Gebruik de inhoud op deze pagina samen met de rest van [configuratieopties voor partnerbestemmingen](./configuration-options.md). Deze pagina is gericht op de berichtindeling en de profieltransformatie in gegevens die van Adobe Experience Platform naar bestemmingen worden geëxporteerd. De andere pagina adressen specificeert over het verbinden en het voor authentiek verklaren aan uw bestemming.
 
-Adobe Experience Platform exporteert gegevens naar een aanzienlijk aantal bestemmingen, in verschillende gegevensindelingen. Voorbeelden van bestemmingstypen zijn reclameplatforms (Google), sociale netwerken (Facebook), cloudopslaglocaties (Amazon S3, Azure Event Hubs).
+Adobe Experience Platform exporteert gegevens naar een aanzienlijk aantal bestemmingen, in verschillende gegevensindelingen. Voorbeelden van bestemmingstypen zijn advertentieplatforms (Google), sociale netwerken (Facebook) en cloudopslaglocaties (Amazon S3, Azure Event Hubs).
 
-Experience Platform kan de geëxporteerde berichtindeling aanpassen aan de verwachte indeling aan uw zijde. Om deze aanpassing te begrijpen, zijn de volgende concepten belangrijk:
+Experience Platform kan de berichtindeling van geëxporteerde profielen aanpassen aan de verwachte indeling aan uw zijde. Om deze aanpassing te begrijpen, zijn de volgende concepten belangrijk:
 * Het XDM-bronschema (1) en het XDM-doelschema (2) in Adobe Experience Platform
 * Het verwachte berichtformaat aan de partnerkant (3), en
 * De transformatielaag tussen XDM-schema en de verwachte berichtindeling, die u kunt definiëren door een [berichttransformatiesjabloon](./message-format.md#using-templating) te maken.
@@ -49,7 +47,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 **JSON-standaardschema van uw kenmerken van het doelprofiel (3)**: Dit item vertegenwoordigt een  [JSON-](https://json-schema.org/learn/miscellaneous-examples.html) schema van alle profielkenmerken die uw platform ondersteunt en de typen kenmerken ervan (bijvoorbeeld: object, tekenreeks, array). Voorbeelden van velden die uw doel kan ondersteunen, zijn `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` enzovoort. U hebt een [berichttransformatiesjabloon](./message-format.md#using-templating) nodig om de gegevens die uit het Experience Platform zijn geëxporteerd, af te stemmen op de verwachte indeling.
 
-Gebaseerd op de hierboven beschreven schematransformaties, is hier hoe de structuur van een bericht tussen het bronXDM schema en een steekproefschema op de partnerkant verandert:
+Gebaseerd op de hierboven beschreven schematransformaties, is hier hoe een profielconfiguratie tussen het bronXDM schema en een steekproefschema op de partnerkant verandert:
 
 ![Voorbeeld van transformatieberichten](./assets/transformations-with-examples.png)
 
@@ -58,7 +56,7 @@ Gebaseerd op de hierboven beschreven schematransformaties, is hier hoe de struct
 
 ## Aan de slag - drie basiskenmerken transformeren {#getting-started}
 
-In het onderstaande voorbeeld worden drie algemene profielkenmerken in Adobe Experience Platform gebruikt om het transformatieproces te demonstreren: **voornaam**, **achternaam** en **e-mailadres**.
+In het onderstaande voorbeeld worden drie veelvoorkomende profielkenmerken in Adobe Experience Platform gebruikt om het profieltransformatieproces te demonstreren: **voornaam**, **achternaam** en **e-mailadres**.
 
 >[!NOTE]
 >
@@ -93,7 +91,7 @@ Gezien het berichtformaat, zijn de overeenkomstige transformaties als volgt:
 
 Adobe gebruikt een malplaatjetaal gelijkend op [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) om de gebieden van het schema XDM in een formaat om te zetten dat door uw bestemming wordt gesteund.
 
-Deze sectie verstrekt verscheidene voorbeelden van hoe deze transformaties, van het inputXDM schema, door het malplaatje worden gemaakt, en uitvoer in ladingsformaten die door uw bestemming worden goedgekeurd. De onderstaande voorbeelden worden als volgt gesorteerd op toenemende complexiteit:
+Deze sectie verstrekt verscheidene voorbeelden van hoe deze transformaties worden gemaakt - van het inputXDM schema, door het malplaatje, en output in ladingsformaten die door uw bestemming worden goedgekeurd. De onderstaande voorbeelden worden als volgt weergegeven door de toenemende complexiteit:
 
 1. Eenvoudige transformatievoorbeelden. Leer hoe sjablonen werken met eenvoudige transformaties voor [Profielkenmerken](./message-format.md#attributes), [Segmentlidmaatschap](./message-format.md#segment-membership) en [Identiteitsvelden](./message-format.md#identities).
 2. Eenvoudigere voorbeelden van sjablonen waarin bovenstaande velden worden gecombineerd: [Maak een sjabloon voor het verzenden van segmenten en identiteiten](./message-format.md#segments-and-identities) en [Maak een sjabloon voor het verzenden van segmenten, identiteiten en profielkenmerken](./message-format.md#segments-identities-attributes).
