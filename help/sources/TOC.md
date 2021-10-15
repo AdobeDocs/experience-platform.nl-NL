@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 5%
 
 ---
@@ -134,6 +134,8 @@ ht-degree: 5%
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketingautomatisering {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [MailChimp-campagne](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+         - [MailChimp-leden](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
