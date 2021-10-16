@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '376'
 ht-degree: 3%
 
 ---
@@ -51,7 +51,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Data Landing Zone] | U kunt nu een [!DNL Data Landing Zone] bronverbinding maken met de [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) of de [gebruikersinterface](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] is een  [!DNL Azure Blob] opslaginterface die door Platform wordt ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden in en uit het Platform in te voeren en te egress. Zie [[!DNL Data Landing Zone] overzicht](../../sources/connectors/cloud-storage/data-landing-zone.md) voor meer informatie. |
+| [!DNL Data Landing Zone] | U kunt nu een [!DNL Data Landing Zone] bronverbinding maken met de [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) of de [gebruikersinterface](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] is een  [!DNL Azure Blob] opslaginterface die door Platform wordt ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden in Platform te brengen. Zie [[!DNL Data Landing Zone] overzicht](../../sources/connectors/cloud-storage/data-landing-zone.md) voor meer informatie. |
 | [!DNL Snowflake] | U kunt nu een [!DNL Snowflake] bronverbinding tot stand brengen gebruikend [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) of [gebruikersinterface](../../sources/tutorials/ui/create/databases/snowflake.md) om gegevens van uw [!DNL Snowflake] gegevensbestand aan Platform te brengen. Zie [[!DNL Snowflake] overzicht](../../sources/connectors/databases/snowflake.md) voor meer informatie. |
 | [!DNL SFTP] bronverbeteringen | U kunt handmatig een aangepast poortnummer instellen wanneer u een [!DNL SFTP]-bronverbinding maakt. Zie [[!DNL SFTP] overzicht](../../sources/connectors/cloud-storage/sftp.md) voor meer informatie. |
 

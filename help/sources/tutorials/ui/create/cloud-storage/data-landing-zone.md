@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om een van de Bron van de Gebied van Gegevens te creëren die de gebruikersinterface van het Platform gebruiken.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 0%
+source-wordcount: '396'
+ht-degree: 1%
 
 ---
 
 # [!DNL Data Landing Zone] verbinden met Platform gebruikend UI
 
-[!DNL Data Landing Zone] is een op cloud gebaseerde gegevensopslagfaciliteit voor tijdelijke opslag van bestanden die bij Adobe Experience Platform wordt geleverd. [!DNL Data Landing Zone] wordt alleen gebruikt voor het in- en uitstappen van gegevens in en uit het Platform. Gegevens worden na zeven dagen automatisch verwijderd uit [!DNL Data Landing Zone].
+[!DNL Data Landing Zone] is een op cloud gebaseerde gegevensopslagfaciliteit voor tijdelijke opslag van bestanden die bij Adobe Experience Platform wordt geleverd. Gegevens worden na zeven dagen automatisch verwijderd uit [!DNL Data Landing Zone].
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Data Landing Zone]-bronverbinding met behulp van de gebruikersinterface van het Platform.
 

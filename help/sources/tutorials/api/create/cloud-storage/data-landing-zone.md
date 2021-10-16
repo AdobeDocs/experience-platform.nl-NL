@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Data Landing Zone met behulp van de Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
 
 # [!DNL Data Landing Zone] verbinden met Adobe Experience Platform met behulp van de Flow Service API
 
-[!DNL Data Landing Zone] is een op cloud gebaseerde gegevensopslagfaciliteit voor tijdelijke opslag van bestanden die bij Adobe Experience Platform wordt geleverd. [!DNL Data Landing Zone] wordt alleen gebruikt voor het in- en uitstappen van gegevens in en uit het Platform. Gegevens worden na zeven dagen automatisch verwijderd uit [!DNL Data Landing Zone].
+[!DNL Data Landing Zone] is een op cloud gebaseerde gegevensopslagfaciliteit voor tijdelijke opslag van bestanden die bij Adobe Experience Platform wordt geleverd. Gegevens worden na zeven dagen automatisch verwijderd uit [!DNL Data Landing Zone].
 
 In deze zelfstudie worden de stappen beschreven voor het maken van een [!DNL Data Landing Zone]-bronverbinding met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Deze zelfstudie bevat ook instructies voor het ophalen van uw [!DNL Data Landing Zone] en het weergeven en vernieuwen van uw referenties.
 

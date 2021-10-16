@@ -5,16 +5,16 @@ title: Bron gegevenslandingszone
 topic-legacy: overview
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] is een  [!DNL Azure Blob] opslaginterface die door Adobe Experience Platform is ingericht en waarmee u toegang krijgt tot een veilige, op de cloud gebaseerde opslagvoorziening voor het opnemen en egress van bestanden in en uit Platform via bronnen en doelen. U hebt toegang tot één [!DNL Data Landing Zone] container per zandbak, en het totale gegevensvolume over alle containers is beperkt tot de totale gegevens die van uw Platform worden voorzien Produces en de vergunning van de Diensten. Alle klanten van Platform en zijn toepassingsdiensten zoals [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], en [!DNL Real-time Customer Data Platform] zijn provisioned met één [!DNL Data Landing Zone] container per zandbak. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of uw opdrachtregelinterface.
+[!DNL Data Landing Zone] is een  [!DNL Azure Blob] opslaginterface die door Adobe Experience Platform is ingericht en u toegang biedt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden in Platform te brengen. U hebt toegang tot één [!DNL Data Landing Zone] container per zandbak, en het totale gegevensvolume over alle containers is beperkt tot de totale gegevens die van uw Platform worden voorzien Produces en de vergunning van de Diensten. Alle klanten van Platform en zijn toepassingsdiensten zoals [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], en [!DNL Real-time Customer Data Platform] zijn provisioned met één [!DNL Data Landing Zone] container per zandbak. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of uw opdrachtregelinterface.
 
 [!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn beveiligd met standaard  [!DNL Azure Blob] opslagbeveiligingsmechanismen in rust en in doorvoer. Met SAS-verificatie hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone]-container. Er zijn geen netwerkveranderingen vereist voor u om tot uw [!DNL Data Landing Zone] container toegang te hebben, wat betekent u geen lijsten van gewenste personen of dwars-regio montages voor uw netwerk hoeft te vormen. Platform dwingt strikte tijd-aan-levende (TTL) zeven dagen op alle dossiers af die aan een [!DNL Data Landing Zone] container worden geupload. Alle bestanden worden na zeven dagen verwijderd.
 
