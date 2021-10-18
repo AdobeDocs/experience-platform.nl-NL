@@ -4,35 +4,38 @@ description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SD
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
+source-git-commit: dcbe4c1b5a085878562990ed2db8e5cb27b93e28
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '918'
 ht-degree: 4%
 
 ---
 
 # Variabelen worden automatisch toegewezen in [!DNL Analytics]
 
-Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Network automatisch in Adobe Analytics toewijst. Gedetailleerde informatie over de vraagparameters van de de gegevensinzameling van Adobe Analytics kan in [de Gids van de Implementatie van Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html) worden gevonden.
+Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Network automatisch in Adobe Analytics toewijst. Gedetailleerde informatie over de parameters van de de vraagvraag van de gegevensinzameling van Adobe Analytics kan in worden gevonden [Handleiding voor analytische implementatie](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
+
+>[!NOTE]
+>De informatie op deze pagina is ook van toepassing op Adobe Mobile SDK.
 
 | XDM-veldpad | [!DNL Analytics Query String] / HTTP-koptekst | Beschrijving |
 | ---------- | ------------------------- | ----------------------------------------- |
-| application.id | c.a.appid | Contextgegevens `c.a.appid`-toewijzing voor AppMeasurement. |
-| application.launches.value | c.a.launches | Contextgegevens `c.a.launches`-toewijzing voor AppMeasurement. |
+| application.id | c.a.appid | Contextgegevens van AppMeasurement `c.a.appid` toewijzing. |
+| application.launches.value | c.a.launches | Contextgegevens van AppMeasurement `c.a.launches` toewijzing. |
 | commerce.checkouts.id | events | `scCheckout` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.checkouts.value | gebeurtenissen | De vraagparameter EVENT_LIST_FULL van de AppMeasurement van de vraag met omzetting COMMERCE_SC_CHECKOUT, gebruikend afbakening `,`. |
+| commerce.checkouts.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_CHECKOUT, met behulp van scheidingsteken `,`. |
 | commerce.order.currencyCode | cc | Toewijzing van de query voor de parameter CURRENCY voor AppMeasurement. |
 | commerce.order.purchaseID | pi | PURCHASEID-toewijzing voor queryparameter AppMeturement. |
 | commerce.productListAdds.id | gebeurtenissen | `scAdd` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListAdds.value | gebeurtenissen | De vraagparameter EVENT_LIST_FULL van AppMeturement met omzetting COMMERCE_SC_ADD, gebruikend afbakening `,`. |
+| commerce.productListAdds.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_ADD, met behulp van scheidingsteken `,`. |
 | commerce.productListOpens.id | gebeurtenissen | `scOpen` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListOpens.value | gebeurtenissen | De vraagparameter EVENT_LIST_FULL van AppMeturement met omzetting COMMERCE_SC_OPEN, gebruikend afbakening `,`. |
+| commerce.productListOpens.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_OPEN, met scheidingsteken `,`. |
 | commerce.productListRemovals.id | gebeurtenissen | `scRemove` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListRemovals.value | gebeurtenissen | De vraagparameter EVENT_LIST_FULL van AppMeturement met omzetting COMMERCE_SC_REMOVE, gebruikend afbakening `,`. |
+| commerce.productListRemovals.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_REMOVE, met behulp van scheidingsteken `,`. |
 | commerce.productListViews.id | gebeurtenissen | `scView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListViews.value | gebeurtenissen | De vraagparameter EVENT_LIST_FULL van AppMeturement met omzetting COMMERCE_SC_VIEW, gebruikend afbakening `,`. |
+| commerce.productListViews.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_VIEW, met scheidingsteken `,`. |
 | commerce.productViews.id | gebeurtenissen | `prodView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productViews.value | gebeurtenissen | De vraagparameter EVENT_LIST_FULL van AppMeturement met omzetting COMMERCE_PROD_VIEW, gebruikend afbakening `,`. |
+| commerce.productViews.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PROD_VIEW, met scheidingsteken `,`. |
 | commerce.purchases.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PURCHASE, met scheidingsteken `,`. |
 | device.colorDepth | c | Query-parameter C_COLOR voor AppMeasurement. |
 | device.screenHeight | s | Schermresolutie toepassingsparameters. |
@@ -50,40 +53,40 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | marketing.trackingCode | v0 | CAMPAIGN-toewijzing voor queryparameter voor AppMeasurement. |
 | media.mediaTimed.completes.value | c.a.media.complete | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.federated.value | c.a.media.federated | Contextgegevens `c.a.media.federated`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.federated.value | c.a.media.federated | Contextgegevens van AppMeasurement `c.a.media.federated` toewijzing. |
 | media.mediaTimed.firstQuartiles.value | c.a.media.progress25 | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.mediaSegmentView.value | c.a.media.segmentView | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.midpoints.value | c.a.media.progress50 | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.pauseTime.value | c.a.media.pauseTime | Contextgegevens `c.a.media.pauseTime`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.pauses.value | c.a.media.pauseCount | Contextgegevens `c.a.media.pauseCount`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.pauseTime.value | c.a.media.pauseTime | Contextgegevens van AppMeasurement `c.a.media.pauseTime` toewijzing. |
+| media.mediaTimed.pauses.value | c.a.media.pauseCount | Contextgegevens van AppMeasurement `c.a.media.pauseCount` toewijzing. |
 | media.mediaTimed.primaryAssetReference.@id | c.a.media.asset | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | Contextgegevens `c.a.media.friendlyName`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | Contextgegevens van AppMeasurement `c.a.media.friendlyName` toewijzing. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | Contextgegevens `c.a.media.episode`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | Contextgegevens van AppMeasurement `c.a.media.episode` toewijzing. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | Contextgegevens `c.a.media.season`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | Contextgegevens `a.media.name`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | Contextgegevens `c.a.media.show`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | Contextgegevens `c.a.media.type` van AppMeasurement met omzetting VEDIO_SHOW_TYPE. |
-| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | Contextgegevens `c.a.media.type` van AppMeasurement met conversie VIDEO_SHOW_TYPE. |
-| media.mediaTimed.primaryAssetReference.xmpDM:duration | c.a.media.length | Contextgegevens `c.a.media.length`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | Contextgegevens van AppMeasurement `c.a.media.season` toewijzing. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | Contextgegevens van AppMeasurement `a.media.name` toewijzing. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | Contextgegevens van AppMeasurement `c.a.media.show` toewijzing. |
+| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | Contextgegevens van AppMeasurement `c.a.media.type` omzetten met VEDIO_SHOW_TYPE. |
+| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | Contextgegevens van AppMeasurement `c.a.media.type` toewijzen met conversie VIDEO_SHOW_TYPE. |
+| media.mediaTimed.primaryAssetReference.xmpDM:duration | c.a.media.length | Contextgegevens van AppMeasurement `c.a.media.length` toewijzing. |
 | media.mediaTimed.primaryAssetViewDetails.@id | c.a.media.vsid | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.broadcastChannel | c.a.media.channel | Contextgegevens `c.a.media.channel`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.broadcastContentType | c.a.contentType | Contextgegevens `c.a.contentType`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.broadcastNetwork | c.a.media.network | Contextgegevens `c.a.media.network`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.mediaSegmentView.value | c.a.media.segment | Contextgegevens `c.a.media.segment`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.playerName | c.a.media.playerName | Contextgegevens `c.a.media.playerName`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.playerSDKVersion.version | c.a.media.sdkVersion | Contextgegevens `c.a.media.sdkVersion`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.sourceFeed | c.a.media.feed | Contextgegevens `c.a.media.feed`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.primaryAssetViewDetails.streamFormat | c.a.media.format | Contextgegevens `c.a.media.format`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.primaryAssetViewDetails.broadcastChannel | c.a.media.channel | Contextgegevens van AppMeasurement `c.a.media.channel` toewijzing. |
+| media.mediaTimed.primaryAssetViewDetails.broadcastContentType | c.a.contentType | Contextgegevens van AppMeasurement `c.a.contentType` toewijzing. |
+| media.mediaTimed.primaryAssetViewDetails.broadcastNetwork | c.a.media.network | Contextgegevens van AppMeasurement `c.a.media.network` toewijzing. |
+| media.mediaTimed.primaryAssetViewDetails.mediaSegmentView.value | c.a.media.segment | Contextgegevens van AppMeasurement `c.a.media.segment` toewijzing. |
+| media.mediaTimed.primaryAssetViewDetails.playerName | c.a.media.playerName | Contextgegevens van AppMeasurement `c.a.media.playerName` toewijzing. |
+| media.mediaTimed.primaryAssetViewDetails.playerSDKVersion.version | c.a.media.sdkVersion | Contextgegevens van AppMeasurement `c.a.media.sdkVersion` toewijzing. |
+| media.mediaTimed.primaryAssetViewDetails.sourceFeed | c.a.media.feed | Contextgegevens van AppMeasurement `c.a.media.feed` toewijzing. |
+| media.mediaTimed.primaryAssetViewDetails.streamFormat | c.a.media.format | Contextgegevens van AppMeasurement `c.a.media.format` toewijzing. |
 | media.mediaTimed.progress10.value | c.a.media.progress10 | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.progress95.value | c.a.media.progress95 | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.resumes.value | c.a.media.resume | Contextgegevens `c.a.media.resume`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.resumes.value | c.a.media.resume | Contextgegevens van AppMeasurement `c.a.media.resume` toewijzing. |
 | media.mediaTimed.starts.value | c.a.media.view | Contextgegevens van AppMeasurement. |
 | media.mediaTimed.thirdQuartiles.value | c.a.media.progress75 | Contextgegevens van AppMeasurement. |
-| media.mediaTimed.timePlayed.value | c.a.media.timePlayed | Contextgegevens `c.a.media.timePlayed`-toewijzing voor AppMeasurement. |
-| media.mediaTimed.totalTimePlayed.value | c.a.media.totalTimePlayed | Contextgegevens `c.a.media.totalTimePlayed`-toewijzing voor AppMeasurement. |
+| media.mediaTimed.timePlayed.value | c.a.media.timePlayed | Contextgegevens van AppMeasurement `c.a.media.timePlayed` toewijzing. |
+| media.mediaTimed.totalTimePlayed.value | c.a.media.totalTimePlayed | Contextgegevens van AppMeasurement `c.a.media.totalTimePlayed` toewijzing. |
 | placeContext.geo.latitude | lat | Toewijzing LATITUDE-queryparameter voor AppMeasurement. |
 | placeContext.geo.longitude | lon | Toewijzing LONGITUDE-queryparameter voor AppMeasurement. |
 | placeContext.geo.postalCode | zip | Zoekparameter ZIP-toewijzing voor AppMeasurement-query. |
@@ -94,7 +97,7 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | productlistitems[N].quantity | producten | AppMeasurement de parameterproducten van de vraagparameterProducts Quantity mapping. |
 | web.webInteraction.URL | pev1 | Toepassingsmetingqueryparameter PAGE_EVENT_VAR1-toewijzing. |
 | web.webInteraction.name | pev2 | Toepassingsmetingqueryparameter PAGE_EVENT_VAR2-toewijzing. |
-| web.webInteraction.type | pe | `web.webInteraction.type=other` naar  `pe=lnk_o`;  `web.webInteraction.type=download` naar  `pe=lnk_d`;  `web.webInteraction.type=exit` tot  `pe=lnk_e` |
+| web.webInteraction.type | pe | `web.webInteraction.type=other` tot `pe=lnk_o`; `web.webInteraction.type=download` tot `pe=lnk_d`; `web.webInteraction.type=exit` tot `pe=lnk_e` |
 | web.webPageDetails.URL | g | Toewijzing PAGE_URL-queryparameter voor AppMeturement. |
 | web.webPageDetails.errorPage | pageType | Toepassingsmetingqueryparameter PAGE_TYPE_FULL-toewijzing met conversiefout_PAGE_TYPE. |
 | web.webPageDetails.homePage | hp | Toepassingsmetingqueryparameter HOMEPAGE-toewijzing met conversie BOOLEAN_TO_YN. |
