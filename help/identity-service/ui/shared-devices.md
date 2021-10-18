@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: De gedeelde Detectie van het Apparaat identificeert verschillende voor authentiek verklaarde gebruikers van het zelfde apparaat, die voor een nauwkeurigere vertegenwoordiging van klantengegevens in identiteitsgrafieken toestaan
 hide: true
 hidefromtoc: true
-source-git-commit: 1cdab6ce71c748ae174700ce50f50b143e46b40f
+exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
+source-git-commit: b948aef2032503bba763b9843402c27cbd747c0d
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 0%
@@ -66,7 +67,7 @@ Selecteer **[!UICONTROL Enable]** om uw gedeelde apparatenmontages te beginnen w
 
 ![enable-shared-device](../images/shared-device/enable-shared-device.png)
 
-The [!UICONTROL Shared Identity Namespace] and [!UICONTROL User Identity Namespace] configuration options appear, allowing you to modify the identity namespaces that you want to use.
+De [!UICONTROL Shared Identity Namespace] en [!UICONTROL User Identity Namespace] configuratieopties verschijnen, toestaand u om de identiteitsnamespaces te wijzigen die u wilt gebruiken.
 
 ![set-namespaces](../images/shared-device/set-namespaces.png)
 
