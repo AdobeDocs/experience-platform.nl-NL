@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '644'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 5%
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Reclame {#advertising}
       - [Google AdWords-connector](connectors/advertising/ads.md)
-   - Cloudopslag {#cloud-storage}
+   - Cloud-opslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-connector](connectors/cloud-storage/s3.md)
       - [Apache HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
@@ -77,7 +77,7 @@ ht-degree: 5%
       - [Shopify-connector](connectors/ecommerce/shopify.md)
    - Lokaal systeem {#local-system}
       - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
-   - Marketingautomatisering {#marketing-automation}
+   - Marketing automatiseren {#marketing-automation}
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
       - [Salesforce-Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Betalingen {#payments}
@@ -90,7 +90,7 @@ ht-degree: 5%
    - Een basisverbinding maken {#create}
       - Reclame {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
-      - Cloudopslag {#cloud-storage}
+      - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -132,7 +132,7 @@ ht-degree: 5%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
-      - Marketingautomatisering {#marketing-automation}
+      - Marketing automatiseren {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp-campagne](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp-leden](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -143,7 +143,7 @@ ht-degree: 5%
          - [Generic OData](tutorials/api/create/protocols/odata.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/api/create/streaming/http.md)
-   - Gegevens {#explore} verkennen
+   - Gegevens verkennen {#explore}
       - [Reclamegegevens verkennen](tutorials/api/explore/advertising.md)
       - [Gegevens over cloudopslag verkennen](tutorials/api/explore/cloud-storage.md)
       - [CRM-gegevens verkennen](tutorials/api/explore/crm.md)
@@ -164,8 +164,6 @@ ht-degree: 5%
       - [Betalingsgegevens verzamelen](tutorials/api/collect/payments.md)
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
       - [Streaming gegevens verzamelen](tutorials/api/collect/streaming.md)
-   - [Bovenliggende gegevens uit een extern cloudopslagsysteem verzamelen](tutorials/api/cloud-storage-parquet.md)
-   - [Een gegevenssetverbinding maken](tutorials/api/create-dataset-base-connection.md)
    - [Dataflows bewaken](tutorials/api/monitor.md)
    - [Accounts bijwerken](tutorials/api/update.md)
    - [Gegevensstromen bijwerken](tutorials/api/update-dataflows.md)
@@ -181,7 +179,7 @@ ht-degree: 5%
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Reclame {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - Cloudopslag {#cloud-storage}
+      - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -200,7 +198,7 @@ ht-degree: 5%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-      - Klantsucces {#customer-success}
+      - Klant geslaagd {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Databases {#databases}
@@ -226,7 +224,7 @@ ht-degree: 5%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
       - Lokaal systeem {#local-system}
          - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
-      - Marketingautomatisering {#marketing-automation}
+      - Marketing automatiseren {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
