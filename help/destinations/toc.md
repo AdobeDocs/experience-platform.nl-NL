@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '645'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 1%
 * Doelcatalogus {#catalog}
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
    * [ (Alpha) HTTP-verbinding](./catalog/http-destination.md)
-   * Adobe bestemmingen{#adobe}
+   * Adobe-bestemmingen{#adobe}
       * [Overzicht van Adobe-doelen](./catalog/adobe/overview.md)
       * [(bèta) Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [Delen van Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
@@ -54,7 +54,7 @@ ht-degree: 1%
       * [Google Ads-extensie](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager-verbinding](./catalog/advertising/google-ad-manager.md)
       * [Google Customer Match-verbinding](./catalog/advertising/google-customer-match.md)
-      * [Google Display en Video 360-verbinding](./catalog/advertising/google-dv360.md)
+      * [Google Display &amp; Video 360-verbinding](./catalog/advertising/google-dv360.md)
       * [Google-tag-extensie](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
@@ -92,7 +92,7 @@ ht-degree: 1%
       * [(Beta) Azure Event Hubs-verbinding](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
       * [IP adres lijst van gewenste personen](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Gebieden van het Platform van het Gegevensbeheer {#data-management}
+   * Platforms voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
    * E-maildoelen {#email}
@@ -106,7 +106,7 @@ ht-degree: 1%
       * [Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
       * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Extensies {#launch-extensions} labelen
+   * Tagextensies {#launch-extensions}
       * [Overzicht van de extensie Tag](./catalog/launch-extensions/overview.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
@@ -125,19 +125,19 @@ ht-degree: 1%
       * [Verkenningsextensie](./catalog/personalization/gainsight.md)
       * [KickFire-extensie](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization-extensie](./catalog/personalization/marketo-web-personalization.md)
-   * Sociale doelen{#social}
+   * Sociale bestemmingen{#social}
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [linkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
-   * Beoordelingsdoelen {#survey}
+   * Onderzoeksbestemmingen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
       * [InMoment-extensie](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback-extensie](./catalog/survey/qualtrics.md)
       * [QuestionPro Intercept Surveys-extensie](./catalog/survey/web-intercept-surveys.md)
-   * Spraak van de klantbestemmingen {#voice}
+   * Stem van de klantenbestemmingen {#voice}
       * [Stem van het overzicht van de bestemmingen van de Klant](./catalog/voice/overview.md)
       * [De extensie Digitale feedback bevestigen](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoc-tags, extensie](./catalog/voice/invoca.md)
@@ -147,7 +147,7 @@ ht-degree: 1%
    * [Overzicht](./destination-sdk/overview.md)
    * [Integratievereisten](./destination-sdk/integration-prerequisites.md)
    * [Aan de slag](./destination-sdk/getting-started.md)
-   * Functionaliteit van SDK van bestemming {#functionality}
+   * Functionaliteit van doel-SDK {#functionality}
       * [Configuratieopties](./destination-sdk/configuration-options.md)
       * [Doelconfiguratie](./destination-sdk/destination-configuration.md)
       * [Server- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
@@ -170,8 +170,8 @@ ht-degree: 1%
          * [API-bewerkingen voor doeltesten](./destination-sdk/destination-testing-api.md)
          * [Voorbeeld van API-bewerkingen voor het genereren van profielen](./destination-sdk/sample-profile-generation-api.md)
    * Hulplijnen {#guides}
-      * [Doel SDK gebruiken om uw bestemming te configureren](./destination-sdk/configure-destination-instructions.md)
-   * Uw doel {#document-destination} documenteren
+      * [Doel SDK gebruiken om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
+   * Uw doel documenteren {#document-destination}
       * [Uw doel documenteren in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Een teksteditor in uw lokale omgeving gebruiken om een doeldocumentatiepagina te maken](./destination-sdk/docs-framework/work-in-local-environment.md)

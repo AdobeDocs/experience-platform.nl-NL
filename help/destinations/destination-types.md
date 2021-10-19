@@ -1,12 +1,12 @@
 ---
 keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
-seo-title: Doeltypen en -categorieën
+seo-title: Destination types and categories
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbind
 
 ## Verbindingen {#connections}
 
-**[!UICONTROL Profile Export]** en  **[!UICONTROL Streaming Segment Export]** bestemmingen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om het  [Real-Time Klantprofiel](../profile/home.md) te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen te exporteren naar bestemmingen.
+**[!UICONTROL Profile Export]** en **[!UICONTROL Streaming Segment Export]** doelen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om de [Klantprofiel in realtime](../profile/home.md)segmentatie toepassen en segmenten en gekwalificeerde profielen exporteren naar bestemmingen.
 
 ## Profielexportdoelen
 
@@ -34,17 +34,17 @@ Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als prim
 
 ### Streaming profiel exporteren doelen {#streaming-profile-export}
 
-Streaming profiel exportdoelen ontvangen segment- en profielgegevens als gegevensstreams voor Experience Platforms. [Amazon ](catalog/cloud-storage/amazon-kinesis.md) Kinesisand  [Azure Event ](catalog/cloud-storage/azure-event-hubs.md) Hubsare voorbeelden van dergelijke bestemmingen.
+Streaming profiel exportdoelen ontvangen segment- en profielgegevens als gegevensstreams voor Experience Platforms. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) en [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md) zijn voorbeelden van dergelijke bestemmingen .
 
 ### Bestandsgebaseerde doelen {#file-based}
 
-Bestandsdoelen ontvangen `.csv` bestanden met profielen en/of kenmerken. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is een voorbeeld van een bestemming waar u bestanden met geëxporteerde profielen kunt neerzetten.
+Bestandsgebaseerde doelen ontvangen `.csv` bestanden met profielen en/of kenmerken. [Amazon S3](catalog/cloud-storage/amazon-s3.md) Dit is een voorbeeld van een bestemming waar u bestanden kunt neerzetten die exporteren profielen bevatten.
 
-## Streaming segment exportdoelen
+## Streaming segment exportdoelen {#streaming-destinations}
 
-De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentgegevens. Deze bestemmingen gebruiken segment IDs of gebruiker IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) en  [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) zijn voorbeelden van dergelijke bestemmingen.
+De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentgegevens. Deze bestemmingen gebruiken segment IDs of gebruiker IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)en zijn voorbeelden van dergelijke bestemmingen.
 
-## Exporteren van profielen en segmentexportdoelen - video-overzicht
+## Exporteren van profielen en segmentexportdoelen - video-overzicht {#video}
 
 In de onderstaande video worden de bijzonderheden van de twee soorten doelen uitgelegd:
 
@@ -56,13 +56,13 @@ Platform maakt gebruik van de kracht en flexibiliteit van tagbeheer, zodat u tag
 
 >[!TIP]
 >
->Zie [overzicht van tagextensies](./catalog/launch-extensions/overview.md) voor gedetailleerde informatie over tagextensies, waaronder gebruiksgevallen en het zoeken van deze extensies in de interface.
+>Raadpleeg voor meer informatie over extensies van tags, waaronder gebruiksgevallen en de manier waarop u deze kunt vinden in de interface de [overzicht van tagextensies](./catalog/launch-extensions/overview.md).
 
-Met uitbreidingen worden onbewerkte gebeurtenisgegevens doorgestuurd naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](./catalog/personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](./catalog/voice/confirmit-digital-feedback.md).
+Met uitbreidingen worden onbewerkte gebeurtenisgegevens doorgestuurd naar verschillende typen doelen. Extensies beschouwen als een **Gebeurtenis doorsturen** type bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Verkrijg inzicht in verpersoonlijkingsuitbreiding](./catalog/personalization/gainsight.md) of de [Bevestiging Stem van de uitbreiding van de Klant](./catalog/voice/confirmit-digital-feedback.md).
 
 ![Extensies labelen in vergelijking met andere doelen](./assets/common/launch-and-other-destinations.png)
 
-## Wanneer gebruikt u verbindingen en extensies
+## Wanneer gebruikt u verbindingen en extensies {#when-to-use}
 
 Als een markeerteken kunt u een combinatie van verbindingen en extensies gebruiken om uw gebruiksproblemen aan te pakken.
 
@@ -70,8 +70,8 @@ Verbindingen zijn handig wanneer u een volledig gecentraliseerd klantprofiel of 
 
 Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeling te activeren of om segmentatie uit te voeren in een externe omgeving. Bijvoorbeeld, als de gedragsgegevens aan een extern systeem moeten worden door:sturen zonder aan andere gegevensbronnen op dossier voor een bepaalde gebruiker worden aangesloten.
 
-## Doelcategorieën
+## Doelcategorieën {#categories}
 
-De verbindingen en extensies in de [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Reclame**, **Cloudopslag**, **Beoordelingsplatforms**, **E-mailmarketing**, enz.), afhankelijk van de marketingactie die zij u helpen bereiken. Zie de [documentatie bij de catalogus Doelen](./catalog/overview.md) voor meer informatie over elk van de categorieën en de bestemmingen die in elke categorie zijn opgenomen.
+De verbindingen en extensies in het dialoogvenster [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Reclame**, **Cloud-opslag**, **Platformen voor enquêtes**, **E-mailmarketing**, enz.), afhankelijk van de marketingactie die ze u helpen te bereiken. Voor meer informatie over elk van de categorieën, evenals de bestemmingen inbegrepen in elke categorie, zie [Documentatie doelcatalogus](./catalog/overview.md).
 
 ![Doelcategorieën](./assets/destination-types/destination-categories-menu.png)
