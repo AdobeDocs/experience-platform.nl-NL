@@ -5,9 +5,9 @@ title: 'Edge Segmentation met de API '
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: c89971668839555347e9b84c7c0a4ff54a394c1a
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
@@ -16,50 +16,47 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->In het volgende document wordt beschreven hoe u randsegmentatie kunt uitvoeren met behulp van de API. Voor informatie die randsegmentatie gebruikend UI uitvoert, te lezen gelieve [de gids van de segmentatie van de rand UI](../ui/edge-segmentation.md). Bovendien wordt de segmentatie tussen randen momenteel in bèta uitgevoerd. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>In het volgende document wordt beschreven hoe u randsegmentatie kunt uitvoeren met behulp van de API. Voor informatie die randsegmentatie uitvoert die UI gebruikt, gelieve te lezen [UI-hulplijn voor randsegmentatie](../ui/edge-segmentation.md). Bovendien wordt de segmentatie tussen randen momenteel in bèta uitgevoerd. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 De segmentatie van de rand is de capaciteit om segmenten in Adobe Experience Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte.
 
 ## Aan de slag
 
-Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Adobe Experience Platform] diensten betrokken bij randsegmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten in verband met randsegmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Segmentation]](../home.md): Verstrekt de capaciteit om segmenten en publiek van uw  [!DNL Real-time Customer Profile] gegevens tot stand te brengen.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Platform] klantenervaring worden georganiseerd.
+- [[!DNL Segmentation]](../home.md): Biedt de mogelijkheid om segmenten en publiek te maken van uw [!DNL Real-time Customer Profile] gegevens.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
-Om met succes vraag aan om het even welk Experience Platform API eindpunten te maken, te lezen gelieve de gids op [begonnen te worden met Platform APIs](../../landing/api-guide.md) om over vereiste kopballen en te leren hoe te om steekproefAPI vraag te lezen.
+Als u aanroepen naar de eindpunten van de Experience Platform-API wilt uitvoeren, leest u de handleiding op [aan de slag met Platform-API&#39;s](../../landing/api-guide.md) om over vereiste kopballen en te leren hoe te om steekproefAPI vraag te lezen.
 
 ## Type Edge-segmenteringsquery {#query-types}
 
 Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag aan de volgende richtlijnen in overeenstemming zijn:
 
-| Type query | Details |
-| ---------- | ------- |
-| Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. |
-| Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. |
-| Binnenkomende hit met een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen 24 uur |
-| Inkomende hit die verwijst naar een profiel met een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen 24 uur en een of meer profielkenmerken |
-
-{style=&quot;table-layout:auto&quot;}
-
-De volgende vraagtypes zijn **not** momenteel gesteund door randsegmentatie:
-
-| Type query | Details |
-| ---------- | ------- |
-| Meerdere gebeurtenissen | Als een query meer dan één gebeurtenis bevat, kan deze niet worden geëvalueerd met behulp van randsegmentatie. |
-| Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keer plaatsvindt. |
-| Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |
+| Type query | Details | Voorbeeld |
+| ---------- | ------- | ------- |
+| Eén gebeurtenis | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. | Mensen die een artikel aan hun winkelwagentje hebben toegevoegd. |
+| Eén gebeurtenis die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en één binnenkomende gebeurtenis zonder tijdbeperking. | Mensen die in de VS wonen en die de homepage hebben bezocht. |
+| Een enkele gebeurtenis met een profielkenmerk negeren | Elke segmentdefinitie die verwijst naar een negatiefunctie van één binnenkomende gebeurtenis en een of meer profielkenmerken | Mensen die in de VS wonen en **niet** heeft de homepage bezocht. |
+| Eén gebeurtenis binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen 24 uur. | Mensen die de laatste 24 uur de homepage hebben bezocht. |
+| Een enkele gebeurtenis met een profielkenmerk in een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en een genegeerde enkele binnenkomende gebeurtenis binnen 24 uur. | Mensen die in de VS wonen en de laatste 24 uur de homepage hebben bezocht. |
+| Eén gebeurtenis die binnen een tijdvenster van 24 uur is genegeerd met een profielkenmerk | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en een genegeerde enkele binnenkomende gebeurtenis binnen 24 uur. | Mensen die in de VS wonen en **niet** heeft de laatste 24 uur de homepage bezocht. |
+| Frequentiegebeurtenis binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een gebeurtenis die een bepaald aantal keren binnen een tijdvenster van 24 uur plaatsvindt. | Personen die de homepage hebben bezocht **ten minste** vijf keer in de laatste 24 uur. |
+| Frequentiegebeurtenis met een profielkenmerk binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en een gebeurtenis die een bepaald aantal keren plaatsvindt binnen een tijdvenster van 24 uur. | Personen uit de VS die de homepage hebben bezocht **ten minste** vijf keer in de laatste 24 uur. |
+| Gebeurtenis met een verwaarloosde frequentie met een profiel binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en een genegeerde gebeurtenis die een bepaald aantal keren plaatsvindt binnen een tijdvenster van 24 uur. | Personen die de homepage niet hebben bezocht **meer** meer dan vijf keer in de laatste 24 uur. |
+| Meerdere inkomende treffers binnen een tijdprofiel van 24 uur | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen die binnen een tijdsvenster van 24 uur optreden. | Personen die de homepage hebben bezocht **of** heeft de laatste 24 uur de afhandelingspagina bezocht. |
+| Meerdere gebeurtenissen met een profiel binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en meerdere gebeurtenissen die binnen een tijdsvenster van 24 uur optreden. | Personen uit de VS die de homepage hebben bezocht **en** heeft de laatste 24 uur de afhandelingspagina bezocht. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Alle segmenten ophalen die zijn ingeschakeld voor segmentatie van randen
 
-U kunt een lijst van alle segmenten terugwinnen die voor randsegmentatie binnen uw IMS Organisatie door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen worden toegelaten.
+U kunt een lijst van alle segmenten terugwinnen die voor randsegmentatie binnen uw IMS Organisatie door een verzoek van de GET aan te dienen worden toegelaten `/segment/definitions` eindpunt.
 
 **API-indeling**
 
-Om segmenten terug te winnen die voor randsegmentatie worden toegelaten, moet u de vraagparameter `evaluationInfo.synchronous.enabled=true` in de verzoekweg omvatten.
+Als u segmenten wilt ophalen die zijn ingeschakeld voor randsegmentatie, moet u de queryparameter opnemen `evaluationInfo.synchronous.enabled=true` in het aanvraagpad.
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -78,7 +75,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie van segmenten in uw IMS Organisatie terug die voor randsegmentatie worden toegelaten. Meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie kan in [segment worden gevonden eindpuntgids](./segment-definitions.md).
+Een succesvolle reactie keert een serie van segmenten in uw IMS Organisatie terug die voor randsegmentatie worden toegelaten. Meer gedetailleerde informatie over de teruggekeerde segmentdefinitie kan in worden gevonden [segmentdefinities, eindhulplijn](./segment-definitions.md).
 
 ```json
 {
@@ -167,7 +164,7 @@ Een succesvolle reactie keert een serie van segmenten in uw IMS Organisatie teru
 
 ## Een segment maken dat is ingeschakeld voor randsegmentatie
 
-U kunt een segment tot stand brengen dat voor randsegmentatie door een verzoek van de POST aan het `/segment/definitions` eindpunt wordt toegelaten dat één van de [de types van de vraagvraag van de randsegmentatie hierboven](#query-types) aanpast.
+U kunt een segment tot stand brengen dat voor randsegmentatie door een verzoek van de POST aan wordt toegelaten `/segment/definitions` eindpunt dat één van [hierboven vermelde typen query voor randsegmentatie](#query-types).
 
 **API-indeling**
 
@@ -179,7 +176,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->Het onderstaande voorbeeld is een standaardverzoek om een segment te maken. Lees voor meer informatie over het maken van een segmentdefinitie de zelfstudie over [het maken van een segment](../tutorials/create-a-segment.md).
+>Het onderstaande voorbeeld is een standaardverzoek om een segment te maken. Lees de zelfstudie voor meer informatie over het maken van een segmentdefinitie [een segment maken](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \
@@ -250,4 +247,4 @@ Een succesvolle reactie keert de details van de pas gecreëerde segmentdefinitie
 
 Nu u weet hoe te om rand-segmentatie-Toegelaten segmenten tot stand te brengen, kunt u hen gebruiken om het gebruik van de zelfde-pagina en volgende-pagina verpersoonlijking toe te laten gevallen.
 
-Als u wilt leren hoe u vergelijkbare acties kunt uitvoeren en met segmenten kunt werken via de Adobe Experience Platform-gebruikersinterface, gaat u naar de [gebruikersgids voor segmentBuilder](../ui/segment-builder.md).
+Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmenten via de Adobe Experience Platform-gebruikersinterface naar de [Gebruikershandleiding voor Segment Builder](../ui/segment-builder.md).
