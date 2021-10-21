@@ -4,9 +4,9 @@ user-guide-title: Help bij tags
 breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 25%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 25%
    * [Bronrevisies vergelijken](./ui/managing-resources/compare-resource-revisions.md)
    * [Bronnen verwijderen](./ui/managing-resources/delete-resources.md)
    * [Bronnen uit een bibliotheek verwijderen](./ui/managing-resources/remove-resources-from-library.md)
-* {#publish} publiceren
+* Publiceren {#publish}
    * [Overzicht](./ui/publishing/overview.md)
    * [Publicatiestroom](./ui/publishing/publishing-flow.md)
    * Gastheren {#hosts}
@@ -72,15 +72,15 @@ ht-degree: 25%
          * [Aanvullende informatie](./extensions/web/product-string/release-notes.md)
       * Adobe Audience Manager {#audience-manager}
          * [Overzicht](./extensions/web/audience-manager/overview.md)
-      * Adobe-gegevenslaag client {#client-data-layer}
+      * Gegevenslaag Adobe-client {#client-data-layer}
          * [Overzicht](./extensions/web/client-data-layer/overview.md)
          * [Aanvullende informatie](./extensions/web/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
          * [Overzicht](./extensions/web/contexthub/overview.md)
-      * Adobe Experience Cloud ID-service {#id-service}
+      * Adobe Experience Cloud ID Service {#id-service}
          * [Overzicht](./extensions/web/id-service/overview.md)
          * [Aanvullende informatie](./extensions/web/id-service/release-notes.md)
-      * Adobe Experience Platform-demo {#platform-demo}
+      * Adobe Experience Platform Demo {#platform-demo}
          * [Overzicht](./extensions/web/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#sdk}
          * [Overzicht](./extensions/web/sdk/overview.md)
@@ -89,13 +89,13 @@ ht-degree: 25%
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Overzicht](./extensions/web/asset-insights/overview.md)
          * [Aanvullende informatie](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Media-analyse voor audio en video {#media-analytics}
+      * Adobe Media Analytics voor audio en video {#media-analytics}
          * [Overzicht](./extensions/web/media-analytics/overview.md)
          * [Aanvullende informatie](./extensions/web/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Overzicht](./extensions/web/media-analytics-3x/overview.md)
          * [Aanvullende informatie](./extensions/web/media-analytics-3x/release-notes.md)
-      * Adobe-privacy {#privacy}
+      * Adobe Privacy {#privacy}
          * [Overzicht](./extensions/web/privacy/overview.md)
       * Adobe Target {#target}
          * [Overzicht](./extensions/web/target/overview.md)
@@ -103,7 +103,7 @@ ht-degree: 25%
       * Adobe Target v2 {#target-v2}
          * [Overzicht](./extensions/web/target-v2/overview.md)
          * [Aanvullende informatie](./extensions/web/target-v2/release-notes.md)
-      * Algemene plug-ins voor analyse {#plugins}
+      * Gebruikelijke plug-ins voor Analytics {#plugins}
          * [Overzicht](./extensions/web/plugins/overview.md)
          * [Aanvullende informatie](./extensions/web/plugins/release-notes.md)
       * Kern {#core}
@@ -113,14 +113,14 @@ ht-degree: 25%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Overzicht](./extensions/web/marketo/overview.md)
          * [Aanvullende informatie](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] video bijhouden  {#brightcove}
+      * [!DNL BrightCove] video bijhouden {#brightcove}
          * [Overzicht](./extensions/web/brightcove/overview.md)
          * [Aanvullende informatie](./extensions/web/brightcove/release-notes.md)
-      * [!DNL YouTube] video tracking-extensie  {#youtube}
+      * [!DNL YouTube] video tracking-extensie {#youtube}
          * [Overzicht](./extensions/web/youtube/overview.md)
          * [Aanvullende informatie](./extensions/web/youtube/release-notes.md)
    * [Extensies van derden](./extensions/3rd-party-extensions.md)
-* Extensieontwikkeling {#extension-dev}
+* Uitbreiding {#extension-dev}
    * [Overzicht](./extension-dev/overview.md)
    * [Aan de slag](./extension-dev/getting-started.md)
    * [Ondersteunde browsers](./extension-dev/browsers.md)
@@ -144,7 +144,7 @@ ht-degree: 25%
       * [Gegevenstelelementtypen](./extension-dev/web/data-element-types.md)
       * [Kernmodules](./extension-dev/web/core.md)
       * [Gedeelde modules](./extension-dev/web/shared.md)
-   * Randextensies {#edge}
+   * Edge-extensies {#edge}
       * [Extensiestroom](./extension-dev/edge/flow.md)
       * [De module Bibliotheek, indeling](./extension-dev/edge/format.md)
       * [Type voorwaarde](./extension-dev/edge/condition-types.md)
@@ -175,6 +175,7 @@ ht-degree: 25%
       * [Notities](./api/endpoints/notes.md)
       * [Profiel](./api/endpoints/profile.md)
       * [Zoeken](./api/endpoints/search.md)
+      * [Geheimen](./api/endpoints/secrets.md)
    * Hulplijnen {#guides}
       * [Id&#39;s van beschrijvingsbestanden delegeren](./api/guides/delegate-descriptor-ids.md)
       * [Waarden versleutelen](./api/guides/encrypting-values.md)
@@ -184,6 +185,7 @@ ht-degree: 25%
       * [Reacties sorteren](./api/guides/sorting.md)
       * [Relaties](./api/guides/relationships.md)
       * [Bronnen zoeken](./api/guides/search.md)
+      * [Geheimen](./api/guides/secrets.md)
 * [Veelgestelde vragen](./faq.md)
 * [Terminologie-updates](./term-updates.md)
 * Aanvullende informatie {#release-notes}

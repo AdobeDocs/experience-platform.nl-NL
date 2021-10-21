@@ -1,9 +1,10 @@
 ---
 title: Notitie-eindpunt
 description: Leer hoe te om vraag aan het /notes eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '527'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ In de Reactor-API zijn notities tekstuele annotaties die u aan bepaalde bronnen 
 * Instructies geven aan andere teamleden
 * Historische context opnemen
 
-Het `/notes` eindpunt in Reactor API staat u toe om deze nota&#39;s programmatically te beheren.
+De `/notes` Het eindpunt in Reactor API staat u toe om deze nota&#39;s programmatically te beheren.
 
 De nota&#39;s kunnen de volgende middelen worden toegepast:
 
@@ -28,6 +29,7 @@ De nota&#39;s kunnen de volgende middelen worden toegepast:
 * [Properties](./properties.md)
 * [Regelcomponenten](./rule-components.md)
 * [Regels](./rules.md)
+* [Geheimen](./secrets.md)
 
 Deze zes types zijn collectief gekend als &quot;opmerkelijke&quot;middelen. Wanneer een opmerkelijke bron wordt verwijderd, worden de bijbehorende notities ook verwijderd.
 
@@ -39,11 +41,11 @@ Deze zes types zijn collectief gekend als &quot;opmerkelijke&quot;middelen. Wann
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met notities ophalen {#list}
 
-U kunt een lijst van nota&#39;s voor een middel terugwinnen door `/notes` aan de weg van een verzoek van de GET voor het middel in kwestie toe te voegen.
+U kunt een lijst met notities voor een bron ophalen door deze toe te voegen `/notes` op het pad van een GET-verzoek om de betrokken bron.
 
 **API-indeling**
 
@@ -54,7 +56,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | Parameter | Beschrijving |
 | --- | --- |
 | `RESOURCE_TYPE` | Het type bron waarvoor u notities ophaalt. Moet een van de volgende waarden zijn: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | De `id` van de specifieke bron waarvan de notities u wilt weergeven. |
+| `RESOURCE_ID` | De `id` van de specifieke bron waarvan u de notities wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -185,7 +187,7 @@ Als de reactie succesvol was, worden de details van de notitie geretourneerd.
 >
 >Voordat u een nieuwe notitie maakt, moet u er rekening mee houden dat notities niet bewerkbaar zijn. U kunt ze alleen verwijderen door de bijbehorende bron te verwijderen.
 
-U kunt een nieuwe nota tot stand brengen door `/notes` aan de weg van een verzoek van de POST voor het middel in kwestie toe te voegen.
+U kunt een nieuwe notitie maken door deze toe te voegen `/notes` op het pad van een POST-aanvraag voor de betrokken bron.
 
 **API-indeling**
 
@@ -223,7 +225,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `type` | **(Vereist)** Het type bron dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `notes` zijn. |
+| `type` | **(Vereist)** Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `notes`. |
 | `attributes.text` | **(Vereist)** De tekst die de notitie bevat. Elke notitie is beperkt tot 512 Unicode-tekens. |
 
 {style=&quot;table-layout:auto&quot;}
