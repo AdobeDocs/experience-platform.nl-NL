@@ -5,23 +5,22 @@ title: API-eindpunt voor toestemming
 topic-legacy: developer guide
 description: Leer hoe u verzoeken om toestemming van klanten voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
 # Constante eindpunt
 
-Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat de persoonsgegevens kunnen worden verzameld. Met het `/consent`-eindpunt in de [!DNL Privacy Service]-API kunt u verzoeken om toestemming van klanten verwerken en deze integreren in uw privacyworkflow.
+Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat de persoonsgegevens kunnen worden verzameld. De `/consent` in de [!DNL Privacy Service] Met API kunt u verzoeken om toestemming van klanten verwerken en deze integreren in uw privacyworkflow.
 
-Voordat u deze handleiding gebruikt, raadpleegt u de sectie [Aan de slag](./getting-started.md) voor informatie over de vereiste verificatieheaders in de voorbeeld-API-aanroep hieronder.
+Voordat u deze handleiding kunt gebruiken, raadpleegt u de [aan de slag](./getting-started.md) gids voor informatie over de vereiste authentificatiekopballen die in de voorbeeld API vraag hieronder worden voorgesteld.
 
 ## Een verzoek om toestemming van een klant verwerken
 
-De toestemmingsverzoeken worden verwerkt door een verzoek van de POST aan het `/consent` eindpunt te doen.
+Aanvragen om toestemming worden verwerkt door een POST aan de `/consent` eindpunt.
 
 **API-indeling**
 
@@ -31,7 +30,7 @@ POST /consent
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe toestemmingstaak voor gebruiker - IDs die in `entities` serie wordt verstrekt.
+Met het volgende verzoek wordt een nieuwe goedkeuringstaak gemaakt voor de gebruikers-id&#39;s die worden geleverd in het dialoogvenster `entities` array.
 
 ```shell
 curl -X POST \
@@ -62,17 +61,17 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `optOutOfSale` | Wanneer ingesteld op true, geeft dit aan dat de gebruikers die worden geleverd onder `entities`, de verkoop of het delen van hun persoonlijke gegevens willen weigeren. |
+| `optOutOfSale` | Indien ingesteld op true, geeft dit aan dat de gebruikers onder `entities` de wens te kennen te geven zich niet aan de verkoop of het delen van hun persoonsgegevens te houden. |
 | `entities` | Een array met objecten die aangeven op welke gebruikers de aanvraag voor toestemming van toepassing is. Elk object bevat een `namespace` en een array van `values` om afzonderlijke gebruikers met die naamruimte te laten overeenkomen. |
-| `nameSpace` | Elk object in de `entities`-array moet een van de [standaard naamruimten](./appendix.md#standard-namespaces) bevatten die door de Privacy Service-API worden herkend. |
-| `values` | Een array van waarden voor elke gebruiker, die overeenkomt met de opgegeven `nameSpace`. |
+| `nameSpace` | Elk object in het dialoogvenster `entities` array moet een van de [standaardnaamruimten](./appendix.md#standard-namespaces) wordt herkend door de Privacy Service-API. |
+| `values` | Een array van waarden voor elke gebruiker, die overeenkomt met de opgegeven waarden `nameSpace`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Zie de handleiding over [het verschaffen van identiteitsgegevens](../identity-data.md) voor meer informatie over hoe u kunt bepalen welke waarden voor de identiteit van klanten u naar [!DNL Privacy Service] wilt verzenden.
+>Voor meer informatie over hoe te bepalen welke waarden van de klantenidentiteit om te verzenden naar [!DNL Privacy Service], zie de handleiding op [identiteitsgegevens verstrekken](../identity-data.md).
 
 **Antwoord**
 
-Een succesvolle reactie keert HTTP status 202 (Toegelaten) zonder nuttige lading terug, erop wijzend dat het verzoek door [!DNL Privacy Service] werd goedgekeurd en aan verwerking ondergaat.
+Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) zonder payload om aan te geven dat de aanvraag is geaccepteerd door [!DNL Privacy Service] en wordt verwerkt.

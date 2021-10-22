@@ -1,48 +1,38 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
-solution: Experience Platform
-title: Handleiding voor Privacy Service-API
-description: Met de Privacy Service-API kunnen ontwikkelaars hun verzoeken om toegang tot of verwijdering van hun persoonlijke gegevens in Experience Cloud-toepassingen maken en beheren, in overeenstemming met de wettelijke privacyregels. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+title: Aan de slag met de Privacy Service-API
+description: Leer hoe u verificatie uitvoert voor de Privacy Service-API en hoe u voorbeeld-API-aanroepen interpreteert in de documentatie.
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 6dcbf2df46ba35104abd9c4e6412799e77c9c49f
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
 
-# [!DNL Privacy Service] API-handleiding
+# Aan de slag met de Privacy Service-API
 
-Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u de persoonlijke gegevens van uw betrokkenen (klanten) in Adobe Experience Cloud-toepassingen kunt beheren (openen en verwijderen). [!DNL Privacy Service] voorziet ook een centraal controle en registrerenmechanisme dat u toestaat om tot de status en de resultaten van banen toegang te hebben die  [!DNL Experience Cloud] toepassingen impliceren.
+Deze gids verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan Privacy Service API te maken.
 
-In deze handleiding wordt uitgelegd hoe u de API [!DNL Privacy Service] gebruikt. Voor details op hoe te om UI te gebruiken, zie [overzicht UI van de Privacy Service](../ui/overview.md). Zie de [API-referentie](https://www.adobe.io/experience-platform-apis/references/privacy-service/) voor een uitgebreide lijst met alle beschikbare eindpunten in de [!DNL Privacy Service]-API.
+## Vereisten
 
-## Aan de slag {#getting-started}
+Deze handleiding vereist een goed begrip van de volgende functies:
 
-Deze gids vereist een werkend begrip van de volgende [!DNL Experience Platform] eigenschappen:
-
-* [[!DNL Privacy Service]](../home.md): Verstrekt een RESTful API en een gebruikersinterface die u toestaan om toegang te beheren en verzoeken van uw gegevenssubjecten (klanten) over Adobe Experience Cloud toepassingen te schrappen.
-
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Privacy Service API te maken.
-
-### API-voorbeeldaanroepen lezen
-
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+* [Adobe Experience Platform Privacy Service](../home.md): Verstrekt een RESTful API en een gebruikersinterface die u toestaan om toegang te beheren en verzoeken van uw gegevenssubjecten (klanten) over Adobe Experience Cloud toepassingen te schrappen.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Privacy Service] API te maken, moet u eerst uw toegangsgeloofsbrieven verzamelen die in vereiste kopballen moeten worden gebruikt:
+Om vraag aan Privacy Service API te maken, moet u uw toegangsgeloofsbrieven eerst verzamelen die in vereiste kopballen moeten worden gebruikt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Hiervoor moeten ontwikkelaarsmachtigingen voor [!DNL Experience Platform] in de Adobe Admin Console worden verkregen en moeten de gegevens vervolgens worden gegenereerd in de Adobe Developer Console.
+Hiervoor moeten ontwikkelaarsmachtigingen voor Adobe Experience Platform in Adobe Admin Console worden verkregen en moeten de gegevens vervolgens worden gegenereerd in de Adobe Developer Console.
 
-### Toegang voor ontwikkelaars verkrijgen tot [!DNL Experience Platform]
+### Toegang tot Experience Platform voor ontwikkelaars
 
-Als u ontwikkelaars toegang wilt geven tot [!DNL Platform], voert u de eerste stappen uit in de zelfstudie [Experience Platform-verificatie](https://www.adobe.com/go/platform-api-authentication-en). Zodra u bij de stap &quot;aankomt produceer toegangsgeloofsbrieven in de Console van de Ontwikkelaar van Adobe&quot;, terugkeer aan dit leerprogramma om de geloofsbrieven te produceren specifiek voor [!DNL Privacy Service].
+Om ontwikkelaarstoegang te verkrijgen tot [!DNL Platform]volgt u de eerste stappen in het dialoogvenster [Zelfstudie over verificatie van Experience Platforms](https://www.adobe.com/go/platform-api-authentication-en). Zodra u bij de stap &quot;aankomt produceer toegangsgeloofsbrieven in de Console van de Ontwikkelaar van Adobe&quot;, terugkeer aan dit leerprogramma om de geloofsbrieven te produceren specifiek voor Privacy Service.
 
 ### Toegangsreferenties genereren
 
@@ -52,49 +42,56 @@ Gebruikend de Console van de Ontwikkelaar van Adobe, moet u de volgende drie toe
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Uw `{IMS_ORG}` en `{API_KEY}` moeten slechts eenmaal worden geproduceerd en kunnen in toekomstige API vraag opnieuw worden gebruikt. Uw `{ACCESS_TOKEN}` is echter tijdelijk en moet elke 24 uur opnieuw worden gegenereerd.
+Uw `{IMS_ORG}` en `{API_KEY}` moet slechts eenmaal worden gegenereerd en kan in toekomstige API-aanroepen opnieuw worden gebruikt. Uw `{ACCESS_TOKEN}` is tijdelijk en moet om de 24 uur opnieuw worden gegenereerd.
 
 De stappen voor het genereren van deze waarden worden hieronder in detail besproken.
 
 #### Eenmalige installatie
 
-Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Volg vervolgens de stappen die worden beschreven in de zelfstudie over het maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.[
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die in de zelfstudie worden beschreven [een leeg project maken](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
-Nadat u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** op het scherm **[!UICONTROL Project Overview]**.
+Als u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** op de **[!UICONTROL Project Overview]** scherm.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-Het **[!UICONTROL Add an API]** scherm verschijnt. Selecteer **[!UICONTROL Privacy Service API]** in de lijst met beschikbare API&#39;s voordat u **[!UICONTROL Next]** selecteert.
+De **[!UICONTROL Add an API]** wordt weergegeven. Selecteren **[!UICONTROL Privacy Service API]** uit de lijst met beschikbare API&#39;s voordat u **[!UICONTROL Next]**.
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-Het **[!UICONTROL Configure API]** scherm verschijnt. Selecteer de optie **[!UICONTROL Generate a key pair]** en selecteer **[!UICONTROL Generate keypair]** in de rechterbenedenhoek.
+De **[!UICONTROL Configure API]** wordt weergegeven. Selecteer de optie die u wilt **[!UICONTROL Generate a key pair]** selecteert u vervolgens **[!UICONTROL Generate keypair]** in de rechterbenedenhoek.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
-Het sleutelpaar wordt automatisch geproduceerd, en een dossier van het ZIP dat een privé sleutel en een openbaar certificaat bevat wordt gedownload aan uw lokale machine (die in een recentere stap moet worden gebruikt). Selecteer **[!UICONTROL Save configured API]** om de configuratie te voltooien.
+Het sleutelpaar wordt automatisch geproduceerd, en een dossier van het ZIP dat een privé sleutel en een openbaar certificaat bevat wordt gedownload aan uw lokale machine (die in een recentere stap moet worden gebruikt). Selecteren **[!UICONTROL Save configured API]** om de configuratie te voltooien.
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op **Privacy Service API overzicht** pagina. Van hier, scrol neer aan de **[!UICONTROL Service Account (JWT)]** sectie, die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan [!DNL Privacy Service] API worden vereist:
+Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op het **Overzicht van Privacy Service-API** pagina. Hier omlaag schuiven naar de **[!UICONTROL Service Account (JWT)]** sectie, die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan Privacy Service API worden vereist:
 
-* **[!UICONTROL CLIENT ID]**: De client-id is de vereiste  `{API_KEY}` voor die id die moet worden opgegeven in de header x-api-key.
-* **[!UICONTROL ORGANIZATION ID]**: De organisatie-id is de  `{IMS_ORG}` waarde die moet worden gebruikt in de header x-gw-ims-org-id.
+* **[!UICONTROL CLIENT ID]**: De client-id is vereist `{API_KEY}` hiervoor moet in de x-api-key header worden voorzien.
+* **[!UICONTROL ORGANIZATION ID]**: De organisatie-id is de `{IMS_ORG}` waarde die moet worden gebruikt in de x-gw-ims-org-id header.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
 #### Verificatie voor elke sessie
 
-De laatste vereiste referentie die u moet verzamelen, is uw `{ACCESS_TOKEN}`, die wordt gebruikt in de machtigingsheader. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om te kunnen doorgaan met het gebruik van [!DNL Platform] API&#39;s.
+De laatste vereiste referentie die u moet verzamelen is uw `{ACCESS_TOKEN}`, die wordt gebruikt in de kop Autorisatie. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`moet om de 24 uur een nieuw token worden gegenereerd om verder te kunnen gaan met [!DNL Platform] API&#39;s.
 
-Als u een nieuwe `{ACCESS_TOKEN}` wilt genereren, opent u de eerder gedownloade persoonlijke sleutel en plakt u de inhoud ervan in het tekstvak naast **[!UICONTROL Generate access token]** voordat u **[!UICONTROL Generate Token]** selecteert.
+Een nieuwe `{ACCESS_TOKEN}`, opent u de eerder gedownloade persoonlijke sleutel en plakt u de inhoud ervan in het tekstvak naast **[!UICONTROL Generate access token]** voordat u selecteert **[!UICONTROL Generate Token]**.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
-Er wordt een nieuw toegangstoken gegenereerd en er wordt een knop opgegeven waarmee het token naar het klembord kan worden gekopieerd. Deze waarde wordt gebruikt voor de vereiste kopbal van de Vergunning, en moet in het formaat `Bearer {ACCESS_TOKEN}` worden verstrekt.
+Er wordt een nieuw toegangstoken gegenereerd en er wordt een knop opgegeven waarmee het token naar het klembord kan worden gekopieerd. Deze waarde wordt gebruikt voor de vereiste koptekst voor autorisatie en moet worden opgegeven in de notatie `Bearer {ACCESS_TOKEN}`.
 
 ![](../images/api/getting-started/generated-access-token.png)
 
+## API-voorbeeldaanroepen lezen
+
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/api-guide.md#sample-api) in de gids Aan de slag voor Platform APIs.
+
 ## Volgende stappen
 
-Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het richten vraag aan [!DNL Privacy Service] API. Het document op [privacybanen](privacy-jobs.md) doorloopt de diverse API vraag u kunt maken gebruikend [!DNL Privacy Service] API. Elke voorbeeldvraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het maken vraag aan Privacy Service API. Selecteer een van de eindpunthulplijnen om aan de slag te gaan:
+
+* [Privacytaken](./privacy-jobs.md)
+* [Toestemming](./consent.md)
