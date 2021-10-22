@@ -1,7 +1,7 @@
 ---
 title: Handleiding voor Privacy Service-API
 description: Leer hoe u de Privacy Service-API kunt gebruiken voor het programmatisch beheren van privacytaken voor ondersteunde Adobe Experience Cloud-toepassingen.
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -30,4 +30,4 @@ Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat 
 
 ## Volgende stappen
 
-Beginnen het maken van vraag gebruikend de Registratie API van het Schema, lees [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.
+Om te beginnen het maken van vraag gebruikend Privacy Service API, lees [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.
