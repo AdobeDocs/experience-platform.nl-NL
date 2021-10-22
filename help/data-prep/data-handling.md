@@ -5,10 +5,9 @@ title: Gegevensindelingen verwerken met Data Prep
 topic-legacy: overview
 description: Dit document geeft een overzicht van hoe de verschillende gegevenstypen in de Prep van Gegevens worden behandeld.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 9%
 
 ---
@@ -17,13 +16,13 @@ ht-degree: 9%
 
 Data Prep kan op krachtige wijze verschillende gegevensindelingen verwerken die in Adobe Experience Platform worden ingevoerd. In dit document wordt beschreven hoe verschillende gegevensindelingen worden verwerkt met Data Prep.
 
-## Booleaanse waarde {#booleans}
+## Booleaanse {#booleans}
 
 Als het brontype een tekenreeks is en het doeltype een Booleaanse waarde is, kan de waarde automatisch worden geparseerd met Data Prep en kan de bronwaarde worden omgezet in een booleaanse waarde.
 
-De waarden `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true` en `TRUE` worden automatisch geparseerd om `true` te zijn.
+De waarden `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`, en `TRUE` automatisch worden geparseerd `true`.
 
-De waarden `n`, `N`, `no`, `NO`, `off`, `OFF`, `false` en `FALSE` worden automatisch geparseerd om `false` te zijn.
+De waarden `n`, `N`, `no`, `NO`, `off`, `OFF`, `false`, en `FALSE` automatisch worden geparseerd `false`.
 
 ## Datums {#dates}
 
@@ -42,10 +41,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{DATE}` | Vereist. De tekenreeks die de datum vertegenwoordigt. |
-| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de notatie van de datum. Meer informatie over tekenreeksindeling vindt u in het gedeelte [datum-/tijdnotatie](#format). |
+| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de indeling van de brondatum. Meer informatie over tekenreeksindeling vindt u in het gedeelte [String-sectie voor datum-/tijdnotatie](#format). |
 | `{DEFAULT_DATE}` | Optioneel. De standaarddatum die moet worden geretourneerd als de opgegeven datum null is. |
 
-De expressie `date(orderDate, "yyyy-MM-dd")` converteert bijvoorbeeld de waarde `orderDate` van &quot;31 december 2020&quot; naar de waarde &quot;2020-12-31&quot; voor de datetime.
+De expressie `date(orderDate, "yyyy-MM-dd")` converteert een `orderDate` waarde &quot;31 december 2020&quot; in de datetime-waarde &quot;2020-12-31&quot;.
 
 ### Datumfunctie converteert
 
