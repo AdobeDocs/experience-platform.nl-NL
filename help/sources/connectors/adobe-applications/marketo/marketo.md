@@ -5,32 +5,36 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: a36a4775c14e97df51f218cea3a083d29c7b69dc
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Marketo Engage]-connector
+# (bèta) [!DNL Marketo Engage] connector
 
 >[!IMPORTANT]
 >
->De bron [!DNL Marketo Engage] in Adobe Experience Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+>De [!DNL Marketo Engage] De bron in Adobe Experience Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) (hierna &quot;[!DNL Marketo]&quot; genoemd) is een volledige oplossing voor het beheer van lood en B2B-marketers die de ervaringen van klanten willen transformeren door zich in elke fase van complexe koopreizen te engageren.
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) (hierna &quot;[!DNL Marketo]&quot;) is een volledige oplossing voor het beheer van leads en B2B-marketers die de ervaringen van klanten willen transformeren door in elke fase van complexe inkoopritten te gaan werken.
 
-Met de [!DNL Marketo] bronschakelaar, kunt u B2B gegevens van [!DNL Marketo] brengen aan Platform en deze gegevens bijgewerkt houden gebruikend Platform-verbonden toepassingen.
+Met de [!DNL Marketo] bronaansluiting, kunt u B2B-gegevens van [!DNL Marketo] om deze gegevens te Platforms en up-to-date te houden gebruikend Platform-Verbonden toepassingen.
 
-Dit document verstrekt een overzicht van de [!DNL Marketo] bronschakelaar, met inbegrip van informatie over hoe te om de schakelaar voor authentiek te verklaren, hoe te om [!DNL Marketo] gebieden aan het Model van Gegevens van de Ervaring (XDM) in kaart te brengen, en de gegevenslatentie van de schakelaar.
+Dit document biedt een overzicht van de [!DNL Marketo] bronschakelaar, met inbegrip van informatie over hoe te om de schakelaar voor authentiek te verklaren, hoe te om in kaart te brengen [!DNL Marketo] velden naar Experience Data Model (XDM) en de gegevenslatentie van de connector.
 
-## Verifieer uw [!DNL Marketo] schakelaar
+## Verifieer uw [!DNL Marketo] connector
 
-Als u [!DNL Marketo] wilt verbinden met een Platform, moet u eerst waarden ophalen voor `munchkinId`, `clientId` en `clientSecret`.
+Om verbinding te maken [!DNL Marketo] aan Platform, moet u waarden voor uw `munchkinId`, `clientId`, en `clientSecret`.
 
-Zie de stappen die worden beschreven in het [Marketo-bronconnector](./marketo-auth.md)-document verifiëren om uw referenties op te halen.
+Zie de stappen in het dialoogvenster [Verifieer uw Marketo-bronconnector](./marketo-auth.md) document om uw referenties op te halen.
+
+## Adobe Experience Cloud Audience Sharing instellen
+
+Voordat u toewijzingssets kunt maken voor [!DNL Marketo], moet u eerst Adobe Experience Cloud Audience Sharing instellen. Zie de handleiding voor gedetailleerde stappen over het voltooien van deze taak [Adobe Experience Cloud Audience Sharing instellen voor [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
 
 ## Experience Data Model (XDM)
 
@@ -38,13 +42,13 @@ XDM is een openbaar gedocumenteerde specificatie die gemeenschappelijke structur
 
 Door te voldoen aan XDM-standaarden kunnen gegevens op uniforme wijze worden opgenomen in het ecosysteem van het Platform, waardoor het eenvoudiger wordt om gegevens te leveren en informatie te verzamelen.
 
-Voor meer informatie over XDM en zijn rol in Platform, gelieve te zien [XDM systeemoverzicht](../../../../xdm/home.md).
+Voor meer informatie over XDM en zijn rol in Platform, gelieve te zien [XDM System, overzicht](../../../../xdm/home.md).
 
 ## Veldtoewijzing van [!DNL Marketo] naar XDM
 
-Om een bronverbinding tussen [!DNL Marketo] en Platform te vestigen, moeten de de brongegevensgebieden van Marketo aan hun aangewezen doelXDM gebieden worden in kaart gebracht alvorens in Platform wordt opgenomen.
+Een bronverbinding tot stand brengen tussen [!DNL Marketo] en Platform, moeten de de brongegevensgebieden van Marketo aan hun aangewezen doelXDM gebieden worden in kaart gebracht alvorens in Platform wordt opgenomen.
 
-Zie het volgende voor gedetailleerde informatie over de regels van de gebiedstoewijzing tussen [!DNL Marketo] datasets en Platform:
+Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart brengen van velden tussen [!DNL Marketo] gegevenssets en Platform:
 
 * [Activiteiten](../mapping/marketo.md#activities)
 * [Programma&#39;s](../mapping/marketo.md#programs)
@@ -57,21 +61,21 @@ Zie het volgende voor gedetailleerde informatie over de regels van de gebiedstoe
 * [Contactrollen opportunity](../mapping/marketo.md#opportunity-contact-roles)
 * [Personen](../mapping/marketo.md#persons)
 
-## Verwachte vertraging van [!DNL Marketo] gegevens op Platform
+## Verwachte vertraging van [!DNL Marketo] gegevens over Platform
 
-In de volgende tabel wordt de verwachte vertraging voor het plaatsen van [!DNL Marketo]-gegevens in het Platform weergegeven op basis van de aard van de opname en het gewenste doel:
+In de volgende tabel wordt de verwachte vertraging voor het overbrengen van [!DNL Marketo] gegevens in Platform, gebaseerd op de aard van de inname en de gewenste bestemming:
 
 | Bestemming | Verwachte vertraging |
 | ----------- | ---------------- |
-| [!DNL Real-time Customer Profile] | &lt; 1=&quot;&quot; minute=&quot;&quot;> |
-| Data Lake | &lt; 60=&quot;&quot; minutes=&quot;&quot;> |
+| [!DNL Real-time Customer Profile] | &lt; 1 minuut |
+| Data Lake | &lt; 60 minuten |
 
 ## Volgende stappen en extra bronnen
 
-In de volgende documentatie vindt u meer informatie over het maken van een [!DNL Marketo]-bronverbinding:
+In de volgende documentatie vindt u meer informatie over het maken van een [!DNL Marketo] bronverbinding:
 
-* Voor informatie over hoe te om uw [!DNL Marketo] gegevens aan Platform aan te sluiten, zie de zelfstudie over [het creëren van een bron van Marketo schakelaar in UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met [!DNL Marketo] worden gebruikt, zie de documentatie voor [B2B namespaces en schema&#39;s](./marketo-namespaces.md).
-* Raadpleeg de [[!DNL Marketo] verificatiegids](./marketo-auth.md) voor informatie over het zoeken naar uw [!DNL Marketo]-insteekmodule en het genereren van uw referenties.
-* Voor informatie over de specifieke toewijzingsregels die op [!DNL Marketo] datasets van toepassing zijn, zie de documentatie over [[!DNL Marketo] gebiedsafbeeldingen](../mapping/marketo.md).
-* Zie de documentatie op [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md) voor algemene informatie over [!DNL Real-time Customer Data Platform B2B Edition] en de bijbehorende functies.
+* Voor informatie over hoe u verbinding kunt maken met uw [!DNL Marketo] gegevens aan Platform, zie de zelfstudie over [Marketo-bronaansluiting maken in de gebruikersinterface](../../../tutorials/ui/create/adobe-applications/marketo.md).
+* Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met worden gebruikt [!DNL Marketo], zie de documentatie voor [B2B-naamruimten en -schema&#39;s](./marketo-namespaces.md).
+* Voor informatie over het zoeken naar uw [!DNL Marketo] munchkin-id en het genereren van uw referenties raadpleegt u de [[!DNL Marketo] verificatiegids](./marketo-auth.md).
+* Voor informatie over de specifieke toewijzingsregels die van toepassing zijn op [!DNL Marketo] datasets, zie de documentatie over [[!DNL Marketo] veldtoewijzingen](../mapping/marketo.md).
+* Voor algemene informatie over [!DNL Real-time Customer Data Platform B2B Edition] en de bijbehorende functies, raadpleegt u de documentatie over [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
