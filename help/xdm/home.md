@@ -5,9 +5,9 @@ title: XDM-systeemoverzicht
 topic-legacy: overview
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1978'
 ht-degree: 0%
 
 ---
@@ -51,14 +51,19 @@ Raadpleeg de volgende documentatie voor meer informatie over het beheren van en 
 
 ## Gegevensgedrag in XDM-systeem {#data-behaviors}
 
-Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in twee gedragstypen:
+Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen:
 
-* **Gegevens opnemen**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
-* **Gegevens uit tijdreeksen**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
+* **Opnemen**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
+* **Tijdreeksen**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
+* **Ad hoc**: Vangt gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor Experience Platform, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
 
 Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen.
 
-Hoewel u uw eigen klassen kunt definiëren in het dialoogvenster [!DNL Schema Registry], wordt u aangeraden de voorkeursklassen te gebruiken **[!UICONTROL XDM Individual Profile]** en **[!UICONTROL XDM ExperienceEvent]** voor gegevens uit respectievelijk record- en tijdreeksen. Deze klassen worden hieronder gedetailleerder beschreven.
+Hoewel u uw eigen klassen kunt definiëren in het dialoogvenster [!DNL Schema Registry]wordt aangeraden de standaardklassen te gebruiken **[!UICONTROL XDM Individual Profile]** en **[!UICONTROL XDM ExperienceEvent]** voor gegevens uit respectievelijk record- en tijdreeksen. Deze klassen worden hieronder gedetailleerder beschreven.
+
+>[!NOTE]
+>
+>Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hocschema&#39;s worden automatisch geproduceerd door de processen van het Platform die hen gebruiken, maar zij kunnen ook worden [manueel gecreeerd gebruikend de Registratie API van het Schema](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
