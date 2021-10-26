@@ -5,9 +5,9 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
+source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '458'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,7 @@ De technologieën van de gegevensinzameling die door Experience Platform worden 
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
+* [DataStreams](../edge/fundamentals/datastreams.md)
 * [Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
@@ -33,30 +34,36 @@ De technologieën van de gegevensinzameling die door Experience Platform worden 
 * [Experience Data Model (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-<!-- (Outdated terminology)
-![](./images/Collection.png)
--->
+Deze gids verstrekt een inleiding op hoog niveau aan het kader van de gegevensinzameling en hoe het werkt om gegevens naar de producten van Adobe Experience Cloud en niet-Adobe toepassingen door het Netwerk van de Rand van de Platform te verzenden.
 
-## Eenvoudige implementaties, snellere prestaties op de client
+## Tags, Web SDK en Mobile SDK
 
-SDK&#39;s van Adobe Experience Platform Web en Mobile vouwen alle Adobe-productbibliotheken samen tot één ontwikkelkit voor web- of mobiele platforms. Als u deze bibliotheken comprimeert, wordt de gegevensverzameling versneld en worden bewerkingen in één stream geconsolideerd, van client-side apparaten tot Adobe Experience Platform Edge Network.
+De SDK van het Web SDK van het Platform en van het Platform Mobiele SDK doen ineenstorten en alle het productbibliotheken van Adobe in één enkele ontwikkelingskit voor Web en mobiele platforms respectievelijk comprimeren. Deze kunnen worden geïmplementeerd met onbewerkte code of met [tags](../tags/home.md) via de gebruikersinterface voor gegevensverzameling.
 
-## Flip-the-switch-proces voor de implementatie van Adobe-technologie {#edge}
+Het samenpersen van deze bibliotheken versnelt gegevensinzameling en consolideert verrichtingen in één enkele stroom van cliënt-zijapparaten aan het Netwerk van de Rand van het Platform.
+
+![Tags, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
+
+## Platform Edge Network en gegevensstreams {#edge}
 
 Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met tags kunt u [gegevensstromen](../edge/fundamentals/datastreams.md) voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder de clientcode te wijzigen.
 
-<!-- (Outdated terminology)
-![](./images/deploy.png)
--->
+![DataStreams en Adobe-oplossingen](./images/home/adobe-solutions.png)
 
 >[!NOTE]
 >
 >Voor een inleiding op hoog niveau aan het Netwerk van de Rand van het Platform, verwijs naar het volgende [interactieve productrondreis](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
-## Gegevens snel en veilig transformeren, verrijken en verzenden
+## Gebeurtenis doorsturen
 
-[Gebeurtenis doorsturen in Adobe Experience Platform](../tags/ui/event-forwarding/overview.md) kan in om het even welke gegevensstroom van het Platform tikken. U kunt gegevens transformeren, verrijken en verzenden naar elke niet-Adobe-bestemming met extreme lage latentie zonder enige code van derden toe te voegen aan het clientapparaat voor snellere en veiligere gegevensverzameling en -distributie.
+[Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md) kan in om het even welke gegevensstroom van het Experience Platform tikken, die u toestaat om, gegevens te transformeren te verrijken en te verzenden naar om het even welke niet-Adobe bestemming met extreme lage latentie en zonder enige dercode aan het cliëntapparaat toe te voegen.
 
-<!-- (Outdated terminology)
-![](./images/launch.png)
--->
+![Gebeurtenis doorsturen](./images/home/event-forwarding.png)
+
+## Volgende stappen
+
+Dit document verstrekte een overzicht op hoog niveau van hoe de technologieën van de gegevensinzameling van het Platform werken om het proces te automatiseren om uw verzamelde gegevens van de klantenervaring naar de producten van de Adobe en derdebestemmingen te verzenden.
+
+![Gegevensverzamelingskader](./images/home/collection.png)
+
+Raadpleeg voor meer informatie over de algemene workflow voor het verzenden van gebeurtenisgegevens via het Edge-netwerk de [end-to-end overzicht voor gegevensverzameling](./e2e.md).
