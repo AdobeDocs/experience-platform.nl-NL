@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '651'
 ht-degree: 5%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 5%
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-aansluiting](connectors/crm/salesforce.md)
       - [Veeva CRM-connector](connectors/crm/veeva.md)
+      - [Zoho CRM-aansluiting](connectors/crm/zoho.md)
    - Klantsucces {#customer-success}
       - [Salesforce Service Cloud-aansluiting](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow-connector](connectors/customer-success/servicenow.md)
@@ -108,6 +109,7 @@ ht-degree: 5%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Klantsucces {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -198,6 +200,7 @@ ht-degree: 5%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Klant geslaagd {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)

@@ -5,7 +5,7 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Ado
 - [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] connectoroverzicht](connectors/adobe-applications/marketo/marketo.md)
-- [Creeer a [!DNL Marketo Engage] bronverbinding in UI](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Reclame
 
@@ -69,6 +69,7 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
 ### Klant geslaagd
 
@@ -141,21 +142,21 @@ Experience Platform verleent steun voor het opnemen van gegevens van een systeem
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Permissions]** in een bepaald productprofiel. Vanuit het deelvenster **[!UICONTROL Edit Permissions]** hebt u via de menuvermelding **[!UICONTROL data ingestion]** toegang tot de machtigingen voor bronnen. De **[!UICONTROL View Sources]** toestemming verleent read-only toegang tot beschikbare bronnen op het **[!UICONTROL Catalog]** lusje en voor authentiek verklaarde bronnen op het **[!UICONTROL Browse]** lusje, terwijl **[!UICONTROL Manage Sources]** toestemming volledige toegang verleent om, bronnen te lezen tot stand te brengen, uit te geven en onbruikbaar te maken.
+Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via de **[!UICONTROL Permissions]** in een bepaald productprofiel. Van de **[!UICONTROL Edit Permissions]** kunt u toegang krijgen tot de machtigingen voor bronnen via het dialoogvenster **[!UICONTROL data ingestion]** menu-item. De **[!UICONTROL View Sources]** toestemming verleent read-only toegang tot beschikbare bronnen in **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** terwijl de **[!UICONTROL Manage Sources]** met deze machtiging hebt u volledige toegang tot het lezen, maken, bewerken en uitschakelen van bronnen.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
 | Machtigingsniveau | Beschrijving |
 | ---- | ----|
 | **[!UICONTROL View Sources]** Aan | De read-only toegang van de subsidie tot bronnen in elk bron-type op het lusje van de Catalogus, evenals doorbladeren, Rekeningen, en lusjes Dataflow. |
-| **[!UICONTROL Manage Sources]** Aan | Naast de functies in **[!UICONTROL View Sources]** verleent toegang tot **[!UICONTROL Connect Source]** optie in **[!UICONTROL Catalog]** en aan **[!UICONTROL Select Data]** optie in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** staat u ook toe om hun programma&#39;s toe te laten of onbruikbaar te maken  **[!UICONTROL DataFlows]** en uit te geven. |
-| **[!UICONTROL View Sources]** Uit en  **[!UICONTROL Manage Sources]** uit | Alle toegang tot bronnen intrekken. |
+| **[!UICONTROL Manage Sources]** Aan | Naast de in **[!UICONTROL View Sources]** verleent toegang tot **[!UICONTROL Connect Source]** optie in **[!UICONTROL Catalog]** en **[!UICONTROL Select Data]** optie in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** staat u ook toe om in of onbruikbaar te maken **[!UICONTROL DataFlows]** en bewerk hun schema&#39;s. |
+| **[!UICONTROL View Sources]** Uit en **[!UICONTROL Manage Sources]** Uit | Alle toegang tot bronnen intrekken. |
 
 Voor meer informatie over de beschikbare toestemmingen die door de Admin Console, met inbegrip van die vier bronnen worden verleend, zie [toegangsbeheeroverzicht](../access-control/home.md).
 
 ## Voorwaarden en bepalingen {#terms-and-conditions}
 
-Door om het even welke bronnen te gebruiken die als bèta (&quot;Beta&quot;) worden geëtiketteerd, bevestigt u hierbij dat Beta ***&quot;zoals is&quot;zonder garantie van om het even welke soort*** wordt verstrekt.
+Door een van de bronnen met het label bèta (&quot;Beta&quot;) te gebruiken, bevestigt u hierbij dat de bèta wordt geleverd ***&quot;zoals is&quot; zonder enige garantie***.
 
 Adobe is niet verplicht het bètaprogramma te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden voorzichtig te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke bèta en/of begeleidende materialen. De bètaversie wordt beschouwd als vertrouwelijke informatie van Adobe.
 
