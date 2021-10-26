@@ -2,16 +2,22 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 07a280f906c5bcc69a0bffc529e1d1c8280f771a
+source-git-commit: e199553a2dcfd2d86d101f19d01e85556c90d05b
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
-In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.8.0 - 26 oktober 2021
+
+Bevat versie 2.7.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+
+* Aanvullende informatie van Experience Edge is beschikbaar in de gebeurtenis Send Event Complete, waaronder `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen. Zie voor meer informatie [Gebeurtenissen bijhouden.](../fundamentals/tracking-events.md)
 
 ## Versie 2.7.3 - 7 september 2021
 
@@ -29,7 +35,7 @@ Bevat versie 2.6.3 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 ## Versie 2.6.2 - 4 augustus 2021
 
-Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+Bevat versie 2.6.2 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
 ## Versie 2.6.1 - juli 2021
 
@@ -50,7 +56,7 @@ Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 Bevat versie 2.5.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-* Een veld `data` toegevoegd aan de handeling Gebeurtenis verzenden. De komende documentatie zal beschrijven hoe dit in bepaalde scenario&#39;s kan worden gebruikt.
+* Toegevoegde `data` veld naar de handeling Verzendgebeurtenis. De komende documentatie zal beschrijven hoe dit in bepaalde scenario&#39;s kan worden gebruikt.
 * In de gegevenselementweergave van het XDM-object is een probleem opgelost waarbij een fout is gegenereerd als de gebruiker toegang had tot Adobe Experience Platform-sandboxen maar niet tot de sandbox die als standaard voor de organisatie is geconfigureerd.
 * In de weergave van het gegevenselement XDM Object is een probleem opgelost waarbij een vereist schemaveld als ongeldig wordt beschouwd, zelfs als het bovenliggende object geen waarden bevat.
 
@@ -58,10 +64,10 @@ Bevat versie 2.5.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 Bevat versie 2.4.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-* [&quot;document unloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) checkbox toegevoegd om de actie UI van de Gebeurtenis te verzenden.
-* Toegevoegde steun voor een `out` optie wanneer [vormend standaardtoestemming](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie vormt gebeurtenissen en verzendt hen zodra de toestemming wordt ontvangen).
+* Toegevoegd [&quot;document wordt verwijderd&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) Schakel het selectievakje Send Event action UI in.
+* Extra ondersteuning voor een `out` optie wanneer [standaardgoedkeuring configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) die alle gebeurtenissen stopzet totdat toestemming is ontvangen (de bestaande `pending` de optie vormt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
 * Knopinfo is toegevoegd aan het veld Standaardtoestemming.
-* Toegevoegde steun [Adobe verzonden 2.0 norm](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Extra ondersteuning voor [Adobe 2](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
 * Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
@@ -76,8 +82,8 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 ## Versie 2.2.0 - 1 oktober 2020
 
 * Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. API die Platform roept is zich nu bewust van milieu&#39;s zodat worden de gebruikers slechts voorgesteld van die schema&#39;s die zij toegang hebben om uit te geven.
-* Wanneer u het gegevenselement `identityMap` gebruikt, worden de naamruimten nu vooraf ingevuld in een vervolgkeuzelijst, zodat u dit niet handmatig hoeft in te vullen.
-* De interface voor het gegevenselement `xdmObject` is vernieuwd. In de nieuwe UI, kunt u zien welke gebieden zijn bevolkt zonder het moeten elk punt in het voorwerp ingaan.
+* Wanneer u de `identityMap` data element, de namespaces is nu vooraf bevolkt in een dropdown zodat moet u dit niet manueel invullen.
+* De interface voor de `xdmObject` gegevenselement. In de nieuwe UI, kunt u zien welke gebieden zijn bevolkt zonder het moeten elk punt in het voorwerp ingaan.
 
 ## Versie 2.1.1 - 26 augustus 2020
 
@@ -85,12 +91,12 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 ## Versie 2.1.0 - 5 augustus 2020
 
-* Wijziging van regeleinde: Verwijder de `syncIdentity` actie en steun die IDs in de `sendEvent` actie in plaats daarvan overgaan. Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
+* Wijziging van regeleinde: Verwijder de `syncIdentity` actie en ondersteuning voor het doorgeven van die id&#39;s in de `sendEvent` in plaats daarvan. Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
 * Bijwerken naar versie 2.1.0 ([Opmerkingen bij de release](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
-* Ondersteuning voor IAB 2.0 Consent Standard in de handeling `setConsent`.
-* Ondersteuning voor het overschrijven van de gegevensset-id in de handeling `sendEvent`.
-* Voeg een nieuw gegevenselement van type `IdentityMap` toe dat kan worden gebruikt om de `identityMap` ingang in het Element van de Gegevens van Objecten te bevolken XDM dat nu wordt toegelaten, en in `setConsent` actie.
-* Ondersteuning voor het doorgeven van een identiteitsoverzicht in de handeling `setConsent`.
+* Ondersteuning voor IAB 2.0 Conceptstandaard in het dialoogvenster `setConsent` handeling.
+* Ondersteuning voor het overschrijven van de id van de gegevensset in het dialoogvenster `sendEvent` handeling.
+* Een nieuw gegevenselement van het type toevoegen `IdentityMap` die kunnen worden gebruikt om de `identityMap` -item in het XDM Object Data Element dat nu is ingeschakeld, en in het dialoogvenster `setConsent` handeling.
+* Ondersteuning voor het doorgeven van een identiteitsoverzicht in het dialoogvenster `setConsent` handeling.
 * Ondersteuning voor het kiezen van een Platform-sandbox in het XDM Object Data Element.
 
 ## Versie 1.0.0 - 26 mei 2020
@@ -99,25 +105,25 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 ## Versie 0.1.2 - 4 mei 2020
 
-* Naam gewijzigd in `configId` in `edgeConfigId`.
-* Naam gewijzigd in `viewStart` in `renderDecisions`, standaard ingesteld op false. Indien ingesteld op true, worden aanbiedingen voor personalisatie opgehaald en automatisch weergegeven.
-* Wijzigingen met betrekking tot `Get Decisions`:
-   * De opdracht `getDecisions` is verwijderd.
-   * Optie `scopes` toegevoegd aan de opdracht `sendEvent`. Besluiten worden geretourneerd in de opgeloste belofte `sendEvent`.
-   * Er is een ingebouwd `__view__` bereik toegevoegd dat zal resulteren in het retourneren van aanbiedingen voor de pagina/weergave in het algemeen. (VEC-aanbiedingen in Target bijvoorbeeld.)
-Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aan vals wordt geplaatst.
-   * Er is een gebeurtenis `Decisions Received` toegevoegd die wordt geactiveerd wanneer beslissingen beschikbaar komen.
+* Naam gewijzigd `configId` tot `edgeConfigId`.
+* Naam gewijzigd `viewStart` tot `renderDecisions`, standaard ingesteld op false. Indien ingesteld op true, worden aanbiedingen voor personalisatie opgehaald en automatisch weergegeven.
+* Wijzigingen in verband met `Get Decisions`:
+   * De `getDecisions` gebruiken.
+   * Toegevoegde `scopes` aan de `sendEvent` gebruiken. Besluiten worden geretourneerd in het `sendEvent` opgelost.
+   * Ingebouwd `__view__` bereik dat leidt tot het retourneren van aanbiedingen voor de hele pagina/weergave. (VEC-aanbiedingen in Target bijvoorbeeld.)
+Deze besluiten komen terug van de `sendEvent` alleen gebruiken als `renderDecisions` is ingesteld op false.
+   * Toegevoegde `Decisions Received` gebeurtenis die wordt geactiveerd wanneer beslissingen beschikbaar komen.
 * Gecombineerde veelvoudige berichten van de Personalisatie onder één enkele servervraag.
 * Probleem opgelost in de samenvoegings-id voor gebeurtenissen waarbij het element telkens opnieuw werd ingesteld toen naar het gegevenselement werd verwezen.
-* De naam van de handeling `setCustomerIds` is gewijzigd in `syncIdentity`.
-* Een opdracht `getIdentity` toegevoegd. Dit kan alleen voorlopig worden verbruikt via aangepaste code.
-* Als u foutopsporing inschakelt met `_satellite`, wordt foutopsporing nu ingeschakeld in de SDK van het Adobe Experience Platform-web.
+* De naam van de `setCustomerIds` actie naar `syncIdentity`.
+* Toegevoegde `getIdentity` gebruiken. Dit kan alleen voorlopig worden verbruikt via aangepaste code.
+* Foutopsporing inschakelen met `_satellite` schakelt nu foutopsporing in de SDK van Adobe Experience Platform Web in.
 * Toegevoegde ondersteuning voor getypte waarden in het XDM-object: Booleaanse cijfers, getallen en decimalen.
 
 ## Versie 0.0.10 - 16 maart 2020
 
-* Gecombineerd de concepten Opt-In &amp; Opt-Out onder `Consent`, en voegde een nieuw `setConsent` bevel toe.
-* Er is een nieuw gegevenselement van het type `XDM Object` toegevoegd dat toewijzing van JavaScript/JSON aan XDM toestaat.
+* De concepten Opt-In en Opt-Out in combinatie `Consent`en voegt een nieuwe `setConsent` gebruiken.
+* Nieuw gegevenselement van type toegevoegd `XDM Object` Hiermee kunt u JavaScript/JSON toewijzen aan XDM.
 
 ## Versie 0.0.7 - 18 februari 2020
 
@@ -137,7 +143,7 @@ Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aa
 
 ## Versie 0.0.3 - 25 november 2019
 
-* De nieuwe gebieden van de Fusie ID en van het Type op de Send actie van de Gebeurtenis. Identiteitskaart van de fusie brengt aan `xdm.eventMergeID` in het XDM schema en het Type brengt aan `xdm.eventType` in het XDM schema in kaart.
+* De nieuwe gebieden van de Fusie ID en van het Type op de Send actie van de Gebeurtenis. Id-maps samenvoegen tot `xdm.eventMergeID` in het XDM-schema en -type worden toegewezen aan `xdm.eventType` in het XDM-schema.
 
 ## Versie 0.0.2 - 18 november 2019
 
