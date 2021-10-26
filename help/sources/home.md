@@ -5,9 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,8 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens uit stream
 
 Experience Platform verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Generic OData] connector](connectors/protocols/odata.md)
+- [[!DNL Generic OData]](connectors/protocols/odata.md)
+- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 

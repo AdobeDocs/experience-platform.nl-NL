@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '661'
 ht-degree: 5%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 5%
       - [PayPal-connector](connectors/payments/paypal.md)
    - Protocollen {#protocols}
       - [Generic OData-connector](connectors/protocols/odata.md)
+      - [Algemene REST API-aansluiting](connectors/protocols/generic-rest.md)
    - Streaming {#streaming}
       - [HTTP API-connector](connectors/streaming/http.md)
 - API-zelfstudies {#api-tutorials}
@@ -143,6 +144,7 @@ ht-degree: 5%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
+         - [Algemene REST-API](tutorials/api/create/protocols/generic-rest.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/api/create/streaming/http.md)
    - Gegevens verkennen {#explore}
@@ -234,6 +236,7 @@ ht-degree: 5%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
+         - [Algemene REST-API](tutorials/ui/create/protocols/generic-rest.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Een gegevensstroom configureren {#dataflow}
