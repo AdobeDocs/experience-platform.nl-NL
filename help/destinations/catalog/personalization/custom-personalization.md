@@ -3,7 +3,7 @@ keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding (bèta)
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt in real time 1:1 en verpersoonlijking die op het segmentlidmaatschap van een gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
+source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
@@ -22,11 +22,11 @@ Deze bestemming verstrekt een manier om segmentinformatie van Adobe Experience P
 
 ## Vereisten {#prerequisites}
 
-Deze integratie wordt aangedreven door [Adobe Experience Platform Web SDK](../../../edge/home.md). U moet deze SDK gebruiken om deze bestemming te gebruiken.
+Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](../../../edge/home.md). U moet deze SDK gebruiken om deze bestemming te gebruiken.
 
 ## Exporttype {#export-type}
 
-**Verzoek**  van het profiel - u vraagt om alle segmenten die in de bestemming van de douaneverpersoonlijking voor één enkel profiel in kaart worden gebracht. Verschillende aangepaste verpersoonlijkingsbestemmingen kunnen worden ingesteld voor verschillende [gegevensstromen van de Gegevensverzameling van Adobe.](../../../edge/fundamentals/datastreams.md)
+**Profielaanvraag** - u vraagt om alle segmenten die voor één profiel in kaart worden gebracht in de bestemming van de douaneverpersoonlijking. Verschillende aangepaste verpersoonlijkingsdoelen kunnen worden ingesteld voor verschillende [Gegevensstromen voor gegevensverzameling Adobe](../../../edge/fundamentals/datastreams.md).
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -44,26 +44,26 @@ Dezelfde website kan on-site advertenties aanwijzen met een andere set segmenten
 
 ## Verbinden met de bestemming {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
 * **[!UICONTROL Integration alias]**: Deze waarde wordt verzonden naar het Web SDK van het Experience Platform als JSON objecten naam.
-* **[!UICONTROL Datastream ID]**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten in de reactie op de pagina zullen worden omvat. In het vervolgkeuzemenu worden alleen gegevensstromen weergegeven waarvoor de doelconfiguratie is ingeschakeld. Zie [Een gegevensstroom configureren](../../../edge/fundamentals/datastreams.md) voor meer informatie.
+* **[!UICONTROL Datastream ID]**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten in de reactie op de pagina zullen worden omvat. In het vervolgkeuzemenu worden alleen gegevensstromen weergegeven waarvoor de doelconfiguratie is ingeschakeld. Zie [Een gegevensstroom configureren](../../../edge/fundamentals/datastreams.md) voor meer informatie .
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Lees [Activate profielen en segmenten aan profiel verzoekbestemmingen](../../ui/activate-profile-request-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../ui/activate-profile-request-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Als u [Adobe Tags](../../../tags/home.md) gebruikt om de SDK van het Web van het Experience Platform op te stellen, gebruik [gebeurtenis complete](../../../edge/extension/event-types.md) functionaliteit en uw actie van de douanecode zal een `event.destinations` variabele hebben die u kunt gebruiken om de uitgevoerde gegevens te zien.
+Als u [Adobe-tags](../../../tags/home.md) om SDK van het Web van het Experience Platform op te stellen, gebruik [De gebeurtenis send voltooid](../../../edge/extension/event-types.md) functionaliteit en uw aangepaste code-actie heeft een `event.destinations` variabele die u kunt gebruiken om de geëxporteerde gegevens weer te geven.
 
-Hier volgt een voorbeeldwaarde voor de variabele `event.destinations`:
+Hier volgt een voorbeeldwaarde voor de `event.destinations` variabele:
 
 ```
 [
@@ -85,7 +85,7 @@ Hier volgt een voorbeeldwaarde voor de variabele `event.destinations`:
 ]
 ```
 
-Als u [Adobe Tags](../../../tags/home.md) niet gebruikt om de SDK van het Web van het Experience Platform op te stellen, gebruik [behandelende reacties van gebeurtenissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionaliteit om de uitgevoerde gegevens te zien.
+Als u dit niet gebruikt [Adobe-tags](../../../tags/home.md) om SDK van het Web van het Experience Platform op te stellen, gebruik [reacties van gebeurtenissen afhandelen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) om de geëxporteerde gegevens weer te geven.
 
 Het JSON-antwoord van Adobe Experience Platform kan worden geparseerd om de bijbehorende integratiealias te zoeken van de toepassing die u integreert met Adobe Experience Platform. De segment-id&#39;s kunnen als doelparameters worden doorgegeven aan de code van de toepassing. Hieronder ziet u een voorbeeld van hoe dit er specifiek uitziet voor de doelrespons.
 
@@ -102,15 +102,15 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
-    if(results.destinations) { // Looking to see if the destination results are there
+}).then(function(result) {
+    if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = results.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = results.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -124,4 +124,4 @@ alloy("sendEvent", {
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Lees voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt het [Overzicht gegevensbeheer](../../../data-governance/home.md).
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](../../../data-governance/home.md).
