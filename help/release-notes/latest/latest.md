@@ -1,47 +1,34 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
+source-git-commit: f4e9750685d641c83b4ceed79af739de43343aef
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 3%
+source-wordcount: '315'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 29 september 2021**
+**Releasedatum: 27 oktober 2021**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Gegevensinname](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Bronnen](#sources)
-
-## Gegevensinname {#ingestion}
-
-De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor Platform gegevens uit diverse bronnen inneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door de stroomafwaartse diensten van het Platform worden voortgeduurd.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-|------- | -----------|
-| Upsert or patch Profile records using Batch-opname | Klantprofiel in realtime staat nu updates toe naar profielkenmerken in afzonderlijke profielrecordgegevens via batch-opname. Voor meer informatie raadpleegt u de handleiding [voor het ontwikkelen van batches](../../ingestion/batch-ingestion/api-overview.md). |
-
-Meer over het opnemen van gegevens in Platform, bezoek [de documentatie van de Ingestie van Gegevens](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
-**Nieuwe functies**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het streamen van gegevensstromen | U kunt de functies van het gegevensvoorvoegsel nu gebruiken wanneer het creëren van een het stromen gegevensstroom voor [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], en [!DNL Google PubSub]. Zie de zelfstudie over het maken van een streaminggegevensstroom voor bronnen voor cloudopslag](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) voor meer informatie.[ |
+| `contains_key` -functie | De `contains_key` functie is geïntroduceerd, waarmee u kunt controleren of het object in de bron bestaat. Deze functie vervangt de `is_set` functie, die nu is afgekeurd. |
+| Foutberichten | Foutberichten die door de `/mappingSets/preview` eindpunt in de Prep API van Gegevens zijn nu verenigbaar met de foutenmeldingen die tijdens runtime worden geproduceerd. |
 
-Voor meer informatie over [!DNL Data Prep] zie [[!DNL Data Prep] overview](../../data-prep/home.md).
+Zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie over deze service.
 
 ## Bronnen {#sources}
 
@@ -51,8 +38,8 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Data Landing Zone] | U kunt nu een [!DNL Data Landing Zone] bronverbinding maken met de [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) of de [gebruikersinterface](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] is een  [!DNL Azure Blob] opslaginterface die door Platform wordt ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden in Platform te brengen. Zie [[!DNL Data Landing Zone] overzicht](../../sources/connectors/cloud-storage/data-landing-zone.md) voor meer informatie. |
-| [!DNL Snowflake] | U kunt nu een [!DNL Snowflake] bronverbinding tot stand brengen gebruikend [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) of [gebruikersinterface](../../sources/tutorials/ui/create/databases/snowflake.md) om gegevens van uw [!DNL Snowflake] gegevensbestand aan Platform te brengen. Zie [[!DNL Snowflake] overzicht](../../sources/connectors/databases/snowflake.md) voor meer informatie. |
-| [!DNL SFTP] bronverbeteringen | U kunt handmatig een aangepast poortnummer instellen wanneer u een [!DNL SFTP]-bronverbinding maakt. Zie [[!DNL SFTP] overzicht](../../sources/connectors/cloud-storage/sftp.md) voor meer informatie. |
+| [!DNL Amazon S3] bronverbeteringen | U kunt nu de opdracht `s3SessionToken` parameter om uw [!DNL Amazon S3] account aan Platform met tijdelijke beveiligingsgegevens. Met dit token kunt u op korte termijn tijdelijke toegang tot uw [!DNL Amazon S3] bronnen voor gebruikers in niet-vertrouwde omgevingen. Zie de [[!DNL Amazon S3] documentatie](../../sources/connectors/cloud-storage/s3.md#prerequisites) voor meer informatie . |
+| [!DNL Generic REST API] (bèta) | U kunt nu een [!DNL Generic REST API] bronverbinding met de [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) of de [gebruikersinterface](../../sources/tutorials/ui/create/protocols/generic-rest.md) gegevens van een generieke REST-toepassing naar het Platform te brengen. Zie de [[!DNL Generic REST API] overzicht](../../sources/connectors/protocols/generic-rest.md) voor meer informatie . |
+| [!DNL Zoho CRM] (bèta) | U kunt nu een [!DNL Zoho CRM] bronverbinding met de [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) of de [gebruikersinterface](../../sources/tutorials/ui/create/crm/zoho.md) om gegevens van uw [!DNL Zoho CRM] aan Platform. Zie de [[!DNL Zoho CRM] overzicht](../../sources/connectors/crm/zoho.md) voor meer informatie . |
 
-Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
+Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
