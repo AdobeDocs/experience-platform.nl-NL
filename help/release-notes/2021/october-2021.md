@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 0c507a26f551af1eb17889e8e77a036e3c106240
+source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 1%
+source-wordcount: '315'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,21 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Data Prep]](#data-prep)
 - [Bronnen](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| `contains_key` -functie | De `contains_key` functie is geïntroduceerd, waarmee u kunt controleren of het object in de bron bestaat. Deze functie vervangt de `is_set` functie, die nu is afgekeurd. |
+| Foutberichten | Foutberichten die door de `/mappingSets/preview` eindpunt in de Prep API van Gegevens zijn nu verenigbaar met de foutenmeldingen die tijdens runtime worden geproduceerd. |
+
+Zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie over deze service.
 
 ## Bronnen {#sources}
 
