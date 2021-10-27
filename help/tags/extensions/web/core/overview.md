@@ -2,9 +2,9 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
+source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
 workflow-type: tm+mt
-source-wordcount: '5247'
+source-wordcount: '5282'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Dit document bevat informatie over de beschikbare opties wanneer u de extensie C
 
 ## Gebeurtenistypen van de kernextensie {#core-extension-event-types}
 
-Dit onderwerp beschrijft de gebeurtenistypen beschikbaar in de uitbreiding van de Kern. Zie de sectie [Opties](#options) voor informatie over de opties die voor verschillende gebeurtenistypen kunnen worden ingesteld.
+Dit onderwerp beschrijft de gebeurtenistypen beschikbaar in de uitbreiding van de Kern. Voor informatie over de opties die voor verschillende gebeurtenistypen kunnen worden ingesteld, raadpleegt u de [Opties](#options) sectie.
 
 ### Gebeurtenissen op basis van browser
 
@@ -37,52 +37,52 @@ De gebeurtenis tab-focus activeert de actie wanneer een tab de focus krijgt. Er 
 
 #### Vervagen
 
-De gebeurtenis blur activeert de actie wanneer een formulier de focus verliest. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis blur activeert de actie wanneer een formulier de focus verliest. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Focus
 
-De focusgebeurtenis activeert de actie wanneer een formulier de focus krijgt. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De focusgebeurtenis activeert de actie wanneer een formulier de focus krijgt. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Verzenden
 
-De verzendgebeurtenis activeert de actie wanneer een formulier wordt verzonden. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De verzendgebeurtenis activeert de actie wanneer een formulier wordt verzonden. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 ### Keyboard-gebeurtenissen
 
 #### Toetsdruk
 
-De gebeurtenis wordt geactiveerd wanneer op een toets wordt gedrukt. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer op een toets wordt gedrukt. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 ### Gebeurtenissen op basis van media
 
 #### Media beëindigd
 
-De gebeurtenis wordt geactiveerd wanneer het medium wordt beëindigd. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer het medium wordt beëindigd. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Gegevens die met media zijn geladen
 
-De gebeurtenis wordt geactiveerd wanneer de media gegevens laden. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer de media gegevens laden. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Media pauzeren
 
-De gebeurtenis wordt geactiveerd wanneer het medium wordt gepauzeerd. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer het medium wordt gepauzeerd. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Media afspelen
 
-De gebeurtenis wordt geactiveerd wanneer de media wordt afgespeeld. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer de media wordt afgespeeld. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Media geïnstalleerd
 
-De gebeurtenis wordt geactiveerd wanneer de media stagneren. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer de media stagneren. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Media-tijd afgespeeld
 
-De gebeurtenis wordt geactiveerd wanneer de media gedurende een bepaalde periode wordt afgespeeld. U moet de duur opgeven waarvoor de media moeten worden afgespeeld om de gebeurtenis te activeren. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer de media gedurende een bepaalde periode wordt afgespeeld. U moet de duur opgeven waarvoor de media moeten worden afgespeeld om de gebeurtenis te activeren. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 
 #### Gewijzigd media-volume
 
-De gebeurtenis wordt geactiveerd als het volume wordt verhoogd of verlaagd. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd als het volume wordt verhoogd of verlaagd. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 ### Mobiel-apparaatgeoriënteerde gebeurtenissen
 
@@ -100,29 +100,29 @@ De gebeurtenis wordt geactiveerd wanneer de gebruiker in- of uitzoomt. Er zijn g
 
 De gebeurtenis wordt geactiveerd als het opgegeven element is geselecteerd (erop geklikt). U kunt ook eigenschapswaarden opgeven die waar moeten zijn voor het element voordat de gebeurtenis wordt geactiveerd.
 
-Als het element een ankermarkering (`<a>`) aan verbonden inhoud is, kunt u ook specificeren of om navigatie voor een periode te vertragen. Dit kan handig zijn als uw regel extra tijd nodig heeft om uit te voeren en normaal gesproken niet zou zijn voltooid voordat paginanavigatie plaatsvindt.
+Als het element een ankertag is (`<a>`) aan gekoppelde inhoud, kunt u ook opgeven of de navigatie gedurende een bepaalde periode moet worden vertraagd. Dit kan handig zijn als uw regel extra tijd nodig heeft om uit te voeren en normaal gesproken niet zou zijn voltooid voordat paginanavigatie plaatsvindt.
 
 >[!WARNING]
 >
 >Deze optie moet uiterst voorzichtig worden gebruikt vanwege de mogelijke negatieve gevolgen voor de gebruikerservaring indien deze onjuist wordt gebruikt.
 
-Wanneer u koppelingsvertraging gebruikt, voorkomt Platform eigenlijk dat de browser van de pagina af navigeert. Vervolgens wordt er een JavaScript-omleiding uitgevoerd naar de oorspronkelijke bestemming na de opgegeven time-out. Dit is vooral gevaarlijk wanneer uw paginamarkering `<a>` markeringen heeft waar de voorgenomen functionaliteit niet de gebruiker weg van de pagina werkelijk navigeert. Als u uw probleem niet op een andere manier kunt oplossen, zou u met uw selecteursdefinitie uiterst nauwkeurig moeten zijn zodat deze gebeurtenis precies teweegbrengt waar u het nodig hebt en nergens anders.
+Wanneer u koppelingsvertraging gebruikt, voorkomt Platform eigenlijk dat de browser van de pagina af navigeert. Vervolgens wordt er een JavaScript-omleiding uitgevoerd naar de oorspronkelijke bestemming na de opgegeven time-out. Dit is vooral gevaarlijk wanneer de paginamarkering `<a>` -tags waar de gebruiker niet echt weg van de pagina navigeert naar de bedoelde functionaliteit. Als u uw probleem niet op een andere manier kunt oplossen, zou u met uw selecteursdefinitie uiterst nauwkeurig moeten zijn zodat deze gebeurtenis precies teweegbrengt waar u het nodig hebt en nergens anders.
 
 De standaardwaarde voor de vertraging van de koppeling is 100 milliseconden. Tags wachten altijd op de opgegeven tijd en zijn op geen enkele wijze verbonden met de uitvoering van de handelingen van de regel. Het is mogelijk dat de vertraging de gebruiker zal dwingen langer te wachten dan noodzakelijk is, en ook de mogelijkheid dat de vertraging niet lang genoeg voor alle acties van de regel met succes zal zijn voltooid. Langere vertragingen verstrekken meer tijd voor regeluitvoering maar ook verslechteren de gebruikerservaring.
 
 Om de vertraging in te voeren is het nodig om zowel het geselecteerde element te verstrekken dat de gebeurtenis teweegbrengt, als de specifieke hoeveelheid tijd alvorens de gebeurtenis wordt teweeggebracht.
 
-Zie de sectie [Opties](#options) voor meer informatie voor de geavanceerde opties.
+Voor de geavanceerde opties raadpleegt u de [Opties](#options) voor meer informatie.
 
 #### Hover
 
-De gebeurtenis wordt geactiveerd wanneer de gebruiker de muisaanwijzer op een opgegeven element plaatst. U moet ook vormen of de regel onmiddellijk of na een gespecificeerd aantal milliseconden wordt teweeggebracht. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis wordt geactiveerd wanneer de gebruiker de muisaanwijzer op een opgegeven element plaatst. U moet ook vormen of de regel onmiddellijk of na een gespecificeerd aantal milliseconden wordt teweeggebracht. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 ### Andere gebeurtenissen
 
 #### Aangepaste gebeurtenis
 
-De gebeurtenis wordt geactiveerd als een aangepast gebeurtenistype optreedt. Benoemde JavaScript-functies die elders in de codebase zijn gedefinieerd, kunnen worden gebruikt als een aangepast gebeurtenistype. U moet de naam van het type van douanegebeurtenis specificeren en om het even welke andere montages vormen zoals die in [sectie ](#options) hieronder worden beschreven.
+De gebeurtenis wordt geactiveerd als een aangepast gebeurtenistype optreedt. Benoemde JavaScript-functies die elders in de codebase zijn gedefinieerd, kunnen worden gebruikt als een aangepast gebeurtenistype. U moet de naam van het type van douanegebeurtenis specificeren en om het even welke andere montages vormen zoals die in worden beschreven [Opties](#options) hieronder.
 
 #### Gegevenselement gewijzigd
 
@@ -130,17 +130,17 @@ De gebeurtenis wordt geactiveerd wanneer een opgegeven gegevenselement verandert
 
 #### Directe oproep
 
-De direct-vraaggebeurtenis overslaat gebeurtenisopsporing en raadplegingssystemen. De direct-vraagregels zijn ideaal voor situaties waar u Platform precies wilt vertellen wat gebeurt. Bovendien zijn ze ideaal wanneer Platform een gebeurtenis niet kan detecteren in het DOM, zoals met Adobe Flash. Geef de tekenreeks `_satellite.track` op in het tekstveld Id.
+De direct-vraaggebeurtenis overslaat gebeurtenisopsporing en raadplegingssystemen. De direct-vraagregels zijn ideaal voor situaties waar u Platform precies wilt vertellen wat gebeurt. Bovendien zijn ze ideaal wanneer Platform een gebeurtenis niet kan detecteren in het DOM, zoals met Adobe Flash. Geef de `_satellite.track` tekenreeks in het tekstveld Id.
 
 #### Element bestaat
 
-De gebeurtenis activeert of een opgegeven element bestaat. Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+De gebeurtenis activeert of een opgegeven element bestaat. Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Viewport invoeren
 
 De gebeurtenis wordt geactiveerd als de gebruiker een opgegeven viewport invoert. U moet een CSS-kiezer opgeven als criteria om overeenkomende elementen als doel in te stellen. U moet ook vormen of de regel onmiddellijk of na een gespecificeerd aantal milliseconden wordt teweeggebracht, en of de gebeurtenis zou moeten teweegbrengen telkens als de gebeurtenis of slechts de eerste keer voorkomt.
 
-Zie de sectie [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
+Zie de [Opties](#options) voor meer informatie over aanpasbare gebeurtenisinstellingen.
 
 #### Geschiedeniswijziging
 
@@ -162,7 +162,7 @@ De gebeurtenis wordt gestart zodra de tagbibliotheek is geladen. Er zijn geen in
 
 #### Pagina onder {#page-bottom}
 
-De gebeurtenis wordt geactiveerd zodra `_satellite.pageBottom();` is aangeroepen. Wanneer de tagbibliotheek asynchroon wordt geladen, mag dit gebeurtenistype niet worden gebruikt. Er zijn geen instellingen voor dit gebeurtenistype.
+De gebeurtenis wordt eenmaal geactiveerd `_satellite.pageBottom();` is opgeroepen. Wanneer de tagbibliotheek asynchroon wordt geladen, mag dit gebeurtenistype niet worden gebruikt. Er zijn geen instellingen voor dit gebeurtenistype.
 
 #### Venster geladen
 
@@ -174,8 +174,8 @@ Voor elk type formuliergebeurtenis worden de volgende instellingen gebruikt:
 
 #### Specifieke elementen \| Willekeurig element
 
-* Als u **[!UICONTROL Specific Elements]** kiest, verschijnen de opties om de elementen en bezitswaarden te selecteren.
-* Als u **[!UICONTROL Any Element]** kiest, zijn er geen verdere opties vereist om de elementen te beperken.
+* Als u **[!UICONTROL Specific Elements]** De opties voor het selecteren van de elementen en eigenschapwaarden worden weergegeven.
+* Als u **[!UICONTROL Any Element]** Er zijn echter geen verdere opties nodig om de elementen te beperken.
 
 #### Elementen die overeenkomen met de CSS-kiezer
 
@@ -191,11 +191,11 @@ Als u deze optie selecteert, worden de volgende parameters beschikbaar:
 
 * Regex
 
-   Schakel deze optie in als de `property=value` een reguliere expressie is.
+   Inschakelen als de `property=value` is een reguliere expressie.
 
 * Toevoegen
 
-   Voeg nog een `property=value` paar toe.
+   Nog een toevoegen `property=value` paar.
 
 #### Geavanceerde opties (Bubbling)
 
@@ -219,13 +219,19 @@ Geef de naam en waarde van het cookie op die moeten bestaan voordat een gebeurte
 
 #### Aangepaste code
 
-Geef aangepaste code op die als voorwaarde voor de gebeurtenis moet bestaan. Gebruik de ingebouwde code-editor om de aangepaste code in te voeren.
+Geef aangepaste code op die als voorwaarde voor de gebeurtenis moet bestaan.
+
+>[!NOTE]
+>
+>ES6+ JavaScript wordt nu ondersteund in aangepaste code. Houd er rekening mee dat sommige oudere browsers ES6+ niet ondersteunen. Om inzicht te krijgen in de gevolgen van het gebruik van ES6+-functies, moet u testen op alle webbrowsers die worden ondersteund.
+
+Gebruik de ingebouwde code-editor om de aangepaste code in te voeren:
 
 1. Selecteer **[!UICONTROL Open Editor]**.
 1. Typ de aangepaste code.
 1. Selecteer **[!UICONTROL Save]**.
 
-Er wordt automatisch een variabele met de naam `event` beschikbaar, waarnaar u in uw aangepaste code kunt verwijzen. Het object `event` bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. De gemakkelijkste manier om te bepalen welke gebeurtenisgegevens beschikbaar zijn is `event` aan de console van binnen uw douanecode te registreren:
+Een variabele met de naam `event` wordt automatisch beschikbaar, waarnaar u kunt verwijzen in uw aangepaste code. De `event` Het object bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. De eenvoudigste manier om te bepalen welke gebeurtenisgegevens beschikbaar zijn, is door te loggen `event` naar de console vanuit uw aangepaste code:
 
 ```javascript
 console.log(event);
@@ -238,7 +244,7 @@ Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobj
 
 Wanneer de optie &quot;Regelcomponenten in volgorde uitvoeren&quot; van eigenschapinstellingen is ingeschakeld, kunt u volgende regelcomponenten laten wachten terwijl uw voorwaarde een asynchrone taak uitvoert.
 
-Wanneer de voorwaarde [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) terugkeert, zal de volgende voorwaarde in de regel niet uitvoeren tot de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zijn de markeringen van mening dat de voorwaarde ontbroken en geen verdere voorwaarden of acties van die regel zullen worden uitgevoerd.
+Wanneer de voorwaarde een [beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), zal de volgende voorwaarde in de regel niet uitvoeren tot de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zijn de markeringen van mening dat de voorwaarde ontbroken en geen verdere voorwaarden of acties van die regel zullen worden uitgevoerd.
 
 Een voorbeeld van een voorwaarde die een belofte terugkeert:
 
@@ -267,41 +273,41 @@ Als u een regel met veelvoudige voorwaarden hebt, is het mogelijk dat deze voorw
 
 De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
-**Gelijk:** de voorwaarde keert waar terug als de twee waarden gelijk zijn gebruikend een niet-strikte vergelijking (in JavaScript, == exploitant). De waarden kunnen van elk type zijn. Wanneer u een woord als _true_, _false_, _null_ of _undefined_ in een waardeveld typt, wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
+**Gelijk:** De voorwaarde retourneert true als de twee waarden gelijk zijn via een niet-strikte vergelijking (in JavaScript, de == operator). De waarden kunnen van elk type zijn. Als u een woord typt als _true_, _false_, _null_, of _ongedefinieerd_ in een waardeveld wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
 
-**Niet gelijk:** de voorwaarde retourneert true als de twee waarden niet gelijk zijn met een niet-strikte vergelijking (in JavaScript, de != operator). De waarden kunnen van elk type zijn. Wanneer u een woord als _true_, _false_, _null_ of _undefined_ in een waardeveld typt, wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
+**Niet gelijk:** De voorwaarde retourneert true als de twee waarden niet gelijk zijn aan een niet-strikte vergelijking (in JavaScript, de != operator). De waarden kunnen van elk type zijn. Als u een woord typt als _true_, _false_, _null_, of _ongedefinieerd_ in een waardeveld wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
 
-**Bevat:** de voorwaarde retourneert true als de eerste waarde de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
+**Bevat:** De voorwaarde retourneert true als de eerste waarde de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Bevat niet:** de voorwaarde retourneert true als de eerste waarde niet de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Bevat niet:** De voorwaarde retourneert true als de eerste waarde niet de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
-**Begint met:** de voorwaarde retourneert true als de eerste waarde met de tweede waarde begint. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
+**Begint met:** De voorwaarde retourneert true als de eerste waarde begint met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Begint niet met:** de voorwaarde retourneert true als de eerste waarde niet begint met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Begint niet met:** De voorwaarde retourneert true als de eerste waarde niet begint met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
-**Eindigt met:** de voorwaarde retourneert true als de eerste waarde eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
+**Eindigt met:** De voorwaarde retourneert true als de eerste waarde eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Niet eindigen met:** de voorwaarde retourneert true als de eerste waarde niet eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Eindigt niet met:** De voorwaarde retourneert true als de eerste waarde niet eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
 **Komt overeen met Regex:** De voorwaarde retourneert true als de eerste waarde overeenkomt met de reguliere expressie. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Komt niet overeen met Regex:** de voorwaarde retourneert true als de eerste waarde niet overeenkomt met de reguliere expressie. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Komt niet overeen met Regex:** De voorwaarde retourneert true als de eerste waarde niet overeenkomt met de reguliere expressie. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
-**Is minder dan:** De voorwaarde retourneert true als de eerste waarde kleiner is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**is kleiner dan:** De voorwaarde retourneert true als de eerste waarde kleiner is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is kleiner dan of gelijk aan:** de voorwaarde retourneert true als de eerste waarde kleiner dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**is kleiner dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde kleiner dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is groter dan:** de voorwaarde keert waar terug als de eerste waarde groter is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**Is groter dan:** De voorwaarde retourneert true als de eerste waarde groter is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is groter dan of gelijk aan:** de voorwaarde keert waar terug als de eerste waarde groter dan of gelijk aan de tweede waarde is. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**is groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is Waar:** de voorwaarde keert waar terug als de waarde een booleaanse waarde met de waarde waar is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
+**Is waar:** De voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde true. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
-**Is Truthy:** De voorwaarde retourneert true als de waarde waar is na de conversie naar een booleaanse waarde. Zie [Truthy-documentatie van MDN](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) voor voorbeelden van waarheidswaarden.
+**Is waar:** De voorwaarde retourneert true als de waarde waar is nadat deze is omgezet in een Booleaanse waarde. Zie [Truthy-documentatie van MDN](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) voor voorbeelden van waarheidswaarden.
 
-**Is Onwaar:** de voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde false. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde false resulteert in de voorwaarde die false retourneert.
+**Is onwaar:** De voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde false. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde false resulteert in de voorwaarde die false retourneert.
 
-**Is Falsy:** de voorwaarde retourneert true als de waarde false is nadat deze is omgezet in een Booleaanse waarde. Zie [Falsy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) voor voorbeelden van valse waarden.
+**Is false:** De voorwaarde retourneert true als de waarde false is na de conversie naar een Booleaanse waarde. Zie [Falsy-documentatie van MDN](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) voor voorbeelden van ongeldige waarden.
 
 #### Variabele
 
@@ -311,7 +317,7 @@ Geef de naam en waarde van de JavaScript-variabele op die moeten bestaan voordat
 1. Geef de waarde op van de variabele die als voorwaarde voor de gebeurtenis moet bestaan.
 1. (Optioneel) Schakel Regex in als dit een reguliere expressie is.
 
-### Engagement
+### Betrokkenheid
 
 #### Openingspagina
 
@@ -408,7 +414,7 @@ Selecteer een of meer van de volgende besturingssystemen:
 * Blackberry
 * iOS
 * Linux
-* MacOS
+* macOS
 * Maemo
 * Symbian OS
 * Unix
@@ -522,9 +528,9 @@ Geef het maximale aantal keren op dat de voorwaarde true retourneert. U kunt uit
 * Weken
 * Maanden
 
-Voor de voorwaarde maximum frequentie 1 per zitting, worden deze twee `localStorage` punten vergeleken. Als de `visitorTracking.sessionCount` groter is dan de `maxFrequency.session` telling, dan is de steekproefvoorwaarde waar. Als ze gelijk zijn, is de voorwaarde onwaar.
+Voor de voorwaarde maximale frequentie 1 per sessie: deze twee `localStorage` objecten worden vergeleken. Als de `visitorTracking.sessionCount` is groter dan de `maxFrequency.session` telling, dan is de steekproefvoorwaarde waar. Als ze gelijk zijn, is de voorwaarde onwaar.
 
-`sessionCount` is een  `visitorTracking` item, dus de bezoeker-API moet zijn ingeschakeld om de samplingvoorwaarde te laten werken.
+`sessionCount` is een `visitorTracking` -item, zodat de bezoeker-API moet zijn ingeschakeld om de samplingvoorwaarde te laten werken.
 
 #### Monster
 
@@ -544,19 +550,19 @@ Geef de code op die wordt uitgevoerd nadat de gebeurtenis is geactiveerd en de v
    * HTML
 1. Selecteer of de actiecode globaal moet worden uitgevoerd.
 1. Selecteer **[!UICONTROL Open Editor]**.
-1. Bewerk de code en selecteer **[!UICONTROL Save]**.
+1. Bewerk de code en selecteer vervolgens **[!UICONTROL Save]**.
 
-Wanneer JavaScript als taal wordt geselecteerd, zal een variabele genoemd `event` automatisch beschikbaar zijn, die u van binnen uw douanecode kunt van verwijzingen voorzien. Het object `event` bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. De gemakkelijkste manier om te bepalen welke gebeurtenisgegevens beschikbaar zijn is `event` aan de console van binnen uw douanecode te registreren:
+Wanneer JavaScript als taal wordt geselecteerd, een variabele genoemd `event` wordt automatisch beschikbaar, waarnaar u kunt verwijzen in uw aangepaste code. De `event` Het object bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. De eenvoudigste manier om te bepalen welke gebeurtenisgegevens beschikbaar zijn, is door te loggen `event` naar de console vanuit uw aangepaste code:
 
 ```javascript
 console.log(event);
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Nadat u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic besluit binnen uw douanecode gebruiken, een deel van het `event` voorwerp naar een server verzenden, etc.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Nadat u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic besluit binnen uw douanecode gebruiken, een stuk van verzenden `event` -object naar een server enzovoort.
 
 ### Verwerking van aangepaste code
 
-De Core-extensie, die beschikbaar is voor alle Adobe Experience Platform-gebruikers, bevat een aangepaste code voor het uitvoeren van door de gebruiker opgegeven JavaScript of HTML. Het is vaak nuttig voor gebruikers om te begrijpen hoe de regels met de acties van de Code van de Douane worden verwerkt.
+De Core-extensie, die beschikbaar is voor alle Adobe Experience Platform-gebruikers, bevat een aangepaste code-actie voor het uitvoeren van door de gebruiker opgegeven JavaScript of HTML. Het is vaak nuttig voor gebruikers om te begrijpen hoe de regels met de acties van de Code van de Douane worden verwerkt.
 
 #### Regels die gebeurtenissen boven of onder op de pagina gebruiken
 
@@ -564,7 +570,7 @@ Code uit aangepaste handelingen wordt ingesloten in de hoofdtagbibliotheek. De c
 
 #### Regels voor elke andere gebeurtenis dan de boven- of onderzijde van de pagina
 
-Code uit aangepaste handelingen wordt vanaf de server geladen en naar het document geschreven met [Postscript](https://github.com/krux/postscribe). Als een regel veelvoudige acties van de Code van de Douane heeft, wordt de code geladen parallel van de server, maar in de orde geschreven die in de regel wordt gevormd.
+Code van aangepaste handelingen wordt vanaf de server geladen en naar het document geschreven met [Postscript](https://github.com/krux/postscribe). Als een regel veelvoudige acties van de Code van de Douane heeft, wordt de code geladen parallel van de server, maar in de orde geschreven die in de regel wordt gevormd.
 
 Tijdens het gebruik van document.write nadat een pagina is geladen, zouden er doorgaans problemen optreden. Dit is echter geen probleem voor code die via aangepaste code-handelingen wordt geleverd. U kunt document.write binnen acties van de Code van de Douane ongeacht gebruiken wanneer de code zal worden uitgevoerd.
 
@@ -574,11 +580,11 @@ De validator die in de tagcode-editor wordt gebruikt, is ontworpen om problemen 
 
 #### Handelingvolgorde
 
-Wanneer de optie &quot;Regelcomponenten in volgorde uitvoeren&quot; van eigenschapinstellingen is ingeschakeld, kunt u volgende regelcomponenten laten wachten terwijl uw handeling een asynchrone taak uitvoert.  Dit werkt anders voor aangepaste JavaScript- en HTML-code.
+Wanneer de optie &quot;Regelcomponenten in volgorde uitvoeren&quot; van eigenschapinstellingen is ingeschakeld, kunt u volgende regelcomponenten laten wachten terwijl uw handeling een asynchrone taak uitvoert.  Dit werkt anders voor JavaScript- en HTML-aangepaste code.
 
 *JavaScript*
 
-Wanneer u een aangepaste JavaScript-code maakt, kunt u een [Belofing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) uit uw handeling retourneren. De volgende actie in de regel zal slechts worden uitgevoerd wanneer de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zullen de volgende acties van de regel niet worden uitgevoerd.
+Wanneer u een aangepaste JavaScript-code maakt, kunt u een [beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) uit uw handeling. De volgende actie in de regel zal slechts worden uitgevoerd wanneer de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zullen de volgende acties van de regel niet worden uitgevoerd.
 
 >[!NOTE]
 >
@@ -600,9 +606,9 @@ return new Promise(function(resolve, reject) {
 
 *HTML*
 
-Wanneer u een aangepaste HTML-codehandeling maakt, is een functie met de naam `onCustomCodeSuccess()` beschikbaar voor gebruik in uw aangepaste code. U kunt deze functie aanroepen om aan te geven dat de aangepaste code is voltooid en dat tags kunnen worden toegepast bij het uitvoeren van volgende handelingen. Aan de andere kant, als uw douanecode op één of andere manier ontbrak, kunt u `onCustomCodeFailure()` roepen. Hiermee wordt aangegeven dat tags de volgende handelingen uit die regel niet mogen uitvoeren.
+Bij het maken van een aangepaste HTML-codehandeling, een functie met de naam `onCustomCodeSuccess()` is beschikbaar voor gebruik in uw aangepaste code. U kunt deze functie aanroepen om aan te geven dat de aangepaste code is voltooid en dat tags kunnen worden toegepast bij het uitvoeren van volgende handelingen. Als uw aangepaste code echter op een of andere manier is mislukt, kunt u `onCustomCodeFailure()`. Hiermee wordt aangegeven dat tags de volgende handelingen uit die regel niet mogen uitvoeren.
 
-Een voorbeeld van een aangepaste HTML-codehandeling die de nieuwe callbacks gebruikt:
+Een voorbeeld van een actie van de HTML douanecode die nieuwe callbacks gebruikt:
 
 ```html
 <script>
@@ -642,7 +648,7 @@ Elke constante tekenreekswaarde waarnaar vervolgens in handelingen of voorwaarde
 
 U kunt aangepaste JavaScript invoeren in de gebruikersinterface door Editor openen te selecteren en code in te voegen in het editorvenster.
 
-Een terugkeerverklaring is noodzakelijk in het redacteursvenster om erop te wijzen welke waarde als waarde van het gegevenselement zou moeten worden gebruikt. Als een retourinstructie niet wordt opgenomen of als de waarde `null` of `undefined` wordt geretourneerd, wordt de standaardwaarde van het gegevenselement gebruikt als de waarde van het gegevenselement.
+Een terugkeerverklaring is noodzakelijk in het redacteursvenster om erop te wijzen welke waarde als waarde van het gegevenselement zou moeten worden gebruikt. Als een instructie return niet is opgenomen of als de waarde `null` of `undefined` wordt geretourneerd, wordt de standaardwaarde van het gegevenselement gebruikt als de waarde van het gegevenselement.
 
 **Voorbeeld:**
 
@@ -655,14 +661,14 @@ if (window.location.pathname == '/') {
 }
 ```
 
-Als het element van de douanecodegegevens als deel van een regeluitvoering wordt teruggewonnen, wordt een variabele genoemd `event` automatisch beschikbaar, die u van binnen uw douanecode kunt van verwijzingen voorzien. Het object `event` bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. De gemakkelijkste manier om te bepalen welke gebeurtenisgegevens beschikbaar zijn is `event` aan de console van binnen uw douanecode te registreren:
+Als het element van de douanecodegegevens als deel van een regeluitvoering wordt teruggewonnen, een genoemde variabele `event` wordt automatisch beschikbaar, waarnaar u kunt verwijzen in uw aangepaste code. De `event` Het object bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. De eenvoudigste manier om te bepalen welke gebeurtenisgegevens beschikbaar zijn, is door te loggen `event` naar de console vanuit uw aangepaste code:
 
 ```javascript
 console.log(event);
 return true;
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Zodra u begrijpt welke informatie onder de diverse regels beschikbaar is die uw gegevenselement kunnen gebruiken, kunt u het voor programmatic besluit binnen uw douanecode gebruiken of een stuk van het `event` voorwerp als waarde van het gegevenselement terugkeren.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Zodra u begrijpt welke informatie onder de diverse regels beschikbaar is die uw gegevenselement kunnen gebruiken, kunt u het voor programmatic besluit binnen uw douanecode gebruiken of een stuk van het terugkeren `event` -object als waarde van het gegevenselement.
 
 ### DOM-kenmerk
 
@@ -695,7 +701,7 @@ In het onderstaande voorbeeld bevat de markering een JavaScript-variabele met de
 
 Wanneer u het gegevenselement in de UI van de Inzameling van Gegevens creeert, verstrek eenvoudig de weg aan die variabele.
 
-Als u een gegevensverzamelingsobject gebruikt als onderdeel van uw gegevenslaag, gebruikt u puntnotatie in het pad om te verwijzen naar het object en de eigenschap die u in het gegevenselement wilt vastleggen, zoals `_myData.pageName` of `digitalData.pageName`, enzovoort.
+Als u een gegevensverzamelingsobject gebruikt als onderdeel van uw gegevenslaag, gebruikt u puntnotatie in het pad om te verwijzen naar het object en de eigenschap die u in het gegevenselement wilt vastleggen, zoals `_myData.pageName`, of `digitalData.pageName`, enzovoort.
 
 #### Voorbeeld:
 
@@ -705,13 +711,13 @@ Als u een gegevensverzamelingsobject gebruikt als onderdeel van uw gegevenslaag,
 
 Geef de naam van uw lokale opslagitem op in het veld Itemnaam lokale opslag.
 
-Lokale opslag biedt browsers een manier om informatie van pagina tot pagina op te slaan ([https://www.w3schools.com/html/html5\_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
+Met lokale opslag kunnen browsers gegevens van pagina tot pagina opslaan ([https://www.w3schools.com/html/html5\_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
 
-Gebruik het opgegeven veld om de waarde op te geven die u hebt gemaakt voor een lokaal opslagitem, zoals `lastProductViewed.`
+Gebruik het opgegeven veld om de waarde op te geven die u voor een lokaal opslagitem hebt gemaakt, zoals `lastProductViewed.`
 
 ### Samengevoegde objecten
 
-Selecteer meerdere gegevenselementen die elk een object leveren. Deze objecten worden diep (recursief) samengevoegd om een nieuw object te maken. De bronobjecten worden niet gewijzigd. Als een eigenschap op dezelfde locatie op meerdere bronobjecten wordt gevonden, wordt de waarde van het laatste object gebruikt. Als een waarde van een broneigenschap `undefined` is, wordt een waarde van een eerder bronobject niet overschreven. Als arrays op dezelfde locatie op meerdere bronobjecten worden gevonden, worden de arrays samengevoegd.
+Selecteer meerdere gegevenselementen die elk een object leveren. Deze objecten worden diep (recursief) samengevoegd om een nieuw object te maken. De bronobjecten worden niet gewijzigd. Als een eigenschap op dezelfde locatie op meerdere bronobjecten wordt gevonden, wordt de waarde van het laatste object gebruikt. Als de waarde van een broneigenschap `undefined`, wordt een waarde uit een eerder bronobject niet overschreven. Als arrays op dezelfde locatie op meerdere bronobjecten worden gevonden, worden de arrays samengevoegd.
 
 Stel bijvoorbeeld dat u een gegevenselement selecteert dat het volgende object biedt:
 
@@ -833,21 +839,21 @@ Enkele gangbare gebruiksgevallen zijn:
 
 ### Voorwaardelijke waarde
 
-Een omslag voor de [Vergelijking van de Waarde](#value-comparison-value-comparison) voorwaarde. Op basis van het resultaat van de vergelijking wordt een van de twee beschikbare waarden in het formulier geretourneerd. Kan hiermee &quot;if... Dan... Anders...&quot; scenario&#39;s zonder extra regels.
+Een omslag voor de [Waardevergelijking](#value-comparison-value-comparison) voorwaarde. Op basis van het resultaat van de vergelijking wordt een van de twee beschikbare waarden in het formulier geretourneerd. Kan hiermee &quot;if... Dan... Anders...&quot; scenario&#39;s zonder extra regels.
 
 ### Runtimeomgeving
 
 Hiermee kunt u een van de volgende variabelen selecteren:
 
-* Het stadium van het milieu - Keert `_satellite.environment.stage` terug om tussen ontwikkelings/het opvoeren/productiemilieu&#39;s te onderscheiden.
-* Bouwstijldatum van bibliotheek - Keert `turbine.buildInfo.buildDate` terug die de zelfde waarde zoals `_satellite.buildInfo.buildDate` bevat.
+* Het stadium van het Milieu - keert terug `_satellite.environment.stage` onderscheid te maken tussen ontwikkelings-/fasering-/productieomgevingen.
+* Builddatum bibliotheek - Retourneert `turbine.buildInfo.buildDate` die dezelfde waarde bevat als `_satellite.buildInfo.buildDate`.
 * Eigenschapnaam - Retourneert `_satellite.property.name` om de naam van de eigenschap Launch op te halen.
-* Eigenschap-id - retourneert `_satellite.property.id` om de id van de eigenschap Launch op te halen
-* Naam van regel - Retourneert `event.$rule.name` met daarin de naam van de uitgevoerde regel.
-* Regel ID - Keert `event.$rule.id` terug die identiteitskaart van de uitgevoerde regel bevatten.
+* Eigenschap-id - Retourneert `_satellite.property.id` om de id van de eigenschap Launch op te halen
+* Regelnaam - Retourneert `event.$rule.name` met de naam van de uitgevoerde regel.
+* Regel-id - Retourneert `event.$rule.id` die de id van de uitgevoerde regel bevat.
 * Gebeurtenistype - Retourneert `event.$type` met het type gebeurtenis dat de regel heeft geactiveerd.
-* De detaillading van de gebeurtenis - keert `event.detail` terug die de lading van een Gebeurtenis van de Douane of de Directe Regel van de Vraag bevatten.
-* Directe vraagherkenningsteken - Keert `event.identifier` terug die herkenningsteken van een Directe Regel van de Vraag bevatten.
+* Payload van gebeurtenisdetails - Retourneert `event.detail` die de lading van een Gebeurtenis van de Douane of de Directe Regel van de Vraag bevatten.
+* Direct call identifier - retourneert `event.identifier` die het herkenningsteken van een Directe Regel van de Vraag bevatten.
 
 ### Apparaatkenmerken
 
