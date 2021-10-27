@@ -4,20 +4,18 @@ solution: Experience Platform
 title: Overzicht van HTTP API Source Connector
 description: Leer hoe u streamingconnectors maakt om verbinding te maken met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 6122a704aff23c3ac762563628859e141e7bfa45
+source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
-# HTTP API-connector
-
->[!IMPORTANT]
->
->Toewijzingsfuncties voor de HTTP API-bron worden momenteel alleen ondersteund in de API en niet in de gebruikersinterface.
+# [!DNL HTTP API] connector
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+
+U kunt de [!DNL HTTP API] bronaansluiting om uw gegevens te streamen naar het Platform. De [!DNL HTTP API] bron wordt ondersteund door [!DNL Data Prep] functies, die u toestaan om het even welke niet XDM-Volgzame gegevens aan een XDM-Volgzame dataset in kaart te brengen.
 
 In de onderstaande documentatie vindt u informatie over het maken van een HTTP API-streamingconnector voor verbinding met [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
 
