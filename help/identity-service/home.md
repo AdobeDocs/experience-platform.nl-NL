@@ -5,9 +5,9 @@ title: Overzicht van identiteitsservice
 topic-legacy: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
+source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1747'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van 
 
 De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-Met [!DNL Identity Service] kunt u:
+Met [!DNL Identity Service]kunt u:
 
 - Zorg ervoor dat uw klanten door elke interactie een consistente, gepersonaliseerde en relevante ervaring ontvangen.
 - U kunt verschillende verschillende identiteiten uit verschillende bronnen samenstellen en een uitgebreide weergave van uw klanten maken.
@@ -26,14 +26,14 @@ Met [!DNL Identity Service] kunt u:
 
 ## Aan de slag
 
-Voordat u naar de details van [!DNL Identity Service] gaat, volgt een korte samenvatting van de belangrijkste termen:
+Voordat u in de details van [!DNL Identity Service]Hier volgt een korte samenvatting van de belangrijkste termen:
 
 | Term | Definitie |
 | --- | --- |
 | Identiteit | Een identiteit is gegevens die uniek zijn voor een entiteit, doorgaans een individuele persoon. Een identiteit, zoals een login identiteitskaart, ECID, of loyaliteitsidentiteitskaart, wordt ook bedoeld als &quot;bekende identiteit&quot;. |
-| ECID | Experience Cloud ID (ECID) is een naamruimte voor gedeelde identiteit die wordt gebruikt in Experience Platform- en Adobe Experience Cloud-toepassingen. ECID verstrekt een stichting voor klantenidentiteit en als primaire identiteitskaart voor apparaten en als basisknoop voor identiteitsgrafieken gebruikt. Zie het [ECID-overzicht](./ecid.md) voor meer informatie. |
-| Naamruimte identiteit | Een naamruimte voor identiteiten maakt onderscheid tussen de context of het type van een identiteit. Een identiteit onderscheidt bijvoorbeeld &quot;name<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken en de context voor identiteitswaarden te verstrekken. Hierdoor kunt u bepalen dat twee [!DNL Profile] fragmenten die verschillende primaire id&#39;s bevatten, maar dezelfde waarde voor de naamruimte `email` hebben, in feite hetzelfde individu zijn. Zie [Naamruimte overzicht](./namespaces.md) voor meer informatie. |
-| Identiteitsgrafiek | Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten, die u toestaan om te visualiseren en beter te begrijpen welke klantenidentiteiten samen worden vastgemaakt, en hoe. Zie de zelfstudie op [de kijker van de identiteitsgrafiek](./ui/identity-graph-viewer.md) voor meer informatie. |
+| ECID | Experience Cloud ID (ECID) is een naamruimte voor gedeelde identiteit die wordt gebruikt in Experience Platform- en Adobe Experience Cloud-toepassingen. ECID verstrekt een stichting voor klantenidentiteit en als primaire identiteitskaart voor apparaten en als basisknoop voor identiteitsgrafieken gebruikt. Zie de [ECID-overzicht](./ecid.md) voor meer informatie . |
+| Naamruimte identiteit | Een naamruimte voor identiteiten maakt onderscheid tussen de context of het type van een identiteit. Een identiteit onderscheidt bijvoorbeeld &quot;name&quot;<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken en de context voor identiteitswaarden te verstrekken. Zo kunt u bepalen dat twee [!DNL Profile] fragmenten die verschillende primaire id&#39;s bevatten, maar dezelfde waarde voor de componenten `email` naamruimte van identiteit is in feite hetzelfde individu. Zie de [Overzicht van naamruimte in identiteit](./namespaces.md) voor meer informatie . |
+| Identiteitsgrafiek | Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten, die u toestaan om te visualiseren en beter te begrijpen welke klantenidentiteiten samen worden vastgemaakt, en hoe. Zie de zelfstudie aan [de viewer voor identiteitsgrafieken gebruiken](./ui/identity-graph-viewer.md) voor meer informatie . |
 | Persoonlijk identificeerbare informatie (PII) | PII is informatie die een klant, zoals een e-mailadres of een telefoonaantal direct kan identificeren. PII-waarden worden vaak gebruikt om overeen te komen. de meervoudige identiteit van een klant op verschillende systemen. |
 | Onbekende of anonieme identiteiten | Onbekende of anonieme identiteiten zijn indicatoren die apparaten isoleren zonder de werkelijke persoon te identificeren die het apparaat gebruikt. Onbekende en anonieme identiteiten zijn onder andere het IP-adres en de cookie-id van een bezoeker. Hoewel onbekende en anonieme identiteiten gedragsgegevens kunnen verstrekken, zijn zij beperkt tot een klant hun PII levert. |
 
@@ -47,16 +47,16 @@ Bekijk een dagelijks voorbeeld van de relatie van een consument met je merk:
 - Op dit punt wordt de activiteit van Mary weergegeven als twee aparte profielen:
    - Haar aanmelding voor e-commerce
    - Haar tabletapparaat, mogelijk geïdentificeerd door apparaat-id
-- Mary hervat later haar tabletsessie en stuurt haar e-mailadres wanneer ze zich abonneert op uw nieuwsbrief. Als u dit doet, wordt door streaming opname een nieuwe identiteit toegevoegd als recordgegevens in haar profiel. Als gevolg hiervan koppelt [!DNL Identity Service] nu de tabletapparaatactiviteit van Mary aan haar e-commerce accountgeschiedenis.
+- Mary hervat later haar tabletsessie en stuurt haar e-mailadres wanneer ze zich abonneert op uw nieuwsbrief. Als u dit doet, wordt door streaming opname een nieuwe identiteit toegevoegd als recordgegevens in haar profiel. Dientengevolge [!DNL Identity Service] relateert nu Mary&#39;s tabletapparaatactiviteit met haar e-commerce rekeninggeschiedenis.
 - Met de volgende klik op haar tablet zou uw doelinhoud het volledige profiel en de geschiedenis van Mary kunnen weerspiegelen, in plaats van slechts een tablet die door een onbekende winkelier wordt gebruikt.
 
 ![Identiteitskoppeling op Platform](./images/identity-service-stitching.png)
 
-In feite kunt u met [!DNL Identity Service] een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid. De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt, worden gebruikt door Real-time klantprofiel om een volledig beeld van een klant en hun interactie met uw merk te maken. Voor meer informatie, zie [Overzicht van het Profiel van de Klant in real time](../profile/home.md).
+Hoofdzakelijk [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid. De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt, worden gebruikt door het Real-time Klantprofiel om een volledig beeld van een klant en hun interactie met uw merk te maken. Zie voor meer informatie de [Overzicht van het realtime klantprofiel](../profile/home.md).
 
 ### Gebruiksscenario’s
 
-Voorbeelden van [!DNL Identity Service]-implementaties zijn:
+Voorbeelden van [!DNL Identity Service] de implementatie omvat :
 
 - Een telecombedrijf kan zich op de waarde van het &quot;telefoonaantal&quot;baseren, waar een telefoonaantal naar het zelfde individu van belang in zowel off-line als online gegevensreeksen zou verwijzen.
 - Een detailhandelsbedrijf kan &quot;e-mailadres&quot; in offlinegegevenssets en ECID in online gegevenssets gebruiken vanwege het hoge percentage anonieme bezoekers.
@@ -70,19 +70,19 @@ Als je iemand vraagt: &quot;Wat is je id?&quot; zonder verdere context zou het v
 
 Uw klanten kunnen met uw merk door een combinatie online en off-line kanalen in wisselwerking staan, resulterend in de uitdaging van hoe te om die gefragmenteerde interactie in één enkele klantenidentiteit te verzoenen.
 
-Begrijpen van uw klant op meerdere apparaten en kanalen begint door hen in elk kanaal te erkennen. Platform bereikt dit door naamruimten te gebruiken. Een naamruimte voor identiteit is een id, zoals E-mail of Telefoon, die wordt gebruikt om aanvullende context aan de identiteit van de klant te bieden. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken of te koppelen en context voor identiteitswaarden te verstrekken. Zie [Naamruimte overzicht](./namespaces.md) voor meer informatie.
+Begrijpen van uw klant op meerdere apparaten en kanalen begint door hen in elk kanaal te erkennen. Platform bereikt dit door naamruimten te gebruiken. Een naamruimte voor identiteit is een id, zoals E-mail of Telefoon, die wordt gebruikt om aanvullende context aan de identiteit van de klant te bieden. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken of te koppelen en context voor identiteitswaarden te verstrekken. Zie de [Overzicht van naamruimte in identiteit](./namespaces.md) voor meer informatie .
 
 ## Identiteitsgrafieken
 
-Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteitsnamespaces, toestaand u om te visualiseren en beter te begrijpen welke klantenidentiteiten samen, en hoe worden vastgemaakt. Zie de zelfstudie op [de kijker van de identiteitsgrafiek](./ui/identity-graph-viewer.md) voor meer informatie.
+Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteitsnamespaces, toestaand u om te visualiseren en beter te begrijpen welke klantenidentiteiten samen, en hoe worden vastgemaakt. Zie de zelfstudie aan [de viewer voor identiteitsgrafieken gebruiken](./ui/identity-graph-viewer.md) voor meer informatie .
 
-De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken. Het behandelt de drie mogelijkheden van identiteitsinzameling, identiteitsgrafieken, en API. Het beschrijft ook hoe deterministische en probabilistische algoritmen worden gebruikt om privé identiteitsgrafieken te construeren, en bespreekt hun rol samen met derdegrafieken en de de coOp Grafiek van de Dienst van de Identiteit van Adobe Experience Platform.
+De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-## Identiteitsgegevens opgeven voor [!DNL Identity Service]
+## Identiteitsgegevens leveren aan [!DNL Identity Service]
 
-In deze sectie wordt beschreven hoe gegevens die aan Adobe Experience Platform worden verstrekt, worden verwerkt voordat ze door [!DNL Identity Service] worden gebruikt om een identiteitsgrafiek voor elke klant te maken.
+In deze sectie wordt beschreven hoe aan Adobe Experience Platform verstrekte gegevens worden verwerkt voordat ze door [!DNL Identity Service] om een identiteitsgrafiek voor elke klant te bouwen.
 
 ### Beslissen over identiteitsvelden
 
@@ -94,28 +94,28 @@ Afhankelijk van uw strategie van de de gegevensinzameling van ondernemingsgegeve
 
 ### Extra naamruimten maken
 
-Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u mogelijk extra naamruimten maken om uw identiteiten correct te categoriseren. Zie de sectie over [het weergeven en maken van naamruimten voor uw organisatie](./namespaces.md) in het overzicht van naamruimte voor identiteiten voor meer informatie.
+Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u mogelijk extra naamruimten maken om uw identiteiten correct te categoriseren. Zie de sectie over [weergeven en maken van naamruimten voor uw organisatie](./namespaces.md) in het naamruimteoverzicht van de identiteit.
 
 >[!NOTE]
 >
 >Naamruimten zijn een kwalificatie voor identiteiten. Als er eenmaal een naamruimte is gemaakt, kan deze daarom niet worden verwijderd.
 
-### Inclusief identiteitsgegevens in [!DNL Experience Data Model] (XDM)
+### Identiteitsgegevens opnemen in [!DNL Experience Data Model] (XDM)
 
-Als gestandaardiseerd kader waarmee [!DNL Platform] klantgegevens ordent, [!DNL Experience Data Model] (XDM) staat gegevens toe om over Experience Platform en andere diensten worden gedeeld en begrepen die met [!DNL Platform] in wisselwerking staan. Zie [XDM System overview](../xdm/home.md) voor meer informatie.
+Als het gestandaardiseerde kader waardoor [!DNL Platform] klantgegevens ordent; [!DNL Experience Data Model] (XDM) staat gegevens toe om over Experience Platform en andere diensten worden gedeeld en worden begrepen die met interactie [!DNL Platform]. Zie voor meer informatie de [XDM System, overzicht](../xdm/home.md).
 
 Zowel de verslagen als de tijdreeksregelingen verstrekken de middelen om identiteitsgegevens te omvatten. Terwijl gegevens worden opgenomen, maakt de identiteitsgrafiek nieuwe relaties tussen gegevensfragmenten van verschillende naamruimten als deze gemeenschappelijke identiteitsgegevens delen.
 
 ### XDM-velden als identiteit markeren
 
-Om het even welk gebied van type `string` in schema&#39;s die of verslag of tijdreeks XDM klassen uitvoeren kan als identiteitsgebied worden geëtiketteerd. Als gevolg hiervan worden alle gegevens die in dat veld worden ingevoerd, beschouwd als identiteitsgegevens.
+Willekeurig tekstveld `string` in schema&#39;s die of verslag of tijdreeks XDM klassen uitvoeren kunnen als identiteitsgebied worden geëtiketteerd. Als gevolg hiervan worden alle gegevens die in dat veld worden ingevoerd, beschouwd als identiteitsgegevens.
 
 >[!NOTE]
 >
 >Array- en toewijzingsvelden worden niet ondersteund en kunnen niet worden gemarkeerd en gelabeld als identiteitsvelden.
 
 Identiteitsvelden maken het ook mogelijk om identiteiten te koppelen als ze gemeenschappelijke PII-gegevens delen.
-Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te etiketteren, [!DNL Identity Service] automatisch verhoudingen met de andere individuen die worden gevonden om het zelfde telefoonaantal te gebruiken.
+Door bijvoorbeeld velden met telefoonnummers als identiteitsvelden te labelen, [!DNL Identity Service] past automatisch relaties met andere personen toe die hetzelfde telefoonnummer gebruiken.
 
 >[!NOTE]
 >
@@ -123,24 +123,24 @@ Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te
 
 ### Een gegevensset configureren voor [!DNL Identity Service]
 
-Tijdens het streamingingingproces haalt [!DNL Identity Service ]automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Maar voordat gegevens kunnen worden ingevoerd, moet [!DNL Identity Service] zijn ingeschakeld. Zie de zelfstudie over [het configureren van een gegevensset voor realtime klantprofiel en identiteitsservice met behulp van API&#39;s](../profile/tutorials/dataset-configuration.md) voor meer informatie.
+Tijdens het streamingingproces [!DNL Identity Service ]haalt automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Voordat gegevens kunnen worden ingevoerd, moet deze echter zijn ingeschakeld voor [!DNL Identity Service]. Zie de zelfstudie aan  [een Dataset configureren voor realtime gebruikersprofiel en identiteitsservice met behulp van API&#39;s](../profile/tutorials/dataset-configuration.md) voor meer informatie .
 
-### Gegevens opnemen in [!DNL Identity Service]
+### Gegevens samenvoegen tot [!DNL Identity Service]
 
-[!DNL Identity Service] verbruikt XDM-compatibele gegevens die naar het Experience Platform worden verzonden door  [batch-](../ingestion/batch-ingestion/overview.md) ingestionof  [streaming opname](../ingestion/streaming-ingestion/overview.md).
+[!DNL Identity Service] verbruikt XDM volgzame gegevens die naar Experience Platform worden verzonden of door [batch-opname](../ingestion/batch-ingestion/overview.md) of [streaming opname](../ingestion/streaming-ingestion/overview.md).
 
 De volgende video is bedoeld om uw begrip van de Dienst van de Identiteit te steunen. In deze video ziet u hoe u gegevensvelden kunt labelen als identiteiten, identiteitsgegevens kunt invoeren en vervolgens kunt controleren of de gegevens zijn omgezet in de persoonlijke grafiek van de Adobe Experience Platform Identity Service.
 
 >[!WARNING]
 >
->De interface [!DNL Platform] die in de volgende video wordt getoond is verouderd. Raadpleeg de documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+>De [!DNL Platform] De interface die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## Gegevensbeheer
 
-Adobe Experience Platform is gemaakt met het oog op privacy en bevat een gegevensbeheerframework om PII-gegevens van uw klanten te beschermen. Identiteitsgegevens onder de naamruimte &quot;email&quot; of &quot;phone&quot; worden standaard gecodeerd, maar om ervoor te zorgen dat vertrouwelijke gegevens worden gecodeerd voordat deze worden voortgezet, kunnen labels voor gegevensgebruik worden toegepast op gegevens die worden ingevoerd of zodra deze worden ontvangen in [!DNL Platform]. Lees voor meer informatie het [Overzicht van gegevensbeheer](../data-governance/home.md).
+Adobe Experience Platform is gemaakt met het oog op privacy en bevat een gegevensbeheerframework om PII-gegevens van uw klanten te beschermen. Identiteitsgegevens in de naamruimte &quot;email&quot; of &quot;phone&quot; zijn standaard gecodeerd, maar om ervoor te zorgen dat vertrouwelijke gegevens worden gecodeerd voordat deze worden voortgezet, kunnen labels voor gegevensgebruik worden toegepast op gegevens die worden ingevoerd of zodra deze worden binnengekomen [!DNL Platform]. Lees voor meer informatie de [Overzicht van gegevensbeheer](../data-governance/home.md).
 
 ## Volgende stappen
 
-Nu u de belangrijkste concepten van [!DNL Identity Service] en zijn rol binnen Experience Platform begrijpt, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend [[!DNL Identity Service API]](./api/getting-started.md).
+Nu begrijpt u de belangrijkste concepten van [!DNL Identity Service] en zijn rol binnen Experience Platform, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend [[!DNL Identity Service API]](./api/getting-started.md).
