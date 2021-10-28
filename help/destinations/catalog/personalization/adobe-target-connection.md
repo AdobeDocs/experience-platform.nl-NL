@@ -2,13 +2,13 @@
 keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelbestemming adobe;
 title: Adobe Target-verbinding (bèta)
 description: Adobe Target is een toepassing die realtime, 1:1 en door AI aangedreven personalisatie en experimenten biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
+source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '453'
+ht-degree: 0%
 
 ---
-
 
 # Adobe Target-verbinding (bèta) {#adobe-target-connection}
 
@@ -24,11 +24,11 @@ Adobe Target is een personalisatieverbinding in Adobe Experience Platform.
 
 ## Vereisten {#prerequisites}
 
-Deze integratie wordt aangedreven door [Adobe Experience Platform Web SDK](../../../edge/home.md). U moet deze SDK gebruiken om deze bestemming te gebruiken.
+Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](../../../edge/home.md). U moet deze SDK gebruiken om deze bestemming te gebruiken.
 
 ## Exporttype {#export-type}
 
-**Profielverzoek**  - u vraagt om alle segmenten die in de Adobe Target-bestemming zijn toegewezen voor één profiel.
+**Profielaanvraag** - u vraagt om alle segmenten die in de Adobe Target-bestemming zijn toegewezen voor één profiel.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -38,21 +38,27 @@ Een huisverhuurbedrijf en verkoopbedrijf willen hun homepage met een banner pers
 
 ## Verbinden met de bestemming {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_datastream"
+>title="Informatie over gegevensstroom-id&#39;s"
+>abstract="Met deze optie bepaalt u in welke gegevensverzamelingsgegevensstroom de segmenten worden opgenomen in het antwoord op de pagina. In het vervolgkeuzemenu worden alleen gegevensstromen weergegeven waarvoor de doelconfiguratie is ingeschakeld. U moet een gegevensstroom vormen alvorens u uw bestemming kunt vormen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Leer hoe u een gegevensstroom configureert."
+
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 Adobe Experience Platform maakt automatisch verbinding met het Adobe Target-exemplaar van uw bedrijf. Er is geen verificatie vereist.
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **Naam**: Vul de voorkeursnaam voor dit doel in.
-* **Omschrijving**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
-* **DataStream-id**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten in de reactie op de pagina zullen worden omvat. In het vervolgkeuzemenu worden alleen gegevensstromen weergegeven waarvoor de doelconfiguratie is ingeschakeld. Zie [Een gegevensstroom configureren](../../../edge/fundamentals/datastreams.md) voor meer informatie.
+* **Beschrijving**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
+* **DataStream-id**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten in de reactie op de pagina zullen worden omvat. In het vervolgkeuzemenu worden alleen gegevensstromen weergegeven waarvoor de doelconfiguratie is ingeschakeld. Zie [Een gegevensstroom configureren](../../../edge/fundamentals/datastreams.md) voor meer informatie .
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Lees [Activate profielen en segmenten aan profiel verzoekbestemmingen](../../ui/activate-profile-request-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../ui/activate-profile-request-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -60,4 +66,4 @@ Adobe Target leest profielgegevens van het Adobe Experience Platform Edge Networ
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Lees voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt het [Overzicht gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
