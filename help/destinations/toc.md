@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -153,12 +153,14 @@ ht-degree: 1%
       * [Server- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
       * [Berichtindeling](./destination-sdk/message-format.md)
       * [Metagegevensbeheer voor het publiek](./destination-sdk/audience-metadata-management.md)
-      * [Verificatieconfiguratie](./destination-sdk/credentials-configuration.md)
-      * [OAuth 2-verificatie](./destination-sdk/oauth2-authentication.md)
+      * Verificatie {#authentication}
+         * [Verificatieconfiguratie](./destination-sdk/authentication-configuration.md)
+         * [OAuth 2-verificatie](./destination-sdk/oauth2-authentication.md)
       * Gereedschappen voor ontwikkelaars {#developer-tools}
          * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/create-template.md)
          * [De doelconfiguratie testen](./destination-sdk/test-destination.md)
-   * API-referentie {#api-reference}
+   * API-bewerkingen {#api}
+      * [Referentie voor de doel-SDK (Authoring bestemming)-API](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [API-bewerkingen voor bestemmingspunten](./destination-sdk/destination-configuration-api.md)
       * [API-bewerkingen voor eindpunt doelserver](./destination-sdk/destination-server-api.md)
       * [API-bewerkingen voor het eindpunt van metagegevens van het publiek](./destination-sdk/audience-metadata-api.md)

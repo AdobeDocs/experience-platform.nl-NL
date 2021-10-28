@@ -1,7 +1,8 @@
 ---
 description: Op deze pagina worden alle API-bewerkingen beschreven die u kunt uitvoeren met het API-eindpunt `/authoring/credentials`.
 title: API-bewerkingen van het eindpunt Credentials
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 2%
@@ -12,17 +13,17 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**:  `platform.adobe.io/data/core/activation/authoring/credentials`
+>**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/credentials`.
+Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/credentials` API-eindpunt.
 
-## Wanneer wordt het API-eindpunt `/credentials` gebruikt {#when-to-use}
+## Wanneer gebruikt u de `/credentials` API-eindpunt {#when-to-use}
 
 >[!IMPORTANT]
 >
->In de meeste gevallen hoeft u *niet* het API-eindpunt `/credentials` te gebruiken. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via de `customerAuthenticationConfigurations` parameters van het `/destinations` eindpunt vormen. Lees [Credentials configuration](./credentials-configuration.md) voor meer informatie.
+>In de meeste gevallen *niet* de `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt. Lezen [Verificatieconfiguratie](./authentication-configuration.md#when-to-use) voor meer informatie .
 
-Gebruik dit API-eindpunt en selecteer `PLATFORM_AUTHENTICATION` in de [doelconfiguratie](./destination-configuration.md#destination-delivery) als er een wereldwijd verificatiesysteem tussen Adobe en uw bestemming is en de [!DNL Platform]-klant geen verificatiegegevens hoeft op te geven om verbinding te maken met uw bestemming. In dit geval moet u een aanmeldingsobject maken met het API-eindpunt `/credentials`.
+Gebruik dit API-eindpunt en selecteer `PLATFORM_AUTHENTICATION` in de [doelconfiguratie](./destination-configuration.md#destination-delivery) als er een globaal authentificatiesysteem tussen Adobe en uw bestemming en is [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een object credentials maken met de opdracht `/credentials` API-eindpunt.
 
 <!--
 
@@ -145,11 +146,11 @@ The sections below list out the necessary parameters for each authentication typ
 
 ## Aan de slag met API-bewerkingen voor aanmeldingsconfiguratie {#get-started}
 
-Alvorens verder te gaan, te herzien [begonnen gids](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmingsauteur en vereiste kopballen te verkrijgen.
+Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
 
 ## Een verificatieconfiguratie maken {#create}
 
-U kunt een nieuwe geloofsgeloofsconfiguratie tot stand brengen door een verzoek van de POST aan het `/authoring/credentials` eindpunt te doen.
+U kunt een nieuwe geloofsgeloofsconfiguratie tot stand brengen door een verzoek van de POST aan `/authoring/credentials` eindpunt.
 
 **API-indeling**
 
@@ -160,7 +161,7 @@ POST /authoring/credentials
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe geloofsgeloofsconfiguratie, die door de parameters wordt gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters die door het `/authoring/credentials` eindpunt worden goedgekeurd. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
+Het volgende verzoek leidt tot een nieuwe geloofsgeloofsconfiguratie, die door de parameters wordt gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters die door `/authoring/credentials` eindpunt. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -225,7 +226,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Configuraties van lijstreferenties {#retrieve-list}
 
-U kunt een lijst van alle geloofsbrieven configuraties voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/authoring/credentials` eindpunt te doen.
+U kunt een lijst van alle geloofsbrieven configuraties voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te dienen `/authoring/credentials` eindpunt.
 
 **API-indeling**
 
@@ -248,7 +249,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Antwoord**
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van aanmeldingsconfiguraties waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Één `instanceId` beantwoordt aan het malplaatje voor één geloofsgeloofsconfiguratie. De reactie is afgebroken voor de beknoptheid.
+De volgende reactie retourneert HTTP-status 200 met een lijst van aanmeldingsconfiguraties waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `instanceId` komt overeen met de sjabloon voor één aanmeldingsconfiguratie. De reactie is afgebroken voor de beknoptheid.
 
 ```json
 {
@@ -275,7 +276,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van aanmeldingscon
 
 ## Een bestaande aanmeldingsconfiguratie bijwerken {#update}
 
-U kunt een bestaande geloofsgeloofsconfiguratie bijwerken door een verzoek van de PUT aan het `/authoring/credentials` eindpunt en het verstrekken van instanceID van de geloofsbrieven configuratie te doen u wilt bijwerken. In het lichaam van de vraag, verstrek de bijgewerkte geloofsgeloofsconfiguratie.
+U kunt een bestaande geloofsgeloofsconfiguratie bijwerken door een verzoek van de PUT aan `/authoring/credentials` eindpunt en het verstrekken van instanceID van de geloofsbrieven configuratie wilt u bijwerken. In het lichaam van de vraag, verstrek de bijgewerkte geloofsgeloofsconfiguratie.
 
 **API-indeling**
 
@@ -323,7 +324,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## Haal een specifieke geloofsbrieven configuratie terug {#get}
 
-U kunt gedetailleerde informatie over een specifieke geloofsbrieven configuratie terugwinnen door een verzoek van de GET tot het `/authoring/credentials` eindpunt te richten en instantieidentiteitskaart van de geloofsbrieven te verstrekken configuratie u wilt bijwerken.
+U kunt gedetailleerde informatie over een specifieke geloofsbrieven configuratie terugwinnen door een verzoek van de GET aan `/authoring/credentials` eindpunt en het verstrekken van instanceID van de geloofsbrieven configuratie wilt u bijwerken.
 
 **API-indeling**
 
@@ -371,7 +372,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Een specifieke aanmeldingsconfiguratie verwijderen {#delete}
 
-U kunt de gespecificeerde geloofsgeloofsconfiguratie schrappen door een verzoek van DELETE aan het `/authoring/credentials` eindpunt te doen en identiteitskaart van de geloofsgeloofsconfiguratie te verstrekken u wenst om in de verzoekweg te schrappen.
+U kunt de opgegeven aanmeldingsconfiguratie verwijderen door een DELETE-aanvraag in te dienen bij de `/authoring/credentials` eindpunt en het verstrekken van identiteitskaart van de geloofsbrieven configuratie u wenst om in de verzoekweg te schrappen.
 
 **API-indeling**
 
@@ -381,7 +382,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | `id` van de geloofsbrieven configuratie u wilt schrappen. |
+| `{INSTANCE_ID}` | De `id` van de aanmeldingsconfiguratie die u wilt verwijderen. |
 
 **Verzoek**
 
@@ -399,8 +400,8 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling
 
-De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Raadpleeg [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [headerfouten aanvragen](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de handleiding voor het oplossen van Platforms.
+De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Zie [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [aanvragen, koptekstfouten](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
 
 ## Volgende stappen
 
-Na het lezen van dit document, weet u nu wanneer om het geloofsverbindendtepunt te gebruiken en hoe te opstelling een geloofsgeloofsconfiguratie gebruikend het `/authoring/credentials` API eindpunt of het `/authoring/destinations` eindpunt. Lees [hoe te om Doel SDK te gebruiken om uw bestemming te vormen](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Na het lezen van dit document weet u nu wanneer om het geloofsverbindendtepunt te gebruiken en hoe te opstelling een geloofsgeloofsconfiguratie gebruikend `/authoring/credentials` API-eindpunt of de `/authoring/destinations` eindpunt. Lezen [hoe te om Doel SDK te gebruiken om uw bestemming te vormen](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

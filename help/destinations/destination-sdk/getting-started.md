@@ -1,9 +1,10 @@
 ---
 description: Op deze pagina wordt beschreven hoe u de Adobe Experience Platform Destination SDK kunt verifiëren en gebruiken. Het omvat instructies op hoe te om de authentificatiegeloofsbrieven van de Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings auteurstoegang te verkrijgen.
 title: Aan de slag met de SDK van Doel
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '538'
 ht-degree: 2%
 
 ---
@@ -16,13 +17,13 @@ Op deze pagina wordt beschreven hoe u de Adobe Experience Platform Destination S
 
 ## Terminologie {#terminology}
 
-Deze handleiding gebruikt Platform-specifieke concepten, zoals IMS-organisatie en sandboxen. Raadpleeg [Experience Platform glossary](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) voor definities van deze en andere termen.
+Deze handleiding gebruikt Platform-specifieke concepten, zoals IMS-organisatie en sandboxen. Raadpleeg de [Woordenlijst Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) voor definities van deze en andere termen.
 
 ## Verkrijg vereiste authentificatiegeloofsbrieven {#obtain-authentication-credentials}
 
-De bestemming SDK gebruikt [Adobe I/O](https://www.adobe.io/) gateway voor authentificatie. Om API vraag aan de eindpunten van SDK van de Bestemming te maken, moet u bepaalde kopballen in uw API vraag verstrekken. Werk met het team van de Uitwisseling van de Adobe aan opstellingsauthentificatie voor u aan [de Console van de Ontwikkelaar ](http://console.adobe.io/) van de Adobe.
+De doel-SDK gebruikt de [Adobe I/O](https://www.adobe.io/) gateway voor authentificatie. Om API vraag aan de eindpunten van SDK van de Bestemming te maken, moet u bepaalde kopballen in uw API vraag verstrekken. Werk met het team van de Uitwisseling van de Adobe aan opstellingsauthentificatie voor u aan [Adobe Developer Console](http://console.adobe.io/).
 
-Om met succes vraag aan de eindpunten van SDK API van de Bestemming te maken, volg [Experience Platform authentificatiezelfstudie](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Start de zelfstudie vanuit de stap &quot;[Genereer een API-sleutel, IMS Org-id en clientgeheim](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. Het team van de Uitwisseling van Adobe zal de vorige stappen voor u behandelen. Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk van de vereiste kopballen in de vraag van SDK API van de Bestemming, zoals hieronder getoond:
+Om met succes vraag aan de eindpunten van SDK API van de Bestemming te maken, volg [Zelfstudie over verificatie van Experience Platforms](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). De zelfstudie starten via het menu &quot;[Een API-sleutel, IMS Org ID en een clientgeheim genereren](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; stap. Het team van de Uitwisseling van Adobe zal de vorige stappen voor u behandelen. Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk van de vereiste kopballen in de vraag van SDK API van de Bestemming, zoals hieronder getoond:
 
 * `x-api-key: {API_KEY}`, ook wel client-id genoemd
 * `x-gw-ims-org-id: {IMS_ORG}`, ook bekend als organisatie-id
@@ -55,7 +56,7 @@ Het team van de Uitwisseling van Adobe voorziet u van uw zandbaknaam, die u in v
 
 ## Rolgebaseerde toegangscontrole (RBAC) {#rbac}
 
-Om de eindpunten van SDK API van de Bestemming te gebruiken die in [verwijzingsdocumentatie](./configuration-options.md) worden beschreven, hebt u **[!UICONTROL Destination Authoring]** toegangsbeheertoestemming nodig. Werk met het team van de Uitwisseling van de Adobe om deze toestemming te krijgen die aan u in [Adobe Admin Console](https://adminconsole.adobe.com/) wordt toegewezen.
+De eindpunten van de SDK-API voor doelen gebruiken die worden beschreven in het dialoogvenster [referentiedocumentatie](./configuration-options.md), hebt u de **[!UICONTROL Destination Authoring]** toegangsbeheermachtiging. Werk met het team van de Uitwisseling van Adobe om deze toestemming te krijgen die aan u binnen wordt toegewezen [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Machtiging voor ontwerpen van bestemming](./assets/destination-authoring-permission.png)
 
@@ -72,4 +73,6 @@ Lees voor meer informatie de volgende documenten van het Toegangsbeheer van het 
 
 ## Volgende stappen {#next-steps}
 
-Door de stappen in dit artikel te volgen, hebt u authentificatiegeloofsbrieven aan Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings authoring toegangscontrole verkregen. Vervolgens kunt u een bestemming instellen met de SDK van Doel. Lees [Gebruik de Doel SDK om uw bestemming](./configure-destination-instructions.md) voor volgende stappen te vormen.
+Door de stappen in dit artikel te volgen, hebt u authentificatiegeloofsbrieven aan Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings authoring toegangscontrole verkregen. Vervolgens kunt u een bestemming instellen met de SDK van Doel.
+* Lezen [Doel SDK gebruiken om uw bestemming te configureren](./configure-destination-instructions.md) voor de volgende stappen.
+* Voor alle bewerkingen raadpleegt u de [API-documentatie voor doelontwerp](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).

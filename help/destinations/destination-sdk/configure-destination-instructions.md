@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend de SDK van de Bestemming.
 title: Hoe te om Bestemming SDK te gebruiken om een het stromen bestemming te vormen
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bes
 Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"authenticationRule": "PLATFORM_AUTHENTICATION"` in de bestemmingsconfiguratie hierboven, kunt u opstellingsauthentificatie voor uw bestemming door te gebruiken `/destination` of de `/credentials` eindpunt.
 
 * **Meest voorkomende gevallen**: Als u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in de bestemmingsconfiguratie en uw bestemming steunt de OAuth 2 authentificatiemethode, gelezen [OAuth 2-verificatie](./oauth2-authentication.md).
-* Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"`, zie [Credentials configuratie](./credentials-configuration.md) in de referentiedocumentatie.
+* Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"`, verwijst u naar de [Verificatieconfiguratie](./authentication-configuration.md#when-to-use).
 
 ## Stap 6: Doel testen {#test-destination}
 
