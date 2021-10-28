@@ -5,9 +5,9 @@ title: 'Edge Segmentation met de API '
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag a
 | Meerdere inkomende treffers binnen een tijdprofiel van 24 uur | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen die binnen een tijdsvenster van 24 uur optreden. | Personen die de homepage hebben bezocht **of** heeft de laatste 24 uur de afhandelingspagina bezocht. |
 | Meerdere gebeurtenissen met een profiel binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en meerdere gebeurtenissen die binnen een tijdsvenster van 24 uur optreden. | Personen uit de VS die de homepage hebben bezocht **en** heeft de laatste 24 uur de afhandelingspagina bezocht. |
 
-{style=&quot;table-layout:auto&quot;}
+Daarnaast wordt het segment **moet** gebonden zijn aan een samenvoegbeleid dat op rand actief is. Lees voor meer informatie over samenvoegingsbeleid de [handleiding voor samenvoegbeleid](../../profile/api/merge-policies.md).
 
 ## Alle segmenten ophalen die zijn ingeschakeld voor segmentatie van randen
 
