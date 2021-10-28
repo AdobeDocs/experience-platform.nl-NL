@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
+source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '458'
 ht-degree: 2%
 
 ---
@@ -12,12 +12,30 @@ ht-degree: 2%
 
 **Releasedatum: 27 oktober 2021**
 
+## Updates voor Experience Platform
+
+Updates voor Experience Platform.
+
+### [Gebruikersinterface] {#ui}
+
+De gebruikersinterface is bijgewerkt met de volgende wijzigingen:
+
+| Functie | Beschrijving |
+| --- | --- |
+| Donker thema | Met de themakeuze Donker schakelt u tussen lichte en donkere thema&#39;s in de interface van het Platform. De switch staat in het gebruikersprofiel onder gebruikersnaam en e-mail. |
+| Linkernavigatie in-/uitschakelen | Met de verbeterde navigatieknop boven aan de toepassingskop kunt u het menu met de mogelijkheden van uw Experience Platform weergeven of verbergen. Het systeem onthoudt uw laatste selectie en geeft alleen de mogelijkheden weer waartoe u toegang hebt. |
+| Toegangszichtbaarheid | Op de linkernavigatiebalk ziet u alleen de functies waartoe u toegang hebt. In eerdere versies van Adobe Experience Platform waren niet-beschikbare items zichtbaar, zelfs als u deze niet kon openen. |
+
+Zie de [UI-gids voor Platform](../../landing/ui-guide.md) voor meer informatie.
+
+## Updates voor bestaande functies
+
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [Bronnen](#sources)
 
-## [!DNL Data Prep] {#data-prep}
+### [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
@@ -30,7 +48,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 Zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie over deze service.
 
-## Bronnen {#sources}
+### Bronnen {#sources}
 
 Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
