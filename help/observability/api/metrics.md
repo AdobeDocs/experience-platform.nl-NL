@@ -5,118 +5,28 @@ title: Metrics API Endpoint
 topic-legacy: developer guide
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
 
 # Metrisch eindpunt
 
-De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historische tendensen, en prestatiesindicatoren voor diverse eigenschappen in Adobe Experience Platform. Het `/metrics` eindpunt in [!DNL Observability Insights API] staat u toe om metrische gegevens voor de activiteit van uw organisatie in [!DNL Platform] programmatically terug te winnen.
+De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historische tendensen, en prestatiesindicatoren voor diverse eigenschappen in Adobe Experience Platform. De `/metrics` in de [!DNL Observability Insights API] staat u toe om metrische gegevens voor de activiteit van uw organisatie in programmatically terug te winnen [!DNL Platform].
+
+>[!NOTE]
+>
+>Het eindpunt van de vorige versie van de metriek (V1) is afgekeurd. Dit document richt zich uitsluitend op de huidige versie (V2). Voor details op het V1 eindpunt voor erfenisimplementaties, gelieve te verwijzen naar [API-referentie](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 ## Metrische waarden voor waarneembaarheid ophalen
 
-Er zijn twee ondersteunde methoden voor het ophalen van metrische gegevens met behulp van de API:
-
-* [Versie 1](#v1): Geef metrische gegevens op met behulp van queryparameters.
-* [Versie 2](#v2): Geef filters op en pas ze toe op metrische getallen met behulp van een JSON-payload.
-
-### Versie 1 {#v1}
-
-U kunt metrische gegevens terugwinnen door een verzoek van de GET aan het `/metrics` eindpunt te doen, specificerend metriek door het gebruik van vraagparameters.
-
-**API-indeling**
-
-In de parameter `metric` moet ten minste één metrische waarde worden opgegeven. Andere vraagparameters zijn facultatief voor het filtreren resultaten.
-
-```http
-GET /metrics?metric={METRIC}
-GET /metrics?metric={METRIC}&metric={METRIC_2}
-GET /metrics?metric={METRIC}&id={ID}
-GET /metrics?metric={METRIC}&dateRange={DATE_RANGE}
-GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
-```
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `{METRIC}` | De metrisch u wilt blootstellen. Wanneer het combineren van veelvoudige metriek in één enkele vraag, moet u ampersand (`&`) gebruiken om individuele metriek te scheiden. Bijvoorbeeld, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | De id voor een bepaalde [!DNL Platform]-bron waarvan u de meetgegevens wilt weergeven. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Zie [appendix](#available-metrics) voor een lijst van beschikbare metriek, met inbegrip van ondersteunde IDs (zowel vereist als facultatief) voor elke metrisch. |
-| `{DATE_RANGE}` | Het datumbereik voor de metriek die u wilt weergeven, in de ISO 8601-indeling (bijvoorbeeld `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
-
-**Verzoek**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/infrastructure/observability/insights/metrics?metric=timeseries.ingestion.dataset.size&metric=timeseries.ingestion.dataset.recordsuccess.count&id=5cf8ab4ec48aba145214abeb&dateRange=2018-10-01T07:00:00.000Z/2019-06-06T07:00:00.000Z \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert een lijst met objecten die elk een tijdstempel bevatten binnen de opgegeven `dateRange` en de bijbehorende waarden voor de metriek die zijn opgegeven in het aanvraagpad. Als `id` van een [!DNL Platform] middel in de verzoekweg inbegrepen is, zullen de resultaten slechts op die bepaalde bron van toepassing zijn. Als `id` wordt weggelaten, zullen de resultaten op alle toepasselijke middelen binnen uw IMS Organisatie van toepassing zijn.
-
-```json
-{
-  "id": "5cf8ab4ec48aba145214abeb",
-  "imsOrgId": "{IMS_ORG}",
-  "timeseries": {
-    "granularity": "MONTH",
-    "items": [
-      {
-        "timestamp": "2019-06-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-          "timeseries.ingestion.dataset.size": 32320
-        }
-      },
-      {
-        "timestamp": "2019-05-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-          "timeseries.ingestion.dataset.size": 31409
-        }
-      },
-      {
-        "timestamp": "2019-04-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-03-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-02-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 390,
-          "timeseries.ingestion.dataset.size": 16801
-        }
-      }
-    ],
-    "_page": null,
-    "_links": null
-  },
-  "stats": {}
-}
-```
-
-### Versie 2 {#v2}
-
-U kunt metrieke gegevens terugwinnen door een POST verzoek aan het `/metrics` eindpunt te doen, specificerend de metriek u wenst om in de nuttige lading terug te winnen.
+U kunt metrische gegevens terugwinnen door een verzoek van de POST aan `/metrics` eindpunt, die de metriek specificeren u in de nuttige lading wenst terug te winnen.
 
 **API-indeling**
 
@@ -170,12 +80,12 @@ curl -X POST \
 | --- | --- |
 | `start` | De vroegste datum/tijd waarvan om metrische gegevens terug te winnen. |
 | `end` | De recentste datum/tijd waarvan om metrische gegevens terug te winnen. |
-| `granularity` | Een optioneel veld waarmee het tijdsinterval wordt aangegeven waarbinnen metrische gegevens moeten worden verdeeld. Bijvoorbeeld, keert een waarde van `DAY` metriek voor elke dag tussen `start` en `end` datum terug, terwijl een waarde van `MONTH` metrische resultaten in plaats daarvan zou groeperen door maand. Wanneer u dit veld gebruikt, moet ook een corresponderende eigenschap `downsample` worden opgegeven om de samenvoegfunctie aan te geven waarmee gegevens moeten worden gegroepeerd. |
+| `granularity` | Een optioneel veld waarmee het tijdsinterval wordt aangegeven waarbinnen metrische gegevens moeten worden verdeeld. Bijvoorbeeld een waarde van `DAY` retourneert meetgegevens voor elke dag tussen de `start` en `end` date, terwijl de waarde `MONTH` zou metrische resultaten door maand in plaats daarvan groeperen. Als u dit veld gebruikt, wordt een corresponderende `downsample` er moet ook een eigenschap worden verstrekt om de aggregatiefunctie aan te geven waarmee gegevens moeten worden gegroepeerd. |
 | `metrics` | Een array van objecten, één voor elke metrische waarde die u wilt ophalen. |
-| `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie [appendix](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
-| `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Momenteel wordt alleen `dataSets` ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters (`|`) wordt gescheiden.</li><li>`groupBy`: Wanneer geplaatst aan waar, wijst erop dat het corresponderen veelvoudige datasets  `value` vertegenwoordigt de waarvan metrische resultaten afzonderlijk zouden moeten zijn teruggekeerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
-| `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Raadpleeg de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html) voor gedetailleerde informatie over beschikbare aggregators. |
-| `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor het downsamplen wordt bepaald door de eigenschap `granularity`. Raadpleeg de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html) voor gedetailleerde informatie over downsampling. |
+| `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie de [aanhangsel](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
+| `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Alleen `dataSets` wordt ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters ( wordt gescheiden`|`).</li><li>`groupBy`: Wanneer ingesteld op true, wordt hiermee aangegeven dat de corresponderende `value` vertegenwoordigt veelvoudige datasets de waarvan metrische resultaten afzonderlijk zouden moeten zijn teruggekeerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
+| `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Voor gedetailleerde informatie over beschikbare aggregators, verwijs naar [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
+| `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor downsampling wordt bepaald door `granularity` eigenschap. Voor gedetailleerde informatie over downsampling raadpleegt u de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,18 +178,18 @@ Een succesvolle reactie keert de resulterende datapoints voor de metriek en de f
 | `metric` | De naam van een van de metriek die in de aanvraag wordt opgegeven. |
 | `filters` | De filterconfiguratie voor gespecificeerde metrisch. |
 | `datapoints` | Een array waarvan de objecten de resultaten van de opgegeven metrische waarde en filters vertegenwoordigen. Het aantal objecten in de array is afhankelijk van de filteropties in de aanvraag. Als er geen filters zijn opgegeven, bevat de array slechts één object dat alle gegevenssets vertegenwoordigt. |
-| `groupBy` | Als de veelvoudige datasets in het `filter` bezit voor metrisch werden gespecificeerd, en de `groupBy` optie werd geplaatst aan waar in het verzoek, zal dit voorwerp identiteitskaart van de dataset bevatten die het overeenkomstige `dps` bezit op van toepassing is.<br><br>Als dit object leeg lijkt in de reactie, is de corresponderende  `dps` eigenschap van toepassing op alle gegevenssets die in de  `filters` array zijn opgenomen (of op alle gegevenssets  [!DNL Platform] als er geen filters zijn opgegeven). |
-| `dps` | De teruggekeerde gegevens voor bepaalde metrisch, filter, en tijdwaaier. Elke sleutel in dit object vertegenwoordigt een tijdstempel met een overeenkomende waarde voor de opgegeven metrische waarde. De tijdspanne tussen elke datapoint hangt van `granularity` waarde af in het verzoek wordt gespecificeerd die. |
+| `groupBy` | Als er meerdere gegevenssets zijn opgegeven in het dialoogvenster `filter` eigenschap voor metrisch en `groupBy` optie is ingesteld op true in het verzoek, dit object bevat de id van de dataset die de overeenkomstige `dps` eigenschap is van toepassing op.<br><br>Als dit object leeg wordt weergegeven in het antwoord, wordt het corresponderende `dps` eigenschap is van toepassing op alle gegevenssets die in de `filters` array (of alle gegevenssets in [!DNL Platform] als er geen filters zijn opgegeven). |
+| `dps` | De teruggekeerde gegevens voor bepaalde metrisch, filter, en tijdwaaier. Elke sleutel in dit object vertegenwoordigt een tijdstempel met een overeenkomende waarde voor de opgegeven metrische waarde. De tijdperiode tussen elke datapoint is afhankelijk van `granularity` in de aanvraag opgegeven waarde. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Aanhangsel
 
-De volgende sectie bevat extra informatie over het werken met het `/metrics` eindpunt.
+De volgende sectie bevat aanvullende informatie over het werken met de `/metrics` eindpunt.
 
 ### Beschikbare cijfers {#available-metrics}
 
-In de volgende tabellen worden alle metriek weergegeven die worden weergegeven door [!DNL Observability Insights], uitgesplitst op [!DNL Platform]-service. Elke metrische waarde bevat een beschrijving en geaccepteerde ID-queryparameter.
+In de volgende tabellen worden alle metriek weergegeven die worden weergegeven door [!DNL Observability Insights], uitgesplitst naar [!DNL Platform] service. Elke metrische waarde bevat een beschrijving en geaccepteerde ID-queryparameter.
 
 >[!NOTE]
 >
@@ -287,7 +197,7 @@ In de volgende tabellen worden alle metriek weergegeven die worden weergegeven d
 
 #### [!DNL Data Ingestion] {#ingestion}
 
-In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Data Ingestion] weergegeven. Metrisch in **bold** zijn streaming ingestition metrics.
+In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Data Ingestion]. Metrische gegevens in **vet** zijn streamingcijfers.
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
@@ -317,37 +227,37 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Data
 
 #### [!DNL Identity Service] {#identity}
 
-In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Identity Service] weergegeven.
+In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Identity Service].
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door [!DNL Identity Service], voor één dataset of alle datasets worden geschreven. | Dataset-id |
-| timeseries.identity.dataset.recordfailed.count | Aantal verslagen door [!DNL Identity Service], voor één dataset of voor alle datasets ontbroken. | Dataset-id |
-| timeseries.identity.dataset.namespacecode.recordsuccess.count | Aantal identiteitsrecords dat is ingevoerd voor een naamruimte. | Naamruimte-id (**Required**) |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Aantal identiteitsrecords dat is mislukt door een naamruimte. | Naamruimte-id (**Required**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Aantal identiteitsrecords dat door een naamruimte is overgeslagen. | Naamruimte-id (**Required**) |
+| timeseries.identity.dataset.recordsuccess.count | Aantal records dat naar de gegevensbron is geschreven door [!DNL Identity Service]voor één gegevensset of alle gegevensreeksen. | Dataset-id |
+| timeseries.identity.dataset.recordfailed.count | Aantal records mislukt door [!DNL Identity Service]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
+| timeseries.identity.dataset.namespacecode.recordsuccess.count | Aantal identiteitsrecords dat is ingevoerd voor een naamruimte. | Namespace-id (**Vereist**) |
+| timeseries.identity.dataset.namespacecode.recordfailed.count | Aantal identiteitsrecords dat is mislukt door een naamruimte. | Namespace-id (**Vereist**) |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Aantal identiteitsrecords dat door een naamruimte is overgeslagen. | Namespace-id (**Vereist**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Aantal unieke identiteiten dat is opgeslagen in de identiteitsgrafiek voor uw IMS-organisatie. | N.v.t. |
-| timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor een namespace worden opgeslagen. | Naamruimte-id (**Required**) |
+| timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor een namespace worden opgeslagen. | Namespace-id (**Vereist**) |
 | timeseries.identity.graph.imsorg.numidgraphs.count | Aantal unieke grafiekidentiteiten die in de identiteitsgrafiek voor uw IMS Organisatie worden opgeslagen. | N.v.t. |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw IMS Organisatie voor een bepaalde grafieksterkte worden opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot;, of &quot;sterk&quot;). | Grafieksterkte (**Required**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw IMS Organisatie voor een bepaalde grafieksterkte worden opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot;, of &quot;sterk&quot;). | Grafieksterkte (**Vereist**) |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Privacy Service] {#privacy}
 
-In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Privacy Service] weergegeven.
+In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Privacy Service].
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
-| timeseries.gdpr.jobs.totaljobs.count | Het totale aantal banen dat door de GDPR is gecreëerd. | ENV (**Required**) |
-| timeseries.gdpr.jobs.completedjobs.count | Totaal aantal voltooide banen van GDPR. | ENV (**Required**) |
-| timeseries.gdpr.jobs.errorjobs.count | Totaal aantal fouttaken van GDPR. | ENV (**Required**) |
+| timeseries.gdpr.jobs.totaljobs.count | Het totale aantal banen dat door de GDPR is gecreëerd. | ENV (**Vereist**) |
+| timeseries.gdpr.jobs.completedjobs.count | Totaal aantal voltooide banen van GDPR. | ENV (**Vereist**) |
+| timeseries.gdpr.jobs.errorjobs.count | Totaal aantal fouttaken van GDPR. | ENV (**Vereist**) |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Query Service] {#query}
 
-In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Query Service] weergegeven.
+In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Query Service].
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
@@ -362,30 +272,30 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Quer
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
-In de volgende tabel worden de metriek voor [!DNL Real-time Customer Profile] beschreven.
+De volgende tabel bevat metriek voor [!DNL Real-time Customer Profile].
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Aantal records die worden gelezen van [!DNL Data Lake] door [!DNL Profile], voor één dataset of voor alle datasets. | Dataset-id |
-| timeseries.profiles.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door [!DNL Profile], voor één dataset of voor alle datasets worden geschreven. | Dataset-id |
-| timeseries.profiles.dataset.recordfailed.count | Aantal verslagen door [!DNL Profile], voor één dataset of voor alle datasets ontbroken. | Dataset-id |
+| timeseries.profiles.dataset.recordread.count | Aantal records dat is gelezen van de [!DNL Data Lake] door [!DNL Profile]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
+| timeseries.profiles.dataset.recordsuccess.count | Aantal records dat naar de gegevensbron is geschreven door [!DNL Profile]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
+| timeseries.profiles.dataset.recordfailed.count | Aantal records mislukt door [!DNL Profile]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
 | timeseries.profiles.dataset.batchsuccess.count | Aantal [!DNL Profile] partijen die voor een dataset of voor alle datasets worden opgenomen. | Dataset-id |
-| timeseries.profiles.dataset.batchfailed.count | Aantal [!DNL Profile] ontbroken partijen voor één dataset of voor alle datasets. | Dataset-id |
-| platform.ups.ingest.streaming.request.m1_rate | Binnenkomend aanvraagpercentage. | IMS Org (**Required**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestie succespercentage. | IMS Org (**Required**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | Het tarief van nieuwe verslagen die voor een dataset worden opgenomen. | Dataset-id (**Required**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Het tarief van uit-van-orde timestamped verslagen voor creeer verzoek om een dataset. | Dataset-id (**Required**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Tijdstempel voor laatst maken recordverzoek voor een dataset. | Dataset-id (**Required**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Snelheid van tijdstempelde records zonder volgorde voor updateverzoek voor een dataset. | Dataset-id (**Required**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Tijdstempel voor laatste verzoek van updaterecord voor een gegevensset. | Dataset-id (**Required**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | Gemiddelde recordgrootte. | IMS Org (**Required**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | Snelheid van updateverzoeken voor verslagen die voor een dataset worden opgenomen. | Dataset-id (**Required**) |
+| timeseries.profiles.dataset.batchfailed.count | Aantal [!DNL Profile] batches zijn mislukt voor één gegevensset of voor alle gegevenssets. | Dataset-id |
+| platform.ups.ingest.streaming.request.m1_rate | Binnenkomend aanvraagpercentage. | IMS Org (**Vereist**) |
+| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestie succespercentage. | IMS Org (**Vereist**) |
+| platform.ups.ingest.streaming.records.created.m15_rate | Het tarief van nieuwe verslagen die voor een dataset worden opgenomen. | Dataset-id (**Vereist**) |
+| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Het tarief van uit-van-orde timestamped verslagen voor creeer verzoek om een dataset. | Dataset-id (**Vereist**) |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Tijdstempel voor laatst maken recordverzoek voor een dataset. | Dataset-id (**Vereist**) |
+| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Snelheid van tijdstempelde records zonder volgorde voor updateverzoek voor een dataset. | Dataset-id (**Vereist**) |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Tijdstempel voor laatste verzoek van updaterecord voor een gegevensset. | Dataset-id (**Vereist**) |
+| platform.ups.ingest.streaming.record.size.m1_rate | Gemiddelde recordgrootte. | IMS Org (**Vereist**) |
+| platform.ups.ingest.streaming.records.updated.m15_rate | Snelheid van updateverzoeken voor verslagen die voor een dataset worden opgenomen. | Dataset-id (**Vereist**) |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Foutberichten
 
-Reacties van het `/metrics` eindpunt kunnen foutenmeldingen onder bepaalde voorwaarden terugkeren. Deze foutberichten worden in de volgende indeling geretourneerd:
+Reacties van de `/metrics` het eindpunt kan foutenmeldingen onder bepaalde voorwaarden terugkeren. Deze foutberichten worden in de volgende indeling geretourneerd:
 
 ```json
 {
@@ -422,10 +332,10 @@ In de volgende tabel worden de verschillende foutcodes weergegeven die door de A
 
 | Foutcode | Titel | Beschrijving |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat u de ladingsformattering precies zoals getoond [hierboven ](#v2) aanpast. Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li></ul> |
+| `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat de ladingsopmaak exact overeenkomt met de weergave [boven](#v2). Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li></ul> |
 | `INSGHT-1001-400` | Metrische query mislukt | Er is een fout opgetreden bij het zoeken naar de metrische database, omdat een onjuiste aanvraag of de query zelf niet kan worden gescheiden. Zorg ervoor dat uw verzoek correct is geformatteerd alvorens opnieuw te proberen. |
 | `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
 | `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
-| `INSGHT-1003-401` | Validatiefout van sandbox | De aanvraag kan niet worden verwerkt vanwege een sandboxvalidatiefout. Zorg ervoor dat de naam van de sandbox die u in de koptekst `x-sandbox-name` hebt opgegeven, een geldige, ingeschakelde sandbox voor uw IMS-organisatie vertegenwoordigt voordat u het verzoek opnieuw probeert. |
+| `INSGHT-1003-401` | Validatiefout van sandbox | De aanvraag kan niet worden verwerkt vanwege een sandboxvalidatiefout. Zorg ervoor dat de naam van de sandbox die u hebt opgegeven in het dialoogvenster `x-sandbox-name` vertegenwoordigt een geldige, ingeschakelde sandbox voor uw IMS-organisatie voordat u het verzoek opnieuw probeert. |
 
 {style=&quot;table-layout:auto&quot;}
