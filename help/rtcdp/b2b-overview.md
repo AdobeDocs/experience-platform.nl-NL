@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;b2b;cdp;Customer AI
-title: Real-time CDP B2B Edition - Overzicht
+title: Real-time CDP B2B Edition-overzicht (bèta)
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Overzicht van Real-time Customer Data Platform B2B Edition-account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
 
-# Overzicht van Real-time Customer Data Platform B2B Edition
+# Real-time Customer Data Platform B2B Edition, overzicht (bèta)
 
 >[!IMPORTANT]
 >
@@ -83,4 +83,15 @@ Voor bedrijven met meer dan één CRM, verstrekt de Echte - tijdCDP B2B Uitgave 
 
 Nu u beter de voordelen voor marketers begrijpt die door Echte - tijd CDP B2B Uitgave, en verschillen tussen het en Echte - tijd CDP worden aangeboden, kunt u leren hoe te om deze eigenschappen op uw eigen IMS Organisatie toe te passen.
 
-Om te begrijpen hoe de Echte - tijdCDP B2B Uitgave uw zaken-aan-zaken de dienstmodel kan ten goede komen, zie [voorbeeld gebruikt case voor Real-time CDP B2B Edition](./b2b-use-case.md). U kunt ook verwijzen naar de [schema&#39;s in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentatie voor meer specifieke richtsnoeren voor het maken van schema&#39;s en het definiëren van relaties voor essentiële B2B-gegevensentiteiten.
+Om te begrijpen hoe de Echte - tijdCDP B2B Uitgave uw zaken-aan-zaken de dienstmodel kan voordeel halen, zie de volgende documentatie om u te helpen begonnen worden:
+
+* [Een voorbeeld gebruikt geval voor Echte - tijdCDP B2B Uitgave](./b2b-use-case.md)
+* [Hoe kan ik gegevens invoeren](./sources/b2b.md)
+* [Profielen openen](./profile/profile-overview.md)
+* [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+* [Hoe te om segmenten te bouwen](./segmentation/b2b.md)
+* [Hoe te om segmenten aan bestemmingen te activeren](./destinations/b2b.md)
+* [Beleid voor gegevensbeheer definiëren en afdwingen](./privacy/data-governance-overview.md)
+
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

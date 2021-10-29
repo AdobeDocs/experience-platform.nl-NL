@@ -5,7 +5,7 @@ title: Adobe Experience Platform - Overzicht
 topic-legacy: getting started
 description: Adobe Experience Platform stelt organisaties in staat klantgegevens te centraliseren en te standaardiseren voordat ze dataletterdheid en computerleren toepassen, zodat ze het ontwerp en de levering van rijke, persoonlijke ervaringen aanzienlijk kunnen verbeteren.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 1%
@@ -16,13 +16,13 @@ ht-degree: 1%
 
 Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. [!DNL Experience Platform] stelt organisaties in staat om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 
-[!DNL Experience Platform] is gebaseerd op RESTful-API&#39;s en stelt de volledige functionaliteit van het systeem beschikbaar voor ontwikkelaars, waardoor de eenvoudige integratie van bedrijfsoplossingen met behulp van vertrouwde tools wordt ondersteund. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze kracht en flexibiliteit maken [!DNL Experience Platform] uniek in de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de Ervaring Bedrijfs drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
+Gebaseerd op RESTful API&#39;s, [!DNL Experience Platform] stelt de volledige functionaliteit van het systeem aan ontwikkelaars bloot, die de gemakkelijke integratie van ondernemingsoplossingen steunen gebruikend vertrouwde hulpmiddelen. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze kracht en flexibiliteit maken [!DNL Experience Platform] uniek op de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de Ervaring Bedrijfs drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
 
 ## [!DNL Experience Platform] documentatie
 
-[!DNL Experience Platform] documentatie wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn, raadpleegt u het [documentatieoverzicht van het Platform](documentation/overview.md).
+[!DNL Experience Platform] documentatie wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Ga voor meer informatie over de typen documentatie die beschikbaar zijn naar [Overzicht van de documentatie van Platforms](documentation/overview.md).
 
-Als u meer wilt weten over een specifieke [!DNL Platform]-service, gaat u terug naar de [pagina voor het landen van documentatie](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteert u de juiste handleiding.
+Meer informatie over een specifieke [!DNL Platform] service, terugkeren naar de [openingspagina van documentatie](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteert u de gewenste hulplijn.
 
 ### Documentatie voor toepassingsservices gebaseerd op [!DNL Experience Platform]
 
@@ -32,26 +32,27 @@ Adobe heeft veelvoudige toepassingsdiensten bovenop Experience Platform gebouwd.
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
+* [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 
 ## [!DNL Experience Platform]-tutorials
 
-U kunt snel en eenvoudig aan de slag gaan met [!DNL Platform] door stapsgewijze zelfstudies te volgen die alles behandelen, van het voorbereiden van uw gegevens op inname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de [!DNL Experience Platform]-documentatie, zodat u de documentatie voor de beste resultaten bij de voltooiing van de zelfstudies ter plaatse kunt houden.
+U kunt beginnen met [!DNL Platform] snel en gemakkelijk door samen met geleidelijke leerprogramma&#39;s te volgen die alles van het voorbereiden van uw gegevens voor opname aan geavanceerde machine-leren algoritmen behandelen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in het dialoogvenster [!DNL Experience Platform] voor de beste resultaten de documentatie bij de voltooiing van de zelfstudies ter beschikking te houden.
 
-Ga naar de [Experience Platform zelfstudies](https://www.adobe.com/go/platform-tutorials-home-en) bestemmingspagina om aan de slag te gaan.
+Ga naar [Zelfstudies voor Experience Platforms](https://www.adobe.com/go/platform-tutorials-home-en) openingspagina.
 
 ## Referentiedocumenten en -bronnen
 
 * [**API-basisbeginselen**](api-fundamentals.md)\
-   Leer de grondbeginselen van het werken met [!DNL Platform] APIs.
+   Leer de basisbeginselen van het werken met [!DNL Platform] API&#39;s.
 
 * [**API-naslagdocumenten**](https://www.adobe.com/go/platform-api-reference-en)\
-   Ontdek [!DNL Experience Platform] APIs, met inbegrip van kopballen, parameters, steekproefverzoeken, en reacties.<br/>*Deze documenten worden gehost op Adobe I/O.*
+   Discover [!DNL Experience Platform] API&#39;s, waaronder kopteksten, parameters, voorbeeldaanvragen en reacties.<br/>*Deze documenten worden gehost op Adobe I/O.*
 
-* [**Verklarende woordenlijst**](glossary.md)\
+* [**Woordenlijst**](glossary.md)\
    Adobe Experience Platform-terminologie controleren.
 
 * [**Aanvullende informatie**](https://www.adobe.com/go/platform-release-notes-en)\
-   Zoek informatie over de meest recente [!DNL Experience Platform] versie en herzie vorige versies.
+   Meer informatie over de meest recente [!DNL Experience Platform] release en revisie van eerdere releases.
 
 * [**Handleiding voor probleemoplossing**](troubleshooting.md)\
    Vind resoluties aan gemeenschappelijke fouten en antwoorden op vaak gestelde vragen.

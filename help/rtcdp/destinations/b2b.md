@@ -1,15 +1,23 @@
 ---
-title: Doelen in Real-time Customer Data Platform B2B Edition
+title: Doelen in Real-time Customer Data Platform B2B Edition (bèta)
 description: Een overzicht van de rol van bestemmingen in Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 44d5abbc9644c4fc138aad3b3ad8eb106de159e9
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-# Een overzicht van bestemmingen in Real-time Customer Data Platform B2B Edition
+# Doelen in Real-time Customer Data Platform B2B Edition (bèta)
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+
+>[!NOTE]
+>
+>Als u Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [overzicht van de bestemmingen](../../destinations/home.md) in plaats daarvan.
 
 De bestemmingen van het Experience Platform volledig die door CDP B2B Uitgave in real time worden gesteund omvatten de Klant van Google Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, de Vertoning van Google &amp; Video 360, Google Ads, en de Manager van Google.
 

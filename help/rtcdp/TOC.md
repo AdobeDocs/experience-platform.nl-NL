@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform Guide
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
-source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
+source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 8%
+source-wordcount: '178'
+ht-degree: 7%
 
 ---
 
@@ -15,44 +15,44 @@ ht-degree: 8%
 # Real-time Customer Data Platform Help {#rtcdp}
 
 * [CDP-overzicht in realtime](overview.md)
-* [Real-time CDP B2B Edition-overzicht](b2b-overview.md)
+* [Real-time CDP B2B Edition-overzicht (bèta)](b2b-overview.md)
 * Aan de slag {#intro}
    * Real-time CDP {#rtcdp-intro}
       * [Aan de slag met Real-Time CDP](get-started.md)
       * [Overzicht van cijfers](home-page-dashboards.md)
    * Real-time CDP B2B Edition {#rtcdpb2b-intro}
-      * [Aan de slag met CDP B2B Edition in realtime](./b2b-use-case.md)
-* Beheer {#admin}
-   * [Overzicht van beheer](administration/admin-overview.md)
-* Accountprofielen {#account}
+      * [Ga aan de slag met CDP B2B Edition (bèta) in real time](./b2b-use-case.md)
+* Accountprofielen (bèta) {#account}
    * [Overzicht van het accountprofiel](accounts/account-profile-overview.md)
    * [Gebruikersgids voor accountprofielen](accounts/account-profile-ui-guide.md)
-* Datasets {#datasets}
+* Beheer {#admin}
+   * [Overzicht van beheer](administration/admin-overview.md)
+* Gegevenssets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
    * [Gegevenskwaliteit op Platform](datasets/data-quality.md)
 * Doelen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
-   * [Doelen in Real-time CDP B2B Edition](destinations/b2b.md)
+   * [Doelen in Real-time CDP B2B Edition (bèta)](destinations/b2b.md)
 * Identiteiten {#identity}
    * [Identiteiten en naamruimten](profile/identities-overview.md)
+* Beleid samenvoegen {#merge-policies}
+   * [Overzicht van beleid samenvoegen](profile/merge-policies.md)
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
-* Beleid {#merge-policies} samenvoegen
-   * [Overzicht van beleid samenvoegen](profile/merge-policies.md)
 * Profielen {#profile}
    * [Profieloverzicht](profile/profile-overview.md)
    * [Bladeren door profiel](profile/profile-browse.md)
+* Schema&#39;s {#schemas}
+   * [Overzicht van schema&#39;s](schemas/overview.md)
+   * [Schema&#39;s in Real-Time CDP B2B Edition (bèta)](schemas/b2b.md)
 * Segmenten {#segmentation}
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
    * [Handleiding voor het maken van segmenten](segmentation/segment-builder-guide.md)
-   * [Segmentatie in Real-time CDP B2B Edition](segmentation/b2b.md)
+   * [Segmentatie in Real-Time CDP B2B Edition (bèta)](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
-* Schema&#39;s {#schemas}
-   * [Overzicht van schema&#39;s](schemas/overview.md)
-   * [Schema&#39;s in Real-time CDP B2B Edition](schemas/b2b.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
-   * [Bronnen in Real-time CDP B2B Edition](sources/b2b.md)
+   * [Bronnen in Real-time CDP B2B Edition (bèta)](sources/b2b.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)
