@@ -5,9 +5,9 @@ title: Metrics API Endpoint
 topic-legacy: developer guide
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
+source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1864'
 ht-degree: 1%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `granularity` | Een optioneel veld waarmee het tijdsinterval wordt aangegeven waarbinnen metrische gegevens moeten worden verdeeld. Bijvoorbeeld een waarde van `DAY` retourneert meetgegevens voor elke dag tussen de `start` en `end` date, terwijl de waarde `MONTH` zou metrische resultaten door maand in plaats daarvan groeperen. Als u dit veld gebruikt, wordt een corresponderende `downsample` er moet ook een eigenschap worden verstrekt om de aggregatiefunctie aan te geven waarmee gegevens moeten worden gegroepeerd. |
 | `metrics` | Een array van objecten, één voor elke metrische waarde die u wilt ophalen. |
 | `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie de [aanhangsel](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
-| `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Alleen `dataSets` wordt ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters ( wordt gescheiden`|`).</li><li>`groupBy`: Wanneer ingesteld op true, wordt hiermee aangegeven dat de corresponderende `value` vertegenwoordigt veelvoudige datasets de waarvan metrische resultaten afzonderlijk zouden moeten zijn teruggekeerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
+| `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Alleen `dataSets` wordt ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters ( wordt gescheiden`\|`).</li><li>`groupBy`: Wanneer ingesteld op true, wordt hiermee aangegeven dat de corresponderende `value` vertegenwoordigt veelvoudige datasets de waarvan metrische resultaten afzonderlijk zouden moeten zijn teruggekeerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
 | `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Voor gedetailleerde informatie over beschikbare aggregators, verwijs naar [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor downsampling wordt bepaald door `granularity` eigenschap. Voor gedetailleerde informatie over downsampling raadpleegt u de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
