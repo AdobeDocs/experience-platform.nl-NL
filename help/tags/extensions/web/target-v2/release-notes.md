@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '589'
 ht-degree: 1%
 
 ---
@@ -14,23 +15,29 @@ ht-degree: 1%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
+## 28 oktober 2021
+
+### Adobe Target v2-extensie 0.16.0
+
+- Bijgewerkt voor ondersteuning op 0.js v2.7.0, nu beschikbaar voor downloaden vanaf Adobe Target.
+
 ## 20 juli 2021
 
 ### Adobe Target v2-extensie 0.15.1
 
-- Probleem verholpen met een functienaamconflict `stringify`, dat ertoe leidde dat onjuiste UUID-waarden werden gegenereerd voor `sessionId`, `requestId` enzovoort.
+- Probleem verholpen met een `stringify` functienaamsconflict, waardoor onjuiste UUID-waarden zijn gegenereerd voor `sessionId`, `requestId`, enzovoort.
 
 ## 16 juli 2021
 
 ### Adobe Target v2-extensie 0.15.0
 
 - Veilige kenmerken aan cookies toevoegen wanneer de SecureOnly-instellingen van at.js op true zijn ingesteld
-- Reactietokens zijn nu beschikbaar wanneer u `triggerView()` gebruikt
-- Oplossing voor een fout met betrekking tot de gebeurtenis `CONTENT_RENDERING_NO_OFFERS`. Nu wordt deze correct geactiveerd wanneer er geen inhoud is geretourneerd van Target
+- Reactietokens zijn nu beschikbaar bij gebruik `triggerView()`
+- Correctie van een fout met betrekking tot `CONTENT_RENDERING_NO_OFFERS` gebeurtenis. Nu wordt deze correct geactiveerd wanneer er geen inhoud is geretourneerd van Target
 - A4T klik metrieke details correct zijn teruggekeerd wanneer het gebruiken van prefetch verzoeken
-- UUID-generatie gebruikt `Math.random()` niet meer, maar is afhankelijk van `window.crypto`
+- UUID-generatie wordt niet langer gebruikt `Math.random()`, maar vertrouwt op `window.crypto`
 - `sessionId` de vervaldatum van het koekje wordt correct uitgebreid op elke netwerkvraag
-- SPA de initialisatie van het weergavecache wordt nu correct afgehandeld en voldoet aan de `viewsEnable`-instellingen
+- SPA de initialisatie van het meningsgeheime voorgeheugen wordt nu correct behandeld en het houdt zich aan `viewsEnable` instellingen
 
 ## 2 juni 2021
 
@@ -48,7 +55,7 @@ ht-degree: 1%
 
 ### Adobe Target v2-extensie 0.14
 
-- Een nieuwe handeling Load Target with [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning) toegevoegd, die wordt geladen op 0,js 2.5 met mogelijkheden voor het bepalen van het apparaat
+- Nieuwe handeling Doel laden toegevoegd met [Apparaatbeslissingen](./overview.md#load-target-with-on-device-decisioning), die bij.js 2.5 met de mogelijkheden van de Beslissing van het Apparaat laadt
 - Bijgewerkt om.js tot 2.5
 
 
@@ -56,7 +63,7 @@ ht-degree: 1%
 
 ### Adobe Target v2-extensie 0.13.7
 
-- Probleem verholpen waarbij `targetPageParams` was opgenomen in mbox-aanvragen. `targetPageParams` uitsluitend in  `pageLoad` verzoeken worden opgenomen.
+- Probleem verholpen met `targetPageParams` worden opgenomen in mbox-aanvragen. `targetPageParams` alleen worden opgenomen in `pageLoad` verzoeken.
 - Probleem verholpen met globale document- en vensterobjecten in de tagextensie door algemene objectafhankelijkheden te vervangen door directe verwijzingen ernaar.
 - Bijgewerkt om 1.js tot 2.4.1.
 
@@ -82,7 +89,7 @@ ht-degree: 1%
 ### Adobe Target v2-extensie 0.13.3
 
 - Oplossing voor een probleem dat ervoor zorgde dat koppelingen in de QA-modus niet werkten voor inactieve activiteiten
-- Het probleem waarbij de extensie mislukte als een script of code `default`-eigenschap toevoegt aan `window` of `document` is opgelost.
+- Het probleem waarbij een extensie mislukte als een script of code wordt toegevoegd, is opgelost. `default` aan de `window` of `document`
 
 ## 15 juni 2020
 
@@ -90,7 +97,7 @@ ht-degree: 1%
 
 - Probleem verholpen bij het gebruik van CNAME en randoverschrijving, waarbij at.js 1.x het serverdomein mogelijk onjuist zou maken, wat tot gevolg had dat de aanvraag van het Doel mislukte
 - Probleem verholpen waarbij Target de aanroep van Analytics sendBeacon vertraagde bij het gebruik van de v2-tagextensie voor de tagextensie Target en Adobe Analytics.
-- De instelling `deviceIdLifetime` is verbeterd doordat deze via `targetGlobalSettings` kan worden overschreven
+- Verbeterde `deviceIdLifetime` instellen door deze te overschrijven via `targetGlobalSettings`
 
 ## 25 maart 2020
 
