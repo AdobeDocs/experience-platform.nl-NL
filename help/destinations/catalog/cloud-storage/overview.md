@@ -3,9 +3,9 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV of bestanden met tabs als scheidingsteken voor [!DNL Amazon S3], [!DNL Azure Blob] en SFTP. Voor [!DNL Amazon Kinesis]- en [!DNL Azure Event Hubs]-doelen worden gegevens uit het Experience Platform gestreamd in [!DNL JSON]-indeling.
+Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob] en SFTP. Voor [!DNL Amazon Kinesis] en [!DNL Azure Event Hubs] doelen, gegevens worden gestreamd uit Experience Platform in [!DNL JSON] gebruiken.
 
 ![Adobe-cloudopslagbestemmingen](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -30,20 +30,20 @@ Adobe Experience Platform ondersteunt de volgende cloudopslagdoelen:
 
 ## Verbinding maken met een nieuwe bestemming voor cloudopslag {#connect-destination}
 
-Om segmenten naar de bestemmingen van de wolkenopslag voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het instellen van een nieuwe bestemming.
+Om segmenten naar de bestemmingen van de wolkenopslag voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
 
 
 ## Macro&#39;s gebruiken om een map te maken op uw opslaglocatie {#use-macros}
 
 >[!NOTE]
 >
-> De functionaliteit die in dit gedeelte wordt beschreven, is momenteel alleen beschikbaar voor [Amazon S3](amazon-s3.md)-doelen.
+> De in deze sectie beschreven functionaliteit is momenteel beschikbaar voor [Amazon S3](amazon-s3.md) alleen bestemmingen.
 
 Als u een aangepaste map per segmentbestand op uw opslaglocatie wilt maken, kunt u macro&#39;s gebruiken in het invoerveld voor het mappad. Voeg de macro&#39;s in aan het einde van het invoerveld, zoals hieronder wordt weergegeven.
 
 ![Macro&#39;s gebruiken om een map in uw opslagruimte te maken](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-In de onderstaande voorbeelden wordt verwezen naar een voorbeeldsegment `Luxury Audience` met ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+In de onderstaande voorbeelden wordt verwezen naar een voorbeeldsegment `Luxury Audience` met id `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **Macro 1:`%SEGMENT_NAME%`**
 
@@ -62,4 +62,4 @@ Mappad op uw opslaglocatie: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-4
 
 ## Gegevensuitvoertype {#export-type}
 
-Cloudopslagdoelen ondersteunen **Op profielen gebaseerde export**. Dit betekent dat u details exporteert over de personen in het publiek. Deze details zijn nodig voor verpersoonlijking en kunnen attributen, gebeurtenissen, segmentlidmaatschap, en meer omvatten.
+Ondersteuning voor cloudopslagbestemmingen **Op profielen gebaseerde export**. Dit betekent dat u details exporteert over de personen in het publiek. Deze details zijn nodig voor verpersoonlijking en kunnen attributen, gebeurtenissen, segmentlidmaatschap, en meer omvatten.
