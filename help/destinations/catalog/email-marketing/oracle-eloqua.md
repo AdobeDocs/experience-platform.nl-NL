@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle eloqua;oracle
 title: Oracle Eloqua-verbinding
 description: Oracle Eloqua is een softwareplatform als service (SaaS) voor marketingautomatisering dat door Oracle wordt aangeboden en dat bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkooplood te beheren.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
 * **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
 * **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV-bestanden indient.
-* **[!UICONTROL File Format]**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
+* **[!UICONTROL File Format]**: Selecteren **CSV** om CSV-bestanden naar uw opslaglocatie te exporteren.
 
 <!--
 

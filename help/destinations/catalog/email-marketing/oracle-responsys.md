@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle responsys bestemming
 title: Verbinding oracle Responsys
 description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media te personaliseren.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
 * **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
 * **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV-bestanden indient.
-* **[!UICONTROL File Format]**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
+* **[!UICONTROL File Format]**: Selecteren **CSV** om CSV-bestanden naar uw opslaglocatie te exporteren.
 
 <!--
 

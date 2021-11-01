@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **[!UICONTROL Bucket Name]**: *Voor S3-verbindingen*. Ga de plaats van uw S3 emmertje in waar [!DNL Platform] zullen uw exportgegevens als CSV-bestanden indienen.
 * **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar [!DNL Platform] zullen uw exportgegevens als CSV-bestanden indienen.
 * **[!UICONTROL Container]**: *Voor Klob-verbindingen*. De container die het blob-pad voor uw map bevat, bevindt zich in.
-* **[!UICONTROL File Format]**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
+* **[!UICONTROL File Format]**: Selecteren **CSV** om CSV-bestanden naar uw opslaglocatie te exporteren.
 
 ## Segmenten naar dit doel activeren {#activate}
 

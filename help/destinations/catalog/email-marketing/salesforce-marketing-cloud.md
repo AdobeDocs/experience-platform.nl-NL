@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;salesforce bestemmi
 title: Verbinding met Salesforce-Marketing Cloud
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
 * **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
 * **[!UICONTROL Folder Path]**: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV-bestanden indient.
-* **[!UICONTROL File Format]**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
+* **[!UICONTROL File Format]**: Selecteren **CSV** om CSV-bestanden naar uw opslaglocatie te exporteren.
 
 <!--
 
