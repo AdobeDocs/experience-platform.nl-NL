@@ -5,9 +5,9 @@ title: Metrics API Endpoint
 topic-legacy: developer guide
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
+source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1866'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historis
 
 >[!NOTE]
 >
->Het eindpunt van de vorige versie van de metriek (V1) is afgekeurd. Dit document richt zich uitsluitend op de huidige versie (V2). Voor details op het V1 eindpunt voor erfenisimplementaties, gelieve te verwijzen naar [API-referentie](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>De vorige versie van het metrieke eindpunt (V1) is afgekeurd. Dit document richt zich uitsluitend op de huidige versie (V2). Voor details op het V1 eindpunt voor erfenisimplementaties, gelieve te verwijzen naar [API-referentie](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Aan de slag
 
