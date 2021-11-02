@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Azure Data Lake Storage Gen2 met behulp van de Flow Service API.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
+source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Om [!DNL Flow Service] Als u verbinding wilt maken met ADLS Gen2, moet u waarden
 | `servicePrincipalId` | De client-id van de toepassing. |
 | `servicePrincipalKey` | De sleutel van de toepassing. |
 | `tenant` | De huurdersinformatie die uw toepassing bevat. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 Zie voor meer informatie over deze waarden [dit ADLS Gen2-document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
@@ -83,7 +83,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
             "version": "1.0"
         }
     }'
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | De service principal ID van uw ADLS Gen2-account. |
 | `auth.params.servicePrincipalKey` | De belangrijkste servicetoets van uw ADLS Gen2-account. |
 | `auth.params.tenant` | De huurdersinformatie van uw account van ADLS Gen2. |
-| `connectionSpec.id` | De ID van de ADLS Gen2-verbindingsspecificatie: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
+| `connectionSpec.id` | De ID van de ADLS Gen2-verbindingsspecificatie: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
 **Antwoord**
 
