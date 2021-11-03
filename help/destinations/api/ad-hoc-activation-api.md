@@ -5,7 +5,7 @@ title: (Bèta) Activeer publiekssegmenten via de API voor ad-hocactivering van h
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van segmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 0%
@@ -124,9 +124,9 @@ Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande 
 
 Nadat de segmentexporttaak is voltooid, kunt u de activering activeren.
 
->[!WARNING]
+>[!NOTE]
 >
->U kunt maximaal 50 segmenten per ad-hocactiveringstaak activeren. Als u probeert meer segmenten te activeren, mislukt de taak.
+>U kunt maximaal 20 segmenten per ad-hocactiveringstaak activeren. Als u probeert meer segmenten te activeren, mislukt de taak.
 
 ### Verzoek
 
