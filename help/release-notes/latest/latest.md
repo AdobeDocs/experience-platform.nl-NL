@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
+source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 2%
@@ -12,23 +12,23 @@ ht-degree: 2%
 
 **Releasedatum: 27 oktober 2021**
 
-## Updates voor Experience Platform
+## Updates to Experience Platform
 
 Updates voor Experience Platform.
 
-### [Gebruikersinterface] {#ui}
+### Gebruikersinterface {#ui}
 
-De gebruikersinterface is bijgewerkt met de volgende wijzigingen:
+The user interface has been updated with the following changes:
 
 | Functie | Beschrijving |
 | --- | --- |
-| Donker thema | Met de themakeuze Donker schakelt u tussen lichte en donkere thema&#39;s in de interface van het Platform. De switch staat in het gebruikersprofiel onder gebruikersnaam en e-mail. |
+| Donker thema | Met de themakeuze Donker schakelt u tussen lichte en donkere thema&#39;s in de interface van het Platform. The switch is located in the user profile below user name and email. |
 | Linkernavigatie in-/uitschakelen | Met de verbeterde navigatieknop boven aan de toepassingskop kunt u het menu met de mogelijkheden van uw Experience Platform weergeven of verbergen. Het systeem onthoudt uw laatste selectie en geeft alleen de mogelijkheden weer waartoe u toegang hebt. |
-| Toegangszichtbaarheid | Op de linkernavigatiebalk ziet u alleen de functies waartoe u toegang hebt. In eerdere versies van Adobe Experience Platform waren niet-beschikbare items zichtbaar, zelfs als u deze niet kon openen. |
+| Toegangszichtbaarheid | Op de linkernavigatiebalk ziet u alleen de functies waartoe u toegang hebt. In previous versions of Adobe Experience Platform, unavailable items were visible, even if you were not able to access them. |
 
 Zie de [UI-gids voor Platform](../../landing/ui-guide.md) voor meer informatie.
 
-## Updates voor bestaande functies
+## Updates to existing features
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
@@ -39,7 +39,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 [!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
-**Bijgewerkte functies**
+**Updated features**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -52,12 +52,12 @@ Zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informati
 
 Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Amazon S3] bronverbeteringen | U kunt nu de opdracht `s3SessionToken` parameter om uw [!DNL Amazon S3] account aan Platform met tijdelijke beveiligingsgegevens. Met dit token kunt u op korte termijn tijdelijke toegang tot uw [!DNL Amazon S3] bronnen voor gebruikers in niet-vertrouwde omgevingen. Zie de [[!DNL Amazon S3] documentatie](../../sources/connectors/cloud-storage/s3.md#prerequisites) voor meer informatie . |
+| [!DNL Amazon S3] bronverbeteringen | U kunt nu de opdracht `s3SessionToken` parameter om uw [!DNL Amazon S3] account aan Platform met tijdelijke beveiligingsgegevens. This token allows you to provide short-term, temporary access to your [!DNL Amazon S3] resources to users in untrusted environments. Zie de [[!DNL Amazon S3] documentatie](../../sources/connectors/cloud-storage/s3.md#prerequisites) voor meer informatie . |
 | [!DNL Generic REST API] (bèta) | U kunt nu een [!DNL Generic REST API] bronverbinding met de [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) of de [gebruikersinterface](../../sources/tutorials/ui/create/protocols/generic-rest.md) gegevens van een generieke REST-toepassing naar het Platform te brengen. Zie de [[!DNL Generic REST API] overzicht](../../sources/connectors/protocols/generic-rest.md) voor meer informatie . |
-| [!DNL Zoho CRM] (bèta) | U kunt nu een [!DNL Zoho CRM] bronverbinding met de [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) of de [gebruikersinterface](../../sources/tutorials/ui/create/crm/zoho.md) om gegevens van uw [!DNL Zoho CRM] aan Platform. Zie de [[!DNL Zoho CRM] overzicht](../../sources/connectors/crm/zoho.md) voor meer informatie . |
+| [!DNL Zoho CRM] (Beta) | You can now create a [!DNL Zoho CRM] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) or the [user interface](../../sources/tutorials/ui/create/crm/zoho.md) to bring data from your [!DNL Zoho CRM] account to Platform. See the [[!DNL Zoho CRM] overview](../../sources/connectors/crm/zoho.md) for more information. |
 
 Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
