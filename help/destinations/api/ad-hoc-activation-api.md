@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;doel-API;ad-hocactivering;segmenten ad-hoc activeren
 solution: Experience Platform
-title: (Bèta) Activeer publiekssegmenten via de API voor ad-hocactivering van het Experience Platform
-description: Dit artikel illustreert de end-to-end workflow voor het activeren van segmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
+title: (bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering
+description: Dit artikel illustreert de end-to-end workflow voor het activeren van publiekssegmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
+source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) Activeer publiekssegmenten via de API voor ad-hocactivering van het Experience Platform
+# (bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering
 
 >[!IMPORTANT]
 >
@@ -35,16 +35,16 @@ In het onderstaande diagram ziet u de end-to-end workflow voor het activeren van
 
 ### Flash verkopen of promoties
 
-Een online detailhandelaar bereidt een beperkte flitsverkoop voor en wil klanten op korte termijn op de hoogte brengen. Via de API voor ad-hocactivering van Experience Platforms kan het marketingteam publiekssegmenten op aanvraag exporteren en snel e-mails met speciale acties naar de klantenbasis verzenden.
+Een online detailhandelaar bereidt een beperkte flitsverkoop voor en wil klanten op korte termijn op de hoogte brengen. Via de API voor ad-hocactivering van Experience Platforms kan het marketingteam segmenten op aanvraag exporteren en snel promotiemails sturen naar de klantenbasis.
 
 
 ### Actuele gebeurtenissen of het doorbreken van nieuws
 
-Een hotel verwacht het hoogteweer in de komende dagen en het team wil de aankomende gasten snel informeren, zodat ze dienovereenkomstig kunnen plannen. Het marketingteam kan de API voor ad-hocactivering van Experience Platforms gebruiken om doelsegmenten op aanvraag te exporteren en de gasten op de hoogte te stellen.
+Een hotel verwacht het hoogteweer in de komende dagen en het team wil de aankomende gasten snel informeren, zodat ze dienovereenkomstig kunnen plannen. Het marketingteam kan de API voor ad-hocactivering van Experience Platforms gebruiken om segmenten op aanvraag te exporteren en de gasten op de hoogte te stellen.
 
 ### Integratie testen
 
-IT-managers kunnen de API voor ad-hocactivering van Experience Platforms gebruiken om doelsegmenten op aanvraag te exporteren, zodat ze hun aangepaste integratie met Adobe Experience Platform kunnen testen en kunnen controleren of alles correct werkt.
+IT-beheerders kunnen de API voor ad-hocactivering van Experience Platforms gebruiken om segmenten op aanvraag te exporteren, zodat ze hun aangepaste integratie met Adobe Experience Platform kunnen testen en kunnen controleren of alles correct werkt.
 
 
 ## Guardrails {#guardrails}
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u publiekssegmenten wilt activeren. |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van de publiekssegmenten die u wilt activeren voor de geselecteerde bestemming. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u segmenten wilt activeren. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van de segmenten die u wilt activeren voor het geselecteerde doel. |
 | <ul><li>`exportId1`</li></ul> | De id die wordt geretourneerd in het antwoord van de [segmentexport](../../segmentation/api/export-jobs.md#retrieve-list) taak. Zie [Stap 4: Vraag de meest recente segment-exporttaak-id aan](#segment-export-id) voor instructies over hoe u deze id kunt vinden. |
 
 ### Antwoord
