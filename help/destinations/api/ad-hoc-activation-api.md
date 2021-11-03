@@ -5,7 +5,7 @@ title: (bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van publiekssegmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -148,7 +148,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
          "segmentId3"
       ]
    },
-   "exportId":[
+   "exportIds":[
       "exportId1"
    ]
 }
