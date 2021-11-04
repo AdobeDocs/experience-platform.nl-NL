@@ -5,9 +5,9 @@ title: Woordenlijst met gegevensgebruikslabels
 topic-legacy: labels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1984'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Adobe Experience Platform Data Governance biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
 
-In dit document worden de basislabels voor gegevensgebruik beschreven die momenteel door [!DNL Experience Platform] worden geleverd. Meer informatie over [!DNL Data Governance] vindt u in het [Overzicht van gegevensbeheer](../home.md).
+In dit document worden de basislabels voor gegevensgebruik beschreven die momenteel worden geleverd door [!DNL Experience Platform]. Meer informatie over gegevensbeheer vindt u in de [Overzicht van gegevensbeheer](../home.md).
 
 ## Contractlabels
 
@@ -70,7 +70,7 @@ Sommige gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd i
 
 #### C2 {#c2}
 
-Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. Het label C2 is restrictiever dan [C1](#c1), wat slechts samenvoeging en anonieme gegevens vereist.
+Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. Het C2-label is restrictiever dan [C1](#c1), waarvoor alleen aggregatie en anonieme gegevens vereist zijn.
 
 #### C3 {#c3}
 
@@ -98,7 +98,7 @@ DAA: Online gedragsreclame. Gegevens van een bepaalde computer of een bepaald ap
 
 #### C6 {#c6}
 
-Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties zijn gescheiden van on-site inhoud en worden gedekt door label [C7](#c7). Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond, en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. *[Zie label C5 voor deze vereisten.](#c5)*
+Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties zijn gescheiden van on-site inhoud en worden gedekt door een label [C7](#c7). Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond, en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. *[Zie label C5 voor deze vereisten.](#c5)*
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
 
@@ -108,7 +108,7 @@ DAA: Online gedragsreclame omvat niet de activiteiten van de eerste partijen, Ad
 
 #### C7 {#c7}
 
-Onsite inhoud is tekst en afbeeldingen die zijn ontworpen om te informeren, te onderwijzen of te vermaken, en die niet zijn gemaakt om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van de inhoud te bepalen, met inbegrip van of de inhoud als inheemse reclame zou kwalificeren. Het C7-label is niet bedoeld voor onsite advertenties, die onder het label [C6](#c6) vallen. Gegevens met een C7-label kunnen niet worden gebruikt voor het bepalen van inhoud op locatie, inclusief de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten. Dit omvat eerder verzamelde informatie over de belangen van gebruikers in bepaalde inhoud, het verwerken van gegevens over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld, het selecteren van inhoud hebben ondernomen. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de activiteiten ter plaatse van die gebruikers en het vervolgens gebruiken van deze voorkeuren bij het gericht maken van inhoud ter plaatse niet als op rente-gebaseerd richten (ook wel personalisatie genoemd) kwalificeren, aangezien het niet aan alle drie vereisten zou voldoen die voor op rente-gebaseerde gericht richten noodzakelijk zijn. *[Zie label C5 voor deze vereisten.](#c5)*
+Onsite inhoud is tekst en afbeeldingen die zijn ontworpen om te informeren, te onderwijzen of te vermaken, en die niet zijn gemaakt om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van de inhoud te bepalen, met inbegrip van of de inhoud als inheemse reclame zou kwalificeren. Het label C7 is niet bedoeld voor advertenties ter plaatse, die onder het etiket vallen [C6](#c6). Gegevens met een C7-label kunnen niet worden gebruikt voor het bepalen van inhoud op locatie, inclusief de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten. Dit omvat eerder verzamelde informatie over de belangen van gebruikers in bepaalde inhoud, het verwerken van gegevens over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld, het selecteren van inhoud hebben ondernomen. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de activiteiten ter plaatse van die gebruikers en het vervolgens gebruiken van deze voorkeuren bij het gericht maken van inhoud ter plaatse niet als op rente-gebaseerd richten (ook wel personalisatie genoemd) kwalificeren, aangezien het niet aan alle drie vereisten zou voldoen die voor op rente-gebaseerde gericht richten noodzakelijk zijn. *[Zie label C5 voor deze vereisten.](#c5)*
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
 
@@ -130,4 +130,4 @@ Sommige beleidsregels voor gegevensgebruik beperken het gebruik van verankerde i
 
 #### C11 {#c11}
 
-Met Adobe Experience Platform Segment Match kunt u eersteklas segmenten afstemmen op privacy- en toestemmingsvoorkeuren, waardoor beter ontwikkelde profielen en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in processen [!DNL Segment Match]. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
+Met Adobe Experience Platform Segment Match kunt u eersteklas segmenten afstemmen op privacy- en toestemmingsvoorkeuren, waardoor beter ontwikkelde profielen en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.

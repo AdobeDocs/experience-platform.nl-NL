@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Selecteren **[!UICONTROL Edit segment]** brengt u naar de [!DNL Segment Builder]
 
 De **[!UICONTROL Total audience in segment]** wordt het totale aantal profielen weergegeven dat in aanmerking komt voor het segment.
 
-Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de voorbeeldgegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het genereren van segmentramingen vindt u in het gedeelte [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmenten.
+Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het genereren van segmentramingen vindt u in het gedeelte [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmenten.
 
 ### Geactiveerde doelen
 
@@ -199,7 +199,7 @@ Meer informatie over de segmentatie van de randen vindt u in de [UI-hulplijn voo
 >
 >Beleidsovertredingen zijn alleen van toepassing als u een segment maakt dat aan een doel is toegewezen.
 
-Als u klaar bent met het maken van uw segment, wordt het segment geanalyseerd door Adobe Experience Platform Data Governance om ervoor te zorgen dat er geen beleidsovertredingen binnen het segment plaatsvinden. Zie de [[!DNL Data Governance] overzicht](../../data-governance/home.md) voor meer informatie .
+Als u klaar bent met het maken van uw segment, wordt het segment geanalyseerd door Adobe Experience Platform Data Governance om ervoor te zorgen dat er geen beleidsovertredingen binnen het segment plaatsvinden. Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie .
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

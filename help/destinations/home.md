@@ -1,13 +1,13 @@
 ---
 keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;activate gegevens;activate;
 title: Overzicht van doelen
-seo-title: Overzicht van doelen
+seo-title: Destinations overview
 description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
-seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
+seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -20,42 +20,42 @@ ht-degree: 0%
 
 ## Doelen en bronnen {#destinations-and-sources}
 
-Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerste partij en het activeren ervan voor uw bedrijfsbehoeften. Gebruik [bronnen](../sources/home.md) om gegevens in te voeren in Platform en bestemmingen om gegevens uit Platform te exporteren.
+Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerste partij en het activeren ervan voor uw bedrijfsbehoeften. Gebruiken [bronnen](../sources/home.md) om gegevens in Platform en bestemmingen in te voeren om gegevens uit Platform uit te voeren.
 
 ## Doelstappen {#steps}
 
-* Kies uit een [zelfbedieningencatalogus](./catalog/overview.md) van alle bestemmingen beschikbaar in Platform.
+* Kiezen uit een [zelfbedieningscatalogus](./catalog/overview.md) van alle in Platform beschikbare bestemmingen.
 * Gebruik bestemmingen om profielen of segmenten te verzenden naar marketingautomatiseringsplatforms, digitale advertentieplatforms en meer.
 * De gegevens van het programma voeren regelmatig naar uw aangewezen bestemmingen uit.
 
 ## Besturingselementen {#controls}
 
-Met de besturingselementen in de [werkruimte Doelen](./ui/destinations-workspace.md) kunt u:
+De besturingselementen in de [Werkruimte Doelen](./ui/destinations-workspace.md) staat u toe:
 
 * Blader door de catalogus met doelplatforms waar u uw gegevens kunt activeren;
 * Gegevensstromen naar de doelen in de catalogus maken, bewerken, activeren en uitschakelen;
 * Maak een account op een opslaglocatie of koppel een Platform naar de account op het doelplatform;
 * Selecteer welke segmenten moeten worden geactiveerd voor bestemmingen;
-* Selecteer welke [XDM-velden (Experience Data Model)](../xdm/home.md) moeten worden geëxporteerd wanneer u segmenten activeert naar marketingdoelen via e-mail.
+* Selecteren [XDM-velden (Experience Data Model)](../xdm/home.md) om te exporteren bij het activeren van segmenten naar marketingdoelen per e-mail.
 
 ## Doeltypen en -categorieën {#types-and-categories}
 
-Voor gedetailleerde informatie, zie [bestemmingstypes en categorieën overzicht](./destination-types.md).
+Zie voor meer informatie de [doeltypen en -categorieën, overzicht](./destination-types.md).
 
 ## Doelen en toegangscontroles {#access-controls}
 
-De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en rol neer aan de bodem van de pagina.
+De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuift omlaag naar de onderkant van de pagina.
 
-Voor meer informatie over toegangscontroles, zie [de gebruikershandleiding van het Toegangsbeheer](../access-control/ui/overview.md).
+Voor meer informatie over toegangscontroles, zie [Gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] beperkingen op het activeren van gegevens naar bestemmingen {#data-governance}
+## Beperkingen op gegevensbeheer bij het activeren van gegevens naar bestemmingen {#data-governance}
 
 Het gegevensbeheer wordt afgedwongen voor bestemmingen in de Platform via:
 
-* *Marketingacties* die u kunt selecteren in de workflow voor het maken van doelen.
-* *Beleid* voor gegevensgebruik dat beperkt dat gegevens met bepaalde gebruikslabels worden geactiveerd tot bestemmingen met bepaalde marketingacties.
+* *Marketingacties* dat u in creeert bestemmingswerkschema kunt selecteren;
+* *Beleid voor gegevensgebruik* die de activering van gegevens met bepaalde gebruiksetiketten beperken tot bestemmingen met bepaalde marketingacties.
 
-Zie [!DNL Data Governance] in de documentatie van het Platform voor meer informatie over [marketing acties](../data-governance/policies/overview.md) en [het oplossen van de schendingen van het gegevensbeleid](../data-governance/enforcement/auto-enforcement.md).
+Zie Gegevensbeheer in de documentatie van het Platform voor meer informatie over [marketingacties](../data-governance/policies/overview.md) en [gegevensbeleidsovertredingen oplossen](../data-governance/enforcement/auto-enforcement.md).
 
 Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platform voor meer informatie over het selecteren van marketingacties in de workflow Doel maken:
 

@@ -5,26 +5,26 @@ title: API-eindpunt voor marketinghandelingen
 topic-legacy: developer guide
 description: Een marketingactie, in het kader van de Adobe Experience Platform Data Governance, is een actie die een consument van gegevens uit een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
 # Eindpunt marketingacties
 
-Een marketingactie in de context van de Adobe Experience Platform [!DNL Data Governance] is een actie die een [!DNL Experience Platform]-gegevensconsument onderneemt, waarvoor het nodig is te controleren op overtredingen van het beleid voor gegevensgebruik.
+Een marketingactie in het kader van de Adobe Experience Platform Data Governance is een actie die [!DNL Experience Platform] gegevens die de consument nodig heeft en waarvoor moet worden gecontroleerd op overtredingen van het beleid inzake gegevensgebruik.
 
-U kunt marketing acties voor uw organisatie beheren door het `/marketingActions` eindpunt in de Dienst API van het Beleid te gebruiken.
+U kunt marketingacties voor uw organisatie beheren met de `/marketingActions` eindpunt in de Dienst API van het Beleid.
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 ## Een lijst met marketingacties ophalen {#list}
 
-U kunt een lijst van kern of douanemarketing acties terugwinnen door een verzoek van de GET aan `/marketingActions/core` of `/marketingActions/custom`, respectievelijk te richten.
+U kunt een lijst met kern- of aangepaste marketingacties opvragen door een GET-aanvraag in te dienen bij `/marketingActions/core` of `/marketingActions/custom`, respectievelijk.
 
 **API-indeling**
 
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details voor elke opgehaalde marketingactie, inclusief `name` en `href`. De waarde `href` wordt gebruikt om de marketing actie te identificeren wanneer [het creëren van een beleid van het gegevensgebruik](policies.md#create-policy).
+Een succesvolle reactie retourneert de details voor elke opgehaalde marketingactie, inclusief de bijbehorende `name` en `href`. De `href` waarde wordt gebruikt om de marketingactie te identificeren wanneer [gegevensgebruiksbeleid maken](policies.md#create-policy).
 
 ```json
 {
@@ -102,12 +102,12 @@ Een geslaagde reactie retourneert de details voor elke opgehaalde marketingactie
 | --- | --- |
 | `_page.count` | Het totale aantal geretourneerde marketingacties. |
 | `children` | Een array met objecten die de details van de opgehaalde marketingacties bevatten. |
-| `name` | De naam van de marketingactie, die fungeert als unieke id wanneer [een specifieke marketingactie](#lookup) wordt opgezocht. |
-| `_links.self.href` | Een URI-referentie voor de marketingactie die kan worden gebruikt om de `marketingActionsRefs`-array te voltooien wanneer [een beleid voor gegevensgebruik maakt](policies.md#create-policy). |
+| `name` | De naam van de marketingactie, die fungeert als unieke id wanneer [specifieke marketingactie zoeken](#lookup). |
+| `_links.self.href` | Een URI-referentie voor de marketingactie die kan worden gebruikt om de handeling te voltooien `marketingActionsRefs` array wanneer [gegevensgebruiksbeleid maken](policies.md#create-policy). |
 
 ## Een specifieke marketingactie opzoeken {#lookup}
 
-U kijkt omhoog de details van een specifieke marketing actie door het bezit `name` van de marketing actie in de weg van een verzoek van de GET te omvatten.
+U kunt de details van een specifieke marketingactie opzoeken door de marketingactie `name` eigenschap in het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -118,11 +118,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | De eigenschap `name` van de marketingactie die u wilt opzoeken. |
+| `{MARKETING_ACTION_NAME}` | De `name` eigenschap van de marketingactie die u wilt opzoeken. |
 
 **Verzoek**
 
-Het volgende verzoek wint een douanemarketing actie genoemd `combineData` terug.
+Met het volgende verzoek wordt een aangepaste marketingactie opgehaald met de naam `combineData`.
 
 ```shell
 curl -X GET \
@@ -135,7 +135,7 @@ curl -X GET \
 
 **Antwoord**
 
-Het reactieobject bevat de details voor de marketingactie, inclusief het pad (`_links.self.href`) dat nodig is om naar de marketingactie te verwijzen wanneer [een beleid voor gegevensgebruik definiëren](policies.md#create-policy) (`marketingActionsRefs`).
+Het reactieobject bevat de details voor de marketingactie, inclusief het pad (`_links.self.href`) nodig zijn om te verwijzen naar de marketingactie wanneer [gegevensgebruiksbeleid definiëren](policies.md#create-policy) (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -172,7 +172,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe marketing actie genoemd `crossSiteTargeting`, op voorwaarde dat een marketing actie van de zelfde naam nog niet in het systeem bestaat. Als een `crossSiteTargeting` marketing actie bestaat, werkt deze vraag in plaats daarvan die marketing actie bij die op de eigenschappen wordt gebaseerd die in de nuttige lading worden verstrekt.
+Met het volgende verzoek wordt een nieuwe marketingactie gemaakt met de naam `crossSiteTargeting`, op voorwaarde dat het systeem nog geen afzetactie met dezelfde naam heeft. Indien een `crossSiteTargeting` marketingactie bestaat wel, maar deze aanroep werkt die marketingactie bij op basis van de eigenschappen die in de payload zijn opgegeven.
 
 ```shell
 curl -X PUT \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `name` | De naam van de marketingactie die moet worden gemaakt of bijgewerkt. <br><br>**BELANGRIJK**: Deze eigenschap moet overeenkomen met de  `{MARKETING_ACTION_NAME}` in het pad, anders treedt een HTTP 400-fout (Bad Request) op. Met andere woorden, wanneer een marketingactie is gemaakt, kan de eigenschap `name` van de actie niet meer worden gewijzigd. |
+| `name` | De naam van de marketingactie die moet worden gemaakt of bijgewerkt. <br><br>**BELANGRIJK**: Deze eigenschap moet overeenkomen met `{MARKETING_ACTION_NAME}` in het pad, anders treedt een HTTP 400-fout (Bad Request) op. Met andere woorden, zodra een marketingactie is opgezet, moet deze `name` eigenschap kan niet worden gewijzigd. |
 | `description` | Een optionele beschrijving om de context van de marketingactie te verfijnen. |
 
 **Antwoord**
@@ -249,4 +249,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP Status 200 (OK) met een lege antwoordinstantie.
 
-U kunt de schrapping bevestigen door te proberen om [de marketing actie](#look-up) op te zoeken. Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als de marketingactie van het systeem is verwijderd.
+U kunt de verwijdering bevestigen door te proberen [marketingactie opzoeken](#look-up). Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als de marketingactie van het systeem is verwijderd.

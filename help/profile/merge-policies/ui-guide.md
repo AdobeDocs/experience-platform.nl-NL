@@ -4,9 +4,9 @@ title: UI-gids voor samenvoegingsbeleid
 type: Documentation
 description: Wanneer het brengen van gegevens uit veelvoudige bronnen samen in Experience Platform, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen. Deze handleiding bevat stapsgewijze instructies voor het werken met samenvoegbeleidsregels via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e0a75a75e5dbb0318ec8785d887d7a156d28f5bd
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2193'
 ht-degree: 0%
 
 ---
@@ -193,7 +193,7 @@ Nadat u de benodigde wijzigingen hebt aangebracht, controleert u het samenvoegbe
 
 ## Schendingen van het beleid inzake gegevensbeheer
 
-Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform [!DNL Data Governance] en zijn regels die het soort marketingacties beschrijven dat u mag uitvoeren op of mag uitvoeren op specifieke [!DNL Platform] gegevens. Bijvoorbeeld, als een samenvoegbeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een **[!UICONTROL Data governance policy violation detected]** melding wanneer wordt geprobeerd uw samenvoegbeleid op te slaan.
+Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform Data Governance en is een regel die het soort marketingacties beschrijft dat u mag uitvoeren of waarvan u een beperking hebt opgelegd voor specifieke acties [!DNL Platform] gegevens. Bijvoorbeeld, als een samenvoegbeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een **[!UICONTROL Data governance policy violation detected]** melding wanneer wordt geprobeerd uw samenvoegbeleid op te slaan.
 
 Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Bij het selecteren van een overtreden beleid, **[!UICONTROL Data lineage]** bevat de reden voor de schending en de betrokken activering, die elk meer details verstrekken over hoe het beleid van het gegevensgebruik is overtreden.
 
