@@ -5,9 +5,9 @@ title: Privacy Service- en Experience Cloud-toepassingen
 topic-legacy: overview
 description: Dit document bevat een referentie voor het configureren van verschillende Experience Cloud-toepassingen voor bewerkingen met betrekking tot privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: f0dc33dcd4803f157e411d8baf3b2d2f96cea5e1
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '617'
 ht-degree: 7%
 
 ---
@@ -37,6 +37,7 @@ Hieronder volgt een lijst met [!DNL Experience Cloud] toepassingen die zijn geï
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Toegang tot/verwijdering van documentatie voor het Data Lake](../catalog/privacy.md)</li><li>[Documentatie voor toegang/verwijdering voor identiteitsservice](../identity-service/privacy.md)</li><li>[Documentatie voor realtime-klantprofiel openen/verwijderen](../profile/privacy.md)</li><li>[!DNL Experience Platform] eerbetoon [opt-out-aanvragen voor publiekssegmenten](../segmentation/consents.md).</li></ul> |
 | Adobe Primetime-verificatie | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] niet over de mogelijkheid beschikt om gegevens over te dragen, zodat verzoeken om niet in aanmerking te komen voor verkoop niet van toepassing zijn.</li></ul> |
 | Adobe Target | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] niet over de mogelijkheid beschikt om gegevens over te dragen, zodat verzoeken om niet in aanmerking te komen voor verkoop niet van toepassing zijn.</li></ul> |
+| Marketo Engage | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] niet over de mogelijkheid beschikt om gegevens over te dragen, zodat verzoeken om niet in aanmerking te komen voor verkoop niet van toepassing zijn.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -50,7 +51,6 @@ Hieronder volgt een lijst met [!DNL Experience Cloud] toepassingen die niet zijn
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Een overzicht van hoe een beheerder van de klantenprivacy of AEM beheerder GDPR- verzoeken kan behandelen. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Stappen voor het maken van GDPR toegang en schrapping verzoeken gebruikend Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Zorg ervoor dat uw Magento Commerce-installaties voldoen aan de vereisten van specifieke privacywetgeving. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Leer hoe privacyregels van toepassing zijn op Marketo. |
 | [Tags in Adobe Experience Platform](../tags/ui/client-side/consent.md) | Hoe ontwikkelaars uitbreidingen en de regelbouwer kunnen gebruiken om opt-in en opt-out oplossingen te bepalen. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Leer hoe Workfront persoonlijke gegevens verzamelt en hoe een betrokkene een privacyaanvraag kan indienen via een formulier. |
 
