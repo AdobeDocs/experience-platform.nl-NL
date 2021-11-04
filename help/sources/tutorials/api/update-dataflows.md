@@ -6,41 +6,41 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het bijwerken van een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma, gebruikend de Dienst API van de Stroom.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 152ad198918f9cf0bea9dabd67886f5d56763ef8
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
 
 # Dataflows bijwerken met de Flow Service API
 
-Deze zelfstudie behandelt de stappen voor het bijwerken van een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In deze zelfstudie worden de stappen beschreven voor het bijwerken van een gegevensstroom, inclusief de basisinformatie, het schema en de toewijzingensets met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom identiteitskaart hebt, selecteer uw schakelaar van keus van [bronnen overzicht](../../home.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
+Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom-id hebt, selecteert u de gewenste connector in het menu [overzicht van bronnen](../../home.md) en voer de stappen uit die zijn beschreven voordat u deze zelfstudie uitvoert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met de [!DNL Flow Service]-API te kunnen bijwerken.
+De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met succes bij te werken met de [!DNL Flow Service] API.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de gids voor het oplossen van problemen met Experience Platforms.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in Experience Platform, inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -50,7 +50,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Gegevens over gegevensstroom opzoeken
 
-De eerste stap bij het bijwerken van uw gegevensstroom is gegevens terug te winnen die uw stroom ID gebruiken. U kunt de huidige details van een bestaande gegevensstroom bekijken door een verzoek van de GET aan het `/flows` eindpunt te richten.
+De eerste stap bij het bijwerken van uw gegevensstroom is gegevens terug te winnen die uw stroom ID gebruiken. U kunt de huidige details van een bestaande gegevensstroom bekijken door een verzoek van de GET aan `/flows` eindpunt.
 
 **API-indeling**
 
@@ -60,7 +60,7 @@ GET /flows/{FLOW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id` waarde voor dataflow u wilt terugwinnen. |
+| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt terugwinnen. |
 
 **Verzoek**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de huidige details van uw gegevensstroom met inbegrip van zijn versie, programma, en uniek herkenningsteken (`id`) terug.
+Een succesvolle reactie keert de huidige details van uw gegevensstroom met inbegrip van zijn versie, programma, en unieke herkenningsteken terug (`id`).
 
 ```json
 {
@@ -191,11 +191,11 @@ Een succesvolle reactie keert de huidige details van uw gegevensstroom met inbeg
 
 ## Gegevensstroom bijwerken
 
-Om het runtime programma, de naam, en de beschrijving van uw gegevensstroom bij te werken, voer een verzoek van PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom identiteitskaart, versie, en het nieuwe programma uit u wilt gebruiken.
+Voer een PATCH-verzoek uit aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het nieuwe programma u wilt gebruiken.
 
 >[!IMPORTANT]
 >
->De `If-Match` kopbal wordt vereist wanneer het doen van een PATCH verzoek. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
+>De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken. De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom.
 
 **API-indeling**
 
@@ -234,15 +234,15 @@ curl -X PATCH \
         ]'
 ```
 
-| Parameter | Beschrijving |
+| Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace` en `remove`. |
-| `path` | Het pad van de parameter die moet worden bijgewerkt. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek tot GET aan [!DNL Flow Service] API te richten, terwijl het verstrekken van uw stroom identiteitskaart
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
 
 ```json
 {
@@ -251,6 +251,62 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 }
 ```
 
+## Toewijzing bijwerken
+
+U kunt de mappingset van een bestaande gegevensstroom bijwerken door een PATCH-verzoek in te dienen bij de [!DNL Flow Service] API en het verstrekken van bijgewerkte waarden voor uw `mappingId` en `mappingVersion`.
+
+**API-indeling**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Verzoek**
+
+Met de volgende aanvraag wordt de toewijzingenset van uw gegevensstroom bijgewerkt.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+    -d '[
+        {
+            "op": "replace",
+            "path": "/transformations/0",
+            "value": {
+                "name": "Mapping",
+                "params": {
+                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                    "mappingVersion": 2
+                }
+            }
+        }
+    ]'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. In dit voorbeeld: `transformations` wordt bijgewerkt. |
+| `value.name` | De naam van de eigenschap die moet worden bijgewerkt. |
+| `value.params.mappingId` | De nieuwe afbeeldings-id die moet worden gebruikt om de toewijzingenset van de gegevensstroom bij te werken. |
+| `value.params.mappingVersion` | De nieuwe toewijzingsversie die is gekoppeld aan de bijgewerkte toewijzingsID. |
+
+**Antwoord**
+
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u runtime programma, naam, en beschrijving van uw gegevensstroom bijgewerkt gebruikend [!DNL Flow Service] API. Voor meer informatie bij het gebruiken van bronschakelaars, zie [bronnen overzicht](../../home.md).
+Door deze zelfstudie te volgen, hebt u de basisinformatie, het programma, en het in kaart brengen reeksen van uw dataflow bijgewerkt gebruikend [!DNL Flow Service] API. Voor meer informatie bij het gebruiken van bronschakelaars, zie [overzicht van bronnen](../../home.md).
