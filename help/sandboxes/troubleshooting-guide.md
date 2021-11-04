@@ -5,53 +5,67 @@ title: Handleiding voor probleemoplossing voor sandboxen
 topic-legacy: troubleshooting guide
 description: Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
 
 # Richtlijnen voor het oplossen van problemen met sandboxen
 
-Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services van Platforms.
+Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en problemen met betrekking tot andere services van Platforms raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
-Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie het [overzicht van sandboxen](home.md) voor meer informatie.
+Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie de [sandboxen, overzicht](home.md) voor meer informatie .
 
 ## Wat is een sandbox?
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie het [overzicht van sandboxen](home.md) voor meer informatie.
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie de [sandboxen, overzicht](home.md) voor meer informatie .
 
 ## Welke typen sandboxen zijn beschikbaar en wat zijn de verschillen tussen deze typen?
 
 Het Experience Platform bevat twee sandboxtypen:
 
-* Productiesandbox
-* Niet-productiesandbox
+* **Productiesandbox**: Een productiesandbox is bedoeld voor gebruik met profielen in uw productieomgeving. Met Platform kunt u meerdere productie-sandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw licentie [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde productiesandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten over al uw geoorloofde productie sandboxen).
+* **Ontwikkelingssandbox**: Een ontwikkelingssandbox is een sandbox die uitsluitend kan worden gebruikt voor ontwikkeling en testen met niet-productieprofielen. De zandbakken van de ontwikkeling steunen een hoeveelheid non-production profielen tot 10% van uw vergunning [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
+   * een gemiddelde rijkheid van het non-production profiel van 75 kilobytes per geautoriseerd niet-productieprofiel (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen);
+   * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
+   * Gemiddeld 120 [!DNL Profile] API-aanroepen, per [!DNL Profile], per jaar (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen.
 
-Experience Platform biedt één productiesandbox die niet kan worden verwijderd of opnieuw ingesteld. Er kan slechts één productiesandbox bestaan voor één enkele instantie van het Platform.
-
-Daarentegen kunnen sandboxbeheerders voor één Platform-instantie meerdere niet-productiesandboxen maken. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt maximaal 75 sandboxen toevoegen voor maximaal tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
-
-Zie het [overzicht van sandboxen](./home.md) voor meer informatie.
+Zie de [sandboxen, overzicht](./home.md) voor meer informatie .
 
 ## Kan ik toegang krijgen tot een bron van meerdere sandboxen?
 
 Sandboxen zijn geïsoleerde partities van één Platform-instantie, waarbij elke sandbox zijn eigen onafhankelijke bibliotheek met bronnen behoudt. Een bron die in een sandbox bestaat, kan niet worden benaderd vanuit een andere sandbox, ongeacht het type sandbox (productie of niet-productie).
 
+## Wat is de standaardproductiesandbox?
+
+De standaardproductiessandbox is de eerste productiesandbox die wordt gemaakt wanneer een IMS-organisatie voor het eerst wordt ingericht. Met de standaardproductiesandbox kunt u gegevens van het Platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten. De standaardproductiesandbox kan worden opnieuw ingesteld maar niet worden verwijderd.
+
 ## Hoeveel productiesandboxen kan ik hebben?
 
-Experience Platform ondersteunt slechts één productiesandbox per IMS-organisatie, die buiten de box wordt geleverd. Hoewel de naam van de productiesandbox kan worden gewijzigd, kan deze niet worden verwijderd of opnieuw ingesteld. De gebruikers met de toestemmingen van het Beleid Sandbox kunnen slechts tot stand brengen, terugstellen, en schrappen niet-productiezandbakken.
+Een instantie van het Experience Platform steunt veelvoudige productie en ontwikkelingszandbakken, met elke zandbak die zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, en profielen) handhaaft.
 
-## Hoeveel niet-productiesandboxen kan ik hebben?
+Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal.
 
-Met Experience Platform kunnen momenteel maximaal 15 niet voor productie bestemde sandboxen actief zijn binnen één IMS-organisatie.
+De zandbakken van de productie kunnen worden teruggesteld of worden geschrapt, behalve productie zandbakken die ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) -functie, of als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) gebruiken.
+
+U kunt de titel van een productiesandbox bijwerken. De naam van een productiesandbox kan echter niet worden gewijzigd.
+
+>[!NOTE]
+>
+>De naam van de sandbox wordt gebruikt voor opzoekdoeleinden in API-aanroepen, terwijl de titel van de sandbox als weergavenaam wordt gebruikt.
+
+## Hoeveel ontwikkelingssandboxen kan ik hebben?
+
+Met Experience Platform kunnen momenteel maximaal 75 sandboxen (productie en ontwikkeling) actief zijn binnen één IMS-organisatie.
+
+Ontwikkelingssandboxen bieden ondersteuning voor functies voor opnieuw instellen en verwijderen.
 
 ## Ik heb zojuist een zandbak gemaakt. Hoe kan ik machtigingen instellen voor de gebruikers die met deze sandbox gaan werken?
 
-De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het gebruik van productprofielen. Nadat u een nieuwe sandbox hebt gemaakt, navigeert u naar het tabblad **Machtigingen** van het productprofiel waartoe u toegang wilt verlenen en klikt u op **Sandboxen**. Van hieruit kunt u op dezelfde manier als andere machtigingen toegang tot de nieuwe sandbox toevoegen of verwijderen.
+De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het gebruik van productprofielen. Nadat u een nieuwe sandbox hebt gemaakt, navigeert u naar de **Machtigingen** tabblad van het productprofiel waaraan u toegang wilt verlenen, klikt u op **Sandboxen**. Van hieruit kunt u op dezelfde manier als andere machtigingen toegang tot de nieuwe sandbox toevoegen of verwijderen.
 
 Als u unieke machtigingen wilt toevoegen aan gebruikers van een bepaalde sandbox, moet u mogelijk een nieuw productprofiel maken met de desbetreffende sandboxen en machtigingen die zijn toegepast, en die gebruikers toewijzen aan dat profiel.
 
-Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor meer informatie over het beheren van sandboxen en machtigingen in de Admin Console.
+Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor meer informatie over het beheer van sandboxen en machtigingen in de Admin Console.
