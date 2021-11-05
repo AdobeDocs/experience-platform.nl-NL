@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
+source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '141'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
    - [Geplande query&#39;s](api/scheduled-queries.md)
    - [Runs voor geplande vragen](api/runs-scheduled-queries.md)
    - [Zoeksjablonen](api/query-templates.md)
-- UI voor query-service {#ui}
+- Gebruikersinterface Query Service {#ui}
    - [Overzicht van gebruikersinterface](ui/overview.md)
    - [Gebruikershandleiding voor de Query Editor](ui/user-guide.md)
    - [Referenties van Query Service gebruiken](ui/credentials.md)
@@ -35,6 +35,7 @@ ht-degree: 2%
    - [Voorbeeld van Adobe Analytics-query&#39;s](best-practices/adobe-analytics.md)
    - [Voorbeeld van Adobe Target-query&#39;s](best-practices/adobe-target.md)
    - [Voorbeeld van anonieme vragen over blokken](best-practices/anonymous-block.md)
+   - [Incrementeel laden](best-practices/incremental-load.md)
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)
@@ -42,7 +43,7 @@ ht-degree: 2%
    - [SQL-functies in Spark](sql/spark-sql-functions.md)
    - [Opdrachten Metagegevens](sql/metadata.md)
    - [Vooraf voorbereide instructies](sql/prepared-statements.md)
-- Verbind cliënten met de Dienst van de Vraag {#clients}
+- Client verbinden met Query-service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)
