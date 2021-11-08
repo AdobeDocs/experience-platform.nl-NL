@@ -5,9 +5,9 @@ title: (bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van publiekssegmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
+source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1063'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ IT-beheerders kunnen de API voor ad-hocactivering van Experience Platforms gebru
 
 Houd rekening met de volgende instructies wanneer u de API voor ad-hocactivering gebruikt.
 
-* Elke ad-hocactiveringstaak kan maximaal 20 segmenten activeren. Als u probeert meer dan 20 segmenten per taak te activeren, mislukt de taak.
+* Momenteel kan elke ad-hocactiveringstaak maximaal 20 segmenten activeren. Als u probeert meer dan 20 segmenten per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd.
 * Ad-hocactiveringstaken kunnen niet gelijktijdig met de geplande [segmentexporttaken](../../segmentation/api/export-jobs.md). Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande segmentexporttaak is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd.
 * Voer niet meer dan één gelijktijdige ad-hocactiveringstaak per segment uit.
 
@@ -126,7 +126,7 @@ Nadat de segmentexporttaak is voltooid, kunt u de activering activeren.
 
 >[!NOTE]
 >
->U kunt maximaal 20 segmenten per ad-hocactiveringstaak activeren. Als u probeert meer segmenten te activeren, mislukt de taak.
+>Momenteel kan elke ad-hocactiveringstaak maximaal 20 segmenten activeren. Als u probeert meer dan 20 segmenten per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd.
 
 ### Verzoek
 
@@ -166,20 +166,21 @@ Een geslaagde reactie retourneert HTTP-status 200.
 
 ```shell
 {
-   "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered successfully",
-   "statusURLs":[
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
+   "order":[
+      {
+         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+      }
    ]
 }
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `code` | De API-antwoordcode. De succesvolle vraagwinst `DEST-ADH-200` (statuscode 200), terwijl een verkeerd opgemaakte code een waarde retourneert `DEST-ADH-400` (statuscode 400). |
-| `message` | Het succes- of foutbericht dat door de API wordt geretourneerd. |
-| `statusURLs` | De status-URL van de activeringsstroom. U kunt de voortgang van de flow volgen met de [Flow Service-API](../../sources/tutorials/api/monitor.md). |
+| `segment` | De id van het geactiveerde segment. |
+| `order` | De id van het doel waarop het segment is geactiveerd. |
+| `statusURL` | De status-URL van de activeringsstroom. U kunt de voortgang van de flow volgen met de [Flow Service-API](../../sources/tutorials/api/monitor.md). |
 
 
 ## API-foutafhandeling
