@@ -6,49 +6,49 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Azure Event Hubs]-bronverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure Event Hubs] bronverbinding met de [!DNL Flow Service] API
 
-Deze zelfstudie begeleidt u door de stappen om [!DNL Azure Event Hubs] (verder genoemd als &quot;[!DNL Event Hubs]&quot;) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om te verbinden [!DNL Azure Event Hubs] (hierna &quot;[!DNL Event Hubs]&quot;) naar Experience Platform, met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-- [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+- [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om [!DNL Event Hubs] met succes te kunnen verbinden met een Platform via de [!DNL Flow Service]-API.
+De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken [!DNL Event Hubs] naar Platform met de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Flow Service] wilt laten verbinden met uw [!DNL Event Hubs]-account, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Event Hubs] account, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
-| `sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
-| `namespace` | De naamruimte van de [!DNL Event Hubs] die u opent. Een [!DNL Event Hubs] namespace verstrekt een unieke bereikingscontainer, waarin u één of meerdere [!DNL Event Hubs] kunt tot stand brengen. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] ID van de verbindingsspecificatie is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKey` | De primaire sleutel van de [!DNL Event Hubs] naamruimte. De `sasPolicy` de `sasKey` komt overeen met `manage` rechten die zijn geconfigureerd voor de [!DNL Event Hubs] in te vullen lijst. |
+| `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt tot stand brengen [!DNL Event Hubs]. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
-Voor meer informatie over deze waarden, verwijs naar [dit document van de Hubs van Gebeurtenis](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Zie voor meer informatie over deze waarden [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
-De eerste stap bij het creëren van een bronverbinding moet uw [!DNL Event Hubs] bron voor authentiek verklaren en een identiteitskaart van de basisverbinding produceren. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
+De eerste stap bij het maken van een bronverbinding is het verifiëren van uw [!DNL Event Hubs] bron en genereer een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Event Hubs] authentificatiegeloofsbrieven als deel van de verzoekparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Event Hubs] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -88,12 +88,12 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `auth.params.sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
-| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] die u opent. |
-| `connectionSpec.id` | De [!DNL Event Hubs] ID van de verbindingsspecificatie is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
+| `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -106,7 +106,7 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en een identiteitskaart van de bronverbinding nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie IMS.
 
-Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan het `/sourceConnections` eindpunt van [!DNL Flow Service] API.
+Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` van het [!DNL Flow Service] API.
 
 **API-indeling**
 
@@ -148,14 +148,14 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opgeven voor meer informatie over uw bronverbinding. |
-| `baseConnectionId` | De verbindingsID van uw [!DNL Event Hubs] bron die in de vorige stap werd geproduceerd. |
-| `connectionSpec.id` | The fixed connection specification ID for [!DNL Event Hubs]. Deze id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
-| `data.format` | De indeling van de [!DNL Event Hubs]-gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
+| `baseConnectionId` | De verbinding-id van uw [!DNL Event Hubs] bron die in de vorige stap is gegenereerd. |
+| `connectionSpec.id` | De vaste-verbindingsspecificatie-id voor [!DNL Event Hubs]. Deze id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `data.format` | Het formaat van de [!DNL Event Hubs] gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
 | `params.eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
 | `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm`. |
-| `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruik `latest` om te beginnen met het lezen van de meest recente gegevens en gebruik `earliest` om te beginnen met het lezen van de eerste beschikbare gegevens in de stream. Deze parameter is optioneel en wordt standaard ingesteld op `earliest` als deze parameter niet wordt opgegeven. |
-| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat moet worden gebruikt voor [!DNL Event Hubs]. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` als deze parameter niet wordt opgegeven. Raadpleeg deze [[!DNL Event Hubs] handleiding over gebeurtenisconsumenten](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie. |
+| `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruiken `latest` beginnen met lezen van de meest recente gegevens en gebruiken `earliest` om te beginnen met lezen van de eerste beschikbare gegevens in de stream. Deze parameter is optioneel en wordt standaard ingesteld op `earliest` indien niet verstrekt. |
+| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat moet worden gebruikt voor [!DNL Event Hubs]. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` indien niet verstrekt. Zie dit [[!DNL Event Hubs] gids over evenementen voor consumenten](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie . |
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een [!DNL Event Hubs] bronverbinding tot stand gebracht gebruikend [!DNL Flow Service] API. U kunt deze bron verbindings-id in de volgende zelfstudie gebruiken om een streaminggegevensstroom te maken met de API [!DNL Flow Service] API](../../collect/streaming.md).[
+Aan de hand van deze zelfstudie hebt u een [!DNL Event Hubs] bronverbinding met de [!DNL Flow Service] API. U kunt deze bron-verbindings-id gebruiken in de volgende zelfstudie: [een streaming gegevensstroom maken met de opdracht [!DNL Flow Service] API](../../collect/streaming.md).
