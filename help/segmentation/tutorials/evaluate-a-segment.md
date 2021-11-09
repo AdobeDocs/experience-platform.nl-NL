@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -150,7 +150,7 @@ Nadat een segmentatietaak is voltooid (de waarde van de opdracht `status` attrib
 De volgende stappen zijn vereist om uw publiek te exporteren:
 
 - [Een doelgegevensset maken](#create-a-target-dataset) - Maak de dataset om publieksleden te houden.
-- [Profielen voor het publiek genereren in de gegevensset](#generate-profiles-for-audience-members) - Vul de dataset met Individuele Profielen XDM die op de resultaten van een segmentbaan worden gebaseerd.
+- [Profielen voor het publiek genereren in de gegevensset](#generate-profiles) - Vul de dataset met Individuele Profielen XDM die op de resultaten van een segmentbaan worden gebaseerd.
 - [Exportvoortgang volgen](#monitor-export-progress) - Controleer de huidige voortgang van het exportproces.
 - [Lees de publieksgegevens](#next-steps) - Haal de resulterende afzonderlijke XDM-profielen op die de leden van uw publiek vertegenwoordigen.
 
@@ -163,9 +163,9 @@ Wanneer het uitvoeren van een publiek, moet een doeldataset eerst worden gecreee
 Er zijn twee manieren om de noodzakelijke dataset tot stand te brengen:
 
 - **API&#39;s gebruiken:** De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen [!DNL XDM Individual Profile Union Schema] met de [!DNL Catalog] API.
-- **De interface gebruiken:** Als u de opdracht [!DNL Adobe Experience Platform] gebruikersinterface om een dataset tot stand te brengen die verwijzingen het unieschema, de stappen in [UI-zelfstudie](../ui/overview.md) en ga vervolgens terug naar deze zelfstudie om door te gaan met de stappen voor [profielen voor publiek genereren](#generate-xdm-profiles-for-audience-members).
+- **De interface gebruiken:** Als u de opdracht [!DNL Adobe Experience Platform] gebruikersinterface om een dataset tot stand te brengen die verwijzingen het unieschema, de stappen in [UI-zelfstudie](../ui/overview.md) en ga vervolgens terug naar deze zelfstudie om door te gaan met de stappen voor [profielen voor publiek genereren](#generate-profiles).
 
-Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u aan de stap rechtstreeks te werk gaan voor [profielen voor publiek genereren](#generate-xdm-profiles-for-audience-members).
+Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u aan de stap rechtstreeks te werk gaan voor [profielen voor publiek genereren](#generate-profiles).
 
 **API-indeling**
 
