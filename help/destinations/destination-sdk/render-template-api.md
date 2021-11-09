@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/template/render ` API eindpunt, om uitgevoerde gegevens voor uw bestemming terug te geven, die op uw malplaatje van de berichttransformatie wordt gebaseerd.
 title: API-bewerkingen voor sjablonen renderen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -13,21 +13,21 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**:  `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**API-eindpunt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend het `/authoring/testing/template/render` API eindpunt, om uitgevoerde gegevens voor uw bestemming terug te geven, die op uw [berichttransformatiemalplaatje ](./message-format.md#using-templating) wordt gebaseerd. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [creeer malplaatje](./create-template.md).
+Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/testing/template/render` API-eindpunt, om geëxporteerde profielen te renderen die overeenkomen met de verwachte indeling van uw bestemming, op basis van uw [berichttransformatiesjabloon](./message-format.md#using-templating). Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [sjabloon maken](./create-template.md).
 
 ## Aan de slag met API-bewerkingen voor sjablonen {#get-started}
 
-Alvorens verder te gaan, te herzien [begonnen gids](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmingsauteur en vereiste kopballen te verkrijgen.
+Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
 
-## Geëxporteerde gegevens renderen op basis van een sjabloon {#render-exported-data}
+## Geëxporteerde profielen renderen op basis van de sjabloon voor berichttransformatie {#render-exported-data}
 
-U kunt uitgevoerde gegevens teruggeven door een verzoek van de POST aan het `authoring/testing/template/render` eindpunt te doen en bestemmingsidentiteitskaart van de bestemmingsconfiguratie en het malplaatje te verstrekken u gebruikend [steekproefmalplaatje API eindpunt ](./sample-template-api.md) creeerde.
+U kunt geëxporteerde profielen renderen door een POST aan te vragen bij de `authoring/testing/template/render` eindpunt en het verstrekken van bestemmingsidentiteitskaart van de bestemmingsconfiguratie en het malplaatje u creeerde gebruikend [voorbeeldsjabloon-API-eindpunt](./sample-template-api.md).
 
 >[!TIP]
 >
->* De bestemmingsidentiteitskaart die u hier zou moeten gebruiken is `instanceId` die aan een bestemmingsconfiguratie beantwoordt, die gebruikend het `/destinations` eindpunt wordt gecreeerd. Raadpleeg de [API referentie voor doelconfiguratie](./destination-configuration-api.md#retrieve-list).
+>* De doel-id die u hier moet gebruiken, is de `instanceId` die met een bestemmingsconfiguratie beantwoordt, die wordt gecreeerd gebruikend `/destinations` eindpunt. Zie de [API-bewerkingen voor doelconfiguratie](./destination-configuration-api.md#retrieve-list).
 
 
 
@@ -38,30 +38,34 @@ U kunt uitgevoerde gegevens teruggeven door een verzoek van de POST aan het `aut
 POST authoring/testing/template/render
 ```
 
-| Parameter | Beschrijving |
+| Request-parameter | Beschrijving |
 | -------- | ----------- |
-| `destinationId` | De id van de doelconfiguratie waarvoor u geëxporteerde gegevens rendert. |
-| `template` | De op tekens gebaseerde versie van de sjabloon waarop u geëxporteerde gegevens rendert. |
-| `profiles` | Als u profielen aan het lichaam van de vraag zou willen toevoegen, kunt u wat produceren door [de generatie API van het Profiel van de Steekproef te gebruiken](./sample-profile-generation-api.md). |
+| `destinationId` | De id van de doelconfiguratie waarvoor u geëxporteerde profielen rendert. |
+| `template` | De op tekens gebaseerde versie van de sjabloon waarop u geëxporteerde profielen rendert. |
+| `profiles` | *Optioneel*. U kunt profielen toevoegen aan de aanvraaginstantie. Als u geen profielen toevoegt, genereert en voegt het Experience Platform automatisch profielen toe aan de aanvraag. <br> Als u profielen aan het lichaam van de vraag zou willen toevoegen, kunt u wat produceren door te gebruiken [Voorbeeld van genereren van profiel-API](./sample-profile-generation-api.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
+Merk op dat de reactie die door teruggegeven malplaatje API eindpunt is teruggekeerd verschilt gebaseerd op het beleid van de bestemmingssamenvoeging. Als uw bestemming een configureerbaar samenvoegingsbeleid heeft, wordt de samenvoegingssleutel die bepaalt hoe de profielen worden bijeengevoegd ook geretourneerd in de reactie. Meer informatie over [samenvoegingsbeleid](./destination-configuration.md#aggregation) in het doelconfiguratiedocument.
 
-U kunt geëxporteerde gegevens renderen, zoals in de volgende voorbeelden wordt getoond:
+| Responsparameter | Beschrijving |
+| -------- | ----------- |
+| `aggregationKey` | Vertegenwoordigt het beleid waardoor de profielen in de uitvoer naar uw bestemming worden samengevoegd. Deze parameter is optioneel en is alleen aanwezig als het beleid voor doelaggregatie is ingesteld op `CONFIGURABLE_AGGREGATION`. |
+| `profiles` | Hiermee geeft u de profielen weer die in de aanvraag zijn opgegeven of de automatisch gegenereerde profielen als er geen profielen zijn opgegeven in de aanvraag. |
+| `output` | Gerenderd profiel of gerenderde profielen, als een beschermde tekenreeks, gebaseerd op de aangeboden sjabloon voor berichttransformatie |
 
-* [Een sjabloon renderen zonder profielen die in de hoofdtekst zijn verzonden](./render-template-api.md#multiple-profiles-no-body)
-* [Een sjabloon renderen met profielen die in de hoofdtekst zijn verzonden](./render-template-api.md#multiple-profiles-with-body)
+In de volgende secties worden gedetailleerde verzoeken en antwoorden gegeven voor beide hierboven beschreven gevallen.
 
-<!--
+* [Beste inspanningsaggregatie en een profiel dat is opgenomen in de aanvraaginstantie](#best-effort)
+* [Configureerbare samenvoeging en profielen opgenomen in de aanvraaginstantie](#configurable-aggregation)
 
-### Render a template for single profile, no profiles sent in body {#single-profile-no-body}
+### Geëxporteerde profielen renderen met de best mogelijke aggregatie en één profiel opgenomen in de aanvraagbak {#best-effort}
 
-**Request**
+**Verzoek**
 
-The following request renders sample profiles that match the format expected by your destination.
+Met de volgende aanvraag wordt een geëxporteerd profiel weergegeven dat overeenkomt met de indeling die door uw doel wordt verwacht. In dit voorbeeld, beantwoordt bestemmingsidentiteitskaart aan een bestemmingsconfiguratie met beste inspanningssamenvoeging, en een steekproefprofiel is inbegrepen in het lichaam van het verzoek.
 
 ```shell
-
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
@@ -71,313 +75,998 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '
 {
-    "destinationId": "a9fb4f0f-3983-4756-b756-00cf25fe5a35",
-    "template": "{# THIS is an example template for a single profile #}\r\n{\r\n    \"identities\": [\r\n        {% for email in input.profile.identityMap.email %}\r\n            {\r\n                \"type\": \"email\",\r\n                \"id\": \"{{ email.id }}\"\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n\r\n        {# Add a comma only if we have both emails and external_ids. #}\r\n        {% if input.profile.identityMap.email is not empty and input.profile.identityMap.external_id is not empty %}\r\n            ,\r\n        {% endif %}\r\n\r\n        {% for external in input.profile.identityMap.external_id %}\r\n            {\r\n                \"type\": \"external_id\",\r\n                \"id\": \"{{ external.id }}\"\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n    ],\r\n    \"AdobeExperiencePlatformSegments\": {\r\n        \"add\": [\r\n            {% for segment in input.profile.segmentMembership.ups | added %}\r\n                \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n            {% endfor %}\r\n        ],\r\n        \"remove\": [\r\n            {# Alternative syntax for filtering segments by status: #}\r\n            {% for segment in removedSegments(input.profile.segmentMembership.ups) %}\r\n                \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n            {% endfor %}\r\n        ]\r\n    }\r\n}"
-}'
-
-```
-
-**Response**
-
-The response returns the result of rendering the template, or any errors encountered.
-A successful response returns HTTP status 200 with details of the exported data.
-An unsuccessful response returns HTTP status 500 along with descriptions of the encountered errors.
-
-```json
-
-{
-    "identities": [
-        {
-            "type": "email",
-            "id": "email_lc_sha256-cBltJ"
-        },
-        {
-            "type": "external_id",
-            "id": "extern_id-cP732"
-        }
-    ],
-    "AdobeExperiencePlatformSegments": {
-        "add": [
-            "segmentid1",
-            "segmentid2"
-        ],
-        "remove": [
-            "segmentid3"
-        ]
-    }
-}
-
-```
-
-### Render a template for single profile, with profiles sent in body {#single-profile-with-body}
-
-**Request**
-
-The following request renders a profile that matches the format expected by your destination. You can generate profiles to send on the call by using the [sample profile generation API](./sample-profile-generation-api.md).
-
-```shell
-
-curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---data-raw '
-{
-    "destinationId": "a9fb4f0f-3983-4756-b756-00cf25fe5a35",
-    "template": "{# THIS is an example template for a single profile #}\r\n{\r\n    \"identities\": [\r\n        {% for email in input.profile.identityMap.email %}\r\n            {\r\n                \"type\": \"email\",\r\n                \"id\": \"{{ email.id }}\"\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n\r\n        {# Add a comma only if we have both emails and external_ids. #}\r\n        {% if input.profile.identityMap.email is not empty and input.profile.identityMap.external_id is not empty %}\r\n            ,\r\n        {% endif %}\r\n\r\n        {% for external in input.profile.identityMap.external_id %}\r\n            {\r\n                \"type\": \"external_id\",\r\n                \"id\": \"{{ external.id }}\"\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n    ],\r\n    \"AdobeExperiencePlatformSegments\": {\r\n        \"add\": [\r\n            {% for segment in input.profile.segmentMembership.ups | added %}\r\n                \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n            {% endfor %}\r\n        ],\r\n        \"remove\": [\r\n            {# Alternative syntax for filtering segments by status: #}\r\n            {% for segment in removedSegments(input.profile.segmentMembership.ups) %}\r\n                \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n            {% endfor %}\r\n        ]\r\n    }\r\n}",
+    "destinationId": "947c1c46-008d-40b0-92ec-3af86eaf41c1",
+    "template": "{#- THIS is an example template for a single profile -#}\r\n{#- A '\''-'\'' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}\r\n{\r\n    \"identities\": [\r\n    {%- for idMapEntry in input.profile.identityMap -%}\r\n    {%- set namespace = idMapEntry.key -%}\r\n        {%- for identity in idMapEntry.value %}\r\n        {\r\n            \"type\": \"{{ namespace }}\",\r\n            \"id\": \"{{ identity.id }}\"\r\n        }{%- if not loop.last -%},{%- endif -%}\r\n        {%- endfor -%}{%- if not loop.last -%},{%- endif -%}\r\n    {% endfor %}\r\n    ],\r\n    \"AdobeExperiencePlatformSegments\": {\r\n        \"add\": [\r\n        {%- for segment in input.profile.segmentMembership.ups | added %}\r\n            \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n        {% endfor %}\r\n        ],\r\n        \"remove\": [\r\n        {#- Alternative syntax for filtering segments by status: -#}\r\n        {% for segment in removedSegments(input.profile.segmentMembership.ups) %}\r\n            \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n        {% endfor %}\r\n        ]\r\n    }\r\n}",
     "profiles": [
-    {
-        "segmentMembership": {
-            "ups": {
-                "segmentid1": {
-                    "lastQualificationTime": "2021-06-17T11:49:06.626238Z",
-                    "status": "existing"
-                },
-                "segmentid3": {
-                    "lastQualificationTime": "2021-06-17T11:49:06.626240Z",
-                    "status": "exited"
-                },
-                "segmentid2": {
-                    "lastQualificationTime": "2021-06-17T11:49:06.626240Z",
-                    "status": "realized"
+        {
+            "segmentMembership": {
+                "ups": {
+                    "segmentid1": {
+                        "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
+                        "status": "existing"
+                    },
+                    "segmentid3": {
+                        "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
+                        "status": "exited"
+                    },
+                    "segmentid2": {
+                        "lastQualificationTime": "2021-10-26T16:59:00.828468Z",
+                        "status": "realized"
+                    }
+                }
+            },
+            "identityMap": {
+                "gaid": [
+                    {
+                        "id": "gaid-BLAcJ"
+                    }
+                ],
+                "idfa": [
+                    {
+                        "id": "idfa-Iv5AG"
+                    }
+                ],
+                "email": [
+                    {
+                        "id": "email-rbN62"
+                    }
+                ]
+            },
+            "attributes": {
+                "key": {
+                    "value": "string"
                 }
             }
-        },
-        "identityMap": {
-            "phone_sha256": [
-                {
-                    "id": "phone_sha256-c3fjU"
-                }
-            ],
-            "gaid": [
-                {
-                    "id": "gaid-VNq0z"
-                }
-            ],
-            "idfa": [
-                {
-                    "id": "idfa-HATAl"
-                }
-            ],
-            "external_id": [
-                {
-                    "id": "extern_id-cP732"
-                }
-            ],
-            "email": [
-                {
-                    "id": "email_lc_sha256-cBltJ"
-                }
-            ]
         }
-    }
     ]
 }'
-
 ```
 
-**Response**
+**Antwoord**
 
-A successful response returns HTTP status 200 with details of the exported data.
+De reactie retourneert het resultaat van het renderen van de sjabloon of eventuele gevonden fouten.
+Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens. Het geëxporteerde profiel zoeken in het dialoogvenster `output` parameter, als een beschermde tekenreeks.
+Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van de gevonden fouten.
 
 ```json
-
 {
-    "identities": [
+    "results": [
         {
-            "type": "email",
-            "id": "email_lc_sha256-cBltJ"
+            "profiles": [
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
+                                "status": "existing"
+                            },
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
+                                "status": "exited"
+                            },
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T16:59:00.828468Z",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "gaid": [
+                            {
+                                "id": "gaid-BLAcJ"
+                            }
+                        ],
+                        "idfa": [
+                            {
+                                "id": "idfa-Iv5AG"
+                            }
+                        ],
+                        "email": [
+                            {
+                                "id": "email-rbN62"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                }
+            ],
+            "output": "{\r\n    \"identities\": [\r\n        {\r\n            \"type\": \"gaid\",\r\n            \"id\": \"gaid-BLAcJ\"\r\n        },\r\n        {\r\n            \"type\": \"idfa\",\r\n            \"id\": \"idfa-Iv5AG\"\r\n        },\r\n        {\r\n            \"type\": \"email\",\r\n            \"id\": \"email-rbN62\"\r\n        }\r\n    ],\r\n    \"AdobeExperiencePlatformSegments\": {\r\n        \"add\": [\r\n            \"segmentid1\",\r\n            \"segmentid2\"\r\n        ],\r\n        \"remove\": [\r\n            \"segmentid3\"\r\n        ]\r\n    }\r\n}"
+        }
+    ]
+}    
+```
+
+### Geëxporteerde profielen renderen met configureerbare aggregatie en profielen in de aanvraagbak {#configurable-aggregation}
+
+**Verzoek**
+
+
+In het volgende verzoek worden meerdere geëxporteerde profielen weergegeven die overeenkomen met de indeling die door uw doel wordt verwacht. In dit voorbeeld, beantwoordt bestemmingsidentiteitskaart aan een bestemmingsconfiguratie met configureerbare samenvoeging. In de inhoud van het verzoek zijn twee profielen opgenomen, elk met drie kwalificaties en vijf identiteiten. U kunt profielen produceren om op de vraag te verzenden door te gebruiken [API voor genereren van voorbeeldprofiel](./sample-profile-generation-api.md).
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--data-raw '{
+    "destinationId": "c2bc84c5-589c-43a1-96ea-becfa941f5be",
+    "template": "{#- THIS is an example template for multiple profiles -#}\r\n{#- A '\''-'\'' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}\r\n{\r\n    \"profiles\": [\r\n    {%- for profile in input.profiles %}\r\n        {\r\n            \"identities\": [\r\n            {%- for idMapEntry in profile.identityMap -%}\r\n            {%- set namespace = idMapEntry.key -%}\r\n                {%- for identity in idMapEntry.value %}\r\n                {\r\n                    \"type\": \"{{ namespace }}\",\r\n                    \"id\": \"{{ customerData }}\"\r\n                }{%- if not loop.last -%},{%- endif -%}\r\n                {%- endfor -%}{%- if not loop.last -%},{%- endif -%}\r\n            {% endfor %}\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                {%- for segment in profile.segmentMembership.ups | added %}\r\n                    \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n                {% endfor %}\r\n                ],\r\n                \"remove\": [\r\n                {#- Alternative syntax for filtering segments by status: -#}\r\n                {% for segment in removedSegments(profile.segmentMembership.ups) %}\r\n                    \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n                {% endfor %}\r\n                ]\r\n            }\r\n        }{%- if not loop.last -%},{%- endif -%}\r\n    {% endfor %}\r\n    ]\r\n}",
+    "profiles": [
+        {
+            "segmentMembership": {
+                "ups": {
+                    "segmentid1": {
+                        "lastQualificationTime": "2021-10-26T17:41:55.947859Z",
+                        "status": "existing"
+                    },
+                    "segmentid3": {
+                        "lastQualificationTime": "2021-10-26T17:41:55.947860Z",
+                        "status": "exited"
+                    },
+                    "segmentid2": {
+                        "lastQualificationTime": "2021-10-26T17:41:55.947860Z",
+                        "status": "realized"
+                    }
+                }
+            },
+            "identityMap": {
+                "amazon_channel": [
+                    {
+                        "id": "amazon_channel-biCbJ"
+                    }
+                ],
+                "named_user_id": [
+                    {
+                        "id": "named_user_id-0Q3hp"
+                    }
+                ],
+                "channel": [
+                    {
+                        "id": "channel-mN1Hw"
+                    }
+                ],
+                "android_channel": [
+                    {
+                        "id": "android_channel-MVw4L"
+                    }
+                ],
+                "ios_channel": [
+                    {
+                        "id": "ios_channel-2OjnN"
+                    }
+                ]
+            },
+            "attributes": {
+                "key": {
+                    "value": "string"
+                }
+            }
         },
         {
-            "type": "external_id",
-            "id": "extern_id-cP732"
-        }
-    ],
-    "AdobeExperiencePlatformSegments": {
-        "add": [
-            "segmentid1",
-            "segmentid2"
-        ],
-        "remove": [
-            "segmentid3"
-        ]
-    }
-}
-
-```
-
--->
-
-### Een sjabloon renderen zonder profielen die in de hoofdtekst zijn verzonden {#multiple-profiles-no-body}
-
-**Verzoek**
-
-In het volgende verzoek worden meerdere voorbeeldprofielen weergegeven die overeenkomen met de indeling die uw bestemming verwacht.
-
-```shell
-curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---data-raw '
-{
-   "destinationId":"{DESTINATION_ID}",
-   "template":"{# THIS is an example template for multiple profiles #}\r\n{\r\n    \"profiles\": [\r\n        {% for profile in input.profiles %}\r\n            {\r\n                \"identities\": [\r\n                    {% for email in profile.identityMap.email %}\r\n                        {\r\n                            \"type\": \"email\",\r\n                            \"id\": \"{{ email.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n\r\n                    {# Add a comma only if we have both emails and external_ids. #}\r\n                    {% if profile.identityMap.email is not empty and profile.identityMap.external_id is not empty %}\r\n                        ,\r\n                    {% endif %}\r\n\r\n                    {% for external in profile.identityMap.external_id %}\r\n                        {\r\n                            \"type\": \"external_id\",\r\n                            \"id\": \"{{ external.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n                ],\r\n                \"AdobeExperiencePlatformSegments\": {\r\n                    \"add\": [\r\n                        {% for segment in profile.segmentMembership.ups | added %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ],\r\n                    \"remove\": [\r\n                        {# Alternative syntax for filtering segments by status: #}\r\n                        {% for segment in removedSegments(profile.segmentMembership.ups) %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ]\r\n                }\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n    ]\r\n}"
-}'
-```
-
-**Antwoord**
-
-De reactie retourneert het resultaat van het renderen van de sjabloon of eventuele gevonden fouten.
-Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens.
-Een mislukte reactie retourneert HTTP-status 500, samen met beschrijvingen van de gevonden fouten.
-
-```json
-{
-   "profiles":[
-      {
-         "identities":[
-            
-         ],
-         "AdobeExperiencePlatformSegments":{
-            "add":[
-               "segmentid1",
-               "segmentid2"
-            ],
-            "remove":[
-               "segmentid3"
-            ]
-         }
-      },
-      {
-         "identities":[
-            
-         ],
-         "AdobeExperiencePlatformSegments":{
-            "add":[
-               "segmentid1",
-               "segmentid2"
-            ],
-            "remove":[
-               "segmentid3"
-            ]
-         }
-      },
-      {
-         "identities":[
-            
-         ],
-         "AdobeExperiencePlatformSegments":{
-            "add":[
-               "segmentid1",
-               "segmentid2"
-            ],
-            "remove":[
-               "segmentid3"
-            ]
-         }
-      }
-   ]
-}       
-```
-
-### Een sjabloon renderen met profielen die in de hoofdtekst zijn verzonden {#multiple-profiles-with-body}
-
-**Verzoek**
-
-In het volgende verzoek worden voorbeeldprofielen weergegeven die overeenkomen met de indeling die uw bestemming verwacht. U kunt profielen produceren om op de vraag te verzenden door [steekproef API](./sample-profile-generation-api.md) van de profielgeneratie te gebruiken.
-
-```shell
-curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---data-raw '
-{
-   "destinationId":"{DESTINATION_ID}",
-   "template":"{# THIS is an example template for multiple profiles #}\r\n{\r\n    \"profiles\": [\r\n        {% for profile in input.profiles %}\r\n            {\r\n                \"identities\": [\r\n                    {% for email in profile.identityMap.email %}\r\n                        {\r\n                            \"type\": \"email\",\r\n                            \"id\": \"{{ email.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n\r\n                    {# Add a comma only if we have both emails and external_ids. #}\r\n                    {% if profile.identityMap.email is not empty and profile.identityMap.external_id is not empty %}\r\n                        ,\r\n                    {% endif %}\r\n\r\n                    {% for external in profile.identityMap.external_id %}\r\n                        {\r\n                            \"type\": \"external_id\",\r\n                            \"id\": \"{{ external.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n                ],\r\n                \"AdobeExperiencePlatformSegments\": {\r\n                    \"add\": [\r\n                        {% for segment in profile.segmentMembership.ups | added %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ],\r\n                    \"remove\": [\r\n                        {# Alternative syntax for filtering segments by status: #}\r\n                        {% for segment in removedSegments(profile.segmentMembership.ups) %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ]\r\n                }\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n    ]\r\n}",
-   "profiles":[
-      {
-         "segmentMembership":{
-            "ups":{
-               "segmentid1":{
-                  "lastQualificationTime":"2021-06-17T12:08:07.870859Z",
-                  "status":"existing"
-               },
-               "segmentid3":{
-                  "lastQualificationTime":"2021-06-17T12:08:07.870860Z",
-                  "status":"exited"
-               },
-               "segmentid2":{
-                  "lastQualificationTime":"2021-06-17T12:08:07.870860Z",
-                  "status":"realized"
-               }
-            }
-         },
-         "identityMap":{
-            "email":[
-               {
-                  "id":"Email-gq3zZ"
-               }
-            ],
-            "external_id":[
-               {
-                  "id":"external_id"
-               }
-            ]
-         }
-      }
-   ]
-}'
-```
-
-**Antwoord**
-
-De reactie retourneert het resultaat van het renderen van de sjabloon of eventuele gevonden fouten.
-Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens.
-Een mislukte reactie retourneert HTTP-status 500, samen met beschrijvingen van de gevonden fouten.
-
-```json
-{
-   "profiles":[
-      {
-         "identities":[
-            {
-               "type":"email",
-               "id":"Email-gq3zZ"
+            "segmentMembership": {
+                "ups": {
+                    "segmentid1": {
+                        "lastQualificationTime": "2021-10-26T17:41:55.948187Z",
+                        "status": "existing"
+                    },
+                    "segmentid3": {
+                        "lastQualificationTime": "2021-10-26T17:41:55.948188Z",
+                        "status": "exited"
+                    },
+                    "segmentid2": {
+                        "lastQualificationTime": "2021-10-26T17:41:55.948188Z",
+                        "status": "realized"
+                    }
+                }
             },
-            {
-               "type":"external_id",
-               "id":"external_id"
+            "identityMap": {
+                "amazon_channel": [
+                    {
+                        "id": "amazon_channel-fxt2p"
+                    }
+                ],
+                "named_user_id": [
+                    {
+                        "id": "named_user_id-sboQe"
+                    }
+                ],
+                "channel": [
+                    {
+                        "id": "channel-MRelR"
+                    }
+                ],
+                "android_channel": [
+                    {
+                        "id": "android_channel-M46ze"
+                    }
+                ],
+                "ios_channel": [
+                    {
+                        "id": "ios_channel-40Vrf"
+                    }
+                ]
+            },
+            "attributes": {
+                "key": {
+                    "value": "string"
+                }
             }
-         ],
-         "AdobeExperiencePlatformSegments":{
-            "add":[
-               "segmentid1",
-               "segmentid2"
+        }
+    ]
+}'
+```
+
+**Antwoord**
+
+De reactie retourneert het resultaat van het renderen van de sjabloon of eventuele gevonden fouten.
+Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens. In het antwoord ziet u hoe de profielen worden geaggregeerd op basis van het segmentlidmaatschap en de identiteiten. De geëxporteerde profielen zoeken in het dialoogvenster `output` parameter, als een beschermde tekenreeks.
+Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van de gevonden fouten.
+
+```json
+{
+    "results": [
+        {
+            "aggregationKey": {
+                "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
+                "segmentId": "segmentid3",
+                "segmentStatus": "exited",
+                "identityNamespaces": [
+                    "android_channel",
+                    "amazon_channel",
+                    "ios_channel",
+                    "channel"
+                ]
+            },
+            "profiles": [
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "ios_channel": [
+                            {
+                                "id": "ios_channel-2OjnN"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "channel": [
+                            {
+                                "id": "channel-mN1Hw"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "amazon_channel": [
+                            {
+                                "id": "amazon_channel-biCbJ"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "android_channel": [
+                            {
+                                "id": "android_channel-MVw4L"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "ios_channel": [
+                            {
+                                "id": "ios_channel-40Vrf"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "channel": [
+                            {
+                                "id": "channel-MRelR"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "amazon_channel": [
+                            {
+                                "id": "amazon_channel-fxt2p"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "android_channel": [
+                            {
+                                "id": "android_channel-M46ze"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                }
             ],
-            "remove":[
-               "segmentid3"
-            ]
-         }
-      }
-   ]
+            "output": "{\r\n    \"profiles\": [\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"ios_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"amazon_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"android_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"ios_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"amazon_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"android_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}"
+        },
+        {
+            "aggregationKey": {
+                "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
+                "segmentId": "segmentid1",
+                "segmentStatus": "existing",
+                "identityNamespaces": [
+                    "android_channel",
+                    "amazon_channel",
+                    "ios_channel",
+                    "channel"
+                ]
+            },
+            "profiles": [
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "ios_channel": [
+                            {
+                                "id": "ios_channel-2OjnN"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "channel": [
+                            {
+                                "id": "channel-mN1Hw"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "amazon_channel": [
+                            {
+                                "id": "amazon_channel-biCbJ"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "android_channel": [
+                            {
+                                "id": "android_channel-MVw4L"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "ios_channel": [
+                            {
+                                "id": "ios_channel-40Vrf"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "channel": [
+                            {
+                                "id": "channel-MRelR"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "amazon_channel": [
+                            {
+                                "id": "amazon_channel-fxt2p"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "android_channel": [
+                            {
+                                "id": "android_channel-M46ze"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                }
+            ],
+            "output": "{\r\n    \"profiles\": [\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"ios_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"amazon_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"android_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"ios_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"amazon_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"android_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}"
+        },
+        {
+            "aggregationKey": {
+                "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
+                "segmentId": "segmentid2",
+                "segmentStatus": "realized",
+                "identityNamespaces": [
+                    "android_channel",
+                    "amazon_channel",
+                    "ios_channel",
+                    "channel"
+                ]
+            },
+            "profiles": [
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "ios_channel": [
+                            {
+                                "id": "ios_channel-2OjnN"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "channel": [
+                            {
+                                "id": "channel-mN1Hw"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "amazon_channel": [
+                            {
+                                "id": "amazon_channel-biCbJ"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "android_channel": [
+                            {
+                                "id": "android_channel-MVw4L"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "ios_channel": [
+                            {
+                                "id": "ios_channel-40Vrf"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "channel": [
+                            {
+                                "id": "channel-MRelR"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "amazon_channel": [
+                            {
+                                "id": "amazon_channel-fxt2p"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "android_channel": [
+                            {
+                                "id": "android_channel-M46ze"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                }
+            ],
+            "output": "{\r\n    \"profiles\": [\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"ios_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"amazon_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"android_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"ios_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"amazon_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"android_channel\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}"
+        },
+        {
+            "aggregationKey": {
+                "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
+                "segmentId": "segmentid3",
+                "segmentStatus": "exited",
+                "identityNamespaces": [
+                    "named_user_id"
+                ]
+            },
+            "profiles": [
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "named_user_id": [
+                            {
+                                "id": "named_user_id-0Q3hp"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid3": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "exited"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "named_user_id": [
+                            {
+                                "id": "named_user_id-sboQe"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                }
+            ],
+            "output": "{\r\n    \"profiles\": [\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"named_user_id\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"named_user_id\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                ],\r\n                \"remove\": [\r\n                    \"segmentid3\"\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}"
+        },
+        {
+            "aggregationKey": {
+                "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
+                "segmentId": "segmentid1",
+                "segmentStatus": "existing",
+                "identityNamespaces": [
+                    "named_user_id"
+                ]
+            },
+            "profiles": [
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "named_user_id": [
+                            {
+                                "id": "named_user_id-0Q3hp"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid1": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "existing"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "named_user_id": [
+                            {
+                                "id": "named_user_id-sboQe"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                }
+            ],
+            "output": "{\r\n    \"profiles\": [\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"named_user_id\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"named_user_id\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid1\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}"
+        },
+        {
+            "aggregationKey": {
+                "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
+                "segmentId": "segmentid2",
+                "segmentStatus": "realized",
+                "identityNamespaces": [
+                    "named_user_id"
+                ]
+            },
+            "profiles": [
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "named_user_id": [
+                            {
+                                "id": "named_user_id-0Q3hp"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                },
+                {
+                    "segmentMembership": {
+                        "ups": {
+                            "segmentid2": {
+                                "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
+                                "status": "realized"
+                            }
+                        }
+                    },
+                    "identityMap": {
+                        "named_user_id": [
+                            {
+                                "id": "named_user_id-sboQe"
+                            }
+                        ]
+                    },
+                    "attributes": {
+                        "key": {
+                            "value": "string"
+                        }
+                    }
+                }
+            ],
+            "output": "{\r\n    \"profiles\": [\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"named_user_id\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"identities\": [\r\n                {\r\n                    \"type\": \"named_user_id\",\r\n                    \"id\": \"{moviestar_region=dIqYn-moviestar_region}\"\r\n                }\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                    \"segmentid2\"\r\n                ],\r\n                \"remove\": [\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}"
+        }
+    ]
 }
 ```
 
 ## API-foutafhandeling {#api-error-handling}
 
-De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Raadpleeg [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [headerfouten aanvragen](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de handleiding voor het oplossen van Platforms.
+De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Zie [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [aanvragen, koptekstfouten](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u de sjabloon voor berichttransformatie kunt gebruiken om geëxporteerde profielen te genereren die overeenkomen met de verwachte gegevensindeling van uw bestemming. Lees [hoe te om Doel SDK te gebruiken om uw bestemming te vormen](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u de sjabloon voor berichttransformatie kunt gebruiken om geëxporteerde profielen te genereren die overeenkomen met de verwachte gegevensindeling van uw bestemming. Lezen [Destination SDK gebruiken om uw bestemming te configureren](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
