@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Generic REST API Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Generic REST API met behulp van API's of de gebruikersinterface kunt verbinden met Adobe Experience Platform.
-source-git-commit: 127c2764b8414ee9b59d49ec04cbbd28269ca496
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,3 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 - [Een algemene REST API-basisverbinding maken met de Flow Service API](../../tutorials/api/create/protocols/generic-rest.md)
 - [Onderzoek de gegevensstructuur en de inhoud van een protocolbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/protocols.md)
 - [Creeer een dataflow voor een protocolbron gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/protocols.md)
-
-## Verbinden [!DNL Generic REST API] tot [!DNL Platform] gebruiken van UI
-
-- [Een algemene REST API-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/protocols/generic-rest.md)
-- [Creeer een dataflow voor een verbinding van de protocolbron in UI](../../tutorials/ui/dataflow/protocols.md)
-
-
