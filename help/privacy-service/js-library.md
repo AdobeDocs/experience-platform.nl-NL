@@ -5,9 +5,9 @@ title: Overzicht van Adobe Privacy JavaScript-bibliotheek
 topic-legacy: overview
 description: Met de Adobe Privacy JavaScript-bibliotheek kunt u gegevenssubject-id's ophalen voor gebruik in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 7f3a0594147a8cea292263f60aa45dc5ebb8484e
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1012'
 ht-degree: 4%
 
 ---
@@ -46,8 +46,9 @@ Aangezien alle drie functies asynchrone processen vertegenwoordigen, moeten om h
 Als u het dialoogvenster [!DNL Privacy JS Library], moet u het op uw computer installeren gebruikend één van de volgende methodes:
 
 * Installeer met npm door de volgende opdracht uit te voeren: `npm install @adobe/adobe-privacy`
-* Installeer de [Adobe Privacy-tagextensie](../tags/extensions/web/privacy/overview.md) onder de naam `AdobePrivacy`
 * Downloaden vanaf de [Experience Cloud GitHub-opslagplaats](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+
+U kunt de bibliotheek ook installeren via een tagextensie in de gebruikersinterface voor gegevensverzameling. Zie het overzicht op de [Adobe Privacy-tagextensie](../tags/extensions/web/privacy/overview.md) voor meer informatie .
 
 ## Instantiëren van de [!DNL Privacy JS Library]
 
@@ -64,7 +65,7 @@ var adobePrivacy = new AdobePrivacy({
 
 Voor een volledige lijst van gesteunde parameters voor verschillende oplossingen van Adobe, zie de bijlage sectie over gesteund [Adobe-configuratieparameters voor oplossing](#adobe-solution-configuration-parameters).
 
-## Codevoorbeelden
+## Codevoorbeelden {#samples}
 
 De volgende codesteekproeven tonen aan hoe te om het [!DNL Privacy JS Library] voor verschillende algemene scenario&#39;s, op voorwaarde dat u geen labels gebruikt.
 
@@ -176,26 +177,26 @@ Door dit document te lezen, hebt u de kernfuncties van de [!DNL Privacy JS Libra
 
 Deze sectie bevat aanvullende informatie voor het gebruik van de [!DNL Privacy JS Library].
 
-### Adobe-configuratieparameters voor oplossing
+### Adobe-configuratieparameters voor oplossing {#config-params}
 
 Hieronder volgt een lijst met de geaccepteerde configuratieparameters voor ondersteunde Adobe-oplossingen die worden gebruikt wanneer [een AdobePrivacy-object instantiëren](#instantiate-the-privacy-js-library).
+
+**Alle oplossingen**
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `key` | Een unieke id die de gebruiker of het gegevenssubject identificeert. Deze eigenschap is bedoeld voor gebruik voor uw eigen interne traceringsdoeleinden en wordt niet gebruikt door Adobe. |
 
 **Adobe Analytics**
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `cookieDomainPeriods` | De numerieke punten in een domein voor het bijhouden van cookies (standaard is 2). |
-| `dataCenter` | Adobe gegevensverzamelingsdatacenter. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. Mogelijke waarden zijn: <ul><li>&quot;d1&quot;: San Jose datacenter.</li><li>&quot;d2&quot;: Dallas datacenter.</li></ul> |
-| `reportSuite` | ID van de Reeks van het rapport zoals gespecificeerd in uw JavaScript Webbaken (bijvoorbeeld, &quot;s_code.js&quot;of &quot;dtm&quot;). |
-| `trackingServer` | Domein voor gegevensverzameling (niet-SSL). Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
-| `trackingServerSecure` | Domein voor gegevensverzameling (SSL). Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
-| `visitorNamespace` | Naamruimte die wordt gebruikt om bezoekers te groeperen. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
-
-**Adobe Target**
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `clientCode` | Clientcode die een client in Adobe Target System identificeert. |
+| `cookieDomainPeriods` | Het aantal punten in een domein dat wordt gebruikt voor het bijhouden van cookies (standaard ingesteld op `2`, bijvoorbeeld `.domain.com`). Definieer deze hier niet, tenzij anders aangegeven in uw JavaScript-webbaken. |
+| `dataCenter` | Het datacenter van de gegevensverzameling Adobe. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. Mogelijke waarden zijn: <ul><li>`d1`: San Jose datacenter</li><li>`d2`: Dallas, datacenter</li></ul> |
+| `reportSuite` | De rapportsuite-id zoals opgegeven in uw JavaScript-webbaken (bijvoorbeeld `s_code.js` of `dtm`). |
+| `trackingServer` | Een niet-SSL-gegevensverzamelingsdomein. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
+| `trackingServerSecure` | Een SSL-gegevensverzamelingsdomein. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
+| `visitorNamespace` | De naamruimte die wordt gebruikt om bezoekers te groeperen. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
 
 **Adobe Audience Manager**
 
@@ -203,8 +204,14 @@ Hieronder volgt een lijst met de geaccepteerde configuratieparameters voor onder
 | --- | --- |
 | `aamUUIDCookieName` | Naam van de cookie van de eerste partij met de unieke gebruikersnaam die door Adobe Audience Manager is geretourneerd. |
 
-**Adobe ID Service (ECID)**
+**Adobe Experience Cloud Identity Service (ECID)**
 
 | Parameter | Beschrijving |
 | --- | --- |
 | `imsOrgID` | Uw IMS-organisatie-id. |
+
+**Adobe Target**
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `clientCode` | Clientcode die een client in Adobe Target System identificeert. |

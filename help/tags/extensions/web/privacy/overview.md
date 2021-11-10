@@ -1,10 +1,11 @@
 ---
 title: Overzicht van Adobe Privacy Extension
 description: Meer informatie over de extensie Adobe Privacy in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
+source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 1%
+source-wordcount: '877'
+ht-degree: 0%
 
 ---
 
@@ -14,95 +15,100 @@ ht-degree: 1%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-De extensie Adobe Privacy biedt functionaliteit voor het verzamelen en verwijderen van gebruikers-id&#39;s die aan eindgebruikers zijn toegewezen door Adobe-oplossingen.
+Met de extensie van de Adobe Privacy-tag kunt u gebruikers-id&#39;s die aan eindgebruikers zijn toegewezen, verzamelen en verwijderen via Adobe-oplossingen op client-side apparaten. Verzamelde id&#39;s kunnen vervolgens worden verzonden naar [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) om de persoonlijke gegevens van de verwante persoon te openen of te verwijderen in ondersteunde Adobe Experience Cloud-toepassingen.
 
-## Oplossingen configureren tijdens installatie
+Deze gids behandelt hoe te om de uitbreiding van de Privacy van de Adobe in de Inzameling van Gegevens UI te installeren en te vormen.
 
-Wanneer u de extensie Adobe Privacy installeert in de Extension Catalog, wordt u gevraagd om de oplossingen te selecteren die u wilt bijwerken. Momenteel kunt u de volgende oplossingen bijwerken:
+>[!NOTE]
+>
+>Als u deze functies liever installeert zonder tags te gebruiken, raadpleegt u de [Overzicht van de Privacy JavaScript-bibliotheek](../../../../privacy-service/js-library.md) voor stappen voor het implementeren met onbewerkte code.
 
-* Analyse (AA)
-* Audience Manager (AAM)
-* Target
-* Bezoekerservice
-* AdCloud
-* Selecteer een of meer oplossingen en selecteer vervolgens Bijwerken.
-* Wanneer u uw oplossingen hebt geselecteerd en gevormd, uitgezocht sparen. De extensie Adobe Privacy wordt toegevoegd aan de lijst met geïnstalleerde extensies.
+## De extensie installeren en configureren
 
-   De opties voor elke oplossing worden hieronder beschreven.
+Selecteer in de gebruikersinterface voor gegevensverzameling de optie **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** tab. Gebruik de zoekbalk om de lijst met beschikbare extensies te versmallen tot u de Adobe Privacy hebt gevonden. Selecteren **[!UICONTROL Install]** om door te gaan.
 
-### Analytics
+![De extensie installeren](../../../images/extensions/privacy/install.png)
 
-![](../../../images/ext-privacy-aa.jpg)
+Het volgende scherm staat u toe om te vormen welke bronnen en oplossingen u de uitbreiding wilt om IDs van te verzamelen. De volgende oplossingen worden ondersteund voor de extensie:
 
-Standaard moet u de rapportsuite opgeven door een tekenreeks in te voeren of een gegevenselement te selecteren.
+* Adobe Analytics (AA)
+* Adobe Audience Manager (AAM)
+* Adobe Target
+* Adobe Experience Cloud Identity Service (Visitor, of ECID)
+* Adobe Advertising Cloud (AdCloud)
 
-Als u andere items wilt configureren, selecteert u **[!UICONTROL Choose an Item]**, selecteert u het item dat u wilt configureren, selecteert u **[!UICONTROL Add]** en voert u de gewenste parameter of een gegevenselement in.
+Selecteer een of meer oplossingen en selecteer vervolgens **[!UICONTROL Update]**.
 
-### Audience Manager
+![Oplossingen selecteren](../../../images/extensions/privacy/select-solutions.png)
 
-![](../../../images/ext-privacy-aam.jpg)
+Het scherm werkt bij om input voor de vereiste configuratieparameters te tonen die op de oplossingen worden gebaseerd u selecteerde.
 
-Selecteer **[!UICONTROL Choose an Item]**, selecteer het punt u, dan selecteren **[!UICONTROL Add]** en ga de gevraagde parameter of een gegevenselement in. Momenteel kunt u alleen de `aamUUIDCookieName` configureren.
+![Vereiste eigenschappen](../../../images/extensions/privacy/required-properties.png)
 
-### Doel
+Gebruikend dropdown menu hieronder, kunt u extra oplossing-specifieke parameters aan de configuratie ook toevoegen.
 
-![](../../../images/ext-privacy-target.jpg)
+![Optionele eigenschappen](../../../images/extensions/privacy/optional-properties.png)
 
-Voer de doelclientcode in.
+>[!NOTE]
+>
+>Zie de sectie over [configuratieparameters](../../../../privacy-service/js-library.md#config-params) in het overzicht Privacy JavaScript Library voor meer informatie over de geaccepteerde configuratiewaarden voor elke ondersteunde oplossing.
 
-### Bezoekerservice
+Als u klaar bent met het toevoegen van parameters voor de geselecteerde oplossingen, selecteert u **[!UICONTROL Save]** om de configuratie op te slaan.
 
-![](../../../images/ext-privacy-visitor.jpg)
+![Optionele eigenschappen](../../../images/extensions/privacy/save-config.png)
 
-Voer uw IMS-organisatie-id in.
+## De extensie gebruiken {#using}
 
-### AdCloud
+De extensie Adobe Privacy biedt drie actietypen die kunnen worden gebruikt in een [regel](../../../ui/managing-resources/rules.md) wanneer zich een bepaalde gebeurtenis voordoet en aan de voorwaarden is voldaan:
 
-![](../../../images/ext-privacy-adcloud.jpg)
+* **[!UICONTROL Retrieve Identities]**: De opgeslagen identiteitsgegevens van de gebruiker worden opgehaald.
+* **[!UICONTROL Remove Identities]**: De opgeslagen identiteitsgegevens van de gebruiker worden verwijderd.
+* **[!UICONTROL Retrieve Then Remove Identities]**: De opgeslagen identiteitsgegevens van de gebruiker worden opgehaald en vervolgens verwijderd.
 
-Er zijn geen specifieke parameters om te configureren voor AdCloud.
+Voor elk van de bovenstaande handelingen moet u een callback JavaScript-functie opgeven die de opgehaalde identiteitsgegevens als objectparameter accepteert en verwerkt. Vanaf hier kunt u deze identiteiten opslaan, weergeven of verzenden naar de [Privacy Service-API](../../../../privacy-service/api/overview.md) zoals u nodig hebt.
 
-## De extensie Adobe Privacy configureren
+Wanneer u de extensie Adobe Privacy gebruikt, moet u de vereiste callback-functie opgeven in de vorm van een gegevenselement. Raadpleeg de volgende sectie voor stappen over het configureren van dit gegevenselement.
 
-Nadat u de extensie hebt geïnstalleerd, kunt u deze uitschakelen of verwijderen. Selecteer **[!UICONTROL Configure]** op de kaart van de Privacy van de Adobe in uw geïnstalleerde uitbreidingen, dan selecteren of **[!UICONTROL Disable]** of **[!UICONTROL Uninstall]**.
+### Een gegevenselement definiëren om identiteiten af te handelen
 
-## Acties
+In de UI van de Inzameling van Gegevens, begin het proces om een nieuw gegevenselement tot stand te brengen door te selecteren **[!UICONTROL Data Elements]** in de linkernavigatie, gevolgd door **[!UICONTROL Add Data Element]**. Zodra u op het configuratiescherm bent, uitgezocht **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Custom Code]** voor het gegevenstype data. Selecteer **[!UICONTROL Open Editor]** in het rechterdeelvenster.
 
-De volgende acties zijn beschikbaar wanneer u een regel gebruikend de uitbreiding van de Privacy van de Adobe vormt.
+![Type gegevenselement selecteren](../../../images/extensions/privacy/data-element-type.png)
 
-### Identiteiten ophalen
+Definieer in het dialoogvenster dat wordt weergegeven een JavaScript-functie die de opgehaalde identiteiten afhandelt. De callback moet één enkel voorwerp-type argument goedkeuren (`ids` in het onderstaande voorbeeld). De functie kan vervolgens de id&#39;s verwerken die u maar wilt, en kan ook alle variabelen en functies aanroepen die wereldwijd op uw site beschikbaar zijn voor verdere verwerking.
 
-Wanneer aan de gebeurtenis en voorwaarden wordt voldaan, wint identiteitsinformatie terug die voor de bezoeker wordt opgeslagen.
+>[!NOTE]
+>
+>Voor meer informatie over de structuur van de `ids` object dat de callback-functie naar verwachting zal verwerken, raadpleegt u het [codevoorbeelden](../../../../privacy-service/js-library.md#samples) in het overzicht voor de Privacy JavaScript-bibliotheek.
 
-Voer de naam in van een JavaScript-functie waaraan u de gegevens wilt doorgeven. Deze functie of methode handelt de opgehaalde identiteiten af. Of u hen opslaat, hen toont, of hen verzendt naar Adobe GDPR API, is binnen uw controle.
+Als u klaar bent, selecteert u **[!UICONTROL Save]**.
 
-### Identiteiten verwijderen
+![Callbackfunctie definiëren](../../../images/extensions/privacy/define-custom-code.png)
 
-Als aan de gebeurtenis en voorwaarden is voldaan, verwijdert u identiteitsgegevens die voor de bezoeker zijn opgeslagen.
+U kunt andere douane-code gegevenselementen blijven creëren als u verschillende callbacks voor verschillende gebeurtenissen vereist.
 
-Voer de naam in van een JavaScript-functie waaraan u de gegevens wilt doorgeven. Deze functie of methode handelt de opgehaalde identiteiten af. Of u hen opslaat, hen toont, of hen verzendt naar Adobe GDPR API, is binnen uw controle.
+### Een regel maken met een privacyactie
 
-### Ophalen en vervolgens id&#39;s verwijderen
+Na het vormen van een callback gegevenselement om opgehaalde IDs te behandelen, kunt u een regel tot stand brengen die de uitbreiding van de Privacy van de Adobe aanhaalt wanneer een bepaalde gebeurtenis op uw plaats samen met om het even welke andere voorwaarden voorkomt u vereist.
 
-Wanneer aan de gebeurtenis en voorwaarden wordt voldaan, wint identiteitsinformatie terug die voor de bezoeker wordt opgeslagen, dan verwijdert het.
+Wanneer het vormen van de actie voor de regel, selecteer **[!UICONTROL Adobe Privacy]** voor de extensie. Selecteer bij het handelingstype een van de opties [drie functies](#using) verstrekt door de uitbreiding.
 
-## Zelfstudie: De extensie Privacy configureren
+![Handelingstype selecteren](../../../images/extensions/privacy/action-type.png)
 
-In het volgende voorbeeld ziet u een gestopte voorbeeld van hoe u een gegevenselement instelt en gebruikt met de extensie Privacy.
+In het rechterdeelvenster wordt u gevraagd een gegevenselement te selecteren dat zal dienen als callback van de handeling. Selecteer het databasepictogram (![Databasepictogram](../../../images/extensions/privacy/database.png)) en kiest u het gegevenselement dat u eerder in de lijst hebt gemaakt. Selecteren **[!UICONTROL Keep Changes]** om door te gaan.
 
-1. Maak een gegevenselement met de naam `privacyFunc`.
+![Gegevenselement selecteren](../../../images/extensions/privacy/add-data-element.png)
 
-   ```JavaScript
-   window.privacyFunc = function(a,b){
-       console.log(a,b);
-   }
-   return window.privacyFunc
-   ```
+Van hier, kunt u de regel blijven vormen zodat de actie van de Privacy van de Adobe onder de gebeurtenissen en de voorwaarden brandt u vereist. Als u tevreden bent, selecteert u **[!UICONTROL Save]**.
 
-1. Maak een regel die moet worden uitgevoerd bij het laden van de bibliotheek (pagina boven), met een handeling uit de extensie Adobe Privacy.  Selecteer `privacyFunc` als gegevenselement.
+![De regel opslaan](../../../images/extensions/privacy/save-rule.png)
 
-   * **extensie:** Adobe Privacy
-   * **Type handeling:Identiteiten** ophalen Dit handelingstype geeft identiteiten weer die zijn gemaakt, verwijderd of niet verwijderd.
-   * **Naam:** identiteiten ophalen
+U kunt nu de regel toevoegen aan een bibliotheek om te implementeren als build op uw website voor testdoeleinden. Zie het overzicht op de [publicatiestroom voor tags](../../../ui/publishing/overview.md) voor meer informatie .
 
-1. Werk uw ontwikkelingsbibliotheek bij en publiceer en test deze.
+## De extensie uitschakelen of verwijderen
+
+Nadat u de extensie hebt geïnstalleerd, kunt u deze uitschakelen of verwijderen. Selecteren **[!UICONTROL Configure]** op de Adobe Privacy-kaart in uw geïnstalleerde extensies en selecteer vervolgens **[!UICONTROL Disable]** of **[!UICONTROL Uninstall]**.
+
+## Volgende stappen
+
+Deze gids behandelde het gebruik van de de markeringsuitbreiding van de Privacy van de Adobe in de UI van de Inzameling van Gegevens. Voor meer informatie over de functies die door de extensie worden geboden, waaronder voorbeelden van het gebruik ervan met onbewerkte code, raadpleegt u de [Overzicht van de Privacy JavaScript-bibliotheek](../../../../privacy-service/js-library.md) in de documentatie bij de Privacy Service.
