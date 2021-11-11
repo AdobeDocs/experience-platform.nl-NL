@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
    * [ (Alpha) HTTP-verbinding](./catalog/http-destination.md)
    * Adobe-bestemmingen{#adobe}
       * [Overzicht van Adobe-doelen](./catalog/adobe/overview.md)
-      * [(bèta) Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
+      * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [Delen van Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Reclamebestemmingen{#advertising}
       * [Overzicht van advertentiebestemmingen](./catalog/advertising/overview.md)
@@ -144,11 +144,11 @@ ht-degree: 1%
       * [Invoc-tags, extensie](./catalog/voice/invoca.md)
       * [extensie Medallia](./catalog/voice/medallia.md)
       * [URL-inbox-extensie Talk](./catalog/voice/talkurl.md)
-* Doel-SDK {#destination-sdk}
+* Destination SDK {#destination-sdk}
    * [Overzicht](./destination-sdk/overview.md)
    * [Integratievereisten](./destination-sdk/integration-prerequisites.md)
    * [Aan de slag](./destination-sdk/getting-started.md)
-   * Functionaliteit van doel-SDK {#functionality}
+   * Destination SDK-functionaliteit {#functionality}
       * [Configuratieopties](./destination-sdk/configuration-options.md)
       * [Doelconfiguratie](./destination-sdk/destination-configuration.md)
       * [Server- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
@@ -161,7 +161,7 @@ ht-degree: 1%
          * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/create-template.md)
          * [De doelconfiguratie testen](./destination-sdk/test-destination.md)
    * API-bewerkingen {#api}
-      * [Referentie voor de doel-SDK (Authoring bestemming)-API](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referentie voor de Destination SDK-API (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [API-bewerkingen voor bestemmingspunten](./destination-sdk/destination-configuration-api.md)
       * [API-bewerkingen voor eindpunt doelserver](./destination-sdk/destination-server-api.md)
       * [API-bewerkingen voor het eindpunt van metagegevens van het publiek](./destination-sdk/audience-metadata-api.md)
@@ -173,7 +173,7 @@ ht-degree: 1%
          * [API-bewerkingen voor doeltesten](./destination-sdk/destination-testing-api.md)
          * [Voorbeeld van API-bewerkingen voor het genereren van profielen](./destination-sdk/sample-profile-generation-api.md)
    * Hulplijnen {#guides}
-      * [Doel SDK gebruiken om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
+      * [Destination SDK gebruiken om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
    * Uw doel documenteren {#document-destination}
       * [Uw doel documenteren in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
