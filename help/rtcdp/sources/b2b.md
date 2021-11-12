@@ -2,9 +2,9 @@
 title: Bronnen in Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de rol van bronnen in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Als u Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [overzicht van bronnen](./sources-overview.md) in plaats daarvan.
 
-Met Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) bronschakelaar terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten.
+Met Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via verschillende bronnen overbrengen, waaronder de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) onder andere de bronaansluiting, Salesforce, Amazon S3 en ADLS. Deze waaier van bronnen voorziet u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten.
 
 >[!TIP]
 >
