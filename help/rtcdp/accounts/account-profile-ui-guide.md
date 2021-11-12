@@ -1,20 +1,16 @@
 ---
 keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbeleid;realtime klantprofiel
-title: Gebruikersgids voor accountprofiel (bèta)
+title: Gebruikersgids voor accountprofiel
 description: Door het gebruik van accountprofielen kunt u met Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
 
-# Handleiding voor gebruikersinterface voor accountprofiel (bèta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+# Gebruikersgids voor accountprofielen
 
 >[!NOTE]
 >
@@ -96,7 +92,7 @@ U kunt de gegevens niet alleen in een lijst weergeven, maar u kunt ook de zoekba
 
 ## Het tabblad Personen
 
-De **[!UICONTROL People]** bevat een lijst met individuele personen die aan het account zijn gekoppeld. Deze mensen kunnen contacten en lood van verschillende ondernemingssystemen zijn die door verschillende teams binnen uw organisatie worden beheerd, maar in real time CDP, B2B Uitgave worden zij samen voorgesteld als één enkele lijst toelatend u om een holistische mening van uw rekeningscontacten te zien.
+De **[!UICONTROL People]** bevat een lijst met individuele personen die aan het account zijn gekoppeld. Deze mensen kunnen contacten en lood van verschillende ondernemingssystemen zijn die door verschillende teams binnen uw organisatie worden beheerd, maar in CDP in real time, B2B Uitgave worden zij samen voorgesteld als één enkele lijst toelatend u om een holistische mening van uw rekeningscontacten te zien.
 
 >[!NOTE]
 >

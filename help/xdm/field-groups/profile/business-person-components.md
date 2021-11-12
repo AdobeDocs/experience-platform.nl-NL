@@ -2,24 +2,20 @@
 title: XDM Business Person Components-schemaveldgroep
 description: Dit document biedt een overzicht van de XDM Business Person Components schema-veldgroep.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '390'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM Business Person Components] schemaveldgroep (bèta)
+# [!UICONTROL XDM Business Person Components] schemaveldgroep
 
->[!IMPORTANT]
->
->Deze veldgroep is beschikbaar als onderdeel van Customer Data Platform B2B Edition in realtime, dat momenteel in bèta wordt weergegeven. De documentatie en functionaliteit kunnen worden gewijzigd.
+[!UICONTROL XDM Business Person Components] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) die veelvoudige bronverslagen voor een persoon, en andere eigenschappen vangen die voor persoonsegmentatie worden vereist.
 
-[!UICONTROL XDM Business Person Components] is een standaardgroep van het schemagebied voor de  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) klasse die veelvoudige bronverslagen voor een persoon, en andere attributen vangt die voor persoonsegmentatie worden vereist.
+Wanneer een profiel voor een persoon via [Klantprofiel in realtime](../../../profile/home.md) in de B2B-editie van Real-Time CDP, kan de informatie die wordt gebruikt om dat profiel tot stand te brengen potentieel uit vele bronverslagen afkomstig zijn. Bijvoorbeeld, als een persoon voor twee verschillende bedrijven werkt, zouden vele systemen van CRM tot een opzettelijk dubbel exemplaar van die persoon leiden zodat één exemplaar met Bedrijf A wordt verbonden, terwijl andere met Onderneming B wordt verbonden. Wanneer die gegevens naar Adobe Experience Platform worden overgebracht, wordt deze veldgroep gebruikt om die verschillende bronrecords samen te voegen tot één representatie.
 
-Wanneer een profiel voor een persoon door [Real-time Profiel van de Klant ](../../../profile/home.md) in de B2B uitgave van CDP in real time wordt gecreeerd, kan de informatie die wordt gebruikt om dat profiel tot stand te brengen potentieel uit vele bronverslagen voortkomen. Bijvoorbeeld, als een persoon voor twee verschillende bedrijven werkt, zouden vele systemen van CRM tot een opzettelijk dubbel exemplaar van die persoon leiden zodat één exemplaar met Bedrijf A wordt verbonden, terwijl andere met Onderneming B wordt verbonden. Wanneer die gegevens naar Adobe Experience Platform worden overgebracht, wordt deze veldgroep gebruikt om die verschillende bronrecords samen te voegen tot één representatie.
-
-De veldgroep bevat een `personComponents`-veld op hoofdniveau. Dit is een array van objecten. Elk object in de array vertegenwoordigt een andere bronrecord.
+De veldgroep biedt een basisniveau `personComponents` field, een array van objecten. Elk object in de array vertegenwoordigt een andere bronrecord.
 
 ![](../../images/field-groups/business-person-components.png)
 

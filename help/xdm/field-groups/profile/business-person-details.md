@@ -2,20 +2,16 @@
 title: XDM Business Person Details-schemaveldgroep
 description: Dit document biedt een overzicht van de XDM Business Person Details schema veldgroep.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM Business Person Details] schemaveldgroep (bèta)
+# [!UICONTROL XDM Business Person Details] schemaveldgroep
 
->[!IMPORTANT]
->
->Deze veldgroep is beschikbaar als onderdeel van Customer Data Platform B2B Edition in realtime, dat momenteel in bèta wordt weergegeven. De documentatie en functionaliteit kunnen worden gewijzigd.
-
-[!UICONTROL XDM Business Person Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) klasse die informatie over een individuele persoon in de context van een zaken-aan-zaken (B2B) onderneming vangt.
+[!UICONTROL XDM Business Person Details] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) die informatie over een individuele persoon opneemt in het kader van een business-to-business (B2B)-onderneming.
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -40,7 +36,7 @@ ht-degree: 2%
 | `b2b.personType` | Tekenreeks | Het type B2B-persoon. |
 | `extSourceSystemAudit` | [Kenmerken externe bronsysteemcontrole](../../data-types/external-source-system-audit-attributes.md) | Als de relatie met de ondernemer uit een extern bronsysteem komt, vangt dit voorwerp controleattributen voor dat systeem. |
 | `extendedWorkDetails` | Object | Hiermee legt u aanvullende gegevens over de persoon vast die betrekking hebben op het werk. |
-| `extendedWorkDetails.assistantDetails` | Object | Vangt de volgende attributen met betrekking tot de medewerker van de persoon: <ul><li>`name`: (Naam [persoon](../../data-types/person-name.md)) De volledige naam van de medewerker.</li><li>`phone`: ([Telefoonnummer](../../data-types/phone-number.md)) Het telefoonnummer van de medewerker.</li></ul> |
+| `extendedWorkDetails.assistantDetails` | Object | Vangt de volgende attributen met betrekking tot de medewerker van de persoon: <ul><li>`name`: ([Naam persoon](../../data-types/person-name.md)) De volledige naam van de assistent.</li><li>`phone`: ([Telefoonnummer](../../data-types/phone-number.md)) Het telefoonnummer van de assistent.</li></ul> |
 | `extendedWorkDetails.departments` | Array van tekenreeksen | Een lijst met afdelingsnamen waar de persoon werkt. |
 | `extendedWorkDetails.jobTitle` | Tekenreeks | De functie van de persoon. |
 | `extendedWorkDetails.photoUrl` | Tekenreeks | Een URL naar een foto van de persoon. |
@@ -56,7 +52,7 @@ ht-degree: 2%
 | `workAddress` | [Postadres](../../data-types/postal-address.md) | Het werkadres van de persoon. |
 | `workEmail` | [E-mailadres](../../data-types/email-address.md) | Het e-mailadres van het werk van de persoon. |
 | `workPhone` | [Telefoonnummer](../../data-types/phone-number.md) | Het telefoonnummer van het werktelefoonnummer van de persoon. |
-| `identityMap` | Kaart | Een kaartveld dat een set naamloze identiteiten voor de persoon bevat. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Als u dit veld correct wilt gebruiken voor [Real-time klantprofiel](../../../profile/home.md), moet u niet handmatig de inhoud van het veld bijwerken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in de  [grondbeginselen van schemacompositie voor meer informatie ](../../schema/composition.md#identityMap) over hun gebruiksgeval. |
+| `identityMap` | Kaart | Een kaartveld dat een set naamloze identiteiten voor de persoon bevat. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Voor een juist gebruik van dit veld voor [Klantprofiel in realtime](../../../profile/home.md)Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan . |
 | `organizations` | Array van tekenreeksen | Een lijst van organisatienamen waar de persoon werkt. |
 
 {style=&quot;table-layout:auto&quot;}

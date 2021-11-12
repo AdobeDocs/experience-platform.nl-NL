@@ -3,9 +3,9 @@ keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbe
 title: Klantprofiel in real-time in CDP in real-time
 description: Leer hoe u met Real-time Customer Data Platform gecoördineerde, consistente en relevante ervaringen voor uw klanten kunt aansturen met het Real-time klantprofiel.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,7 @@ Het Profiel van de Klant in real time laat u toe om een holistische mening van e
 
 CDP in real time wordt gebouwd bovenop Experience Platform en gebruikt veel van de eigenschappen en de functionaliteit van het kernExperience Platform, met inbegrip van de verwezenlijking van profielen. Deze samengevoegde meningen van een individuele klant brengen gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om klantengegevens op te slaan.
 
-## Profielverbeteringen voor CDP, B2B Edition (bèta) in realtime
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+## Profielverbeteringen voor CDP en B2B Edition in realtime
 
 Naast de profielmogelijkheden die door CDP in real time worden gesteund, kunt u Echte - tijd CDP, B2B Uitgave gebruiken om belangrijke informatie te doorbladeren verbonden aan een individu, zoals een rekening en kansen. Als u meer wilt weten over profielverbeteringen voor CDP en B2B Edition in realtime, leest u eerst de [bladergids voor profielen](profile-browse.md).
 

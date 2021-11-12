@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '395'
 ht-degree: 6%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 6%
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
-   * B2B-klassen (bèta) {#b2b}
+   * B2B-klassen {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
       * [XDM Zakelijke account Person Relatie](./classes/b2b/business-account-person-relation.md)
       * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -121,7 +121,7 @@ ht-degree: 6%
       * [Klassen](./ui/resources/classes.md)
       * [Veldgroepen](./ui/resources/field-groups.md)
       * [Datatypen](./ui/resources/data-types.md)
-   * Veld {#fields} definiëren
+   * Velden definiëren {#fields}
       * [Overzicht](./ui/fields/overview.md)
       * [Vereiste velden](./ui/fields/required.md)
       * [Objectvelden](./ui/fields/object.md)
@@ -132,7 +132,7 @@ ht-degree: 6%
    * [Workflows op basis van velden](./ui/field-based-workflows.md)
    * [Voorbeeld-XDM-gegevens genereren](./ui/sample.md)
    * [XDM-schema&#39;s exporteren](./ui/export.md)
-* Schema Registry API {#api}
+* Schema-register-API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Schema&#39;s](api/schemas.md)
@@ -153,7 +153,7 @@ ht-degree: 6%
    * [Een schema maken in de API](tutorials/create-schema-api.md)
    * [Een schemarelatie definiëren in de UI](tutorials/relationship-ui.md)
    * [Een schemarelatie definiëren in de API](tutorials/relationship-api.md)
-   * [Definieer een schemarelatie in Real-time CDP B2B Edition (bèta)](tutorials/relationship-b2b.md)
+   * [Definieer een schemarelatie in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Een ad-hocschema (API) maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

@@ -1,22 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;b2b;cdp;Customer AI
-title: Real-time CDP B2B Edition-overzicht (bèta)
+title: Real-time CDP B2B Edition - Overzicht
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Overzicht van Real-time Customer Data Platform B2B Edition-account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition, overzicht (bèta)
-
->[!IMPORTANT]
->
->CDP B2B Edition in realtime wordt momenteel in bèta uitgevoerd. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Overzicht van Real-time Customer Data Platform B2B Edition
 
 Gebaseerd op Real-time Customer Data Platform (Real-Time CDP), is de Echte - tijdCDP B2B Uitgave speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
 
@@ -51,7 +47,7 @@ Het systeem van de identiteitsresolutie verstrekt de volgende eigenschappen:
 
 Het systeem voor identiteitsafwikkeling is uitgebreid om een meer veelzijdige classificatie van personen te ondersteunen. Het systeem staat voor mensen toe om als lood in bedrijfskansen evenals klanten worden geïdentificeerd.
 
-De verslagen van de rekening die door bronCRM worden gesynchroniseerd en via veelvoudige wegen binnen het systeem worden verbonden worden samengevoegd door Platform. Het systeem verenigt die mensen verbonden aan bedrijfskansen en die geregistreerd als klanten, maar kan ook het onderscheid tussen hen als attribuut bewaren als zij identificeerbaar zijn.
+De verslagen van de rekening die door bronCRM worden gesynchroniseerd en via veelvoudige wegen binnen het systeem worden verbonden worden samengevoegd door Platform. Het systeem brengt die mensen samen verbonden aan bedrijfskansen en die geregistreerd als klanten, maar kan ook het onderscheid tussen hen als attribuut bewaren als zij identificeerbaar zijn.
 
 Overeenkomende id&#39;s worden gebruikt om accountrecords van meerdere systemen te koppelen en samen te voegen. Accounthiërarchieën blijven gedurende dit proces behouden. De differentiators worden gebruikt onderzoeken of een persoon met een rekening verbonden is of niet, en verstrekken de capaciteit om hen van de rekening te scheiden indien nodig.
 
