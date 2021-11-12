@@ -5,18 +5,14 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: a36a4775c14e97df51f218cea3a083d29c7b69dc
+source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Marketo Engage] connector
-
->[!IMPORTANT]
->
->De [!DNL Marketo Engage] De bron in Adobe Experience Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+# [!DNL Marketo Engage] connector
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
@@ -63,7 +59,7 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 
 ## Verwachte vertraging van [!DNL Marketo] gegevens over Platform
 
-In de volgende tabel wordt de verwachte vertraging voor het overbrengen van [!DNL Marketo] gegevens in Platform, gebaseerd op de aard van de inname en de gewenste bestemming:
+In de volgende tabel wordt de verwachte vertraging voor het introduceren weergegeven [!DNL Marketo] gegevens in Platform, gebaseerd op de aard van de inname en de gewenste bestemming:
 
 | Bestemming | Verwachte vertraging |
 | ----------- | ---------------- |

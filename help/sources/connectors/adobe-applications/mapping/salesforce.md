@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Salesforce;salesforce;field mapping;field mapping;marketo;B2B;b2b
-solution: Experience Platform
+keywords: Experience Platform;home;populaire onderwerpen;Salesforce;salesforce;field mapping;Field mapping;marketo;B2B;b2b
 title: Salesforce-toewijzingsvelden
-topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen Salesforce-bronvelden en de bijbehorende XDM-velden.
-source-git-commit: 00207ae10979b48d190cbda63aecf55e0f6d0f9c
+source-git-commit: d0efc8ffab33029c9c3ff69456b634b4ef737b1a
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '279'
 ht-degree: 1%
 
 ---
@@ -19,20 +17,27 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
-| `AccountId` | `b2b.accountID` |
-| `AccountId` | `personComponents.sourceAccountID` |
+| `AccountId` | `b2b.accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", AccountId, "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceAccountKey` |
+| `"Salesforce"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `AssistantName` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `Birthdate` | `person.birthDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Department` | `extendedWorkDetails.departments` |
-| `Email` | `workEmail.address` | Dit is de secundaire identiteit. |
+| `Email` | `workEmail.address` | Secundaire identiteit. |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `HomePhone` | `homePhone.number` |
-| `Id` | `personID` | Dit is de primaire identiteit |
-| `Id` | `personComponents.sourcePersonID` |
+| `Id` | `b2b.personKey.sourceID` |
+| `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
+| `Id` | `personComponents.sourcePersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourcePersonKey.sourceKey` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `LastName` | `person.name.lastName` |
@@ -73,13 +78,19 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `ConvertedContactId` | `personComponents.sourceConvertedContactID` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
-| `Email` | `workEmail.address` | Dit is de secundaire identiteit |
+| `Email` | `workEmail.address` | Secundaire identiteit. |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `IsConverted` | `b2b.isConverted` |
-| `Id` | `personID` | Dit is de primaire identiteit |
-| `Id` | `personComponents.sourcePersonID` |
+| `"Salesforce"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
+| `Id` | `b2b.personKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
+| `Id` | `personComponents.sourcePersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourcePersonKey.sourceKey` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `LastName` | `person.name.lastName` |
@@ -99,6 +110,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Street` | `workAddress.street1` |
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `Suffix` | `person.name.suffix` |
+| `Company` | `b2b.companyName` |
+| `Website` | `b2b.companyWebsite` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -106,10 +119,12 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
+| `"Salesforce"` | `accountKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `AccountNumber` | `accountNumber` |
 | `AccountSource` | `accountSourceType` |
 | `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
-| `BillingCity` | adres | `accountBillingAddress.city` |
+| `BillingCity` | `accountBillingAddress.city` |
 | `BillingCountry` | `accountBillingAddress.country` |
 | `BillingLatitude` | `accountBillingAddress._schema.latitude` |
 | `BillingLongitude` | `accountBillingAddress._schema.longitude` |
@@ -120,7 +135,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Description` | `accountDescription` |
 | `DunsNumber` | `accountOrganization.DUNSNumber` | data.com, functie |
 | `Fax` | `accountFax.number` |
-| `Id` | `accountID` | Dit is de primaire identiteit |
+| `Id` | `accountKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `Industry` | `accountOrganization.industry` |
 | `Jigsaw` | `accountOrganization.jigsaw` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -132,7 +148,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Name` | `accountName` |
 | `NumberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `Ownership` | `accountOwnership` |
-| `ParentId` | `accountParentID` |
+| `ParentId` | `accountParentKey.sourceID` |
+| `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountParentKey` |
 | `Phone` | `accountPhone.number` |
 | `Rating` | `accountOrganization.rating` |
 | `ShippingCity` | `accountShippingAddress.city` |
@@ -155,9 +172,14 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
-| `AccountId` | `accountID` | Relatie |
+| `"Salesforce"` | `opportunityKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `AccountId` | `accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | Relatie. |
 | `Amount` | `opportunityAmount.amount` |
-| `CampaignId` | `campaignID` |
+| `CampaignId` | `campaignKey.sourceID` |
+| `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
 | `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription` |
@@ -166,7 +188,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `FiscalYear` | `fiscalYear` |
 | `ForecastCategory` | `forecastCategory` |
 | `ForecastCategoryName` | `forecastCategoryName` |
-| `Id` | `opportunityID` | Dit is de primaire identiteit |
+| `Id` | `opportunityKey.sourceID` |
 | `IsClosed` | `isClosed` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -187,12 +209,21 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
-| `ContactId` | `personID` | Relatie |
+| `"Salesforce"` | `opportunityPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `"Salesforce"` | `personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personKey.sourceInstanceID` |
+| `ContactId` | `personKey.sourceID` |
+| `concat(ContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
-| `Id` | `opportunityPersonID` | Dit is de primaire identiteit |
+| `Id` | `opportunityPersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
-| `OpportunityId` | `opportunityID` | Relatie |
+| `"Salesforce"` | `opportunityKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` |
+| `OpportunityId` | `opportunityKey.sourceID` |
+| `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -201,32 +232,45 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
-| `Id` | `xdm: campaignID` | Dit is de primaire identiteit |
-| `Name` | `xdm: campaignName` |
-| `ParentId` | `xdm: parentCampaignID` |
-| `Type` | `xdm: campaignType` |
-| `Status` | `xdm: campaignStatus` |
-| `StartDate` | `xdm: campaignStartDate` |
-| `EndDate` | `xdm: campaignEndDate` |
-| `ExpectedRevenue` | `xdm: expectedRevenue.amount` |
-| `BudgetedCost` | `xdm: budgetedCost.amount` |
-| `ActualCost` | `xdm: actualCost.amount` |
-| `ExpectedResponse` | `xdm: expectedResponse` |
-| `IsActive` | `xdm: isActive` |
-| `Description` | `xdm: campaignDescription` |
-| `CreatedDate` | `xdm: extSourceSystemAudit.createdDate` |
-| `LastModifiedDate` | `xdm: extSourceSystemAudit.lastUpdatedDate` |
-| `LastActivityDate` | `xdm: extSourceSystemAudit.lastActivityDate` |
-| `LastViewedDate` | `xdm: extSourceSystemAudit.lastViewedDate` |
-| `LastReferencedDate` | `xdm: extSourceSystemAudit.lastReferencedDate` |
+| `"Salesforce"` | `campaignKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `Id` | `campaignKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `Name` | `campaignName` |
+| `ParentId` | `parentCampaignKey.sourceID` |
+| `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `parentCampaignKey` |
+| `Type` | `campaignType` |
+| `Status` | `campaignStatus` |
+| `StartDate` | `campaignStartDate` |
+| `EndDate` | `campaignEndDate` |
+| `ExpectedRevenue` | `expectedRevenue.amount` |
+| `BudgetedCost` | `budgetedCost.amount` |
+| `ActualCost` | `actualCost.amount` |
+| `ExpectedResponse` | `expectedResponse` |
+| `IsActive` | `isActive` |
+| `Description` | `campaignDescription` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
+| `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
+| `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
 
 ## Campagnelid {#campaign-member}
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
-| `Id` | `campaignMemberID` | Dit is de primaire identiteit |
-| `CampaignId` | `campaignID` | Relatie |
-| `LeadOrContactId` | `personID` | Relatie |
+| `"Salesforce"` | `campaignMemberKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `Id` | `campaignMemberKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `"Salesforce"` | `campaignKey.sourceType` |
+| `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
+| `CampaignId` | `campaignKey.sourceID` |
+| `concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` |
+| `"Salesforce"` | `personKey.sourceType` |
+| `${CRM_ORG_ID}` | `personKey.sourceInstanceID` |
+| `LeadOrContactId` | `personKey.sourceID` |
+| `concat(LeadOrContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `Status` | `memberStatus` |
 | `HasResponded` | `hasResponded` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
@@ -235,4 +279,4 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u inzicht verworven in de toewijzingsverhouding tussen [!DNL Salesforce] brongebieden en hun overeenkomstige gebieden XDM. Zie de zelfstudie op [het creëren van a [!DNL Salesforce] bronverbinding](../../../tutorials/ui/create/crm/salesforce.md) om uw [!DNL Salesforce] dataflow te beginnen.
+Door dit document te lezen hebt u meer inzicht gekregen in de relatie tussen [!DNL Salesforce] bronvelden en de bijbehorende XDM-velden. Zie de documentatie op [een [!DNL Salesforce] bronverbinding](../../../connectors/crm/salesforce.md) voor meer informatie .
