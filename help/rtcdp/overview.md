@@ -5,9 +5,9 @@ seo-title: Real-time Customer Data Platform Overview
 description: Overzicht van Real-time Customer Data Platform
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Met Real-time Customer Data Platform kunt u:
 * Maak actionable inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
-## Real-time Customer Data Platform B2B Edition (bèta)
+## Real-time Customer Data Platform B2B Edition
 
 Er is ook een verschillende uitgave van CDP in real time beschikbaar om zaken-aan-zaken organisatorische behoeften aan te passen. CDP B2B Edition in real time is speciaal gebouwd om de functionaliteit van CDP in real time voor marketers uit te breiden. Het heeft verschillende mogelijkheden die binnen het ecosysteem van Adobe Experience Platform worden toegelaten om beter te passen werkend binnen een zaken-aan-zaken de dienstmodel.
 

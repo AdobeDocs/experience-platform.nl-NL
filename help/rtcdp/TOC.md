@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform Guide
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
-source-git-commit: d0a1c6f198a8eb3e442168b6a2d2a2475fbf8fee
+source-git-commit: d5c05d4ada15a9c6a2d8afbaa6cd5675a8271e25
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 7%
+source-wordcount: '174'
+ht-degree: 8%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 7%
       * [Aan de slag met Real-Time CDP](get-started.md)
       * [Overzicht van cijfers](home-page-dashboards.md)
    * Real-time CDP B2B Edition {#rtcdpb2b-intro}
-      * [CDP B2B Edition-voorbeeldgebruik in realtime](./b2b-use-case.md)
-      * [Eend-to-end CDP B2B Edition-zelfstudie in realtime](./b2b-tutorial.md)
+      * [Voorbeeld van gebruik](./b2b-use-case.md)
+      * [Volledige zelfstudie](./b2b-tutorial.md)
       * [CDP B2B Edition-instructies in realtime](b2b-guardrails.md)
 * Accountprofielen {#account}
    * [Overzicht van het accountprofiel](accounts/account-profile-overview.md)

@@ -5,9 +5,9 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Overzicht van Real-time Customer Data Platform B2B Edition-account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -82,12 +82,10 @@ Nu u beter de voordelen voor marketers begrijpt die door Echte - tijd CDP B2B Ui
 Om te begrijpen hoe de Echte - tijdCDP B2B Uitgave uw zaken-aan-zaken de dienstmodel kan voordeel halen, zie de volgende documentatie om u te helpen begonnen worden:
 
 * [Een voorbeeld gebruikt geval voor Echte - tijdCDP B2B Uitgave](./b2b-use-case.md)
+* [Een end-to-end zelfstudie voor Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
 * [Hoe kan ik gegevens invoeren](./sources/b2b.md)
 * [Profielen openen](./profile/profile-overview.md)
 * [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 * [Hoe te om segmenten te bouwen](./segmentation/b2b.md)
 * [Hoe te om segmenten aan bestemmingen te activeren](./destinations/b2b.md)
 * [Beleid voor gegevensbeheer definiëren en afdwingen](./privacy/data-governance-overview.md)
-
-<!-- PLACEHOLDER - page under construction -->
-<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

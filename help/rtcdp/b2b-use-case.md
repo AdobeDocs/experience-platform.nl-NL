@@ -1,20 +1,16 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
-title: Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition (bèta)
+title: Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
 description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van uw implementatie van Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
 
-# Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition (bèta)
-
->[!IMPORTANT]
->
->CDP Business to Business Edition in realtime wordt momenteel in bèta weergegeven. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
 
 Real-time Customer Data Platform B2B Edition breidt het bestaande Real-time CDP- en Adobe Experience Platform-aanbod uit om B2B-gegevens en -workflows te ondersteunen. Dit document biedt een voorbeeld van een gebruiksgeval dat de extra voordelen aantoont die door de B2B Edition worden geboden. Deze omvatten:
 
@@ -29,8 +25,6 @@ Bodea, een technologiebedrijf, heeft een nieuw product en wil tegelijkertijd kla
 Bodea heeft echter twee verschillende bedrijfsonderdelen. Bodea&#39;s eerste business line 1 creëert software voor de automobielindustrie. De tweede branche, &quot;Line 2&quot;, verkoopt 3D-printers die auto-onderdelen maken. Als gevolg van de twee bedrijfsonderdelen van Bodea zijn de inkomstengegevens die uit de klantenrekeningen van Bodea worden gegenereerd, niet in één enkele weergave verenigd.
 
 Elke branche heeft zijn eigen verkoopsysteem: &quot;CRM 1&quot; en &quot;CRM 2&quot;. Beide CRM-verkoopsystemen zijn verbonden met hun eigen marketingautomatiseringsplatform &quot;Marketo 1&quot; en &quot;Marketo 2&quot;. Gegevens van CRM 1 worden alleen gesynchroniseerd naar Marketo 1 en gegevens van CRM2 worden alleen gesynchroniseerd naar Marketo 2. Uiteindelijk worden hun gegevens bewaard in verschillende informatiesilo&#39;s van bedrijven.
-
-<!-- ![lines of business diagram](./assets/lines-of-business.png) -->
 
 ## Huidige gegevenssituatie
 
@@ -97,7 +91,7 @@ Door dit document te lezen, bent u nu geïntroduceerd aan de soorten doelstellin
 
 De volgende documentatie wordt aanbevolen om meer inzicht te krijgen in B2B-specifieke functies:
 
-<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B Edition - end-to-end zelfstudie](./b2b-tutorial.md)
 - [Bronnen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
 - [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [B2B-segmenteringsvoorbeelden](./segmentation/b2b.md)

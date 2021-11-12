@@ -1,21 +1,15 @@
 ---
-title: Overzicht van de Gevallen van het Gebruik van de Segmentatie voor Echte - tijdCDP B2B Uitgave (Bèta)
+title: Overzicht van de Gevallen van het Gebruik van de Segmentatie voor Echte - tijdCDP B2B Uitgave
 description: Een overzicht van de diverse beschikbare Echte - tijdCDP B2B de gebruiksgevallen van de Uitgave.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
 
-# Overzicht van de segmentatieuse cases voor Real-time Customer Data Platform B2B Edition (bèta)
-
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->CDP B2B Edition in realtime wordt momenteel in bèta uitgevoerd. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Overzicht van de segmentatieuse cases voor Real-time Customer Data Platform B2B Edition
 
 Dit document bevat voorbeelden met betrekking tot de segmentatie die beschikbaar is voor CDP B2B Edition in realtime en hoe de verschillende typen kenmerken kunnen worden gecombineerd voor algemene B2B-gebruiksgevallen.
 
@@ -40,7 +34,7 @@ Zodra de unieschema&#39;s voor de B2B-klassen relaties hebben vastgesteld en zij
 
 B2B-klassen en hun kenmerken worden toegevoegd met een `B2B` in de segmentatiewerkruimte om deze te onderscheiden van de standaardwaarden in Real-time Customer Data Platform.
 
-Om segmenten voor B2B gebruiksgevallen effectief tot stand te brengen, is het belangrijk om een intieme kennis van het schema te hebben en te begrijpen hoe het gegevensmodel eruit ziet. Het is ook handig om rekening te houden met het pad dat de gegevens van het ene gegevensobject naar het andere nemen.
+Om segmenten voor B2B gebruiksgevallen effectief tot stand te brengen, is het belangrijk om een intieme kennis van het schema te hebben en te begrijpen hoe het gegevensmodel eruit ziet. Het is ook handig om rekening te houden met het pad dat de gegevens van het ene gegevensobject naar het andere overnemen.
 
 De onderstaande afbeelding illustreert de relaties tussen de B2B-klassen die beschikbaar zijn in Real-Time CDP B2B Edition.
 
