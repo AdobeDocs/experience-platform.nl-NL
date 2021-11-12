@@ -5,38 +5,39 @@ title: Een advertentiesysteem verkennen met de Flow Service API
 topic-legacy: overview
 description: De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten. Deze zelfstudie gebruikt de Flow Service API om advertentiesystemen te verkennen.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 9938b0bb939dc7bab9d8e02bd58735360fc883fa
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 1%
 
 ---
 
-# Een advertentiesysteem verkennen met de API [!DNL Flow Service]
+# Een reclamesysteem verkennen met de [!DNL Flow Service] API
 
 Als er een basisverbinding is gemaakt, kunt u nu de unieke basis-verbindings-id gebruiken om te navigeren en de gegevensstructuur en inhoud van uw bron te verkennen. Zo kunt u de specifieke items en hun respectievelijke gegevenstypen en indelingen identificeren voordat u een gegevensstroom maakt en deze naar Adobe Experience Platform overbrengt.
 
-Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om advertentiesystemen te verkennen.
+Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) het verkennen van reclamesystemen.
 
 ## Aan de slag
 
 >[!IMPORTANT]
-Voor deze zelfstudie moet u beschikken over de unieke basis-verbindings-id voor uw advertentiebron. Als u deze id niet hebt, raadpleegt u de zelfstudie [Een advertentiebron verbinden met Platform](../../api/create/advertising/ads.md).
+>
+>Voor deze zelfstudie moet u beschikken over de unieke basis-verbindings-id voor uw advertentiebron. Als u deze id niet hebt, raadpleegt u de zelfstudie op [een reclamebron verbinden met Platform](../../api/create/advertising/ads.md) zelfstudie.
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [Sandboxen](../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een advertentiesysteem met de API [!DNL Flow Service].
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om een verbinding met een advertentiesysteem tot stand te brengen met het [!DNL Flow Service] API.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../landing/api-guide.md).
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
 
 ## Uw gegevenstabellen verkennen
 
-Met de basisverbinding voor uw advertentiesysteem kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in [!DNL Platform] in te gaan.
+Met de basisverbinding voor uw advertentiesysteem kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in te gaan [!DNL Platform].
 
 **API-indeling**
 
@@ -61,7 +62,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol antwoord is een serie van lijsten van aan uw reclamesysteem. Zoek de lijst u in [!DNL Platform] wilt brengen en nota nemen van zijn `path` bezit, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
+Een succesvol antwoord is een serie van lijsten van aan uw reclamesysteem. Zoek de tabel waarin u wilt plaatsen [!DNL Platform] en neemt nota van zijn `path` eigenschap, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
 
 ```json
 [
@@ -124,7 +125,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de structuur van een tabel. De details betreffende elk van de kolommen van de lijst worden gevestigd binnen elementen van `columns` serie.
+Een geslaagde reactie retourneert de structuur van een tabel. De details betreffende elk van de kolommen van de lijst worden gevestigd binnen elementen van `columns` array.
 
 ```json
 {
@@ -170,4 +171,4 @@ Een geslaagde reactie retourneert de structuur van een tabel. De details betreff
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw advertentiesysteem verkend, het pad van de tabel gevonden die u wilt doorgeven naar [!DNL Platform] en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in de volgende zelfstudie gebruiken om gegevens van uw advertentiesysteem te verzamelen en in Platform te brengen](../collect/advertising.md).[
+Door deze zelfstudie te volgen, hebt u uw advertentiesysteem verkend, vond de weg van de lijst u binnen wilt brengen [!DNL Platform]en heeft informatie over de structuur ervan verkregen. U kunt deze informatie in de volgende zelfstudie gebruiken om [gegevens van uw advertentiesysteem verzamelen en in Platform brengen](../collect/advertising.md).
