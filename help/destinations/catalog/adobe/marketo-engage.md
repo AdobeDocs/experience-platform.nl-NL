@@ -2,10 +2,10 @@
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
+source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 1%
+source-wordcount: '334'
+ht-degree: 0%
 
 ---
 
@@ -23,6 +23,10 @@ De bestemming laat marketers toe om segmenten te duwen die in Adobe Experience P
 |---|---|
 | ECID | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
 | Email | Een naamruimte die een e-mailadres vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
+
+>[!NOTE]
+>
+>In de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de doelworkflow activeren: *verplicht* om identiteiten toe te wijzen en *optioneel* om kenmerken toe te wijzen. Het toewijzen van e-mail- en/of ECID via het tabblad Identiteitsnaamruimte is het belangrijkste wat u moet doen om ervoor te zorgen dat de persoon gelijk is aan de persoon in Marketo. Toewijzing via e-mail zorgt voor de hoogste match-rate.
 
 ## Exporttype {#export-type}
 
