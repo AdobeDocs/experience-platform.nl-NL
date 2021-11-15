@@ -6,7 +6,7 @@ title: Een AI-instantie van een klant configureren
 topic-legacy: Instance creation
 description: Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
+source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
 workflow-type: tm+mt
 source-wordcount: '2218'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Nadat u de gegevenssets hebt geselecteerd die u wilt gebruiken, selecteert u de 
 
 Het infopictogram selecteren ![infopictogram](../images/user-guide/info-icon.png) naast de dataset opent de dataset voorproefpopover.
 
-![Gegevensset selecteren en zoeken](../images/user-guide/dataset-info-2.png)
+![Gegevensset selecteren en zoeken](../images/user-guide/dataset-info.png)
 
 De voorproef van de dataset bevat gegevens zoals de laatste updatetijd, bronschema, en een voorproef van de eerste tien kolommen.
 
@@ -85,8 +85,8 @@ De voorvertoning van de gegevensset bevat een percentage voor volledigheid van d
 >[!NOTE]
 >
 >De volledigheid van de gegevensset wordt berekend aan de hand van het maximale trainingsvenster voor de AI van de Klant (één jaar). Dit betekent dat gegevens die meer dan een jaar oud zijn, niet in aanmerking worden genomen bij het weergeven van de volledigheidswaarde van de gegevensset.
-<!-- training dataset completness needs to change -->
-![Volledige gegevensset](../images/user-guide/dataset-info.png)
+
+![Volledige gegevensset](../images/user-guide/dataset-info-2.png)
 
 ### Een identiteit selecteren {#identity}
 
