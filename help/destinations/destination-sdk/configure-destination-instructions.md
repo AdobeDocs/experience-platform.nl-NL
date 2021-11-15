@@ -1,31 +1,31 @@
 ---
-description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend de SDK van de Bestemming.
-title: Hoe te om Bestemming SDK te gebruiken om een het stromen bestemming te vormen
+description: Op deze pagina vindt u een overzicht en beschrijving van de stappen voor het configureren van een streamingbestemming met Destination SDK.
+title: Destination SDK gebruiken om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
 
-# Hoe te om Bestemming SDK te gebruiken om een het stromen bestemming te vormen
+# Destination SDK gebruiken om een streamingbestemming te configureren
 
 ## Overzicht {#overview}
 
-In deze pagina wordt beschreven hoe u de informatie in [Configuratieopties in de SDK Doelen](./configuration-options.md) en in andere bestemmingsSDK-functionaliteit en API-referentiedocumenten om een [streamingdoel](/help/destinations/destination-types.md#streaming-destinations). De stappen worden in de onderstaande volgorde weergegeven.
+In deze pagina wordt beschreven hoe u de informatie in [Configuratieopties in de SDK Doelen](./configuration-options.md) en in andere Destination SDK-functionaliteit en API-referentiedocumenten om een [streamingdoel](/help/destinations/destination-types.md#streaming-destinations). De stappen worden in de onderstaande volgorde weergegeven.
 
 >[!NOTE]
 >
->Het vormen van een partijbestemming door Doel SDK wordt momenteel niet gesteund.
+>Het configureren van een batchbestemming via Destination SDK wordt momenteel niet ondersteund.
 
 ## Vereisten {#prerequisites}
 
-Lees de onderstaande stappen voordat u verdergaat [Aan de slag met de doel-SDK](./getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke authentificatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met de APIs van SDK van de Bestemming te werken.
+Lees de onderstaande stappen voordat u verdergaat [Destination SDK aan de slag](./getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegegevens voor Adobe I/O en andere voorwaarden voor het werken met Destination SDK API&#39;s.
 
-## Stappen om de configuratieopties in Doel SDK aan opstelling te gebruiken uw bestemming {#steps}
+## Stappen om de configuratieopties in Destination SDK aan opstelling te gebruiken uw bestemming {#steps}
 
-![Afgedrukte stappen van het gebruiken van eindpunten van SDK van de Bestemming](./assets/destination-sdk-steps.png)
+![Gedetailleerde stappen voor het gebruik van Destination SDK-eindpunten](./assets/destination-sdk-steps.png)
 
 ## Stap 1: Een server- en sjabloonconfiguratie maken {#create-server-template-configuration}
 
@@ -152,7 +152,7 @@ Zodra u een malplaatje van de berichttransformatie hebt gecreeerd dat voor u wer
 
 ## Stap 4: Configuratie van metagegevens voor het publiek maken {#create-audience-metadata-configuration}
 
-Voor sommige bestemmingen, vereist de Bestemming SDK dat u een configuratie van publieksmeta-gegevens vormt om publiek in uw bestemming programmatically tot stand te brengen bij te werken of te schrappen. Zie [Metagegevensbeheer voor het publiek](./audience-metadata-management.md) voor informatie over wanneer u aan opstelling deze configuratie en hoe te om het moet doen.
+Voor sommige bestemmingen, vereist Destination SDK dat u een configuratie van publieksmeta-gegevens vormt om publiek in uw bestemming programmatically tot stand te brengen bij te werken of te schrappen. Zie [Metagegevensbeheer voor het publiek](./audience-metadata-management.md) voor informatie over wanneer u aan opstelling deze configuratie en hoe te om het moet doen.
 
 Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bestemmingsconfiguratie verbinden u in stap 2 creeerde. Voeg instanceID van uw configuratie van publieksmeta-gegevens aan uw bestemmingsconfiguratie als toe `audienceTemplateId`.
 
