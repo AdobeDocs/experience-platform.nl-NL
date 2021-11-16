@@ -3,9 +3,9 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 1%
 
 ---
@@ -41,13 +41,13 @@ Het is belangrijk om op de volgende verschillen tussen gebeurtenis te letten die
 
 * Tokenisering gegevenselement
 
-   * Tags: In een regel worden gegevenselementen aan het begin en einde van de naam van het gegevenselement gekoppeld met een `%`. Bijvoorbeeld, `%viewportHeight%`.
+   * Tags: In een regel worden gegevenselementen samengevoegd met een `%` aan het begin en einde van de naam van het gegevenselement. Bijvoorbeeld, `%viewportHeight%`.
 
-   * Gebeurtenis doorsturen: In een regel worden gegevenselementen aan het begin en `}}` aan het einde van de naam van het gegevenselement gekoppeld. `{{` Bijvoorbeeld, `{{viewportHeight}}`.
+   * Gebeurtenis doorsturen: In een regel worden gegevenselementen samengevoegd met `{{` aan het begin en `}}` aan het einde van de naam van het gegevenselement. Bijvoorbeeld, `{{viewportHeight}}`.
 
 * Hoe wordt verwezen naar gegevens
 
-   Als u wilt verwijzen naar gegevens van het Edge-netwerk, moet het pad voor het gegevenselement `arc.event._<element>_` zijn.
+   Als u wilt verwijzen naar gegevens van het Edge-netwerk, moet het pad naar het gegevenselement `arc.event._<element>_`.
 
    `arc` staat voor Adobe Response Context.
 
@@ -61,9 +61,5 @@ Het is belangrijk om op de volgende verschillen tussen gebeurtenis te letten die
 * Reeks handelingen
 
    In de sectie van de Actie van een regel, gebeurtenis die regels door:sturen wordt altijd opeenvolgend uitgevoerd. Zorg ervoor dat de volgorde van de handelingen correct is wanneer u een regel opslaat. Deze uitvoeringsreeks kan niet worden gekozen zoals dit kan met tags.
-
-* JavaScript-versies voor aangepaste code
-
-   Tags gebruiken JavaScript-versie es5. Voor het doorsturen van gebeurtenissen wordt versie es6 gebruikt.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->

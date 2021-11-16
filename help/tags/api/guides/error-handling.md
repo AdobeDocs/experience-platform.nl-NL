@@ -1,9 +1,10 @@
 ---
 title: Foutafhandeling
 description: Leer hoe de fout wordt behandeld in de Reactor-API.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 Wanneer een probleem optreedt tijdens het aanroepen van de Reactor-API, kan een fout op een van de volgende manieren worden geretourneerd:
 
 * **Onmiddellijke fouten**: Wanneer een aanvraag wordt uitgevoerd die resulteert in een directe fout, wordt een foutreactie geretourneerd door de API, waarbij de HTTP-status het algemene type fout weergeeft dat is opgetreden.
-* **Vertraagde fouten**: Wanneer een API-aanvraag wordt uitgevoerd die resulteert in een vertraagde fout (zoals een asynchrone activiteit), kan een fout door de API worden geretourneerd in de  `meta.status_details` van een gerelateerde bron.
+* **Vertraagde fouten**: Wanneer een API-aanvraag wordt uitgevoerd die resulteert in een vertraagde fout (zoals een asynchrone activiteit), kan een fout worden geretourneerd door de API in het dialoogvenster `meta.status_details` van een verwante bron.
 
 ## Foutindeling
 
-Foutreacties zijn bedoeld om te voldoen aan de [JSON:API foutspecificatie](http://jsonapi.org/format/#errors) en houden zich doorgaans aan de volgende structuur:
+Foutreacties zijn bedoeld om te voldoen aan de [JSON:API foutspecificatie](http://jsonapi.org/format/#errors)en houdt zich doorgaans aan de volgende structuur:
 
 ```json
 {
@@ -43,9 +44,9 @@ Foutreacties zijn bedoeld om te voldoen aan de [JSON:API foutspecificatie](http:
 | `id` | Een unieke id voor dit specifieke exemplaar van het probleem. |
 | `status` | De HTTP-statuscode die op dit probleem van toepassing is, uitgedrukt als een tekenreekswaarde. |
 | `code` | Een toepassingsspecifieke foutcode, uitgedrukt als tekenreekswaarde. |
-| `title` | Een korte, leesbare samenvatting van het probleem dat **niet zou moeten veranderen** van voorkomen aan voorkomen, behalve voor localisatiedoeleinden. |
-| `detail` | Een door de mens leesbare verklaring specifiek voor dit voorkomen van het probleem. Net als `title` kan de waarde van dit veld worden gelokaliseerd. |
-| `source` | Een object met verwijzingen naar de bron van de fout, eventueel inclusief een van de volgende leden:<ul><li>`pointer`: een  [JSON-](https://datatracker.ietf.org/doc/html/rfc6901) tekenreeks (RFC6901) die verwijst naar de gekoppelde entiteit in het aanvraagdocument (bijvoorbeeld  `/data` voor een primair gegevensobject of  `/data/attributes/title` voor een specifiek kenmerk).</li></ul> |
+| `title` | Een korte, leesbare samenvatting van het probleem dat **mag niet worden gewijzigd** van voorval tot voorval, behalve voor lokalisatie. |
+| `detail` | Een door de mens leesbare verklaring specifiek voor dit voorkomen van het probleem. leuk `title`De waarde van dit veld kan worden gelokaliseerd. |
+| `source` | Een object met verwijzingen naar de bron van de fout, eventueel inclusief een van de volgende leden:<ul><li>`pointer`: a [JSON-aanwijzer (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) tekenreeks die verwijst naar de gekoppelde entiteit in het aanvraagdocument (bijvoorbeeld `/data` voor een primair gegevensobject, of `/data/attributes/title` voor een specifiek kenmerk).</li></ul> |
 | `meta` | Een object met niet-standaard metagegevens over de fout. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -85,13 +86,13 @@ In de volgende tabel worden de verschillende fouten weergegeven die de API kan r
 | `invalid-rule` | Een ongeldige regel kan niet worden toegevoegd aan een bibliotheek. |
 | `invalid-settings-syntax` | Er is een syntaxisfout aangetroffen tijdens het parseren van de JSON-instellingen. |
 | `library-file-not-found` | Een vereist bestand dat is gedefinieerd in extension.json kan niet worden gevonden in het ZIP-pakket. |
-| `minification-error` | De code kan niet worden gecompileerd vanwege ongeldige code of ES6-code. |
+| `minification-error` | De code kan niet worden gecompileerd vanwege ongeldige code. |
 | `multiple-revisions` | Slechts één revisie van elke bron kan in een bibliotheek worden opgenomen. |
 | `no-available-orgs` | Deze gebruikersaccount behoort niet tot een productprofiel dat toegang heeft tot tags. Gebruik de Admin Console om deze gebruiker toe te voegen aan een productprofiel met tagrechten. |
 | `not-authorized` | Deze gebruikersaccount beschikt niet over de benodigde rechten om deze handeling uit te voeren. |
 | `not-found` | De record kan niet worden gevonden. Controleer de id van het object dat u wilt ophalen. |
 | `not-unique` | De naam die u wilt gebruiken, is al in gebruik. Voor deze resource moet de eigenschap &#39;name&#39; uniek zijn. |
-| `public-release-not-authorized` | De openbare versie van extensies wordt gecoördineerd door `launch-ext-dev@adobe.com`. Zie het document op [releasing extensions](../../extension-dev/submit/release.md) voor meer informatie. |
+| `public-release-not-authorized` | De openbare bekendmaking van verlengingen wordt gecoördineerd door `launch-ext-dev@adobe.com`. Document weergeven op [extensies vrijgeven](../../extension-dev/submit/release.md) voor meer informatie . |
 | `read-only` | Deze bron is alleen-lezen en kan niet worden gewijzigd. |
 | `session-timeout` | De gebruikerssessie is verlopen. Meld u af en meld u opnieuw aan. |
 | `sftp-authentication-failed` | Verificatie is mislukt voor de SFTP-verbinding. |

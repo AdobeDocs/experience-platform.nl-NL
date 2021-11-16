@@ -2,9 +2,9 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5282'
+source-wordcount: '5352'
 ht-degree: 0%
 
 ---
@@ -299,7 +299,7 @@ De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
 **Is groter dan:** De voorwaarde retourneert true als de eerste waarde groter is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**is groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
 **Is waar:** De voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde true. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
@@ -542,6 +542,10 @@ Deze sectie beschrijft de actietypes beschikbaar in de uitbreiding van de Kern.
 
 ### Aangepaste code
 
+>[!NOTE]
+>
+>ES6+ JavaScript wordt nu ondersteund in aangepaste code. Houd er rekening mee dat sommige oudere browsers ES6+ niet ondersteunen. Om inzicht te krijgen in de gevolgen van het gebruik van ES6+-functies, moet u testen op alle webbrowsers die worden ondersteund.
+
 Geef de code op die wordt uitgevoerd nadat de gebeurtenis is geactiveerd en de voorwaarden zijn geëvalueerd.
 
 1. Geef de actiecode een naam.
@@ -645,6 +649,10 @@ Elke constante tekenreekswaarde waarnaar vervolgens in handelingen of voorwaarde
 `string`
 
 ### Aangepaste code
+
+>[!NOTE]
+>
+>ES6+ JavaScript wordt nu ondersteund in aangepaste code. Houd er rekening mee dat sommige oudere browsers ES6+ niet ondersteunen. Om inzicht te krijgen in de gevolgen van het gebruik van ES6+-functies, moet u testen op alle webbrowsers die worden ondersteund.
 
 U kunt aangepaste JavaScript invoeren in de gebruikersinterface door Editor openen te selecteren en code in te voegen in het editorvenster.
 
