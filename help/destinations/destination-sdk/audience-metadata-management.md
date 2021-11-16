@@ -2,7 +2,7 @@
 description: Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u het malplaatje bepaalt, test en voorlegt, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 title: Metagegevensbeheer voor het publiek
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
+source-git-commit: cb4e399798a9521e6f3da89cbd88d19476ab070d
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u bepaalt, test, en voorlegt de configuratie, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 
-U kunt de in dit document beschreven functionaliteit vormen door het `/authoring/audience-templates` API eindpunt te gebruiken. Lees [API-bewerkingen voor het eindpunt van metagegevens van het publiek](./audience-metadata-api.md) voor een volledige lijst met bewerkingen die u op het eindpunt kunt uitvoeren.
+U kunt de in dit document beschreven functionaliteit configureren met de `/authoring/audience-templates` API-eindpunt. Lezen [API-bewerkingen voor het eindpunt van metagegevens van het publiek](./audience-metadata-api.md) voor een volledige lijst van verrichtingen kunt u op het eindpunt uitvoeren.
 
 ## Wanneer om het het beheerseindpunt van publiekmeta-gegevens te gebruiken {#when-to-use}
 
@@ -25,11 +25,11 @@ Afhankelijk van uw API configuratie, kunt u of niet het beheerseindpunt van publ
 
 ## Gebruik gevallen die worden ondersteund door het metagegevensbeheer van het publiek {#use-cases}
 
-Met steun van publieksmeta-gegevens in Doel SDK, wanneer u uw bestemming van het Experience Platform vormt, kunt u de gebruikers van het Platform één van verscheidene opties geven wanneer zij segmenten aan uw bestemming in kaart brengen en activeren. U kunt de opties controleren beschikbaar aan de gebruiker via de parameters in de sectie van de segmentafbeelding van [bestemmingsconfiguratie](./destination-configuration.md#segment-mapping).
+Met steun van publieksmeta-gegevens in Destination SDK, wanneer u uw bestemming van het Experience Platform vormt, kunt u de gebruikers van het Platform één van verscheidene opties geven wanneer zij segmenten aan uw bestemming in kaart brengen en activeren. U kunt de opties bepalen die beschikbaar zijn voor de gebruiker via de parameters in het gedeelte voor segmenttoewijzing van het dialoogvenster [doelconfiguratie](./destination-configuration.md#segment-mapping).
 
 ### Hoofdlettergebruik 1 - U hebt een API van derden en gebruikers hoeven geen toewijzings-id&#39;s in te voeren
 
-Als u een API eindpunt hebt om segmenten of soorten publiek tot stand te brengen/bij te werken/te schrappen, kunt u de malplaatjes van publieksmeta-gegevens gebruiken om de SDK van de Bestemming te vormen om specs van uw segment te passen creeer/update/schrapt eindpunt. Experience Platform kan programmatically segmenten creëren/bijwerken/schrappen en meta-gegevens terug naar Experience Platform synchroniseren.
+Als u een API eindpunt hebt om segmenten of soorten publiek tot stand te brengen/bij te werken/te schrappen, kunt u de malplaatjes van publieksmeta-gegevens gebruiken om Destination SDK te vormen om de specificaties van uw segment te vormen creeer/update/schrapt eindpunt. Experience Platform kan programmatically segmenten creëren/bijwerken/schrappen en meta-gegevens terug naar Experience Platform synchroniseren.
 
 Wanneer het activeren van segmenten aan uw bestemming in het gebruikersinterface van het Experience Platform (UI), te hoeven de gebruikers niet om een gebied van de segmentafbeelding identiteitskaart in het activeringswerkschema manueel in te vullen.
 
@@ -47,7 +47,7 @@ Als uw bestemmingssysteem identiteitskaart van het Experience Platform segment g
 
 Om de hierboven vermelde gebruiksgevallen te ondersteunen, biedt Adobe u een algemene sjabloon die kan worden aangepast aan uw API-specificaties.
 
-U kunt het generische malplaatje gebruiken om [een nieuw publiekssjabloon te creëren](./audience-metadata-api.md#create) als uw API steunt:
+U kunt de generieke sjabloon gebruiken [een nieuwe publiekssjabloon maken](./audience-metadata-api.md#create) als uw API ondersteuning biedt voor:
 
 * De HTTP-methoden: POST, GET, PUT, DELETE, PATCH
 * De verificatietypen: OAuth 1, OAuth 2 met verfrist teken, OAuth 2 met dragertoken
@@ -59,14 +59,14 @@ Het technische team van Adobe kan met u werken om het generische malplaatje met 
 
 Deze sectie omvat drie voorbeelden van generische configuraties van publieksmeta-gegevens, voor uw verwijzing, samen met beschrijvingen van de belangrijkste secties van de configuratie. U ziet dat de URL, kopteksten, verzoeken en antwoorden verschillen tussen de drie voorbeeldconfiguraties. Dit komt door de verschillende specificaties van de marketing-API van de drie voorbeeldplatforms.
 
-In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{{segment.name}}` gebruikt in de URL en in andere voorbeelden worden deze gebruikt in de kopteksten of in de aanvraagtekst. Het hangt echt af van uw marketing API specificaties.
+Merk op dat in sommige voorbeelden macrogebieden zoals `{{authData.accessToken}}` of `{{segment.name}}` worden gebruikt in de URL, en in andere voorbeelden worden deze gebruikt in de kopballen of het verzoeklichaam. Het hangt echt af van uw marketing API specificaties.
 
 | Sjabloonsectie | Beschrijving |
 |--- |--- |
 | `create` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar uw API te maken, om programmatisch segmenten/publiek in uw platform te maken en de informatie weer te synchroniseren naar Adobe Experience Platform. |
 | `update` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar uw API uit te voeren, segmenten/publiek in uw platform programmatisch bij te werken en de informatie weer te synchroniseren naar Adobe Experience Platform. |
 | `delete` | Omvat alle vereiste componenten (URL, methode HTTP, kopballen, verzoek en reactielichaam) om een vraag van HTTP aan uw API te maken, segmenten/publiek in uw platform programmatically te schrappen. |
-| `validations` | Voert bevestigingen voor om het even welke gebieden in de malplaatjeconfiguratie in werking alvorens een vraag aan partner API te maken. U kunt bijvoorbeeld controleren of de account-id van de gebruiker correct is ingevoerd. |
+| `validate` | Voert bevestigingen voor om het even welke gebieden in de malplaatjeconfiguratie in werking alvorens een vraag aan partner API te maken. U kunt bijvoorbeeld controleren of de account-id van de gebruiker correct is ingevoerd. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -79,7 +79,7 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
    "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
    "metadataTemplate":{
       "create":{
-         "url":"https://api.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
          "httpMethod":"POST",
          "headers":[
             {
@@ -118,7 +118,7 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
          ]
       },
       "update":{
-         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"PUT",
          "headers":[
             {
@@ -155,7 +155,7 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
          ]
       },
       "delete":{
-         "url":"https://adsapi.moviestar.com/v1/segments/{{segment.alias}}",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"DELETE",
          "headers":[
             {
@@ -375,7 +375,7 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
 }
 ```
 
-Zoek beschrijvingen van alle parameters in het malplaatje in de verwijzingsdocumentatie [de verrichtingen van het de meta-gegevenseindpunt van het publiek ](./audience-metadata-api.md).
+Beschrijvingen van alle parameters in het malplaatje in de verwijzingsdocumentatie zoeken [API-bewerkingen voor het eindpunt van metagegevens van het publiek](./audience-metadata-api.md).
 
 ## Macro&#39;s die in publieksmeta-gegevensmalplaatjes worden gebruikt
 
@@ -388,8 +388,8 @@ Om informatie zoals segment IDs, toegangstokens, foutenmeldingen, en meer tussen
 | `{{segment.id}}` | Staat u toe om tot segmentidentiteitskaart in Experience Platform toegang te hebben. |
 | `{{customerData.accountId}}` | Staat u toe om tot het gebied van accountIdentiteitskaart toegang te hebben dat u opstelling in de bestemmingsconfiguratie. |
 | `{{oauth2ServiceAccessToken}}` | Staat u toe om een toegangstoken dynamisch te produceren die op uw configuratie OAuth 2 wordt gebaseerd. |
-| `{{authData.accessToken}}` | Staat u toe om het toegangstoken tot uw API eindpunt over te gaan. Gebruik `{{authData.accessToken}}` als het Experience Platform niet-vervallende tokens zou moeten gebruiken om met uw bestemming te verbinden, anders `{{oauth2ServiceAccessToken}}` gebruiken om een toegangstoken te produceren. |
-| `{{body.segments[0].segment.id}}` | Retourneert de unieke id van het gemaakte publiek als de waarde van de sleutel `externalAudienceId`. |
+| `{{authData.accessToken}}` | Staat u toe om het toegangstoken tot uw API eindpunt over te gaan. Gebruiken `{{authData.accessToken}}` als het Experience Platform niet-vervallende tokens zou moeten gebruiken om met uw bestemming te verbinden, anders gebruik `{{oauth2ServiceAccessToken}}` om een toegangstoken te produceren. |
+| `{{body.segments[0].segment.id}}` | Hiermee wordt de unieke id van het gemaakte publiek geretourneerd als de waarde van de sleutel `externalAudienceId`. |
 | `{{error.message}}` | Retourneert een foutbericht dat wordt weergegeven aan gebruikers in de gebruikersinterface van het Experience Platform. |
 
 {style=&quot;table-layout:auto&quot;}
