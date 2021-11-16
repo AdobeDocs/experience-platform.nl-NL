@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: Het volgende document bevat stappen voor het ophalen en bijwerken van stroomspecificaties met behulp van de Flow Service API voor Sources SDK.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -616,4 +616,4 @@ Een succesvolle reactie retourneert de details van de aangevraagde flowspecifica
 
 ## Volgende stappen
 
-Als de nieuwe verbindingsspecificatie aan de juiste stroomspecificatie is toegevoegd, kunt u nu doorgaan met testen en uw nieuwe bron verzenden. Zie de handleiding op [een nieuwe bron testen en verzenden](./overview.md#submit) voor meer informatie .
+Als de nieuwe verbindingsspecificatie aan de juiste stroomspecificatie is toegevoegd, kunt u nu doorgaan met testen en uw nieuwe bron verzenden. Zie de handleiding op [een nieuwe bron testen en verzenden](./submit.md) voor meer informatie .

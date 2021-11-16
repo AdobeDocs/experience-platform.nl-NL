@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 83aefe6a0880b201e376f458279461888e531741
+source-git-commit: b8793a4346e3f6017bdac07a1dd8df75a7341066
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '731'
 ht-degree: 5%
 
 ---
@@ -259,23 +259,20 @@ ht-degree: 5%
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
 - [Bronnen-SDK] {#sdk}
    - [Overzicht](sources-sdk/overview.md)
-   - [Bronnen: SDK-configuratie] {#config}
-      - [Configuratieopties](sources-sdk/config/config.md)
-      - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
-      - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
-      - [Uitgebreide specificatie configureren](sources-sdk/config/explorespec.md)
-   - [Bronnen: SDK API-zelfstudies] {#sdk-api}
-      - [Overzicht SDK API van bronnen](sources-sdk/api/overview.md)
-      - [Aan de slag](sources-sdk/api/getting-started.md)
-      - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
-      - [Een verbindingsspecificatie bijwerken](sources-sdk/api/update-connection-specs.md)
-      - [Een stroomspecificatie bijwerken](sources-sdk/api/update-flow-specs.md)
-      - [Uw bron verzenden](sources-sdk/api/submit.md)
-   - [Uw bron documenteren] {#document}
-      - [Uw bron documenteren in Adobe Experience Platform](sources-sdk/documentation/overview.md)
-      - [Gebruik de het Webinterface van GitHub om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
-      - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
-      - [Zelfservicesjabloon voor documentatie](sources-sdk/documentation/template.md)
+   - [Configuratieopties](sources-sdk/config/config.md)
+   - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
+   - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
+   - [Uitgebreide specificatie configureren](sources-sdk/config/explorespec.md)
+   - [Overzicht SDK API van bronnen](sources-sdk/api/api-overview.md)
+   - [Aan de slag](sources-sdk/api/getting-started.md)
+   - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
+   - [Een verbindingsspecificatie bijwerken](sources-sdk/api/update-connection-specs.md)
+   - [Een stroomspecificatie bijwerken](sources-sdk/api/update-flow-specs.md)
+   - [Uw bron verzenden](sources-sdk/api/submit.md)
+   - [Uw bron documenteren in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+   - [Gebruik de het Webinterface van GitHub om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
+   - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
+   - [Zelfservicesjabloon voor documentatie](sources-sdk/documentation/template.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
