@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK is een set configuratie-API's waarmee u een REST API-gebaseerde bron kunt integreren met behulp van de Flow Service API om uw gegevens naar het Experience Platform te brengen.
 hide: true
 hidefromtoc: true
-source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
+source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -41,17 +41,17 @@ Voor meer informatie over bronnen, en om een lijst van verschillende bronnen te 
 
 Via Sources SDK kunt u uw eigen REST API-bron integreren en uw gegevens naar het Platform brengen met [!DNL Flow Service]. De bronnen SDK staat u toe om een nieuwe bron met Platform te integreren, door nieuwe verbindingsspecificatie te creëren en voor te leggen door [!DNL Flow Service] API.
 
-Zie de handleiding op [een nieuwe verbindingsspecificatie maken](./api/overview.md) voor informatie over hoe te om een nieuwe bron aan Platform te integreren.
+Zie de handleiding op [een nieuwe verbindingsspecificatie maken](./api/api-overview.md) voor informatie over hoe te om een nieuwe bron aan Platform te integreren.
 
 ## Uw bron documenteren
 
-Als uw bron is gemaakt, raadpleegt u de [documentatiehandleiding](./documentation/overview.md) voor instructies over hoe u de bron kunt documenteren via de [!DNL GitHub] webinterface of via uw eigen teksteditor.
+Als uw bron is gemaakt, raadpleegt u de [documentatiehandleiding](./documentation/doc-overview.md) voor instructies over hoe u de bron kunt documenteren via de [!DNL GitHub] webinterface of via uw eigen teksteditor.
 
 ## Proces op hoog niveau
 
 Het stapsgewijze proces voor het configureren van uw bron in Experience Platform wordt hieronder beschreven:
 
-* Lees de [Bronnen: SDK API-handleiding](./api/overview.md);
+* Lees de [Bronnen: SDK API-handleiding](./api/api-overview.md);
    * Lees de [gids Aan de slag](./api/getting-started.md);
    * Volg de zelfstudie op [een nieuwe verbindingsspecificatie maken](./api/create.md);
    * Volg de zelfstudie op [bijwerken van uw verbindingsspecificatie](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ Het stapsgewijze proces voor het configureren van uw bron in Experience Platform
    * Zie de handleiding op [configureren van verificatiespecificaties](./config/authspec.md);
    * Zie de handleiding op [configureren van uw bronspecificaties](./config/sourcespec.md);
    * Zie de handleiding op [configureren, specificaties](./config/explorespec.md);
-* Als u wilt beginnen met het documenteren van de bron, raadpleegt u de [overzicht van het creëren van documentatie voor Bronnen SDK](./documentation/overview.md)
+* Als u wilt beginnen met het documenteren van de bron, raadpleegt u de [overzicht van het creëren van documentatie voor Bronnen SDK](./documentation/doc-overview.md)
    * U kunt dit [source documentation template](./documentation/template.md) de structuur van uw documentatie te bepalen;
    * Zie de handleiding op [het gebruiken van de het Webinterface van GitHub](./documentation/github.md) voor stappen op hoe te om documentatie tot stand te brengen die GitHub gebruikt;
    * Zie de handleiding op [een teksteditor gebruiken](./documentation/text-editor.md) voor stappen voor het maken van documentatie met behulp van uw lokale computer.

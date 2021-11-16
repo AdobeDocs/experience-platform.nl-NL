@@ -5,7 +5,7 @@ topic-legacy: overview
 description: Dit document verstrekt een overzicht van de configuraties u moet voorbereiden om Bronnen SDK te gebruiken.
 hide: true
 hidefromtoc: true
-source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
+source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -87,4 +87,4 @@ De specificaties van het onderzoek bepalen de parameters die voor het onderzoeke
 
 ## Volgende stappen
 
-Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan en een volledige verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API. Zie de [[!DNL Sources SDK] API-handleiding](../api/overview.md) voor meer informatie .
+Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan en een volledige verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API. Zie de [[!DNL Sources SDK] API-handleiding](../api/api-overview.md) voor meer informatie .
