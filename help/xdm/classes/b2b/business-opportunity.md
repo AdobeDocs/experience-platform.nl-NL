@@ -2,14 +2,18 @@
 title: XDM Business Opportunity-klasse
 description: Dit document biedt een overzicht van de XDM Business Opportunity-klasse in Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 4%
+source-wordcount: '220'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL XDM Business Opportunity] class
+
+>[!IMPORTANT]
+>
+>Deze klasse is bedoeld om te worden gebruikt door organisaties die toegang hebben tot [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Deze klasse kan alleen deelnemen aan CDP B2B Edition in realtime als u toegang hebt tot CDP B2B Edition [Klantprofiel in realtime](../../../profile/home.md).
 
 [!UICONTROL XDM Business Opportunity] is een standaardklasse van de Gegevens van de Ervaring van het Model (XDM) die de minimum vereiste eigenschappen van een bedrijfskans vangt.
 
