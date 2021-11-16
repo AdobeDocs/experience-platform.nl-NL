@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
+source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '741'
 ht-degree: 5%
 
 ---
@@ -257,6 +257,25 @@ ht-degree: 5%
    - [Gegevensstromen bijwerken](tutorials/ui/update-dataflows.md)
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
+- [Bronnen-SDK] {#sources-sdk}
+   - [Overzicht](sources-sdk/overview.md)
+   - [Bronnen-SDK-functionaliteit] {#functionality}
+      - [Configuratieopties](sources-sdk/config/config.md)
+      - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
+      - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
+      - [Uitgebreide specificatie configureren](sources-sdk/config/explorespec.md)
+   - [Bronnen: SDK API-zelfstudies] {#sdk-tutorials}
+      - [Overzicht SDK API van bronnen](sources-sdk/api/overview.md)
+      - [Aan de slag](sources-sdk/api/getting-started.md)
+      - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
+      - [Een verbindingsspecificatie bijwerken](sources-sdk/api/update-connection-specs.md)
+      - [Een stroomspecificatie bijwerken](sources-sdk/api/update-flow-specs.md)
+      - [Uw bron verzenden](sources-sdk/api/submit.md)
+   - [Uw bron documenteren] {#document}
+      - [Uw bron documenteren in Adobe Experience Platform](sources-sdk/documentation/overview.md)
+      - [Gebruik de het Webinterface van GitHub om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
+      - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
+      - [Zelfservicesjabloon voor documentatie](sources-sdk/documentation/template.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
