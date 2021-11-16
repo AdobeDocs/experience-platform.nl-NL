@@ -4,7 +4,7 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
+source-git-commit: 83aefe6a0880b201e376f458279461888e531741
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 5%
@@ -257,14 +257,14 @@ ht-degree: 5%
    - [Gegevensstromen bijwerken](tutorials/ui/update-dataflows.md)
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
-- [Bronnen-SDK] {#sources-sdk}
+- [Bronnen-SDK] {#sdk}
    - [Overzicht](sources-sdk/overview.md)
-   - [Bronnen-SDK-functionaliteit] {#functionality}
+   - [Bronnen: SDK-configuratie] {#config}
       - [Configuratieopties](sources-sdk/config/config.md)
       - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
       - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
       - [Uitgebreide specificatie configureren](sources-sdk/config/explorespec.md)
-   - [Bronnen: SDK API-zelfstudies] {#sdk-tutorials}
+   - [Bronnen: SDK API-zelfstudies] {#sdk-api}
       - [Overzicht SDK API van bronnen](sources-sdk/api/overview.md)
       - [Aan de slag](sources-sdk/api/getting-started.md)
       - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
