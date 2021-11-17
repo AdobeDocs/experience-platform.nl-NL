@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
+source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1835'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
 - [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om een verbinding met een cloudopslag tot stand te brengen met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om een verbinding met een cloudopslag tot stand te brengen via de [!DNL Flow Service] API.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -638,6 +638,10 @@ De laatste stap op weg naar het verzamelen van gegevens voor cloudopslag is het 
 - [Dataflow-specificatie-id](#specs)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
+
+>[!NOTE]
+>
+>Voor batch-opname selecteert elke volgende gegevensstroom bestanden die van uw bron moeten worden ingepakt op basis van hun **laatst gewijzigd** tijdstempel. Dit betekent dat de partijgegevens uitgezochte dossiers van de bron die of nieuw zijn of sinds de laatste dataflow looppas zijn gewijzigd.
 
 Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde op gelijk aan of groter dan `15`.
 
