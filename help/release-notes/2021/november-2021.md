@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De release van november 2021 bevat notities voor Adobe Experience Platform.
-source-git-commit: 4618d8d73beeb7e525b5681aaa119125adaf7883
+source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Ondersteuning voor meerdere gegevenssets | Attribution AI kan nu gemakkelijk veelvoudige datasets direct in UI zonder de behoefte direct in kaart brengen en vastmaken elke dataset. Deze nieuwe capaciteit van tijdbesparing verstrekt krachtigere en nauwkeurige scores met rijkere gegevens van de veelvoudige datasets. |
-| Toewijzing van mediakanaal en campagneveld | Attribution AI ondersteunt nu het toewijzen van mediakanalen en campagnevelden. De kanaaltoewijzing van media tussen datasets verbetert de inzichten die uit Attribution AI worden afgeleid en helpt duidelijkere resultaten verstrekken die gemakkelijk te interpreteren zijn. |
+| Toewijzing van mediakanaal en campagneveld | Attribution AI ondersteunt nu de toewijzing van mediakanalen en campagnevelden. De kanaaltoewijzing van media tussen datasets verbetert de inzichten die uit Attribution AI worden afgeleid en helpt duidelijkere resultaten verstrekken die gemakkelijk te interpreteren zijn. |
 
 Zie voor meer informatie over Attribution AI de [Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 
