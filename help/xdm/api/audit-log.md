@@ -5,26 +5,26 @@ title: Logboek-API-eindpunt controleren
 description: Het /auditlog eindpunt in de Registratie API van het Schema staat u toe om een chronologische lijst van veranderingen terug te winnen die aan een bestaand middel XDM zijn aangebracht.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 7abe27d7fcc461becb0495fcd470eaea031b94bc
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van het controlelogboek
 
-Voor elke bron van het Gegevensmodel van de Ervaring (XDM), [!DNL Schema Registry] handhaaft een logboek van alle veranderingen die tussen verschillende updates zijn voorgekomen. Het `/auditlog` eindpunt in [!DNL Schema Registry] API staat u toe om een controlelogboek voor om het even welke klasse, de groep van het schemagebied, gegevenstype, of schema terug te winnen dat door identiteitskaart wordt gespecificeerd.
+Voor elke bron van het Gegevensmodel van de Ervaring (XDM), [!DNL Schema Registry] onderhoudt een logboek van alle veranderingen die tussen verschillende updates zijn voorgekomen. De `/auditlog` in de [!DNL Schema Registry] API staat u toe om een controlelogboek voor om het even welke klasse, de groep van het schemagebied, gegevenstype, of schema terug te winnen dat door identiteitskaart wordt gespecificeerd.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
-Het `/auditlog` eindpunt is deel van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC eindpunten geen extra kopballen zoals `Accept` of `Content-Type`, en gebruiken geen `CONTAINER_ID`. In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals in de API-aanroep hieronder wordt getoond.
+De `/auditlog` het eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door het [!DNL Schema Registry]. Anders dan bij andere eindpunten in het deelvenster [!DNL Schema Registry] API, RPC-eindpunten vereisen geen extra headers zoals `Accept` of `Content-Type`en geen `CONTAINER_ID`. In plaats daarvan moeten ze de opdracht `/rpc` naamruimte, zoals wordt getoond in de API-aanroep hieronder.
 
 ## Hiermee wordt een controlelogbestand voor een bron opgehaald
 
-U kunt een controlelogboek voor om het even welke klasse, gebiedsgroep, gegevenstype, of schema terugwinnen binnen de Bibliotheek van het Schema door identiteitskaart van het middel in de weg van een verzoek van de GET aan het `/auditlog` eindpunt te specificeren.
+U kunt een controlelogboek voor om het even welke klasse, gebiedsgroep, gegevenstype, of schema terugwinnen binnen de Bibliotheek van het Schema door identiteitskaart van het middel in de weg van een verzoek van de GET aan te specificeren `/auditlog` eindpunt.
 
 **API-indeling**
 
@@ -34,17 +34,17 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de bron waarvan het controlelogboek u wilt terugwinnen. |
+| `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het middel waarvan controlelogboek u wilt terugwinnen. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
-Het volgende verzoek wint het controlelogboek voor een `Restaurant` gebiedsgroep terug.
+Het volgende verzoek wint het controlelogboek voor een schema terug.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.schemas.50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -58,44 +58,72 @@ Een succesvolle reactie keert een chronologische lijst van veranderingen terug d
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-    "auditTrails": [
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "a14NMF0jd6BIfyXaHdTDl4bC4R0r9rht",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+        "xdmType": "schemas",
+        "action": "remove",
+        "path": "/meta:usageCount",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "pFQbgmWrdbJrNB9GdxTSGECpXYWspu68",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
+      {
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltySunday_ABC",
         "value": {
-          "title": "Brand",
+          "title": "LoyaltySundayABC",
           "description": "",
           "type": "string",
           "isRequired": false,
+          "required": [],
           "meta:xdmType": "string"
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/meta:usageCount",
-        "value": 0
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltyMoxee_XYZ",
+        "value": {
+          "title": "LoyaltyMoxeeXYZ",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "required": [],
+          "meta:xdmType": "string"
+        }
       }
-    ],
-    "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
-    "updated": 1606255582281,
-    "clientId": "{CLIENT_ID}",
-    "sandBoxId": "{SANDBOX_ID}"
+    ]
   }
 ]
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `auditTrails` | Een array van objecten, waarbij elk object een wijziging vertegenwoordigt die is aangebracht in de opgegeven bron of een van de afhankelijke bronnen ervan. |
-| `id` | De `$id` van de bron die is gewijzigd. Deze waarde zal typisch het middel vertegenwoordigen dat in de verzoekweg wordt gespecificeerd, maar kan een afhankelijke middel vertegenwoordigen als dat de bron van de verandering is. |
+| `updates` | Een array van objecten, waarbij elk object een wijziging vertegenwoordigt die is aangebracht in de opgegeven bron of een van de afhankelijke bronnen ervan. |
+| `id` | De `$id` van de bron die is gewijzigd. Deze waarde vertegenwoordigt typisch het middel dat in de verzoekweg wordt gespecificeerd, maar kan een afhankelijke middel vertegenwoordigen als dat de bron van de verandering is. |
+| `xdmType` | Het type bron dat is gewijzigd. |
 | `action` | Het type wijziging dat is aangebracht. |
-| `path` | Een [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer)-tekenreeks die het pad naar het specifieke veld aangeeft dat is gewijzigd of toegevoegd. |
+| `path` | A [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer) tekenreeks die het pad aangeeft naar het specifieke veld dat is gewijzigd of toegevoegd. |
 | `value` | De waarde die is toegewezen aan het nieuwe of bijgewerkte veld. |
 
 {style=&quot;table-layout:auto&quot;}
