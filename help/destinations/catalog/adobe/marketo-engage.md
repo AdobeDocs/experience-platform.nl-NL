@@ -2,9 +2,9 @@
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
+source-git-commit: 05b97e8bdeb4ffb81a4a671d282d0d8ebc7e870a
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,14 @@ Segmentexport - u exporteert alle leden van een segment (publiek) met de id&#39;
 ## Doel instellen en segmenten activeren {#set-up}
 
 Voor gedetailleerde instructies over hoe te opstelling de bestemming en activeert segmenten, lees [Een Adobe Experience Platform-segment naar een statische Marketo-lijst verplaatsen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in de documentatie van Marketo.
+
+In de onderstaande video ziet u ook de stappen voor het configureren van een Marketo-bestemming en het activeren van segmenten.
+
+>[!NOTE]
+>
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de bovenstaande handleiding.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 <!--
 
