@@ -1,7 +1,8 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Cloud Identity Service Extension
 description: De meest recente release bevat informatie over de extensie van de Adobe Experience Cloud Identity Service in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
+source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 4%
@@ -16,7 +17,7 @@ ht-degree: 4%
 
 Raadpleeg voor opmerkingen bij de release de Experience Cloud Identity Service zelf en niet alleen de Adobe Experience Platform-tagextensie: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)
 
-## 3 nov. 2020
+## 3 nov. 2021
 
 ### Experience Cloud ID Extension 5.2.1
 
@@ -38,14 +39,14 @@ Raadpleeg voor opmerkingen bij de release de Experience Cloud Identity Service z
 
 #### **Functies**
 
-* `sameSiteCookie` config toevoegen om het `SameSite` attribuut van `AMCV` koekje te specificeren.
-Deze config steunt de volgende waarden voor `SameSite` attributen:
+* Toevoegen `sameSiteCookie` config om te specificeren `SameSite` kenmerk van de `AMCV` cookie.
+Deze config steunt de volgende waarden voor `SameSite` kenmerk:
 
    * `Strict`
    * `Lax`
    * `None`
 
-Details van deze kenmerkwaarden vindt u op [web.dev](https://web.dev/samesite-cookies-explained/) en [chroom](https://www.chromium.org/updates/same-site)
+Details van deze kenmerkwaarden zijn ingeschakeld [web.dev](https://web.dev/samesite-cookies-explained/) en [chroom](https://www.chromium.org/updates/same-site)
 
 
 ## 13 augustus 2020
@@ -62,7 +63,7 @@ Details van deze kenmerkwaarden vindt u op [web.dev](https://web.dev/samesite-co
 
 #### **Functies**
 
-* Ondersteuning toevoegen voor `IAB TCF` - Transparency &amp; Consent Framework - `Version 2.0`.
+* Ondersteuning toevoegen voor `IAB TCF` - Transparantie en instemming - `Version 2.0`.
 
 ## 13 april 2020
 
@@ -70,7 +71,7 @@ Details van deze kenmerkwaarden vindt u op [web.dev](https://web.dev/samesite-co
 
 #### **Functies**
 
-* Markering `loadSSL` is standaard ingeschakeld. Alle oproepen aan de Dienst van de Identiteit zullen `https` door gebrek zijn. De klanten kunnen het aan vals plaatsen als zij de Diensten van de Identiteit op http van hun niet-ssl pagina&#39;s willen roepen.
+* Made `loadSSL` markering is standaard ingeschakeld. Alle vraag aan de Dienst van de Identiteit zal zijn `https` standaard. De klanten kunnen het aan vals plaatsen als zij de Diensten van de Identiteit op http van hun niet-ssl pagina&#39;s willen roepen.
 * Bijgewerkt de functie die wordt gebruikt om Internet-Explorer (IE) versie te ontdekken, om een kwestie te bevestigen die door ESLint wordt gemeld.
 * Opgeloste problemen voor een prestatieprobleem in Internet Explorer (IE) 11 wanneer ECID vooraf is goedgekeurd en later wordt bijgewerkt.
 
@@ -82,7 +83,7 @@ Details van deze kenmerkwaarden vindt u op [web.dev](https://web.dev/samesite-co
 
 * Bijgewerkte bezoeker.js aan 4.5.2
 * Bezoeker 4.5.1 bevat een foutopsporing voor IAB-insteekmodule voor Optin
-* Bijgewerkte methode `setCustomerIDs` om het even welke lege verzonden IDs te verwerpen.
+* Bijgewerkt `setCustomerIDs` methode om lege verzonden id&#39;s af te wijzen.
 
 ## 7 januari 2020
 
@@ -91,7 +92,7 @@ Details van deze kenmerkwaarden vindt u op [web.dev](https://web.dev/samesite-co
 #### **Functies**
 
 * Bijgewerkte bezoeker.js aan 4.4.2
-* Verbeteringen voor de methode `getVisitorValues` om waarden sneller op te halen
+* Verbeteringen voor `getVisitorValues` methode om waarden sneller op te halen
 
 
 ## 19 september 2019
