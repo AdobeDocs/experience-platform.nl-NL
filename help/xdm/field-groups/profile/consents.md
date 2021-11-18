@@ -4,9 +4,9 @@ title: Inhoud en Voorkeuren voor schemaveldgroep
 topic-legacy: overview
 description: Dit document bevat een overzicht van de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De [!UICONTROL Consents and Preferences] veldgroep levert één objecttype veld,
 >
 >Zie de handleiding op [XDM-bronnen verkennen](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in het Platform UI te inspecteren.
 
-In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens dat [!UICONTROL Consents and Preferences] veldgroep kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
+In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens dat [!UICONTROL Consents and Preferences] veldgroep kan verwerken. Raadpleeg de handleiding bij het dialoogvenster [Gegevenstype Inhoud en Voorkeuren](../../data-types/consents.md). De subsecties hieronder richten zich op de unieke attributen die de gebiedsgroep aan het gegevenstype toevoegt.
 
 ```json
 {
@@ -96,8 +96,6 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 >* [Voorbeeldgegevens genereren in de gebruikersinterface](../../ui/sample.md)
 >* [Voorbeeldgegevens genereren in de API](../../api/sample-data.md)
 
-
-Raadpleeg de handleiding bij het dialoogvenster [Gegevenstype Inhoud en Voorkeuren](../../data-types/consents.md). De subsecties hieronder richten zich op de unieke attributen die de gebiedsgroep aan het gegevenstype toevoegt.
 
 ### `idSpecific`
 
