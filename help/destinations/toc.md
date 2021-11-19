@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
+source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '680'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 1%
    * [Dataflows bewaken](./ui/monitor-dataflows.md)
 * Doelcatalogus {#catalog}
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
-   * [ (Alpha) HTTP-verbinding](./catalog/http-destination.md)
    * Adobe-bestemmingen{#adobe}
       * [Overzicht van Adobe-doelen](./catalog/adobe/overview.md)
       * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
@@ -132,6 +131,8 @@ ht-degree: 1%
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [linkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
+   * Streaming doelen {#streaming}
+      * [ (Bèta) HTTP API-verbinding](./catalog/streaming/http-destination.md)
    * Onderzoeksbestemmingen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
