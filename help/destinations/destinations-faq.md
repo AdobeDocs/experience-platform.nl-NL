@@ -5,9 +5,9 @@ seo-title: Frequently asked questions
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '795'
 ht-degree: 4%
 
 ---
@@ -77,7 +77,7 @@ Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vere
 
 **Kan ik veelvoudige bestemmingen van Facebook in Platform UI voor afzonderlijke rekeningen van Facebook tot stand brengen?**
 
-Een Facebook-bestemming in Experience Platform is 1:1 voor een advertentieaccount in Facebook. U kunt een aparte Facebook-bestemming maken voor elke Facebook-advertentieaccount in uw bedrijf. Volg de [zelfstudie over doelverbinding](/help/destinations/ui/connect-destination.md) en maak verbinding met een aparte Facebook-account voor elke nieuwe Facebook-bestemming in de gebruikersinterface van het Platform.
+Ja. Een Facebook-bestemming in Experience Platform is 1:1 voor een advertentieaccount in Facebook. U kunt een aparte Facebook-bestemming maken voor elke Facebook-advertentieaccount in uw bedrijf. Volg de [zelfstudie over doelverbinding](/help/destinations/ui/connect-destination.md) en maak verbinding met een aparte Facebook-account voor elke nieuwe Facebook-bestemming in de gebruikersinterface van het Platform. Er is geen limiet voor het aantal Facebook-advertentieaccounts waarmee u verbinding kunt maken.
 
 ## linkedIn-doelgroepen {#linkedin}
 
