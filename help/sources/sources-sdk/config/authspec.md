@@ -5,13 +5,13 @@ topic-legacy: overview
 description: Dit document verstrekt een overzicht van de configuraties u moet voorbereiden om Bronnen SDK te gebruiken.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 1%
 
 ---
-
 
 # Verificatiespecificaties voor Bronnen SDK configureren
 
@@ -180,7 +180,7 @@ Basisverificatie is een verificatietype waarmee u toegang kunt krijgen tot uw to
 | Eigenschap | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | `authSpec.name` | Geeft de naam van het ondersteunde verificatietype weer. | `Basic Authentication` |
-| `authSpec.type` | Definieert het type verificatie dat door de bron wordt ondersteund. | `oAuth2-refresh-code` |
+| `authSpec.type` | Definieert het type verificatie dat door de bron wordt ondersteund. | `BasicAuthentication` |
 | `authSpec.spec` | Bevat informatie over het schema van de authentificatie, gegevenstype, en eigenschappen. |
 | `authSpec.spec.$schema` | Bepaalt het schema dat voor de authentificatie wordt gebruikt. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definieert het gegevenstype van het schema. | `object` |
