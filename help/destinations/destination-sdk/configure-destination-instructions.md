@@ -2,7 +2,7 @@
 description: Op deze pagina vindt u een overzicht en beschrijving van de stappen voor het configureren van een streamingbestemming met Destination SDK.
 title: Destination SDK gebruiken om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"auth
 
 ## Stap 6: Doel testen {#test-destination}
 
-Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de vorige stappen, kunt u de opdracht [doeltestgereedschap](./create-template.md) om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
+Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de vorige stappen, kunt u de opdracht [doeltestgereedschap](./test-destination.md) om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
 
 Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Verwijs naar de twee hieronder middelen voor instructies hoe te om segmenten in Experience Platform tot stand te brengen:
 
