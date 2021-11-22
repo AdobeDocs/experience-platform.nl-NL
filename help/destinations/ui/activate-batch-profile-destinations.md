@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '2050'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,12 @@ Gebruik de selectievakjes links van de segmentnamen om de segmenten te selectere
 
 ## Segmentexport plannen {#scheduling}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule"
+>title="Schema"
+>abstract="Het bestandstype (volledige bestanden of incrementele bestanden) en de planning kunnen niet worden gewijzigd nadat het segment is opgeslagen."
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Meer informatie in documentatie"
+
 [!DNL Adobe Experience Platform] exporteert gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van [!DNL CSV] bestanden. In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
 
 >[!IMPORTANT]
@@ -61,6 +67,12 @@ Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt
 ![De knop Planning maken](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Volledige bestanden exporteren {#export-full-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exportoptions"
+>title="Exportopties voor bestanden"
+>abstract="Selecteren **Volledige bestanden exporteren** om een volledige momentopname van alle profielen uit te voeren die voor het segment kwalificeren. <br> Selecteren **Incrementele bestanden exporteren** om alleen de profielen te exporteren die voor het segment in aanmerking kwamen sinds de laatste exportbewerking. Het eerste incrementele exportbestand bevat alle profielen die in aanmerking komen voor het segment en die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de profielen die in aanmerking kwamen voor het segment sinds de eerste incrementele bestandsexport."
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Meer informatie in documentatie"
 
 Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige opname van alle profielkwalificaties voor het geselecteerde segment te activeren.
 
@@ -112,6 +124,12 @@ Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te a
 1. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
 
 ### Bestandsnamen configureren {#file-names}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_filename"
+>title="Bestandsnaam configureren"
+>abstract="Voor op een bestand gebaseerde doelen wordt een unieke bestandsnaam per segment gegenereerd. Gebruik de bestandsnaameditor om een unieke bestandsnaam te maken en te bewerken of de standaardnaam te behouden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="Meer informatie in documentatie"
 
 De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen.
 

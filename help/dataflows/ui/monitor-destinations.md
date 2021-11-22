@@ -6,9 +6,9 @@ title: Gegevensstromen van de monitor voor Doelen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 9396f44aafc7d6e863d09b369440f507998dce2c
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1687'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,18 @@ Zie de volgende tabel voor meer informatie over statussen:
 | Fout | De `Error` status geeft aan dat het activeringsproces van een gegevensstroom is onderbroken. |
 
 ### Dataflow wordt uitgevoerd voor streamingdoelen
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesactivated"
+>title="Geactiveerde identiteiten"
+>abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Meer informatie in documentatie"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesexcluded"
+>title="Uitgesloten identiteiten"
+>abstract="Het aantal afzonderlijke profielrecords dat is uitgesloten van activering voor de geselecteerde bestemming op basis van ontbrekende kenmerken en schending van de toestemming."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Meer informatie in documentatie"
 
 Voor streamingdoelen geldt het [!UICONTROL Dataflow runs] bevat een update per uur voor metrische gegevens in uw gegevensstroomuitvoering. De meest prominente statistieken met het label zijn voor identiteiten.
 
