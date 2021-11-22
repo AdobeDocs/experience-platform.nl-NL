@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '798'
 ht-degree: 1%
 
 ---
@@ -17,6 +18,7 @@ ht-degree: 1%
 Nieuwe functies in Adobe Experience Platform:
 
 - [Real-time Customer Data Platform B2B Edition](#B2B)
+- [(bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering](#ad-hoc-activation)
 
 ## Updates voor bestaande functies
 
@@ -62,6 +64,10 @@ De standaard B2B klassen XDM, gebiedsgroepen, en gegevenstypes zijn beschikbaar 
 
 Zie de [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentatie voor meer informatie over het vastleggen van B2B-gegevensentiteiten.
 
+### (bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering {#ad-hoc-activation}
+
+Met de API voor ad-hocactivering kunnen marketers publiekssegmenten programmatisch op een snelle en efficiënte manier naar doelen activeren voor situaties waarin onmiddellijke activering vereist is. Activering van ad-hocgroepen wordt alleen ondersteund door [batchbestandsgebaseerde doelen](../../destinations/destination-types.md#file-based) en is momenteel in bèta. Zie voor meer informatie de [API-documentatie voor ad-hocactivering](../../destinations/api/ad-hoc-activation-api.md).
+
 ### Attribution AI {#attribution-ai}
 
 Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
@@ -85,3 +91,4 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 | Aangepaste profielkenmerken | De AI van de Klant steunt nu het bepalen van de gebieden van de gegevensreeks van het douaneprofiel (met timestamps) in uw gegevens naast standaardgebeurtenisgebieden. Met deze optie kunt u aanvullende profielkenmerken toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model worden verbeterd en kunnen de resultaten nauwkeuriger worden weergegeven. |
 
 Voor meer informatie over AI van de Klant, gelieve te zien [AI-documentatie van klant](../../intelligent-services/customer-ai/overview.md).
+
