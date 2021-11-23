@@ -5,9 +5,9 @@ title: Beperkingen voor XDM-veldtypen
 topic-legacy: overview
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
+source-git-commit: 684237122e7384f6c611e1c602c30af2518aba58
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1076'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ In schema&#39;s van het Model van Gegevens van de Ervaring (XDM), beperkt het ty
 
 ## Aan de slag
 
-Alvorens deze gids te gebruiken, te herzien gelieve de [grondbeginselen van schemacompositie](./composition.md) voor een inleiding aan schema XDM, klassen, en groepen van het schemagebied.
+Lees voordat u deze handleiding gebruikt de [grondbeginselen van de schemacompositie](./composition.md) voor een inleiding aan schema&#39;s XDM, klassen, en groepen van het schemagebied.
 
-Als u van plan bent om uw eigen gebiedstypes in API te bepalen, adviseert men sterk dat u met [de ontwikkelaarsgids van de Registratie van het Schema](../api/getting-started.md) begint om te leren hoe te om gebiedsgroepen en gegevenstypes tot stand te brengen om uw douanevelden in te omvatten. Als u het Experience Platform UI gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [het bepalen van gebieden in UI](../ui/fields/overview.md) leren hoe invoert beperkingen op gebieden die u binnen de groepen van het douanegebied en gegevenstypes bepaalt.
+Als u van plan bent om uw eigen veldtypen in de API te definiëren, wordt u ten zeerste aangeraden om te beginnen met de [Handleiding voor ontwikkelaars van het schema Register](../api/getting-started.md) voor meer informatie over het maken van veldgroepen en gegevenstypen waarin u aangepaste velden kunt opnemen. Als u de interface van het Experience Platform gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [velden definiëren in de gebruikersinterface](../ui/fields/overview.md) leren hoe u beperkingen implementeert op velden die u definieert binnen aangepaste veldgroepen en gegevenstypen.
 
 ## Basisstructuur en voorbeelden
 
@@ -28,7 +28,7 @@ XDM wordt gebouwd bovenop het Schema van JSON, en daarom erven de gebieden XDM e
 
 >[!NOTE]
 >
->Zie de [handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-schema) voor meer informatie over JSON-schema en andere onderliggende technologieën in Platform-API&#39;s.
+>Zie de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-schema) voor meer informatie over JSON Schema en andere onderliggende technologieën in Platform APIs.
 
 In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in JSON-schema, samen met een voorbeeldwaarde die overeenkomt met het type:
 
@@ -61,47 +61,31 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 9007199254740991,
-  "minimum": -9007199254740991
-}</pre>
+{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL-geheel getal]</td>
+      <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 2147483648,
-  "minimum": -2147483648
-}</pre>
+{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL short]</td>
+      <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 32768,
-  "minimum": -32768
-}</pre>
+{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL-byte]</td>
+      <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 128
-  "minimum": -128
-}</pre>
+{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -109,10 +93,7 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "string",
-  "formaat": "date"
-}</pre>
+{ "type": "string", "format": "date" }</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -120,10 +101,7 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "string",
-  "formaat": "date-time"
-}</pre>
+{ "type": "string", "format": "date-time" }</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -138,7 +116,7 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
   </tbody>
 </table>
 
-**Alle tekenreeksen met datumnotatie moeten voldoen aan de ISO 8601-standaard ([RFC 3339, sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**Alle tekenreeksen met datumnotatie moeten voldoen aan de ISO 8601-standaard ([RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
 
 ## XDM-typen toewijzen aan andere indelingen
 
@@ -150,7 +128,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 
 >[!IMPORTANT]
 >
->Onder de standaard XDM types die in de lijsten hieronder worden vermeld, is het [!UICONTROL Map] type ook inbegrepen. Kaarten worden gebruikt in standaardschema&#39;s wanneer de gegevens als sleutels worden vertegenwoordigd die aan bepaalde waarden in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.
+>Onder de standaard XDM types die in de lijsten hieronder worden vermeld, [!UICONTROL Map] type is ook opgenomen. Kaarten worden gebruikt in standaardschema&#39;s wanneer de gegevens als sleutels worden vertegenwoordigd die aan bepaalde waarden in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.
 >
 >De kaart-type gebieden zijn gereserveerd voor industrie en verkopersschemagebruik en daarom kunnen niet in douanemiddelen worden gebruikt die u bepaalt. De opname van het kaarttype in de onderstaande tabellen is alleen bedoeld om u te helpen bepalen hoe u uw bestaande gegevens kunt toewijzen aan XDM als deze momenteel zijn opgeslagen in een van de hieronder vermelde indelingen.
 
@@ -158,16 +136,16 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 
 | XDM-type | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Annotatie: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Aantekening: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Double] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Integer] | Type: `INT32`<br>Annotatie: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Short] | Type: `INT32`<br>Annotatie: `INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL Byte] | Type: `INT32`<br>Annotatie: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Date] | Type: `INT32`<br>Annotatie: `DATE` | `DateType` | `java.util.Date` |
-| [!UICONTROL DateTime] | Type: `INT64`<br>Annotatie: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL Integer] | Type: `INT32`<br>Aantekening: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | Type: `INT32`<br>Aantekening: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | Type: `INT32`<br>Aantekening: `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Date] | Type: `INT32`<br>Aantekening: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL DateTime] | Type: `INT64`<br>Aantekening: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Boolean] | Type: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` must be  `STRING`) | `MapType`<br><br>(`keyType` moet zijn  `StringType`) | `java.util.Map` |
+| [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` moet `STRING`) | `MapType`<br><br>(`keyType` moet `StringType`) | `java.util.Map` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -207,15 +185,15 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 
 ## XDM-veldtypen definiëren in de API {#define-fields}
 
-Alle XDM gebieden worden bepaald gebruikend standaard [JSON Schema](https://json-schema.org/) beperkingen die op hun gebiedstype van toepassing zijn, met extra beperkingen voor gebiedsnamen die door [!DNL Experience Platform] worden afgedwongen. Met de API voor het schemaregister kunt u aanvullende veldtypen definiëren via het gebruik van indelingen en optionele beperkingen. XDM gebiedtypes worden blootgesteld door het gebied-vlakke attribuut, `meta:xdmType`.
+Alle XDM-velden worden gedefinieerd met de standaard [JSON Schema](https://json-schema.org/) beperkingen die van toepassing zijn op hun veldtype, met extra beperkingen voor veldnamen die worden afgedwongen door [!DNL Experience Platform]. Met de API voor het schemaregister kunt u aanvullende veldtypen definiëren via het gebruik van indelingen en optionele beperkingen. De XDM gebiedstypes worden blootgesteld door het gebied-vlakke attribuut, `meta:xdmType`.
 
 >[!NOTE]
 >
->`meta:xdmType` is een door het systeem gegenereerde waarde en daarom hoeft u deze eigenschap niet aan de JSON voor uw veld toe te voegen wanneer u de API gebruikt. De beste manier is om JSON-schematypen (zoals `string` en `integer`) te gebruiken met de juiste min/max-beperkingen zoals gedefinieerd in de onderstaande tabel.
+>`meta:xdmType` is een door het systeem gegenereerde waarde en daarom hoeft u deze eigenschap niet aan de JSON voor uw veld toe te voegen wanneer u de API gebruikt. De beste manier is om JSON-schematypen te gebruiken (zoals `string` en `integer`) met de toepasselijke minimum/maximum-beperkingen zoals gedefinieerd in de onderstaande tabel.
 
 In de volgende tabel ziet u de juiste opmaak voor het definiëren van verschillende veldtypen, inclusief die met optionele eigenschappen. Meer informatie over optionele eigenschappen en typespecifieke trefwoorden is beschikbaar via de [JSON-schemadocumentatie](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt verstrekt om uw API verzoek te bouwen om [een gebiedsgroep te creëren ](../api/field-groups.md#create) of [creërend een gegevenstype](../api/data-types.md#create).
+Zoek eerst het gewenste veldtype en gebruik de voorbeeldcode om uw API-aanvraag voor [een veldgroep maken](../api/field-groups.md#create) of [een gegevenstype maken](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
@@ -234,11 +212,7 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-    "type": "string",
-    "patroon": "^[A-Z]{2}$",
-    "maxLength": 2
-}</pre>
+"sampleField": { "type": "string", "pattern": "^[A-Z]{2}$", "maxLength": 2}</pre>
     </td>
   </tr>
   <tr>
@@ -246,10 +220,7 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "formaat": "uri"
-}</pre>
+"sampleField": { "type": "string", "format": "uri" }</pre>
     </td>
   </tr>
   <tr>
@@ -260,32 +231,18 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
         <li><code>meta:enum</code></li>
       </ul>
     </td>
-    <td>Beperkte opsommingswaarden worden verschaft onder de <code>enum</code>-array, terwijl optionele klantgerichte labels voor elke waarde kunnen worden opgegeven onder <code>meta:enum</code>:
+    <td>Beperkte opsommingswaarden worden opgegeven onder de <code>enum</code> array, terwijl optionele klantgerichte labels voor elke waarde onder <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "enum": [
-      "value1",
-      "value2",
-      "value3"
-  ],
-  "meta:enum": {
-      "value1": "Waarde 1",
-      "value2": "Waarde 2",
-      "value3": "Waarde 3"
-  },
-  "default": "value1"
-}</pre>
+"sampleField": { "type": "string", "enum": [ "value1", "value2", "value3" ], "meta:enum": { "value1": "Waarde 1", "waarde2": "Waarde 2", "waarde3": "Value 3" }, "default": "value1" }</pre>
+    <br>De <code>meta:enum</code> waarde is <strong>niet</strong> een opsomming declareren of gegevensvalidatie zelfstandig uitvoeren. In de meeste gevallen worden tekenreeksen onder <code>meta:enum</code> ook <code>enum</code> om ervoor te zorgen dat gegevens worden beperkt. Er zijn echter gevallen waarin <code>meta:enum</code> wordt verstrekt zonder overeenkomstige <code>enum</code> array. Zie de zelfstudie aan <a href="../tutorials/extend-soft-enum.md">uitbreiden, zachte nummers</a> voor meer informatie .
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL-nummer]</td>
+    <td>[!UICONTROL Number]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "number"
-}</pre>
+"sampleField": { "type": "number" }</pre>
     </td>
   </tr>
   <tr>
@@ -293,47 +250,31 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "minimum": -9007199254740992,
-  "maximum": 9007199254740992
-}</pre>
+"sampleField": { "type": "integer", "minimum": -9007199254740992, "maximum": 9007199254740992 }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL-geheel getal]</td>
+    <td>[!UICONTROL Integer]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "minimum": -2147483648,
-  "maximum": 2147483648
-}</pre>
+"sampleField": { "type": "integer", "minimum": -2147483648, "maximum": 2147483648 }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL short]</td>
+    <td>[!UICONTROL Short]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "minimum": -32768,
-  "maximum": 32768
-}</pre>
+"sampleField": { "type": "integer", "minimum": -32768, "maximum": 32768 }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL-byte]</td>
+    <td>[!UICONTROL Byte]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "minimum": -128,
-  "maximum": 128
-  }</pre>
+"sampleField": { "type": "integer", "minimum": -128, "maximum": } 128</pre>
     </td>
   </tr>
   <tr>
@@ -345,22 +286,15 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "boolean",
-  "default": false
-}</pre>
+"sampleField": { "type": "boolean", "default": false }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL-datum]</td>
+    <td>[!UICONTROL Date]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "formaat": "date",
-  "voorbeelden": ["2004-10-23"]
-}</pre>
+"sampleField": { "type": "string", "format": "date", "examples": ["2004-10-23"] }</pre>
     </td>
   </tr>
   <tr>
@@ -368,42 +302,28 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "formaat": "date-time",
-  "voorbeelden": ["2004-10-23T12:00:00-06:00"]
-}</pre>
+"sampleField": { "type": "string", "format": "date-time", "examples": ["2004-10-23T12:00:00-06:00"] }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL-array]</td>
+    <td>[!UICONTROL Array]</td>
     <td></td>
     <td>Een array van elementaire scalaire typen (bijvoorbeeld tekenreeksen):
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "array",
-  "objecten": {
-    "type": "string"
-  }
-}</pre>
-      Een array van objecten die door een ander schema worden gedefinieerd:<br/>
+"sampleField": { "type": "array", "items": { "type": "string" } }</pre>
+      Een array met objecten die door een ander schema worden gedefinieerd:<br/>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "array",
-  "objecten": {
-    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
-  }
-}</pre>
+"sampleField": { "type": "array", "items": { "$ref": "https://ns.adobe.com/xdm/data/paymentitem" }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!Object UICONTROL]</td>
+    <td>[!UICONTROL Object]</td>
     <td></td>
-    <td>Het <code>type</code>-kenmerk van elk subveld dat onder <code>properties</code> wordt gedefinieerd, kan met elk scalair type worden gedefinieerd:
+    <td>De <code>type</code> kenmerk van elk subveld dat wordt gedefinieerd onder <code>properties</code> kan worden gedefinieerd met elk scalair type:
       <pre class="JSON language-JSON hljs">
 "sampleField": {
   "type": "object",
-  "eigenschappen": {
+  "properties": {
     "field1": {
       "type": "string"
     },
@@ -412,44 +332,23 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     }
   }
 }</pre>
-      Objecttype velden kunnen worden gedefinieerd door te verwijzen naar <code>$id</code> van een gegevenstype:
+      Objecttype velden kunnen worden gedefinieerd door te verwijzen naar de <code>$id</code> van een gegevenstype:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction"
-}</pre>
+"sampleField": { "type": "object", "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction" }</pre>
     </td>
   </tr>
   <tr>
     <td>[!UICONTROL Map]</td>
     <td></td>
-    <td>Een kaart <strong>mag geen eigenschappen definiëren. </strong> Het <strong>must</strong> bepaalt één enkel <code>additionalProperties</code> schema om het type van waarden te beschrijven bevat binnen de kaart (elke kaart kan slechts één enkel gegevenstype bevatten). Waarden kunnen elk geldig XDM <code>type</code>-kenmerk zijn of een verwijzing naar een ander schema met een <code>$ref</code>-kenmerk.<br/><br/>Een toewijzingsveld met tekenreekswaarden:
+    <td>Een kaart <strong>mogen</strong> om het even welke eigenschappen bepalen. IT <strong>moet</strong> één <code>additionalProperties</code> schema om het type van waarden te beschrijven binnen de kaart (elke kaart kan slechts één enkel gegevenstype bevatten). Waarden kunnen elke geldige XDM zijn <code>type</code> kenmerk, of een verwijzing naar een ander schema met behulp van een <code>$ref</code> kenmerk.<br/><br/>Een toewijzingsveld met tekenreekswaarden:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "additionalProperties":{
-    "type": "string"
-  }
-}</pre>
+"sampleField": { "type": "object", "additionalProperties":{ "type": "string" } }</pre>
     Een toewijzingsveld met arrays van tekenreeksen voor waarden:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "additionalProperties":{
-    "type": "array",
-    "objecten": {
-      "type": "string"
-    }
-  }
-}</pre>
+"sampleField": { "type": "object", "additionalProperties":{ "type": "array", "items": { "type": "string" } } }</pre>
     Een kaartveld dat naar een ander gegevenstype verwijst:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "additionalProperties":{
-    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
-  }
-}</pre>
+"sampleField": { "type": "object", "additionalProperties":{ "$ref": "https://ns.adobe.com/xdm/data/paymentitem" }</pre>
     </td>
   </tr>
 </table>
