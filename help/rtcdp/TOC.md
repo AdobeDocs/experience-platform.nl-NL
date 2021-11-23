@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform Guide
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
-source-git-commit: a63f0fc1b401009fbcc4def1fbdadab30c881c42
+source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 7%
+source-wordcount: '174'
+ht-degree: 8%
 
 ---
 
@@ -57,5 +57,4 @@ ht-degree: 7%
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Bronnen in Real-time CDP B2B Edition](sources/b2b.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
-* [Opmerkingen bij de release van CDP B2B Edition in realtime](./b2b-release-notes.md)
 * [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)
