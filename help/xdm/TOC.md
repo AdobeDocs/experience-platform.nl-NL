@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: a7f95dd5b0b84a8ca5c7a69b5a30e5c3dba16007
+source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '400'
 ht-degree: 6%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 6%
       * [XDM Business Opportunity Person Relatie](./classes/b2b/business-opportunity-person-relation.md)
       * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
       * [Leden van XDM Business Marketing List](./classes/b2b/business-marketing-list-members.md)
-* Schema veldgroepen {#field-groups}
+* Veldgroepen {#field-groups}
    * Profielveldgroepen {#profile}
       * [Demografische details](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 Toestemming](./field-groups/profile/iab.md)
