@@ -5,9 +5,9 @@ title: Bijlage Privacy Service API-handleiding
 topic-legacy: developer guide
 description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 445c8158dbf012defb32e9cd7aa4c27c6be1fb88
+source-git-commit: 532c9c9d07c112944ff26b1e48545d2b4777b06c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '485'
 ht-degree: 3%
 
 ---
@@ -69,12 +69,11 @@ In de volgende tabel worden de toegestane waarden voor het opgeven van een Adobe
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
+| Adobe Experience Platform (Real-time klantprofiel) | `profileService` |
 | Adobe Primetime-verificatie | `primetimeAuthentication` |
 | Adobe Target | `target` |
-| Automatiseringsproduct | `automationProduct` |
 | Klantkenmerken (CRS) | `CRS` |
 | Identiteitsservice | `Identity` |
-| Klantprofiel in realtime | `profileService` |
 | Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
