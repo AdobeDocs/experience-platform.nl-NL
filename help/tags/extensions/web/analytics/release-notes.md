@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
+source-git-commit: 73fe3c2e060dbdd7607ed3b54c5b8e9cca752d8f
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1272'
 ht-degree: 3%
 
 ---
@@ -14,6 +14,14 @@ ht-degree: 3%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 29 november 2021
+
+### Adobe Analytics Extension 1.8.8
+
+#### Opgeloste problemen
+
+* Bijgewerkte AppMeasurement naar v2.22.3.
 
 ## 16 september 2021
 
@@ -30,7 +38,7 @@ ht-degree: 3%
 
 #### Opgeloste problemen
 
-* [AppMeasurement is bijgewerkt naar v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* Bijgewerkt [AppMeasurement naar v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Bijgewerkte fallback linkName om logica van de Activity Map te weerspiegelen in plaats van innerHTML te gebruiken.
 
 ## 6 augustus 2020
@@ -43,7 +51,7 @@ ht-degree: 3%
 
 #### Functies
 
-* Bijgewerkt [AppMeasurement aan 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* Bijgewerkt [AppMeasurement tot 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * De kleine verandering UI zodat het extra plaatsen nu samengevouwen in een accordeon in plaats van checkbox verschijnt.
 
 ## 2 juni 2020
@@ -71,7 +79,7 @@ ht-degree: 3%
 
 #### Functies
 
-* Bijgewerkt [AppMeasurement aan 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* Bijgewerkt [AppMeasurement tot 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 
 ## 2 maart 2020
 
@@ -83,7 +91,7 @@ ht-degree: 3%
 
 #### Functies
 
-* Bijgewerkt [AppMeasurement aan 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* Bijgewerkt [AppMeasurement naar 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 * De DIL-bibliotheek in de module Audience Manager is bijgewerkt naar 9.4
 * De lengte van invoervelden in de extensie vergroten
 * Vars en props in de extensie- en actieconfiguraties geven nu de vriendelijke naam van Analytics weer
@@ -153,7 +161,7 @@ ht-degree: 3%
 
 #### Functies
 
-* De Adobe Analytics-extensie is bijgewerkt naar [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0). Deze bevat een correctie voor een bekende clearVars-uitgave
+* De Adobe Analytics-extensie is bijgewerkt naar [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0) dat een oplossing bevat voor een bekende clearVars-kwestie
 * Een Exchange-koppeling toegevoegd aan de extensie. De Exchange-lijst kan worden bereikt door het vervolgkeuzemenu te selecteren en &#39;&#39;extensie info&#39;&#39; te kiezen
 
 #### Bugfixes
@@ -203,7 +211,7 @@ ht-degree: 3%
 #### Functies
 
 * De Adobe Analytics-extensie voor DIL 9.0 is bijgewerkt en biedt nu ondersteuning voor opt-in.
-* De Adobe Analytics-extensie voor AppMeasurement 2.11 is bijgewerkt voor ondersteuning van de opt-in.
+* De Adobe Analytics-extensie voor AppMeasurement 2.11 is bijgewerkt om de opt-in te ondersteunen.
 
 #### Bugfixes
 
@@ -250,7 +258,7 @@ ht-degree: 3%
 #### **Functies**
 
 * Bijgewerkte Adobe Analytics-extensie voor ondersteuning van AppMeasurement 2.9.
-* De functie &#39;Tracker globaal toegankelijk maken&#39; in de Adobe Analytics-extensie is toegevoegd, waardoor de tracker globaal onder `windows.s` kan worden geplaatst.
+* De functie &#39;Tracker globaal toegankelijk maken&#39; in de Adobe Analytics-extensie is toegevoegd, waardoor de tracker wereldwijd onder het bereik van `windows.s`.
 
 #### **Opgeloste problemen**
 
