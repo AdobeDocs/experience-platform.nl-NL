@@ -5,9 +5,9 @@ title: 'Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 
 >[!NOTE]
 >
->Streaming segmentatie kan alleen worden gebruikt om gegevens te evalueren die in het Platform worden gestreamd. Met andere woorden, gegevens die via batch-opname worden ingevoerd, worden niet geëvalueerd door streamingsegmentatie en worden samen met de nachtelijke geplande gesegmenteerde taak geëvalueerd.
+>Streaming segmentatie kan alleen worden gebruikt om gegevens te evalueren die in het Platform worden gestreamd. Met andere woorden, gegevens die via batch-opname worden ingevoerd, worden niet geëvalueerd door streaming segmentatie en worden samen met de nachtelijke geplande gesegmenteerde taak geëvalueerd.
 
 ## Aan de slag
 
@@ -62,7 +62,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Voor het invullen van specifieke aanvragen kunnen extra kopteksten nodig zijn. In elk voorbeeld in dit document worden de juiste kopteksten weergegeven. Gelieve speciale aandacht te besteden aan de steekproefverzoeken om ervoor te zorgen dat alle vereiste kopballen inbegrepen zijn.
 
-### Voor streaming segmentatie ingeschakelde querytypen {#streaming-segmentation-query-types}
+### Voor streaming segmentatie ingeschakelde querytypen {#query-types}
 
 >[!NOTE]
 >
@@ -86,12 +86,16 @@ Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende sc
 - De segmentdefinitie omvat Adobe Audience Manager (AAM)-segmenten of -kenmerken.
 - De segmentdefinitie omvat meerdere entiteiten (vragen van meerdere entiteiten).
 
-Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wordt uitgevoerd:
+Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmentatie:
 
 | Type query | Richtsnoer |
 | ---------- | -------- |
 | Query voor één gebeurtenis | Er gelden geen limieten voor het terugzoekvenster. |
 | Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugzoekvenster is beperkt tot **één dag**.</li><li>Een strikte voorwaarde voor de tijdvolgorde **moet** tussen de gebeurtenissen bestaan.</li><li>Query&#39;s met ten minste één genegeerde gebeurtenis worden ondersteund. De gehele gebeurtenis **kan** een negatie zijn.</li></ul> |
+
+Als een segmentdefinitie wordt gewijzigd zodat deze niet meer voldoet aan de criteria voor het streamen van segmentatie, schakelt de segmentdefinitie automatisch over van &quot;Streaming&quot; naar &quot;Batch&quot;.
+
+Bovendien, segmentonkwalificatie, zo gelijkaardig aan segmentkwalificatie, gebeurt in real time. Als een publiek niet langer in aanmerking komt voor een segment, is het dus onmiddellijk niet gekwalificeerd. Bijvoorbeeld, als de segmentdefinitie &quot;Alle gebruikers vraagt die rode schoenen in de laatste drie uren&quot;kochten, na drie uren, zullen alle profielen die aanvankelijk voor de segmentdefinitie kwalificeerden ongekwalificeerd zijn.
 
 ## Hiermee worden alle segmenten opgehaald die zijn ingeschakeld voor streaming segmentatie
 
@@ -208,7 +212,7 @@ Een succesvolle reactie keert een serie van segmenten in uw IMS Organisatie teru
 
 ## Een segment met streaming mogelijkheden maken
 
-Als een segment overeenkomt met een van de [hierboven vermelde typen streamingsegmentatie](#streaming-segmentation-query-types).
+Als een segment overeenkomt met een van de [hierboven vermelde typen streamingsegmentatie](#query-types).
 
 **API-indeling**
 
@@ -334,7 +338,7 @@ curl -X POST \
 | `type` | **(Vereist)** Het taaktype in tekenreeksindeling. De ondersteunde typen zijn `batch_segmentation` en `export`. |
 | `properties` | **(Vereist)** Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `properties.segments` | **(Vereist als `type` equals `batch_segmentation`)** Gebruiken `["*"]` zorgt ervoor dat alle segmenten worden opgenomen. |
-| `schedule` | **(Vereist)** Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd. Dit betekent dat u een taak niet meer dan één keer gedurende een periode van 24 uur kunt plannen. Het getoonde voorbeeld (`0 0 1 * * ?`) betekent dat de baan elke dag om 1 wordt geactiveerd:00:00 UTC. Voor meer informatie raadpleegt u de [expressie-indeling voor uitsnijden](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie. |
+| `schedule` | **(Vereist)** Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Het getoonde voorbeeld (`0 0 1 * * ?`) betekent dat de baan elke dag om 1 wordt geactiveerd:00:00 UTC. Voor meer informatie raadpleegt u de [expressie-indeling voor uitsnijden](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie. |
 | `state` | *(Optioneel)* Tekenreeks die de planningsstatus bevat. Beschikbare waarden: `active` en `inactive`. De standaardwaarde is `inactive`. Een IMS-organisatie kan slechts één schema maken. De stappen voor het bijwerken van het programma zijn beschikbaar later in dit leerprogramma. |
 
 **Antwoord**
@@ -407,3 +411,31 @@ Dezelfde bewerking kan worden gebruikt om een schema uit te schakelen door de wa
 Nu u zowel nieuwe als bestaande segmenten voor het stromen segmentatie hebt toegelaten, en geplande segmentatie toegelaten om een basislijn te ontwikkelen en terugkomende evaluaties uit te voeren, kunt u beginnen streaming-toegelaten segmenten voor uw organisatie tot stand te brengen.
 
 Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmenten via de Adobe Experience Platform-gebruikersinterface naar de [Gebruikershandleiding voor Segment Builder](../ui/segment-builder.md).
+
+## Aanhangsel
+
+In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weergegeven:
+
+### Vindt streaming segmentatie ook &#39;onkwalificatie&#39; plaats in real-time?
+
+Doorgaans gebeurt een onkwalificatie van streamingsegmentatie in real-time. Bij streaming segmenten die segmenten van segmenten gebruiken, gebeurt dit echter wel **niet** in real time niet in aanmerking komen, in plaats daarvan na 24 uur niet in aanmerking.
+
+### Aan welke gegevens werkt streaming segmentatie?
+
+Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ingeslikt. Segmenten die worden ingevoerd met behulp van een op batch gebaseerde bron, worden elke avond geëvalueerd, zelfs als deze in aanmerking komt voor streaming segmentatie.
+
+### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
+
+Een segment wordt gedefinieerd als batch- of streaming segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmenten die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
+
+### Kan een gebruiker een segment definiëren als batch- of streaming-segmentatie?
+
+Op dit ogenblik, kan de gebruiker niet bepalen of een segment gebruikend partij of het stromen opname wordt geëvalueerd, aangezien het systeem automatisch zal bepalen met welke methode het segment zal worden geëvalueerd.
+
+### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot; segmenten toe terwijl het aantal onder &quot;Laatste X dagen&quot; nul blijft binnen de sectie met segmentdetails?
+
+Het aantal in totaal gekwalificeerde segmenten wordt ontleend aan de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als het stromen segmenten kwalificeert. Deze waarde wordt weergegeven voor zowel batch- als streaming segmenten.
+
+Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat publiek dat in het stromen segmentatie gekwalificeerd is, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streaming segmenten. Dientengevolge, deze waarde **kan** weergeven als 0 voor batchsegmenten.
+
+Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor dat segment in aanmerking zouden komen.

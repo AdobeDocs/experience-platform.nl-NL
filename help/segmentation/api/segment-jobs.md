@@ -5,31 +5,30 @@ title: API-eindpunt segmenttaken
 topic-legacy: developer guide
 description: Het eindpunt van segmentbanen in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om segmentbanen voor uw organisatie programmatically te beheren.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
 
 # Eindpunt segmenttaken
 
-Een segmentbaan is een asynchroon proces dat tot een nieuw publiekssegment leidt. Het verwijst naar een [segmentdefinitie](./segment-definitions.md), evenals om het even welk [samenvoegbeleid](../../profile/api/merge-policies.md) die controleert hoe [!DNL Real-time Customer Profile] overlappende attributen over uw profielfragmenten samenvoegt. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
+Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een [segmentdefinitie](./segment-definitions.md)en alle [beleid samenvoegen](../../profile/api/merge-policies.md) bepalen hoe [!DNL Real-time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
 
 Deze handleiding bevat informatie die u helpt segmenttaken beter te begrijpen en voorbeelden van API-aanroepen voor het uitvoeren van basishandelingen met de API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om oproepen aan API, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen met succes te maken.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
-## Hiermee wordt een lijst met segmenttaken {#retrieve-list} opgehaald
+## Een lijst met segmenttaken ophalen {#retrieve-list}
 
-U kunt een lijst van alle segmentbanen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/segment/jobs` eindpunt te doen.
+U kunt een lijst van alle segmentbanen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te dienen `/segment/jobs` eindpunt.
 
 **API-indeling**
 
-Het `/segment/jobs` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle uitvoerbanen beschikbaar voor uw organisatie terugwinnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+De `/segment/jobs` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle uitvoerbanen beschikbaar voor uw organisatie terugwinnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
 
 ```http
 GET /segment/jobs
@@ -43,7 +42,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | Geeft de beginverschuiving aan voor de geretourneerde segmenttaken. | `start=1` |
 | `limit` | Geeft het aantal segmenttaken op dat per pagina wordt geretourneerd. | `limit=20` |
 | `status` | Filtert de resultaten op basis van status. De ondersteunde waarden zijn NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELING | `status=NEW` |
-| `sort` | Hiermee worden de geretourneerde segmenttaken gesorteerd. Wordt geschreven in de notatie `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `sort` | Hiermee worden de geretourneerde segmenttaken gesorteerd. Is geschreven in de notatie `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
 | `property` | Hiermee filtert u segmenttaken en haalt u exacte overeenkomsten op voor het opgegeven filter. Deze kan in een van de volgende indelingen worden geschreven: <ul><li>`[jsonObjectPath]==[value]` - filteren op de objecttoets</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filteren binnen de array</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Verzoek**
@@ -180,9 +179,9 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van segmentbanen voo
 | `metrics.segmentProfileByStatusCounter` | Het aantal profielen voor elke status. De volgende drie statussen worden ondersteund: <ul><li>&quot;gerealiseerde&quot; - Het aantal nieuwe profielen dat in het segment is ingevoerd.</li><li>&quot;existing&quot; - Het aantal profielen dat in het segment blijft bestaan.</li><li>&quot;exited&quot; - Het aantal profielsegmenten dat niet meer in het segment bestaat.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Het totale aantal samengevoegde profielen op een per de beleidsbasis van de fusie. |
 
-## Nieuwe segmenttaak maken {#create}
+## Een nieuwe segmenttaak maken {#create}
 
-U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan het `/segment/jobs` eindpunt te doen en in het lichaam identiteitskaart van de segmentdefinitie te omvatten waarvan u een nieuw publiek zou willen tot stand brengen.
+U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan `/segment/jobs` eindpunt en het opnemen in het lichaam identiteitskaart van de segmentdefinitie waarvan u een nieuw publiek zou willen tot stand brengen.
 
 **API-indeling**
 
@@ -209,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentId` | De id van de segmentdefinitie waarvoor u een segmenttaak wilt maken. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities kan in [segment worden gevonden eindpuntgids](./segment-definitions.md). |
+| `segmentId` | De id van de segmentdefinitie waarvoor u een segmenttaak wilt maken. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities vindt u in de [eindhulplijn segmentdefinitie](./segment-definitions.md). |
 
 **Antwoord**
 
@@ -274,9 +273,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | `segments.segment.id` | De id van de segmentdefinitie die u hebt opgegeven. |
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |
 
-## Hiermee wordt een specifieke segmenttaak {#get} opgehaald
+## Een specifieke segmenttaak ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een verzoek van de GET aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een verzoek van de GET aan `/segment/jobs` eindpunt en het verstrekken van identiteitskaart van de segmentbaan u wenst om in de verzoekweg terug te winnen.
 
 **API-indeling**
 
@@ -371,9 +370,9 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |
 | `metrics` | Een object dat diagnostische informatie bevat over de segmenttaak. |
 
-## Ophalen van segmenttaken opheffen {#bulk-get}
+## Ophaalsegmenttaken bulksgewijs opvragen {#bulk-get}
 
-U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een verzoek van de POST aan het `/segment/jobs/bulk-get` eindpunt te doen en de `id` waarden van de segmentbanen in het verzoeklichaam te verstrekken.
+U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een verzoek van de POST aan `/segment/jobs/bulk-get` en het verstrekken van  `id` waarden van de segmentbanen in de aanvraaginstantie.
 
 **API-indeling**
 
@@ -479,7 +478,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen 
 
 ## Een specifieke segmenttaak annuleren of verwijderen {#delete}
 
-U kunt een specifieke segmentbaan schrappen door een verzoek van DELETE aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u wenst om in de verzoekweg te schrappen.
+U kunt een specifieke segmentbaan schrappen door een verzoek van DELETE aan de `/segment/jobs` eindpunt en het verstrekken van identiteitskaart van de segmentbaan u wenst om in de verzoekweg te schrappen.
 
 >[!NOTE]
 >
@@ -493,7 +492,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | De `id`-waarde van de segmenttaak die u wilt verwijderen. |
+| `{SEGMENT_JOB_ID}` | De `id` waarde van de segmenttaak die u wilt verwijderen. |
 
 **Verzoek**
 

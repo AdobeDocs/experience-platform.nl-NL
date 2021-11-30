@@ -5,9 +5,9 @@ title: UI-gids voor streamingsegmentatie
 topic-legacy: ui guide
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,10 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 
 >[!NOTE]
 >
->Streaming segmentatie kan alleen worden gebruikt om gegevens te evalueren die in het Platform worden gestreamd. Met andere woorden, gegevens die door batch ingestion worden opgenomen zullen niet door het stromen segmentatie worden geëvalueerd, en zullen samen met de nachtelijke geplande segmentbaan worden geëvalueerd.
 >
->Bovendien, kunnen de segmenten die met het stromen segmentatie worden geëvalueerd tussen ideaal en echt lidmaatschap vergaan als het segment van een ander segment wordt gebaseerd dat gebruikend partijsegmentatie wordt geëvalueerd. Bijvoorbeeld, als Segment A van Segment B wordt gebaseerd, en Segment B wordt geëvalueerd gebruikend partijsegmentatie, aangezien Segment B slechts om de 24 uur bijwerkt, zal Segment A zich verder van de daadwerkelijke gegevens bewegen tot het met de update van Segment B hersynchroniseert.
+>Segmenten die met streaming segmentatie worden geëvalueerd, kunnen tussen ideaal en feitelijk lidmaatschap verschuiven als het segment is gebaseerd op een ander segment dat met batchsegmentatie wordt geëvalueerd. Bijvoorbeeld, als Segment A van Segment B wordt gebaseerd, en Segment B wordt geëvalueerd gebruikend partijsegmentatie, aangezien Segment B slechts om de 24 uur bijwerkt, zal Segment A zich verder van de daadwerkelijke gegevens bewegen tot het met de update van Segment B hersynchroniseert.
 
-## Streaming segmenteringsquerytypen
+## Streaming segmenteringsquerytypen {#query-types}
 
 >[!NOTE]
 >
@@ -50,7 +49,7 @@ Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende sc
 - De segmentdefinitie omvat Adobe Audience Manager (AAM)-segmenten of -kenmerken.
 - De segmentdefinitie omvat meerdere entiteiten (vragen van meerdere entiteiten).
 
-Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wordt uitgevoerd:
+Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmentatie:
 
 | Type query | Richtsnoer |
 | ---------- | -------- |
@@ -58,6 +57,8 @@ Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wo
 | Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugzoekvenster is beperkt tot **één dag**.</li><li>Een strikte voorwaarde voor de tijdvolgorde **moet** tussen de gebeurtenissen bestaan.</li><li>Query&#39;s met ten minste één genegeerde gebeurtenis worden ondersteund. De gehele gebeurtenis **kan** een negatie zijn.</li></ul> |
 
 Als een segmentdefinitie wordt gewijzigd zodat deze niet meer voldoet aan de criteria voor het streamen van segmentatie, schakelt de segmentdefinitie automatisch over van &quot;Streaming&quot; naar &quot;Batch&quot;.
+
+Bovendien, segmentonkwalificatie, zo gelijkaardig aan segmentkwalificatie, gebeurt in real time. Als een publiek niet langer in aanmerking komt voor een segment, is het dus onmiddellijk niet gekwalificeerd. Bijvoorbeeld, als de segmentdefinitie &quot;Alle gebruikers vraagt die rode schoenen in de laatste drie uren&quot;kochten, na drie uren, zullen alle profielen die aanvankelijk voor de segmentdefinitie kwalificeerden ongekwalificeerd zijn.
 
 ## Segmentdetails streaming
 
@@ -82,3 +83,33 @@ Lees voor meer informatie over segmentdefinities het vorige gedeelte over [segme
 In deze gebruikershandleiding wordt uitgelegd hoe definities van streaming-ingeschakelde segmenten werken op Adobe Experience Platform en hoe u voor streaming geschikte segmenten kunt controleren.
 
 Voor meer informatie over het gebruik van de Adobe Experience Platform-gebruikersinterface leest u de [Gebruikershandleiding voor segmentatie](./overview.md).
+
+## Aanhangsel
+
+In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weergegeven:
+
+In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weergegeven:
+
+### Vindt streaming segmentatie ook &#39;onkwalificatie&#39; plaats in real-time?
+
+Doorgaans gebeurt een onkwalificatie van streamingsegmentatie in real-time. Bij streaming segmenten die segmenten van segmenten gebruiken, gebeurt dit echter wel **niet** in real time niet in aanmerking komen, in plaats daarvan na 24 uur niet in aanmerking.
+
+### Aan welke gegevens werkt streaming segmentatie?
+
+Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ingeslikt. Segmenten die worden ingevoerd met behulp van een op batch gebaseerde bron, worden elke avond geëvalueerd, zelfs als deze in aanmerking komt voor streaming segmentatie.
+
+### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
+
+Een segment wordt gedefinieerd als batch- of streaming segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmenten die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
+
+### Kan een gebruiker een segment definiëren als batch- of streaming-segmentatie?
+
+Op dit ogenblik, kan de gebruiker niet bepalen of een segment gebruikend partij of het stromen opname wordt geëvalueerd, aangezien het systeem automatisch zal bepalen met welke methode het segment zal worden geëvalueerd.
+
+### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot; segmenten toe terwijl het aantal onder &quot;Laatste X dagen&quot; nul blijft binnen de sectie met segmentdetails?
+
+Het aantal in totaal gekwalificeerde segmenten wordt ontleend aan de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als het stromen segmenten kwalificeert. Deze waarde wordt weergegeven voor zowel batch- als streaming segmenten.
+
+Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat publiek dat in het stromen segmentatie gekwalificeerd is, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streaming segmenten. Dientengevolge, deze waarde **kan** weergeven als 0 voor batchsegmenten.
+
+Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor dat segment in aanmerking zouden komen.

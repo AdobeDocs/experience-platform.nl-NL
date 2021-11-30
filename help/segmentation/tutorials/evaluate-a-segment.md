@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -86,12 +86,11 @@ De evaluatie op bestelling staat u toe om een segmentbaan tot stand te brengen o
 
 ### Een segmenttaak maken
 
-Een segmentbaan is een asynchroon proces dat tot een nieuw publiekssegment leidt. Het verwijst naar een segmentdefinitie evenals om het even welk samenvoegbeleid dat controleert hoe [!DNL Real-time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
+Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een segmentdefinitie evenals om het even welk samenvoegbeleid dat controleert hoe [!DNL Real-time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen. Een segmentbaan moet in werking worden gesteld telkens als u het publiek wilt verfrissen dat momenteel voor de segmentdefinitie kwalificeert.
 
 U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan `/segment/jobs` in de [!DNL Real-time Customer Profile] API.
 
 Meer gedetailleerde informatie over het gebruik van dit eindpunt vindt u in de [eindgids voor segmenttaken](../api/segment-jobs.md#create)
-
 
 ### Status segmenttaak opzoeken
 
