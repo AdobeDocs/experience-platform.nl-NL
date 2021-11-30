@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 85a68d49614f021ec7e4be2c11f91ef835e88929
+source-git-commit: 873a23d06696c98633f76e37a8b4a1d9b1d25c8b
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '1985'
 ht-degree: 0%
 
 ---
@@ -193,8 +193,7 @@ Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTR
 >id="platform_sources_alerts_subscribe"
 >title="Abonneren op waarschuwingen voor bronnen"
 >abstract="Schakel deze optie in als u zich wilt abonneren op meldingen voor uw gegevensstromen van bronnen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Meer informatie in documentatie"
-
+>text="Learn more in documentation"
 
 De **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
