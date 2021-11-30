@@ -5,9 +5,9 @@ title: UI-gids voor streamingsegmentatie
 topic-legacy: ui guide
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
+source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1182'
 ht-degree: 0%
 
 ---
@@ -85,8 +85,6 @@ In deze gebruikershandleiding wordt uitgelegd hoe definities van streaming-inges
 Voor meer informatie over het gebruik van de Adobe Experience Platform-gebruikersinterface leest u de [Gebruikershandleiding voor segmentatie](./overview.md).
 
 ## Aanhangsel
-
-In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weergegeven:
 
 In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weergegeven:
 
