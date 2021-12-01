@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1570'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,21 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 >title="Oorsprong van het publiek"
 >abstract="Kies hoe de klantgegevens in het segment oorspronkelijk zijn verzameld. De gegevens worden in Facebook weergegeven wanneer een gebruiker voor het segment is ingesteld"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Meer informatie in documentatie"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Oorsprong van het publiek"
+>abstract="Adverteerders verzamelden gegevens rechtstreeks bij klanten."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Oorsprong van het publiek"
+>abstract="Adverteerders verzamelden gegevens rechtstreeks bij hun partners."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Oorsprong van het publiek"
+>abstract="Adverteerders verzamelden gegevens rechtstreeks bij hun klanten en partners."
 
 Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
