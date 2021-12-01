@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 82f02064477cc5336bf528a34284c9f4f7669c3d
+source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1969'
 ht-degree: 0%
 
 ---
@@ -187,13 +187,7 @@ Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTR
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## Gegevens over gegevensstroom opgeven {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="Abonneren op waarschuwingen voor bronnen"
->abstract="Selecteer de optie(s) waarop u zich wilt abonneren, om meldingen te ontvangen voor de gegevensstromen van uw bronnen."
->text="Learn more in documentation"
+## Gegevens over gegevensstroom opgeven
 
 De **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
