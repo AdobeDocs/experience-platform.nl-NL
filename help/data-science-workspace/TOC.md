@@ -5,10 +5,9 @@ breadcrumb-title: Werkruimtegids voor gegevenswetenschappen
 user-guide-description: Gebruik computerleren om modellen en recepten te ontwikkelen, te trainen en te scoren met Adobe Sensei- en JupyterLab-laptops.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '248'
 ht-degree: 2%
 
 ---
@@ -25,9 +24,9 @@ ht-degree: 2%
    * [Uw gegevens analyseren](jupyterlab/analyze-your-data.md)
    * [Query-service](jupyterlab/query-service.md)
    * [Onderzoeksgegevens (EDA)](jupyterlab/eda-notebook.md)
-   * [Een recept maken](jupyterlab/create-a-recipe.md)
+   * [Een model maken met de functie voor het maken van recept](jupyterlab/create-a-model.md)
    * [Samenwerken in JupyterLab met behulp van Git](jupyterlab/using-git-for-collaboration.md)
-* API voor leren door Sensei-machine {#api}
+* API voor leren werken met Sensei {#api}
    * [Aan de slag](api/getting-started.md)
    * [Motoren](api/engines.md)
    * [MLInstances (recepten)](api/mlinstances.md)
@@ -36,7 +35,7 @@ ht-degree: 2%
    * [MLServices](api/mlservices.md)
    * [Inzichten](api/insights.md)
    * [Aanhangsel](api/appendix.md)
-* Real-time Machine Learning (Alpha) {#real-time-machine-learning}
+* Real-time Machine Learning (alfa) {#real-time-machine-learning}
    * [Overzicht](real-time-machine-learning/home.md)
    * [Aan de slag](real-time-machine-learning/getting-started.md)
    * [Laptops beheren](real-time-machine-learning/rtml-authoring-notebook.md)
@@ -53,6 +52,7 @@ ht-degree: 2%
    * [Toegang tot Vonk-gegevens](authoring/spark.md)
 * Zelfstudies over modellen en recept {#models-recipes}
    * [Een model voor machinaal leren maken en publiceren](models-recipes/create-publish-model.md)
+   * [De demo Luma-schema&#39;s en gegevenssets maken](models-recipes/create-luma-data.md)
    * [Het schema en de gegevensset voor de detailhandel maken](models-recipes/create-retails-sales-dataset.md)
    * [Voorvertoningsschema&#39;s en gegevenssets](models-recipes/preview-schema-data.md)
    * [Bronbestanden in een recept plaatsen](models-recipes/package-source-files-recipe.md)

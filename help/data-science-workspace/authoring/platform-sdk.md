@@ -5,29 +5,28 @@ title: Modellen ontwerpen met de SDK van het Adobe Experience Platform-Platform
 topic-legacy: SDK authoring
 description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 4%
 
 ---
 
-# Model authoring met de Adobe Experience Platform [!DNL Platform] SDK
+# Ontwerpmodel met Adobe Experience Platform [!DNL Platform] SDK
 
-Deze zelfstudie biedt u informatie over het omzetten van `data_access_sdk_python` in de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
+Deze zelfstudie biedt u informatie over het converteren `data_access_sdk_python` naar de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
 
 - [Verificatie opbouwen](#build-authentication)
 - [Basislezen van gegevens](#basic-reading-of-data)
 - [Basisschrijven van gegevens](#basic-writing-of-data)
 
-## Verificatie {#build-authentication} samenstellen
+## Verificatie opbouwen {#build-authentication}
 
-De authentificatie wordt vereist om vraag aan [!DNL Adobe Experience Platform] te maken, en bestaat uit API Sleutel, IMS Org identiteitskaart, een gebruikerstoken, en een de dienstteken.
+De authentificatie wordt vereist om vraag te maken aan [!DNL Adobe Experience Platform]en bestaat uit API-sleutel, IMS Org-id, een gebruikerstoken en een servicetoken.
 
 ### Python
 
-Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context` te maken:
+Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
@@ -45,7 +44,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context` te maken:
+Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context`:
 
 ```r
 library(reticulate)
@@ -70,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basislezen van gegevens {#basic-reading-of-data}
 
-Met de nieuwe [!DNL Platform] SDK is de maximale leesgrootte 32 GB, met een maximale leestijd van 10 minuten.
+Met de nieuwe [!DNL Platform] SDK, de maximale leesgrootte is 32 GB, met een maximale leestijd van 10 minuten.
 
 Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken:
 
@@ -81,7 +80,7 @@ Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken
 
 >[!NOTE]
 >
->De IMS-tekenreeks wordt ingesteld binnen `client_context`.
+>De IMS-organisatie wordt ingesteld binnen de `client_context`.
 
 ### Python
 
@@ -105,9 +104,9 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filteren op offset en beperken {#filter-by-offset-and-limit}
+## Filteren op verschuiving en limiet {#filter-by-offset-and-limit}
 
-Omdat filteren op batch-id niet meer wordt ondersteund, moet u `offset` en `limit` gebruiken om het lezen van gegevens in bereik te houden.
+Omdat filteren op batch-id niet meer wordt ondersteund, moet u voor het lezen van gegevens in een bereik het volgende gebruiken: `offset` en `limit`.
 
 ### Python
 
@@ -151,7 +150,7 @@ De nieuwe [!DNL Platform] SDK ondersteunt de volgende bewerkingen:
 
 | Bewerking | -functie |
 | --------- | -------- |
-| Gelijk aan (`=`) | `eq()` |
+| Gelijk (`=`) | `eq()` |
 | Greater than (`>`) | `gt()` |
 | Greater than or equal to (`>=`) | `ge()` |
 | Less than (`<`) | `lt()` |
@@ -193,11 +192,11 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Standaard schrijven van gegevens {#basic-writing-of-data}
+## Basisschrijven van gegevens {#basic-writing-of-data}
 
 >[!NOTE]
 >
->De IMS-tekenreeks wordt ingesteld binnen `client_context`.
+>De IMS-organisatie wordt ingesteld binnen de `client_context`.
 
 Gebruik een van de volgende voorbeelden om gegevens in Python en R te schrijven:
 
@@ -222,4 +221,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Volgende stappen
 
-Nadat u de `platform_sdk` gegevenslader hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de `train`- en `val`-gegevensset. Als u meer wilt weten over de voorbereiding van gegevens en de engineering van functies, raadpleegt u de sectie over [gegevensvoorbereiding en functietechniek](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in de zelfstudie voor het maken van een recept met behulp van [!DNL JupyterLab] laptops.
+Zodra u hebt gevormd `platform_sdk` de gegevenslader, de gegevens ondergaat voorbereiding en wordt dan verdeeld aan `train` en `val` datasets. Ga voor meer informatie over het voorbereiden en ontwerpen van gegevens naar de sectie over [gegevensvoorbereiding en functietechniek](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in de zelfstudie voor het maken van een recept met [!DNL JupyterLab] -laptops.

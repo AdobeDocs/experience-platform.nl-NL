@@ -6,8 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Deze gids concentreert zich op hoe te om het Verkennende Notitieboekje van de gegevensanalyse (EDA) te gebruiken om patronen in Webgegevens te ontdekken, gebeurtenissen met een voorspelingsdoel, schone samengevoegde gegevens te groeperen, en het verband tussen predikers en een doel te begrijpen.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%
@@ -24,11 +23,11 @@ Deel twee begint met een beschrijvende analyse van de geaggregeerde gegevens met
 
 ## Aan de slag
 
-Voordat u deze handleiding leest, raadpleegt u de [[!DNL JupyterLab] gebruikershandleiding](./overview.md) voor een inleiding op hoog niveau op [!DNL JupyterLab] en de rol ervan in de werkruimte voor wetenschap van gegevens. Als u uw eigen gegevens gebruikt, raadpleegt u bovendien de documentatie voor [gegevenstoegang in [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Deze handleiding bevat belangrijke informatie over de gegevenslimieten van laptops.
+Lees deze handleiding voordat u deze leest. [[!DNL JupyterLab] gebruikershandleiding](./overview.md) voor een introductie op hoog niveau van [!DNL JupyterLab] en zijn rol binnen de Werkruimte van de Wetenschap van Gegevens. Als u uw eigen gegevens gebruikt, raadpleegt u bovendien de documentatie voor [gegevenstoegang in [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Deze handleiding bevat belangrijke informatie over de gegevenslimieten van laptops.
 
-Deze laptop gebruikt een gegevensset met gemiddelde waarden in de vorm van Adobe Analytics Experience Events-gegevens in de Analytics Analysis Workspace. Als u de EDA-laptop wilt gebruiken, moet u de gegevenstabel definiëren met de volgende waarden `target_table` en `target_table_id`. Om het even welke middelwaarden dataset kan worden gebruikt.
+Deze laptop gebruikt een gegevensset met gemiddelde waarden in de vorm van Adobe Analytics Experience Events-gegevens in de Analytics Analysis Workspace. Als u de EDA-laptop wilt gebruiken, moet u de gegevenstabel met de volgende waarden definiëren `target_table` en `target_table_id`. Om het even welke middelwaarden dataset kan worden gebruikt.
 
-Om deze waarden te vinden, volg de stappen in [schrijven aan een dataset in python](./access-notebook-data.md#write-python) sectie van de gids van de de gegevenstoegang JupyterLab worden geschetst. De naam van de gegevensset (`target_table`) bevindt zich in de directory van de gegevensset. Zodra u met de rechtermuisknop op de dataset klikt om gegevens in een notitieboekje te onderzoeken of te schrijven, wordt een dataset identiteitskaart (`target_table_id`) verstrekt in de uitvoerbare codeingang.
+Als u deze waarden wilt zoeken, volgt u de stappen in het dialoogvenster [schrijven aan een dataset in python](./access-notebook-data.md#write-python) van de JupyterLab-gids voor gegevenstoegang. De naam van de gegevensset (`target_table`) bevindt zich in de map met gegevenssets. Nadat u met de rechtermuisknop op de gegevensset hebt geklikt om gegevens in een notitieboekje te verkennen of te schrijven, wordt een gegevensset-id (`target_table_id`) wordt opgegeven in het item voor uitvoerbare code.
 
 ## Gegevensdetectie
 
@@ -36,7 +35,7 @@ Deze sectie bevat configuratiestappen en voorbeeldvragen die worden gebruikt om 
 
 ### Configuratie van bibliotheken
 
-JupyterLab ondersteunt meerdere bibliotheken. De volgende code kan in een codecel worden geplakt en uitgevoerd om alle vereiste pakketten te verzamelen en te installeren die in dit voorbeeld worden gebruikt. U kunt extra of alternatieve pakketten buiten dit voorbeeld voor uw eigen gegevensanalyse gebruiken. Kopieer en plak `!pip list --format=columns` in een nieuwe cel voor een lijst met ondersteunde pakketten.
+JupyterLab ondersteunt meerdere bibliotheken. De volgende code kan in een codecel worden geplakt en uitgevoerd om alle vereiste pakketten te verzamelen en te installeren die in dit voorbeeld worden gebruikt. U kunt extra of alternatieve pakketten buiten dit voorbeeld voor uw eigen gegevensanalyse gebruiken. Kopieer en plak voor een lijst met ondersteunde pakketten `!pip list --format=columns` in een nieuwe cel.
 
 ```python
 !pip install colorama
@@ -64,11 +63,11 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_colwidth', -1)
 ```
 
-### Verbinden met Adobe Experience Platform [!DNL Query Service]
+### Verbinding maken met Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] op Platform staat u toe om SQL in een  [!DNL Python] notitieboekje te gebruiken om tot gegevens door de Dienst [ van de ](https://www.adobe.com/go/query-service-home-en)Vraag toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn voor het verwerken van grote gegevenssets vanwege de superieure werktijden. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
+[!DNL JupyterLab] op Platform kunt u SQL gebruiken in een [!DNL Python] laptop voor toegang tot gegevens via [Query-service](https://www.adobe.com/go/query-service-home-en). Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn om grote datasets wegens zijn superieure lopende tijden te behandelen. Houd er rekening mee dat u gegevens kunt opvragen met [!DNL Query Service] heeft een verwerkingstijd van tien minuten.
 
-Voordat u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, moet u ervoor zorgen dat u een goed begrip hebt van de [[!DNL Query Service] SQL-syntaxis](https://www.adobe.com/go/query-service-sql-syntax-en).
+Wat u moet weten voordat u gaat gebruiken [!DNL Query Service] in [!DNL JupyterLab]zorgt u ervoor dat u een goed begrip hebt van de [[!DNL Query Service] SQL-syntaxis](https://www.adobe.com/go/query-service-sql-syntax-en).
 
 Om de Dienst van de Vraag in JupyterLab te gebruiken, moet u eerst een verbinding tussen uw werkende Notitieboekje Python en de Dienst van de Vraag tot stand brengen. Dit kan worden bereikt door de volgende cel uit te voeren.
 
@@ -78,7 +77,7 @@ qs_connect()
 
 ### De gegevensset met middentonen definiëren voor exploratie
 
-Om met het vragen van en het onderzoeken van gegevens te beginnen, moet een midvalues datasetlijst worden verstrekt. Kopieer en vervang de waarden `table_name` en `table_id` door uw eigen waarden van de gegevenstabel.
+Om met het vragen van en het onderzoeken van gegevens te beginnen, moet een midvalues datasetlijst worden verstrekt. Kopieer en vervang de `table_name` en `table_id` waarden met uw eigen waarden voor de gegevenstabel.
 
 ```python
 target_table = "table_name"
@@ -120,7 +119,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Detectie gegevensset
 
-Nadat u alle parameters hebt geconfigureerd, [!DNL Query Service] hebt gestart en een datumbereik hebt, kunt u beginnen met het lezen van gegevensrijen. U moet het aantal rijen dat u leest, beperken.
+Zodra u al uw parameters hebt gevormd, begonnen [!DNL Query Service]En u hebt een datumbereik. U kunt nu gegevensrijen beginnen te lezen. U moet het aantal rijen dat u leest, beperken.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -285,7 +284,7 @@ iplot(fig)
 
 **De tien meest bekeken producten**
 
-Deze vraag verstrekt een lijst van de hoogste tien bekeken producten. In het onderstaande voorbeeld wordt de functie `Explode()` gebruikt om elk product in het object `productlistitems` naar de eigen rij te retourneren. Dit staat u toe om een genestelde vraag te doen om productmeningen voor verschillende SKU&#39;s samen te voegen.
+Deze vraag verstrekt een lijst van de hoogste tien bekeken producten. In het onderstaande voorbeeld wordt `Explode()` functie wordt gebruikt om elk product in terug te keren `productlistitems` object naar zijn eigen rij. Dit staat u toe om een genestelde vraag te doen om productmeningen voor verschillende SKU&#39;s samen te voegen.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -369,7 +368,7 @@ threshold = 1
 
 ### Gegevenssamenvoeging voor functie en doel maken
 
-Om met verkennende analyse te beginnen, moet u een doel op het profielniveau tot stand brengen, door uw dataset te groeperen wordt gevolgd. In dit voorbeeld worden twee query&#39;s opgegeven. De eerste vraag bevat de verwezenlijking van een doel. De tweede vraag moet worden bijgewerkt om het even welke variabelen buiten degenen in de eerste vraag te omvatten. U kunt `limit` voor uw vraag willen bijwerken. Nadat u de volgende query&#39;s hebt uitgevoerd, zijn de samengevoegde gegevens nu beschikbaar voor verkenning.
+Om met verkennende analyse te beginnen, moet u een doel op het profielniveau tot stand brengen, door uw dataset te groeperen wordt gevolgd. In dit voorbeeld worden twee query&#39;s opgegeven. De eerste vraag bevat de verwezenlijking van een doel. De tweede vraag moet worden bijgewerkt om het even welke variabelen buiten degenen in de eerste vraag te omvatten. U kunt de `limit` voor uw query. Nadat u de volgende query&#39;s hebt uitgevoerd, zijn de samengevoegde gegevens nu beschikbaar voor verkenning.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -517,7 +516,7 @@ In dit voorbeeld wordt interkwartielbereik gebruikt om uitschieters te identific
 
 >[!TIP]
 >
->Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste. Voor meer informatie over het laten vallen van uitschieters, bezoek [facultatieve stap van de gegevensreiniging](#optional-data-clean).
+>Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste. Ga voor meer informatie over het neerzetten van uitschieters naar de [optionele stap voor gegevensreiniging](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -630,7 +629,7 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Nadat u kolommen met één waarde hebt verwijderd, controleert u de overige kolommen op fouten met de opdracht `Data.columns` in een nieuwe cel.
+Als u kolommen met één waarde hebt verwijderd, controleert u de overige kolommen op fouten met de opdracht `Data.columns` in een nieuwe cel.
 
 ### Correct voor ontbrekende waarden
 
@@ -680,7 +679,7 @@ Bivariate-analyse wordt gebruikt om inzicht te krijgen in de relatie tussen twee
 - **Paarplot**: Paarten zijn een eenvoudige manier om relaties tussen elke variabele te visualiseren. Het produceert een matrijs van verhoudingen tussen elke variabele in de gegevens.
 - **Heatmap**: Heatmaps zijn de correlatiecoëfficiënt voor alle variabelen in de gegevensset.
 - **Vakpercelen**: De percelen van de doos zijn een gestandaardiseerde manier om gegevensdistributie te tonen die op een vijf aantalsamenvatting (minimum, eerste kwartiel (Q1), mediaan, derde kwartiel (Q3), en maximum) wordt gebaseerd.
-- **Grafiekplot**: Een telplot is als een histogram of een staafgrafiek voor sommige categorische eigenschappen. Hier wordt het aantal exemplaren van een item weergegeven op basis van een bepaald type categorie.
+- **Telplot**: Een telplot is als een histogram of een staafgrafiek voor sommige categorische eigenschappen. Hier wordt het aantal exemplaren van een item weergegeven op basis van een bepaald type categorie.
 
 Om het verband tussen de &quot;doel&quot;variabele en de voorspellers/de eigenschappen te begrijpen, worden de grafieken gebruikt gebaseerd op datatypes. Voor numerieke eigenschappen, zou u een doosplot moeten gebruiken als de &quot;doel&quot;variabele categorisch is, evenals, een pairplot en een heatmap als de &quot;doel&quot;variabele numeriek is.
 
@@ -804,13 +803,13 @@ else:
 
 ![voorbeeldinzicht](../images/jupyterlab/eda/insight.PNG)
 
-## Optionele stap {#optional-data-clean} voor gegevensreiniging
+## Optionele stap voor gegevensreiniging {#optional-data-clean}
 
 Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste.
 
-Voor meer informatie over uitschieters en of om hen te laten vallen of niet, lees deze ingang van [analytiefactor](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Voor meer informatie over uitschieters en of ze moeten worden neergezet, leest u deze vermelding in het dialoogvenster [analysemethode](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-De volgende gegevenspunten van voorbeeldcellen en vloeren die uitschieters zijn gebruikend [interkwartielwaaier](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+De volgende gegevenspunten van voorbeeldcellen en vloeren die outliers gebruiken [interkwartielbereik](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -832,4 +831,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Nadat u uw verkennende gegevensanalyse hebt voltooid, bent u klaar om met het creëren van een model te beginnen. U kunt ook de gegevens en inzichten gebruiken die u hebt afgeleid om een dashboard te maken met gereedschappen zoals Power BI.
 
-Adobe Experience Platform scheidt het proces voor het maken van modellen in twee verschillende fasen: Recipes (een modelinstantie) en Modellen. Als u het proces voor het maken van recept wilt starten, raadpleegt u de documentatie voor [het maken van een recept in JupyerLab-laptops](./create-a-recipe.md). Dit document bevat informatie en voorbeelden voor het maken, trainen en scoren van een recept in [!DNL JupyterLab]-laptops.
+Adobe Experience Platform scheidt het proces voor het maken van modellen in twee verschillende fasen: Recipes (een modelinstantie) en Modellen. Als u het proces voor het maken van het recept wilt starten, raadpleegt u de documentatie voor [een recept maken voor JupyerLab-laptops](./create-a-model.md). Dit document bevat informatie en voorbeelden voor het maken, opleiden en scoren van een recept in [!DNL JupyterLab] Laptops.

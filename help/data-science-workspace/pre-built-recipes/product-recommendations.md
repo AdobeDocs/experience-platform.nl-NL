@@ -5,8 +5,7 @@ title: Recipe productaanbeveling
 topic-legacy: overview
 description: Met het product Recommendations-recept kunt u op maat gemaakte productaanbevelingen doen die zijn afgestemd op de behoeften en belangen van uw klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 1%
@@ -27,14 +26,14 @@ Het product-Recommendations-recept gebruikt automatisch leren om de interactie v
 
 ## Hoe begin ik?
 
-U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie laat u zien hoe u het product Recommendations-recept kunt maken in een Jupyter-laptop door de [notebook to recipe](../jupyterlab/create-a-recipe.md)-workflow te volgen en het recept te implementeren in [!DNL Experience Platform] [!DNL Data Science Workspace].
+U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie laat u zien hoe u het product Recommendations-recept kunt maken in een Jupyter-laptop door het volgende te doen: [notebook naar recept](../jupyterlab/create-a-model.md) werkschema en de toepassing van het recept in [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Lab: De toekomst voorspellen met Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab-bronnen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Gegevensschema
 
-In dit recept worden aangepaste [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) gebruikt om de invoer- en uitvoergegevens te modelleren:
+In dit recept wordt aangepaste [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) om de invoer- en uitvoergegevens te modelleren:
 
 ### Invoergegevensschema
 
