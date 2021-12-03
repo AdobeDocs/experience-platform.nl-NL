@@ -2,10 +2,10 @@
 title: Aanvullende informatie
 description: De meest recente releaseopmerkingen voor tags in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
+source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 1%
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wordt omgedoopt tot een reeks technologieën voor gegevensverzameling in Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 15 november 2021
+
+**ES6-code in tags accepteren** - Extensies en aangepaste code met ES6-code kunnen nu worden gebruikt in tags. In de extensiecatalogus wordt een ES6+-label weergegeven in de kaart van elke extensie die ES6-code bevat. IE10 en IE11 ondersteunen geen ES6-code. Voordat u ES6-code gebruikt in uw tagbibliotheken, moet u uw uiterste best doen.
+
+**Terser gebruiken als JavaScript-compressor** - Uglifier is vervangen door Terser. Vanaf deze release worden alle tagbibliotheken geminiateerd door Terser.
 
 ## 21 oktober 2021
 
