@@ -5,7 +5,7 @@ title: Overzicht van afstemming van segment
 topic-legacy: overview
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%
@@ -59,7 +59,7 @@ De lijst met ondersteunde naamruimten ziet er als volgt uit:
 
 U moet een toestemmingsconfiguratie verstrekken en zijn standaardwaarde plaatsen aan of `opt-in` of `opt-out` voor een toestemmingscontrole.
 
-De controle van de opt-in en opt-out toestemming bepaalt of u met de toestemming kunt werken om gebruikersgegevens door gebrek te delen. Als het gebrek van de toestemmingsconfiguratie aan wordt geplaatst `opt-in`, kunnen gebruikersgegevens worden gedeeld, tenzij een gebruiker expliciet weigert. Als de standaardwaarde is ingesteld op `opt-out`, kunnen gebruikersgegevens niet worden gedeeld, tenzij een gebruiker expliciet binnen kiest.
+De controle van de opt-in en opt-out toestemming bepaalt of u met de toestemming kunt werken om gebruikersgegevens door gebrek te delen. Als het gebrek van de toestemmingsconfiguratie aan wordt geplaatst `opt-out`, kunnen gebruikersgegevens worden gedeeld, tenzij een gebruiker expliciet weigert. Als de standaardwaarde is ingesteld op `opt-in`, kunnen gebruikersgegevens niet worden gedeeld, tenzij een gebruiker expliciet binnen kiest.
 
 De standaardtoestemmingsconfiguratie voor [!DNL Segment Match] is ingesteld op `opt-out`. Als u een aanmeldingsmodel voor uw gegevens wilt afdwingen, stuurt u een e-mailverzoek naar uw accountmanager van Adobe.
 
