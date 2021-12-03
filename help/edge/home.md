@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK - Overzicht
 description: Leer hoe u de Adobe Experience Platform Web SDK kunt gebruiken om de mogelijkheden van het Platform in uw website te integreren.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 0%
@@ -12,19 +12,19 @@ ht-degree: 0%
 
 # Overzicht Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van Adobe Experience Cloud via het Adobe Experience Platform Edge Network kunnen communiceren met de verschillende services in de [!DNL Experience Cloud]. Naast de JavaScript-bibliotheek is er een [tagextensie](../tags/extensions/web/sdk/overview.md) om u te helpen met uw Web SDK-configuraties.
+Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van Adobe Experience Cloud kunnen communiceren met de verschillende services in de [!DNL Experience Cloud] via het Adobe Experience Platform Edge Network. Naast de JavaScript-bibliotheek is er een [tagextensie](./extension/web-sdk-extension-configuration.md) om met uw configuraties van SDK van het Web te helpen.
 
 ## Beleef de rand
 
 [!DNL Adobe Experience Platform Web SDK] maakt deel uit van de verzameling waaruit Experience Edge bestaat. Experience Edge bestaat uit drie technologieën:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** Een JavaScript SDK- en tagextensie om de implementatie van  [!DNL Adobe] technologieën aanzienlijk te vereenvoudigen
-* **Adobe Experience Platform Mobile SDK:** een uitbreiding op de mobiele SDK van v5 waarmee klanten de nieuwe implementatiemethode kunnen gebruiken
-* **[!DNL Adobe Experience Platform Edge Network]:** Een wereldwijd gedistribueerd netwerk van servers dat een nieuwe methode om  [!DNL Adobe] producten in te voeren mogelijk maakt
+* **[!DNL Adobe Experience Platform Web SDK]:** Een JavaScript SDK en tagextensie om de implementatie aanzienlijk te vereenvoudigen [!DNL Adobe] technologieën
+* **Adobe Experience Platform Mobile SDK:** Een uitbreiding van de mobiele SDK van v5 zodat klanten de nieuwe implementatiemethode kunnen gebruiken
+* **[!DNL Adobe Experience Platform Edge Network]:** Een globaal verdeeld netwerk van servers die een nieuwe methodologie om toelaten op te stellen [!DNL Adobe] producten
 
-De [!DNL Adobe Experience Edge] is een nieuw kader voor het verzamelen van gegevens met lage latentie, pluggable gegevensverwerking en snelle gegevensactivering over alle adresseerbare kanalen.
+De [!DNL Adobe Experience Edge] is een nieuw kader voor gegevensverzameling met lage latentie, pluggable computergebruik en snelle gegevensactivering op alle adresseerbare kanalen.
 
-[!DNL Adobe Experience Edge] biedt één geconsolideerde SDK voor elk kanaal (JavaScript, Mobiel, Server-kant), die gegevens naar een gemeenschappelijk Adobe-domein (`adobedc.net`) verzendt en één enkele nuttige lading voor gegevens en ervaringslevering ontvangt.
+[!DNL Adobe Experience Edge] biedt één geconsolideerde SDK voor elk kanaal (JavaScript, Mobiel, Server-kant), dat gegevens verzendt naar een gemeenschappelijk Adobe-domein (`adobedc.net`) en ontvangt één enkele nuttige lading voor gegevens en ervaringslevering.
 
 Aan de serverzijde, maken een verenigde randgateway en een gemeenschappelijk kader van de platformdiensten het gemakkelijk om nieuwe mogelijkheden in deze real-time gegevensverwerkingsomgeving op te nemen en op te stellen.  Deze architectuur:
 
@@ -35,7 +35,7 @@ Aan de serverzijde, maken een verenigde randgateway en een gemeenschappelijk kad
 * Verhoogt de snelheid van innovatie
 * Creeert duurzame concurrerende voordelen voor klanten van Adobe
 
-Met één enkel geconsolideerd randsysteem kunnen klanten hun reclame-, marketing- of personalisatiecampagnes op alle kanalen als een geïntegreerde ervaring beheren.  Hierdoor kunnen klanten services leveren met lagere totale eigendomskosten.  [!DNL Adobe]  Het helpt ook de snelheid van productinnovatie te verhogen door de rand in real time pluggable te maken en [!DNL Adobe] en zijn klanten toe te staan om nieuwe mogelijkheden en klant-bepaalde logica aan dat echt - tijdsysteem sneller toe te voegen.
+Met één enkel geconsolideerd randsysteem kunnen klanten hun reclame-, marketing- of personalisatiecampagnes op alle kanalen als een geïntegreerde ervaring beheren.  Het staat [!DNL Adobe] om de diensten met lagere totale kosten van eigendom voor klanten te leveren.  Het helpt ook de snelheid van productinnovatie te verhogen door de rand in real time pluggable te maken en toe te staan [!DNL Adobe] en zijn klanten om nieuwe mogelijkheden en klant-bepaalde logica aan dat real time systeem sneller toe te voegen.
 
 ## Video-overzicht
 
@@ -52,17 +52,17 @@ Adobe Experience Platform Web SDK vervangt de volgende SDK&#39;s:
 * AT.js
 * DIL.js
 
-Dit is niet alleen een omslag rond bestaande bibliotheken. Het is een volledige herschrijving. Het doel is een einde te maken aan de uitdagingen waarbij tags in de juiste volgorde moeten worden afgevuurd, inconsistentie met bibliotheekversieproblemen en een beter beheer van afhankelijkheden. Het is een nieuwe manier om [!DNL Experience Cloud] uit te voeren en het is [open bron](https://github.com/adobe/alloy).
+Dit is niet alleen een omslag rond bestaande bibliotheken. Het is een volledige herschrijving. Het doel is een einde te maken aan de uitdagingen waarbij tags in de juiste volgorde moeten worden afgevuurd, inconsistentie met bibliotheekversieproblemen en een beter beheer van afhankelijkheden. Het is een nieuwe manier om de [!DNL Experience Cloud] en [open bron](https://github.com/adobe/alloy).
 
-Naast een nieuwe bibliotheek, is er een nieuw eindpunt dat de HTTP- verzoeken aan de oplossingen van Adobe stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen stuurde AT.js een vraag naar Adobe Target, zond DIL.js een vraag naar Adobe Audience Manager, en tenslotte stuurde AppMeasurement.js een vraag naar Adobe Analytics. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een [!DNL Target] ervaring halen, gegevens verzenden naar [!DNL Audience Manager], en de gegevens tot Adobe Experience Platform in één enkele vraag overgaan.
+Naast een nieuwe bibliotheek, is er een nieuw eindpunt dat de HTTP- verzoeken aan de oplossingen van Adobe stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen stuurde AT.js een vraag naar Adobe Target, zond DIL.js een vraag naar Adobe Audience Manager, en tenslotte stuurde AppMeasurement.js een vraag naar Adobe Analytics. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een halen [!DNL Target] ervaring, gegevens verzenden naar [!DNL Audience Manager]en geef de gegevens door aan Adobe Experience Platform in één aanroep.
 
-In de volgende video worden Adobe Experience Platform [!DNL Web SDK] en Adobe Experience Platform [!DNL Edge Network] in actie gedemonstreerd. Het videovoorbeeld gebruikt één enkele vraag aan Adobe die gegevens naar [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager], en [!DNL Target] verzendt.
+De volgende video demonstreert Adobe Experience Platform [!DNL Web SDK] en Adobe Experience Platform [!DNL Edge Network] in actie. Het videovoorbeeld gebruikt één enkele vraag aan Adobe die gegevens naar verzendt [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager], en [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Raadpleeg de pagina [supported use cases page](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html) voor meer informatie. Deze pagina bevat een overzicht van de gebruiksgevallen die momenteel worden ondersteund, met koppelingen naar meer informatie indien beschikbaar.
+Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Als u de nieuwste [pagina met ondersteunde gebruiksgevallen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). Deze pagina bevat een overzicht van de gebruiksgevallen die momenteel worden ondersteund, met koppelingen naar meer informatie indien beschikbaar.
 
-* **Gebruik nog niet ondersteunde gevallen:** dit zijn gebruiksgevallen die op onze routekaart staan en in de toekomst worden ondersteund.
-* **Gebruiksgevallen in uitvoering:** Dit zijn de gebruiksgevallen die het team momenteel aan voltooiing voor versie werkt.
-* **Gevallen voor ondersteund gebruik:** Dit zijn de gebruiksgevallen die worden ondersteund en die vandaag worden gebruikt.
-* **Gebruik gevallen die we niet ondersteunen:** dit zijn de gebruiksgevallen die we hebben besloten niet te ondersteunen.
+* **Gebruik nog niet ondersteunde gevallen:** Dit zijn gebruiksgevallen die op onze routekaart staan en die in de toekomst moeten worden ondersteund.
+* **Gevallen worden gebruikt:** Dit zijn de gebruiksgevallen die het team momenteel aan de voltooiing voor versie werkt.
+* **Gevallen voor ondersteund gebruik:** Dit zijn de gebruiksgevallen die worden ondersteund en vandaag werken.
+* **Gebruik gevallen die we niet ondersteunen:** Dit zijn de gebruiksgevallen die we hebben besloten niet te steunen.

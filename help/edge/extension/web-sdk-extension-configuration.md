@@ -1,27 +1,27 @@
 ---
-title: Adobe Experience Platform Web SDK-configuratie
-description: Meer informatie over de tagextensie Adobe Experience Platform Web SDK.
+title: De extensie Adobe Experience Platform Web SDK configureren
+description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in de UI van de Inzameling van Gegevens te vormen.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
 
-# Overzicht
+# De extensie Adobe Experience Platform Web SDK configureren
 
-De Adobe Experience Platform Web SDK-extensie verzendt gegevens van wegeigenschappen naar Adobe Experience Cloud via het Adobe Experience Platform Edge Network. Met de extensie kunt u gegevens streamen naar een Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
+Met de tagextensie Adobe Experience Platform Web SDK worden gegevens vanuit wegeigenschappen via het Adobe Experience Platform Edge Network verzonden naar Adobe Experience Cloud. Met de extensie kunt u gegevens streamen naar een Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
 
 Dit document behandelt hoe te om de uitbreiding in de Inzameling UI van Gegevens te vormen.
 
-## De extensie configureren
+## Aan de slag
 
-Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in de Inzameling UI van Gegevens en selecteer **[!UICONTROL Extensions]** tabel. Selecteer **[!UICONTROL Configure]** onder Web SDK van Platform.
+Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in de Inzameling UI van Gegevens en selecteer **[!UICONTROL Extensions]** tab. Onder het Web SDK van het Platform, selecteer **[!UICONTROL Configure]**.
 
 ![](../images/extension/overview/configure.png)
 
-Als u de extensie nog niet hebt geïnstalleerd, selecteert u het tabblad **[!UICONTROL Catalog]**. Van de lijst van beschikbare uitbreidingen, vind de uitbreiding van SDK van het Web van het Platform en selecteer **[!UICONTROL Install]**.
+Als u de extensie nog niet hebt geïnstalleerd, selecteert u de **[!UICONTROL Catalog]** tab. Van de lijst van beschikbare uitbreidingen, vind de uitbreiding van SDK van het Web van het Platform en selecteer **[!UICONTROL Install]**.
 
 ![](../images/extension/overview/install.png)
 
@@ -37,28 +37,28 @@ De configuratieopties boven aan de pagina vertellen Adobe Experience Platform wa
 
 De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden.
 
-De naam van de extensie is standaard &quot;[!DNL alloy]&quot;. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
+De naam van de extensie wordt standaard ingesteld op &quot;[!DNL alloy]&quot;. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
 
 ### **[!UICONTROL IMS Organization ID]**
 
-De [!UICONTROL IMS Organization ID] is de organisatie waarnaar u de gegevens wilt verzenden bij Adobe. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
+De [!UICONTROL IMS Organization ID] Dit is de organisatie waarnaar u de gegevens wilt verzenden bij Adobe. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
 
 ### **[!UICONTROL Edge Domain]**
 
-[!UICONTROL Edge Domain] is het domein dat de uitbreiding van Adobe Experience Platform verzendt en gegevens van ontvangt. De uitbreiding vereist dat u 1st-partij CNAME voor productieverkeer gebruikt. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+De [!UICONTROL Edge Domain] is het domein waarvan de extensie Adobe Experience Platform gegevens verzendt en ontvangt. De uitbreiding vereist dat u 1st-partij CNAME voor productieverkeer gebruikt. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
 ## [!UICONTROL Datastreams]
 
 Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een gegevensstroom-id gebruikt om naar de serverconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
-Zie de gids op [gegevensstromen](../fundamentals/datastreams.md) voor meer informatie.
+Zie de handleiding op [gegevensstromen](../fundamentals/datastreams.md) voor meer informatie .
 
 
 ## [!UICONTROL Privacy]
 
 ![](../images/extension/overview/privacy.png)
 
-In de sectie [!UICONTROL Privacy] kunt u configureren hoe de SDK de signalen van uw website voor gebruikerstoestemming verwerkt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven. Het standaard toestemmingsniveau wordt niet bewaard aan het profiel van de gebruiker. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
+De [!UICONTROL Privacy] kunt u configureren hoe de SDK de signalen van uw website voor gebruikerstoestemming verwerkt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven. Het standaard toestemmingsniveau wordt niet bewaard aan het profiel van de gebruiker. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
 
 | [!UICONTROL Default Consent Level] | Beschrijving |
 | --- | --- |
@@ -85,7 +85,7 @@ Met deze optie kan de SDK proberen een gebruikers-id op te slaan in een cookie v
 
 ![](../images/extension/overview/personalization.png)
 
-Als u bepaalde onderdelen wilt verbergen als uw site wordt geladen terwijl er gepersonaliseerde inhoud is geladen, kunt u de elementen opgeven die u wilt verbergen in de voorverborgen stijleditor. Vervolgens kunt u het standaardvoorverborgen fragment dat u wordt aangeboden, kopiëren en in het `<head>`element van uw HTML-site plakken.
+Als u bepaalde onderdelen wilt verbergen als uw site wordt geladen terwijl er gepersonaliseerde inhoud is geladen, kunt u de elementen opgeven die u wilt verbergen in de voorverborgen stijleditor. Vervolgens kunt u het standaard voorverborgen fragment dat u ontvangt, kopiëren en in het dialoogvenster `<head>`-element van uw HTML-site.
 
 ## [!UICONTROL Data Collection]
 
@@ -93,15 +93,15 @@ Als u bepaalde onderdelen wilt verbergen als uw site wordt geladen terwijl er ge
 
 ### [!UICONTROL Callback function]
 
-De callback functie die in de uitbreiding wordt verstrekt wordt ook genoemd [`onBeforeEventSend` functie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in de bibliotheek. Met deze functie kunt u gebeurtenissen globaal wijzigen voordat ze naar Adobe Edge Network worden verzonden. Meer gedetailleerde informatie over het gebruik van deze functie vindt u [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+De callback-functie die in de extensie wordt opgegeven, wordt ook [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in de bibliotheek. Met deze functie kunt u gebeurtenissen globaal wijzigen voordat ze naar Adobe Edge Network worden verzonden. Meer gedetailleerde informatie over het gebruik van deze functie vindt u [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL Click data collection]
 
-De SDK kan automatisch koppelingsklikgegevens voor u verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als deze een van de downloadexpressies bevatten die in het tekstvak [!UICONTROL Download Link Qualifier] worden vermeld. Adobe biedt u enkele standaardkwalificatietoetsen voor downloadkoppelingen, maar deze kunnen op elk gewenst moment worden bewerkt.
+De SDK kan automatisch koppelingsklikgegevens voor u verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als ze een van de downloadexpressies bevatten die in het dialoogvenster [!UICONTROL Download Link Qualifier] textbox. Adobe biedt u enkele standaardkwalificatietoetsen voor downloadkoppelingen, maar deze kunnen op elk gewenst moment worden bewerkt.
 
 ### [!UICONTROL Automatically collected context data]
 
-Door gebrek, verzamelt SDK bepaalde contextgegevens betreffende apparaat, Web, milieu, en plaatcontext. Als u een lijst van de informatie zou willen zien Adobe verzamelt, kunt u het [hier ](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en) vinden. Als u deze gegevens niet wilt verzamelen of slechts bepaalde categorieën gegevens wilt verzamelen, kunt u deze opties veranderen.
+Door gebrek, verzamelt SDK bepaalde contextgegevens betreffende apparaat, Web, milieu, en plaatcontext. Als u een lijst van de informatie wilt zien Adobe verzamelt, kunt u het vinden [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Als u deze gegevens niet wilt verzamelen of slechts bepaalde categorieën gegevens wilt verzamelen, kunt u deze opties veranderen.
 
 ## [!UICONTROL Advanced Settings]
 
