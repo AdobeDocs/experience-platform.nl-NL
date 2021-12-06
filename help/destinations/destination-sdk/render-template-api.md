@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/template/render ` API eindpunt, om uitgevoerde gegevens voor uw bestemming terug te geven, die op uw malplaatje van de berichttransformatie wordt gebaseerd.
 title: API-bewerkingen voor sjablonen renderen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,8 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 ## Geëxporteerde profielen renderen op basis van de sjabloon voor berichttransformatie {#render-exported-data}
 
 U kunt geëxporteerde profielen renderen door een POST aan te vragen bij de `authoring/testing/template/render` eindpunt en het verstrekken van bestemmingsidentiteitskaart van de bestemmingsconfiguratie en het malplaatje u creeerde gebruikend [voorbeeldsjabloon-API-eindpunt](./sample-template-api.md).
+
+U kunt beginnen met het gebruik van een eenvoudige sjabloon die uw Raw-profielen exporteert zonder transformaties toe te passen en vervolgens verdergaan naar een complexere sjabloon, die transformaties toepast op profielen. De syntaxis voor de eenvoudige sjabloon is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
@@ -1065,7 +1067,7 @@ Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van d
 
 ## API-foutafhandeling {#api-error-handling}
 
-De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Zie [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [aanvragen, koptekstfouten](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene beginselen van API-foutberichten voor Experience Platforms. Zie [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [aanvragen, koptekstfouten](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
 
 ## Volgende stappen {#next-steps}
 
