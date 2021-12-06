@@ -1,10 +1,10 @@
 ---
-description: Als deel van Doel SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u in het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen.
+description: Als onderdeel van Destination SDK biedt Adobe hulpprogramma's voor ontwikkelaars die u helpen bij het configureren en testen van uw bestemming. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen.
 title: De doelconfiguratie testen
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
+source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,21 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Als deel van Doel SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u in het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen. Voor informatie over hoe te om een malplaatje van de berichttransformatie tot stand te brengen, lees [creeer en test een malplaatje van de berichttransformatie](./create-template.md).
+Als onderdeel van Destination SDK biedt Adobe hulpprogramma&#39;s voor ontwikkelaars die u helpen bij het configureren en testen van uw bestemming. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen. Voor informatie over hoe u een sjabloon voor berichttransformatie kunt maken, leest u [Een sjabloon voor berichttransformatie maken en testen](./create-template.md).
 
-Om **test als uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren**, gebruik *het testende hulpmiddel van de Bestemming*. Met dit hulpmiddel, kunt u uw bestemmingsconfiguratie testen door berichten naar uw REST API eindpunt te verzenden.
+Naar **test als uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren**, gebruikt u de *Gereedschap Doel testen*. Met dit hulpmiddel, kunt u uw bestemmingsconfiguratie testen door berichten naar uw REST API eindpunt te verzenden.
 
-Hieronder wordt geïllustreerd hoe het testen van uw bestemming in [bestemmingsconfiguratiewerkschema](./configure-destination-instructions.md) in Doel SDK past:
+Hieronder wordt geïllustreerd hoe het testen van uw bestemming past in de [doelconfiguratieworkflow](./configure-destination-instructions.md) in Destination SDK:
 
 ![Grafiek van waar de bestemmings testende stap in het werkschema van de bestemmingsconfiguratie past](./assets/test-destination-step.png)
 
-## Gereedschap Doel testen {#destination-testing-tool}
+## Gereedschap voor het testen van de bestemming - Doel en voorwaarden {#destination-testing-tool}
 
-Gebruik dit hulpmiddel om uw bestemmingsconfiguratie te testen door berichten naar het partnereindpunt te verzenden u in [serverconfiguratie](./server-and-template-configuration.md) verstrekte.
+Gebruik het bestemmings testende hulpmiddel om uw bestemmingsconfiguratie te testen door berichten naar het partnereindpunt te verzenden u in [serverconfiguratie](./server-and-template-configuration.md).
+
+Controleer voordat u het gereedschap gebruikt of:
+* Vorm uw bestemming door de stappen te volgen die in worden geschetst [doelconfiguratieworkflow](./configure-destination-instructions.md) en
+* Stel een verbinding met uw bestemming in, zoals in [Hoe te om bestemmingsID te krijgen](./destination-testing-api.md#get-destination-instance-id).
 
 Met dit hulpmiddel, na het vormen van uw bestemming, kunt u:
 * Test of uw bestemming correct wordt gevormd;
@@ -33,20 +37,20 @@ Met dit hulpmiddel, na het vormen van uw bestemming, kunt u:
 
 >[!NOTE]
 >
->Lees [API-bewerkingen voor doeltests](./destination-testing-api.md) voor volledige API-naslagdocumentatie.
+>Voor volledige API-naslagdocumentatie leest u [API-bewerkingen voor doeltesten](./destination-testing-api.md).
 
 U kunt vraag aan het bestemmings het testen API eindpunt met of zonder profielen op het verzoek toe te voegen.
 
-Als u geen profielen aan de aanvraag toevoegt, genereert Adobe deze intern voor u en voegt u ze toe aan de aanvraag. Als u profielen wilt genereren voor gebruik in deze aanvraag, raadpleegt u de [Sample profile generation API reference](./sample-profile-generation-api.md). U moet profielen produceren die op het bronXDM schema, zoals aangetoond in [API verwijzing](./sample-profile-generation-api.md#generate-sample-profiles-source-schema) worden gebaseerd. Merk op dat het bronschema [union schema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) van de zandbak is die u gebruikt.
+Als u geen profielen aan de aanvraag toevoegt, genereert Adobe deze intern voor u en voegt u ze toe aan de aanvraag. Als u profielen wilt genereren voor gebruik in deze aanvraag, raadpleegt u de [Voorbeeld van API-naslaggids voor genereren van profielen](./sample-profile-generation-api.md). U moet profielen produceren die op het bronXDM schema worden gebaseerd, zoals aangetoond in [API-referentie](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Het bronschema is het [samenvoegingsschema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) van de sandbox die u gebruikt.
 
 De reactie bevat het resultaat van de verwerking van het bestemmingsverzoek. Het verzoek omvat drie belangrijke onderdelen:
 * Het verzoek dat door Adobe voor de bestemming wordt geproduceerd.
 * De reactie die van uw bestemming wordt ontvangen.
-* De lijst met profielen die in de aanvraag zijn verzonden, of de profielen [zijn toegevoegd door u in de aanvraag](./destination-testing-api.md/#test-with-added-profiles) of zijn gegenereerd door Adobe als [de hoofdtekst van de aanvraag voor het testen van de bestemming leeg](./destination-testing-api.md#test-without-adding-profiles) was.
+* De lijst met profielen die in de aanvraag zijn verzonden, of de profielen [toegevoegd door u in het verzoek](./destination-testing-api.md/#test-with-added-profiles), of gegenereerd door Adobe als [de hoofdtekst van de aanvraag voor het testen van de bestemming leeg was](./destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->Adobe kan veelvoudige verzoek en reactieparen produceren. Als u bijvoorbeeld 10 profielen verzendt naar een doel met de waarde `maxUsersPerRequest` 7, is er één aanvraag met 7 profielen en een andere aanvraag met 3 profielen.
+>Adobe kan veelvoudige verzoek en reactieparen produceren. Als u bijvoorbeeld 10 profielen verzendt naar een doel met een `maxUsersPerRequest` waarde 7, er is één aanvraag met 7 profielen en een andere aanvraag met 3 profielen.
 
 **Voorbeeldverzoek met profielparameter in de hoofdtekst**
 
@@ -121,7 +125,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Monsterreactie**
 
-De inhoud van de parameter `results.httpCalls` is specifiek voor uw REST API.
+De inhoud van de `results.httpCalls` is specifiek voor uw REST API.
 
 ```json
 {
@@ -225,8 +229,8 @@ De inhoud van de parameter `results.httpCalls` is specifiek voor uw REST API.
 }
 ```
 
-Raadpleeg [API-bewerkingen voor het testen van doelen](./destination-testing-api.md) voor beschrijvingen van de verzoek- en responsparameters.
+Voor beschrijvingen van de verzoek- en responsparameters raadpleegt u [API-bewerkingen voor doeltesten](./destination-testing-api.md).
 
 ## Volgende stappen
 
-Na het testen van uw bestemming en het bevestigen dat het correct wordt gevormd, gebruik [bestemmings het publiceren API](./destination-publish-api.md) om uw configuratie aan Adobe voor overzicht voor te leggen.
+Na het testen van uw bestemming en het bevestigen dat het correct wordt gevormd, gebruik [doel-publicatie-API](./destination-publish-api.md) om uw configuratie ter controle naar Adobe te verzenden.
