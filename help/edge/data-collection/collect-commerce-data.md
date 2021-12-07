@@ -3,9 +3,9 @@ title: Handel en productinformatie verzamelen met de SDK van Adobe Experience Pl
 description: Leer hoe u gegevens met betrekking tot producten of een winkelwagentje toevoegt met de Adobe Experience Platform Web SDK.
 keywords: producten;handel;maatregelen;maatregel;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListViews;productListViews;productViews;aankopen;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
+source-git-commit: 51a18ca3a9d0817eafeecea328900eb2f4d1d9a4
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1326'
 ht-degree: 1%
 
 ---
@@ -114,7 +114,7 @@ De productlijst geeft aan welke producten gerelateerd zijn aan de corresponderen
 | **Veld** | **Aanbeveling** | **Beschrijving** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Optioneel | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) valuta voor het product. Dit is alleen handig wanneer u producten met verschillende valutacodes kunt gebruiken en wanneer deze van toepassing zijn. Bijvoorbeeld wanneer er een aankoop is of een winkelwagentje wordt toegevoegd. |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Zeer aanbevolen | Moet alleen worden vastgesteld wanneer dit van toepassing is. Het is bijvoorbeeld mogelijk dat u niet kunt instellen op `productView` omdat verschillende variaties van het product verschillende prijzen kunnen hebben, maar op een `productListAdds`. |
+| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Zeer aanbevolen | Moet alleen worden vastgesteld wanneer dit van toepassing is. Het is bijvoorbeeld mogelijk dat u niet kunt instellen op `productView` gebeurtenis omdat verschillende variaties van het product verschillende prijzen kunnen hebben, maar op een `productListAdds` gebeurtenis. |
 | [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | Zeer aanbevolen | De XDM-id voor het product. |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Zeer aanbevolen | De methode die door de bezoeker is gebruikt om een product-item aan de lijst toe te voegen. Instellen met `productListAdds` maatregelen en mogen alleen worden gebruikt wanneer een product aan de lijst wordt toegevoegd. Voorbeelden zijn `add to cart button`, `quick add`, en `upsell`. |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | Zeer aanbevolen | Deze wordt ingesteld op de weergavenaam of leesbare naam van het product. |
