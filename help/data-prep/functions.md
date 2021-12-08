@@ -5,9 +5,9 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 16484a5cf9f8ae7e4d0802cb8957c8627466db5f
+source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3971'
 ht-degree: 2%
 
 ---
@@ -114,8 +114,8 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Hiermee wordt de huidige tijd opgehaald. |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Hiermee wordt de huidige Unix-tijd opgehaald. |  | timestamp() | timestamp() | 1571850624571 |
-| date_to_string | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | <ul><li>DATUM: **Vereist** De invoerdatum, als een ZonedDateTime-object, die u wilt opmaken.</li><li>INDELING: **Vereist** De notatie waarin de datum moet worden gewijzigd.</li></ul> | date_to_string(DATE, FORMAT) | date_to_string(2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35 inch |
-| long_to_date | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | <ul><li>TIJDSTEMPEL: **Vereist** Het tijdstempel dat u wilt opmaken. Dit wordt geschreven in milliseconden.</li><li>INDELING: **Vereist** De indeling die u wilt instellen als tijdstempel.</li></ul> | long_to_date(TIMESTAMP, FORMAT) | long_to_date(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35,000Z&quot; |
+| format | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | <ul><li>DATUM: **Vereist** De invoerdatum, als een ZonedDateTime-object, die u wilt opmaken.</li><li>INDELING: **Vereist** De notatie waarin de datum moet worden gewijzigd.</li></ul> | format(DATE, FORMAT) | formaat (2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35 inch |
+| dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | <ul><li>TIJDSTEMPEL: **Vereist** Het tijdstempel dat u wilt opmaken. Dit wordt geschreven in milliseconden.</li><li>INDELING: **Vereist** De indeling die u wilt instellen als tijdstempel.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35,000Z&quot; |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Vereist** De tekenreeks die de datum vertegenwoordigt.</li><li>INDELING: **Vereist** De tekenreeks die staat voor de indeling van de brondatum.**Opmerking:** Dit doet **niet** vertegenwoordigen de notatie waarin u de datumtekenreeks wilt omzetten. </li><li>DEFAULT_DATE: **Vereist** De geretourneerde standaarddatum als de opgegeven datum null is.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24:00Z&quot; |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Vereist** De tekenreeks die de datum vertegenwoordigt.</li><li>INDELING: **Vereist** De tekenreeks die staat voor de indeling van de brondatum.**Opmerking:** Dit doet **niet** vertegenwoordigen de notatie waarin u de datumtekenreeks wilt omzetten. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Vereist** De tekenreeks die de datum vertegenwoordigt.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
@@ -237,7 +237,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| ua_os_name | Extraheert de naam van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1, zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
+| ua_os_name | Extraheert de naam van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone); CPU iPhone OS 5_1_1, zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Extraheert de belangrijkste versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone); CPU iPhone OS 5_1_1, zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
 | ua_os_version | Extraheert de versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone); CPU iPhone OS 5_1_1, zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1. |
 | ua_os_name_version | Extraheert de naam en versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_name_version &#x200B;(USER_AGENT) | ua_os_name_version &#x200B;(&quot;Mozilla/5.0 (iPhone); CPU iPhone OS 5_1_1, zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
