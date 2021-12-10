@@ -2,10 +2,10 @@
 title: XDM Business Person Components-schemaveldgroep
 description: Dit document biedt een overzicht van de XDM Business Person Components schema-veldgroep.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 83329002a1fe51e49818a203191c7082f9589037
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 2%
+source-wordcount: '532'
+ht-degree: 1%
 
 ---
 
@@ -16,6 +16,15 @@ ht-degree: 2%
 Wanneer een profiel voor een persoon via [Klantprofiel in realtime](../../../profile/home.md) in de B2B-editie van Real-Time CDP, kan de informatie die wordt gebruikt om dat profiel tot stand te brengen potentieel uit vele bronverslagen afkomstig zijn. Bijvoorbeeld, als een persoon voor twee verschillende bedrijven werkt, zouden vele systemen van CRM tot een opzettelijk dubbel exemplaar van die persoon leiden zodat één exemplaar met Bedrijf A wordt verbonden, terwijl andere met Onderneming B wordt verbonden. Wanneer die gegevens naar Adobe Experience Platform worden overgebracht, wordt deze veldgroep gebruikt om die verschillende bronrecords samen te voegen tot één representatie.
 
 De veldgroep biedt een basisniveau `personComponents` field, een array van objecten. Elk object in de array vertegenwoordigt een andere bronrecord.
+
+>[!IMPORTANT]
+>
+>U dient de inname-patronen te volgen zoals beschreven in het dialoogvenster [documentatie bronnen](../../../rtcdp/sources/b2b.md). Andere kaartmethoden in het veld werken niet gegarandeerd.
+>
+>Elk object van de `personComponents` array wordt afzonderlijk verzonden tijdens standaard innamepatronen en vervolgens via Platform aan de array toegevoegd. Als u handmatig een array met objecten toevoegt aan de Business Person Component, wordt een fout geretourneerd.
+>U zou het auto-generatienut moeten gebruiken wanneer het creëren van schema&#39;s voor uw B2B gegevens. Zie de documentatie voor instructies over het gebruik van de [B2B-naamruimte en hulpprogramma voor automatisch genereren van schema](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Als u het hulpprogramma voor automatisch genereren niet gebruikt en van plan bent het gegevensmodel handmatig toe te wijzen, moet u de documentatie lezen op [de klassen Real-time Customer Data Platform B2B Edition Experience Data Model (XDM)](../../../rtcdp/schemas/b2b.md) voordat u uw gegevens toewijst.
+>
+>Zie de [end-to-end zelfstudie](../../../rtcdp/b2b-tutorial.md) voor informatie over aanbevolen workflows voor B2B-gegevens.
 
 ![](../../images/field-groups/business-person-components.png)
 

@@ -2,9 +2,9 @@
 title: Doelen in Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de rol van bestemmingen in Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 >Als u Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [overzicht van de bestemmingen](../../destinations/home.md) in plaats daarvan.
 
 De bestemmingen van het Experience Platform volledig die door CDP B2B Uitgave in real time worden gesteund omvatten de Klant van Google Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, de Vertoning van Google &amp; Video 360, Google Ads, en de Manager van Google.
+
+Als u wilt weten hoe doelen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
 Met Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens exporteren via de Marketo Engage-doelconnector. Door de bestemming van de Marketo Engage te gebruiken, kunt u segmenten die in Adobe Experience Platform aan Marketo worden gecreeerd duwen, waar zij als statische lijsten zullen verschijnen.
 

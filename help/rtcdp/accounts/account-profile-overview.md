@@ -3,9 +3,9 @@ keywords: rtcdp b2b;b2b;account;accountprofiel;accountprofielen rtcdp;real-time 
 title: Accountprofielen in Real-time CDP B2B Edition
 description: Leer hoe u met Real-time Customer Data Platform B2B Edition accountgegevens uit meerdere bronnen kunt verenigen met accountprofielen.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >Accountprofielen zijn alleen beschikbaar voor Real-time Customer Data Platform B2B Edition-klanten. Als u meer wilt weten over CDP, B2B Edition in realtime, inclusief de beschikbare functies en functionaliteit, leest u eerst de [Real-time CDP, B2B Edition overzicht](../b2b-overview.md).
 
-Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de gegevens van de klantenrekening op te slaan.
+Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de gegevens van de klantenrekening op te slaan. Als u meer wilt weten over de manier waarop accountprofielen worden gemaakt als onderdeel van de B2B-workflow, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md).
 
 Door accountgegevens uit verschillende bronnen te bundelen, kunt u een volledig beeld van elk van uw klantenrekeningen en zijn verwante mogelijkheden en contacten beginnen te zien. Hierdoor kan uw organisatie uw B2B-marketingcampagnes naar een nieuw niveau tillen. Lees voor meer informatie over de kracht van CDP, B2B Edition in real time de [CDP-, B2B Edition-voorbeeldgebruik in realtime](../b2b-use-case.md).
 

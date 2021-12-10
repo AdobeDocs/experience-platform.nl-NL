@@ -1,17 +1,17 @@
 ---
-title: Overzicht van de Gevallen van het Gebruik van de Segmentatie voor Echte - tijdCDP B2B Uitgave
+title: De Gevallen van het Gebruik van de segmentatie voor Echte - tijdCDP B2B Uitgave
 description: Een overzicht van de diverse beschikbare Echte - tijdCDP B2B de gebruiksgevallen van de Uitgave.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
 
-# Overzicht van de segmentatieuse cases voor Real-time Customer Data Platform B2B Edition
+# Gebruiksscenario&#39;s voor segmentatie voor Real-time Customer Data Platform B2B Edition
 
-Dit document bevat voorbeelden met betrekking tot de segmentatie die beschikbaar is voor CDP B2B Edition in realtime en hoe de verschillende typen kenmerken kunnen worden gecombineerd voor algemene B2B-gebruiksgevallen.
+Dit document bevat voorbeelden van segmentdefinities in Real-time CDP B2B Edition en hoe verschillende typen kenmerken kunnen worden gecombineerd voor algemene B2B-gebruiksgevallen. Als u wilt weten hoe doelen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: Bronnen in Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de rol van bronnen in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Met Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via vers
 >[!TIP]
 >
 >Hoewel Real-time Customer Data Platform B2B Edition een groot aantal externe bronnen aanbiedt, van waaruit gegevens kunnen worden ingevoerd, zijn er minder bronnen beschikbaar voor Real-time Customer Data Platform. Om te leren welke bronschakelaars aan uw organisatie beschikbaar zijn, kunt u de broncatalogus in de UI van het Platform bekijken. Als u de catalogus wilt openen, selecteert u **Bronnen** in de linkernavigatie selecteert u vervolgens **Catalogus**.
+
+Als u wilt weten hoe bronnen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 Zie de [overzicht van bronconnectors](../../sources/home.md) voor meer informatie over de soorten bronnen die in Adobe Experience Platform beschikbaar zijn.
 
