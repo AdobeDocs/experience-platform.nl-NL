@@ -2,9 +2,9 @@
 description: Op deze pagina vindt u een overzicht en beschrijving van de stappen voor het configureren van een streamingbestemming met Destination SDK.
 title: Destination SDK gebruiken om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 Hieronder weergegeven is een voorbeeldconfiguratie voor een doelsjabloon, die is gemaakt met de `/destinations` API-eindpunt. Voor meer informatie over deze sjabloon raadpleegt u [Doelconfiguratie](./destination-configuration.md).
 
 Om de server en malplaatjeconfiguratie in stap 1 met deze bestemmingsconfiguratie te verbinden, voeg instantieidentiteitskaart van de server en malplaatjeconfiguratie als toe `destinationServerId` hier.
+
+>[!IMPORTANT]
+>
+>Om een correct gevormde bestemming tot stand te brengen, u *moet* minstens één doelidentiteit toevoegen in `identityNamespaces`, zoals hieronder weergegeven. Als geen doelidentiteit wordt gevormd, zullen de gebruikers niet voorbij voorbij kunnen te werk gaan [Toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de activeringsworkflow.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
