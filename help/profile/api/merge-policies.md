@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2469'
 ht-degree: 0%
@@ -115,7 +115,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
     }
 ```
 
-Wanneer `{IDENTITY_GRAPH_TYPE}` is één van het volgende:
+Wanneer `{IDENTITY_GRAPH_TYPE}` is een van de volgende:
 
 * **&quot;none&quot;:** Geen identiteitsstitching uitvoeren.
 * **&quot;pdg&quot;:** Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
@@ -140,10 +140,10 @@ Een profielfragment is de profielinformatie voor slechts één identiteit uit de
     }
 ```
 
-Wanneer `{ATTRIBUTE_MERGE_TYPE}` is één van het volgende:
+Wanneer `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
 
 * **`timestampOrdered`**: (standaardwaarde) Geef prioriteit aan het profiel dat het laatst is bijgewerkt. Met dit samenvoegtype `data` attribuut is not required.
-* **`dataSetPrecedence`** : Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer u dit samenvoegtype gebruikt, wordt `order` attribuut wordt vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
+* **`dataSetPrecedence`**: Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer u dit samenvoegtype gebruikt, wordt `order` attribuut wordt vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
    * **`order`**: Wanneer &quot;dataSetPrecision&quot; wordt gebruikt, wordt een `order` array moet worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De `order` De serie maakt een lijst van IDs van de datasets in orde van prioriteit.
 
 #### Voorbeeld `attributeMerge` object gebruiken `dataSetPrecedence` type
@@ -151,7 +151,7 @@ Wanneer `{ATTRIBUTE_MERGE_TYPE}` is één van het volgende:
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -483,12 +483,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]

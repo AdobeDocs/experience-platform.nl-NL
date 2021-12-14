@@ -5,8 +5,7 @@ title: API-eindpunt voor querysjablonen
 topic-legacy: query templates
 description: De volgende documentatie loopt door de diverse API vraag u het gebruiken van vraagmalplaatjes voor de Dienst API van de Vraag kunt maken.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 1%
@@ -17,11 +16,11 @@ ht-degree: 1%
 
 ## Voorbeeld-API-aanroepen
 
-Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het richten vraag aan [!DNL Query Service] API. De volgende secties lopen door de diverse API vraag u kan maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+Nu u begrijpt welke kopballen aan gebruik zijn, bent u bereid beginnen het richten van vraag aan [!DNL Query Service] API. De volgende secties lopen door diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ### Een lijst met querysjablonen ophalen
 
-U kunt een lijst van alle vraagmalplaatjes voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/query-templates` eindpunt te doen.
+U kunt een lijst van alle vraagmalplaatjes voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan `/query-templates` eindpunt.
 
 **API-indeling**
 
@@ -32,7 +31,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facultatieve*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
+| `{QUERY_PARAMETERS}` | (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
 
 **Parameters query**
 
@@ -40,10 +39,10 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Als u een `-` toevoegt voordat u een item (`orderby=-created`) hebt gemaakt, worden de items in aflopende volgorde gesorteerd. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. `start=2` retourneert bijvoorbeeld een lijst die begint bij de derde query. (*Standaardwaarde: 0*) |
-| `property` | Filterresultaten op basis van velden. De filters **must** moeten uit HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `name` en `userId`. De enige ondersteunde operator is `==` (gelijk aan). `name==my_template` retourneert bijvoorbeeld alle querysjablonen met de naam `my_template`. |
+| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld: `start=2` Hiermee wordt een lijst geretourneerd die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `name` en `userId`. De enige ondersteunde operator is `==` (gelijk aan). Bijvoorbeeld: `name==my_template` retourneert alle querysjablonen met de naam `my_template`. |
 
 **Verzoek**
 
@@ -83,7 +82,7 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van vraagmalplaatjes
                 "update": {
                     "href": "https://platform.adobe.io/data/foundation/query/query-templates/f7cb5155-29da-4b95-8131-8c5deadfbe7f",
                     "method": "PUT",
-                    "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+                    "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
                 }
             }
         }
@@ -108,11 +107,11 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van vraagmalplaatjes
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
+>U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
 
 ### Een querysjabloon maken
 
-U kunt een vraagmalplaatje tot stand brengen door een verzoek van de POST aan het `/query-templates` eindpunt te doen.
+U kunt een vraagmalplaatje tot stand brengen door een verzoek van de POST aan `/query-templates` eindpunt.
 
 **API-indeling**
 
@@ -163,7 +162,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -171,11 +170,11 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
+>U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
 
 ### Een opgegeven querysjabloon ophalen
 
-U kunt een specifiek vraagmalplaatje terugwinnen door een verzoek van de GET aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifieke vraagmalplaatje terugwinnen door een verzoek van de GET aan `/query-templates/{TEMPLATE_ID}` eindpunt en het verstrekken van identiteitskaart van het vraagmalplaatje in de verzoekweg.
 
 **API-indeling**
 
@@ -185,7 +184,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | De waarde `id` van het vraagmalplaatje u wilt terugwinnen. |
+| `{TEMPLATE_ID}` | De `id` waarde van het vraagmalplaatje u wilt terugwinnen. |
 
 **Verzoek**
 
@@ -221,7 +220,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -229,11 +228,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
+>U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
 
 ### Een opgegeven querysjabloon bijwerken
 
-U kunt een specifiek vraagmalplaatje bijwerken door een verzoek van de PUT aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifieke vraagmalplaatje bijwerken door een verzoek van de PUT aan `/query-templates/{TEMPLATE_ID}` eindpunt en het verstrekken van identiteitskaart van het vraagmalplaatje in de verzoekweg.
 
 **API-indeling**
 
@@ -243,13 +242,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | De waarde `id` van het vraagmalplaatje u wilt terugwinnen. |
+| `{TEMPLATE_ID}` | De `id` waarde van het vraagmalplaatje u wilt terugwinnen. |
 
 **Verzoek**
 
 >[!NOTE]
 >
->Het verzoek van de PUT vereist zowel het sql als naamgebied om worden gevuld, en zal **de huidige inhoud van dat vraagmalplaatje beschrijven.**
+>Voor de aanvraag van de PUT moeten zowel het veld sql als de naam worden ingevuld en **overschrijven** de huidige inhoud van die vraagmalplaatje.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -293,7 +292,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewer
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query_templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -301,11 +300,11 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewer
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
+>U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
 
 ### Een opgegeven querysjabloon verwijderen
 
-U kunt een specifiek vraagmalplaatje schrappen door een verzoek van de DELETE aan `/query-templates/{TEMPLATE_ID}` te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifieke vraagmalplaatje schrappen door een verzoek van de DELETE aan te richten `/query-templates/{TEMPLATE_ID}` en het verstrekken van identiteitskaart van het vraagmalplaatje in de verzoekweg.
 
 **API-indeling**
 
@@ -315,7 +314,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | De waarde `id` van het vraagmalplaatje u wilt terugwinnen. |
+| `{TEMPLATE_ID}` | De `id` waarde van het vraagmalplaatje u wilt terugwinnen. |
 
 **Verzoek**
 

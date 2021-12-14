@@ -1,13 +1,13 @@
 ---
 title: Verizon MediaYahoo DataX-verbinding
 description: DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen.
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 1%
 
 ---
-
 
 # Verizon Media/Yahoo DataX-verbinding
 
@@ -27,7 +27,7 @@ Dit is een unieke id in Yahoo DataX en het is een verplicht veld voor het instel
 
 **Snelheidslimiet**
 
-DataX is tarief-beperkt binnen de quotagrenzen voor taxonomie en publieksposten die in de [documentatie DataX](https://developer.verizonmedia.com/datax/guide/rate-limits/) worden geschetst.
+DataX is tariefbeperkt binnen de quota voor taxonomie en publieksposten die in [DataX-documentatie](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
 
 | Foutcode | Foutbericht | Beschrijving |
@@ -45,13 +45,13 @@ De bron Taxonomy definieert een extensie via de structuur van Base DataX-metageg
 
   >>(Base DataX Metadata)<<
 
-        "extensions" : { "action" :
-        {string}, "incrementalData" :
+        "extensions": { "action":
+        {string}, "incrementalData":
         {
                 "taxonomyId": {string}
                 },
-                "links" : [{
-                "rel"   : "https://datax.yahooapis.com/rels/fullTaxonomy", "title" : "Full
+                "links": [{
+                "rel": "https://datax.yahooapis.com/rels/fullTaxonomy", "title": "Full
                 Taxonomy post processing",
                 "href": {string}
                 ]
@@ -59,7 +59,7 @@ De bron Taxonomy definieert een extensie via de structuur van Base DataX-metageg
 }
 ```
 
-Meer informatie over [Taxonomy Metadata](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) vindt u in de documentatie voor ontwikkelaars van DataX.
+Meer informatie over [Metagegevens over taxonomie](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) in de documentatie voor ontwikkelaars van DataX.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -67,15 +67,15 @@ Verizon Media ondersteunt de activering van identiteiten die in de onderstaande 
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 | GAID | Google-advertentie-id | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
-| IDFA | Apple ID for Advertisers | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
+| IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Exporttype {#export-type}
 
-**Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail) die worden gebruikt in de bestemming Verizon Media.
+**Segment exporteren** - u exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail) die worden gebruikt in de bestemming Verizon Media.
 
 ## Gevallen gebruiken {#use-cases}
 
@@ -85,11 +85,11 @@ DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep
 
 ![Yahoo DataX-doelkaart in gebruikersinterface van Platform](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -97,12 +97,12 @@ Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volge
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Lees [Activate profielen en segmenten aan een bestemming](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan bestemmingen.
+Lezen [Profielen en segmenten naar een doel activeren](../../ui/activate-segment-streaming-destinations.md) voor instructies over het activeren van publiekssegmenten aan bestemmingen.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Zie [Overzicht gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html) voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt.
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Lees de [documentatie bij Yahoo/Verizon Media over DataX](https://developer.verizonmedia.com/datax/guide/) voor meer informatie.
+Lees voor meer informatie de Yahoo/Verizon-media [documentatie over DataX](https://developer.verizonmedia.com/datax/guide/).

@@ -5,7 +5,7 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2261'
 ht-degree: 0%
@@ -87,7 +87,7 @@ Minimale lengte van vereiste gegevens = trainingsvenster + terugkijkvenster
 >
 > De minimale gegevenslengte die vereist is voor een toepassing met standaardconfiguraties is: 2 kwartalen (180 dagen) + 56 dagen = 236 dagen.
 
-Voorbeeld :
+Voorbeeld:
 
 - U wilt conversiegebeurtenissen die zich in de laatste 90 dagen (3 maanden) hebben voorgedaan, toewijzen en alle aanraakpunten bijhouden die binnen 4 weken vóór de conversiegebeurtenis zijn opgetreden. De gegevensduur van de invoer moet zich uitstrekken over de afgelopen 90 dagen + 28 dagen (4 weken). Het trainingsvenster is 90 dagen en het terugkijkvenster is 28 dagen in totaal 118 dagen.
 

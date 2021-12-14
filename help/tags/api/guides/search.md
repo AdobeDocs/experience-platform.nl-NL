@@ -1,7 +1,8 @@
 ---
 title: Bronnen zoeken in de Reactor-API
 description: Leer hoe u naar bronnen in de Reactor-API kunt zoeken.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -10,11 +11,11 @@ ht-degree: 0%
 
 # Bronnen zoeken in de Reactor-API
 
-Het `/search` eindpunt in Reactor API staat u toe om gestructureerde vragen op opgeslagen middelen te maken. Dit document bevat voorbeelden van verschillende zoekopdrachten voor verschillende veelvoorkomende gebruiksgevallen.
+De `/search` eindpunt in Reactor API staat u toe om gestructureerde vragen over opgeslagen middelen te maken. Dit document bevat voorbeelden van verschillende zoekopdrachten voor verschillende veelvoorkomende gebruiksgevallen.
 
 >[!NOTE]
 >
->Alvorens deze gids te lezen, gelieve te verwijzen naar [zoek eindpuntgids](../endpoints/search.md) voor informatie over toegelaten vraagsyntaxis en andere gebruiksrichtlijnen.
+>Voor het lezen van deze handleiding raadpleegt u de [zoekeindpuntgids](../endpoints/search.md) voor informatie over toegelaten vraagsyntaxis en andere gebruiksrichtlijnen.
 
 ## Basisquerystrategieën
 
@@ -22,11 +23,11 @@ In de volgende voorbeelden worden enkele basisbeginselen getoond voor het gebrui
 
 ### Zoeken in meerdere velden
 
-U kunt zoeken in meerdere velden door jokertekens in de veldnaam te gebruiken. Als u bijvoorbeeld wilt zoeken in meerdere kenmerkvelden, gebruikt u `attributes.*` als veldnaam.
+U kunt zoeken in meerdere velden door jokertekens in de veldnaam te gebruiken. Als u bijvoorbeeld wilt zoeken in meerdere kenmerkvelden, gebruikt u `attributes.*` als de veldnaam.
 
 ```json
 {
-  "data" : {
+  "data": {
     "query": {
       "attributes.*": {
         "value": "evar7"
@@ -38,15 +39,15 @@ U kunt zoeken in meerdere velden door jokertekens in de veldnaam te gebruiken. A
 
 >[!IMPORTANT]
 >
->Doorgaans moeten de zoekwaarden overeenkomen met het type gegevens dat wordt doorzocht. Een querywaarde van `evar7` voor een geheel-getalveld zou bijvoorbeeld mislukken. Wanneer het zoeken over veelvoudige gebieden, wordt het vraagtype vereist om fouten te vermijden, maar kan ongewenste resultaten veroorzaken.
+>Doorgaans moeten de zoekwaarden overeenkomen met het type gegevens dat wordt doorzocht. Bijvoorbeeld, een vraagwaarde van `evar7` in een veld met gehele getallen mislukt. Wanneer het zoeken over veelvoudige gebieden, wordt het vraagtype vereist om fouten te vermijden, maar kan ongewenste resultaten veroorzaken.
 
 ### De vragen van het werkingsgebied aan specifieke middeltypes
 
-U kunt een onderzoek aan een specifiek middeltype door `resource_types` in het verzoek te leveren. Als u bijvoorbeeld wilt zoeken tussen `data_elements` en `rule_components`:
+U kunt een onderzoek tot een specifiek middeltype door te voorzien `resource_types` in het verzoek. Als u bijvoorbeeld wilt zoeken naar `data_elements`, en `rule_components`:
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -64,11 +65,11 @@ U kunt een onderzoek aan een specifiek middeltype door `resource_types` in het v
 
 ### Reacties sorteren
 
-De eigenschap `sort` kan worden gebruikt om reacties te sorteren. Bijvoorbeeld om op `created_at` met nieuwste eerst te sorteren:
+De `sort` kan worden gebruikt om reacties te sorteren. Als u bijvoorbeeld wilt sorteren op `created_at` met nieuwste eerst:
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -104,7 +105,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.name": {
               "value": "Adobe"
@@ -125,7 +126,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.*": {
               "value": "evar7"
@@ -146,7 +147,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.delegate_descriptor_id": {
               "value": "custom-code"
@@ -168,7 +169,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.settings": {
               "value": "myDataElement8"
@@ -190,7 +191,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "relationships.property.data.id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -212,7 +213,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -233,7 +234,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.display_name": {
               "value": "My Rule Holiday Sale",

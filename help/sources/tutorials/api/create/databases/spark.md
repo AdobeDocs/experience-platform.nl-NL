@@ -6,54 +6,54 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Apache Spark op Azure HDInsights kunt aansluiten op Adobe Experience Platform met behulp van de Flow Service API.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Apache Spark] maken op [!DNL Azure] HDInsights-basisverbinding met de [!DNL Flow Service]-API
+# Een [!DNL Apache Spark] op [!DNL Azure] HDInsights-basisverbinding met behulp van de [!DNL Flow Service] API
 
 >[!NOTE]
 >
->De [!DNL Apache Spark] op [!DNL Azure HDInsights] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Apache Spark] op [!DNL Azure HDInsights] -connector bevindt zich in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Apache Spark] op [!DNL Azure HDInsights] (verder genoemd als &quot;[!DNL Spark]&quot;) tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Apache Spark] op [!DNL Azure HDInsights] (hierna &quot;[!DNL Spark]&quot;) het gebruik van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met [!DNL Spark] met de [!DNL Flow Service]-API tot stand te brengen.
+De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Spark] met de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Spark], moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om [!DNL Flow Service] om te verbinden met [!DNL Spark]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | Het IP-adres of de hostnaam van de [!DNL Spark]-server. |
+| `host` | Het IP-adres of de hostnaam van de [!DNL Spark] server. |
 | `username` | De gebruikersnaam die u gebruikt om toegang te krijgen tot [!DNL Spark] Server. |
 | `password` | Het wachtwoord dat overeenkomt met de gebruiker. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Spark] is: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 
-Voor meer informatie over begonnen worden verwijs naar [dit document van Vonk](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
+Zie voor meer informatie over het aan de slag gaan [dit Spark-document](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Spark] authentificatiegeloofsbrieven als deel van de verzoekparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Spark] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -63,7 +63,7 @@ POST /connections
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een basisverbinding voor [!DNL Spark]:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Spark]:
 
 
 ```shell
@@ -80,9 +80,9 @@ curl -X POST \
         "auth": {
             "specName": "HDInsights Basic Authentication",
         "params": {
-            "host" :  "{HOST}",
-            "username" : "{USERNAME}",
-            "password" :"{PASSWORD}"
+            "host":  "{HOST}",
+            "username": "{USERNAME}",
+            "password":"{PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -94,14 +94,14 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.host` | De host van de [!DNL Spark]-server. |
-| `auth.params.username` | De gebruikersnaam die is gekoppeld aan uw [!DNL Spark]-verbinding. |
-| `auth.params.password` | Het wachtwoord dat is gekoppeld aan uw [!DNL Spark]-verbinding. |
-| `connectionSpec.id` | De [!DNL Spark] ID van de verbindingsspecificatie: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
+| `auth.params.host` | De gastheer van de [!DNL Spark] server. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL Spark] verbinding. |
+| `auth.params.password` | Het wachtwoord dat aan uw [!DNL Spark] verbinding. |
+| `connectionSpec.id` | De [!DNL Spark] Verbindingsspecificatie-id: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -112,4 +112,4 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een [!DNL Spark]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Spark] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u [databases verkennen met de Flow Service API](../../explore/database-nosql.md).

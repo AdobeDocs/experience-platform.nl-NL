@@ -6,7 +6,7 @@ description: In dit document wordt beschreven hoe u streaming doelen kunt maken 
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 0%
@@ -194,7 +194,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "data": {
                 "format": "json"
             },
-            "params" : {}
+            "params": {}
 }'
 ```
 
@@ -266,7 +266,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id die u in de stap hebt opgehaald [Krijg de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
-* `{AUTHENTICATION_CREDENTIALS}`: Voer de naam van uw streamingdoel in: `Aws Kinesis authentication credentials` of `Azure EventHub authentication credentials`.
+* `{AUTHENTICATION_CREDENTIALS}`: Vul de naam van uw het stromen bestemming in: `Aws Kinesis authentication credentials` of `Azure EventHub authentication credentials`.
 * `{ACCESS_ID}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Uw toegangs-id voor uw Amazon Kinesis-opslaglocatie.
 * `{SECRET_KEY}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Je geheime sleutel voor je Amazon Kinesis-opslaglocatie.
 * `{REGION}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Het gebied in uw [!DNL Amazon Kinesis] -account waar Platform uw gegevens stroomt.

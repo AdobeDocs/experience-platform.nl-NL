@@ -5,8 +5,7 @@ title: Modellen-API-eindpunt
 topic-legacy: Developer guide
 description: Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 1%
@@ -19,7 +18,7 @@ Een model is een geval van een machine het leren recept dat gebruikend historisc
 
 ## Een lijst met modellen ophalen
 
-U kunt een lijst van Modeldetails terugwinnen die tot alle Modellen behoren door één enkel verzoek van de GET aan /models uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model gewijzigd en worden de resultaten beperkt tot 25. U kunt verkiezen om resultaten te filtreren door sommige vraagparameters te specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
+U kunt een lijst van Modeldetails terugwinnen die tot alle Modellen behoren door één enkel verzoek van de GET aan /models uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model gewijzigd en worden de resultaten beperkt tot 25. U kunt verkiezen om resultaten te filtreren door sommige vraagparameters te specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
 
 **API-indeling**
 
@@ -40,7 +39,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van uw Modellen met inbegrip van elke unieke herkenningsteken van Modellen (`id`) bevat.
+Een geslaagde reactie retourneert een payload die de details van uw modellen bevat, inclusief elke unieke id voor Modellen (`id`).
 
 ```json
 {
@@ -95,13 +94,13 @@ Een succesvolle reactie keert een lading terug die de details van uw Modellen me
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | De id die overeenkomt met het model. |
-| `modelArtifactUri` | Een URI die aangeeft waar het model wordt opgeslagen. De URI eindigt met de waarde `name` voor het model. |
+| `modelArtifactUri` | Een URI die aangeeft waar het model wordt opgeslagen. De URI eindigt met de `name` waarde voor het model. |
 | `experimentId` | Een geldige experimentele id. |
 | `experimentRunId` | Een geldige uitvoerings-id voor Experimenten. |
 
 ## Een specifiek model ophalen
 
-U kunt een lijst ophalen met Modeldetails die bij een bepaald model horen door één aanvraag voor een GET uit te voeren en een geldige model-id op te geven in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
+U kunt een lijst ophalen met Modeldetails die bij een bepaald model horen door één aanvraag voor een GET uit te voeren en een geldige model-id op te geven in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
 
 **API-indeling**
 
@@ -130,7 +129,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van uw Model met inbegrip van het unieke herkenningsteken van Modellen (`id`) bevat.
+Een geslaagde reactie retourneert een payload die de details van uw model bevat, inclusief de unieke id voor Modellen (`id`).
 
 ```json
 {
@@ -159,13 +158,13 @@ Een succesvolle reactie keert een lading terug die de details van uw Model met i
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | De id die overeenkomt met het model. |
-| `modelArtifactUri` | Een URI die aangeeft waar het model wordt opgeslagen. De URI eindigt met de waarde `name` voor het model. |
+| `modelArtifactUri` | Een URI die aangeeft waar het model wordt opgeslagen. De URI eindigt met de `name` waarde voor het model. |
 | `experimentId` | Een geldige experimentele id. |
 | `experimentRunId` | Een geldige uitvoerings-id voor Experimenten. |
 
-## Een vooraf gegenereerd model {#register-a-model} registreren
+## Een vooraf gegenereerd model registreren {#register-a-model}
 
-U kunt een vooraf gegenereerd model registreren door een verzoek van de POST aan het `/models` eindpunt te richten. Als u uw model wilt registreren, moeten het `modelArtifact`-bestand en de eigenschapswaarden `model` in de hoofdtekst van de aanvraag worden opgenomen.
+U kunt een vooraf gegenereerd model registreren door een POST aan te vragen bij de `/models` eindpunt. Om uw model te registreren, `modelArtifact` en `model` eigenschapswaarden moeten in de hoofdtekst van het verzoek worden opgenomen.
 
 **API-indeling**
 
@@ -175,7 +174,7 @@ POST /models
 
 **Verzoek**
 
-De volgende POST bevat het `modelArtifact` dossier en `model` bezitswaarden die nodig zijn. Zie de onderstaande tabel voor meer informatie over deze waarden.
+De volgende POST bevat de `modelArtifact` en `model` benodigde eigenschapswaarden. Zie de onderstaande tabel voor meer informatie over deze waarden.
 
 ```shell
 curl -X POST \
@@ -198,7 +197,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van uw Model met inbegrip van het unieke herkenningsteken van Modellen (`id`) bevat.
+Een geslaagde reactie retourneert een payload die de details van uw model bevat, inclusief de unieke id voor Modellen (`id`).
 
 ```json
 {
@@ -215,7 +214,7 @@ Een succesvolle reactie keert een lading terug die de details van uw Model met i
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | De id die overeenkomt met het model. |
-| `modelArtifactUri` | Een URI die aangeeft waar het model wordt opgeslagen. De URI eindigt met de waarde `id` voor uw model. |
+| `modelArtifactUri` | Een URI die aangeeft waar het model wordt opgeslagen. De URI eindigt met de `id` waarde voor uw model. |
 
 ## Model op id bijwerken
 
@@ -223,7 +222,7 @@ U kunt een bestaand Model bijwerken door zijn eigenschappen door een verzoek van
 
 >[!TIP]
 >
->Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het model op id op te halen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het model op ID op te halen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 **API-indeling**
 
@@ -317,9 +316,9 @@ Een succesvolle reactie keert een lading terug die een status 200 bevat die de s
 }
 ```
 
-## Nieuwe transcodering maken voor een model {#create-transcoded-model}
+## Een nieuwe transcodering maken voor een model {#create-transcoded-model}
 
-Transcodering is de directe digitaal-naar-digitale conversie van de ene codering naar de andere. U creeert een nieuwe transcodering voor een Model door `{MODEL_ID}` en `targetFormat` te verstrekken u de nieuwe output binnen wilt zijn.
+Transcodering is de directe digitaal-naar-digitale conversie van de ene codering naar de andere. U maakt een nieuwe transcodering voor een model door het `{MODEL_ID}` en `targetFormat` u wilt dat de nieuwe uitvoer wordt opgenomen.
 
 **API-indeling**
 
@@ -343,7 +342,7 @@ curl -X POST \
     -H 'Content-Type: text/plain' \
     -D '{
  "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
- "modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
+ "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
  "targetFormat": "CoreML",
  "created": "2019-12-16T19:59:08.360Z",
  "createdBy": {
@@ -356,7 +355,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die een JSON-object met de informatie van de transcodering bevat. Dit omvat het unieke herkenningsteken van transcoderingen (`id`) dat in [het terugwinnen van een specifiek getranscodeerd Model](#retrieve-transcoded-model) wordt gebruikt.
+Een geslaagde reactie retourneert een payload die een JSON-object met de informatie van de transcodering bevat. Dit omvat de unieke id voor transcoderingen (`id`) gebruikt in [een specifiek getranscodeerd model ophalen](#retrieve-transcoded-model).
 
 ```json
 {
@@ -374,7 +373,7 @@ Een geslaagde reactie retourneert een payload die een JSON-object met de informa
 
 ## Een lijst met transcoderingen ophalen voor een model {#retrieve-transcoded-model-list}
 
-U kunt een lijst van omzettingen terugwinnen die op een Model door een verzoek van de GET met uw `{MODEL_ID}` zijn uitgevoerd.
+U kunt een lijst van transcoderingen terugwinnen die op een Model door een verzoek van de GET met uw worden uitgevoerd `{MODEL_ID}`.
 
 **API-indeling**
 
@@ -399,7 +398,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die een JSON-object bevat met een lijst van elke transcodering die op het Model is uitgevoerd. Elk getranscodeerd model ontvangt een uniek herkenningsteken (`id`).
+Een geslaagde reactie retourneert een payload die een JSON-object bevat met een lijst van elke transcodering die op het Model is uitgevoerd. Elk getranscodeerd model ontvangt een unieke id (`id`).
 
 ```json
 {
@@ -432,9 +431,9 @@ Een geslaagde reactie retourneert een payload die een JSON-object bevat met een 
 }
 ```
 
-## Hiermee wordt een specifiek getranscodeerd model {#retrieve-transcoded-model} opgehaald
+## Een specifiek getranscodeerd model ophalen {#retrieve-transcoded-model}
 
-U kunt een specifiek getranscodeerd Model terugwinnen door een verzoek van de GET met uw `{MODEL_ID}` en identiteitskaart van een getranscodeerd model uit te voeren.
+U kunt een specifiek getranscodeerd model terugwinnen door een verzoek van de GET met uw `{MODEL_ID}` en de id van een getranscodeerd model.
 
 **API-indeling**
 

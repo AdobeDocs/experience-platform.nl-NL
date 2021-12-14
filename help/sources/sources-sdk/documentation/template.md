@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met uw BRON met behulp van de Flow Service API.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2300'
 ht-degree: 0%
@@ -54,7 +55,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor *UURSOURCE* :
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor *UURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -237,7 +238,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bronverbinding gemaakt voor *UURSOURCE* :
+Met de volgende aanvraag wordt een bronverbinding gemaakt voor *UURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -312,7 +313,7 @@ POST /targetConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een doelverbinding gemaakt voor *UURSOURCE* :
+Met de volgende aanvraag wordt een doelverbinding gemaakt voor *UURSOURCE*:
 
 ```shell
 curl -X POST \

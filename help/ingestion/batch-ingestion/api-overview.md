@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
 description: Dit document bevat een uitgebreide handleiding voor ontwikkelaars die werken met batch-opname-API's voor Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 1%
@@ -13,15 +13,15 @@ ht-degree: 1%
 
 # Handleiding voor het ontwikkelen van batterijen
 
-Dit document biedt een uitgebreide handleiding voor het gebruik van [batch ingestion API endpoints](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Voor een overzicht van batch-opname-API&#39;s, inclusief voorwaarden en aanbevolen procedures, begint u met het lezen van het API-overzicht [batch-opname](overview.md).
+Dit document biedt een uitgebreide handleiding voor het gebruik van [batch-opname-API-eindpunten](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Voor een overzicht van batch-opname-API&#39;s, inclusief voorwaarden en aanbevolen procedures, begint u met het lezen van de [overzicht van batch-invoer-API](overview.md).
 
-De bijlage bij dit document bevat informatie over [het opmaken van gegevens die moeten worden gebruikt voor inname](#data-transformation-for-batch-ingestion), inclusief voorbeeld-CSV- en JSON-gegevensbestanden.
+De bijlage bij dit document bevat informatie voor [formatteren van gegevens die voor opname moeten worden gebruikt](#data-transformation-for-batch-ingestion), inclusief voorbeeld-CSV- en JSON-gegevensbestanden.
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van [De Ingestie API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) van Gegevens. Gegevensinvoer biedt een RESTful-API waarmee u standaard CRUD-bewerkingen kunt uitvoeren op de ondersteunde objecttypen.
+De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [Data Ingestie-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Gegevensinvoer biedt een RESTful-API waarmee u standaard CRUD-bewerkingen kunt uitvoeren op de ondersteunde objecttypen.
 
-Lees voordat u doorgaat het [overzicht van de batch-opname-API](overview.md) en de [gids Aan de slag](getting-started.md).
+Controleer voordat je doorgaat de [overzicht van batch-invoer-API](overview.md) en de [gids Aan de slag](getting-started.md).
 
 ## Ingest JSON-bestanden
 
@@ -35,7 +35,7 @@ Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het cre�
 
 >[!NOTE]
 >
->De voorbeelden hieronder zijn voor single-line JSON. Om JSON met meerdere regels in te voeren, moet de markering `isMultiLineJson` worden ingesteld. Lees voor meer informatie de [handleiding voor het oplossen van problemen bij het in batch opnemen](./troubleshooting.md).
+>De voorbeelden hieronder zijn voor single-line JSON. Als u JSON met meerdere regels wilt gebruiken, `isMultiLineJson` de markering moet worden ingesteld . Lees voor meer informatie de [handleiding voor het oplossen van problemen met batchverwerking](./troubleshooting.md).
 
 **API-indeling**
 
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -97,7 +97,7 @@ Nu u een batch hebt gemaakt, kunt u de batch-id uit het antwoord op het aanmaken
 
 >[!NOTE]
 >
->Zie de appendix sectie voor een [voorbeeld van een behoorlijk-geformatteerd JSON- gegevensdossier](#data-transformation-for-batch-ingestion).
+>Zie het aanhangsel voor een [voorbeeld van een JSON-gegevensbestand met de juiste indeling](#data-transformation-for-batch-ingestion).
 
 **API-indeling**
 
@@ -122,14 +122,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
 
 **Antwoord**
 
@@ -157,7 +157,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -184,7 +184,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -257,14 +257,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
 
 **Antwoord**
 
@@ -292,7 +292,7 @@ POST /batches/{BATCH_ID}?action=complete
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In gehele getallen, het begin en het eind van de gevraagde waaier. |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
 
 
 **Antwoord**
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Volledig groot bestand
 
-Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -501,7 +501,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -513,7 +513,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## CSV-bestanden samenvoegen
 
-om CSV- dossiers in te voeren, zult u een klasse, een schema, en een dataset moeten tot stand brengen die CSV steunt. Voor gedetailleerde informatie over hoe te om de noodzakelijke klasse en het schema tot stand te brengen, volg de instructies in [ad-hoc schemaverwezenlijking leerprogramma](../../xdm/api/ad-hoc.md) worden verstrekt.
+om CSV- dossiers in te voeren, zult u een klasse, een schema, en een dataset moeten tot stand brengen die CSV steunt. Voor gedetailleerde informatie over hoe te om de noodzakelijke klasse en het schema tot stand te brengen, volg de instructies die in [zelfstudie over het maken van ad-hocschema&#39;s](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -569,7 +569,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
             "datasetId": "{DATASET_ID}",
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 >[!NOTE]
 >
->Zie de appendix sectie voor een [voorbeeld van een behoorlijk-formatted Csv- gegevensdossier](#data-transformation-for-batch-ingestion).
+>Zie het aanhangsel voor een [voorbeeld van een CSV-gegevensbestand met de juiste indeling](#data-transformation-for-batch-ingestion).
 
 **API-indeling**
 
@@ -646,14 +646,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.csv"
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
 
 
 **Antwoord**
@@ -678,7 +678,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -708,7 +708,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Een batch verwijderen {#delete-a-batch}
 
-Een partij kan worden geschrapt door het volgende POST verzoek met `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
+Een partij kan worden geschrapt door het volgende verzoek van de POST met uit te voeren `action=REVERT` De parameter van de vraag aan identiteitskaart van de partij u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
 
 **API-indeling**
 
@@ -738,7 +738,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -758,10 +758,10 @@ Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organi
 
 Het volgende is vereist om een batch te kunnen repareren:
 
-- **Een dataset die voor de updates van het Profiel en van attributen wordt toegelaten.** Dit wordt gedaan door datasetmarkeringen en vereist een specifieke  `isUpsert:true` markering wordt toegevoegd aan de  `unifiedProfile` serie. Voor detailstappen die tonen hoe te om een dataset tot stand te brengen of een bestaande dataset voor upsert te vormen, volg het leerprogramma voor [toelatend een dataset voor de updates van het Profiel](../../catalog/datasets/enable-upsert.md).
+- **Een dataset die voor de updates van het Profiel en van attributen wordt toegelaten.** Dit wordt gedaan door datasetmarkeringen en vereist een specifieke `isUpsert:true` -tag wordt toegevoegd aan de `unifiedProfile` array. Voor detailstappen die tonen hoe te om een dataset tot stand te brengen of een bestaande dataset voor upsert te vormen, volg het leerprogramma voor [het toelaten van een dataset voor de updates van het Profiel](../../catalog/datasets/enable-upsert.md).
 - **Een Parket-bestand met de velden die moeten worden gerepareerd en identiteitsvelden voor het profiel.** De gegevensindeling voor het patchen van een batch is vergelijkbaar met het normale inslikproces voor batches. De vereiste invoer is een Parquet-bestand. Naast de velden die moeten worden bijgewerkt, moeten de geüploade gegevens de identiteitsvelden bevatten, zodat ze overeenkomen met de gegevens in het Profile Store.
 
-Zodra u een dataset hebt die voor Profiel en upsert wordt toegelaten, en een dossier van het Pakket die de gebieden bevat u wenst om evenals de noodzakelijke identiteitsgebieden te herstellen, kunt u de stappen voor [het opnemen van de dossiers van het Pakket ](#ingest-parquet-files) volgen om de flard via partijopname te voltooien.
+Als u een gegevensset hebt die is ingeschakeld voor Profiel en Bijvoegen, en een Parquet-bestand dat de velden bevat die u wilt repareren en de benodigde identiteitsvelden, kunt u de stappen volgen voor [Parket-bestanden invoegen](#ingest-parquet-files) om de pleister te voltooien door middel van batch-inname.
 
 ## Een batch opnieuw afspelen
 
@@ -769,7 +769,7 @@ Als u een reeds opgenomen partij wilt vervangen, kunt u dit met &quot;partij rep
 
 ### Batch maken
 
-Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het creëren van de partij, zult u een datasetidentiteitskaart moeten verstrekken. U zult ook moeten ervoor zorgen dat alle dossiers die als deel van de partij worden geupload met het schema XDM verbonden aan de verstrekte dataset in overeenstemming zijn. Bovendien moet u de oude batch(s) als referentie opgeven in de sectie Opnieuw afspelen. In het onderstaande voorbeeld worden batches opnieuw afgespeeld met de id&#39;s `batchIdA` en `batchIdB`.
+Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het creëren van de partij, zult u een datasetidentiteitskaart moeten verstrekken. U zult ook moeten ervoor zorgen dat alle dossiers die als deel van de partij worden geupload met het schema XDM verbonden aan de verstrekte dataset in overeenstemming zijn. Bovendien moet u de oude batch(s) als referentie opgeven in de sectie Opnieuw afspelen. In het onderstaande voorbeeld worden batches opnieuw afgespeeld met id&#39;s `batchIdA` en `batchIdB`.
 
 **API-indeling**
 
@@ -784,7 +784,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -868,14 +868,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
 
 **Antwoord**
 
@@ -903,7 +903,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -919,9 +919,9 @@ De volgende sectie bevat aanvullende informatie voor het innemen van gegevens in
 
 ### Gegevenstransformatie voor batch-opname
 
-Als u een gegevensbestand in [!DNL Experience Platform] wilt opnemen, moet de hiërarchische structuur van het bestand voldoen aan het schema [Experience Data Model (XDM)](../../xdm/home.md) dat is gekoppeld aan de gegevensset waarnaar wordt geüpload.
+Om een gegevensbestand in te voeren [!DNL Experience Platform]moet de hiërarchische structuur van het bestand voldoen aan de [Experience Data Model (XDM)](../../xdm/home.md) schema verbonden aan de dataset die wordt geupload aan.
 
-Informatie over hoe u een CSV-bestand kunt toewijzen om te voldoen aan een XDM-schema vindt u in het [voorbeeldtransformaties](../../etl/transformations.md)-document, samen met een voorbeeld van een JSON-gegevensbestand met de juiste indeling. Hier vindt u voorbeeldbestanden in het document:
+Informatie over hoe u een CSV-bestand kunt toewijzen om te voldoen aan een XDM-schema vindt u in het dialoogvenster [voorbeeldtransformaties](../../etl/transformations.md) samen met een voorbeeld van een JSON-gegevensbestand met de juiste indeling. Hier vindt u voorbeeldbestanden in het document:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

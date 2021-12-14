@@ -6,7 +6,7 @@ title: Invoer en uitvoer in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '3042'
 ht-degree: 0%
@@ -114,7 +114,7 @@ Minimumlengte van de vereiste gegevens = subsidiabele populatie + resultaatvenst
 >
 > 30 is het minimumaantal dagen dat vereist is voor de in aanmerking komende bevolking. Als dit niet wordt verstrekt is het gebrek 120 dagen.
 
-Voorbeelden :
+Voorbeelden:
 
 - U wilt voorspellen of een klant waarschijnlijk een horloge in de komende 30 dagen zal kopen. U wilt ook gebruikers scoren die de afgelopen 60 dagen enige internetactiviteit hebben gehad. In dat geval is de minimumlengte van de vereiste gegevens 60 dagen + 30 dagen. De in aanmerking komende populatie is 60 dagen en het resultaatvenster is 30 dagen in totaal 90 dagen.
 

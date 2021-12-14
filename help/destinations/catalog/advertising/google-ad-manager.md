@@ -1,9 +1,9 @@
 ---
-keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google Admanager; DFP
+keywords: google en manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google en manager; DFP
 title: Google Ad Manager-verbinding
-description: Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
+description: Google Ad Manager, voorheen bekend als DoubleClick voor Publishers of DoubleClick AdX, is een advertentieplatform uit Google dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 1%
@@ -14,14 +14,14 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-[!DNL Google Ad Manager], voorheen bekend als  [!DNL DoubleClick for Publishers] (DFP) of  [!DNL DoubleClick AdX], is een platform voor advertenties van  [!DNL Google] waaruit uitgevers de middelen krijgen om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
+[!DNL Google Ad Manager], voorheen bekend als [!DNL DoubleClick for Publishers] (DFP) of [!DNL DoubleClick AdX], is een platform voor advertenties van [!DNL Google] uitgevers krijgen de middelen om de weergave van advertenties op hun websites , via video en in mobiele apps te beheren .
 
 ## Doelspecificaties {#specifics}
 
-Neem nota van de volgende details die voor [!DNL Google Ad Manager] bestemmingen specifiek zijn:
+Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] bestemmingen:
 
-* Geactiveerd publiek wordt gecreeerd programmatically in het [!DNL Google] platform.
-* [!DNL Platform] bevat momenteel geen metrische waarde om een geslaagde activering te valideren. Raadpleeg de tellingen van het publiek in Google om de integratie te valideren en inzicht te krijgen in doelgroepen.
+* Geactiveerd publiek wordt programmatically gecreeerd in [!DNL Google] platform.
+* [!DNL Platform] bevat momenteel geen metrische waarde om een geslaagde activering te valideren. Raadpleeg het aantal gebruikers in Google om de integratie te valideren en te begrijpen waar de doelgroep zich op richt.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -31,57 +31,57 @@ Neem nota van de volgende details die voor [!DNL Google Ad Manager] bestemmingen
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | [!DNL Apple ID for Advertisers] | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), ook bekend als  [!DNL Device ID]. Een numerieke apparaat-id van 38 cijfers waarmee de Audience Manager werkt. | Google gebruikt [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) om gebruikers in Californië aan te wijzen, en Google Cookie ID voor alle andere gebruikers. |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), ook bekend als [!DNL Device ID]. Een numerieke apparaat-id van 38 cijfers waarmee de Audience Manager werkt. | Google gebruikt [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) om gebruikers in Californië te richten, en identiteitskaart van de Koek van Google voor alle andere gebruikers. |
 | [!DNL Google] cookie-id | [!DNL Google] cookie-id | [!DNL Google] gebruikt deze id om gebruikers buiten Californië als doel in te stellen. |
 | RIDA | Roku ID for Advertising. Deze id identificeert unieke Roku-apparaten. |  |
-| GEMAAKT | Microsoft Advertising ID. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
+| GEMAAKT | Microsoft-advertentie-id. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
 | Amazon Fire TV ID | Deze id is uniek voor Amazon Fire TV&#39;s. |  |
 
 ## Exporttype {#export-type}
 
-**Segmentexport** : u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
+**Segment exporteren** - u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
 
 ## Vereisten
 
-Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt maken en de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in het verleden (met Audience Manager of andere toepassingen) niet hebt ingeschakeld, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL Google] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
+Als u uw eerste bestemming wilt maken met [!DNL Google Ad Manager] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u al eerder was ingesteld [!DNL Google] Als u integreert in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 ## Lijst van gewenste personen
 
 >[!NOTE]
 >
->De lijst van gewenste personen is verplicht alvorens uw eerste [!DNL Google Ad Manager] bestemming in Platform te plaatsen. Controleer of het hieronder beschreven proces voor lijst van gewenste personen is voltooid door [!DNL Google] voordat u een doel maakt.
+>De lijst van gewenste personen is verplicht voordat u de eerste [!DNL Google Ad Manager] bestemming in Platform. Controleer of de hieronder beschreven lijst van gewenste personen is voltooid door [!DNL Google] voordat u een doel maakt.
 
-Voordat u de [!DNL Google Ad Manager]-bestemming in Platform maakt, moet u contact opnemen met [!DNL Google] om Adobe op de lijst met toegestane gegevensproviders te plaatsen en om uw account aan de lijst van gewenste personen toe te voegen. Neem contact op met [!DNL Google] en geef de volgende informatie op:
+Voordat u het dialoogvenster [!DNL Google Ad Manager] bestemming in Platform, moet u contact opnemen [!DNL Google] voor Adobe die op de lijst met toegestane gegevensproviders moet worden geplaatst, en dat uw account aan de lijst van gewenste personen wordt toegevoegd. Contact [!DNL Google] en verstrekt de volgende informatie:
 
-* **Account-id**: Adobe-account-id met Google. Account-id: 87933855.
-* **Klant-id**: Adobe&#39;s klant account-id met Google. Klant-id: 89690775.
-* **Netwerk-id** : dit is je account met  [!DNL Google Ad Manager]
-* **Koppelings-id**  publiek: dit is je account met  [!DNL Google Ad Manager]
-* Je accounttype. DFP door koper van Google of AdX.
+* **Account-id**: De account-id van Adobe met Google. Account-id: 87933855.
+* **Klant-id**: De klant-id van Adobe met Google. Klant-id: 89690775.
+* **Netwerk-id**: dit is je account met [!DNL Google Ad Manager]
+* **Koppeling-id voor publiek**: dit is je account met [!DNL Google Ad Manager]
+* Je accounttype. DFP door Google of AdX koper.
 
 ## Verbinden met de bestemming {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
-   * `DFP by Google` gebruiken voor [!DNL DoubleClick] voor uitgevers
-   * `AdX buyer` gebruiken voor [!DNL Google AdX]
-* **[!UICONTROL Account ID]**: Vul je account-id in met  [!DNL Google]. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
+   * Gebruiken `DFP by Google` for [!DNL DoubleClick] voor uitgevers
+   * Gebruiken `AdX buyer` for [!DNL Google AdX]
+* **[!UICONTROL Account ID]**: Vul je account-id in met [!DNL Google]. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Ad Manager]-bestemming instelt, werkt u samen met uw [!DNL Google Account Manager]- of Adobe-medewerker om te begrijpen welk accounttype u hebt.
+>Wanneer u een [!DNL Google Ad Manager] bestemming, gelieve met uw te werken [!DNL Google Account Manager] of Adobe om te begrijpen welk accounttype u hebt.
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens
 
-Controleer uw [!DNL Google Ad Manager]-account om te controleren of gegevens naar de [!DNL Google Ad Manager]-bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+Controleren of gegevens zijn geëxporteerd naar de [!DNL Google Ad Manager] doel, controleer uw [!DNL Google Ad Manager] account. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.

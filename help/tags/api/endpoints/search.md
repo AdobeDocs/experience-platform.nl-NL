@@ -1,7 +1,8 @@
 ---
 title: Zoekeindpunt
 description: Leer hoe te om vraag aan het /search eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # Zoekeindpunt
 
-Het `/search` eindpunt in Reactor API verstrekt een manier om middelen te vinden die gewenste criteria aanpassen, die als vraag worden uitgedrukt.
+De `/search` eindpunt in Reactor API verstrekt een manier om middelen te vinden die gewenste criteria aanpassen, die als vraag worden uitgedrukt.
 
 De volgende API-middeltypen kunnen worden doorzocht, waarbij dezelfde gegevensstructuur wordt gebruikt als de op bronnen gebaseerde documenten die via de API worden geretourneerd:
 
@@ -37,11 +38,11 @@ Alle vragen zijn scoped aan uw huidige bedrijf en toegankelijke eigenschappen.
 >* De vragen van de waaier steunen momenteel slechts gehelen.
 
 
-Voor meer diepgaande informatie over hoe te om deze functionaliteit te gebruiken, verwijs naar [zoekgids](../guides/search.md).
+Raadpleeg voor meer informatie over het gebruik van deze functie de [zoekhulplijn](../guides/search.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een zoekopdracht uitvoeren {#perform}
 
@@ -64,7 +65,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "from": 0,
           "size": 25,
           "query": {
@@ -95,15 +96,15 @@ curl -X POST \
 | --- | --- |
 | `from` | Het aantal resultaten waarmee de reactie moet worden verschoven. |
 | `size` | De maximale hoeveelheid resultaten die moet worden geretourneerd. De resultaten mogen niet groter zijn dan 100 items. |
-| `query` | Een object dat de zoekquery vertegenwoordigt. Voor elke eigenschap in dit object moet de sleutel een veldpad vertegenwoordigen waarnaar moet worden gezocht. De waarde moet een object zijn waarvan de subeigenschappen bepalen waarvoor moet worden gezocht.<br><br>Voor elk veldpad kunt u de volgende subeigenschappen gebruiken:<ul><li>`exists`: Retourneert true als het veld bestaat in de bron.</li><li>`value`: Retourneert true als de waarde van het veld overeenkomt met de waarde van deze eigenschap.</li><li>`value_operator`: Booleaanse logica die wordt gebruikt om te bepalen hoe een  `value` query moet worden afgehandeld. Toegestane waarden zijn `AND` en `OR`. Wanneer uitgesloten, wordt `AND` logica verondersteld. Zie de sectie over [value operator logic](#value-operator) voor meer informatie.</li><li>`range` Retourneert true als de waarde van het veld binnen een specifiek numeriek bereik valt. Het bereik zelf wordt bepaald door de volgende subeigenschappen:<ul><li>`gt`: Groter dan de opgegeven waarde, niet inclusief.</li><li>`gte`: Groter dan of gelijk aan de opgegeven waarde.</li><li>`lt`: Minder dan de opgegeven waarde, niet inclusief.</li><li>`lte`: Kleiner dan of gelijk aan de opgegeven waarde.</li></ul></li></ul> |
-| `sort` | Een array met objecten die de volgorde aangeeft waarin de resultaten moeten worden gesorteerd. Elk object moet één eigenschap bevatten: De toets vertegenwoordigt het veldpad waarop moet worden gesorteerd en de waarde vertegenwoordigt de sorteervolgorde (`asc` voor oplopend, `desc` voor aflopend). |
+| `query` | Een object dat de zoekquery vertegenwoordigt. Voor elke eigenschap in dit object moet de sleutel een veldpad vertegenwoordigen waarnaar moet worden gezocht. De waarde moet een object zijn waarvan de subeigenschappen bepalen waarvoor moet worden gezocht.<br><br>Voor elk veldpad kunt u de volgende subeigenschappen gebruiken:<ul><li>`exists`: Retourneert true als het veld bestaat in de bron.</li><li>`value`: Retourneert true als de waarde van het veld overeenkomt met de waarde van deze eigenschap.</li><li>`value_operator`: Booleaanse logica die wordt gebruikt om te bepalen hoe een `value` query moet worden afgehandeld. Toegestane waarden zijn `AND` en `OR`. Indien uitgesloten, `AND` logica wordt aangenomen. Zie de sectie over [value operator logica](#value-operator) voor meer informatie .</li><li>`range` Retourneert true als de waarde van het veld binnen een specifiek numeriek bereik valt. Het bereik zelf wordt bepaald door de volgende subeigenschappen:<ul><li>`gt`: Groter dan de opgegeven waarde, niet inclusief.</li><li>`gte`: Groter dan of gelijk aan de opgegeven waarde.</li><li>`lt`: Minder dan de opgegeven waarde, niet inclusief.</li><li>`lte`: Kleiner dan of gelijk aan de opgegeven waarde.</li></ul></li></ul> |
+| `sort` | Een array met objecten die de volgorde aangeeft waarin de resultaten moeten worden gesorteerd. Elk object moet één eigenschap bevatten: De toets vertegenwoordigt het veldpad waarop moet worden gesorteerd en de waarde vertegenwoordigt de sorteervolgorde (`asc` in oplopende volgorde, `desc` voor aflopend). |
 | `resource_types` | Een array van tekenreeksen die de specifieke brontypen aangeven waarnaar moet worden gezocht. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van passende middelen voor de vraag terug. Voor details over hoe API gelijken voor specifieke waarden bepaalt, zie de bijlage sectie op [passende overeenkomsten](#conventions).
+Een succesvolle reactie keert een lijst van passende middelen voor de vraag terug. Zie de sectie in de bijlage voor meer informatie over hoe de API overeenkomsten voor specifieke waarden bepaalt [overeenkomsten](#conventions).
 
 ```json
 {
@@ -210,15 +211,15 @@ Een succesvolle reactie keert een lijst van passende middelen voor de vraag teru
 
 ## Aanhangsel
 
-De volgende sectie bevat extra informatie over het gebruiken van het `/search` eindpunt.
+De volgende sectie bevat aanvullende informatie over het gebruik van de `/search` eindpunt.
 
 ### Logica van operator voor waarden {#value-operator}
 
-Zoekquerywaarden worden gesplitst in termen die overeenkomen met geïndexeerde documenten. Tussen elke termijn, wordt een `AND` verhouding verondersteld.
+Zoekquerywaarden worden gesplitst in termen die overeenkomen met geïndexeerde documenten. Tussen elke termijn, en `AND` Er wordt aangenomen dat er een relatie bestaat.
 
-Wanneer u `AND` als `value_operator` gebruikt, wordt een vraagwaarde van `My Rule Holiday Sale` geïnterpreteerd als documenten met een gebied dat `My AND Rule AND Holiday AND Sale` bevat.
+Wanneer u `AND` als de `value_operator`, een querywaarde van `My Rule Holiday Sale` wordt geïnterpreteerd als documenten met een veld dat `My AND Rule AND Holiday AND Sale`.
 
-Wanneer u `OR` als `value_operator` gebruikt, wordt een vraagwaarde van `My Rule Holiday Sale` geïnterpreteerd als documenten met een gebied dat `My OR Rule OR Holiday OR Sale` bevat. Hoe meer termen overeenkomen, hoe hoger de waarde `match_score`. Vanwege de aard van een gedeeltelijke overeenkomst van de termijn, wanneer niets dicht bij de gewenste waarde aanpast, kunt u een resultaatreeks verkrijgen waar de waarde slechts op een zeer eenvoudig niveau, zoals een paar karakters van tekst wordt aangepast.
+Wanneer u `OR` als de `value_operator`, een querywaarde van `My Rule Holiday Sale` wordt geïnterpreteerd als documenten met een veld dat `My OR Rule OR Holiday OR Sale`. Hoe meer voorwaarden overeenkomen, hoe hoger de `match_score`. Vanwege de aard van een gedeeltelijke overeenkomst van de termijn, wanneer niets dicht bij de gewenste waarde aanpast, kunt u een resultaatreeks verkrijgen waar de waarde slechts op een zeer eenvoudig niveau, zoals een paar karakters van tekst wordt aangepast.
 
 ### Overeenkomende conventies {#conventions}
 

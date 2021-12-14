@@ -5,8 +5,7 @@ title: Naslaggids voor het leren van machines in realtime
 topic-legacy: Nodes reference
 description: Een knooppunt is de fundamentele eenheid waarvan grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
@@ -25,7 +24,7 @@ De volgende gids schetst de gesteunde knoopbibliotheken voor het Leren van de ma
 
 ## Het ontdekken van knopen voor gebruik in uw pijpleiding van ML
 
-Kopieer de volgende code naar een [!DNL Python]-laptop om alle knooppunten weer te geven die beschikbaar zijn voor gebruik.
+De volgende code kopiëren naar een [!DNL Python] -laptop om alle knooppunten weer te geven die beschikbaar zijn voor gebruik.
 
 ```python
 from pprint import pprint
@@ -83,9 +82,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Met het volgende Pandas-knooppunt kunt u elke `pd.DataFrame`-methode of elke algemene pandasfunctie op hoofdniveau importeren. Voor meer informatie over de methodes van Pandas, bezoek [Pandas methodedocumentatie](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Voor meer informatie over functies op hoofdniveau gaat u naar de [Pandas API-naslaggids voor algemene functies](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Met het volgende Pandas-knooppunt kunt u alle `pd.DataFrame` of een algemene pandasfunctie op hoofdniveau. Ga voor meer informatie over Pandas-methoden naar de [Documentatie over de Pandas-methoden](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Ga voor meer informatie over functies op het hoogste niveau naar de [Referentiegids voor Pandas API voor algemene functies](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Het knooppunt hieronder gebruikt `"import": "map"` om de methodenaam als koord in de parameters in te voeren, die door de parameters als kaartfunctie in te voeren wordt gevolgd. In het onderstaande voorbeeld wordt dit gedaan met `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Nadat u de kaart op zijn plaats hebt, hebt u de optie om `inplace` als `True` of `False` te plaatsen. Stel `inplace` in als `True` of `False` op basis van of u transformatie wilt toepassen. Standaard wordt een nieuwe kolom gemaakt. `"inplace": False` Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan een enkele kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld wordt `device` opgegeven.
+Het knooppunt hieronder gebruikt `"import": "map"` om de methodenaam als koord in de parameters in te voeren, door de parameters als kaartfunctie in te voeren. In het onderstaande voorbeeld wordt dit gedaan door `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Nadat u de kaart hebt geplaatst, hebt u de optie om te plaatsen `inplace` als `True` of `False`. Set `inplace` als `True` of `False` op basis van de vraag of u transformatie wilt toepassen. Standaard `"inplace": False` maakt een nieuwe kolom. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` Dit kan een enkele kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld `device` wordt opgegeven.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -116,24 +115,24 @@ model_train = ScikitLearn(params={
     "model_path": "resources/model.onnx",
     "params": {
         "model": "sklearn.linear_model.LogisticRegression",
-        "model_params": {"solver" : 'lbfgs'}
+        "model_params": {"solver": 'lbfgs'}
     }})
 msg6 = model_train.process(msg5)
 ```
 
-| Value | Beschrijving |
+| Waarde | Beschrijving |
 | --- | --- |
-| functies | Invoerfuncties voor het model (lijst met tekenreeksen). <br> Bijvoorbeeld:  `browser`,  `device`,  `login_page`,  `product_page`,  `search_page` |
+| functies | Invoerfuncties voor het model (lijst met tekenreeksen). <br> Bijvoorbeeld: `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | label | Naam van doelkolom (tekenreeks). |
 | mode | Trein/test (tekenreeks). |
 | model_path | Pad naar het model lokaal opslaan in onx-indeling. |
 | params.model | Absoluut importpad naar het model (tekenreeks), bijvoorbeeld: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modelhyperparameters, zie de [klearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentatie voor meer informatie. |
+| params.model_params | Modelhyperparameters, zie [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentatie voor meer informatie. |
 | node_instance.process(data_message_from_previous_node) | De methode `process()` neemt DataMsg van de vorige knoop en past transformatie toe. Dit hangt van de huidige knoop af die wordt gebruikt. |
 
 ### Splitsen
 
-Gebruik het volgende knooppunt om uw dataframe op te splitsen in een trein en test door `train_size` of `test_size` door te geven. Dit retourneert een dataframe met een meervoudige index. U kunt tot trein toegang hebben en dataframes testen gebruikend het volgende voorbeeld, `msg5.data.xs(“train”)`.
+Gebruik het volgende knooppunt om uw dataframe op te splitsen in een trein en te testen door te slagen `train_size` of `test_size`. Dit retourneert een dataframe met een meervoudige index. U kunt tot trein en testgegevenskaders toegang hebben gebruikend het volgende voorbeeld: `msg5.data.xs(“train”)`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +141,4 @@ msg5 = splitter.process(msg4)
 
 ## Volgende stappen
 
-De volgende stap is knopen voor gebruik in het scoren van een Echte-tijd het Leren van de Machine model tot stand te brengen. Voor meer informatie raadpleegt u de [Gebruikershandleiding voor de laptop die in realtime op de machine wordt toegepast](./rtml-authoring-notebook.md).
+De volgende stap is knopen voor gebruik in het scoren van een Echte-tijd het Leren van de Machine model tot stand te brengen. Ga voor meer informatie naar de [Gebruikershandleiding voor laptop in realtime leren van machines](./rtml-authoring-notebook.md).

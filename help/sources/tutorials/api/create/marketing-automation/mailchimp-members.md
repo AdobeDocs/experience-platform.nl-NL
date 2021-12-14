@@ -4,32 +4,33 @@ solution: Experience Platform
 title: Een gegevensstroom maken voor MailChimp-leden met behulp van de Flow Service API
 topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform met MailChimp-leden kunt verbinden met behulp van de Flow Service API.
-source-git-commit: c8d94af6185785a0e4bfce9889c04405ed223b1f
+exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2500'
 ht-degree: 0%
 
 ---
 
-# Een dataflow maken voor [!DNL MailChimp Members] met behulp van de Flow Service API
+# Een gegevensstroom maken voor [!DNL MailChimp Members] de Flow Service API gebruiken
 
-De volgende zelfstudie begeleidt u door de stappen om een bronverbinding en een gegevensstroom tot stand te brengen om [!DNL MailChimp Members] gegevens aan Platform te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen [!DNL MailChimp Members] gegevens naar Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Vereisten
 
-Voordat u [!DNL MailChimp] met Adobe Experience Platform kunt verbinden gebruikend OAuth 2 verfrist code, moet u eerst uw toegangstoken voor [!DNL MailChimp.] terugwinnen zie [[!DNL MailChimp] OAuth 2 gids](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) voor gedetailleerde instructies bij het vinden van uw toegangstoken.
+Voordat u verbinding maakt [!DNL MailChimp] naar Adobe Experience Platform met OAuth 2-vernieuwingscode, moet u eerst uw toegangstoken ophalen voor [!DNL MailChimp.] Zie de [[!DNL MailChimp] Handleiding OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) voor gedetailleerde instructies bij het vinden van uw toegangstoken.
 
 ## Een basisverbinding maken {#base-connection}
 
-Nadat u de [!DNL MailChimp]-verificatiereferenties hebt opgehaald, kunt u het maken van een gegevensstroom starten om [!DNL MailChimp Members]-gegevens naar het Platform te brengen. De eerste stap bij het maken van een gegevensstroom is het maken van een basisverbinding.
+Zodra u uw [!DNL MailChimp] verificatiereferenties kunt u nu het proces starten voor het maken van een gegevensstroom om [!DNL MailChimp Members] gegevens naar Platform. De eerste stap bij het maken van een gegevensstroom is het maken van een basisverbinding.
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
 [!DNL MailChimp] steunt zowel basisauthentificatie als OAuth 2 verfrist code. Zie de volgende voorbeelden voor begeleiding op hoe te met één van beide authentificatietypen voor authentiek te verklaren.
 
-### Een [!DNL MailChimp] basisverbinding maken met basisverificatie
+### Een [!DNL MailChimp] basisverbinding met basisverificatie
 
-Als u een [!DNL MailChimp]-basisverbinding wilt maken met behulp van basisverificatie, vraagt u een POST naar het `/connections`-eindpunt van [!DNL Flow Service]-API, terwijl u inloggegevens voor `host`, `authorizationTestUrl`, `username` en `password` opgeeft.
+Als u een [!DNL MailChimp] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, `username`, en `password`.
 
 **API-indeling**
 
@@ -39,7 +40,7 @@ POST /connections
 
 **Verzoek**
 
-Met het volgende verzoek wordt een basisverbinding voor [!DNL MailChimp] gemaakt:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -72,16 +73,16 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
-| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat uw bron is geregistreerd en goedgekeurd via de [!DNL Flow Service]-API. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
 | `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verbinden met Platform. |
-| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt met de [!DNL MailChimp]-API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` het datacenter vertegenwoordigt dat overeenkomt met uw account. |
+| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL MailChimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
 | `auth.params.authorizationTestUrl` | (Optioneel) De autorisatietest-URL wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |
-| `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL MailChimp]-account. Dit is vereist voor basisverificatie. |
-| `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL MailChimp]-account. Dit is vereist voor basisverificatie. |
+| `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL MailChimp] account. Dit is vereist voor basisverificatie. |
+| `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL MailChimp] account. Dit is vereist voor basisverificatie. |
 
 **Antwoord**
 
-Een succesvolle reactie keert de pas gecreëerde basisverbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
+Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke verbindingsidentificatie (`id`). Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
 
 ```json
 {
@@ -90,9 +91,9 @@ Een succesvolle reactie keert de pas gecreëerde basisverbinding, met inbegrip v
 }
 ```
 
-### Een [!DNL MailChimp] basisverbinding maken met OAuth 2-vernieuwingscode
+### Een [!DNL MailChimp] basisverbinding met OAuth 2-vernieuwingscode
 
-Om een [!DNL MailChimp] basisverbinding tot stand te brengen gebruikend OAuth 2 verfrist code, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, en `accessToken`.
+Als u een [!DNL MailChimp] basisverbinding die OAuth 2 gebruikt verfrist code, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, en `accessToken`.
 
 **API-indeling**
 
@@ -102,7 +103,7 @@ POST /connections
 
 **Verzoek**
 
-Met het volgende verzoek wordt een basisverbinding voor [!DNL MailChimp] gemaakt:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -132,17 +133,17 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `name` | The name of your base connection. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
+| `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
-| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat u de bron hebt geregistreerd met de API [!DNL Flow Service]. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat u de bron hebt geregistreerd met de [!DNL Flow Service] API. |
 | `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
-| `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` het datacenter vertegenwoordigt dat overeenkomt met uw account. |
-| `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL MailChimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
+| `auth.params.authorizationTestUrl` | (Optioneel) De autorisatietest-URL wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |
 | `auth.params.accessToken` | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
 **Antwoord**
 
-A successful response returns the newly created base connection, including its unique connection identifier (`id`). Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
+Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke verbindingsidentificatie (`id`). Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
 
 ```json
 {
@@ -157,7 +158,7 @@ Met de id van de basisverbinding die u in de vorige stap hebt gegenereerd, kunt 
 
 >[!TIP]
 >
->Om het toegelaten formaat-type voor `{SOURCE_PARAMS}` terug te winnen, moet u het volledige `list_id` koord in base64 coderen. `"list_id": "10c097ca71"` gecodeerd in base64 komt bijvoorbeeld overeen met `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
+>Het geaccepteerde indelingstype ophalen voor `{SOURCE_PARAMS}`, moet u het gehele `list_id` string in base64. Bijvoorbeeld: `"list_id": "10c097ca71"` gecodeerd in base64 is gelijk aan `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
 
 **API-indeling**
 
@@ -170,7 +171,7 @@ Wanneer het uitvoeren van GET verzoeken om de het dossierstructuur en inhoud van
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | De id van de basisverbinding die in de vorige stap is gegenereerd. |
-| `{OBJECT_TYPE}` | Het type object dat u wilt verkennen. Voor REST-bronnen is deze waarde standaard `rest`. |
+| `{OBJECT_TYPE}` | Het type object dat u wilt verkennen. Voor REST-bronnen wordt deze waarde standaard ingesteld op `rest`. |
 | `{OBJECT}` | Het object dat u wilt verkennen. |
 | `{FILE_TYPE}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. |
 | `{PREVIEW}` | Een booleaanse waarde die definieert of de inhoud van de verbinding voorvertoning ondersteunt. |
@@ -326,7 +327,7 @@ Een succesvol antwoord retourneert de structuur van het bestand waarnaar wordt g
 
 ## Een bronverbinding maken {#source-connection}
 
-U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan [!DNL Flow Service] API te doen. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
+U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
 
 Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
 
@@ -338,7 +339,7 @@ Gebruik de volgende opsommingswaarden voor bestandsgebaseerde bronnen:
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Stel voor alle op tabellen gebaseerde bronnen de waarde in op `tabular`.
+Voor alle op tabellen gebaseerde bronnen stelt u de waarde in op `tabular`.
 
 **API-indeling**
 
@@ -348,7 +349,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met het volgende verzoek wordt een bronverbinding voor [!DNL MailChimp] gemaakt:
+Met de volgende aanvraag wordt een bronverbinding gemaakt voor [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -379,14 +380,14 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de bronverbinding. |
-| `baseConnectionId` | De id van de basisverbinding van [!DNL MailChimp]. Deze id is gegenereerd in een eerdere stap. |
+| `baseConnectionId` | De basis verbindings-id van [!DNL MailChimp]. Deze id is gegenereerd in een eerdere stap. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met uw bron. |
-| `data.format` | De indeling van de [!DNL MailChimp]-gegevens die u wilt invoeren. |
-| `params.listId` | Ook genoemd geworden publiek identiteitskaart, [!DNL MailChimp] staat voor de overdracht van publieksgegevens aan andere integraties toe. |
+| `data.format` | Het formaat van de [!DNL MailChimp] gegevens die u wilt invoeren. |
+| `params.listId` | Wordt ook wel publiek-id genoemd. [!DNL MailChimp] lijst ID staat voor de overdracht van publieksgegevens aan andere integraties toe. |
 
 **Antwoord**
 
-Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -397,25 +398,25 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. The target schema is then used to create a Platform dataset in which the source data is contained.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [creërend een schema gebruikend API](../../../../../xdm/api/schemas.md).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md).
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een verzoek van de POST aan [de Dienst API van de Catalogus ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
+Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [het creëren van een dataset gebruikend API](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target-connection}
 
-Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart van de verbindingsspecificatie verstrekken die aan [!DNL Data Lake] beantwoordt. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste verbindingsspecificatie-id opgeven die overeenkomt met de [!DNL Data Lake]. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan [!DNL Data Lake]. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan [!DNL Data Lake]. Met deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
-**API format**
+**API-indeling**
 
 ```https
 POST /targetConnections
@@ -423,7 +424,7 @@ POST /targetConnections
 
 **Verzoek**
 
-The following request creates a target connection for [!DNL MailChimp] :
+Met de volgende aanvraag wordt een doelverbinding gemaakt voor [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -458,13 +459,13 @@ curl -X POST \
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Lake]. Deze vaste ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | De indeling van de [!DNL MailChimp]-gegevens die u naar het Platform wilt verzenden. |
+| `data.format` | Het formaat van de [!DNL MailChimp] gegevens die u naar het Platform wilt brengen. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 
 **Antwoord**
 
-Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverbinding (`id`) terug. Deze id is vereist in latere stappen.
+Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id`). Deze id is vereist in latere stappen.
 
 ```json
 {
@@ -475,7 +476,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 
 ## Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST aan [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevens uit te voeren die binnen de verzoeklading worden bepaald.
+Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST aan [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen die zijn gedefinieerd in de payload van het verzoek.
 
 **API-indeling**
 
@@ -516,14 +517,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdmSchema` | De id van het [doel-XDM-schema](#target-schema) dat in een eerdere stap is gegenereerd. |
+| `xdmSchema` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
 | `mappings.destinationXdmPath` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
 | `mappings.sourceAttribute` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
 | `mappings.identity` | Een booleaanse waarde die aangeeft of de toewijzingsset wordt gemarkeerd voor [!DNL Identity Service]. |
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -538,7 +539,7 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 
 ## Een flow maken {#flow}
 
-De laatste stap in de richting van het verzenden van [!DNL MailChimp]-gegevens naar het Platform is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar [!DNL MailChimp] gegevens aan Platform moeten een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)
@@ -546,7 +547,7 @@ De laatste stap in de richting van het verzenden van [!DNL MailChimp]-gegevens n
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
-Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day` of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde worden ingesteld op gelijk aan of groter dan `15`.
+Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde op gelijk aan of groter dan `15`.
 
 
 **API-indeling**
@@ -601,19 +602,19 @@ curl -X POST \
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de gegevensstroom. |
 | `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | De corresponderende versie van de flow specification-id. Deze waarde wordt standaard ingesteld op `1.0`. |
-| `sourceConnectionIds` | De [bron verbindings-id](#source-connection) die in een eerdere stap is gegenereerd. |
-| `targetConnectionIds` | De [doel verbindings ID](#target-connection) die in een vroegere stap wordt geproduceerd. |
-| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Platform. |
+| `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
+| `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
+| `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
 | `transformations.name` | De naam die aan de transformatie is toegewezen. |
-| `transformations.params.mappingId` | De [toewijzing-id](#mapping) die in een eerdere stap is gegenereerd. |
+| `transformations.params.mappingId` | De [toewijzing-id](#mapping) gegenereerd in een eerdere stap. |
 | `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde wordt standaard ingesteld op `0`. |
 | `scheduleParams.startTime` | De aangewezen begintijd voor wanneer de eerste opname van gegevens begint. |
-| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week`. |
+| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
 
 **Antwoord**
 
-Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow terug. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
+Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
 
 ```json
 {
@@ -622,17 +623,17 @@ Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd datafl
 }
 ```
 
-## Monitor your dataflow
+## Uw gegevensstroom controleren
 
 Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien.
 
-**API format**
+**API-indeling**
 
 ```http
 GET /runs?property=flowId=={FLOW_ID}
 ```
 
-**Request**
+**Verzoek**
 
 Het volgende verzoek wint de specificaties voor een bestaande gegevensstroom terug.
 
@@ -647,7 +648,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`) terug.
+Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`).
 
 ```json
 {
@@ -742,11 +743,11 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
 
 ## Uw gegevensstroom bijwerken
 
-Om het runtime programma, de naam, en de beschrijving van uw gegevensstroom bij te werken, voer een verzoek van PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom identiteitskaart, versie, en het nieuwe programma uit u wilt gebruiken.
+Voer een PATCH-verzoek uit aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het nieuwe programma u wilt gebruiken.
 
 >[!IMPORTANT]
 >
->De `If-Match` kopbal wordt vereist wanneer het doen van een PATCH verzoek. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
+>De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
 
 **API-indeling**
 
@@ -787,13 +788,13 @@ curl -X PATCH \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace` en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
 | `path` | Het pad van de parameter die moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek tot GET aan [!DNL Flow Service] API te richten, terwijl het verstrekken van uw stroom identiteitskaart
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
 
 ```json
 {
@@ -804,7 +805,7 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## Uw gegevensstroom verwijderen
 
-Met een bestaande stroom-id kunt u een gegevensstroom verwijderen door een DELETE-verzoek uit te voeren naar de [!DNL Flow Service]-API.
+Met een bestaande stroom-id kunt u een gegevensstroom verwijderen door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API.
 
 **API-indeling**
 
@@ -814,7 +815,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id`-waarde voor de gegevensstroom die u wilt verwijderen. |
+| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt schrappen. |
 
 **Verzoek**
 
@@ -833,11 +834,11 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoof
 
 ## De verbinding bijwerken
 
-Om de naam, beschrijving en geloofsbrieven van uw verbinding bij te werken, voer een verzoek van de PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe informatie u wilt gebruiken.
+Als u de naam, beschrijving en referenties van uw verbinding wilt bijwerken, moet u een PATCH-verzoek uitvoeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe informatie u wilt gebruiken.
 
 >[!IMPORTANT]
 >
->De `If-Match` kopbal wordt vereist wanneer het doen van een PATCH verzoek. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
+>De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
 
 **API-indeling**
 
@@ -847,9 +848,9 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | De unieke `id`-waarde voor de verbinding die u wilt bijwerken. |
+| `{BASE_CONNECTION_ID}` | De unieke `id` waarde voor de verbinding u wilt bijwerken. |
 
-**Request**
+**Verzoek**
 
 De volgende aanvraag bevat een nieuwe naam en beschrijving, plus een nieuwe set referenties waarmee u de verbinding kunt bijwerken.
 
@@ -885,13 +886,13 @@ curl -X PATCH \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de verbinding bij te werken. Operations include: `add`, `replace`, and `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de verbinding bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
 | `path` | Het pad van de parameter die moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek tot GET aan [!DNL Flow Service] API te richten, terwijl het verstrekken van uw verbindingsidentiteitskaart
+Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw verbinding-id opgeeft.
 
 ```json
 {
@@ -900,9 +901,9 @@ Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt labe
 }
 ```
 
-## Delete your connection
+## Verbinding verwijderen
 
-Zodra u een bestaande identiteitskaart van de basisverbinding hebt, voer een verzoek van DELETE aan [!DNL Flow Service] API uit.
+Zodra u een bestaande identiteitskaart van de basisverbinding hebt, voer een verzoek van de DELETE aan [!DNL Flow Service] API.
 
 **API-indeling**
 
@@ -912,7 +913,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | The unique `id` value for the base connection you want to delete. |
+| `{BASE_CONNECTION_ID}` | De unieke `id` waarde voor de basisverbinding u wilt schrappen. |
 
 **Verzoek**
 

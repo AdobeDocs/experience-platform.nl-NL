@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding laat zien hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2272'
 ht-degree: 0%
@@ -18,21 +18,21 @@ ht-degree: 0%
 >
 >De berekende kenmerkfunctionaliteit die in dit document wordt beschreven, bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding bevat voorbeeld-API-aanroepen voor het uitvoeren van standaard-CRUD-bewerkingen met behulp van het `/computedAttributes`-eindpunt.
+Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding bevat voorbeeld-API-aanroepen voor het uitvoeren van standaard-CRUD-bewerkingen met behulp van de `/computedAttributes` eindpunt.
 
-Als u meer wilt weten over berekende kenmerken, leest u eerst [berekende kenmerken overzicht](overview.md).
+Als u meer wilt weten over berekende kenmerken, leest u eerst de [overzicht van berekende kenmerken](overview.md).
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [Real-time het Profiel van de Klant API](https://www.adobe.com/go/profile-apis-en).
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [Real-time API voor klantprofiel](https://www.adobe.com/go/profile-apis-en).
 
-Voordat u verdergaat, bekijkt u eerst de [Aan de slag-handleiding voor profiel-API](../api/getting-started.md) voor koppelingen naar aanbevolen documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen die in dit document worden weergegeven en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API met succes uit te voeren.
+Controleer voordat je doorgaat de [Aan de slag-handleiding voor profiel-API](../api/getting-started.md) voor verbindingen aan geadviseerde documentatie, een gids aan het lezen van de steekproefAPI vraag die in dit document verschijnt, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 ## Veld voor berekende kenmerken configureren
 
 Om een gegevens verwerkt attribuut tot stand te brengen, moet u eerst het gebied in een schema identificeren dat de gegevens verwerkte attributenwaarde zal houden.
 
-Raadpleeg de documentatie bij [het configureren van een berekend kenmerk](configure-api.md) voor een complete end-to-end handleiding voor het maken van een berekend kenmerkveld in een schema.
+Raadpleeg de documentatie bij [configureren, kenmerk computed](configure-api.md) voor een volledige gids van begin tot eind aan het creëren van een gegevens verwerkt attributengebied in een schema.
 
 >[!WARNING]
 >
@@ -40,9 +40,9 @@ Raadpleeg de documentatie bij [het configureren van een berekend kenmerk](config
 
 ## Een berekend kenmerk maken {#create-a-computed-attribute}
 
-Als het berekende kenmerkveld is gedefinieerd in het schema voor het inschakelen van het profiel, kunt u nu een berekend kenmerk configureren. Als u dit nog niet hebt gedaan, volgt u de workflow die wordt beschreven in de [documentatie voor het configureren van een berekend kenmerk](configure-api.md).
+Als het berekende kenmerkveld is gedefinieerd in het schema voor het inschakelen van het profiel, kunt u nu een berekend kenmerk configureren. Als u dit nog niet hebt gedaan, volgt u de workflow die in het dialoogvenster [configureren, kenmerk computed](configure-api.md) documentatie.
 
-Om een gegevens verwerkt attribuut tot stand te brengen, begin door een verzoek van de POST aan het `/config/computedAttributes` eindpunt met een verzoeklichaam te doen dat de details van de gegevens verwerkte attributen bevat die u wenst om tot stand te brengen.
+Om een gegevens verwerkt attribuut tot stand te brengen, begin door een verzoek van de POST aan `/config/computedAttributes` eindpunt met een verzoeklichaam dat de details van de gegevens verwerkte attributen bevat die u wenst om tot stand te brengen.
 
 **API-indeling**
 
@@ -61,13 +61,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "birthdayCurrentMonth",
-        "path" : "_{TENANT_ID}",
-        "description" : "Computed attribute to capture if the customer birthday is in the current month.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "person.birthDate.getMonth() = currentMonth()"
+        "name": "birthdayCurrentMonth",
+        "path": "_{TENANT_ID}",
+        "description": "Computed attribute to capture if the customer birthday is in the current month.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "person.birthDate.getMonth() = currentMonth()"
         },
         "schema": 
           {
@@ -80,15 +80,15 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 |---|---|
 | `name` | De naam van het berekende kenmerkveld, als een tekenreeks. |
-| `path` | Het pad naar het veld met het berekende kenmerk. Dit pad wordt gevonden in het `properties`-kenmerk van het schema en mag NIET de veldnaam in het pad opnemen. Laat bij het schrijven van het pad de verschillende niveaus van `properties`-kenmerken weg. |
-| `{TENANT_ID}` | Als u niet vertrouwd met uw huurdersidentiteitskaart bent, gelieve te verwijzen naar de stappen voor het vinden van uw huurdersidentiteitskaart in [de ontwikkelaarsgids van de Registratie van het Schema](../../xdm/api/getting-started.md#know-your-tenant_id). |
+| `path` | Het pad naar het veld met het berekende kenmerk. Dit pad is gevonden in het dialoogvenster `properties` kenmerk van het schema en mag de veldnaam NIET in het pad opnemen. Laat bij het schrijven van het pad de verschillende niveaus van `properties` kenmerken. |
+| `{TENANT_ID}` | Als u niet bekend bent met uw huurder-id, raadpleegt u de stappen voor het zoeken van uw huurder-id in het dialoogvenster [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat hierdoor anderen binnen uw IMS-organisatie kunnen bepalen welk kenmerk correct moet worden berekend. |
-| `expression.value` | Een geldige [!DNL Profile Query Language] (PQL)-expressie. De berekende kenmerken ondersteunen momenteel de volgende functies: som, aantal, min, max en boolean. Raadpleeg de documentatie [voorbeeld van PQL-expressies](expressions.md) voor een lijst met voorbeeldexpressies. |
-| `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema dat op de klasse XDM ExperienceEvent wordt gebaseerd. |
+| `expression.value` | Een geldige [!DNL Profile Query Language] (PQL) expression. De berekende kenmerken ondersteunen momenteel de volgende functies: som, aantal, min, max en boolean. Voor een lijst met voorbeeldexpressies raadpleegt u de [Voorbeeld-PQL-expressies](expressions.md) documentatie. |
+| `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema op basis van de klasse XDM ExperienceEvent. |
 
 **Antwoord**
 
-Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTTP (O.K.) en een reactielichaam terug die de details van het onlangs gecreeerde gegevens verwerkte attribuut bevatten. Deze details omvatten een uniek, read-only, systeem-geproduceerd `id` die voor het van verwijzingen voorzien van het gegevens verwerkte attribuut tijdens andere API verrichtingen kunnen worden gebruikt.
+Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTTP (O.K.) en een reactielichaam terug die de details van het onlangs gecreeerde gegevens verwerkte attribuut bevatten. Deze details zijn onder andere een uniek, alleen-lezen systeem dat wordt gegenereerd `id` die kunnen worden gebruikt voor het verwijzen naar het berekende kenmerk tijdens andere API-bewerkingen.
 
 ```json
 {
@@ -138,17 +138,17 @@ Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTT
 |---|---|
 | `id` | Een unieke, alleen-lezen, door het systeem gegenereerde id die kan worden gebruikt voor het verwijzen naar het berekende kenmerk tijdens andere API-bewerkingen. |
 | `imsOrgId` | De IMS-organisatie die betrekking heeft op het berekende kenmerk, moet overeenkomen met de waarde die in de aanvraag is verzonden. |
-| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie. |
-| `positionPath` | Een array met de gedeconstrueerde `path` naar het veld dat in de aanvraag is verzonden. |
+| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Zie voor meer informatie de [sandboxen, overzicht](../../sandboxes/home.md). |
+| `positionPath` | Een array die het gedeconstrueerde object bevat `path` naar het veld dat in de aanvraag is verzonden. |
 | `returnSchema.meta:xdmType` | Het type veld waarin het berekende kenmerk wordt opgeslagen. |
 | `definedOn` | Een array die de samenvoegingsschema&#39;s weergeeft waarop het berekende kenmerk is gedefinieerd. Bevat één object per samenvoegingsschema. Dit houdt in dat er meerdere objecten in de array kunnen zijn als het berekende kenmerk aan meerdere schema&#39;s is toegevoegd op basis van verschillende klassen. |
-| `active` | Een booleaanse waarde die weergeeft of het berekende kenmerk actief is of niet. De standaardwaarde is `true`. |
+| `active` | Een booleaanse waarde die weergeeft of het berekende kenmerk actief is of niet. Standaard is de waarde `true`. |
 | `type` | Het type van gecreeerde bron, in dit geval &quot;ComputedAttribute&quot;is de standaardwaarde. |
 | `createEpoch` en `updateEpoch` | De tijd waarop het berekende attribuut werd gecreeerd en het laatst bijgewerkt, respectievelijk. |
 
 ## Een berekend kenmerk maken dat verwijst naar bestaande berekende kenmerken
 
-Het is ook mogelijk om een berekend attribuut tot stand te brengen dat verwijzingen bestaande gegevens verwerkte attributen. Om dit te doen, begin door een verzoek van de POST aan het `/config/computedAttributes` eindpunt te doen. De aanvraaginstantie zal verwijzingen naar de gegevens verwerkte attributen in het `expression.value` gebied zoals aangetoond in het volgende voorbeeld bevatten.
+Het is ook mogelijk om een berekend attribuut tot stand te brengen dat verwijzingen bestaande gegevens verwerkte attributen. Om dit te doen, eerst door een verzoek van de POST aan `/config/computedAttributes` eindpunt. De aanvraaginstantie bevat verwijzingen naar de berekende kenmerken in de `expression.value` veld, zoals weergegeven in het volgende voorbeeld.
 
 **API-indeling**
 
@@ -163,7 +163,7 @@ In dit voorbeeld zijn al twee berekende kenmerken gemaakt en worden deze gebruik
 * **`totalSpend`:** Vangt het totale dollarbedrag dat een klant heeft uitgegeven.
 * **`countPurchases`:** Telt het aantal aankopen dat een klant heeft gedaan.
 
-De onderstaande aanvraag verwijst naar de twee bestaande berekende kenmerken, waarbij een geldige PQL wordt gebruikt om te delen om het nieuwe `averageSpend` berekende kenmerk te berekenen.
+De onderstaande aanvraag verwijst naar de twee bestaande berekende kenmerken, waarbij een geldige PQL wordt gebruikt om te delen om de nieuwe kenmerken te berekenen `averageSpend` berekend kenmerk.
 
 ```shell
 curl -X POST \
@@ -174,13 +174,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "averageSpend",
-        "path" : "_{TENANT_ID}.purchaseSummary",
-        "description" : "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
+        "name": "averageSpend",
+        "path": "_{TENANT_ID}.purchaseSummary",
+        "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
         },
         "schema": 
           {
@@ -193,15 +193,15 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 |---|---|
 | `name` | De naam van het berekende kenmerkveld, als een tekenreeks. |
-| `path` | Het pad naar het veld met het berekende kenmerk. Dit pad wordt gevonden in het `properties`-kenmerk van het schema en mag NIET de veldnaam in het pad opnemen. Laat bij het schrijven van het pad de verschillende niveaus van `properties`-kenmerken weg. |
-| `{TENANT_ID}` | Als u niet vertrouwd met uw huurdersidentiteitskaart bent, gelieve te verwijzen naar de stappen voor het vinden van uw huurdersidentiteitskaart in [de ontwikkelaarsgids van de Registratie van het Schema](../../xdm/api/getting-started.md#know-your-tenant_id). |
+| `path` | Het pad naar het veld met het berekende kenmerk. Dit pad is gevonden in het dialoogvenster `properties` kenmerk van het schema en mag de veldnaam NIET in het pad opnemen. Laat bij het schrijven van het pad de verschillende niveaus van `properties` kenmerken. |
+| `{TENANT_ID}` | Als u niet bekend bent met uw huurder-id, raadpleegt u de stappen voor het zoeken van uw huurder-id in het dialoogvenster [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat hierdoor anderen binnen uw IMS-organisatie kunnen bepalen welk kenmerk correct moet worden berekend. |
-| `expression.value` | Een geldige PQL-expressie. De berekende kenmerken ondersteunen momenteel de volgende functies: som, aantal, min, max en boolean. Raadpleeg de documentatie [voorbeeld van PQL-expressies](expressions.md) voor een lijst met voorbeeldexpressies.<br/><br/>In dit voorbeeld verwijst de expressie naar twee bestaande berekende kenmerken. Naar de kenmerken wordt verwezen met behulp van `path` en `name` van het berekende kenmerk zoals deze worden weergegeven in het schema waarin de berekende kenmerken zijn gedefinieerd. Het `path` van het eerste berekende kenmerk waarnaar wordt verwezen, is bijvoorbeeld `_{TENANT_ID}.purchaseSummary` en het `name` is `totalSpend`. |
-| `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema dat op de klasse XDM ExperienceEvent wordt gebaseerd. |
+| `expression.value` | Een geldige PQL-expressie. De berekende kenmerken ondersteunen momenteel de volgende functies: som, aantal, min, max en boolean. Voor een lijst met voorbeeldexpressies raadpleegt u de [Voorbeeld-PQL-expressies](expressions.md) documentatie.<br/><br/>In dit voorbeeld verwijst de expressie naar twee bestaande berekende kenmerken. Naar de kenmerken wordt verwezen met de `path` en de `name` van het berekende kenmerk zoals deze worden weergegeven in het schema waarin de berekende kenmerken zijn gedefinieerd. De `path` van het eerste berekende kenmerk waarnaar wordt verwezen, is `_{TENANT_ID}.purchaseSummary` en de `name` is `totalSpend`. |
+| `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema op basis van de klasse XDM ExperienceEvent. |
 
 **Antwoord**
 
-Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTTP (O.K.) en een reactielichaam terug die de details van het onlangs gecreeerde gegevens verwerkte attribuut bevatten. Deze details omvatten een uniek, read-only, systeem-geproduceerd `id` die voor het van verwijzingen voorzien van het gegevens verwerkte attribuut tijdens andere API verrichtingen kunnen worden gebruikt.
+Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTTP (O.K.) en een reactielichaam terug die de details van het onlangs gecreeerde gegevens verwerkte attribuut bevatten. Deze details zijn onder andere een uniek, alleen-lezen systeem dat wordt gegenereerd `id` die kunnen worden gebruikt voor het verwijzen naar het berekende kenmerk tijdens andere API-bewerkingen.
 
 ```json
 {
@@ -220,9 +220,9 @@ Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTT
         "purchaseSummary"
     ],
     "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-    "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+    "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
     },
     "schema": {
@@ -266,26 +266,26 @@ Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTT
 |---|---|
 | `id` | Een unieke, alleen-lezen, door het systeem gegenereerde id die kan worden gebruikt voor het verwijzen naar het berekende kenmerk tijdens andere API-bewerkingen. |
 | `imsOrgId` | De IMS-organisatie die betrekking heeft op het berekende kenmerk, moet overeenkomen met de waarde die in de aanvraag is verzonden. |
-| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie. |
-| `positionPath` | Een array met de gedeconstrueerde `path` naar het veld dat in de aanvraag is verzonden. |
+| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Zie voor meer informatie de [sandboxen, overzicht](../../sandboxes/home.md). |
+| `positionPath` | Een array die het gedeconstrueerde object bevat `path` naar het veld dat in de aanvraag is verzonden. |
 | `returnSchema.meta:xdmType` | Het type veld waarin het berekende kenmerk wordt opgeslagen. |
 | `definedOn` | Een array die de samenvoegingsschema&#39;s weergeeft waarop het berekende kenmerk is gedefinieerd. Bevat één object per samenvoegingsschema. Dit houdt in dat er meerdere objecten in de array kunnen zijn als het berekende kenmerk aan meerdere schema&#39;s is toegevoegd op basis van verschillende klassen. |
-| `active` | Een booleaanse waarde die weergeeft of het berekende kenmerk actief is of niet. De standaardwaarde is `true`. |
+| `active` | Een booleaanse waarde die weergeeft of het berekende kenmerk actief is of niet. Standaard is de waarde `true`. |
 | `type` | Het type van gecreeerde bron, in dit geval &quot;ComputedAttribute&quot;is de standaardwaarde. |
 | `createEpoch` en `updateEpoch` | De tijd waarop het berekende attribuut werd gecreeerd en het laatst bijgewerkt, respectievelijk. |
 
 ## Toegang krijgen tot berekende kenmerken
 
-Wanneer u werkt met berekende kenmerken met behulp van de API, hebt u twee opties voor toegang tot berekende kenmerken die door uw organisatie zijn gedefinieerd. Ten eerste moeten alle berekende kenmerken worden vermeld. Ten tweede moet een specifiek berekend kenmerk worden weergegeven op basis van het unieke `id`.
+Wanneer u werkt met berekende kenmerken met behulp van de API, hebt u twee opties voor toegang tot berekende kenmerken die door uw organisatie zijn gedefinieerd. Ten eerste moeten alle berekende kenmerken worden vermeld. Ten tweede moet een specifiek berekend kenmerk worden weergegeven op basis van zijn unieke `id`.
 
 De stappen voor beide toegangspatronen worden beschreven in dit document. Selecteer een van de volgende opties om te beginnen:
 
-* **[Alle bestaande berekende kenmerken](#list-all-computed-attributes) weergeven:** retourneren een lijst met alle bestaande berekende kenmerken die uw organisatie heeft gemaakt.
-* **[Bekijk een specifiek gegevens verwerkt attribuut](#view-a-computed-attribute):** keer de details van één enkel gegevens verwerkt attribuut door zijn identiteitskaart tijdens het verzoek te specificeren.
+* **[Alle bestaande berekende kenmerken weergeven](#list-all-computed-attributes):** Retourneer een lijst met alle bestaande berekende kenmerken die uw organisatie heeft gemaakt.
+* **[Een specifiek berekend kenmerk weergeven](#view-a-computed-attribute):** Retourneer de details van één enkel gegevens verwerkt attribuut door zijn identiteitskaart tijdens het verzoek te specificeren.
 
 ### Alle berekende kenmerken weergeven {#list-all-computed-attributes}
 
-Uw IMS Organisatie kan veelvoudige gegevens verwerkte attributen tot stand brengen, en het uitvoeren van een verzoek van de GET aan het `/config/computedAttributes` eindpunt staat u toe om van alle bestaande gegevens verwerkte attributen voor uw organisatie een lijst te maken.
+Uw IMS-organisatie kan meerdere berekende kenmerken maken en een verzoek om GET naar de `/config/computedAttributes` het eindpunt staat u toe een lijst van alle bestaande gegevens verwerkte attributen voor uw organisatie.
 
 **API-indeling**
 
@@ -306,9 +306,9 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol antwoord omvat een `_page` attribuut dat het totale aantal gegevens verwerkte attributen (`totalCount`) en het aantal gegevens verwerkte attributen op de pagina (`pageSize`) verstrekt.
+Een geslaagde reactie omvat een `_page` kenmerk met het totale aantal berekende kenmerken (`totalCount`) en het aantal berekende kenmerken op de pagina (`pageSize`).
 
-De reactie bevat ook een `children`-array die bestaat uit een of meer objecten, die elk de details van één berekend kenmerk bevatten. Als uw organisatie geen berekende kenmerken heeft, zijn `totalCount` en `pageSize` 0 (nul) en is `children` array leeg.
+Het antwoord bevat ook een `children` array die bestaat uit een of meer objecten, die elk de details van één berekend kenmerk bevatten. Als uw organisatie geen berekende kenmerken heeft, `totalCount` en `pageSize` zal 0 (nul) zijn en `children` array is leeg.
 
 ```json
 {
@@ -375,8 +375,8 @@ De reactie bevat ook een `children`-array die bestaat uit een of meer objecten, 
             ],
             "description": "Calculate total product downloads.",
             "expression": {
-                "type" : "PQL", 
-                "format" : "pql/text", 
+                "type": "PQL", 
+                "format": "pql/text", 
                 "value":  "let Y = xEvent[_coresvc.event.subType = \"DOWNLOAD\"].groupBy(_coresvc.attributes[name = \"product\"].value).map({
                   \"downloaded\": this.head()._coresvc.attributes[name = \"product\"].head().value,
                   \"downloadsSum\": this.count(),
@@ -416,14 +416,14 @@ De reactie bevat ook een `children`-array die bestaat uit een of meer objecten, 
 | Eigenschap | Beschrijving |
 |---|---|
 | `_page.totalCount` | Het totale aantal berekende kenmerken dat door uw IMS-organisatie is gedefinieerd. |
-| `_page.pageSize` | Het aantal berekende kenmerken dat op deze resultatenpagina wordt geretourneerd. Als `pageSize` gelijk is aan `totalCount`, betekent dit dat er slechts één pagina met resultaten is en alle berekende kenmerken zijn geretourneerd. Als deze niet gelijk zijn, zijn er extra pagina&#39;s met resultaten die kunnen worden geopend. Zie `_links.next` voor meer informatie. |
-| `children` | Een array die bestaat uit een of meer objecten, die elk de details van één berekend kenmerk bevatten. Als er geen berekende kenmerken zijn gedefinieerd, is de `children`-array leeg. |
-| `id` | Een unieke, alleen-lezen, door het systeem gegenereerde waarde die automatisch wordt toegewezen aan een berekend kenmerk wanneer dit wordt gemaakt. Voor meer informatie over de componenten van een gegevens verwerkt attribuut voorwerp, te zien gelieve de sectie over [het creëren van een gegevens verwerkt attribuut](#create-a-computed-attribute) vroeger in deze zelfstudie. |
-| `_links.next` | Als één pagina met berekende kenmerken wordt geretourneerd, is `_links.next` een leeg object, zoals in de voorbeeldreactie hierboven wordt getoond. Als uw organisatie veel berekende kenmerken heeft, worden deze geretourneerd op meerdere pagina&#39;s die u kunt openen door een GET-aanvraag in te dienen bij de waarde `_links.next`. |
+| `_page.pageSize` | Het aantal berekende kenmerken dat op deze resultatenpagina wordt geretourneerd. Indien `pageSize` is gelijk aan `totalCount`Dit betekent dat er slechts één pagina met resultaten is en dat alle berekende kenmerken zijn geretourneerd. Als deze niet gelijk zijn, zijn er extra pagina&#39;s met resultaten die kunnen worden geopend. Zie `_links.next` voor meer informatie. |
+| `children` | Een array die bestaat uit een of meer objecten, die elk de details van één berekend kenmerk bevatten. Als er geen berekende kenmerken zijn gedefinieerd, worden de `children` array is leeg. |
+| `id` | Een unieke, alleen-lezen, door het systeem gegenereerde waarde die automatisch wordt toegewezen aan een berekend kenmerk wanneer dit wordt gemaakt. Voor meer informatie over de componenten van een berekend kenmerkobject raadpleegt u de sectie over [een berekend kenmerk maken](#create-a-computed-attribute) eerder in deze zelfstudie. |
+| `_links.next` | Als één pagina met berekende kenmerken wordt geretourneerd, `_links.next` is een leeg object, zoals in de voorbeeldreactie hierboven wordt getoond. Als uw organisatie veel berekende kenmerken heeft, worden deze geretourneerd op meerdere pagina&#39;s die u kunt openen door een GET-aanvraag in te dienen bij de `_links.next` waarde. |
 
 ### Een berekend kenmerk weergeven {#view-a-computed-attribute}
 
-U kunt een specifiek gegevens verwerkt attribuut bekijken door een verzoek van de GET aan het `/config/computedAttributes` eindpunt en met inbegrip van gegevens verwerkte kenmerkidentiteitskaart in de verzoekweg te richten.
+U kunt een specifiek gegevens verwerkt attribuut bekijken door een verzoek van de GET aan `/config/computedAttributes` eindpunt en met inbegrip van gegevens verwerkte kenmerkidentiteitskaart in de verzoekweg.
 
 **API-indeling**
 
@@ -494,7 +494,7 @@ curl -X GET \
 
 ## Een berekend kenmerk bijwerken
 
-Mocht u vinden dat u een bestaand gegevens verwerkt attribuut moet bijwerken, kan dit worden gedaan door een verzoek van PATCH aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van berekende toegeschreven die u in de verzoekweg wenst bij te werken.
+Mocht u vinden dat u een bestaand gegevens verwerkt attribuut moet bijwerken, kan dit door een verzoek van de PATCH aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van gegevens verwerkte toegeschreven die u in de verzoekweg wenst bij te werken.
 
 **API-indeling**
 
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Verzoek**
 
-In dit verzoek wordt [JSON-patchopmaak](http://jsonpatch.com/) gebruikt om de &quot;waarde&quot; van het veld &quot;expression&quot; bij te werken.
+Dit verzoek gebruikt [JSON-patchopmaak](http://jsonpatch.com/) om de &quot;waarde&quot; van het veld &quot;expression&quot; bij te werken.
 
 ```shell
 curl -X PATCH \
@@ -524,8 +524,8 @@ curl -X PATCH \
           "path": "/expression",
           "value": 
           {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "{NEW_EXPRESSION_VALUE}"
           }
         }
@@ -534,7 +534,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Een geldige [!DNL Profile Query Language] (PQL)-expressie. De berekende kenmerken ondersteunen momenteel de volgende functies: som, aantal, min, max en boolean. Raadpleeg de documentatie [voorbeeld van PQL-expressies](expressions.md) voor een lijst met voorbeeldexpressies. |
+| `{NEW_EXPRESSION_VALUE}` | Een geldige [!DNL Profile Query Language] (PQL) expression. De berekende kenmerken ondersteunen momenteel de volgende functies: som, aantal, min, max en boolean. Voor een lijst met voorbeeldexpressies raadpleegt u de [Voorbeeld-PQL-expressies](expressions.md) documentatie. |
 
 **Antwoord**
 
@@ -542,7 +542,7 @@ Een geslaagde update retourneert HTTP Status 204 (Geen inhoud) en een lege antwo
 
 ## Een berekend kenmerk verwijderen
 
-Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit wordt gedaan door een verzoek van DELETE aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van de gegevens verwerkte attributen te doen die u wenst om in de verzoekweg te schrappen.
+Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit gebeurt door een DELETE-verzoek in te dienen bij de `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van de gegevens verwerkte attributen die u wenst om in de verzoekweg te schrappen.
 
 >[!NOTE]
 >
@@ -577,9 +577,9 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie omvat een uitdrukking die een vraag inkapselt die in PQL wordt geschreven. Deze expressies kunnen ook verwijzen naar berekende kenmerken.
 
-In het volgende voorbeeld wordt een segmentdefinitie gemaakt die verwijst naar een bestaand berekend kenmerk. Meer over segmentdefinities, en hoe te om met hen in de Dienst API van de Segmentatie te werken, gelieve te verwijzen naar [segment definities API eindpuntgids](../../segmentation/api/segment-definitions.md).
+In het volgende voorbeeld wordt een segmentdefinitie gemaakt die verwijst naar een bestaand berekend kenmerk. Voor meer informatie over segmentdefinities en hoe u ermee kunt werken in de segmentatieservice-API, raadpleegt u de [segmentdefinities-API-eindhulplijn](../../segmentation/api/segment-definitions.md).
 
-Om te beginnen, doe een verzoek van de POST aan het `/segment/definitions` eindpunt, verstrekkend de gegevens verwerkte attributen in het verzoeklichaam.
+Om te beginnen, doe een verzoek van de POST aan `/segment/definitions` eindpunt, verstrekkend de gegevens verwerkte attributen in het verzoeklichaam.
 
 **API-indeling**
 
@@ -619,17 +619,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | -------- | ----------- |
 | `name` | Een unieke naam voor het segment, als een tekenreeks. |
 | `description` | Een door de mens leesbare beschrijving van de definitie. |
-| `schema.name` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name`. |
+| `schema.name` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een object dat velden bevat met informatie over de segmentdefinitie. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt alleen `pql/text` ondersteund. |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Alleen `pql/text` wordt ondersteund. |
 | `expression.value` | Een geldige PQL-expressie, in dit voorbeeld bevat deze een verwijzing naar een bestaand berekend kenmerk. |
 
-Voor meer informatie over de attributen van de schemadefinitie, gelieve te verwijzen naar de voorbeelden die in [segment definities API eindpuntgids worden verstrekt](../../segmentation/api/segment-definitions.md).
+Raadpleeg de voorbeelden in het dialoogvenster [segmentdefinities-API-eindhulplijn](../../segmentation/api/segment-definitions.md).
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde segmentdefinitie terug. Meer over de voorwerpen van de de reactie van de segmentdefinitie, verwijs naar [segment definities API eindpuntgids](../../segmentation/api/segment-definitions.md).
+Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde segmentdefinitie terug. Voor meer informatie over segmentdefinitieresponsobjecten raadpleegt u de [segmentdefinities-API-eindhulplijn](../../segmentation/api/segment-definitions.md).
 
 ```json
 {

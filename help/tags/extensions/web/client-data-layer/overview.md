@@ -1,7 +1,8 @@
 ---
 title: Adobe Client Data Layer Extension
 description: Meer informatie over de tagextensie Adobe Client Data Layer in Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -30,11 +31,11 @@ This installation will not be supported on our end.<br>
 
 ## Extensieweergave
 
-Standaard maakt het ACDL-script een nieuwe gegevenslaag met de variabelenaam `adobeDataLayer`. In de extensieweergave kunt u deze naam desgewenst wijzigen. De naam die u hebt ingesteld, wordt geïnstantieerd wanneer tags worden geladen.
+Standaard maakt het ACDL-script een nieuwe gegevenslaag met de naam van de variabele `adobeDataLayer`. In de extensieweergave kunt u deze naam desgewenst wijzigen. De naam die u hebt ingesteld, wordt geïnstantieerd wanneer tags worden geladen.
 
 >[!NOTE]
 >
->Wanneer u de objectnaam wijzigt, wordt het oorspronkelijke `adobeDataLayer`-object nog steeds geïnstantieerd en vervolgens gedupliceerd naar de nieuwe variabelenaam die u hebt geselecteerd.
+>Wanneer u de objectnaam wijzigt, wordt het origineel `adobeDataLayer` object wordt nog steeds geïnstantieerd en vervolgens gedupliceerd naar de nieuwe variabelenaam die u hebt geselecteerd.
 
 ## Gebeurtenissen
 
@@ -74,7 +75,7 @@ De volgende voorbeeldpushgebeurtenis wordt niet door de listener bijgehouden:
 
 Als u een gebeurtenis opgeeft, houdt de gebeurtenislistener alle gebeurtenissen bij die overeenkomen met een bepaalde tekenreeks.
 
-Als u bijvoorbeeld `myEvent` instelt wanneer u deze configuratie gebruikt, wordt in de listener alleen de volgende pushgebeurtenis bijgehouden:
+Stel bijvoorbeeld `myEvent` wanneer u deze configuratie gebruikt, wordt in de listener alleen de volgende pushgebeurtenis bijgehouden:
 
 * `adobeDataLayer.push({"event":"myEvent"})`
 
@@ -94,11 +95,11 @@ De extensie biedt u een manier om de lengte van de gegevenslaag opnieuw in te st
 
 Er bestaat momenteel echter geen mogelijkheid om de informatie die eerder tijdens de pushmethoden was ingesteld, volledig te verwijderen.
 
-Met de handeling **Berekende status herstellen en instellen** kopieert u de laatst berekende status, verwijdert u het gegevenslaagobject en duwt u de laatste status opnieuw.
+De **Berekende status opnieuw instellen en instellen** De actie kopieert de laatste gegevens verwerkte staat, leegt het voorwerp van de gegevenslaag, en duwt het laatste staat opnieuw.
 
 ### Naar gegevenslaag duwen
 
-De extensie biedt u een handeling waarmee u JSON-inhoud naar de gegevenslaag zelf kunt duwen. Met deze handeling kunt u gegevenselementen rechtstreeks in de JSON gebruiken. Binnen de redacteur JSON, gegevenselementen zouden moeten worden van verwijzingen voorzien gebruikend percentenaantekening (bijvoorbeeld, `%dataElementName%`).
+De extensie biedt u een handeling waarmee u JSON-inhoud naar de gegevenslaag zelf kunt duwen. Met deze handeling kunt u gegevenselementen rechtstreeks in de JSON gebruiken. Binnen de redacteur JSON, gegevenselementen zouden moeten worden van verwijzingen voorzien gebruikend percenten aantekening (bijvoorbeeld `%dataElementName%`).
 
 ```json
 {

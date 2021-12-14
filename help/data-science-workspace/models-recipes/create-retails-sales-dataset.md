@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies voor de Adobe Experience Platform Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie IMS op Experience Platform beschikbaar zijn.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -67,11 +67,11 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
        kernel_type: Python
    ```
 
-   - `platform_gateway` : Het basispad voor API-aanroepen. Wijzig deze waarde niet.
-   - `ims_token` : Uw `{ACCESS_TOKEN}` komt hier.
-   - `ingest_data` : Voor deze zelfstudie stelt u deze waarde in als `"True"` om de detailhandelschema&#39;s en datasets van de Verkoop tot stand te brengen. Een waarde van `"False"` alleen de schema&#39;s maken.
-   - `build_recipe_artifacts` : Voor deze zelfstudie stelt u deze waarde in als `"False"` om te voorkomen dat het script een Recipe-artefact genereert.
-   - `kernel_type` : Het uitvoeringstype van het Recipe-artefact. Deze waarde behouden als `Python` indien `build_recipe_artifacts` is ingesteld als `"False"`, anders het correcte uitvoeringstype specificeren.
+   - `platform_gateway`: Het basispad voor API-aanroepen. Wijzig deze waarde niet.
+   - `ims_token`: Uw `{ACCESS_TOKEN}` komt hier.
+   - `ingest_data`: Voor deze zelfstudie stelt u deze waarde in als `"True"` om de detailhandelschema&#39;s en datasets van de Verkoop tot stand te brengen. Een waarde van `"False"` alleen de schema&#39;s maken.
+   - `build_recipe_artifacts`: Voor deze zelfstudie stelt u deze waarde in als `"False"` om te voorkomen dat het script een Recipe-artefact genereert.
+   - `kernel_type`: Het uitvoeringstype van het Recipe-artefact. Deze waarde behouden als `Python` indien `build_recipe_artifacts` is ingesteld als `"False"`, anders het correcte uitvoeringstype specificeren.
 
 4. Onder de `Titles` de volgende informatie voor de voorbeeldgegevens van de detailhandel op de juiste wijze verstrekken, het bestand opslaan en sluiten nadat de bewerkingen zijn uitgevoerd. Voorbeeld hieronder:
 
