@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: Create a new connection specification using the Flow Service API (Beta)
+title: Een nieuwe verbindingsspecificatie maken met behulp van de Flow Service API (bèta)
 topic-legacy: tutorial
-description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
+description: Het volgende document verstrekt stappen op hoe te om een verbindingsspecificatie tot stand te brengen gebruikend de Dienst API van de Stroom en een nieuwe bron door Bronnen SDK te integreren.
 hide: true
 hidefromtoc: true
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: baa5f95fc8155c6a3f6c2faab99182046f33f49a
+source-git-commit: 5af36c096a030c9f06c304f2c899ce49066ae4cb
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 1%
 
 ---
 
-# [!DNL Flow Service]
+# Een nieuwe verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API (bèta)
 
 >[!IMPORTANT]
 >
->Sources SDK is currently in beta and your organization may not have access to it yet. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
+>Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
 
 Een verbindingsspecificatie vertegenwoordigt de structuur van een bron. Het bevat informatie over de authentificatievereisten van een bron, bepaalt hoe de brongegevens kunnen worden onderzocht en worden geïnspecteerd, en verstrekt informatie over de attributen van een bepaalde bron. De `/connectionSpecs` in de [!DNL Flow Service] API staat u toe om de verbindingsspecificaties binnen uw organisatie programmatically te beheren.
 
@@ -30,18 +30,18 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 
 ## Artefacten verzamelen
 
-The first step in creating a new source through [!DNL Sources SDK] is to coordinate with your Adobe representative and identify values for your source&#39;s corresponding **icon**, **description**, **label**, and **category**.
+De eerste stap bij het maken van een nieuwe bron via [!DNL Sources SDK] moet coördineren met uw Adobe-vertegenwoordiger en waarden identificeren voor de overeenkomstige bron **pictogram**, **beschrijving**, **label**, en **categorie**.
 
-| Artifacts | Beschrijving | Voorbeeld |
+| Artefacten | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | Label | De naam van de bron. | [!DNL MailChimp Members] |
-| Beschrijving | Een korte beschrijving van de bron. | Create a live inbound connection to your [!DNL Mailchimp Members] instance, to ingest both historic and scheduled data into Experience Platform. |
-| Pictogram | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
-| Categorie | The category of your source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| Beschrijving | Een korte beschrijving van de bron. | Een live binnenkomende verbinding maken met uw [!DNL Mailchimp Members] bijvoorbeeld om zowel historische als geplande gegevens in Experience Platform in te voeren. |
+| Pictogram | De afbeelding of het logo dat de bron vertegenwoordigt. Het pictogram wordt weergegeven in de UI-weergave van het Platform van uw bron. | `mailchimp-members-icon.svg` |
+| Categorie | De categorie van je bron. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Copy connection specification template
+## Sjabloon voor verbindingsspecificatie kopiëren
 
 Nadat u de vereiste artefacten hebt verzameld, kopieert en plakt u de onderstaande sjabloon voor de verbindingsspecificatie naar de teksteditor van uw keuze en werkt u de kenmerken tussen haakjes bij `{}` met informatie die relevant is voor uw specifieke bron.
 
@@ -289,23 +289,23 @@ Nadat u de vereiste artefacten hebt verzameld, kopieert en plakt u de onderstaan
 
 Nadat u de sjabloon voor de verbindingsspecificatie hebt verkregen, kunt u nu een nieuwe verbindingsspecificatie ontwerpen door de juiste waarden in te vullen die overeenkomen met de bron.
 
-A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications.
+Een verbindingsspecificatie kan in drie verschillende delen worden verdeeld: de verificatiespecificaties, de bronspecificaties en de verkennende specificaties.
 
 Zie de volgende documenten voor instructies over hoe u de waarden van elk deel van een verbindingsspecificatie kunt vullen:
 
 * [Uw verificatiespecificatie configureren](../config/authspec.md)
-* [Configure your source specification](../config/sourcespec.md)
-* [Configure your explore specification](../config/explorespec.md)
+* [Uw bronspecificatie configureren](../config/sourcespec.md)
+* [Uw verkenningsspecificatie configureren](../config/explorespec.md)
 
-`/connectionSpecs`[!DNL Flow Service]
+Als de opgegeven gegevens zijn bijgewerkt, kunt u de nieuwe verbindingsspecificatie verzenden door een verzoek van de POST in te dienen bij de `/connectionSpecs` van het [!DNL Flow Service] API.
 
-****
+**API-indeling**
 
 ```http
 POST /connectionSpecs
 ```
 
-****
+**Verzoek**
 
 Het volgende verzoek is een voorbeeld van een volledig geschreven verbindingsspecificatie voor een [!DNL MailChimp] bron:
 
@@ -482,7 +482,7 @@ curl -X POST \
 
 **Antwoord**
 
-A successful response returns the newly created connection specification, including its unique `id`.
+Met een geslaagde reactie wordt de nieuwe verbindingsspecificatie geretourneerd, inclusief de unieke `id`.
 
 ```json
 {
@@ -669,4 +669,4 @@ A successful response returns the newly created connection specification, includ
 
 Nu u een nieuwe verbindingsspecificatie hebt gecreeerd, moet u zijn overeenkomstige identiteitskaart van de verbindingsspecificatie aan een bestaande stroomspecificatie toevoegen. Zie de zelfstudie aan [bijwerken, stroomspecificaties](./update-flow-specs.md) voor meer informatie .
 
-To make modifications to the connection specification that you created, see the tutorial on [updating connection specifications](./update-connection-specs.md).
+Als u wijzigingen wilt aanbrengen in de verbindingsspecificatie die u hebt gemaakt, raadpleegt u de zelfstudie over [bijwerken, verbindingsspecificaties](./update-connection-specs.md).
