@@ -1,9 +1,10 @@
 ---
 description: Deze pagina bevat alle informatie die u voor revisie moet verzenden naar een doel dat is ontworpen met Destination SDK.
 title: Ter controle verzenden naar een bestemming die is geschreven in Destination SDK
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -211,10 +212,6 @@ Geef de id van de publicatieaanvraag voor uw doel op. Voor informatie over het o
 ## Doeldocumentatie PR (pull-request) voor productieve integratie
 
 Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](./overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming tot stand te brengen. Geef als onderdeel van het verzendproces de pull request (PR) voor de doeldocumentatie op.
-
-Voorbeeld-PR&#39;s van bestaande integratiepartners zijn:
-* [Yahoo-bestemmingsdocumentatie PR](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Documentatie vluchtbestemming PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## Logo voor uw doel
 
