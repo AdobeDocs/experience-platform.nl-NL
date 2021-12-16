@@ -6,9 +6,9 @@ title: Een AI-instantie van een klant configureren
 topic-legacy: Instance creation
 description: Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
+source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2525'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De AI van de klant, als deel van de Intelligente Diensten staat u toe om de scor
 
 Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 
-## Instellen van instantie {#set-up-your-instance}
+## Een instantie maken {#set-up-your-instance}
 
 Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Services]** in de linkernavigatie. De **[!UICONTROL Services]** wordt weergegeven en geeft alle beschikbare services weer. Selecteer in de container voor AI van de Klant **[!UICONTROL Open]**.
 
@@ -48,7 +48,7 @@ Als u een nieuwe instantie wilt maken, selecteert u **[!UICONTROL Create instanc
 
 ## Instellen
 
-De workflow voor het maken van instanties wordt weergegeven, te beginnen bij het **[!UICONTROL Setup]** stap.
+De workflow voor het maken van instanties wordt weergegeven, te beginnen bij het **[!UICONTROL Set up]** stap.
 
 Hieronder vindt u belangrijke informatie over waarden die u aan het exemplaar moet doorgeven:
 
@@ -108,7 +108,7 @@ Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteer
 >
 > Als er geen geldig identiteitstype (naamruimte) bestaat voor een gegevensset, moet u een primaire identiteit instellen en deze toewijzen aan een naamruimte voor identiteit met behulp van de [schema-editor](../../../xdm/schema/composition.md#identity). Ga voor meer informatie over naamruimten en identiteiten naar de [Naamruimten identiteitsservice](../../../identity-service/namespaces.md) documentatie.
 
-## Een doel definiëren {#define-a-goal}
+## Doel definiëren {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
@@ -156,9 +156,13 @@ Standaard worden voor alle profielen densiteitsscores gegenereerd, tenzij een in
 
 Als u aanvullende informatie hebt naast de [standaardgebeurtenisvelden](../input-output.md#standard-events) die door de AI van de Klant worden gebruikt om eigenschapscores te genereren, wordt een optie voor aangepaste gebeurtenissen geboden. Met deze optie kunt u aanvullende gebeurtenissen toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model verbeteren en kunnen nauwkeurigere resultaten worden verkregen. Als de dataset u selecteerde douanegebeurtenissen omvat die in uw schema worden bepaald, kunt u hen aan uw instantie toevoegen.
 
+>[!NOTE]
+>
+> Ga voor een uitgebreide uitleg over de gevolgen van aangepaste gebeurtenissen voor de resultaten van beoordelingen door de Klant AI naar de [Aangepast gebeurtenisvoorbeeld](#custom-event) sectie.
+
 ![gebeurtenisfunctie](../images/user-guide/event-feature.png)
 
-Als u een aangepaste gebeurtenis wilt toevoegen, selecteert u **[!UICONTROL Add custom event]**. Voer vervolgens een aangepaste naam voor de gebeurtenis in en wijs deze toe aan het gebeurtenisveld in uw schema. Aangepaste gebeurtenisnamen worden weergegeven in plaats van de veldwaarde wanneer wordt gekeken naar invloedrijke factoren en andere inzichten. Dit betekent dat gebruikers-id&#39;s, reserverings-id&#39;s, apparaatinformatie en andere aangepaste waarden worden vermeld met de naam van de aangepaste gebeurtenis in plaats van met de id/waarde van de gebeurtenis. Deze extra aangepaste gebeurtenissen worden door de AI van de Klant gebruikt om de kwaliteit van uw model te verbeteren en nauwkeurigere resultaten te bieden.
+Als u een aangepaste gebeurtenis wilt toevoegen, selecteert u **[!UICONTROL Add custom event]**. Voer vervolgens een aangepaste naam voor de gebeurtenis in en wijs deze toe aan het gebeurtenisveld in uw schema. Aangepaste gebeurtenisnamen worden weergegeven in plaats van de veldwaarde wanneer wordt gekeken naar invloedrijke factoren en andere inzichten. Dit betekent dat de naam van de aangepaste gebeurtenis wordt gebruikt in plaats van de id/waarde van de gebeurtenis. Voor meer informatie over hoe de gebeurtenissen van de douane worden getoond, zie [voorbeeldsectie voor aangepaste gebeurtenissen](#custom-event). Deze extra aangepaste gebeurtenissen worden door de AI van de Klant gebruikt om de kwaliteit van uw model te verbeteren en nauwkeurigere resultaten te bieden.
 
 ![Veld Aangepaste gebeurtenis](../images/user-guide/custom-event.png)
 
@@ -178,21 +182,31 @@ U kunt belangrijke gegevenssetvelden voor profielen definiëren (met tijdstempel
 
 >[!NOTE]
 >
->Het toevoegen van een attribuut van het Aangepast Profiel volgt het zelfde werkschema zoals het toevoegen van een douanegebeurtenis.
+>Het toevoegen van een attribuut van het Aangepast Profiel volgt het zelfde werkschema zoals het toevoegen van een douanegebeurtenis. Net als aangepaste gebeurtenissen hebben kenmerken van aangepaste profielen hetzelfde effect op de score van uw model. Ga voor een uitgebreide uitleg naar de [Aangepast gebeurtenisvoorbeeld](#custom-event) sectie.
 
 ![een aangepast profielkenmerk toevoegen](../images/user-guide/profile-attributes.png)
 
+### Een voorbeeld van een aangepaste gebeurtenis toevoegen {#custom-event}
+
+In het volgende voorbeeld worden een aangepast gebeurtenis- en profielkenmerk toegevoegd aan een Customer AI-instantie. Het doel van de AI-instantie van de klant is te voorspellen hoe waarschijnlijk het is dat een klant in de komende 60 dagen een ander Luma-product zal kopen. Doorgaans zijn productgegevens gekoppeld aan een SKU van het product. In dit geval is de SKU `prd1013`. Nadat het AI-model van de Klant is opgeleid/gecodeerd, kan deze SKU worden gekoppeld aan een gebeurtenis en worden weergegeven als een invloedrijke factor voor een aandrijfsegment.
+
+De AI van de klant past automatisch eigenschapgeneratie zoals &quot;Dagen toe aangezien&quot;of &quot;Aantal&quot;tegen douanegebeurtenissen zoals **Aankoop bekijken**. Als deze gebeurtenis werd beschouwd als een invloedrijke factor voor de reden waarom klanten een hoge, gemiddelde of lage propensiteit hebben, geeft de AI deze als `Days since prd1013 purchase` of `Count of prd1013 purchase`. Door deze gebeurtenis als een aangepaste gebeurtenis te maken, kunt u de gebeurtenis een nieuwe naam geven, waardoor de resultaten veel beter leesbaar worden. Bijvoorbeeld, `Days since Watch purchase`. Daarnaast gebruikt de AI van de Klant deze gebeurtenis in zijn training en scoring, zelfs als de gebeurtenis geen standaardgebeurtenis is. Dit betekent dat u meerdere gebeurtenissen kunt toevoegen die volgens u van invloed kunnen zijn en uw model verder kunt aanpassen door gegevens zoals reserveringen, bezoekerslogboeken en andere gebeurtenissen op te nemen. Door deze gegevenspunten toe te voegen, vergroot u de nauwkeurigheid en nauwkeurigheid van uw AI-model van de klant.
+
+![voorbeeld van een aangepaste gebeurtenis](../images/user-guide/custom-event-name.png)
+
+## Opties instellen
+
+De vastgestelde optiesstap staat u toe om een programma te vormen om voorspellingslooppas te automatiseren, voorspellingsuitsluitingen te bepalen om bepaalde gebeurtenissen te filtreren, en knevel **[!UICONTROL Profile]** aan/uit.
+
 ### Een schema configureren *(optioneel)* {#configure-a-schedule}
 
-De **[!UICONTROL Advanced]** wordt weergegeven. Deze facultatieve stap staat u toe om een programma te vormen om voorspellingslooppas te automatiseren, voorspellingsuitsluitingen te bepalen om bepaalde gebeurtenissen te filtreren, of te selecteren **[!UICONTROL Finish]** als er niets nodig is.
-
-Opstelling een het scoren programma door te vormen **[!UICONTROL Scoring Frequency]**. De geautomatiseerde predikings kunnen worden gepland om of wekelijks of maandelijks te lopen.
+Om opstelling een het scoren programma, begin door te vormen **[!UICONTROL Scoring Frequency]**. De geautomatiseerde predikings kunnen worden gepland om of wekelijks of maandelijks te lopen.
 
 ![](../images/user-guide/schedule.png)
 
-### Uitsluitingen op voorspelling
+### Uitsluitingen op voorspelling *(optioneel)*
 
-Als uw dataset kolommen bevatte die als testgegevens werden toegevoegd, kunt u die kolom of gebeurtenis aan een uitsluitingslijst toevoegen door te selecteren **Uitsluiting toevoegen** gevolgd door het veld in te voeren dat u wilt uitsluiten. Zo voorkomt u dat gebeurtenissen die aan bepaalde voorwaarden voldoen, worden geëvalueerd wanneer u scores genereert. Deze functie kan worden gebruikt om irrelevante gegevensinvoer of bepaalde promoties uit te filteren.
+Als uw dataset kolommen bevatte die als testgegevens werden toegevoegd, kunt u die kolom of gebeurtenis aan een uitsluitingslijst toevoegen door te selecteren **[!UICONTROL Add Exclusion]** gevolgd door het veld in te voeren dat u wilt uitsluiten. Zo voorkomt u dat gebeurtenissen die aan bepaalde voorwaarden voldoen, worden geëvalueerd wanneer u scores genereert. Deze functie kan worden gebruikt om irrelevante gegevensinvoer of -promoties uit te filteren.
 
 Selecteer **[!UICONTROL Add exclusion]** en definieert u de gebeurtenis. Als u een uitsluiting wilt verwijderen, selecteert u de ovalen (**[!UICONTROL ...]**) rechtsboven in de gebeurteniscontainer en selecteert u **[!UICONTROL Remove Container]**.
 
@@ -202,7 +216,7 @@ Selecteer **[!UICONTROL Add exclusion]** en definieert u de gebeurtenis. Als u e
 
 Met de schakeloptie Profiel kan de Klant-AI de resultaten van de scoring exporteren naar het realtime profiel van de Klant. Als u deze schakeloptie uitschakelt, worden de resultaten van de modelscoring niet toegevoegd aan Profiel. De resultaten van AI-scoring van de klant zijn nog steeds beschikbaar met deze functie uitgeschakeld.
 
-Wanneer u voor het eerst een AI van de Klant gebruikt, dient u deze functie uit te schakelen totdat u tevreden bent met de resultaten van de modeluitvoer. Dit verhindert u veelvoudige het scoren datasets aan het Profiel van de Klant in real time te uploaden terwijl het verfijnen van uw model.
+Wanneer u voor het eerst een AI van de Klant gebruikt, kunt u deze functie uitschakelen totdat u tevreden bent met de resultaten van de modeluitvoer. Dit verhindert u veelvoudige het scoren datasets aan uw Profielen van de Klant te uploaden terwijl het verfijnen van uw model. Als u klaar bent met het kalibreren van het model, kunt u het model klonen met de opdracht [kloonoptie](#set-up-your-instance) van de **Service-instanties** pagina. Op deze manier kunt u een kopie van uw model maken en het profiel in- en uitschakelen.
 
 ![Schakelen tussen profielen](../images/user-guide/advanced-workflow.png)
 
