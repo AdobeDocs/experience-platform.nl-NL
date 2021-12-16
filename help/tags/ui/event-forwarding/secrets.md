@@ -1,14 +1,15 @@
 ---
-title: Doorgestuurde geheimen van gebeurtenissen
+title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in de Inzameling UI van Gegevens te vormen om aan eindpunten voor authentiek te verklaren die in gebeurtenis door:sturen eigenschappen worden gebruikt.
-source-git-commit: 43d593cd8adf5a29c3283a328c24b0994009222b
+exl-id: eefd87d7-457f-422a-b159-5b428da54189
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1376'
 ht-degree: 0%
 
 ---
 
-# Gebeurtenis die geheimen doorstuurt
+# Het vormen geheimen in gebeurtenis door:sturen
 
 In gebeurtenis door:sturen, is een geheim een middel dat een authentificatiereferentie voor een ander systeem vertegenwoordigt, dat voor de veilige uitwisseling van gegevens toestaat. De geheimen kunnen slechts binnen gebeurtenis worden gecreeerd die eigenschappen door:sturen.
 
@@ -160,4 +161,4 @@ Door veelvoudige geheimen aan één enkel gegevenselement toe te wijzen en het o
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om geheimen in de Inzameling UI van Gegevens te beheren. Voor informatie over hoe u met geheimen communiceert via de Reactor-API raadpleegt u de [punthulplijn voor geheimen](../../api/endpoints/secrets.md).
+Deze gids behandelde hoe te om geheimen in de Inzameling UI van Gegevens te beheren. Voor informatie over hoe u met geheimen communiceert met de Reactor-API raadpleegt u de [punthulplijn voor geheimen](../../api/endpoints/secrets.md).

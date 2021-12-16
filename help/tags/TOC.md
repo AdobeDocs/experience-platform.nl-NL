@@ -4,9 +4,9 @@ user-guide-title: Help bij tags
 breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
-source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 25%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 25%
 * Gebeurtenis doorsturen {#event-forwarding}
    * [Overzicht](./ui/event-forwarding/overview.md)
    * [Aan de slag](./ui/event-forwarding/getting-started.md)
-   * [Geheimen](./ui/event-forwarding/secrets.md)
+   * [Onbewerkte gegevens configureren](./ui/event-forwarding/secrets.md)
 * Beheer {#admin}
    * [Overzicht](./ui/administration/overview.md)
    * [Bedrijven en eigendommen](./ui/administration/companies-and-properties.md)
