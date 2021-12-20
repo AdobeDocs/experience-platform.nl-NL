@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Google AdWords;google adwords
 solution: Experience Platform
-title: Overzicht van Google AdWords Source Connector
+title: Overzicht van Google AdWords-bronnen
 topic-legacy: overview
 description: Leer hoe u Google AdWords met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: fa3b83372db557d7f0aed16303cef4124c7dd897
+source-git-commit: eaac380cb4329b9233b40105d51f3809737d6173
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google AdWords] connector
+# [!DNL Google AdWords] bron
 
 >[!NOTE]
 >
->De [!DNL Google AdWords] schakelaar is in bèta. Zie [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Google AdWords] De bron is in bèta. Zie de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Tot de ondersteuning voor advertenties behoren [!DNL Google AdWords].
+[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. De steun voor reclamebureaus omvat [!DNL Google AdWords].
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
 
-## [!DNL Google AdWords] verbinden met Platform
+## Verbinden [!DNL Google AdWords] naar Platform
 
-De onderstaande documentatie biedt informatie over hoe u [!DNL Google AdWords] kunt verbinden met een Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Google AdWords] Platforms met behulp van API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
