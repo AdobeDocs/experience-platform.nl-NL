@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u GreenPlum met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: c3a72d5a4aea33f123f81bd416557a9cfe879224
+source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '427'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL GreenPlum] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
-Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [dit GreenPlum-document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
+Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [dit GreenPlum-document](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ### Platform-API&#39;s gebruiken
 
