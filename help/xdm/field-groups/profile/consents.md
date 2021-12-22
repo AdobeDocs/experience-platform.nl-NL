@@ -4,7 +4,7 @@ title: Inhoud en Voorkeuren voor schemaveldgroep
 topic-legacy: overview
 description: Dit document bevat een overzicht van de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%
@@ -178,7 +178,7 @@ De `adID` instemming geeft de toestemming van de klant voor het feit of een adve
 
 Voor het gebruik van de [!UICONTROL Consents and Preferences] de gebiedsgroep om toestemmingsgegevens van uw klanten in te voeren, moet u een dataset tot stand brengen die op een schema wordt gebaseerd dat die gebiedsgroep bevat.
 
-Zie de zelfstudie aan [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen over het toewijzen van veldgroepen aan velden. Nadat u een schema hebt gemaakt dat een veld bevat met de opdracht [!UICONTROL Consents and Preferences] veldgroep, zie de sectie over [een gegevensset maken](../../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
+Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen over het toewijzen van veldgroepen aan velden. Nadat u een schema hebt gemaakt dat een veld bevat met de opdracht [!UICONTROL Consents and Preferences] veldgroep, zie de sectie over [een gegevensset maken](../../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
 >

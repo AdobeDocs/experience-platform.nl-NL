@@ -4,7 +4,7 @@ title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '1996'
 ht-degree: 0%
@@ -21,8 +21,8 @@ In dit document worden de structuur en het beoogde gebruik van de door de [!UICO
 
 Dit document vereist een werkend inzicht in XDM en het gebruik van de schema&#39;s in [!DNL Experience Platform]. Lees de volgende documentatie voordat u verdergaat:
 
-* [XDM System, overzicht](http://www.adobe.com/go/xdm-home-en)
-* [Basisbeginselen van de schemacompositie](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [XDM System, overzicht](https://www.adobe.com/go/xdm-home-en)
+* [Basisbeginselen van de schemacompositie](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Gegevenstypestructuur {#structure}
 
@@ -255,7 +255,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 
 Voor het gebruik van de [!UICONTROL Consents and Preferences] het gegevenstype om toestemmingsgegevens van uw klanten in te voeren, moet u een dataset tot stand brengen die op een schema wordt gebaseerd dat dat gegevenstype bevat.
 
-Zie de zelfstudie aan [het creëren van een schema in UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen over hoe te om gegevenstypes aan gebieden toe te wijzen. Nadat u een schema hebt gemaakt dat een veld bevat met de opdracht [!UICONTROL Consents and Preferences] gegevenstype, raadpleeg de sectie over [een gegevensset maken](../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
+Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen over hoe te om gegevenstypes aan gebieden toe te wijzen. Nadat u een schema hebt gemaakt dat een veld bevat met de opdracht [!UICONTROL Consents and Preferences] gegevenstype, raadpleeg de sectie over [een gegevensset maken](../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
 >
