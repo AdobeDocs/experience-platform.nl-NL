@@ -3,9 +3,9 @@ keywords: tagextensies;tagextensie;lanceerdoelen; platformtagextensies;platform 
 title: Tagextensies in Adobe Experience Platform
 description: Adobe Experience Platform biedt de volgende generatie mogelijkheden voor tagbeheer van Adobe. Platform biedt u een eenvoudige manier om alle analyses, marketing en reclametags te implementeren en te beheren die nodig zijn om de ervaring van klanten te verbeteren.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
@@ -21,27 +21,37 @@ Zie de volgende bronnen voor een inleiding op tags:
 
 ## Hoe te om markeringsuitbreidingen in de interface van het Platform te vinden {#how-to-find-extensions-in-interface}
 
-Als u de extensies wilt zoeken in de interface Platform, bladert u naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** en selecteert u **[!UICONTROL Extensions]** in het filter **[!UICONTROL Types]**.
+Blader naar de extensies in de interface Platform om de extensies te zoeken **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** en selecteert u **[!UICONTROL Extensions]** in de **[!UICONTROL Types]** filter.
 
 ![Extensies, filter in de interface](../../assets/catalog/launch-extensions/filter.png)
 
 ## Hoe werken tagextensies? {#how-extensions-work}
 
-Extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](../personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](../voice/confirmit-digital-feedback.md).
+A [tagextensie](../../../tags/home.md#extensions) is een pakket code dat de functionaliteit van een website of mobiele app verbetert. Dit kan onder andere het verzenden van onbewerkte gebeurtenisgegevens naar een bestemming [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) maar ze kunnen ook andere functies vervullen .
 
-**Profiel/segment** Exportbestemmingen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen, passen segmentatie toe, en exporteer segmenten en gekwalificeerde profielen naar bestemmingen. Voorbeelden hiervan zijn de [Amazon S3 cloudopslagbestemming](../cloud-storage/amazon-s3.md) of de [Google Display &amp; Video 360 advertentiebestemming](../advertising/google-dv360.md).
+Het is belangrijk om tussen markering en gebeurtenis te onderscheiden die uitbreidingen door:sturen. De extensies die worden weergegeven in de gebruikersinterface van de Platform-bestemmingen zijn *tagextensies*. Raadpleeg het overzicht over het doorsturen van gebeurtenissen voor meer informatie over de [verschillen tussen tags en gebeurtenissen doorsturen](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
-![Extensies labelen in vergelijking met andere doelen](../../assets/common/launch-and-other-destinations.png)
+
+
+<!--
+
+Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
+
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+
+![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
+
+-->
 
 ## Voordelen van het gebruik van tagextensies {#extensions-benefits}
 
 De mogelijkheden voor tags van Platform zijn gratis voor bestaande Experience Cloud-klanten. Het systeem vereenvoudigt de implementatie van tags op uw website via eenvoudig te gebruiken extensies die u kunt installeren, configureren, bijwerken en verwijderen. Met labels blijft er een kleine voetafdruk op uw website staan, zodat uw pagina&#39;s snel kunnen worden geladen.
 
-Hoewel u segmenten niet kunt activeren om extensies te labelen, kunt u regels instellen om alleen gebeurtenisgegevens in bepaalde situaties door te sturen. Met deze krachtige functionaliteit kunt u gebeurtenisgegevens alleen in bepaalde situaties doorsturen, in tegenstelling tot het verzenden van gebeurtenisgegevens voor elke interactie. Lees voor meer informatie de regels in de [tagdocumentatie](../../../tags/ui/managing-resources/rules.md).
+Hoewel u segmenten niet kunt activeren om extensies te labelen, kunt u regels instellen om alleen gebeurtenisgegevens in bepaalde situaties door te sturen. Met deze krachtige functionaliteit kunt u gebeurtenisgegevens alleen in bepaalde situaties doorsturen, in tegenstelling tot het verzenden van gebeurtenisgegevens voor elke interactie. Lees voor meer informatie over de regels in het dialoogvenster [codedocumentatie](../../../tags/ui/managing-resources/rules.md).
 
 ## Voorbeeld van gebruik voor extensies {#extensions-use-cases}
 
-De uitbreidingen laten u toe om diverse klantengebruiksgevallen tevreden te stellen. U kunt bijvoorbeeld extensies gebruiken in de volgende gevallen:
+De uitbreidingen laten u toe om diverse klantengebruiksgevallen tevreden te stellen. Voorbeelden hiervan zijn:
 
 - U kunt website- of native toepassingsgegevens naar Facebook verzenden via de Facebook-pixelextensie. Facebook Pixel geeft aan naar welke delen van uw site of app een bezoeker is genavigeerd, die informatie doorstuurt naar Facebook en u uw bezoeker kunt richten via Facebook.
 - U kunt gebeurtenisgegevens van uw websites en apps doorsturen naar Google Analytics om deze te analyseren en beslissingen te nemen op basis van die gegevens.
