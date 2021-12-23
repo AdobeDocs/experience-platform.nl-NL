@@ -3,7 +3,7 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 82ce288d55e57f05910fd8290c38f44b1846f48e
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Het door:sturen van de gebeurtenis gecombineerd met Adobe Experience Platform [W
 
 * Verhoog de transparantie en controleer welke gegevens naar alle eigenschappen worden verzonden.
 
-## Verschillen tussen het doorsturen van gebeurtenissen en tags
+## Verschillen tussen het doorsturen van gebeurtenissen en tags {#differences-from-tags}
 
 In termen van configuratie, gebruikt het door:sturen van gebeurtenissen veel van de zelfde concepten zoals markeringen [regels](../managing-resources/rules.md), [gegevenselementen](../managing-resources/data-elements.md), en [extensions](../managing-resources/extensions/overview.md). Het belangrijkste verschil tussen beide kan als volgt worden samengevat:
 
@@ -47,7 +47,7 @@ In termen van configuratie, gebruikt het door:sturen van gebeurtenissen veel van
 
 Terwijl de markeringen gebeurtenisgegevens direct van uw plaats of inheemse mobiele toepassing gebruikend het Web van het Platform en Mobiele SDKs verzamelt, vereist gebeurtenis het door:sturen gebeurtenisgegevens om reeds door het Netwerk van de Rand van het Platform worden verzonden om het naar bestemmingen door te sturen. Met andere woorden, moet u het Web van het Platform of Mobiele SDK op uw digitale bezit (of door markeringen of het gebruiken van ruwe code) uitvoeren om gebeurtenis te gebruiken door:sturen.
 
-### Properties
+### Properties {#properties}
 
 Het door:sturen van de gebeurtenis handhaaft zijn eigen opslag eigenschappen los van markeringen, die u in de UI van de Inzameling van Gegevens kunt bekijken door te selecteren **[!UICONTROL Event Forwarding]** in de linkernavigatie.
 
@@ -61,13 +61,13 @@ Het doorsturen van gebeurtenissen heeft een eigen catalogus met compatibele exte
 
 ![Gebeurtenis die uitbreidingen in de Inzameling UI door:sturen van Gegevens](../../images/ui/event-forwarding/overview/extensions.png)
 
-### Gegevenselementen
+### Gegevenselementen {#data-elements}
 
 De typen gegevenselementen die beschikbaar zijn in het doorsturen van gebeurtenissen zijn beperkt tot de compatibele catalogus [extensions](#extensions) die hen voorzien.
 
 Terwijl de gegevenselementen zelf worden gecreeerd en gevormd de zelfde manier in gebeurtenis door:sturen aangezien zij voor markeringen zijn, zijn er sommige belangrijke syntaxisverschillen wanneer het over komt hoe zij gegevens van het Netwerk van de Rand van het Platform van verwijzingen voorzien.
 
-#### Verwijzen naar gegevens van het Netwerk van de Rand van het Platform
+#### Verwijzen naar gegevens van het Netwerk van de Rand van het Platform {#edge}
 
 Als u wilt verwijzen naar gegevens van Platform Edge Network, moet u een gegevenselement maken dat een geldig pad naar die gegevens biedt. Selecteer **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Path]** voor het type.
 
@@ -75,23 +75,23 @@ De **[!UICONTROL Path]** waarde voor het gegevenselement moet het patroon volgen
 
 ![Voorbeeld van een padgegevenselement voor het doorsturen van gebeurtenissen](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### Regels
+### Regels {#rules}
 
 Het maken van regels bij het doorsturen van eigenschappen voor gebeurtenissen werkt op vergelijkbare wijze als labels, waarbij het belangrijkste verschil is dat u geen gebeurtenissen als regelcomponenten kunt selecteren. In plaats daarvan verwerkt een gebeurtenis die regel door:sturen alle gebeurtenissen het van ontvangt [datastream](../../../edge/fundamentals/datastreams.md) en stuurt deze evenementen door naar bestemmingen indien aan bepaalde voorwaarden is voldaan.
 
 ![Gebeurtenis door:sturen regels in de UI van de Inzameling van Gegevens](../../images/ui/event-forwarding/overview/rules.png)
 
-#### Tokenisering gegevenselement
+#### Tokenisering gegevenselement {#tokenization}
 
 In labelregels worden gegevenselementen gekoppeld aan een `%` aan het begin en einde van de naam van het gegevenselement (bijvoorbeeld: `%viewportHeight%`). In gebeurtenis die regels door:sturen, worden de gegevenselementen in plaats daarvan samengevoegd met `{{` aan het begin en `}}` aan het einde van de naam van het gegevenselement (bijvoorbeeld: `{{viewportHeight}}`).
 
 ![Voorbeeld van een padgegevenselement voor het doorsturen van gebeurtenissen](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### Reeks handelingen
+#### Reeks handelingen {#action-sequencing}
 
 De [!UICONTROL Actions] sectie van een gebeurtenis die regel door:sturen wordt altijd opeenvolgend uitgevoerd. Zorg ervoor dat de volgorde van de handelingen correct is wanneer u een regel opslaat. Deze uitvoeringsvolgorde kan niet asynchroon worden uitgevoerd, zoals met tags.
 
-## Geheimen
+## Geheimen {#secrets}
 
 Gebeurtenis door:sturen staat u toe om, geheimen tot stand te brengen te leiden en op te slaan die kunnen worden gebruikt om aan de servers voor authentiek te verklaren die u gegevens verzendt naar. Zie de handleiding op [geheimen](./secrets.md) over de verschillende soorten beschikbare geheime types en hoe zij in UI worden uitgevoerd.
 

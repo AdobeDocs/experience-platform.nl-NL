@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Telecom Subscription Schema Field Group
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van het Abonnement van Telecom.
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '713'
 ht-degree: 1%
 
 ---
@@ -15,22 +16,22 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL Telecom Subscription] is een standaardschemagebiedgroep voor de  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) klasse die het abonnement van een klant op telecom, met inbegrip van tarifering, pakketten, en individuele productabonnementen beschrijft.
+[!UICONTROL Telecom Subscription] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) Dit beschrijft het abonnementsplan van een klant voor telecommunicatie, met inbegrip van tarifering, pakketten, en individuele productabonnementen.
 
-De veldgroep biedt één objecttype veld, `telecomSubscription`, waarvan de eigenschappen hieronder worden beschreven.
+De veldgroep bevat één veld van het objecttype. `telecomSubscription`, waarvan de eigenschappen hieronder worden beschreven.
 
 ![Telecom Subscription Structure](../../images/field-groups/telecom-subscription/structure.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `internetSubscription` | Array van objecten | Beschrijft de details van het Internet abonnementsplan zoals gegevensGLB, verbindingstype, en snelheidsdetails. Zie de [sectie onder](#internetSubscription) voor meer informatie. |
-| `landlineSubscription` | Array van objecten | Beschrijft de details van het landline abonnementsplan, met inbegrip van geselecteerde eigenschappen, notulen, en het draaien plannen. Zie de [sectie onder](#landlineSubscription) voor meer informatie. |
-| `mediaSubscription` | Array van objecten | Beschrijft de details van het media abonnementsplan, met inbegrip van het aantal kanalen en inbegrepen het stromen diensten. Zie de [sectie onder](#mediaSubscription) voor meer informatie. |
-| `mobileSubscription` | Array van objecten | Beschrijft mobiele details van het abonnementsabonnement, met inbegrip van het aantal lijnen, gegevenstarieven, kosten, en meer. Zie de [sectie onder](#mobileSubscription) voor meer informatie. |
+| `internetSubscription` | Array van objecten | Beschrijft de details van het Internet abonnementsplan zoals gegevensGLB, verbindingstype, en snelheidsdetails. Zie de [sectie hieronder](#internetSubscription) voor meer informatie . |
+| `landlineSubscription` | Array van objecten | Beschrijft de details van het landline abonnementsplan, met inbegrip van geselecteerde eigenschappen, notulen, en het draaien plannen. Zie de [sectie hieronder](#landlineSubscription) voor meer informatie . |
+| `mediaSubscription` | Array van objecten | Beschrijft de details van het media abonnementsplan, met inbegrip van het aantal kanalen en inbegrepen het stromen diensten. Zie de [sectie hieronder](#mediaSubscription) voor meer informatie . |
+| `mobileSubscription` | Array van objecten | Beschrijft mobiele details van het abonnementsabonnement, met inbegrip van het aantal lijnen, gegevenstarieven, kosten, en meer. Zie de [sectie hieronder](#mobileSubscription) voor meer informatie . |
 | `primarySubscriber` | [[!UICONTROL Person]](../../data-types/person.md) | Beschrijft de eigenaar van het abonnement. |
-| `bundleName` | Tekenreeks | Vangt de naam van om het even welk type van abonnementsbundel waarin de klant, zoals `Internet + Media` wordt ingeschreven. |
+| `bundleName` | Tekenreeks | Hiermee wordt de naam vastgelegd van elk type abonnementsbundel waarin de klant is ingeschreven, zoals `Internet + Media`. |
 | `primaryPartyID` | Tekenreeks | Een herkenningsteken voor de primaire persoon verantwoordelijk voor het abonnement, die typisch hun aantal van de apparatentelefoon zou kunnen zijn. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -109,4 +110,3 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | `portedNumber` | Boolean | Geeft aan of de klant zijn of haar nummer van een andere provider poorten. |
 
 {style=&quot;table-layout:auto&quot;}
-

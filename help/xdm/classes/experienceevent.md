@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-klasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent en aanbevolen procedures voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 5405a2e2312e81db210a97a759681f66faa8b1fa
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -16,20 +16,20 @@ ht-degree: 0%
 
 [!DNL XDM ExperienceEvent] is een standaardklasse van het Gegevensmodel van de Ervaring (XDM) die u toestaat om een timestamped momentopname van het systeem tot stand te brengen wanneer een specifieke gebeurtenis voorkomt of een bepaalde reeks voorwaarden zijn bereikt.
 
-Een ervaringsgebeurtenis is een feitenverslag van wat voorkwam, met inbegrip van het tijdstip en de identiteit van de betrokken persoon. Gebeurtenissen kunnen expliciet (direct waarneembare menselijke acties) of impliciet (zonder directe menselijke actie) zijn en worden geregistreerd zonder aggregatie of interpretatie. Voor meer informatie op hoog niveau over het gebruik van deze klasse in het Platform ecosysteem, verwijs naar [XDM overzicht](../home.md#data-behaviors).
+Een ervaringsgebeurtenis is een feitenverslag van wat voorkwam, met inbegrip van het tijdstip en de identiteit van de betrokken persoon. Gebeurtenissen kunnen expliciet (direct waarneembare menselijke acties) of impliciet (zonder directe menselijke actie) zijn en worden geregistreerd zonder aggregatie of interpretatie. Raadpleeg voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van het Platform de [XDM-overzicht](../home.md#data-behaviors).
 
-De klasse [!DNL XDM ExperienceEvent] zelf verstrekt verscheidene op tijd-reeksen betrekking hebbende gebieden aan een schema. De waarden van sommige van deze velden worden automatisch ingevuld wanneer gegevens worden ingevoerd:
+De [!DNL XDM ExperienceEvent] De klasse zelf verstrekt verscheidene op tijd-reeksen betrekking hebbende gebieden aan een schema. De waarden van sommige van deze velden worden automatisch ingevuld wanneer gegevens worden ingevoerd:
 
 ![](../images/classes/experienceevent/structure.png)
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `_id` | Een unieke tekenreeks-id voor de gebeurtenis. Dit veld wordt gebruikt om de unieke aard van een individuele gebeurtenis te volgen, om te voorkomen dat gegevens worden herhaald en om die gebeurtenis in downstreamdiensten op te zoeken. In sommige gevallen kan `_id` een [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) of [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) zijn.<br><br>Als u gegevens streamt via een bronverbinding of rechtstreeks opgeeft vanuit een Parquet-bestand, moet u deze waarde genereren door een bepaalde combinatie van velden samen te voegen die de gebeurtenis uniek maken, zoals een primaire id, tijdstempel, gebeurtenistype, enzovoort. De samengevoegde waarde moet een tekenreeks met de indeling `uri-reference` zijn. Dit houdt in dat alle dubbele tekens moeten worden verwijderd. Daarna, zou de samengevoegde waarde moeten worden gehakt gebruikend SHA-256 of een ander algoritme van uw keus.<br><br>Het is belangrijk om te onderscheiden dat  **dit veld geen identiteit vertegenwoordigt die verband houdt met een individuele persoon**, maar eerder de registratie van gegevens zelf. Identiteitsgegevens die betrekking hebben op een persoon moeten worden overgebracht naar [identiteitsvelden](../schema/composition.md#identity) die in plaats daarvan door compatibele veldgroepen worden verschaft. |
-| `eventMergeId` | Als u de [Adobe Experience Platform Web SDK](../../edge/home.md) gebruikt om gegevens in te voeren, vertegenwoordigt dit de id van de ingesloten batch die ervoor zorgde dat de record werd gemaakt. Dit veld wordt automatisch ingevuld door het systeem bij het invoeren van gegevens. Het gebruik van dit gebied buiten de context van een implementatie van SDK van het Web wordt niet gesteund. |
-| `eventType` | Een tekenreeks die het type of de categorie voor de gebeurtenis aangeeft. Dit gebied kan worden gebruikt als u verschillende gebeurtenistypen binnen het zelfde schema en de dataset wilt onderscheiden, zoals het onderscheiden van een gebeurtenis van de productmening van toe:voegen-aan-winkelwagentje voor een detailhandelsbedrijf.<br><br>Standaardwaarden voor deze eigenschap worden gegeven in de  [ ](#eventType)bijlage, met inbegrip van beschrijvingen van het beoogde gebruik ervan. Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen voor gebeurtenistypen kunt gebruiken om de gebeurtenissen die u bijhoudt, te categoriseren.<br><br>`eventType` beperkt u tot het gebruik van slechts één gebeurtenis per hit op uw toepassing en daarom moet u berekende velden gebruiken om het systeem te laten weten welke gebeurtenis het belangrijkst is. Zie de sectie over [aanbevolen methoden voor berekende velden](#calculated) voor meer informatie. |
-| `producedBy` | Een tekenreekswaarde die de producent of oorsprong van de gebeurtenis beschrijft. Dit veld kan worden gebruikt om bepaalde gebeurtenisproducenten uit te filteren als dat voor segmentatiedoeleinden nodig is.<br><br>Sommige voorgestelde waarden voor deze eigenschap zijn opgenomen in de  [appendix sectie](#producedBy). Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen kunt gebruiken om verschillende gebeurtenisproducenten te vertegenwoordigen. |
-| `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor het individu waarop de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Als u dit veld correct wilt gebruiken voor [Real-time klantprofiel](../../profile/home.md), moet u niet handmatig de inhoud van het veld bijwerken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in de  [grondbeginselen van schemacompositie voor meer informatie ](../schema/composition.md#identityMap) over hun gebruiksgeval. |
-| `timestamp` | Een tijdstempel volgens ISO 8601 van het tijdstip van de gebeurtenis, opgemaakt volgens [RFC 339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Deze tijdstempel moet in het verleden voorkomen. Zie de sectie hieronder op [timestamps](#timestamps) voor beste praktijken op het gebruik van dit gebied. |
+| `_id` | Een unieke tekenreeks-id voor de gebeurtenis. Dit veld wordt gebruikt om de unieke aard van een individuele gebeurtenis te volgen, om te voorkomen dat gegevens worden herhaald en om die gebeurtenis in downstreamdiensten op te zoeken. In sommige gevallen `_id` kan [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) of [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Als u gegevens streamt via een bronverbinding of rechtstreeks opgeeft vanuit een Parquet-bestand, moet u deze waarde genereren door een bepaalde combinatie van velden samen te voegen die de gebeurtenis uniek maken, zoals een primaire id, tijdstempel, gebeurtenistype, enzovoort. De samengevoegde waarde moet een `uri-reference` geformatteerde tekenreeks: eventuele dubbele tekens moeten worden verwijderd. Daarna, zou de samengevoegde waarde moeten worden gehakt gebruikend SHA-256 of een ander algoritme van uw keus.<br><br>Het is van belang te onderscheiden dat **dit veld vertegenwoordigt geen identiteit die betrekking heeft op een individuele persoon**, maar eerder de gegevensregistratie zelf. Identiteitsgegevens betreffende een persoon moeten worden beperkt tot [identiteitsvelden](../schema/composition.md#identity) in plaats daarvan worden verstrekt door compatibele veldgroepen. |
+| `eventMergeId` | Als u de [Adobe Experience Platform Web SDK](../../edge/home.md) om gegevens in te voeren, vertegenwoordigt dit identiteitskaart van de opgenomen partij die het verslag om veroorzaakte te creëren. Dit veld wordt automatisch ingevuld door het systeem bij het invoeren van gegevens. Het gebruik van dit gebied buiten de context van een implementatie van SDK van het Web wordt niet gesteund. |
+| `eventType` | Een tekenreeks die het type of de categorie voor de gebeurtenis aangeeft. Dit gebied kan worden gebruikt als u verschillende gebeurtenistypen binnen het zelfde schema en de dataset wilt onderscheiden, zoals het onderscheiden van een gebeurtenis van de productmening van toe:voegen-aan-winkelwagentje voor een detailhandelsbedrijf.<br><br>Standaardwaarden voor deze eigenschap worden gegeven in het gedeelte [aanhangsel](#eventType), met een beschrijving van het beoogde gebruik. Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen voor gebeurtenistypen kunt gebruiken om de gebeurtenissen die u bijhoudt, te categoriseren.<br><br>`eventType` beperkt u tot het gebruik van slechts één gebeurtenis per hit op uw toepassing en daarom moet u berekende velden gebruiken om het systeem te laten weten welke gebeurtenis het belangrijkst is. Zie de sectie over [aanbevolen procedures voor berekende velden](#calculated). |
+| `producedBy` | Een tekenreekswaarde die de producent of oorsprong van de gebeurtenis beschrijft. Dit veld kan worden gebruikt om bepaalde gebeurtenisproducenten uit te filteren als dat voor segmentatiedoeleinden nodig is.<br><br>Sommige voorgestelde waarden voor deze eigenschap zijn opgenomen in het dialoogvenster [aanhangsel](#producedBy). Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen kunt gebruiken om verschillende gebeurtenisproducenten te vertegenwoordigen. |
+| `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor het individu waarop de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Voor een juist gebruik van dit veld voor [Klantprofiel in realtime](../../profile/home.md)Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan . |
+| `timestamp` | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden, opgemaakt volgens [RFC 3339 — Sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Deze tijdstempel moet in het verleden voorkomen. Zie de onderstaande sectie over [tijdstempels](#timestamps) voor beste praktijken op het gebruik van dit gebied. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -39,9 +39,9 @@ De volgende secties behandelen beste praktijken voor het ontwerpen van uw op geb
 
 ### Tijdstempels {#timestamps}
 
-Het hoofdveld `timestamp` van een gebeurtenisschema kan **only** de waarneming van de gebeurtenis zelf vertegenwoordigen, en moet in het verleden voorkomen. Als voor uw segmentatiegebruik tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen, moeten deze waarden elders in het schema van de Experience-gebeurtenis worden beperkt.
+De basis `timestamp` veld van een gebeurtenisschema kan **alleen** de waarneming van het evenement zelf vertegenwoordigen en in het verleden moeten plaatsvinden. Als voor uw segmentatiegebruik tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen, moeten deze waarden elders in het schema van de Experience-gebeurtenis worden beperkt.
 
-Als een bedrijf in de reis- en gastsector bijvoorbeeld een gebeurtenis voor reservering van vluchten modelleert, geeft het veld op klasseniveau `timestamp` het tijdstip weer waarop de reserveringsgebeurtenis werd waargenomen. Andere tijdstempels die verband houden met de gebeurtenis, zoals de begindatum van de reisreservering, moeten worden vastgelegd in afzonderlijke velden die worden verschaft door standaard- of aangepaste veldgroepen.
+Als een bedrijf in de reis- en gastsector bijvoorbeeld een vluchtreserveringsevenement modelleert, `timestamp` wordt het tijdstip weergegeven waarop de reserveringsgebeurtenis is waargenomen. Andere tijdstempels die verband houden met de gebeurtenis, zoals de begindatum van de reisreservering, moeten worden vastgelegd in afzonderlijke velden die worden verschaft door standaard- of aangepaste veldgroepen.
 
 ![](../images/classes/experienceevent/timestamps.png)
 
@@ -49,21 +49,21 @@ Door de klasse-vlakke timestamp gescheiden van andere verwante datetime waarden 
 
 ### Berekende velden gebruiken {#calculated}
 
-Bepaalde interacties in uw ervaringstoepassingen kunnen resulteren in meerdere gerelateerde gebeurtenissen die technisch dezelfde tijdstempel voor de gebeurtenis hebben en daarom kunnen worden weergegeven als één gebeurtenisrecord. Als een klant bijvoorbeeld een product op uw website weergeeft, kan dit resulteren in een gebeurtenisrecord met twee mogelijke `eventType`-waarden: een &quot;product view&quot;gebeurtenis (`commerce.productViews`) of een generische &quot;pagina mening&quot;gebeurtenis (`web.webpagedetails.pageViews`). In deze gevallen kunt u berekende velden gebruiken om de belangrijkste kenmerken vast te leggen wanneer meerdere gebeurtenissen in één keer worden vastgelegd.
+Bepaalde interacties in uw ervaringstoepassingen kunnen resulteren in meerdere gerelateerde gebeurtenissen die technisch dezelfde tijdstempel voor de gebeurtenis hebben en daarom kunnen worden weergegeven als één gebeurtenisrecord. Als een klant bijvoorbeeld een product op uw website weergeeft, kan dit resulteren in een gebeurtenisrecord met twee mogelijke `eventType` waarden: een &quot;product view&quot;-gebeurtenis (`commerce.productViews`) of een algemene gebeurtenis &quot;paginaweergave&quot; (`web.webpagedetails.pageViews`). In deze gevallen kunt u berekende velden gebruiken om de belangrijkste kenmerken vast te leggen wanneer meerdere gebeurtenissen in één keer worden vastgelegd.
 
-[Met Adobe Experience Platform Data ](../../data-prep/home.md) kunt u gegevens toewijzen, transformeren en valideren naar en van XDM. Met behulp van de beschikbare [toewijzingsfuncties](../../data-prep/functions.md) die door de service worden geboden, kunt u logische operatoren aanroepen om gegevens uit records met meerdere gebeurtenissen te prioriteren, te transformeren en/of te consolideren wanneer deze in Experience Platform worden opgenomen. In het bovenstaande voorbeeld kunt u `eventType` aanwijzen als een berekend veld dat voorrang geeft aan een &quot;productweergave&quot; boven een &quot;paginaweergave&quot; wanneer deze beide voorkomen.
+[Adobe Experience Platform Data Prep](../../data-prep/home.md) staat u toe om, gegevens aan en van XDM in kaart te brengen om te zetten en te bevestigen. De beschikbare [toewijzingsfuncties](../../data-prep/functions.md) die door de dienst worden verstrekt kunt u logische exploitanten aanhalen om, gegevens van multi-gebeurtenisverslagen voorrang te geven om te zetten en/of te consolideren wanneer ingebed in Experience Platform. In het bovenstaande voorbeeld kunt u `eventType` als een berekend veld dat voorrang geeft aan een &quot;productweergave&quot; boven een &quot;paginaweergave&quot; wanneer deze beide voorkomen.
 
-Als u gegevens handmatig via de gebruikersinterface in het Platform invoert, raadpleegt u de handleiding [berekende velden hulplijn](../../data-prep/calculated-fields.md) voor specifieke stappen voor het maken van berekende velden.
+Als u gegevens handmatig via de gebruikersinterface in het Platform invoert, raadpleegt u de handleiding [berekende velden](../../data-prep/calculated-fields.md) voor specifieke stappen voor het maken van berekende velden.
 
-Als u gegevens aan Platform stroomt gebruikend een bronverbinding, kunt u de bron vormen om berekende gebieden in plaats daarvan te gebruiken. Raadpleeg de [documentatie voor uw specifieke bron](../../sources/home.md) voor instructies over hoe te om berekende gebieden uit te voeren wanneer het vormen van de verbinding.
+Als u gegevens aan Platform stroomt gebruikend een bronverbinding, kunt u de bron vormen om berekende gebieden in plaats daarvan te gebruiken. Zie de [documentatie voor uw specifieke bron](../../sources/home.md) voor instructies op hoe te om berekende gebieden uit te voeren wanneer het vormen van de verbinding.
 
 ## Compatibele schemaveldgroepen {#field-groups}
 
 >[!NOTE]
 >
->De namen van verschillende veldgroepen zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../field-groups/name-updates.md) voor meer informatie.
+>De namen van verschillende veldgroepen zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../field-groups/name-updates.md) voor meer informatie .
 
-Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL XDM ExperienceEvent]. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
+Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM ExperienceEvent] klasse. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
 * [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
@@ -80,11 +80,11 @@ Adobe biedt verschillende standaardveldgroepen voor gebruik met de klasse [!DNL 
 
 ## Aanhangsel
 
-De volgende sectie bevat aanvullende informatie over de klasse [!UICONTROL XDM ExperienceEvent].
+De volgende sectie bevat aanvullende informatie over de [!UICONTROL XDM ExperienceEvent] klasse.
 
 ### Geaccepteerde waarden voor `eventType` {#eventType}
 
-In de volgende tabel worden de geaccepteerde waarden voor `eventType` beschreven, samen met de bijbehorende definities:
+In de volgende tabel worden de toegestane waarden voor `eventType`, alsmede de definities ervan:
 
 | Waarde | Definitie |
 | --- | --- |
@@ -140,7 +140,7 @@ In de volgende tabel worden de geaccepteerde waarden voor `eventType` beschreven
 
 ### Voorgestelde waarden voor `producedBy` {#producedBy}
 
-In de volgende tabel worden enkele toegestane waarden voor `producedBy` weergegeven:
+In de volgende tabel worden enkele toegestane waarden voor `producedBy`:
 
 | Waarde | Definitie |
 | --- | --- |
