@@ -4,203 +4,98 @@ solution: Experience Platform
 title: Een leermodel voor machines maken en publiceren
 topic-legacy: tutorial
 type: Tutorial
-description: De Adobe Experience Platform Data Science Workspace biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde Product Recommendations Recipe. Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel, een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in de werkruimte voor wetenschap van gegevens.
+description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een model voor machinaal leren te maken en te publiceren.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff8a3612f34d6547577564ba40261052cd78ef01
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
 
+
 # Een leermodel voor computers maken en publiceren
 
-![](../images/models-recipes/model-walkthrough/objective.png)
-
-Voorbereid u een online detailhandelswebsite. Wanneer uw klanten op uw detailhandelswebsite winkelen, wilt u hen met gepersonaliseerde productaanbevelingen presenteren om een verscheidenheid van andere producten bloot te stellen uw bedrijfsaanbiedingen. Gedurende de periode dat uw website bestaat, hebt u voortdurend klantgegevens verzameld en wilt u deze gegevens op de een of andere manier gebruiken om gepersonaliseerde productaanbevelingen te genereren.
-
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde  [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Volg deze zelfstudie om te zien hoe u toegang krijgt tot uw gegevens in de detailhandel, een model voor machinetlering kunt maken en optimaliseren en inzichten kunt genereren in [!DNL Data Science Workspace].
-
-Deze zelfstudie weerspiegelt de workflow van [!DNL Data Science Workspace] en behandelt de volgende stappen voor het maken van een model voor machinaal leren:
-
-1. [Uw gegevens voorbereiden](#prepare-your-data)
-2. [Uw model ontwerpen](#author-your-model)
-3. [Uw model trainen en evalueren](#train-and-evaluate-your-model)
-4. [Uw model exploiteren](#operationalize-your-model)
+In de volgende handleiding worden de stappen beschreven die nodig zijn om een model voor machinaal leren te maken en te publiceren. Elke sectie bevat een beschrijving van wat u gaat doen en een verbinding aan de documentatie UI en API om de beschreven stap uit te voeren.
 
 ## Aan de slag
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang tot een Organisatie IMS in [!DNL Experience Platform] hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
 
-- Enablement assets. Neem contact op met uw accountvertegenwoordiger om de volgende items voor u beschikbaar te stellen.
-   - Recommendations Recipe
-   - Recommendations Input Dataset
-   - Recommendations-invoerschema
-   - Recommendations-uitvoergegevensset
-   - Recommendations-uitvoerschema
-   - Gouden gegevensset, postwaarden
-   - Goudgegevenssetschema
-
-- Download de drie vereiste [!DNL Jupyter Notebook] bestanden van [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), deze worden gebruikt om de [!DNL JupyterLab] workflow in [!DNL Data Science Workspace] te demonstreren.
-
-Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
-- [[!DNL Experience Data Model]](../../xdm/home.md): De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals  [!DNL Profile] en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
-- Gegevenssets: Een opslag- en beheerconstructie voor werkelijke gegevens. Een fysieke instantie van een [XDM-schema](../../xdm/schema/field-dictionary.md).
-- Batches: Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt.
-- [!DNL JupyterLab]:  [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-bron web-based interface voor Project  [!DNL Jupyter] en is strak geïntegreerd in  [!DNL Experience Platform].
-
-## Uw gegevens {#prepare-your-data} voorbereiden
-
-Als u een model voor machinaal leren wilt maken dat gepersonaliseerde productaanbevelingen doet aan uw klanten, moeten eerdere aankopen van klanten op uw website worden geanalyseerd. In deze sectie wordt beschreven hoe deze gegevens worden opgenomen in [!DNL Platform] tot en met [!DNL Adobe Analytics] en hoe die gegevens worden omgezet in een gegevensset met functies die moet worden gebruikt door het model voor machinaal leren.
+- Alle zelfstudies in de werkruimte voor wetenschappen van gegevens maken gebruik van het model Luminantie. Als u de stappen wilt volgen, moet u de opdracht [Luminantiemodel, schema&#39;s en gegevenssets](./create-luma-data.md).
 
 ### Ontdek de gegevens en begrijp de schema&#39;s
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com/) en selecteer **[!UICONTROL Datasets]** om alle bestaande gegevenssets weer te geven en selecteer de gegevensset die u wilt verkennen. In dit geval, [!DNL Analytics] dataset **Gulden Dataset postValues**.
+Aanmelden bij [Adobe Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Datasets]** om van alle bestaande datasets een lijst te maken en de dataset te selecteren die u zou willen onderzoeken. Selecteer in dit geval de optie **Luminagewebgegevens** dataset.
 
-![](../images/models-recipes/model-walkthrough/dataset-browse.png)
+![Selecteer Luminagewebgegevensset](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
-De pagina van de datasetactiviteit opent, die informatie opsomt met betrekking tot uw dataset. U kunt **[!UICONTROL Preview Dataset]** dichtbij bovenkant-recht selecteren om steekproefverslagen te onderzoeken. U kunt het schema voor de geselecteerde dataset ook bekijken. Selecteer de schemaverbinding in het juiste spoor. Er wordt een pop-up weergegeven. Als u de koppeling onder **[!UICONTROL schema name]** selecteert, wordt het schema op een nieuw tabblad geopend.
+De pagina van de datasetactiviteit opent, die informatie opsomt met betrekking tot uw dataset. U kunt **[!UICONTROL Preview Dataset]** in de buurt van de rechterbovenhoek om de voorbeeldrecords te bekijken. U kunt het schema voor de geselecteerde dataset ook bekijken.
 
-![](../images/models-recipes/model-walkthrough/dataset-activity.png)
+![voorvertoning van Luminantiewebgegevens](../images/models-recipes/model-walkthrough/preview-dataset.png)
 
+Selecteer de schemaverbinding in het juiste spoor. Er wordt een pop-up weergegeven en de koppeling onder **[!UICONTROL schema name]** Hiermee opent u het schema in een nieuw tabblad.
 
-![](../images/models-recipes/model-walkthrough/schema-view.png)
+![voorvertoning van het lumawebgegevensschema](../images/models-recipes/model-walkthrough/preview-schema.png)
 
-De andere datasets zijn vooraf gevuld met partijen voor het voorvertonen van doeleinden. U kunt deze datasets bekijken door de bovengenoemde stappen te herhalen.
+U kunt de gegevens verder verkennen met de geleverde EDA-laptop (Exploratory Data Analysis). Deze laptop kan worden gebruikt om inzicht te krijgen in de patronen in de Luminantiemaatgegevens, de gegevenshygiëne te controleren en een overzicht te maken van de relevante gegevens voor het voorspellende-nevenmodel. Meer over de Verkennende Analyse van Gegevens leren, bezoek [EDA-documentatie](../jupyterlab/eda-notebook.md).
 
-| Naam gegevensset | Schema | Beschrijving |
-| ----- | ----- | ----- |
-| Gouden gegevensset, postwaarden | Goudgegevenssetschema | [!DNL Analytics] brongegevens van uw website |
-| Recommendations Input Dataset | Recommendations-invoerschema | De [!DNL Analytics] gegevens worden omgezet in een opleidingsdataset gebruikend een eigenschappijpleiding. Deze gegevens worden gebruikt voor de training van het Product Recommendations-model voor machinetechniek. `itemid` en  `userid` overeenstemmen met een product dat door die klant is aangekocht. |
-| Recommendations-uitvoergegevensset | Recommendations-uitvoerschema | De dataset waarvoor het scoren resultaten worden opgeslagen, zal het de lijst van geadviseerde producten voor elke klant bevatten. |
+## Maak het veelvuldigheidsrecept voor Luma {#author-your-model}
 
-## Uw model {#author-your-model} ontwerpen
+Een hoofdcomponent van de [!DNL Data Science Workspace] De levenscyclus omvat het ontwerpen van Ontvangers en Modellen. Het model van de Luminantiemogelijkheid is ontworpen om een voorspelling te genereren over de vraag of klanten een hoge neiging hebben om een product van Luma te kopen.
 
-De tweede component van de [!DNL Data Science Workspace] levenscyclus omvat het ontwerpen van Ontvangers en Modellen. De Product Recommendations Recipe is ontworpen om op grote schaal productaanbevelingen te genereren door gebruik te maken van eerdere aankoopgegevens en computerlessen.
+Voor het maken van het model Luma-eigenschappen wordt de sjabloon voor het maken van het recept gebruikt. Ontvangers vormen de basis voor een model, aangezien zij machine het leren algoritmen en logica bevatten die worden ontworpen om specifieke problemen op te lossen. Nog belangrijker is dat met behulp van Ontvangers u het leren van machines in uw organisatie kunt democratiseren, zodat andere gebruikers toegang hebben tot een model voor verschillende gebruiksgevallen zonder dat er code hoeft te worden geschreven.
 
-Ontvangers vormen de basis voor een model aangezien zij machine het leren algoritmen en logica bevatten die worden ontworpen om specifieke problemen op te lossen. Nog belangrijker is dat met behulp van Ontvangers u het leren van machines in uw organisatie kunt democratiseren, zodat andere gebruikers toegang hebben tot een model voor verschillende gebruiksgevallen zonder dat er code hoeft te worden geschreven.
+Volg de [een model maken met JupyterLab-laptops](../jupyterlab/create-a-model.md) zelfstudie voor het maken van het recept voor het model Luminantie, dat in volgende zelfstudies wordt gebruikt.
 
-### Ontdek het product dat Recommendations recept
+## Een recept uit externe bronnen importeren en verpakken (*optioneel*)
 
-Navigeer in Experience Platform naar **[!UICONTROL Models]** in de linkernavigatiekolom en selecteer **[!UICONTROL Recipes]** in de bovenste navigatie om een lijst met beschikbare recepten voor uw organisatie weer te geven.
+Als u een recept voor gebruik in de Werkruimte van de Wetenschap van Gegevens wilt invoeren en verpakken, moet u uw brondossiers in een archiefdossier verpakken. Volg de [bronbestanden in een recept plaatsen](./package-source-files-recipe.md) zelfstudie. Deze zelfstudie laat u zien hoe u bronbestanden in een recept kunt verpakken. Dit is de eerste vereiste stap voor het importeren van een recept in de werkruimte voor wetenschap van gegevens. Zodra de zelfstudie is voltooid, krijgt u een Docker-afbeelding in een Azure Container-register, samen met de bijbehorende afbeelding-URL, met andere woorden een archiefbestand.
 
-![](../images/models-recipes/model-walkthrough/recipe-tab.png)
+Dit archiefbestand kan worden gebruikt om een recept te maken in de Data Science Workspace door de workflow voor het importeren van recept te volgen met de [UI-workflow](./import-packaged-recipe-ui.md) of de [API-workflow](./import-packaged-recipe-api.md).
 
-Zoek en open vervolgens de opgegeven **[!UICONTROL Recommendations Recipe]** door de naam ervan te selecteren. De overzichtspagina Recipe wordt weergegeven.
+## Een model trainen en evalueren {#train-and-evaluate-your-model}
 
-![](../images/models-recipes/model-walkthrough/Recipe-view.png)
+Nu uw gegevens zijn voorbereid en een recept klaar is, hebt u de mogelijkheid om uw model voor het leren van machines verder te maken, te trainen en te evalueren. Terwijl u de Recipe Builder gebruikt, had u uw model al moeten opleiden, scoren en evalueren voordat u het in een recept hebt verpakt.
 
-Selecteer vervolgens **[!UICONTROL Recommendations Input Schema]** in het rechterspoor om het schema voor het recept weer te geven. De schemavelden &quot;[!UICONTROL itemId]&quot; en &quot;[!UICONTROL userId]&quot; komen overeen met een product dat door die klant op een specifiek tijdstip ([!UICONTROL interactionType]) is aangeschaft ([!UICONTROL timestamp]). Voer dezelfde stappen uit om de velden voor de **[!UICONTROL Recommendations Output Schema]** te controleren.
-
-![](../images/models-recipes/model-walkthrough/input-output.png)
-
-U hebt nu de invoer- en uitvoerschema&#39;s gecontroleerd die vereist zijn voor de Product Recommendations Recipe. Ga verder met het volgende gedeelte en leer hoe u een product-Recommendations-model maakt, opleidt en evalueert.
-
-## Uw model opleiden en evalueren{#train-and-evaluate-your-model}
-
-Nu uw gegevens zijn voorbereid en de recept klaar is, kunt u uw model voor machinaal leren maken, trainen en evalueren.
+Met de gebruikersinterface van de Data Science Workspace en de API kunt u uw recept als model publiceren. Daarnaast kunt u specifieke aspecten van uw model verder perfectioneren, zoals het toevoegen, verwijderen en wijzigen van hyperparameters.
 
 ### Een model maken
 
-Een model is een instantie van een recept, waarmee u gegevens op schaal kunt trainen en scoren.
+Als u meer wilt weten over het maken van een model met behulp van de gebruikersinterface, gaat u naar de trein en evalueert u een model in de werkruimte Gegevenswetenschap [UI-zelfstudie](./train-evaluate-model-ui.md) of [API-zelfstudie](./train-evaluate-model-api.md). Deze zelfstudie biedt een voorbeeld van het maken, trainen en bijwerken van hyperparameters om uw model verder aan te passen.
 
-Navigeer in Experience Platform naar **[!UICONTROL Models]** in de linkernavigatiekolom en selecteer **[!UICONTROL Recipes]** in de bovenste navigatie. Hier wordt een lijst weergegeven met beschikbare recepten voor uw organisatie. Selecteer het recept voor productaanbevelingen.
-
-![](../images/models-recipes/model-walkthrough/recipe-tab.png)
-
-Selecteer **[!UICONTROL Create Model]** op de pagina met recept.
-
-![model maken](../images/models-recipes/model-walkthrough/create-model-recipe.png)
-
-De workflow voor het maken van modellen begint met het selecteren van een recept. Selecteer **[!UICONTROL Recommendations Recipe]** en selecteer **[!UICONTROL Next]** in de rechterbovenhoek.
-
-![](../images/models-recipes/model-walkthrough/create-model.png)
-
-Geef vervolgens een modelnaam op. Beschikbare configuraties voor het model worden weergegeven met instellingen voor de standaardtraining en -scoring van het model. Controleer de configuraties en selecteer **[!UICONTROL Finish]**.
-
-![](../images/models-recipes/model-walkthrough/configure-model.png)
-
-U wordt omgeleid uw modellenoverzichtspagina met een onlangs geproduceerde trainingslooppas. Een trainingsrun wordt standaard gegenereerd wanneer een model wordt gemaakt.
-
-![](../images/models-recipes/model-walkthrough/model-overview.png)
-
-U kunt ervoor kiezen te wachten totdat de trainingsreeks is voltooid of een nieuwe trainingsreeks te maken in de volgende sectie.
-
-### Het model trainen met aangepaste hyperparameters
-
-Selecteer **[!UICONTROL Train]** in de buurt van de rechterbovenhoek op de pagina **Modeloverzicht** om een nieuwe trainingsrun te maken. Selecteer de zelfde inputdataset u toen het creëren van het model gebruikte en uitgezocht **[!UICONTROL Next]**.
-
-![](../images/models-recipes/model-walkthrough/select-train.png)
-
-De pagina **[!UICONTROL Configuration]** wordt weergegeven. Hier kunt u de trainingslooppas `num_recommendations` waarde vormen, die ook als hyperparameter wordt bekend. Een getraind en geoptimaliseerd model zal de best-presterende hyperparameters gebruiken die op de resultaten van de trainingslooppas worden gebaseerd.
-
-Hyperparameters kunnen niet worden geleerd, daarom moeten zij worden toegewezen alvorens de opleidingslooppas voorkomt. Het aanpassen van hyperparameters kan de nauwkeurigheid van het getrainde model veranderen. Aangezien het optimaliseren van een model een herhalend proces is, kunnen meerdere trainingen nodig zijn voordat een bevredigende evaluatie wordt uitgevoerd.
-
->[!TIP]
+>[!NOTE]
 >
->Stel `num_recommendations` in op 10.
+> Hyperparameters kunnen niet worden geleerd, daarom moeten zij worden toegewezen alvorens de opleidingslooppas voorkomt. Het aanpassen van hyperparameters kan de nauwkeurigheid van uw getrainde model veranderen. Aangezien het optimaliseren van een model een herhalend proces is, kunnen meerdere trainingen nodig zijn voordat een bevredigende evaluatie wordt uitgevoerd.
 
-![](../images/models-recipes/model-walkthrough/training-configuration.png)
+## Score een model {#score-a-model}
 
-De extra gegevenspunten verschijnen op de modelgrafiek van de evaluatie. Het kan enkele minuten duren voordat dit wordt weergegeven wanneer een bewerking is voltooid.
+De volgende stap bij het maken en publiceren van een model is het operationeel maken van uw model om inzichten van het datumpeer en het Real-Time Profiel van de Klant te scoren en te verbruiken.
 
-![](../images/models-recipes/model-walkthrough/training-graphs.png)
+Scores in de Werkruimte van de Wetenschap van Gegevens kunnen worden bereikt door inputgegevens in een bestaand opgeleid Model te voeren. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
 
-### Het model evalueren
+Ga voor meer informatie over het behalen van uw model naar de score van een model [UI-zelfstudie](./score-model-ui.md) of [API-zelfstudie](./score-model-api.md).
 
-Telkens als een trainingslooppas voltooit, kunt u de resulterende evaluatiemetriek bekijken om te bepalen hoe goed het Model uitvoerde.
+## Een model met een score publiceren als service
 
-Als u de evaluatiemetriek (Precisie en Herinnering) voor elke voltooide trainingsrun wilt controleren, selecteert u de trainingsrun.
+De Werkruimte van de Wetenschap van gegevens staat u toe om uw opgeleid model als dienst te publiceren. Hierdoor kunnen gebruikers binnen uw IMS-organisatie gegevens behalen zonder dat ze zelf modellen hoeven te maken.
 
-![](../images/models-recipes/model-walkthrough/select-training-run.png)
+Ga voor meer informatie over het publiceren van een model als service naar de [UI-zelfstudie](./publish-model-service-ui.md) of [API-zelfstudie](./publish-model-service-api.md).
 
-U kunt de informatie onderzoeken die voor elke metrische evaluatie wordt verstrekt. Hoe hoger deze waarden, hoe beter het model wordt uitgevoerd.
+### Geautomatiseerde training voor een service plannen
 
-![](../images/models-recipes/model-walkthrough/metrics.png)
+Als u een model eenmaal als service hebt gepubliceerd, kunt u geplande scoring- en trainingsprogramma&#39;s voor de leerservice voor uw computer instellen. Het automatiseren van het trainings- en scoringsproces kan de efficiëntie van een service helpen behouden en verbeteren door patronen in uw gegevens bij te houden. Ga naar [plant een model in de Werkruimte van de Wetenschap van Gegevens UI](./schedule-models-ui.md) zelfstudie.
 
-U kunt de dataset, het schema, en de configuratieparameters zien die voor elke opleiding op het juiste spoor worden gebruikt. Navigeer terug naar de modelpagina en identificeer de best presterende opleiding door hun evaluatiemetriek te observeren.
-
-## Uw model laten werken {#operationalize-your-model}
-
-De laatste stap in de Data Science-workflow is het operationeel maken van uw model, zodat u uw gegevens kunt bijhouden en inzichten van uw gegevensarchief kunt gebruiken.
-
-### Score en genereren inzichten
-
-Selecteer op de overzichtspagina van het model met productaanbevelingen de naam van de best-presterende trainingslooppas, met de hoogste terugroepings en precisienormen.
-
-![score de beste looppas](../images/models-recipes/model-walkthrough/select-training-run.png)
-
-Selecteer vervolgens **[!UICONTROL Score]** in de rechterbovenhoek van de pagina met details voor de training.
-
-![score selecteren](../images/models-recipes/model-walkthrough/select-score.png)
-
-Vervolgens selecteert u **[!UICONTROL Recommendations Input Dataset]** als de gegevensset voor het zoeken van de invoergegevens. Dit is dezelfde gegevensset die u hebt gebruikt toen u het model maakte en de trainingsreeks uitvoerde. Selecteer vervolgens **[!UICONTROL Next]**.
-
-![](../images/models-recipes/model-walkthrough/score-input.png)
-
-Zodra u uw inputdataset hebt, selecteer **[!UICONTROL Recommendations Output Dataset]** als het scoren outputdataset. Scoreresultaten worden opgeslagen in deze dataset als partij.
-
-![](../images/models-recipes/model-walkthrough/score-output.png)
-
-Tot slot herzie de het scoren configuraties. Deze parameters bevatten de input en outputdatasets u vroeger samen met de aangewezen schema&#39;s selecteerde. Selecteer **[!UICONTROL Finish]** om met de scoring te beginnen. De uitvoering kan enkele minuten duren.
-
-![](../images/models-recipes/model-walkthrough/score-finish.png)
-
-### Gecodeerde inzichten weergeven
-
-Nadat de scoring is voltooid, kunt u een voorvertoning van de resultaten bekijken en de gegenereerde inzichten weergeven.
-
-Selecteer op de pagina met scoring de voltooide scoring en selecteer vervolgens **[!UICONTROL Preview Scoring Results Dataset]** op de rechterrail.
-
-![](../images/models-recipes/model-walkthrough/preview-scores.png)
-
-In de voorvertoningstabel bevat elke rij productaanbevelingen voor een bepaalde klant, aangeduid als respectievelijk [!UICONTROL recommendations] en [!UICONTROL userId]. Aangezien de [!UICONTROL num_recommendations] hyperparameter aan 10 in de steekproefscreenshots werd geplaatst, kan elke rij van aanbevelingen tot 10 productidentiteiten bevatten die door een aantalteken (#) worden afgebakend.
-
-![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+>[!NOTE]
+>
+> U kunt een model voor geautomatiseerde opleiding en het scoren slechts van UI plannen.
 
 ## Volgende stappen {#next-steps}
 
-Deze zelfstudie introduceerde u aan het werkschema van [!DNL Data Science Workspace], die aantoont hoe onverwerkte gegevens in nuttige informatie door machine leren kunnen worden omgezet. Om meer over het gebruiken van [!DNL Data Science Workspace] te leren, ga aan de volgende gids op [het creëren van het detailhandelschema en dataset](./create-retails-sales-dataset.md) verder.
+Adobe Experience Platform [!DNL Data Science Workspace] biedt de tools en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van het leren van machines worden opgenomen in een [!DNL Profile]-enabled dataset, dat de zelfde gegevens ook worden opgenomen zoals [!DNL Profile] records die vervolgens kunnen worden gesegmenteerd [!DNL Adobe Experience Platform Segmentation Service].
+
+Aangezien profiel en tijdreeksgegevens worden opgenomen, beslist het Profiel van de Klant in real time automatisch om die gegevens van segmenten door een aan de gang zijnde proces te omvatten of uit te sluiten die het stromen segmentatie wordt genoemd, alvorens het met bestaande gegevens samen te voegen en de verenigingsmening bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan.
+
+De zelfstudie bezoeken voor [Het verrijken van Real-Time Klantprofiel met machine het leren inzichten](./enrich-profile.md) voor meer informatie over hoe u inzichten van machine-leren kunt gebruiken.
