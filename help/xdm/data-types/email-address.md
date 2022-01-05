@@ -5,27 +5,27 @@ title: Gegevenstype e-mailadres
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor e-mailadressen.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: fe6abe468025ab3373f802954aedceeb1af625fe
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Email address] gegevenstype
 
-[!UICONTROL Email address] is een standaard XDM gegevenstype dat de details van een e-mailadres beschrijft.
+[!UICONTROL Email address] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat de details van een e-mailadres beschrijft.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `address` | Het technische adres van e-mail zoals algemeen bepaald in RFC2822 en verdere normen (bijvoorbeeld, `name@domain.com`). |
-| `label` | Aanvullende weergavegegevens die beschikbaar kunnen zijn. Als een e-mailbericht bijvoorbeeld een uitgebreide adresweergave van Microsoft Outlook van `John Smith smithjr@company.uk` heeft, wordt `John Smith` in dit veld geplaatst. |
-| `primary` | Geeft aan of dit het primaire e-mailadres van de betrokkene is. Een profiel kan slechts één `primary` e-mailadres op een bepaald tijdstip hebben. |
+| `address` | Het technische adres van e-mail zoals algemeen bepaald in RFC2822 en verdere normen (bijvoorbeeld, `name@domain.com`).<br><br>In XDM moeten e-mailadressen een geldig domein op hoofdniveau bevatten om validatie te kunnen doorstaan. Raadpleeg het volgende: [document](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) voor een volledige lijst van geldige top-level domeinen zoals die door Internet wordt bepaald Toegewezen Instantie van Aantallen (IANA). |
+| `label` | Aanvullende weergavegegevens die beschikbaar kunnen zijn. Als een e-mailbericht bijvoorbeeld een uitgebreide adresweergave van Microsoft Outlook heeft van `John Smith smithjr@company.uk`, `John Smith` wordt in dit veld geplaatst. |
+| `primary` | Geeft aan of dit het primaire e-mailadres van de betrokkene is. Een profiel kan slechts één profiel hebben `primary` e-mailadres op een bepaald tijdstip. |
 | `status` | Geeft aan of het e-mailadres momenteel kan worden gebruikt |
 | `statusReason` | Een beschrijving van de huidige `status`. |
-| `type` | De manier waarop de account betrekking heeft op de persoon (zoals `work` of `personal`). |
+| `type` | De wijze waarop de rekening op de persoon betrekking heeft (zoals `work` of `personal`). |
 
 {style=&quot;table-layout:auto&quot;}
 
