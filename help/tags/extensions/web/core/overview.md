@@ -2,9 +2,9 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
 workflow-type: tm+mt
-source-wordcount: '5352'
+source-wordcount: '5482'
 ht-degree: 0%
 
 ---
@@ -128,9 +128,13 @@ De gebeurtenis wordt geactiveerd als een aangepast gebeurtenistype optreedt. Ben
 
 De gebeurtenis wordt geactiveerd wanneer een opgegeven gegevenselement verandert. U moet een naam opgeven voor het gegevenselement. U kunt het gegevenselement selecteren door de naam ervan in het tekstveld te typen of door het pictogram voor het gegevenselement rechts van het tekstveld te selecteren en een keuze te maken in een lijst in het dialoogvenster dat verschijnt.
 
-#### Directe oproep
+#### Directe oproep {#direct-call-event}
 
-De direct-vraaggebeurtenis overslaat gebeurtenisopsporing en raadplegingssystemen. De direct-vraagregels zijn ideaal voor situaties waar u Platform precies wilt vertellen wat gebeurt. Bovendien zijn ze ideaal wanneer Platform een gebeurtenis niet kan detecteren in het DOM, zoals met Adobe Flash. Geef de `_satellite.track` tekenreeks in het tekstveld Id.
+Een directe vraaggebeurtenis mijdt gebeurtenisopsporing en raadplegingssystemen. De directe vraagregels zijn ideaal voor situaties waar u het systeem precies wilt vertellen wat gebeurt. Bovendien zijn deze ideaal wanneer het systeem geen gebeurtenis in het DOM kan detecteren.
+
+Wanneer u een directe aanroepgebeurtenis definieert, moet u een tekenreeks opgeven die als id van deze gebeurtenis fungeert. Indien een [directe belactie activeren](#direct-call-action) die het zelfde herkenningsteken bevatten wordt in brand gestoken, dan zullen om het even welke directe regels die van de vraaggebeurtenis luisteren naar dat herkenningsteken lopen.
+
+![Screenshot van een Directe gebeurtenis van de Vraag in de Inzameling UI van Gegevens](../../../images/extensions/core/direct-call-event.png)
 
 #### Element bestaat
 
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### Rechtstreekse oproep activeren {#direct-call-action}
+
+Deze handeling activeert alle regels die een specifieke [directe call, gebeurtenis](#direct-call-event). Wanneer het vormen van de actie, moet u het herkenningstekenkoord voor de directe vraaggebeurtenis verstrekken u wilt teweegbrengen. U kunt optioneel ook gegevens doorgeven aan de directe aanroepgebeurtenis via een `detail` -object, dat een aangepaste set sleutel-waardeparen kan bevatten.
+
+![Schermafbeelding van een actie van de Vraag van de Trekker Direct in de UI van de Inzameling van Gegevens](../../../images/extensions/core/direct-call-action.png)
+
+De handeling wordt rechtstreeks toegewezen aan de [`track` methode](../../../ui/client-side/satellite-object.md?lang=en#track) in de `satellite` -object, dat kan worden benaderd door code op de client.
 
 ## Gegevenstelelementtypen van de kernextensie
 
