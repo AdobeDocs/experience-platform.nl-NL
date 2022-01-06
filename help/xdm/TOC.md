@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
+source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '404'
 ht-degree: 6%
 
 ---
@@ -18,15 +18,16 @@ ht-degree: 6%
 * Schema&#39;s {#schema}
    * [Basisbeginselen van de schemacompositie](schema/composition.md)
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
+   * [Gevoelige en persoonlijke gegevens](./schema/sensitive-and-personal-data.md)
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
    * [Naamruimte in XDM](./schema/namespaces.md)
-   * [XDM-veldwoordenboek](schema/field-dictionary.md)
    * Industriële gegevensmodellen {#industries}
       * [Overzicht](./schema/industries/overview.md)
       * [Detailhandel](./schema/industries/retail.md)
       * [Financiële diensten](./schema/industries/financial.md)
       * [Telecommunicatie](./schema/industries/telecom.md)
       * [Reizen en gastvrijheid](./schema/industries/travel-hospitality.md)
+   * [XDM-veldwoordenboek](schema/field-dictionary.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
