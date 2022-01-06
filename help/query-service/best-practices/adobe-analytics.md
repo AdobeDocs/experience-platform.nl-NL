@@ -12,11 +12,11 @@ ht-degree: 1%
 
 ---
 
-# Sample queries for Adobe Analytics data
+# Voorbeeldquery&#39;s voor Adobe Analytics-gegevens
 
-Data from selected Adobe Analytics report suites is transformed into data conforming to the [!DNL XDM ExperienceEvent] class and ingested into Adobe Experience Platform as datasets.
+Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in gegevens die overeenkomen met de [!DNL XDM ExperienceEvent] klasse en opgenomen in Adobe Experience Platform als datasets.
 
-In dit document wordt een aantal gebruiksgevallen beschreven waarbij Adobe Experience Platform [!DNL Query Service] maakt gebruik van deze gegevens, met inbegrip van steekproefvragen zou met uw datasets van Adobe Analytics moeten werken. See the documentation on [Analytics field mapping](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to [!DNL Experience Events].
+In dit document wordt een aantal gebruiksgevallen beschreven waarbij Adobe Experience Platform [!DNL Query Service] maakt gebruik van deze gegevens, met inbegrip van steekproefvragen zou met uw datasets van Adobe Analytics moeten werken. Zie de documentatie op [Toewijzing van het veld Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie over toewijzing aan [!DNL Experience Events].
 
 ## Aan de slag
 
@@ -50,7 +50,7 @@ ORDER BY page_views DESC
 LIMIT  10;
 ```
 
-### Top 10 most active users
+### De tien meest actieve gebruikers
 
 ```sql
 SELECT enduserids._experience.aaid.id AS aaid, 
@@ -120,18 +120,18 @@ ORDER BY Hour;
 
 ## Deduplicatie
 
-Adobe Experience Platform Query Service supports data deduplication. Zie de [Gegevensdeduplicatie in de documentatie van de Dienst van de Vraag](./deduplication.md) voor informatie over hoe u nieuwe waarden kunt genereren op het moment dat u een query uitvoert [!DNL Experience Event] datasets.
+Adobe Experience Platform Query Service ondersteunt gegevensdeduplicatie. Zie de [Gegevensdeduplicatie in de documentatie van de Dienst van de Vraag](./deduplication.md) voor informatie over hoe u nieuwe waarden kunt genereren op het moment dat u een query uitvoert [!DNL Experience Event] datasets.
 
 ## Merchandising-variabelen (productsyntaxis)
 
 
-### Product syntax
+### Productsyntaxis
 
-In Adobe Analytics kunnen aangepaste productgegevens worden verzameld via speciaal geconfigureerde variabelen, de zogenaamde &#39;merchandising&#39;-variabelen. These are based on either an eVar or custom events. The difference between these variables and their standard use is that they represent a separate value for each product found on the hit rather than only a single value for the hit.
+In Adobe Analytics kunnen aangepaste productgegevens worden verzameld via speciaal geconfigureerde variabelen, de zogenaamde &#39;merchandising&#39;-variabelen. Deze zijn gebaseerd op een eVar of aangepaste gebeurtenissen. Het verschil tussen deze variabelen en hun standaardgebruik is dat ze een afzonderlijke waarde vertegenwoordigen voor elk product dat op de hit wordt gevonden, in plaats van slechts één waarde voor de hit.
 
-Deze variabelen worden ook wel handelsvariabelen in de productsyntaxis genoemd. This allows for collection of information, such as a per product &quot;discount amount&quot; or information about the product&#39;s &quot;location on page&quot; in the customer&#39;s search results.
+Deze variabelen worden ook wel handelsvariabelen in de productsyntaxis genoemd. Op deze manier kunt u informatie verzamelen, zoals een &quot;kortingsbedrag&quot; per product of informatie over de &quot;locatie op pagina&quot; van het product in de zoekresultaten van de klant.
 
-To learn more about using the product syntax, please read the Adobe Analytics documentation on [implementing eVars using product syntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
+Meer informatie over het gebruik van de productsyntaxis vindt u in de Adobe Analytics-documentatie op [eVars implementeren met productsyntaxis](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
 
 In de onderstaande secties worden de XDM-velden beschreven die nodig zijn voor toegang tot de handelsvariabelen in uw [!DNL Analytics] gegevensset:
 
@@ -155,7 +155,7 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 
 #### Voorbeeldquery&#39;s
 
-Here is a sample query returning a merchandising eVar and event for the first product found in the `productListItems`.
+Hier volgt een voorbeeldquery die een eVar en gebeurtenis retourneert voor het eerste product dat in het dialoogvenster `productListItems`.
 
 ```sql
 SELECT
@@ -169,7 +169,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-This next query explodes the `productListItems` array and returns each merchandising eVar and event per product. De `_id` wordt opgenomen om de relatie met de originele hit te tonen. De `_id` value is een unieke primaire sleutel voor de dataset.
+In deze volgende query wordt het dialoogvenster `productListItems` array en retourneert elke eVar en gebeurtenis die door de handel wordt verwerkt per product. De `_id` wordt opgenomen om de relatie met de originele hit te tonen. De `_id` value is een unieke primaire sleutel voor de dataset.
 
 ```sql
 SELECT
@@ -200,10 +200,10 @@ LIMIT 20
 
 ### Conversiesyntaxis
 
-Another type of merchandising variable found in Adobe Analytics is conversion syntax. With product syntax, the value is collected at the same time as the product, but this requires the data to be present on the same page. There are scenarios where the data occurs on a page prior to the conversion or event of interest related to the product. Neem bijvoorbeeld het gebruiksgeval voor de productzoekmethode.
+Een ander type handelsvariabele in Adobe Analytics is de conversiesyntaxis. Met productsyntaxis wordt de waarde verzameld op hetzelfde moment als het product, maar hiervoor moeten de gegevens op dezelfde pagina aanwezig zijn. Er zijn scenario&#39;s waarin de gegevens op een pagina vóór de conversie of het geval van belang met betrekking tot het product voorkomen. Neem bijvoorbeeld het gebruiksgeval voor de productzoekmethode.
 
 1. Een gebruiker voert en intern onderzoek naar &quot;winterhoed&quot;uit die de Syntaxis van de Omzetting toelaat Merchandising eVar6 aan &quot;intern onderzoek:winterhoed&quot;
-2. The user clicks on &quot;waffle beanie&quot; and lands on the product detail page.\
+2. De gebruiker klikt op &quot;wafelbeanie&quot; en landt op de pagina met productdetails.\
    a. Het landen hier vuurt een `Product View` gebeurtenis voor de &quot;waffle beanie&quot; voor $12,99.\
    b. Omdat `Product View` is geconfigureerd als een bindingsgebeurtenis. Het product &quot;waffle beanie&quot; is nu gebonden aan de eVar 6-waarde van &quot;internal search:winter hat&quot;. Telkens wanneer het product &quot;waffle beanie&quot; wordt verzameld, wordt het gekoppeld aan &quot;internal search:winter hat&quot; totdat (1) de instelling voor de vervaldatum is bereikt of (2) een nieuwe waarde voor eVar6 is ingesteld en de gebeurtenis binding met dat product opnieuw plaatsvindt.
 3. De gebruiker voegt het product aan zijn winkelwagentje toe en ontslaat het `Cart Add` gebeurtenis.
@@ -211,7 +211,7 @@ Another type of merchandising variable found in Adobe Analytics is conversion sy
 5. De gebruiker klikt op &quot;sporty t-shirt&quot; en landt op de pagina met productdetails.\
    a. Het landen hier vuurt een `Product View` evenement voor &quot;sporty t-shirt voor $19,99.\
    b. De `Product View` Het evenement is nog steeds ons bindende evenement, dus nu is het product &quot;sporty t-shirt&quot; nu gebonden aan de eVar6-waarde van &quot;internal search:zomer shirt&quot; en het eerdere product &quot;waffle beanie&quot; is nog steeds gebonden aan de eVar &quot;internal search:waffle beanie&quot;.
-6. The user adds the product to their cart, firing the `Cart Add` event.
+6. De gebruiker voegt het product aan zijn winkelwagentje toe en ontslaat het `Cart Add` gebeurtenis.
 7. De gebruiker checkt beide producten uit.
 
 Bij de rapportage worden de orders, opbrengsten, productweergaven en winkelwagentjes gerapporteerd tegen eVar6 en afgestemd op de activiteit van het gebonden product.
