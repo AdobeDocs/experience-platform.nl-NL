@@ -1,9 +1,10 @@
 ---
 title: Verbinding met pinterest Customer List
 description: Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
-source-git-commit: a071aaaf5e9b8ef9223ef4f9ea204460f18bf95e
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '511'
 ht-degree: 1%
 
 ---
@@ -21,30 +22,30 @@ Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezoc
 ## Vereisten {#prerequisites}
 
 * De gebruiker moet zich verifiëren met een Pinterest-account dat toegang heeft tot het advertentieaccount waaraan hij of zij een publiek wil toevoegen. Meer informatie over het delen van adverteerderaccounts vindt u [hier](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Specifiek, zou de gebruiker de &quot;publiek&quot;toegangsniveaus nodig hebben.
-* Nadere gegevens over de identiteitsindelingen van de klantenlijst vindt u [hier](https://help.pinterest.com/en/business/article/audience-targeting).
+* Gegevens over identiteitsindelingen van klantenlijsten zijn te vinden [hier](https://help.pinterest.com/en/business/article/audience-targeting).
 
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De bestemming [!DNL Pinterest Customer List] steunt de activering van identiteiten die in de hieronder lijst worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+De [!DNL Pinterest Customer List] doel ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-Wijs in [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de workflow voor doelactivering de gewenste identiteiten toe aan het doelveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest.
+In de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de workflow voor doelactivering de gewenste identiteiten aan het doelveld toewijzen *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Wijs *GAID* bronidentiteitsnaamruimte toe aan het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Wijs *IDFA* bronidentiteitsnaamruimte toe aan het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
-| EMAIL | E-mailadressen (tekst wissen of hashed met het algoritme SHA256) | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. <br> Wijs de naamruimte  ** van de  *bronidentiteit van de e-mail_LC_SHA256* aan het veld  *pinterest_publiek* van de doelidentiteit toe. |
+| GAID | [!DNL Google Advertising ID] | Wijs de *GAID* naamruimte van bronidentiteit naar het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
+| IDFA | [!DNL Apple ID for Advertisers] | Wijs de *IDFA* naamruimte van bronidentiteit naar het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
+| EMAIL | E-mailadressen (tekst wissen of hashed met het algoritme SHA256) | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. <br> Wijs de *E-mail* of *Email_LC_SHA256* naamruimte van bronidentiteit naar het doelidentiteitsveld *pinterest_publiek*. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Exporttype {#export-type}
 
-**De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) die in de bestemming van de Lijst van de Klant van Pinterest worden gebruikt.
+**Segment exporteren** - u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in de Pinterest Customer List-bestemming.
 
 ## Gevallen gebruiken {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u [!DNL Pinterest Customer List] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
+Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Pinterest Customer List] doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
 
 ### Hoofdletters en kleine letters gebruiken 1
@@ -53,26 +54,25 @@ Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezoc
 
 ## Verbinden met doel {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
-
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: Je Pinterest-advertentie-ID.
+* **[!UICONTROL Advertiser ID]**: Je Pinterest-adverteerder-id.
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Lees [Activate profielen en segmenten aan het stromen segment de uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Zie [Overzicht gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html) voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt.
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Raadpleeg de pagina [Pinterest Help Center](https://help.pinterest.com/en/business/article/audience-targeting) voor meer informatie.
+Raadpleeg de [Pinterest Help Center-pagina](https://help.pinterest.com/en/business/article/audience-targeting) voor aanvullende informatie.
