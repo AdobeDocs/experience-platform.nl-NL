@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
+source-git-commit: 644be95d9f90e20622c4f8ad68252ac57c09a288
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '623'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 7 januari 2022
+
+### Adobe Target v2 Extension 0.17.0
+
+- Bijgewerkt voor ondersteuning van at.js v2.8.0, die nu het gebruik van functies en telemetriegegevens voor prestaties verzamelt.  Persoonlijke gegevens worden niet verzameld. Als u zich wilt afmelden voor deze functie, stelt u `telemetryEnabled` tot `false` in `targetGlobalSettings`.
 
 ## 28 oktober 2021
 
