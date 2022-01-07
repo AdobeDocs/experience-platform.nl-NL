@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Een doelaccount verwijderen met de Flow Service API
 type: Tutorial
 description: Leer hoe u een doelaccount kunt verwijderen met de Flow Service API.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '766'
 ht-degree: 0%
 
 ---
@@ -184,4 +185,4 @@ De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-f
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de opdracht [!DNL Flow Service] API om bestaande doelaccounts te verwijderen.
+Door deze zelfstudie te volgen, hebt u de opdracht [!DNL Flow Service] API om bestaande doelaccounts te verwijderen. Voor meer informatie bij het gebruiken van bestemmingen, verwijs naar [Overzicht van doelen](/help/destinations/home.md).

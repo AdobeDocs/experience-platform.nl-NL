@@ -1,11 +1,11 @@
 ---
 keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
-title: (Beta) !DNL Azure Event Hubs] verbinding
-description: Creeer een uitgaande verbinding in real time aan uw !DNL Azure Event Hubs] opslag aan stroomgegevens van Experience Platform.
+title: (bèta) [!DNL Azure Event Hubs] verbinding
+description: Creeer een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag naar streamgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---

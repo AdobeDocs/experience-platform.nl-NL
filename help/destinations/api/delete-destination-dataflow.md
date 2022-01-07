@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Een doelgegevensstroom verwijderen met de Flow Service API
 type: Tutorial
 description: Leer hoe te om dataflows aan partij en het stromen bestemmingen te schrappen gebruikend de Dienst API van de Stroom.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -90,3 +91,5 @@ De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-f
 Door deze zelfstudie te volgen, hebt u de opdracht [!DNL Flow Service] API om een bestaande gegevensstroom naar een bestemming te verwijderen.
 
 Raadpleeg de zelfstudie voor informatie over het uitvoeren van deze bewerkingen in de gebruikersinterface. [verwijderen, gegevensstromen in de gebruikersinterface](../ui/delete-destinations.md).
+
+Je kunt nu doorgaan en [doelaccounts verwijderen](/help/destinations/api/delete-destination-account.md) met de [!DNL Flow Service] API.
