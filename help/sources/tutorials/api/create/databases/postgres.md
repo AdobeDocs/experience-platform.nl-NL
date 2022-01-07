@@ -6,49 +6,60 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API verbindt met PostgreSQL.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: eea815f72c1e807f4ad6ca6273ba18a9da09ac6e
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '505'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL PostgreSQL] basisverbinding maken met de [!DNL Flow Service]-API
+# Een [!DNL PostgreSQL] basisverbinding met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL PostgreSQL] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL PostgreSQL] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met [!DNL PostgreSQL] met de [!DNL Flow Service]-API tot stand te brengen.
+De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL PostgreSQL] met de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Flow Service] wilt laten verbinden met [!DNL PostgreSQL], moet u de volgende verbindingseigenschap opgeven:
+Om [!DNL Flow Service] om te verbinden met [!DNL PostgreSQL]moet u de volgende eigenschap voor de verbinding opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die is gekoppeld aan uw [!DNL PostgreSQL]-account. Het patroon van de [!DNL PostgreSQL] verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | De verbindingstekenreeks die aan uw [!DNL PostgreSQL] account. De [!DNL PostgreSQL] patroon verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-Voor meer informatie over het verkrijgen van een verbindingstekenreeks, verwijs naar dit [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
+Raadpleeg deze voor meer informatie over het verkrijgen van een verbindingstekenreeks [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
+
+#### SSL-versleuteling inschakelen voor uw verbindingstekenreeks
+
+U kunt SSL-codering inschakelen voor uw [!DNL PostgreSQL] verbindingstekenreeks door uw verbindingstekenreeks toe te voegen met de volgende eigenschappen:
+
+| Eigenschap | Beschrijving | Voorbeeld |
+| --- | --- | --- |
+| `EncryptionMethod` | Hiermee kunt u SSL-codering inschakelen op uw [!DNL PostgreSQL] gegevens. | <uL><li>`EncryptionMethod=0`(Uitgeschakeld)</li><li>`EncryptionMethod=1`(Ingeschakeld)</li><li>`EncryptionMethod=6`(RequestSSL)</li></ul> |
+| `ValidateServerCertificate` | Valideert het certificaat dat door uw [!DNL PostgreSQL] database wanneer `EncryptionMethod` wordt toegepast. | <uL><li>`ValidationServerCertificate=0`(Uitgeschakeld)</li><li>`ValidationServerCertificate=1`(Ingeschakeld)</li></ul> |
+
+Hier volgt een voorbeeld van een [!DNL PostgreSQL] verbindingstekenreeks toegevoegd met SSL-codering: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL PostgreSQL] authentificatiegeloofsbrieven als deel van de verzoekparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL PostgreSQL] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -58,7 +69,7 @@ POST /connections
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een basisverbinding voor [!DNL PostgreSQL]:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL PostgreSQL]:
 
 ```shell
 curl -X POST \
@@ -86,12 +97,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | ------------- | --------------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die is gekoppeld aan uw [!DNL PostgreSQL]-account. Het patroon van de [!DNL PostgreSQL] verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | De [!DNL PostgreSQL] ID&#39;s van de verbindingsspecificatie: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die aan uw [!DNL PostgreSQL] account. De [!DNL PostgreSQL] patroon verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | De [!DNL PostgreSQL] Verbindingsspecificatie-id&#39;s: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **Antwoord**
 
-Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde basisverbinding terug. Deze id is vereist om uw [!DNL PostgreSQL]-database in de volgende zelfstudie te verkennen.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe basisverbinding. Deze id is vereist om uw [!DNL PostgreSQL] in de volgende zelfstudie.
 
 ```json
 {
@@ -102,4 +113,4 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een [!DNL PostgreSQL]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindingsID in de volgende zelfstudie gebruiken aangezien u leert hoe te om [gegevensbestanden of systemen te onderzoeken NoSQL gebruikend de Dienst API van de Stroom](../../explore/database-nosql.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL PostgreSQL] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze verbindings-id gebruiken in de volgende zelfstudie terwijl u leert hoe u [databases of NoSQL-systemen verkennen met de Flow Service API](../../explore/database-nosql.md).
