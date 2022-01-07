@@ -1,10 +1,10 @@
 ---
-description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in de Doel SDK van Adobe Experience Platform via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
+description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in Adobe Experience Platform Destination SDK via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: API-bewerkingen voor eindpunt doelserver
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '827'
 ht-degree: 2%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**:  `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers`. De server en malplaatjespecs voor uw bestemming kunnen in de Doel SDK van Adobe Experience Platform via het gemeenschappelijke eindpunt `/authoring/destination-servers` worden gevormd. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt verstrekt, lees [server en malplaatjespecs](./server-and-template-configuration.md).
+Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/destination-servers` API-eindpunt. De server en malplaatjespecs voor uw bestemming kunnen in Adobe Experience Platform Destination SDK via het gemeenschappelijke eindpunt worden gevormd `/authoring/destination-servers`. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt verstrekt, lees [server- en sjabloonspecificaties](./server-and-template-configuration.md).
 
 ## Aan de slag met API-bewerkingen voor doelserver {#get-started}
 
-Alvorens verder te gaan, te herzien [begonnen gids](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmingsauteur en vereiste kopballen te verkrijgen.
+Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
 
 ## Configuratie maken voor een doelserver {#create}
 
-U kunt een nieuwe configuratie van de bestemmingsserver tot stand brengen door een verzoek van de POST aan het `/authoring/destination-servers` eindpunt te doen.
+U kunt een nieuwe configuratie van de bestemmingsserver tot stand brengen door een verzoek van de POST aan `/authoring/destination-servers` eindpunt.
 
 **API-indeling**
 
@@ -34,7 +34,7 @@ POST /authoring/destination-servers
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver, die door de parameters wordt gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters die door het `/authoring/destination-servers` eindpunt worden goedgekeurd. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
+Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver, die door de parameters wordt gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters die door `/authoring/destination-servers` eindpunt. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -68,11 +68,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
 | `destinationServerType` | Tekenreeks | *Vereist.* `URL_BASED` is momenteel de enige beschikbare optie. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL moet transformeren in het onderstaande veld `value`. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruik `NONE` als er geen transformatie nodig is aan de Adobe zijde, bijvoorbeeld als u een eindpunt hebt zoals: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als Adobe de URL moet transformeren in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruiken `NONE` als er aan de Adobe zijde geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
-| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die Adobe in vraag aan uw server zal gebruiken. Opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht.  <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [Gebruikend het malplaatjesectie](./message-format.md#using-templating). </li><li> Raadpleeg de [RFC JSON-standaard, sectie zeven](https://tools.ietf.org/html/rfc8259#section-7) voor meer informatie over het escapen van tekens. </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [transformatie van de Attributen van het Profiel](./message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](./message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [Profielkenmerken](./message-format.md#attributes) transformatie. </li></ul> |
 | `httpTemplate.contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -83,7 +83,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Bestemmingsserverconfiguraties weergeven {#retrieve-list}
 
-U kunt een lijst van alle configuraties van de bestemmingsserver voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/authoring/destination-servers` eindpunt te doen.
+U kunt een lijst van alle configuraties van de bestemmingsserver voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot de `/authoring/destination-servers` eindpunt.
 
 **API-indeling**
 
@@ -184,7 +184,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van configuraties 
 
 ## Een bestaande doelserverconfiguratie bijwerken {#update}
 
-U kunt een bestaande configuratie van de bestemmingsserver bijwerken door een verzoek van de PUT aan het `/authoring/destination-servers` eindpunt en het verstrekken van instantie identiteitskaart van de configuratie van de bestemmingsserver u wilt bijwerken. In het lichaam van de vraag, verstrek de bijgewerkte configuratie van de bestemmingsserver.
+U kunt een bestaande configuratie van de bestemmingsserver bijwerken door een verzoek van de PUT aan `/authoring/destination-servers` eindpunt en het verstrekken van instanceID van de configuratie van de bestemmingsserver u wilt bijwerken. In het lichaam van de vraag, verstrek de bijgewerkte configuratie van de bestemmingsserver.
 
 **API-indeling**
 
@@ -235,7 +235,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## Een specifieke configuratie van de doelserver ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke configuratie van de bestemmingsserver terugwinnen door een verzoek van de GET tot het `/authoring/destination-servers` eindpunt te richten en instantieidentiteitskaart van de configuratie van de bestemmingsserver te verstrekken u wilt bijwerken.
+U kunt gedetailleerde informatie over een specifieke configuratie van de bestemmingsserver terugwinnen door een verzoek van de GET aan `/authoring/destination-servers` eindpunt en het verstrekken van instanceID van de configuratie van de bestemmingsserver u wilt bijwerken.
 
 **API-indeling**
 
@@ -286,7 +286,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Een specifieke doelserverconfiguratie verwijderen {#delete}
 
-U kunt de gespecificeerde configuratie van de bestemmingsserver schrappen door een verzoek van de DELETE aan het `/authoring/destination-servers` eindpunt te doen en identiteitskaart van de configuratie te verstrekken van de bestemmingsserver u in de verzoekweg wenst te schrappen.
+U kunt de opgegeven configuratie van de doelserver verwijderen door een DELETE-aanvraag in te dienen bij de `/authoring/destination-servers` eindpunt en het verstrekken van identiteitskaart van de configuratie van de bestemmingsserver u wenst om in de verzoekweg te schrappen.
 
 **API-indeling**
 
@@ -314,8 +314,8 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling
 
-De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Raadpleeg [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [headerfouten aanvragen](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de handleiding voor het oplossen van Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u uw doelserver en sjablonen kunt configureren met behulp van het API-eindpunt `/authoring/destination-servers`. Lees [hoe te om Doel SDK te gebruiken om uw bestemming te vormen](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u de doelserver en sjablonen kunt configureren met de `/authoring/destination-servers` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/destinationInstance/ ` API eindpunt, om te testen of uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 title: API-bewerkingen voor doeltesten
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -321,7 +321,7 @@ Een succesvolle reactie keert status 200 van HTTP samen met de API reactie van h
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van API-foutberichten voor Experience Platforms. Zie [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [aanvragen, koptekstfouten](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
 
 ## Volgende stappen
 

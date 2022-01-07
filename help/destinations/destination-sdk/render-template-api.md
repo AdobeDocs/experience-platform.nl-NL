@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/template/render ` API eindpunt, om uitgevoerde gegevens voor uw bestemming terug te geven, die op uw malplaatje van de berichttransformatie wordt gebaseerd.
 title: API-bewerkingen voor sjablonen renderen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -1067,8 +1067,8 @@ Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van d
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van API-foutberichten voor Experience Platforms. Zie [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [aanvragen, koptekstfouten](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u de sjabloon voor berichttransformatie kunt gebruiken om geëxporteerde profielen te genereren die overeenkomen met de verwachte gegevensindeling van uw bestemming. Lezen [Destination SDK gebruiken om uw bestemming te configureren](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u de sjabloon voor berichttransformatie kunt gebruiken om geëxporteerde profielen te genereren die overeenkomen met de verwachte gegevensindeling van uw bestemming. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](./configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

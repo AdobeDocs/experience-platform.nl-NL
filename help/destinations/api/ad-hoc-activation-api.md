@@ -5,13 +5,13 @@ title: (bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van publiekssegmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
-
 
 # (bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering
 
@@ -185,4 +185,4 @@ Een geslaagde reactie retourneert HTTP-status 200.
 
 ## API-foutafhandeling
 
-De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Zie [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [aanvragen, koptekstfouten](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.

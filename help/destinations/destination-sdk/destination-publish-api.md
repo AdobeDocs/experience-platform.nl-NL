@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination/publish`.
 title: API-eindpuntbewerkingen voor doelen publiceren
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '757'
 ht-degree: 2%
 
 ---
@@ -13,23 +13,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**:  `platform.adobe.io/data/core/activation/authoring/destinations/publish`
+>**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destinations/publish`.
+Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/destinations/publish` API-eindpunt.
 
 Nadat u hebt gevormd en uw bestemming getest, kunt u het voorleggen aan Adobe voor overzicht en het publiceren.
 
 Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te dienen wanneer:
-* Als partner van SDK van de Bestemming, wilt u uw geproduceerde bestemming beschikbaar over alle organisaties van het Experience Platform voor alle klanten van het Experience Platform aan gebruik maken;
+* Als partner van Destination SDK, wilt u uw geproduceerde bestemming beschikbaar over alle organisaties van het Experience Platform voor alle klanten van het Experience Platform aan gebruik maken;
 * U wilt uw aangepaste bestemming beschikbaar maken in uw eigen organisatie van het Experience Platform, voor alle sandboxen.
 
 ## Aan de slag met API-bewerkingen voor doelpublicatie {#get-started}
 
-Alvorens verder te gaan, te herzien [begonnen gids](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmingsauteur en vereiste kopballen te verkrijgen.
+Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
 
 ## Een doelconfiguratie verzenden voor publicatie {#create}
 
-U kunt een bestemmingsconfiguratie voor het publiceren voorleggen door een verzoek van de POST aan het `/authoring/destinations/publish` eindpunt te doen.
+U kunt een bestemmingsconfiguratie voor het publiceren voorleggen door een verzoek van de POST aan de `/authoring/destinations/publish` eindpunt.
 
 **API-indeling**
 
@@ -40,7 +40,7 @@ POST /authoring/destinations/publish
 
 **Verzoek**
 
-Het volgende verzoek legt een bestemming voor publicatie voor, over de organisaties die door de parameters worden gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters die door het `/authoring/destinations/publish` eindpunt worden goedgekeurd.
+Het volgende verzoek legt een bestemming voor publicatie voor, over de organisaties die door de parameters worden gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters die door `/authoring/destinations/publish` eindpunt.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -62,9 +62,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `destinationId` | Tekenreeks | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren voorlegt. Krijg bestemmingsidentiteitskaart van een bestemmingsconfiguratie door [bestemmingsconfiguratie API verwijzing](./destination-configuration-api.md#retrieve-list) te gebruiken. |
-| `destinationAccess` | Tekenreeks | `ALL` of `LIMITED`. Geef op of u uw bestemming wilt weergeven in de catalogus voor alle klanten van het Experience Platform of alleen voor bepaalde organisaties. <br> **Opmerking**: Als u gebruikt  `LIMITED`, zal de bestemming voor uw organisatie van het Experience Platform slechts worden gepubliceerd. Als u de bestemming aan een ondergroep van de organisaties van het Experience Platform voor klant testende doeleinden wilt publiceren, gelieve te bereiken aan de steun van de Adobe. |
-| `allowedOrgs` | Tekenreeks | Als u `"destinationAccess":"LIMITED"` gebruikt, specificeer de organisaties van het Experience Platform waarvoor de bestemming beschikbaar zal zijn. |
+| `destinationId` | Tekenreeks | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren voorlegt. Krijg bestemmingsidentiteitskaart van een bestemmingsconfiguratie door te gebruiken [API-naslaggids voor doelconfiguratie](./destination-configuration-api.md#retrieve-list). |
+| `destinationAccess` | Tekenreeks | `ALL` of `LIMITED`. Geef op of u uw bestemming wilt weergeven in de catalogus voor alle klanten van het Experience Platform of alleen voor bepaalde organisaties. <br> **Opmerking**: Als u `LIMITED`, zal de bestemming voor uw organisatie van het Experience Platform slechts worden gepubliceerd. Als u de bestemming aan een ondergroep van de organisaties van het Experience Platform voor klant testende doeleinden wilt publiceren, gelieve te bereiken aan de steun van de Adobe. |
+| `allowedOrgs` | Tekenreeks | Als u `"destinationAccess":"LIMITED"`, de organisaties van het Experience Platform specificeren waarvoor de bestemming beschikbaar zal zijn. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -74,7 +74,7 @@ Een succesvolle reactie keert status 201 van HTTP met details van uw bestemmings
 
 ## Publicatieverzoeken voor bestemming weergeven {#retrieve-list}
 
-U kunt een lijst van alle bestemmingen terugwinnen die voor publicatie voor uw organisatie IMS door een verzoek van de GET aan het `/authoring/destinations/publish` eindpunt worden voorgelegd te doen.
+U kunt een lijst van alle bestemmingen terugwinnen die voor publicatie voor uw organisatie IMS door een verzoek van de GET aan wordt voorgelegd `/authoring/destinations/publish` eindpunt.
 
 **API-indeling**
 
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwoord**
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van doelen die zijn ingediend voor publicatie waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Één `configId` beantwoordt aan het publicatieverzoek voor één bestemming.
+De volgende reactie retourneert HTTP-status 200 met een lijst van doelen die zijn ingediend voor publicatie waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `configId` komt overeen met de publicatieaanvraag voor één bestemming.
 
 ```json
 {
@@ -129,7 +129,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van doelen die zij
 
 ## Een bestaand doelpublicatieverzoek bijwerken {#update}
 
-U kunt de toegestane organisaties in een bestaande bestemming bijwerken publiceer verzoek door een verzoek van de PUT aan het `/authoring/destinations/publish` eindpunt te doen en identiteitskaart van de bestemming te verstrekken waarvoor u de toegestane organisaties wilt bijwerken. In het lichaam van de vraag, verstrek de bijgewerkte toegestane organisaties.
+U kunt de toegestane organisaties in een bestaand doel bijwerken publicatieverzoek door een PUT aan te vragen bij `/authoring/destinations/publish` eindpunt en het verstrekken van identiteitskaart van de bestemming waarvoor u de toegestane organisaties wilt bijwerken. In het lichaam van de vraag, verstrek de bijgewerkte toegestane organisaties.
 
 **API-indeling**
 
@@ -166,7 +166,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## Hiermee wordt de status van een specifiek publicatieverzoek voor een doel opgehaald {#get}
 
-U kunt gedetailleerde informatie over een specifieke bestemming terugwinnen publiceer verzoek door een verzoek van de GET tot het `/authoring/destinations/publish` eindpunt te richten en identiteitskaart van de bestemming te verstrekken waarvoor u de het publiceren status wilt terugwinnen.
+U kunt gedetailleerde informatie over een specifieke bestemmings terugwinnen publicatieverzoek door een verzoek van de GET aan `/authoring/destinations/publish` eindpunt en het verstrekken van identiteitskaart van de bestemming waarvoor u de het publiceren status wilt terugwinnen.
 
 **API-indeling**
 
@@ -212,8 +212,8 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## API-foutafhandeling
 
-De eindpunten van SDK API van de bestemming volgen de algemene API van het Experience Platform foutenmeldingsbeginselen. Raadpleeg [API-statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) en [headerfouten aanvragen](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in de handleiding voor het oplossen van Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een publicatieverzoek voor uw doel kunt indienen. Het Adobe Experience Platform-team zal uw publicatieverzoek beoordelen en met vijf werkdagen teruggaan naar u.
+Nadat u dit document hebt gelezen, weet u nu hoe u een publicatieverzoek voor uw doel kunt indienen. Het Adobe Experience Platform-team zal uw publicatieaanvraag beoordelen en met vijf werkdagen teruggaan naar u.
