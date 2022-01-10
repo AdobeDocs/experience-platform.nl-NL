@@ -3,9 +3,9 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (bèta) [!DNL Azure Event Hubs] verbinding
 description: Creeer een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag naar streamgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
+source-git-commit: 0a45cb49f3eb2bbd6ac1b39962df88b2352eb121
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Alle toegewezen kenmerken worden geëxporteerd voor een profiel, ongeacht de loc
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Uw geëxporteerde [!DNL Experience Platform] gegevenslagen in [!DNL Azure Event Hubs] in JSON-indeling. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
+Uw geëxporteerde [!DNL Experience Platform] gegevenslagen in [!DNL Azure Event Hubs] in JSON-indeling. De onderstaande exportbewerking bevat bijvoorbeeld een profiel dat is gekwalificeerd voor een bepaald segment en dat een ander segment heeft verlaten. Het bevat de voornaam, achternaam, geboortedatum en het persoonlijke e-mailadres van het profielkenmerk. De identiteiten voor dit profiel zijn ECID en e-mail.
 
 ```json
 {
