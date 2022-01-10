@@ -3,7 +3,7 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (bèta) [!DNL Azure Event Hubs] verbinding
 description: Creeer een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag naar streamgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
+source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%
@@ -75,7 +75,14 @@ Uw geëxporteerde [!DNL Experience Platform] gegevenslagen in [!DNL Azure Event 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.com"
+    "birthDate": "YYYY-MM-DD",
+    "name": {
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  },
+  "personalEmail": {
+    "address": "john.doe@acme.com"
   },
   "segmentMembership": {
     "ups": {
