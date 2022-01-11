@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f529a49c994d20f4b8da4c0d6bfe4c06a1a32655
+source-git-commit: a3596624c16da6369f8901d448bb381c37e3510e
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2130'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt
 >id="platform_destinations_activate_exportoptions"
 >title="Exportopties voor bestanden"
 >abstract="Selecteer Volledige bestanden exporteren om een volledige opname te exporteren van alle profielen die in aanmerking komen voor het segment. Selecteer Incrementele bestanden exporteren om alleen de profielen te exporteren die voor het segment in aanmerking kwamen sinds de laatste exportbewerking. Het eerste incrementele exportbestand bevat alle profielen die in aanmerking komen voor het segment en die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de profielen die in aanmerking kwamen voor het segment sinds de eerste incrementele bestandsexport."
->additional-url="https://www.adobe.com/go/destinations-incremental-files-en" text="Incrementele bestanden exporteren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Incrementele bestanden exporteren"
 
 Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige opname van alle profielkwalificaties voor het geselecteerde segment te activeren.
 
