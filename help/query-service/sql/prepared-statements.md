@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;voorbereide verklaringen;voorbereid;sql;
+keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;voorbereide verklaringen;voorbereid;sql;
 solution: Experience Platform
 title: Bereide verklaringen in de Dienst van de Vraag
 topic-legacy: prepared statements
 description: In SQL, worden de voorbereide verklaringen gebruikt aan malplaatje gelijkaardige vragen of updates. De Dienst van de Vraag van Adobe Experience Platform steunt voorbereide verklaringen door een parameterized vraag te gebruiken.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '374'
 ht-degree: 6%
 
 ---
 
 # Vooraf voorbereide instructies
 
-In SQL, worden de voorbereide verklaringen gebruikt om gelijkaardige vragen of updates te templatiseren. Adobe Experience Platform [!DNL Query Service] steunt voorbereide verklaringen door een parameterized vraag te gebruiken. Dit kan worden gebruikt om prestaties te optimaliseren, aangezien u een vraag niet meer zult moeten opnieuw parseren opnieuw en opnieuw.
+In SQL, worden de voorbereide verklaringen gebruikt om gelijkaardige vragen of updates te templatiseren. Adobe Experience Platform [!DNL Query Service] steunt voorbereide verklaringen door een parameterized vraag te gebruiken. Hierdoor kunnen de prestaties worden geoptimaliseerd, omdat u een query niet langer herhaaldelijk opnieuw hoeft te parseren.
 
 ## Vooraf voorbereide instructies gebruiken
 
@@ -25,9 +24,9 @@ Wanneer u kant-en-klare instructies gebruikt, worden de volgende syntaxis onders
 - [UITVOEREN](#execute)
 - [VERWIJDEREN](#deallocate)
 
-### Een voorbereide instructie {#prepare} voorbereiden
+### Een voorbereide instructie voorbereiden {#prepare}
 
-Deze SQL-query slaat de geschreven SELECT-query op met de naam als `PLAN_NAME`. U kunt variabelen, zoals `$1`, gebruiken in plaats van werkelijke waarden. Deze voorbereide instructie wordt opgeslagen tijdens de huidige sessie. Houd er rekening mee dat plannamen **niet** hoofdlettergevoelig zijn.
+Deze SQL-query slaat de geschreven SELECT-query op met de opgegeven naam `PLAN_NAME`. U kunt variabelen gebruiken, zoals `$1` in plaats van de werkelijke waarden. Deze voorbereide instructie wordt opgeslagen tijdens de huidige sessie. Houd er rekening mee dat de namen van de abonnementen **niet** hoofdlettergevoelig.
 
 #### SQL-indeling
 
@@ -57,7 +56,7 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Toewijzen van een voorbereid statement {#deallocate} ongedaan maken
+### Toewijzing van een voorbereid overzicht opheffen {#deallocate}
 
 Deze SQL-query wordt gebruikt om de benoemde voorbereide instructie te verwijderen.
 
