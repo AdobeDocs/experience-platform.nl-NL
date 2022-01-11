@@ -6,9 +6,9 @@ title: Gegevensstromen van de monitor voor Doelen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1699'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 - [Doelen](../../destinations/home.md): Doelen zijn voorgebouwde integraties met veelgebruikte toepassingen die het mogelijk maken om gegevens van Platform naadloos te activeren voor kanaalmarketingcampagnes, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-## Gegevens controleren in de werkruimte Doelen
+## Gegevens controleren in de werkruimte Doelen {#monitor-dataflows-in-the-destinations-workspace}
 
 In de **[!UICONTROL Destinations]** binnen de gebruikersinterface van het Platform navigeert u naar de **[!UICONTROL Browse]** en selecteert u de naam van een doel dat u wilt weergeven.
 
@@ -45,18 +45,24 @@ Zie de volgende tabel voor meer informatie over statussen:
 | Verwerking | De `Processing` status geeft aan dat een gegevensstroom nog niet actief is. Deze status wordt vaak direct na het maken van een nieuwe gegevensstroom aangetroffen. |
 | Fout | De `Error` status geeft aan dat het activeringsproces van een gegevensstroom is onderbroken. |
 
-### Dataflow wordt uitgevoerd voor streamingdoelen
+### Dataflow wordt uitgevoerd voor streamingdoelen {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="Geactiveerde identiteiten"
 >abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Meer informatie in documentatie"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="Uitgesloten identiteiten"
 >abstract="Het aantal afzonderlijke profielrecords dat is uitgesloten van activering voor de geselecteerde bestemming op basis van ontbrekende kenmerken en schending van de toestemming."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identiteiten mislukt"
+>abstract="Het aantal afzonderlijke profiel-id&#39;s dat is mislukt voor het geselecteerde doel. Controleer de foutdiagnostiek voor meer informatie."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Meer informatie in documentatie"
 
 Voor streamingdoelen geldt het [!UICONTROL Dataflow runs] bevat een update per uur voor metrische gegevens in uw gegevensstroomuitvoering. De meest prominente statistieken met het label zijn voor identiteiten.
@@ -93,7 +99,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Dataflow wordt uitgevoerd voor batchdoelen
+### Dataflow wordt uitgevoerd voor batchdoelen {#dataflow-runs-for-batch-destinations}
 
 Voor batchbestemmingen wordt de [!UICONTROL Dataflow runs] bevat metrische gegevens over de gegevensstroomuitvoering. Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
 

@@ -1,11 +1,11 @@
 ---
 keywords: Amazon S3;S3 doel;s3;amazon s3
 title: Amazon S3-verbinding
-description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
+description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,12 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 ### Verbindingsparameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="Openbare RSA-sleutel"
+>abstract="U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet als Base64 gecodeerde koord worden geschreven."
+>text="Learn more in documentation"
+
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!DNL Amazon S3]toegangstoets** en **[!DNL Amazon S3]geheime sleutel**: In [!DNL Amazon S3], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon S3] account. Meer informatie in het dialoogvenster [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
@@ -40,7 +46,7 @@ U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteli
 
 >[!TIP]
 >
->In de Connect-doelworkflow kunt u per geëxporteerd segmentbestand een aangepaste map in uw Amazon S3-opslag maken. Lezen [Macro&#39;s gebruiken om een map te maken op uw opslaglocatie](overview.md#use-macros) voor instructies.
+>In de Connect-doelworkflow kunt u per geëxporteerd segmentbestand een aangepaste map in uw Amazon S3-opslagruimte maken. Lezen [Macro&#39;s gebruiken om een map te maken op uw opslaglocatie](overview.md#use-macros) voor instructies.
 
 ### Vereist [!DNL Amazon S3] machtigingen {#required-s3-permission}
 
