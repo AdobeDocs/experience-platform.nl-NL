@@ -1,9 +1,10 @@
 ---
 title: Overzicht van extensieontwikkeling
 description: In deze video ziet u de belangrijkste componenten van verschillende extensietypen en het ontwikkelingsproces voor extensies in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: b72df3df-f206-488d-a690-0f086973c5b6
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -24,25 +25,25 @@ Een extensie bestaat uit een map met bestanden. Specifiek, bestaat een uitbreidi
 
 ### Manifest-bestand
 
-Een manifestbestand ([`extension.json`](./manifest.md)) moet zich in de hoofdmap van de map bevinden. In dit bestand wordt de samenstelling van de extensie beschreven en wordt aangegeven waar bepaalde bestanden zich in de map bevinden. Het manifest werkt zo gelijkaardig aan een [`package.json`](https://docs.npmjs.com/files/package.json) dossier in een [npm](https://www.npmjs.com/) project.
+Een manifestbestand ([`extension.json`](./manifest.md)) moet in de hoofdmap van de map staan. In dit bestand wordt de samenstelling van de extensie beschreven en wordt aangegeven waar bepaalde bestanden zich in de map bevinden. Het manifest werkt gelijkaardig aan a [`package.json`](https://docs.npmjs.com/files/package.json) bestand in een [npm](https://www.npmjs.com/) project.
 
 ### Bibliotheekmodules
 
-Bibliotheekmodules zijn de bestanden die de verschillende [componenten](#components) beschrijven die een extensie biedt (met andere woorden, de logica die moet worden uitgestraald in de runtimebibliotheek van de tag). De inhoud van elk bibliotheekmodulebestand moet voldoen aan de [CommonJS modulestandaard](http://wiki.commonjs.org/wiki/Modules/1.1.1).
+Bibliotheekmodules zijn de bestanden die de verschillende [componenten](#components) dat een extensie bevat (met andere woorden de logica die moet worden uitgestraald in de runtimebibliotheek van de tag). De inhoud van elk bibliotheekmodulebestand moet overeenkomen met de [CommonJS module standard](https://nodejs.org/api/modules.html#modules-commonjs-modules).
 
-Bijvoorbeeld, als u een actietype genoemd &quot;verzend baken&quot;bouwt, moet u een dossier hebben dat de logica bevat die het baken verzendt. Als u JavaScript gebruikt, kan het bestand `sendBeacon.js` worden genoemd. De inhoud van dit bestand wordt weergegeven in de runtimebibliotheek van de tag.
+Bijvoorbeeld, als u een actietype genoemd &quot;verzend baken&quot;bouwt, moet u een dossier hebben dat de logica bevat die het baken verzendt. Als u JavaScript gebruikt, kan het bestand worden aangeroepen `sendBeacon.js`. De inhoud van dit bestand wordt weergegeven in de runtimebibliotheek van de tag.
 
-U kunt bibliotheekmodulebestanden op elke gewenste locatie in de extensiemap plaatsen, op voorwaarde dat u de locaties in `extension.json` beschrijft.
+U kunt bibliotheekmodulebestanden op elke gewenste locatie in de extensiemap plaatsen, op voorwaarde dat u hun locaties in `extension.json`.
 
 ### Weergaven
 
-Een weergave is een HTML-bestand dat kan worden geladen in een [`iframe`-element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de tagtoepassing, met name via de gebruikersinterface voor gegevensverzameling. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
+Een weergave is een HTML-bestand dat in een [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door de Inzameling van Gegevens UI. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
 
-Het belangrijkste meningsdossier voor om het even welke uitbreiding is zijn configuratie. Zie de sectie over [extensieconfiguraties](#configuration) voor meer informatie.
+Het belangrijkste meningsdossier voor om het even welke uitbreiding is zijn configuratie. Zie de sectie over [extensieconfiguraties](#configuration) voor meer informatie .
 
 Er gelden geen beperkingen ten aanzien van de bibliotheken die in uw weergaven worden gebruikt. Met andere woorden, u kunt jQuery, Onderstreping, Reageren, Angular, Bootstrap of andere gebruiken. Nochtans, wordt het nog geadviseerd om uw uitbreiding een gelijkaardige blik te maken en aan de UI van de Inzameling van Gegevens te voelen.
 
-U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) in één submap te plaatsen die is gescheiden van de bibliotheekmodulebestanden. In `extension.json`, kunt u beschrijven waar deze meningssubdirectory wordt gevestigd. Platform zal deze subdirectory (en slechts deze subdirectory) van zijn Webservers dan dienen.
+U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) in één submap te plaatsen die is gescheiden van de bibliotheekmodulebestanden. In `extension.json`kunt u beschrijven waar deze submap voor de weergave zich bevindt. Platform zal deze subdirectory (en slechts deze subdirectory) van zijn Webservers dan dienen.
 
 ## Bibliotheekcomponenten {#components}
 
@@ -52,9 +53,9 @@ Afhankelijk van het feit of u een webextensie of een randextensie ontwikkelt, ve
 
 ### Componenten voor webextensies {#web}
 
-In webextensies worden regels geactiveerd via gebeurtenissen, die vervolgens specifieke acties kunnen uitvoeren als aan een bepaalde set voorwaarden wordt voldaan. Zie het overzicht op [modulestroom in Webuitbreidingen](./web/flow.md) voor meer informatie.
+In webextensies worden regels geactiveerd via gebeurtenissen, die vervolgens specifieke acties kunnen uitvoeren als aan een bepaalde set voorwaarden wordt voldaan. Zie het overzicht op [modulestroom in Webuitbreidingen](./web/flow.md) voor meer informatie .
 
-Naast de [core modules](./web/core.md) die door Adobe worden verstrekt, kunt u de volgende bibliotheekcomponenten in uw Webuitbreidingen bepalen:
+Naast de [kernmodules](./web/core.md) kunt u de volgende bibliotheekcomponenten definiëren in uw webextensies die worden geleverd door Adobe:
 
 * [Gebeurtenissen](./web/event-types.md)
 * [Voorwaarden](./web/condition-types.md)
@@ -64,11 +65,11 @@ Naast de [core modules](./web/core.md) die door Adobe worden verstrekt, kunt u d
 
 >[!NOTE]
 >
->Zie [module format overview](./web/format.md) voor meer informatie over de vereiste indeling voor het implementeren van bibliotheekcomponenten in webextensies.
+>Voor meer informatie over de vereiste indeling voor het implementeren van bibliotheekcomponenten in webextensies raadpleegt u de [overzicht van moduleopmaak](./web/format.md).
 
 ### Componenten voor randextensies {#edge}
 
-In randuitbreidingen worden de regels geactiveerd door voorwaardencontroles, die vervolgens specifieke acties uitvoeren als die controles slagen. Zie het overzicht op [de stroom van de randuitbreiding](./edge/flow.md) voor meer informatie.
+In randuitbreidingen worden de regels geactiveerd door voorwaardencontroles, die vervolgens specifieke acties uitvoeren als die controles slagen. Zie het overzicht op de [edge extension flow](./edge/flow.md) voor meer informatie .
 
 U kunt de volgende bibliotheekcomponenten in uw randuitbreidingen bepalen:
 
@@ -78,7 +79,7 @@ U kunt de volgende bibliotheekcomponenten in uw randuitbreidingen bepalen:
 
 >[!NOTE]
 >
->Voor details op het vereiste formaat voor het uitvoeren van bibliotheekmodules in randuitbreidingen, zie [moduleformaat overzicht](./edge/format.md).
+>Zie voor meer informatie over de vereiste indeling voor het implementeren van bibliotheekmodules in edge extensions de [overzicht van moduleopmaak](./edge/format.md).
 
 ## Extensieconfiguratie {#configuration}
 
@@ -88,8 +89,8 @@ Neem bijvoorbeeld een extensie die de gebruiker toestaat een baken te verzenden 
 
 Wanneer gebruikers een uitbreiding aan een bezit in UI installeren, worden zij getoond de mening van de uitbreidingsconfiguratie, die zij moeten voltooien om de installatie te voltooien.
 
-Meer leren, zie de gids op [uitbreidingsconfiguraties](./configuration.md).
+Raadpleeg de handleiding voor meer informatie [extensieconfiguraties](./configuration.md).
 
 ## Extensies verzenden
 
-Nadat u de extensie hebt gemaakt, kunt u deze verzenden naar een lijst in de extensiecatalogus in het Platform. Zie het [overzicht van het verzendproces voor extensies](./submit/overview.md) voor meer informatie.
+Nadat u de extensie hebt gemaakt, kunt u deze verzenden naar een lijst in de extensiecatalogus in het Platform. Zie de [overzicht van het verzendproces voor extensies](./submit/overview.md) voor meer informatie .

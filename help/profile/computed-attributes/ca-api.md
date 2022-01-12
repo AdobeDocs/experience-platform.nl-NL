@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding laat zien hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2275'
 ht-degree: 0%
 
 ---
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Verzoek**
 
-Dit verzoek gebruikt [JSON-patchopmaak](http://jsonpatch.com/) om de &quot;waarde&quot; van het veld &quot;expression&quot; bij te werken.
+Dit verzoek gebruikt [JSON-patchopmaak](https://datatracker.ietf.org/doc/html/rfc6902) om de &quot;waarde&quot; van het veld &quot;expression&quot; bij te werken.
 
 ```shell
 curl -X PATCH \

@@ -1,9 +1,10 @@
 ---
 title: Bibliotheekmodules in Edge-extensies
 description: Bibliotheekmodules opmaken voor tagextensies in een randeigenschap.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -16,15 +17,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->In dit document wordt de indeling van de module Bibliotheek voor randextensies besproken. Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [het formatteren van Webuitbreidingsmodules](../web/format.md).
+>In dit document wordt de indeling van de module Bibliotheek voor randextensies besproken. Als u een webextensie ontwikkelt, raadpleegt u de handleiding op [opmaken van webextensiemodules](../web/format.md) in plaats daarvan.
 
-Een bibliotheekmodule is een stuk herbruikbare code die door een extensie wordt geleverd en die wordt uitgegeven in de runtimebibliotheek van de tag in Adobe Experience Platform (de bibliotheek die op het randknooppunt wordt uitgevoerd). Bijvoorbeeld, zal een `sendBeacon` actietype een bibliotheekmodule hebben die op de randknoop zal lopen en een baken verzendt.
+Een bibliotheekmodule is een stuk herbruikbare code die door een extensie wordt geleverd en die wordt uitgegeven in de runtimebibliotheek van de tag in Adobe Experience Platform (de bibliotheek die op het randknooppunt wordt uitgevoerd). Bijvoorbeeld een `sendBeacon` actietype zal een bibliotheekmodule hebben die op de randknoop zal lopen en een baken zal verzenden.
 
-De bibliotheekmodule is gestructureerd als [CommonJS module](http://wiki.commonjs.org/wiki/Modules/1.1.1). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
+De module Bibliotheek is gestructureerd als een [CommonJS-module](https://nodejs.org/api/modules.html#modules-commonjs-modules). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
 
 ## [!DNL require]
 
-Een functie `require` is beschikbaar voor u aan toegangsmodules binnen uw uitbreiding. Elke module in de extensie is toegankelijk via een relatief pad. Het relatieve pad moet beginnen met `./` of `../`.
+A `require` Deze functie is beschikbaar voor u om tot modules binnen uw uitbreiding toegang te hebben. Elke module in de extensie is toegankelijk via een relatief pad. Het relatieve pad moet beginnen met `./` of `../`.
 
 Voorbeeld:
 
@@ -35,7 +36,7 @@ transformHelper.execute({a: 'b'});
 
 ## [!DNL module]
 
-Er is een gratis variabele met de naam `module` beschikbaar waarmee u de API van de module kunt exporteren.
+Een gratis variabele met de naam `module` is beschikbaar waarmee u de API van de module kunt exporteren.
 
 Voorbeeld:
 
@@ -45,7 +46,7 @@ module.exports = (…) => { … }
 
 ## [!DNL exports]
 
-Er is een gratis variabele met de naam `exports` beschikbaar waarmee u de API van de module kunt exporteren.
+Een gratis variabele met de naam `exports` is beschikbaar waarmee u de API van de module kunt exporteren.
 
 Voorbeeld:
 
@@ -53,7 +54,7 @@ Voorbeeld:
 exports.sayHello = (…) => { … }
 ```
 
-Dit is een alternatief voor `module.exports` maar het gebruik ervan is beperkter. Lees [Understanding module.export and exporting in node.js](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de verwante bedenkingen met het gebruiken van `exports`. Als u twijfelt, maakt u uw leven makkelijker en gebruikt u `module.exports` in plaats van `exports`.
+Dit is een alternatief voor `module.exports` maar heeft een beperkter gebruik. Lees [Het begrip module.export en de uitvoer in node.js](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de hiermee samenhangende waarschuwingen bij het gebruik `exports`. Als u twijfelt, maak dan uw leven makkelijker en gebruik `module.exports` eerder dan `exports`.
 
 ## Handtekening van de module Server-side
 

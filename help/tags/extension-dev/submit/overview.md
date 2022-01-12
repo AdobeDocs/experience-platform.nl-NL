@@ -1,9 +1,10 @@
 ---
 title: Overzicht van het verzendproces voor extensies
 description: Leer de stappen voor het verzenden van uw extensie in Adobe Experience Platform van ontwikkeling naar release.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -21,14 +22,14 @@ Het indienen van een extensie voor de catalogus voor gegevensverzameling in Adob
 1. [Een extensie ontwikkelen](./develop.md)
 1. [Een aanbieding maken](./create-listing.md)
 1. Uw extensiepakket maken
-1. [Upload en test uw extensie](./upload-and-test.md)
+1. [Uw extensie uploaden en testen](./upload-and-test.md)
 1. [Geen extensie](./release.md)
 
 Selecteer de gewenste koppeling voor meer informatie over elk van deze stappen.
 
 ## Ondersteuning
 
-Ondersteuning is beschikbaar via de Slack-werkruimte van de tagontwikkelaar terwijl u uw extensie maakt en test. De werkruimte Slack is een online gemeenschap waar de auteurs van extensies elkaar ondersteunen. U kunt toegang aanvragen op [http://join.launchdevelopers.chat](http://join.launchdevelopers.chat).
+Ondersteuning is beschikbaar via de Slack-werkruimte van de tagontwikkelaar terwijl u uw extensie maakt en test. De werkruimte Slack is een online gemeenschap waar de auteurs van extensies elkaar ondersteunen. U kunt toegang aanvragen met behulp van de volgende [online formulier](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ title: Gegevenstype postadres
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor postadres.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 | --- | --- |
 | `city` | De naam van de stad. |
 | `country` | De naam van het door de overheid bestuurde gebied. Dit is een veld met vrije vorm dat de naam van het land in elke taal kan hebben. |
-| `countryCode` | De code van twee tekens <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> voor het land. |
+| `countryCode` | Het twee-karakter <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> code voor het land. |
 | `createdByBatchID` | De id van het ingesloten batchbestand waarmee de adresrecord is gemaakt. |
 | `dmaID` | Het Nielsen-mediaonderzoek heeft een marktgebied aangewezen. |
 | `label` | Een vrije-vormnaam voor het adres. |
@@ -31,14 +31,14 @@ ht-degree: 0%
 | `msaID` | Het statistische metropolitane gebied in de Verenigde Staten waar de waarneming plaatsvond. |
 | `postOfficeBox` | Het postkantoor vak van het adres. |
 | `postalCode` | De postcode van de locatie. Postcodes zijn niet voor alle landen beschikbaar. In sommige landen zal dit slechts een deel van de postcode bevatten. |
-| `primary` | Een Booleaanse waarde die aangeeft of dit het primaire adres van de betrokkene is. Een profiel kan slechts één `primary` adres op een bepaald punt van tijd hebben. |
+| `primary` | Een Booleaanse waarde die aangeeft of dit het primaire adres van de betrokkene is. Een profiel kan slechts één profiel hebben `primary` adres op een bepaald tijdstip. |
 | `region` | Het gebied, het graafschap, of het districtsgedeelte van het adres. |
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
-| `stateProvince` | De staat of provincie van de observatie. De notatie volgt de [ISO 3166-2 (land en deelsector)](http://www.unece.org/cefact/locode/subdivisions.html) standaard. |
+| `stateProvince` | De staat of provincie van de observatie. De notatie volgt de [ISO 3166-2 (land en deelsector)](https://www.unece.org/cefact/locode/subdivisions.html) standaard. |
 | `status` | Geeft aan of het adres momenteel kan worden gebruikt. |
 | `statusReason` | Een beschrijving van de huidige `status`. |
-| `street1` - `street4` | Deze vier velden zijn bedoeld om informatie op het niveau van de primaire straat, het appartementnummer, het straatnummer en de straatnaam te bevatten. `street2` op  `street4` optioneel. |
+| `street1` - `street4` | Deze vier velden zijn bedoeld om informatie op het niveau van de primaire straat, het appartementnummer, het straatnummer en de straatnaam te bevatten. `street2` tot `street4` zijn optioneel. |
 
 {style=&quot;table-layout:auto&quot;}
 

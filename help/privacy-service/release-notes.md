@@ -5,14 +5,14 @@ title: Opmerkingen bij de release Privacy Service
 topic-legacy: release notes
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%
 
 ---
 
-# [!DNL Privacy Service] - aanvullende informatie
+# Aanvullende informatie voor [!DNL Privacy Service]
 
 Dit document bevat informatie over nieuwe functies voor Adobe Experience Platform [!DNL Privacy Service], alsmede verbeteringen en belangrijke opgeloste problemen.
 
@@ -47,7 +47,7 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 | [!DNL Privacy Service] herbranding | De voormalige naam &quot;GDPR Service&quot; is hernoemd naar [!DNL Privacy Service] aangezien de dienst is gegroeid om andere voorschriften naast de GDPR te ondersteunen. |
 | Nieuwe API-eindpunten | Basispad voor de [!DNL Privacy Service] API is bijgewerkt vanaf `/data/privacy/gdpr` tot `/data/core/privacy/jobs` |
 | Nieuw vereist `regulation` eigenschap | Wanneer u nieuwe taken maakt in het dialoogvenster [!DNL Privacy Service] API, a `regulation` de goederen moeten in de lading van het verzoek worden geleverd om aan te geven welke regeling moet worden toegepast om de functie onder te houden. Accepteerde waarden zijn `gdpr` en `ccpa`. Document weergeven op [privacytaken](api/privacy-jobs.md) in de [!DNL Privacy Service] API-handleiding voor meer informatie. |
-| Ondersteuning voor Adobe Primetime-verificatie | [!DNL Privacy Service] accepteert nu toegang-/verwijderaanvragen van Adobe Primetime-verificatie, met `primetimeAuthentication` als productwaarde. Zie de [Primetime-verificatiedocumentatie](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) voor meer informatie . |
+| Ondersteuning voor Adobe Primetime-verificatie | [!DNL Privacy Service] accepteert nu toegang-/verwijderaanvragen van Adobe Primetime-verificatie, met `primetimeAuthentication` als productwaarde. Zie de [Primetime-verificatiedocumentatie](https://tve.helpdocsonline.com/how-to-make-a-privacy-request) voor meer informatie . |
 
 ### Verbeteringen
 

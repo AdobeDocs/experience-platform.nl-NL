@@ -1,9 +1,10 @@
 ---
 title: Bibliotheekmodules in webextensies
 description: Leer hoe u bibliotheekmodules kunt opmaken voor webextensies in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -16,17 +17,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->In dit document wordt de indeling van de module Bibliotheek voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [het formatteren van de modules van de randuitbreiding](../edge/format.md).
+>In dit document wordt de indeling van de module Bibliotheek voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie de gids op [opmaken van Edge-uitbreidingsmodules](../edge/format.md) in plaats daarvan.
 
-Een bibliotheekmodule is een stuk herbruikbare code die door een extensie wordt geleverd en die wordt uitgegeven in de runtimebibliotheek van de tag in Adobe Experience Platform. Deze bibliotheek wordt vervolgens op de website van de client uitgevoerd. Een `gesture`-gebeurtenistype heeft bijvoorbeeld een bibliotheekmodule die wordt uitgevoerd op de website van de client en waarmee bewegingen van de gebruiker worden gedetecteerd.
+Een bibliotheekmodule is een stuk herbruikbare code die door een extensie wordt geleverd en die wordt uitgegeven in de runtimebibliotheek van de tag in Adobe Experience Platform. Deze bibliotheek wordt vervolgens op de website van de client uitgevoerd. Bijvoorbeeld een `gesture` gebeurtenistype heeft een bibliotheekmodule die op de website van de client wordt uitgevoerd en gebruikersbewegingen detecteert.
 
-De bibliotheekmodule is gestructureerd als [CommonJS module](http://wiki.commonjs.org/wiki/Modules/1.1.1). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
+De module Bibliotheek is gestructureerd als een [CommonJS-module](https://nodejs.org/api/modules.html#modules-commonjs-modules). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
 
 ## [!DNL require]
 
-U hebt toegang tot een functie `require`:
+A `require` -functie is beschikbaar voor u:
 
-1. Kernmodules geleverd door tags. Deze modules kunnen worden betreden door `require('@adobe/reactor-name-of-module')` te gebruiken. Zie het document over beschikbare [kernmodules](./core.md) voor meer informatie.
+1. Kernmodules geleverd door tags. Deze modules kunnen worden betreden door te gebruiken `require('@adobe/reactor-name-of-module')`. Het document is beschikbaar [kernmodules](./core.md) voor meer informatie .
 1. Andere modules in uw extensie. Elke module in de extensie is toegankelijk via een relatief pad. Het relatieve pad moet beginnen met `./` of `../`.
 
 Voorbeeld:
@@ -38,7 +39,7 @@ cookie.set('foo', 'bar');
 
 ## [!DNL module]
 
-Er is een gratis variabele met de naam `module` beschikbaar waarmee u de API van de module kunt exporteren.
+Een gratis variabele met de naam `module` is beschikbaar waarmee u de API van de module kunt exporteren.
 
 Voorbeeld:
 
@@ -48,7 +49,7 @@ module.exports = function(…) { … }
 
 ## [!DNL exports]
 
-Er is een gratis variabele met de naam `exports` beschikbaar waarmee u de API van de module kunt exporteren.
+Een gratis variabele met de naam `exports` is beschikbaar waarmee u de API van de module kunt exporteren.
 
 Voorbeeld:
 
@@ -56,7 +57,7 @@ Voorbeeld:
 exports.sayHello = function(…) { … }
 ```
 
-Dit is een alternatief voor `module.exports` maar het gebruik ervan is beperkter. Lees [Understanding module.export and exporting in node.js](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de verwante bedenkingen met het gebruiken van `exports`. Als u twijfelt, maakt u uw leven makkelijker en gebruikt u `module.exports` in plaats van `exports`.
+Dit is een alternatief voor `module.exports` maar heeft een beperkter gebruik. Lees [Het begrip module.export en de uitvoer in node.js](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de hiermee samenhangende waarschuwingen bij het gebruik `exports`. Als u twijfelt, maak dan uw leven makkelijker en gebruik `module.exports` eerder dan `exports`.
 
 ## Uitvoering en caching
 
@@ -70,4 +71,4 @@ module.exports = function(settings) {
 }
 ```
 
-`runs on startup` worden onmiddellijk geregistreerd, maar  `runs when necessary` worden pas geregistreerd wanneer de geëxporteerde functie wordt aangeroepen door de tagengine. Hoewel dit niet nodig kan zijn voor het doel van uw specifieke module, kunt u hiervan profiteren door de vereiste instellingen uit te voeren voordat u de functie exporteert.
+`runs on startup` wordt onmiddellijk gelogd, terwijl `runs when necessary` wordt alleen geregistreerd als de geëxporteerde functie wordt aangeroepen door de tagengine. Hoewel dit niet nodig kan zijn voor het doel van uw specifieke module, kunt u hiervan profiteren door de vereiste instellingen uit te voeren voordat u de functie exporteert.

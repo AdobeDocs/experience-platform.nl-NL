@@ -5,9 +5,9 @@ title: Metrics API Endpoint
 topic-legacy: developer guide
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 1%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | Een array van objecten, één voor elke metrische waarde die u wilt ophalen. |
 | `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie de [aanhangsel](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
 | `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Alleen `dataSets` wordt ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters ( wordt gescheiden`\|`).</li><li>`groupBy`: Wanneer ingesteld op true, wordt hiermee aangegeven dat de corresponderende `value` vertegenwoordigt veelvoudige datasets de waarvan metrische resultaten afzonderlijk zouden moeten zijn teruggekeerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
-| `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Voor gedetailleerde informatie over beschikbare aggregators, verwijs naar [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor downsampling wordt bepaald door `granularity` eigenschap. Voor gedetailleerde informatie over downsampling raadpleegt u de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Voor gedetailleerde informatie over beschikbare aggregators, verwijs naar [OpenTSDB-documentatie](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor downsampling wordt bepaald door `granularity` eigenschap. Voor gedetailleerde informatie over downsampling raadpleegt u de [OpenTSDB-documentatie](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -178,7 +178,7 @@ Een succesvolle reactie keert de resulterende datapoints voor de metriek en de f
 | `metric` | De naam van een van de metriek die in de aanvraag wordt opgegeven. |
 | `filters` | De filterconfiguratie voor gespecificeerde metrisch. |
 | `datapoints` | Een array waarvan de objecten de resultaten van de opgegeven metrische waarde en filters vertegenwoordigen. Het aantal objecten in de array is afhankelijk van de filteropties in de aanvraag. Als er geen filters zijn opgegeven, bevat de array slechts één object dat alle gegevenssets vertegenwoordigt. |
-| `groupBy` | Als er meerdere gegevenssets zijn opgegeven in het dialoogvenster `filter` eigenschap voor metrisch en `groupBy` optie is ingesteld op true in het verzoek, dit object bevat de id van de dataset die de overeenkomstige `dps` eigenschap is van toepassing op.<br><br>Als dit object leeg wordt weergegeven in het antwoord, wordt het corresponderende `dps` eigenschap is van toepassing op alle gegevenssets die in de `filters` array (of alle gegevenssets in [!DNL Platform] als er geen filters zijn opgegeven). |
+| `groupBy` | Als er meerdere gegevenssets zijn opgegeven in het dialoogvenster `filter` eigenschap voor metrisch, en `groupBy` optie is ingesteld op true in het verzoek, dit object bevat de id van de dataset die de overeenkomstige `dps` eigenschap is van toepassing op.<br><br>Als dit object leeg wordt weergegeven in het antwoord, wordt het corresponderende `dps` eigenschap is van toepassing op alle gegevenssets die in de `filters` array (of alle gegevenssets in [!DNL Platform] als er geen filters zijn opgegeven). |
 | `dps` | De teruggekeerde gegevens voor bepaalde metrisch, filter, en tijdwaaier. Elke sleutel in dit object vertegenwoordigt een tijdstempel met een overeenkomende waarde voor de opgegeven metrische waarde. De tijdperiode tussen elke datapoint is afhankelijk van `granularity` in de aanvraag opgegeven waarde. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -197,7 +197,7 @@ In de volgende tabellen worden alle metriek weergegeven die worden weergegeven d
 
 #### [!DNL Data Ingestion] {#ingestion}
 
-In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Data Ingestion]. Metrische gegevens in **vet** zijn streamingcijfers.
+In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Data Ingestion]. Metrisch in **vet** zijn streamingcijfers.
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
