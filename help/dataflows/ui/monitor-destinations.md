@@ -6,9 +6,9 @@ title: Gegevensstromen van de monitor voor Doelen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
+source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1781'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Elke individuele dataflow run toont de volgende details:
 - **[!UICONTROL Processing time]**: De hoeveelheid tijd die het voor dataflow aan proces nam.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom.
 - **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming werd geactiveerd.
-- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat is uitgesloten voor activering op basis van ontbrekende kenmerken en schending van de toestemming.
+- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van de toestemming.
 - **[!UICONTROL Identities failed]** Het totale aantal profielidentiteiten dat niet aan de bestemming wegens fouten wordt geactiveerd.
 - **[!UICONTROL Activation rate]**: Het percentage ontvangen identiteiten dat is geactiveerd of overgeslagen. De volgende formule laat zien hoe deze waarde wordt berekend:
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
@@ -101,10 +101,21 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ### Dataflow wordt uitgevoerd voor batchdoelen {#dataflow-runs-for-batch-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Gegevens gegevensstroom"
+>abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van het segment en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Voor meer informatie raadpleegt u de handleiding voor metrische definities."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="Ontvangen profielen"
+>abstract="Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Meer informatie in documentatie"
+
 Voor batchbestemmingen wordt de [!UICONTROL Dataflow runs] bevat metrische gegevens over de gegevensstroomuitvoering. Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
 
 - **[!UICONTROL Identities activated]**: Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel.
-- **[!UICONTROL Identities excluded]**: Het aantal individuele profielidentiteiten die zijn uitgesloten voor activering voor de geselecteerde bestemming, op basis van ontbrekende kenmerken en schending van de toestemming.
+- **[!UICONTROL Identities excluded]**: Het aantal individuele profielidentiteiten die van activering voor de geselecteerde bestemming worden uitgesloten, op basis van ontbrekende attributen en schending van de toestemming.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
@@ -114,7 +125,7 @@ Elke individuele dataflow run toont de volgende details:
 - **[!UICONTROL Processing time]**: De hoeveelheid tijd het voor dataflow nam om te worden verwerkt.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt.
 - **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming werd geactiveerd.
-- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat is uitgesloten voor activering op basis van ontbrekende kenmerken en schending van de toestemming.
+- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van de toestemming.
 - **[!UICONTROL Status]**: Geeft de status aan waarin de gegevensstroom zich bevindt. Dit kan een van drie staten zijn: [!UICONTROL Success], [!UICONTROL Failed], en [!UICONTROL Processing]. [!UICONTROL Success] betekent dat de gegevensstroom actief is en gegevens volgens zijn verstrekt programma uitvoert. [!UICONTROL Failed] betekent dat de activering van gegevens is opgeschort als gevolg van fouten. [!UICONTROL Processing] betekent dat de gegevensstroom nog niet actief is en over het algemeen wordt ontmoet wanneer een nieuwe gegevensstroom wordt gecreeerd.
 
 Om details van een specifieke dataflow looppas te bekijken, selecteer de begintijd van de looppas van de lijst.
@@ -136,6 +147,11 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Het dashboard Bestemmingen controleren {#monitoring-destinations-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="Activering"
+>abstract="De doelactivering bevat informatie over de activeringsstatus van het segment en de maatstaven die vanuit Real-time klantprofiel zijn genomen om unieke identiteiten te genereren."
 
 Om toegang te krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Destinations]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de banen van de bestemmingslooppas.
 
