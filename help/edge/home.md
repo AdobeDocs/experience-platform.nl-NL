@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK - Overzicht
 description: Leer hoe u de Adobe Experience Platform Web SDK kunt gebruiken om de mogelijkheden van het Platform in uw website te integreren.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,8 @@ ht-degree: 0%
 # Overzicht Adobe Experience Platform Web SDK
 
 Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van Adobe Experience Cloud kunnen communiceren met de verschillende services in de [!DNL Experience Cloud] via het Adobe Experience Platform Edge Network. Naast de JavaScript-bibliotheek is er een [tagextensie](./extension/web-sdk-extension-configuration.md) om met uw configuraties van SDK van het Web te helpen.
+
+**Voor een geleidelijke gids aan vestiging SDK van het Web met markeringen en het verzenden van gegevens naar de oplossingen gelieve te zien [Zelfstudie Adobe Experience Cloud implementeren met Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)**
 
 ## Beleef de rand
 
