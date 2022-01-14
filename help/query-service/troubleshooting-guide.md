@@ -5,16 +5,16 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
+source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '769'
 ht-degree: 4%
 
 ---
 
 # [!DNL Query Service] gids voor problemen
 
-Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de Vraag en verstrekt een lijst van algemeen gezien foutencodes wanneer het gebruiken van de Dienst van de Vraag. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services in Adobe Experience Platform.
+Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de Vraag en verstrekt een lijst van algemeen gezien foutencodes wanneer het gebruiken van de Dienst van de Vraag. Voor vragen en problemen met betrekking tot andere services in Adobe Experience Platform raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
 ## Veelgestelde vragen
 
@@ -62,7 +62,7 @@ Wanneer u gegevens uit tijdreeksen opvraagt, moet u het tijdstempelfilter gebrui
 
 >[!NOTE]
 >
-> De datumtekenreeks **must** heeft de notatie `yyyy-mm-ddTHH24:MM:SS`.
+> De datumtekenreeks **moet** heeft de notatie `yyyy-mm-ddTHH24:MM:SS`.
 
 Hieronder ziet u een voorbeeld van het gebruik van het tijdstempelfilter:
 
@@ -77,13 +77,13 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 ### Moet ik vervangingen, zoals * gebruiken om alle rijen van mijn datasets te krijgen?
 
-U kunt geen vervangingen gebruiken om alle gegevens van uw rijen te krijgen, aangezien de Dienst van de Vraag als **column-store** eerder dan een traditioneel op rij-gebaseerd opslagsysteem zou moeten worden behandeld.
+U kunt geen vervangingen gebruiken om alle gegevens van uw rijen te krijgen, aangezien de Dienst van de Vraag als a zou moeten worden behandeld **columnar-store** in plaats van een traditioneel opslagsysteem op basis van rijen.
 
-### Moet ik `NOT IN` in mijn SQL vraag gebruiken?
+### Moet ik gebruiken `NOT IN` in mijn SQL-query?
 
-De `NOT IN` exploitant wordt vaak gebruikt om rijen terug te winnen die niet in een andere lijst of SQL verklaring worden gevonden. Deze operator kan de prestaties vertragen en onverwachte resultaten opleveren als de kolommen die worden vergeleken `NOT NULL` accepteren of als u een groot aantal records hebt.
+De `NOT IN` wordt vaak gebruikt om rijen op te halen die niet in een andere lijst of SQL verklaring worden gevonden. Deze operator kan de prestaties vertragen en onverwachte resultaten opleveren als de kolommen die worden vergeleken, accepteren `NOT NULL`of u hebt een groot aantal records.
 
-In plaats van `NOT IN` te gebruiken, kunt u of `NOT EXISTS` of `LEFT OUTER JOIN` gebruiken.
+In plaats van `NOT IN`kunt u beide `NOT EXISTS` of `LEFT OUTER JOIN`.
 
 Als u bijvoorbeeld de volgende tabellen hebt gemaakt:
 
@@ -97,7 +97,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Als u de operator `NOT EXISTS` gebruikt, kunt u repliceren met de operator `NOT IN` door de volgende query te gebruiken:
+Als u het `NOT EXISTS` -operator, kunt u repliceren met de `NOT IN` operator door de volgende query te gebruiken:
 
 ```sql
 SELECT ID FROM T1
@@ -105,7 +105,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-Als u de operator `LEFT OUTER JOIN` gebruikt, kunt u ook repliceren met de operator `NOT IN` door de volgende query te gebruiken:
+U kunt ook de opdracht `LEFT OUTER JOIN` operator, kunt u repliceren met de `NOT IN` operator door de volgende query te gebruiken:
 
 ```sql
 SELECT T1.ID FROM T1
@@ -113,11 +113,11 @@ LEFT OUTER JOIN T2 ON T1.ID = T2.ID
 WHERE T2.ID IS NULL
 ```
 
-### Wat is het correcte gebruik van `OR` en `UNION` exploitanten?
+### Wat is het correcte gebruik van `OR` en `UNION` operatoren?
 
-### Hoe gebruik ik correct de `CAST` exploitant om mijn timestamps in SQL vragen om te zetten?
+### Hoe gebruik ik de `CAST` operator om mijn tijdstempels om te zetten in SQL query&#39;s?
 
-Wanneer u de operator `CAST` gebruikt om een tijdstempel om te zetten, moet u zowel de datum **als** tijd opnemen.
+Wanneer u de `CAST` om een tijdstempel om te zetten, moet u beide datums opnemen **en** tijd.
 
 Als bijvoorbeeld de tijdcomponent ontbreekt, zoals hieronder wordt weergegeven, resulteert dit in een fout:
 
@@ -126,12 +126,16 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-Een correct gebruik van de `CAST` exploitant wordt getoond hieronder:
+Een correct gebruik van de `CAST` operator wordt hieronder weergegeven:
 
 ```sql
 SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ```
+
+### Hoe kan ik mijn vraagresultaten als Csv- dossier downloaden?
+
+Dit is geen functie die Query Service rechtstreeks aanbiedt. Als de [!DNL PostgreSQL] client gebruikt om verbinding te maken met de databaseserver heeft de mogelijkheid, de reactie van een SELECT-query kan worden geschreven en gedownload als een CSV-bestand. Raadpleeg de documentatie bij het hulpprogramma of het hulpprogramma van derden dat u gebruikt voor meer informatie over dit proces.
 
 ## REST API-fouten
 
@@ -147,7 +151,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 | ---------- | ---------------- | ----------- | -------------- |
 | **08P01** | N.v.t. | Niet-ondersteund berichttype | Niet-ondersteund berichttype |
 | **28P01** | Opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
-| **28000** | Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword` zijn. |
+| **28000** | Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword`. |
 | **42P12** | Opstarten - verificatie | Geen tabellen gevonden | Geen tabellen gevonden voor gebruik |
 | **42601** | Query | Syntaxisfout | Ongeldige opdracht- of syntaxisfout |
 | **42P01** | Query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
@@ -156,7 +160,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 | **53400** | Query | Time-out instructie | De ingediende liveverklaring nam meer dan maximaal 10 minuten in beslag |
 | **58000** | Query | Systeemfout | Interne systeemfout |
 | **0A000** | Query/opdracht | Niet ondersteund | De functie/functionaliteit in de query/opdracht wordt niet ondersteund |
-| **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend de `CREATE TABLE` verklaring |
+| **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend `CREATE TABLE` statement |
 | **42501** | DROP TABLE-query | Tabel niet gemaakt door de geverifieerde gebruiker | De lijst die wordt gelaten vallen werd niet gecreeerd door de momenteel het programma geopende gebruiker |
 | **42P01** | DROP TABLE-query | Tabel niet gevonden | De tabel die in de query is opgegeven, is niet gevonden |
-| **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: gelieve te controleren `dbName` | Er zijn geen tabellen gevonden in de huidige database |
+| **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: gelieve de `dbName` | Er zijn geen tabellen gevonden in de huidige database |
