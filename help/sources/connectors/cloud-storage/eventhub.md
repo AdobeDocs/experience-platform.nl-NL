@@ -5,9 +5,9 @@ title: Azure Event Hubs Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Azure Event Hubs met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: cda9ca9c560b1af2147c00ea4e89dff09b7428ba
+source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,20 @@ ht-degree: 0%
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure]. U kunt uw gegevens van deze systemen in Platform brengen.
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van [!DNL Event Hubs] in real time.
+
+## Schalen met [!DNL Event Hubs]
+
+De schaalfactor van uw [!DNL Event Hubs] De instantie moet worden verhoogd als u gegevens met een hoog volume moet invoeren, parallellisme moet vergroten of de snelheid van het Platform moet verhogen.
+
+### Hoger volume-gegevens opnemen
+
+Het maximale gegevensvolume dat u van uw [!DNL Event Hubs] voor Platform is dit 2000 records per seconde . Neem contact op met uw Adobe als u de schaal wilt verhogen en meer gegevens over het volume wilt invoeren.
+
+### parallellisme vergroten op [!DNL Event Hubs] en Platform
+
+Parallelisme verwijst naar de gelijktijdige uitvoering van dezelfde taken op meerdere verwerkingseenheden om de snelheid en prestaties te verhogen. U kunt het parallellisme van de [!DNL Event Hubs] naast elkaar door verdeling te verhogen of door meer verwerkingseenheden voor uw [!DNL Event Hubs] account. Zie dit [[!DNL Event Hubs] document over schalen](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) voor meer informatie .
+
+Om de snelheid van opname aan de kant van het Platform te verhogen, moet het Platform het aantal taken in de bronschakelaar verhogen om van uw te lezen [!DNL Event Hubs] partities. Als u eenmaal een verhoogd parallellisme hebt op de [!DNL Event Hubs] Neem contact op met uw Adobe-vertegenwoordiger om de taken van het Platform op basis van uw nieuwe partitie te schalen. Dit proces is momenteel niet geautomatiseerd.
 
 ## Een virtueel netwerk gebruiken om verbinding te maken met [!DNL Event Hubs] naar Platform
 
