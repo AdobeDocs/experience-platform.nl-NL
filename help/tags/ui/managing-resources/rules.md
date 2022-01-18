@@ -2,9 +2,9 @@
 title: Regels
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
 workflow-type: tm+mt
-source-wordcount: '1948'
+source-wordcount: '1952'
 ht-degree: 0%
 
 ---
@@ -121,22 +121,18 @@ Wanneer u regels maakt of bewerkt, kunt u deze opslaan en samenstellen op uw [ac
 
 ## Regelvolgorde {#rule-ordering}
 
-De orde die van de regel toestaat u om de orde van uitvoering voor regels te controleren die een gebeurtenis delen.
+De orde die van de regel toestaat u om de orde van uitvoering voor regels te controleren die een gebeurtenis delen. Elke regel bevat een geheel dat zijn ordeprioriteit bepaalt (de standaardwaarde is 50). Regels die lagere waarden voor hun volgorde bevatten, worden uitgevoerd vóór regels met hogere waarden.
 
-Het is vaak belangrijk dat uw regels in een bepaalde volgorde worden geactiveerd. Voorbeelden: (1) u hebt verschillende regels die voorwaardelijk zijn ingesteld [!DNL Analytics] variabelen en u moet ervoor zorgen dat de regel met Send Band het laatst gaat. (2) u hebt een regel die brandt [!DNL Target] en een andere regel die brandt [!DNL Analytics] en u wilt [!DNL Target] eerst uit te voeren.
+Overweeg een reeks van vijf regels die allen een gebeurtenis delen en allen standaardprioriteit hebben:
 
-Uiteindelijk ligt de verantwoordelijkheid voor het uitvoeren van handelingen in volgorde bij de extensieontwikkelaar van het gebeurtenistype dat u gebruikt. Adobe-extensieontwikkelaars zorgen ervoor dat hun extensies werken zoals u wilt. Voor extensies van derden biedt Adobe ontwikkelaars richtlijnen voor het correct implementeren van extensies, maar dat is hun taak.
+* Als er een regel is die u als laatste wilt uitvoeren, kunt u die ene regelcomponent bewerken en er een getal hoger dan 50 (bijvoorbeeld 60) aan geven.
+* Als er een regel is die u het eerst wilt uitvoeren, kunt u die ene regelcomponent bewerken en er een getal lager dan 50 (bijvoorbeeld 40) aan geven.
 
-Adobe raadt u ten zeerste aan om uw regels te bestellen met een positief getal tussen 1 en 100 (de standaardwaarde is 50). Eenvoudiger is beter. Vergeet niet dat u uw bestelling moet onderhouden. Adobe herkent echter dat er randgevallen kunnen zijn waarbij dat beperkt zal zijn, zodat andere getallen zijn toegestaan. Tags ondersteunen getallen tussen +/- 2.147.483.648. U kunt ook ongeveer 10 decimalen gebruiken - maar als u in een scenario bent waar u denkt dat u dat moet doen, zou u sommige besluiten moeten heroverwegen u hebt gemaakt om tot waar u nu bent te komen.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->In de sectie van de Actie van een regel, server-zijregels worden uitgevoerd opeenvolgend. Zorg ervoor de orde correct is wanneer u de regel creeert.
+>Uiteindelijk ligt de verantwoordelijkheid voor het uitvoeren van handelingen in volgorde bij de extensieontwikkelaar van het gebeurtenistype dat u gebruikt. Adobe-extensieontwikkelaars zorgen ervoor dat hun extensies werken zoals u wilt. Adobe biedt ontwikkelaars van extensies van derden aanwijzingen om dit naar behoren te doen, maar kan niet garanderen hoe deze richtlijnen worden gevolgd.
 
-### Scenarios
-
-* Vijf regels delen een gebeurtenis. Allemaal hebben de standaardprioriteit. Ik wil dat een van hen de laatste is. Ik moet alleen die ene regelcomponent bewerken en er een getal hoger dan 50 (bijvoorbeeld 60) aan geven.
-* Vijf regels delen een gebeurtenis. Allemaal hebben de standaardprioriteit. Ik wil dat een van hen eerst loopt. Ik moet die ene regelcomponent bewerken en er een getal van lager dan 50 (bijvoorbeeld 40) aan geven.
+Het wordt ten zeerste aanbevolen om uw regels te bestellen met positieve getallen tussen 1 en 100 (de standaardwaarde is 50). Aangezien de regelorde manueel moet worden gehandhaafd, is het beste praktijken om uw het bestel zo eenvoudig mogelijk te houden. Als er randgevallen zijn waarin deze beperking te beperkt is, ondersteunen de labels volgordenummers +/- 2,147,483,648.
 
 ### Regelafhandeling op de client
 
@@ -165,21 +161,23 @@ Adobe kan niet garanderen dat andere regels daadwerkelijk in werking zullen tred
 * **JavaScript:** Het JavaScript wordt vanaf de server als normale tekst geladen, in een scripttag opgenomen en met Postscript aan het document toegevoegd. Als de regel meerdere aangepaste JavaScript-scripts heeft, worden deze parallel van de server geladen, maar in dezelfde volgorde uitgevoerd als in de regel.
 * **HTML:** De HTML wordt vanaf de server geladen en met Postscript aan het document toegevoegd. Als de regel veelvoudige manuscripten van douaneHTML heeft, worden zij geladen parallel van de server, maar in de zelfde orde uitgevoerd die in de regel werd gevormd.
 
-## Regelcomponentvolgorde {#sequencing}
+## Reeksen van componenten van de regel {#sequencing}
 
-Het gedrag van de runtimeomgeving van de tag hangt af van het feit of **[!UICONTROL Run rule components in sequence]** is aan of uit voor uw eigenschap.
+Het gedrag van de runtimeomgeving hangt af van het feit of **[!UICONTROL Run rule components in sequence]** is aan of uit voor uw eigenschap. Dit het plaatsen bepaalt of de componenten van een regel parallel (asynchroon) kunnen worden geëvalueerd of of zij in opeenvolging moeten worden geëvalueerd.
+
+>[!IMPORTANT]
+>
+>Dit het plaatsen bepaalt slechts hoe de voorwaarden en de acties binnen elke regel worden geëvalueerd, en beïnvloedt niet de opeenvolging waarin de regels zelf op uw bezit worden uitgevoerd. Zie de vorige sectie over [regelvolgorde](#rule-ordering) voor meer informatie over hoe te om de uitvoeringsorde voor veelvoudige regels te bepalen.
+>
+>In [gebeurtenis doorsturen](../event-forwarding/overview.md) eigenschappen, worden regelhandelingen altijd opeenvolgend uitgevoerd en deze instelling is niet beschikbaar. Zorg ervoor de orde correct is wanneer u de regel creeert.
 
 ### Ingeschakeld
 
-Indien toegelaten, wanneer een gebeurtenis bij runtime wordt teweeggebracht, worden de voorwaarden en de acties van de regel toegevoegd aan een verwerkingsrij-gebaseerd op de orde u-bepaald-en verwerkt tegelijkertijd op een basis FIFO. De tag wacht tot de component is voltooid voordat naar de volgende wordt gegaan.
+Als het plaatsen wordt toegelaten wanneer een gebeurtenis bij runtime wordt teweeggebracht, worden de de voorwaarden en de acties van de regel toegevoegd aan een verwerkingsrij (die op de orde wordt gebaseerd u) hebt bepaald en verwerkt één voor één op een &quot;eerste binnen, eerste uit&quot;basis (FIFO). De regel wacht tot de component is voltooid voordat naar de volgende wordt gegaan.
 
 Als een voorwaarde als vals evalueert of zijn bepaalde onderbreking bereikt, worden de verdere voorwaarden en de acties van die regel verwijderd uit de rij.
 
 Als een actie ontbreekt of zijn bepaalde onderbreking bereikt, worden de verdere acties van die regel verwijderd uit de rij.
-
->[!NOTE]
->
->Als deze instelling is ingeschakeld, worden alle voorwaarden en handelingen asynchroon uitgevoerd, zelfs als u de tagbibliotheek synchroon hebt geladen.
 
 ### Uitgeschakeld
 
