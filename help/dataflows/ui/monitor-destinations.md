@@ -6,9 +6,9 @@ title: Gegevensstromen van de monitor voor Doelen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
+source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1799'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,11 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 >id="platform_monitoring_activation"
 >title="Activering"
 >abstract="De doelactivering bevat informatie over de activeringsstatus van het segment en de maatstaven die vanuit Real-time klantprofiel zijn genomen om unieke identiteiten te genereren."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Segmenttaken"
+>abstract="Het dashboard van segmentbanen bevat informatie over de evaluatie en de uitvoerbanen voor al uw segmenten."
 
 Om toegang te krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Destinations]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de banen van de bestemmingslooppas.
 
