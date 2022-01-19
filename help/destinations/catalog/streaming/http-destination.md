@@ -3,32 +3,57 @@ keywords: streaming;
 title: HTTP API-verbinding
 description: Met de HTTP API-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
+source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL HTTP] API-verbinding
+# (Bèta) HTTP API-verbinding
 
 >[!IMPORTANT]
 >
->De [!DNL HTTP] doel in Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De HTTP API-bestemming in Platform staat momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
-De [!DNL HTTP] API-doel is een [!DNL Adobe Experience Platform] streamingdoel waarmee u profielgegevens naar derden kunt verzenden [!DNL HTTP] eindpunten.
+De HTTP API-bestemming is een [!DNL Adobe Experience Platform] streamingbestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
 
-Profielgegevens verzenden naar [!DNL HTTP] eindpunten, moet u eerst met de bestemming binnen verbinden [[!DNL Adobe Experience Platform]](#connect-destination).
+Als u profielgegevens naar HTTP-eindpunten wilt verzenden, moet u eerst [verbinden met de bestemming](#connect-destination) in [!DNL Adobe Experience Platform].
 
 ## Gebruiksscenario’s {#use-cases}
 
-De [!DNL HTTP] doel is gericht op klanten die XDM-profielgegevens en publiekssegmenten naar generiek moeten exporteren [!DNL HTTP] eindpunten.
+De bestemming van HTTP wordt gericht op klanten die XDM profielgegevens en publiekssegmenten naar generische eindpunten van HTTP moeten uitvoeren.
 
-[!DNL HTTP] de eindpunten kunnen of de systemen van klanten of derdeoplossingen zijn.
+De eindpunten van HTTP kunnen of de systemen van klanten of derdeoplossingen zijn.
 
-## Verbinden met de bestemming {#connect}
+## Vereisten {#prerequisites}
+
+>[!IMPORTANT]
+>
+>Neem contact op met uw Adobe-vertegenwoordigers of de klantenservice van Adobe als u de bètefunctionaliteit van de HTTP API-bestemming voor uw bedrijf wilt inschakelen.
+
+Als u de HTTP API-bestemming wilt gebruiken om gegevens uit Experience Platform te exporteren, moet u aan de volgende voorwaarden voldoen:
+
+* U moet een eindpunt van HTTP hebben dat REST API steunt.
+* Uw eindpunt van HTTP moet het het profielschema van het Experience Platform steunen. Transformatie naar een extern payload-schema wordt niet ondersteund in de HTTP API-bestemming. Zie de [geëxporteerde gegevens](#exported-data) voor een voorbeeld van het uitvoerschema van het Experience Platform.
+* Uw eindpunt van HTTP moet kopballen steunen.
+* Uw eindpunt van HTTP moet steunen [OAuth 2.0-clientreferenties](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) verificatie. Deze vereiste is geldig zolang de HTTP API-bestemming zich in de bètafase bevindt.
+* De cliëntreferentie moet in het lichaam van de verzoeken van de POST aan uw eindpunt worden omvat, zoals aangetoond in het hieronder voorbeeld.
+
+```shell
+curl --location --request POST '<YOUR_API_ENDPOINT>' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>'
+```
+
+
+U kunt ook [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) aan opstelling een integratie en verzendt de profielgegevens van het Experience Platform naar een eindpunt van HTTP.
+
+## Verbinden met de bestemming {#connect-destination}
 
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
