@@ -1,16 +1,22 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;versie nota's;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7d7a9357f17b941a8f7800be86f211bb1276698d
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.8.0 - 19 januari 2022
+
+* Ondersteuning voor schaduw-DOM-kiezers voor personalisatie.
+* Naam gewijzigd in gebeurtenistypen voor personalisatie. (`display` en `click` worden `decisioning.propositionDisplay` en `decisioning.propositionInteract`)
+* Probleem verholpen waarbij HTML-aanbiedingen met inlinescripttags de scripttags twee keer aan de pagina hebben toegevoegd, ook al werd het script slechts één keer uitgevoerd.
 
 ## Versie 2.7.0 - 26 oktober 2021
 
