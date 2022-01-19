@@ -3,7 +3,7 @@ title: Vereisten voor het Gebruiken van het Web SDK van Adobe Experience Platfor
 description: Meer informatie over de voorwaarden voor het gebruik van Adobe Experience Platform Web SDK.
 keywords: 1st-partijdomein;CNAME;schema;creeer schema;lancering;aep Web sdk uitbreiding;uitbreiding;configuratie identiteitskaart;configuratiehulpmiddel;gegevenselement;creeer gegevenselement;XDM Voorwerp;sendEvent;send Gebeurtenis;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 072e1968fa152454f4df6e88fcf7de5c03494030
+source-git-commit: a9b63d2ad2c1adbd647c0c3a43331cddffa8a04e
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Als u de Adobe Experience Platform Web SDK wilt gebruiken, moet u eerst:
 
-- Uw organisatie voorzien hebben voor deze eigenschap. Vul het volgende in als u toegang wilt krijgen [formulier](http://adobe.ly/websdkaccess) en Adobe krijgt u toegang tot Datatstreams en Adobe Experience Platform (indien nodig). Houd er rekening mee dat Adobe u zonder extra kosten toegang biedt tot de SDK, zodat u deze in beperkte mate kunt gebruiken.
+- Uw organisatie voorzien hebben voor deze eigenschap. Vul het volgende in als u toegang wilt krijgen [formulier](https://adobe.ly/websdkaccess) en Adobe krijgt u toegang tot Datatstreams en Adobe Experience Platform (indien nodig). Houd er rekening mee dat Adobe u zonder extra kosten toegang biedt tot de SDK, zodat u deze in beperkte mate kunt gebruiken.
 - Het wordt aanbevolen om domein van de eerste partij (CNAME) ingeschakeld te hebben. Als je al een CNAME voor Adobe Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME, maar Adobe adviseert om één te hebben alvorens u aan productie gaat. Hoewel een CNAME-implementatie geen voordelen biedt in termen van de levensduur van cookies, kan het voorkomen dat bepaalde advertentieblokkers en minder gebruikelijke browsers SDK-aanvragen blokkeren. In die gevallen, zou het gebruiken van een NAAM uw gegevensinzameling voor gebruikers kunnen verhinderen worden verstoord die deze hulpmiddelen gebruiken.
 
 >[!IMPORTANT]
