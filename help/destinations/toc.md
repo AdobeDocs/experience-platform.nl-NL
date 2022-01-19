@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 54da385fa3e275137164423a0bec71445b0242e4
+source-git-commit: b41230c1280bf699e9a78d5fd15b43d51ab298f7
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '689'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 1%
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API](./api/email-marketing.md)
    * [(bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
+   * [Doelgegevens bijwerken](./api/update-destination-dataflows.md)
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
 * UI-hulplijnen {#ui}
