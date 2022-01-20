@@ -1,8 +1,8 @@
 ---
-description: Deze pagina beschrijft de diverse OAuth 2 authentificatiestromen die door Doel SDK worden gesteund, en verstrekt instructies aan opstelling OAuth 2 authentificatie voor uw bestemming.
+description: Deze pagina beschrijft de diverse OAuth 2 authentificatiestromen die door Destination SDK worden gesteund, en verstrekt instructies aan opstelling OAuth 2 authentificatie voor uw bestemming.
 title: OAuth 2-verificatie
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: e8625d6de7707b3a159f95d4471a73cbbed25d21
+source-git-commit: 87fb3ffa65449b61e05d94d2b56daf727ecebdea
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 3%
@@ -13,9 +13,9 @@ ht-degree: 3%
 
 ## Overzicht {#overview}
 
-Gebruik de SDK van de Bestemming om Adobe Experience Platform toe te staan om met uw bestemming te verbinden door [OAuth 2 authentificatiekader](https://tools.ietf.org/html/rfc6749) te gebruiken.
+Gebruik Destination SDK om Adobe Experience Platform toe te staan verbinding te maken met uw doel door de [OAuth 2-verificatieframework](https://tools.ietf.org/html/rfc6749).
 
-Deze pagina beschrijft de diverse OAuth 2 authentificatiestromen die door Doel SDK worden gesteund, en verstrekt instructies aan opstelling OAuth 2 authentificatie voor uw bestemming.
+Deze pagina beschrijft de diverse OAuth 2 authentificatiestromen die door Destination SDK worden gesteund, en verstrekt instructies aan opstelling OAuth 2 authentificatie voor uw bestemming.
 
 ## Hoe te om OAuth 2 authentificatiedetails aan uw bestemmingsconfiguratie toe te voegen {#how-to-setup}
 
@@ -29,16 +29,16 @@ Als eerste stap moet u in uw systeem een app voor Adobe Experience Platform make
 
 >[!IMPORTANT]
 >
->De stap om een omleidings/callback URL voor Adobe Experience Platform in uw systeem te registreren wordt vereist slechts voor [OAuth 2 met de Code van de Toelating](./oauth2-authentication.md#authorization-code) subsidietype. Voor de andere twee gesteunde subsidietypes (wachtwoord en cliëntgeloofsbrieven), kunt u deze stap overslaan.
+>De stap om een omleidings-/callback-URL voor Adobe Experience Platform in uw systeem te registreren is alleen vereist voor de [OAuth 2 met machtigingscode](./oauth2-authentication.md#authorization-code) subsidietype. Voor de andere twee gesteunde subsidietypes (wachtwoord en cliëntgeloofsbrieven), kunt u deze stap overslaan.
 
 Aan het eind van deze stap, zou u moeten hebben:
 * een client-id;
 * een clientgeheim;
 * URL voor Adobe (voor autorisatieverlening).
 
-### Wat u in Doel SDK moet doen {#to-do-in-destination-sdk}
+### Wat u moet doen in Destination SDK {#to-do-in-destination-sdk}
 
-Als u OAuth 2-verificatie wilt instellen voor uw doel in Experience Platform, moet u uw OAuth 2-gegevens toevoegen aan de [doelconfiguratie](./destination-configuration.md), onder de `customerAuthenticationConfigurations`-parameter, door het `platform.adobe.io/data/core/activation/authoring/destinations` [API-eindpunt](./destination-configuration-api.md) te gebruiken. Zie [voorbeeldconfiguratie](./destination-configuration.md#example-configuration). Specifieke instructies over welke gebieden u aan uw configuratiemalplaatje, afhankelijk van uw OAuth 2 type van authentificatiesubsidie moet toevoegen, zijn verder hieronder op deze pagina.
+Om OAuth 2 authentificatie voor uw bestemming in Experience Platform te plaatsen, moet u uw OAuth 2 details aan OAuth toevoegen [doelconfiguratie](./destination-configuration.md), onder de `customerAuthenticationConfigurations` parameter, door `platform.adobe.io/data/core/activation/authoring/destinations` [API-eindpunt](./destination-configuration-api.md). Zie de [voorbeeldconfiguratie](./destination-configuration.md#example-configuration). Specifieke instructies over welke gebieden u aan uw configuratiemalplaatje, afhankelijk van uw OAuth 2 type van authentificatiesubsidie moet toevoegen, zijn verder hieronder op deze pagina.
 
 ## Ondersteunde OAuth 2-subsidietypen {#oauth2-grant-types}
 
@@ -47,7 +47,7 @@ Experience Platform steunt de drie OAuth 2 subsidietypes in onderstaande lijst. 
 >[!IMPORTANT]
 >
 >* U geeft de invoerparameters op volgens de instructies in de onderstaande secties. Adobe-interne systemen maken verbinding met het verificatiesysteem van uw platform en nemen uitvoerparameters op, die worden gebruikt om de gebruiker te verifiëren en verificatie naar uw bestemming te behouden.
->* De invoerparameters die in de tabel vet worden gemarkeerd, zijn vereiste parameters in de OAuth 2-verificatiestroom. De andere parameters zijn optioneel. Er zijn andere parameters van de douaneinput die niet hier worden getoond, maar bij lengte in de secties [worden beschreven aanpassen uw configuratie OAuth 2](./oauth2-authentication.md#customize-configuration) en [Het teken van de toegang verfrist ](./oauth2-authentication.md#access-token-refresh).
+>* De invoerparameters die in de tabel vet worden gemarkeerd, zijn vereiste parameters in de OAuth 2-verificatiestroom. De andere parameters zijn optioneel. Er zijn andere aangepaste invoerparameters die hier niet worden weergegeven, maar die in de secties met een lengte worden beschreven [Uw OAuth 2-configuratie aanpassen](./oauth2-authentication.md#customize-configuration) en [Vernieuwen van toegangstoken](./oauth2-authentication.md#access-token-refresh).
 
 
 | OAuth 2 Grant | Invoer | Uitvoer |
@@ -58,7 +58,7 @@ Experience Platform steunt de drie OAuth 2 subsidietypes in onderstaande lijst. 
 
 {style=&quot;table-layout:auto&quot;}
 
-De bovenstaande tabel bevat een lijst met velden die worden gebruikt in standaard OAuth 2-stromen. Naast deze standaardgebieden, kunnen diverse partnerintegraties extra input en output vereisen. Adobe heeft een flexibel OAuth 2 authentificatie/vergunningskader voor Doel SDK ontworpen die variaties aan het bovengenoemde standaardgebiedspatroon kan behandelen terwijl het steunen van een mechanisme om ongeldige output, zoals verlopen toegangstokens automatisch opnieuw te produceren.
+De bovenstaande tabel bevat een lijst met velden die worden gebruikt in standaard OAuth 2-stromen. Naast deze standaardgebieden, kunnen diverse partnerintegraties extra input en output vereisen. Adobe heeft een flexibel OAuth 2 authentificatie/vergunningskader voor Destination SDK ontworpen die veranderingen aan het bovengenoemde standaardgebiedspatroon kan behandelen terwijl het steunen van een mechanisme om ongeldige output, zoals verlopen toegangstokens automatisch opnieuw te produceren.
 
 De output omvat in alle gevallen een toegangstoken, dat door Experience Platform wordt gebruikt om authentificatie aan uw bestemming voor authentiek te verklaren en te handhaven.
 
@@ -69,7 +69,7 @@ Het systeem dat Adobe voor authentificatie OAuth 2 heeft ontworpen:
 
 ## OAuth 2 met machtigingscode {#authorization-code}
 
-Als uw bestemming een standaardOAuth 2.0 stroom van de Code van de Vergunning (lees [RFC normen specs](https://tools.ietf.org/html/rfc6749#section-4.1)) of een variatie van het steunt, raadpleeg de vereiste en facultatieve gebieden hieronder:
+Als uw bestemming een standaardstroom van de Code van de Toestemming van OAuth 2.0 steunt (lees [Specificaties van RFC-standaarden](https://tools.ietf.org/html/rfc6749#section-4.1)) of een variatie daarvan, de vereiste en facultatieve velden hieronder raadplegen:
 
 | OAuth 2 Grant | Invoer | Uitvoer |
 |---------|----------|---------|
@@ -77,7 +77,7 @@ Als uw bestemming een standaardOAuth 2.0 stroom van de Code van de Vergunning (l
 
 {style=&quot;table-layout:auto&quot;}
 
-Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie, in `/destinations` [eindpunt](./destination-configuration.md) toe:
+Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie, in toe `/destinations` [eindpunt](./destination-configuration.md):
 
 ```json
 {
@@ -104,7 +104,7 @@ Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende l
 | `grant` | Tekenreeks | Gebruik &quot;OAUTH2_AUZATION_CODE&quot;. |
 | `accessTokenUrl` | Tekenreeks | De URL aan uw zijde, die toegangstokens uitgeeft en, naar keuze, tokens verfrist. |
 | `authorizationUrl` | Tekenreeks | De URL van uw verificatieserver, waar u de gebruiker omleidt om zich aan te melden bij uw toepassing. |
-| `refreshTokenUrl` | Tekenreeks | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak is `refreshTokenUrl` hetzelfde als `accessTokenUrl`. |
+| `refreshTokenUrl` | Tekenreeks | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak, `refreshTokenUrl` is gelijk aan `accessTokenUrl`. |
 | `clientId` | Tekenreeks | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
 | `clientSecret` | Tekenreeks | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
 | `scope` | Lijst met tekenreeksen | *Optioneel*. Plaats het werkingsgebied van wat het toegangstoken Experience Platform toestaat om op uw middelen uit te voeren. Voorbeeld: &quot;read, write&quot;. |
@@ -113,7 +113,7 @@ Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende l
 
 ## OAuth 2 with Password Grant
 
-Voor de OAuth 2 toelage van het Wachtwoord (lees [RFC normen specs](https://tools.ietf.org/html/rfc6749#section-4.3)), vereist het Experience Platform de gebruikersbenaming en het wachtwoord van de gebruiker. In de authentificatiestroom, ruilt het Experience Platform deze geloofsbrieven voor een toegangstoken en, naar keuze, verfrist het teken.
+Voor de OAuth 2-wachtwoordsubsidie (lees de [Specificaties van RFC-standaarden](https://tools.ietf.org/html/rfc6749#section-4.3)), vereist Experience Platform de gebruikersnaam en het wachtwoord van de gebruiker. In de authentificatiestroom, ruilt het Experience Platform deze geloofsbrieven voor een toegangstoken en, naar keuze, verfrist het teken.
 Adobe maakt gebruik van de standaardinvoer hieronder om bestemmingsconfiguratie te vereenvoudigen, met de capaciteit om waarden met voeten te treden:
 
 | OAuth 2 Grant | Invoer | Uitvoer |
@@ -124,9 +124,9 @@ Adobe maakt gebruik van de standaardinvoer hieronder om bestemmingsconfiguratie 
 
 >[!NOTE]
 >
-> U hoeft geen parameters voor `username` en `password` in de onderstaande configuratie toe te voegen. Wanneer u `"grant": "OAUTH2_PASSWORD"` in de bestemmingsconfiguratie toevoegt, zal het systeem de gebruiker verzoeken om een gebruikersbenaming en een wachtwoord in het Experience Platform UI te verstrekken, wanneer zij aan uw bestemming voor authentiek verklaren.
+> U hoeft geen parameters toe te voegen voor `username` en `password` in de onderstaande configuratie. Wanneer u `"grant": "OAUTH2_PASSWORD"` in de bestemmingsconfiguratie, zal het systeem de gebruiker verzoeken om een gebruikersbenaming en een wachtwoord in het Experience Platform UI te verstrekken, wanneer zij aan uw bestemming voor authentiek verklaren.
 
-Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie, in `/destinations` [eindpunt](./destination-configuration.md) toe:
+Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie, in toe `/destinations` [eindpunt](./destination-configuration.md):
 
 ```json
 {
@@ -156,7 +156,7 @@ Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende l
 
 ## OAuth 2 met Client Credentials Grant
 
-U kunt een OAuth 2 de Referentie van de Cliënt (lees [RFC normen specs](https://tools.ietf.org/html/rfc6749#section-4.4)) bestemming vormen, die de hieronder vermelde standaardinput en output steunt. U kunt de waarden aanpassen. Zie [Uw OAuth 2 configuratie](./oauth2-authentication.md#customize-configuration) voor details aanpassen.
+U kunt een OAuth 2 Credentials van de Cliënt vormen (lees [Specificaties van RFC-standaarden](https://tools.ietf.org/html/rfc6749#section-4.4)), die de hieronder vermelde standaardinvoer en -uitvoer ondersteunt. U kunt de waarden aanpassen. Zie [Uw OAuth 2-configuratie aanpassen](./oauth2-authentication.md#customize-configuration) voor meer informatie.
 
 | OAuth 2 Grant | Invoer | Uitvoer |
 |---------|----------|---------|
@@ -164,7 +164,7 @@ U kunt een OAuth 2 de Referentie van de Cliënt (lees [RFC normen specs](https:/
 
 {style=&quot;table-layout:auto&quot;}
 
-Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie, in `/destinations` [eindpunt](./destination-configuration.md) toe:
+Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie, in toe `/destinations` [eindpunt](./destination-configuration.md):
 
 ```json
 {
@@ -189,7 +189,7 @@ Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende l
 | `authType` | Tekenreeks | Gebruik &quot;OAUTH2&quot;. |
 | `grant` | Tekenreeks | Gebruik &quot;OAUTH2_CLIENT_CREDENTIALS&quot;. |
 | `accessTokenUrl` | Tekenreeks | De URL van uw verificatieserver, die een toegangstoken en een optioneel vernieuwingstoken uitgeeft. |
-| `refreshTokenUrl` | Tekenreeks | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak is `refreshTokenUrl` hetzelfde als `accessTokenUrl`. |
+| `refreshTokenUrl` | Tekenreeks | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak, `refreshTokenUrl` is gelijk aan `accessTokenUrl`. |
 | `clientId` | Tekenreeks | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
 | `clientSecret` | Tekenreeks | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
 | `scope` | Lijst met tekenreeksen | *Optioneel*. Plaats het werkingsgebied van wat het toegangstoken Experience Platform toestaat om op uw middelen uit te voeren. Voorbeeld: &quot;read, write&quot;. |
@@ -198,11 +198,11 @@ Om opstelling deze authentificatiemethode voor uw bestemming, voeg de volgende l
 
 ## Uw OAuth 2-configuratie aanpassen {#customize-configuration}
 
-De configuraties die in de bovenstaande secties worden beschreven, beschrijven standaard OAuth 2-subsidies. Nochtans, verstrekt het systeem dat door Adobe wordt ontworpen flexibiliteit zodat kunt u douaneparameters voor om het even welke variaties in OAuth 2 subsidie gebruiken. Als u de standaard OAuth 2-instellingen wilt aanpassen, gebruikt u de parameters `authenticationDataFields`, zoals in de onderstaande voorbeelden wordt getoond.
+De configuraties die in de bovenstaande secties worden beschreven, beschrijven standaard OAuth 2-subsidies. Nochtans, verstrekt het systeem dat door Adobe wordt ontworpen flexibiliteit zodat kunt u douaneparameters voor om het even welke variaties in OAuth 2 subsidie gebruiken. Als u de standaard OAuth 2-instellingen wilt aanpassen, gebruikt u de opdracht `authenticationDataFields` parameters, zoals in de onderstaande voorbeelden wordt getoond.
 
-### Voorbeeld 1: Het gebruiken van `authenticationDataFields` om informatie te vangen die uit de authentificatiereactie komt {#example-1}
+### Voorbeeld 1: Gebruiken `authenticationDataFields` om informatie te vangen die uit de authentificatiereactie komt {#example-1}
 
-In dit voorbeeld, heeft een bestemmingsplatform tokens verfrissen die na een bepaalde hoeveelheid tijd verlopen. In dit geval stelt de partner het aangepaste veld `refreshTokenExpiration` in om de vervaldatum van het vernieuwingstoken in het veld `refresh_token_expires_in` in de API-reactie op te halen.
+In dit voorbeeld, heeft een bestemmingsplatform tokens verfrissen die na een bepaalde hoeveelheid tijd verlopen. In dit geval stelt de partner de `refreshTokenExpiration` aangepast veld om de vervaldatum van het vernieuwingstoken op te halen in het dialoogvenster `refresh_token_expires_in` in de API-reactie.
 
 ```json
 {
@@ -238,7 +238,7 @@ In dit voorbeeld, heeft een bestemmingsplatform tokens verfrissen die na een bep
 }  
 ```
 
-### Voorbeeld 2: Het gebruiken van `authenticationDataFields` om een speciaal verfrist teken te verstrekken {#example-2}
+### Voorbeeld 2: Gebruiken `authenticationDataFields` om een speciaal vernieuwingstoken te verstrekken {#example-2}
 
 In dit voorbeeld, plaatst een partner - omhoog hun bestemming om speciaal te verstrekken verfrist teken. Bovendien wordt de vervaldatum voor toegangstokens niet teruggekeerd in de API reactie zodat kunnen zij een standaardwaarde, in dit geval 3600 seconden hardcoderen.
 
@@ -257,7 +257,7 @@ In dit voorbeeld, plaatst een partner - omhoog hun bestemming om speciaal te ver
 
 ### Voorbeeld 3: De gebruiker voert cliënt ID en cliëntgeheim in wanneer zij de bestemming vormen {#example-3}
 
-In dit voorbeeld moet de klant in plaats van een algemene client-id en een clientgeheim te maken, zoals wordt weergegeven in de sectie [Voorwaarden in uw systeem](./oauth2-authentication.md#prerequisites), de client-id, het clientgeheim en de account-id invoeren (de id die de klant gebruikt om zich aan te melden bij de bestemming).
+In dit voorbeeld maakt u geen algemene client-id en clientgeheim, zoals in de sectie wordt getoond [Vereisten in uw systeem](./oauth2-authentication.md#prerequisites), moet de klant client-id, clientgeheim en account-id invoeren (de id die de klant gebruikt om zich aan te melden bij het doel)
 
 ```json
 {
@@ -273,7 +273,7 @@ In dit voorbeeld moet de klant in plaats van een algemene client-id en een clien
                     "description": "Client ID",
                     "type": "string",
                     "isRequired": true,
-                    "fieldType": "CUSTOMER"
+                    "source": "CUSTOMER"
                 },
                 {
                     "name": "clientSecret",
@@ -282,7 +282,7 @@ In dit voorbeeld moet de klant in plaats van een algemene client-id en een clien
                     "type": "string",
                     "isRequired": true,
                     "format": "password",
-                    "fieldType": "CUSTOMER"
+                    "source": "CUSTOMER"
                 },
                 {
                     "name": "moviestarId",
@@ -290,7 +290,7 @@ In dit voorbeeld moet de klant in plaats van een algemene client-id en een clien
                     "description": "Moviestar ID",
                     "type": "string",
                     "isRequired": true,
-                    "fieldType": "CUSTOMER"
+                    "source": "CUSTOMER"
                 }
             ],
             "accessTokenRequest": {
@@ -340,18 +340,18 @@ In dit voorbeeld moet de klant in plaats van een algemene client-id en een clien
 
 
 
-U kunt de volgende parameters in `authenticationDataFields` gebruiken om uw configuratie aan te passen OAuth 2:
+U kunt de volgende parameters gebruiken in `authenticationDataFields` om uw OAuth 2 configuratie aan te passen:
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `authenticationDataFields.name` | Tekenreeks | De naam van het aangepaste veld. |
 | `authenticationDataFields.title` | Tekenreeks | Een titel die u voor het aangepaste veld kunt opgeven. |
 | `authenticationDataFields.description` | Tekenreeks | Een beschrijving van het aangepaste gegevensveld dat u hebt ingesteld. |
-| `authenticationDataFields.type` | Tekenreeks | Hiermee definieert u het type van het veld Aangepaste gegevens. <br> Geaccepteerde waarden:  `string`,  `boolean`,  `integer` |
+| `authenticationDataFields.type` | Tekenreeks | Hiermee definieert u het type van het veld Aangepaste gegevens. <br> Geaccepteerde waarden: `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | Boolean | Geeft aan of het aangepaste gegevensveld vereist is in de verificatiestroom. |
-| `authenticationDataFields.format` | Tekenreeks | Wanneer u `"format":"password"` selecteert, codeert Adobe de waarde van het gebied van authentificatiegegevens. Wanneer gebruikt met `"fieldType": "CUSTOMER"`, verbergt dit ook de input in UI wanneer de gebruiker in het gebied typt. |
+| `authenticationDataFields.format` | Tekenreeks | Wanneer u `"format":"password"`, versleutelt Adobe de waarde van het veld met verificatiegegevens. Indien gebruikt met `"fieldType": "CUSTOMER"`Hiermee verbergt u ook de invoer in de gebruikersinterface wanneer de gebruiker in het veld typt. |
 | `authenticationDataFields.fieldType` | Tekenreeks | Wijst erop of de input uit de partner (u) of van de gebruiker komt, wanneer zij opstelling uw bestemming in Experience Platform. |
-| `authenticationDataFields.value` | Tekenreeks. Booleaans. Geheel | De waarde van het veld met aangepaste gegevens. De waarde komt overeen met het gekozen type uit `authenticationDataFields.type`. |
+| `authenticationDataFields.value` | Tekenreeks. Booleaans. Geheel | De waarde van het veld met aangepaste gegevens. De waarde komt overeen met het gekozen type `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Tekenreeks | Geeft aan naar welk veld van het API-antwoordpad u verwijst. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -360,7 +360,7 @@ U kunt de volgende parameters in `authenticationDataFields` gebruiken om uw conf
 
 Adobe heeft een systeem ontworpen dat verlopen toegangstokens vernieuwt zonder dat de gebruiker zich weer hoeft aan te melden bij uw platform. Het systeem kan een nieuw token genereren zodat de activering van uw bestemming naadloos voor de klant wordt voortgezet.
 
-Om het teken van de opstellingstoegang te verfrissen zich, kunt u een templatized HTTP- verzoek moeten vormen die Adobe toestaat om een nieuw toegangstoken te krijgen, gebruikend verfrist symbolisch. Als het toegangstoken is verlopen, neemt Adobe het sjabloonverzoek dat door u wordt verstrekt, toevoegend de parameters u verstrekte. Gebruik de `accessTokenRequest` parameter om een toegangstoken te vormen verfrist mechanisme.
+Om het teken van de opstellingstoegang te verfrissen zich, kunt u een templatized HTTP- verzoek moeten vormen die Adobe toestaat om een nieuw toegangstoken te krijgen, gebruikend verfrist symbolisch. Als het toegangstoken is verlopen, neemt Adobe het sjabloonverzoek dat door u wordt verstrekt, toevoegend de parameters u verstrekte. Gebruik de `accessTokenRequest` parameter om een toegangstoken te vormen verfrist zich mechanisme.
 
 
 ```json
@@ -430,31 +430,31 @@ Om het teken van de opstellingstoegang te verfrissen zich, kunt u een templatize
 }
 ```
 
-U kunt de volgende parameters in `accessTokenRequest` gebruiken om uw token aan te passen vernieuwt proces:
+U kunt de volgende parameters gebruiken in `accessTokenRequest` om uw token aan te passen vernieuwt proces:
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `accessTokenRequest.destinationServerType` | Tekenreeks | Gebruik `URL_BASED`. |
-| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als u sjablonen voor de waarde in `accessTokenRequest.urlBasedDestination.url.value` gebruikt.</li><li> Gebruik `NONE` als de waarde in het veld `accessTokenRequest.urlBasedDestination.url.value` een constante is. </li></li> |
+| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarde in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.urlBasedDestination.url.value` is een constante. </li></li> |
 | `accessTokenRequest.urlBasedDestination.url.value` | Tekenreeks | De URL waar het Experience Platform om het toegangstoken verzoekt. |
-| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Gebruik `NONE` als de waarde in het veld `accessTokenRequest.httpTemplate.requestBody.value` een constante is. </li></li> |
-| `accessTokenRequest.httpTemplate.requestBody.value` | Tekenreeks | Gebruik de sjabloontaal om velden in de HTTP-aanvraag aan te passen aan het eindpunt van het toegangstoken. Raadpleeg de sectie [Tijdelijke conventies](./oauth2-authentication.md#templating-conventions) voor informatie over hoe u sjablonen kunt gebruiken om velden aan te passen. |
+| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.httpTemplate.requestBody.value` is een constante. </li></li> |
+| `accessTokenRequest.httpTemplate.requestBody.value` | Tekenreeks | Gebruik de sjabloontaal om velden in de HTTP-aanvraag aan te passen aan het eindpunt van het toegangstoken. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](./oauth2-authentication.md#templating-conventions) sectie. |
 | `accessTokenRequest.httpTemplate.httpMethod` | Tekenreeks | Specificeert de methode die van HTTP wordt gebruikt om uw eindpunt van het toegangstoken te roepen. In de meeste gevallen is deze waarde `POST`. |
-| `accessTokenRequest.httpTemplate.contentType` | Tekenreeks | Specificeert het inhoudstype van de vraag van HTTP aan uw toegangstoken eindpunt. <br> Bijvoorbeeld:  `application/x-www-form-urlencoded` of  `application/json`. |
+| `accessTokenRequest.httpTemplate.contentType` | Tekenreeks | Specificeert het inhoudstype van de vraag van HTTP aan uw toegangstoken eindpunt. <br> Bijvoorbeeld: `application/x-www-form-urlencoded` of `application/json`. |
 | `accessTokenRequest.httpTemplate.headers` | Tekenreeks | Specificeert als om het even welke kopballen aan de vraag van HTTP aan uw toegangstoken eindpunt zouden moeten worden toegevoegd. |
-| `accessTokenRequest.responseFields.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.responseFields.value`.</li><li> Gebruik `NONE` als de waarde in het veld `accessTokenRequest.responseFields.value` een constante is. </li></li> |
-| `accessTokenRequest.responseFields.value` | Tekenreeks | De malplaatjetaal van het gebruik om tot gebieden in de reactie van HTTP van uw toegangstoken eindpunt toegang te hebben. Raadpleeg de sectie [Tijdelijke conventies](./oauth2-authentication.md#templating-conventions) voor informatie over hoe u sjablonen kunt gebruiken om velden aan te passen. |
+| `accessTokenRequest.responseFields.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.responseFields.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.responseFields.value` is een constante. </li></li> |
+| `accessTokenRequest.responseFields.value` | Tekenreeks | De malplaatjetaal van het gebruik om tot gebieden in de reactie van HTTP van uw toegangstoken eindpunt toegang te hebben. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](./oauth2-authentication.md#templating-conventions) sectie. |
 | `accessTokenRequest.validations.name` | Tekenreeks | Geeft de naam aan die u voor deze validatie hebt opgegeven. |
-| `accessTokenRequest.validations.actualValue.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.actualValue.value`.</li><li> Gebruik `NONE` als de waarde in het veld `accessTokenRequest.validations.actualValue.value` een constante is. </li></li> |
-| `accessTokenRequest.validations.actualValue.value` | Tekenreeks | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Raadpleeg de sectie [Tijdelijke conventies](./oauth2-authentication.md#templating-conventions) voor informatie over hoe u sjablonen kunt gebruiken om velden aan te passen. |
-| `accessTokenRequest.validations.expectedValue.templatingStrategy` | Tekenreeks | <ul><li>Gebruik `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.expectedValue.value`.</li><li> Gebruik `NONE` als de waarde in het veld `accessTokenRequest.validations.expectedValue.value` een constante is. </li></li> |
-| `accessTokenRequest.validations.expectedValue.value` | Tekenreeks | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Raadpleeg de sectie [Tijdelijke conventies](./oauth2-authentication.md#templating-conventions) voor informatie over hoe u sjablonen kunt gebruiken om velden aan te passen. |
+| `accessTokenRequest.validations.actualValue.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.actualValue.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.validations.actualValue.value` is een constante. </li></li> |
+| `accessTokenRequest.validations.actualValue.value` | Tekenreeks | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](./oauth2-authentication.md#templating-conventions) sectie. |
+| `accessTokenRequest.validations.expectedValue.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.expectedValue.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.validations.expectedValue.value` is een constante. </li></li> |
+| `accessTokenRequest.validations.expectedValue.value` | Tekenreeks | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](./oauth2-authentication.md#templating-conventions) sectie. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Sjabloonconventies {#templating-conventions}
 
-Afhankelijk van uw authentificatieaanpassing, zou u tot gegevensgebieden in de authentificatiereactie kunnen moeten toegang hebben, zoals aangetoond in de vorige sectie. Om dat te doen, gelieve zich met [Kiezels het templating taal](https://pebbletemplates.io/) vertrouwd te maken die door Adobe wordt gebruikt en te verwijzen naar de malplaatjeovereenkomsten hieronder om uw OAuth 2 implementatie aan te passen.
+Afhankelijk van uw authentificatieaanpassing, zou u tot gegevensgebieden in de authentificatiereactie kunnen moeten toegang hebben, zoals aangetoond in de vorige sectie. Om dat te doen, moet u zich vertrouwd maken met de [Taal voor peersjablonen](https://pebbletemplates.io/) gebruikt door Adobe en verwijs naar de malplaatjeovereenkomsten hieronder om uw implementatie aan te passen OAuth 2.
 
 
 | Voorvoegsel | Beschrijving | Voorbeeld |
@@ -469,4 +469,4 @@ Afhankelijk van uw authentificatieaanpassing, zou u tot gegevensgebieden in de a
 
 ## Volgende stappen {#next-steps}
 
-Door dit artikel te lezen, hebt u nu inzicht in de OAuth 2 authentificatiepatronen die door Adobe Experience Platform worden gesteund en weet hoe te om uw bestemming met OAuth 2 authentificatiesteun te vormen. Daarna, kunt u opstelling uw 2-gesteunde bestemming OAuth gebruikend Doel SDK. Lees [Gebruik de Doel SDK om uw bestemming](./configure-destination-instructions.md) voor volgende stappen te vormen.
+Door dit artikel te lezen, hebt u nu inzicht in de OAuth 2 authentificatiepatronen die door Adobe Experience Platform worden gesteund en weet hoe te om uw bestemming met OAuth 2 authentificatiesteun te vormen. Vervolgens kunt u met Destination SDK de OAuth 2-ondersteunde bestemming instellen. Lezen [Gebruik Destination SDK om uw bestemming te vormen](./configure-destination-instructions.md) voor de volgende stappen.
