@@ -6,7 +6,7 @@ title: De Dataflows van de monitor voor Bronnen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 507fa2981f99cad26b117eb576c9dc18080886c8
+source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
 workflow-type: tm+mt
 source-wordcount: '1689'
 ht-degree: 0%
@@ -41,13 +41,13 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Bron invoegen"
->abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. <br> Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
+>abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Gegevens gegevensstroom"
->abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. <br> Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
+>abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
 In de [UI Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** van de linkernavigatie om tot [!UICONTROL Monitoring] dashboard. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over alle brongegevens, met inbegrip van inzicht in de gezondheid van gegevensverkeer van een bron aan [!DNL Identity Service]en [!DNL Profile].
@@ -151,7 +151,7 @@ Selecteren **[!UICONTROL Identities]** om inname te zien in de [!UICONTROL Ident
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Identiteitsverwerking"
->abstract="Identiteitsverwerking bevat gegevens over records die aan de identiteitsdienst zijn toegevoegd, zoals het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken. <br> Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
+>abstract="Identiteitsverwerking bevat gegevens over records die aan de identiteitsdienst zijn toegevoegd, zoals het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
 De [!UICONTROL Identity processing] pagina bevat informatie over records die aan worden toegevoegd [!DNL Identity Service], inclusief het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken.
