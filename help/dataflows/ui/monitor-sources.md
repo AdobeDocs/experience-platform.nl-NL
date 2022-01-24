@@ -6,9 +6,9 @@ title: De Dataflows van de monitor voor Bronnen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
+source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -154,6 +154,11 @@ Selecteren **[!UICONTROL Identities]** om inname te zien in de [!UICONTROL Ident
 >abstract="Identiteitsverwerking bevat gegevens over records die aan de identiteitsdienst zijn toegevoegd, zoals het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="Gegevens gegevensstroom"
+>abstract="Op de pagina met details over uitvoering van de Dataflow-software wordt meer informatie weergegeven over de uitvoering van uw identiteitsgegevens, waaronder de IMS-organisatie-id en de uitvoerid van de dataflow."
+
 De [!UICONTROL Identity processing] pagina bevat informatie over records die aan worden toegevoegd [!DNL Identity Service], inclusief het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken.
 
 Filterpictogram selecteren ![filter](../assets/ui/monitor-sources/filter.png) naast de dataflow run start time om meer informatie over uw [!DNL Identity] dataflow run.
@@ -191,6 +196,11 @@ Van de [!UICONTROL Identity processing] pagina, selecteert u **[!UICONTROL Profi
 >title="Profielverwerking"
 >abstract="De profielverwerking bevat informatie over verslagen die aan de dienst van het Profiel worden opgenomen, met inbegrip van het aantal gemaakte profielfragmenten, profielfragmenten bijgewerkt en het totale aantal profielfragmenten."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="Gegevens gegevensstroom"
+>abstract="Op de pagina met details over gegevensuitvoering in de dataflow-runtime van DataFlow wordt meer informatie weergegeven over uw profiel, waaronder de IMS-organisatie-id en de uitvoerings-id van de dataflow."
 
 De [!UICONTROL Profile processing] pagina bevat informatie over records die aan worden toegevoegd [!DNL Profile], inclusief het aantal gemaakte profielfragmenten, de bijgewerkte profielfragmenten en het totale aantal profielfragmenten.
 
