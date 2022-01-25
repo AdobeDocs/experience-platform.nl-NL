@@ -3,18 +3,15 @@ keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentatie
 solution: Experience Platform
 title: Veelgestelde vragen over segmentovereenkomst (bèta)
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
-source-git-commit: 81ef2030ff26d2aee146316fcdab41d9311e84c7
+exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
+source-git-commit: 50795be308649052037be62153109eadab02c9a1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 # [!DNL Segment Match] veelgestelde vragen (bèta)
-
->[!IMPORTANT]
->
->Segmentovereenkomst bevindt zich momenteel in bèta en uw organisatie heeft er wellicht nog geen toegang toe. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
 
 Deze handleiding bevat antwoorden op privacy- en juridische vragen die vaak worden gesteld over Adobe Experience Platform Segment Match.
 

@@ -5,18 +5,14 @@ title: Overzicht van afstemming van segment
 topic-legacy: overview
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 3c0be965189c7c62b0b3509cf8a07d37ed9cbb68
+source-git-commit: 50795be308649052037be62153109eadab02c9a1
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Segment Match] overzicht
-
->[!IMPORTANT]
->
->Segmentovereenkomst bevindt zich momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# [!DNL Segment Match] - overzicht
 
 Adobe Experience Platform Segment Match is een segment-delende dienst die voor twee of meer gebruikers van het Platform toestaat om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen. [!DNL Segment Match] gebruikt de privacynormen van het Platform en persoonlijke herkenningstekens zoals gehakte e-mails, gehakte telefoonaantallen, en apparatenherkenningstekens zoals IDFAs en GAIDs.
 
