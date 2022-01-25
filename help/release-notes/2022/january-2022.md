@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 49fd8615353a4029b0e98ba90e8438f8ff512e7b
+source-git-commit: 641fcab89b849d91a075fa5058421950bc7fecd7
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 1%
+source-wordcount: '430'
+ht-degree: 2%
 
 ---
 
@@ -14,9 +14,22 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Waarschuwingen](#alerts)
 - [Gegevensprep](#data-prep)
 - [Sandboxen](#sandboxes)
 - [Segmenteringsservice](#segmentation)
+
+## Waarschuwingen {#alerts}
+
+Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van gebeurtenissen voor verschillende activiteiten van Platforms. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailberichten.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Nieuwe waarschuwingsregels | Er zijn nu verschillende nieuwe waarschuwingsregels beschikbaar voor workflows die betrekking hebben op gegevensinvoer, identiteiten, profielen, segmentering en activering. Zie het overzicht op [waarschuwingsregels](../../observability/alerts/rules.md) voor de bijgewerkte lijst met waarschuwingstypen. |
+
+Raadpleeg voor meer informatie over waarschuwingen in Platform de [waarschuwingsoverzicht](../../observability/alerts/overview.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -26,13 +39,15 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 | Functie | Beschrijving |
 | --- | --- |
-| Geconsolideerde toewijzingservaring | De nieuwe toewijzingsinterface in het Platform UI, voorziet u van een verenigbare afbeeldingservaring om uit intelligente kaartaanbevelingen voordeel te halen, manueel toewijzingsregels te vormen, en om het even welke fouten te zuiveren die aan uw kaartreeksen voorkomen. Zie voor meer informatie de [[!DNL Data Prep] UI-hulplijn](../../data-prep/home.md). |
+| Geconsolideerde toewijzingservaring | De nieuwe toewijzingsinterface in het Platform UI voorziet u van een verenigbare afbeeldingservaring om uit intelligente kaartaanbevelingen voordeel te halen, manueel toewijzingsregels te vormen, en om het even welke fouten te zuiveren die aan uw kaartreeksen voorkomen. Zie voor meer informatie de [[!DNL Data Prep] UI-hulplijn](../../data-prep/home.md). |
 
 Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
 ## Sandboxen {#sandboxes}
 
 Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -43,6 +58,8 @@ Voor meer informatie over sandboxen raadpleegt u de [sandboxen, overzicht](../..
 ## Segmenteringsservice {#segmentation}
 
 [!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
