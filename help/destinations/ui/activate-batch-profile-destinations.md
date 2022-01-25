@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a3596624c16da6369f8901d448bb381c37e3510e
+source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2129'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmen
 >abstract="Selecteer de XDM-schemakenmerken die alle geëxporteerde profielen moeten bevatten. Profielen zonder de verplichte sleutel worden niet naar de bestemming geëxporteerd. Als u geen verplichte sleutel selecteert, worden alle gekwalificeerde profielen geëxporteerd, ongeacht hun kenmerken."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Meer informatie in documentatie"
 
-Een verplicht kenmerk is een selectievakje dat door de gebruiker is ingeschakeld en dat ervoor zorgt dat alle profielrecords het geselecteerde kenmerk bevatten. Bijvoorbeeld: alle geëxporteerde profielen bevatten een e-mailadres. &#x200B;
+Een verplicht kenmerk is een selectievakje dat door de gebruiker wordt ingeschakeld en dat ervoor zorgt dat alle profielrecords het geselecteerde kenmerk bevatten. Bijvoorbeeld: alle geëxporteerde profielen bevatten een e-mailadres. &#x200B;
 
 U kunt kenmerken als verplicht markeren om ervoor te zorgen dat [!DNL Platform] Hiermee worden alleen de profielen geëxporteerd die het specifieke kenmerk bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Een attribuut als verplicht markeren is **niet** vereist.
 
