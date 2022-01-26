@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 8a26a69e6a244fc8a0d347e2814f0406713b1c9b
+source-git-commit: 703e49a20fae0fbf527275e1385f596d01642954
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1328'
 ht-degree: 1%
 
 ---
@@ -69,17 +69,10 @@ Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| Zelfde pagina en volgende pagina personalisatie | De verpersoonlijkingseigenschap van de zelfde pagina en van de volgende pagina verstrekt een gedeelde, gerichte mening van gebruikers voor toepassingen op de Rand van de Ervaring, voor consistentie tussen marketing en klantenkanalen. Deze personalisatie is mogelijk via de [Adobe Target-verbinding](../../destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepaste aanpassingsverbinding](../../destinations/catalog/personalization/custom-personalization.md). Om uw zelfde-pagina of volgende-pagina verpersoonlijkingscampagnes te vormen, zie [speciale zelfstudie](../../destinations/ui/configure-personalization-destinations.md). |
-| Verbeteringen voor Marketo-bestemming | De klanten van het Experience Platform die Marketo Engage gebruiken kunnen hun gegevensbestand van Marketo met de nieuwe capaciteit maximaliseren om net-nieuwe persoonverslagen in Marketo Engage van Experience Platform via te duwen [Marketo-doelconnector](/help/destinations/catalog/adobe/marketo-engage.md). Wanneer u publiekssegmenten van Experience Platform naar Marketo Engage verzendt, kunnen personen binnen het segment die nog niet in uw Marketo Engage-database bestaan, automatisch aan het segment worden toegevoegd. Lees voor meer informatie [Een Adobe Experience Platform-segment naar een statische Marketo-lijst verplaatsen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (Stap 9 in de zelfstudie geeft aan hoe u nieuwe persoonrecords naar Marketo kunt duwen). |
-
-<!--
-
-| Feature | Description |
-| ----------- | ----------- |
-| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
-| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
-
--->
+| Zelfde pagina en volgende pagina personalisatie | De [personalisatiefunctie voor dezelfde pagina en volgende pagina](../../destinations/ui/configure-personalization-destinations.md) biedt een gedeelde, doelgerichte weergave van gebruikers voor toepassingen op de Experience Edge, voor consistentie tussen marketing en klantenkanalen. Deze personalisatie is mogelijk via de [Adobe Target-verbinding](../../destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepaste aanpassingsverbinding](../../destinations/catalog/personalization/custom-personalization.md). Om uw zelfde-pagina of volgende-pagina verpersoonlijkingscampagnes te vormen, zie [speciale zelfstudie](../../destinations/ui/configure-personalization-destinations.md). |
+| Batchdoelbewaking en segmentcijfers | De functionaliteit van bestemmings controle wordt nu uitgebreid van het stromen bestemmingen om ook partijbestemmingen en segment-vlakke metriek voor uw activeringsgegevens te omvatten. Lees voor meer informatie [Dashboard voor controledoelen](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) en [segmentweergave](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
+| Bewerken in de gebruikersinterface plannen voor bestaande gegevens voor batchactivering | Deze versie introduceert de optie om het schema van uw bestaande activeringsgegevens te bewerken naar batchbestemmingen. Lees voor meer informatie [profielgegevens activeren naar batchprofieldoelen](/help/destinations/ui/activate-batch-profile-destinations.md). |
+| Verbeteringen voor Marketo-bestemming | De klanten van het Experience Platform die Marketo Engage gebruiken kunnen hun gegevensbestand van Marketo met de nieuwe capaciteit maximaliseren om net-nieuwe persoonverslagen in Marketo Engage van Experience Platform via te duwen [Marketo-doelconnector](/help/destinations/catalog/adobe/marketo-engage.md). <br> Wanneer u publiekssegmenten van Experience Platform naar Marketo Engage verzendt, kunnen personen binnen het segment die nog niet in uw Marketo Engage-database bestaan, automatisch aan het segment worden toegevoegd. Lees voor meer informatie [Een Adobe Experience Platform-segment naar een statische Marketo-lijst verplaatsen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (Stap 9 in de zelfstudie geeft aan hoe u nieuwe persoonrecords naar Marketo kunt duwen). |
 
 **Nieuwe bestemmingen**
 
