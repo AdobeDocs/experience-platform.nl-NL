@@ -5,9 +5,9 @@ title: Azure Event Hubs Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Azure Event Hubs met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
+source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -35,13 +35,29 @@ Om de snelheid van opname aan de kant van het Platform te verhogen, moet het Pla
 
 ## Een virtueel netwerk gebruiken om verbinding te maken met [!DNL Event Hubs] naar Platform
 
-U kunt een virtueel netwerk instellen om verbinding te maken [!DNL Event Hubs] aan Platform terwijl het hebben van uw firewallmaatregelen wordt toegelaten. Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs] netwerkregelsetdocument](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) en selecteer vervolgens **Probeer het** van het REST API-deelvenster. Nu verifieert u uw [!DNL Azure] -account met uw referenties en selecteer vervolgens de [!DNL Event Hubs] namespace, middelgroep, en abonnement dat u aan Platform wilt brengen.
+U kunt een virtueel netwerk instellen om verbinding te maken [!DNL Event Hubs] aan Platform terwijl het hebben van uw firewallmaatregelen wordt toegelaten. Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs] netwerkregelsetdocument](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) en voert u de volgende stappen uit:
 
-Wanneer u de installatie hebt ingesteld, werkt u de **verzoek** met JSON die aan uw netwerkgebied beantwoordt, van de hieronder lijst:
+* Selecteren **Probeer het** vanuit het REST API-deelvenster;
+* Verifieer uw [!DNL Azure] account met uw referenties in dezelfde browser;
+* Selecteer [!DNL Event Hubs] namespace, middelgroep, en abonnement dat u aan Platform wilt brengen en dan selecteren **RUN**;
+* In het lichaam JSON dat verschijnt, voeg volgende subnet van het Platform onder toe `virtualNetworkRules` binnenkant `properties`:
 
->[!TIP]
+
+>[!IMPORTANT]
 >
->U moet een steun van uw bestaande firewallIP het filtreren regels maken aangezien zij na deze vraag zullen worden geschrapt.
+>Maak een back-up van de JSON-instantie die u ontvangt voordat u de update uitvoert `virtualNetworkRules` met subnet van het Platform aangezien het uw bestaande IP het filtreren regels bevat. Anders, zullen de regels na de vraag worden geschrapt.
+
+
+```json
+{
+    "subnet": {
+        "id": "/subscriptions/93f21779-b1fd-49ee-8547-2cdbc979a44f/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_va7_network_10_19_144_0_22/subnets/ethos_12_prod_va7_network_10_19_144_0_22"
+    },
+    "ignoreMissingVnetServiceEndpoint": true
+}
+```
+
+Zie de lijst hieronder voor verschillende gebieden van Platform subnets:
 
 ### VA7: Noord-Amerika
 
@@ -108,10 +124,10 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ### API&#39;s gebruiken
 
-- [Creeer een de bronverbinding van de Hubs van de Gebeurtenis gebruikend de Dienst API van de Stroom](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [Streaming gegevens verzamelen met de Flow Service API](../../tutorials/api/collect/streaming.md)
+* [Creeer een de bronverbinding van de Hubs van de Gebeurtenis gebruikend de Dienst API van de Stroom](../../tutorials/api/create/cloud-storage/eventhub.md)
+* [Streaming gegevens verzamelen met de Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Creeer een de bronverbinding van de Hubs van de Gebeurtenis in UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [Creeer een de bronverbinding van de Hubs van de Gebeurtenis in UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
+* [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
