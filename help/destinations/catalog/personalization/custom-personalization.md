@@ -1,28 +1,24 @@
 ---
 keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding (bèta)
-description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt in real time 1:1 en verpersoonlijking die op het segmentlidmaatschap van een gebruikersprofiel wordt gebaseerd.
+description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 0%
+source-wordcount: '569'
+ht-degree: 1%
 
 ---
 
-# Aangepaste aanpassingsverbinding (bèta) {#custom-personalization-connection}
+# Aangepaste aanpassingsverbinding {#custom-personalization-connection}
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->De aangepaste aanpassingsverbinding in Adobe Experience Platform bevindt zich momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 Deze bestemming verstrekt een manier om segmentinformatie van Adobe Experience Platform aan externe verpersoonlijkingsplatforms, inhoudsbeheersystemen, en servers, en andere toepassingen terug te winnen die op klantenwebsites lopen.
 
 ## Vereisten {#prerequisites}
 
-Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](../../../edge/home.md). U moet deze SDK gebruiken om deze bestemming te gebruiken.
+Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](../../../edge/home.md) of de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). U moet één van deze SDKs gebruiken om deze bestemming te gebruiken.
 
 ## Exporttype {#export-type}
 
@@ -73,12 +69,10 @@ Hier volgt een voorbeeldwaarde voor de `event.destinations` variabele:
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }

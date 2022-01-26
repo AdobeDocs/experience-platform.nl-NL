@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: b41230c1280bf699e9a78d5fd15b43d51ab298f7
+source-git-commit: 628e7a993a3566322e0249a5a9864cf6b3fe4493
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '695'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 1%
       * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md)
       * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](./ui/activate-batch-profile-destinations.md)
       * [De publieksgegevens van de activering aan de bestemmingen van het profielverzoek (Bèta)](./ui/activate-profile-request-destinations.md)
+      * [Vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](./ui/configure-personalization-destinations.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
    * [Doelaccounts bijwerken](./ui/update-accounts.md)
    * [Activeringsstromen bewerken](./ui/edit-activation.md)
@@ -118,11 +119,11 @@ ht-degree: 1%
       * [Braze verbinding](./catalog/mobile-engagement/braze.md)
    * Aanpassingsdoelen {#personalization}
       * [Overzicht van personalisatiedoelen](./catalog/personalization/overview.md)
-      * [Adobe Target-verbinding (bèta)](./catalog/personalization/adobe-target-connection.md)
+      * [Adobe Target-verbinding](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target-extensie](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2-extensie](./catalog/personalization/adobe-target-v2.md)
       * [Beemray-extensie](./catalog/personalization/beemray.md)
-      * [Aangepaste aanpassingsverbinding (bèta)](./catalog/personalization/custom-personalization.md)
+      * [Aangepaste aanpassingsverbinding](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Bezoeker Intelligence-extensie](./catalog/personalization/dnb.md)
       * [Experience Cloud ID Service-extensie](./catalog/personalization/adobe-ecid.md)
       * [Verkenningsextensie](./catalog/personalization/gainsight.md)

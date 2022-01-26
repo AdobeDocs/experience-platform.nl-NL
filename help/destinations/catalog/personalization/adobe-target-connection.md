@@ -1,24 +1,20 @@
 ---
 keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelbestemming adobe;
-title: Adobe Target-verbinding (bèta)
-description: Adobe Target is een toepassing die realtime, 1:1 en door AI aangedreven personalisatie en experimenten biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
+title: Adobe Target-verbinding
+description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
-# Adobe Target-verbinding (bèta) {#adobe-target-connection}
+# Adobe Target-verbinding {#adobe-target-connection}
 
 ## Overzicht {#overview}
 
->[!IMPORTANT]
->
->De Adobe Target-verbinding in Adobe Experience Platform bevindt zich momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
-
-Adobe Target is een toepassing die realtime, 1:1, door AI aangedreven personalisatie en experimenteren biedt in alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
+Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 
 Adobe Target is een personalisatieverbinding in Adobe Experience Platform.
 
