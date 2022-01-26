@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c2c543e64a4f2aef0064abf5e4fb9d7f2738159b
+source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2301'
 ht-degree: 1%
 
 ---
@@ -343,6 +343,23 @@ EXCEPTION
     SELECT 'ERROR';
 END;
 ```
+
+## Gegevensmiddelenorganisatie
+
+Het is belangrijk om uw gegevensactiva logisch te organiseren binnen het gegevenshoop van Adobe Experience Platform aangezien zij groeien. De Dienst van de vraag breidt SQL constructies uit die u toelaten om gegevensactiva binnen een zandbak logisch gezien te groeperen. Deze organisatiemethode staat voor het delen van gegevensactiva tussen schema&#39;s toe zonder de behoefte om hen fysiek te bewegen.
+
+De volgende SQL-constructies die gebruikmaken van de standaard SQL-syntaxis, worden ondersteund voor het logisch organiseren van uw gegevens.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+Zie de handleiding op [logische organisatie van gegevenselementen](../best-practices/organize-data-assets.md) voor meer een gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
 
 ## [!DNL Spark] SQL-opdrachten
 
