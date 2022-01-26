@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
+source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '1964'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ De **[!UICONTROL Select schema]** wordt weergegeven. Selecteer het schema u op d
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor meer informatie over mapperfuncties en berekende velden raadpleegt u de [Handleiding voor functies Data Prep](../../../../../data-prep/functions.md) of de [hulplijn voor berekende velden](../../../../../data-prep/calculated-fields.md).
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 

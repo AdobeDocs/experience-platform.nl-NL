@@ -4,122 +4,122 @@ solution: Experience Platform
 title: Vorm een Dataflow voor een BronVerbinding van de Automatisering van de Marketing in UI
 topic-legacy: overview
 type: Tutorial
-description: Een dataflow is een geplande taak die gegevens van een bron aan a [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw account voor marketingautomatisering.
+description: Een dataflow is een geplande taak die gegevens van een bron aan een bron terugwint en opneemt [!DNL Platform] dataset. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw account voor marketingautomatisering.
 exl-id: 8d31fc2d-b952-44f7-98e7-f51b0acc19ed
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
 
 # Een gegevensstroom configureren voor een verbinding voor marketingautomatisering in de gebruikersinterface
 
-Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw account voor marketingautomatisering.
+Een dataflow is een geplande taak die gegevens van een bron aan een bron terugwint en opneemt [!DNL Platform] dataset. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw account voor marketingautomatisering.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
+- [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Zelfstudie](../../../../xdm/tutorials/create-schema-ui.md) Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+   - [Zelfstudie Schema Editor](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Bovendien moet u voor deze zelfstudie al een account voor marketingautomatisering hebben gemaakt. Een lijst van leerprogramma&#39;s voor het creëren van verschillende marketing automatiseringsschakelaars in UI kan in [overzicht van bronschakelaars](../../../home.md) worden gevonden.
+Bovendien moet u voor deze zelfstudie al een account voor marketingautomatisering hebben gemaakt. Een lijst met zelfstudies voor het maken van verschillende connectors voor marketingautomatisering in de gebruikersinterface vindt u in het dialoogvenster [overzicht van bronconnectors](../../../home.md).
 
 ## Gegevens selecteren
 
-Nadat u uw marketingautomatiseringsaccount hebt gemaakt, wordt de stap *Gegevens selecteren* weergegeven en krijgt u een interactieve interface om de bestandshiërarchie te verkennen.
+Nadat u uw account voor marketingautomatisering hebt gemaakt, kunt u *Gegevens selecteren* wordt weergegeven met een interactieve interface waarmee u de bestandshiërarchie kunt verkennen.
 
 - De linkerhelft van de interface is een directorybrowser waarin de bestanden en mappen van uw server worden weergegeven.
 - Met de rechterhelft van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
 
-Met de optie **[!UICONTROL Search]** boven aan de pagina kunt u snel de brongegevens identificeren die u wilt gebruiken.
+U kunt de **[!UICONTROL Search]** boven aan de pagina om snel de brongegevens te identificeren die u wilt gebruiken.
 
 >[!NOTE]
 >
 >De optie van onderzoeksbrongegevens is beschikbaar aan alle op tabelvorm-gebaseerde bronschakelaars behalve de Analytics, Classifications, de Hubs van de Gebeurtenis, en de schakelaars van Kinesis.
 
-Wanneer u de brongegevens hebt gevonden, selecteert u de map en klikt u op **[!UICONTROL Next]**.
+Als u de brongegevens hebt gevonden, selecteert u de map en klikt u op **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
-De stap **[!UICONTROL Mapping]** verschijnt, die een interactieve interface verstrekken om de brongegevens aan een [!DNL Platform] dataset in kaart te brengen.
+De **[!UICONTROL Mapping]** stap wordt weergegeven en biedt een interactieve interface voor het toewijzen van de brongegevens aan een [!DNL Platform] dataset.
 
 Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of een nieuwe dataset tot stand brengen.
 
 ### Een bestaande gegevensset gebruiken
 
-Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Use existing dataset]**, dan klik het datasetpictogram.
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Use existing dataset]** klikt u op het pictogram van de gegevensset.
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/marketing-automation/use-existing-dataset.png)
 
-Het dialoogvenster **[!UICONTROL Select dataset]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan **[!UICONTROL Continue]** te klikken.
+De **[!UICONTROL Select dataset]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan klik **[!UICONTROL Continue]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/marketing-automation/select-existing-dataset.png)
 
 ### Een nieuwe gegevensset gebruiken
 
-Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Create new dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
+Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Create new dataset]** en voert een naam en een beschrijving voor de gegevensset in de opgegeven velden in.
 
-U kunt een schemagebied vastmaken door een schemanaam in **[!UICONTROL Select schema]** onderzoeksbar in te gaan. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Advanced search]** selecteren om toegang te krijgen tot het scherm van bestaande schema&#39;s met hun respectievelijke details.
+U kunt een schemagebied vastmaken door een schemanaam in te gaan in **[!UICONTROL Select schema]** zoekbalk. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Advanced search]** toegang tot het scherm van bestaande schema&#39;s, met inbegrip van hun respectieve details.
 
-Tijdens deze stap, kunt u uw dataset voor [!DNL Real-time Customer Profile] toelaten en een holistische mening van de attributen en het gedrag van een entiteit creëren. De gegevens van alle toegelaten datasets zullen in [!DNL Profile] worden omvat en de veranderingen worden toegepast wanneer u uw gegevensstroom bewaart.
+Tijdens deze stap, kunt u uw dataset voor toelaten [!DNL Real-time Customer Profile] en een holistische weergave te maken van de kenmerken en gedragingen van een entiteit. Gegevens van alle ingeschakelde gegevenssets worden opgenomen in [!DNL Profile] en wijzigingen worden toegepast wanneer u de gegevensstroom opslaat.
 
-Schakel de knop **[!UICONTROL Profile dataset]** in of uit om uw doelgegevensset in te schakelen voor [!DNL Profile].
+Schakelen tussen **[!UICONTROL Profile dataset]** knoop om uw doeldataset voor toe te laten [!DNL Profile].
 
 ![create-new-dataset](../../../images/tutorials/dataflow/marketing-automation/new-dataset.png)
 
-Het dialoogvenster **[!UICONTROL Select schema]** wordt weergegeven. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Done]**.
+De **[!UICONTROL Select schema]** wordt weergegeven. Selecteer het schema u op de nieuwe dataset wenst toe te passen, dan klik **[!UICONTROL Done]**.
 
 ![selectieschema](../../../images/tutorials/dataflow/marketing-automation/select-schema.png)
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor meer informatie over mapperfuncties en berekende velden raadpleegt u de [handleiding voor gegevenprepfuncties](../../../../data-prep/functions.md) of de [handleiding voor berekende velden](../../../../data-prep/calculated-fields.md).
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../data-prep/ui/mapping.md).
 
 >[!TIP]
 >
->[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
+>Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
-Selecteer **[!UICONTROL Preview data]** om toewijzingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
+Selecteren **[!UICONTROL Preview data]** om afbeeldingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
 
 Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
 
-Selecteer **[!UICONTROL Close]** als de brongegevens zijn toegewezen.
+Selecteer **[!UICONTROL Close]**.
 
 ## Planninguitvoering
 
-De stap **[!UICONTROL Scheduling]** verschijnt, toestaand u om een insluitingsprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
+De **[!UICONTROL Scheduling]** de stap verschijnt, toestaand u om een innameprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
 
 | Veld | Beschrijving |
 | --- | --- |
-| Frequentie | Selecteerbare frequenties zijn onder andere `Once`, `Minute`, `Hour`, `Day` en `Week`. |
+| Frequentie | Selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
 | Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als **[!UICONTROL Backfill]** wordt toegelaten, zullen alle huidige dossiers in de gespecificeerde weg tijdens de eerste geplande opname worden opgenomen. Als **[!UICONTROL Backfill]** is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
+| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Indien **[!UICONTROL Backfill]** is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Indien **[!UICONTROL Backfill]** is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
 | Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 
 Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Begin door de innamefrequentie te selecteren. Daarna, plaats het interval om de periode tussen twee stroomlooppas aan te wijzen. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15.
 
 Als u de begintijd voor inname wilt instellen, past u de datum en tijd aan die worden weergegeven in het vak Begintijd. U kunt ook het kalenderpictogram selecteren om de begintijdwaarde te bewerken. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd.
 
-Selecteer **[!UICONTROL Load incremental data by]** om de deltakolom toe te wijzen. In dit veld wordt een onderscheid gemaakt tussen nieuwe en bestaande gegevens.
+Selecteren **[!UICONTROL Load incremental data by]** om de deltakolom toe te wijzen. In dit veld wordt een onderscheid gemaakt tussen nieuwe en bestaande gegevens.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
 ### Eenmalige gegevensstroom voor inname instellen
 
-Als u eenmalige invoer wilt instellen, selecteert u de pijl voor de frequentieverlaging en selecteert u **[!UICONTROL Once]**.
+Als u eenmalige invoer wilt instellen, selecteert u de pijl-omlaag voor de frequentie en selecteert u **[!UICONTROL Once]**.
 
 >[!TIP]
 >
->**[!UICONTROL Interval]** en niet zichtbaar  **[!UICONTROL Backfill]** zijn tijdens eenmalig gebruik.
+>**[!UICONTROL Interval]** en **[!UICONTROL Backfill]** niet zichtbaar zijn tijdens eenmalig gebruik.
 
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Next]**.
 
@@ -127,9 +127,9 @@ Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTR
 
 ## Gegevens over gegevensstroom opgeven
 
-De stap **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
+De **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
-Tijdens dit proces kunt u **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** ook inschakelen. Als u **[!UICONTROL Partial ingestion]** inschakelt, kunt u gegevens met fouten tot een bepaalde drempel invoeren. Wanneer **[!UICONTROL Partial ingestion]** is ingeschakeld, sleept u de **[!UICONTROL Error threshold %]**-schijf om de foutdrempel van de batch aan te passen. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie [gedeeltelijk partijingesinzicht overzicht](../../../../ingestion/batch-ingestion/partial.md).
+Tijdens dit proces kunt u ook **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]**. Inschakelen **[!UICONTROL Partial ingestion]** biedt de mogelijkheid om gegevens met fouten tot een bepaalde drempel in te voeren. Eenmaal **[!UICONTROL Partial ingestion]** is ingeschakeld, versleept u de **[!UICONTROL Error threshold %]** wijzerplaat om de foutendrempel van de partij aan te passen. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Zie voor meer informatie de [gedeeltelijke batch-opname, overzicht](../../../../ingestion/batch-ingestion/partial.md).
 
 Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Next]**.
 
@@ -137,27 +137,27 @@ Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Next]**.
 
 ## Controleer uw gegevensstroom
 
-De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
+De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
 - **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
 - **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
 - **[!UICONTROL Scheduling]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
 
-Zodra u uw gegevensstroom hebt herzien, klik **[!UICONTROL Finish]** en laat wat tijd voor dataflow om worden gecreeerd.
+Nadat u de gegevensstroom hebt gecontroleerd, klikt u op **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
 ![revisie](../../../images/tutorials/dataflow/marketing-automation/review.png)
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie de zelfstudie over [het controleren van rekeningen en dataflows in UI](../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie de zelfstudie op [het controleren van rekeningen en gegevensstromen in UI](../monitor.md).
 
 ## Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend de functie **[!UICONTROL Delete]** beschikbaar in de **[!UICONTROL Dataflows]** werkruimte zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over [het schrappen van gegevensstromen in UI](../delete.md).
+U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend zijn **[!UICONTROL Delete]** functie beschikbaar in de **[!UICONTROL Dataflows]** werkruimte. Raadpleeg de zelfstudie voor meer informatie over het verwijderen van gegevensstromen [verwijderen, gegevensstromen in de gebruikersinterface](../delete.md).
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om gegevens van een systeem van de marketingautomatisering in te brengen en inzicht verworven in de controle van datasets. Binnenkomende gegevens kunnen nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om gegevens van een systeem van de marketingautomatisering in te brengen en inzicht verworven in de controle van datasets. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [[!DNL Real-time Customer Profile] - overzicht](../../../../profile/home.md)
 - [[!DNL Data Science Workspace] - overzicht](../../../../data-science-workspace/home.md)
@@ -170,14 +170,14 @@ De volgende secties verstrekken extra informatie voor het werken met bronschakel
 
 Wanneer een gegevensstroom wordt gecreeerd, wordt het onmiddellijk actief en neemt gegevens volgens het programma op het werd gegeven. U kunt een actieve gegevensstroom op elk ogenblik onbruikbaar maken door de instructies hieronder te volgen.
 
-Selecteer in het scherm **[!UICONTROL authentication]** de naam van de verbinding die is gekoppeld aan de dataflow die u wilt uitschakelen.
+Binnen de **[!UICONTROL authentication]** selecteert u de naam van de verbinding die is gekoppeld aan de gegevensstroom die u wilt uitschakelen.
 
 ![](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
 
-De pagina **[!UICONTROL Source activity]** wordt weergegeven. Selecteer de actieve gegevensstroom in de lijst om zijn **[!UICONTROL Properties]** kolom op de rechterkant van het scherm te openen, die een **[!UICONTROL Enabled]** knevelknoop bevat. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
+De **[!UICONTROL Source activity]** wordt weergegeven. Selecteer de actieve gegevensstroom in de lijst om zijn te openen **[!UICONTROL Properties]** aan de rechterkant van het scherm, dat een **[!UICONTROL Enabled]** schakelknop. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
 
 ![disable](../../../images/tutorials/dataflow/marketing-automation/disable.png)
 
-### Binnenkomende gegevens voor [!DNL Profile] populatie activeren
+### Inkomende gegevens activeren voor [!DNL Profile] bevolking
 
-De binnenkomende gegevens van uw bronschakelaar kunnen worden gebruikt om uw [!DNL Real-time Customer Profile] gegevens te verrijken en te vullen. Zie de zelfstudie over [Profielpopulatie](../profile.md) voor meer informatie over het vullen van uw [!DNL Real-time Customer Profile]-gegevens.
+De binnenkomende gegevens van uw bronschakelaar kunnen aan het verrijken en het bevolken van uw [!DNL Real-time Customer Profile] gegevens. Voor meer informatie over het vullen van uw [!DNL Real-time Customer Profile] gegevens, raadpleeg de zelfstudie over [Profielpopulatie](../profile.md).

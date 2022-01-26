@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze UI-handleiding helpt u bij het maken van een streamingverbinding met Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,8 @@ Als u een bestaande gegevensset wilt gebruiken, selecteert u **[!UICONTROL Exist
 
 ### Standaardvelden toewijzen
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor meer informatie over mapperfuncties en berekende velden raadpleegt u de [Handleiding voor functies Data Prep](../../../../../data-prep/functions.md) of de [hulplijn voor berekende velden](../../../../../data-prep/calculated-fields.md).
+
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
 Als u een nieuw bronveld wilt toevoegen, selecteert u **[!UICONTROL Add new mapping]**.
 

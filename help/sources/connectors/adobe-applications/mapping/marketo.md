@@ -5,7 +5,7 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -343,7 +343,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 >[!NOTE]
 >
->De `to_object('ECID',arrays_to_objects('id',explode(ecids)))` bronveld is een berekend veld dat moet worden toegevoegd met het [!UICONTROL Add calculated field] in de gebruikersinterface van het Platform. Zie de zelfstudie aan [berekende velden toevoegen](../../../../data-prep/calculated-fields.md) voor meer informatie .
+>De `to_object('ECID',arrays_to_objects('id',explode(ecids)))` bronveld is een berekend veld dat moet worden toegevoegd met het [!UICONTROL Add calculated field] in de gebruikersinterface van het Platform. Zie de zelfstudie aan [berekende velden toevoegen](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie .
 
 ## Volgende stappen
 
