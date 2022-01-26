@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
 workflow-type: tm+mt
-source-wordcount: '2129'
+source-wordcount: '2124'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Gebruik de selectievakjes links van de segmentnamen om de segmenten te selectere
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Schema"
->abstract="Het bestandstype (volledige bestanden of incrementele bestanden) en de planning kunnen niet worden gewijzigd nadat het segment is opgeslagen."
+>abstract="Stel het exporttype van het bestand (volledige bestanden of incrementele bestanden) en de exportfrequentie in."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Meer informatie in documentatie"
 
 [!DNL Adobe Experience Platform] exporteert gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van [!DNL CSV] bestanden. In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
