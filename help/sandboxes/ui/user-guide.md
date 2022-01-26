@@ -5,7 +5,7 @@ title: Gebruiksaanwijzing voor sandbox
 topic-legacy: user guide
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59b608ba06028f7f345f6a59dab333a4fdf2d225
+source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogven
 
 >[!WARNING]
 >
->U kunt de standaardproductiesandbox niet verwijderen. Nochtans, een user-created productie zandbak die voor bidirectioneel segment het delen met wordt gebruikt [!DNL Audience Manager] of [!DNL Audience Core Service] kan na een waarschuwingsbericht worden verwijderd.
+>U kunt de standaardproductiesandbox niet verwijderen. Nochtans, om het even welke user-created productiesandbox die voor bidirectioneel segment het delen met wordt gebruikt [!DNL Audience Manager] of [!DNL Audience Core Service] kan na een waarschuwingsbericht worden verwijderd.
 
 Als u een productie- of ontwikkelingssandbox verwijdert, worden alle bronnen die aan die sandbox zijn gekoppeld, inclusief de machtigingen, permanent verwijderd.
 

@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 703e49a20fae0fbf527275e1385f596d01642954
+source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
 workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 1%
