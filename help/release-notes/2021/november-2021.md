@@ -1,8 +1,8 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
-description: De release van november 2021 bevat notities voor Adobe Experience Platform.
-exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
-source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
+description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: a089ff9c053e46d32b98f94ddaf71d75d29fd4c7
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 1%
@@ -50,7 +50,7 @@ Voor meer informatie over Real-time CDP B2B Edition raadpleegt u de [overzicht](
 De nieuwe gegevensbron en bestemmingsschakelaars van Marketo stromen Marketo gegevens in Platform en Platform publiek terug naar Marketo. Beschikbaar voor alle gebruikers van het Platform.
 
 | Functie | Beschrijving |
-|-----------|--------------|
+|----------|-------------|
 | Marketo Engage-bronaansluiting | De [Marketo Engage-bronaansluiting](../../sources/connectors/adobe-applications/marketo/marketo.md) biedt marketers de mogelijkheid om naadloos gegevens van een of meer Marketo-instanties in hun Adobe Experience Platform-exemplaar in te voeren en biedt een volledige oplossing voor het beheer van leads en B2B-marketers. |
 | Marketo Engage-bestemming | De [Marketo-bestemming](../../destinations/catalog/adobe/marketo-engage.md) stelt marketers in staat om segmenten die in Adobe Experience Platform zijn gemaakt, naar Marketo te verplaatsen waar ze als statische lijsten worden weergegeven. |
 
@@ -59,7 +59,7 @@ De nieuwe gegevensbron en bestemmingsschakelaars van Marketo stromen Marketo geg
 De standaard B2B klassen XDM, gebiedsgroepen, en gegevenstypes zijn beschikbaar voor alle gebruikers van het Platform.
 
 | Functie | Beschrijving |
-|----------|-------------|
+|-----------|--------------|
 | Standaard B2B XDM-klassen | Real-time Customer Data Platform B2B Edition biedt verschillende standaard XDM-kaarten die gegevens vastleggen over essentiële B2B-gegevensentiteiten, zoals accounts, mogelijkheden, campagnes en meer. |
 
 Zie de [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentatie voor meer informatie over het vastleggen van B2B-gegevensentiteiten.
@@ -73,7 +73,7 @@ Met de API voor ad-hocactivering kunnen marketers publiekssegmenten programmatis
 Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
 
 | Functie | Beschrijving |
-| ------- | ----------- |
+|-----------|---------------|
 | Ondersteuning voor meerdere gegevenssets | Attribution AI kan nu gemakkelijk veelvoudige datasets direct in UI zonder de behoefte direct in kaart brengen en vastmaken elke dataset. Dit nieuwe tijdbesparende vermogen verstrekt krachtigere en nauwkeurige scores met rijkere gegevens van veelvoudige datasets. |
 | Toewijzing van mediakanaal en campagneveld | Attribution AI ondersteunt nu de toewijzing van mediakanalen en campagnevelden. De kanaaltoewijzing van media tussen datasets verbetert de inzichten die uit Attribution AI worden afgeleid en helpt duidelijkere resultaten verstrekken die gemakkelijk te interpreteren zijn. |
 
@@ -86,8 +86,9 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
-| --- | --- |
+|-----------|-------------|
 | Ondersteuning voor meerdere gegevenssets | KlantAI kan nu gemakkelijk meerdere gegevenssets rechtstreeks in de gebruikersinterface opnemen zonder dat elke gegevensset moet worden toegewezen en gekoppeld. Dit nieuwe tijdbesparende vermogen verstrekt krachtigere en nauwkeurige scores met rijkere gegevens van veelvoudige datasets. |
 | Aangepaste profielkenmerken | De AI van de Klant steunt nu het bepalen van de gebieden van de gegevensreeks van het douaneprofiel (met timestamps) in uw gegevens naast standaardgebeurtenisgebieden. Met deze optie kunt u aanvullende profielkenmerken toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model worden verbeterd en kunnen de resultaten nauwkeuriger worden weergegeven. |
 
 Voor meer informatie over AI van de Klant, gelieve te zien [AI-documentatie van klant](../../intelligent-services/customer-ai/overview.md).
+
