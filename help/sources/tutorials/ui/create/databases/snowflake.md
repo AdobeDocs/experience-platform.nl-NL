@@ -5,7 +5,7 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 76b3e3e9bcb27eb2bd6981ae6eb109410ae16336
+source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Om toegang te krijgen tot uw Snowflake-account op [!DNL Platform]moet u de volge
 | Database | De [!DNL Snowflake] de database bevat de gegevens die u het Platform wilt brengen. |
 | Gebruikersnaam | De gebruikersnaam voor de [!DNL Snowflake] account. |
 | Wachtwoord | Het wachtwoord voor de [!DNL Snowflake] gebruikersaccount. |
-| Verbindingstekenreeks | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| Verbindingstekenreeks | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Zie voor meer informatie over deze waarden [dit Snowflake-document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
 
