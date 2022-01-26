@@ -5,7 +5,7 @@ topic-legacy: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2effccfa9b1975292f350369201269099dc1b2a1
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 1%
@@ -103,7 +103,7 @@ In de volgende tabel worden de beschikbare machtigingen voor [!DNL Experience Pl
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Toegang tot het lezen, creëren, uitgeven, en onbruikbaar maken bestemmingen. |
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Alleen-lezen toegang tot beschikbare doelen in de **[!UICONTROL Catalog]** tab en geverifieerde doelen in het dialoogvenster **[!UICONTROL Browse]** tab. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Mogelijkheid om gegevens te activeren naar actieve doelen die zijn gemaakt. Voor deze machtiging is &quot;Doelen weergeven&quot; of &quot;Beheren&quot; vereist [!UICONTROL Destinations”] toe te kennen aan de gebruiker die bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid om doelen te ontwerpen met [Adobe Experience Platform-doelSDK](../destinations/destination-sdk/overview.md). |
+| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid om doelen te ontwerpen met [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen in het dialoogvenster **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** tab. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Toegang om partnerhandvatten te creëren, goed te keuren en te verwerpen om twee organisaties te verbinden IMS en toe te laten [!DNL Segment Match] stromen. |
@@ -112,7 +112,7 @@ In de volgende tabel worden de beschikbare machtigingen voor [!DNL Experience Pl
 | Data Governance | [!UICONTROL Apply Data Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
 | Gegevensbeheer | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
 | Gegevensbeheer | [!UICONTROL View Data Usage Policies] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
-| Gegevensbeheer | [!UICONTROL View Audit Log] | Alleen-lezen toegang tot opgenomen weergave [auditlogboeken](../landing/governance-privacy-security/audit-logs/overview.md) van de activiteiten van de Platform. |
+| Gegevensbeheer | [!UICONTROL View User Activity Log] | Alleen-lezen toegang tot opgenomen weergave [auditlogboeken](../landing/governance-privacy-security/audit-logs/overview.md) van de activiteiten van de Platform. |
 | [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Alleen-lezen toegang om het dashboard voor het licentiegebruik weer te geven. |
 | [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Voeg douanekenmerken toe die nog niet in het gegevenspakhuis zijn. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Toegang tot het lezen, maken, bewerken en verwijderen van gestructureerde SQL-query&#39;s voor Platform-gegevens. |

@@ -2,9 +2,9 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met controlelogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d258ddef6a904fee5a4676a513fc426663342c91
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '637'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 
 Wanneer de eigenschap voor uw organisatie wordt toegelaten, worden de controlelogboeken automatisch verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten.
 
-Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheermachtiging &quot;Auditlogboeken weergeven&quot; hebben (gevonden onder de categorie &quot;Gegevensbeheer&quot;). Raadpleeg voor meer informatie over het beheren van individuele machtigingen voor functies van Platforms de [toegangsbeheerdocumentatie](../../../access-control/home.md).
+Als u controlelogboeken wilt weergeven en exporteren, moet u beschikken over **[!UICONTROL View User Activity Log]** toegangsbeheermachtiging verleend (gevonden onder [!UICONTROL Data Governance] categorie). Raadpleeg voor meer informatie over het beheren van individuele machtigingen voor functies van Platforms de [toegangsbeheerdocumentatie](../../../access-control/home.md).
 
 ## Het beheren van controlelogboeken in UI
 
