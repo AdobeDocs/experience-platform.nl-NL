@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen
 title: Privacy Request-verwerking in Identity-service
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor identiteitsdiensten.
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '720'
+ht-degree: 0%
 
 ---
-
 
 # Behandeling van privacyverzoek in [!DNL Identity Service]
 
@@ -50,6 +50,10 @@ Bovendien `include` array van de aanvraag payload moet de productwaarden voor de
 
 Met het volgende verzoek wordt een nieuwe privacytaak onder de GDPR gemaakt voor de gegevens van één klant in de [!DNL Identity] opslaan. Er zijn twee identiteitswaarden voor de klant in de `userIDs` array; één met de norm `Email` naamruimte identiteit en de andere naamruimte gebruiken `ECID` namespace, omvat ook de productwaarde voor [!DNL Identity] (`Identity`) in de `include` array:
 
+>[!TIP]
+>
+>Wanneer u een aangepaste naamruimte verwijdert met de API, moet u het identiteitssymbool opgeven als de naamruimte in plaats van de weergavenaam.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### De gebruikersinterface gebruiken
+
+>[!TIP]
+>
+>Wanneer u een aangepaste naamruimte verwijdert via de gebruikersinterface, moet u het identiteitssymbool opgeven als de naamruimte in plaats van de weergavenaam. Bovendien kunt u geen aangepaste naamruimten in de gebruikersinterface verwijderen voor niet-productiesandboxen.
 
 Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL Identity]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die zijn opgeslagen in [!DNL Identity Service].
 
