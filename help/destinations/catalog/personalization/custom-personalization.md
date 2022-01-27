@@ -1,11 +1,11 @@
 ---
 keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
-title: Aangepaste aanpassingsverbinding (bèta)
+title: Aangepaste aanpassingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---

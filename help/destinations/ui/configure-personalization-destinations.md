@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: Leer hoe te om verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
-source-git-commit: 24e8d088dd79304e0bf0335b7c3df2ef75baf81d
+exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 1%
 
 ---
-
 
 # Vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking
 
@@ -54,7 +54,7 @@ Volg de [segmentbuilder](../../segmentation/ui/segment-builder.md) gids om uw ni
 
 ## Stap 5: Activeer het segment aan uw bestemming
 
-De laatste stap van het configuratieproces is het segment te activeren dat u bij stap 4 aan de bestemming creeerde die u bij stap 2 creeerde.
+De laatste stap van het configuratieproces is het segment te activeren dat u in stap 4 aan de bestemming creeerde die u in stap 2 creeerde.
 
 Volg deze [activeringszelfstudie](../ui/activate-profile-request-destinations.md).
 
