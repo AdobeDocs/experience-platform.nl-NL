@@ -4,45 +4,45 @@ title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
 
 # Werkruimte Doelen {#destinations-workspace}
 
-Selecteer in Adobe Experience Platform **[!UICONTROL Destinations]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Destinations] te openen.
+Selecteer in Adobe Experience Platform **[!UICONTROL Destinations]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Destinations] werkruimte.
 
-De werkruimte [!UICONTROL Destinations] bestaat uit vijf secties, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], en [!UICONTROL System View], die in de hieronder secties worden beschreven.
+De [!UICONTROL Destinations] de werkruimte bestaat uit vijf secties, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], en [!UICONTROL System View], zoals beschreven in de onderstaande punten.
 
 ![Overzicht van bestemmingen](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Overview] {#overview}
 
-Op het tabblad **[!UICONTROL Overview]** wordt het dashboard [!UICONTROL Destinations] weergegeven, met daarin belangrijke meetgegevens voor de doelgegevens van uw organisatie. Voor meer informatie gaat u naar de [[!UICONTROL Destinations] dashboardgids](../../dashboards/guides/destinations.md).
+De **[!UICONTROL Overview]** tabblad geeft de [!UICONTROL Destinations] dashboard, dat belangrijke metriek verstrekt met betrekking tot de bestemmingsgegevens van uw organisatie. Ga voor meer informatie naar de [[!UICONTROL Destinations] dashboardhulplijn](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, zijn [!UICONTROL Destinations] dashboard en [!UICONTROL Overview] tabel niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt [[!UICONTROL Catalog] tab](#catalog) weergegeven.
+>Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, [!UICONTROL Destinations] dashboard en [!UICONTROL Overview] zijn niet zichtbaar. In plaats daarvan selecteert u [!UICONTROL Destinations] van de linkernavigatie toont de [[!UICONTROL Catalog] tab](#catalog).
 
 ![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
-Het **[!UICONTROL Catalog]** lusje toont een lijst van alle bestemmingen beschikbaar in [!DNL Platform], die u gegevens kunt verzenden naar.
+De **[!UICONTROL Catalog]** tabblad geeft een lijst weer met alle bestemmingen die beschikbaar zijn in [!DNL Platform], waarnaar u gegevens kunt verzenden.
 
-De [!DNL Platform] gebruikersinterface verstrekt verscheidene onderzoek en filteropties op de pagina van de bestemmingscatalogus:
+De [!DNL Platform] De gebruikersinterface verstrekt verscheidene onderzoek en filteropties op de pagina van de bestemmingscatalogus:
 
 * Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
-* De bestemmingen van de filter gebruikend [!UICONTROL Categories] controle.
-* Schakelen tussen [!UICONTROL All destinations] en [!UICONTROL My destinations]. Wanneer u **[!UICONTROL All destinations]** selecteert, worden alle beschikbare [!DNL Platform] bestemmingen getoond. Wanneer u **[!UICONTROL My destinations]** selecteert, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
-* Selecteer deze optie om **[!UICONTROL Connections]** en/of **[!UICONTROL Extensions]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, zie [De Types van Bestemming en Categorieën](../destination-types.md).
+* Doelen filteren met de opdracht [!UICONTROL Categories] controle.
+* Schakelen tussen [!UICONTROL All destinations] en [!UICONTROL My destinations]. Wanneer u **[!UICONTROL All destinations]**, alle beschikbare [!DNL Platform] doelen worden weergegeven. Wanneer u **[!UICONTROL My destinations]**, kunt u alleen de doelen zien waarmee u een verbinding hebt gemaakt.
+* Selecteren voor weergave **[!UICONTROL Connections]** en/of **[!UICONTROL Extensions]**. Om het verschil tussen de twee categorieën te begrijpen, zie [Doeltypen en -categorieën](../destination-types.md).
 
 ![Catalogus](../assets/ui/workspace/catalog.png)
 
-De bestemmingskaarten bevatten of een **[!UICONTROL Set up]** of **[!UICONTROL Activate segments]** controle, en een secundaire controle die meer opties omhoog brengt. Deze besturingselementen worden hieronder beschreven:
+De doelkaarten bevatten een van de **[!UICONTROL Set up]** of **[!UICONTROL Activate segments]** controle, en een secundaire controle die meer opties omhoog brengt. Deze besturingselementen worden hieronder beschreven:
 
 | Control | Beschrijving |
 |---------|----------|
@@ -60,20 +60,21 @@ Selecteer een doelkaart in de catalogus om de rechterrail te openen. Hier, kunt 
 
 ![Opties voor doelcatalogus](../assets/ui/workspace/destination-right-rail.png)
 
-Zie [Doelcatalogus](../catalog/overview.md) en [Doeltypen en -categorieën](../destination-types.md) voor meer informatie over doelcategorieën en informatie over elke bestemming.
+Voor meer informatie over bestemmingscategorieën en informatie over elke bestemming, zie [Doelcatalogus](../catalog/overview.md) en [Doeltypen en -categorieën](../destination-types.md).
 
 ## [!UICONTROL Accounts] {#accounts}
 
-Het **[!UICONTROL Accounts]** lusje toont u details over de verbindingen die u met diverse bestemmingen hebt gevestigd, en staat u toe om bestaande verbindingsdetails bij te werken. Zie [Accounts bijwerken](update-accounts.md) voor gedetailleerde instructies.
+De **[!UICONTROL Accounts]** bevat details over de verbindingen die u hebt gemaakt met verschillende bestemmingen en waarmee u bestaande verbindingsdetails kunt bijwerken. Zie [Accounts bijwerken](update-accounts.md) voor gedetailleerde instructies.
 
 ## [!UICONTROL Browse] {#browse}
 
-Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u een verbinding hebt gemaakt. Doelen waarvoor de schakeloptie **[!UICONTROL Enabled/Disabled]** is ingeschakeld, stellen de bestemming respectievelijk in op actief of inactief. U kunt de bestemmingen ook bekijken waar u gegevens door **[!UICONTROL Segments]** > **[!UICONTROL Browse]** te selecteren en een segment te inspecteren hebt. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
+De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen met de **[!UICONTROL Enabled/Disabled]** Schakel het inschakelen in om de bestemming in te stellen op respectievelijk actief of inactief. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door te selecteren stromen **[!UICONTROL Segments]** > **[!UICONTROL Browse]** en selecteert u een segment dat u wilt inspecteren. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
 
 >[!TIP]
 >
-> * Selecteer de drie punten op [!UICONTROL Name] kolom en gebruik ![Add segmentknoop ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]**om segmenten naar die bestemming te verzenden.
-> * Selecteer de drie punten op de [!UICONTROL Name] kolom en gebruik ![de knoop van bestemmingen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**aan [remove](delete-destinations.md) een bestaande verbinding aan een bestemming.
+> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Knop Segmenten activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]**om segmenten naar dat doel te verzenden.
+> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Knop Verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**knop aan [remove](delete-destinations.md) een bestaande verbinding met een doel.
+> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Controle, knop ](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Monitoring]**om activeringsgegevens voor deze bestemming in het deelvenster [controledashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
@@ -81,12 +82,12 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 | Element | Beschrijving |
 |---------|----------|
 | Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. Dezelfde kolom bevat twee besturingselementen: [!UICONTROL Activate ] en [!UICONTROL Delete destination]. |
-| [!UICONTROL Last Flow Run Status] | De status van de laatste gegevensstroom die wordt uitgevoerd. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
-| [!UICONTROL Last Flow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| [!UICONTROL Last Flow Run Status] | De status van de laatste gegevensstroom die wordt uitgevoerd. Zie [Doelgegevens weergeven](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| [!UICONTROL Last Flow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [Doelgegevens weergeven](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Destination] | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
-| [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3, FTP of [!DNL Azure Blob] zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server.</li><li>Voor streamingdoelen: Kan [!DNL Azure Event Hubs] of [!DNL Amazon Kinesis] zijn.</li></ul> |
+| [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan zijn S3, FTP of [!DNL Azure Blob].</li><li>Voor realtime advertentiebestemmingen: Server-naar-server.</li><li>Voor streamingdoelen: Kan [!DNL Azure Event Hubs] of [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Username] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
-| [!UICONTROL Activation Data] | Geeft het aantal segmenten aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement voor meer informatie over de geactiveerde segmenten. Raadpleeg [Activeringsgegevens](/help/destinations/ui/destination-details-page.md#activation-data) op de pagina met doeldetails voor meer informatie over de geactiveerde segmenten. |
+| [!UICONTROL Activation Data] | Geeft het aantal segmenten aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement voor meer informatie over de geactiveerde segmenten. Zie [Activeringsgegevens](/help/destinations/ui/destination-details-page.md#activation-data) in de pagina met doeldetails voor meer informatie over de geactiveerde segmenten. |
 | [!UICONTROL Created] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. |
 | [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of gegevens op dit doel worden geactiveerd. |
 
@@ -94,11 +95,11 @@ Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaa
 
 ![Doelrij klikken](../assets/ui/workspace/click-destination-row.png)
 
-Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klik **[!UICONTROL Edit activation]** om te wijzigen of aan de segmenten toe te voegen die naar deze bestemming worden verzonden.
+Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klikken **[!UICONTROL Edit activation]** om te wijzigen of aan de segmenten toe te voegen die naar deze bestemming worden verzonden.
 
 ## [!UICONTROL System View] {#system-view}
 
-Het tabblad **[!UICONTROL System View]** geeft een grafische weergave weer van de activeringsstromen die u hebt ingesteld in de Adobe Experience Platform.
+De **[!UICONTROL System View]** wordt een grafische weergave weergegeven van de activeringsstromen die u hebt ingesteld in de Adobe Experience Platform.
 
 ![Gegevensstromen1](../assets/ui/workspace/data-flows1.png)
 
