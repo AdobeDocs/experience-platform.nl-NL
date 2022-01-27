@@ -6,7 +6,7 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fbcaa4c9010835f7a21f9f555671f6de2344f892
+source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
 workflow-type: tm+mt
 source-wordcount: '3041'
 ht-degree: 0%
@@ -200,6 +200,11 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ## Het dashboard voor segmenttaken controleren {#monitoring-segment-jobs-dashboard}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Segmenttaken"
+>abstract="Het dashboard van segmentbanen bevat informatie over de evaluatie en de uitvoerbanen voor al uw segmenten."
+
 Om toegang te krijgen tot [!UICONTROL Segment Jobs] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Segment Jobs]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de segmentevaluatie en de uitvoerbanen.
 
 ![Dashboard voor bewaking van segmenttaken](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
@@ -222,11 +227,6 @@ De volgende metriek is beschikbaar voor segmentbanen:
 >id="platform_monitoring_activation"
 >title="Activering"
 >abstract="De doelactivering bevat informatie over de activeringsstatus van het segment en de maatstaven die vanuit Real-time klantprofiel zijn genomen om unieke identiteiten te genereren."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segmenttaken"
->abstract="Het dashboard van segmentbanen bevat informatie over de evaluatie en de uitvoerbanen voor al uw segmenten."
 
 Om toegang te krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Destinations]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de banen van de bestemmingslooppas.
 
