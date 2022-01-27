@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui guide;mapper;mapping;data prep;data voorbereiden;voorbereiden van gegevens;
 title: UI-gids voor gegevenprepress
 description: Dit document biedt aanwijzingen voor het gebruik van functies voor gegevensvoorvoegsel in de gebruikersinterface van het Platform om CSV-bestanden toe te wijzen aan een XDM-schema.
-source-git-commit: 4c2e3380881e6a032100ef00502b55112f3b103f
+exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
+source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
 workflow-type: tm+mt
 source-wordcount: '1564'
 ht-degree: 0%
@@ -80,18 +81,18 @@ De **[!UICONTROL mapping]** biedt u een uitgebreid hulpmiddel om brongebieden va
 
 ### De toewijzingsinterface
 
-De toewijzingsinterface bevat een dashboard dat informatie verschaft over de status van uw toewijzingensets binnen de context van de innameworkflow. Het dashboard geeft de volgende details weer met betrekking tot uw toewijzingssets:
+De toewijzingsinterface bevat een dashboard dat informatie verschaft over de status van uw toewijzingsvelden binnen de context van de innameworkflow. Op het dashboard worden de volgende gegevens over de toewijzingsvelden weergegeven:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | [!UICONTROL Mapped fields] | Hiermee geeft u het totale aantal bronvelden weer dat aan een doel-XDM-veld is toegewezen, ongeacht fouten. |
 | [!UICONTROL Required fields] | Hier wordt het aantal vereiste toewijzingsvelden weergegeven. |
-| [!UICONTROL Identity fields] | Hiermee geeft u het totale aantal toewijzingssets weer dat als identiteit is gedefinieerd. Deze sets met toewijzingen worden aangegeven met een vingerafdrukpictogram. |
-| [!UICONTROL Errors] | Geeft het aantal onjuiste toewijzingssets weer. |
+| [!UICONTROL Identity fields] | Hiermee geeft u het totale aantal toewijzingsvelden weer dat als identiteit is gedefinieerd. Deze toewijzingsvelden worden aangegeven met een vingerafdrukpictogram. |
+| [!UICONTROL Errors] | Geeft het aantal onjuiste toewijzingsvelden weer. |
 
 ![bovenpaneel](../images/ui/mapping/top-panel.png)
 
-De toewijzingsinterface biedt ook een deelvenster met opties die u kunt kiezen om beter te kunnen communiceren met of filteren door de sets met toewijzingen.
+De toewijzingsinterface biedt ook een deelvenster met opties die u kunt kiezen om beter te communiceren of door de toewijzingsvelden te filteren.
 
 ![tweede deelvenster](../images/ui/mapping/second-panel.png)
 
@@ -112,11 +113,11 @@ De filteropties zijn:
 | [!UICONTROL Unmapped fields] | Met deze optie filtert u het bronschema zodat alleen de velden worden weergegeven die nog moeten worden toegewezen. |
 | [!UICONTROL Fields with recommendation] | Met deze optie filtert u het bronschema om alleen de velden weer te geven die toewijzingsaanbevelingen bevatten. |
 
-Selecteren **[!UICONTROL Fields with errors]** om alle sets met toewijzingen met fouten weer te geven.
+Selecteren **[!UICONTROL Fields with errors]** om alle toewijzingsvelden met fouten weer te geven.
 
 ![filter](../images/ui/mapping/filter.png)
 
-Er wordt een geïsoleerde weergave van onjuiste toewijzingssets weergegeven, zodat u fouten kunt oplossen aan de hand van intelligente toewijzingsaanbevelingen of via de handmatige toewijzingsstructuur.
+Er wordt een geïsoleerde weergave van onjuiste toewijzingsvelden weergegeven, zodat u fouten kunt verhelpen met intelligente toewijzingsaanbevelingen of met de handmatige toewijzingsstructuur.
 
 ![velden met fouten](../images/ui/mapping/fields-with-errors.png)
 
@@ -176,13 +177,13 @@ Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste
 
 ![voorvertoningsscherm](../images/ui/mapping/preview-screen.png)
 
-Selecteer **[!UICONTROL Clear all mappings]**.
+Als u alle toewijzingsvelden wilt verwijderen, selecteert u **[!UICONTROL Clear all mappings]**.
 
 ![duidelijk](../images/ui/mapping/clear-all.png)
 
 ### De toewijzingsinterface gebruiken
 
-Het Platform verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd die u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruikscase of gedupliceerde toewijzingssets corrigeren om eventuele fouten te wissen.
+Het Platform verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd die u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruikscase of gedupliceerde toewijzingsvelden corrigeren om eventuele fouten te wissen.
 
 ![mapping, interface](../images/ui/mapping/mapping-interface.png)
 
@@ -200,7 +201,7 @@ U kunt ook **[!UICONTROL Select manually]** om de interactieve boomstructuur voo
 
 ![recc-panel](../images/ui/mapping/recc-panel.png)
 
-De toewijzingsinterface van het doelschema verschijnt in de zelfde mening zoals uw toewijzingsreeksen, toestaand u om kaartparen binnen het zelfde scherm te wijzigen. Selecteer het doelveld dat bij uw gebruikscase past of corrigeer de fouten.
+De toewijzingsinterface van het doelschema verschijnt in de zelfde mening zoals uw toewijzingsgebieden, toestaand u om kaartparen binnen het zelfde scherm te wijzigen. Selecteer het doelveld dat bij uw gebruikscase past of corrigeer de fouten.
 
 ![select-target-field](../images/ui/mapping/select-target-field.png)
 
