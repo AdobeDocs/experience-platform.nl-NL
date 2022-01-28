@@ -5,9 +5,9 @@ title: 'Edge Segmentation met de API '
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,8 @@ De segmentatie van de rand is de capaciteit om segmenten in Adobe Experience Pla
 >[!IMPORTANT]
 >
 > De Edge-gegevens worden opgeslagen op een locatie op de Edge-server die het dichtst bij de locatie ligt waar ze zijn verzameld en kunnen worden opgeslagen op een andere locatie dan die welke is aangewezen als het Adobe Experience Platform-datacenter in de hub (of principal).
+>
+> Bovendien zal de engine voor randsegmentatie alleen aanvragen aan de rand uitvoeren waar deze zich bevindt **één** primaire gemarkeerde identiteit, die consistent is met primaire identiteiten die niet op randen zijn gebaseerd.
 
 ## Aan de slag
 

@@ -5,9 +5,9 @@ title: gebruikersgids voor Edge Segmentation
 topic-legacy: ui guide
 description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ Randsegmentatie is de mogelijkheid om segmenten in Adobe Experience Platform oge
 >[!IMPORTANT]
 >
 > De Edge-gegevens worden opgeslagen op een locatie op de Edge-server die het dichtst bij de locatie ligt waar ze zijn verzameld en kunnen worden opgeslagen op een andere locatie dan die welke is aangewezen als het Adobe Experience Platform-datacenter in de hub (of principal).
+>
+> Bovendien zal de engine voor randsegmentatie alleen aanvragen aan de rand uitvoeren waar deze zich bevindt **één** primaire gemarkeerde identiteit, die consistent is met primaire identiteiten die niet op randen zijn gebaseerd.
 
 ## Type Edge-segmenteringsquery
 
