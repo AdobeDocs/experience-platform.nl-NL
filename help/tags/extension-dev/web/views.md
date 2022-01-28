@@ -2,9 +2,9 @@
 title: Weergaven in webextensies
 description: Leer hoe u weergaven voor bibliotheekmodules definieert in uw Adobe Experience Platform-webextensies.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -169,6 +169,10 @@ Voordat het instellingsobject tijdens runtime wordt doorgegeven aan de module Bi
 Om aan te geven waar het nuttig kan zijn voor gebruikers om gegevenselementen te gebruiken en het voor gebruikers gemakkelijk te maken om een gegevenselement in te voeren, adviseren wij hoogst toevoegend een pictogramknoop naast dergelijke gebieden zoals hier getoond:
 
 ![gegevenselementveld](../images/data-element-field.png)
+
+>[!NOTE]
+>
+>Als u het juiste pictogram wilt downloaden, navigeert u naar de knop [pictogrammen op pagina Adobe Spectrum](https://spectrum.adobe.com/page/icons/) en zoek naar &quot;[!DNL Data]&quot;.
 
 Wanneer een gebruiker de knop naast het tekstveld selecteert, roept u `window.extensionBridge.openDataElementSelector` als [hierboven geschetst](#open-data-element). Hiermee wordt een lijst weergegeven met de gegevenselementen van de gebruiker die de gebruiker kan kiezen in plaats van deze te dwingen de naam en het type procent-teken te onthouden. Zodra de gebruiker een gegevenselement heeft geselecteerd, zult u de naam van het geselecteerde gegevenselement ontvangen dat in percentagetekens wordt verpakt (tenzij u hebt geplaatst `tokenize` optie voor `false`). We raden u aan het tekstveld te vullen met het resultaat.
 
