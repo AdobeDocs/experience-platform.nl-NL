@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentatie;Segmentovereenkomst;segmentovereenkomst
 solution: Experience Platform
-title: Veelgestelde vragen over segmentovereenkomst (bèta)
+title: Veelgestelde vragen over segmentovereenkomst
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 823eb549e5514a3201ba68ed395c69e202cb747f
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] veelgestelde vragen (bèta)
+# [!DNL Segment Match] vaak gestelde vragen
 
 Deze handleiding bevat antwoorden op privacy- en juridische vragen die vaak worden gesteld over Adobe Experience Platform Segment Match.
 
@@ -21,14 +21,14 @@ Deze handleiding bevat antwoorden op privacy- en juridische vragen die vaak word
 
 Er worden geen klant- of segmentgegevens over sandboxen verplaatst om deze schattingsgegevens voor overlappingen te verkrijgen. De door de klant geselecteerde, vooraf gehakte toepasselijke identiteiten in een bepaalde sandbox worden toegevoegd aan een probabilistische gegevensstructuur waarin de id&#39;s zelf in een gehakt formaat worden vertegenwoordigd.
 
-Dit is een eenrichtingsproces, dat betekent de originele pre-haastige herkenningstekens niet worden blootgesteld en kunnen niet worden omgekeerd-gebouwd.
+This is a one-way process, meaning the original pre-hashed identifiers are not exposed and cannot be reverse-engineered.
 
-Deze gegevensstructuren hebben unieke eigenschappen die engineering toestaan om unie en doorsnedeverrichtingen tussen hen uit te voeren, zelfs als de gecodeerde informatie ernstig wordt gecomprimeerd of gehakt. Deze bewerkingen staan [!DNL Segment Match] om de geschatte doorsnede te krijgen van twee gegevensstructuren die bestaan uit id&#39;s van twee verschillende sandboxen zonder dat de werkelijke waarden moeten worden vergeleken. Sinds [!DNL Segment Match] alleen de gegevensstructuren worden gebruikt, de id&#39;s laten de respectievelijke profielopslagplaatsen van de IMS-organisaties nooit over voor schattingsdoeleinden. Hierdoor kan Adobe voldoen aan de privacy- en beveiligingsvereisten van klanten en tegelijkertijd uiterst nauwkeurige schattingsgereedschappen bieden om samenwerkingsovereenkomsten op het gebied van gegevens te begeleiden.
+Deze gegevensstructuren hebben unieke eigenschappen die engineering toestaan om unie en doorsnedeverrichtingen tussen hen uit te voeren, zelfs als de gecodeerde informatie ernstig wordt gecomprimeerd of gehakt. Deze bewerkingen staan [!DNL Segment Match] om de geschatte doorsnede te krijgen van twee gegevensstructuren die bestaan uit id&#39;s van twee verschillende sandboxen zonder dat de werkelijke waarden moeten worden vergeleken. Since [!DNL Segment Match] only uses the data structures, the IDs never leave their respective IMS Organizations&#39; Profile storages for estimation purposes. Hierdoor kan Adobe voldoen aan de privacy- en beveiligingsvereisten van klanten en tegelijkertijd uiterst nauwkeurige schattingsgereedschappen bieden om samenwerkingsovereenkomsten op het gebied van gegevens te begeleiden.
 
 ## Wat is het proces achter het aanwijzen van welke identiteiten gedeelde segment IDs ontvangen?
 
-[!DNL Segment Match] voorziet klanten van een optie om te vormen welke namespaces in de dienst te gebruiken. Deze selectie wordt toegepast op zowel het ramingsproces dat in de vorige vraag wordt beschreven als het proces van de gegevensoverdracht, als de klant besluit om het voer aan een partnerzandbak te publiceren.
+[!DNL Segment Match] voorziet klanten van een optie om te vormen welke namespaces in de dienst te gebruiken. This selection is applied to both the estimation process described in the previous question and the data transfer process, should the customer decide to publish the feed to a partner sandbox.
 
-Het gegevensoverdrachtproces tussen de gecodeerde identiteiten van twee verschillende organisaties wordt uitgevoerd in een neutrale compute omgeving. De gegevensoverdrachtstaak is in het bezit van Adobe en de organisaties die bij het partnerschap zijn betrokken, hebben geen toegang tot deze omgeving en krijgen ook geen toegang tot logboeken die het resultaat kunnen zijn van de gegevensoverdrachtstaak.
+The data transfer process between the encrypted identities of two different organizations is performed in a neutral compute environment. De gegevensoverdrachtstaak is in het bezit van Adobe en de organisaties die bij het partnerschap zijn betrokken, hebben geen toegang tot deze omgeving en krijgen ook geen toegang tot logboeken die het resultaat kunnen zijn van de gegevensoverdrachtstaak.
 
 Alleen segmentlidmaatschap wordt opgenomen in de overlappende profielfragmenten van een IMS-organisatie van een ontvanger en er wordt geen extra identiteit overgedragen van de IMS-organisatie van de afzender naar de IMS-organisatie van de ontvanger. Geen platte tekst persoonlijk identificeerbare informatie (PII) wordt gelezen door de gegevensoverdrachtbaan omdat [!DNL Segment Match] staat overlappingen alleen toe op met SHA256 gecodeerde naamruimten (e-mail/telefoon) wanneer gegevens PII zijn. Resultaten worden nooit opgeslagen in de computeromgeving.
