@@ -5,18 +5,14 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
+source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '431'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Snowflake] bronverbinding in de gebruikersinterface
-
->[!NOTE]
->
-> De [!DNL Snowflake] -connector bevindt zich in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Snowflake] bronaansluiting die gebruikmaakt van de Adobe Experience Platform-gebruikersinterface.
 

@@ -5,55 +5,52 @@ title: Een Veeva CRM-basisverbinding maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Veeva CRM met behulp van de Flow Service API.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
+source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '497'
 ht-degree: 1%
 
 ---
 
-# (Beta) Maak een [!DNL Veeva CRM] basisverbinding met de API [!DNL Flow Service]
-
->[!NOTE]
->
->De bron [!DNL Veeva CRM] is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# Een [!DNL Veeva CRM] basisverbinding met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Deze zelfstudie begeleidt u door de stappen om een basisverbinding voor [!DNL Veeva CRM] tot stand te brengen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Veeva CRM] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met [!DNL Veeva CRM] met de [!DNL Flow Service]-API tot stand te brengen.
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met [!DNL Veeva CRM] met de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Veeva CRM], moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om [!DNL Flow Service] om te verbinden met [!DNL Veeva CRM]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `environmentUrl` | De URL van de instantie [!DNL Veeva CRM]. |
-| `username` | De gebruikersnaam van uw [!DNL Veeva CRM]-account. |
-| `password` | De wachtwoordwaarde van uw [!DNL Veeva CRM]-account. |
-| `securityToken` | Het beveiligingstoken voor uw [!DNL Veeva CRM]-instantie. |
+| `environmentUrl` | De URL van uw [!DNL Veeva CRM] -instantie. |
+| `username` | De gebruikersnaam van uw [!DNL Veeva CRM] account. |
+| `password` | De wachtwoordwaarde van uw [!DNL Veeva CRM] account. |
+| `securityToken` | Het beveiligingstoken voor uw [!DNL Veeva CRM] -instantie. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
-Raadpleeg dit [[!DNL Veeva CRM] document](https://developer.veevacrm.com/api/#order-management-rest-api) voor meer informatie over deze waarden.
+Raadpleeg deze voor meer informatie over deze waarden [[!DNL Veeva CRM] document](https://developer.veevacrm.com/api/#order-management-rest-api).
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [Aan de slag met Platform APIs](../../../../../landing/api-guide.md).
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw [!DNL Veeva CRM] authentificatiegeloofsbrieven als deel van de verzoekparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Veeva CRM] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -63,7 +60,7 @@ POST /connections
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een basisverbinding voor [!DNL Veeva CRM]:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Veeva CRM]:
 
 ```shell
 curl -X POST \
@@ -94,18 +91,18 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `name` | De naam van uw [!DNL Veeva CRM] basisverbinding. U kunt deze naam gebruiken om uw [!DNL Veeva CRM] basisverbinding te zoeken. |
+| `name` | De naam van uw [!DNL Veeva CRM] basisverbinding. U kunt deze naam gebruiken om uw [!DNL Veeva CRM] basisverbinding. |
 | `description` | Een optionele beschrijving voor uw [!DNL Veeva CRM] basisverbinding. |
 | `auth.specName` | Het verificatietype dat voor de verbinding wordt gebruikt. |
-| `auth.params.environmentUrl` | De URL van de instantie [!DNL Veeva CRM]. |
-| `auth.params.username` | De gebruikersnaam van uw [!DNL Veeva CRM]-account. |
-| `auth.params.password` | De wachtwoordwaarde van uw [!DNL Veeva CRM]-account. |
-| `auth.params.securityToken` | Het beveiligingstoken voor uw [!DNL Veeva CRM]-instantie. |
+| `auth.params.environmentUrl` | De URL van uw [!DNL Veeva CRM] -instantie. |
+| `auth.params.username` | De gebruikersnaam van uw [!DNL Veeva CRM] account. |
+| `auth.params.password` | De wachtwoordwaarde van uw [!DNL Veeva CRM] account. |
+| `auth.params.securityToken` | Het beveiligingstoken voor uw [!DNL Veeva CRM] -instantie. |
 | `connectionSpec.id` | De verbindingsspecificatie-id voor [!DNL Veeva CRM]: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
 **Antwoord**
 
-Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -116,4 +113,4 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een [!DNL Veeva CRM] basisverbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken wanneer u leert hoe u CRM-systemen kunt [verkennen met behulp van de Flow Service API](../../explore/crm.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Veeva CRM] basisverbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u [CRM-systemen verkennen met behulp van de Flow Service API](../../explore/crm.md).
