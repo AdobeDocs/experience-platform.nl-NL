@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API's.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1230'
 ht-degree: 1%
 
 ---
@@ -97,6 +97,12 @@ Naast de bovenstaande referenties hebt u ook de gegenereerde **[!UICONTROL Clien
 ## Een JSON-webtoken (JWT) genereren {#jwt}
 
 De volgende stap bestaat uit het genereren van een JSON Web Token (JWT) op basis van uw accountgegevens. Deze waarde wordt gebruikt om uw `{ACCESS_TOKEN}` referentie voor gebruik in Platform API vraag, die om de 24 uur opnieuw moet worden geproduceerd.
+
+>[!IMPORTANT]
+>
+>In deze zelfstudie wordt in de onderstaande stappen beschreven hoe u een JWT kunt genereren in de Developer Console. Deze generatiemethode mag echter alleen voor test- en evaluatiedoeleinden worden gebruikt.
+>
+>Voor normaal gebruik moet de JWT automatisch worden gegenereerd. Voor meer informatie over hoe te om JWTs programmatically te produceren, zie [servicerekeningautorisatiehandleiding](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) op Adobe Developer.
 
 Selecteren **[!UICONTROL Service Account (JWT)]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Generate JWT]**.
 

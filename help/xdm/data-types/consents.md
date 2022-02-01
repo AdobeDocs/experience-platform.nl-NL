@@ -4,9 +4,9 @@ title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2015'
 ht-degree: 0%
 
 ---
@@ -53,10 +53,11 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 {
   "consents": {
     "collect": {
-      "val": "y",
+      "val": "VI",
     },
     "adID": {
-      "val": "VI"
+      "idType": "IDFA",
+      "val": "y"
     },
     "share": {
       "val": "y",
@@ -99,10 +100,11 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 ```json
 "consents": {
   "collect": {
-    "val": "y",
+    "val": "VI",
   },
   "adID": {
-    "val": "VI"
+    "idType": "IDFA",
+    "val": "y"
   },
   "share": {
     "val": "y",
@@ -144,16 +146,18 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 
 ### `adID`
 
-`adID` staat voor de toestemming van de klant om te bepalen of een adverteerder-id (IDFA of GAID) kan worden gebruikt om de klant te koppelen tussen apps op dit apparaat.
+`adID` staat voor de toestemming van de klant om te bepalen of een adverteerder-id kan worden gebruikt om de klant te koppelen tussen apps op dit apparaat.
 
 ```json
 "adID": {
+  "idType": "IDFA",
   "val": "y"
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
+| `idType` | Het type advertentie-id: `IDFA` voor Apple-id voor adverteerders of `GAID` voor Google Advertiser ID, ook wel Android Advertiser ID (AID) genoemd. |
 | `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie de [aanhangsel](#choice-values) voor aanvaarde waarden en definities. |
 
 {style=&quot;table-layout:auto&quot;}
