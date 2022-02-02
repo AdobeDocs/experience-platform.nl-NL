@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
+source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -64,11 +64,11 @@ De **[!UICONTROL Analytics source add data]** wordt weergegeven. Selecteren **[!
 
 Voordat u uw [!DNL Analytics] gegevens aan doelXDM schema, moet u eerst selecteren of u een standaardschema of een douaneschema gebruikt.
 
-Een standaardschema leidt tot een nieuw schema namens u, die het [!DNL Analytics] veldgroep. Als u een standaardschema wilt gebruiken, selecteert u **[!UICONTROL Default schema]**.
+Een standaardschema leidt tot een nieuw schema namens u, die het [!DNL Adobe Analytics ExperienceEvent Template] veldgroep. Als u een standaardschema wilt gebruiken, selecteert u **[!UICONTROL Default schema]**.
 
 ![standaardschema](../../../../images/tutorials/create/analytics/default-schema.png)
 
-Met een aangepast schema kunt u elk beschikbaar schema voor uw [!DNL Analytics] gegevens, zolang dat schema [!DNL Analytics] veldgroep. Als u een aangepast schema wilt gebruiken, selecteert u **[!UICONTROL Custom schema]**.
+Met een aangepast schema kunt u elk beschikbaar schema voor uw [!DNL Analytics] gegevens, zolang dat schema de [!DNL Adobe Analytics ExperienceEvent Template] veldgroep. Als u een aangepast schema wilt gebruiken, selecteert u **[!UICONTROL Custom schema]**.
 
 ![aangepast schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -76,7 +76,7 @@ De [!UICONTROL Mapping] pagina verstrekt een interface om brongebieden aan hun a
 
 >[!TIP]
 >
->Alleen schema&#39;s met de [!DNL Analytics] de groep van het malplaatjegebied wordt getoond in het menu van de schemaselectie. Andere schema&#39;s worden weggelaten. Als er geen aangewezen schema&#39;s beschikbaar voor uw gegevens van de Reeks van het Rapport zijn, dan moet u een nieuw schema tot stand brengen. Voor gedetailleerde stappen bij het creëren van schema&#39;s, zie de gids op [schema&#39;s maken en bewerken in de gebruikersinterface](../../../../../xdm/ui/resources/schemas.md).
+>Alleen schema&#39;s met de [!DNL Adobe Analytics ExperienceEvent Template] de gebiedsgroep wordt getoond in het menu van de schemaselectie. Andere schema&#39;s worden weggelaten. Als er geen aangewezen schema&#39;s beschikbaar voor uw gegevens van de Reeks van het Rapport zijn, dan moet u een nieuw schema tot stand brengen. Voor gedetailleerde stappen bij het creëren van schema&#39;s, zie de gids op [schema&#39;s maken en bewerken in de gebruikersinterface](../../../../../xdm/ui/resources/schemas.md).
 
 ![selectieschema](../../../../images/tutorials/create/analytics/select-schema.png)
 
