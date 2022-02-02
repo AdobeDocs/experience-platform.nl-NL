@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,16 @@ De **[!UICONTROL Analytics source add data]** wordt weergegeven. Selecteren **[!
 >[!IMPORTANT]
 >
 >De functie Data Prep voor ondersteuning van de [!DNL Analytics] De bron is in bèta.
+
+Voordat u uw [!DNL Analytics] gegevens aan doelXDM schema, moet u eerst selecteren of u een standaardschema of een douaneschema gebruikt.
+
+Een standaardschema leidt tot een nieuw schema namens u, die het [!DNL Analytics] veldgroep. Als u een standaardschema wilt gebruiken, selecteert u **[!UICONTROL Default schema]**.
+
+![standaardschema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+Met een aangepast schema kunt u elk beschikbaar schema voor uw [!DNL Analytics] gegevens, zolang dat schema [!DNL Analytics] veldgroep. Als u een aangepast schema wilt gebruiken, selecteert u **[!UICONTROL Custom schema]**.
+
+![aangepast schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 De [!UICONTROL Mapping] pagina verstrekt een interface om brongebieden aan hun aangewezen gebieden van het doelschema in kaart te brengen. Van hier, kunt u douanevariabelen aan nieuwe groepen van het schemagebied in kaart brengen en berekeningen toepassen zoals die door de Prep van Gegevens worden gesteund. Selecteer een doelschema om het toewijzingsproces te starten.
 
