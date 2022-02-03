@@ -6,16 +6,14 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Leer hoe te om verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 1%
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
 # Vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking
-
-## Overzicht {#overview}
 
 Adobe Experience Platform gebruikt [randsegmentatie](../../segmentation/ui/edge-segmentation.md) om klanten toe te laten om publiekssegmenten tot stand te brengen en te richten op hoge schaal, in echt - tijd.
 
@@ -23,11 +21,15 @@ Met deze functie kunt u gebruiksgevallen voor personalisatie op dezelfde pagina 
 
 Dit artikel verstrekt geleidelijke instructies op hoe te om Experience Platform en uw verpersoonlijkingsbestemmingen voor deze gebruiksgevallen te vormen.
 
-## Stap 1: Een SDK-gegevensstroom voor het web van Experience Platforms configureren {#configure-datastream}
+## Stap 1: Een gegevensstroom configureren in de gebruikersinterface voor gegevensverzameling {#configure-datastream}
 
-De eerste stap in het vormen van uw het gebruiksgeval van het verpersoonlijkingsgebruik is een [!DNL Web SDK datastream].
+De eerste stap in vestiging moet uw verpersoonlijkingsbestemming een gegevensstroom voor het Web SDK van het Experience Platform vormen. Dit wordt gedaan in de UI van de Inzameling van Gegevens.
 
-Volg de instructies in de [gegevensstroomconfiguratie](../../edge/fundamentals/datastreams.md) documentatie.
+Bij het configureren van de gegevensstroom, onder **[!UICONTROL Adobe Experience Platform]** ervoor zorgen dat beide **[!UICONTROL Edge Segmentation]** en **[!UICONTROL Personalization Destinations]** zijn geselecteerd.
+
+![Configuratie DataStream](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+Voor meer informatie over hoe u een gegevensstroom instelt, volgt u de instructies in het dialoogvenster [Platform Web SDK-documentatie](../../edge/fundamentals/datastreams.md).
 
 ## Stap 2: Vorm uw verpersoonlijkingsbestemming {#configure-destination}
 
