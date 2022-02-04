@@ -2,14 +2,13 @@
 title: Flicker beheren voor persoonlijke ervaringen met de SDK van Adobe Experience Platform Web
 description: Leer hoe u de SDK van Adobe Experience Platform Web kunt gebruiken om flikkering op gebruikerservaring te beheren.
 keywords: target;flicker;prehideStyle;asynchroon;asynchroon;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
+source-git-commit: e5d279397cab30e997103496beda5265520dca77
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
 
 ---
-
 
 # flikkering beheren
 
@@ -23,9 +22,9 @@ De functie voor flikkerbeheer heeft een aantal fasen:
 
 ## Voorverbergen
 
-Tijdens de voorbereidingsfase gebruikt de SDK de configuratieoptie `prehidingStyle` om een HTML-stijltag te maken en deze aan de DOM toe te voegen om ervoor te zorgen dat grote delen van de pagina worden verborgen. Als u niet zeker weet welke delen van de pagina worden aangepast, kunt u `prehidingStyle` het beste instellen op `body { opacity: 0 !important }`. Zo weet u zeker dat de hele pagina verborgen is. Dit heeft echter het nadeel van het leiden tot slechtere weergaveprestaties voor pagina&#39;s die worden gemeld door gereedschappen zoals Lighthouse, Webpaginatests, enzovoort. Als u de beste weergaveprestaties op de pagina wilt hebben, kunt u `prehidingStyle` het beste instellen op een lijst met containerelementen die de delen van de pagina bevatten die worden aangepast.
+Tijdens de voorverborgen fase gebruikt de SDK de `prehidingStyle` om een HTML-stijltag te maken en deze aan het DOM toe te voegen, zodat grote delen van de pagina worden verborgen. Als u niet zeker weet welke delen van de pagina u wilt aanpassen, kunt u het beste `prehidingStyle` tot `body { opacity: 0 !important }`. Zo weet u zeker dat de hele pagina verborgen is. Dit heeft echter het nadeel van het leiden tot slechtere weergaveprestaties voor pagina&#39;s die worden gemeld door gereedschappen zoals Lighthouse, Webpaginatests, enzovoort. Voor de beste renderingprestaties van de pagina wordt aangeraden `prehidingStyle` aan een lijst van containerelementen die de delen van de pagina bevatten die zullen worden gepersonaliseerd.
 
-Ervan uitgaande dat u een HTML-pagina hebt zoals de onderstaande pagina en dat alleen `bar`- en `bazz`-containerelementen ooit zullen worden aangepast:
+Ervan uitgaande dat u een HTML-pagina hebt, zoals hieronder, en u weet dat alleen `bar` en `bazz` containerelementen zullen ooit worden gepersonaliseerd :
 
 ```html
 <html>
@@ -47,11 +46,11 @@ Ervan uitgaande dat u een HTML-pagina hebt zoals de onderstaande pagina en dat a
 </html>
 ```
 
-Dan `prehidingStyle` zou aan iets als `#bar, #bazz { opacity: 0 !important }` moeten worden geplaatst.
+Vervolgens worden de `prehidingStyle` moet worden ingesteld op iets als `#bar, #bazz { opacity: 0 !important }`.
 
 ## Voorbewerken
 
-De voorbereidingsfase tikt in zodra de SDK de gepersonaliseerde inhoud van de server heeft ontvangen. Tijdens deze fase, wordt de reactie vooraf verwerkt, ervoor zorgend dat de elementen die gepersonaliseerde inhoud moeten bevatten worden verborgen. Nadat deze elementen zijn verborgen, wordt de HTML-stijltag die is gemaakt op basis van de configuratieoptie `prehidingStyle` verwijderd en wordt de HTML-hoofdtekst of de verborgen containerelementen weergegeven.
+De voorbereidingsfase tikt in zodra de SDK de gepersonaliseerde inhoud van de server heeft ontvangen. Tijdens deze fase, wordt de reactie vooraf verwerkt, ervoor zorgend dat de elementen die gepersonaliseerde inhoud moeten bevatten worden verborgen. Nadat deze elementen zijn verborgen, wordt de stijltag HTML gemaakt op basis van de `prehidingStyle` De configuratieoptie wordt verwijderd en de hoofdtekst van de HTML of de verborgen containerelementen worden weergegeven.
 
 ## Renderen
 
@@ -59,7 +58,7 @@ Nadat alle verpersoonlijkingsinhoud met succes is teruggegeven, of als er om het
 
 ## Flicker beheren wanneer SDK asynchroon wordt geladen
 
-U wordt aangeraden de SDK altijd asynchroon te laden voor de beste weergaveprestaties van de pagina. Dit heeft echter enkele gevolgen voor de weergave van gepersonaliseerde inhoud. Wanneer de SDK asynchroon wordt geladen, is het vereist om het voorverborgen fragment te gebruiken. Het voorbeeldfragment moet worden toegevoegd vóór de SDK in de HTML-pagina. Hier volgt een voorbeeldfragment dat het gehele lichaam verbergt:
+U wordt aangeraden de SDK altijd asynchroon te laden voor de beste weergaveprestaties van de pagina. Dit heeft echter enkele gevolgen voor de weergave van gepersonaliseerde inhoud. Wanneer de SDK asynchroon wordt geladen, is het vereist om het voorverborgen fragment te gebruiken. Het voorbeeldfragment moet worden toegevoegd vóór de SDK op de pagina HTML. Hier volgt een voorbeeldfragment dat het gehele lichaam verbergt:
 
 ```html
 <script>
@@ -69,8 +68,8 @@ U wordt aangeraden de SDK altijd asynchroon te laden voor de beste weergaveprest
     var o=e.createElement("style");
     o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
     setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, "body { opacity: 0 !important }", 3000);
+    (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
 </script>
 ```
 
-Om ervoor te zorgen dat de HTML-hoofdtekst of de containerelementen gedurende langere tijd niet worden verborgen, gebruikt het voorverborgen fragment een timer die het fragment standaard na `3000` milliseconden verwijdert. De `3000` milliseconden is de maximumwachttijd. Als de reactie van de server eerder is ontvangen en verwerkt, wordt de voorverborgen HTML-stijltag zo snel mogelijk verwijderd.
+Om ervoor te zorgen dat de hoofdtekst van de HTML of de containerelementen niet gedurende langere tijd verborgen zijn, gebruikt het preHide fragment een tijdopnemer die door gebrek het fragment na verwijdert `3000` milliseconden. De `3000` milliseconden is de maximale wachttijd. Als de reactie van de server eerder is ontvangen en verwerkt, wordt de voorverborgen HTML-stijltag zo snel mogelijk verwijderd.
