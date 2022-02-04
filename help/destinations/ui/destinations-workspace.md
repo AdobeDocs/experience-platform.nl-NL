@@ -4,9 +4,9 @@ title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -64,11 +64,30 @@ Voor meer informatie over bestemmingscategorieën en informatie over elke bestem
 
 ## [!UICONTROL Accounts] {#accounts}
 
-De **[!UICONTROL Accounts]** bevat details over de verbindingen die u hebt gemaakt met verschillende bestemmingen en waarmee u bestaande verbindingsdetails kunt bijwerken. Zie [Accounts bijwerken](update-accounts.md) voor gedetailleerde instructies.
+De **[!UICONTROL Accounts]** bevat details over de verbindingen die u hebt gemaakt met verschillende doelen en waarmee u bestaande accountgegevens kunt bijwerken of verwijderen. Zie de tabel hieronder voor alle informatie die u op elke doelaccount kunt krijgen.
+
+>[!TIP]
+>
+> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Platform] en gebruikt u de ![Knop Segmenten activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]**om segmenten naar dat doel te verzenden.
+> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Platform] en gebruikt u de ![Knop Details bewerken ](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]**knop aan [update](update-accounts.md) de details van een bestaande bestemmingsrekening.
+> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Platform] en gebruikt u de ![Knop Verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**knop aan [delete](delete-destination-account.md) een bestaande bestemmingsrekening.
+
+
+![Het tabblad Accounts](../assets/ui/workspace/destination-account-options.png)
+
+| Element | Beschrijving |
+|---|---|
+| [!UICONTROL Platform] | Het doel waarvoor u de verbinding hebt ingesteld. |
+| [!UICONTROL Connection Type] | Vertegenwoordigt het type van rekeningsverbinding aan uw opslagemmer of bestemming. Afhankelijk van de bestemming, zijn de authentificatieopties: <ul><li>Voor e-mailmarketingdoelen: Kan S3, FTP of Azure Blob zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li><li>Voor Amazon S3-cloudopslagdoelen: Toegangstoets </li><li>Voor SFTP-cloudopslagdoelen: Basisverificatie voor SFTP</li><li>OAuth 1- of OAuth 2-verificatie</li><li>Tokenverificatie</li></ul> |
+| [!UICONTROL Username] | De gebruikersnaam die u in het dialoogvenster [wizard Verbinding maken](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Destinations] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsdataflows die met basisinformatie worden verbonden voor een bestemming worden gecreeerd. |
+| [!UICONTROL Authorized] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Browse] {#browse}
 
-De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen met de **[!UICONTROL Enabled/Disabled]** Schakel het inschakelen in om de bestemming in te stellen op respectievelijk actief of inactief. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door te selecteren stromen **[!UICONTROL Segments]** > **[!UICONTROL Browse]** en selecteert u een segment dat u wilt inspecteren. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
+De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen met de **[!UICONTROL Enabled/Disabled]** Schakel het inschakelen in om de bestemming in te stellen op respectievelijk actief of inactief. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door te selecteren stromen **[!UICONTROL Segments]** > **[!UICONTROL Browse]** en selecteert u een segment dat u wilt inspecteren. Zie de tabel hieronder voor alle informatie die voor elke bestemming wordt verstrekt in het dialoogvenster [!UICONTROL Browse] tab:
 
 >[!TIP]
 >
