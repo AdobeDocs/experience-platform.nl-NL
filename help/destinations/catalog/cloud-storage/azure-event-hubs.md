@@ -3,9 +3,9 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (bèta) [!DNL Azure Event Hubs] verbinding
 description: Creeer een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag naar streamgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 0a45cb49f3eb2bbd6ac1b39962df88b2352eb121
+source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -58,19 +58,37 @@ Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbes
 
 ## Exportgedrag profiel {#profile-export-behavior}
 
-Het Experience Platform optimaliseert het profiel uitvoergedrag aan uw bestemming van de Hubs van de Gebeurtenis Azure, om gegevens naar uw bestemming slechts uit te voeren wanneer de relevante updates aan een profiel na segmentkwalificatie of andere significante gebeurtenissen zijn voorgekomen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
+Experience Platform optimaliseert het gedrag voor het exporteren van profielen naar uw [!DNL Azure Event Hubs] doel, om gegevens naar uw bestemming slechts uit te voeren wanneer de relevante updates aan een profiel na segmentkwalificatie of andere significante gebeurtenissen zijn voorgekomen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
 
-* De profielupdate werd teweeggebracht door een verandering in segmentlidmaatschap voor minstens één van de segmenten die aan de bestemming in kaart werden gebracht. Het profiel is bijvoorbeeld gekwalificeerd voor een van de segmenten die aan het doel zijn toegewezen of heeft een van de segmenten afgesloten die aan het doel zijn toegewezen.
-* De profielupdate is geactiveerd door een wijziging in de [identiteitsbewijs](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de segmenten die aan de bestemming zijn toegewezen, is toegevoegd aan een nieuwe identiteit in het kenmerk Naamplaatje.
-* De profielupdate werd geactiveerd door een wijziging in kenmerken voor ten minste een van de kenmerken die aan de bestemming zijn toegewezen. Een van de kenmerken die in de toewijzingsstap aan het doel is toegewezen, wordt bijvoorbeeld aan een profiel toegevoegd.
+* De profielupdate werd bepaald door een verandering in segmentlidmaatschap voor minstens één van de segmenten in kaart gebracht aan de bestemming. Het profiel is bijvoorbeeld gekwalificeerd voor een van de segmenten die aan het doel zijn toegewezen of heeft een van de segmenten afgesloten die aan het doel zijn toegewezen.
+* De profielupdate is bepaald door een wijziging in het dialoogvenster [identiteitsbewijs](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de segmenten die aan de bestemming zijn toegewezen, is toegevoegd aan een nieuwe identiteit in het kenmerk Naamplaatje.
+* De profielupdate is bepaald door een wijziging in kenmerken voor ten minste een van de kenmerken die aan de bestemming zijn toegewezen. Een van de kenmerken die in de toewijzingsstap aan het doel is toegewezen, wordt bijvoorbeeld aan een profiel toegevoegd.
 
 In alle hierboven beschreven gevallen worden alleen de profielen waarin relevante updates zijn opgetreden, naar uw bestemming geëxporteerd. Bijvoorbeeld, als een segment dat aan de bestemmingsstroom in kaart wordt gebracht honderd leden heeft, en vijf nieuwe profielen voor het segment kwalificeren, is de uitvoer naar uw bestemming incrementeel en omvat slechts de vijf nieuwe profielen.
 
 Alle toegewezen kenmerken worden geëxporteerd voor een profiel, ongeacht de locatie van de wijzigingen. In het voorbeeld hierboven worden alle toegewezen kenmerken voor deze vijf nieuwe profielen geëxporteerd, zelfs als de kenmerken zelf niet zijn gewijzigd.
 
+### Wat bepaalt een gegevensexport en wat wordt opgenomen in de export? {#what-determines-export-what-is-included}
+
+Met betrekking tot de gegevens die voor een bepaald profiel worden geëxporteerd, is het belangrijk dat u de twee verschillende concepten van *wat bepalend is voor het exporteren van gegevens naar uw [!DNL Azure Event Hubs] doel* en *welke gegevens in de uitvoer worden opgenomen*.
+
+| Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
+|---------|----------|
+| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als om het even welke in kaart gebrachte segmenten staten (van ongeldig aan gerealiseerd of van gerealiseerde/bestaande aan het weggaan) veranderen of om het even welke in kaart gebrachte attributen worden bijgewerkt, een bestemmingsuitvoer zou worden weggeduwd.</li><li>Omdat identiteiten momenteel niet kunnen worden toegewezen aan [!DNL Azure Event Hubs] doelen, wijzigingen in een identiteit in een bepaald profiel bepalen ook de export van de bestemming.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Alle segmenten (met de nieuwste lidmaatschapsstatus), ongeacht of ze in de dataflow zijn toegewezen of niet, worden opgenomen in de `segmentMembership` object.</li><li>Alle identiteiten in de `identityMap` object wordt ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de [!DNL Azure Event Hubs] bestemming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+
+{style=&quot;table-layout:fixed&quot;}
+
+Neem bijvoorbeeld deze gegevensstroom naar een [!DNL Azure Event Hubs] doel waar drie segmenten in dataflow worden geselecteerd, en vier attributen worden in kaart gebracht aan de bestemming.
+
+![Amazon Kinesis-doeldatabase](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+
+Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de *drie toegewezen segmenten*. Bij de gegevensexport moet u `segmentMembership` object (zie [Geëxporteerde gegevens](#exported-data) (zie hieronder), zouden andere niet in kaart gebrachte segmenten kunnen verschijnen, als dat bepaalde profiel een lid van hen is. Als een profiel in aanmerking komt voor de klant met het segment DeLorean Cars, maar ook lid is van de segmenten &quot;Terug naar de toekomst&quot; film en science fiction, dan zullen deze andere twee segmenten ook aanwezig zijn in de `segmentMembership` -object van de gegevensexport, ook al worden deze niet toegewezen in de gegevensstroom.
+
+Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
+
 ## Geëxporteerde gegevens {#exported-data}
 
-Uw geëxporteerde [!DNL Experience Platform] gegevenslagen in [!DNL Azure Event Hubs] in JSON-indeling. De onderstaande exportbewerking bevat bijvoorbeeld een profiel dat is gekwalificeerd voor een bepaald segment en dat een ander segment heeft verlaten. Het bevat de voornaam, achternaam, geboortedatum en het persoonlijke e-mailadres van het profielkenmerk. De identiteiten voor dit profiel zijn ECID en e-mail.
+Uw geëxporteerde [!DNL Experience Platform] gegevensterreinen in uw [!DNL Azure Event Hubs] doel in JSON-indeling. Bijvoorbeeld, bevat de hieronder uitvoer een profiel dat voor een bepaald segment heeft gekwalificeerd, een lid van andere twee segmenten is, en een ander segment verliet. Het exporteren bevat ook de voornaam, achternaam, geboortedatum en het persoonlijke e-mailadres van het profielkenmerk. De identiteiten voor dit profiel zijn ECID en e-mail.
 
 ```json
 {
@@ -85,17 +103,25 @@ Uw geëxporteerde [!DNL Experience Platform] gegevenslagen in [!DNL Azure Event 
     "address": "john.doe@acme.com"
   },
   "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
+   "ups":{
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93":{
+         "lastQualificationTime":"2022-01-11T21:24:39Z",
+         "status":"exited"
       },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
+         "lastQualificationTime":"2022-01-02T23:37:33Z",
+         "status":"existing"
+      },
+      "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
+         "lastQualificationTime":"2021-08-25T23:37:33Z",
+         "status":"existing"
+      },
+      "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
+         "lastQualificationTime":"2022-01-11T23:37:33Z",
+         "status":"realized"
       }
-    }
-  },
+   }
+},
   "identityMap": {
     "ecid": [
       {
