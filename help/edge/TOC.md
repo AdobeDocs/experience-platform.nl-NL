@@ -3,12 +3,12 @@ solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
-user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
+user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
-source-git-commit: ccda6d3e16fd6b9966c2f30491feed5fafec47f2
+source-git-commit: 2b6a64bed3033cc5e4f97ed838050dab4400a282
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 16%
+source-wordcount: '146'
+ht-degree: 15%
 
 ---
 
@@ -45,6 +45,7 @@ ht-degree: 16%
       * [Overzicht](personalization/adobe-target/target-overview.md)
       * [Implementatie van één pagina](personalization/adobe-target/spa-implementation.md)
       * [Toegang krijgen tot reactietokens](personalization/adobe-target/accessing-response-tokens.md)
+      * [Dbox-id van derden gebruiken](personalization/adobe-target/using-mbox-3rdpartyid.md)
    * offer decisioning {#offer-decisioning}
       * [Overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Toestemming {#consent}
