@@ -2,9 +2,9 @@
 title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in de Inzameling UI van Gegevens te vormen om aan eindpunten voor authentiek te verklaren die in gebeurtenis door:sturen eigenschappen worden gebruikt.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ U kunt een geheime uitwisseling van het het uitgeven scherm opnieuw proberen of 
 | Geheim type | Protocol opnieuw proberen |
 | --- | --- |
 | [!UICONTROL Token] | Selecteren **[!UICONTROL Exchange Secret]** om de geheime uitwisseling opnieuw te proberen. Deze controle is slechts beschikbaar wanneer er een milieu verbonden aan het geheim is. |
-| [!UICONTROL HTTP] | Als er geen omgeving aan het geheim is gekoppeld, selecteert u **[!UICONTROL Exchange Secret]** de referentie aan base64 om te wisselen. Als een omgeving is gekoppeld, selecteert u **[!UICONTROL Exchange and Deploy Secret]** om uit te wisselen naar base64 en het geheim te gebruiken voor Cloudfare. |
+| [!UICONTROL HTTP] | Als er geen omgeving aan het geheim is gekoppeld, selecteert u **[!UICONTROL Exchange Secret]** de referentie aan base64 om te wisselen. Als een omgeving is gekoppeld, selecteert u **[!UICONTROL Exchange and Deploy Secret]** om uit te wisselen om base64 te gebruiken en het geheim op te stellen. |
 | [!UICONTROL OAuth2] | Selecteren **[!UICONTROL Generate Token]** om de geloofsbrieven uit te wisselen en een toegangstoken van de authentificatieleverancier terug te keren. |
 
 ## Een geheim verwijderen
