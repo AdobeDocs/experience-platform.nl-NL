@@ -2,7 +2,7 @@
 title: Voorbeeld van anonieme blokquery's
 description: Het anonieme blok is een SQL syntaxis die door de Dienst van de Vraag van Adobe Experience Platform wordt gesteund, die u toestaat om een opeenvolging van vragen efficiënt uit te voeren
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -33,18 +33,14 @@ Er moet op worden gewezen dat een blok een uitvoerbare verklaring is en daarom b
 De volgende query toont een voorbeeld van het koppelen van SQL-instructies. Zie de [SQL-syntaxis in Query Service](../sql/syntax.md) voor meer informatie over de gebruikte SQL-syntaxis.
 
 ```SQL
-BEGIN
-     
+$$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
-    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-     
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
     EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
-     
-END;
+END
+$$;
 ```
-
-<!-- The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature. -->
 
 In het onderstaande voorbeeld: `SET` blijft het resultaat van een `SELECT` query in de opgegeven lokale variabele. De variabele is scoped aan het anonieme blok.
 
@@ -53,10 +49,11 @@ De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). H
 Een gegevensbestandmomentopname is een read-only, statische mening van een SQL gegevensbestand van de Server. Voor meer [informatie over de momentopnameclausule](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
 
 ```SQL
-BEGIN                                             
+$$ BEGIN                                             
   SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
-  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
-END;
+  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                           
+END
+$$;
 ```
 
 ## Volgende stappen

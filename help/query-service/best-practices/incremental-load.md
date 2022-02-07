@@ -2,7 +2,7 @@
 title: Steekproef incrementele oplaadquery's
 description: De stijgende ladingseigenschap gebruikt zowel anonieme blok als momentopnamefuncties om een dichtbij oplossing in real time te verstrekken voor het bewegen van gegevens van het gegevensholoader aan uw gegevenspakhuis terwijl het negeren van passende gegevens.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
+source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
@@ -65,7 +65,7 @@ INSERT INTO
 >De `history_meta('source table name')` is een geschikte methode die wordt gebruikt om toegang tot beschikbare momentopname in een dataset te verkrijgen.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -86,7 +86,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END 
+$$;
 ```
 
 4 Gebruik de incrementele gegevensbelastingslogica in het anonieme blokvoorbeeld hieronder om het even welke nieuwe gegevens van de brondataset (sinds meest recente timestamp) toe te staan om aan de bestemmingstabel bij een regelmatige kadentie worden verwerkt en worden toegevoegd. In het voorbeeld worden gegevens gewijzigd in `DIM_TABLE_ABC` wordt verwerkt en toegevoegd aan `DIM_TABLE_ABC_incremental`.
@@ -96,7 +97,7 @@ EXCEPTION
 > `_ID` is de primaire sleutel in beide `DIM_TABLE_ABC_Incremental` en `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -117,7 +118,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 Deze logica kan op om het even welke lijst worden toegepast om stijgende lasten uit te voeren.
@@ -137,7 +139,7 @@ SET resolve_fallback_snapshot_on_failure=true;
 Het volledige codeblok ziet er als volgt uit:
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -158,7 +160,8 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 ## Volgende stappen
