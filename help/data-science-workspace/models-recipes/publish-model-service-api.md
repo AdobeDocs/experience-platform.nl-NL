@@ -1,30 +1,29 @@
 ---
 keywords: Experience Platform;een model publiceren;Data Science Workspace;populaire onderwerpen;sensei machine learning api
 solution: Experience Platform
-title: Een model publiceren als een service met de API voor leren van Sensei-machines
+title: Een model publiceren als een service met de API voor leren door Sensei Machine
 topic-legacy: tutorial
 type: Tutorial
-description: Deze zelfstudie behandelt het publiceren van een model als service met behulp van de API voor leren van Sensei-machines.
+description: In deze zelfstudie wordt beschreven hoe u een model publiceert als service met de API voor leren van Sensei Machine.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-translation-type: tm+mt
-source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 0%
 
 ---
 
-# Een model publiceren als een service met [!DNL Sensei Machine Learning API]
+# Een model publiceren als een service met de [!DNL Sensei Machine Learning API]
 
-Deze zelfstudie behandelt het proces waarbij een model als service wordt gepubliceerd met de [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Deze zelfstudie behandelt het proces voor het publiceren van een model als service met behulp van de [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de Adobe Experience Platform Data Science Workspace. Voordat u met deze zelfstudie begint, bekijkt u het [Overzicht van de Data Science Workspace](../home.md) voor een introductie op hoog niveau van de service.
+Deze zelfstudie vereist een goed begrip van de Adobe Experience Platform Data Science Workspace. Lees voordat u met deze zelfstudie begint de [Overzicht van de Data Science Workspace](../home.md) voor een introductie op hoog niveau van de dienst.
 
-Om samen met dit leerprogramma te volgen, moet u een bestaande Motor van ML, Instantie van XML, en Experiment hebben. Raadpleeg de zelfstudie over het importeren van een verpakt recept](./import-packaged-recipe-api.md) voor meer informatie over het maken van deze recept in de API.[
+Om samen met dit leerprogramma te volgen, moet u een bestaande Motor van ML, Instantie van XML, en Experiment hebben. Raadpleeg de zelfstudie voor meer informatie over het maken van deze bestanden in de API [een verpakt recept importeren](./import-packaged-recipe-api.md).
 
-Tot slot alvorens deze zelfstudie te beginnen, te herzien [aan de slag ](../api/getting-started.md) sectie van de ontwikkelaarsgids voor belangrijke informatie die u moet kennen om met succes vraag aan [!DNL Sensei Machine Learning] API te maken, met inbegrip van de vereiste kopballen die door dit leerprogramma worden gebruikt:
+Voordat u met deze zelfstudie begint, moet u eerst de [aan de slag](../api/getting-started.md) van de ontwikkelaarsgids voor belangrijke informatie die u moet weten om met succes vraag aan te maken [!DNL Sensei Machine Learning] API, inclusief de vereiste kopteksten die in deze zelfstudie worden gebruikt:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -40,7 +39,7 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in de
 
 | Term | Definitie |
 | --- | --- |
-| **Machine Learning Instance (XML-instantie)** | Een instantie van een [!DNL Sensei] Motor voor een bepaalde huurder, die specifieke gegevens, parameters, en [!DNL Sensei] code bevat. |
+| **Machine Learning Instance (XML-instantie)** | Een instantie van een [!DNL Sensei] Motor voor een bepaalde huurder, die specifieke gegevens, parameters bevat, en [!DNL Sensei] code. |
 | **Experimenteer** | Een overkoepelende entiteit voor het houden van de looppas van de trainingsExperiment, het scoren Experimentloops, of allebei. |
 | **Gepland experiment** | Een term die de automatisering van de looppas van het opleidings of het schatten van Experiment beschrijft, die door een user-defined programma wordt geregeld. |
 | **Experimenteer uitvoeren** | Een specifiek geval van opleiding of het scoren van Experimenten. Meerdere experimentatieroutes van een bepaalde expert kunnen verschillen in waarden voor gegevenssets die worden gebruikt voor training of scoring. |
@@ -84,11 +83,11 @@ curl -X POST
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `mlInstanceId` | De bestaande die Instantie van XML identificatie, de opleidingUitvoer van de Experiment wordt gebruikt om de Dienst van ML tot stand te brengen zou aan dit bepaalde Instantie van XML moeten beantwoorden. |
+| `mlInstanceId` | De bestaande Instantie van XML identificatie, de opleiding de Looppas van de Experiment die wordt gebruikt om de Dienst van ML tot stand te brengen zou aan dit bepaalde Instantie van XML moeten beantwoorden. |
 | `trainingExperimentId` | Identificatie van het experiment overeenkomstig de identificatie van het XML-exemplaar. |
 | `trainingExperimentRunId` | Een bepaalde opleiding van de Experimentlooppas die voor het publiceren van de Dienst van ML moet worden gebruikt. |
 | `scoringDataSetId` | Identificatie die verwijst naar de specifieke gegevensset die moet worden gebruikt voor geplande scoring-experimentuitvoeren. |
-| `scoringTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor het scoren van experimentele runtime. Een waarde van `10080` betekent bijvoorbeeld dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor elke geplande proefrun met scoring. Een waarde van `0` zal geen gegevens filteren, alle gegevens binnen de dataset wordt gebruikt voor het scoren. |
+| `scoringTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor het scoren van experimentele runtime. Bijvoorbeeld een waarde van `10080` betekent dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor elke geplande scoring Experimentrun. De waarde van `0` zullen geen gegevens filtreren, worden alle gegevens binnen de dataset gebruikt voor het scoren. |
 | `scoringSchedule` | Bevat details betreffende geplande het scoren van de Runnen van de Experiment. |
 | `scoringSchedule.startTime` | Datumtijd die aangeeft wanneer de scoring moet worden gestart. |
 | `scoringSchedule.endTime` | Datumtijd die aangeeft wanneer de scoring moet worden gestart. |
@@ -96,7 +95,7 @@ curl -X POST
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van de zojuist gemaakte ML-service, inclusief de unieke `id` en `scoringExperimentId` voor de bijbehorende studie.
+Een succesvolle reactie keert de details van de pas gecreëerde Dienst van ML, met inbegrip van zijn unieke terug `id` en de `scoringExperimentId` voor de bijbehorende studie.
 
 
 ```JSON
@@ -131,7 +130,7 @@ Merk op dat de Dienst van XML kan worden gecreeerd gebruikend een Instantie van 
 
 ### ML Service met gepland experiment voor scoring {#ml-service-with-scheduled-experiment-for-scoring}
 
-U kunt de Dienst van ML tot stand brengen door een Instantie van XML met geplande Runnen van de Experiment voor het scoring te publiceren, die tot een gewone Experimententiteit voor opleiding zal leiden. Er wordt een serie trainingsexperimenten gegenereerd die wordt gebruikt voor alle geplande evaluatiereacties voor scores. Zorg ervoor dat de `mlInstanceId`, `trainingDataSetId` en `scoringDataSetId` vereist zijn voor het maken van de ML-service en dat deze bestaan en geldige waarden zijn.
+U kunt de Dienst van ML tot stand brengen door een Instantie van XML met geplande Runnen van de Experiment voor het scoring te publiceren, die tot een gewone Experimententiteit voor opleiding zal leiden. Er wordt een serie trainingsexperimenten gegenereerd die wordt gebruikt voor alle geplande evaluatiereacties voor scores. Zorg ervoor dat u beschikt over de `mlInstanceId`, `trainingDataSetId`, en `scoringDataSetId` vereist voor de verwezenlijking van de Dienst van ML, en dat zij bestaan en geldige waarden zijn.
 
 **API-indeling**
 
@@ -168,9 +167,9 @@ curl -X POST
 | --- | --- |
 | `mlInstanceId` | De bestaande die Instantie van XML identificatie, die de Instantie van XML vertegenwoordigt wordt gebruikt om de Dienst van ML tot stand te brengen. |
 | `trainingDataSetId` | Identificatie die verwijst naar de specifieke gegevensverzameling die moet worden gebruikt voor opleidingsexperimenten. |
-| `trainingTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor trainingsexperimenten. De waarde `"10080"` betekent bijvoorbeeld dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor de uitvoering van het trainingsexperiment. De waarde `"0"` filtert geen gegevens, alle gegevens in de gegevensset worden gebruikt voor training. |
+| `trainingTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor trainingsexperimenten. Bijvoorbeeld een waarde van `"10080"` betekent dat gegevens uit de afgelopen 10080 minuten of 168 uur zullen worden gebruikt voor de opleiding die wordt uitgevoerd door een expert. De waarde van `"0"` geen gegevens filteren, worden alle gegevens in de gegevensset gebruikt voor training. |
 | `scoringDataSetId` | Identificatie die verwijst naar de specifieke gegevensset die moet worden gebruikt voor geplande scoring-experimentuitvoeren. |
-| `scoringTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor het scoren van experimentele runtime. Een waarde van `"10080"` betekent bijvoorbeeld dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor elke geplande proefrun met scoring. Een waarde van `"0"` zal geen gegevens filteren, alle gegevens binnen de dataset wordt gebruikt voor het scoren. |
+| `scoringTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor het scoren van experimentele runtime. Bijvoorbeeld een waarde van `"10080"` betekent dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor elke geplande scoring Experimentrun. De waarde van `"0"` zullen geen gegevens filtreren, worden alle gegevens binnen de dataset gebruikt voor het scoren. |
 | `scoringSchedule` | Bevat details betreffende geplande het scoren van de Runnen van de Experiment. |
 | `scoringSchedule.startTime` | Datumtijd die aangeeft wanneer de scoring moet worden gestart. |
 | `scoringSchedule.endTime` | Datumtijd die aangeeft wanneer de scoring moet worden gestart. |
@@ -178,7 +177,7 @@ curl -X POST
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de pas gecreëerde Dienst van ML terug. Dit omvat de unieke `id` van de service, evenals de `trainingExperimentId` en `scoringExperimentId` voor de bijbehorende experimenten met training en scoring.
+Een succesvolle reactie keert de details van de pas gecreëerde Dienst van ML terug. Dit omvat het unieke van de dienst `id`en de `trainingExperimentId` en `scoringExperimentId` voor de overeenkomstige experimenten met opleiding en scoring.
 
 ```JSON
 {
@@ -202,7 +201,7 @@ Een succesvolle reactie keert de details van de pas gecreëerde Dienst van ML te
 }
 ```
 
-### ML Service met geplande experimenten voor training en scores {#ml-service-with-scheduled-experiments-for-training-and-scoring}
+### ML Service met geplande experimenten voor training en scoring {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 Om een bestaande Instantie van XML als Dienst van ML met geplande opleiding en het scoren de Loppen van de Experimenten te publiceren, moet u zowel opleidings als het scoren programma&#39;s verstrekken. Wanneer een Dienst van ML van deze configuratie wordt gecreeerd, worden de geplande entiteiten van de Experiment voor zowel opleiding als het scoren ook gecreeerd. Opleiding- en scoringprogramma&#39;s hoeven niet hetzelfde te zijn. Tijdens het uitvoeren van een scoring wordt het meest recente trainingsmodel dat door de geplande trainingsexperimentatierouts is gemaakt, opgehaald en gebruikt voor de geplande scoring.
 
@@ -215,7 +214,7 @@ POST /mlServices
 **Verzoek**
 
 ```SHELL
-curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices' 
+curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
   -H 'x-gw-ims-org-id: {IMS_ORG}' 
@@ -245,9 +244,9 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 | --- | --- |
 | `mlInstanceId` | De bestaande die Instantie van XML identificatie, die de Instantie van XML vertegenwoordigt wordt gebruikt om de Dienst van ML tot stand te brengen. |
 | `trainingDataSetId` | Identificatie die verwijst naar de specifieke gegevensverzameling die moet worden gebruikt voor opleidingsexperimenten. |
-| `trainingTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor trainingsexperimenten. De waarde `"10080"` betekent bijvoorbeeld dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor de uitvoering van het trainingsexperiment. De waarde `"0"` filtert geen gegevens, alle gegevens in de gegevensset worden gebruikt voor training. |
+| `trainingTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor trainingsexperimenten. Bijvoorbeeld een waarde van `"10080"` betekent dat gegevens uit de afgelopen 10080 minuten of 168 uur zullen worden gebruikt voor de opleiding die wordt uitgevoerd door een expert. De waarde van `"0"` geen gegevens filteren, worden alle gegevens in de gegevensset gebruikt voor training. |
 | `scoringDataSetId` | Identificatie die verwijst naar de specifieke gegevensset die moet worden gebruikt voor geplande scoring-experimentuitvoeren. |
-| `scoringTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor het scoren van experimentele runtime. Een waarde van `"10080"` betekent bijvoorbeeld dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor elke geplande proefrun met scoring. Een waarde van `"0"` zal geen gegevens filteren, alle gegevens binnen de dataset wordt gebruikt voor het scoren. |
+| `scoringTimeframe` | Een geheel getal dat minuten vertegenwoordigt voor het filteren van gegevens die moeten worden gebruikt voor het scoren van experimentele runtime. Bijvoorbeeld een waarde van `"10080"` betekent dat gegevens uit de afgelopen 10080 minuten of 168 uur worden gebruikt voor elke geplande scoring Experimentrun. De waarde van `"0"` zullen geen gegevens filtreren, worden alle gegevens binnen de dataset gebruikt voor het scoren. |
 | `trainingSchedule` | Bevat details betreffende de geplande looppas van het trainingsexperiment. |
 | `scoringSchedule` | Bevat details betreffende geplande het scoren van de Runnen van de Experiment. |
 | `scoringSchedule.startTime` | Datumtijd die aangeeft wanneer de scoring moet worden gestart. |
@@ -256,7 +255,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de pas gecreëerde Dienst van ML terug. Hieronder vallen de unieke `id` van de service, evenals de `trainingExperimentId` en `scoringExperimentId` van de bijbehorende training- en scoring-experimenten. In het onderstaande voorbeeldantwoord suggereert de aanwezigheid van `trainingSchedule` en `scoringSchedule` dat de Experimententiteiten voor training en scoring geplande experimenten zijn.
+Een succesvolle reactie keert de details van de pas gecreëerde Dienst van ML terug. Dit omvat het unieke van de dienst `id`en de `trainingExperimentId` en `scoringExperimentId` van de overeenkomstige opleiding- en studieprogramma-experimenten. In het onderstaande voorbeeldantwoord wordt de aanwezigheid van `trainingSchedule` en `scoringSchedule` stelt voor dat de experimenten voor opleiding en scoring gepland zijn als experimenten.
 
 ```JSON
 {
@@ -285,9 +284,9 @@ Een succesvolle reactie keert de details van de pas gecreëerde Dienst van ML te
 }
 ```
 
-## Zoek de Dienst {#retrieving-ml-services} van ML
+## Zoek op de Dienst van ML {#retrieving-ml-services}
 
-U kunt een bestaande Dienst van ML opzoeken door `GET` verzoek aan `/mlServices` te doen en unieke `id` van de Dienst van ML in de weg te verstrekken.
+U kunt omhoog een bestaande Dienst van ML kijken door een `GET` verzoek om `/mlServices` en de unieke `id` van de dienst van ML in de weg.
 
 **API-indeling**
 
@@ -297,7 +296,7 @@ GET /mlServices/{SERVICE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SERVICE_ID}` | De unieke `id` van de ML-service die u opzoekt. |
+| `{SERVICE_ID}` | De unieke `id` van de dienst van ML u omhoog kijkt. |
 
 **Verzoek**
 
@@ -342,12 +341,12 @@ Een succesvolle reactie keert de details van de Dienst van ML terug.
 
 >[!NOTE]
 >
->Het terugwinnen van de verschillende Diensten van ML kan een reactie met meer of minder sleutel-waarde paren terugkeren. Het bovenstaande antwoord is een voorstelling van een [ML-service met zowel geplande training als het scoren van Experimentloops](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>Het terugwinnen van de verschillende Diensten van ML kan een reactie met meer of minder sleutel-waarde paren terugkeren. Het bovenstaande antwoord is een weergave van een [ML-service met zowel geplande trainings- als scoring-experimentbanen](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Training of scores plannen
 
-Als u scoring en training wilt plannen voor een ML-service die al is gepubliceerd, kunt u dit doen door de bestaande ML-service bij te werken met een `PUT`-verzoek op `/mlServices`.
+Als u scoring en training wilt plannen voor een ML-service die al is gepubliceerd, kunt u dit doen door de bestaande ML-service bij te werken met een `PUT` verzoek op `/mlServices`.
 
 **API-indeling**
 
@@ -357,11 +356,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SERVICE_ID}` | De unieke `id` van de XML-service die u bijwerkt. |
+| `{SERVICE_ID}` | De unieke `id` van de dienst van ML u bijwerkt. |
 
 **Verzoek**
 
-De volgende aanvraag plant training en scoring voor een bestaande ML-service door de toetsen `trainingSchedule` en `scoringSchedule` met hun respectievelijke toetsen `startTime`, `endTime` en `cron` toe te voegen.
+De volgende verzoekprogramma&#39;s opleiding en het scoren voor een bestaande Dienst van ML door toe te voegen `trainingSchedule` en `scoringSchedule` toetsen met hun respectievelijke `startTime`, `endTime`, en `cron` toetsen.
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -394,7 +393,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Probeer niet de `startTime` te wijzigen voor bestaande geplande training en scoring-taken. Als de `startTime` moet worden gewijzigd, kunt u overwegen hetzelfde model te publiceren en opleidings- en scoring-taken opnieuw te plannen.
+>Probeer niet de opdracht `startTime` over bestaande geplande opleidings- en scoretaken. Als de `startTime` moet worden gewijzigd, kunt u overwegen hetzelfde model te publiceren en opleidings- en scoretaken opnieuw te plannen.
 
 **Antwoord**
 

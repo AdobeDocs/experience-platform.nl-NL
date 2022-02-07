@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten en metriek met behulp van de Flow Service API.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 0%
@@ -15,36 +15,36 @@ ht-degree: 0%
 
 # Dataflows gebruiken met de Flow Service API
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie behandelt de stappen voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten, en metriek die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruiken.
+In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten en metriek met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow ID hebt, selecteer uw schakelaar van keus van [bronnen overzicht](../../home.md) en volg de stappen geschetst alvorens dit leerprogramma te proberen.
+Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow-id hebt, selecteert u de gewenste connector in het menu [overzicht van bronnen](../../home.md) en voer de stappen uit die zijn beschreven voordat u deze zelfstudie uitvoert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om stroomlooppas met succes te controleren gebruikend [!DNL Flow Service] API.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Monitordoorloopstukken
 
-Zodra u een gegevensstroom hebt gemaakt, voer een verzoek van de GET aan [!DNL Flow Service] API uit.
+Zodra u een gegevensstroom hebt gemaakt, voer een verzoek van de GET aan [!DNL Flow Service] API.
 
 **API-indeling**
 
@@ -64,7 +64,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id` waarde voor dataflow u wilt controleren. |
+| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt controleren. |
 
 **Verzoek**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`) terug.
+Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`).
 
 ```json
 {
@@ -193,7 +193,7 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
                         "outputFileCount": 1,
                         "extensions": {
                             "manifest": {
-                                "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
+                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
                             }
                         }
                     },
@@ -207,8 +207,8 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
                         ],
                         "extensions": {
                             "manifest": {
-                                "failedRecords": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
+                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
+                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
                             },
                             "errors": [
                                 {
@@ -256,4 +256,4 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u metriek en fouteninformatie over uw gegevensstroom teruggewonnen gebruikend [!DNL Flow Service] API. U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie de zelfstudie over [het controleren van gegevensstromen gebruikend het gebruikersinterface](../ui/monitor.md)
+Door deze zelfstudie te volgen, hebt u metriek en fouteninformatie over uw gegevensstroom teruggewonnen gebruikend [!DNL Flow Service] API. U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie de zelfstudie op [gegevens controleren met behulp van de gebruikersinterface](../ui/monitor.md)
