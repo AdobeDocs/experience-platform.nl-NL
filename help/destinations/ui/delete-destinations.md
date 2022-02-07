@@ -4,9 +4,9 @@ title: Doelen verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen waarmee een bestaand doel in de gebruikersinterface van Adobe Experience Platform kan worden verwijderd
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
@@ -19,44 +19,39 @@ In de Adobe Experience Platform-gebruikersinterface kunt u bestaande verbindinge
 
 Als u een bestemming verwijdert, worden bestaande gegevensstromen naar die bestemming verwijderd. Alle segmenten die aan de bestemmingen worden geactiveerd die u schrapt worden unmapped alvorens dataflow wordt geschrapt.
 
-Er zijn twee manieren u bestemmingen van [!DNL Platform] [!DNL UI] kunt schrappen. U kunt:
+Er zijn twee manieren u bestemmingen van kunt schrappen [!DNL Platform] [!DNL UI]. U kunt:
 
-* [Doelen verwijderen via het tabblad [!UICONTROL Browse]](#delete-browse-tab)
+* [Doelen verwijderen uit het dialoogvenster [!UICONTROL Browse] tab](#delete-browse-tab)
 * [Doelen verwijderen van de pagina met bestemmingsdetails](#delete-destination-details-page)
-
->[!IMPORTANT]
->
->Hoewel u bestaande *verbindingen aan bestemmingen* kunt schrappen, zoals die in dit artikel wordt beschreven, staat het Platform momenteel niet u toe om bestaande *[bestemmingsrekeningen](/help/destinations/ui/destinations-workspace.md#accounts)* te schrappen.
 
 ## Doelen verwijderen op het tabblad Bladeren{#delete-browse-tab}
 
-Voer de onderstaande stappen uit om een doel te verwijderen uit het tabblad [!UICONTROL Browse].
+Voer de onderstaande stappen uit om een doel te verwijderen uit de [!UICONTROL Browse] tab.
 
-1. Meld u aan bij [Experience Platform UI](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** van de hoogste kopbal.
+1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** in de bovenste koptekst.
 
    ![Bladeren door doelen](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![Filter-pictogram](../assets/ui/delete-destinations/filter.png) linksboven om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Filterpictogram selecteren ![Filter-pictogram](../assets/ui/delete-destinations/filter.png) bovenaan links om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![Filterdoelen](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecteer de ![Meer knoop](../assets/ui/delete-destinations/more-icon.png) in de kolom van de Naam en selecteer dan ![knoop van de Schrapping](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** om een bestaande bestemmingsverbinding te verwijderen.
+3. Selecteer ![Meer, knop](../assets/ui/delete-destinations/more-icon.png) in de kolom Naam en selecteer vervolgens ![Knop Verwijderen](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** om een bestaande doelverbinding te verwijderen.
    ![Doelen verwijderen](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Selecteer **[!UICONTROL Delete]** om de verwijdering van de bestemmingsverbinding te bevestigen.
+4. Selecteren **[!UICONTROL Delete]** om de verwijdering van de bestemmingsverbinding te bevestigen.
 
    ![Doel verwijderen bevestigen](../assets/ui/delete-destinations/delete-destinations-confirm.png)
-
 
 ## Doelen verwijderen van de pagina met bestemmingsdetails{#delete-destination-details-page}
 
 Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina met doeldetails.
 
-1. Meld u aan bij [Experience Platform UI](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** van de hoogste kopbal.
+1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** in de bovenste koptekst.
 
    ![Bladeren door doelen](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![Filter-pictogram](../assets/ui/delete-destinations/filter.png) linksboven om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Filterpictogram selecteren ![Filter-pictogram](../assets/ui/delete-destinations/filter.png) bovenaan links om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![Filterdoelen](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -64,7 +59,7 @@ Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina 
 
    ![Doel selecteren](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * Als de bestemming bestaande gegevensstromen heeft, wordt u genomen aan [!UICONTROL Dataflow runs] tabel.
+   * Als de bestemming bestaande gegevensstromen heeft, wordt u genomen aan [!UICONTROL Dataflow runs] tab.
 
       ![Tabblad DataFlow-uitvoering](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
@@ -72,15 +67,14 @@ Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina 
 
       ![Doelgegevens](../assets/ui/delete-destinations/destination-details-empty.png)
 
-
-4. Selecteer **[!UICONTROL Delete]** in het juiste spoor.
+4. Selecteren **[!UICONTROL Delete]** in het rechterspoor.
 
    ![Doel verwijderen](../assets/ui/delete-destinations/delete-destinations-button.png)
 
-5. Selecteer **[!UICONTROL Delete]** in de bevestigingsdialoog om de bestemming te verwijderen.
+5. Selecteren **[!UICONTROL Delete]** in het bevestigingsdialoogvenster om het doel te verwijderen.
 
    ![Doel bevestigen verwijderen](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
    >[!NOTE]
    >
-   >Afhankelijk van het laden van de server kan het enkele minuten duren voordat [!DNL Platform] het doel heeft verwijderd.
+   >Afhankelijk van het laden van de server kan het enkele minuten duren [!DNL Platform] om het doel te verwijderen.
