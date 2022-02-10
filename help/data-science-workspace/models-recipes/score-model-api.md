@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform;Score a model;Data Science Workspace;populaire onderwerpen;sensei machine learning api
 solution: Experience Platform
-title: Score een model met behulp van de Sensei Machine Learning API
+title: Score een model met de Sensei Machine Learning-API
 topic-legacy: tutorial
 type: Tutorial
-description: Deze zelfstudie laat u zien hoe u de API's voor leren van Sensei-machines kunt gebruiken om een experimentele en experimentele versie te maken.
+description: Deze zelfstudie laat u zien hoe u de API's voor leren van Sensei Machine Learning kunt gebruiken om een expert en een experimentele run te maken.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
 
 # Score een model gebruikend [!DNL Sensei Machine Learning API]
 
-Deze zelfstudie laat u zien hoe u de API&#39;s kunt gebruiken om een experimenteerprogramma en een experimentele versie te maken. Raadpleeg [dit document](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html) voor een gedetailleerde lijst met API-documentatie.
+Deze zelfstudie laat u zien hoe u de API&#39;s kunt gebruiken om een experimenteerprogramma en een experimentele versie te maken. Raadpleeg voor een lijst met alle eindpunten in de API voor leren van Sensei Machine de koppeling naar [dit document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Een geplande expert voor scoring maken
 
-Net als voor geplande experimenten voor training wordt het maken van een gepland experiment voor scoring ook uitgevoerd door het opnemen van een sectie `template` in de parameter body. Daarnaast wordt het veld `name` onder `tasks` in de hoofdtekst ingesteld op `score`.
+Net als voor geplande trainingsexperimenten wordt ook een gepland experiment voor scoring ontwikkeld door een `template` aan de parameter body. Daarnaast worden de `name` veld onder `tasks` in de hoofdtekst wordt ingesteld als `score`.
 
-Hieronder ziet u een voorbeeld van het maken van een Experiment die elke 20 minuten start vanaf `startTime` en wordt uitgevoerd tot `endTime`.
+Hieronder ziet u een voorbeeld van het maken van een experiment dat elke 20 minuten wordt uitgevoerd, te beginnen bij `startTime` en loopt tot `endTime`.
 
 **Verzoek**
 
@@ -110,7 +109,7 @@ Hier volgt de reactie na het maken van het geplande experiment.
 
 ### Een experimentele score maken
 
-Met het getrainde model kunnen we nu een Experimentele run voor scoring maken. De waarde van de `modelId` parameter is de `id` parameter die in het Model hierboven verzoek van de GET wordt teruggekeerd.
+Met het getrainde model kunnen we nu een Experimentele run voor scoring maken. De waarde van de `modelId` parameter is `id` parameter die hierboven in de GET Model-aanvraag is geretourneerd.
 
 **Verzoek**
 
@@ -219,7 +218,7 @@ Aangezien er meerdere experimentele runtime&#39;s zijn voor een specifiek experi
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland Experiment vóór zijn `endTime` wilt ophouden, kan dit worden gedaan door een verzoek van DELETE aan `{EXPERIMENT_ID}` te vragen
+Als u de uitvoering van een gepland experiment wilt stoppen vóór de uitvoering ervan `endTime`, kan dit worden gedaan door een verzoek van DELETE aan `{EXPERIMENT_ID}`
 
 **Verzoek**
 
