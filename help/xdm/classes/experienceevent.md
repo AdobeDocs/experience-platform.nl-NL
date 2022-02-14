@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-klasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent en aanbevolen procedures voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ De volgende secties behandelen beste praktijken voor het ontwerpen van uw op geb
 
 De basis `timestamp` veld van een gebeurtenisschema kan **alleen** de waarneming van het evenement zelf vertegenwoordigen en in het verleden moeten plaatsvinden. Als voor uw segmentatiegebruik tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen, moeten deze waarden elders in het schema van de Experience-gebeurtenis worden beperkt.
 
-Als een bedrijf in de reis- en gastsector bijvoorbeeld een vluchtreserveringsevenement modelleert, moet de klasse `timestamp` wordt het tijdstip weergegeven waarop de reserveringsgebeurtenis is waargenomen. Andere tijdstempels die verband houden met de gebeurtenis, zoals de begindatum van de reisreservering, moeten worden vastgelegd in afzonderlijke velden die worden verschaft door standaard- of aangepaste veldgroepen.
+Als een bedrijf in de reis- en gastsector bijvoorbeeld een vluchtreserveringsevenement modelleert, `timestamp` wordt het tijdstip weergegeven waarop de reserveringsgebeurtenis is waargenomen. Andere tijdstempels die verband houden met de gebeurtenis, zoals de begindatum van de reisreservering, moeten worden vastgelegd in afzonderlijke velden die worden verschaft door standaard- of aangepaste veldgroepen.
 
 ![](../images/classes/experienceevent/timestamps.png)
 
@@ -118,6 +118,10 @@ In de volgende tabel worden de toegestane waarden voor `eventType`, alsmede de d
 | `directMarketing.emailDelivered` | Er is een e-mailbericht verzonden naar de e-mailservice van een persoon |
 | `directMarketing.emailOpened` | Een persoon heeft een marketingbericht geopend. |
 | `directMarketing.emailUnsubscribed` | Een persoon die zich niet heeft geabonneerd op een marketingbericht. |
+| `inappmessageTracking.dismiss` | Een bericht in de app is afgewezen. |
+| `inappmessageTracking.display` | Er is een bericht in de app weergegeven. |
+| `inappmessageTracking.interact` | Er is interactie met een bericht in de app. |
+| `leadOperation.callWebhook` | Er is een webhaak opgeroepen als reactie op een lead. |
 | `leadOperation.convertLead` | Een lead is omgezet. |
 | `leadOperation.interestingMoment` | Er is een interessant moment opgenomen voor een persoon. |
 | `leadOperation.newLead` | Er is een lead gemaakt. |
