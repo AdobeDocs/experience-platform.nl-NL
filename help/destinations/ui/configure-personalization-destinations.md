@@ -6,9 +6,9 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Leer hoe te om verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
+source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Adobe Experience Platform gebruikt [randsegmentatie](../../segmentation/ui/edge-
 Met deze functie kunt u gebruiksgevallen voor personalisatie op dezelfde pagina en op de volgende pagina configureren.
 
 Dit artikel verstrekt geleidelijke instructies op hoe te om Experience Platform en uw verpersoonlijkingsbestemmingen voor deze gebruiksgevallen te vormen.
+
+Bekijk bovendien de video hieronder voor een overzicht van het configuratieproces van begin tot eind.
+
+>[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
 ## Stap 1: Een gegevensstroom configureren in de gebruikersinterface voor gegevensverzameling {#configure-datastream}
 
