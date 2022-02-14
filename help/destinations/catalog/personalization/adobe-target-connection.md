@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](..
 Een huisverhuurbedrijf en verkoopbedrijf willen hun homepage met een banner personaliseren, die op de kwalificaties van het klantensegment in Adobe Experience Platform wordt gebaseerd. Het bedrijf kan selecteren welk publiek een persoonlijke ervaring zou moeten krijgen en hen naar Adobe Target sturen als doelcriterium voor hun Target-aanbieding.
 
 ## Verbinden met de bestemming {#connect}
+
+>[!IMPORTANT]
+>
+>Voordat u een [!DNL Adobe Target] verbinding, adviseren wij u onze gids over hoe te lezen [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/configure-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platforms.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"

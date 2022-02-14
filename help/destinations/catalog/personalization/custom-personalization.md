@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,10 @@ Een homepage- en verkoopwebsite wil hun homepage aanpassen op basis van segmentk
 Dezelfde website kan on-site advertenties aanwijzen met een andere set segmenten van Adobe Experience Platform als doelcriteria, waarbij een afzonderlijke aangepaste personalisatiebestemming voor de advertentieserver wordt gebruikt.
 
 ## Verbinden met de bestemming {#connect}
+
+>[!IMPORTANT]
+>
+>Voordat u een aangepaste verpersoonlijkingsverbinding maakt, raden we u aan onze handleiding te lezen over hoe u [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/configure-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platforms.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
