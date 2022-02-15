@@ -1,10 +1,10 @@
 ---
-title: Het vergelijken bij.js met het Web SDK van het Platform
-description: Leer hoe de at.js eigenschappen met Web SDKs vergelijken
+title: Het vergelijken bij.js met het Web SDK van het Experience Platform
+description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 2%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-AEP WEB SDK verzendt automatisch een bericht met de aanbiedingen die door WEB SDK werden uitgevoerd, dit is een voorbeeld van hoe een lading van het berichtverzoek kijkt als:
+SDK van het Web van het Experience Platform verzendt automatisch een bericht met de aanbiedingen die door WEB SDK werden uitgevoerd, is dit een voorbeeld van hoe een lading van het berichtverzoek als kijkt:
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### Web SDK gebruiken
 
-Als u een weergavewijziging van één pagina wilt activeren of signaleren, stelt u de optie `web.webPageDetails.viewName` eigendom onder de `xdm` de `sendEvent` gebruiken. De AEP WEB SDK controleert de weergavecache als er aanbiedingen zijn voor de `viewName` gespecificeerd in `sendEvent` deze wordt uitgevoerd en er wordt een weergavemeldingsgebeurtenis verzonden.
+Als u een weergavewijziging van één pagina wilt activeren of signaleren, stelt u de optie `web.webPageDetails.viewName` eigendom onder de `xdm` de `sendEvent` gebruiken. De SDK van het Web zal het meningsgeheime voorgeheugen controleren, als er aanbiedingen voor zijn `viewName` gespecificeerd in `sendEvent` deze wordt uitgevoerd en er wordt een weergavemeldingsgebeurtenis verzonden.
 
 **Voorbeeld**
 
