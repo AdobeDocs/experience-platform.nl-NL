@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
-source-git-commit: 2b6a64bed3033cc5e4f97ed838050dab4400a282
+source-git-commit: f237ee364cdf6048840dca797f7827b9b88dd73b
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 15%
+source-wordcount: '154'
+ht-degree: 14%
 
 ---
 
@@ -46,6 +46,7 @@ ht-degree: 15%
       * [Implementatie van één pagina](personalization/adobe-target/spa-implementation.md)
       * [Toegang krijgen tot reactietokens](personalization/adobe-target/accessing-response-tokens.md)
       * [Dbox-id van derden gebruiken](personalization/adobe-target/using-mbox-3rdpartyid.md)
+      * [Het vergelijken van de bibliotheek at.js met het Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
    * offer decisioning {#offer-decisioning}
       * [Overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Toestemming {#consent}
