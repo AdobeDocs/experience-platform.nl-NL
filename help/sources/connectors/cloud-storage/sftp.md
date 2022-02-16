@@ -5,7 +5,7 @@ title: Overzicht van SFTP-bronconnector
 topic-legacy: overview
 description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 1abbe74c1005e1358b5388f580d309f0aec5f124
+source-git-commit: 2db458fa335d65642549773a35ddefe602102f7f
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Er wordt een lijst met optionele functies weergegeven. Indien **OpenSSH-client**
 Als deze niet is geïnstalleerd, selecteert u **Installeren** en open vervolgens **[!DNL Powershell]** en voer de volgende opdracht uit om uw persoonlijke sleutel te genereren:
 
 ```shell
-PS C:\Users\lucy> ssh-keygen -t rsa
+PS C:\Users\lucy> ssh-keygen -t rsa -m pem
 Generating public/private rsa key pair.
 Enter file in which to save the key (C:\Users\lucy/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -94,7 +94,7 @@ Met de bovenstaande opdracht slaat u de opdracht [!DNL Base64]-gecodeerde persoo
 Als u een [!DNL Mac], open **Terminal** en voer de volgende opdracht uit om de persoonlijke sleutel te genereren (in dit geval wordt de persoonlijke sleutel opgeslagen in `/Documents/id_rsa`):
 
 ```shell
-ssh-keygen -t rsa -f ~/Documents/id_rsa
+ssh-keygen -t rsa -m pem -f ~/Documents/id_rsa
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
