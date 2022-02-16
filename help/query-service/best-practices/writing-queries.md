@@ -6,18 +6,18 @@ topic-legacy: queries
 type: Tutorial
 description: Dit document bevat belangrijke details die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 3f3a8d100a38d60dc8e15a8c3589e5566492885f
+source-git-commit: c36ef1d5f5e5f7875da2b7a878c86b449d46c3c5
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1031'
 ht-degree: 2%
 
 ---
 
-# Algemene begeleiding voor vraaguitvoering in [!DNL Query Service]
+# Algemene richtlijnen voor het uitvoeren van query&#39;s in [!DNL Query Service]
 
-Dit document bevat belangrijke details die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform [!DNL Query Service].
+In dit document worden belangrijke gegevens vermeld die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform [!DNL Query Service].
 
-Lees de [SQL-syntaxisdocumentatie](../sql/syntax.md) voor gedetailleerde informatie over de SQL-syntaxis die in [!DNL Query Service] wordt gebruikt.
+Voor gedetailleerde informatie over de SQL-syntaxis die wordt gebruikt in [!DNL Query Service], lees de [SQL-syntaxisdocumentatie](../sql/syntax.md).
 
 ## Uitvoeringsmodellen voor query
 
@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Query Service] heeft twee modellen van vraaguitv
 
 ### Interactieve queryuitvoering
 
-U kunt query&#39;s interactief uitvoeren door ze via de gebruikersinterface [!DNL Query Service] of [via een verbonden client](../clients/overview.md) te verzenden. Wanneer het lopen [!DNL Query Service] door een verbonden cliënt, een actieve zittingslooppas tussen de cliënt en [!DNL Query Service] tot of de voorgelegde vraag terugkeert of tijden uit.
+De vragen kunnen interactief worden uitgevoerd door hen door voor te leggen [!DNL Query Service] UI of [via een verbonden client](../clients/overview.md). Bij uitvoering [!DNL Query Service] via een verbonden client een actieve sessie wordt uitgevoerd tussen de client en [!DNL Query Service] tot of de voorgelegde vraagwinst of tijden uit.
 
 De interactieve vraaguitvoering heeft de volgende beperkingen:
 
@@ -37,17 +37,17 @@ De interactieve vraaguitvoering heeft de volgende beperkingen:
 
 >[!NOTE]
 >
->Als u de maximale rijbeperking wilt overschrijven, neemt u `LIMIT 0` op in de query. De zoektime-out van 10 minuten is nog steeds van toepassing.
+>Als u de maximale rijbeperking wilt overschrijven, neemt u `LIMIT 0` in uw query. De zoektime-out van 10 minuten is nog steeds van toepassing.
 
-Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de client en **not** blijft bestaan. Om de resultaten als dataset in [!DNL Experience Platform] voort te zetten, moet de vraag `CREATE TABLE AS SELECT` syntaxis gebruiken.
+Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de client en zijn deze **niet** aanhoudend. Om de resultaten als dataset in [!DNL Experience Platform], moet de query de `CREATE TABLE AS SELECT` syntaxis.
 
 ### Niet-interactieve query-uitvoering
 
-Vragen die via de [!DNL Query Service] API worden ingediend, worden niet-interactief uitgevoerd. De niet-interactieve uitvoering betekent dat [!DNL Query Service] de API vraag ontvangt en de vraag in de orde uitvoert het wordt ontvangen. Niet-interactieve query&#39;s resulteren altijd in het genereren van een nieuwe dataset in [!DNL Experience Platform] om de resultaten te ontvangen, of in het invoegen van nieuwe rijen in een bestaande dataset.
+Vragen ingediend via [!DNL Query Service] API wordt niet-interactief uitgevoerd. Niet-interactieve uitvoering betekent dat [!DNL Query Service] ontvangt de API-aanroep en voert de query uit in de volgorde waarin deze is ontvangen. Niet-interactieve query&#39;s resulteren altijd in het genereren van een nieuwe dataset in [!DNL Experience Platform] om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
 
 ## Een specifiek veld binnen een object openen
 
-Om tot een gebied binnen een voorwerp in uw vraag toegang te hebben, kunt u of puntaantekening (`.`) of haakjesaantekening (`[]`) gebruiken. De volgende SQL-instructie gebruikt puntnotatie om het `endUserIds`-object omlaag te verplaatsen naar het `mcid`-object.
+Als u toegang wilt krijgen tot een veld binnen een object in de query, kunt u beide puntnotaties gebruiken (`.`) of vierkante haakjes (`[]`). De volgende SQL-instructie gebruikt puntnotatie om de `endUserIds` object naar beneden `mcid` object.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -61,7 +61,7 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | De naam van de analystabel. |
 
-De volgende SQL-instructie gebruikt haakjesnotatie om het `endUserIds`-object omlaag te verplaatsen naar het `mcid`-object.
+De volgende SQL-instructie gebruikt haakjes om de `endUserIds` object naar beneden `mcid` object.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -88,7 +88,7 @@ Beide voorbeeldquery&#39;s hierboven retourneren een samengevoegd object in plaa
 (1 row)
 ```
 
-Het geretourneerde `endUserIds._experience.mcid`-object bevat de overeenkomende waarden voor de volgende parameters:
+De geretourneerde `endUserIds._experience.mcid` object bevat de overeenkomende waarden voor de volgende parameters:
 
 - `id`
 - `namespace`
@@ -117,9 +117,9 @@ De enige citaten, de dubbele citaten, en de achtercitaten hebben verschillend ge
 
 ### Enkele aanhalingstekens
 
-Het enkele citaat (`'`) wordt gebruikt om tekstkoorden tot stand te brengen. Het kan bijvoorbeeld worden gebruikt in de instructie `SELECT` om een statische tekstwaarde in het resultaat te retourneren en in de component `WHERE` om de inhoud van een kolom te evalueren.
+Het enkele citaat (`'`) wordt gebruikt om tekstreeksen te maken. Deze kan bijvoorbeeld worden gebruikt in het dialoogvenster `SELECT` instructie om een statische tekstwaarde te retourneren in het resultaat en in de `WHERE` clausule om de inhoud van een kolom te evalueren.
 
-Met de volgende query wordt een statische tekstwaarde (`'datasetA'`) gedeclareerd voor een kolom:
+Met de volgende query wordt een statische tekstwaarde gedeclareerd (`'datasetA'`) voor een kolom:
 
 ```sql
 SELECT 
@@ -131,7 +131,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-De volgende vraag gebruikt één-geciteerde koord (`'homepage'`) in zijn WAAR clausule om gebeurtenissen voor een specifieke pagina terug te keren.
+De volgende query gebruikt een tekenreeks tussen aanhalingstekens (`'homepage'`) in de WHERE-component om gebeurtenissen voor een specifieke pagina te retourneren.
 
 ```sql
 SELECT 
@@ -145,7 +145,7 @@ LIMIT 10
 
 ### Dubbele aanhalingstekens
 
-Het dubbele aanhalingsteken (`"`) wordt gebruikt om een herkenningsteken met ruimten te verklaren.
+Het dubbele aanhalingsteken (`"`) wordt gebruikt om een id met spaties te declareren.
 
 De volgende query gebruikt dubbele aanhalingstekens om waarden uit opgegeven kolommen te retourneren wanneer één kolom een spatie in de id bevat:
 
@@ -162,11 +162,11 @@ FROM
 
 >[!NOTE]
 >
->Dubbele aanhalingstekens **kunnen niet** worden gebruikt met toegang tot puntnotatieveld.
+>Dubbele aanhalingstekens **kan** worden gebruikt met toegang tot puntnotatievelden.
 
 ### Achter aanhalingstekens
 
-Het achtercitaat `` ` `` wordt gebruikt om gereserveerde kolomnamen **only** te ontsnappen wanneer het gebruiken van de syntaxis van de puntnotatie. Aangezien `order` bijvoorbeeld een gereserveerd woord is in SQL, moet u backquotes gebruiken om het veld `commerce.order` te openen:
+The back quote `` ` `` wordt gebruikt om gereserveerde kolomnamen te omzeilen **alleen** bij gebruik van puntnotatiesyntaxis. Bijvoorbeeld sinds `order` is een gereserveerd woord in SQL, moet u backquotes gebruiken om tot het gebied toegang te hebben `commerce.order`:
 
 ```sql
 SELECT 
@@ -176,7 +176,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Achteraanhalingstekens worden ook gebruikt om toegang te krijgen tot een veld dat met een getal begint. Als u bijvoorbeeld toegang wilt krijgen tot het veld `30_day_value`, moet u een notatie voor een backcitaat gebruiken.
+Achteraanhalingstekens worden ook gebruikt om toegang te krijgen tot een veld dat met een getal begint. Als u bijvoorbeeld toegang wilt krijgen tot het veld `30_day_value`, moet u de notatie voor aanhalingstekens gebruiken.
 
 ```SQL
 SELECT
@@ -186,7 +186,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Achter citaten zijn **niet** nodig als u steun-aantekening gebruikt.
+Achter aanhalingstekens zijn **niet** nodig als u haakjes gebruikt.
 
 ```sql
  SELECT
@@ -198,11 +198,11 @@ Achter citaten zijn **niet** nodig als u steun-aantekening gebruikt.
 
 ## Tabelgegevens weergeven
 
-Na het verbinden met de Dienst van de Vraag, kunt u al uw beschikbare lijsten op Platform zien door of `\d` of `SHOW TABLES` bevelen te gebruiken.
+Na het verbinden met de Dienst van de Vraag, kunt u al uw beschikbare lijsten op Platform zien door of `\d` of `SHOW TABLES` opdrachten.
 
 ### Standaardtabelweergave
 
-Met de opdracht `\d` wordt de standaardweergave van PostSQL voor het weergeven van tabellen weergegeven. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
+De `\d` toont de standaard PostSQL-weergave voor het weergeven van tabellen. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
 ```sql
              List of relations
@@ -227,9 +227,9 @@ Met de opdracht `\d` wordt de standaardweergave van PostSQL voor het weergeven v
 
 ### Schema-informatie
 
-Als u meer gedetailleerde informatie over de schema&#39;s in de tabel wilt weergeven, kunt u de opdracht `\d {TABLE_NAME}` gebruiken, waarbij `{TABLE_NAME}` de naam is van de tabel waarvan u de schemagegevens wilt weergeven.
+Als u meer gedetailleerde informatie over de schema&#39;s in de tabel wilt weergeven, kunt u de opdracht `\d {TABLE_NAME}` opdracht, waar `{TABLE_NAME}` is de naam van de lijst waarvan schemainformatie u wilt bekijken.
 
-Het volgende voorbeeld toont de schemainformatie voor de `luma_midvalues` lijst, die door `\d luma_midvalues` te gebruiken zou worden gezien:
+In het volgende voorbeeld worden de schemagegevens voor het `luma_midvalues` tabel, die u kunt zien met `\d luma_midvalues`:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -252,9 +252,9 @@ Het volgende voorbeeld toont de schemainformatie voor de `luma_midvalues` lijst,
  search            | search                      |           |          | 
 ```
 
-Bovendien kunt u meer informatie over een bepaalde kolom krijgen door de naam van de kolom aan de lijstnaam toe te voegen. Dit zou in het formaat `\d {TABLE_NAME}_{COLUMN}` worden geschreven.
+Bovendien kunt u meer informatie over een bepaalde kolom krijgen door de naam van de kolom aan de lijstnaam toe te voegen. Dit wordt in de notatie geschreven `\d {TABLE_NAME}_{COLUMN}`.
 
-Het volgende voorbeeld toont extra informatie voor de `web` kolom, en zou worden aangehaald door het volgende bevel te gebruiken: `\d luma_midvalues_web`:
+In het volgende voorbeeld wordt aanvullende informatie voor het `web` kolom, en zou worden aangehaald door het volgende bevel te gebruiken: `\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -268,7 +268,7 @@ Het volgende voorbeeld toont extra informatie voor de `web` kolom, en zou worden
 
 U kunt zich bij veelvoudige datasets aansluiten samen om gegevens van andere datasets in uw vraag te omvatten.
 
-In het volgende voorbeeld worden de volgende twee datasets (`your_analytics_table` en `custom_operating_system_lookup`) samengevoegd en wordt een instructie `SELECT` voor de bovenste 50 besturingssystemen gemaakt op basis van het aantal paginaweergaven.
+Het volgende voorbeeld zou zich bij de volgende twee datasets (`your_analytics_table` en `custom_operating_system_lookup`) en maakt een `SELECT` voor de bovenste 50 besturingssystemen op basis van het aantal paginaweergaven.
 
 **Query**
 
@@ -308,10 +308,14 @@ LIMIT 50;
 
 ## Deduplicatie
 
-De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Lees voor meer informatie over deduplicatie de [Handleiding voor het dedupliceren van Query Service](./deduplication.md).
+De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Lees voor meer informatie over deduplicatie de [Handleiding voor deduplicatie van Query Service](./deduplication.md).
+
+## De berekeningen van de tijdzone in de Dienst van de Vraag
+
+De Service van de vraag normaliseert persisted gegevens in Adobe Experience Platform gebruikend het timestamp formaat UTC. Voor meer informatie over hoe te om uw tijdzonevereiste aan en van een timestamp UTC te vertalen, gelieve te zien [sectie Veelgestelde vragen over het wijzigen van de tijdzone van en naar een UTC-tijdstempel](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u aan sommige belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe te om de SQL syntaxis te gebruiken om uw eigen vragen te schrijven, te lezen gelieve [SQL syntaxisdocumentatie](../sql/syntax.md).
+Door dit document te lezen, bent u op enkele belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe u de SQL-syntaxis kunt gebruiken om uw eigen query&#39;s te schrijven, leest u de [SQL-syntaxisdocumentatie](../sql/syntax.md).
 
-Voor meer voorbeelden van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, te lezen gelieve de gidsen op [Adobe Analytics steekproefvragen](./adobe-analytics.md), [Adobe Target steekproefvragen](./adobe-target.md), of [ExperienceEvent steekproefvragen](./experience-event-queries.md).
+Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, te lezen gelieve de gidsen op [Adobe Analytics-voorbeeldvragen](./adobe-analytics.md), [Adobe Target-voorbeeldvragen](./adobe-target.md), of [Voorbeeldquery&#39;s van ExperienceEvent](./experience-event-queries.md).

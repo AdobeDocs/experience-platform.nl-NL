@@ -5,10 +5,10 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
+source-git-commit: 03cd013e35872bcc30c68508d9418cb888d9e260
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 4%
+source-wordcount: '1106'
+ht-degree: 2%
 
 ---
 
@@ -54,6 +54,53 @@ FROM actual_dataset a
 WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
 AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
+```
+
+### Hoe kan ik de tijdzone wijzigen van en naar een UTC-tijdstempel?
+
+Adobe Experience Platform zet gegevens voort in de tijdstempelindeling UTC (Coordinated Universal Time). Een voorbeeld van de UTC-indeling is `2021-12-22T19:52:05Z`
+
+De Dienst van de vraag steunt ingebouwde SQL functies om een bepaalde timestamp in en van formaat om te zetten UTC. Beide `to_utc_timestamp()` en de `from_utc_timestamp()` methoden hebben twee parameters : tijdstempel en tijdzone.
+
+| Parameter | Beschrijving |
+|---|---|
+| Tijdstempel | De tijdstempel kan in UTC- of eenvoudig worden geschreven `{year-month-day}` gebruiken. Als er geen tijd is opgegeven, is de standaardwaarde middernacht op de ochtend van de opgegeven dag. |
+| Tijdzone | De tijdzone wordt geschreven in een `{continent/city})` gebruiken. Dit moet een van de erkende tijdzonecodes zijn, zoals die in de [public-domain TZ-database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
+#### Omzetten in UTC-tijdstempel
+
+De `to_utc_timestamp()` methode interpreteert de opgegeven parameters en converteert deze **naar het tijdstempel van uw lokale tijdzone** in UTC-indeling. De tijdzone in Seoul, Zuid-Korea, is bijvoorbeeld UTC/GMT +9 uur. Door een datum-enige timestamp te verstrekken, gebruikt de methode een standaardwaarde van middernacht in de ochtend. De tijdstempel en tijdzone worden vanuit dat gebied omgezet in de UTC-indeling in een UTC-tijdstempel van uw lokale regio.
+
+```SQL
+SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
+```
+
+De query retourneert een tijdstempel in de lokale tijd van de gebruiker. In dit geval is 3 uur de vorige dag, zoals Seoul, negen uur voor.
+
+```
+2021-08-30 15:00:00
+```
+
+Als een ander voorbeeld, als de opgegeven tijdstempel `2021-07-14 12:40:00.0` voor de `Asia/Seoul` timezone, de geretourneerde UTC-tijdstempel is `2021-07-14 03:40:00.0`
+
+De consoleoutput die in de Dienst UI van de Vraag wordt verstrekt is een meer mens-leesbaar formaat:
+
+```
+8/30/2021, 3:00 PM
+```
+
+### Omzetten vanuit de UTC-tijdstempel
+
+De `from_utc_timestamp()` methode interpreteert de opgegeven parameters **van de tijdstempel van uw lokale tijdzone** en geeft het equivalente tijdstempel van het gewenste gebied in UTC-indeling. In het onderstaande voorbeeld is het uur 2:40PM in de lokale tijdzone van de gebruiker. De tijdzone van Seoul die als variabele wordt overgegaan is negen uur vóór lokale timezone.
+
+```SQL
+SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
+```
+
+De query retourneert een tijdstempel in UTC-indeling voor de tijdzone die als parameter is doorgegeven. Het resultaat is negen uur voor de tijdzone die de vraag in werking stelde.
+
+```
+8/31/2021, 11:40 PM
 ```
 
 ### Hoe moet ik mijn tijdreeksgegevens filteren?
