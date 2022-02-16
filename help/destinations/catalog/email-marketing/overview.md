@@ -4,7 +4,7 @@ title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Adobe Experience Platform integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
 
-Platform exporteert uw segmenten als `.csv`-bestanden en levert deze naar de gewenste locatie. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die is ingeschakeld in [!DNL Platform]. Het proces om gegevens in te voeren varieert voor elke partner. Lees de afzonderlijke bestemmingsartikelen voor meer informatie.
+Platform exporteert uw segmenten als `.csv` en levert deze naar de gewenste locatie. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die is ingeschakeld in [!DNL Platform]. Het proces om gegevens in te voeren varieert voor elke partner. Lees de afzonderlijke bestemmingsartikelen voor meer informatie.
 
 ## Ondersteunde e-mailmarketingdoelen {#supported-destinations}
 
@@ -30,13 +30,13 @@ Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 
 ## Verbinding maken met een nieuwe marketingbestemming voor e-mail {#connect-destination}
 
-Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het instellen van een nieuwe bestemming.
+Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
 
 ## Tips en trucs bij het activeren van het publiek naar marketingbestemmingen via e-mail {#best-practices}
 
 ### Identiteitsselectie {#identity}
 
-Adobe adviseert dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Dit is het veld waarvan de gebruikers-id&#39;s zijn weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Raadpleeg de onderstaande tabel voor de meest gangbare unieke id&#39;s en hun XDM-veld in het schema.
+Adobe raadt u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Dit is het veld waarvan de gebruikers-id&#39;s zijn weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Raadpleeg de onderstaande tabel voor de meest gangbare unieke id&#39;s en hun XDM-veld in het schema.
 
 | Unieke id | XDM-veld in Unified Schema |
 |----------------- | ---------------------------|
@@ -70,9 +70,9 @@ Lees de afzonderlijke artikelen van de e-mailmarketing bestemming om te leren ho
 
 ## Segmenten activeren voor e-mailmarketingdoelen {#activate}
 
-Voor instructies op hoe te om segmenten aan e-mail marketing bestemmingen te activeren, verwijs naar [Activate publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md).
+Voor instructies over hoe te om segmenten aan e-mail marketing bestemmingen te activeren, verwijs naar [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md).
 
 ## Aanvullende bronnen
 
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md)
-* [E-mailmarketingdoelen maken en gegevens activeren met de Flow Service API](../../api/email-marketing.md)
+* [E-mailmarketingdoelen maken en gegevens activeren met de Flow Service API](../../api/connect-activate-batch-destinations.md)
