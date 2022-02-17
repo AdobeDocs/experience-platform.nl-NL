@@ -5,7 +5,7 @@ title: Metrics API Endpoint
 topic-legacy: developer guide
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 1%
@@ -282,7 +282,7 @@ De volgende tabel bevat metriek voor [!DNL Real-time Customer Profile].
 | timeseries.profiles.dataset.batchsuccess.count | Aantal [!DNL Profile] partijen die voor een dataset of voor alle datasets worden opgenomen. | Dataset-id |
 | timeseries.profiles.dataset.batchfailed.count | Aantal [!DNL Profile] batches zijn mislukt voor één gegevensset of voor alle gegevenssets. | Dataset-id |
 | platform.ups.ingest.streaming.request.m1_rate | Binnenkomend aanvraagpercentage. | IMS Org (**Vereist**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestie succespercentage. | IMS Org (**Vereist**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Ingestie succespercentage. | IMS Org (**Vereist**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Het tarief van nieuwe verslagen die voor een dataset worden opgenomen. | Dataset-id (**Vereist**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Het tarief van uit-van-orde timestamped verslagen voor creeer verzoek om een dataset. | Dataset-id (**Vereist**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Tijdstempel voor laatst maken recordverzoek voor een dataset. | Dataset-id (**Vereist**) |
