@@ -6,9 +6,9 @@ title: De Dataflows van de monitor voor Bronnen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Bron invoegen"
->abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
+>abstract="De broningestitiemening bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van verslagen die en verslagen ontbroken worden opgenomen. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -151,7 +151,7 @@ Selecteren **[!UICONTROL Identities]** om inname te zien in de [!UICONTROL Ident
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Identiteitsverwerking"
->abstract="Identiteitsverwerking bevat gegevens over records die aan de identiteitsdienst zijn toegevoegd, zoals het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
+>abstract="De weergave Identiteitsverwerking bevat informatie over records die aan de identiteitsdienst zijn toegevoegd, zoals het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -194,7 +194,7 @@ Van de [!UICONTROL Identity processing] pagina, selecteert u **[!UICONTROL Profi
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Profielverwerking"
->abstract="De profielverwerking bevat informatie over verslagen die aan de dienst van het Profiel worden opgenomen, met inbegrip van het aantal gemaakte profielfragmenten, profielfragmenten bijgewerkt en het totale aantal profielfragmenten."
+>abstract="De profielverwerkingsweergave bevat informatie over records die worden opgenomen in de profielservice, zoals het aantal gemaakte profielfragmenten, bijgewerkte profielfragmenten en het totale aantal profielfragmenten."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]

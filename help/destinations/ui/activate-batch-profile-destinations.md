@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
 source-wordcount: '2124'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Exportopties voor bestanden"
->abstract="Selecteer Volledige bestanden exporteren om een volledige opname te exporteren van alle profielen die in aanmerking komen voor het segment. Selecteer Incrementele bestanden exporteren om alleen de profielen te exporteren die voor het segment in aanmerking kwamen sinds de laatste exportbewerking. Het eerste incrementele exportbestand bevat alle profielen die in aanmerking komen voor het segment en die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de profielen die in aanmerking kwamen voor het segment sinds de eerste incrementele bestandsexport."
+>abstract="Selecteren **Volledige bestanden exporteren** om een volledige momentopname van alle profielen uit te voeren die voor het segment kwalificeren. Selecteren **Incrementele bestanden exporteren** om alleen de profielen te exporteren die voor het segment in aanmerking kwamen sinds de laatste exportbewerking. <br> Het eerste incrementele exportbestand bevat alle profielen die in aanmerking komen voor het segment en die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de profielen die in aanmerking kwamen voor het segment sinds de eerste incrementele bestandsexport."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Incrementele bestanden exporteren"
 
 Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige opname van alle profielkwalificaties voor het geselecteerde segment te activeren.
@@ -348,7 +348,6 @@ Adobe raadt u aan een naamruimte voor identiteiten te selecteren, zoals een [!DN
 >
 >* De velden worden gebruikt in de segmentdefinitie.
 >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
-
 >
 > Als het veld `person.name.firstName` heeft bepaalde etiketten van het gegevensgebruik die met de het op de markt brengen van de bestemming in conflict zijn, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Zie voor meer informatie [Beheer van gegevens in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
