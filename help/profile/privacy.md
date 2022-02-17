@@ -5,9 +5,9 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
+source-git-commit: 6cb30dc9e7e76ff9ca060f83405196fa09ed0ebb
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1255'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voo
 >
 >Privacy Service kan alleen verwerken [!DNL Profile] gegevens die een samenvoegbeleid gebruiken dat geen identiteitsstitching uitvoert. Als u de UI gebruikt om te bevestigen of uw privacyverzoeken worden verwerkt, zorg ervoor dat u een beleid met &quot;[!DNL None]&quot; als [!UICONTROL ID stitching] type. Met andere woorden, u kunt geen samenvoegbeleid gebruiken waarbij [!UICONTROL ID stitching] is ingesteld op &quot;[!UICONTROL Private graph]&quot;.
 >
->![](./images/privacy/no-id-stitch.png)
+>![De ID-instelling van het samenvoegbeleid is ingesteld op Geen](./images/privacy/no-id-stitch.png)
 >
 >Het is ook belangrijk om op te merken dat de hoeveelheid tijd die een privacyverzoek kan duren om te voltooien niet kan worden gewaarborgd. Als er wijzigingen optreden in uw [!DNL Profile] terwijl een verzoek nog wordt verwerkt, kan ook niet worden gegarandeerd of die gegevens al dan niet worden verwerkt.
 
@@ -111,7 +111,7 @@ curl -X POST \
 
 Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL AEP Data Lake]** en/of **[!UICONTROL Profile]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die zijn opgeslagen in de [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk.
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Een verzoek van de toegangstaak die in UI wordt gecreeerd, met de optie van het Profiel die onder Producten wordt geselecteerd](./images/privacy/product-value.png)
 
 ## Profielfragmenten in privacyverzoeken {#fragments}
 
@@ -138,6 +138,10 @@ Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL P
 >Terwijl een succesvol schrappingsverzoek de verzamelde kenmerkgegevens voor een klant (of reeks klanten) verwijdert, verwijdert het verzoek niet de verenigingen die in de identiteitsgrafiek worden gevestigd.
 >
 >Bijvoorbeeld, een schrappingsverzoek dat een klant gebruikt `email_id` en `customer_id` verwijdert alle kenmerkgegevens die onder die id&#39;s zijn opgeslagen. Gegevens die daarna onder dezelfde `customer_id` nog steeds in verband worden gebracht met `email_id`, aangezien de associatie nog steeds bestaat.
+>
+>Bovendien kan Privacy Service alleen verwerken [!DNL Profile] gegevens die een samenvoegbeleid gebruiken dat geen identiteitsstitching uitvoert. Als u de UI gebruikt om te bevestigen of uw privacyverzoeken worden verwerkt, zorg ervoor dat u een beleid met &quot;[!DNL None]&quot; als [!UICONTROL ID stitching] type. Met andere woorden, u kunt geen samenvoegbeleid gebruiken waarbij [!UICONTROL ID stitching] is ingesteld op &quot;[!UICONTROL Private graph]&quot;.
+>
+>![De ID-instelling van het samenvoegbeleid is ingesteld op Geen](./images/privacy/no-id-stitch.png)
 
 In toekomstige versies [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] nadat de gegevens fysiek zijn verwijderd.
 

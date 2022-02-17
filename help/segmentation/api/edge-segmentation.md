@@ -5,9 +5,9 @@ title: 'Edge Segmentation met de API '
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
+source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag a
 | Eén gebeurtenis die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en één binnenkomende gebeurtenis zonder tijdbeperking. | Mensen die in de VS wonen en die de homepage hebben bezocht. |
 | Een enkele gebeurtenis met een profielkenmerk negeren | Elke segmentdefinitie die verwijst naar een negatiefunctie van één binnenkomende gebeurtenis en een of meer profielkenmerken | Mensen die in de VS wonen en **niet** heeft de homepage bezocht. |
 | Eén gebeurtenis binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen 24 uur. | Mensen die de laatste 24 uur de homepage hebben bezocht. |
-| Eén gebeurtenis met een profielkenmerk binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en een genegeerde enkele binnenkomende gebeurtenis binnen 24 uur. | Mensen die in de VS wonen en de laatste 24 uur de homepage hebben bezocht. |
+| Eén gebeurtenis met een profielkenmerk binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en één binnenkomende gebeurtenis binnen 24 uur. | Mensen die in de VS wonen en de laatste 24 uur de homepage hebben bezocht. |
 | Eén gebeurtenis die binnen een tijdvenster van 24 uur is genegeerd met een profielkenmerk | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en een genegeerde enkele binnenkomende gebeurtenis binnen 24 uur. | Mensen die in de VS wonen en **niet** heeft de laatste 24 uur de homepage bezocht. |
 | Frequentiegebeurtenis binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een gebeurtenis die een bepaald aantal keren binnen een tijdvenster van 24 uur plaatsvindt. | Personen die de homepage hebben bezocht **ten minste** vijf keer in de laatste 24 uur. |
 | Frequentiegebeurtenis met een profielkenmerk binnen een tijdvenster van 24 uur | Elke segmentdefinitie die verwijst naar een of meer profielkenmerken en een gebeurtenis die een bepaald aantal keren plaatsvindt binnen een tijdvenster van 24 uur. | Personen uit de VS die de homepage hebben bezocht **ten minste** vijf keer in de laatste 24 uur. |
