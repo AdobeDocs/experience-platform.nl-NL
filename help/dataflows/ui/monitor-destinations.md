@@ -6,9 +6,9 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '2961'
 ht-degree: 0%
 
 ---
@@ -46,24 +46,6 @@ Zie de volgende tabel voor meer informatie over statussen:
 | Fout | De `Error` status geeft aan dat het activeringsproces van een gegevensstroom is onderbroken. |
 
 ### Dataflow wordt uitgevoerd voor streamingdoelen {#dataflow-runs-for-streaming-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
->title="Geactiveerde identiteiten"
->abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
->title="Uitgesloten identiteiten"
->abstract="Het aantal afzonderlijke profielrecords dat is uitgesloten van activering voor de geselecteerde bestemming op basis van ontbrekende kenmerken en schending van de toestemming."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesfailed"
->title="Identiteiten mislukt"
->abstract="Het aantal afzonderlijke profiel-id&#39;s dat is mislukt voor het geselecteerde doel. Controleer de foutdiagnostiek voor meer informatie."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Meer informatie in documentatie"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
@@ -129,12 +111,6 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 ![Dataflow-records voor streamingdoelen](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Dataflow wordt uitgevoerd voor batchdoelen {#dataflow-runs-for-batch-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
->title="Ontvangen profielen"
->abstract="Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
