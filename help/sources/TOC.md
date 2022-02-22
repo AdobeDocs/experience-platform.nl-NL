@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
+source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '741'
 ht-degree: 5%
 
 ---
@@ -81,6 +81,7 @@ ht-degree: 5%
       - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
    - Marketing automatiseren {#marketing-automation}
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
+      - [Mailchimp-connector](connectors/marketing-automation/mailchimp.md)
       - [Salesforce-Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Betalingen {#payments}
       - [PayPal-connector](connectors/payments/paypal.md)
@@ -232,6 +233,8 @@ ht-degree: 5%
          - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing automatiseren {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Mailchimp-campagnes](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+         - [Mailchimp-leden](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
