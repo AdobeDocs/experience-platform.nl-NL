@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
+source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
@@ -57,10 +57,6 @@ De **[!UICONTROL Analytics source add data]** wordt weergegeven. Selecteren **[!
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Toewijzing
-
->[!IMPORTANT]
->
->De functie Data Prep voor ondersteuning van de [!DNL Analytics] De bron is in bèta.
 
 Voordat u uw [!DNL Analytics] gegevens aan doelXDM schema, moet u eerst selecteren of u een standaardschema of een douaneschema gebruikt.
 
