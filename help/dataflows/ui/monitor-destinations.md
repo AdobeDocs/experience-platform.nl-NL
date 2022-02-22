@@ -6,9 +6,9 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
+source-git-commit: 387e10038f61a7444a16f4e6270a62082446c09d
 workflow-type: tm+mt
-source-wordcount: '2961'
+source-wordcount: '3104'
 ht-degree: 0%
 
 ---
@@ -90,8 +90,10 @@ Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weerg
 
 Elke individuele dataflow run toont de volgende details:
 
-- **[!UICONTROL Dataflow run start]**: De tijd dat dataflow begon bij.
-- **[!UICONTROL Processing time]**: De hoeveelheid tijd die het voor dataflow aan proces nam.
+- **[!UICONTROL Dataflow run start]**: De tijd dat dataflow begon bij. Voor het stromen dataflow looppas, vangt het Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek wordt gebaseerd. Voor het stromen dataflow looppas, als een dataflow looppas bijvoorbeeld bij 10:30PM begon, toont metrisch de begintijd zoals 10:00 PM in UI.
+- **[!UICONTROL Processing time]**: De hoeveelheid tijd die het voor dataflow nam in werking te stellen proces.
+   - Voor **[!UICONTROL completed]** De metrische verwerkingstijd toont altijd één uur.
+   - Voor dataflow-run die zich nog steeds in een **[!UICONTROL processing]** staat, het venster om alle metriek te vangen open meer dan een uur, om alle metriek te verwerken die aan de dataflow looppas beantwoorden. Bijvoorbeeld, zou een dataflow looppas die bij 9:30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Vervolgens wordt het verwerkingsvenster gesloten en wordt de status van de dataflow-run bijgewerkt naar **voltooid**, wordt de weergegeven verwerkingstijd gewijzigd in één uur.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom.
 - **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming werd geactiveerd.
 - **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van de toestemming.
