@@ -5,13 +5,13 @@ topic-legacy: overview
 description: Dit document verstrekt een overzicht van de configuraties u moet voorbereiden om Bronnen SDK te gebruiken.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
+source-git-commit: 4c4c89ab7db7d3546163d707ac80210561c2fa02
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
-
 
 # Bronspecificatie voor Bronnen SDK configureren
 
@@ -28,57 +28,199 @@ Zie de [aanhangsel](#source-spec) voor een voorbeeld van een volledig-bevolkte b
       "isPreview": true,
       "isBeta": true,
       "category": {
-        "key": "{CATEGORY}"
+        "key": "protocols"
       },
       "icon": {
-        "key": "{ICON}"
+        "key": "genericRestIcon"
       },
       "description": {
-        "key": "{DESCRIPTION}"
+        "key": "genericRestDescription"
       },
       "label": {
-        "key": "{LABEL}"
+        "key": "genericRestLabel"
       }
     },
-    "urlParams": {
-      "path": "{RESOURCE_PATH}",
-      "method": "{GET_or_POST}",
-      "queryParams": "{QUERY_PARAMS}"
-    },
-    "headerParams": "{HEADER_VALUES}",
-    "bodyParams": "{BODY_PARAMS_USED_IF_METHOD_IS_POST}",
-    "contentPath": {
-      "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-      "skipAttributes": [],
-      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}",
-      "keepAttributes": ["action", "type", "timestamp"]
-    },
-    "explodeEntityPath": {
-      "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-      "skipAttributes": [],
-      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}",
-      "keepAttributes": ["action", "type", "timestamp"]
-    },
-    "paginationParams": {
-      "type": "{OFFSET_OR_POINTER}",
-      "limitName": "{NUMBER_OF_RECORDS_ATTRIBUTE_NAME}",
-      "limitValue": "{NUMBER_OF_RECORDS_PER_PAGE}",
-      "offSetName": "{OFFSET_ATTRIBUTE_NAME_REQUIRED_IN_CASE_OF_OFFSET BASED_PAGINATION}",
-      "pointerName": "{POINTER_PATH_REQUIRED_IN__CASE_OF_POINTER BASED_PAGINATION}"
-    },
-    "scheduleParams": {
-      "scheduleStartParamName": "{START_TIME_PARAMETER_NAME}",
-      "scheduleEndParamName": "{END_TIME_PARAMETER_NAME}",
-      "scheduleStartParamFormat": "{DATE_TIME_FORMAT_FOR_START_TIME}",
-      "scheduleEndParamFormat": "{END_TIME_FORMAT_FOR_START_TIME}"
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "description": "Defines static and user input parameters to fetch resource values.",
+      "properties": {
+        "urlParams": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Enter resource path",
+              "example": "/3.0/reports/campaignId/email-activity"
+            },
+            "method": {
+              "type": "string",
+              "description": "HTTP method type.",
+              "enum": [
+                "GET",
+                "POST"
+              ]
+            },
+            "queryParams": {
+              "type": "object",
+              "description": "The query parameters in json format",
+            }
+          },
+          "required": [
+            "path",
+            "method"
+          ]
+        },
+        "headerParams": {
+          "type": "object",
+          "description": "The header parameters in json format",
+        },
+        "contentPath": {
+          "type": "object",
+          "description": "The parameters required for main collection content.",
+          "properties": {
+            "path": {
+              "description": "The path to the main content.",
+              "type": "string",
+              "example": "$.emails"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be skipped while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be kept while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "The new name to be used for the root content path node.",
+              "example": "email"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "explodeEntityPath": {
+          "type": "object",
+          "description": "The parameters required for the sub-array content.",
+          "properties": {
+            "path": {
+              "description": "The path to the sub-array content.",
+              "type": "string",
+              "example": "$.email.activity"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be skipped while fattening sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be kept while fattening the sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "The new name to be used for the  root content path node.",
+              "example": "activity"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "paginationParams": {
+          "type": "object",
+          "description": "The parameters required to fetch data using pagination.",
+          "properties": {
+            "type": {
+              "description": "The pagination fetch type.",
+              "type": "string",
+              "enum": [
+                "OFFSET",
+                "POINTER"
+              ]
+            },
+            "limitName": {
+              "type": "string",
+              "description": "The limit property name",
+              "example": "limit or count"
+            },
+            "limitValue": {
+              "type": "integer",
+              "description": "The number of records to fetch per page.",
+              "example": "limit=10 or count=10"
+            },
+            "offsetName": {
+              "type": "string",
+              "description": "The offset property name",
+              "example": "offset"
+            },
+            "pointerPath": {
+              "type": "string",
+              "description": "The path to pointer property",
+              "example": "$.paging.next"
+            }
+          },
+          "required": [
+            "type",
+            "limitName",
+            "limitValue"
+          ]
+        },
+        "scheduleParams": {
+          "type": "object",
+          "description": "The parameters required to fetch data for batch schedule.",
+          "properties": {
+            "scheduleStartParamName": {
+              "type": "string",
+              "description": "The order property name to get the order by date."
+            },
+            "scheduleEndParamName": {
+              "type": "string",
+              "description": "The order property name to get the order by date."
+            },
+            "scheduleStartParamFormat": {
+              "type": "string",
+              "description": "The order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            },
+            "scheduleEndParamFormat": {
+              "type": "string",
+              "description": "The order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            }
+          },
+          "required": [
+            "scheduleStartParamName",
+            "scheduleEndParamName"
+          ]
+        }
+      },
+      "required": [
+        "urlParams",
+        "contentPath",
+        "paginationParams",
+        "scheduleParams"
+      ]
     }
   },
-  "spec": {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "description": "Define user input parameters to fetch resource values.",
-    "properties": "{USER_INPUT}"
-  }
 }
 ```
 
@@ -87,37 +229,36 @@ Zie de [aanhangsel](#source-spec) voor een voorbeeld van een volledig-bevolkte b
 | `sourceSpec.attributes` | Bevat informatie over de bron specifiek voor UI of API. |
 | `sourceSpec.attributes.uiAttributes` | Geeft informatie weer over de specifieke bron voor de gebruikersinterface. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Een booleaanse eigenschap die erop wijst of de bron meer terugkoppelt van klanten vereist om aan zijn functionaliteit toe te voegen. | <ul><li>`true`</li><li>`false`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.category` | Definieert de categorie van de bron. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.category` | Definieert de categorie van de bron. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Definieert het pictogram dat wordt gebruikt voor het renderen van de bron in de interface van het Platform. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Hiermee geeft u een korte beschrijving van de bron weer. |
 | `sourceSpec.attributes.uiAttributes.label` | Toont het etiket dat voor het teruggeven van de bron in Platform UI moet worden gebruikt. |
-| `sourceSpec.attributes.urlParams` | Bevat informatie over de het middelweg URL, methode, en gesteunde vraagparameters. |
-| `sourceSpec.attributes.urlParams.path` | Bepaalt de middelweg van waar te om de gegevens van te halen. | `/3.0/reports/${campaignId}/email-activity` |
-| `sourceSpec.attributes.urlParams.method` | Bepaalt de methode van HTTP die moet worden gebruikt om het verzoek aan het middel te doen om gegevens te halen. | `GET`, `POST` |
-| `sourceSpec.attributes.urlParams.queryParams` | Definieert de ondersteunde queryparameters die kunnen worden gebruikt om de bron-URL toe te voegen bij het indienen van een aanvraag om gegevens op te halen. De parameters van de vraag moeten komma zijn (`,`) gescheiden sleutelwaardeparen. **Opmerking**: Door de gebruiker opgegeven parameterwaarden moeten als plaatsaanduiding worden opgemaakt. Bijvoorbeeld: `${USER_PARAMETER}`. | `exclude_fields=emails._links,id=${id}` |
-| `sourceSpec.attributes.headerParams` | Hiermee definieert u de komma (`,`) gescheiden koppen die in de HTTP-aanvraag moeten worden opgegeven om de URL te kunnen bron terwijl gegevens worden opgehaald. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
-| `sourceSpec.attributes.bodyParams` | Definieert de vereiste body-parameters. Deze eigenschap wordt alleen gebruikt als `urlParams.method` is ingesteld op `POST`. |
-| `sourceSpec.attributes.contentPath` | Bepaalt de knoop die de lijst van punten bevat die aan Platform moeten worden opgenomen. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | Zie de [aanhangsel](#content-path) voor een voorbeeld van de bron in een inhoudspad. |
-| `sourceSpec.attributes.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die aan het Platform moeten worden toegevoegd. | `$.emails` |
-| `sourceSpec.attributes.contentPath.skipAttributes` | Met deze eigenschap kunt u specifieke items identificeren uit de bron die is geïdentificeerd in het inhoudspad en die moeten worden uitgesloten van het opnemen van inhoud. |
-| `sourceSpec.attributes.contentPath.overrideWrapperAttribute` | Met deze eigenschap kunt u de waarde van de kenmerknaam overschrijven die u hebt opgegeven in `contentPath`. |
-| `sourceSpec.attributes.contentPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt toewijzen. |
-| `sourceSpec.attributes.explodeEntityPath` | Met deze eigenschap kunt u twee arrays samenvoegen en de brongegevens transformeren naar een Platform-bron. |
-| `sourceSpec.attributes.explodeEntityPath.path` | Het pad dat wijst naar de verzamelingsrecords die u wilt afvlakken. | `$.email.activity` |
-| `sourceSpec.attributes.explodeEntityPath.skipAttributes` | Dit bezit staat u toe om specifieke punten van het middel te identificeren die in de entiteitweg worden geïdentificeerd die van worden uitgesloten. |
-| `sourceSpec.attributes.explodeEntityPath.overrideWrapperAttribute` | Met deze eigenschap kunt u de waarde van de kenmerknaam overschrijven die u hebt opgegeven in `explodeEntityPath`. |
-| `sourceSpec.attributes.explodeEntityPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt toewijzen. |
-| `sourceSpec.attributes.paginationParams` | Definieert de parameters of velden die moeten worden opgegeven voor het ophalen van een koppeling naar de volgende pagina vanuit het huidige paginaantwoord van de gebruiker, of tijdens het maken van een URL voor de volgende pagina. |
-| `sourceSpec.attributes.paginationParams.type` | Hiermee geeft u het type van het ondersteunde paginatietype voor uw bron weer. | <ul><li>`offset`: Met dit paginatype kunt u de resultaten parseren door een index op te geven vanaf waar de resulterende array moet worden gestart en een limiet op het aantal resultaten.</li><li>`pointer`: Met dit paginatype kunt u een `pointer` variabele om naar een bepaald punt te richten dat met een verzoek moet worden verzonden. Voor het paginatype aanwijzer is een pad vereist in laadpad dat naar de volgende pagina verwijst</li></ul> |
-| `sourceSpec.attributes.paginationParams.limitName` | De naam voor de limiet waarmee de API het aantal records kan opgeven dat op een pagina moet worden opgehaald. | `count` |
-| `sourceSpec.attributes.paginationParams.limitValue` | Het aantal records dat op een pagina moet worden opgehaald. | `100` |
-| `sourceSpec.attributes.paginationParams.offSetName` | De naam van het verschuivingskenmerk. Dit is vereist als pagineringstype is ingesteld op `offset`. | `offset` |
-| `sourceSpec.attributes.paginationParams.pointerName` | De naam van het attribuut pointer. Hiervoor is een pad nodig naar het kenmerk dat naar de volgende pagina verwijst. Dit is vereist als pagineringstype is ingesteld op `pointer`. | `pointer` |
-| `sourceSpec.attributes.scheduleParams` | Bevat parameters die gesteunde het plannen formaten voor uw bron bepalen. De parameters van het programma omvatten `startTime` en `endTime`, beide waarvan u toestaat om specifieke tijdintervallen voor partijlooppas te plaatsen, die dan ervoor zorgt dat de verslagen die in een vorige partijlooppas worden gehaald niet opnieuw worden gehaald. |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | Definieert de naam van de begintijdparameter | `since_last_changed` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | Definieert de naam van de eindtijdparameter | `before_last_changed` |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | Definieert de ondersteunde indeling voor de `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | Definieert de ondersteunde indeling voor de `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.spec.properties.urlParams` | Bevat informatie over de het middelweg URL, methode, en gesteunde vraagparameters. |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Bepaalt de middelweg van waar te om de gegevens van te halen. | `/3.0/reports/${campaignId}/email-activity` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Bepaalt de methode van HTTP die moet worden gebruikt om het verzoek aan het middel te doen om gegevens te halen. | `GET`, `POST` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definieert de ondersteunde queryparameters die kunnen worden gebruikt om de bron-URL toe te voegen bij het indienen van een aanvraag om gegevens op te halen. **Opmerking**: Door de gebruiker opgegeven parameterwaarden moeten als plaatsaanduiding worden opgemaakt. Bijvoorbeeld: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` wordt toegevoegd aan de bron-URL als: `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Bepaalt kopballen die in het HTTP- verzoek aan bron URL moeten worden verstrekt terwijl het halen van gegevens. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
+| `sourceSpec.attributes.spec.properties.contentPath` | Bepaalt de knoop die de lijst van punten bevat die aan Platform moeten worden opgenomen. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | Zie de [aanhangsel](#content-path) voor een voorbeeld van de bron in een inhoudspad. |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die aan het Platform moeten worden toegevoegd. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Met deze eigenschap kunt u specifieke items identificeren uit de bron die is geïdentificeerd in het inhoudspad en die moeten worden uitgesloten van het opnemen van inhoud. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Met deze eigenschap kunt u de waarde van de kenmerknaam overschrijven die u hebt opgegeven in `contentPath`. | `email` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Met deze eigenschap kunt u twee arrays samenvoegen en de brongegevens transformeren naar een Platform-bron. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Het pad dat wijst naar de verzamelingsrecords die u wilt afvlakken. | `$.email.activity` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Dit bezit staat u toe om specifieke punten van het middel te identificeren die in de entiteitweg worden geïdentificeerd die van worden uitgesloten. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Met deze eigenschap kunt u de waarde van de kenmerknaam overschrijven die u hebt opgegeven in `explodeEntityPath`. | `activity` |
+| `sourceSpec.attributes.spec.properties.paginationParams` | Definieert de parameters of velden die moeten worden opgegeven voor het ophalen van een koppeling naar de volgende pagina vanuit het huidige paginaantwoord van de gebruiker, of tijdens het maken van een URL voor de volgende pagina. |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Hiermee geeft u het type van het ondersteunde paginatietype voor uw bron weer. | <ul><li>`offset`: Met dit paginatype kunt u de resultaten parseren door een index op te geven vanaf waar de resulterende array moet worden gestart en een limiet op het aantal resultaten.</li><li>`pointer`: Met dit paginatype kunt u een `pointer` variabele om naar een bepaald punt te richten dat met een verzoek moet worden verzonden. Voor het paginatype aanwijzer is een pad vereist in laadpad dat naar de volgende pagina verwijst</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | De naam voor de limiet waarmee de API het aantal records kan opgeven dat op een pagina moet worden opgehaald. | `limit` of `count` |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Het aantal records dat op een pagina moet worden opgehaald. | `limit=10` of `count=10` |
+| `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | De naam van het verschuivingskenmerk. Dit is vereist als pagineringstype is ingesteld op `offset`. | `offset` |
+| `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | De naam van het attribuut pointer. Hiervoor is een pad nodig naar het kenmerk dat naar de volgende pagina verwijst. Dit is vereist als pagineringstype is ingesteld op `pointer`. | `pointer` |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | Bevat parameters die gesteunde het plannen formaten voor uw bron bepalen. De parameters van het programma omvatten `startTime` en `endTime`, beide waarvan u toestaat om specifieke tijdintervallen voor partijlooppas te plaatsen, die dan ervoor zorgt dat de verslagen die in een vorige partijlooppas worden gehaald niet opnieuw worden gehaald. |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Definieert de naam van de begintijdparameter | `since_last_changed` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Definieert de naam van de eindtijdparameter | `before_last_changed` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Definieert de ondersteunde indeling voor de `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Definieert de ondersteunde indeling voor de `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.spec.properties` | Bepaalt de user-provided parameters om middelwaarden te halen. | Zie de [aanhangsel](#user-input) voor een voorbeeld van door de gebruiker ingevoerde parameters voor `spec.properties`. |
 
 {style=&quot;table-layout:auto&quot;}
