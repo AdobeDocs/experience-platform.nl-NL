@@ -6,9 +6,9 @@ description: Stapsgewijze instructies voor het gebruik van de Flow Service API v
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: ae9c43b3a3cd59b0c0bcfd5034f5edc5ebb818d8
+source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
 workflow-type: tm+mt
-source-wordcount: '3179'
+source-wordcount: '3083'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Deze zelfstudie laat zien hoe u de Flow Service API kunt gebruiken om een batch te maken [cloudopslag](../catalog/cloud-storage/overview.md) of [e-mailmarketingbestemming](../catalog/email-marketing/overview.md), maakt u een gegevensstroom naar het nieuwe doel en exporteert u gegevens naar het nieuwe doel via CSV-bestanden.
 
-In deze zelfstudie wordt de Adobe Campaign-bestemming in alle voorbeelden gebruikt, maar de stappen zijn identiek voor alle batch-cloudopslag- en e-mailmarketingdoelen.
+Deze zelfstudie gebruikt de [!DNL Adobe Campaign] doel in alle voorbeelden, maar de stappen zijn identiek voor alle opslag van de batchcloud en e-mailmarketingbestemmingen.
 
 ![Overzicht - de stappen om een bestemming tot stand te brengen en segmenten te activeren](../assets/api/email-marketing/overview.png)
 
@@ -37,14 +37,14 @@ De volgende secties verstrekken extra informatie die u moet weten om gegevens aa
 
 Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieven klaar moeten hebben, afhankelijk van het type van bestemming dat u verbindt en segmenten aan activeert.
 
-* Voor [!DNL Amazon] S3-verbindingen: `accessId`, `secretKey`
-* Voor [!DNL Amazon] S3-verbindingen met [!DNL Adobe Campaign]: `accessId`, `secretKey`
+* Voor [!DNL Amazon S3] verbindingen: `accessId`, `secretKey`
+* Voor [!DNL Amazon S3] verbindingen met [!DNL Adobe Campaign]: `accessId`, `secretKey`
 * Voor SFTP-verbindingen: `domain`, `port`, `username`, `password` of `sshKey` (afhankelijk van de verbindingsmethode met de FTP-locatie)
 * Voor [!DNL Azure Blob] verbindingen: `connectionString`
 
 >[!NOTE]
 >
->De referenties `accessId`, `secretKey` voor Amazon S3-verbindingen en `accessId`, `secretKey` voor Amazon S3-verbindingen met Adobe Campaign identiek zijn.
+>De referenties `accessId`, `secretKey` for [!DNL Amazon S3] verbindingen en `accessId`, `secretKey` for [!DNL Amazon S3] verbindingen met [!DNL Adobe Campaign] identiek zijn.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
@@ -100,7 +100,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwoord**
 
-Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unieke id&#39;s (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Als u bijvoorbeeld segmenten wilt verbinden en leveren aan Adobe Campaign, zoekt u het volgende fragment in het antwoord:
+Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unieke id&#39;s (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Bijvoorbeeld, als u segmenten wilt verbinden en leveren aan [!DNL Adobe Campaign]zoekt u het volgende fragment in het antwoord:
 
 ```json
 {
@@ -115,13 +115,13 @@ Voor uw verwijzing, bevat de lijst hieronder de verbindingsspecificaties - IDs v
 
 | Bestemming | Verbinding, specificatie-id |
 ---------|----------|
-| [!DNL Adobe Campaign] | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
-| [!DNL Amazon S3] | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
-| [!DNL Azure Blob] | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
-| [!DNL Oracle Eloqua] | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
-| [!DNL Oracle Responsys] | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
-| [!DNL Salesforce Marketing Cloud] | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
-| SFTP | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 |
+| [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
+| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
+| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
+| [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
+| [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
+| [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
+| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -163,9 +163,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `name` | Geef een naam op voor de basisverbinding met het Experience Platform Profile Store. |
+| `name` | Geef een naam op voor de basisverbinding met het Experience Platform [!DNL Profile Store]. |
 | `description` | U kunt desgewenst een beschrijving voor de basisverbinding opgeven. |
 | `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor de [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -212,11 +214,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `name` | Geef een naam op voor de bronverbinding met het Experience Platform Profile Store. |
+| `name` | Geef een naam op voor de bronverbinding met het Experience Platform [!DNL Profile Store]. |
 | `description` | U kunt desgewenst een beschrijving voor de bronverbinding opgeven. |
 | `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor de [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | Gebruik de basisverbindings-id die u in de vorige stap hebt verkregen. |
 | `data.format` | `CSV` is momenteel de enige ondersteunde indeling voor het exporteren van bestanden. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -247,7 +251,7 @@ POST /connections
 
 **Verzoek**
 
-In het onderstaande verzoek wordt een basisverbinding met Adobe Campaign-bestemmingen tot stand gebracht. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren (Amazon S3, SFTP, Azure Blob), moet u de juiste instelling voor `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Adobe Campaign] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]), de passende `auth` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -297,9 +301,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Voorbeeld van een verzoek om verbinding te maken met Amazon S3-doelen
+Zie de onderstaande voorbeeldverzoeken om verbinding te maken met andere ondersteunde batch-cloudopslag- en e-mailmarketingdoelen.
 
-In het onderstaande verzoek wordt een basisverbinding met Amazon S3-bestemmingen tot stand gebracht.
++++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Amazon S3] bestemmingen
+
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Amazon S3] bestemmingen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -327,9 +333,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld van een verzoek om verbinding te maken met Azure Blob-bestemmingen
++++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Azure Blob] bestemmingen
 
-In het onderstaande verzoek wordt een basisverbinding tot Azure Blob-bestemmingen tot stand gebracht.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Azure Blob] bestemmingen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -356,9 +362,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld van een verzoek om verbinding te maken met Oracle Eloqua-bestemmingen
++++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Oracle Eloqua] bestemmingen
 
-Het hieronder vermelde verzoek vestigt een basisverbinding aan de bestemmingen van Eloqua van het Oracle. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Oracle Eloqua] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -397,9 +403,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld verzoek om met Oracle te verbinden Resys bestemmingen
++++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Oracle Responsys] bestemmingen
 
-Het hieronder verzoek vestigt een basisverbinding aan Oracle Resys bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Oracle Responsys] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -438,9 +444,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld van een verzoek om verbinding te maken met Salesforce-Marketing Cloud-bestemmingen
++++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Salesforce Marketing Cloud] bestemmingen
 
-In het onderstaande verzoek wordt een basisverbinding tot de bestemmingen van de Salesforce-Marketing Cloud tot stand gebracht. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Salesforce Marketing Cloud] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -518,6 +524,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `auth.specname` | Wijst op het authentificatieformaat voor de bestemming. Om te weten te komen specName voor uw bestemming, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `authSpec.name` in de reactie. <br> Voor Adobe Campaign-doelen kunt u bijvoorbeeld elk van de volgende handelingen uitvoeren `S3`, `SFTP with Password`, of `SFTP with SSH Key`. |
 | `params` | Afhankelijk van het doel waarmee u verbinding maakt, moet u verschillende vereiste verificatieparameters opgeven. Voor Amazon S3-verbindingen moet u uw toegangs-id en geheime sleutel opgeven op de opslaglocatie van Amazon S3. <br> Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `authSpec.spec.required` in de reactie. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Een geslaagde reactie bevat de unieke id van de basisverbinding (`id`). Sla deze waarde op zoals vereist in de volgende stap om een doelverbinding te maken.
@@ -546,7 +554,7 @@ POST /targetConnections
 
 **Verzoek**
 
-In het onderstaande verzoek wordt een doelverbinding met Adobe Campaign-doelen vastgelegd om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangevoerd. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Adobe Campaign] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -589,9 +597,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Voorbeeld van een verzoek om opslaglocatie voor Amazon S3-doelen in te stellen
+Zie de onderstaande voorbeeldaanvragen voor een opslaglocatie voor andere ondersteunde batch-cloudopslag- en e-mailmarketingdoelen.
 
-In het onderstaande verzoek wordt een doelverbinding met de Amazon S3-doelen vastgelegd om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangevoerd.
++++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Amazon S3] bestemmingen
+
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Amazon S3] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -625,9 +635,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld van een verzoek om opslaglocatie voor Azure Blob-bestemmingen in te stellen
++++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Azure Blob] bestemmingen
 
-In het onderstaande verzoek wordt een doelverbinding met Azure Blob-bestemmingen vastgesteld om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangevoerd.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Azure Blob] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -661,9 +671,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld van een verzoek om opslaglocatie voor Oracle Eloqua-bestemmingen in te stellen
++++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Oracle Eloqua] bestemmingen
 
-In het onderstaande verzoek wordt een doelverbinding met de Eloqua-doelen van het Oracle tot stand gebracht om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Oracle Eloqua] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -702,9 +712,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld verzoek om opstellingsopslagplaats voor Oracle Resys bestemmingen
++++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Oracle Responsys] bestemmingen
 
-Het hieronder verzoek vestigt een doelverbinding aan Oracle Resys bestemmingen, om te bepalen waar de uitgevoerde dossiers in uw opslagplaats zullen landen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Oracle Responsys] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -743,9 +753,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld van een verzoek om opslaglocatie voor Salesforce-Marketing Cloud-bestemmingen in te stellen
++++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Salesforce Marketing Cloud] bestemmingen
 
-In het onderstaande verzoek wordt een doelverbinding naar de bestemmingen van de Salesforce-Marketing Cloud tot stand gebracht om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Salesforce Marketing Cloud] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -784,7 +794,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Voorbeeld van verzoek om opslaglocatie voor SFTP-doelen in te stellen
++++ Voorbeeld van een verzoek om een opslaglocatie voor SFTP-doelen in te stellen
 
 In het onderstaande verzoek wordt een doelverbinding met SFTP-doelen vastgelegd om te bepalen waar de geëxporteerde bestanden in uw opslaglocatie worden geland.
 
@@ -830,6 +840,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName` | Geef voor S3-verbindingen de naam op van het emmertje waar de bestanden worden geëxporteerd. |
 | `params.path` | Geef voor S3-verbindingen het bestandspad op in de opslaglocatie waar de bestanden worden geëxporteerd. |
 | `params.format` | `CSV` is momenteel het enige ondersteunde exporttype voor bestanden. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
@@ -908,9 +920,9 @@ Voor uw verwijzing, bevat de lijst hieronder de stroom specifieke IDs voor algem
 
 | Bestemming | Stroom-specificatie-id |
 ---------|----------|
-| Alle cloudopslagbestemmingen (Amazon S3, SFTP, Azure Blob) en Oracle Eloqua | 71471eba-b620-49e4-90fd-23f1fa0174d8 |
-| Oracle Responsys | 51d675ce-e270-408d-91fc-22717bdf2148 |
-| Salesforce-Marketing Cloud | 493b2bd6-26e4-4167-ab3b-5e910bba44f0 |
+| Alle cloudopslagbestemmingen ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) en [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
+| [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
+| [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |
 
 **Antwoord**
 
@@ -1019,6 +1031,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `frequency` | Verplicht. <br> <ul><li>Voor de `"DAILY_FULL_EXPORT"` u kunt de exportmodus `ONCE` of `DAILY`.</li><li>Voor de `"FIRST_FULL_THEN_INCREMENTAL"` u kunt de exportmodus `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `endDate` | Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop segmentleden stoppen met exporteren naar de bestemming. |
 | `startTime` | Verplicht. Selecteer het tijdstip waarop bestanden met leden van het segment moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
