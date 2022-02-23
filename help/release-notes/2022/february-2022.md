@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 762a4b7336f1c26b79883db9484d8f5fc7bff53c
+source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,25 @@ ht-degree: 2%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Gegevensverzameling](#data-collection)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Bronnen](#sources)
+
+## Gegevensverzameling {#data-collection}
+
+Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Verbeterde UI-workflow voor configuratie gegevensstroom | De workflow voor het maken van een nieuwe gegevensstroom in de gebruikersinterface voor gegevensverzameling is bijgewerkt. Wanneer u services toevoegt aan een gegevensstroom, worden alleen de services waartoe u toegang hebt, opgenomen in de lijst met opties. Zie de handleiding op [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md) voor meer informatie . |
+| Gegevensvoorvoegsel voor gegevensverzameling | Als u de SDK van het Web van Adobe Experience Platform gebruikt, kunt u de mogelijkheden van de Prep van Gegevens nu hefboomwerking om uw gegevens aan de server van het Model van de Gegevens van de Ervaring (XDM) in kaart te brengen. Zie de sectie over [Gegevensvoorvoegsel voor gegevensverzameling](../../edge/fundamentals/datastreams.md#data-prep) in de gids voor gegevensstromen voor meer informatie. |
+| Apparaat-id&#39;s van eerste partij | U kunt nu uw eigen apparaat-id&#39;s naar het Adobe Experience Platform Edge Network sturen wanneer u klantgegevens verzamelt met de SDK van het Web Platform, waarmee u een oplossing kunt vinden voor recente browserbeperkingen met betrekking tot de levensduur van cookies van derden. Zie de handleiding op [apparaat-id&#39;s van eerste partij](../../edge/identity/first-party-device-ids.md) voor meer informatie . |
+
+Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+
 
 ## [!DNL Data Prep] {#data-prep}
 
