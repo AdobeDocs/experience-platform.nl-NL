@@ -4,15 +4,17 @@ solution: Experience Platform
 title: Een MailChimp-bronverbinding maken met een Platform-interface
 topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met MailChimp-campagnes via de gebruikersinterface van het Platform.
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 0%
 
 ---
 
-
-# Een [!DNL MailChimp Campaigns] bronverbinding met gebruikersinterface van Platform
+# Een [!DNL Mailchimp Campaigns] bronverbinding met gebruikersinterface van Platform
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Mailchimp] bronaansluiting voor opnemen [!DNL Mailchimp Campaigns] gegevens naar Adobe Experience Platform via de gebruikersinterface.
 
@@ -98,4 +100,3 @@ De pagina wordt bijgewerkt in een interactieve schemastructuur waarmee u de hië
 ## Volgende stappen
 
 Met uw [!DNL Mailchimp] account is geverifieerd en uw [!DNL Mailchimp Campaigns] geselecteerde gegevens, kunt u nu beginnen met het maken van een gegevensstroom om uw gegevens naar het Platform te brengen. Raadpleeg de documentatie bij voor gedetailleerde stappen over het maken van een gegevensstroom [het creëren van een gegevensstroom om de gegevens van de marketing automatisering aan Platform te brengen](../../dataflow/marketing-automation.md).
-

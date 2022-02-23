@@ -1,7 +1,8 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
+source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 2%
@@ -37,7 +38,7 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 
 [!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
-**Bijgewerkte functies**
+**Nieuwe functie**
 
 | Functie | Beschrijving |
 | --- | --- |

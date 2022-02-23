@@ -4,13 +4,15 @@ solution: Experience Platform
 title: Een MailChimp-bronverbinding voor leden maken met de gebruikersinterface van het Platform
 topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform met MailChimp-leden verbindt via de gebruikersinterface van het Platform.
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 0%
 
 ---
-
 
 # Een [!DNL Mailchimp Members] bronverbinding met gebruikersinterface van Platform
 
