@@ -1,37 +1,53 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 3a81a6f41b1e6acfe0e79dd56f01cf1bcd99417c
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: c49526c52bdf7732e84e94965db474b64db15552
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 2%
+source-wordcount: '1340'
+ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 23 februari 2022**
+**Releasedatum: 26 januari 2022**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Gegevensverzameling](#data-collection)
+- [Waarschuwingen](#alerts)
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Identity Service]](#identity)
+- [[!DNL Dashboards]](#dashboards)
+- [[!DNL Destinations]](#destinations)
+- [Query-service](#query-service)
+- [Sandboxen](#sandboxes)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
-## Gegevensverzameling {#data-collection}
+## Waarschuwingen {#alerts}
 
-Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van gebeurtenissen voor verschillende activiteiten van Platforms. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailberichten.
 
-**Nieuwe functies**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeterde UI-workflow voor configuratie gegevensstroom | De workflow voor het maken van een nieuwe gegevensstroom in de gebruikersinterface voor gegevensverzameling is bijgewerkt. Wanneer u services toevoegt aan een gegevensstroom, worden alleen de services waartoe u toegang hebt, opgenomen in de lijst met opties. Zie de handleiding op [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md) voor meer informatie . |
-| Gegevensvoorvoegsel voor gegevensverzameling | Als u de SDK van het Web van Adobe Experience Platform gebruikt, kunt u de mogelijkheden van de Prep van Gegevens nu hefboomwerking om uw gegevens aan de server van het Model van de Gegevens van de Ervaring (XDM) in kaart te brengen. Zie de sectie over [Gegevensvoorvoegsel voor gegevensverzameling](../../edge/fundamentals/datastreams.md#data-prep) in de gids voor gegevensstromen voor meer informatie. |
-| Apparaat-id&#39;s van eerste partij | U kunt nu uw eigen apparaat-id&#39;s naar het Adobe Experience Platform Edge Network sturen wanneer u klantgegevens verzamelt met de SDK van het Web Platform, waarmee u een oplossing kunt vinden voor recente browserbeperkingen met betrekking tot de levensduur van cookies van derden. Zie de handleiding op [apparaat-id&#39;s van eerste partij](../../edge/identity/first-party-device-ids.md) voor meer informatie . |
+| Nieuwe waarschuwingsregels | Er zijn nu verschillende nieuwe waarschuwingsregels beschikbaar voor workflows die betrekking hebben op gegevensinvoer, identiteiten, profielen, segmentering en activering. Zie het overzicht op [waarschuwingsregels](../../observability/alerts/rules.md) voor de bijgewerkte lijst met waarschuwingstypen. |
+| In-context alarm voor bronnen dataflows | U kunt zich nu abonneren op het ontvangen van waarschuwingsberichten over de status van uw gegevensstromen tijdens de inlogworkflow. Zie de handleiding voor meer informatie over [abonneren op berichten voor bronnen in de gebruikersinterface](../../sources/tutorials/ui/alerts.md). |
 
-Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+Raadpleeg voor meer informatie over waarschuwingen in Platform de [waarschuwingsoverzicht](../../observability/alerts/overview.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+
+| Functie | Beschrijving |
+| --- | --- |
+| Intelligente bijschriften | Een machine het leren algoritme verstrekt automatisch inzichten op uw profiel en publieksgegevens, en illustreert patronen en tendensen over een 30-90 dag, of periode van 12 maanden. De bijschriften bevatten informatie over <ul><li>Algemene vorm en statistieken</li><li>Trends en abrupte wijzigingen</li><li>Seizoenspatronen</li><li>Onverwachte anomalieën</li></ul> Meer informatie is te vinden op de [profielen, dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) en [segmentdashboards](../../dashboards/guides/segments.md#audience-size-trend) documentatie. |
+| Overzicht van dashboards | Open de vooraf geconfigureerde rapporten van profiel-, segmenten- en doeldashboards, inclusief geïnstalleerde integraties zoals PowerBI, op een gecentraliseerde locatie. Zie voor meer informatie de [[!DNL Dashboards] inventarisdocumentatie](../../dashboards/inventory.md). |
+| PowerBI-rapportsjablonen | Met nieuwe PowerBI-diagrammen kunt u metriek van het profiel, de segmenten en de doelrapportgegevensmodellen maken, aanpassen of uitbreiden. Met de geautomatiseerde installatieworkflow kunt u uw marketinginzichten binnen uw organisatie delen vanuit de PowerBI-omgeving. Zie voor meer informatie de [PowerBI-rapportsjabloondocumentatie](../../dashboards/integrations/power-bi.md). |
+
+Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -41,23 +57,68 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Data Prep] ondersteuning voor Adobe Analytics-bronaansluiting | De Adobe Analytics-bronaansluiting ondersteunt nu Data Prep-functies, zodat u uw Analytics-rapport-suite-gegevens kunt toewijzen aan een doel-XDM-schema wanneer u een gegevensstroom maakt. Zie de zelfstudie aan [een analytische bronaansluiting maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
+| Geconsolideerde toewijzingservaring | De nieuwe toewijzingsinterface in het Platform UI voorziet u van een verenigbare afbeeldingservaring om uit intelligente kaartaanbevelingen voordeel te halen, manueel toewijzingsregels te vormen, en om het even welke fouten te zuiveren die aan uw kaartreeksen voorkomen. Zie voor meer informatie de [[!DNL Data Prep] UI-hulplijn](../../data-prep/ui/mapping.md). |
 
 Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
-## [!DNL Identity Service] {#identity}
+## [!DNL Destinations] {#destinations}
 
-Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen.
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
-Adobe Experience Platform [!DNL Identity Service] helpt u een beter inzicht te krijgen in uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| Zelfde pagina en volgende pagina personalisatie | De [personalisatiefunctie voor dezelfde pagina en volgende pagina](../../destinations/ui/configure-personalization-destinations.md) biedt een gedeelde, doelgerichte weergave van gebruikers voor toepassingen op de Experience Edge, voor consistentie tussen marketing en klantenkanalen. Deze personalisatie is mogelijk via de [Adobe Target-verbinding](../../destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepaste aanpassingsverbinding](../../destinations/catalog/personalization/custom-personalization.md). Om uw zelfde-pagina of volgende-pagina verpersoonlijkingscampagnes te vormen, zie [speciale zelfstudie](../../destinations/ui/configure-personalization-destinations.md). |
+| Batchdoelbewaking en segmentcijfers | De functionaliteit van bestemmings controle wordt nu uitgebreid van het stromen bestemmingen om ook partijbestemmingen en segment-vlakke metriek voor uw activeringsgegevens te omvatten. Lees voor meer informatie [Dashboard voor controledoelen](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [monitoring segment job dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), en [segmentweergave](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
+| Bewerken in de gebruikersinterface plannen voor bestaande gegevens voor batchactivering | Deze versie introduceert de optie om het schema van uw bestaande activeringsgegevens te bewerken naar batchbestemmingen. Lees voor meer informatie [profielgegevens activeren naar batchprofieldoelen](/help/destinations/ui/activate-batch-profile-destinations.md). |
+| Verbeteringen voor Marketo-bestemming | De klanten van het Experience Platform die Marketo Engage gebruiken kunnen hun gegevensbestand van Marketo met de nieuwe capaciteit maximaliseren om net-nieuwe persoonverslagen in Marketo Engage van Experience Platform via te duwen [Marketo-doelconnector](/help/destinations/catalog/adobe/marketo-engage.md). <br> Wanneer u publiekssegmenten van Experience Platform naar Marketo Engage verzendt, kunnen personen binnen het segment die nog niet in uw Marketo Engage-database bestaan, automatisch aan het segment worden toegevoegd. Lees voor meer informatie [Een Adobe Experience Platform-segment naar een statische Marketo-lijst verplaatsen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (Stap 9 in de zelfstudie geeft aan hoe u nieuwe persoonrecords naar Marketo kunt duwen). |
+
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [Adobe Target-verbinding](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie en experimenteren biedt in alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer. Adobe Target is een personalisatieverbinding in Adobe Experience Platform. |
+| [Aangepaste aanpassingsverbinding](../../destinations/catalog/personalization/custom-personalization.md) | Deze verpersoonlijkingsverbinding verstrekt een manier om segmentinformatie van Adobe Experience Platform aan externe verpersoonlijkingsplatforms, inhoudsbeheersystemen, en servers, en andere toepassingen terug te winnen die op klantenwebsites lopen. |
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Query-service {#query-service}
+
+[!DNL Query Service] staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
 
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe machtiging voor `view-identity-graph` | U kunt nu de opdracht `view-identity-graph` toestemming om te controleren of de gebruikers in uw organisatie de gegevens van de identiteitsgrafiek kunnen bekijken. Gebruikers zonder deze machtiging hebben geen toegang tot de viewer voor identiteitsgrafieken in de gebruikersinterface of bij toegang tot [!DNL Identity Service] API&#39;s die id&#39;s retourneren. Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over machtigingen. |
+| Anoniem blok | Het anonieme blokSQL bouwt staat u toe om de taken van de grote schaal van de gegevensvoorbereiding in de Dienst van de Vraag in kleinere taken te verdelen, dan hergebruik en hen in opeenvolging voor het stijgende laden van gegevens uit te voeren. Zie voor meer informatie de [voorbeeldquery&#39;s voor anonieme blokdocumentatie](../../query-service/best-practices/anonymous-block.md). |
+| Datasetorganisatie | Verstrekt een coherente, logische gegevensstructuur om uw gegevensactiva voor gebruik met de Dienst van de Vraag te organiseren aangezien de hoeveelheid gegevensactiva binnen de zandbak groeit. Zie voor meer informatie de [documentatie over gegevenselementen organiseren](../../query-service/best-practices/organize-data-assets.md). |
 
-Meer algemene informatie over [!DNL Identity Service], verwijst u naar de [Overzicht van identiteitsservice](../../identity-service/home.md).
+Voor meer informatie over [!DNL Query Service], zie de [[!DNL Query Service] overzicht](../../query-service/home.md).
+
+## Sandboxen {#sandboxes}
+
+Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Verbeteringen in de gebruikersinterface van sandboxen | De sandboxindicator is nu geïntegreerd in de header voor alle Platform-UI-toepassingen. De sandboxindicator geeft de naam, het gebied en het type van de sandbox weer en geeft u ook toegang tot een vervolgkeuzemenu om tussen de sandboxen te schakelen. Zie voor meer informatie de [UI-hulplijn sandbox](../../sandboxes/ui/user-guide.md). |
+
+Voor meer informatie over sandboxen raadpleegt u de [sandboxen, overzicht](../../sandboxes/home.md).
+
+## Segmenteringsservice {#segmentation}
+
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Segmentovereenkomst | Segmentovereenkomst is een service voor gegevenssamenwerking waarmee twee of meer gebruikers in het Platform gegevens kunnen uitwisselen op basis van gemeenschappelijke id&#39;s op een veilige, beheerde en privacyvriendelijke manier. Segmentovereenkomst maakt gebruik van privacystandaarden voor Platforms en persoonlijke id&#39;s, zoals gehashte e-mails, gehashte telefoonnummers en apparaat-id&#39;s, zoals IDFA&#39;s en GAID&#39;s. Zie voor meer informatie de [Overzicht van afstemming van segment](../../segmentation/ui/segment-match/overview.md). |
+
+Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
@@ -65,10 +126,8 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
-**Bijgewerkte functies**
-
 | Functie | Beschrijving |
 | --- | --- |
-| Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
-
-Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
+| Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
+| [!DNL Event Hubs] bronverbeteringen | De [!DNL Event Hubs] De bron ondersteunt nu SAS-sleuteltype verificatie buiten de hoofdmap om verbinding te maken en bronverbinding te maken. Zie voor meer informatie de [[!DNL Event Hubs] overzicht](../../sources/connectors/cloud-storage/eventhub.md). |
+| [!DNL SFTP] bronverbeteringen | De [!DNL SFTP] De bron staat u nu toe om een vastgestelde aantal van een maximum gezamenlijke verbindingen te vestigen die een dataflow kan gebruiken om met de server van SFTP te verbinden. Zie voor meer informatie de [[!DNL SFTP] overzicht](../../sources/connectors/cloud-storage/sftp.md). |
