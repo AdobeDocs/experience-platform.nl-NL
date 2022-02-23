@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
+source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '411'
 ht-degree: 6%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 6%
       * [XDM Business Person-componenten](./field-groups/profile/business-person-components.md)
       * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
    * Groepen van gebeurtenisvelden {#event}
+      * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
       * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
       * [Kanaaldetails](./field-groups/event/channel-details.md)
       * [Handelsgegevens](./field-groups/event/commerce-details.md)
@@ -95,6 +96,7 @@ ht-degree: 6%
    * [Geo-vorm](./data-types/geo-shape.md)
    * [Identiteit](./data-types/identity.md)
    * [Impressies](./data-types/impressions.md)
+   * [Toetswaardenpaar](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Meetlat](./data-types/measure.md)
    * [Volgorde](./data-types/order.md)
