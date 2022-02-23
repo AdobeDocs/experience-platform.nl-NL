@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Platform Identity Service Guide
 user-guide-description: De klantenidentiteiten van de brug over apparaten en systemen om gepersonaliseerde digitale ervaringen te leveren.
 feature: Identities
-source-git-commit: 81b325fe0994eef73111f9fc474984a4550dd256
+source-git-commit: 6ef978251c8b1ecaffa3a28cf2b89e24e2d725b6
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 12%
+source-wordcount: '102'
+ht-degree: 11%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 12%
 
 - [Overzicht van identiteitsservice](home.md)
 - [Overzicht naamruimte identiteit](namespaces.md)
+- [Guardrails voor identiteitsgegevens](guardrails.md)
 - Identiteitsservice-API {#api}
    - [Aan de slag](api/getting-started.md)
    - [Een veld als identiteit labelen](api/label-identities.md)
