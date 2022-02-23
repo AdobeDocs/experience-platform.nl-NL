@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
-source-git-commit: f237ee364cdf6048840dca797f7827b9b88dd73b
+source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '157'
 ht-degree: 14%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 14%
    * [Ondersteunde gebruiksgevallen](fundamentals/supported-use-cases.md)
 * Identiteit {#identity}
    * [Overzicht](identity/overview.md)
+   * [Apparaat-id&#39;s van eerste partij](identity/first-party-device-ids.md)
 * Gegevensverzameling {#data-collection}
    * [Automatisch verzamelde gegevens](data-collection/automatic-information.md)
    * [Koppelingen bijhouden](data-collection/track-links.md)
