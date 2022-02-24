@@ -2,7 +2,7 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van de technologieën voor gegevensverzameling van Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1125907e02c23b89ea672f424d1bbf9e9de0ba04
+source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
 workflow-type: tm+mt
 source-wordcount: '2536'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Selecteer in de gebruikersinterface voor gegevensverzameling de optie **[!UICONT
 
 De configuratievereisten voor een gegevensstroom hangen af van welke producten en mogelijkheden u gegevens naar verzendt. Voor gedetailleerde informatie over de configuratieopties voor elk product raadpleegt u de [datastreams, overzicht](../edge/fundamentals/datastreams.md).
 
-## De SDK van het Web installeren en configureren {#install}
+## De SDK van het Web installeren en configureren
 
 Zodra u een schema en een gegevensstroom hebt gecreeerd, moet de volgende stap het Web SDK van het Platform installeren en vormen beginnen gegevens naar het Netwerk van de Rand te verzenden.
 
