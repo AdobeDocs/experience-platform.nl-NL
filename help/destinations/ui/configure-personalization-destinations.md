@@ -6,9 +6,9 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Leer hoe te om verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,10 @@ Dit artikel verstrekt geleidelijke instructies op hoe te om Experience Platform 
 Bekijk bovendien de video hieronder voor een overzicht van het configuratieproces van begin tot eind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
+
+>[!NOTE]
+>
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Raadpleeg de configuratiestappen in de onderstaande secties voor de meest actuele informatie.
 
 ## Stap 1: Een gegevensstroom configureren in de gebruikersinterface voor gegevensverzameling {#configure-datastream}
 
