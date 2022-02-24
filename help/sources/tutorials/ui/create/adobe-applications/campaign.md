@@ -4,10 +4,10 @@ title: Een Adobe Campaign Managed Services-bronverbinding maken met de gebruiker
 description: Leer hoe u Adobe Experience Platform via de gebruikersinterface van het Platform verbindt met Adobe Campaign Managed Services.
 hide: true
 hidefromtoc: true
-source-git-commit: 24d7a549e83245fc363bd76f26ba58130e980c6c
+source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 0%
+source-wordcount: '280'
+ht-degree: 1%
 
 ---
 
@@ -31,30 +31,24 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Onder de **[!UICONTROL Adobe applications]** categorie, selecteert u **[!UICONTROL Adobe Campaign Managed Services]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
-### Gegevens selecteren
+### Gegevens selecteren {#select-data}
 
 De [!UICONTROL Select data] stap verschijnt, die u van een interface voorzien om waarden voor uw te vormen [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], en [!UICONTROL Schema name].
 
-#### Campagne-instantie selecteren {#select-campaign-instance}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Campagne-instantie selecteren"
+>title="ACC-instantie"
 >abstract="De naam van de Adobe Campaign Classic-omgeving die u wilt gebruiken."
 >text="Learn more in documentation"
 
-#### Campagne toewijzen selecteren {#select-campaign-mapping}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="Doeltoewijzing campagne selecteren"
+>title="Targettoewijzing"
 >abstract="De afbeeldingen van het doel zijn technische voorwerpen die door Campagne worden gebruikt om berichten te leveren, en bevatten alle technische montages die worden vereist om leveringen (adressen, telefoonaantallen, opt-in indicatoren, extra herkenningstekens..) te verzenden."
 >text="Learn more in documentation"
 
-#### Campagne-schema selecteren {#select-campaign-schema}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="Naam van campagnereschema selecteren"
+>title="Schemanaam"
 >abstract="De naam van de entiteit die is gedefinieerd in de Adobe Campaign-database."
 >text="Learn more in documentation"
