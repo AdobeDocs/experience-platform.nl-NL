@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
+source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '724'
 ht-degree: 1%
 
 ---
@@ -157,9 +157,9 @@ ht-degree: 1%
    * Destination SDK-functionaliteit {#functionality}
       * [Configuratieopties](./destination-sdk/configuration-options.md)
       * [Streaming doelconfiguratie](./destination-sdk/destination-configuration.md)
-      * [Bestandsgebaseerde doelconfiguratie](./destination-sdk/file-based-destination-configuration.md)
+      * [(Beta) Bestandsgebaseerde doelconfiguratie](./destination-sdk/file-based-destination-configuration.md)
       * [Streaming doelserver- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
-      * [Bestandsgebaseerde server- en bestandsdoelbestanden](./destination-sdk/server-and-file-configuration.md)
+      * [(bèta) server- en bestandsserver met bestandsgebaseerde doelen](./destination-sdk/server-and-file-configuration.md)
       * [Berichtindeling](./destination-sdk/message-format.md)
       * [Metagegevensbeheer voor het publiek](./destination-sdk/audience-metadata-management.md)
       * Verificatie {#authentication}
