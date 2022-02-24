@@ -2,9 +2,9 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een bestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
+source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,10 @@ Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming ve
 * Het bewijs dat u een bestemmings het publiceren verzoek voor uw bestemming gebruikend hebt voorgelegd [doel-publicatie-API](./destination-publish-api.md).
 * (Alleen voor productieve integratie) een documentatie PR (pull-verzoek), volgens de instructies in de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md).
 * Een afbeeldingsbestand dat wordt weergegeven als een logo voor uw doelkaart in de catalogus met bestemmingen voor het Experience Platform.
+
+>[!NOTE]
+>
+>Publicatietijd Adobe is 5 werkdagen.
 
 In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
 
