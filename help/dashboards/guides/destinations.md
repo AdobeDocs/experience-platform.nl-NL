@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 48ceeadda939ea14132fafb4275db9e855d238b6
+source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Voor een overzicht van de bestemmingen en een lijst van alle beschikbare bestemm
 
 ## [!UICONTROL Destinations] dashboardgegevens {#destinations-dashboard-data}
 
-De [!UICONTROL Destinations] het dashboard toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten. De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het dashboard van bestemmingen werkt niet in real time bij.
+De [!UICONTROL Destinations] het dashboard toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten. De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het dashboard van bestemmingen werkt niet in echt bij - tijd.
 
 >[!NOTE]
 >
@@ -43,18 +43,13 @@ Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van wi
 
 ## Standaardwidgets
 
-Adobe verstrekt veelvoudige standaardwidgets die u kunt gebruiken om verschillende metriek met betrekking tot uw bestemmingen te visualiseren en de volledigheid van de segmenten beschikbaar voor uw gegevensanalyse te beoordelen. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens voor uw doelen. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [[!UICONTROL Most used destinations]](#most-used-destinations)
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
 * [[!UICONTROL Recently activated segments]](#recently-activated-segments)
-* [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Audience size trend]](#audience-size-trends)
-* [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
-* [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
-* [[!UICONTROL Common audiences]](#common-audiences)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -91,66 +86,6 @@ Als u de naam van een segment selecteert in de lijst die wordt weergegeven op de
 Voor meer informatie over het werken met segmenten in Experience Platform, gelieve te beginnen door te lezen [Overzicht van segmentatieservice](../../segmentation/home.md).
 
 ![](../images/destinations/recently-activated-segments.png)
-
-### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
-
-De **[!UICONTROL Recently activated segments by destination]** widget geeft de bovenste vijf laatst geactiveerde segmenten in aflopende volgorde weer, afhankelijk van het doel dat u hebt gekozen in de overzichtsvervolgkeuzelijst. Het lijkt op het [!UICONTROL Recently activated segments] widget, maar de gegevens worden weergegeven **alleen** wordt toegepast op het geselecteerde doel.
-
-Deze widget bevat twee metriek: de segmentnaam en de datum dat het segment het laatst aan de bestemming werd geactiveerd. De weergegeven gegevens zijn correct vanaf de laatste dagelijkse momentopname.
-
-U kunt de details van een segment bekijken door de naam van een segment van de getoonde lijst te selecteren.
-
-![Onlangs geactiveerde segmenten op doelwidget.](../images/destinations/recently-activated-segments-by-destination.png)
-
-### [!UICONTROL Audience size trend] {#audience-size-trend}
-
-De **[!UICONTROL Audience size trend]** widget geeft de relatie weer van de profieltelling over een tijdsperiode voor een segment dat is toegewezen aan die doelaccount. De widget gebruikt een lijngrafiek om het aantal profielen in het segment te illustreren, die dagelijks naar de bestemmingsrekening worden verzonden.
-
-Een tijdsperiode voor de publiekstrend over de afgelopen 30 dagen, 90 dagen, of 12 maanden, kan worden aangepast gebruikend het eerste drop-down menu.
-
-Het tweede vervolgkeuzemenu bevat alle beschikbare segmenten die naar de doelaccount kunnen worden verzonden die boven aan het dashboard is gekozen.
-
-![De trendwidget voor de doelgrootte.](../images/destinations/audience-size-trend.png)
-
-### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
-
-De **[!UICONTROL Unmapped segments by identity]** widget geeft de bovenste vijf weer **ongestructureerd** segmenten gerangschikt op basis van het afnemende aantal identiteiten voor een bepaald doel en een bepaalde identiteit. Het benadrukt segmenten die het meest voordelig zijn om aan de gekozen bestemmingsrekening in kaart te brengen die op gekozen identiteitskaart wordt gebaseerd.
-
-Het vervolgkeuzemenu voor de doel-id filtert de beschikbare segmenten. De filter-id&#39;s in de vervolgkeuzelijst veranderen, afhankelijk van de doelaccount die boven aan de overzichtspagina is geselecteerd.
-
-In de kolom met identiteiten wordt het aantal bron-id&#39;s in het segment geteld dat kan worden toegewezen aan de id die is gekozen in het vervolgkeuzemenu van de widget-id.
-
-![De segmenten zonder toewijzing op de identiteitswidget.](../images/destinations/unmapped-segments-by-identity.png)
-
-### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
-
-Deze widget biedt een bovenste lijst van vijf **toegewezen** segmenten. De lijst wordt bevolen van hoog aan laag volgens het aantal bron IDs bevat binnen de segmenten. De doel-id die moet worden geteld, wordt geselecteerd in het vervolgkeuzemenu onder de titel van de widget. De doel-id&#39;s die beschikbaar zijn in de vervolgkeuzelijst in de widget, worden gewijzigd op basis van het doelaccountfilter dat boven aan het overzichtsdashboard is gekozen.
-
-![De toegewezen segmenten op identiteitswidget.](../images/destinations/mapped-segments-by-identity.png)
-
-De **[!UICONTROL Mapped segments by identity]** in één oogopslag wordt de nadruk gelegd op de waarschijnlijkheid om profielkansen voor een campagne binnen de gekozen bestemming met succes te richten . Een efficiënte gerichte campagne is niet afhankelijk van het aantal profielen dat naar de bestemming wordt verzonden, maar van het aantal bron-id&#39;s dat waarschijnlijk met de doel-id&#39;s wordt aangepast om nuttige en uitvoerbare gegevens te verschaffen.
-
-### Algemeen publiek
-
-De **[!UICONTROL Common audiences]** widget bevat een lijst met de bovenste vijf segmenten die worden geactiveerd over de doelaccount die boven aan de pagina is gekozen, en het doel dat is geselecteerd in de widgetvervolgkeuzelijst. De lijst met segmenten wordt geordend op basis van hoe recent ze zijn geactiveerd. Het laatst geactiveerde segment wordt bovenaan weergegeven.
-
-De [!UICONTROL AUDIENCE SIZE] de kolom verstrekt het totale profielaantal van elk vermeld segment.
-
-![De widget Algemeen publiek.](../images/destinations/common-audiences.png)
-
-### Gewijzigde gezondheid van het publiek
-
-De widget biedt een lijst met maximaal 20 in kaart gebrachte segmenten waarvan het totale aantal profielen, vanaf de laatste dagelijkse momentopname, met een factor van minstens één standaardafwijking afwijkt van de gemiddelde 30 dagen-publieksgrootte die aan die bestemming is toegewezen.
-
-Kortom, het biedt een berekende maatstaf voor de spreiding van de publieksformaten ten opzichte van het gemiddelde over de afgelopen 30 dagen. Het vergelijkt of de omvang van het publiek van vandaag buiten de historische standaardafwijking valt die in de afgelopen 30 dagen in de gegevens werd gezien.
-
-Alle publieksgrootten in het systeem worden gesorteerd van hoge naar lage publieksgrootte, zoals aangegeven in het dialoogvenster [!UICONTROL LATEST SIZE] kolom.
-
-Als het aantal aan een segment toegewezen profielen de afgelopen 30 dagen buiten één standaardafwijking van de gemiddelde toegewezen profielgrootte ligt, wijst dit op een anomalie in het systeem en het zou moeten worden onderzocht.
-
-Als een segment binnen de [!UICONTROL Mapped audience health] widget wijkt met een ruime marge af, moet u naar het trenddiagram voor de doelgrootte verwijzen en het afwijkende segment zoeken. De trend kan meer inzicht in de gezondheid van uw segment verstrekken.
-
-![De widget gezondheid voor het toegewezen publiek.](../images/destinations/mapped-audience-health.png)
 
 ## Volgende stappen
 
