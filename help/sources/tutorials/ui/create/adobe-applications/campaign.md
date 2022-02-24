@@ -4,7 +4,7 @@ title: Een Adobe Campaign Managed Services-bronverbinding maken met de gebruiker
 description: Leer hoe u Adobe Experience Platform via de gebruikersinterface van het Platform verbindt met Adobe Campaign Managed Services.
 hide: true
 hidefromtoc: true
-source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
+source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 1%
@@ -33,8 +33,6 @@ Onder de **[!UICONTROL Adobe applications]** categorie, selecteert u **[!UICONTR
 
 ### Gegevens selecteren {#select-data}
 
-De [!UICONTROL Select data] stap verschijnt, die u van een interface voorzien om waarden voor uw te vormen [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], en [!UICONTROL Schema name].
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
 >title="ACC-instantie"
@@ -52,3 +50,5 @@ De [!UICONTROL Select data] stap verschijnt, die u van een interface voorzien om
 >title="Schemanaam"
 >abstract="De naam van de entiteit die is gedefinieerd in de Adobe Campaign-database."
 >text="Learn more in documentation"
+
+De [!UICONTROL Select data] stap verschijnt, die u van een interface voorzien om waarden voor uw te vormen [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], en [!UICONTROL Schema name].
