@@ -2,7 +2,7 @@
 description: Op deze pagina worden alle API-bewerkingen beschreven die u kunt uitvoeren met het API-eindpunt `/authoring/publiek-templates`.
 title: API-bewerkingen voor het eindpunt van metagegevens van het publiek
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 2%
@@ -26,7 +26,6 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 U kunt een nieuw publiekssjabloon maken door een POST aan te vragen bij de `/authoring/audience-templates` eindpunt.
 
 **API-indeling**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 U kunt een bestaande publiekssjabloon bijwerken door een PUT aan te vragen bij de `/authoring/audience-templates` eindpunt en het verstrekken van instanceID van het publiekssjabloon u wilt bijwerken. In het lichaam van de vraag, verstrek het bijgewerkte malplaatje.
 
 **API-indeling**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## Een lijst met publiekssjablonen ophalen {#retrieve-list}
 
@@ -430,7 +452,6 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van publiekmetageg
 U kunt gedetailleerde informatie over een specifiek publiekssjabloon terugwinnen door een verzoek van de GET tot de `/authoring/audience-templates` eindpunt en het verstrekken van instanceID van het publiekssjabloon u wilt terugwinnen.
 
 **API-indeling**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

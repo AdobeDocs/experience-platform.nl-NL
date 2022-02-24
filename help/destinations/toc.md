@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '722'
 ht-degree: 1%
 
 ---
@@ -156,8 +156,10 @@ ht-degree: 1%
    * [Aan de slag](./destination-sdk/getting-started.md)
    * Destination SDK-functionaliteit {#functionality}
       * [Configuratieopties](./destination-sdk/configuration-options.md)
-      * [Doelconfiguratie](./destination-sdk/destination-configuration.md)
-      * [Server- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
+      * [Streaming doelconfiguratie](./destination-sdk/destination-configuration.md)
+      * [Bestandsgebaseerde doelconfiguratie](./destination-sdk/file-based-destination-configuration.md)
+      * [Streaming doelserver- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
+      * [Bestandsgebaseerde server- en bestandsdoelbestanden](./destination-sdk/server-and-file-configuration.md)
       * [Berichtindeling](./destination-sdk/message-format.md)
       * [Metagegevensbeheer voor het publiek](./destination-sdk/audience-metadata-management.md)
       * Verificatie {#authentication}
@@ -180,6 +182,7 @@ ht-degree: 1%
          * [Voorbeeld van API-bewerkingen voor het genereren van profielen](./destination-sdk/sample-profile-generation-api.md)
    * Hulplijnen {#guides}
       * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
+      * [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/submit-destination.md)
    * Uw doel documenteren {#document-destination}
       * [Uw doel documenteren in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)

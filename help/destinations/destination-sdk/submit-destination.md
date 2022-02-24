@@ -1,15 +1,15 @@
 ---
-description: Deze pagina bevat alle informatie die u voor revisie moet verzenden naar een doel dat is ontworpen met Destination SDK.
-title: Ter controle verzenden naar een bestemming die is geschreven in Destination SDK
+description: Deze pagina verstrekt alle informatie u voor overzicht een bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
+title: Ter controle een bestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
 
 ---
 
-# Ter controle verzenden naar een bestemming die is geschreven in Destination SDK
+# Ter controle een bestemming verzenden die is geschreven in Destination SDK
 
 ## Overzicht {#overview}
 
@@ -37,6 +37,7 @@ Verstrek een beschrijving van de gebruiksgevallen die uw bestemming voor klanten
 ## Testresultaten na gebruik van de API voor testbestemming
 
 Geef testresultaten op nadat u de [doel-API testen](./test-destination.md) eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Dit omvat:
+
 * De volledige API-aanvraag (headers en body) die met de API voor testen is ingediend bij het eindpunt van de bestemming.
 * De API reactie die van uw bestemmingshindpunt wordt ontvangen.
 

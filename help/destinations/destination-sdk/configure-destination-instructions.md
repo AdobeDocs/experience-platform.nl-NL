@@ -1,27 +1,23 @@
 ---
-description: Op deze pagina vindt u een overzicht en beschrijving van de stappen voor het configureren van een streamingbestemming met Destination SDK.
-title: Destination SDK gebruiken om een streamingbestemming te configureren
+description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend Destination SDK.
+title: Gebruik Destination SDK om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# Destination SDK gebruiken om een streamingbestemming te configureren
+# Gebruik Destination SDK om een streamingbestemming te configureren
 
 ## Overzicht {#overview}
 
 In deze pagina wordt beschreven hoe u de informatie in [Configuratieopties in de SDK Doelen](./configuration-options.md) en in andere Destination SDK-functionaliteit en API-referentiedocumenten om een [streamingdoel](/help/destinations/destination-types.md#streaming-destinations). De stappen worden in de onderstaande volgorde weergegeven.
 
->[!NOTE]
->
->Het configureren van een batchbestemming via Destination SDK wordt momenteel niet ondersteund.
-
 ## Vereisten {#prerequisites}
 
-Lees de onderstaande stappen voordat u verdergaat [Destination SDK aan de slag](./getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegegevens voor Adobe I/O en andere voorwaarden voor het werken met Destination SDK API&#39;s.
+Lees de onderstaande stappen voordat u verdergaat [Aan de slag met Destination SDK](./getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 ## Stappen om de configuratieopties in Destination SDK aan opstelling te gebruiken uw bestemming {#steps}
 
@@ -29,7 +25,7 @@ Lees de onderstaande stappen voordat u verdergaat [Destination SDK aan de slag](
 
 ## Stap 1: Een server- en sjabloonconfiguratie maken {#create-server-template-configuration}
 
-Begin door een server en malplaatjeconfiguratie te creëren gebruikend `/destinations-server` eindpunt (read [API-referentie](./destination-server-api.md)). Voor meer informatie over de server en malplaatjeconfiguratie, verwijs naar [Server- en sjabloonspecificaties](./configuration-options.md#server-and-template) in de referentiesectie.
+Begin door een server en malplaatjeconfiguratie te creëren gebruikend `/destinations-server` eindpunt (read [API-referentie](destination-server-api.md)). Voor meer informatie over de server en malplaatjeconfiguratie, verwijs naar [Server- en sjabloonspecificaties](server-and-template-configuration.md) in de referentiesectie.
 
 Hieronder ziet u een voorbeeldconfiguratie. Merk op dat het malplaatje van de berichttransformatie in `requestBody.value` parameter wordt behandeld in stap 3; [Transformatiesjabloon maken](./configure-destination-instructions.md#create-transformation-template).
 
@@ -58,7 +54,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Stap 2: Doelconfiguratie maken {#create-destination-configuration}
 
-Hieronder weergegeven is een voorbeeldconfiguratie voor een doelsjabloon, die is gemaakt met de `/destinations` API-eindpunt. Voor meer informatie over deze sjabloon raadpleegt u [Doelconfiguratie](./destination-configuration.md).
+Hieronder weergegeven is een voorbeeldconfiguratie voor een doelsjabloon, die is gemaakt met de `/destinations` API-eindpunt. Voor meer informatie over deze configuratie, verwijs naar [Doelconfiguratie](./destination-configuration.md).
 
 Om de server en malplaatjeconfiguratie in stap 1 met deze bestemmingsconfiguratie te verbinden, voeg instantieidentiteitskaart van de server en malplaatjeconfiguratie als toe `destinationServerId` hier.
 
@@ -160,7 +156,7 @@ Voor sommige bestemmingen, vereist Destination SDK dat u een configuratie van pu
 
 Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bestemmingsconfiguratie verbinden u in stap 2 creeerde. Voeg instanceID van uw configuratie van publieksmeta-gegevens aan uw bestemmingsconfiguratie als toe `audienceTemplateId`.
 
-## Stap 5: Referentieconfiguratie maken/verificatie instellen {#set-up-authentication}
+## Stap 5: Verificatie instellen {#set-up-authentication}
 
 Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"authenticationRule": "PLATFORM_AUTHENTICATION"` in de bestemmingsconfiguratie hierboven, kunt u opstellingsauthentificatie voor uw bestemming door te gebruiken `/destination` of de `/credentials` eindpunt.
 

@@ -2,9 +2,9 @@
 description: Op deze pagina worden alle API-bewerkingen beschreven die u kunt uitvoeren met het API-eindpunt `/authoring/credentials`.
 title: API-bewerkingen van het eindpunt Credentials
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '797'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,11 @@ ht-degree: 2%
 
 Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/credentials` API-eindpunt.
 
+Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees:
+
+* [Streaming doelconfiguratie](destination-configuration.md) voor de functionaliteit kunt u voor het stromen bestemmingen vormen.
+* [Bestandsgebaseerde doelconfiguratie](file-based-destination-configuration.md) voor de functionaliteit kunt u voor op dossier-gebaseerde bestemmingen vormen.
+
 ## Wanneer gebruikt u de `/credentials` API-eindpunt {#when-to-use}
 
 >[!IMPORTANT]
@@ -24,125 +29,6 @@ Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u k
 >In de meeste gevallen *niet* de `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt. Lezen [Verificatieconfiguratie](./authentication-configuration.md#when-to-use) voor meer informatie .
 
 Gebruik dit API-eindpunt en selecteer `PLATFORM_AUTHENTICATION` in de [doelconfiguratie](./destination-configuration.md#destination-delivery) als er een globaal authentificatiesysteem tussen Adobe en uw bestemming en is [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een object credentials maken met de opdracht `/credentials` API-eindpunt.
-
-<!--
-
-Commenting out the example configurations
-
-## Example configurations
-
-**Example configuration for a Basic authentication credential configuration with username and password**
-
-```json
-{
-  "type": "BASIC",
-  "name": "YOUR_DESTINATION_NAME",
-  "basicAuthentication": {
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "password": "YOUR_DESTINATION_SERVER_PASSWORD"
-  }
-}
-
-```
-
-**Example configuration for an OAuth2 credential configuration**
-
-```json
-
-{
-  "oauth2AccessTokenAuthentication": {
-    "accessToken": "YOUR_DESTINATION_SERVER_ACCESS_TOKEN",
-    "expiration": "YOUR_TOKEN_TIME_TO_LIVE",
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "userId": "YOUR_DESTINATION_USER_ID",
-    "url": "AUTHORIZATION_PROVIDER_URL",
-    "header": "YOUR_AUTHORIZATION_HEADER"
-  }
-}
-
-```
-
-The sections below list out the necessary parameters for each authentication type. Let us know which authentication type your server uses and provide us with the relevant information for your server type.
-
-## Basic authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`username` | String | credentials configuration login username |
-|`password` | String | credentials configuration login password |
-
-
-
-// commenting out this part as these types of authentication methods are not supported in phase one
-
-### S3 authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|accessId | String | credentials configuration S3 credential Access key ID |
-|secretKey | String | credentials configuration S3 credential Secret key |
-
-### SSH 
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|username | String | credentials configuration SSH username |
-|SSHKey | String | credentials configuration SSH key |
-
-
-
-## OAuth1
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`apiKey` | String | A value used by the Destinations Service to identify itself to the Service Provider. |
-|`apiSecret` | String | Secret used by the Destinations Service to establish ownership of the API key to the Service Provider. |
-|`acccessToken` | String | A value used by the Destinations Service to gain access to the Protected Resources on behalf of the User |
-|`tokenSecret` | String | A secret used by the Destinations Service to establish ownership of an access token. |
-
-## OAuth2 user credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username` | String | The user's username to log on to your platform. |
-|`password` | String | The user's password to log on to your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 client credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username`| String | URL of authorization provider |
-|`password` | String | Any header required for authorization |
-
-## OAuth2 access token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`accessToken` | String | Access token provided by the authorization provider |
-|`expiration` | String | The time-to-live for the access token |
-|`username` | String | The user's username to log on to your platform. |
-|`userId` | String | The user's ID with your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 refresh token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`refreshToken` | String | Refresh token provided by the authorization provider |
-|`url` | String | URL of authorization provider |
-|`expiration` | String | The time-to-live for the refresh token |
-|`header` | String | Any header required for authorization |
-
--->
 
 ## Aan de slag met API-bewerkingen voor aanmeldingsconfiguratie {#get-started}
 
@@ -153,7 +39,6 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 U kunt een nieuwe geloofsgeloofsconfiguratie tot stand brengen door een verzoek van de POST aan `/authoring/credentials` eindpunt.
 
 **API-indeling**
-
 
 ```http
 POST /authoring/credentials
@@ -202,14 +87,36 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
       "clientSecret":"string",
       "url":"string",
       "header":"string"
+   },
+   "s3Authentication":{
+      "accessId":"string",
+      "secretKey":"string"
+   },
+   "sshAuthentication":{
+      "username":"string",
+      "sshKey":"string"
+   },
+   "azureAuthentication":{
+      "url":"string",
+      "tenant":"string",
+      "servicePrincipalId":"string",
+      "servicePrincipalKey":"string"
+   },
+   "azureConnectionStringAuthentication":{
+      "connectionString":"string"
+   },
+   "basicAuthentication":{
+      "url":"string",
+      "username":"string",
+      "password":"string"
    }
 }
 ```
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `username` | Tekenreeks | aanmeldingsgebruikersnaam voor gebruikersconfiguratie |
-| `password` | Tekenreeks | aanmeldingswachtwoord voor gebruikersconfiguratie |
+| `username` | Tekenreeks | Gebruikersnaam aanmeldnaam voor configuratie van referenties |
+| `password` | Tekenreeks | Aanmeldingswachtwoord voor configuratie van referenties |
 | `url` | Tekenreeks | URL van leverancier van autorisaties |
 | `clientId` | Tekenreeks | Client-id van client/toepassingsreferentie |
 | `clientSecret` | Tekenreeks | Clientgeheim van client/toepassingsreferentie |
@@ -217,6 +124,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `expiration` | Tekenreeks | De time-to-live voor het toegangstoken |
 | `refreshToken` | Tekenreeks | Token vernieuwen die door de leverancier van de vergunning worden verstrekt |
 | `header` | Tekenreeks | Alle kopteksten die vereist zijn voor autorisatie |
+| `accessId` | Tekenreeks | Amazon S3 access ID |
+| `secretKey` | Tekenreeks | Amazon S3 geheime sleutel |
+| `sshKey` | Tekenreeks | SSH-sleutel voor SFTP met SSH-verificatie |
+| `tenant` | Tekenreeks | Azure Data Lake Storage-huurder |
+| `servicePrincipalId` | Tekenreeks | Azure Service Principal ID for Azure Data Lake Storage |
+| `servicePrincipalKey` | Tekenreeks | Azure Service Principal Key for Azure Data Lake Storage |
+| `connectionString` | Tekenreeks | Azure Blob Storage connection string |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -318,16 +232,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 }
 ```
 
-
-
-
-
 ## Haal een specifieke geloofsbrieven configuratie terug {#get}
 
 U kunt gedetailleerde informatie over een specifieke geloofsbrieven configuratie terugwinnen door een verzoek van de GET aan `/authoring/credentials` eindpunt en het verstrekken van instanceID van de geloofsbrieven configuratie wilt u bijwerken.
 
 **API-indeling**
-
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
@@ -368,7 +277,6 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
    }
 }
 ```
-
 
 ## Een specifieke aanmeldingsconfiguratie verwijderen {#delete}
 

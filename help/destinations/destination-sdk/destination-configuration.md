@@ -1,27 +1,27 @@
 ---
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
-title: Opties voor doelconfiguratie voor doel-SDK
+title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1753'
 ht-degree: 2%
 
 ---
 
-# Doelconfiguratie {#destination-configuration}
+# Streaming doelconfiguratie {#destination-configuration}
 
 ## Overzicht {#overview}
 
-Deze configuratie staat u toe om essentiële informatie zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
+Deze configuratie staat u toe om essentiële informatie voor uw het stromen bestemming, zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 
 Deze configuratie verbindt ook de andere configuraties die voor uw bestemming worden vereist aan het werk - bestemmingsserver en publieksmeta-gegevens - aan dit. Lees hoe u naar de twee configuraties in een [hieronder](./destination-configuration.md#connecting-all-configurations).
 
 U kunt de in dit document beschreven functionaliteit configureren met de `/authoring/destinations` API-eindpunt. Lezen [API-eindpuntbewerkingen voor doelen](./destination-configuration-api.md) voor een volledige lijst van verrichtingen kunt u op het eindpunt uitvoeren.
 
-## Voorbeeldconfiguratie {#example-configuration}
+## Voorbeeld van streamingconfiguratie {#example-configuration}
 
-Hieronder ziet u een voorbeeldconfiguratie van een fictieve bestemming, Moviestar, die eindpunten heeft op vier plaatsen op de wereld. De bestemming behoort tot de categorie mobiele bestemmingen. In de volgende secties wordt uitgelegd hoe deze configuratie wordt samengesteld.
+Dit is een voorbeeldconfiguratie van een fictieve streamingbestemming, Moviestar, die eindpunten heeft op vier locaties over de hele wereld. De bestemming behoort tot de categorie mobiele bestemmingen.
 
 ```json
 {
@@ -137,29 +137,28 @@ Hieronder ziet u een voorbeeldconfiguratie van een fictieve bestemming, Moviesta
 
 Deze sectie in de bestemmingsconfiguratie produceert [Nieuwe bestemming configureren](/help/destinations/ui/connect-destination.md) pagina in het gebruikersinterface van het Experience Platform, waar de gebruikers Experience Platform met de rekeningen verbinden zij met uw bestemming hebben. Afhankelijk van welke verificatieoptie u aangeeft in het dialoogvenster `authType` wordt de pagina Experience Platform voor de gebruikers als volgt gegenereerd:
 
-**Waardere verificatie**
+### Waardere verificatie
 
 Wanneer u het dragerauthentificatietype vormt, worden de gebruikers vereist om het dragerteken in te voeren dat zij uit uw bestemming verkrijgen.
 
-![UI-weergave met dragerverificatie](./assets/bearer-authentication-ui.png)
+![UI-weergave met dragerverificatie](assets/bearer-authentication-ui.png)
 
-**OAuth 2-verificatie**
+### OAuth 2-verificatie
 
-Gebruikers selecteren **[!UICONTROL Connect to destination]** om de OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de bestemming van het Toegelaten publiek van Twitter teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees specifiek [Bestemming-SDK OAuth 2-verificatiepagina](./oauth2-authentication.md).
+Gebruikers selecteren **[!UICONTROL Connect to destination]** om de OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de bestemming van het publiek van de Douane van Twitter teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees specifiek [Destination SDK OAuth 2-verificatiepagina](./oauth2-authentication.md).
 
-![UI-weergave met OAuth 2-verificatie](./assets/oauth2-authentication-ui.png)
-
+![UI-weergave met OAuth 2-verificatie](assets/oauth2-authentication-ui.png)
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Tekenreeks | Wijst op de configuratie die wordt gebruikt om de klanten van het Experience Platform aan uw server voor authentiek te verklaren. Zie `authType` hieronder voor geaccepteerde waarden. |
-| `authType` | Tekenreeks | Accepteerde waarden zijn `OAUTH2, BEARER`. <br><ul><li> Als uw bestemming authentificatie OAuth 2 steunt, selecteer `OAUTH2` waarde en voeg de vereiste gebieden voor OAuth 2 toe, zoals aangetoond in [Bestemming-SDK OAuth 2-verificatiepagina](./oauth2-authentication.md). Bovendien moet u `authenticationRule=CUSTOMER_AUTHENTICATION` in de [leveringssectie bestemming](./destination-configuration.md). </li><li>Selecteer `BEARER` en selecteert u `authenticationRule=CUSTOMER_AUTHENTICATION` in de [leveringssectie bestemming](./destination-configuration.md).</li></ul> |
+| `authType` | Tekenreeks | Accepteerde waarden voor streamingdoelen zijn:<ul><li>`BEARER`. Als uw bestemming dragerauthentificatie steunt, plaats `"authType":"Bearer"` en  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in de [leveringssectie bestemming](./destination-configuration.md).</li><li>`OAUTH2`. Als uw bestemming OAuth 2 authentificatie steunt, plaats `"authType":"OAUTH2"` en voeg de vereiste gebieden voor OAuth 2 toe, zoals aangetoond in [Destination SDK OAuth 2-verificatiepagina](./oauth2-authentication.md). Bovendien instellen `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in de [leveringssectie bestemming](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Gegevensvelden van de klant {#customer-data-fields}
 
-Deze sectie staat partners toe om douanegebieden te introduceren. In de bovenstaande voorbeeldconfiguratie: `customerDataFields` vereist gebruikers om een eindpunt in de authentificatiestroom te selecteren en op hun klantID met de bestemming te wijzen. De configuratie wordt weerspiegeld in de authentificatiestroom zoals hieronder getoond:
+Gebruik deze sectie om gebruikers te vragen aangepaste velden in te vullen, specifiek voor uw doel, wanneer u verbinding maakt met het doel in de gebruikersinterface van het Experience Platform. De configuratie wordt weerspiegeld in de authentificatiestroom zoals hieronder getoond:
 
 ![Aangepaste veldverificatiestroom](./assets/custom-field-authentication-flow.png)
 
@@ -184,7 +183,7 @@ Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe
 | `documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Doelcatalogus](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruiken `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` is de naam van uw bestemming. Voor een bestemming genoemd Moviestar, zou u gebruiken `http://www.adobe.com/go/destinations-moviestar-en` |
 | `category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees voor meer informatie [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | Tekenreeks | `Server-to-server` is momenteel de enige beschikbare optie. |
-| `frequency` | Tekenreeks | `Streaming` is momenteel de enige beschikbare optie. |
+| `frequency` | Tekenreeks | Verwijst naar het type gegevens dat door de bestemming wordt gesteund. Ondersteunde waarden: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -202,6 +201,7 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de workflow vo
 | `identityRequired` | Boolean | Gebruiken `true` als gebruikers naamruimten van het Experience Platform aan uw gewenste schema moeten kunnen toewijzen. |
 
 {style=&quot;table-layout:auto&quot;}
+
 
 ## Identiteiten en kenmerken {#identities-and-attributes}
 

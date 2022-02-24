@@ -2,7 +2,7 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination/publish`.
 title: API-eindpuntbewerkingen voor doelen publiceren
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 2%
@@ -20,6 +20,7 @@ Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u k
 Nadat u hebt gevormd en uw bestemming getest, kunt u het voorleggen aan Adobe voor overzicht en het publiceren.
 
 Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te dienen wanneer:
+
 * Als partner van Destination SDK, wilt u uw geproduceerde bestemming beschikbaar over alle organisaties van het Experience Platform voor alle klanten van het Experience Platform aan gebruik maken;
 * U wilt uw aangepaste bestemming beschikbaar maken in uw eigen organisatie van het Experience Platform, voor alle sandboxen.
 
@@ -32,7 +33,6 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 U kunt een bestemmingsconfiguratie voor het publiceren voorleggen door een verzoek van de POST aan de `/authoring/destinations/publish` eindpunt.
 
 **API-indeling**
-
 
 ```http
 POST /authoring/destinations/publish
@@ -78,7 +78,6 @@ U kunt een lijst van alle bestemmingen terugwinnen die voor publicatie voor uw o
 
 **API-indeling**
 
-
 ```http
 GET /authoring/destinations/publish
 ```
@@ -114,7 +113,6 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van doelen die zij
       }
    ]
 }
-    
 ```
 
 | Parameter | Type | Beschrijving |
@@ -132,7 +130,6 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van doelen die zij
 U kunt de toegestane organisaties in een bestaand doel bijwerken publicatieverzoek door een PUT aan te vragen bij `/authoring/destinations/publish` eindpunt en het verstrekken van identiteitskaart van de bestemming waarvoor u de toegestane organisaties wilt bijwerken. In het lichaam van de vraag, verstrek de bijgewerkte toegestane organisaties.
 
 **API-indeling**
-
 
 ```http
 PUT /authoring/destinations/publish/{DESTINATION_ID}
@@ -169,7 +166,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 U kunt gedetailleerde informatie over een specifieke bestemmings terugwinnen publicatieverzoek door een verzoek van de GET aan `/authoring/destinations/publish` eindpunt en het verstrekken van identiteitskaart van de bestemming waarvoor u de het publiceren status wilt terugwinnen.
 
 **API-indeling**
-
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}

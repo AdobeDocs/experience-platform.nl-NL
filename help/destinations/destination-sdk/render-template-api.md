@@ -2,7 +2,7 @@
 description: Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u kunt uitvoeren gebruikend `/authoring/testing/template/render ` API eindpunt, om uitgevoerde gegevens voor uw bestemming terug te geven, die op uw malplaatje van de berichttransformatie wordt gebaseerd.
 title: API-bewerkingen voor sjablonen renderen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 0%
@@ -30,7 +30,6 @@ U kunt beginnen met het gebruik van een eenvoudige sjabloon die uw Raw-profielen
 >[!TIP]
 >
 >* De doel-id die u hier moet gebruiken, is de `instanceId` die met een bestemmingsconfiguratie beantwoordt, die wordt gecreeerd gebruikend `/destinations` eindpunt. Zie de [API-bewerkingen voor doelconfiguratie](./destination-configuration-api.md#retrieve-list).
-
 
 
 **API-indeling**
