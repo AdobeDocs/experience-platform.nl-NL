@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronconnector in de UI om B2B-gegevens over te brengen naar Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -52,19 +52,19 @@ Onder de [!UICONTROL Adobe applications] categorie, selecteert u **[!UICONTROL M
 
 ![catalogus](../../../../images/tutorials/create/marketo/catalog.png)
 
-De **[!UICONTROL Connect to Marketo Engage]** wordt weergegeven. Op deze pagina kunt u een nieuw account gebruiken of een bestaand account openen.
-
-### Nieuwe account
-
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een accountnaam, een optionele beschrijving en uw [!DNL Marketo] verificatiereferenties. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
-
-![nieuwe rekening](../../../../images/tutorials/create/marketo/new.png)
+De **[!UICONTROL Connect Marketo Engage account]** wordt weergegeven. Op deze pagina kunt u een nieuw account gebruiken of een bestaand account openen.
 
 ### Bestaande account
 
 Als u een gegevensstroom met een bestaande account wilt maken, selecteert u **[!UICONTROL Existing account]** en selecteer vervolgens de [!DNL Marketo] account dat u wilt gebruiken. Selecteren **[!UICONTROL Next]** om verder te gaan.
 
 ![bestaand](../../../../images/tutorials/create/marketo/existing.png)
+
+### Nieuwe account
+
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een accountnaam, een optionele beschrijving en uw [!DNL Marketo] verificatiereferenties. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+
+![new](../../../../images/tutorials/create/marketo/new.png)
 
 ## Een gegevensset selecteren
 
@@ -74,41 +74,53 @@ De linkerhelft van de interface is een directorybrowser, die de 10 weergeeft [!D
 
 >[!NOTE]
 >
->Voor beknoptheid wordt de volgende zelfstudie gebruikt [!UICONTROL Named Accounts] als voorbeeld, maar de hieronder beschreven stappen zijn van toepassing op om het even welke 10 [!DNL Marketo] datasets.
+>Voor beknoptheid wordt de volgende zelfstudie gebruikt [!UICONTROL Opportunities] als voorbeeld, maar de hieronder beschreven stappen zijn van toepassing op om het even welke 10 [!DNL Marketo] datasets.
 
 Selecteer eerst de gegevensset die u wilt invoeren en selecteer vervolgens **[!UICONTROL Next]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Kaart [!DNL Marketo] schema&#39;s voor Platform
+## Gegevens over gegevensstroom opgeven
 
-De [!UICONTROL Mapping] stap verschijnt, die een interface verstrekken om in kaart te brengen [!DNL Marketo] schema&#39;s voor Platform.
+De [!UICONTROL Dataflow detail] De pagina staat u toe om te selecteren of u een bestaande dataset of een nieuwe dataset wilt gebruiken. Tijdens dit proces kunt u ook instellingen configureren voor [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], en [!UICONTROL Alerts].
 
-Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of een nieuwe dataset tot stand brengen.
+![details gegevensstroom](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
 ### Een bestaande gegevensset gebruiken
 
-Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Existing dataset]** selecteert u vervolgens het pictogram voor de gegevensset.
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Existing dataset]**. U kunt of een bestaande dataset terugwinnen gebruikend [!UICONTROL Advanced search] of door door de lijst van bestaande datasets in het dropdown menu te scrollen. Zodra u een dataset hebt geselecteerd, verstrek een naam en een beschrijving voor uw gegevensstroom.
 
 ![bestaande gegevensset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-De **[!UICONTROL Select dataset]** wordt weergegeven. Zoek de dataset met het aangewezen schema u wenst te gebruiken, het selecteren, dan selecteren **[!UICONTROL Confirm]**.
-
-![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
-
 ### Een nieuwe gegevensset gebruiken
 
-Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL New dataset]** en voert een naam en een beschrijving voor de gegevensset in de opgegeven velden in.
+Om in een nieuwe dataset in te gaan, selecteer **[!UICONTROL New dataset]** en geef vervolgens een naam voor de uitvoergegevensset en een optionele beschrijving op. Selecteer vervolgens het schema waaraan u wilt toewijzen [!UICONTROL Advanced search] of door door de lijst van bestaande schema&#39;s in het dropdown menu te scrollen. Nadat u een schema hebt geselecteerd, geeft u een naam en een beschrijving voor de gegevensstroom op.
 
-U kunt naar een schema zoeken door de naam ervan in te voeren in het dialoogvenster **[!UICONTROL Select schema]** zoekbalk. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Advanced search]** toegang tot pagina&#39;s van bestaande schema&#39;s, met inbegrip van hun respectieve details.
+![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
 
-Schakelen tussen **[!UICONTROL Profile dataset]** knoop om uw doeldataset voor toe te laten [!DNL Profile], waarmee u een holistische weergave kunt maken van de kenmerken en het gedrag van een entiteit. Gegevens van alle [!DNL Profile]- de toegelaten datasets zullen in worden omvat [!DNL Profile] en wijzigingen worden toegepast wanneer u de gegevensstroom opslaat.
+### Inschakelen [!DNL Profile] en foutdiagnostiek
 
-![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
+Selecteer vervolgens de **[!UICONTROL Profile dataset]** schakelen om uw gegevensset in te schakelen voor [!DNL Profile]. Hierdoor kunt u een holistische weergave maken van de kenmerken en het gedrag van een entiteit. Gegevens van alle [!DNL Profile]- de toegelaten datasets zullen in worden omvat [!DNL Profile] en wijzigingen worden toegepast wanneer u de gegevensstroom opslaat.
 
-Als u een schema hebt geselecteerd, schuift u omlaag om het toewijzingsdialoogvenster weer te geven en de afbeelding toe te wijzen [!DNL Marketo] datasetgebieden aan hun aangewezen doelXDM gebieden.
+[!UICONTROL Error diagnostics] laat gedetailleerde foutenmelding generatie voor om het even welke onjuiste verslagen toe die in uw dataflow voorkomen, terwijl [!UICONTROL Partial ingestion] kunt u gegevens met fouten opnemen tot een bepaalde drempel die u handmatig definieert. Zie de [gedeeltelijke batch-opname, overzicht](../../../../../ingestion/batch-ingestion/partial.md) voor meer informatie .
 
-### Uw kaart toewijzen [!DNL Marketo] Gegevenssetbronvelden naar doel-XDM-velden
+>[!IMPORTANT]
+>
+>De [!DNL Marketo] de schakelaar gebruikt batch-opname om alle historische verslagen in te voeren en gebruikt het stromen ingestie voor updates in real time. Hierdoor kan de connector doorgaan met streamen terwijl onjuiste records worden ingeslikt. De optie **[!UICONTROL Partial ingestion]** schakelen en vervolgens instellen [!UICONTROL Error threshold %] maximaal gebruiken om te voorkomen dat de gegevensstroom mislukt.
+
+![met profiel en fouten](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+
+### Waarschuwingen inschakelen
+
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [abonneren op berichten voor bronnen met behulp van de gebruikersinterface](../../alerts.md).
+
+Wanneer u klaar bent met het opgeven van details voor uw gegevensstroom, selecteert u **[!UICONTROL Next]**.
+
+![waarschuwingen](../../../../images/tutorials/create/marketo/alerts.png)
+
+## Uw kaart toewijzen [!DNL Marketo] Gegevenssetbronvelden naar doel-XDM-velden
+
+De [!UICONTROL Mapping] de stap verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
 Elk [!DNL Marketo] dataset heeft zijn eigen specifieke toewijzingsregels om te volgen. Zie het volgende voor meer informatie over hoe u kunt toewijzen [!DNL Marketo] datasets voor XDM:
 
@@ -123,33 +135,11 @@ Elk [!DNL Marketo] dataset heeft zijn eigen specifieke toewijzingsregels om te v
 * [Contactrollen opportunity](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
 * [Personen](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
-Selecteren **[!UICONTROL Preview data]** om toewijzingsresultaten te zien die op uw geselecteerde dataset worden gebaseerd.
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartinterface, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
 ![toewijzing](../../../../images/tutorials/create/marketo/mapping.png)
 
-De [!UICONTROL Preview] popover verstrekt u een interface om afbeeldingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te onderzoeken.
-
-![voorvertoning](../../../../images/tutorials/create/marketo/mapping-preview.png)
-
-Als de bronvelden zijn toegewezen aan de desbetreffende doelvelden, selecteert u **[!UICONTROL Close]**.
-
-## Gegevens over gegevensstroom opgeven
-
-De [!UICONTROL Dataflow detail] wordt weergegeven, zodat u een naam en een korte beschrijving van de nieuwe gegevensstroom kunt opgeven.
-
-![dataFlow-detail](../../../../images/tutorials/create/marketo/dataflow-detail.png)
-
-De optie **[!UICONTROL Error diagnostics]** Schakel deze optie in om het genereren van gedetailleerde foutberichten voor nieuw opgenomen batches mogelijk te maken. Deze kunt u downloaden via de API. Raadpleeg de zelfstudie voor meer informatie [diagnoses voor gegevensinvoer ophalen](../../../../../ingestion/quality/error-diagnostics.md).
-
-![fouten](../../../../images/tutorials/create/marketo/errors.png)
-
-De [!DNL Marketo] de schakelaar gebruikt batch-opname om alle historische verslagen in te voeren en gebruikt het stromen ingestie voor updates in real time. Hierdoor kan de connector doorgaan met streamen terwijl onjuiste records worden ingeslikt. De optie **[!UICONTROL Partial ingestion]** schakelen en vervolgens instellen [!UICONTROL Error threshold %] maximaal gebruiken om te voorkomen dat de gegevensstroom mislukt.
-
-**[!UICONTROL Partial ingestion]** biedt de mogelijkheid om gegevens met fouten tot een bepaalde drempel in te voeren. Zie voor meer informatie de [gedeeltelijke batch-opname, overzicht](../../../../../ingestion/batch-ingestion/partial.md).
-
-Als u de gegevens in de gegevensstroom hebt ingevoerd en de drempel voor een fout op max. hebt ingesteld, selecteert u **[!UICONTROL Next]**.
-
-![gedeeltelijke inname](../../../../images/tutorials/create/marketo/partial-ingestion.png)
+Als uw toewijzingssets gereed zijn, selecteert u **[!UICONTROL Next]** en kan de nieuwe gegevensstroom even worden gemaakt.
 
 ## Controleer uw gegevensstroom
 
@@ -158,7 +148,7 @@ De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom k
 * **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van de gekozen bronentiteit, en de hoeveelheid kolommen binnen die bronentiteit.
 * **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
 
-Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
+Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Save & ingest]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
 ![revisie](../../../../images/tutorials/create/marketo/review.png)
 
