@@ -1,18 +1,18 @@
 ---
-title: Gegevens verzenden naar Adobe Analytics via de Adobe Experience Platform Web SDK
+title: Adobe Analytics gebruiken met Platform Web SDK
 description: Leer hoe u gegevens naar Adobe Analytics verzendt met de Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
 
-# Gegevens verzenden naar Adobe Analytics
+# Adobe Analytics gebruiken met Platform Web SDK
 
-De Adobe Experience Platform [!DNL Web SDK] kan gegevens naar Adobe Analytics verzenden. Dit werkt door `xdm` in een formaat te vertalen de Adobe Analytics kan gebruiken.
+De Adobe Experience Platform [!DNL Web SDK] kan gegevens naar Adobe Analytics verzenden. Dit werkt door te vertalen `xdm` in een indeling die de Adobe Analytics kan gebruiken.
 
 ## Instellen
 
@@ -20,7 +20,7 @@ Adobe Analytics haalt de gegevens die u verzendt automatisch op als u een rappor
 
 ## Automatisch toegewezen gegevens
 
-De Adobe Experience Platform [!DNL Edge Network] wijst automatisch veel XDM-variabelen toe. De volledige lijst van deze variabelen wordt [hier](automatically-mapped-vars.md) vermeld.
+De Adobe Experience Platform [!DNL Edge Network] Hiermee worden veel XDM-variabelen automatisch toegewezen. De volledige lijst met deze variabelen wordt weergegeven [hier](automatically-mapped-vars.md).
 
 ## Handmatig toegewezen gegevens
 

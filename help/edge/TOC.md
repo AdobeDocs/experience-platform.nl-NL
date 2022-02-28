@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: ea2bd2ff025c2fbd898e58b171c24abf1dbe55b1
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 14%
+source-wordcount: '163'
+ht-degree: 13%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 14%
    * [Koppelingen bijhouden](data-collection/track-links.md)
    * [Gegevens over handel en producten verzamelen](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [Overzicht](data-collection/adobe-analytics/analytics-overview.md)
+      * [Adobe Analytics gebruiken met Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
       * [Variabelen van Analyse toewijzen](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [Automatisch toegewezen variabelen](data-collection/adobe-analytics/automatically-mapped-vars.md)
       * [Gegevens verzenden naar Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
