@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: Een dataflow maken voor MailChimp-campagne met behulp van de Flow Service API
+title: Creeer een dataflow voor de Campagne Mailchimp gebruikend de Dienst API van de Stroom
 topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met MailChimp-campagne met behulp van de Flow Service API.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
 workflow-type: tm+mt
 source-wordcount: '2319'
 ht-degree: 0%
 
 ---
 
-# Een gegevensstroom maken voor [!DNL MailChimp Campaign] de Flow Service API gebruiken
+# Een gegevensstroom maken voor [!DNL Mailchimp Campaign] de Flow Service API gebruiken
 
-Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen [!DNL MailChimp Campaign] gegevens naar Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen [!DNL Mailchimp Campaign] gegevens naar Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Vereisten
 
-Voordat u verbinding maakt [!DNL MailChimp] naar Adobe Experience Platform met OAuth 2-vernieuwingscode, moet u eerst uw toegangstoken ophalen voor [!DNL MailChimp.] Zie de [[!DNL MailChimp] Handleiding OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) voor gedetailleerde instructies bij het vinden van uw toegangstoken.
+Voordat u verbinding maakt [!DNL Mailchimp] naar Adobe Experience Platform met OAuth 2-vernieuwingscode, moet u eerst uw toegangstoken ophalen voor [!DNL MailChimp.] Zie de [[!DNL Mailchimp] Handleiding OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) voor gedetailleerde instructies bij het vinden van uw toegangstoken.
 
 ## Een basisverbinding maken {#base-connection}
 
-Zodra u uw [!DNL MailChimp] verificatiereferenties kunt u nu het proces starten voor het maken van een gegevensstroom om [!DNL MailChimp Campaign] gegevens naar Platform. De eerste stap bij het maken van een gegevensstroom is het maken van een basisverbinding.
+Zodra u uw [!DNL Mailchimp] verificatiereferenties kunt u nu het proces starten voor het maken van een gegevensstroom om [!DNL Mailchimp Campaign] gegevens naar Platform. De eerste stap bij het maken van een gegevensstroom is het maken van een basisverbinding.
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-[!DNL MailChimp] steunt zowel basisauthentificatie als OAuth 2 verfrist code. Zie de volgende voorbeelden voor begeleiding op hoe te met één van beide authentificatietypen voor authentiek te verklaren.
+[!DNL Mailchimp] steunt zowel basisauthentificatie als OAuth 2 verfrist code. Zie de volgende voorbeelden voor begeleiding op hoe te met één van beide authentificatietypen voor authentiek te verklaren.
 
-### Een [!DNL MailChimp] basisverbinding met basisverificatie
+### Een [!DNL Mailchimp] basisverbinding met basisverificatie
 
-Als u een [!DNL MailChimp] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, `username`, en `password`.
+Als u een [!DNL Mailchimp] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, `username`, en `password`.
 
 **API-indeling**
 
@@ -40,7 +40,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL MailChimp]:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -51,8 +51,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
-      "name": "MailChimp base connection with basic authentication",
-      "description": "MailChimp Campaign base connection with basic authentication",
+      "name": "Mailchimp base connection with basic authentication",
+      "description": "Mailchimp Campaign base connection with basic authentication",
       "connectionSpec": {
           "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
           "version": "1.0"
@@ -75,10 +75,10 @@ curl -X POST \
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
 | `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verbinden met Platform. |
-| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL MailChimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
+| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL Mailchimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
 | `auth.params.authorizationTestUrl` | (Optioneel) De autorisatietest-URL wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |
-| `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL MailChimp] account. Dit is vereist voor basisverificatie. |
-| `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL MailChimp] account. Dit is vereist voor basisverificatie. |
+| `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL Mailchimp] account. Dit is vereist voor basisverificatie. |
+| `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL Mailchimp] account. Dit is vereist voor basisverificatie. |
 
 **Antwoord**
 
@@ -91,9 +91,9 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke
 }
 ```
 
-### Een [!DNL MailChimp] basisverbinding met OAuth 2-vernieuwingscode
+### Een [!DNL Mailchimp] basisverbinding met OAuth 2-vernieuwingscode
 
-Als u een [!DNL MailChimp] basisverbinding die OAuth 2 gebruikt verfrist code, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, en `accessToken`.
+Als u een [!DNL Mailchimp] basisverbinding die OAuth 2 gebruikt verfrist code, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, en `accessToken`.
 
 **API-indeling**
 
@@ -103,7 +103,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL MailChimp]:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -114,8 +114,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
-      "name": "MailChimp base connection with OAuth 2 refresh code",
-      "description": "MailChimp Campaign base connection with OAuth 2 refresh code",
+      "name": "Mailchimp base connection with OAuth 2 refresh code",
+      "description": "Mailchimp Campaign base connection with OAuth 2 refresh code",
       "connectionSpec": {
           "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
           "version": "1.0"
@@ -137,7 +137,7 @@ curl -X POST \
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat u de bron hebt geregistreerd met de [!DNL Flow Service] API. |
 | `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
-| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL MailChimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
+| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL Mailchimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
 | `auth.params.authorizationTestUrl` | (Optioneel) De testURL voor autorisaties wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |
 | `auth.params.accessToken` | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
@@ -279,7 +279,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bronverbinding gemaakt voor [!DNL MailChimp]:
+Met de volgende aanvraag wordt een bronverbinding gemaakt voor [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -310,10 +310,10 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de bronverbinding. |
-| `baseConnectionId` | De basis verbindings-id van [!DNL MailChimp]. Deze id is gegenereerd in een eerdere stap. |
+| `baseConnectionId` | De basis verbindings-id van [!DNL Mailchimp]. Deze id is gegenereerd in een eerdere stap. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met uw bron. |
-| `data.format` | Het formaat van de [!DNL MailChimp] gegevens die u wilt invoeren. |
-| `params.campaignId` | De [!DNL MailChimp] campagne-id een specifieke [!DNL MailChimp] en kunt u vervolgens e-mails naar uw lijsten/publiek sturen. |
+| `data.format` | Het formaat van de [!DNL Mailchimp] gegevens die u wilt invoeren. |
+| `params.campaignId` | De [!DNL Mailchimp] campagne-id een specifieke [!DNL Mailchimp] en kunt u vervolgens e-mails naar uw lijsten/publiek sturen. |
 
 **Antwoord**
 
@@ -354,7 +354,7 @@ POST /targetConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een doelverbinding gemaakt voor [!DNL MailChimp]:
+Met de volgende aanvraag wordt een doelverbinding gemaakt voor [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -389,7 +389,7 @@ curl -X POST \
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Lake]. Deze vaste ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Het formaat van de [!DNL MailChimp] gegevens die u naar het Platform wilt brengen. |
+| `data.format` | Het formaat van de [!DNL Mailchimp] gegevens die u naar het Platform wilt brengen. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 
@@ -406,7 +406,7 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 >[!IMPORTANT]
 >
->Data prep-functies worden momenteel niet ondersteund voor [!DNL MailChimp Campaign].
+>Data prep-functies worden momenteel niet ondersteund voor [!DNL Mailchimp Campaign].
 
 <!--
 ## Create a mapping {#mapping}
@@ -476,7 +476,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Een flow maken {#flow}
 
-De laatste stap op weg naar [!DNL MailChimp] gegevens aan Platform moeten een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar [!DNL Mailchimp] gegevens aan Platform moeten een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)
