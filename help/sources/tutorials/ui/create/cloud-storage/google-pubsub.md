@@ -6,21 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van het Platform.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Google PubSub]-bronverbinding maken in de gebruikersinterface
+# Een [!DNL Google PubSub] bronverbinding in de gebruikersinterface
 
->[!NOTE]
->
-> De [!DNL Google PubSub] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
-
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot; genoemd) met behulp van de gebruikersinterface van het Platform.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot;) gebruiken van de gebruikersinterface van het Platform.
 
 ## Aan de slag
 
@@ -29,49 +24,49 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Als u al een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan [vormend een dataflow](../../dataflow/batch/cloud-storage.md).
+Als u al een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL PubSub] wilt verbinden met Platform, moet u een geldige waarde opgeven voor de volgende referenties:
+Om verbinding te maken [!DNL PubSub] aan Platform, moet u een geldige waarde voor de volgende geloofsbrieven verstrekken:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `credentials` | De referentie- of persoonlijke sleutel-id die is vereist voor verificatie [!DNL PubSub]. |
 
-Zie het volgende [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication)-document voor meer informatie over deze waarden. Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zie [PubSub gids](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
+Raadpleeg de volgende secties voor meer informatie over deze waarden [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie het volgende [PubSub-hulplijn](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
 
 >[!TIP]
 >
 >Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zorg ervoor dat u voldoende gebruikerstoegang tot uw de dienstrekening hebt verleend en dat er geen extra witte ruimten in JSON zijn, wanneer het kopiëren en het kleven van uw geloofsbrieven.
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PubSub]-account te koppelen aan het Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PubSub] aan Platform.
 
-## Uw [!DNL PubSub]-account aansluiten
+## Verbind uw [!DNL PubSub] account
 
-In [Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Sources]** van de linkernavigatiebar om tot de [!UICONTROL Sources] werkruimte toegang te hebben. In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+In de [UI Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
-Selecteer [!UICONTROL Cloud storage] onder de categorie **[!UICONTROL Google PubSub]** en selecteer **[!UICONTROL Add data]**.
+Onder de [!UICONTROL Cloud storage] categorie, selecteert u **[!UICONTROL Google PubSub]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
 ![catalogus](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
-De pagina **[!UICONTROL Connect to Google PubSub]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De **[!UICONTROL Connect to Google PubSub]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account
 
-Als u een bestaande account wilt gebruiken, selecteert u de [!DNL PubSub]-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL PubSub] account waarmee u een nieuwe gegevensstroom wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
 
 ![bestaand](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam, een optionele beschrijving en uw [!DNL PubSub] verificatiegegevens op het invoerformulier. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw [!DNL PubSub] verificatiereferenties op het invoerformulier. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding gemaakt tussen uw [!DNL PubSub]-account en Platform. U kunt nu verdergaan naar de volgende zelfstudie en [een gegevensstroom configureren om streaminggegevens van uw cloudopslag naar Platform te brengen](../../dataflow/streaming/cloud-storage-streaming.md).
+Aan de hand van deze zelfstudie hebt u een verbinding gemaakt tussen uw [!DNL PubSub] account en Platform. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om streaminggegevens van uw cloudopslag naar Platform te brengen](../../dataflow/streaming/cloud-storage-streaming.md).

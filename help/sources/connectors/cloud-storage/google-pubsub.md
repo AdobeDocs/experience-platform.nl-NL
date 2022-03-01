@@ -5,26 +5,22 @@ title: Overzicht van de Google PubSub Source Connector
 topic-legacy: overview
 description: Leer hoe u Google PubSub met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
-# (Bèta) [!DNL Google PubSub]-connector
+# [!DNL Google PubSub] connector
 
->[!NOTE]
->
->De [!DNL Google PubSub] schakelaar is in bèta. Zie [Bronnen overzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals [!DNL AWS], [!DNL Google Cloud Platform], en [!DNL Azure], zodat u gegevens van deze systemen in Platform kunt brengen voor gebruik in downstreamdiensten en -bestemmingen.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals [!DNL AWS], [!DNL Google Cloud Platform] en [!DNL Azure], zodat u gegevens van deze systemen in Platform kunt brengen voor gebruik in downstreamservices en -doelen.
+Met bronnen voor cloudopslag kunt u uw gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens van [!DNL Azure Event Hubs] in real time.
 
-Met bronnen voor cloudopslag kunt u uw gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens van [!DNL Azure Event Hubs] in real-time invoeren.
+## Verbinden [!DNL Google PubSub] naar Platform
 
-## [!DNL Google PubSub] verbinden met Platform
-
-De onderstaande documentatie biedt informatie over hoe u [!DNL Google PubSub] kunt verbinden met een Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Google PubSub] Platforms met behulp van API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
