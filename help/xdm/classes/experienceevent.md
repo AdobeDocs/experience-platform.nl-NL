@@ -5,7 +5,7 @@ title: XDM ExperienceEvent-klasse
 topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent en aanbevolen procedures voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
+source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 0%
@@ -65,9 +65,13 @@ Als u gegevens aan Platform stroomt gebruikend een bronverbinding, kunt u de bro
 
 Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM ExperienceEvent] klasse. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
+* [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)
 * [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Deposit Details]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL Device Trade-In Details]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL Dining Reservation]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
@@ -75,6 +79,7 @@ Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM Exp
 * [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
 * [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 

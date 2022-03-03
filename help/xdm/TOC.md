@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
+source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '434'
 ht-degree: 6%
 
 ---
@@ -31,6 +31,8 @@ ht-degree: 6%
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [Beleid](./classes/policy.md)
+   * [Product](./classes/product.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
    * B2B-klassen {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
@@ -42,7 +44,7 @@ ht-degree: 6%
       * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
       * [Leden van XDM Business Marketing List](./classes/b2b/business-marketing-list-members.md)
 * Veldgroepen {#field-groups}
-   * Profielveldgroepen {#profile}
+   * Afzonderlijk XDM-profiel {#profile}
       * [Demografische details](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 Toestemming](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -54,11 +56,14 @@ ht-degree: 6%
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
       * [XDM Business Person-componenten](./field-groups/profile/business-person-components.md)
       * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
-   * Groepen van gebeurtenisvelden {#event}
+   * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+      * [Balansoverdrachten](./field-groups/event/balance-transfers.md)
       * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
+      * [Kaarthandelingen](./field-groups/event/card-actions.md)
       * [Kanaaldetails](./field-groups/event/channel-details.md)
       * [Handelsgegevens](./field-groups/event/commerce-details.md)
+      * [Aanbetalingsgegevens](./field-groups/event/deposit-details.md)
       * [Device Trade-In-details](./field-groups/event/device-trade-in-details.md)
       * [Mijnreservering](./field-groups/event/dining-reservation.md)
       * [Gegevens van eindgebruiker](./field-groups/event/enduserids.md)
@@ -66,10 +71,15 @@ ht-degree: 6%
       * [Vluchtreservering](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 Toestemming](./field-groups/event/iab.md)
       * [Voorbehoud voor indiening](./field-groups/event/lodging-reservation.md)
+      * [Gegevens prijsaanvraag](./field-groups/event/quote-request-details.md)
       * [Reserveringsdetails](./field-groups/event/reservation-details.md)
+      * [Zoeken op ondersteuningssite](./field-groups/event/support-site-search.md)
       * [Upgradedetails](./field-groups/event/upgrade-details.md)
       * [Details uploaden](./field-groups/event/upsell-details.md)
       * [Webdetails](./field-groups/event/web-details.md)
+   * Product {#product}
+      * [Productcatalogus](./field-groups/product/product-catalog.md)
+      * [Productcategorie](./field-groups/product/product-category.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
 * Datatypen {#data-types}
    * [Toepassing](./data-types/application.md)
@@ -85,6 +95,7 @@ ht-degree: 6%
    * [Omgeving](./data-types/environment.md)
    * [Experience Channel](./data-types/experience-channel.md)
    * [Kenmerken externe bronsysteemcontrole](./data-types/external-source-system-audit-attributes.md)
+   * [Financiële rekening](./data-types/financial-account.md)
    * [Veld voor algemene toestemming](./data-types/consent-field.md)
    * [Algemeen veld Voorkeuren voor marketing](./data-types/marketing-field.md)
    * [Algemeen veld Voorkeuren voor marketing met abonnementen](./data-types/marketing-field-subscriptions.md)
@@ -96,6 +107,7 @@ ht-degree: 6%
    * [Geo-vorm](./data-types/geo-shape.md)
    * [Identiteit](./data-types/identity.md)
    * [Impressies](./data-types/impressions.md)
+   * [Interne site zoeken](./data-types/internal-site-search.md)
    * [Toetswaardenpaar](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Meetlat](./data-types/measure.md)

@@ -5,9 +5,9 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 080ff800c78263a29f855ae6fe0e6acdb73554d5
 workflow-type: tm+mt
-source-wordcount: '3964'
+source-wordcount: '3965'
 ht-degree: 2%
 
 ---
@@ -139,7 +139,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | is_empty | Controleert of een object leeg is. | <ul><li>INVOER: **Vereist** Het object dat u wilt controleren, is leeg.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | Hiermee maakt u een lijst met objecten. | <ul><li>INVOER: **Vereist** Een groepering van sleutel- en arrayparen.</li></ul> | arrays_to_object(INPUT) | monster nodig | monster nodig |
 | to_object | Hiermee maakt u een object op basis van de opgegeven platte sleutel/waardeparen. | <ul><li>INVOER: **Vereist** Een platte lijst met sleutel/waardeparen.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Maakt een object van de invoertekenreeks. | <ul><li>TEKENREEKS: **Vereist** De tekenreeks die wordt geparseerd om een object te maken.</li><li>VALUE_DELIMITER: *Optioneel* Het scheidingsteken dat een veld van de waarde scheidt. Het standaardscheidingsteken is `:`.</li><li>FIELD_DELIMITER: *Optioneel* Het scheidingsteken dat de waardeparen van het gebied scheidt. Het standaardscheidingsteken is `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | phone - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | Maakt een object van de invoertekenreeks. | <ul><li>TEKENREEKS: **Vereist** De tekenreeks die wordt geparseerd om een object te maken.</li><li>VALUE_DELIMITER: *Optioneel* Het scheidingsteken dat een veld van de waarde scheidt. Het standaardscheidingsteken is `:`.</li><li>FIELD_DELIMITER: *Optioneel* Het scheidingsteken dat de waardeparen van het gebied scheidt. Het standaardscheidingsteken is `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName=John,lastName=Doe,phone=123 456 7890&quot;, &quot;=&quot;, &quot;,&quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | contains_key | Controleert of het object bestaat in de brongegevens. **Opmerking:** Deze functie vervangt de vervangen `is_set()` functie. | <ul><li>INVOER: **Vereist** Het pad dat moet worden gecontroleerd als het bestaat in de brongegevens.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | opheffen | Hiermee wordt de waarde van het kenmerk ingesteld op `null`. Dit zou moeten worden gebruikt wanneer u niet het gebied aan het doelschema wilt kopiëren. |  | nullify() | nullify() | `null` |
 | get_keys | Parseert de sleutel/waardeparen en retourneert alle sleutels. | <ul><li>OBJECT: **Vereist** Het object waaruit de sleutels worden geëxtraheerd.</li></ul> | get_keys(OBJECT) | get_keys({&quot;boek1&quot;: &quot;Pride and Prerechterlijke&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
