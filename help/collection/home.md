@@ -5,9 +5,9 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
@@ -59,6 +59,10 @@ Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netw
 [Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md) kan in om het even welke gegevensstroom van het Experience Platform tikken, die u toestaat om, gegevens te transformeren te verrijken en te verzenden naar om het even welke niet-Adobe bestemming met extreme lage latentie en zonder enige dercode aan het cliëntapparaat toe te voegen.
 
 ![Gebeurtenis doorsturen](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>Het door:sturen van gebeurtenissen is een betaalde eigenschap die slechts als deel van het aanbieden van de Verbindingen van Real-time Customer Data Platform inbegrepen is.
 
 ## Volgende stappen
 
