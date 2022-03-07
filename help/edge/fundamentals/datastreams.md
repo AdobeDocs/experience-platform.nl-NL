@@ -1,11 +1,11 @@
 ---
 title: Vorm uw DataStream voor het Web SDK van het Experience Platform
-description: 'Leer hoe u de gegevensstromen configureert. '
+description: 'Leer hoe te om de gegevensstromen te vormen. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Dodes;url Doelen;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
+source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
