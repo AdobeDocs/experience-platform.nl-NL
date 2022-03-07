@@ -2,11 +2,9 @@
 title: Eerste partij apparaat IDs in het Web SDK van het Platform
 description: Leer hoe u FPID's (First-party device ID's) voor de Adobe Experience Platform Web SDK configureert.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-hide: true
-hidefromtoc: true
-source-git-commit: c094e72232f9ac44d10a1919a00024e5faa27b2b
+source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1776'
 ht-degree: 0%
 
 ---
@@ -27,36 +25,44 @@ Deze gids veronderstelt u vertrouwd met bent hoe de identiteitsgegevens voor het
 
 ## FPID&#39;s gebruiken
 
-De koekjes van de eerste partij zijn het meest efficiënt wanneer zij gebruikend een klant-bezeten server worden geplaatst die hefboomwerkingen een DNS A-verslag in tegenstelling tot DNS CNAME. Gebruikend eerste-partijapparaat IDs, kunt u uw eigen apparaat IDs in koekjes plaatsen gebruikend DNS A-verslagen. Deze id&#39;s kunnen vervolgens naar Adobe worden verzonden en als zaden worden gebruikt om ECID&#39;s te genereren die de primaire id&#39;s zullen blijven in Adobe Experience Cloud-toepassingen.
+FPID&#39;s volgen bezoekers door het gebruik van cookies van de eerste partij. De eerste partijkoekjes zijn het meest efficiënt wanneer zij gebruikend een server worden geplaatst die hefboomwerkingen DNS [Een record](https://datatracker.ietf.org/doc/html/rfc1035) (voor IPv4) of [AAAA-record](https://datatracker.ietf.org/doc/html/rfc3596) (voor IPv6), in tegenstelling tot een DNS CNAME- of JavaScript-code.
+
+>[!IMPORTANT]
+>
+>Een record of AAAA-record wordt alleen ondersteund voor het instellen en bijhouden van cookies. De primaire methode voor gegevensinzameling is door DNS CNAME. Met andere woorden, FPID&#39;s worden ingesteld met een A-record of AAAA-record en worden vervolgens met een CNAME naar Adobe verzonden.
+>
+>De [Adobe-Beheerd certificaatprogramma](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wordt ook nog gesteund voor de inzameling van eerste-partijgegevens.
+
+Nadat een FPID-cookie is ingesteld, kan de waarde ervan worden opgehaald en naar Adobe worden verzonden wanneer gebeurtenisgegevens worden verzameld. Verzamelde FPID&#39;s worden gebruikt als zaden om ECID&#39;s te genereren, die in Adobe Experience Cloud-toepassingen nog steeds de belangrijkste identificatoren zijn.
 
 Als u een FPID voor een websitebezoeker naar het Edge Network van het Platform wilt verzenden, moet u de FPID opnemen in het dialoogvenster `identityMap` voor die bezoeker. Zie de sectie verderop in dit document op [FPID&#39;s gebruiken in `identityMap`](#identityMap) voor meer informatie .
 
-## Vereisten voor id-opmaak
+### Vereisten voor id-opmaak
 
 Het Netwerk van de Rand van het Platform keurt slechts identiteitskaart&#39;s goed die aan het voldoen [UUIDv4-indeling](https://datatracker.ietf.org/doc/html/rfc4122). Apparaat-id&#39;s die niet de UUIDv4-indeling hebben, worden geweigerd.
 
 Het genereren van een UUID zal bijna altijd resulteren in een unieke, willekeurige id, waarbij de kans dat een botsing optreedt verwaarloosbaar is. UUIDv4 kan niet worden verzonden gebruikend IP adressen of een andere persoonlijke identificeerbare informatie (PII). UUID&#39;s zijn alomtegenwoordig en bibliotheken zijn beschikbaar voor vrijwel elke programmeertaal om ze te genereren.
 
-## Een cookie instellen met een DNS A-record
+## Een cookie instellen met uw eigen server
 
-U kunt een cookie op verschillende manieren op een manier instellen die voorkomt dat deze wordt beperkt door het browserbeleid:
+Wanneer u een cookie instelt met een server die u bezit, kunt u een aantal methoden gebruiken om te voorkomen dat het cookie wordt beperkt door het browserbeleid:
 
 * Cookies genereren met scripttalen op de server
 * Cookies instellen als reactie op een API-aanvraag die is uitgevoerd naar een subdomein of ander eindpunt op de site
 * Cookies genereren met behulp van een CMS
 * Cookies genereren met behulp van een CDN
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Cookies ingesteld met gebruik van JavaScript `document.cookie` Deze methode wordt bijna nooit beschermd tegen browserbeleid dat de duur van cookies beperkt.
 
-## Wanneer stelt u het cookie in
+### Wanneer stelt u het cookie in
 
 Het FPID-cookie moet idealiter worden ingesteld voordat u een aanvraag indient bij het Edge-netwerk. In gevallen waarin dat niet mogelijk is, wordt een ECID echter nog steeds gegenereerd met bestaande methoden en fungeert deze als primaire id zolang het cookie bestaat.
 
 Ervan uitgaande dat de ECID uiteindelijk wordt beïnvloed door een beleid voor het verwijderen van de browser, maar de FPID niet, wordt de FPID bij het volgende bezoek de primaire identificator en wordt deze gebruikt om de ECID bij elk volgend bezoek te bezaaien.
 
-## De vervaldatum van de cookie instellen
+### De vervaldatum van de cookie instellen
 
 Het instellen van de vervaldatum van een cookie moet zorgvuldig worden overwogen wanneer u de FPID-functionaliteit implementeert. Bij het nemen van dit besluit moet u rekening houden met de landen of regio&#39;s waarin uw organisatie samen met de wetten en het beleid in elk van die regio&#39;s werkt.
 
