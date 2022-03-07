@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
+source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '2219'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,26 @@ U kunt de weergave van het dialoogvenster [!UICONTROL Profiles] dashboard door *
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
 
+## (Beta) Inzichten in de efficiëntie van profielen {#profile-efficiency-insights}
+
+>[!IMPORTANT]
+>
+>De functionaliteit voor informatie over profielefficiëntie is momenteel in bèta beschikbaar en niet voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+De [!UICONTROL Efficacy] bevat maatstaven over de kwaliteit en volledigheid van uw profielgegevens en het gebruik van widgets voor de doeltreffendheid van profielen. Deze widgets illustreren in een oogopslag de samenstelling van uw profielen, tendensen in volledigheid in tijd, en beoordelingen van de kwaliteit van uw profielgegevens.
+
+[Het dashboard voor de werkzaamheid van het profiel.](../images/profiles/attributes-quality-assessment.png)
+
+Zie de [sectie over de doeltreffendheid van profielen](#profile-efficacy-widgets) voor meer informatie over de widgets die momenteel beschikbaar zijn.
+
+De indeling van dit dashboard kan ook worden aangepast door [**[!UICONTROL Modify dashboard]**](../customize/modify.md) van de [!UICONTROL Overview] tab.
+
+## Bladeren door profielen {#browse-profiles}
+
+De [!UICONTROL Browse] kunt u de alleen-lezen profielen die in uw IMS-organisatie worden opgenomen, doorzoeken en bekijken. Van hieruit kunt u belangrijke informatie zien die tot het profiel behoort met betrekking tot hun voorkeuren, gebeurtenissen uit het verleden, interacties en segmenten
+
+Zie de documentatie over voor meer informatie over de mogelijkheden voor profielweergave die worden geboden in de interface van het Platform [browserprofielen in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+
 ## Beleid samenvoegen {#merge-policies}
 
 De maatstaven die worden weergegeven in het dialoogvenster [!UICONTROL Profiles] het dashboard is gebaseerd op samenvoegbeleid dat wordt toegepast op uw gegevens van het Profiel van de Klant in real time. Wanneer gegevens uit veelvoudige bronnen worden samengebracht om het klantenprofiel tot stand te brengen, is het mogelijk voor de gegevens om conflicterende waarden te bevatten (bijvoorbeeld, kan één dataset een klant als &quot;enig&quot;vermelden terwijl een andere dataset de klant als &quot;gehuwd&quot;kan vermelden). Het is de taak van het fusiebeleid om te bepalen welke gegevens aan prioriteren en vertoning als deel van het profiel moeten.
@@ -56,6 +76,14 @@ Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden weergeg
 >In het vervolgkeuzemenu ziet u alleen samenvoegbeleid met betrekking tot de XDM Individual Profile Class. Als uw organisatie echter meerdere samenvoegingsbeleidsregels heeft gemaakt, moet u mogelijk schuiven om de volledige lijst met beschikbare samenvoegingsbeleidsregels weer te geven.
 
 ![](../images/profiles/select-merge-policy.png)
+
+## Unieregelingen
+
+De [!UICONTROL Union Schema] Het dashboard geeft het samenvoegingsschema voor een specifieke XDM-klasse weer. Als u [!UICONTROL **Klasse**] kunt u de samenvoegingsschema&#39;s voor verschillende XDM-klassen weergeven.
+
+De schema&#39;s van de unie zijn samengesteld uit veelvoudige schema&#39;s die de zelfde klasse delen en voor Profiel toegelaten. Ze stellen u in staat om in één weergave een samenvoeging te zien van elk veld in elk schema dat dezelfde klasse deelt.
+
+Zie de gids UI van het unieschema om meer over te leren [verenigingsschema&#39;s weergeven in de gebruikersinterface van het Platform](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## Widgets en metriek
 
@@ -134,6 +162,59 @@ Voor meer informatie over profielfragmenten begint u met het lezen van de sectie
 Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+## (bèta) Profielefficiëntiewidgets {#profile-efficacy-widgets}
+
+>[!IMPORTANT]
+>
+>De widgets voor profielefficiëntie bevinden zich momenteel in bèta en zijn niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+Adobe verstrekt veelvoudige widgets om de volledigheid van de ingebedde profielen beschikbaar voor uw gegevensanalyse te beoordelen. Elk van de widgets voor profieleffectiviteit kan worden gefilterd door samenvoegbeleid. Als u het filter Samenvoegbeleid wilt wijzigen, selecteert u de optie[!UICONTROL Profiles using merge policy] en kiest u het juiste beleid in de beschikbare lijst.
+
+Als u meer wilt weten over elk van de widgets voor de doeltreffendheid van het profiel, selecteert u de naam van een widget in de volgende lijst:
+
+* [[!UICONTROL Attribute quality assessment]](#attribute-quality-assessment)
+* [[!UICONTROL Profile completeness]](#profile-completeness)
+* [[!UICONTROL Profile completeness trend]](#profile-completeness-trend)
+
+### (bèta) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
+
+Deze widget toont de volledigheid en de kardinaliteit van elk profielkenmerk sinds de laatste verwerkingsdatum. Deze informatie wordt voorgesteld als een lijst met vier kolommen waar elke rij in de lijst één enkel attribuut vertegenwoordigt.
+
+| Kolom | Beschrijving |
+|---|---|
+| Kenmerk | The name of the attribute. |
+| Profielen | Het aantal profielen dat dit kenmerk heeft en dat is gevuld met waarden die niet &#39;null&#39; zijn. |
+| Volledigheid | Dit percentage wordt bepaald door het totale aantal profielen dat dit kenmerk heeft en wordt gevuld met waarden die niet gelijk zijn aan null. Het getal wordt berekend door het totale aantal profielen te delen door het totale aantal niet-lege waarden in de profielen voor dat kenmerk. |
+| Kardinaal | Het totale aantal **uniek** niet-null waarden van dit kenmerk. Deze wordt in alle profielen gemeten. |
+
+![De widget voor kwaliteitsbeoordeling van kenmerken](../images/profiles/attributes-quality-assessment.png)
+
+### (bèta) [!UICONTROL Profiles by completeness] {#profile-completeness}
+
+Deze widget maakt een cirkeldiagram met de volledigheid van het profiel sinds de laatste verwerkingsdatum. De volledigheid van een profiel wordt gemeten door het percentage attributen die met niet-krachtwaarden onder alle waargenomen attributen worden gevuld.
+
+Deze widget geeft het percentage profielen weer dat hoog, gemiddeld of laag volledig is. Door gebrek, zijn er drie gevormde niveaus van volledigheid:
+
+* Hoge volledigheid: Profielen zijn gevuld met meer dan 70% kenmerken.
+* Normale volledigheid: Profielen zijn voor minder dan 70% en voor meer dan 30% gevuld.
+* Lage volledigheid: Profielen zijn voor minder dan 30% gevuld.
+
+![De profielen op de widget Volledigheid](../images/profiles/profiles-by-completeness.png)
+
+### (bèta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
+
+Deze widget maakt een gestapeld kolomdiagram dat de trend van de volledigheid van het profiel in de loop der tijd weergeeft. De volledigheid wordt gemeten door het percentage attributen worden gevuld met waarden niet-krachteloos onder alle waargenomen attributen. De profielvolledigheid wordt gecategoriseerd als hoog, gemiddeld of laag volledig sinds de laatste verwerkingsdatum.
+
+Op de x-as wordt de tijd weergegeven, op de y-as wordt het aantal profielen weergegeven en op de kleuren worden de drie niveaus van profielvolledigheid weergegeven.
+
+De drie volledigheidsniveaus zijn:
+
+* Hoge volledigheid: Profielen zijn gevuld met meer dan 70% kenmerken.
+* Normale volledigheid: Profielen zijn voor minder dan 70% en voor meer dan 30% gevuld.
+* Lage volledigheid: Profielen zijn voor minder dan 30% gevuld.
+
+![De widget voor trend naar volledigheid van profielen](../images/profiles/profiles-completeness-trend.png)
 
 ## Volgende stappen
 
