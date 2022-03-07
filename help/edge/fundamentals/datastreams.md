@@ -3,7 +3,7 @@ title: Vorm uw DataStream voor het Web SDK van het Experience Platform
 description: 'Leer hoe te om de gegevensstromen te vormen. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Dodes;url Doelen;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0141f0a83ca7b444015d98d8ce11199b400f77a5
+source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
 workflow-type: tm+mt
 source-wordcount: '1942'
 ht-degree: 1%
@@ -70,7 +70,7 @@ De subsecties hieronder behandelen de basisstappen voor het in kaart brengen van
 
 Selecteren **[!UICONTROL Save and Add Mapping]** nadat de [basisconfiguratiestap](#configure)en de **[!UICONTROL Select data]** wordt weergegeven. Van hier, moet u een steekproefJSON voorwerp verstrekken dat de structuur van de gegevens vertegenwoordigt u bij het verzenden naar Platform van plan bent. U kunt de optie selecteren om het object als een bestand te uploaden of het onbewerkte object in het tekstvak dat wordt weergegeven plakken.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Het JSON-object moet één hoofdknooppunt hebben `data` om de validatie te doorstaan.
 
