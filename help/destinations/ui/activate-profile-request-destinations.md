@@ -6,9 +6,9 @@ seo-title: Activate audience data to profile request destinations
 description: Leer hoe te om de publieksgegevens te activeren u in Adobe Experience Platform hebt door segmenten aan de bestemmingen van het profielverzoek in kaart te brengen.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming]
 
 ### Samenvoegingsbeleid segment {#merge-policy}
 
-Momenteel, steunen de bestemmingen van het profielverzoek slechts de activering van segmenten die gebruiken [standaardsamenvoegingsbeleid](../../segmentation/ui/segment-builder.md#merge-policies).
+Momenteel, steunen de bestemmingen van het profielverzoek slechts de activering van segmenten die gebruiken [Samenvoegingsbeleid actief op rand](../../segmentation/ui/segment-builder.md#merge-policies) ingesteld als standaard.
 
 ## Kies uw bestemming {#select-destination}
 
