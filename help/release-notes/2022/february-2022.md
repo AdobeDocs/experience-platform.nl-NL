@@ -2,16 +2,20 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
+source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '732'
 ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 23 februari 2022**
+**Releasedatum: 7 maart 2022**
+
+>[!NOTE]
+>
+>Deze release werd verschoven van de oorspronkelijke datum van 23 februari naar 7 maart.
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
