@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
+source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 2%
+source-wordcount: '502'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,6 @@ ht-degree: 2%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Gegevensverzameling](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Bronnen](#sources)
 
@@ -33,18 +32,6 @@ Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen 
 | Apparaat-id&#39;s van eerste partij | U kunt nu uw eigen apparaat-id&#39;s naar het Adobe Experience Platform Edge Network sturen wanneer u klantgegevens verzamelt met de SDK van het Web Platform, waarmee u een oplossing kunt vinden voor recente browserbeperkingen met betrekking tot de levensduur van cookies van derden. Zie de handleiding op [apparaat-id&#39;s van eerste partij](../../edge/identity/first-party-device-ids.md) voor meer informatie . |
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
-
-**Nieuwe functie**
-
-| Functie | Beschrijving |
-| --- | --- |
-| [!DNL Data Prep] ondersteuning voor Adobe Analytics-bronaansluiting | De Adobe Analytics-bronaansluiting ondersteunt nu Data Prep-functies, zodat u uw Analytics-rapport-suite-gegevens kunt toewijzen aan een doel-XDM-schema wanneer u een gegevensstroom maakt. Zie de zelfstudie aan [een analytische bronaansluiting maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
-
-Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
