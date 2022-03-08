@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
+source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +20,10 @@ ht-degree: 1%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Dashboards]](#dashboards)
-- [Gegevensverzameling](#data-collection)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Identity Service]](#identity)
-- [Bronnen](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -49,6 +50,16 @@ Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen 
 | Apparaat-id&#39;s van eerste partij | U kunt nu uw eigen apparaat-id&#39;s naar het Adobe Experience Platform Edge Network sturen wanneer u klantgegevens verzamelt met de SDK van het Web Platform, waarmee u een oplossing kunt vinden voor recente browserbeperkingen met betrekking tot de levensduur van cookies van derden. Zie de handleiding op [apparaat-id&#39;s van eerste partij](../../edge/identity/first-party-device-ids.md) voor meer informatie . |
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| (Bèta) Destination SDK-ondersteuning voor op bestanden gebaseerde doelen | [Destination SDK-ondersteuning voor op bestanden gebaseerde doelen](../../destinations/destination-sdk/file-based-destination-configuration.md) is momenteel in privé bèta en is slechts beschikbaar aan een geselecteerd aantal partners en klanten. De functionaliteit en bijbehorende documentatie kunnen worden gewijzigd voordat de algemene beschikbaarheidsrelease beschikbaar wordt.<br><br>Neem contact op met uw Adobe-accountvertegenwoordiger voor meer informatie over de functie. De Adobe-interne rekeningsvertegenwoordigers zouden uit naar de Experience Platform doelproducten en de technische teams moeten reiken om gesteunde gebruiksgevallen te bespreken. <br><br> In de bètafase van de steun van Destination SDK voor op dossier-gebaseerde bestemmingen, bètapartners en klanten kunnen gebruiken [Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) om privé bestemmingen te bouwen om van de volgende functionaliteit te profiteren: <ul><li>Maak een bestandsgebaseerde (batch) bestemming via Amazon S3, SFTP-servers, Azure Blob, Azure Data Lake Storage, Data Landing Zone storage.</li><li>Configureer en stel standaardopties voor het plannen en uitvoeren van bestanden in.</li><li>Configureer en stel opties in om uw geëxporteerde CSV-bestanden op te maken (scheidingstekens, escape-tekens en andere opties).</li><li>Mogelijkheid om aangepaste bestandsheaders in te stellen en te bewerken.</li><li>Mogelijkheid om gebeurtenismeldingen te ontvangen over het exporteren van bestanden en segmenten.</li><li>Mogelijkheid om aanvullende bestandstypen te exporteren, zoals CSV, TSV, JSON, Parquet.</li></ul>  <br>Om aan de slag te gaan met de nieuwe functionaliteit, leest u [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> De functionaliteit om privé of tot stand te brengen *streaming* de bestemmingen door Destination SDK te gebruiken zijn reeds beschikbaar aan alle klanten en partners van het Experience Platform. Lees de handleiding over hoe u [gebruik Destination SDK om een het stromen bestemming te vormen](/help/destinations/destination-sdk/configure-destination-instructions.md) voor meer informatie. |
 
 ## [!DNL Identity Service] {#identity}
 
