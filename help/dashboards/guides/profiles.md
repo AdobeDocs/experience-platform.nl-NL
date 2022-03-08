@@ -4,7 +4,7 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2219'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van wi
 
 De [!UICONTROL Efficacy] bevat maatstaven over de kwaliteit en volledigheid van uw profielgegevens en het gebruik van widgets voor de doeltreffendheid van profielen. Deze widgets illustreren in een oogopslag de samenstelling van uw profielen, tendensen in volledigheid in tijd, en beoordelingen van de kwaliteit van uw profielgegevens.
 
-[Het dashboard voor de werkzaamheid van het profiel.](../images/profiles/attributes-quality-assessment.png)
+![Het dashboard voor de werkzaamheid van het profiel.](../images/profiles/attributes-quality-assessment.png)
 
 Zie de [sectie over de doeltreffendheid van profielen](#profile-efficacy-widgets) voor meer informatie over de widgets die momenteel beschikbaar zijn.
 
