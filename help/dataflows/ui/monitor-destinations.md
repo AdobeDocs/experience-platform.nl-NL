@@ -6,9 +6,9 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
+source-git-commit: 0a6813d5d614d86940b042e03d2ab4f083644600
 workflow-type: tm+mt
-source-wordcount: '3193'
+source-wordcount: '3173'
 ht-degree: 0%
 
 ---
@@ -56,25 +56,21 @@ Zie de volgende tabel voor meer informatie over statussen:
 >id="platform_monitoring_profiles_received_streaming"
 >title="Ontvangen profielen"
 >abstract="Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Geactiveerde identiteiten"
 >abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Uitgesloten identiteiten"
 >abstract="Het aantal afzonderlijke profielrecords dat is uitgesloten van activering voor de geselecteerde bestemming op basis van ontbrekende kenmerken en schending van de toestemming."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identiteiten mislukt"
 >abstract="Het aantal afzonderlijke profiel-id&#39;s dat is mislukt voor het geselecteerde doel. Controleer de foutdiagnostiek voor meer informatie."
->text="Learn more in documentation"
 
 Voor streamingdoelen geldt het [!UICONTROL Dataflow runs] bevat een update per uur voor metrische gegevens in uw gegevensstroomuitvoering. De meest prominente statistieken met het label zijn voor identiteiten.
 
@@ -118,29 +114,22 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Gegevens gegevensstroom"
 >abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van het segment en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Voor meer informatie raadpleegt u de handleiding voor metrische definities."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation_batch"
->title="Gegevens gegevensstroom"
->abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van het segment en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Voor meer informatie raadpleegt u de handleiding voor metrische definities."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Ontvangen profielen"
 >abstract="Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Geactiveerde identiteiten"
 >abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Uitgesloten identiteiten"
 >abstract="Het aantal afzonderlijke profielrecords dat is uitgesloten van activering voor de geselecteerde bestemming op basis van ontbrekende kenmerken en schending van de toestemming."
->text="Learn more in documentation"
 
 Voor batchbestemmingen wordt de [!UICONTROL Dataflow runs] bevat metrische gegevens over de gegevensstroomuitvoering. Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
 
