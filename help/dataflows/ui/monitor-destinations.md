@@ -6,9 +6,9 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 387e10038f61a7444a16f4e6270a62082446c09d
+source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
 workflow-type: tm+mt
-source-wordcount: '3104'
+source-wordcount: '3193'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Zie de volgende tabel voor meer informatie over statussen:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Geactiveerde identiteiten"
->abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel."
+>abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -82,7 +82,7 @@ De identiteiten vertegenwoordigen de verschillende facetten van een profiel. Als
 
 Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
 
-- **[!UICONTROL Identities activated]**: The total count of profile identities that were created or updated for activation.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming wordt geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten.
 - **[!UICONTROL Identities excluded]**: Het totale aantal profielidentiteiten dat voor activering wordt overgeslagen op basis van ontbrekende kenmerken en schending van de toestemming.
 - **[!UICONTROL Identities failed]**: Het totale aantal profielidentiteiten dat niet aan de bestemming wegens fouten wordt geactiveerd.
 
@@ -95,7 +95,7 @@ Elke individuele dataflow run toont de volgende details:
    - Voor **[!UICONTROL completed]** De metrische verwerkingstijd toont altijd één uur.
    - Voor dataflow-run die zich nog steeds in een **[!UICONTROL processing]** staat, het venster om alle metriek te vangen open meer dan een uur, om alle metriek te verwerken die aan de dataflow looppas beantwoorden. Bijvoorbeeld, zou een dataflow looppas die bij 9:30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Vervolgens wordt het verwerkingsvenster gesloten en wordt de status van de dataflow-run bijgewerkt naar **voltooid**, wordt de weergegeven verwerkingstijd gewijzigd in één uur.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom.
-- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming werd geactiveerd.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten die met succes aan de geselecteerde bestemming als deel van dataflow looppas werden geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten.
 - **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van de toestemming.
 - **[!UICONTROL Identities failed]** Het totale aantal profielidentiteiten dat niet aan de bestemming wegens fouten wordt geactiveerd.
 - **[!UICONTROL Activation rate]**: Het percentage ontvangen identiteiten dat is geactiveerd of overgeslagen. De volgende formule laat zien hoe deze waarde wordt berekend:
@@ -133,7 +133,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Geactiveerde identiteiten"
->abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel."
+>abstract="Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -144,7 +144,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 Voor batchbestemmingen wordt de [!UICONTROL Dataflow runs] bevat metrische gegevens over de gegevensstroomuitvoering. Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
 
-- **[!UICONTROL Identities activated]**: Het aantal afzonderlijke profiel-id&#39;s dat is geactiveerd voor het geselecteerde doel.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming wordt geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten.
 - **[!UICONTROL Identities excluded]**: Het aantal individuele profielidentiteiten die van activering voor de geselecteerde bestemming worden uitgesloten, op basis van ontbrekende attributen en schending van de toestemming.
 
 ![Dataflow wordt weergegeven als batchdoelen](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -154,7 +154,7 @@ Elke individuele dataflow run toont de volgende details:
 - **[!UICONTROL Dataflow run start]**: De tijd dat dataflow begon bij.
 - **[!UICONTROL Processing time]**: De hoeveelheid tijd het voor dataflow nam om te worden verwerkt.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt.
-- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming werd geactiveerd.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten die met succes aan de geselecteerde bestemming als deel van dataflow looppas werden geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten.
 - **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van de toestemming.
 - **[!UICONTROL Status]**: Geeft de status aan waarin de gegevensstroom zich bevindt. Dit kan een van drie staten zijn: [!UICONTROL Success], [!UICONTROL Failed], en [!UICONTROL Processing]. [!UICONTROL Success] betekent dat de gegevensstroom actief is en gegevens volgens zijn verstrekt programma uitvoert. [!UICONTROL Failed] betekent dat de activering van gegevens is opgeschort als gevolg van fouten. [!UICONTROL Processing] betekent dat de gegevensstroom nog niet actief is en over het algemeen wordt ontmoet wanneer een nieuwe gegevensstroom wordt gecreeerd.
 
