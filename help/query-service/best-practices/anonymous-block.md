@@ -1,15 +1,15 @@
 ---
-title: Voorbeeld van anonieme blokquery's
+title: Anoniem blok in Query-service
 description: Het anonieme blok is een SQL syntaxis die door de Dienst van de Vraag van Adobe Experience Platform wordt gesteund, die u toestaat om een opeenvolging van vragen efficiënt uit te voeren
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
-# Voorbeeldquery&#39;s voor anonieme blokken
+# Anoniem blok in Query-service
 
 Adobe Experience Platform Query Service ondersteunt anonieme blokken. Met de functie voor anonieme blokken kunt u een of meer SQL-instructies ketenen die op volgorde worden uitgevoerd. Zij bieden ook de mogelijkheid om uitzonderingen af te handelen.
 
@@ -60,4 +60,4 @@ $$;
 
 Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. [Voor meer informatie over het uitvoeren van query&#39;s](./writing-queries.md), te lezen gelieve de gids over vraaguitvoering in de Dienst van de Vraag.
 
-Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, te lezen gelieve de gidsen op [Adobe Analytics-voorbeeldvragen](./adobe-analytics.md), [Adobe Target-voorbeeldvragen](./adobe-target.md), of [Voorbeeldquery&#39;s van ExperienceEvent](./experience-event-queries.md).
+U moet ook lezen over [hoe anoniem blok met het stijgende patroon van het ladingsontwerp wordt gebruikt](./incremental-load.md) om query-efficiëntie te verhogen.

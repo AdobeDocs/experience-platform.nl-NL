@@ -5,42 +5,42 @@ title: RStudio verbinden met Query Service
 topic-legacy: connect
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
-# [!DNL RStudio] verbinden met de Dienst van de Vraag
+# Verbinden [!DNL RStudio] aan de Dienst van de Vraag
 
-Dit document doorloopt de stappen voor het verbinden van [!DNL RStudio] met Adobe Experience Platform [!DNL Query Service].
+Dit document doorloopt de stappen voor het verbinden [!DNL RStudio] met Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Deze gids veronderstelt u reeds toegang tot [!DNL RStudio] hebt en vertrouwd met hoe te om het te gebruiken. Meer informatie over [!DNL RStudio] vindt u in de [officiële [!DNL RStudio] documentatie](https://rstudio.com/products/rstudio/).
+> Deze handleiding gaat ervan uit dat u al toegang hebt tot [!DNL RStudio] en zijn vertrouwd met het gebruik ervan. Meer informatie over [!DNL RStudio] kunt u vinden in het dialoogvenster [ambtenaar [!DNL RStudio] documentatie](https://rstudio.com/products/rstudio/).
 > 
-> Bovendien, om RStudio met de Dienst van de Vraag te gebruiken, moet u de Bestuurder PostSQL JDBC 4.2 installeren. U kunt het JDBC-stuurprogramma downloaden van de [officiële PostSQL-site](https://jdbc.postgresql.org/download.html).
+> Bovendien, om RStudio met de Dienst van de Vraag te gebruiken, moet u de Bestuurder PostSQL JDBC 4.2 installeren. U kunt het JDBC-stuurprogramma downloaden van het dialoogvenster [Officiële PostSQL-site](https://jdbc.postgresql.org/download.html).
 
-## Een [!DNL Query Service]-verbinding maken in de [!DNL RStudio]-interface
+## Een [!DNL Query Service] verbinding in de [!DNL RStudio] interface
 
-Nadat u [!DNL RStudio] hebt geïnstalleerd, moet u het RJDBC-pakket installeren. Ga naar **[!DNL Packages]** ruit, en selecteer **[!DNL Install]**.
+Na installatie [!DNL RStudio]moet u het RJDBC-pakket installeren. Ga naar de **[!DNL Packages]** en selecteert u **[!DNL Install]**.
 
 ![](../images/clients/rstudio/install-package.png)
 
-Er verschijnt een pop-up met het scherm **[!DNL Install Packages]**. Zorg ervoor dat **[!DNL Repository (CRAN)]** voor **[!DNL Install from]** sectie wordt geselecteerd. De waarde voor **[!DNL Packages]** moet `RJDBC` zijn. Zorg ervoor dat **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren.
+Er wordt een pop-up weergegeven met de **[!DNL Install Packages]** scherm. Zorg ervoor dat **[!DNL Repository (CRAN)]** is geselecteerd voor de **[!DNL Install from]** sectie. De waarde voor **[!DNL Packages]** moeten `RJDBC`. Zorgen **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren.
 
 ![](../images/clients/rstudio/install-jrdbc.png)
 
 Nu het RJDBC-pakket is geïnstalleerd, start u RStudio opnieuw om het installatieproces te voltooien.
 
-Nadat RStudio opnieuw is begonnen, kunt u met de Dienst van de Vraag nu verbinden. Selecteer het **[!DNL RJDBC]** pakket in **[!DNL Packages]** ruit, en ga het volgende bevel in de console in:
+Nadat RStudio opnieuw is begonnen, kunt u met de Dienst van de Vraag nu verbinden. Selecteer **[!DNL RJDBC]** in de **[!DNL Packages]** en voert u de volgende opdracht in de console in:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Waar {PAD NAAR DE POSTGRESQL JDBC} het pad vertegenwoordigt naar de PostSQL JDBC JAR die op uw computer is geïnstalleerd.
+Where {PATH TO THE POSTGRESQL JDBC JAR} represents the path to the PostgreSQL JDBC JAR that was installed on your computer.
 
 Nu, kunt u uw verbinding aan de Dienst van de Vraag tot stand brengen door het volgende bevel in de console in te gaan:
 
@@ -50,15 +50,15 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
->Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [geloofsbrieven gids](../ui/credentials.md). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
+>Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [aanmeldingsgids](../ui/credentials.md). Meld u aan om uw referenties te zoeken [!DNL Platform]selecteert u vervolgens **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Bezig met schrijven van query&#39;s
 
-Nu u met [!DNL Query Service] hebt verbonden, kunt u vragen schrijven om SQL verklaringen uit te voeren en uit te geven. U kunt bijvoorbeeld `dbGetQuery(con, sql)` gebruiken om query&#39;s uit te voeren, waarbij `sql` de SQL-query is die u wilt uitvoeren.
+Nu hebt u verbinding met [!DNL Query Service], kunt u vragen schrijven om SQL-instructies uit te voeren en te bewerken. U kunt bijvoorbeeld `dbGetQuery(con, sql)` om query&#39;s uit te voeren, waarbij `sql` is de SQL-query die u wilt uitvoeren.
 
-De volgende query gebruikt een dataset met [Experience Events](../best-practices/experience-event-queries.md) en maakt een histogram van paginaweergaven van een website, gezien de schermhoogte van het apparaat.
+De volgende vraag gebruikt een dataset die bevat [Experience Events](../sample-queries/experience-event.md) en maakt u een histogram van paginaweergaven van een website, op basis van de schermhoogte van het apparaat.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -95,4 +95,4 @@ df_pageviews
 
 ## Volgende stappen
 
-Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de gids op [lopende vragen](../best-practices/writing-queries.md).
+Lees voor meer informatie over het schrijven en uitvoeren van query&#39;s de handleiding op [uitvoeren, query&#39;s](../best-practices/writing-queries.md).
