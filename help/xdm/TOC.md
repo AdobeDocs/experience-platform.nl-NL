@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
+source-git-commit: 2144c75eb83a5806fa2cd9c75edc8cb0e85695fd
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '440'
 ht-degree: 6%
 
 ---
@@ -166,6 +166,7 @@ ht-degree: 6%
 * Tutorials {#tutorials}
    * [Een schema maken in de gebruikersinterface](tutorials/create-schema-ui.md)
    * [Een schema maken in de API](tutorials/create-schema-api.md)
+   * [Aangepaste velden in de API definiëren](./tutorials/custom-fields-api.md)
    * [Een schemarelatie definiëren in de UI](tutorials/relationship-ui.md)
    * [Een schemarelatie definiëren in de API](tutorials/relationship-api.md)
    * [Definieer een schemarelatie in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)

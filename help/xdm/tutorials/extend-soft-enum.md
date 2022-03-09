@@ -2,9 +2,9 @@
 title: Een zacht Enum-veld uitbreiden
 description: Leer hoe u een veld met een zachte opsomming kunt uitbreiden in de API voor schemaregistratie.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 9f275ba69c0310fb93ddec58c89259f25244ae23
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -198,4 +198,4 @@ Na het toepassen van de verandering, antwoordt de Registratie van het Schema met
 
 ## Volgende stappen
 
-Deze gids besprak hoe te om zachte aantallen in de Registratie API van het Schema uit te breiden. Zie de handleiding voor meer informatie over het definiëren van verschillende veldtypen in de API [Beperkingen voor XDM-veldtypen](../schema/field-constraints.md#define-fields).
+Deze gids besprak hoe te om zachte aantallen in de Registratie API van het Schema uit te breiden. Zie de handleiding op [aangepaste velden in de API definiëren](./custom-fields-api.md) voor meer informatie over het maken van verschillende veldtypen.

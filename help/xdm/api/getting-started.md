@@ -5,49 +5,49 @@ title: Aan de slag met de API voor schemaregistratie
 description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
 
-# Aan de slag met de [!DNL Schema Registry]-API
+# Aan de slag met de [!DNL Schema Registry] API
 
-Met de [!DNL Schema Registry]-API kunt u verschillende XDM-bronnen (Experience Data Model) maken en beheren. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [!DNL Schema Registry] API te maken.
+De [!DNL Schema Registry] Met API kunt u verschillende XDM-bronnen (Experience Data Model) maken en beheren. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen vraag aan te maken [!DNL Schema Registry] API.
 
 ## Vereisten
 
 Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip van de volgende onderdelen van Adobe Experience Platform vereist:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Daarom wordt u ten zeerste aangeraden de [officiële JSON-schemadocumentatie](https://json-schema.org/) te raadplegen voor een beter inzicht in deze onderliggende technologie.
+XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Daarom wordt u ten zeerste aangeraden de [Officiële JSON-schemadocumentatie](https://json-schema.org/) voor een beter inzicht in deze onderliggende technologie.
 
 ## API-voorbeeldaanroepen lezen
 
-De [!DNL Schema Registry] API documentatie verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van de Experience Platform te lezen.
+De [!DNL Schema Registry] API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de gids voor het oplossen van problemen met Experience Platforms.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Schema Registry] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke tot de [!DNL Schema Registry], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Raadpleeg de [sandboxdocumentatie](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
+>Voor meer informatie over sandboxen in [!DNL Platform], zie de [sandbox-documentatie](../../sandboxes/home.md).
 
-Alle opzoekverzoeken (GET) naar [!DNL Schema Registry] vereisen een extra `Accept` kopbal, de waarvan waarde de formaat van informatie bepaalt die door API wordt teruggekeerd. Zie de onderstaande sectie [Koptekst accepteren](#accept) voor meer informatie.
+Alle opzoekverzoeken (GET) aan de [!DNL Schema Registry] aanvullende `Accept` header, wiens waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie de [Koptekst accepteren](#accept) voor meer informatie hieronder.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -55,7 +55,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Weet uw TENANT_ID {#know-your-tenant_id}
 
-Door de API gidsen zult u verwijzingen naar `TENANT_ID` zien. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door de volgende GET-aanvraag uit te voeren:
+In de API-hulplijnen worden verwijzingen naar een `TENANT_ID`. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door de volgende GET-aanvraag uit te voeren:
 
 **API-indeling**
 
@@ -76,7 +76,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert informatie betreffende het gebruik van [!DNL Schema Registry] van uw organisatie terug. Dit omvat een `tenantId` attribuut, waarvan de waarde uw `TENANT_ID` is.
+Een succesvolle reactie keert informatie betreffende het gebruik van uw organisatie van terug [!DNL Schema Registry]. Dit omvat een `tenantId` attribuut, waarvan de waarde uw is `TENANT_ID`.
 
 ```JSON
 {
@@ -153,15 +153,15 @@ Een succesvolle reactie keert informatie betreffende het gebruik van [!DNL Schem
  }
 ```
 
-## `CONTAINER_ID` begrijpen {#container}
+## Begrijp het `CONTAINER_ID` {#container}
 
-Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de container `global` en de container `tenant`.
+verzoekt de [!DNL Schema Registry] API vereist het gebruik van een `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de `global` en de `tenant` container.
 
 ### Algemene container
 
-De `global` container houdt alle standaardAdobe en [!DNL Experience Platform] partner verstrekte klassen, de groepen van het schemagebied, gegevenstypes, en schema&#39;s. U kunt lijst en raadplegings (GET) verzoeken tegen de `global` container slechts uitvoeren.
+De `global` houder bevat alle standaard Adobe en [!DNL Experience Platform] de partner verstrekte klassen, de groepen van het schemagebied, gegevenstypes, en schema&#39;s. U kunt lijst en raadpleging (GET) verzoeken tegen slechts uitvoeren `global` container.
 
-Een voorbeeld van een vraag die de `global` container gebruikt zou als het volgende kijken:
+Een voorbeeld van een vraag die gebruikt `global` de container ziet er als volgt uit:
 
 ```http
 GET /global/classes
@@ -169,60 +169,60 @@ GET /global/classes
 
 ### Trekcontainer
 
-Om niet met uw uniek `TENANT_ID` te worden verward, bevat de `tenant` container alle klassen, gebiedsgroepen, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD verrichtingen (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de `tenant` container creeert.
+Niet verward met je unieke `TENANT_ID`de `tenant` container bevat alle klassen, veldgroepen, gegevenstypen, schema&#39;s en descriptoren die zijn gedefinieerd door een IMS-organisatie. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren tegen bronnen die u maakt in het dialoogvenster `tenant` container.
 
-Een voorbeeld van een vraag die de `tenant` container gebruikt zou als het volgende kijken:
+Een voorbeeld van een vraag die gebruikt `tenant` de container ziet er als volgt uit:
 
 ```http
 POST /tenant/fieldgroups
 ```
 
-Wanneer u een klasse, een gebiedsgroep, een schema of een gegevenstype in de `tenant` container creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen `$id` URI die `TENANT_ID` omvat. Deze `$id` wordt gebruikt door de API om naar specifieke middelen te verwijzen. De voorbeelden van `$id` waarden worden verstrekt in de volgende sectie.
+Wanneer u een klasse, veldgroep, schema of gegevenstype maakt in het dialoogvenster `tenant` container, wordt het opgeslagen in de [!DNL Schema Registry] en een `$id` URI die uw `TENANT_ID`. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. Voorbeelden van `$id` waarden worden gegeven in de volgende sectie.
 
 ## Bronidentificatie {#resource-identification}
 
-XDM-bronnen worden aangeduid met een `$id`-kenmerk in de vorm van een URI, zoals de volgende voorbeelden:
+XDM-bronnen worden geïdentificeerd met een `$id` attribuut in de vorm van URI, zoals de volgende voorbeelden:
 
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
 
-Om URI meer REST-vriendelijk te maken, hebben de schema&#39;s ook een punt-aantekening het coderen van URI in een bezit genoemd `meta:altId`:
+Om URI meer REST-vriendelijk te maken, hebben de schema&#39;s ook een punt-aantekening codering van URI in een genoemd bezit `meta:altId`:
 
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-Oproepen aan [!DNL Schema Registry] API zullen of URL-Gecodeerde `$id` URI of `meta:altId` (punt-aantekening formaat) steunen. De beste manier is om de URL-gecodeerde `$id` URI te gebruiken bij het maken van een REST-aanroep naar de API, zoals:
+verzoekt de [!DNL Schema Registry] API ondersteunt de URL-codering `$id` URI of de `meta:altId` (puntnotatie). U kunt het beste de URL-codering gebruiken `$id` URI wanneer het maken van een REST vraag aan API, als zo:
 
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
 ## Koptekst accepteren {#accept}
 
-Bij het uitvoeren van lijst en raadplegings (GET) verrichtingen in [!DNL Schema Registry] API, wordt een `Accept` kopbal vereist om het formaat van de gegevens te bepalen die door API worden teruggekeerd. Wanneer het omhoog kijken van specifieke middelen, moet een versieaantal ook in `Accept` kopbal worden omvat.
+Wanneer u lijst- en opzoekbewerkingen (GET) uitvoert in het dialoogvenster [!DNL Schema Registry] API, en `Accept` header is vereist om de indeling van de gegevens te bepalen die door de API worden geretourneerd. Wanneer u specifieke bronnen opzoekt, moet u ook een versienummer opnemen in het dialoogvenster `Accept` header.
 
-De volgende tabel bevat compatibele `Accept`-headerwaarden, inclusief waarden met versienummers, en beschrijvingen van wat de API retourneert wanneer deze worden gebruikt.
+De volgende tabel bevat compatibele `Accept` headerwaarden, inclusief waarden met versienummers, samen met beschrijvingen van wat de API retourneert wanneer deze worden gebruikt.
 
 | Accepteren | Beschrijving |
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Retourneert alleen een lijst met id&#39;s. Dit wordt meestal gebruikt voor het aanbieden van resources. |
-| `application/vnd.adobe.xed+json` | Retourneert een lijst met volledige JSON-schema met origineel `$ref` en `allOf` inbegrepen. Dit wordt gebruikt om een lijst van volledige middelen terug te keren. |
+| `application/vnd.adobe.xed+json` | Retourneert een lijst met volledige JSON-schema met origineel `$ref` en `allOf` opgenomen. Dit wordt gebruikt om een lijst van volledige middelen terug te keren. |
 | `application/vnd.adobe.xed+json; version=1` | Onbewerkte XDM met `$ref` en `allOf`. Bevat titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Bevat titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` kenmerken en `allOf` opgelost. Bevat titels en beschrijvingen. |
 | `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkte XDM met `$ref` en `allOf`. Geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Beschrijvers worden opgenomen. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` kenmerken en `allOf` opgelost. Geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` kenmerken en `allOf` opgelost. Beschrijvers worden opgenomen. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Platform steunt momenteel slechts één belangrijke versie voor elk schema (`1`). Daarom moet de waarde voor `version` altijd `1` zijn wanneer het uitvoeren van raadplegingsverzoeken om de recentste minder belangrijke versie van het schema terug te keren. Zie de subsectie hieronder voor meer informatie over schemaversie.
+>Platform ondersteunt momenteel slechts één hoofdversie voor elk schema (`1`). De waarde voor `version` moet altijd `1` wanneer het uitvoeren van raadplegingsverzoeken om de recentste minder belangrijke versie van het schema terug te keren. Zie de subsectie hieronder voor meer informatie over schemaversie.
 
 ### Schema versioning {#versioning}
 
-De versies van het schema worden van verwijzingen voorzien door `Accept` kopballen in de Registratie API van het Schema en in `schemaRef.contentType` eigenschappen in stroomafwaartse de dienstlading van de Platform API.
+Er wordt naar schemaversies verwezen door `Accept` headers in de Schema Registry API en in `schemaRef.contentType` eigenschappen in downstream Platform service-API-ladingen.
 
-Momenteel, steunt het Platform slechts één enkele belangrijkste versie (`1`) voor elk schema. Volgens de [regels van schemaevolutie](../schema/composition.md#evolution), moet elke update aan een schema niet-destructief zijn, betekenend dat nieuwe minder belangrijke versies van een schema (`1.2`, `1.3`, enz.) zijn altijd achterwaarts compatibel met eerdere secundaire versies. Daarom wanneer het specificeren van `version=1`, keert het Registratie van het Schema altijd **recentste** belangrijkste versie `1` van een schema terug, betekenend dat vorige minder belangrijke versies niet zijn teruggekeerd.
+Platform ondersteunt momenteel slechts één hoofdversie (`1`) voor elk schema. Volgens de [regels voor schemaontwikkeling](../schema/composition.md#evolution), moet elke update van een schema niet-destructief zijn, wat betekent dat nieuwe kleine versies van een schema (`1.2`, `1.3`, enz.) zijn altijd achterwaarts compatibel met eerdere secundaire versies. Daarom bij het specificeren van `version=1`, retourneert het Schemaregister altijd de **nieuwste** hoofdversie `1` van een schema, wat betekent dat vorige secundaire versies niet worden geretourneerd.
 
 >[!NOTE]
 >
@@ -230,16 +230,12 @@ Momenteel, steunt het Platform slechts één enkele belangrijkste versie (`1`) v
 >
 >* De gegevens zijn opgenomen in de dataset.
 >* De dataset is toegelaten voor gebruik in het Profiel van de Klant in real time (zelfs als geen gegevens is opgenomen).
-
 >
->
-Als het schema niet aan een dataset is geassocieerd die aan één van bovengenoemde criteria voldoet, dan kan om het even welke verandering worden aangebracht. In alle gevallen blijft de `version` component echter op `1` staan.
+>Als het schema niet aan een dataset is geassocieerd die aan één van bovengenoemde criteria voldoet, dan kan om het even welke verandering worden aangebracht. In alle gevallen echter `version` nog steeds component aanwezig `1`.
 
 ## Beperkingen en aanbevolen procedures voor XDM-velden
 
-De velden van een schema worden vermeld binnen het `properties`-object. Elk veld is zelf een object dat kenmerken bevat voor het beschrijven en beperken van de gegevens die het veld kan bevatten.
-
-Meer informatie over het definiëren van veldtypen in de API vindt u in de [veldbeperkingsgids](../schema/field-constraints.md) voor deze handleiding, inclusief codevoorbeelden en optionele beperkingen voor de meest gebruikte gegevenstypen.
+De velden van een schema worden weergegeven binnen het schema `properties` object. Elk veld is zelf een object dat kenmerken bevat voor het beschrijven en beperken van de gegevens die het veld kan bevatten. Raadpleeg de handleiding op [aangepaste velden in de API definiëren](../tutorials/custom-fields-api.md) voor codesteekproeven en facultatieve beperkingen voor de meest algemeen gebruikte gegevenstypes.
 
 In het volgende voorbeeldveld wordt een correct opgemaakt XDM-veld weergegeven met nadere informatie over de naamgevingsbeperkingen en de onderstaande aanbevolen procedures. Deze praktijken kunnen ook worden toegepast wanneer het bepalen van andere middelen die gelijkaardige attributen bevatten.
 
@@ -255,19 +251,17 @@ In het volgende voorbeeldveld wordt een correct opgemaakt XDM-veld weergegeven m
 }
 ```
 
-* De naam van een veldobject mag alfanumerieke tekens, streepjes of onderstrepingstekens bevatten, maar **mag niet** met een onderstrepingsteken beginnen.
-   * **Juist:** `fieldName`,  `field_name2`,  `Field-Name`,  `field-name_3`
+* De naam van een veldobject mag alfanumerieke tekens, streepjestekens of onderstrepingstekens bevatten, maar **mag** begint met een onderstrepingsteken.
+   * **Juist:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **Onjuist:** `_fieldName`
 * kamelCase heeft de voorkeur voor de naam van het veldobject. Voorbeeld: `fieldName`
-* Het veld moet een `title` bevatten, geschreven in Alles Beginhoofdletter. Voorbeeld: `Field Name`
-* Voor dit veld is een `type` vereist.
-   * Voor het definiëren van bepaalde typen is mogelijk een optionele `format` vereist.
-   * Wanneer een specifieke opmaak van gegevens vereist is, kan `examples` worden toegevoegd als een array.
-   * Het veldtype kan ook worden gedefinieerd aan de hand van elk gegevenstype in het register. Zie de sectie over [het creëren van een gegevenstype](./data-types.md#create) in de gids van het gegevenstypeneindpunt voor meer informatie.
-* In `description` worden het veld en relevante informatie met betrekking tot veldgegevens uitgelegd. Het zou in volledige zinnen met duidelijke taal moeten worden geschreven zodat iedereen die tot het schema toegang heeft de intentie van het gebied kan begrijpen.
-
-Zie het document over [veldbeperkingen](../schema/field-constraints.md) voor meer informatie over hoe te om verschillende gebiedstypes in API te bepalen.
+* Het veld moet een `title`, geschreven in geval van titel. Voorbeeld: `Field Name`
+* Voor het veld is een `type`.
+   * Voor het definiëren van bepaalde typen is mogelijk een optionele `format`.
+   * Wanneer een specifieke opmaak van gegevens vereist is, `examples` kan als een array worden toegevoegd.
+   * Het veldtype kan ook worden gedefinieerd aan de hand van elk gegevenstype in het register. Zie de sectie over [een gegevenstype maken](./data-types.md#create) in de gids van het gegevenstypeseindpunt voor meer informatie.
+* De `description` geeft uitleg over het veld en relevante informatie over veldgegevens. Het zou in volledige zinnen met duidelijke taal moeten worden geschreven zodat iedereen die tot het schema toegang heeft de intentie van het gebied kan begrijpen.
 
 ## Volgende stappen
 
-Om beginnen het maken vraag gebruikend [!DNL Schema Registry] API, selecteer één van de beschikbare eindpuntgidsen.
+Beginnen het maken vraag gebruikend [!DNL Schema Registry] API, selecteert u een van de beschikbare eindpunthulplijnen.
