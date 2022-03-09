@@ -4,7 +4,7 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2219'
 ht-degree: 0%
@@ -43,11 +43,11 @@ U kunt de weergave van het dialoogvenster [!UICONTROL Profiles] dashboard door *
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
 
-## (Beta) Inzichten in de efficiëntie van profielen {#profile-efficiency-insights}
+## (Beta) Gegevens over de werkzaamheid van profielen {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->De functionaliteit voor informatie over profielefficiëntie is momenteel in bèta beschikbaar en niet voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De functionaliteit voor het verkrijgen van inzicht in de werkzaamheid van het profiel is momenteel in bèta beschikbaar en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 De [!UICONTROL Efficacy] bevat maatstaven over de kwaliteit en volledigheid van uw profielgegevens en het gebruik van widgets voor de doeltreffendheid van profielen. Deze widgets illustreren in een oogopslag de samenstelling van uw profielen, tendensen in volledigheid in tijd, en beoordelingen van de kwaliteit van uw profielgegevens.
 
@@ -167,7 +167,7 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 
 >[!IMPORTANT]
 >
->De widgets voor profielefficiëntie bevinden zich momenteel in bèta en zijn niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De widgets voor profieleffectiviteit zijn momenteel in bèta beschikbaar en niet voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Adobe verstrekt veelvoudige widgets om de volledigheid van de ingebedde profielen beschikbaar voor uw gegevensanalyse te beoordelen. Elk van de widgets voor profieleffectiviteit kan worden gefilterd door samenvoegbeleid. Als u het filter Samenvoegbeleid wilt wijzigen, selecteert u de optie[!UICONTROL Profiles using merge policy] en kiest u het juiste beleid in de beschikbare lijst.
 

@@ -4,7 +4,7 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: 7dd0f69b51ebda5e43fc0e832be249ed2a0eebe1
+source-git-commit: 341b34c9acd7b3e19369ec30c4ba643c0cf1b829
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 2%
@@ -32,12 +32,13 @@ ht-degree: 2%
    - [Algemene richtlijnen voor het uitvoeren van query&#39;s](best-practices/writing-queries.md)
    - [Richtlijnen voor de organisatie van gegevenselementen](./best-practices/organize-data-assets.md)
    - [Werken met geneste gegevensstructuren](best-practices/nested-data-structures.md)
-   - [Gegevensdeduplicatie](best-practices/deduplication.md)
-   - [Voorbeeld van query&#39;s voor ervaringsgebeurtenissen](best-practices/experience-event-queries.md)
-   - [Voorbeeld van Adobe Analytics-query&#39;s](best-practices/adobe-analytics.md)
-   - [Voorbeeld van Adobe Target-query&#39;s](best-practices/adobe-target.md)
-   - [Voorbeeld van anonieme vragen over blokken](best-practices/anonymous-block.md)
+   - [Anoniem blok](best-practices/anonymous-block.md)
    - [Incrementeel laden](best-practices/incremental-load.md)
+   - [Gegevensdeduplicatie](best-practices/deduplication.md)
+- Voorbeeldquery&#39;s {#sample-queries}
+   - [Voorbeeld van query&#39;s voor ervaringsgebeurtenissen](sample-queries/experience-event.md)
+   - [Voorbeeld van Adobe Analytics-query&#39;s](sample-queries/adobe-analytics.md)
+   - [Voorbeeld van Adobe Target-query&#39;s](sample-queries/adobe-target.md)
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)
