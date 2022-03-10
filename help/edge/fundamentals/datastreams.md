@@ -1,11 +1,11 @@
 ---
-title: Vorm uw DataStream voor het Web SDK van het Experience Platform
+title: Configure your Datastream for the Experience Platform Web SDK
 description: 'Leer hoe te om de gegevensstromen te vormen. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Dodes;url Doelen;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1837'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Selecteer het pictogram Meer (**...**) voor een bepaalde gegevensstroom om meer 
 
 Als u een gegevensstroom wilt maken, selecteert u **[!UICONTROL New Datastream]**.
 
-![Nieuwe gegevensstroom selecteren](../images/datastreams/new-datastream-button.png)
+![Select New Datastream](../images/datastreams/new-datastream-button.png)
 
 ### [!UICONTROL Configure] {#configure}
 
@@ -50,7 +50,7 @@ Als u deze gegevensstroom voor gebruik in Experience Platform vormt en SDK van h
 
 ![Basisconfiguratie voor een gegevensstroom](../images/datastreams/configure.png)
 
-De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Selecteer **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
+The rest of this section focuses on the steps to map data to a selected Platform event schema. Selecteer **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
 
 ### Gegevensvoorvoegsel voor gegevensverzameling {#data-prep}
 
@@ -72,7 +72,7 @@ Selecteren **[!UICONTROL Save and Add Mapping]** nadat de [basisconfiguratiestap
 
 >[!IMPORTANT]
 >
->Het JSON-object moet één hoofdknooppunt hebben `data` om de validatie te doorstaan.
+>The JSON object must have a single root node `data` in order to pass validation.
 
 Als de JSON geldig is, wordt een voorvertoningsschema weergegeven in het rechterdeelvenster. Selecteren **[!UICONTROL Next]** om door te gaan.
 
@@ -88,7 +88,7 @@ Selecteer het bronpictogram (![Bronpictogram](../images/datastreams/source-icon.
 
 ![Het veld selecteren dat moet worden toegewezen in het bronschema](../images/datastreams/source-mapping.png)
 
-Selecteer vervolgens het schemapictogram (![Schema, pictogram](../images/datastreams/schema-icon.png)) om een vergelijkbaar dialoogvenster voor het doelgebeurtenisschema te openen. Kies het veld waaraan u de gegevens wilt toewijzen voordat u bevestigt met **[!UICONTROL Select]**.
+Selecteer vervolgens het schemapictogram (![Schema, pictogram](../images/datastreams/schema-icon.png)) om een vergelijkbaar dialoogvenster voor het doelgebeurtenisschema te openen. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
 
 ![Het veld selecteren dat moet worden toegewezen in het doelschema](../images/datastreams/target-mapping.png)
 
@@ -96,7 +96,7 @@ De toewijzingspagina wordt opnieuw weergegeven met de voltooide veldtoewijzing w
 
 ![Veld is toegewezen met voortgang weergegeven](../images/datastreams/field-mapped.png)
 
-Ga verder met de bovenstaande stappen om de overige velden toe te wijzen aan het doelschema. Hoewel u niet alle beschikbare brongebieden moet in kaart brengen, om het even welke gebieden in het doelschema die zoals vereist worden geplaatst moeten worden in kaart gebracht om deze stap te voltooien. De **[!UICONTROL Required fields]** teller geeft aan hoeveel vereiste velden nog niet zijn toegewezen in de huidige configuratie.
+Continue following the above steps to map the rest of the fields to the target schema. Hoewel u niet alle beschikbare brongebieden moet in kaart brengen, om het even welke gebieden in het doelschema die zoals vereist worden geplaatst moeten worden in kaart gebracht om deze stap te voltooien. De **[!UICONTROL Required fields]** teller geeft aan hoeveel vereiste velden nog niet zijn toegewezen in de huidige configuratie.
 
 Als het aantal vereiste velden nul bereikt en u tevreden bent met de toewijzing, selecteert u **[!UICONTROL Save]** om uw wijzigingen te voltooien.
 
@@ -108,14 +108,6 @@ Nadat u een nieuwe gegevensstroom hebt geconfigureerd of een bestaande gegevenss
 
 ![De pagina Details van een gemaakte gegevensstroom](../images/datastreams/view-details.png)
 
-Wanneer een gegevensstroom wordt gecreeerd, worden drie bijbehorende milieu&#39;s automatisch gecreeerd met identieke montages. Deze drie omgevingen zijn `dev`, `stage`, en `prod`, die overeenkomen met de [standaardomgevingen voor tags](../../tags/ui/publishing/environments.md). Wanneer u een tagbibliotheek maakt met een `dev` omgeving, gebruikt de bibliotheek automatisch de `dev` omgeving van de gegevensstroom. U kunt de instellingen in afzonderlijke omgevingen naar wens bewerken.
-
-In SDK-implementaties kunt u `edgeConfigId` is een samengestelde id die de gegevensstroom en de specifieke omgeving binnen die gegevensstroom opgeeft. Als u bijvoorbeeld de opdracht `stage` omgeving voor een gegevensstroom met id `1c86778b-cdba-4684-9903-750e52912ad1`, gebruikt u de `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->Als er geen omgeving aanwezig is in de samengestelde id, wordt de productieomgeving (`prod`) wordt gebruikt.
-
 Vanuit het scherm met gegevensstroomdetails kunt u [toevoegen, services](#add-services) om functies in te schakelen van de Adobe Experience Cloud-producten waartoe u toegang hebt.
 
 ## Services toevoegen aan een gegevensstroom {#add-services}
@@ -124,11 +116,11 @@ Selecteer op de detailpagina van een gegevensstroom de optie **[!UICONTROL Add S
 
 ![Selecteer Service toevoegen om door te gaan](../images/datastreams/add-service.png)
 
-Voor het volgende scherm, gebruik dropdown menu om de dienst te selecteren voor deze gegevensstroom te vormen. Alleen de services waartoe u toegang hebt, worden in deze lijst weergegeven.
+Voor het volgende scherm, gebruik dropdown menu om de dienst te selecteren voor deze gegevensstroom te vormen. Only the services that you have access to will appear in this list.
 
 ![Selecteer een service in de lijst](../images/datastreams/service-selection.png)
 
-Selecteer de gewenste service, vul de configuratieopties in die worden weergegeven en selecteer **[!UICONTROL Save]** om de dienst aan de datastream toe te voegen. Alle toegevoegde diensten verschijnen in de detailmening voor de gegevensstroom.
+Selecteer de gewenste service, vul de configuratieopties in die worden weergegeven en selecteer **[!UICONTROL Save]** om de dienst aan de datastream toe te voegen. All added services appear in the details view for the datastream.
 
 ![Services die aan een gegevensstroom zijn toegevoegd](../images/datastreams/services-added.png)
 
@@ -150,14 +142,14 @@ Deze service bepaalt of en hoe gegevens naar Adobe Analytics worden verzonden. M
 
 ### Adobe Audience Manager-instellingen
 
-Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzonden. Alles wat nodig is om gegevens naar de Audience Manager te verzenden, moet deze sectie inschakelen. De andere instellingen zijn optioneel, maar worden aangemoedigd.
+This service controls whether and how data is sent to Adobe Audience Manager. Alles wat nodig is om gegevens naar de Audience Manager te verzenden, moet deze sectie inschakelen. The other settings are optional but encouraged.
 
 ![Adobe Publiek beheren, instellingenblok](../images/datastreams/audience-manager-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
-| [!UICONTROL Cookie Destinations Enabled] | Staat SDK toe om segmentinformatie via te delen [koekjesbestemmingen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) van [!DNL Audience Manager]. |
-| [!UICONTROL URL Destinations Enabled] | Staat SDK toe om segmentinformatie via te delen [URL-doelen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) van [!DNL Audience Manager]. |
+| [!UICONTROL Cookie Destinations Enabled] | Allows the SDK to share segment information via [cookie destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager]. |
+| [!UICONTROL URL Destinations Enabled] | Allows the SDK to share segment information via [URL destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) from [!DNL Audience Manager]. |
 
 ### Adobe Experience Platform-instellingen
 
@@ -165,7 +157,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzo
 >
 >Wanneer het toelaten van een gegevensstroom voor Platform, neem nota van de zandbak van het Platform die u momenteel gebruikt, zoals getoond in het hoogste lint van UI van de Inzameling van Gegevens.
 >
->![Geselecteerde sandbox](../images/datastreams/platform-sandbox.png)
+>![Selected sandbox](../images/datastreams/platform-sandbox.png)
 >
 >Sandboxen zijn virtuele partities in Adobe Experience Platform waarmee u uw gegevens en implementaties kunt isoleren van die in uw organisatie. Wanneer een gegevensstroom is gemaakt, kan de sandbox niet meer worden gewijzigd. Zie voor meer informatie over de rol van sandboxen in Experience Platform de klasse [sandboxdocumentatie](../../sandboxes/home.md).
 
@@ -175,11 +167,11 @@ Deze service bepaalt of en hoe gegevens naar Adobe Experience Platform worden ve
 
 | Instelling | Beschrijving |
 | --- | --- |
-| [!UICONTROL Event Dataset] | **(Vereist)** Selecteer de dataset van het Platform dat de gegevens van de klantengebeurtenis zullen worden gestroomd aan. Dit schema moet de [XDM ExperienceEvent, klasse](../../xdm/classes/experienceevent.md). |
+| [!UICONTROL Event Dataset] | **(Vereist)** Selecteer de dataset van het Platform dat de gegevens van de klantengebeurtenis zullen worden gestroomd aan. This schema must use the [XDM ExperienceEvent class](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Profile Dataset] | Selecteer de dataset van het Platform dat de gegevens van de klantenattributen zullen worden verzonden naar. Dit schema moet de [Afzonderlijke XDM-profielklasse](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Selecteer dit checkbox om Offer decisioning voor een implementatie van SDK van het Web van het Platform toe te laten. Zie de handleiding op [het gebruiken van Offer decisioning met het Web SDK van het Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) voor meer details over de implementatie. Raadpleeg voor meer informatie over de mogelijkheden van Offer decisioning de [Adobe Journey Optimizer-documentatie](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=nl). |
 | [!UICONTROL Edge Segmentation] | Schakel dit selectievakje in om in te schakelen [randsegmentatie](../../segmentation/ui/edge-segmentation.md) voor deze gegevensstroom. Wanneer de SDK gegevens via een voor edge-segmentatie ingeschakelde gegevensstroom verzendt, worden bijgewerkte segmentlidmaatschappen voor het profiel in kwestie teruggestuurd in de reactie.<br><br>Deze optie kan in combinatie met [!UICONTROL Personalization Destinations] for [gebruiksgevallen voor personalisatie op de volgende pagina](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Personalization Destinations] | Indien gebruikt in combinatie met [!UICONTROL Edge Segmentation] Schakel deze optie in om de datastream verbinding te laten maken met personaliseringsengines zoals Adobe Target. Raadpleeg de documentatie bij bestemmingen voor specifieke stappen over [het vormen verpersoonlijkingsbestemmingen](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Personalization Destinations] | When used in combination with the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization engines like Adobe Target. Raadpleeg de documentatie bij bestemmingen voor specifieke stappen over [het vormen verpersoonlijkingsbestemmingen](../../destinations/ui/configure-personalization-destinations.md). |
 
 ### Adobe Target-instellingen
 
@@ -189,9 +181,9 @@ Deze service bepaalt of en hoe gegevens naar Adobe Target worden verzonden.
 
 | Instelling | Beschrijving |
 | --- | --- |
-| [!UICONTROL Property Token] | [!DNL Target] staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. Zie de handleiding voor meer informatie over eigenschappen [configureren van bedrijfsmachtigingen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) in de [!DNL Target] documentatie.<br><br>Het eigenschapstoken vindt u in de gebruikersinterface van Adobe Target onder [!UICONTROL Setup] > [!UICONTROL Properties]. |
+| [!UICONTROL Property Token] | [!DNL Target] staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. Zie de handleiding voor meer informatie over eigenschappen [configureren van bedrijfsmachtigingen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) in de [!DNL Target] documentatie.<br><br>The property token can be found in the Adobe Target UI under [!UICONTROL Setup] > [!UICONTROL Properties]. |
 | [!UICONTROL Target Environment ID] | [Milieu in Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) helpen u bij het beheren van uw implementatie in alle ontwikkelingsstadia. Deze instelling geeft aan welke omgeving u wilt gebruiken voor deze gegevensstroom.<br><br>U kunt dit het beste voor elk van uw `dev`, `stage`, en `prod` gegevensstroomomgevingen om dingen eenvoudig te houden. Als u echter al Adobe Target-omgevingen hebt gedefinieerd, kunt u deze gebruiken. |
-| [!UICONTROL Target Third Party ID namespace] | De naamruimte voor de identiteit van de `mbox3rdPartyId` wilt gebruiken voor deze gegevensstroom. Zie de handleiding op [uitvoeren `mbox3rdPartyId` met de Web SDK](../personalization/adobe-target/using-mbox-3rdpartyid.md) voor meer informatie . |
+| [!UICONTROL Target Third Party ID namespace] | The identity namespace for the `mbox3rdPartyId` you want to use for this datastream. Zie de handleiding op [uitvoeren `mbox3rdPartyId` met de Web SDK](../personalization/adobe-target/using-mbox-3rdpartyid.md) voor meer informatie . |
 
 ### [!UICONTROL Event Forwarding] instellingen
 
