@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
+source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2224'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Deze widget maakt een cirkeldiagram met de volledigheid van het profiel sinds de
 
 Deze widget geeft het percentage profielen weer dat hoog, gemiddeld of laag volledig is. Door gebrek, zijn er drie gevormde niveaus van volledigheid:
 
-* Hoge volledigheid: Profielen zijn gevuld met meer dan 70% kenmerken.
+* Hoge volledigheid: Profielen hebben meer dan 70% van de gevulde kenmerken.
 * Normale volledigheid: Profielen zijn voor minder dan 70% en voor meer dan 30% gevuld.
 * Lage volledigheid: Profielen zijn voor minder dan 30% gevuld.
 
@@ -210,7 +210,7 @@ Op de x-as wordt de tijd weergegeven, op de y-as wordt het aantal profielen weer
 
 De drie volledigheidsniveaus zijn:
 
-* Hoge volledigheid: Profielen zijn gevuld met meer dan 70% kenmerken.
+* Hoge volledigheid: Profielen hebben meer dan 70% van de gevulde kenmerken.
 * Normale volledigheid: Profielen zijn voor minder dan 70% en voor meer dan 30% gevuld.
 * Lage volledigheid: Profielen zijn voor minder dan 30% gevuld.
 
