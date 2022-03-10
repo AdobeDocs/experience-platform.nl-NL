@@ -4,9 +4,9 @@ user-guide-title: Help bij tags
 breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '386'
 ht-degree: 25%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 25%
    * [Bibliotheken](./ui/publishing/libraries.md)
    * [Bibliotheken die zichzelf hosten](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Bibliotheek opnieuw publiceren](./ui/publishing/republish.md)
+   * [Premium CDN-ondersteuning (bèta)](./ui/publishing/premium-cdn.md)
 * Informatie aan de clientzijde {#client-side}
    * [Overzicht](./ui/client-side/overview.md)
    * [Asynchrone implementatie](./ui/client-side/asynchronous-deployment.md)

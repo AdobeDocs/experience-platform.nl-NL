@@ -1,7 +1,8 @@
 ---
 title: Omgevingen
 description: Leer meer over het concept van labelomgevingen en hoe deze werken in Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 0%
@@ -28,13 +29,13 @@ Dit document bevat stappen voor het installeren, configureren en maken van versc
 
 ## Omgevingstypen
 
-Tags ondersteunen drie verschillende omgevingstypen, die elk overeenkomen met een andere status in de publicatieworkflow [a1/>:](./publishing-flow.md)
+Tags ondersteunen drie verschillende omgevingstypen die elk overeenkomen met een andere status in het dialoogvenster [publicatieworkflow](./publishing-flow.md):
 
 | Type omgeving | Beschrijving |
 | --- | --- |
-| Ontwikkeling | Deze omgeving komt overeen met de kolom **Ontwikkeling** in de publicatieworkflow. |
-| Staging | Deze omgeving komt overeen met de kolommen **Ingediend** en **Goedgekeurd** in de publicatieworkflow. |
-| Productie | Deze omgeving komt overeen met de kolom **Published** in de publicatieworkflow. |
+| Ontwikkeling | Deze omgeving komt overeen met de **Ontwikkeling** in de publicatieworkflow. |
+| Staging | Deze omgeving komt overeen met de **Verzonden** en **Goedgekeurd** kolommen in de publicatieworkflow. |
+| Productie | Deze omgeving komt overeen met de **Gepubliceerd** in de publicatieworkflow. |
 
 In elke omgeving kunnen verschillende artefacten voorkomen. Hierdoor kunt u verschillende bibliotheken in verschillende omgevingen testen terwijl u ze doorloopt in de publicatieworkflow.
 
@@ -42,7 +43,7 @@ In elke omgeving kunnen verschillende artefacten voorkomen. Hierdoor kunt u vers
 >
 >Aan elke omgeving kan slechts één bibliotheekbuild tegelijk worden toegewezen. Nochtans, wordt verwacht dat één enkele milieu vele verschillende bouwstijlen in tijd zal bevatten aangezien u hen door het publiceren werkschema beweegt, die bouwt zonodig opnieuw aan tussen milieu&#39;s.
 
-## Installatie
+## Installatie {#installation}
 
 Elke omgeving heeft een set instructies die worden gebruikt om de omgeving te verbinden met uw toepassing. Voor wegeigenschappen bevatten deze instructies insluitcodes. Voor mobiele eigenschappen, verstrekken deze instructies de code noodzakelijk om de bibliotheken te concretiseren u gebruikt en de configuratie bij runtime terugwinnen.
 
@@ -52,15 +53,15 @@ Elke omgeving heeft een set instructies die worden gebruikt om de omgeving te ve
 >
 >De insluitcode voor de productie van een webeigenschap ondersteunt bijvoorbeeld het in cache plaatsen van browsers, terwijl de insluitcodes voor de ontwikkeling en het opvoeren van insluitcodes dat niet doen. Als dusdanig, zou u ontwikkeling of het opvoeren ingebedde codes in hoog-verkeer of productiecontext niet moeten gebruiken.
 
-Als u de installatie-instructies voor een omgeving wilt openen, navigeert u naar het tabblad **[!UICONTROL Environments]** voor uw eigenschap en selecteert u het pictogram **[!UICONTROL Install]** voor die omgeving.
+Als u de installatie-instructies voor een omgeving wilt openen, navigeert u naar de **[!UICONTROL Environments]** en selecteert u vervolgens de **[!UICONTROL Install]** pictogram voor die omgeving.
 
 ![](./images/environments/install-buttons.png)
 
-Als u een webeigenschap gebruikt, krijgt u een insluitcode die moet worden gebruikt in de tag `<head>` van uw document. U krijgt ook de mogelijkheid om bibliotheekbestanden synchroon of asynchroon te implementeren tijdens runtime. Afhankelijk van de instelling die u kiest, zijn de weergegeven installatie-instructies anders. Insluitcodes worden verderop in dit document uitgebreid uitgelegd.
+Als u een webeigenschap gebruikt, krijgt u een insluitcode die in het dialoogvenster `<head>` -code van het document. U krijgt ook de mogelijkheid om bibliotheekbestanden synchroon of asynchroon te implementeren tijdens runtime. Afhankelijk van de instelling die u kiest, zijn de weergegeven installatie-instructies anders. Insluitcodes worden verderop in dit document uitgebreid uitgelegd.
 
 ![](./images/environments/web-instructions.png)
 
-Als u een mobiele eigenschap gebruikt, krijgt u aparte instructies voor het installeren van afhankelijkheden voor Android (via [Gradle](https://gradle.org/)) en iOS (via [CocoaPods](https://cocoapods.org/)).
+Als u een eigenschap voor mobiele apparaten gebruikt, krijgt u aparte instructies voor het installeren van afhankelijkheden voor Android (via [Gradient](https://gradle.org/)) en iOS (via [CocoaPods](https://cocoapods.org/)).
 
 ![](./images/environments/mobile-instructions.png)
 
@@ -70,7 +71,7 @@ Voor mobiele eigenschappen kunt u de configuratieopties voor een omgeving bekijk
 
 ![](./images/environments/mobile-config.png)
 
-Zie het overzicht op [hosts](./hosts/hosts-overview.md) voor meer informatie.
+Zie het overzicht op [gastheren](./hosts/hosts-overview.md) voor meer informatie .
 
 ## Webconfiguratie
 
@@ -78,25 +79,25 @@ De instellingen van de toegewezen omgeving bepalen het volgende voor wegeigensch
 
 * **Host**: De serverlocatie waar u de build wilt implementeren.
 * **Archiefinstelling**: Of het systeem een implementeerbare set bestanden moet uitvoeren of dat deze in een archiefindeling moeten worden gecomprimeerd.
-* **Code** insluiten: De  `<script>` code die moet worden ingesloten in de HTML van uw websitepagina&#39;s en waarmee de build van de bibliotheek tijdens runtime wordt geïmplementeerd.
+* **Code insluiten**: De `<script>` code die moet worden ingesloten in de HTML van uw websitepagina&#39;s en die moet worden gebruikt om de build van de bibliotheek tijdens runtime te implementeren.
 
-Selecteer op het tabblad [!UICONTROL Environments] een weergegeven omgeving om de configuratiecontroles ervan weer te geven.
+In de [!UICONTROL Environments] selecteert u een weergegeven omgeving om de configuratiecontroles ervan weer te geven.
 
 ![](./images/environments/environment-config.png)
 
 ### Host {#host}
 
-Selecteer **[!UICONTROL Host]** om een vooraf geconfigureerde host voor de omgeving te kiezen in het vervolgkeuzemenu.
+Selecteren **[!UICONTROL Host]** om een vooraf geconfigureerde host voor de omgeving te kiezen in het vervolgkeuzemenu.
 
 ![](./images/environments/select-host.png)
 
-Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over om gastheren in de Inzameling van Gegevens UI tot stand te brengen en te vormen, verwijs naar [gastheren overzicht](./hosts/hosts-overview.md).
+Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over om gastheren in de Inzameling van Gegevens UI tot stand te brengen en te vormen, verwijs naar [Overzicht van hosts](./hosts/hosts-overview.md).
 
 ### Archiefinstelling {#archive}
 
 De meeste builds bestaan uit meerdere bestanden. Samenstellen van meerdere bestanden bevatten een hoofdbibliotheekbestand (gekoppeld in de insluitcode) dat interne verwijzingen bevat naar de andere bestanden die zo nodig worden ingesloten.
 
-Met de knop **[!UICONTROL Create archive]** kunt u de archiefinstelling van de omgeving in- en uitschakelen. Standaard wordt de archiefoptie uitgeschakeld en wordt de build geleverd in een indeling die als zodanig wordt uitgevoerd (JavaScript voor wegeigenschappen en JSON voor mobiele eigenschappen).
+De **[!UICONTROL Create archive]** kunt u de archiefinstelling van de omgeving in- en uitschakelen. Standaard wordt de archiefoptie uitgeschakeld en wordt de build geleverd in een indeling die als zodanig wordt uitgevoerd (JavaScript voor wegeigenschappen en JSON voor mobiele eigenschappen).
 
 Als u ervoor kiest om de archiefinstelling in te schakelen, worden aanvullende configuratie-instellingen weergegeven in de gebruikersinterface, zodat u het archiefbestand optioneel kunt coderen en een pad naar de bibliotheek kunt definiëren als u zelfhosting gebruikt.
 
@@ -112,7 +113,7 @@ Als u de archiefoptie gebruikt, worden alle bouwstijlbestanden als ZIP-bestand g
 
 ### Code insluiten {#embed-code}
 
-Een insluitcode is een `<script>`-tag die in de `<head>`-secties van uw websitepagina&#39;s moet worden geplaatst om de code die u maakt te laden en uit te voeren. Bij elke omgevingsconfiguratie wordt automatisch een eigen insluitcode gegenereerd. U hoeft deze dus alleen te kopiëren en in uw site te plakken op de pagina&#39;s waarop de tags moeten worden uitgevoerd.
+Een insluitcode is een `<script>` -tag die in de `<head>` secties van uw websitepagina&#39;s om de code die u maakt te laden en uit te voeren. Bij elke omgevingsconfiguratie wordt automatisch een eigen insluitcode gegenereerd. U hoeft deze dus alleen te kopiëren en in uw site te plakken op de pagina&#39;s waarop de tags moeten worden uitgevoerd.
 
 Wanneer u de installatie-instructies bekijkt, kunt u ervoor kiezen om het script de bibliotheekbestanden synchroon of asynchroon te laten laden. Deze instelling is niet blijvend en geeft niet aan hoe u tags daadwerkelijk hebt geïmplementeerd op uw site. In plaats daarvan is het alleen bedoeld om de juiste manier te tonen om de omgeving te installeren.
 
@@ -122,15 +123,15 @@ Wanneer u de installatie-instructies bekijkt, kunt u ervoor kiezen om het script
 
 #### Asynchrone implementatie
 
-Met asynchrone implementatie kan de browser de rest van de pagina blijven laden terwijl de bibliotheek wordt opgehaald. Er is slechts één insluitcode wanneer u deze instelling gebruikt, die in het document `<head>` moet worden geplaatst.
+Met asynchrone implementatie kan de browser de rest van de pagina blijven laden terwijl de bibliotheek wordt opgehaald. Er is slechts één insluitcode wanneer u deze instelling gebruikt, die in het document moet worden geplaatst `<head>`.
 
-Zie de handleiding over [asynchrone implementatie](../client-side/asynchronous-deployment.md) voor meer informatie over deze instelling.
+Zie de handleiding voor meer informatie over deze instelling [asynchrone implementatie](../client-side/asynchronous-deployment.md).
 
 #### Synchrone implementatie
 
 Wanneer de browser een ingesloten code leest met een synchrone implementatie, wordt de tagbibliotheek opgehaald en uitgevoerd voordat de pagina verder wordt geladen.
 
-Synchrone insluitcodes bestaan uit twee `<script>`-tags die in de HTML van uw website moeten worden geplaatst. Een `<script>`-tag moet in het document `<head>` worden geplaatst, terwijl de andere tag net voor de afsluitende `</body>`-tag moet worden geplaatst.
+Synchrone insluitcodes bestaan uit twee `<script>` -tags die binnen de HTML van uw website moeten worden geplaatst. Eén `<script>` -tag moet in het document worden geplaatst `<head>`, terwijl de andere vlak voor het sluiten moet worden geplaatst `</body>` tag.
 
 #### Code-updates insluiten
 
@@ -142,25 +143,25 @@ Aangezien insluitcodes worden gegenereerd op basis van uw omgevingsconfiguraties
 
 >[!WARNING]
 >
->Wanneer de insluitcode van een tagomgeving verandert, moet u de insluitcodes in de HTML handmatig bijwerken. Om kostbaar onderhoud te voorkomen, dient u uw insluitcode(s) alleen bij te werken als dat absoluut noodzakelijk is.
+>Wanneer de insluitcode van een tagomgeving verandert, moet u de insluitcodes in uw HTML handmatig bijwerken. Om kostbaar onderhoud te voorkomen, dient u uw insluitcode(s) alleen bij te werken als dat absoluut noodzakelijk is.
 
 ## Een omgeving maken
 
 Er worden automatisch drie omgevingen toegewezen aan een eigenschap wanneer die eigenschap voor het eerst wordt gemaakt: ontwikkeling, staging en productie. Dit is genoeg om de publicatieworkflow uit te voeren. U kunt desgewenst echter aanvullende ontwikkelomgevingen toevoegen, omdat dit nuttig kan zijn voor grotere teams waar meerdere ontwikkelaars tegelijkertijd aan verschillende projecten werken.
 
-Selecteer **[!UICONTROL Add Environment]** op het tabblad [!UICONTROL Environments] voor de eigenschap.
+Op de [!UICONTROL Environments] tab voor uw eigenschap, selecteert u **[!UICONTROL Add Environment]**.
 
 ![](./images/environments/create-new.png)
 
-Selecteer in het volgende scherm de optie **[!UICONTROL Development]**.
+Selecteer in het volgende scherm de optie **[!UICONTROL Development]** optie.
 
 ![](./images/environments/create-development.png)
 
-In het volgende scherm kunt u de nieuwe omgeving een naam geven, een host selecteren en een archiefinstelling kiezen. Als u klaar bent, selecteert u **[!UICONTROL Save]** om de omgeving te maken.
+In het volgende scherm kunt u de nieuwe omgeving een naam geven, een host selecteren en een archiefinstelling kiezen. Als u klaar bent, selecteert u **[!UICONTROL Save]** om het milieu te creëren.
 
 ![](./images/environments/create-config.png)
 
-Het tabblad [!UICONTROL Environments] wordt opnieuw weergegeven met de installatie-instructies voor de nieuwe omgeving.
+De [!UICONTROL Environments] wordt opnieuw weergegeven, waarbij de installatie-instructies voor de nieuwe omgeving worden weergegeven.
 
 ![](./images/environments/create-install.png)
 
@@ -168,4 +169,4 @@ Het tabblad [!UICONTROL Environments] wordt opnieuw weergegeven met de installat
 
 Door dit document te lezen, hebt u een goed begrip voor het configureren van omgevingen in de gebruikersinterface en het installeren van deze omgevingen in uw website of app. U kunt nu beginnen met het publiceren van uw bibliotheekbuilds.
 
-Wanneer u in de loop der tijd herhalingen van uw bibliotheek publiceert, is het mogelijk nodig om eerdere builds bij te houden en te archiveren voor probleemoplossing en terugdraaidoeleinden. Zie de handleiding bij [oudere bibliotheken opnieuw publiceren](./republish.md) voor meer informatie.
+Wanneer u in de loop der tijd herhalingen van uw bibliotheek publiceert, is het mogelijk nodig om eerdere builds bij te houden en te archiveren voor probleemoplossing en terugdraaidoeleinden. Zie de handleiding op [oudere bibliotheken opnieuw publiceren](./republish.md) voor meer informatie .
