@@ -1,151 +1,133 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;vorm dataflow;reclameschakelaar
 solution: Experience Platform
-title: Een gegevensstroom configureren voor een verbinding met een publicatiebron in de gebruikersinterface
+title: Een gegevensstroom maken met een publicatiebron in de gebruikersinterface
 topic-legacy: overview
 type: Tutorial
-description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw advertentieaccount.
+description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een advertentiebron met behulp van de gebruikersinterface van het Platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1346'
 ht-degree: 0%
 
 ---
 
-# Een gegevensstroom configureren voor een advertentieverbinding in de gebruikersinterface
+# Een gegevensstroom maken met een advertentiebron in de gebruikersinterface
 
-Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw advertentieaccount.
-
-## Aan de slag
-
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
-
-- [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Zelfstudie Schema Editor](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-
-Bovendien moet u voor deze zelfstudie al een advertentieaccount hebben gemaakt. Een lijst met zelfstudies voor het maken van verschillende betalingsconnectors in de gebruikersinterface vindt u in de [overzicht van bronconnectors](../../../home.md).
-
-## Gegevens selecteren
-
-Nadat u uw advertentieaccount hebt gemaakt, kunt u **[!UICONTROL Select data]** wordt weergegeven met een interactieve interface waarmee u de bestandshiërarchie kunt verkennen.
-
-- De linkerhelft van de interface is een directorybrowser waarin de bestanden en mappen van uw server worden weergegeven.
-- Met de rechterhelft van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
-
-U kunt de **[!UICONTROL Search]** boven aan de pagina om snel de brongegevens te identificeren die u wilt gebruiken.
+Een dataflow is een geplande taak die gegevens van een bron aan een dataset in Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een advertentiebron met behulp van de interface van het Platform.
 
 >[!NOTE]
 >
->De optie van onderzoeksbrongegevens is beschikbaar aan alle op tabelvorm-gebaseerde bronschakelaars behalve de Analytics, Classifications, de Hubs van de Gebeurtenis, en de schakelaars van Kinesis.
+>Als u een gegevensstroom wilt maken, moet u al over een geverifieerd account bij een advertentiebron beschikken. Een lijst met zelfstudies voor het maken van verschillende advertentiebronaccounts in de gebruikersinterface vindt u in de [overzicht van bronnen](../../../home.md#advertising).
 
-Als u de brongegevens hebt gevonden, selecteert u de map en klikt u op **[!UICONTROL Next]**.
+## Aan de slag
 
-![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platform:
 
+* [Bronnen](../../../home.md): Met Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+   * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [Zelfstudie Schema Editor](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Data Prep]](../../../../data-prep/home.md): Staat gegevensingenieurs toe om, gegevens aan en van het Model van de Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
-## Gegevensvelden toewijzen aan een XDM-schema
+## Gegevens toevoegen
 
-De **[!UICONTROL Mapping]** stap wordt weergegeven en biedt een interactieve interface voor het toewijzen van de brongegevens aan een [!DNL Platform] dataset.
+Nadat u uw bronaccount voor advertenties hebt gemaakt, kunt u **[!UICONTROL Add data]** de stap verschijnt, die een interface voor u verstrekt om de de lijsthiërarchie van uw reclamebronrekening te onderzoeken.
 
-Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of een nieuwe dataset tot stand brengen.
+* De linkerhelft van de interface is een browser waarin een lijst met gegevenstabellen in uw account wordt weergegeven. De interface bevat ook een zoekoptie waarmee u snel de brongegevens kunt identificeren die u wilt gebruiken.
+* De rechterhelft van de interface is een voorvertoningsvenster waarin u maximaal 100 rijen gegevens kunt voorvertonen.
 
-### Een bestaande gegevensset gebruiken
-
-Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Use existing dataset]** klikt u op het pictogram van de gegevensset.
-
-![use-existing-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
-
-De **[!UICONTROL Select dataset]** wordt weergegeven. Zoek de dataset u wenst te gebruiken, het te selecteren, dan klik **[!UICONTROL Continue]**.
-
-![select-existing-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
-
-### Een nieuwe gegevensset gebruiken
-
-Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Create new dataset]** en voert een naam en een beschrijving voor de gegevensset in de opgegeven velden in.
-
-U kunt een schemagebied vastmaken door een schemanaam in te gaan in **[!UICONTROL Select schema]** zoekbalk. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Advanced search]** toegang tot het scherm van bestaande schema&#39;s, met inbegrip van hun respectieve details.
-
-Tijdens deze stap, kunt u uw dataset voor toelaten [!DNL Real-time Customer Profile] en een holistische weergave te maken van de kenmerken en gedragingen van een entiteit. Gegevens van alle ingeschakelde gegevenssets worden opgenomen in [!DNL Profile] en wijzigingen worden toegepast wanneer u de gegevensstroom opslaat.
-
-Schakelen tussen **[!UICONTROL Profile dataset]** knoop om uw doeldataset voor toe te laten [!DNL Profile].
-
-![create-new-dataset](../../../images/tutorials/dataflow/advertising/target-dataset.png)
-
-De **[!UICONTROL Select schema]** wordt weergegeven. Selecteer het schema u op de nieuwe dataset wenst toe te passen, dan klik **[!DNL Done]**.
-
-![selectieschema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
-
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../data-prep/ui/mapping.md).
-
->[!TIP]
+>[!NOTE]
 >
->Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
+>De zoekbrongegevensoptie is beschikbaar voor alle op tabellen gebaseerde bronnen, met uitzondering van de Adobe Analytics, [!DNL Amazon Kinesis], en [!DNL Azure Event Hubs].
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Wanneer u de brongegevens hebt gevonden, selecteert u de tabel en selecteert u vervolgens **[!UICONTROL Next]**.
 
-Selecteren **[!UICONTROL Preview data]** om afbeeldingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
-
-Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten.
-
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
-Selecteer **[!UICONTROL Close]**.
-
-## Planninguitvoering
-
-De **[!UICONTROL Scheduling]** de stap verschijnt, toestaand u om een innameprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
-
-| Veld | Beschrijving |
-| --- | --- |
-| Frequentie | Selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
-| Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
-| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Indien **[!UICONTROL Backfill]** is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Indien **[!UICONTROL Backfill]** is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
-| Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
-
-Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Begin door de innamefrequentie te selecteren. Daarna, plaats het interval om de periode tussen twee stroomlooppas aan te wijzen. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15.
-
-Als u de begintijd voor inname wilt instellen, past u de datum en tijd aan die worden weergegeven in het vak Begintijd. U kunt ook het kalenderpictogram selecteren om de begintijdwaarde te bewerken. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd.
-
-Selecteren **[!UICONTROL Load incremental data by]** om de deltakolom toe te wijzen. In dit veld wordt een onderscheid gemaakt tussen nieuwe en bestaande gegevens.
-
-![schema-interval](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
-
-### Eenmalige gegevensstroom voor inname instellen
-
-Als u eenmalige invoer wilt instellen, selecteert u de pijl-omlaag voor de frequentie en selecteert u **[!UICONTROL Once]**.
-
->[!TIP]
->
->**[!UICONTROL Interval]** en **[!UICONTROL Backfill]** niet zichtbaar zijn tijdens eenmalig gebruik.
-
-Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Next]**.
-
-![schema-eens](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Gegevens over gegevensstroom opgeven
 
-De **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
+De [!UICONTROL Dataflow detail] De pagina staat u toe om te selecteren of u een bestaande dataset of een nieuwe dataset wilt gebruiken. Tijdens dit proces kunt u ook instellingen configureren voor [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], en [!UICONTROL Alerts].
 
-Tijdens dit proces kunt u ook **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]**. Inschakelen **[!UICONTROL Partial ingestion]** biedt de mogelijkheid om gegevens met fouten tot een bepaalde drempel in te voeren. Eenmaal **[!UICONTROL Partial ingestion]** is ingeschakeld, versleept u de **[!UICONTROL Error threshold %]** wijzerplaat om de foutendrempel van de partij aan te passen. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Zie voor meer informatie de [gedeeltelijke batch-opname, overzicht](../../../../ingestion/batch-ingestion/partial.md).
-Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Next]**.
+![dataFlow-detail](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
-![details gegevensstroom](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+### Een bestaande gegevensset gebruiken
+
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Existing dataset]**. U kunt of een bestaande dataset terugwinnen gebruikend [!UICONTROL Advanced search] of door door de lijst van bestaande datasets in het dropdown menu te scrollen. Zodra u een dataset hebt geselecteerd, verstrek een naam en een beschrijving voor uw gegevensstroom.
+
+![bestaande gegevensset](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
+
+### Een nieuwe gegevensset gebruiken
+
+Om in een nieuwe dataset in te gaan, selecteer **[!UICONTROL New dataset]** en geef vervolgens een naam voor de uitvoergegevensset en een optionele beschrijving op. Selecteer vervolgens het schema waaraan u wilt toewijzen [!UICONTROL Advanced search] of door door de lijst van bestaande schema&#39;s in het dropdown menu te scrollen. Nadat u een schema hebt geselecteerd, geeft u een naam en een beschrijving voor de gegevensstroom op.
+
+![new-dataset](../../../images/tutorials/dataflow/table-based/new-dataset.png)
+
+### Inschakelen [!DNL Profile] en foutdiagnostiek
+
+Selecteer vervolgens de **[!UICONTROL Profile dataset]** schakelen om uw gegevensset in te schakelen voor [!DNL Profile]. Hierdoor kunt u een holistische weergave maken van de kenmerken en het gedrag van een entiteit. Gegevens van alle [!DNL Profile]- de toegelaten datasets zullen in worden omvat [!DNL Profile] en wijzigingen worden toegepast wanneer u de gegevensstroom opslaat.
+
+[!UICONTROL Error diagnostics] laat gedetailleerde foutenmelding generatie voor om het even welke onjuiste verslagen toe die in uw dataflow voorkomen, terwijl [!UICONTROL Partial ingestion] kunt u gegevens met fouten opnemen tot een bepaalde drempel die u handmatig definieert. Zie de [gedeeltelijke batch-opname, overzicht](../../../../ingestion/batch-ingestion/partial.md) voor meer informatie .
+
+![met profiel en fouten](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
+
+### Waarschuwingen inschakelen
+
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [abonneren op berichten voor bronnen met behulp van de gebruikersinterface](../alerts.md).
+
+Wanneer u klaar bent met het opgeven van details voor uw gegevensstroom, selecteert u **[!UICONTROL Next]**.
+
+![waarschuwingen](../../../images/tutorials/dataflow/table-based/alerts.png)
+
+## Gegevensvelden toewijzen aan een XDM-schema
+
+De [!UICONTROL Mapping] de stap verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
+
+Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../data-prep/ui/mapping.md).
+
+Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+
+![toewijzing](../../../images/tutorials/dataflow/table-based/mapping.png)
+
+## Planninguitvoering
+
+De [!UICONTROL Scheduling] de stap verschijnt, toestaand u om een innameprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. Standaard is de planning ingesteld op `Once`. Selecteer **[!UICONTROL Frequency]** en selecteert u vervolgens een optie in het vervolgkeuzemenu.
+
+>[!TIP]
+>
+>Interval en backfill zijn niet zichtbaar tijdens een eenmalige opname.
+
+![plannen](../../../images/tutorials/dataflow/table-based/scheduling.png)
+
+Als u de innamefrequentie instelt op `Minute`, `Hour`, `Day`, of `Week`dan moet u een interval instellen om een bepaald tijdkader tussen elke opname te bepalen. Bijvoorbeeld een innamefrequentie ingesteld op `Day` en een interval instellen op `15` betekent dat uw gegevensstroom gepland is om gegevens in te voeren om de 15 dagen.
+
+Tijdens deze stap kunt u ook **backfill** en definieert u een kolom voor de incrementele opname van gegevens. Backfill wordt gebruikt om historische gegevens in te voeren, terwijl in de kolom die u voor incrementele inname definieert, nieuwe gegevens kunnen worden onderscheiden van bestaande gegevens.
+
+Zie de lijst hieronder voor meer informatie over het plannen van configuraties.
+
+| Veld | Beschrijving |
+| --- | --- |
+| Frequentie | De frequentie waarin inname plaatsvindt. Selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
+| Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15. |
+| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd. |
+| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
+| Incrementele gegevens laden met | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
+
+![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Controleer uw gegevensstroom
 
 De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-- **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-- **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
-- **[!UICONTROL Scheduling]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
+* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **[!UICONTROL Scheduling]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
 
-Nadat u de gegevensstroom hebt gecontroleerd, klikt u op **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
+Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
-![revisie](../../../images/tutorials/dataflow/advertising/review.png)
+![revisie](../../../images/tutorials/dataflow/table-based/review.png)
 
 ## Uw gegevensstroom controleren
 
@@ -157,27 +139,14 @@ U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeer
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om gegevens van een systeem van de marketingautomatisering in te brengen en inzicht verworven in de controle van datasets. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om gegevens van uw reclamebron naar het Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-- [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
-- [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] - overzicht](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] - overzicht](../../../../data-science-workspace/home.md)
 
-## Aanhangsel
 
-De volgende secties verstrekken extra informatie voor het werken met bronschakelaars.
-
-### Een gegevensstroom uitschakelen
-
-Wanneer een gegevensstroom wordt gecreeerd, wordt het onmiddellijk actief en neemt gegevens volgens het programma op het werd gegeven. U kunt een actieve gegevensstroom op elk ogenblik onbruikbaar maken door de instructies hieronder te volgen.
-
-Binnen de **[!UICONTROL Dataflows]** selecteert u de naam van de gegevensstroom die u wilt uitschakelen.
-
-![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
-
-De **[!UICONTROL Properties]** wordt aan de rechterkant van het scherm weergegeven. Dit deelvenster bevat een **[!UICONTROL Enabled]** schakelknop. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
-
-![disable](../../../images/tutorials/dataflow/advertising/disable.png)
-
-### Inkomende gegevens activeren voor [!DNL Profile] bevolking
-
-De binnenkomende gegevens van uw bronschakelaar kunnen aan het verrijken en het bevolken van uw [!DNL Real-time Customer Profile] gegevens. Voor meer informatie over het vullen van uw [!DNL Real-time Customer Profile] gegevens, raadpleeg de zelfstudie over [Profielpopulatie](../profile.md).
+>[!WARNING]
+>
+> De interface van het Platform die in de volgende video wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+>
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

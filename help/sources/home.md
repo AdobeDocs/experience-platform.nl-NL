@@ -5,7 +5,7 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronn
 
 Bronnen in Experience Platform worden ingedeeld in de volgende categorieën:
 
-### Adobe-toepassingen
+### Adobe-toepassingen {#adobe-applications}
 
 Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager, worden ingesloten. Zie de volgende verwante documenten voor meer informatie:
 
@@ -38,13 +38,13 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Ado
 - [[!DNL Marketo Engage] connectoroverzicht](connectors/adobe-applications/marketo/marketo.md)
 - [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Reclame
+### Reclame {#advertising}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
-### Cloud Storage
+### Cloud Storage {#cloud-storage}
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
@@ -62,7 +62,7 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen z
 - [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
-### Customer Relationship Management (CRM)
+### Customer Relationship Management (CRM) {#crm}
 
 De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. Experience Platform biedt ondersteuning voor het opnemen van CRM-gegevens van [!DNL Microsoft Dynamics 365] en [!DNL Salesforce]. Zie de volgende verwante documenten voor meer informatie:
 
@@ -71,14 +71,14 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Klant geslaagd
+### Klant geslaagd {#customer-success}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor klantsucces van derden. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
-### Database
+### Database {#database}
 
 Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
@@ -101,19 +101,19 @@ Experience Platform verleent steun voor het opnemen van gegevens van een derdege
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 - [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
 
-### eCommerce
+### eCommerce {#ecommerce}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een eCommerce-systeem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### Lokaal systeem
+### Lokaal systeem {#local-system}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van uw lokale systeem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [Lokale bestanden uploaden](connectors/local-system/local-file-upload.md)
 
-### Marketing Automation
+### Marketing Automation {#marketing-automation}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
@@ -121,19 +121,19 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een de
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### Betalingen
+### Betalingen {#payments}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
-### Streaming
+### Streaming {#streaming}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit streamingbronnen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### Protocollen
+### Protocollen {#protocols}
 
 Experience Platform verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
