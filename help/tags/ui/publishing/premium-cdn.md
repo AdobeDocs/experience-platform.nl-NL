@@ -1,9 +1,10 @@
 ---
 title: Premium CDN-ondersteuning voor tags
 description: Leer over de premiumfunctie CDN voor tags en hoe u deze kunt gebruiken om uw inhoud in meerdere geografische regio's te leveren.
-source-git-commit: 530fc1ad3f389ffb5d77ddf6aa0b0b3208f1d532
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
+source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -20,21 +21,13 @@ Om dit te verklaren, verstrekken de markeringen in Experience Platform een premi
 
 Premium CDN-ondersteuning is een betaalde functie en moet door uw organisatie worden aangeschaft om deze in te schakelen en te gebruiken. Deze gids behandelt hoe te om deze eigenschap in de UI van de Inzameling van Gegevens te vormen en te gebruiken nadat het is gekocht.
 
-## Premium CDN voor een bedrijf inschakelen
+## Premium-CDN inschakelen voor uw organisatie
 
-De premie CDN wordt toegelaten op het bedrijfsniveau, betekenend dat u bedrijf moet hebben uitgeven toestemmingen om de eigenschap toe te laten.
-
-In de UI van de Inzameling van Gegevens, navigeer aan **[!UICONTROL Tags]** > **[!UICONTROL Companies]**. Selecteer van hieruit het bedrijf waarvoor u de functie wilt inschakelen en selecteer **[!UICONTROL Configure]** .
-
-![Selecteer een bedrijf om te vormen](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-Selecteer in het configuratievenster dat wordt weergegeven de optie voor **[!UICONTROL Premium CDN Enabled]** voordat u selecteert **[!UICONTROL Save]** om uw wijzigingen te bevestigen.
-
-![De optie premium-CDN inschakelen](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+Premium CDN is ingeschakeld op bedrijfsniveau. Zodra uw organisatie de premieCDN eigenschap heeft gekocht, zal een beheerder van Adobe voor uw bedrijf in de Inzameling van Gegevens UI toelaten.
 
 ## Tagbibliotheken opnieuw samenstellen en installeren met bijgewerkte insluitcodes
 
-Als u de functie premium-CDN inschakelt, betekent dit niet dat de tagelementen direct worden gerepliceerd en klaar zijn voor gebruik in de nieuwe gebieden. Dit betekent alleen dat u nu kunt kiezen wanneer u zich aanmeldt voor deze functie.
+Als premium-CDN eenmaal is ingeschakeld, betekent dit niet dat de tagelementen direct worden gerepliceerd en klaar zijn voor gebruik in de nieuwe gebieden. Dit betekent alleen dat u nu kunt kiezen wanneer u zich aanmeldt voor deze functie.
 
 >[!IMPORTANT]
 >
