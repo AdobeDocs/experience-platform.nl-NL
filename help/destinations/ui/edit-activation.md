@@ -1,38 +1,45 @@
 ---
 keywords: activering bewerken, doel bewerken, bestemming bewerken
-title: Activeringsstromen bewerken
+title: Activeringsgegevens bewerken
 type: Tutorial
-seo-title: Activeringsstromen bewerken
-description: Voer de stappen in dit artikel uit om een bestaande activeringsstroom in Adobe Experience Platform te bewerken.
-seo-description: Voer de stappen in dit artikel uit om een bestaande activeringsstroom in Adobe Experience Platform te bewerken.
+seo-title: Edit activation dataflows
+description: Voer de stappen in dit artikel uit om een bestaande activeringsgegevensstroom in Adobe Experience Platform te bewerken.
+seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
 
-# Activeringsstromen bewerken {#edit-activation-flows}
+# Activeringsgegevens bewerken {#edit-activation-flows}
 
-Voer de onderstaande stappen uit om bestaande activeringsstromen in Adobe Experience Platform te bewerken:
+In Adobe Experience Platform kunt u verschillende componenten van bestaande activeringsgegevens naar doelen bewerken, zoals de geëxporteerde segmenten en profielkenmerken, de exportfrequentie, of de activeringsgegevensstroom is in- of uitgeschakeld, enzovoort.
 
-1. Meld u aan bij [Experience Platform UI](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteer **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingen te bekijken.
+Voer de onderstaande stappen uit om bestaande activeringsgegevens te bewerken:
+
+1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
 
    ![Bladeren door doelen](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![Filter-pictogram](../assets/ui/edit-activation/filter.png) linksboven om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Filterpictogram selecteren ![Filter-pictogram](../assets/ui/edit-activation/filter.png) bovenaan links om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![Filterdoelen](../assets/ui/edit-activation/filter-destinations.png)
 
-3. Selecteer de naam van het doel dat u wilt bewerken.
+3. Selecteer de naam van de doelgegevensstroom die u wilt bewerken.
 
    ![Doel selecteren](../assets/ui/edit-activation/destination-select.png)
 
-4. De pagina **[!UICONTROL Dataflow runs]** voor het doel wordt weergegeven, met daarin de beschikbare besturingselementen. Selecteer **[!UICONTROL Activate]** in het juiste spoor om te veranderen welke segmenten om naar de bestemming te verzenden.
+4. De **[!UICONTROL Dataflow runs]** wordt de pagina voor het doel weergegeven en worden de beschikbare besturingselementen weergegeven. Op dit punt, kunt u verscheidene componenten van de bestemmingsdataflow uitgeven:
 
-   Bovendien kunt u de doelnaam en beschrijving bewerken.
+   * Selecteren **[!UICONTROL Activate segments]** in de juiste spoorstaaf om te veranderen welke segmenten of profielattributen naar de bestemming te verzenden. Hiermee gaat u naar de activeringsworkflow, die afhankelijk is van het doeltype. Zie de handleidingen voor meer informatie:
+      * [het activeren van publieksgegevens aan segment het stromen bestemmingen](./activate-segment-streaming-destinations.md) (bijvoorbeeld Facebook of Twitter);
+      * [het activeren van publieksgegevens aan batch op profiel-gebaseerde bestemmingen](./activate-batch-profile-destinations.md) (bijvoorbeeld Amazon S3 of Oracle Eloqua);
+      * [het activeren van publieksgegevens aan het stromen op profiel-gebaseerde bestemmingen](./activate-streaming-profile-destinations.md) (bijvoorbeeld HTTP-API of Amazon Kinesis).
+   * Daarnaast kunt u de naam en beschrijving van de doelgegevensstroom bewerken.
+   * U kunt de **[!UICONTROL Enabled]/[!UICONTROL Disabled]** schakelen om alle gegevens die u exporteert naar de bestemming te starten en pauzeren.
 
    ![Doelgegevens](../assets/ui/edit-activation/destination-details.png)
 
-5. Raadpleeg [Activeringsoverzicht](activation-overview.md) voor meer informatie over het activeren van nieuwe segmenten voor uw doelen.
+5. Zie [Overzicht van activering](activation-overview.md) voor details op hoe te om nieuwe segmenten aan uw bestemmingen te activeren.
