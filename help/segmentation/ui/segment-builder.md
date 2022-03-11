@@ -5,9 +5,9 @@ title: UI-gids voor segmentBuilder
 topic-legacy: ui guide
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6f4d250750d36c516a9a5730b5ced91e47d3bf05
+source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
 workflow-type: tm+mt
-source-wordcount: '2311'
+source-wordcount: '2397'
 ht-degree: 0%
 
 ---
@@ -114,6 +114,14 @@ Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tege
 >
 >De meest recente wijzigingen in Adobe Experience Platform hebben het gebruik van de `OR` en `AND` logische operatoren tussen gebeurtenissen. Deze updates zijn niet van invloed op bestaande segmenten. Deze wijzigingen zijn echter van invloed op alle volgende updates van bestaande segmenten en nieuwe segmentcreaties. Lees de [tijdconstanten bijwerken](./segment-refactoring.md) voor meer informatie .
 
+Wanneer u een waarde voor het kenmerk selecteert, wordt een lijst met opsommingswaarden weergegeven die het kenmerk kan bevatten.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+Als u een waarde in deze lijst met nummers selecteert, krijgt de waarde een effen rand. Voor velden die `meta:enum` (soft) opsommingen, kunt u ook een waarde selecteren die **niet** in de lijst van opsommingen. Als u uw eigen waarde maakt, krijgt deze de omtrek met een gestippelde rand en een waarschuwing dat deze waarde niet in de opsommingslijst voorkomt.
+
+![](../images/ui/segment-builder/enum-warning.png)
+
 ### Soorten publiek toevoegen
 
 U kunt een publiek slepen en neerzetten vanuit het deelvenster **[!UICONTROL Audience]** tab op het canvas van de regelbouwer om te verwijzen naar het lidmaatschap van het publiek in de nieuwe segmentdefinitie. Dit staat u toe om publiekslidmaatschap als attribuut in de nieuwe segmentregel te omvatten of uit te sluiten.
@@ -196,7 +204,7 @@ Zodra u **[!UICONTROL Unwrap container]** de onderliggende container wordt verwi
 
 [!DNL Experience Platform] laat u toe om gegevens uit veelvoudige bronnen te brengen en het te combineren om een volledige mening van elk van uw individuele klanten te zien. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe gegevens voorrang krijgen en welke gegevens worden gecombineerd om een profiel te maken.
 
-U kunt een samenvoegbeleid selecteren dat uw marketing doel voor dit publiek aanpast of het standaardsamenvoegbeleid gebruiken dat door wordt verstrekt [!DNL Platform]. U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor stapsgewijze instructies voor het maken van een samenvoegbeleid voor uw organisatie, begint u met het lezen van de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
+U kunt een samenvoegbeleid selecteren dat overeenkomt met uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Platform]. U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor stapsgewijze instructies voor het maken van een samenvoegbeleid voor uw organisatie, begint u met het lezen van de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
 
 Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u het tandwielpictogram in het dialoogvenster **[!UICONTROL Fields]** gebruikt u vervolgens de **[!UICONTROL Merge Policy]** vervolgkeuzelijst om het samenvoegbeleid te selecteren dat u wilt gebruiken.
 
