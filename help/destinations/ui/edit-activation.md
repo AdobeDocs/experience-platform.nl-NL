@@ -6,9 +6,9 @@ seo-title: Edit activation dataflows
 description: Voer de stappen in dit artikel uit om een bestaande activeringsgegevensstroom in Adobe Experience Platform te bewerken.
 seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 # Activeringsgegevens bewerken {#edit-activation-flows}
 
 In Adobe Experience Platform kunt u verschillende componenten van bestaande activeringsgegevens naar doelen bewerken, zoals de geëxporteerde segmenten en profielkenmerken, de exportfrequentie, of de activeringsgegevensstroom is in- of uitgeschakeld, enzovoort.
+
+## Gegevensstromen bewerken {#edit-dataflows}
 
 Voer de onderstaande stappen uit om bestaande activeringsgegevens te bewerken:
 
@@ -42,4 +44,8 @@ Voer de onderstaande stappen uit om bestaande activeringsgegevens te bewerken:
 
    ![Doelgegevens](../assets/ui/edit-activation/destination-details.png)
 
-5. Zie [Overzicht van activering](activation-overview.md) voor details op hoe te om nieuwe segmenten aan uw bestemmingen te activeren.
+## Volgende stappen {#next-steps}
+
+Door deze zelfstudie te volgen, hebt u de opdracht **[!UICONTROL destinations]** om bestaande doelgegevens bij te werken.
+
+Voor meer informatie over bestemmingen, verwijs naar [Overzicht van doelen](../catalog/overview.md).
