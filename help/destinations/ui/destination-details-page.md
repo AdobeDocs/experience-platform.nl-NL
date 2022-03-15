@@ -4,9 +4,9 @@ title: Doelgegevens weergeven
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
+source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,10 @@ U kunt de **[!UICONTROL Enabled]/[!UICONTROL Disabled]** schakelen om alle gegev
 ## [!UICONTROL Dataflow runs] {#dataflow-runs}
 
 De [!UICONTROL Dataflow runs] tab bevat metrische gegevens over uw gegevensstroom die naar batch- en streaming doelen worden uitgevoerd. Zie [Dataflows bewaken](monitor-dataflows.md) voor details en metrische definities.
+
+>[!NOTE]
+>
+>Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP-API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
 
 ![Dataflow-runweergave](../assets/ui/details-page/dataflow-runs.png)
 
