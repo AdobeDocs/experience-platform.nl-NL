@@ -3,14 +3,24 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.9.0 - 10 maart 2022
+
+* Toegevoegde ondersteuning voor tekstspatiëring [!DNL control (default)] Adobe Target ervaart.
+* De gebeurtenis view-change is geoptimaliseerd voor toepassingen op één pagina. Het weergavebericht wordt nu opgenomen in de gebeurtenis view-change wanneer persoonlijke ervaringen worden weergegeven.
+* Waarschuwing van console is verwijderd als dit niet het geval is `eventType` aanwezig is.
+* Het probleem waarbij de `propositions` eigenschap is alleen geretourneerd door een `sendEvent` gebruiken wanneer ervaringen zijn opgevraagd of opgehaald uit de cache. De `propositions` eigenschap wordt nu altijd gedefinieerd als een array.
+* Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd van Adobe Experience Edge.
+* Probleem verholpen waarbij de interactieve gebeurtenissen niet in Adobe Target werden meegeteld. Dit probleem is opgelost door de weergavenaam toe te voegen aan de XDM op web.webPageDetails.viewName.
+* Los gebroken documentatiekoppelingen in consoleberichten op.
 
 ## Versie 2.8.0 - 19 januari 2022
 
