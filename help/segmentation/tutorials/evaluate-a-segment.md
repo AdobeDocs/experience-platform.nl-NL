@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -153,7 +153,7 @@ De volgende stappen zijn vereist om uw publiek te exporteren:
 - [Exportvoortgang volgen](#monitor-export-progress) - Controleer de huidige voortgang van het exportproces.
 - [Lees de publieksgegevens](#next-steps) - Haal de resulterende afzonderlijke XDM-profielen op die de leden van uw publiek vertegenwoordigen.
 
-### Een doelgegevensset maken
+### Een doelgegevensset maken {#create-dataset}
 
 Wanneer het uitvoeren van een publiek, moet een doeldataset eerst worden gecreeerd. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
 
