@@ -6,7 +6,7 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: a076e9815050b10c0db5001a15371761710a3c28
+source-git-commit: 5254f100f59f1edb36e00d1475c2857a525fe79e
 workflow-type: tm+mt
 source-wordcount: '3200'
 ht-degree: 0%
@@ -195,11 +195,11 @@ De volgende metriek is beschikbaar voor segmentbanen:
 >title="Activering"
 >abstract="De weergave voor doelactivering bevat informatie over de activeringsstatus van het segment en de maatstaven die vanuit het realtime profiel van de klant zijn genomen om unieke identiteiten te genereren."
 
+Om toegang te krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Destinations]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de banen van de bestemmingslooppas.
+
 >[!NOTE]
 >
 >Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP-API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
-
-Om toegang te krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Destinations]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de banen van de bestemmingslooppas.
 
 Gebruik de [!UICONTROL Destinations] dashboard voor een algemeen idee van de gezondheid van uw activeringsstromen. Begin door inzichten op een bijeengevoegd niveau voor alle partij en het stromen bestemmingen te krijgen en dan neer te boor in gedetailleerde meningen voor dataflows, dataflow looppas, en geactiveerde segmenten voor een diepgaande blik op uw activeringsgegevens. De schermen in de [!UICONTROL Monitoring] het dashboard verstrekt actionable inzichten door metriek en foutenbeschrijvingen om u te helpen om het even welke problemen oplossen die zich in uw activeringsscenario&#39;s zouden kunnen voordoen.
 
