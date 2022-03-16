@@ -1,47 +1,59 @@
 ---
-keywords: Experience Platform;aan de slag;klantenondersteuning;populaire onderwerpen;input van klantenondersteuning;klantenservice uitvoer;problemen oplossen;fouten in klantenondersteuning
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output;customer ai troubleshooting;customer ai errors
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
-title: Probleemoplossing van AI-fouten van klant
+title: Customer AI error troubleshooting
 topic-legacy: Getting started
-description: Zoek antwoorden op algemene fouten in Customer AI.
+description: Find answers to common errors in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
 
-# Probleemoplossing van AI-fouten van klant
+# Customer AI error troubleshooting
 
-De AI van de klant toont fouten wanneer de modelopleiding, het scoren, en de configuratie ontbreken. In de **[!UICONTROL Service instances]** sectie, toont een kolom voor **[!UICONTROL LAST RUN STATUS]** één van de volgende berichten: **[!UICONTROL Success]**, **[!UICONTROL Training issue]** en **[!UICONTROL Failed]**.
+Customer AI displays errors when model training, scoring, and configuration fails. **[!UICONTROL Service instances]****[!UICONTROL LAST RUN STATUS]****[!UICONTROL Success]****[!UICONTROL Training issue]****[!UICONTROL Failed]**
 
-![status laatste uitvoering](./images/errors/last-run-status.png)
+![](./images/errors/last-run-status.png)
 
-Als **[!UICONTROL Failed]** of **[!UICONTROL Training issue]** wordt weergegeven, kunt u de uitvoerstatus selecteren om een zijpaneel te openen. Het zijpaneel bevat uw **[!UICONTROL Last run status]** en **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** bevat informatie over waarom de uitvoering is mislukt. Als de AI van de Klant geen details over uw fout kan verstrekken, contacteer steun met de foutencode die verstrekt wordt.
+**[!UICONTROL Failed]****[!UICONTROL Training issue]** **[!UICONTROL Last run status]****[!UICONTROL Last run details]** **[!UICONTROL Last run details]** In the event that Customer AI is not able to provide details on your error, contact support with the error code thats provided.
 
 <img src="./images/errors/last-run-details.png" width="300" /><br />
 
-## Modelkwaliteit is slecht
+## Unable to access Customer AI in Chrome incognito
 
-Als u de fout &quot;[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]&quot;ontvangt. Volg onderstaande aanbevolen stappen om problemen op te lossen.
+Loading errors in Google Chrome&#39;s incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+
+<img src="./images/errors/error.PNG" width="500" /><br />
+
+### Recommended fix
+
+To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. **** ******** `[*.]experience.adobe.com`**** ****
+
+![](./images/errors/cookies2.gif)
+
+## Model quality is poor
+
+[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration] Follow the recommended steps below to help troubleshoot.
 
 <img src="./images/errors/model-quality.png" width="300" /><br />
 
-### Aanbevolen correctie
+### Recommended fix
 
-&quot;Modelkwaliteit is slecht&quot; betekent dat de nauwkeurigheid van het model niet binnen een aanvaardbaar bereik ligt. Klantenservice-AI kon na training geen betrouwbaar model en AUC (Area under the ROC curve) &lt; 0,65 maken. Om de fout te bevestigen, adviseert men dat u één van de configuratieparameters verandert en de opleiding opnieuw uitvoert.
+&quot;Model quality is poor&quot; means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) &lt; 0.65 after training. To fix the error, it is recommended that you change one of the configuration parameters and rerun the training.
 
-Begin door de nauwkeurigheid van uw gegevens te controleren. Het is belangrijk dat uw gegevens de velden bevatten die nodig zijn voor uw voorspelbare resultaat.
+Start by checking the accuracy of your data. It is important that your data contains the necessary fields needed for your predictive outcome.
 
-- Controleer of uw dataset de recentste data heeft. De AI van de Klant veronderstelt altijd dat de gegevens bijgewerkt zijn wanneer het model wordt teweeggebracht.
-- Controleer of er gegevens ontbreken in het gedefinieerde voorspellings- en geschiktheidsvenster. Uw gegevens moeten volledig zijn zonder tussenruimten. Zorg er ook voor dat uw gegevensset voldoet aan de [historische gegevensvereisten voor AI van de klant](./input-output.md#data-requirements).
-- Controle voor ontbrekende gegevens in handel, toepassing, Web, en onderzoek, binnen uw eigenschappen van het schemagebied.
+- Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
+- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. [](./input-output.md#data-requirements)
+- Check for missing data in commerce, application, web, and search, within your schema field properties.
 
-Als uw gegevens niet het probleem lijken te zijn, probeert u de toelatingsvoorwaarde van de populatie te veranderen om het model tot bepaalde profielen (bijvoorbeeld, `_experience.analytics.customDimensions.eVars.eVar142` bestaat in afgelopen 56 dagen) te beperken. Dit beperkt de populatie en de grootte van de gegevens die in het trainingsvenster worden gebruikt.
+`_experience.analytics.customDimensions.eVars.eVar142` This restricts the population and size of the data used in the training window.
 
-Als het beperken van de toelatingspopulatie niet werkte of niet mogelijk is, verander uw voorspellingsvenster.
+If restricting the eligibility population did not work or is not possible, change your prediction window.
 
-- Probeer het voorspellingsvenster te wijzigen in 7 dagen en controleer of de fout zich blijft voordoen. Als de fout niet meer voorkomt, wijst dit erop dat u niet genoeg gegevens voor uw bepaalde voorspellingsvenster kunt hebben.
+- Try changing your prediction window to 7 days and see if the error continues to occur. If the error no longer occurs, this indicates that you may not have enough data for your defined prediction window.
