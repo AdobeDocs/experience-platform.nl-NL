@@ -4,20 +4,20 @@ description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 3%
+source-wordcount: '860'
+ht-degree: 4%
 
 ---
 
 # Vorm de SDK van het Web van het Platform
 
-De configuratie voor SDK wordt gedaan met `configure` bevel.
+De configuratie voor de SDK wordt uitgevoerd met de `configure` gebruiken.
 
 >[!IMPORTANT]
 >
->`configure` is altijd  ** het eerste geroepen bevel.
+>`configure` is *altijd* het eerste geroepen bevel.
 
 ```javascript
 alloy("configure", {
@@ -26,7 +26,7 @@ alloy("configure", {
 });
 ```
 
-Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle opties zijn hieronder te vinden, gegroepeerd op categorie.
+Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle opties vindt u hieronder, gegroepeerd op categorie.
 
 ## Algemene opties
 
@@ -34,7 +34,7 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 
 >[!NOTE]
 >
->**Edge Configurations zijn omgedoopt tot gegevensstreams. Een gegevensstroom ID is het zelfde als een configuratieidentiteitskaart**
+>**Edge Configurations zijn omgedoopt tot gegevensstreams. Een gegevensstroom-id is hetzelfde als een configuratie-id.**
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
@@ -42,7 +42,7 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 
 {style=&quot;table-layout:auto&quot;}
 
-Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie. Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u verschillende `edgeConfigId` voor elke instantie vormen.
+Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie. Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u verschillende vormen `edgeConfigId` voor elke instantie.
 
 ### `context`
 
@@ -62,7 +62,7 @@ Geeft aan welke contextcategorieën automatisch moeten worden verzameld, zoals b
 
 {style=&quot;table-layout:auto&quot;}
 
-Geeft aan of foutopsporing is ingeschakeld. Als u deze configuratie instelt op `true`, worden de volgende functies ingeschakeld:
+Geeft aan of foutopsporing is ingeschakeld. Deze configuratie instellen op `true` schakelt de volgende functies in:
 
 | **Functie** | **-functie** |
 | ---------------------- | ------------------ |
@@ -72,9 +72,19 @@ Geeft aan of foutopsporing is ingeschakeld. Als u deze configuratie instelt op `
 
 ### `edgeDomain` {#edge-domain}
 
-Vul dit veld met uw domein van de eerste partij. Raadpleeg de [documentatie](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html) voor meer informatie.
+Vul dit veld met uw domein van de eerste partij. Zie voor meer informatie de [documentatie](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
 Het domein is vergelijkbaar met `data.{customerdomain.com}` voor een website op www.{customerdomain.com}.
+
+### `edgeBasePath` {#edge-base-path}
+
+Pad na het edgeDomain dat wordt gebruikt voor communicatie en interactie met Adobe-services.  Vaak zou dit alleen veranderen wanneer de standaardproductieomgeving niet wordt gebruikt.
+
+| **Type** | **Vereist** | **Standaardwaarde** |
+| -------- | ------------ | ----------------- |
+| Tekenreeks | Nee | ee |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `orgId`
 
@@ -84,7 +94,7 @@ Het domein is vergelijkbaar met `data.{customerdomain.com}` voor een website op 
 
 {style=&quot;table-layout:auto&quot;}
 
-Uw toegewezen [!DNL Experience Cloud] organisatie-id. Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u verschillende `orgId` voor elke instantie vormen.
+Uw toegewezen [!DNL Experience Cloud] organisatie-id. Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u verschillende vormen `orgId` voor elke instantie.
 
 ## Gegevensverzameling
 
@@ -96,7 +106,7 @@ Uw toegewezen [!DNL Experience Cloud] organisatie-id. Wanneer het vormen van vee
 
 {style=&quot;table-layout:auto&quot;}
 
-Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch worden verzameld. Zie [Automatische koppeling bijhouden](../data-collection/track-links.md#automaticLinkTracking) voor meer informatie. Koppelingen worden ook gelabeld als downloadkoppelingen als deze een downloadkenmerk bevatten of als de koppeling eindigt met een bestandsextensie. De de verbindingsbepalers van de download kunnen met een regelmatige uitdrukking worden gevormd. De standaardwaarde is `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
+Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch worden verzameld. Zie [Automatisch koppelen bijhouden](../data-collection/track-links.md#automaticLinkTracking) voor meer informatie . Koppelingen worden ook gelabeld als downloadkoppelingen als deze een downloadkenmerk bevatten of als de koppeling eindigt met een bestandsextensie. De de verbindingsbepalers van de download kunnen met een regelmatige uitdrukking worden gevormd. De standaardwaarde is `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
@@ -106,7 +116,7 @@ Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch word
 
 {style=&quot;table-layout:auto&quot;}
 
-Vorm callback die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen. Een object met het veld `xdm` wordt naar de callback verzonden. Als u wilt wijzigen wat wordt verzonden, wijzigt u het object `xdm`. Binnen callback, heeft het `xdm` voorwerp reeds de gegevens die in het gebeurtenisbevel worden overgegaan, en de automatisch verzamelde informatie. Zie [Gebeurtenissen globaal wijzigen](tracking-events.md#modifying-events-globally) voor meer informatie over de timing van deze callback en een voorbeeld.
+Vorm callback die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen. Een object met het veld `xdm` wordt verzonden binnen naar callback. Om te wijzigen wat wordt verzonden, wijzigt u de `xdm` object. Binnen de callback, `xdm` heeft de gegevens al doorgegeven in de gebeurtenisopdracht en de automatisch verzamelde informatie. Voor meer informatie over de timing van deze callback en een voorbeeld, zie [Gebeurtenissen globaal wijzigen](tracking-events.md#modifying-events-globally).
 
 ## Privacyopties
 
@@ -118,11 +128,11 @@ Vorm callback die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt 
 
 {style=&quot;table-layout:auto&quot;}
 
-Hiermee stelt u de standaardtoestemming van de gebruiker in. Gebruik deze instelling als er nog geen voorkeur voor toestemming is opgeslagen voor de gebruiker. De andere geldige waarden zijn `"pending"` en `"out"`. Deze standaardwaarde wordt niet doorgevoerd in het profiel van de gebruiker. Het profiel van de gebruiker wordt alleen bijgewerkt wanneer `setConsent` wordt aangeroepen.
+Hiermee stelt u de standaardtoestemming van de gebruiker in. Gebruik deze instelling als er nog geen voorkeur voor toestemming is opgeslagen voor de gebruiker. De andere geldige waarden zijn `"pending"` en `"out"`. Deze standaardwaarde wordt niet doorgevoerd in het profiel van de gebruiker. Het gebruikersprofiel wordt alleen bijgewerkt wanneer `setConsent` wordt aangeroepen.
 * `"in"`: Wanneer deze instelling is ingesteld of geen waarde is opgegeven, gaat het werk verder zonder voorkeuren voor gebruikerstoestemming.
 * `"pending"`: Wanneer deze instelling is ingesteld, wordt het werk in de wachtrij geplaatst totdat de gebruiker voorkeuren voor toestemming geeft.
 * `"out"`: Wanneer deze instelling is ingesteld, worden de werkzaamheden verwijderd totdat de gebruiker voorkeuren voor toestemming heeft ingesteld.
-Nadat de voorkeuren van de gebruiker zijn opgegeven, gaat het werk door of wordt het afgebroken op basis van de voorkeuren van de gebruiker. Zie [Ondersteunende toestemming](../consent/supporting-consent.md) voor meer informatie.
+Nadat de voorkeuren van de gebruiker zijn opgegeven, gaat het werk door of wordt het afgebroken op basis van de voorkeuren van de gebruiker. Zie [Ondersteunende toestemming](../consent/supporting-consent.md) voor meer informatie .
 
 ## Persoonlijke opties
 
@@ -152,7 +162,7 @@ Als een element op uw webpagina bijvoorbeeld een id heeft van `container`, waarv
 
 {style=&quot;table-layout:auto&quot;}
 
-Hiermee schakelt u cookie-doelen [!DNL Audience Manager] in, zodat cookies kunnen worden ingesteld op basis van segmentkwalificatie.
+Inschakelen [!DNL Audience Manager] koekjesbestemmingen, die het plaatsen van koekjes toestaat die op segmentkwalificatie worden gebaseerd.
 
 ### `urlDestinationsEnabled`
 
@@ -162,7 +172,7 @@ Hiermee schakelt u cookie-doelen [!DNL Audience Manager] in, zodat cookies kunne
 
 {style=&quot;table-layout:auto&quot;}
 
-Laat [!DNL Audience Manager] bestemmingen URL toe, die het vuren van URLs toestaat die op segmentkwalificatie wordt gebaseerd.
+Inschakelen [!DNL Audience Manager] URL-doelen, waarmee URL&#39;s kunnen worden geactiveerd op basis van segmentkwalificatie.
 
 ## Identiteitsopties
 
