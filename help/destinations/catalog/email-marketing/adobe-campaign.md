@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,16 @@ Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online e
 
 Als u segmentgegevens naar Adobe Campaign wilt verzenden, moet u eerst [verbinden de bestemming](#connect-destination) in Adobe Experience Platform, en vervolgens [een gegevensimport instellen](#import-data-into-campaign) vanaf uw opslaglocatie naar Adobe Campaign.
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
-**Op basis van profiel** - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), gekozen in het dialoogvenster **[!UICONTROL Select attributes]** de [activeringsworkflow voor publiek](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## IP adres lijst van gewenste personen {#allow-list}
 

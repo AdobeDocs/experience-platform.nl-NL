@@ -4,9 +4,9 @@ title: Doeltypen en -categorieën
 seo-title: Destination types and categories
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,15 @@ In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbind
 Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als primaire sleutel. Experience Platform ondersteunt momenteel twee typen exportdoelen voor profielen:
 
 * [Streaming profiel exporteren doelen](#streaming-profile-export)
-* [Bestandsgebaseerde doelen](#file-based)
+* [Batchbestemmingen (op basis van bestanden)](#file-based)
 
 ### Streaming profiel exporteren doelen {#streaming-profile-export}
 
 Streaming profiel exportdoelen ontvangen segment- en profielgegevens als gegevensstreams voor Experience Platforms. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) en [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md) zijn voorbeelden van dergelijke bestemmingen .
 
-### Bestandsgebaseerde doelen {#file-based}
+### Batchbestemmingen (op basis van bestanden) {#file-based}
 
-Bestandsgebaseerde doelen ontvangen `.csv` bestanden met profielen en/of kenmerken. [Amazon S3](catalog/cloud-storage/amazon-s3.md) Dit is een voorbeeld van een bestemming waar u bestanden kunt neerzetten die exporteren profielen bevatten.
+Bestandsgebaseerde doelen ontvangen `.csv` bestanden met profielen en/of kenmerken. [Amazon S3](catalog/cloud-storage/amazon-s3.md) Dit is een voorbeeld van een bestemming waar u bestanden kunt exporteren die profielen bevatten.
 
 ## Streaming segment exportdoelen {#streaming-destinations}
 

@@ -2,9 +2,9 @@
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 05b97e8bdeb4ffb81a4a671d282d0d8ebc7e870a
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,22 @@ De bestemming laat marketers toe om segmenten te duwen die in Adobe Experience P
 | ECID | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
 | Email | Een naamruimte die een e-mailadres vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
 
+{style=&quot;table-layout:auto&quot;}
+
 >[!NOTE]
 >
 >In de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de doelworkflow activeren: *verplicht* om identiteiten toe te wijzen en *optioneel* om kenmerken toe te wijzen. Het toewijzen van e-mail- en/of ECID via het tabblad Identiteitsnaamruimte is het belangrijkste wat u moet doen om ervoor te zorgen dat de persoon gelijk is aan de persoon in Marketo. Toewijzing via e-mail zorgt voor de hoogste match-rate.
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
-Segmentexport - u exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail, ECID) die in de Marketo Engage-bestemming worden gebruikt.
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail, ECID) die in de Marketo Engage-bestemming worden gebruikt. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Doel instellen en segmenten activeren {#set-up}
 

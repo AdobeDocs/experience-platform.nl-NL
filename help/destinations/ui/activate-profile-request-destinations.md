@@ -1,14 +1,14 @@
 ---
 keywords: activeer profiel verzoek bestemmingen;activeer gegevens;profiel verzoek bestemmingen
-title: De publieksgegevens van de activering aan de bestemmingen van het profielverzoek (Bèta)
+title: De publieksgegevens van de activering aan de bestemmingen van het profielverzoek
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Leer hoe te om de publieksgegevens te activeren u in Adobe Experience Platform hebt door segmenten aan de bestemmingen van het profielverzoek in kaart te brengen.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
+source-git-commit: 388a061c87cfe9acda177ed71ed9f6017c8c2f4c
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,12 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Fi
 
 ![Controleren](../assets/ui/activate-profile-request-destinations/review.png)
 
-## Segmentactivering verifiëren {#verify}
+<!--
 
-Controleer de [doelcontroledocumentatie](../../dataflows/ui/monitor-destinations.md) voor gedetailleerde informatie over hoe te om de stroom van gegevens aan uw bestemmingen te controleren.
+Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
+
+## Verify segment activation {#verify}
+
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+
+-->

@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,16 @@ Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbest
 >
 > Hoewel Adobe gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen opslaglocaties voor de cloud voor het exporteren van gegevens: [!DNL Amazon S3] en [!DNL Azure Blob].
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
-**Op basis van profiel** - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met selectiekenmerken van het dialoogvenster [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md).
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ![Op SFTP-profiel gebaseerd exporttype](../../assets/catalog/cloud-storage/sftp/catalog.png)
 

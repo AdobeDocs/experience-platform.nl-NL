@@ -3,9 +3,9 @@ keywords: streaming;
 title: HTTP API-verbinding
 description: Met de HTTP API-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,17 @@ Als u profielgegevens naar HTTP-eindpunten wilt verzenden, moet u eerst [verbind
 De bestemming van HTTP wordt gericht op klanten die XDM profielgegevens en publiekssegmenten naar generische eindpunten van HTTP moeten uitvoeren.
 
 De eindpunten van HTTP kunnen of de systemen van klanten of derdeoplossingen zijn.
+
+## Type en frequentie exporteren {#export-type-frequency}
+
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Vereisten {#prerequisites}
 

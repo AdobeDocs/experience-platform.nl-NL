@@ -2,9 +2,9 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '1053'
 ht-degree: 1%
 
 ---
@@ -51,11 +51,22 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
-**Segment exporteren** - u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in het dialoogvenster *UW BESTEMMING* bestemming.
+*In de lijst, houd slechts de lijnen die aan uw bestemming beantwoorden. U moet één regel voor het type Exporteren en één regel voor de frequentie Exporteren hebben. Verwijder de waarden die niet van toepassing zijn op de bestemming.*
 
-## Gebruiksscenario’s
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *UW BESTEMMING* bestemming. |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Gebruiksscenario’s {#use-cases}
 
 Om u te helpen beter begrijpen hoe en wanneer u het *UW BESTEMMING* doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
@@ -79,7 +90,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) voor deze bestemming moet u de volgende informatie opgeven:
 
-*Voeg de gebieden toe die de klanten moeten invullen wanneer het vormen van een nieuwe bestemming. Deze gebieden zijn bestemmings-specifiek en hangen van uw configuratie in Doel SDK af. De velden van uw bestemming zijn mogelijk niet gelijk aan de onderstaande velden.*
+*Voeg de gebieden toe die de klanten moeten invullen wanneer het vormen van een nieuwe bestemming. Deze gebieden zijn bestemming-specifiek en hangen van uw configuratie in Destination SDK af. De velden van uw bestemming zijn mogelijk niet gelijk aan de onderstaande velden.*
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.

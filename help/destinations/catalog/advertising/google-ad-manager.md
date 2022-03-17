@@ -3,10 +3,10 @@ keywords: google en manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: Google Ad Manager, voorheen bekend als DoubleClick voor Publishers of DoubleClick AdX, is een advertentieplatform uit Google dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,15 +37,24 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] best
 | GEMAAKT | Microsoft-advertentie-id. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
 | Amazon Fire TV ID | Deze id is uniek voor Amazon Fire TV&#39;s. |  |
 
-## Exporttype {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**Segment exporteren** - u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
+## Type en frequentie exporteren {#export-type-frequency}
 
-## Vereisten
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de Google-bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Vereisten {#prerequisites}
 
 Als u uw eerste bestemming wilt maken met [!DNL Google Ad Manager] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u al eerder was ingesteld [!DNL Google] Als u integreert in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
-## Lijst van gewenste personen
+### Aanbieding toestaan {#allow-listing}
 
 >[!NOTE]
 >
@@ -82,6 +91,6 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
-## Geëxporteerde gegevens
+## Geëxporteerde gegevens {#exported-data}
 
 Controleren of gegevens zijn geëxporteerd naar de [!DNL Google Ad Manager] doel, controleer uw [!DNL Google Ad Manager] account. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.

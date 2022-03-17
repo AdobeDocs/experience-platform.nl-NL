@@ -3,9 +3,9 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -16,55 +16,66 @@ ht-degree: 0%
 
 [!DNL Airship] is het toonaangevende Platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichanale berichten aan uw gebruikers kunt leveren.
 
-Deze integratie gaat Adobe Experience Platform segmentgegevens in [!DNL Airship] als [Codes](https://docs.airship.com/guides/audience/tags/) voor het richten of het teweegbrengen over.
+Deze integratie geeft Adobe Experience Platform-segmentgegevens door in [!DNL Airship] als [Tags](https://docs.airship.com/guides/audience/tags/) voor aanwijzen of activeren.
 
-Zie [Airship Docs](https://docs.airship.com) voor meer informatie over [!DNL Airship].
+Meer informatie over [!DNL Airship], zie de [Airship Docs](https://docs.airship.com).
 
 
 >[!TIP]
 >
->Deze documentatiepagina is gemaakt door het team van [!DNL Airship]. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via [support.airship.com](https://support.airship.com/).
+>Deze documentatiepagina is gemaakt door de [!DNL Airship] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via [support.airship.com](https://support.airship.com/).
 
 ## Vereisten
 
-Voordat u uw Adobe Experience Platform-segmenten kunt verzenden naar [!DNL Airship], moet u:
+Voordat u uw Adobe Experience Platform-segmenten kunt verzenden naar [!DNL Airship]moet u:
 
-* Creeer een markeringsgroep in uw [!DNL Airship] project.
+* Een taggroep maken in uw [!DNL Airship] project.
 * Een token voor toonder genereren voor verificatie.
 
 >[!TIP]
 > 
->Maak een [!DNL Airship]-account via [deze aanmeldlink](https://go.airship.eu/accounts/register/plan/starter/) als u dat nog niet hebt gedaan.
+>Een [!DNL Airship] account via [deze link](https://go.airship.eu/accounts/register/plan/starter/) als u dat nog niet hebt gedaan.
+
+## Type en frequentie exporteren {#export-type-frequency}
+
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s die worden gebruikt in de bestemming Airship Tags. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Taggroepen
 
-Het concept van segmenten in het platform van de Ervaring van Adobe is gelijkaardig aan [Markeringen](https://docs.airship.com/guides/audience/tags/) in Airship, met lichte verschillen in implementatie. Door deze integratie wordt de status van een [lidmaatschap van een gebruiker in een Experience Platform segment](../../../xdm/field-groups/profile/segmentation.md) toegewezen aan de aanwezigheid of niet-aanwezigheid van een [!DNL Airship]-tag. Bijvoorbeeld, in een segment van het Platform waar `xdm:status` in `realized` verandert, wordt de markering toegevoegd aan [!DNL Airship] kanaal of genoemde gebruiker wordt dit profiel in kaart gebracht aan. Als `xdm:status` in `exited` verandert, wordt de markering verwijderd.
+Het concept van segmenten in het Adobe Experience Platform lijkt op [Tags](https://docs.airship.com/guides/audience/tags/) in het luchtschip, met lichte verschillen in uitvoering. Deze integratie brengt de status van de gebruiker in kaart [lidmaatschap in een segment van de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) de aanwezigheid of het ontbreken van een [!DNL Airship] tag. Bijvoorbeeld in een segment van het Platform waar `xdm:status` wijzigingen in `realized`, wordt de tag toegevoegd aan de [!DNL Airship] kanaal of benoemde gebruiker wordt dit profiel toegewezen aan. Als de `xdm:status` wijzigingen in `exited`, wordt de tag verwijderd.
 
-Om deze integratie toe te laten, creeer een *markeringsgroep* in [!DNL Airship] genoemd `adobe-segments`.
+Als u deze integratie wilt inschakelen, maakt u een *taggroep* in [!DNL Airship] benoemd `adobe-segments`.
 
 >[!IMPORTANT]
 >
->Wanneer het creëren van uw nieuwe markeringsgroep **controleer** niet het radioknoop dat &quot;[!DNL Allow these tags to be set only from your server]&quot;zegt. Als u dit doet, mislukt de integratie van de Adobe-tags.
+>Wanneer u een nieuwe taggroep maakt **Niet controleren** het keuzerondje &quot;[!DNL Allow these tags to be set only from your server]&quot;. Als u dit doet, mislukt de integratie van de Adobe-tags.
 
 Zie [Taggroepen beheren](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) voor instructies over het maken van de taggroep.
 
 ## Dragertoken genereren
 
-Ga naar **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** in [Luchtvaartdashboard](https://go.airship.com) en selecteer **[!UICONTROL Tokens]** in het linkermenu.
+Ga naar **[!UICONTROL Settings]** &quot; **[!UICONTROL APIs & Integrations]** in de [Luchtvaartdashboard](https://go.airship.com) en selecteert u **[!UICONTROL Tokens]** in het linkermenu.
 
 Klik op **[!UICONTROL Create Token]**.
 
 Geef uw token een gebruikersvriendelijke naam, bijvoorbeeld &quot;Doel van Adobe-tags&quot;, en selecteer &quot;Alle toegang&quot; voor de rol.
 
-Klik op **[!UICONTROL Create Token]** en sla de details op als vertrouwelijk.
+Klikken **[!UICONTROL Create Token]** en bewaren de gegevens als vertrouwelijk.
 
 ## Gebruiksscenario’s
 
-Om u beter te helpen begrijpen hoe en wanneer u [!DNL Airship Tags] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
+Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Airship Tags] doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
 ### Hoofdletters gebruiken #1
 
-Detailhandelaars of entertainmentplatforms kunnen gebruikersprofielen maken voor hun klanten die loyaal zijn en die segmenten doorgeven aan [!DNL Airship] voor berichten die bestemd zijn voor mobiele campagnes.
+De detailhandelaars of de entertainmentplatforms kunnen gebruikersprofielen op hun loyaliteitklanten tot stand brengen en die segmenten overgaan in [!DNL Airship] voor berichten die gericht zijn op mobiele campagnes.
 
 ### Hoofdletters gebruiken #2
 
@@ -74,34 +85,34 @@ Een detailhandelaar stelt bijvoorbeeld een merkspecifiek segment voor jeans in P
 
 ## Verbinden met de bestemming {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
-* **[!UICONTROL Bearer token]**: De token die u hebt gegenereerd van het  [!DNL Airship] dashboard.
+* **[!UICONTROL Bearer token]**: het token dat u hebt gegenereerd op basis van het [!DNL Airship] dashboard.
 * **[!UICONTROL Name]**: Voer een naam in die u helpt deze bestemming te identificeren.
 * **[!UICONTROL Description]**: Voer een beschrijving in voor deze bestemming.
-* **[!UICONTROL Domain]**: Selecteer een Amerikaans of EU-datacenter, afhankelijk van het  [!DNL Airship] datacenter dat op dit doel van toepassing is.
+* **[!UICONTROL Domain]**: een Amerikaans of EU-datacenter selecteren, afhankelijk van [!DNL Airship] het gegevenscentrum is op deze bestemming van toepassing.
 
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 
-[!DNL Airship] tags kunnen worden ingesteld op een kanaal dat apparaatinstantie vertegenwoordigt, bijvoorbeeld iPhone, of een benoemde gebruiker, die alle apparaten van een gebruiker toewijst aan een gemeenschappelijke id, zoals een klant-id. Als u gewone (niet-gehakte) e-mailadressen als primaire identiteit in uw schema hebt, selecteer het e-mailgebied in uw **[!UICONTROL Source Attributes]** en kaart aan [!DNL Airship] genoemde gebruiker in de juiste kolom onder **[!UICONTROL Target Identities]**, zoals hieronder getoond.
+[!DNL Airship] -tags kunnen worden ingesteld op een kanaal dat apparaatinstantie vertegenwoordigt, bijvoorbeeld iPhone, of op een benoemde gebruiker, die alle apparaten van een gebruiker toewijst aan een gemeenschappelijke id, zoals een klant-id. Als u onbewerkte (niet-gehashte) e-mailadressen als primaire identiteit in uw schema hebt, selecteert u het e-mailveld in uw schema **[!UICONTROL Source Attributes]** en de kaart aan [!DNL Airship] benoemde gebruiker in de rechterkolom onder **[!UICONTROL Target Identities]**, zoals hieronder weergegeven.
 
 ![Toewijzing van benoemde gebruikers](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-Voor herkenningstekens die aan een kanaal, d.w.z., een apparaat moeten worden in kaart gebracht, kaart aan het aangewezen kanaal dat op de bron wordt gebaseerd. In de volgende afbeeldingen ziet u hoe u een Google Advertising-id toewijst aan een Android-kanaal [!DNL Airship].
+Voor herkenningstekens die aan een kanaal, d.w.z., een apparaat moeten worden in kaart gebracht, kaart aan het aangewezen kanaal dat op de bron wordt gebaseerd. In de volgende afbeeldingen ziet u hoe u een advertentie-id van Google toewijst aan een [!DNL Airship] Android-kanaal.
 
-![Verbinden met ](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
-![Airship TagsVerbinden met ](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
-![Airship TagsChannel-toewijzing](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
+![Verbinden met luchtvaartcodes](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
+![Verbinden met luchtvaartcodes](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
+![Kanaaltoewijzing](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Zie [Overzicht gegevensbeheer](../../../data-governance/home.md) voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt.
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](../../../data-governance/home.md).

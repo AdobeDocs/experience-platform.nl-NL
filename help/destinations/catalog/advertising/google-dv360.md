@@ -1,11 +1,11 @@
 ---
 keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave en video 360;weergave 360;video 360;Video 360;Weergave 360;weergave en video
-title: Google Display en Video 360-verbinding
+title: Google Display & Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 3154020d5be029c738c3a5bfe52ae975a15be2ec
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '760'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-[!DNL Display & Video 360], voorheen bekend onder de naam  [!DNL DoubleClick Bid Manager], is een hulpmiddel dat wordt gebruikt voor het uitvoeren van herrichtings- en doelgerichte digitale campagnes in verschillende bronnen voor weergave, video en mobiele inventaris.
+[!DNL Display & Video 360], voorheen bekend als [!DNL DoubleClick Bid Manager], is een hulpmiddel dat wordt gebruikt voor het uitvoeren van herrichtings- en doelgerichte digitale campagnes in verschillende bronnen voor weergave, video en mobiele inventaris.
 
 ## Doelspecificaties {#specifics}
 
-Neem nota van de volgende details die voor [!DNL Google Display & Video 360] bestemmingen specifiek zijn:
+Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 360] bestemmingen:
 
-* Geactiveerd publiek wordt via programmacode gemaakt in het Google-platform.
-* [!DNL Platform] bevat momenteel geen metrische waarde om een geslaagde activering te valideren. Raadpleeg de tellingen van het publiek in Google om de integratie te valideren en inzicht te krijgen in doelgroepen.
+* Geactiveerd publiek wordt programmatically gecreeerd in het platform van Google.
+* [!DNL Platform] bevat momenteel geen metrische waarde om een geslaagde activering te valideren. Raadpleeg het aantal gebruikers in Google om de integratie te valideren en te begrijpen waar de doelgroep zich op richt.
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met Google Display &amp; Video 360 wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om ID-syncs in te schakelen. Als u eerder Google-integraties in Audience Manager had ingesteld, worden de id-synchronisaties die u hebt ingesteld overgedragen naar Platform.
+>Als u uw eerste bestemming wilt maken met Google Display &amp; Video 360 en de optie [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of Customer Care om ID-syncs in te schakelen. Als u eerder Google-integratie in Audience Manager had ingesteld, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -35,56 +35,61 @@ Neem nota van de volgende details die voor [!DNL Google Display & Video 360] bes
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | [!DNL Apple ID for Advertisers] | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), ook bekend als  [!DNL Device ID]. Een numerieke apparaat-id van 38 cijfers waarmee de Audience Manager werkt. | Google gebruikt [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) om gebruikers in Californië aan te wijzen, en Google Cookie ID voor alle andere gebruikers. |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), ook bekend als [!DNL Device ID]. Een numerieke apparaat-id van 38 cijfers waarmee de Audience Manager werkt. | Google gebruikt [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) om gebruikers in Californië te richten, en identiteitskaart van de Koek van Google voor alle andere gebruikers. |
 | [!DNL Google] cookie-id | [!DNL Google] cookie-id | [!DNL Google] gebruikt deze id om gebruikers buiten Californië als doel in te stellen. |
 | RIDA | Roku ID for Advertising. Deze id identificeert unieke Roku-apparaten. |  |
-| GEMAAKT | Microsoft Advertising ID. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
+| GEMAAKT | Microsoft-advertentie-id. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
 | Amazon Fire TV ID | Deze id is uniek voor Amazon Fire TV&#39;s. |  |
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
-**Segmentexport** : u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de Google-bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Vereisten {#prerequisites}
 
-### Aanbieding toestaan
+### Aanbieding toestaan {#allow-listing}
 
 >[!NOTE]
 >
->Aanbieding toestaan is verplicht voordat uw eerste [!DNL Google Display & Video 360]-bestemming in Platform wordt ingesteld. Controleer of Google het hieronder beschreven proces voor het aanbieden van een aanbieding heeft voltooid voordat je een bestemming maakt.
+>Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Display & Video 360] bestemming in Platform. Controleer of Google het hieronder beschreven proces voor het aanbieden van een aanbieding heeft voltooid voordat je een bestemming maakt.
 
-Voordat u de [!DNL Google Display & Video 360]-bestemming in Platform maakt, moet u contact opnemen met Google om Adobe op te nemen in de lijst met toegestane gegevensproviders en om uw account toe te voegen aan de lijst van gewenste personen. Neem contact op met Google en geef de volgende informatie op:
+Voordat u het dialoogvenster [!DNL Google Display & Video 360] Als u de bestemming in Platform hebt, moet u contact opnemen met Google om Adobe op de lijst met toegestane gegevensproviders te plaatsen en om uw account aan de lijst van gewenste personen toe te voegen. Neem contact op met Google en geef de volgende informatie op:
 
-* **Account-id**: Adobe-account-id met Google. Account-id: 87933855.
-* **Klant-id**: Adobe&#39;s klant account-id met Google. Klant-id: 89690775.
-* **Je accounttype**: gebruik  **[!DNL Invite advertiser]** om het publiek alleen te laten delen naar een specifiek merk in uw Display &amp; Video 360-account of gebruik  **[!DNL Invite partner]** om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
+* **Account-id**: De account-id van Adobe met Google. Account-id: 87933855.
+* **Klant-id**: De klant-id van Adobe met Google. Klant-id: 89690775.
+* **Je accounttype**: gebruiken **[!DNL Invite advertiser]** om het publiek alleen te laten delen naar een specifiek merk in uw Display &amp; Video 360-account of -gebruik **[!DNL Invite partner]** om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
 
 ## Verbinden met de bestemming {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
-   * Gebruik `Invite Advertiser` om het publiek toe te staan om slechts aan een specifiek merk in uw Vertoning &amp; Video 360 rekening worden gedeeld.
-   * Gebruik `Invite Partner` om publiek toe te staan om aan alle merken in uw Vertoning &amp; Video 360 rekening worden gedeeld.
-* **[!UICONTROL Account ID]**: Vul uw  **[!DNL Invite partner]** of  **[!DNL Invite advertiser]** account-id in met Google. Dit is doorgaans een ID van zes of zeven cijfers.
+   * Gebruiken `Invite Advertiser` om het publiek alleen te laten delen naar een specifiek merk in uw Display &amp; Video 360-account.
+   * Gebruiken `Invite Partner` om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
+* **[!UICONTROL Account ID]**: Vul uw **[!DNL Invite partner]** of **[!DNL Invite advertiser]** account-id met Google. Dit is doorgaans een ID van zes of zeven cijfers.
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Display & Video 360]-bestemming instelt, werkt u samen met uw [!DNL Google Account Manager]- of Adobe-medewerker om te begrijpen welk accounttype u hebt.
+>Wanneer u een [!DNL Google Display & Video 360] bestemming, gelieve met uw te werken [!DNL Google Account Manager] of Adobe om te begrijpen welk accounttype u hebt.
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens
 
-Controleer uw [!DNL Google Display & Video 360]-account om te controleren of gegevens naar de [!DNL Google Display & Video 360]-bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+Controleren of gegevens zijn geëxporteerd naar de [!DNL Google Display & Video 360] doel, controleer uw [!DNL Google Display & Video 360] account. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
 
 ## Problemen oplossen {#troubleshooting}
 
@@ -94,4 +99,4 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Deze fout treedt op wanneer de klantenaccounts niet voldoen aan de [voorwaarden](#prerequisites). Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat je account op de lijst staat.
+Deze fout treedt op wanneer de klantenrekeningen niet aan [voorwaarden](#prerequisites). Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat je account op de lijst staat.

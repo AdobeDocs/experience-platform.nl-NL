@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om regelmatig CSV-gegevensbestanden uit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '465'
 ht-degree: 1%
 
 ---
@@ -27,11 +27,22 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 Als u al een geldige [!DNL Blob] doel, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [segmenten activeren op uw doel](../../ui/activate-batch-profile-destinations.md).
 
+## Type en frequentie exporteren {#export-type-frequency}
+
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
 ## Ondersteunde bestandsindelingen {#file-formats}
 
 [!DNL Experience Platform] ondersteunt de volgende bestandsindeling waarnaar geëxporteerd moet worden [!DNL Blob]:
 
-* Door scheidingstekens gescheiden waarden (DSV): De ondersteuning voor gegevensbestanden met DSV-indeling is momenteel beperkt tot door komma&#39;s gescheiden waarden. Algemene DSV-bestanden worden in de toekomst ondersteund.
+* Door komma&#39;s gescheiden waarden (CSV): De ondersteuning voor geëxporteerde gegevensbestanden is momenteel beperkt tot door komma&#39;s gescheiden waarden.
 
 ## Verbinden met de bestemming {#connect}
 

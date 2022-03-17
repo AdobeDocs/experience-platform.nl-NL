@@ -3,9 +3,9 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Activeer profielen voor uw [!DNL LinkedIn] campagnes voor doelgroepen, personalisatie, en onderdrukking, die op gehakte e-mail en mobiele IDs worden gebaseerd.
+Profielen activeren voor uw [!DNL LinkedIn] campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails en mobiele id&#39;s.
 
 ![linkedIn-bestemming in de gebruikersinterface van Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Gebruiksscenario’s
 
-Om u beter te helpen begrijpen hoe en wanneer om de [!DNL LinkedIn Matched Audiences] bestemming te gebruiken, is hier een gebruiksgeval dat de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
+Om u te helpen beter begrijpen hoe en wanneer gebruiken [!DNL LinkedIn Matched Audiences] doel, hier is een gebruiksgeval dat Adobe Experience Platform klanten kunnen oplossen door deze eigenschap te gebruiken.
 
-Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van eigen [!DNL CRM] invoeren in Adobe Experience Platform. Vervolgens kunnen ze segmenten van hun eigen offlinegegevens maken en deze segmenten naar het sociale platform [!DNL LinkedIn] sturen, zodat hun advertentie-uitgaven worden geoptimaliseerd.
+Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van zijn eigen server invoeren [!DNL CRM] naar Adobe Experience Platform. Dan, kunnen zij segmenten van hun eigen off-line gegevens bouwen, en deze segmenten verzenden naar [!DNL LinkedIn] sociaal platform, optimalisering van hun reclame-uitgaven.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -31,31 +31,39 @@ Een softwarebedrijf organiseert een conferentie en wil contact houden met deelne
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | GAID | Google-advertentie-id | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
-| IDFA | Apple ID for Advertisers | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ID passende vereisten](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakte e-mails, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
+| IDFA | Apple-id voor adverteerders | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [Vereisten voor id-afstemming](#id-matching-requirements-id-matching-requirements) en gebruikt de juiste naamruimten voor respectievelijk platte tekst en gehakte e-mails. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 
+{style=&quot;table-layout:auto&quot;}
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
-**De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, en anderen) die in de  [!DNL LinkedIn Matched Audiences] bestemming worden gebruikt.
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer en andere) die worden gebruikt in het dialoogvenster [!DNL LinkedIn Matched Audiences] bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Voorwaarden voor linkedIn-accounts {#LinkedIn-account-prerequisites}
 
-Voordat u de bestemming [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager]-account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
+Voordat u de [!UICONTROL LinkedIn Matched Audience] doel, zorg ervoor uw [!DNL LinkedIn Campaign Manager] account bevat [!DNL Creative Manager] machtigingsniveau of hoger.
 
-Zie [Gebruikersmachtigingen toevoegen, bewerken en verwijderen voor meer informatie over het bewerken van uw [!DNL LinkedIn Campaign Manager]-gebruikersmachtigingen in de documentatie van LinkedIn.](https://www.linkedin.com/help/lms/answer/5753)
+Meer informatie over het bewerken van uw [!DNL LinkedIn Campaign Manager] gebruikersmachtigingen, zie [Gebruikersmachtigingen toevoegen, bewerken en verwijderen voor advertentieaccounts](https://www.linkedin.com/help/lms/answer/5753) in de documentatie van LinkedIn.
 
 ## Vereisten voor id-afstemming {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audiences] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom kan het publiek dat aan [!DNL LinkedIn Matched Audiences] wordt geactiveerd *hashed* herkenningstekens, zoals e-mailadressen of mobiele apparaat IDs worden afgevinkt.
+[!DNL LinkedIn Matched Audiences] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom wordt het publiek geactiveerd tot [!DNL LinkedIn Matched Audiences] kan worden uitgeschakeld *hashed* id&#39;s, zoals e-mailadressen of id&#39;s van mobiele apparaten.
 
 Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen.
 
 ## Vereisten voor e-mailhashing {#email-hashing-requirements}
 
-U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en hebben [!DNL Platform] hen op activering hakt.
+U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en hebben [!DNL Platform] hash deze na activering.
 
-Als u meer wilt weten over het invoeren van e-mailadressen in Experience Platform, raadpleegt u het [batchoverzicht](/help/ingestion/batch-ingestion/overview.md) en het [streamingoverzicht](/help/ingestion/streaming-ingestion/overview.md).
+Als u meer wilt weten over het invoeren van e-mailadressen in Experience Platform, raadpleegt u de [overzicht van batch-opname](/help/ingestion/batch-ingestion/overview.md) en de [overzicht van streaming opname](/help/ingestion/streaming-ingestion/overview.md).
 
 Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende vereisten voldoen:
 
@@ -68,43 +76,43 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 
 >[!NOTE]
 >
->Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht door [!DNL Platform].
+>Gegevens uit naamruimten zonder hashing worden automatisch gehasht door [!DNL Platform] na activering.
 > Kenmerkbrongegevens worden niet automatisch gehasht.
 > 
-> Tijdens de stap [Identiteitstoewijzing](../../ui/activate-segment-streaming-destinations.md#mapping), wanneer uw brongebied ongehakte attributen bevat, controleer **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] automatisch te hebben de gegevens over activering hakt.
+> Tijdens de [Identiteitstoewijzing](../../ui/activate-segment-streaming-destinations.md#mapping) als uw bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen.
 > 
-> De optie **[!UICONTROL Apply transformation]** wordt alleen weergegeven wanneer u kenmerken als bronvelden selecteert. Deze wordt niet weergegeven wanneer u naamruimten kiest.
+> De **[!UICONTROL Apply transformation]** Deze optie wordt alleen weergegeven wanneer u kenmerken selecteert als bronvelden. Deze wordt niet weergegeven wanneer u naamruimten kiest.
 
 ![Transformatie identiteitstoewijzing](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Verbinden met de bestemming {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
-In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL LinkedIn Matched Audiences]-bestemming en het activeren van segmenten.
+In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL LinkedIn Matched Audiences] doel en activeer segmenten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, verwijs naar [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Raadpleeg voor de meest recente informatie de [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: uw  [!DNL LinkedIn Campaign Manager Account ID]. U kunt deze id vinden in uw [!DNL LinkedIn Campaign Manager]-account.
+* **[!UICONTROL Account ID]**: uw [!DNL LinkedIn Campaign Manager Account ID]. U kunt deze id vinden in uw [!DNL LinkedIn Campaign Manager] account.
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Zie [De publieksgegevens van Activate aan het stromen segment de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Een succesvolle activering betekent dat een [!DNL LinkedIn] douanepubliek programmatically in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login) zou worden gecreeerd. Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
+Een geslaagde activering betekent dat een [!DNL LinkedIn] aangepaste doelgroep wordt programmatisch gemaakt in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
 
 >[!TIP]
 >
->De integratie tussen Adobe Experience Platform en [!DNL LinkedIn Matched Audiences] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden naar [!DNL LinkedIn] verzonden wanneer u de segmenten naar de bestemming activeert.
+>De integratie tussen Adobe Experience Platform en [!DNL LinkedIn Matched Audiences] ondersteunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL LinkedIn] wanneer u de segmenten naar het doel activeert.

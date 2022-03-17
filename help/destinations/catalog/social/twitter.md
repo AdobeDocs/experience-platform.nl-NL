@@ -1,13 +1,13 @@
 ---
 title: Twitter Aangepast publiek, verbinding
 description: Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd
-source-git-commit: 3ea3f9ed156ba3a1fbc790153a4b8fa193d5e2da
+exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '599'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Twitter Custom Audiences] verbinding
 
@@ -17,10 +17,10 @@ Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketin
 
 ## Vereisten {#prerequisites}
 
-Voordat u de bestemming [!DNL Twitter Custom Audiences] configureert, moet u controleren of aan de volgende Twitter-voorwaarden is voldaan.
+Voordat u uw [!DNL Twitter Custom Audiences] -bestemming, controleert u of u de volgende Twitter-voorwaarden hebt waaraan u moet voldoen.
 
-1. Uw [!DNL Twitter Ads]-account moet in aanmerking komen voor advertenties. Nieuwe [!DNL Twitter Ads]-accounts komen niet in aanmerking voor reclame in de eerste twee weken nadat ze zijn gemaakt.
-2. Voor uw Twitter-gebruikersaccount waarvoor u toegang hebt toegestaan in [!DNL Twitter Audience Manager], moet *[!DNL Partner Audience Manager]* toestemming zijn ingeschakeld.
+1. Uw [!DNL Twitter Ads] account moet in aanmerking komen voor reclame. Nieuw [!DNL Twitter Ads] de rekeningen komen niet in aanmerking voor reclame in de eerste twee weken nadat zij zijn gemaakt.
+2. Je Twitter-gebruikersaccount waarvoor je toegang hebt geautoriseerd in [!DNL Twitter Audience Manager] moet de *[!DNL Partner Audience Manager]* machtiging ingeschakeld.
 
 
 ## Ondersteunde identiteiten {#supported-identities}
@@ -29,42 +29,49 @@ Voordat u de bestemming [!DNL Twitter Custom Audiences] configureert, moet u con
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| device_id | IDFA/AdID/Android-id | Google Advertising ID (GAID) en Apple ID for Advertisers (IDFA) worden ondersteund in Adobe Experience Platform. Wijs deze naamruimten en/of kenmerken vanuit uw bronschema dienovereenkomstig toe in de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de workflow voor doelactivering. |
-| email | E-mailadres(sen) voor de gebruiker | Wijs uw e-mailadressen met onbewerkte tekst en uw SHA256-hashed-e-mailadressen toe aan dit veld. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. Als u uw klanten e-mailadressen alvorens hen aan Adobe Experience Platform te uploaden verbergt, gelieve te merken dat deze identiteiten moeten worden gehakt gebruikend SHA256, zonder zout. |
+| device_id | IDFA/AdID/Android-id | Google Advertising ID (GAID) en Apple ID for Advertisers (IDFA) worden ondersteund in Adobe Experience Platform. Wijs deze naamruimten en/of kenmerken vanuit het bronschema dienovereenkomstig toe in het dialoogvenster [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de workflow voor doelactivering. |
+| email | E-mailadres(sen) voor de gebruiker | Wijs uw e-mailadressen met onbewerkte tekst en uw SHA256-hashed-e-mailadressen toe aan dit veld. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. Als u uw klanten e-mailadressen alvorens hen aan Adobe Experience Platform te uploaden verbergt, gelieve te merken dat deze identiteiten moeten worden gehakt gebruikend SHA256, zonder zout. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
-**Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek van Twitter.
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek van Twitter. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Gevallen gebruiken {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u [!DNL Twitter Custom Audiences] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
+Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Twitter Custom Audiences] doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
 ### Hoofdletters en kleine letters gebruiken 1
 
-Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform als [!DNL List Custom Audiences] in Twitter wordt gebouwd.
+Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd als [!DNL List Custom Audiences] in Twitter.
 
 ## Verbinden met doel {#connect}
 
-Om met deze bestemming te verbinden, volg de stappen in [het leerprogramma van de bestemmingsconfiguratie](../../ui/connect-destination.md) worden beschreven.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [vestiging](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: Je  [!DNL Twitter Ads] account-id. Dit vindt u in uw [!DNL Twitter Ads]-instellingen.
+* **[!UICONTROL Account ID]**: Uw [!DNL Twitter Ads] account-id. Dit is te vinden in uw [!DNL Twitter Ads] instellingen.
 
 ## Segmenten naar dit doel activeren {#activate}
 
-Lees [Activate profielen en segmenten aan het stromen segment de uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Zie [Overzicht gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html) voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt.
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -73,4 +80,4 @@ Wanneer het in kaart brengen van publiekssegmenten aan Twitter, zorg ervoor om a
 1. Verstrek de mens-leesbare namen van de segmentafbeelding. Wij adviseren gebruikend de zelfde naam die u voor de segmenten van het Experience Platform gebruikte.
 2. Gebruik geen speciale tekens (+ &amp; , % : ; @ / = ? $) in segment en segmenttoewijzingsnamen. Als de segmentnaam van het Experience Platform deze tekens bevat, verwijdert u deze voordat u het segment toewijst aan een Twitter-bestemming.
 
-Meer informatie over [!DNL List Custom Audiences] in Twitter vindt u in de [Twitter-documentatie](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Meer informatie over [!DNL List Custom Audiences] in Twitter vindt u in het [Twitter-documentatie](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

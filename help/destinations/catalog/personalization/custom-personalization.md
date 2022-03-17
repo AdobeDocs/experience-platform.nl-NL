@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: 95d287f3eac08064da35aea7c4cb22ea901c7324
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](..
 >
 >Lees voordat u een aangepaste verpersoonlijkingsverbinding maakt de handleiding over het [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/configure-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platforms.
 
-## Exporttype {#export-type}
+## Type en frequentie exporteren {#export-type-frequency}
 
 **Profielaanvraag** - u vraagt om alle segmenten die voor één profiel in kaart worden gebracht in de bestemming van de douaneverpersoonlijking. Verschillende aangepaste verpersoonlijkingsdoelen kunnen worden ingesteld voor verschillende [Gegevensstromen voor gegevensverzameling Adobe](../../../edge/fundamentals/datastreams.md).
 

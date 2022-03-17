@@ -3,10 +3,10 @@ keywords: reclame; de handelsdienst; reclamebureau
 title: De verbinding van de handelsbureau
 description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -34,9 +34,18 @@ Als telleraar, wil ik segmenten kunnen gebruiken die van worden gebouwd [!DNL Tr
 | IDFA | [!DNL Apple ID for Advertisers] |
 | Handelsbureau-id | Advertiser-id in het Trade Desk-platform |
 
-## Exporttype {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** - u exporteert alle leden van een segment (publiek) naar de bestemming.
+## Type en frequentie exporteren {#export-type-frequency}
+
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Vereisten {#prerequisites}
 
