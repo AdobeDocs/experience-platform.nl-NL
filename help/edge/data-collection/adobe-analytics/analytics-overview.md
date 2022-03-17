@@ -3,9 +3,9 @@ title: Adobe Analytics gebruiken met Platform Web SDK
 description: Leer hoe u gegevens naar Adobe Analytics verzendt met de Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
+source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ De Adobe Experience Platform [!DNL Web SDK] kan gegevens naar Adobe Analytics ve
 ## Instellen
 
 Adobe Analytics haalt de gegevens die u verzendt automatisch op als u een rapportsuite hebt toegewezen in de gebruikersinterface van Customer Config. Hier kunt u één of meerdere rapporten aan een bepaalde config in kaart brengen. Nadat een rapportsuite is toegewezen, beginnen de gegevens automatisch te stromen.
+
+## XDM-veldgroep
+
+Om het gemakkelijker te maken om de gemeenschappelijkste metriek van Adobe Analytics te vangen, verstrekken wij een het gebiedsgroep van Analytics die u kunt gebruiken. Raadpleeg de documentatie bij het dialoogvenster [Adobe Analytics ExperienceEvent Volledige extensieschema, veldgroep](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## Automatisch toegewezen gegevens
 

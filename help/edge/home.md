@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK - Overzicht
 description: Leer hoe u de Adobe Experience Platform Web SDK kunt gebruiken om de mogelijkheden van het Platform in uw website te integreren.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
+source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,4 @@ De volgende video demonstreert Adobe Experience Platform [!DNL Web SDK] en Adobe
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Als u de nieuwste [pagina met ondersteunde gebruiksgevallen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). Deze pagina bevat een overzicht van de gebruiksgevallen die momenteel worden ondersteund, met koppelingen naar meer informatie indien beschikbaar.
-
-* **Gebruik nog niet ondersteunde gevallen:** Dit zijn gebruiksgevallen die op onze routekaart staan en die in de toekomst moeten worden ondersteund.
-* **Gevallen worden gebruikt:** Dit zijn de gebruiksgevallen die het team momenteel aan de voltooiing voor versie werkt.
-* **Gevallen voor ondersteund gebruik:** Dit zijn de gebruiksgevallen die worden ondersteund en vandaag werken.
-* **Gebruik gevallen die we niet ondersteunen:** Dit zijn de gebruiksgevallen die we hebben besloten niet te steunen.
+Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Als u de nieuwste ontwikkelingen wilt bijhouden en wilt zien wat wij op dit moment steunen, raadpleegt u de [pagina met ondersteunde gebruiksgevallen](https://github.com/orgs/adobe/projects/18/views/1).
