@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
+source-git-commit: fa393b2bd8085a17653962b5a8b112a5db10df83
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -44,16 +44,44 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 >title="Openbare RSA-sleutel"
 >abstract="U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet als Base64 gecodeerde koord worden geschreven."
 
-while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_ssh"
+>title="SSH-toets"
+>abstract="De sleutel SSH vereist een koord Base64."
 
-* **Host**: Het adres van uw opslagplaats SFTP
-* **Gebruikersnaam**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie
-* **Wachtwoord**: Het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie
-* **[!UICONTROL Name]**: Voer een naam in die u helpt deze bestemming te identificeren.
-* **[!UICONTROL Description]**: Voer een beschrijving van deze bestemming in.
-* **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+Wanneer [verbinden](../../ui/connect-destination.md) aan deze bestemming, moet u de volgende informatie verstrekken:
 
-U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet worden geschreven als een [!DNL Base64] gecodeerde tekenreeks.
+#### Verificatiegegevens {#authentication-information}
+
+Als u **[!UICONTROL Basic authentication]** type voor verbinding met uw SFTP-locatie:
+
+![Basisverificatie van SFTP-bestemming](/help/destinations/assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+
+* **[!UICONTROL Host]**: Het adres van uw opslagplaats SFTP;
+* **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
+* **[!UICONTROL Password]**: Het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie.
+* **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet worden geschreven als een [!DNL Base64] gecodeerde tekenreeks.
+
+
+Als u **[!UICONTROL SFTP with SSH key]** verificatietype voor verbinding met uw SFTP-locatie:
+
+![SSH-sleutelverificatie voor SFTP-bestemming](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+
+* **[!UICONTROL Domain]**: Vul het IP-adres of de domeinnaam van uw SFTP-account in
+* **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
+* **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
+* **[!UICONTROL SSH Key]**: De SSH-sleutel om u aan te melden bij uw SFTP-opslaglocatie.
+* **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet worden geschreven als een [!DNL Base64] gecodeerde tekenreeks.
+
+#### Doelgegevens {#destination-details}
+
+Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de volgende informatie voor de bestemming:
+
+![Beschikbare bestemmingsdetails voor bestemming SFTP](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+
+* **[!UICONTROL Name]**: Voer een naam in die u zal helpen deze bestemming in het gebruikersinterface van het Experience Platform identificeren;
+* **[!UICONTROL Description]**: een beschrijving voor deze bestemming invoeren;
+* **[!UICONTROL Folder path]**: Voer het pad in naar de map op de SFTP-locatie waar de bestanden worden geëxporteerd.
 
 ## Geëxporteerde gegevens {#exported-data}
 

@@ -1,11 +1,11 @@
 ---
 keywords: Amazon Kinesis;kinesis-bestemming;kinesis
-title: Amazon Kinesis-verbinding
+title: (Beta) Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1296'
 ht-degree: 0%
 
 ---
