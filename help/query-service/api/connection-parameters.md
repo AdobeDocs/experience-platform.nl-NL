@@ -5,23 +5,22 @@ title: API-eindpunt voor verbindingsparameters
 topic-legacy: connection parameters
 description: U kunt uw verbindingsparameters voor het gebruiken van de interactieve dienst terugwinnen door een verzoek van de GET aan het /connection_parameters eindpunt te doen.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: cff95575530e0db00d34ff1ea4c90e5422b6562d
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van de verbindingsparameters
 
-## Voorbeeld-API-aanroepen
+## Voorbeeld-API-aanroep
 
-Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het richten vraag aan [!DNL Query Service] API. De volgende secties lopen door de diverse API vraag u kan maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+In de volgende sectie wordt u door de API-aanroep geleid die u kunt maken met de [!DNL Query Service] API. De aanroep omvat de algemene API-indeling, een voorbeeldaanvraag met de vereiste headers en een voorbeeldreactie.
 
 ### Verbindingsparameters aanvragen
 
-U kunt uw verbindingsparameters terugwinnen door een verzoek van de GET aan het `/connection_parameters` eindpunt te doen. Voor meer informatie over cliënten die verbindingsparameters gebruiken om via de interactieve dienst te verbinden, gelieve de documentatie op [de cliënten van de Dienst van de Vraag](../clients/overview.md) te lezen.
+U kunt uw verbindingsparameters terugwinnen door een verzoek van de GET aan `/connection_parameters` eindpunt. Voor meer informatie over clients die gebruikmaken van verbindingsparameters voor verbinding via de interactieve service, raadpleegt u de documentatie over [Query Service-clients](../clients/overview.md).
 
 **API-indeling**
 
