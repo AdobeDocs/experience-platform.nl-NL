@@ -6,9 +6,10 @@ topic-legacy: overview
 description: De laatste stap voordat je nieuwe bron live kan worden gemaakt in Adobe Experience Platform is het documenteren van je nieuwe bron.
 hide: true
 hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
+source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,10 @@ Op hoog niveau, om documentatie voor uw bron tot stand te brengen, moet u een vo
 
 U kunt een voorgevulde spuit gebruiken [documentatiesjabloon](./template.md) om u te helpen bij het maken van documentatie voor uw bron. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. De ingediende documentatie voor uw nieuwe bron zal door het de documentatieteam van de Adobe worden herzien en worden gepubliceerd.
 
-U kunt ook de opdracht [documentatie sjabloon hier](../assets/template.zip).
+U kunt ook de onderstaande documentatiesjablonen downloaden:
+
+* [API-documentatiesjabloon](../assets/template.zip)
+* [UI-documentatiesjabloon](../assets/ui-template.zip)
 
 ## Nieuwe bronpagina maken
 

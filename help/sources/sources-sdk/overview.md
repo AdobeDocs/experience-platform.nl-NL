@@ -6,9 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK is een set configuratie-API's waarmee u een REST API-gebaseerde bron kunt integreren met behulp van de Flow Service API om uw gegevens naar het Experience Platform te brengen.
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ Het stapsgewijze proces voor het configureren van uw bron in Experience Platform
    * Zie de handleiding op [configureren van uw bronspecificaties](./config/sourcespec.md);
    * Zie de handleiding op [configureren, specificaties](./config/explorespec.md);
 * Als u wilt beginnen met het documenteren van de bron, raadpleegt u de [overzicht van het creëren van documentatie voor Bronnen SDK](./documentation/doc-overview.md)
-   * U kunt dit [source documentation template](./documentation/template.md) de structuur van uw documentatie te bepalen;
+   * U kunt dit [bron-API documentatiesjabloon](./documentation/template.md) om uw API-documentatie te structureren;
+   * U kunt dit [de documentatiesjabloon van bron UI](./documentation/ui-template.md) om uw UI-documentatie te structureren;
    * Zie de handleiding op [het gebruiken van de het Webinterface van GitHub](./documentation/github.md) voor stappen op hoe te om documentatie tot stand te brengen die GitHub gebruikt;
    * Zie de handleiding op [een teksteditor gebruiken](./documentation/text-editor.md) voor stappen voor het maken van documentatie met behulp van uw lokale computer.
-

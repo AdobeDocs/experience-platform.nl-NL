@@ -6,9 +6,10 @@ topic-legacy: tutorial
 description: Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan auteursdocumentatie te gebruiken en een trekkingsverzoek (PR) voor te leggen.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
+source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,11 @@ Als de vork is voltooid, selecteert u **master** en voert u een naam voor de nie
 
 ![vertakking maken](../assets/create-branch.png)
 
-In de de omslagstructuur van GitHub van uw forked bewaarplaats, navigeer uw manier aan `experience-platform.en/help/sources/tutorials/api/create/` en selecteer vervolgens in de lijst de juiste categorie voor uw bron. Als u bijvoorbeeld documentatie maakt voor een nieuwe bron voor cloudopslag, selecteert u **cloudopslag**.
+In de de omslagstructuur van GitHub van uw forked bewaarplaats, navigeer aan [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) en selecteer vervolgens in de lijst de juiste categorie voor uw bron. Als u bijvoorbeeld documentatie maakt voor een nieuwe bron voor cloudopslag, selecteert u **cloudopslag**.
+
+>[!TIP]
+>
+>Als u documentatie voor UI creeert, dan navigeer aan [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) en selecteer de juiste categorie voor uw bron. Als u uw afbeeldingen wilt toevoegen, navigeert u naar [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) Voeg vervolgens uw schermafbeeldingen toe aan de `sdk` map.
 
 ![cloudopslag](../assets/cloud-storage.png)
 

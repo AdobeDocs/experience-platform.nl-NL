@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '750'
 ht-degree: 5%
 
 ---
@@ -277,7 +277,8 @@ ht-degree: 5%
    - [Uw bron documenteren in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
    - [Gebruik de het Webinterface van GitHub om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
    - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
-   - [Zelfservicesjabloon voor documentatie](sources-sdk/documentation/template.md)
+   - [Zelfbediening API-sjabloon voor documentatie](sources-sdk/documentation/template.md)
+   - [Zelfbediening UI-sjabloon voor documentatie](sources-sdk/documentation/ui-template.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
