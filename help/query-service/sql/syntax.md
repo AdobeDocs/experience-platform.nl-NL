@@ -5,10 +5,10 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
+source-git-commit: 575352d8ee6da092fd0fc3a3033e481ee59bd7d3
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 1%
+source-wordcount: '2378'
+ht-degree: 2%
 
 ---
 
@@ -182,11 +182,11 @@ De volgende syntaxis definieert een `CREATE TABLE AS SELECT` (CTAS)-query:
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-**Parameters**
-
-- `schema`: De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd.
-- `rowvalidation`: (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`.
-- `select_query`: A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries).
+| Parameters | Beschrijving |
+| ----- | ----- |
+| `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
+| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
+| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
 **Voorbeeld**
 
@@ -210,10 +210,10 @@ De `INSERT INTO` wordt als volgt gedefinieerd:
 INSERT INTO table_name select_query
 ```
 
-**Parameters**
-
-- `table_name`: De naam van de tabel waarin u de query wilt invoegen.
-- `select_query`: A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries).
+| Parameters | Beschrijving |
+| ----- | ----- |
+| `table_name` | De naam van de tabel waarin u de query wilt invoegen. |
+| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
 **Voorbeeld**
 
@@ -257,9 +257,9 @@ De `DROP TABLE` een bestaande tabel neerzet en de aan de tabel gekoppelde map ui
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-**Parameters**
-
-- `IF EXISTS`: Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de tabel wel **niet** bestaan.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `IF EXISTS` | Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de tabel wel **niet** bestaan. |
 
 ## DATABASE DROP
 
@@ -269,9 +269,9 @@ De `DROP DATABASE` een bestaande database neerzetten.
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-**Parameters**
-
-- `IF EXISTS`: Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het gegevensbestand doet **niet** bestaan.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `IF EXISTS` | Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het gegevensbestand doet **niet** bestaan. |
 
 ## DROP SCHEMA
 
@@ -281,13 +281,11 @@ De `DROP SCHEMA` een bestaand schema neerzet.
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-**Parameters**
-
-- `IF EXISTS`: Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het schema doet **niet** bestaan.
-
-- `RESTRICT`: Standaardwaarde voor de modus. Als dit wordt gespecificeerd, zal het schema slechts vallen als het **niet** bevatten tabellen.
-
-- `CASCADE`: Als dit wordt gespecificeerd, zal het schema samen met alle lijsten huidig in het schema worden gelaten vallen.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `IF EXISTS` | Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het schema doet **niet** bestaan. |
+| `RESTRICT` | Standaardwaarde voor de modus. Als dit wordt gespecificeerd, zal het schema slechts vallen als het **niet** bevatten tabellen. |
+| `CASCADE` | Als dit wordt gespecificeerd, zal het schema samen met alle lijsten huidig in het schema worden gelaten vallen. |
 
 ## WEERGAVE MAKEN
 
@@ -297,10 +295,10 @@ De volgende syntaxis definieert een `CREATE VIEW` query:
 CREATE VIEW view_name AS select_query
 ```
 
-**Parameters**
-
-- `view_name`: De naam van de weergave die moet worden gemaakt.
-- `select_query`: A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries).
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `view_name` | De naam van de weergave die moet worden gemaakt. |
+| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
 **Voorbeeld**
 
@@ -318,10 +316,10 @@ De volgende syntaxis definieert een `DROP VIEW` query:
 DROP VIEW [IF EXISTS] view_name
 ```
 
-**Parameter**
-
-- `IF EXISTS`: Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de weergave **niet** bestaan.
-- `view_name`: De naam van de weergave die moet worden verwijderd.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `IF EXISTS` | Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de weergave **niet** bestaan. |
+| `view_name` | De naam van de weergave die moet worden verwijderd. |
 
 **Voorbeeld**
 
@@ -396,10 +394,10 @@ De `SET` plaatst een bevel een bezit en of keert de waarde van een bestaand bezi
 SET property_key = property_value
 ```
 
-**Parameters**
-
-- `property_key`: De naam van de eigenschap die u wilt weergeven of wijzigen.
-- `property_value`: De waarde waarop u de eigenschap wilt instellen.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `property_key` | De naam van de eigenschap die u wilt weergeven of wijzigen. |
+| `property_value` | De waarde waarop u de eigenschap wilt instellen. |
 
 Als u de waarde voor een instelling wilt retourneren, gebruikt u `SET [property key]` zonder `property_value`.
 
@@ -447,10 +445,10 @@ De `DECLARE` staat een gebruiker toe om een curseur tot stand te brengen, die ka
 DECLARE name CURSOR FOR query
 ```
 
-**Parameters**
-
-- `name`: De naam van de cursor die moet worden gemaakt.
-- `query`: A `SELECT` of `VALUES` bevel dat de rijen verstrekt die door de curseur moeten zijn teruggekeerd.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `name` | De naam van de cursor die moet worden gemaakt. |
+| `query` | A `SELECT` of `VALUES` bevel dat de rijen verstrekt die door de curseur moeten zijn teruggekeerd. |
 
 ### UITVOEREN
 
@@ -462,10 +460,10 @@ Als de `PREPARE` een instructie die de instructie heeft gemaakt, bepaalde parame
 EXECUTE name [ ( parameter ) ]
 ```
 
-**Parameters**
-
-- `name`: De naam van de voorbereide instructie die moet worden uitgevoerd.
-- `parameter`: De werkelijke waarde van een parameter voor de voorbereide instructie. Dit moet een expressie zijn die een waarde oplevert die compatibel is met het gegevenstype van deze parameter, zoals bepaald toen de voorbereide instructie werd gemaakt.  Als er meerdere parameters zijn voor de voorbereide instructie, worden deze door komma&#39;s gescheiden.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `name` | De naam van de voorbereide instructie die moet worden uitgevoerd. |
+| `parameter` | De werkelijke waarde van een parameter voor de voorbereide instructie. Dit moet een expressie zijn die een waarde oplevert die compatibel is met het gegevenstype van deze parameter, zoals bepaald toen de voorbereide instructie werd gemaakt.  Als er meerdere parameters zijn voor de voorbereide instructie, worden deze door komma&#39;s gescheiden. |
 
 ### VERKLAREN
 
@@ -482,11 +480,11 @@ ANALYZE
 FORMAT { TEXT | JSON }
 ```
 
-**Parameters**
-
-- `ANALYZE`: Als de `option` contains `ANALYZE`, worden de runtime en andere statistieken weergegeven.
-- `FORMAT`: Als de `option` contains `FORMAT`wordt de uitvoerindeling opgegeven die `TEXT` of `JSON`. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter wordt standaard ingesteld op `TEXT`.
-- `statement`: Alle `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, of `CREATE MATERIALIZED VIEW AS` de verklaring, waarvan uitvoeringsplan u wilt zien.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `ANALYZE` | Als de `option` contains `ANALYZE`, worden de runtime en andere statistieken weergegeven. |
+| `FORMAT` | Als de `option` contains `FORMAT`wordt de uitvoerindeling opgegeven die `TEXT` of `JSON`. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter wordt standaard ingesteld op `TEXT`. |
+| `statement` | Alle `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, of `CREATE MATERIALIZED VIEW AS` de verklaring, waarvan uitvoeringsplan u wilt zien. |
 
 >[!IMPORTANT]
 >
@@ -515,10 +513,10 @@ De `FETCH` Hiermee worden rijen opgehaald met een eerder gemaakte cursor.
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-**Parameters**
-
-- `num_of_rows`: Het aantal rijen dat moet worden opgehaald.
-- `cursor_name`: De naam van de curseur u informatie van terugwint.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `num_of_rows` | Het aantal rijen dat moet worden opgehaald. |
+| `cursor_name` | De naam van de curseur u informatie van terugwint. |
 
 ### PREPARE {#prepare}
 
@@ -532,10 +530,10 @@ U kunt ook een lijst met parametergegevenstypen opgeven. Als het gegevenstype va
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-**Parameters**
-
-- `name`: De naam voor de voorbereide instructie.
-- `data_type`: De gegevenstypen van de parameters van de voorbereide instructie. Als het gegevenstype van een parameter niet wordt vermeld, kan het type van de context worden afgeleid. Als u meerdere gegevenstypen wilt toevoegen, kunt u deze toevoegen in een door komma&#39;s gescheiden lijst.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `name` | De naam voor de voorbereide instructie. |
+| `data_type` | De gegevenstypen van de parameters van de voorbereide instructie. Als het gegevenstype van een parameter niet wordt vermeld, kan het type van de context worden afgeleid. Als u meerdere gegevenstypen wilt toevoegen, kunt u deze toevoegen in een door komma&#39;s gescheiden lijst. |
 
 ### ROLLBACK
 
@@ -568,13 +566,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-**Parameters**
-
 Meer informatie over de standaard SELECT-queryparameters vindt u in het gedeelte [Query-sectie SELECTEREN](#select-queries). In deze sectie worden alleen parameters vermeld die exclusief zijn voor de `SELECT INTO` gebruiken.
 
-- `TEMPORARY` of `TEMP`: Een optionele parameter. Indien gespecificeerd, zal de lijst die wordt gecreeerd een tijdelijke lijst zijn.
-- `UNLOGGED`: Een optionele parameter. Indien gespecificeerd, zal de lijst die zoals wordt gecreeerd een niet geregistreerde lijst zijn. Meer informatie over niet-geregistreerde tabellen vindt u in de [PostSQL-documentatie](https://www.postgresql.org/docs/current/sql-createtable.html).
-- `new_table`: De naam van de tabel die moet worden gemaakt.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `TEMPORARY` of `TEMP` | Een optionele parameter. Indien gespecificeerd, zal de lijst die wordt gecreeerd een tijdelijke lijst zijn. |
+| `UNLOGGED` | Een optionele parameter. Indien gespecificeerd, zal de lijst die zoals wordt gecreeerd een niet geregistreerde lijst zijn. Meer informatie over niet-geregistreerde tabellen vindt u in de [PostSQL-documentatie](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | De naam van de tabel die moet worden gemaakt. |
 
 **Voorbeeld**
 
@@ -593,15 +591,10 @@ SHOW name
 SHOW ALL
 ```
 
-**Parameters**
-
-- `name`: De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter zijn de volgende waarden:
-   - `SERVER_VERSION`: Deze parameter toont het versienummer van de server.
-   - `SERVER_ENCODING`: Deze parameter toont de codering van de tekenset aan de serverzijde.
-   - `LC_COLLATE`: Deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).
-   - `LC_CTYPE`: Deze parameter toont de landinstelling van de database voor tekenclassificatie.
-      `IS_SUPERUSER`: Deze parameter toont of heeft de huidige rol supergebruikersvoorrechten.
-- `ALL`: Toon de waarden van alle configuratieparameters met beschrijvingen.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `name` | De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter zijn de volgende waarden:<br>`SERVER_VERSION`: Deze parameter toont het versienummer van de server.<br>`SERVER_ENCODING`: Deze parameter toont de codering van de tekenset aan de serverzijde.<br>`LC_COLLATE`: Deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).<br>`LC_CTYPE`: Deze parameter toont de landinstelling van de database voor tekenclassificatie.<br>`IS_SUPERUSER`: Deze parameter toont of heeft de huidige rol supergebruikersvoorrechten. |
+| `ALL` | Toon de waarden van alle configuratieparameters met beschrijvingen. |
 
 **Voorbeeld**
 
@@ -628,10 +621,10 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-**Parameters**
-
-- `query`: De query die u wilt kopiëren.
-- `format_name`: De indeling waarin u de query wilt kopiëren. De `format_name` kan één van `parquet`, `csv`, of `json`. De standaardwaarde is `parquet`.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `query` | De query die u wilt kopiëren. |
+| `format_name` | De indeling waarin u de query wilt kopiëren. De `format_name` kan één van `parquet`, `csv`, of `json`. De standaardwaarde is `parquet`. |
 
 >[!NOTE]
 >
@@ -657,13 +650,13 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name
 ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
-**Parameters**
-
-- `table_name`: De naam van de tabel die u bewerkt.
-- `constraint_name`: De naam van de restrictie die u wilt toevoegen of verwijderen.
-- `column_name`: De naam van de kolom waaraan u een beperking toevoegt.
-- `referenced_table_name`: De naam van de tabel waarnaar wordt verwezen door de buitenlandse sleutel.
-- `primary_column_name`: De naam van de kolom waarnaar wordt verwezen door de buitenlandse sleutel.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `table_name` | De naam van de tabel die u bewerkt. |
+| `constraint_name` | De naam van de restrictie die u wilt toevoegen of verwijderen. |
+| `column_name` | De naam van de kolom waaraan u een beperking toevoegt. |
+| `referenced_table_name` | De naam van de tabel waarnaar wordt verwezen door de buitenlandse sleutel. |
+| `primary_column_name` | De naam van de kolom waarnaar wordt verwezen door de buitenlandse sleutel. |
 
 >[!NOTE]
 >
@@ -679,11 +672,11 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
-**Parameters**
-
-- `table_name`: De naam van de tabel die u bewerkt.
-- `column_name`: De naam van de kolom die u wilt toevoegen.
-- `data_type`: Het gegevenstype van de kolom die u wilt toevoegen. Tot de ondersteunde gegevenstypen behoren: bigint, char, string, date, datetime, double, double precision, integer, small int, tinyint, varchar.
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `table_name` | De naam van de tabel die u bewerkt. |
+| `column_name` | De naam van de kolom die u wilt toevoegen. |
+| `data_type` | Het gegevenstype van de kolom die u wilt toevoegen. Tot de ondersteunde gegevenstypen behoren: bigint, char, string, date, datetime, double, double precision, integer, small int, tinyint, varchar. |
 
 ### PRIMAIRE TOETSEN TONEN
 
