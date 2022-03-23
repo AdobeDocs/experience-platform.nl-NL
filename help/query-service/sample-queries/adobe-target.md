@@ -5,18 +5,18 @@ title: Voorbeeldquery's voor Adobe Target-gegevens
 topic-legacy: queries
 description: Gegevens uit Adobe Target worden omgezet in XDM-schema voor Experience Event en worden als datasets voor u opgenomen in Experience Platform. Dit document bevat steekproefvragen voor het gebruiken van de Dienst van de Vraag met uw datasets van Adobe Target.
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
 # Voorbeeldquery&#39;s voor Adobe Target-gegevens
 
-Gegevens uit Adobe Target worden omgezet in XDM-schema voor Experience Event en worden als datasets voor u opgenomen in Adobe Experience Platform. Er zijn vele gebruiksgevallen voor de Dienst van de Vraag van Adobe Experience Platform met deze gegevens, en de volgende steekproefvragen zouden met uw datasets van Adobe Target moeten werken.
+Gegevens die vanuit Adobe Target worden ingevoerd, worden omgezet in XDM-schema voor Experience Event en als datasets opgenomen in Adobe Experience Platform. Adobe Experience Platform Query Service vereenvoudigt veel gebruiksgevallen voor deze gegevens en de volgende voorbeeldquery&#39;s moeten werken met uw Adobe Target-gegevenssets.
 
-In Experience Platform, is de naam van auto-gecreeerde dataset &quot;de Gebeurtenissen van de Ervaring van Adobe Target&quot;. Wanneer het gebruiken van deze dataset met vragen, zou u de naam moeten gebruiken `adobe_target_experience_events`.
+In Experience Platform, is de naam van een auto-gecreeerde dataset &quot;de Gebeurtenissen van de Ervaring van Adobe Target&quot;. Wanneer het gebruiken van deze dataset met vragen, gebruik de naam `adobe_target_experience_events`.
 
 ## Partiële XDM-veldtoewijzing op hoog niveau
 
