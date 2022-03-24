@@ -4,9 +4,9 @@ title: Algemeen veld met voorkeursgegevens voor marketing met abonnementen
 topic-legacy: overview
 description: Dit document biedt een overzicht van het veld Algemene marketingvoorkeur met XDM-gegevenstypen voor abonnementen.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '885'
 ht-degree: 1%
 
 ---
@@ -59,29 +59,31 @@ Sommige ondernemingen staan klanten toe om binnen voor verschillende abonnemente
 De volgende JSON vertegenwoordigt een voorbeeld marketing gebied voor een telefoonvraag marketing kanaal dat een `subscriptions` kaart. Elke toets in het dialoogvenster `subscriptions` object staat voor een individueel abonnement op het marketingkanaal. Elk abonnement bevat op zijn beurt een aanmeldingswaarde (`val`).
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -93,7 +95,9 @@ De volgende JSON vertegenwoordigt een voorbeeld marketing gebied voor een telefo
 
 | Eigenschap | Beschrijving |
 | --- | --- |
+| `val` | De [toestemmingswaarde](#val) voor het abonnement. |
 | `type` | Het abonnementstype. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is. |
+| `topics` | Een array van tekenreeksen die de gebieden vertegenwoordigen waarop een klant zich heeft geabonneerd, en die kan worden gebruikt om relevante inhoud te verzenden. |
 | `subscribers` | Een optioneel veld van het type map dat een set id&#39;s vertegenwoordigt (zoals e-mailadressen of telefoonnummers) die zijn geabonneerd op een bepaald abonnement. Elke sleutel in dit object vertegenwoordigt de id in kwestie en bevat twee subeigenschappen: <ul><li>`time`: Een tijdstempel volgens ISO 8601 van het tijdstip waarop de identiteit is geabonneerd, indien van toepassing.</li><li>`source`: De bron die de abonnee van voortkwam. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
