@@ -3,11 +3,11 @@ keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de diens
 solution: Experience Platform
 title: Voorbeeldquery's voor Adobe Analytics-gegevens
 topic-legacy: queries
-description: Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden getransformeerd in XDM ExperienceEvents en als datasets voor u opgenomen in Adobe Experience Platform. Dit document schetst een aantal gebruiksgevallen waar de Dienst van de Vraag van Adobe Experience Platform deze gegevens gebruikt, en de inbegrepen steekproefvragen zouden met uw datasets van Adobe Analytics moeten werken.
+description: Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden getransformeerd in XDM ExperienceEvents en als datasets opgenomen in Adobe Experience Platform. Dit document schetst een aantal gebruiksgevallen waarin de Dienst van de Vraag van deze gegevens gebruik maakt en steekproefvragen omvat die worden ontworpen om met uw datasets van Adobe Analytics te werken.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: bb5ece5e48ca5e3bb97aa1367515f510ab03deee
+source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1066'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in gegevens die overeenkomen met de [!DNL XDM ExperienceEvent] klasse en opgenomen in Adobe Experience Platform als datasets.
 
-In dit document wordt een aantal gebruiksgevallen beschreven waarbij Adobe Experience Platform [!DNL Query Service] maakt gebruik van deze gegevens, met inbegrip van steekproefvragen zou met uw datasets van Adobe Analytics moeten werken. Zie de documentatie op [Toewijzing van het veld Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie over toewijzing aan [!DNL Experience Events].
+In dit document wordt een aantal gebruiksgevallen beschreven waarbij Adobe Experience Platform [!DNL Query Service] maakt gebruik van deze gegevens, met inbegrip van steekproefvragen die worden ontworpen om met uw datasets van Adobe Analytics te werken. Zie de documentatie op [Toewijzing van het veld Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie over toewijzing aan [!DNL Experience Events].
 
 ## Aan de slag
 
@@ -24,7 +24,7 @@ De SQL voorbeelden door dit document vereisen u om SQL uit te geven en de verwac
 
 ## Algemeen gebruikte SQL-voorbeelden
 
-In de volgende voorbeelden worden veelgebruikte SQL-query&#39;s getoond om uw Adobe Analytics-gegevens te analyseren.
+In de volgende voorbeelden worden SQL-query&#39;s getoond voor veelvoorkomende gebruiksscenario&#39;s voor het analyseren van uw Adobe Analytics-gegevens.
 
 ### Aantal uren bezoekers voor een bepaalde dag
 
@@ -120,14 +120,15 @@ ORDER BY Hour;
 
 ## Deduplicatie
 
-Adobe Experience Platform Query Service ondersteunt gegevensdeduplicatie. Zie de [Gegevensdeduplicatie in de documentatie van de Dienst van de Vraag](../best-practices/deduplication.md) voor informatie over hoe u nieuwe waarden kunt genereren op het moment dat u een query uitvoert [!DNL Experience Event] datasets.
+[!DNL Query Service] ondersteunt gegevensdeduplicatie. Zie de [Gegevensdeduplicatie in [!DNL Query Service] documentatie](../best-practices/deduplication.md) voor informatie over hoe u nieuwe waarden kunt genereren op het moment dat u een query uitvoert [!DNL Experience Event] datasets.
 
 ## Merchandising-variabelen (productsyntaxis)
 
+De volgende secties verstrekken XDM gebieden en steekproefvragen die u kunt gebruiken om tot de handelsveranderende variabelen in uw [!DNL Analytics] dataset.
 
 ### Productsyntaxis
 
-In Adobe Analytics kunnen aangepaste productgegevens worden verzameld via speciaal geconfigureerde variabelen, de zogenaamde &#39;merchandising&#39;-variabelen. Deze zijn gebaseerd op een eVar of aangepaste gebeurtenissen. Het verschil tussen deze variabelen en hun standaardgebruik is dat ze een afzonderlijke waarde vertegenwoordigen voor elk product dat op de hit wordt gevonden, in plaats van slechts één waarde voor de hit.
+In Adobe Analytics kunnen aangepaste productgegevens worden verzameld via speciaal geconfigureerde variabelen, de zogenaamde &#39;merchandising&#39;-variabelen. Deze zijn gebaseerd op een eVar of aangepaste gebeurtenissen. Het verschil tussen deze variabelen en hun typische gebruik is dat zij een afzonderlijke waarde voor elk product vertegenwoordigen dat op de slag wordt gevonden eerder dan slechts één waarde voor de slag.
 
 Deze variabelen worden ook wel handelsvariabelen in de productsyntaxis genoemd. Op deze manier kunt u informatie verzamelen, zoals een &quot;kortingsbedrag&quot; per product of informatie over de &quot;locatie op pagina&quot; van het product in de zoekresultaten van de klant.
 
@@ -200,12 +201,12 @@ LIMIT 20
 
 ### Conversiesyntaxis
 
-Een ander type handelsvariabele in Adobe Analytics is de conversiesyntaxis. Met productsyntaxis wordt de waarde verzameld op hetzelfde moment als het product, maar hiervoor moeten de gegevens op dezelfde pagina aanwezig zijn. Er zijn scenario&#39;s waarin de gegevens op een pagina vóór de conversie of het geval van belang met betrekking tot het product voorkomen. Neem bijvoorbeeld het gebruiksgeval voor de productzoekmethode.
+Een ander type handelsvariabele dat in Adobe Analytics wordt gevonden, is de conversiesyntaxis. Met productsyntaxis wordt de waarde verzameld op hetzelfde moment als het product, maar hiervoor moeten de gegevens op dezelfde pagina aanwezig zijn. Er zijn scenario&#39;s waarin de gegevens op een pagina vóór de conversie of het geval van belang met betrekking tot het product voorkomen. Neem bijvoorbeeld het gebruiksgeval voor de productzoekmethode.
 
 1. Een gebruiker voert en intern onderzoek naar &quot;winterhoed&quot;uit die de Syntaxis van de Omzetting toelaat Merchandising eVar6 aan &quot;intern onderzoek:winterhoed&quot;
 2. De gebruiker klikt op &quot;wafelbeanie&quot; en landt op de pagina met productdetails.\
    a. Het landen hier vuurt een `Product View` gebeurtenis voor de &quot;waffle beanie&quot; voor $12,99.\
-   b. Omdat `Product View` is geconfigureerd als een bindingsgebeurtenis. Het product &quot;waffle beanie&quot; is nu gebonden aan de eVar 6-waarde van &quot;internal search:winter hat&quot;. Telkens wanneer het product &quot;waffle beanie&quot; wordt verzameld, wordt het gekoppeld aan &quot;internal search:winter hat&quot; totdat (1) de instelling voor de vervaldatum is bereikt of (2) een nieuwe waarde voor eVar6 is ingesteld en de gebeurtenis binding met dat product opnieuw plaatsvindt.
+   b. Sinds `Product View` is geconfigureerd als een bindende gebeurtenis, is het product &quot;waffle beanie&quot; nu gebonden aan de eVar6-waarde van &quot;internal search:winter hat&quot;. Telkens wanneer het product &quot;waffle beanie&quot; wordt verzameld, wordt het gekoppeld aan &quot;internal search:winter hat&quot; totdat (1) de instelling voor de vervaldatum is bereikt of (2) een nieuwe waarde voor eVar6 is ingesteld en de gebeurtenis binding met dat product opnieuw plaatsvindt.
 3. De gebruiker voegt het product aan zijn winkelwagentje toe en ontslaat het `Cart Add` gebeurtenis.
 4. De gebruiker voert een andere interne zoekopdracht uit naar &quot;zomershirt&quot; waarmee de omzettingssyntaxis Merchandising eVar6 instelt op &quot;intern zoeken:zomershirt&quot;
 5. De gebruiker klikt op &quot;sporty t-shirt&quot; en landt op de pagina met productdetails.\

@@ -5,10 +5,10 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
+source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
 workflow-type: tm+mt
-source-wordcount: '3274'
-ht-degree: 0%
+source-wordcount: '3395'
+ht-degree: 1%
 
 ---
 
@@ -19,8 +19,10 @@ Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de 
 De volgende lijst met antwoorden op veelgestelde vragen is onderverdeeld in de volgende categorieën:
 
 - [Algemeen](#general)
-- [Gegevens exporteren](#exporting-data)
+- [Data exporteren](#exporting-data)
 - [Gereedschappen van derden](#third-party-tools)
+- [PostSQL API-fouten](#postgresql-api-errors)
+- [REST API-fouten](#rest-api-errors)
 
 ## Algemene vragen over Query Service {#general}
 
@@ -36,7 +38,7 @@ Deze sectie bevat informatie over prestaties, beperkingen en processen.
 +++Antwoord Een mogelijke oorzaak is de functie voor automatisch aanvullen. De eigenschap verwerkt bepaalde meta-gegevensbevelen die de redacteur tijdens vraag het uitgeven soms kunnen vertragen.
 +++
 
-### Kan ik Postman voor de API van de Dienst van de Vraag gebruiken?
+### Kan ik Postman gebruiken voor de API voor zoekservices?
 
 +++Antwoord ja, kunt u visualiseren en met alle Adobe API diensten in wisselwerking staan gebruikend Postman (een vrije, derdetoepassing). Kijk naar de [Postman Setup Guide](https://video.tv.adobe.com/v/28832) voor geleidelijke instructies op hoe te opstelling een project in de Console van de Ontwikkelaar van de Adobe en verwerft alle noodzakelijke geloofsbrieven voor gebruik met Postman. Zie de officiële documentatie voor [richtlijnen voor het starten, uitvoeren en delen van Postman-verzamelingen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
@@ -434,38 +436,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-## REST API-fouten
-
-| HTTP-statuscode | Beschrijving | Mogelijke oorzaken |
-|------------------|-----------------------|----------------------------|
-| 400 | Ongeldig verzoek | Onjuiste of ongeldige query |
-| 401 | Verificatie mislukt | Ongeldig auteur-token |
-| 500 | Interne serverfout | Interne systeemfout |
-
-## PostSQL API-fouten
-
-| Foutcode | Verbindingsstatus | Beschrijving | Mogelijke oorzaak |
-|------------|---------------------------|-------------|----------------|
-| **08P01** | N.v.t. | Niet-ondersteund berichttype | Niet-ondersteund berichttype |
-| **28P01** | Opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
-| **28000** | Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword`. |
-| **42P12** | Opstarten - verificatie | Geen tabellen gevonden | Geen tabellen gevonden voor gebruik |
-| **42601** | Query | Syntaxisfout | Ongeldige opdracht- of syntaxisfout |
-| **42P01** | Query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
-| **42P07** | Query | Tabel bestaat | Er bestaat al een tabel met dezelfde naam (CREATE TABLE) |
-| **53400** | Query | LIMIT overschrijdt max. waarde | Gebruiker heeft een LIMIT-component opgegeven die hoger is dan 100.000 |
-| **53400** | Query | Time-out instructie | De ingediende liveverklaring nam meer dan maximaal 10 minuten in beslag |
-| **58000** | Query | Systeemfout | Interne systeemfout |
-| **0A000** | Query/opdracht | Niet ondersteund | De functie/functionaliteit in de query/opdracht wordt niet ondersteund |
-| **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend `CREATE TABLE` statement |
-| **42501** | DROP TABLE-query | Tabel niet gemaakt door de geverifieerde gebruiker | De lijst die wordt gelaten vallen werd niet gecreeerd door de momenteel het programma geopende gebruiker |
-| **42P01** | DROP TABLE-query | Tabel niet gevonden | De tabel die in de query is opgegeven, is niet gevonden |
-| **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: gelieve de `dbName` | Er zijn geen tabellen gevonden in de huidige database |
-
-## Gegevens exporteren {#exporting-data}
+## Data exporteren {#exporting-data}
 
 Deze sectie bevat informatie over het exporteren van gegevens en beperkingen.
-
 
 ### Is er een manier om gegevens uit de Dienst van de Vraag na vraagverwerking te halen en de resultaten in een Csv- dossier te bewaren?
 
@@ -524,3 +497,51 @@ Het doel om de laag van de geheim voorgeheugenserver toe te voegen is de gegeven
 
 +++Antwoord nr., wordt de connectiviteit pgAdmin niet gesteund. A [lijst van beschikbare derde cliënten en instructies op hoe te om hen met de Dienst van de Vraag te verbinden](./clients/overview.md) te vinden in de documentatie.
 +++
+
+## PostSQL API-fouten {#postgresql-api-errors}
+
+De volgende tabel bevat PSQL-foutcodes en de mogelijke oorzaken ervan.
+
+| Foutcode | Verbindingsstatus | Beschrijving | Mogelijke oorzaak |
+|------------|---------------------------|-------------|----------------|
+| **08P01** | N.v.t. | Niet-ondersteund berichttype | Niet-ondersteund berichttype |
+| **28P01** | Opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
+| **28000** | Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword`. |
+| **42P12** | Opstarten - verificatie | Geen tabellen gevonden | Geen tabellen gevonden voor gebruik |
+| **42601** | Query | Syntaxisfout | Ongeldige opdracht- of syntaxisfout |
+| **42P01** | Query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
+| **42P07** | Query | Tabel bestaat | Er bestaat al een tabel met dezelfde naam (CREATE TABLE) |
+| **53400** | Query | LIMIT overschrijdt max. waarde | Gebruiker heeft een LIMIT-component opgegeven die hoger is dan 100.000 |
+| **53400** | Query | Time-out instructie | De ingediende liveverklaring nam meer dan maximaal 10 minuten in beslag |
+| **58000** | Query | Systeemfout | Interne systeemfout |
+| **0A000** | Query/opdracht | Niet ondersteund | De functie/functionaliteit in de query/opdracht wordt niet ondersteund |
+| **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend `CREATE TABLE` statement |
+| **42501** | DROP TABLE-query | Tabel niet gemaakt door de geverifieerde gebruiker | De lijst die wordt gelaten vallen werd niet gecreeerd door de momenteel het programma geopende gebruiker |
+| **42P01** | DROP TABLE-query | Tabel niet gevonden | De tabel die in de query is opgegeven, is niet gevonden |
+| **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: gelieve de `dbName` | Er zijn geen tabellen gevonden in de huidige database |
+
+### Waarom ontving ik een 58000 foutcode toen het gebruiken van de history_meta () methode op mijn lijst?
+
+++ beantwoord `history_meta()` De methode wordt gebruikt om tot een momentopname van een dataset toegang te hebben. Eerder, als u een vraag op een lege dataset in Azure Data Lake Storage (ADLS) moest in werking stellen, zou u een 58000 foutencode ontvangen die zegt dat de gegevensreeks niet bestaat. Hieronder wordt een voorbeeld van de oude systeemfout weergegeven.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+Deze fout is opgetreden omdat de query geen retourwaarde heeft. Dit gedrag is nu gecorrigeerd om het volgende bericht te retourneren:
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## REST API-fouten {#rest-api-errors}
+
+De volgende tabel bevat HTTP-foutcodes en de mogelijke oorzaken ervan.
+
+| HTTP-statuscode | Beschrijving | Mogelijke oorzaken |
+|------------------|-----------------------|----------------------------|
+| 400 | Ongeldig verzoek | Onjuiste of ongeldige query |
+| 401 | Verificatie mislukt | Ongeldig auteur-token |
+| 500 | Interne serverfout | Interne systeemfout |
