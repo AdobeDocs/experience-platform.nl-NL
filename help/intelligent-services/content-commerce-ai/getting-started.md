@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;aan de slag;content ai;commerce ai;content en commerce ai
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Aan de slag met AI voor Inhoud en Handel
 topic-legacy: Getting started
-description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. Om vraag aan Adobe I/O APIs en de I/O Integratie van de Console te maken, moet u het authentificatieleerprogramma eerst voltooien.
+description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 0%
 
 ---
 
-# Aan de slag met Content and Commerce AI
+# Getting started with Content and Commerce AI
 
 >[!NOTE]
 >
->AI van de Inhoud en van de Handel is in bèta. De documentatie kan worden gewijzigd.
+>Content and Commerce AI is in beta. The documentation is subject to change.
 
-[!DNL Content and Commerce AI] gebruikt Adobe I/O API&#39;s. Om vraag aan Adobe I/O APIs en de I/O Console Integratie te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien.
+[!DNL Content and Commerce AI] gebruikt Adobe I/O API&#39;s. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
-Wanneer u echter de stap **API toevoegen** doorloopt, bevindt de API zich onder Experience Cloud in plaats van Adobe Experience Platform, zoals in de volgende schermafbeelding wordt getoond:
+Wanneer u echter de **API toevoegen** De API bevindt zich stap voor stap onder Experience Cloud in plaats van Adobe Experience Platform, zoals in de volgende schermafbeelding wordt getoond:
 
-![AI voor inhoud en handel toevoegen](./images/add-api.png)
+![adding Content and Commerce AI](./images/add-api.png)
 
 Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk van de vereiste kopballen in alle Adobe I/O API vraag, zoals hieronder getoond:
 
@@ -30,31 +30,31 @@ Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-## Een postmanomgeving maken (optioneel)
+## Een Postman-omgeving maken (optioneel)
 
-Nadat u uw project en API hebt ingesteld in de Adobe Developer Console, kunt u een omgevingsbestand voor Postman downloaden. Selecteer **[!UICONTROL Content and Commerce AI]** onder **[!UICONTROL APIs]** de linkerrail van uw project. Er wordt een nieuw tabblad geopend met een kaart met het label &quot;[!DNL Try it out]&quot;. Selecteer **Download voor Postman** om een JSON-bestand te downloaden dat wordt gebruikt om uw postmanomgeving te configureren.
+Once you have set up your project and API within Adobe Developer Console, you have the option to download an environment file for Postman. Under **[!UICONTROL APIs]** the left rail of your project, select **[!UICONTROL Content and Commerce AI]**. A new tab opens, containing a card labeled &quot;[!DNL Try it out]&quot;. Select **Download for Postman** to download a JSON file used to configure your postman environment.
 
-![download voor postbode](./images/add-to-postman.png)
+![download for postman](./images/add-to-postman.png)
 
-Nadat u het bestand hebt gedownload, opent u Postman en selecteert u het **tandwielpictogram** rechtsboven om het dialoogvenster **omgevingen beheren** te openen.
+Once you have downloaded the file, open Postman and select the **gear icon** in the top right to open up the **manage environments** dialog.
 
 ![tandwielpictogram](./images/select-gear-icon.png)
 
-Selecteer vervolgens **Importeren** in het dialoogvenster **Omgevingen beheren**.
+Selecteer vervolgens **Importeren** van binnen **Omgevingen beheren** .
 
 ![import](./images/import.png)
 
-U wordt omgeleid en gevraagd om een omgevingsbestand van uw computer te selecteren. Selecteer het JSON-bestand dat u eerder hebt gedownload en selecteer **Open** om de omgeving te laden.
+You are redirected and asked to select an environment file from your computer. Selecteer het JSON-bestand dat u eerder hebt gedownload en selecteer **Openen** om de omgeving te laden.
 
 ![](./images/choose-your-file.png)
 
 ![](./images/click-open.png)
 
-U wordt omgeleid terug naar *Manage milieu&#39;s* tabel met een nieuwe omgevingsnaam bevolkt. Selecteer de omgevingsnaam om de variabelen in Postman weer te geven en te bewerken. U moet nog manueel `JWT_TOKEN` en `ACCESS_TOKEN` bevolken. Deze waarden hadden moeten worden verkregen tijdens het voltooien van de [zelfstudie voor verificatie](https://www.adobe.com/go/platform-api-authentication-en).
+You are redirected back to the *Manage environments* tab with a new environment name populated. Selecteer de omgevingsnaam om de variabelen in Postman weer te geven en te bewerken. U moet nog steeds handmatig de `JWT_TOKEN` en `ACCESS_TOKEN`. Deze waarden hadden moeten worden verkregen tijdens het voltooien van de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
 
 ![](./images/re-direct.png)
 
-Nadat de variabelen zijn voltooid, moeten ze er ongeveer als volgt uitzien: Selecteer **Update** om het instellen van uw omgeving te voltooien.
+Nadat de variabelen zijn voltooid, moeten ze er ongeveer als volgt uitzien: Selecteren **Bijwerken** om uw omgeving te voltooien.
 
 ![](./images/final-environment.png)
 
@@ -62,16 +62,16 @@ U kunt nu de omgeving selecteren in het vervolgkeuzemenu rechtsboven in het sche
 
 ![voorbeeld](./images/select-environment.png)
 
-Voor meer informatie over het werken met Adobe I/O APIs die Postman gebruiken, zie de Middelgrote post op [gebruikend Postman voor authentificatie JWT op Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Voor meer informatie over het werken met Adobe I/O API&#39;s die Postman gebruiken, raadpleegt u het artikel Medium op [Postman gebruiken voor JWT-verificatie op Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md) in de het oplossen van problemengids van de Experience Platform te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. These include paths, required headers, and properly formatted request payloads. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
 
 ## Volgende stappen {#next-steps}
 
-Zodra u al uw geloofsbrieven hebt, bent u klaar aan opstelling een douanearbeider voor [!DNL Content and Commerce AI]. De volgende documenten helpen bij het begrijpen van het uitbreidingsframework en de omgeving.
+Once you have all your credentials, you are ready to set up a custom worker for [!DNL Content and Commerce AI]. De volgende documenten helpen bij het begrijpen van het uitbreidingsframework en de omgeving.
 
-Om meer over het Kader van de Rekbaarheid te leren, begin door [inleiding aan rekbaarheid](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) document te lezen. In dit document worden de voorwaarden en de inrichtingsvereisten beschreven.
+Om meer over het Kader van de Rekbaarheid te leren, begin door te lezen [inleiding tot uitbreidbaarheid](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) document. In dit document worden de voorwaarden en de inrichtingsvereisten beschreven.
 
-Als u meer wilt weten over het instellen van een omgeving voor [!DNL Content and Commerce AI], begint u met het lezen van de handleiding voor het instellen van een ontwikkelomgeving](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). [ Dit document bevat instellingsinstructies waarmee u de service Asset compute kunt ontwikkelen.
+To learn more about setting up an environment for [!DNL Content and Commerce AI], start by reading the guide for [setting up a developer environment](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Dit document bevat instellingsinstructies waarmee u de service Asset compute kunt ontwikkelen.

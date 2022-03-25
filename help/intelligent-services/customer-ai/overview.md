@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;overzicht;klantenhulp;populaire onderwerpen;het overzicht van de klantenhulp
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: AI-overzicht van klant
 topic-legacy: Customer AI Overview
 description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
 landing-page-description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -37,7 +37,7 @@ AI van de klant is gebouwd aan:
 Klant is niet gebouwd op:
 
 - De AI van de klant mag niet worden gebruikt om dynamische prijzen te voorspellen, noch het prijspunt waarop de klant een aankoop gaat doen.
-- Klantenservice-AI kan niet bepalen of het aanbieden van een aanbieding de kans van de klant om een object te kopen zal vergroten. Hoewel u kunt besluiten kortingsvoorstellen te verzenden op basis van de score voor volheid, is het niet noodzakelijk de beste manier om die klanten om te zetten.
+- Klantenservice kan niet bepalen of het aanbieden van een aanbieding de kans van de klant om een artikel te kopen zal vergroten. Hoewel u kunt besluiten kortingsvoorstellen te verzenden op basis van de score voor volheid, is het niet altijd de beste manier om die klanten om te zetten.
 - AI van de klant is geen hulpmiddel voor productaanbevelingen. Als u duizenden SKU&#39;s hebt, gebruik geen AI van de Klant als volmacht voor een echte oplossing van productaanbevelingen zoals [!DNL Adobe Target].
 - Klantenservice-AI kan niet voorspellen in welk stadium van de koopgedrag de klant zich bevindt, bijvoorbeeld in de fase waarin de klant zich bewust is van de situatie, de &quot;vergoeding&quot;, de &quot;aankoop&quot; of de &quot;retentie&quot;.
 - Gebruik geen AI van de Klant om klanten te bepalen die waarschijnlijk een product kopen dat in de toekomst lanceert. Dit vereist bepaalde succesgebeurtenissen om in het verleden aanwezig te zijn voor de AI van de Klant om het systeemleeralgoritme op uw gegevens te trainen.
@@ -52,4 +52,4 @@ De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consu
 
 ## Volgende stappen
 
-U kunt beginnen door [te volgen begonnen ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor AI van de Klant. Als u al uw aanmeldingsgegevens en gegevens hebt, gaat u naar [een AI-exemplaar van de klant configureren](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.
+U kunt beginnen door [aan de slag](./getting-started.md) hulplijn. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor AI van de Klant. Als u al over al uw gegevens en gegevens beschikt, gaat u naar  [configureren van een Customer AI-exemplaar](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.

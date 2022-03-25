@@ -1,59 +1,59 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output;customer ai troubleshooting;customer ai errors
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+keywords: Experience Platform;aan de slag;klantenondersteuning;populaire onderwerpen;input van klantenondersteuning;klantenservice uitvoer;problemen oplossen;fouten in klantenondersteuning
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
-title: Customer AI error troubleshooting
+title: Probleemoplossing van AI-fouten van klant
 topic-legacy: Getting started
-description: Find answers to common errors in Customer AI.
+description: Zoek antwoorden op algemene fouten in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
 
 ---
 
-# Customer AI error troubleshooting
+# Probleemoplossing van AI-fouten van klant
 
-Customer AI displays errors when model training, scoring, and configuration fails. **[!UICONTROL Service instances]****[!UICONTROL LAST RUN STATUS]****[!UICONTROL Success]****[!UICONTROL Training issue]****[!UICONTROL Failed]**
+De AI van de klant toont fouten wanneer de modelopleiding, het scoren, en de configuratie ontbreken. In de **[!UICONTROL Service instances]** sectie, een kolom voor **[!UICONTROL LAST RUN STATUS]** geeft een van de volgende berichten weer: **[!UICONTROL Success]**, **[!UICONTROL Training issue]**, en **[!UICONTROL Failed]**.
 
-![](./images/errors/last-run-status.png)
+![status laatste uitvoering](./images/errors/last-run-status.png)
 
-**[!UICONTROL Failed]****[!UICONTROL Training issue]** **[!UICONTROL Last run status]****[!UICONTROL Last run details]** **[!UICONTROL Last run details]** In the event that Customer AI is not able to provide details on your error, contact support with the error code thats provided.
+In het geval dat **[!UICONTROL Failed]** of **[!UICONTROL Training issue]** wordt weergegeven, kunt u de uitvoerstatus selecteren om een zijpaneel te openen. Het zijpaneel bevat uw **[!UICONTROL Last run status]** en **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** bevat informatie over waarom de uitvoering is mislukt. Als de AI van de Klant geen details over uw fout kan verstrekken, contacteer steun met de foutencode die verstrekt wordt.
 
 <img src="./images/errors/last-run-details.png" width="300" /><br />
 
-## Unable to access Customer AI in Chrome incognito
+## Geen toegang tot AI van klant in Chrome-incognito
 
-Loading errors in Google Chrome&#39;s incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+Er treden laadfouten op in de incognitomodus van Google Chrome vanwege updates in de beveiligingsinstellingen van de incognitomodus van Google Chrome. Het probleem wordt actief besproken met Chrome en maakt van experience.adobe.com een vertrouwd domein.
 
 <img src="./images/errors/error.PNG" width="500" /><br />
 
-### Recommended fix
+### Aanbevolen correctie
 
-To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. **** ******** `[*.]experience.adobe.com`**** ****
+Als u dit probleem wilt oplossen, moet u Experience.adobe.com toevoegen als een site die cookies altijd kan gebruiken. Begin door naar **chrome://settings/cookies**. Blader vervolgens omlaag naar de **Aangepast gedrag** gevolgd door het selecteren van de **Toevoegen** knop naast &quot;sites die altijd cookies kunnen gebruiken&quot;. Kopieer en plak de pop-up die wordt weergegeven `[*.]experience.adobe.com` Selecteer vervolgens de **Cookies van derden opnemen** op deze site. Selecteer **Toevoegen** en de AI van de Klant in incognito opnieuw laden.
 
-![](./images/errors/cookies2.gif)
+![aanbevolen correctie](./images/errors/cookies2.gif)
 
-## Model quality is poor
+## Modelkwaliteit is slecht
 
-[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration] Follow the recommended steps below to help troubleshoot.
+Als de fout &quot;[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]&quot;. Volg onderstaande aanbevolen stappen om problemen op te lossen.
 
 <img src="./images/errors/model-quality.png" width="300" /><br />
 
-### Recommended fix
+### Aanbevolen correctie
 
-&quot;Model quality is poor&quot; means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) &lt; 0.65 after training. To fix the error, it is recommended that you change one of the configuration parameters and rerun the training.
+&quot;Modelkwaliteit is slecht&quot; betekent dat de nauwkeurigheid van het model niet binnen een aanvaardbaar bereik ligt. Klantenservice-AI kon na training geen betrouwbaar model en AUC (Area under the ROC curve) &lt; 0,65 maken. Om de fout te bevestigen, adviseert men dat u één van de configuratieparameters verandert en de opleiding opnieuw uitvoert.
 
-Start by checking the accuracy of your data. It is important that your data contains the necessary fields needed for your predictive outcome.
+Begin door de nauwkeurigheid van uw gegevens te controleren. Het is belangrijk dat uw gegevens de velden bevatten die nodig zijn voor uw voorspelbare resultaat.
 
-- Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
-- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. [](./input-output.md#data-requirements)
-- Check for missing data in commerce, application, web, and search, within your schema field properties.
+- Controleer of uw dataset de recentste data heeft. De AI van de Klant veronderstelt altijd dat de gegevens bijgewerkt zijn wanneer het model wordt teweeggebracht.
+- Controleer of er gegevens ontbreken in het gedefinieerde voorspellings- en geschiktheidsvenster. Uw gegevens moeten volledig zijn zonder tussenruimten. Zorg er ook voor dat uw gegevensset voldoet aan de [Vereisten voor historische gegevens van AI-klanten](./input-output.md#data-requirements).
+- Controle voor ontbrekende gegevens in handel, toepassing, Web, en onderzoek, binnen uw eigenschappen van het schemagebied.
 
-`_experience.analytics.customDimensions.eVars.eVar142` This restricts the population and size of the data used in the training window.
+Als uw gegevens niet het probleem lijken te zijn, probeer veranderend de toelatingsvoorwaarde van de bevolking om het model tot bepaalde profielen (bijvoorbeeld) te beperken `_experience.analytics.customDimensions.eVars.eVar142` bestaat in de afgelopen 56 dagen). Dit beperkt de populatie en de grootte van de gegevens die in het trainingsvenster worden gebruikt.
 
-If restricting the eligibility population did not work or is not possible, change your prediction window.
+Als het beperken van de toelatingspopulatie niet werkte of niet mogelijk is, verander uw voorspellingsvenster.
 
-- Try changing your prediction window to 7 days and see if the error continues to occur. If the error no longer occurs, this indicates that you may not have enough data for your defined prediction window.
+- Probeer het voorspellingsvenster te wijzigen in 7 dagen en controleer of de fout zich blijft voordoen. Als de fout niet meer voorkomt, wijst dit erop dat u niet genoeg gegevens voor uw bepaalde voorspellingsvenster kunt hebben.

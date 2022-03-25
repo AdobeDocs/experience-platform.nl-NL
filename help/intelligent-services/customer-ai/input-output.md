@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;aan de slag;klantenhulp;populaire onderwerpen;input van klantenhulp;klantenoutput
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Invoer en uitvoer in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '3042'
 ht-degree: 0%
@@ -52,27 +52,27 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in di
 >
 > De AI van de Klant bepaalt automatisch welke gebeurtenissen nuttig voor voorspellingen zijn en roept een waarschuwing op als de beschikbare gegevens niet voldoende zijn om kwaliteitsvoorspellingen te produceren.
 
-AI van de Klant steunt de datasets van Adobe Analytics, Adobe Audience Manager, van de Gebeurtenis van de Ervaring (EE), en van de Ervaring van de Consumenten (CEE). Het CEE-schema vereist dat u tijdens het maken van het schema veldgroepen toevoegt. Als u de datasets van Adobe Analytics of van Adobe Audience Manager gebruikt, brengt de bronschakelaar direct de standaardgebeurtenissen (Handel, de details van de Web-pagina, Toepassing, en Onderzoek) in kaart die hieronder tijdens het verbindingsproces worden vermeld. U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt.
+AI van de Klant steunt de datasets van Adobe Analytics, Adobe Audience Manager, van de Gebeurtenis van de Ervaring (EE), en van de Ervaring van de Consumenten (CEE). Het CEE-schema vereist dat u tijdens het maken van het schema veldgroepen toevoegt. Als u de datasets van Adobe Analytics of van Adobe Audience Manager gebruikt, brengt de bronschakelaar direct de standaardgebeurtenissen (Handel, de details van de Web-pagina, Toepassing, en Onderzoek) in kaart die hieronder tijdens het verbindingsproces worden vermeld. You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID.
 
 Ga voor meer informatie over het koppelen van Adobe Analytics-gegevens of Audience Manager-gegevens naar de [Toewijzingen van analytische velden](../../sources/connectors/adobe-applications/analytics.md) of [Veldtoewijzingen Audience Manager](../../sources/connectors/adobe-applications/mapping/audience-manager.md) hulplijn.
 
-### Standaardgebeurtenissen die door de AI van de Klant worden gebruikt {#standard-events}
+### Standard events used by Customer AI {#standard-events}
 
-De Gebeurtenissen van de Ervaring XDM worden gebruikt voor het bepalen van diverse klantengedrag. Afhankelijk van de structuur van uw gegevens, omvatten de hieronder vermelde gebeurtenistypen mogelijk niet alle gedragingen van uw klant. Het is aan u om te bepalen welke gebieden de noodzakelijke gegevens hebben die nodig zijn om Webgebruikersactiviteit duidelijk en ondubbelzinnig te identificeren. Afhankelijk van uw voorspellingsdoel, kunnen de vereiste gebieden veranderen die nodig zijn.
+De Gebeurtenissen van de Ervaring XDM worden gebruikt voor het bepalen van diverse klantengedrag. Depending on how your data is structured, the event types listed below may not encompass all of your customer&#39;s behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
 
 De AI van de klant is afhankelijk van verschillende gebeurtenistypen voor de eigenschappen van het bouwmodel. Deze gebeurtenistypen worden automatisch aan uw schema toegevoegd gebruikend veelvoudige XDM gebiedsgroepen.
 
 >[!NOTE]
 >
->Als u Adobe Analytics- of Adobe Audience Manager-gegevens gebruikt, wordt het schema automatisch gemaakt met de vereiste standaardgebeurtenissen die nodig zijn om uw gegevens vast te leggen. Als u uw eigen aangepaste CEE-schema maakt om gegevens vast te leggen, moet u overwegen welke veldgroepen nodig zijn om uw gegevens vast te leggen.
+>Als u Adobe Analytics- of Adobe Audience Manager-gegevens gebruikt, wordt het schema automatisch gemaakt met de vereiste standaardgebeurtenissen die nodig zijn om uw gegevens vast te leggen. If you are creating your own custom CEE schema to capture data, you need to consider what field groups are needed to capture your data.
 
 Het is niet nodig gegevens te hebben voor elk van de hieronder vermelde standaardgebeurtenissen, maar voor bepaalde scenario&#39;s zijn bepaalde gebeurtenissen vereist. Als u standaardgebeurtenisgegevens hebt, is het raadzaam deze op te nemen in uw schema. Als u bijvoorbeeld een AI-toepassing van de Klant wilt maken om aankoopgebeurtenissen te voorspellen, is het handig om gegevens van de `Commerce` en `Web page details` gegevenstypen.
 
 Als u een veldgroep wilt weergeven in de gebruikersinterface van het Platform, selecteert u de optie **[!UICONTROL Schemas]** op de linkerspoorstaaf, gevolgd door het selecteren van **[!UICONTROL Field groups]** tab.
 
-| Veldgroep | Het type Event | XDM-veldpad |
+| Veldgroep | Het type Event | XDM field path |
 | --- | --- | --- |
-| [!UICONTROL Commerce Details] | bestellen | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+| [!UICONTROL Commerce Details] | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
 |  | kassa | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
 |  | aankopen | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
@@ -90,21 +90,21 @@ Als u een veldgroep wilt weergeven in de gebruikersinterface van het Platform, s
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [!UICONTROL Search Details] | zoeken | search.keywords |
 
-Bovendien kan de AI van de Klant abonnementsgegevens gebruiken om betere modellen van de Koor te bouwen. Abonnementsgegevens zijn nodig voor elk profiel dat de [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) indeling van gegevenstype. De meeste velden zijn optioneel, maar voor een optimaal chroommodel is het zeer raadzaam gegevens te verstrekken voor zoveel mogelijk velden, zoals: `startDate`, `endDate`en alle andere relevante gegevens.
+Bovendien kan de AI van de Klant abonnementsgegevens gebruiken om betere modellen van de Koor te bouwen. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. De meeste velden zijn optioneel, maar voor een optimaal chroommodel is het zeer raadzaam gegevens te verstrekken voor zoveel mogelijk velden, zoals: `startDate`, `endDate`en alle andere relevante gegevens.
 
 ### Aangepaste gebeurtenissen en profielkenmerken toevoegen
 
 Als u over informatie beschikt die u in aanvulling op de [standaardgebeurtenisvelden](#standard-events) wordt gebruikt door de AI van de Klant, wordt een aangepaste gebeurtenis en een optie van het douaneprofielattribuut verstrekt tijdens uw [instantieconfiguratie](./user-guide/configure.md#custom-events).
 
-Als de dataset u selecteerde douanegebeurtenissen of profielattributen zoals &quot;hotelreserve&quot;of &quot;werknemer van X bedrijf&quot;omvat die in uw schema wordt bepaald, kunt u hen aan uw instantie toevoegen. Deze extra aangepaste gebeurtenissen en profielkenmerken worden door de AI van de Klant gebruikt om de kwaliteit van uw model te verbeteren en nauwkeurigere resultaten te bieden.
+If the dataset you selected includes custom events or profile attributes such as a &quot;hotel reservation&quot; or &quot;employee of X company&quot; defined in your schema, you can add them to your instance. These additional custom events and profile attributes are used by Customer AI to improve the quality of your model and provide more accurate results.
 
 ### Historische gegevens {#data-requirements}
 
 Klanten-AI hebben historische gegevens nodig voor modeltraining, maar de hoeveelheid vereiste gegevens is gebaseerd op twee sleutelelementen: resultaatvenster en in aanmerking komende populatie.
 
-Standaard zoekt de AI van de Klant naar een gebruiker die activiteit heeft gehad in de laatste 120 dagen als er tijdens de toepassingsconfiguratie geen definitie van de in aanmerking komende populatie is opgegeven. Daarnaast vereist de AI van de Klant minimaal 500 gekwalificeerde en 500 niet-kwalificerende gebeurtenissen (in totaal 1000) van historische gegevens op basis van een voorspelde doeldefinitie.
+By default, Customer AI looks for a user to have had activity in the last 120 days if no eligible population definition is provided during the application configuration. Additionally, Customer AI requires a minimum of 500 qualifying and 500 non-qualifying events (1000 total) of historical data based on a predicted goal definition.
 
-In de volgende voorbeelden wordt een eenvoudige formule gebruikt om u te helpen de minimale vereiste hoeveelheid gegevens te bepalen. Als u meer dan de minimumvereiste hebt, zal uw model waarschijnlijk nauwkeurigere resultaten verstrekken. Als u minder dan het vereiste minimumbedrag hebt, zal het model ontbreken aangezien er geen voldoende hoeveelheid gegevens voor modelopleiding is.
+The following examples provided use a simple formula to help you determine the minimum amount of data required. Als u meer dan de minimumvereiste hebt, zal uw model waarschijnlijk nauwkeurigere resultaten verstrekken. Als u minder dan het vereiste minimumbedrag hebt, zal het model ontbreken aangezien er geen voldoende hoeveelheid gegevens voor modelopleiding is.
 
 **Formule**:
 
@@ -112,7 +112,7 @@ Minimumlengte van de vereiste gegevens = subsidiabele populatie + resultaatvenst
 
 >[!NOTE]
 >
-> 30 is het minimumaantal dagen dat vereist is voor de in aanmerking komende bevolking. Als dit niet wordt verstrekt is het gebrek 120 dagen.
+> 30 is het minimumaantal dagen dat vereist is voor de in aanmerking komende bevolking. If this is not provided the default is 120 days.
 
 Voorbeelden:
 
@@ -154,47 +154,47 @@ Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op b
 
 **Voorspeldoel:** Verwacht dat de conversiegevoeligheid van de abonnementen ertoe leidt dat de in aanmerking komende profielen zich vastleggen op een bepaald abonnementsniveau, zoals een standaard- of premieplan.
 
-**Vereiste standaardgebeurtenistypen:**
+**Required standard event types:**
 
-De onderstaande gebeurtenistypen zijn vereist voor een optimale AI-uitvoer van de Klant met dit specifieke voorspellingsdoel. Het is mogelijk om een vereiste gebeurtenis uit te sluiten, afhankelijk van uw voorspellingsdoel, maar het uitsluiten van meerdere gebeurtenissen kan leiden tot slechte resultaten.
+The event types listed below are required for an optimal Customer AI output with this particular prediction goal. Het is mogelijk om een vereiste gebeurtenis uit te sluiten, afhankelijk van uw voorspellingsdoel, maar het uitsluiten van meerdere gebeurtenissen kan leiden tot slechte resultaten.
 
-- bestellen
-- kassa
+- order
+- checkouts
 - aankopen
 - webVisit
-- zoeken
+- search
 
-In dit voorbeeld: `order`, `checkouts`, en `purchases` worden gebruikt om aan te geven dat een abonnement is aangeschaft en het type abonnement.
+In this example, `order`, `checkouts`, and `purchases` are used to indicate that a subscription was purchased and its type.
 
 Voor een accuraat model wordt bovendien aangeraden om een aantal van de beschikbare eigenschappen in het dialoogvenster [gegevenstype abonnement](../../xdm/data-types/subscription.md).
 
-**Aanvullende aanbevolen standaardgebeurtenistypen:**
+**Additional recommended standard event types:**
 
-Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op basis van de complexiteit van uw doel en in aanmerking komende populatie tijdens de configuratie van uw Customer AI-exemplaar. Als de gegevens beschikbaar zijn voor een bepaald gegevenstype, wordt aangeraden dat deze gegevens in het schema worden opgenomen.
+Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op basis van de complexiteit van uw doel en in aanmerking komende populatie tijdens de configuratie van uw Customer AI-exemplaar. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
 ### Scenario 3: Churn op een e-commercewebsite
 
-**Voorspeldoel:** Verwacht de kans dat er geen aankoopgebeurtenis plaatsvindt.
+**Prediction goal:** Predict the likelihood that a purchase event will not occur.
 
 **Vereiste standaardgebeurtenistypen:**
 
-De onderstaande gebeurtenistypen zijn vereist voor een optimale AI-uitvoer van de Klant met dit specifieke voorspellingsdoel. Het is mogelijk om een vereiste gebeurtenis uit te sluiten, afhankelijk van uw voorspellingsdoel, maar het uitsluiten van meerdere gebeurtenissen kan leiden tot slechte resultaten.
+De onderstaande gebeurtenistypen zijn vereist voor een optimale AI-uitvoer van de Klant met dit specifieke voorspellingsdoel. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
 
-- bestellen
-- kassa
+- order
+- checkouts
 - aankopen
 - webVisit
-- zoeken
+- search
 
 **Aanvullende aanbevolen standaardgebeurtenistypen:**
 
-Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op basis van de complexiteit van uw doel en in aanmerking komende populatie tijdens de configuratie van uw Customer AI-exemplaar. Als de gegevens beschikbaar zijn voor een bepaald gegevenstype, wordt aangeraden dat deze gegevens in het schema worden opgenomen.
+Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op basis van de complexiteit van uw doel en in aanmerking komende populatie tijdens de configuratie van uw Customer AI-exemplaar. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
-### Scenario 4: Conversie via e-commerce
+### Scenario 4: Upsell conversion on an e-commerce retail website
 
 **Voorspeldoel:** Verwacht de koopkracht van de populatie die een specifiek product heeft gekocht om een nieuw verwant product te kopen.
 
-**Vereiste standaardgebeurtenistypen:**
+**Required standard event types:**
 
 De onderstaande gebeurtenistypen zijn vereist voor een optimale AI-uitvoer van de Klant met dit specifieke voorspellingsdoel. Het is mogelijk om een vereiste gebeurtenis uit te sluiten, afhankelijk van uw voorspellingsdoel, maar het uitsluiten van meerdere gebeurtenissen kan leiden tot slechte resultaten.
 
@@ -231,11 +231,11 @@ Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op b
 
 **Vereiste standaardgebeurtenistypen:**
 
-De onderstaande gebeurtenistypen zijn vereist voor een optimale AI-uitvoer van de Klant met dit specifieke voorspellingsdoel. Het is mogelijk om een vereiste gebeurtenis uit te sluiten, afhankelijk van uw voorspellingsdoel, maar het uitsluiten van meerdere gebeurtenissen kan leiden tot slechte resultaten.
+De onderstaande gebeurtenistypen zijn vereist voor een optimale AI-uitvoer van de Klant met dit specifieke voorspellingsdoel. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
 
-- bestellen
+- order
 - kassa
-- aankopen
+- purchases
 - webVisit
 - applicationCloses
 - applicationCrashes
@@ -245,25 +245,25 @@ De onderstaande gebeurtenistypen zijn vereist voor een optimale AI-uitvoer van d
 - applicationLaunches
 - applicationUpgrades
 
-In dit voorbeeld: `order`, `checkouts`, en `purchases` worden gebruikt wanneer een mobiele toepassing moet worden aangeschaft.
+In this example, `order`, `checkouts`, and `purchases` are used when a mobile application needs to be  purchased.
 
-**Aanvullende aanbevolen standaardgebeurtenistypen:**
+**Additional recommended standard event types:**
 
-Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op basis van de complexiteit van uw doel en in aanmerking komende populatie tijdens de configuratie van uw Customer AI-exemplaar. Als de gegevens beschikbaar zijn voor een bepaald gegevenstype, wordt aangeraden dat deze gegevens in het schema worden opgenomen.
+Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
-### Scenario 7: Afgerealiseerde transacties (Adobe Audience Manager)
+### Scenario 7: Traits realized (Adobe Audience Manager)
 
 **Voorspeldoel:** Verwacht de neiging om sommige eigenschappen te verwezenlijken.
 
 **Vereiste standaardgebeurtenistypen:**
 
-Als u kenmerken van Adobe Audience Manager wilt gebruiken, moet u een bronverbinding maken met de [Audience Manager-bronaansluiting](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). De bronschakelaar leidt automatisch tot het schema met de juiste gebiedsgroep(en). U hoeft niet handmatig extra gebeurtenistypen toe te voegen om het schema te laten werken met Customer AI.
+Als u kenmerken van Adobe Audience Manager wilt gebruiken, moet u een bronverbinding maken met de [Audience Manager-bronaansluiting](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). The source connector automatically creates the schema with the proper field group(s). U hoeft niet handmatig extra gebeurtenistypen toe te voegen om het schema te laten werken met Customer AI.
 
-Wanneer u een nieuwe klant-AI-instantie configureert, `audienceName` en `audienceID` U kunt een bepaalde eigenschap voor scoring selecteren bij het definiëren van uw doel.
+Wanneer u een nieuwe klant-AI-instantie configureert, `audienceName` en `audienceID` U kunt een bepaalde eigenschap selecteren om te scoren terwijl u uw doel definieert.
 
 ## AI-uitvoergegevens van klant
 
-De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een Real-time dataset van het Profiel van de Klant hebt toegelaten, kunt u inzichten van het Profiel van de Klant in real time in [Segment Builder](../../segmentation/ui/segment-builder.md). Als u geen profiel-Toegelaten dataset hebt, kunt u [De AI-uitvoer van de klant downloaden](./user-guide/download-scores.md) dataset beschikbaar op het data Lake.
+De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). Als u geen profiel-Toegelaten dataset hebt, kunt u [De AI-uitvoer van de klant downloaden](./user-guide/download-scores.md) dataset beschikbaar op het data Lake.
 
 >[!NOTE]
 >
@@ -273,11 +273,11 @@ In de onderstaande tabel worden de verschillende kenmerken beschreven die in de 
 
 | Kenmerk | Beschrijving |
 | ----- | ----------- |
-| Score | De relatieve waarschijnlijkheid voor een klant om het voorspelde doel binnen het bepaalde tijdkader te bereiken. Deze waarde moet niet worden beschouwd als een waarschijnlijkheidspercentage, maar veeleer als de waarschijnlijkheid dat een individu vergeleken wordt met de totale populatie. Deze score varieert van 0 tot 100. |
-| Waarschijnlijkheid | Deze eigenschap is de ware waarschijnlijkheid van een profiel voor het bereiken van het voorspelde doel binnen het bepaalde tijdkader. Bij het vergelijken van outputs over verschillende doelstellingen, wordt geadviseerd dat u waarschijnlijkheid over percentiel of score overweegt. Bij het bepalen van de gemiddelde waarschijnlijkheid in de in aanmerking komende populatie moet altijd rekening worden gehouden met de waarschijnlijkheid, aangezien de waarschijnlijkheid aan de onderkant ligt voor gebeurtenissen die niet vaak voorkomen. Waarden voor de waarschijnlijkheid liggen tussen 0 en 1. |
-| Percentage | Deze waarde biedt informatie over de prestaties van een profiel ten opzichte van andere profielen met een vergelijkbare score. Een profiel met een percentielrang van 99 voor churn geeft bijvoorbeeld aan dat het risico op churning groter is dan 99% van alle andere profielen die zijn gescaureerd. De percentages variëren van 1 tot 100. |
-| Type volheid | Het geselecteerde type buigzaamheid. |
-| Score-datum | De datum waarop de scoring heeft plaatsgevonden. |
+| Score | De relatieve waarschijnlijkheid voor een klant om het voorspelde doel binnen het bepaalde tijdkader te bereiken. Deze waarde moet niet worden beschouwd als een waarschijnlijkheidspercentage, maar veeleer als de waarschijnlijkheid dat een individu vergeleken wordt met de totale populatie. This score ranges from 0 to 100. |
+| Probability | Deze eigenschap is de ware waarschijnlijkheid van een profiel voor het bereiken van het voorspelde doel binnen het bepaalde tijdkader. Bij het vergelijken van outputs over verschillende doelstellingen, wordt geadviseerd dat u waarschijnlijkheid over percentiel of score overweegt. Probability should always be used when determining the average probability across the eligible population, as the probability tends to be on the lower side for events that do not occur frequently. Waarden voor de waarschijnlijkheid liggen tussen 0 en 1. |
+| Percentile | This value provides information regarding the performance of a profile relative to other similarly scored profiles. Een profiel met een percentielrang van 99 voor churn geeft bijvoorbeeld aan dat het risico op churning groter is dan 99% van alle andere profielen die zijn gescaureerd. De percentages variëren van 1 tot 100. |
+| Type volheid | The selected propensity type. |
+| Score-datum | The date on which scoring occurred. |
 | Influentiële factoren | Voorspelde redenen waarom een profiel waarschijnlijk wordt omgezet of afgekapt. Factoren bestaan uit de volgende kenmerken:<ul><li>Code: Het profiel of gedragskenmerk dat de voorspelde score van een profiel positief beïnvloedt. </li><li>Waarde: De waarde van het profiel of gedragskenmerk.</li><li>Belangrijk: Hiermee wordt het gewicht van het profiel of gedragskenmerk op de voorspelde score aangegeven (laag, gemiddeld, hoog)</li></ul> |
 
 ## Volgende stappen {#next-steps}

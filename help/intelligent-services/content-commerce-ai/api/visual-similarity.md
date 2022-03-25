@@ -1,12 +1,11 @@
 ---
 keywords: Visuele gelijkenis;visuele gelijkenis;ccai api
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Visuele gelijkenis in de API voor Inhoud en Handel
 topic-legacy: Developer guide
 description: Wanneer u een afbeelding krijgt met de visuele gelijkenis, worden in de catalogus automatisch visueel vergelijkbare afbeeldingen gevonden.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 2%
@@ -37,7 +36,7 @@ In het volgende verzoek worden visueel vergelijkbare afbeeldingen uit een catalo
 
 >[!CAUTION]
 >
->`analyzer_id` bepaalt welke  [!DNL Sensei Content Framework] wordt gebruikt. Controleer of u de juiste `analyzer_id` hebt voordat u uw verzoek indient. Neem contact op met het AI beta-team van Content and Commerce om uw `analyzer_id` voor deze service te ontvangen.
+>`analyzer_id` bepaalt welke [!DNL Sensei Content Framework] wordt gebruikt. Controleer of u de juiste `analyzer_id` voordat u uw verzoek indient. Neem contact op met het AI bètateam voor Inhoud en Handel om uw `analyzer_id` voor deze service.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,21 +75,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschap | Beschrijving | Verplicht |
 | --- | --- | --- |
-| `analyzer_id` | De [!DNL Sensei] service-id waarin uw verzoek is geïmplementeerd. Deze id bepaalt welke van [!DNL Sensei Content Frameworks] worden gebruikt. Neem voor aangepaste services contact op met het AI-team voor Inhoud en Handel om een aangepaste id in te stellen. | Ja |
+| `analyzer_id` | De [!DNL Sensei] service-id waarin uw verzoek is geïmplementeerd. Deze id bepaalt welke van de [!DNL Sensei Content Frameworks] worden gebruikt. Neem voor aangepaste services contact op met het AI-team voor Inhoud en Handel om een aangepaste id in te stellen. | Ja |
 | `application-id` | De id van de toepassing die u hebt gemaakt. | Ja |
-| `data` | Een array die een JSON-object bevat met elk object in de array die een afbeelding vertegenwoordigt. Elke parameter die als onderdeel van deze array wordt doorgegeven, overschrijft de algemene parameters die buiten de array `data` zijn opgegeven. Alle overige eigenschappen die hieronder in deze tabel worden beschreven, kunnen worden overschreven vanuit `data`. | Ja |
+| `data` | Een array die een JSON-object bevat met elk object in de array die een afbeelding vertegenwoordigt. Alle parameters die als onderdeel van deze array worden doorgegeven, overschrijven de algemene parameters die buiten de `data` array. Alle resterende eigenschappen die hieronder in deze tabel worden beschreven, kunnen van binnenuit worden overschreven `data`. | Ja |
 | `content-id` | De unieke id voor het gegevenselement dat in de reactie wordt geretourneerd. Als dit niet wordt overgegaan, wordt een auto-geproduceerde identiteitskaart toegewezen. | Nee |
-| `content` | De inhoud die door de visuele gelijkenisdienst moet worden geanalyseerd. Als de afbeelding deel uitmaakt van de hoofdtekst van het verzoek, gebruikt u `-F file=@<filename>` in de opdracht Krullen om de afbeelding door te geven, zodat deze parameter een lege tekenreeks blijft. <br> Als de afbeelding een bestand is op S3, geeft u de ondertekende URL door. Wanneer de inhoud deel uitmaakt van de aanvraaginstantie, mag de lijst met gegevenselementen slechts één object bevatten. Wanneer meerdere objecten worden doorgegeven, wordt alleen het eerste object verwerkt. | Ja |
+| `content` | De inhoud die door de visuele gelijkenisdienst moet worden geanalyseerd. Als de afbeelding deel uitmaakt van de aanvraaginstantie, gebruikt u `-F file=@<filename>` in de krullopdracht om de afbeelding door te geven, waarbij deze parameter een lege tekenreeks blijft. <br> Als de afbeelding een bestand is op S3, geeft u de ondertekende URL door. Wanneer de inhoud deel uitmaakt van de aanvraaginstantie, mag de lijst met gegevenselementen slechts één object bevatten. Wanneer meerdere objecten worden doorgegeven, wordt alleen het eerste object verwerkt. | Ja |
 | `content-type` | Gebruikt om erop te wijzen of de input deel van het verzoeklichaam of een ondertekende url voor een S3 emmertje uitmaakt. De standaardwaarde voor deze eigenschap is `inline`. | Nee |
 | `encoding` | De bestandsindeling van de invoerafbeelding. Momenteel kunnen alleen JPEG- en PNG-afbeeldingen worden verwerkt. De standaardwaarde voor deze eigenschap is `jpeg`. | Nee |
-| `threshold` | De drempel van de score (0 tot en met 1) waarboven de resultaten moeten worden geretourneerd. Gebruik de waarde `0` om alle resultaten te retourneren. De standaardwaarde voor deze eigenschap is `0`. | Nee |
-| `top-N` | Het aantal resultaten dat moet worden geretourneerd (mag geen negatief geheel getal zijn). Gebruik de waarde `0` om alle resultaten te retourneren. Wanneer gebruikt in combinatie met `threshold`, is het aantal teruggekeerde resultaten het laagste van één van beide vastgestelde grenzen. De standaardwaarde voor deze eigenschap is `0`. | Nee |
+| `threshold` | De drempel van de score (0 tot en met 1) waarboven de resultaten moeten worden geretourneerd. De waarde gebruiken `0` om alle resultaten te retourneren. De standaardwaarde voor deze eigenschap is `0`. | Nee |
+| `top-N` | Het aantal resultaten dat moet worden geretourneerd (mag geen negatief geheel getal zijn). De waarde gebruiken `0` om alle resultaten te retourneren. Indien gebruikt in combinatie met `threshold`, is het aantal geretourneerde resultaten het laagste van de twee ingestelde limieten. De standaardwaarde voor deze eigenschap is `0`. | Nee |
 | `custom` | Aangepaste parameters die moeten worden doorgegeven. | Nee |
 | `historic-metadata` | Een array waarvan metagegevens kunnen worden doorgegeven. | Nee |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een `response`-array die een `feature_value` en `feature_name` bevat voor elk van de visueel vergelijkbare afbeeldingen in de catalogus.
+Een geslaagde reactie retourneert een `response` array die een `feature_value` en `feature_name` voor elk van de visueel vergelijkbare afbeeldingen in de catalogus.
 
 De volgende visueel vergelijkbare afbeeldingen zijn geretourneerd in de onderstaande voorbeeldreactie:
 
