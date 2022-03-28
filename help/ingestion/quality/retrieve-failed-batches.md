@@ -6,17 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie behandelt stappen voor het ophalen van informatie over een mislukte batch met gebruik van API's voor gegevensinname.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 99f99ad78853236868550d880576b82da2af8878
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
 
 # Mislukte batches ophalen met de API voor gegevenstoegang
 
-Adobe Experience Platform biedt twee methoden voor het uploaden en opnemen van gegevens. U kunt batch-opname gebruiken, waarmee u de gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s) of streaming opname, waardoor u de gegevens in [!DNL Platform] kunt invoegen met streaming eindpunten in real-time.
+Adobe Experience Platform biedt twee methoden voor het uploaden en opnemen van gegevens. U kunt batch-opname gebruiken, waardoor u de gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u de gegevens kunt invoegen op [!DNL Platform] het gebruiken van het stromen eindpunten in echt - tijd.
 
 Deze zelfstudie behandelt stappen voor het ophalen van informatie over een mislukte batch met behulp van [!DNL Data Ingestion] API&#39;s.
 
@@ -24,36 +23,36 @@ Deze zelfstudie behandelt stappen voor het ophalen van informatie over een mislu
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
-- [[!DNL Data Ingestion]](../home.md): De methoden waarmee gegevens kunnen worden verzonden naar  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Data Ingestion]](../home.md): De methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Schema Registry] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke tot de [!DNL Schema Registry], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
+>Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
-- Inhoudstype: `application/json`
+- `Content-Type: application/json`
 
 ### Sample failed batch
 
-Deze zelfstudie gebruikt voorbeeldgegevens met een verkeerd opgemaakte tijdstempel waarmee de waarde van de maand wordt ingesteld op **00**, zoals hieronder wordt weergegeven:
+In deze zelfstudie worden voorbeeldgegevens gebruikt met een verkeerd opgemaakte tijdstempel die instelt dat de waarde van de maand moet worden ingesteld **00**, zoals hieronder weergegeven:
 
 ```json
 {
@@ -95,13 +94,13 @@ GET /batches/{BATCH_ID}/failed
 **Verzoek**
 
 ```shell
-curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed" \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "Cache-Control: no-cache" \
-  -H "Content-Type: application/json" \
-  -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-sandbox-name: {SANDBOX_NAME}
+curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
@@ -135,7 +134,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Met het bovenstaande antwoord kunt u zien welke delen van de batch zijn uitgevoerd en mislukt. In dit antwoord ziet u dat het bestand `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` de mislukte batch bevat.
+Met het bovenstaande antwoord kunt u zien welke delen van de batch zijn uitgevoerd en mislukt. In dit antwoord ziet u dat het bestand `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` bevat de mislukte batch.
 
 ## De mislukte batch downloaden
 
@@ -154,7 +153,7 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 **Verzoek**
 
-Met de volgende aanvraag kunt u het bestand downloaden dat innamefouten had.
+Met de volgende aanvraag kunt u het bestand downloaden met innamefouten.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -186,7 +185,7 @@ Aangezien de vorige opgenomen batch een ongeldige datum-tijd had, wordt de volge
 
 ## Volgende stappen
 
-Na het lezen van deze zelfstudie hebt u geleerd hoe u fouten kunt ophalen uit mislukte batches. Lees voor meer informatie over het in batch opnemen de [batch ingestion developer guide](../batch-ingestion/overview.md). Lees voor meer informatie over streamingopname de zelfstudie [voor het maken van een streamingverbinding](../tutorials/create-streaming-connection.md).
+Na het lezen van deze zelfstudie hebt u geleerd hoe u fouten kunt ophalen uit mislukte batches. Lees voor meer informatie over het gebruik van batch [handleiding voor het ontwikkelen van batch-inhoud](../batch-ingestion/overview.md). Lees voor meer informatie over streaming opname de [een zelfstudie over streamingverbindingen maken](../tutorials/create-streaming-connection.md).
 
 ## Aanhangsel
 
@@ -213,7 +212,7 @@ Deze fout wordt weergegeven als de IMS-organisatie-id ontbreekt in de payload.
 
 ### Ontbrekend XDM-schema
 
-Deze fout wordt getoond als `schemaRef` voor `xdmMeta` mist.
+Deze fout wordt weergegeven als de `schemaRef` voor de `xdmMeta` ontbreekt.
 
 ```json
 {
@@ -228,7 +227,7 @@ Deze fout wordt getoond als `schemaRef` voor `xdmMeta` mist.
 
 ### Ontbrekende bronnaam
 
-Deze fout wordt getoond als `source` in de kopbal zijn `name` mist.
+Deze fout wordt weergegeven als de `source` in de koptekst ontbreekt het `name`.
 
 ```json
 {
@@ -244,7 +243,7 @@ Deze fout wordt getoond als `source` in de kopbal zijn `name` mist.
 
 ### Ontbrekende XDM-entiteit
 
-Deze fout wordt getoond als er geen `xdmEntity` aanwezig is.
+Deze fout wordt weergegeven als er geen `xdmEntity` aanwezig.
 
 ```json
 {
