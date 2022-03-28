@@ -3,9 +3,9 @@ title: Vorm uw DataStream voor het Web SDK van het Experience Platform
 description: 'Leer hoe te om de gegevensstromen te vormen. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Dodes;url Doelen;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
+source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1899'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ In dit document worden de stappen beschreven voor het configureren van een gegev
 
 >[!NOTE]
 >
->Uw organisatie moet voor deze eigenschap worden voorzien om tot het in UI toegang te hebben. Als u geen toegang hebt, gelieve het volgende in te vullen: [formulier](http://adobe.ly/websdkaccess) en wij zullen u de noodzakelijke toegang verlenen.
+>Uw organisatie moet voor deze eigenschap worden voorzien om tot het in UI toegang te hebben. Vul het volgende in [formulier](https://adobe.ly/websdkaccess) om de nodige toegang te vragen.
 
 ## Toegang krijgen tot [!UICONTROL Datastreams] werkruimte
 
@@ -66,7 +66,7 @@ De rest van deze sectie concentreert zich op de stappen om gegevens aan een gese
 
 >[!IMPORTANT]
 >
->Data Prep voor gegevensverzameling wordt momenteel niet ondersteund voor Mobile SDK-implementaties.
+>Data Prep voor gegevensverzameling wordt momenteel niet ondersteund voor mobiele SDK-implementaties.
 
 De Prep van gegevens is de dienst van het Experience Platform die u toestaat om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM). Wanneer het vormen van een Platform-toegelaten gegevensstroom, kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar het Netwerk van de Rand van het Platform.
 
