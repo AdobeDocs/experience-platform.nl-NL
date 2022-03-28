@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 73fe3c2e060dbdd7607ed3b54c5b8e9cca752d8f
+source-git-commit: 6bb452285ea98380617afd13462b4a2b9a8e8b68
 workflow-type: tm+mt
-source-wordcount: '1272'
-ht-degree: 3%
+source-wordcount: '1284'
+ht-degree: 5%
 
 ---
 
@@ -15,54 +15,62 @@ ht-degree: 3%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
+## 28 februari 2022
+
+**Adobe Analytics Extension 1.9.0**
+
+**Bugfixes**:
+
+* Enkele foutopsporingsinstructies zijn verwijderd uit AppMeturement.
+
 ## 29 november 2021
 
-### Adobe Analytics Extension 1.8.8
+**Adobe Analytics Extension 1.8.8**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Bijgewerkte AppMeasurement naar v2.22.3.
 
 ## 16 september 2021
 
-### Adobe Analytics Extension 1.8.7
+**Adobe Analytics Extension 1.8.7**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Bijgewerkte AppMeasurement naar v2.2.2.2.
 * Verwijderd afgekeurd buildInfo.environment
 
 ## 24 augustus 2021
 
-### Adobe Analytics Extension 1.8.6
+**Adobe Analytics Extension 1.8.6**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Bijgewerkt [AppMeasurement naar v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Bijgewerkte fallback linkName om logica van de Activity Map te weerspiegelen in plaats van innerHTML te gebruiken.
 
 ## 6 augustus 2020
 
-### Adobe Analytics Extension 1.8.5
+**Adobe Analytics Extension 1.8.5**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * De onjuiste cookienaam in de instellingen van de AAM module werd ingesteld toen dit veld leeg bleef. Dit is nu gecorrigeerd.
 
-#### Functies
+**Functies**:
 
 * Bijgewerkt [AppMeasurement tot 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * De kleine verandering UI zodat het extra plaatsen nu samengevouwen in een accordeon in plaats van checkbox verschijnt.
 
 ## 2 juni 2020
 
-### Adobe Analytics Extension 1.8.4
+**Adobe Analytics Extension 1.8.4**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Probleem verholpen waarbij de winkelwagengebeurtenissen (prodView, scAdd, scView, enz.) niet werden weergegeven tijdens de vervolgkeuzelijst met gebeurtenissen. Al deze moeten nu selecteerbaar zijn in het vervolgkeuzemenu.
 
-#### Functies
+**Functies**:
 
 * U kunt de activiteitenkaart in de uitbreiding nu uitzetten zonder het moeten douanecode gebruiken. De activiteitenkaart laadt als een afzonderlijke module (ongeveer zoals de AAM module) en u kunt het uitzetten als u wilt.
 * De interface is verbeterd door hiërarchische variabelen en andere opties te minimaliseren.
@@ -70,26 +78,26 @@ ht-degree: 3%
 
 ## 10 maart 2020
 
-### Adobe Analytics Extension 1.8.3
+**Adobe Analytics Extension 1.8.3**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Oplossing van een bug die de regelconfiguratie beïnvloedde die een fout zou werpen wanneer u probeerde om variabelen te plaatsen als u een douanebibliotheek gebruikte en uw rapportsuites niet in Analytics werden gevormd.
 * Bij het maken van een eVar was er een fout die u niet de optie zou geven om te &#39;dupliceren van&#39; een proxy of andersom. Dit is nu opgelost om het gedrag in vorige versies te weerspiegelen.
 
-#### Functies
+**Functies**:
 
 * Bijgewerkt [AppMeasurement tot 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 
 ## 2 maart 2020
 
-### Adobe Analytics Extension 1.8.2
+**Adobe Analytics Extension 1.8.2**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Probleem verholpen waarbij de onjuiste syntaxis werd gebruikt voor numerieke gebeurtenissen en geserialiseerde valuta
 
-#### Functies
+**Functies**:
 
 * Bijgewerkt [AppMeasurement naar 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 * De DIL-bibliotheek in de module Audience Manager is bijgewerkt naar 9.4
@@ -100,55 +108,55 @@ ht-degree: 3%
 
 ## 13 november 2019
 
-### Adobe Analytics Extension 1.8.1
+**Adobe Analytics Extension 1.8.1**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Probleem verholpen waarbij premiumgebeurtenissen en -props niet konden worden opgeslagen.
 
 ## 1 november 2019
 
-### Adobe Analytics Extension 1.8.0
+**Adobe Analytics Extension 1.8.0**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Probleem verholpen waarbij een klein aantal klanten de opties van de rapportsuite in de vervolgkeuzelijst niet kon zien
 * Probleem verholpen waarbij bepaalde variabelen niet correct werden ingesteld bij gebruik van ECID
 
-#### Functies
+**Functies**:
 
 * Hiermee sorteert u gebeurtenissen, regeleinden en gebeurtenissen numeriek in de weergave Extensie
 * Wijzigingen in het achtergrondschema aangebracht ter ondersteuning van Magento-contextgegevens
 
 ## 6 september 2019
 
-### Adobe Analytics Extension 1.7.8
+**Adobe Analytics Extension 1.7.8**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Probleem verholpen waarbij sommige gebruikers de opties van de rapportsuite niet zagen in de vervolgkeuzelijst
 * Probleem verholpen waarbij gebeurtenissen niet correct werden geactiveerd
 
 ## 5 september 2019
 
-### Adobe Analytics Extension 1.7.7
+**Adobe Analytics Extension 1.7.7**
 
-#### Functies
+**Functies**:
 
 * Bijgewerkte AppMeasurement aan 2.17
 * Bijgewerkte module van het Beheer van het Publiek om DIL 9.3 te steunen
 * Bijgewerkte veldbreedten voor meer ruimte
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Het probleem met de instelling opt-in/opt-out is opgelost.
 * Probleem verholpen waarbij variabelen niet correct werden ingesteld bij gebruik van ECID
 
 ## 18 juli 2019
 
-### Adobe Analytics Extension 1.7.6
+**Adobe Analytics Extension 1.7.6**
 
-#### Functies
+**Functies**:
 
 * De Adobe Analytics-extensie is bijgewerkt om DIL 9.2 voor Audience Manager te ondersteunen
 
@@ -157,39 +165,39 @@ ht-degree: 3%
 
 ## 4 juni 2019
 
-### Adobe Analytics Extension 1.7.5
+**Adobe Analytics Extension 1.7.5**
 
-#### Functies
+**Functies**:
 
 * De Adobe Analytics-extensie is bijgewerkt naar [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0) dat een oplossing bevat voor een bekende clearVars-kwestie
 * Een Exchange-koppeling toegevoegd aan de extensie. De Exchange-lijst kan worden bereikt door het vervolgkeuzemenu te selecteren en &#39;&#39;extensie info&#39;&#39; te kiezen
 
-#### Bugfixes
+**Bugfixes**:
 
 * Probleem verholpen in de interface die het onjuiste eval liet zien dat uit een lijst werd geschrapt
 * Oplossing voor een probleem waarvoor een SSL-traceringsserver nodig was toen u meerdere rapportsuites probeerde toe te voegen. Wanneer u meerdere rapportsuites toevoegt, is een trackingserver vereist, maar is het veld SSL-tracking-server optioneel.
 
 ## 15 april 2019
 
-### Adobe Analytics Extension 1.7.4
+**Adobe Analytics Extension 1.7.4**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * Gerolde extensie terug nadat een bug is gevonden in appMeasurement 2.13.0. appMeasurement 2.13.0 veroorzaakte een probleem dat de ECID niet verstuurde. Als u 1.7.3 installeerde, raden we u aan een upgrade naar 1.7.4 uit te voeren om dit probleem te voorkomen. De clearVars wordt uitgevoerd totdat een bijgewerkte versie van appMeasurement wordt uitgebracht.
 
 ## 12 april 2019
 
-### Adobe Analytics Extension 1.7.3
+**Adobe Analytics Extension 1.7.3**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * De Adobe Analytics-extensie is bijgewerkt naar appMeasurement 2.13.0 en bevat een correctie voor een bekend clearVars-probleem.
 
 ## 21 maart 2019
 
-### Adobe Analytics Extension 1.7.2
+**Adobe Analytics Extension 1.7.2**
 
-#### Functies
+**Functies**:
 
 * De Adobe Analytics-extensie is bijgewerkt naar DIL 9.1.
 * De Adobe Analytics-extensie is bijgewerkt naar appMeasurement 2.12.
@@ -198,69 +206,69 @@ ht-degree: 3%
 
 ## 7 maart 2019
 
-### Adobe Analytics Extension 1.7.1
+**Adobe Analytics Extension 1.7.1**
 
-#### Opgeloste problemen
+**Bugfixes**:
 
 * De extensie werd teruggedraaid naar versie 1.6 nadat een bug in versie 1.7 werd gevonden.
 
 ## 11 februari 2019
 
-### Adobe Analytics Extension 1.6
+**Adobe Analytics Extension 1.6**
 
-#### Functies
+**Functies**:
 
 * De Adobe Analytics-extensie voor DIL 9.0 is bijgewerkt en biedt nu ondersteuning voor opt-in.
 * De Adobe Analytics-extensie voor AppMeasurement 2.11 is bijgewerkt om de opt-in te ondersteunen.
 
-#### Bugfixes
+**Bugfixes**:
 
 * Oplossing voor een conflict met Prototype JS. De extensie Analytics ondersteunt nu standaard prototype.js-bibliotheken.
 
 ## 9 november 2018
 
-### Adobe Analytics Extension 1.5.1
+**Adobe Analytics Extension 1.5.1**
 
-#### **Bugfixes**
+**Bugfixes**:
 
 * De DIL-module is gedowngraded naar 7.0 om een probleem op te lossen dat problemen veroorzaakte met analysatiebakens die niet werden geactiveerd
 
 ## 5 november 2018
 
-### Adobe Analytics Extension 1.5
+**Adobe Analytics Extension 1.5**
 
-#### **Functies**
+**Functies**:
 
 * De Adobe Analytics-extensie is bijgewerkt om DIL 8.0 in Audience Manager te ondersteunen
 * Scheidte het veld &quot;Serialize from value&quot; in twee velden, &quot;Event ID&quot; en &quot;Event Value&quot;. Hiermee wordt het probleem verholpen dat een waarde toewijst in plaats van een gebeurtenis met serienummering te coderen
    * Opmerking: als u het huidige veld gebruikt om een id toe te voegen met een tekenreeks (bijvoorbeeld Event7=3:abc123) u zult uw input moeten bijwerken om identiteitskaart op het gebied van de &quot;identiteitskaart van de Gebeurtenis&quot;te weerspiegelen
 
-#### **Bugfixes**
+**Bugfixes**:
 
 * Probleem verholpen waarbij de valutacode niet correct kon worden gevuld
 
 ## 11 oktober 2018
 
-### Adobe Analytics Extension 1.4
+**Adobe Analytics Extension 1.4**
 
-#### **Functies**
+**Functies**:
 
 * De naam van het volgende cookie is gemigreerd naar de extensieconfiguratie.
 
-#### **Opgeloste problemen**
+**Bugfixes**:
 
 * Probleem verholpen, zodat ingestelde variabelen niet vastlopen wanneer geen trackerProperties-object beschikbaar is.
 
 ## 5 juni 2018
 
-### Adobe Analytics Extension 1.3
+**Adobe Analytics Extension 1.3**
 
-#### **Functies**
+**Functies**:
 
 * Bijgewerkte Adobe Analytics-extensie voor ondersteuning van AppMeasurement 2.9.
 * De functie &#39;Tracker globaal toegankelijk maken&#39; in de Adobe Analytics-extensie is toegevoegd, waardoor de tracker wereldwijd onder het bereik van `windows.s`.
 
-#### **Opgeloste problemen**
+**Bugfixes**:
 
 * Het probleem waarbij de lijstweergave werd hersteld bij het terugkeren vanuit de detailweergave, is opgelost.
 * Enkele fouten verholpen om het laden van bronnen in de revisiekiezer te verbeteren
@@ -268,22 +276,22 @@ ht-degree: 3%
 
 ## 20 maart 2018
 
-### Adobe Analytics Extension 1.2
+**Adobe Analytics Extension 1.2**
 
-#### **Functies**
+**Functies**:
 
 * Werkt AppMeasurement.js tot 2.8.0 bij
 * Voegt steun voor server-kant door:sturen toe
 
 ## 8 februari 2018
 
-### Adobe Analytics Extension 1.1
+**Adobe Analytics Extension 1.1**
 
-#### **Functies**
+**Functies**:
 
 * AppMeasurement is bijgewerkt naar versie 2.6
 * De geïnitialiseerde analysecontracker wordt nu weergegeven via een gedeelde module in de Adobe Experience Platform-tagextensie, zodat andere extensies code kunnen bevatten om ermee te werken.
 
-#### **Bugfixes**
+**Bugfixes**:
 
 * Correctie van een fout in de Adobe Analytics-extensie die ervoor zorgde dat &quot;Fout, ontbrekende ID van rapportsuite in initialisatie van AppMeasurement&quot; werd weergegeven in de browserconsole.
