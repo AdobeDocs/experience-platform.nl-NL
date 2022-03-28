@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
+source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '757'
 ht-degree: 5%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 5%
    - Marketing automatiseren {#marketing-automation}
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
       - [Mailchimp-connector](connectors/marketing-automation/mailchimp.md)
+      - [Oracle Eloqua-aansluiting](connectors/marketing-automation/oracle-eloqua.md)
       - [Salesforce-Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Betalingen {#payments}
       - [PayPal-connector](connectors/payments/paypal.md)
@@ -141,6 +142,7 @@ ht-degree: 5%
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp-campagne](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp-leden](tutorials/api/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -236,6 +238,7 @@ ht-degree: 5%
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp-campagnes](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp-leden](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
