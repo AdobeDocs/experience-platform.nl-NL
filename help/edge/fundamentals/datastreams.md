@@ -3,9 +3,9 @@ title: Vorm uw DataStream voor het Web SDK van het Experience Platform
 description: 'Leer hoe te om de gegevensstromen te vormen. '
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Dodes;url Doelen;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1908'
 ht-degree: 1%
 
 ---
@@ -50,15 +50,25 @@ Als u deze gegevensstroom voor gebruik in Experience Platform vormt en SDK van h
 
 ![Basisconfiguratie voor een gegevensstroom](../images/datastreams/configure.png)
 
-De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Selecteer **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
+Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om de gegevensstroom te vormen.
+
+![Geavanceerde configuratieopties](../images/datastreams/advanced-options.png)
+
+| Instelling | Beschrijving |
+| --- | --- |
+| [!UICONTROL Geo Location] | Hiermee bepaalt u of GPS-opzoekingen worden uitgevoerd op basis van het IP-adres van de gebruiker. De standaardinstelling **[!UICONTROL None]** schakelt GPS-opzoekingen uit terwijl de **[!UICONTROL City]** Met deze instelling krijgt u GPS-coördinaten met twee decimalen. |
+| [!UICONTROL First Party ID Cookie] | Als deze instelling is ingeschakeld, geeft het Edge Network de opdracht naar een opgegeven cookie te verwijzen wanneer u een [apparaat-id van eerste partij](../identity/first-party-device-ids.md)in plaats van deze waarde op te zoeken in het identiteitsoverzicht.<br><br>Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen. |
+| [!UICONTROL Third Party ID Sync] | De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Als deze instelling is ingeschakeld, kunt u opgeven welke container met id-syncs wordt uitgevoerd voor deze gegevensstroom. |
+
+De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Als u de SDK van Mobile gebruikt of uw gegevensstroom voor Platform anders niet configureert, selecteert u **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
 
 ### Gegevensvoorvoegsel voor gegevensverzameling {#data-prep}
 
 >[!IMPORTANT]
 >
->Data Prep voor gegevensverzameling wordt momenteel niet ondersteund voor mobiele SDK-implementaties.
+>Data Prep voor gegevensverzameling wordt momenteel niet ondersteund voor Mobile SDK-implementaties.
 
-De Prep van gegevens is de diensten van het Experience Platform die u toestaan om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM). Wanneer het vormen van een Platform-toegelaten gegevensstroom, kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar het Netwerk van de Rand van het Platform.
+De Prep van gegevens is de dienst van het Experience Platform die u toestaat om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM). Wanneer het vormen van een Platform-toegelaten gegevensstroom, kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar het Netwerk van de Rand van het Platform.
 
 De subsecties hieronder behandelen de basisstappen voor het in kaart brengen van uw gegevens binnen de UI van de Inzameling van Gegevens. Raadpleeg de volgende documentatie voor uitgebreide informatie over alle mogelijkheden van Data Prep, inclusief transformatiefuncties voor berekende velden:
 
@@ -199,16 +209,6 @@ Deze service bepaalt of en hoe gegevens worden verzonden naar [gebeurtenis doors
 >[!NOTE]
 >
 >U kunt **[!UICONTROL Manually enter IDs]** om in de bezit en omgevingsnamen in plaats van het gebruiken van dropdown menu&#39;s te typen.
-
-### [!UICONTROL Third Party ID Sync] instellingen
-
-De sectie met de id van derden is de enige sectie die altijd is ingeschakeld. Er zijn twee beschikbare instellingen: &quot;[!UICONTROL Third Party ID Sync Enabled]&quot; en &quot;[!UICONTROL Third Party ID Sync Container ID]&quot;.
-
-![De sectie van de Synchronisatie van identiteitskaart van de derde van de configuratie UI](../images/datastreams/third-party-id-sync-config.png)
-
-| Instelling | Beschrijving |
-| --- | --- |
-| [!UICONTROL Third Party ID Sync Container ID] | De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Met deze optie bepaalt u welke container met ID-syncs wordt uitgevoerd voor deze gegevensstroom. |
 
 ## Volgende stappen
 
