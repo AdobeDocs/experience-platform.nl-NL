@@ -5,9 +5,9 @@ title: Overzicht van de API voor batchverwerking
 topic-legacy: overview
 description: Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1387'
 ht-degree: 4%
 
 ---
@@ -151,7 +151,7 @@ U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw best
 
 >[!INFO]
 >
->In de onderstaande voorbeelden worden de [Apache Parquet](https://parquet.apache.org/documentation/latest/) bestandsindeling. Een voorbeeld met de JSON-bestandsindeling vindt u in het dialoogvenster [handleiding voor het ontwikkelen van batch-inhoud](api-overview.md).
+>In de onderstaande voorbeelden worden de [Apache Parquet](https://parquet.apache.org/docs/) bestandsindeling. Een voorbeeld met de JSON-bestandsindeling vindt u in het dialoogvenster [handleiding voor het ontwikkelen van batch-inhoud](api-overview.md).
 
 ### Kleine bestandsupload
 

@@ -5,9 +5,9 @@ title: Scores downloaden in Attribution AI
 topic-legacy: Downloading scores
 description: Dit document dient als richtlijn voor het downloaden van scores voor Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ Dit document dient als richtlijn voor het downloaden van scores voor Attribution
 
 ## Aan de slag
 
-Met Attribution AI kunt u scores downloaden in de Parquet-bestandsindeling. Deze zelfstudie vereist dat u de sectie met downloadscores in de [Aan de slag](./getting-started.md)-handleiding hebt gelezen en voltooid.
+Met Attribution AI kunt u scores downloaden in de Parquet-bestandsindeling. Deze zelfstudie vereist dat u het gedeelte met downloadscores voor Attribution AI in het dialoogvenster [aan de slag](./getting-started.md) hulplijn.
 
 Bovendien, om tot scores voor Attribution AI toegang te hebben, moet u een de dienstinstantie hebben met een succesvolle looppasstatus beschikbaar. Als u een nieuwe service-instantie wilt maken, gaat u naar de [Gebruikershandleiding voor Attribution AI](./user-guide.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
 
 ## Uw gegevensset-id zoeken {#dataset-id}
 
-Binnen uw de dienstinstantie voor Attribution AI inzichten, klik *Meer acties* dropdown in de top-juiste navigatie dan uitgezocht **[!UICONTROL Access scores]**.
+Klik in uw serviceversie voor Attribution AI-inzichten op de knop *Meer handelingen* vervolgkeuzelijst in de navigatie rechtsboven en selecteer **[!UICONTROL Access scores]**.
 
 ![meer acties](./images/download-scores/more-actions.png)
 
@@ -34,7 +34,7 @@ Er wordt een nieuw dialoogvenster weergegeven met een koppeling naar de document
 
 ## Batch-id ophalen {#retrieve-your-batch-id}
 
-Gebruikend uw dataset identiteitskaart van de vorige stap, moet u een vraag aan de Catalogus API maken om een partijidentiteitskaart terug te winnen. Voor deze API-aanroep worden aanvullende queryparameters gebruikt om de laatste succesvolle batch te retourneren in plaats van een lijst met batches die bij uw organisatie horen. Om extra partijen terug te keren, verhoog het aantal voor de `limit` vraagparameter tot de gewenste hoeveelheid u wenst om te zijn teruggekeerd. Voor meer informatie over de types van vraagparameters beschikbaar, bezoek de gids over [het filtreren van de gegevens van de Catalogus gebruikend vraagparameters](../../catalog/api/filter-data.md).
+Gebruikend uw dataset identiteitskaart van de vorige stap, moet u een vraag aan de Catalogus API maken om een partijidentiteitskaart terug te winnen. Voor deze API-aanroep worden aanvullende queryparameters gebruikt om de laatste succesvolle batch te retourneren in plaats van een lijst met batches die bij uw organisatie horen. Als u extra batches wilt retourneren, verhoogt u het aantal voor de optie `limit` de vraagparameter aan de gewenste hoeveelheid u wenst om te zijn teruggekeerd. Voor meer informatie over de types van vraagparameters beschikbaar, bezoek de gids op [catalogusgegevens filteren met behulp van queryparameters](../../catalog/api/filter-data.md).
 
 **API-indeling**
 
@@ -58,11 +58,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In dit voorbeeld is de waarde Key aan het geretourneerde object de batch-id `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieer de batch-id die u wilt gebruiken in de volgende API-aanroep.
+Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In dit voorbeeld is de waarde Key voor het geretourneerde object de batch-id `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieer de batch-id die u wilt gebruiken in de volgende API-aanroep.
 
 >[!NOTE]
 >
-> In de volgende reactie is het object `tags` gereed voor leesbaarheid.
+> Het volgende antwoord heeft de `tags` object geredigeerd voor leesbaarheid.
 
 ```json
 {
@@ -113,7 +113,7 @@ Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In d
 
 ## De volgende API-aanroep ophalen met uw batch-id {#retrieve-the-next-api-call-with-your-batch-id}
 
-Zodra u uw partij-identiteitskaart hebt, kunt u een nieuw verzoek van de GET aan `/batches` indienen. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
+Als je eenmaal een batch-id hebt, kun je een nieuwe aanvraag indienen bij `/batches`. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
 
 **API-indeling**
 
@@ -123,7 +123,7 @@ GET batches/{BATCH_ID}/files
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BATCH_ID}` | De batch-id die is opgehaald in de vorige stap [haalt uw batch-id](#retrieve-your-batch-id) op. |
+| `{BATCH_ID}` | De batch-id die is opgehaald in de vorige stap [batch-id ophalen](#retrieve-your-batch-id). |
 
 **Verzoek**
 
@@ -139,7 +139,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die een object `_links` bevat. Binnen het `_links` voorwerp is een `href` met een nieuwe API vraag als zijn waarde. Kopieer deze waarde om door te gaan naar de volgende stap.
+Een geslaagde reactie retourneert een payload die een `_links` object. Binnen de `_links` object is een `href` met een nieuwe API-aanroep als waarde. Kopieer deze waarde om door te gaan naar de volgende stap.
 
 ```json
 {
@@ -167,7 +167,7 @@ Een geslaagde reactie retourneert een payload die een object `_links` bevat. Bin
 
 ## Bestanden ophalen {#retrieving-your-files}
 
-Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw verzoek van de GET om uw dossierfolder terug te winnen.
+Met de `href` Voer een nieuwe aanvraag in om de bestandsmap op te halen.
 
 **API-indeling**
 
@@ -177,7 +177,7 @@ GET files/{DATASETFILE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | De dataSetFile-id wordt geretourneerd in de `href`-waarde van de [vorige stap](#retrieve-the-next-api-call-with-your-batch-id). Het is ook toegankelijk in de `data` serie onder het objecten type `dataSetFileId`. |
+| `{DATASETFILE_ID}` | De id dataSetFile wordt geretourneerd in het dialoogvenster `href` waarde van de [vorige stap](#retrieve-the-next-api-call-with-your-batch-id). Het is ook toegankelijk in `data` array onder het objecttype `dataSetFileId`. |
 
 **Verzoek**
 
@@ -218,15 +218,15 @@ De reactie bevat een gegevensarray die één item kan hebben, of een lijst met b
 | `_links.self.href` | De aanvraag-URL van de GET die wordt gebruikt om een bestand in uw map te downloaden. |
 
 
-Kopieer de waarde `href` voor een willekeurig bestandsobject in de array `data` en ga vervolgens verder met de volgende stap.
+Kopieer de `href` waarde voor elk bestandsobject in het dialoogvenster `data` -array en ga vervolgens verder met de volgende stap.
 
 ## Bestandsgegevens downloaden
 
-Als u de bestandsgegevens wilt downloaden, vraagt u een GET aan om de `"href"`-waarde die u in de vorige stap hebt gekopieerd [bestanden ophalen](#retrieving-your-files).
+Als u uw bestandsgegevens wilt downloaden, vraagt u een GET naar de `"href"` waarde die u in de vorige stap hebt gekopieerd [ophalen, bestanden](#retrieving-your-files).
 
 >[!NOTE]
 >
->Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. In het volgende aanvraagvoorbeeld wordt `--output {FILENAME.FILETYPE}` gebruikt.
+>Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. Het volgende aanvraagvoorbeeld gebruikt `--output {FILENAME.FILETYPE}`.
 
 **API-indeling**
 
@@ -236,7 +236,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | De dataSetFile-id wordt geretourneerd in de `href`-waarde van een [vorige stap](#retrieve-the-next-api-call-with-your-batch-id). |
+| `{DATASETFILE_ID}` | De id dataSetFile wordt geretourneerd in het dialoogvenster `href` waarde van een [vorige stap](#retrieve-the-next-api-call-with-your-batch-id). |
 | `{FILE_NAME}` | De naam van het bestand. |
 
 **Verzoek**
@@ -260,11 +260,11 @@ Het antwoord downloadt het bestand dat u in de huidige map hebt aangevraagd. In 
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-De gedownloade scores hebben de Parquet-indeling en hebben een [!DNL Spark]-shell of een Parquet-lezer nodig om de scores weer te geven. Voor het bekijken van onbewerkte scores kunt u [Apache Parquet-gereedschappen](https://parquet.apache.org/documentation/latest/) gebruiken. Met de gereedschappen Parquet kunt u de gegevens analyseren met [!DNL Spark].
+De gedownloade scores hebben de Parquet-indeling en hebben een [!DNL Spark]-shell of Parquet reader om de scores te bekijken. Voor weergave met onbewerkte score kunt u [Gereedschappen voor Apache Parquet](https://parquet.apache.org/docs/). Met de parketgereedschappen kunt u de gegevens analyseren met [!DNL Spark].
 
 ## Volgende stappen
 
-In dit document worden de stappen beschreven die zijn vereist voor het downloaden van scores van Attribution AI. Voor meer informatie over de score gaat u naar de [documentatie voor AIR-invoer en -uitvoer](./input-output.md).
+In dit document worden de stappen beschreven die zijn vereist voor het downloaden van scores van Attribution AI. Ga voor meer informatie over de score naar de [In- en uitvoer van AI](./input-output.md) documentatie.
 
 ## Muziek openen met Snowflake
 
@@ -288,11 +288,11 @@ Zodra u uw geloofsbrieven en URL hebt, kunt u de modellijsten vragen, die door t
 
 ### Schema zoeken in Snowflake
 
-Meld u aan bij Snowflake met de opgegeven referenties. Klik op het tabblad **Werkbladen** in de hoofdnavigatie linksboven en navigeer naar de databasemap in het linkerdeelvenster.
+Meld u aan bij Snowflake met de opgegeven referenties. Klik op de knop **Werkbladen** in de hoofdnavigatie linksboven, navigeert u naar de databasemap in het linkerdeelvenster.
 
 ![Werkbladen en navigatie](./images/download-scores/edited_snowflake_1.png)
 
-Klik vervolgens op **Schema** in de rechterbovenhoek van het scherm. Bevestig in de pop-up die wordt weergegeven dat u de juiste database hebt geselecteerd. Klik vervolgens op het vervolgkeuzemenu *Schema* en selecteer een van de weergegeven schema&#39;s. U kunt rechtstreeks zoeken vanuit de scoretabellen die onder het geselecteerde schema staan.
+Klik op Volgende **Schema selecteren** in de rechterbovenhoek van het scherm. Bevestig in de pop-up die wordt weergegeven dat u de juiste database hebt geselecteerd. Klik op de knop *Schema* en selecteer een van de vermelde schema&#39;s. U kunt rechtstreeks zoeken vanuit de scoretabellen die onder het geselecteerde schema staan.
 
 ![zoeken naar een schema](./images/download-scores/edited_snowflake_2.png)
 
@@ -300,7 +300,7 @@ Klik vervolgens op **Schema** in de rechterbovenhoek van het scherm. Bevestig in
 
 Met uw Snowflake-referenties kunt u een verbinding tot stand brengen tussen PowerBI Desktop- en Snowflake-databases.
 
-Typ eerst onder het vak *Server* de URL van de Snowflake. Typ vervolgens onder *Winkel* &quot;XSMALL&quot;. Typ vervolgens uw gebruikersnaam en wachtwoord.
+Ten eerste, onder de *Server* typt u de URL van de Snowflake. Volgende, onder *Warehouse*, typt u &quot;XSMALL&quot;. Typ vervolgens uw gebruikersnaam en wachtwoord.
 
 ![voorbeeld van POWERBI](./images/download-scores/powerbi-snowflake.png)
 

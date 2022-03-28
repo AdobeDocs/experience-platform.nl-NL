@@ -5,21 +5,20 @@ title: Een gegevensset maken in de API
 topic-legacy: developer guide
 description: In dit document wordt beschreven hoe u een gegevenssetobject maakt in de API voor catalogusservice.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 # Een gegevensset maken in de API
 
-Als u een gegevensset wilt maken met de [!DNL Catalog]-API, moet u de `$id`-waarde weten van het [!DNL Experience Data Model]-schema (XDM) waarop de gegevensset wordt gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een verzoek van de POST aan het `/datasets` eindpunt in [!DNL Catalog] API te doen.
+Om een dataset tot stand te brengen gebruikend [!DNL Catalog] API, u moet de `$id` waarde van de [!DNL Experience Data Model] (XDM) schema waarop de dataset zal worden gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een verzoek van de POST aan het `/datasets` in de [!DNL Catalog] API.
 
 >[!NOTE]
 >
->In dit document wordt alleen beschreven hoe u een gegevenssetobject maakt in [!DNL Catalog]. Raadpleeg de volgende [zelfstudie](../datasets/create.md) voor de volledige stappen voor het maken, vullen en controleren van een gegevensset.
+>In dit document wordt alleen beschreven hoe u een gegevenssetobject maakt in [!DNL Catalog]. Voor volledige stappen op om, te creëren bevolken en te controleren een dataset, gelieve te verwijzen naar het volgende [zelfstudie](../datasets/create.md).
 
 **API-indeling**
 
@@ -51,16 +50,16 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De naam van de gegevensset die moet worden gemaakt. |
-| `schemaRef.id` | De URI `$id`-waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
-| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie. |
+| `schemaRef.id` | De URI `$id` waarde voor het XDM schema de dataset zal worden gebaseerd op. |
+| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de XDM API-handleiding voor meer informatie. |
 
 >[!NOTE]
 >
->In dit voorbeeld wordt de bestandsindeling [Apache Parquet](https://parquet.apache.org/documentation/latest/) gebruikt voor de eigenschap `containerFormat`. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de handleiding [voor het ontwikkelen van batch-indelingen](../../ingestion/batch-ingestion/api-overview.md).
+>In dit voorbeeld wordt het [Apache Parquet](https://parquet.apache.org/docs/) bestandsindeling voor `containerFormat` eigenschap. Een voorbeeld met de JSON-bestandsindeling vindt u in het dialoogvenster [handleiding voor het ontwikkelen van batch-inhoud](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat bestaat uit een array met de id van de nieuwe dataset in de notatie `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat bestaat uit een array met de id van de nieuwe dataset in de indeling `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien.
 
 ```JSON
 [
