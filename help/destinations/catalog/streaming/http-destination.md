@@ -3,9 +3,9 @@ keywords: streaming;
 title: HTTP API-verbinding
 description: Met de HTTP API-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1369'
 ht-degree: 0%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 U kunt ook [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) aan opstelling een integratie en verzendt de profielgegevens van het Experience Platform naar een eindpunt van HTTP.
+
+## IP adres lijst van gewenste personen {#ip-address-allowlist}
+
+Om klanten&#39; veiligheid en nalevingsvereisten te ontmoeten, verstrekt het Experience Platform een lijst van statische IPs die u voor de bestemming van HTTP kunt lijsten van gewenste personen API. Zie [IP adres lijst van gewenste personen voor het stromen bestemmingen](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
 
 ## Verbinden met de bestemming {#connect-destination}
 
@@ -97,10 +100,6 @@ Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbes
 ### Doelkenmerken {#attributes}
 
 In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, raadt Adobe u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
-
-## Productoverwegingen {#product-considerations}
-
-Het Experience Platform stroomt uit geen gegevens aan eindpunten van HTTP door een vaste reeks statische IPs. Daarom kan Adobe geen lijst van statische IPs verstrekken die u lijst van gewenste personen voor de bestemming van HTTP API kunt.
 
 ## Exportgedrag profiel {#profile-export-behavior}
 
