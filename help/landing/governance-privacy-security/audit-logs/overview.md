@@ -2,18 +2,14 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met controlelogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
+source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '736'
 ht-degree: 2%
 
 ---
 
-# Controlelogboeken (bèta)
-
->[!IMPORTANT]
->
->De functie voor auditlogs in Adobe Experience Platform is momenteel in bèta en uw organisatie heeft er wellicht nog geen toegang toe. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
+# Controlelogboeken
 
 Om de transparantie en zichtbaarheid van de in het systeem uitgevoerde activiteiten te vergroten, kunt u in Adobe Experience Platform gebruikersactiviteiten voor verschillende services en mogelijkheden controleren in de vorm van &quot;auditlogs&quot;. Deze logboeken vormen een auditspoor dat met het oplossen van problemenkwesties op Platform kan helpen, en uw zaken helpen effectief aan het beleid en de regelgevende vereisten van het collectieve gegevensbeheer voldoen.
 
@@ -27,13 +23,18 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 
 | Resource | Acties |
 | --- | --- |
-| [Gegevensset](../../../catalog/datasets/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen voor [Klantprofiel in realtime](../../../profile/home.md)</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Gegevensset](../../../catalog/datasets/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen voor [Klantprofiel in realtime](../../../profile/home.md)</li><li>Uitschakelen voor profiel</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen voor profiel</li></ul> |
 | [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Veldgroep](../../../xdm/schema/composition.md#field-group) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Gegevenstype](../../../xdm/schema/composition.md#data-type) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Herstellen</li><li>Verwijderen</li></ul> |
-| [Bestemming](../../../destinations/home.md) | <ul><li>Activeren</li></ul> |
+| [Bestemming](../../../destinations/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>Gegevensset activeren</li><li>Gegevensset verwijderen</li><li>Profiel activeren</li><li>Profiel verwijderen</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Maken</li><li>Verwijderen</li><li>Segment activeren</li><li>Segment verwijderen</li></ul> |
+| [Samenvoegbeleid](../../../profile/merge-policies/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Berekend kenmerk](../../../profile/computed-attributes/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Productprofiel](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Account (Adobe)](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 
 ## Toegang tot auditlogboeken
 
@@ -47,7 +48,7 @@ U kunt controlelogboeken voor verschillende eigenschappen van het Experience Pla
 
 ![Het dashboard voor controlelogboeken](../../images/audit-logs/audits.png)
 
-Het systeem geeft alleen auditlogboeken van het laatste jaar weer. Logboeken die deze limiet overschrijden, worden automatisch uit het systeem verwijderd.
+Auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kunt u slechts voor een maximumperiode van 365 dagen terugkeren.
 
 Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven.
 
@@ -55,7 +56,12 @@ Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te g
 
 ### Controllerlogboeken filteren
 
-Selecteer het trechter-pictogram (![Filterpictogram](../../images/audit-logs/icon.png)) om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken.
+>[!NOTE]
+>
+>Aangezien dit een nieuwe eigenschap is, gaan de getoonde gegevens slechts terug tot maart 2022. Afhankelijk van de geselecteerde bron kunnen eerdere gegevens beschikbaar zijn vanaf januari 2022.
+
+
+Selecteer het trechter-pictogram (![Filterpictogram](../../images/audit-logs/icon.png)) om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de verschillende geselecteerde filters.
 
 ![Filters](../../images/audit-logs/filters.png)
 
@@ -65,8 +71,9 @@ De volgende filters zijn beschikbaar voor controlegebeurtenissen in UI:
 | --- | --- |
 | [!UICONTROL Category] | Gebruik het vervolgkeuzemenu om de weergegeven resultaten te filteren op [categorie](#category). |
 | [!UICONTROL Action] | Filteren op handeling. Alleen op dit moment [!UICONTROL Create] en [!UICONTROL Delete] acties kunnen worden gefilterd. |
+| [!UICONTROL User] | Voer de volledige gebruikersnaam in (bijvoorbeeld `johndoe@acme.com`) om te filteren op gebruiker. |
 | [!UICONTROL Status] | Filteren op de vraag of de handeling is toegestaan (voltooid) of geweigerd vanwege een gebrek aan [toegangsbeheer](../../../access-control/home.md) machtigingen. |
-| [!UICONTROL Date] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. |
+| [!UICONTROL Date] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. De gegevens kunnen met een raadplegingsperiode van 90 dagen worden uitgevoerd (bijvoorbeeld, 2021-12-15 aan 2022-03-15). Dit kan per gebeurtenistype verschillen. |
 
 Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** om alle filters te verwijderen.
 
@@ -90,6 +97,10 @@ Alle acties die u in UI kunt uitvoeren kunnen ook worden gedaan gebruikend API v
 
 Raadpleeg het volgende voor meer informatie over het beheren van auditlogs voor activiteiten in Adobe Admin Console [document](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## Volgende stappen
+## Volgende stappen en extra bronnen
 
 Deze gids besprak hoe te om controlelogboeken in Experience Platform te beheren. Raadpleeg de documentatie over voor meer informatie over hoe u de activiteiten van Platforms kunt controleren. [Waarnembaarheidsinzichten](../../../observability/home.md) en [controle gegevensinvoer](../../../ingestion/quality/monitor-data-ingestion.md).
+
+Bekijk de volgende video om uw inzicht in auditlogs in Experience Platform te versterken:
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
