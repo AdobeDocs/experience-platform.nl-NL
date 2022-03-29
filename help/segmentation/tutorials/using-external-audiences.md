@@ -5,9 +5,9 @@ title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 077622e891f4c42ce283e2553d6a2983569d3584
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
+>[!NOTE]
+>
+>Als u aangepaste naamruimten wilt gebruiken voor externe doelgroepen, moet u een ondersteuningsticket maken. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+
 ## Een schema maken voor de metagegevens van het segment
 
 Nadat u een naamruimte voor identiteiten hebt gemaakt, moet u een nieuw schema maken voor het segment dat u wilt maken.
@@ -72,7 +76,7 @@ Dit schema is nu ingeschakeld voor Profiel, waarbij de primaire identificatie is
 
 Na het vormen van het schema, zult u een dataset voor de segmentmeta-gegevens moeten tot stand brengen.
 
-Om een dataset tot stand te brengen, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#create). U zult willen volgen **[!UICONTROL Create dataset from schema]** met het eerder gemaakte schema.
+Om een dataset tot stand te brengen, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#create). U moet de **[!UICONTROL Create dataset from schema]** met het eerder gemaakte schema.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -82,13 +86,70 @@ Na het creëren van de dataset, volg de instructies in [gebruikershandleiding vo
 
 ## Gebruikersgegevens instellen en importeren
 
-Met toegelaten dataset, kunnen de gegevens nu naar Platform of door UI of het gebruiken van Experience Platform APIs worden verzonden. Als u deze gegevens in het Platform wilt invoeren, moet u een streamingverbinding maken.
+Met toegelaten dataset, kunnen de gegevens nu naar Platform of door UI of het gebruiken van Experience Platform APIs worden verzonden. U kunt deze gegevens via een batch- of streamingverbinding invoeren.
+
+### Gegevens opnemen met een batchverbinding
+
+Als u een batchverbinding wilt maken, volgt u de instructies in het algemene [UI-gids voor het uploaden van lokale bestanden](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Voor een volledige lijst van beschikbare bronnen die u kunt gebruiken binnenste gegevens met, te lezen gelieve [overzicht van bronnen](../../sources/home.md).
+
+### Gegevens verzamelen met behulp van een streamingverbinding
 
 Als u een streamingverbinding wilt maken, volgt u de instructies in het dialoogvenster [API-zelfstudie](../../sources/tutorials/api/create/streaming/http.md) of de [UI-zelfstudie](../../sources/tutorials/ui/create/streaming/http.md).
 
 Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke streamingeindpunt waarnaar u de gegevens kunt verzenden. Als u wilt weten hoe u gegevens naar deze eindpunten verzendt, leest u de [zelfstudie over streaming recordgegevens](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
 ![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+
+## Structuur van metagegevens voor het publiek
+
+Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu aan het Platform toevoegen.
+
+Hieronder ziet u een voorbeeld van de metagegevens van de externe doelgroep:
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Audience"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{SEGMENT_ID}",
+            "description": "Sample description",
+            "identityMap": {
+                "{IDENTITY_NAMESPACE}": [{
+                    "id": "{}"
+                }]
+            },
+            "segmentName" : "{SEGMENT_NAME}",
+            "segmentStatus": "ACTIVE",
+            "version": "1.0"
+        }
+    }
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `schemaRef` | Het schema **moet** verwijs naar het eerder gecreeerd schema voor de segmentmeta-gegevens. |
+| `datasetId` | De gegevensset-id **moet** verwijs naar de eerder gecreeerde dataset voor het schema u enkel creeerde. |
+| `xdmEntity._id` | De id **moet** verwijs naar zelfde segment identiteitskaart u als uw extern publiek gebruikt. |
+| `xdmEntity.identityMap` | Deze sectie **moet** bevat het identiteitslabel dat wordt gebruikt bij het maken van de eerder gemaakte naamruimte. |
+| `{IDENTITY_NAMESPACE}` | Dit is het label van de eerder gemaakte naamruimte voor identiteit. Als u bijvoorbeeld uw naamruimte ExternalAudience hebt aangeroepen, gebruikt u die als de sleutel van de array. |
+| `segmentName` | De naam van het segment waarop u het externe publiek wilt segmenteren. |
 
 ## Segmenten samenstellen met behulp van geïmporteerde soorten publiek
 
@@ -99,3 +160,105 @@ Zodra het geïmporteerde publiek is ingesteld, kunnen deze worden gebruikt als o
 ## Volgende stappen
 
 Nu u externe doelgroepen in uw segmenten kunt gebruiken, kunt u de Bouwer van het Segment gebruiken om segmenten tot stand te brengen. Als u wilt leren hoe u segmenten maakt, leest u de [zelfstudie over het maken van segmenten](./create-a-segment.md).
+
+## Aanhangsel
+
+Naast het gebruiken van ingevoerde externe publieksmeta-gegevens en het gebruiken van hen voor het creëren van segmenten, kunt u externe segmentlidmaatschap aan Platform ook invoeren.
+
+### Een extern bestemmingsschema voor een segmentlidmaatschap instellen
+
+Als u wilt beginnen met het samenstellen van een schema, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door de **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schemas. Selecteer **[!UICONTROL XDM Individual Profile]**.
+
+![](../images/tutorials/external-audiences/create-schema-profile.png)
+
+Nu het schema is gecreeerd, zult u de het gebiedsgroep van het segmentlidmaatschap als deel van het schema moeten toevoegen. Selecteer [!UICONTROL Segment Membership Details], gevolgd door [!UICONTROL Add field groups].
+
+![](../images/tutorials/external-audiences/segment-membership-details.png)
+
+Zorg er bovendien voor dat het schema is gemarkeerd voor **[!UICONTROL Profile]**. Hiervoor moet u een veld markeren als de primaire identiteit.
+
+![](../images/tutorials/external-audiences/external-segment-profile.png)
+
+### De gegevensset instellen
+
+Na het creëren van uw schema, zult u een dataset moeten creëren.
+
+Om een dataset tot stand te brengen, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#create). U moet de **[!UICONTROL Create dataset from schema]** met het eerder gemaakte schema.
+
+![](../images/tutorials/external-audiences/select-schema.png)
+
+Na het creëren van de dataset, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#enable-profile) om deze dataset voor het Profiel van de Klant in real time toe te laten.
+
+![](../images/tutorials/external-audiences/dataset-profile.png)
+
+## Externe gegevens voor publieksleden instellen en importeren
+
+Met toegelaten dataset, kunnen de gegevens nu naar Platform of door UI of het gebruiken van Experience Platform APIs worden verzonden. U kunt deze gegevens via een batch- of streamingverbinding invoeren.
+
+### Gegevens opnemen met een batchverbinding
+
+Als u een batchverbinding wilt maken, volgt u de instructies in het algemene [UI-gids voor het uploaden van lokale bestanden](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Voor een volledige lijst van beschikbare bronnen die u kunt gebruiken binnenste gegevens met, te lezen gelieve [overzicht van bronnen](../../sources/home.md).
+
+### Gegevens verzamelen met behulp van een streamingverbinding
+
+Als u een streamingverbinding wilt maken, volgt u de instructies in het dialoogvenster [API-zelfstudie](../../sources/tutorials/api/create/streaming/http.md) of de [UI-zelfstudie](../../sources/tutorials/ui/create/streaming/http.md).
+
+Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke streamingeindpunt waarnaar u de gegevens kunt verzenden. Als u wilt weten hoe u gegevens naar deze eindpunten verzendt, leest u de [zelfstudie over streaming recordgegevens](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+
+![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+
+## Segmentlidmaatschapsstructuur
+
+Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu aan het Platform toevoegen.
+
+Hieronder ziet u een voorbeeld van de downloadbelasting voor het externe publiek:
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Audience Membership"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{UNIQUE_ID}",
+            "description": "Sample description",
+            "{TENANT_NAME}": {
+                "identities": {
+                    "{SCHEMA_IDENTITY}": "sample-id"
+                }
+            },
+            "personId" : "sample-name",
+            "segmentMembership": {
+                "{IDENTITY_NAMESPACE}": {
+                    "{EXTERNAL_IDENTITY}": {
+                        "status": "realized",
+                        "lastQualificationTime": "2022-03-14T:00:00:00Z"
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `schemaRef` | Het schema **moet** verwijs naar het eerder gecreeerd schema voor de gegevens van het segmentlidmaatschap. |
+| `datasetId` | De gegevensset-id **moet** verwijs naar de eerder gecreeerde dataset voor het lidmaatschapsschema u enkel creeerde. |
+| `xdmEntity._id` | Een geschikte id die wordt gebruikt om de record in de gegevensset op unieke wijze te identificeren. |
+| `{TENANT_NAME}.identities` | Deze sectie wordt gebruikt om de het gebiedsgroep van douaneidentiteiten met de gebruikers te verbinden u eerder invoerde. |
+| `segmentMembership.{IDENTITY_NAMESPACE}` | Dit is het label van de eerder gemaakte naamruimte voor aangepaste identiteit. Als u bijvoorbeeld uw naamruimte ExternalAudience hebt aangeroepen, gebruikt u die als de sleutel van de array. |
