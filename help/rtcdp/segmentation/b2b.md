@@ -2,9 +2,9 @@
 title: De Gevallen van het Gebruik van de segmentatie voor Echte - tijdCDP B2B Uitgave
 description: Een overzicht van de diverse beschikbare Echte - tijdCDP B2B de gebruiksgevallen van de Uitgave.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Dit document bevat voorbeelden van segmentdefinities in Real-time CDP B2B Editio
 >
 >De kenmerken die vereist zijn voor deze segmentatieuse-gevallen zijn alleen beschikbaar voor Real-time Customer Data Platform B2B Edition-klanten. Als u Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [segmentatieoverzicht](./segmentation-overview.md) in plaats daarvan.
 
-## Vereisten
+## Vereisten {#prerequisites}
 
 Voordat u de segmentatiekenmerken voor B2B-klassen kunt gebruiken, moet u de volgende stappen uitvoeren:
 
@@ -28,7 +28,7 @@ Voordat u de segmentatiekenmerken voor B2B-klassen kunt gebruiken, moet u de vol
 
 Als aan deze vereisten is voldaan, kunt u deze kenmerken combineren voor algemene B2B-gebruiksgevallen.
 
-## Aan de slag
+## Aan de slag {#getting-started}
 
 Zodra de unieschema&#39;s voor de B2B-klassen relaties hebben vastgesteld en zijn gebruikt om gegevens in te voeren, worden hun kenmerken beschikbaar gesteld in de linkerspoorlijn van de Segment Builder.
 
@@ -54,52 +54,58 @@ Raadpleeg de [schema&#39;s in Real-time Customer Data Platform B2B Edition-docum
 
 De onderstaande gebruiksgevallen bevatten informatie over de klassen die worden gebruikt om relaties tussen de verschillende schema&#39;s tot stand te brengen om deze resultaten te bereiken. Deze voorbeelden kunnen worden gebruikt om u te helpen uw eigen segmenten tot stand brengen.
 
-## Voorbeelden van verschillende gebruiksgevallen
+## Voorbeelden van gebruiksgevallen van verschillende segmentaties {#use-cases}
 
 De volgende gebruiksgevallen zijn beschikbaar voor segmentatie met de B2B Edition. Elk voorbeeld bevat een beschrijving van wat het segment doet en een beschrijving van de klassen die zijn gebruikt om deze te maken. De geleverde afbeeldingen markeren het bestandspad in het dialoogvenster [!UICONTROL Attributes] zijspoor dat de structuur van het schema weerspiegelt. De [!UICONTROL Segment properties] rechts van het scherm bevat een uitsplitsing van de kenmerken van het segment.
 
-### Voorbeeld 1
+### Voorbeeld 1: Zoek naar &quot;besluitvormers&quot; voor B2B-mogelijkheden {#find-decision-maker}
 
 Vind alle mensen die de &quot;Beslissingsmaker&quot;van om het even welke kans zijn. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] en de [!UICONTROL XDM Business Opportunity Person Relation] klasse.
 
 ![UI die voorbeeld 1 montages toont](../assets/segmentation/example-1.png)
 
-### Voorbeeld 2
+### Voorbeeld 2: B2B-profielen zoeken die zijn toegewezen aan mogelijkheden boven een bepaald dollarbedrag {#find-opportunities-amount}
 
 Zoek alle mensen die rechtstreeks zijn toegewezen aan kansen waarvan het opportuniteitsbedrag hoger is dan het opgegeven bedrag ($ 1 miljoen). Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Opportunity Person Relation] klasse, en [!UICONTROL XDM Business Opportunity] klasse.
 
 ![UI die voorbeeld 2 montages toont](../assets/segmentation/example-2.png)
 
-### Voorbeeld 3
+### Voorbeeld 3: B2B-profielen zoeken die zijn toegewezen aan mogelijkheden per locatie {#find-opportunities-location}
 
 Zoek alle personen die rechtstreeks zijn toegewezen aan kansen waar de account zich op een bepaalde locatie bevindt (Canada). Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Opportunity Person Relation] klasse, [!UICONTROL XDM Business Opportunity] klasse, en [!UICONTROL XDM Business Account] klasse.
 
 ![UI die voorbeeld 3 montages toont](../assets/segmentation/example-3.png)
 
-### Voorbeeld 4
+### Voorbeeld 4: Zoek naar &quot;besluitvormers&quot; voor mogelijkheden door de industrie en het bladergedrag {#find-industry-browsing-behavior}
 
 Vind alle mensen die een &quot;Beslissingsmaker&quot;van om het even welke kans zijn waar de rekening in de &quot;Financiën&quot;industrie is, en bezocht de het tarief pagina in de laatste drie dagen. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Opportunity Person Relation] klasse, [!UICONTROL XDM Business Opportunity] klasse, en [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM ExperienceEvent] klasse.
 
 ![UI die voorbeeld 4 montages toont](../assets/segmentation/example-4.png)
 
-### Voorbeeld 5
+### Voorbeeld 5: B2B-profielen zoeken voor mogelijkheden per afdelingsnaam en opportuniteitsbedrag {#find-department-opportunity-amount}
 
 Vind alle mensen die in een afdeling van het Personeel (HR) werken en met om het even welke rekening verwant zijn die minstens één open kans heeft die het bepaalde bedrag ($1 miljoen) of meer waard is. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM Business Opportunity] klasse.
 
 ![UI die voorbeeld 5 montages toont](../assets/segmentation/example-5.png)
 
-### Voorbeeld 6
+### Voorbeeld 6: B2B-profielen zoeken op basis van functie- en jaarrekeninginkomsten {#find-by-job-title-and-revenue}
 
 Zoek alle personen van wie de functie Vice President is en die verbonden zijn met om het even welke rekening met jaarlijkse inkomsten van het bepaalde bedrag ($100 miljoen) of meer, en hebben de prijsstellingspagina minstens driemaal bezocht in de afgelopen maand. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM ExperienceEvent] klasse.
 
 ![UI die voorbeeld 6 montages toont](../assets/segmentation/example-6.png)
 
-### Voorbeeld 7
+### Voorbeeld 7: Zoek naar &#39;besluitvormers&#39; op opportuniteitsstatus en bladergedrag {#find-by-opportunity-status-and-browsing-behavior}
 
 Zoek alle mensen die een &quot;Beslissingsmaker&quot;van om het even welke gesloten-verloren kans zijn, en bezocht de het tarief pagina in de vorige week. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Opportunity Person Relation] klasse, [!UICONTROL XDM Business Opportunity] klasse, en [!UICONTROL XDM ExperienceEvent] klasse.
 
 ![UI die voorbeeld 7 montages toont](../assets/segmentation/example-7.png)
 
-## Volgende stappen
+### Voorbeeld 8: Gerelateerde accounts gebruiken om het segmentatiebereik uit te breiden {#related-accounts}
+
+Zoek alle mensen die werken in een afdeling Personeelszaken (HR) en die verwant zijn aan om het even welke rekening *of een van de aan de rekening gerelateerde rekeningen* dat minstens één open kans heeft ter waarde van het gegeven bedrag ( $ 1 miljoen) of meer. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM Business Opportunity] klasse.
+
+![UI die segmentatie voor verwante rekeningen toont](../assets/segmentation/segmentation-related-accounts.png)
+
+## Volgende stappen {#next-steps}
 
 Na het lezen van dit overzicht, hebt u nu een inzicht in de segmentatiemogelijkheden die beschikbaar gebruikend CDP In real time, B2B Uitgave zijn. Voor meer informatie over de Segmenteringsdienst, gelieve te lezen [Segmenteringsdocumentatie](../../segmentation/home.md).

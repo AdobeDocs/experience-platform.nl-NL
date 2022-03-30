@@ -3,9 +3,9 @@ keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbe
 title: Gebruikersgids voor accountprofiel
 description: Door het gebruik van accountprofielen kunt u met Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1376'
 ht-degree: 0%
 
 ---
@@ -20,21 +20,21 @@ Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze
 
 Als u meer wilt weten over de manier waarop accountprofielen worden gemaakt als onderdeel van de B2B-workflow, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md).
 
-## Accountprofielen zoeken
+## Accountprofielen zoeken {#browse-account-profiles}
 
 Als u door accountprofielen wilt bladeren, selecteert u eerst **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie.
 
-![](images/b2b-account-browse.png)
+![Profielen selecteren in linkernavigatie](images/b2b-account-browse.png)
 
 Op de **[!UICONTROL Browse]** kunt u accountprofielen verkennen aan de hand van een account-id van een verbonden onderneming of door de brongegevens rechtstreeks in te voeren.
 
-![](images/b2b-account-browse-by.png)
+![Gebruik account-id om profielen te verkennen](images/b2b-account-browse-by.png)
 
-### Bladeren op [!UICONTROL Connected enterprise source]
+### Bladeren op [!UICONTROL Connected enterprise source] {#browse-by-connected-enterprise-source}
 
 Selecteer **[!UICONTROL Connected enterprise source]** van de **[!UICONTROL Browse by]** en vervolgens een verbonden bron kiezen met de selectieknop naast het dialoogvenster **[!UICONTROL Source]** veld.
 
-![](images/b2b-account-browse.png)
+![Door accountprofielen bladeren naar een verbonden ondernemingsbron](images/b2b-account-browse.png)
 
 Hierdoor wordt het **[!UICONTROL Select source]** , waarin u een bron kunt selecteren op basis van de verbindingen die uw organisatie tot stand heeft gebracht.
 
@@ -44,7 +44,7 @@ Hierdoor wordt het **[!UICONTROL Select source]** , waarin u een bron kunt selec
 
 Raadpleeg voor meer informatie over het verbinden van bedrijfsbronnen de [overzicht van bronnen](../sources/sources-overview.md).
 
-![](images/b2b-account-select-source.png)
+![Bronworkflow selecteren](images/b2b-account-select-source.png)
 
 U kunt een bron kiezen door het keuzerondje naast de naam van de verbinding te selecteren en vervolgens **[!UICONTROL Select]** om terug te keren naar de [!UICONTROL Browse] tab.
 
@@ -54,11 +54,11 @@ Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account ID]** met b
 >
 >Voor Marketo-account-id&#39;s zijn er twee mogelijke accounttabellen waarnaar kan worden verwezen. Daarom moet u een specifieke syntaxis gebruiken om ervoor te zorgen dat u de juiste account weergeeft.
 >
->De meest voorkomende, standaardsyntaxis is de Marketo-account-id die wordt toegevoegd door `.mkto_org` (bijvoorbeeld `1234567.mkto_org`). Marketo Account-Based Marketing-klanten kunnen aanvullende waarden hebben die u kunt vinden met de Marketo-account-id die u hebt toegevoegd door `.mkto_account`. Neem contact op met uw Marketo-beheerder als u niet zeker weet welke syntaxis u moet gebruiken.
+>De meest voorkomende, standaardsyntaxis is de Marketo-account-id die wordt toegevoegd door `.mkto_org` (bijvoorbeeld `1234567.mkto_org`). Marketo Account-Based Marketing-klanten kunnen aanvullende waarden vinden met de Marketo-account-id die is toegevoegd door `.mkto_account`. Neem contact op met uw Marketo-beheerder als u niet zeker weet welke syntaxis u moet gebruiken.
 
-![](images/b2b-account-browse-id.png)
+![Selectie van account-id](images/b2b-account-browse-id.png)
 
-### Bladeren op [!UICONTROL Others]
+### Bladeren op [!UICONTROL Others] {#browse-by-others}
 
 In real time CDP, steunt de Uitgave B2B de capaciteit om een directe raadpleging uit te voeren door u toe te staan om een te gaan **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account ID]** voor een account dat u wilt bekijken. Door de bronnaam en -instantie rechtstreeks in te voeren, geeft u de context op die Experience Platform nodig heeft om de juiste accountprofielgegevens te zoeken en weer te geven.
 
@@ -68,9 +68,9 @@ Een ander voorbeeld zou kunnen zijn dat u een transformatie op de gegevens uitvo
 
 Selecteer **[!UICONTROL Others]** van de **[!UICONTROL Browse by]** vervolgkeuzelijst, voert u vervolgens een **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account ID]** voor de account die u wilt bekijken.
 
-![](images/b2b-account-browse-adhoc.png)
+![Bladeren door anderen](images/b2b-account-browse-adhoc.png)
 
-## Accountprofieldetails weergeven
+## Accountprofieldetails weergeven {#view-account-profile-details}
 
 Nadat u de **[!UICONTROL Browse]** om een accountprofiel te zoeken, selecteert u de **[!UICONTROL Profile ID]** opent de **[!UICONTROL Detail]** voor het accountprofiel. De profielgegevens die worden weergegeven op het tabblad **[!UICONTROL Detail]** tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Dit omvat accountdetails zoals basiskenmerken en gegevens over sociale media.
 
@@ -80,19 +80,19 @@ De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewij
 >
 >Er is een vergelijkbare functionaliteit beschikbaar voor klantprofielen en er is een stapsgewijze handleiding gemaakt met instructies voor het toevoegen en verwijderen van kenmerken, het wijzigen van het formaat van deelvensters, enzovoort. Lees de [handleiding voor het aanpassen van profieldetails](../../profile/ui/profile-customization.md) voor meer informatie.
 
-![](images/b2b-account-details.png)
+![Accountprofieldetails weergeven](images/b2b-account-details.png)
 
 U kunt aanvullende gegevens met betrekking tot de account weergeven door een andere beschikbare tabbladen te selecteren. Deze lusjes omvatten attributen, mensen, en het kansen lusje dat open en gesloten kansen met betrekking tot de rekening over uw ondernemingssystemen toont. Raadpleeg de volgende secties voor meer informatie over elk tabblad.
 
-## Tabblad Kenmerken
+## Tabblad Kenmerken {#attributes-tab}
 
 De **[!UICONTROL Attributes]** worden alle recordgegevens weergegeven die betrekking hebben op de account. Dit omvat kenmerkgegevens die afkomstig zijn van meerdere bronnen die samen zijn samengevoegd om één weergave van de account te vormen.
 
 U kunt de gegevens niet alleen in een lijst weergeven, maar u kunt ook de zoekbalk gebruiken om te zoeken naar specifieke kenmerken of om de recordgegevens als JSON weer te geven.
 
-![](images/b2b-account-attributes.png)
+![Tabblad Kenmerken](images/b2b-account-attributes.png)
 
-## Het tabblad Personen
+## Het tabblad Personen {#people-tab}
 
 De **[!UICONTROL People]** bevat een lijst met individuele personen die aan het account zijn gekoppeld. Deze mensen kunnen contacten en lood van verschillende ondernemingssystemen zijn die door verschillende teams binnen uw organisatie worden beheerd, maar in CDP in real time, B2B Uitgave worden zij samen voorgesteld als één enkele lijst toelatend u om een holistische mening van uw rekeningscontacten te zien.
 
@@ -102,9 +102,9 @@ De **[!UICONTROL People]** bevat een lijst met individuele personen die aan het 
 
 Naast het tonen van u een momentopname van informatie voor het contact, omvat elke vermelde persoon ook een **[!UICONTROL Profile ID]**, wat een klikbare verbinding is die u toestaat om het Profiel van de Klant in real time voor dat individu te onderzoeken. Voor meer informatie over het bekijken van individuele klantenprofielen met betrekking tot uw rekeningen, gelieve te bezoeken gelieve de gids voor [bladeren profielen in Echte - tijd CDP, B2B Uitgave](../profile/profile-browse.md).
 
-![](images/b2b-account-people.png)
+![Het tabblad Personen](images/b2b-account-people.png)
 
-## Tabblad Kansen
+## Tabblad Kansen {#opportunities-tab}
 
 De **[!UICONTROL Opportunities]** bevat informatie over open en afgesloten mogelijkheden met betrekking tot de account. Deze kansen kunnen in Experience Platform van veelvoudige bronnen worden opgenomen, nochtans in real time CDP, maakt B2B Uitgave het voor marketers gemakkelijk om al deze kansen samen op één plaats te zien.
 
@@ -114,4 +114,20 @@ De **[!UICONTROL Opportunities]** bevat informatie over open en afgesloten mogel
 
 Elke kans bevat informatie zoals de naam van de kans, de hoeveelheid kansen, het werkgebied en of de kans open, gesloten, gewonnen of verloren is.
 
-![](images/b2b-account-opportunities.png)
+![Tabblad Accountmogelijkheden](images/b2b-account-opportunities.png)
+
+## Tabblad Verwante accounts {#related-accounts-tab}
+
+De **[!UICONTROL Related accounts]** bevat informatie over andere accounts die mogelijk gerelateerd zijn aan de account waarin u bladert. Voor uitgebreide informatie over de functionaliteit leest u de [overzicht van verwante accounts](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+
+>[!NOTE]
+>
+>* Een groep Verwante accounts kan maximaal 30 accountprofielen hebben. Als er meer dan 30 accountprofielen met elkaar zijn gevonden, worden deze willekeurig in meerdere groepen opgedeeld, elk met niet meer dan 30 leden. De groep Verwante accounts van een accountprofiel bevat altijd zichzelf.
+>* De [!UICONTROL Related accounts] wordt momenteel een lijst weergegeven met maximaal 25 verwante accounts die zijn gekoppeld aan het account waarin u bladert. Dit is een beperking die in een toekomstige update zal worden aangepakt. Ondanks deze UI-beperking worden bij gebruik van verwante accounts in segmentdefinities voor groepen van 30 gerelateerde accountprofielen alle profielen gebruikt voor het opgeven van doelen.
+
+
+Elke verwante rekening omvat informatie zoals de identiteitskaart en de naam van het rekeningsprofiel, zijn de sleutel van de rekeningsbron, en verdere informatie met betrekking tot homepage, adres, ouderrekening, telefoon, industrie, en jaarlijkse opbrengst.
+
+![Tabblad Verwante accounts](images/b2b-account-related-accounts.png)
+
+U kunt de verwante accounts in deze lijst gebruiken voor segmentatiedoeleinden. Zie een [segmenteringsvoorbeeld](/help/rtcdp/segmentation/b2b.md#related-account) om te begrijpen hoe te om verwante rekeningen te gebruiken om uw bereik in segmentdefinities uit te breiden.
