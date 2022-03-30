@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
+source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
 workflow-type: tm+mt
-source-wordcount: '2224'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Profiles count trend]](#profiles-count-trend)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Single Identity Profiles]](#single-identity-profiles)
+* [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
+* [[!UICONTROL Unsegmented Profiles] Trend](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -162,6 +166,30 @@ Voor meer informatie over profielfragmenten begint u met het lezen van de sectie
 Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL Single Identity Profiles] {#single-identity-profiles}
+
+De [!UICONTROL Single Identity Profiles] widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn. Het aantal profielen wordt gegenereerd op basis van de gegevens in de meest recente momentopname.
+
+![Widget Single Identity Profiles.](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL Unsegmented Profiles] {#unsegmented-profiles}
+
+De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Het wijst ook op de kans om profielen uit te sluiten die geen adequate ROI verstrekken.
+
+![De widget Niet-gesegmenteerde profielen.](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
+
+De [!UICONTROL Unsegmented Profiles Trend] widget geeft een illustratie van de lijngrafiek voor het aantal profielen die niet aan om het even welk segment over een bepaalde periode in bijlage zijn. De trend van profielen die niet aan om het even welk segment verbonden zijn kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld in de y-as en de tijd op de x-as.
+
+![De trendwidget voor niet-gesegmenteerde profielen.](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL Unsegmented Profiles by Identity] (#unsegmented-profiles-by-identity)
+
+De [!UICONTROL Unsegmented Profiles by Identity] widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden in een staafdiagram weergegeven, zodat ze gemakkelijk kunnen worden vergeleken.
+
+![De widget Niet-gesegmenteerde profielen op basis van identiteit.](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ## (bèta) Profielefficiëntiewidgets {#profile-efficacy-widgets}
 
