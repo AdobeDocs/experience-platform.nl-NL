@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen in real-time aan uw klanten te leveren.
-source-git-commit: c53482763a98946543907ea96df1a1080ce78beb
+source-git-commit: 520405601dccc649b983da2b8f999f3862dd140b
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '235'
 ht-degree: 7%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 7%
          * [Overzicht](./governance-privacy-security/consent/iab/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
       * [De SDK van het Web Platform integreren om toestemmings- en voorkeursgegevens te verwerken](./governance-privacy-security/consent/sdk.md)
-   * Controlelogboeken (bèta) {#audit-logs}
+   * Controlelogboeken {#audit-logs}
       * [Overzicht](./governance-privacy-security/audit-logs/overview.md)
 * [Het gebruiksdashboard voor licenties](license-usage-dashboard.md)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
