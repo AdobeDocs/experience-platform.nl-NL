@@ -5,9 +5,9 @@ title: Groep met schemavelden maken en bewerken in de gebruikersinterface
 description: Leer hoe u groepen met schemavelden maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 716250b8bcfa1b2d9c868aa80b3122da401553b9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
@@ -54,11 +54,7 @@ Als u het schema hebt geopend in de editor, kunt u beginnen [velden toevoegen aa
 
 ## Velden toevoegen aan een veldgroep {#add-fields}
 
->[!NOTE]
->
->Deze sectie richt zich op het toevoegen van velden aan aangepaste veldgroepen. Voor informatie over het toevoegen van aangepaste velden aan standaardveldgroepen raadpleegt u de [UI-hulplijn voor schema&#39;s](./schemas.md#custom-fields-for-standard-groups).
-
-Als u velden wilt toevoegen aan een aangepaste veldgroep in het dialoogvenster [!DNL Schema Editor]selecteert u eerst de naam van de veldgroep in het linkerspoor en selecteert u vervolgens de **plus (+)** op het canvas naast de naam van het schema.
+Als u velden wilt toevoegen aan een veldgroep in het dialoogvenster [!DNL Schema Editor]selecteert u eerst de naam van de veldgroep in het linkerspoor en selecteert u vervolgens de **plus (+)** op het canvas naast de naam van het schema.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 

@@ -5,10 +5,10 @@ title: XDM-velden definiëren in de gebruikersinterface
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 08002616450259aded0cc53046472f10ce0a9bb9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 2%
+source-wordcount: '1256'
+ht-degree: 3%
 
 ---
 
@@ -26,30 +26,25 @@ Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie
 
 Als u nieuwe XDM-velden in de gebruikersinterface wilt definiëren, moet u eerst een schema openen in het dialoogvenster [!DNL Schema Editor]. Afhankelijk van welke schema&#39;s momenteel beschikbaar zijn in de [!DNL Schema Library]kunt u [een nieuw schema maken](../resources/schemas.md#create) of [een bestaand schema selecteren om te bewerken](../resources/schemas.md#edit).
 
-Zodra u [!DNL Schema Editor] op het canvas worden besturingselementen voor het toevoegen of bewerken van velden weergegeven. Deze besturingselementen worden naast de naam van het schema weergegeven, evenals alle velden van het objecttype die zijn gedefinieerd onder de geselecteerde klasse of veldgroep.
+Zodra u [!DNL Schema Editor] open, gebruik de linkerspoorlijn om de klasse of de gebiedsgroep te selecteren die u gebieden voor wilt bepalen. Als de bron een aangepaste bron is die door uw organisatie is gedefinieerd, verschijnen er besturingselementen voor het toevoegen of bewerken van velden op het canvas. Deze besturingselementen worden naast de naam van het schema weergegeven, evenals alle velden van het objecttype die zijn gedefinieerd onder de geselecteerde klasse of veldgroep.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!WARNING]
+>[!NOTE]
 >
->Als u een veld probeert toe te voegen aan een object dat wordt geleverd door een standaardveldgroep, wordt die veldgroep geconverteerd naar een aangepaste veldgroep en is de oorspronkelijke veldgroep niet meer beschikbaar. Zie de sectie over [velden toevoegen aan standaardveldgroepen](../resources/schemas.md#custom-fields-for-standard-groups) in de gids van schema&#39;s UI voor meer informatie.
+>Als de klasse of de gebiedsgroep u selecteert een kernmiddel is dat door Adobe wordt verstrekt, kan het niet worden uitgegeven en daarom zullen de hierboven getoonde controles niet verschijnen. Als het schema waaraan u velden wilt toevoegen, is gebaseerd op een basis-XDM-klasse en geen aangepaste veldgroepen bevat, kunt u [een nieuwe veldgroep maken](../resources/field-groups.md#create) om in plaats daarvan aan het schema toe te voegen.
 
 Als u een nieuw veld aan de bron wilt toevoegen, selecteert u de optie **plus (+)** naast de naam van het schema op het canvas of naast het veld voor het objecttype dat u wilt definiëren onder.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-Afhankelijk van het feit of u een veld rechtstreeks aan een schema of aan de deel-klasse en -veldgroepen toevoegt, variëren de vereiste stappen voor het toevoegen van het veld. De rest van dit document richt zich op hoe te om de eigenschappen van een gebied ongeacht te vormen waar dat gebied in het schema verschijnt. Voor meer informatie over de verschillende manieren dat de gebieden aan een schema kunnen worden toegevoegd, verwijs naar de volgende secties in de gids van schema&#39;s UI:
+## Een veld definiëren voor een bron {#define}
 
-* [Velden toevoegen aan veldgroepen](../resources/schemas.md#add-fields)
-* [Velden rechtstreeks aan een schema toevoegen](../resources/schemas.md#add-individual-fields)
-
-## De eigenschappen van een veld definiëren {#define}
-
-Na het selecteren van **plus (+)** pictogram, a **[!UICONTROL New field]** verschijnt in het canvas, dat binnen een voorwerp wordt gevestigd dat aan uw unieke huurderID (getoond zoals `_tenantId` in het onderstaande voorbeeld). Alle aangepaste velden die aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten te voorkomen met andere velden van door Adobe verschafte klassen en veldgroepen.
+Na het selecteren van **plus (+)** pictogram, a **[!UICONTROL New field]** verschijnt in het canvas, dat binnen een wortel-vlakke voorwerp wordt gevestigd dat aan uw unieke huurdersidentiteitskaart wordt genoemd (getoond zoals `_tenantId` in het onderstaande voorbeeld). Alle velden die via aangepaste klassen en veldgroepen aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten met andere velden van door Adobe verschafte klassen en veldgroepen te voorkomen.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-In de rechtertrein onder **[!UICONTROL Field properties]** kunt u de details van het nieuwe veld configureren. Voor elk veld is de volgende informatie vereist:
+In de rechtertrein onder **[!UICONTROL Field properties]** kunt u de details van de nieuwe velden configureren. Voor elk veld is de volgende informatie vereist:
 
 | Field, eigenschap | Beschrijving |
 | --- | --- |

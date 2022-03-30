@@ -5,9 +5,9 @@ title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 933f2537b686b019251dd178a7f06876d7ee28c5
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '2768'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Als u een bestaand schema wilt bewerken, selecteert u de optie **[!UICONTROL Bro
 >
 >Met de zoek- en filtermogelijkheden van de werkruimte kunt u het schema gemakkelijker vinden. Zie de handleiding op [XDM-bronnen verkennen](../explore.md) voor meer informatie .
 
-Nadat u een schema hebt geselecteerd, [!DNL Schema Editor] wordt weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [veldgroepen toevoegen](#add-field-groups) naar het schema (of [afzonderlijke velden toevoegen](#add-individual-fields) van deze groepen), [weergavenamen van velden bewerken](#display-names), of [bestaande aangepaste veldgroepen bewerken](./field-groups.md#edit) als het schema om het even welk gebruikt.
+Nadat u een schema hebt geselecteerd, [!DNL Schema Editor] wordt weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [veldgroepen toevoegen](#add-field-groups) op het schema, [weergavenamen van velden bewerken](#display-names), of [bestaande aangepaste veldgroepen bewerken](./field-groups.md#edit) als het schema om het even welk gebruikt.
 
 ## Veldgroepen toevoegen aan een schema {#add-field-groups}
 
@@ -95,130 +95,6 @@ Nadat u de veldgroepen hebt gekozen, selecteert u **[!UICONTROL Add field groups
 De [!DNL Schema Editor] verschijnt weer terwijl de velden die door de veldgroep worden opgegeven, op het canvas worden weergegeven.
 
 ![](../../images/ui/resources/schemas/field-groups-added.png)
-
-Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u optioneel [bestaande velden verwijderen](#remove-fields) of [Nieuwe aangepaste velden toevoegen](#add-fields) naar deze groepen, afhankelijk van uw behoeften.
-
-### Velden verwijderen die zijn toegevoegd uit veldgroepen {#remove-fields}
-
-Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u alle velden verwijderen die u niet nodig hebt.
-
->[!NOTE]
->
->Het verwijderen van velden uit een veldgroep heeft alleen invloed op het schema waaraan wordt gewerkt en heeft geen invloed op de veldgroep zelf. Als u velden in één schema verwijdert, zijn deze velden nog steeds beschikbaar in alle andere schema&#39;s waarin dezelfde veldgroep wordt gebruikt.
-
-In het volgende voorbeeld wordt de standaardveldgroep **[!UICONTROL Demographic Details]** is toegevoegd aan een schema. Eén veld verwijderen, zoals `taxId`selecteert u het veld op het canvas en selecteert u vervolgens **[!UICONTROL Remove]** in het rechterspoor.
-
-![Eén veld verwijderen](../../images/ui/resources/schemas/remove-single-field.png)
-
-Als er meerdere velden zijn die u wilt verwijderen, kunt u de veldgroep als geheel beheren. Selecteer een veld dat tot de groep behoort op het canvas en selecteer vervolgens **[!UICONTROL Manage related fields]** in het rechterspoor.
-
-![Gerelateerde velden beheren](../../images/ui/resources/schemas/manage-related-fields.png)
-
-Er verschijnt een dialoogvenster met de structuur van de veldgroep in kwestie. Hier kunt u de beschikbare selectievakjes gebruiken om de velden die u nodig hebt in of uit te schakelen. Als u tevreden bent, selecteert u **[!UICONTROL Confirm]**.
-
-![Velden selecteren uit veldgroep](../../images/ui/resources/schemas/select-fields.png)
-
-Het canvas verschijnt weer met alleen de geselecteerde velden in de schemastructuur.
-
-![Toegevoegde velden](../../images/ui/resources/schemas/fields-added.png)
-
-### Aangepaste velden toevoegen aan veldgroepen {#add-fields}
-
-Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u aanvullende velden voor die groep definiëren. Om het even welke gebieden die aan een gebiedsgroep in één schema worden toegevoegd zullen ook in alle andere schema&#39;s verschijnen die die zelfde gebiedsgroep gebruiken.
-
-Als een aangepast veld wordt toegevoegd aan een standaardveldgroep, wordt die veldgroep geconverteerd naar een aangepaste veldgroep en is de oorspronkelijke standaardveldgroep niet meer beschikbaar.
-
-Als u een aangepast veld wilt toevoegen aan een standaardveldgroep, raadpleegt u de [sectie hieronder](#custom-fields-for-standard-groups) voor specifieke instructies. Als u velden toevoegt aan een aangepaste veldgroep, raadpleegt u de sectie over [aangepaste veldgroepen bewerken](./field-groups.md) in de UI-gids voor veldgroepen.
-
-Als u geen bestaande veldgroepen wilt wijzigen, kunt u [een nieuwe aangepaste veldgroep maken](./field-groups.md#create) om in plaats daarvan extra velden te definiëren.
-
-## Afzonderlijke velden toevoegen aan een schema {#add-individual-fields}
-
-Met de Schema-editor kunt u afzonderlijke velden rechtstreeks aan een schema toevoegen als u niet een hele veldgroep voor een bepaald gebruiksgeval wilt toevoegen. U kunt [Afzonderlijke velden toevoegen uit standaardveldgroepen](#add-standard-fields) of [uw eigen aangepaste velden toevoegen](#add-custom-fields) in plaats daarvan.
-
->[!IMPORTANT]
->
->Hoewel de Redacteur van het Schema functioneel u toestaat om individuele gebieden aan een schema direct toe te voegen, verandert dit niet het feit dat alle gebieden in een XDM schema door zijn klasse of een gebiedsgroep moeten worden verstrekt die met die klasse compatibel is. Zoals in de volgende secties wordt uitgelegd, worden alle afzonderlijke velden nog steeds aan een veldgroep gekoppeld als een belangrijke stap wanneer ze aan een schema worden toegevoegd.
-
-### Standaardvelden toevoegen {#add-standard-fields}
-
-U kunt velden van standaardveldgroepen rechtstreeks aan een schema toevoegen zonder dat u eerst de corresponderende veldgroep hoeft te kennen. Als u een standaardveld aan een schema wilt toevoegen, selecteert u de plusknop (**+**) naast de naam van het schema in het canvas. An **[!UICONTROL Untitled Field]** tijdelijke aanduiding wordt weergegeven in de schemastructuur en de juiste spoorwegupdates om besturingselementen voor de configuratie van het veld zichtbaar te maken.
-
-![Tijdelijke aanduiding voor veld](../../images/ui/resources/schemas/root-custom-field.png)
-
-Onder **[!UICONTROL Field name]** typt u de naam van het veld dat u wilt toevoegen. Het systeem zoekt automatisch naar standaardvelden die overeenkomen met de query en geeft deze onder weer **[!UICONTROL Recommended Standard Fields]**, inclusief de veldgroepen waartoe ze behoren.
-
-![Aanbevolen standaardvelden](../../images/ui/resources/schemas/standard-field-search.png)
-
-Sommige standaardvelden hebben dezelfde naam, maar de structuur van deze velden kan afhankelijk zijn van de veldgroep waaruit ze afkomstig zijn. Als een standaardveld is genest in een bovenliggend object in de veldgroepsstructuur, wordt het bovenliggende veld ook opgenomen in het schema als het onderliggende veld wordt toegevoegd.
-
-Selecteer het voorvertoningspictogram (![Pictogram Voorvertoning](../../images/ui/resources/schemas/preview-icon.png)) naast een standaardveld om de structuur van de veldgroep weer te geven en om beter te begrijpen hoe deze kan worden genest. Als u het standaardveld aan het schema wilt toevoegen, selecteert u het plusteken (![Plus-pictogram](../../images/ui/resources/schemas/add-icon.png)).
-
-![Standaardveld toevoegen](../../images/ui/resources/schemas/add-standard-field.png)
-
-Het canvas wordt bijgewerkt om het standaardveld weer te geven dat aan het schema is toegevoegd, inclusief bovenliggende velden die het is genest onder de veldgroepsstructuur. De naam van de veldgroep wordt ook onder **[!UICONTROL Field groups]** in het linkerspoor. Als u meer velden uit dezelfde veldgroep wilt toevoegen, selecteert u **[!UICONTROL Manage related fields]** in het rechterspoor.
-
-![Standaardveld toegevoegd](../../images/ui/resources/schemas/standard-field-added.png)
-
-### Aangepaste velden toevoegen {#add-custom-fields}
-
-Net als bij de workflow voor standaardvelden kunt u ook uw eigen aangepaste velden rechtstreeks aan een schema toevoegen.
-
-Als u velden wilt toevoegen aan het hoofdniveau van een schema, selecteert u de plusknop (**+**) naast de naam van het schema in het canvas. An **[!UICONTROL Untitled Field]** tijdelijke aanduiding wordt weergegeven in de schemastructuur en de juiste spoorwegupdates om besturingselementen voor de configuratie van het veld zichtbaar te maken.
-
-![Aangepast basisveld](../../images/ui/resources/schemas/root-custom-field.png)
-
-Typ de naam van het veld dat u wilt toevoegen en het systeem zoekt automatisch naar de desbetreffende standaardvelden. Als u een nieuw aangepast veld wilt maken, selecteert u de bovenste optie die wordt toegevoegd met **([!UICONTROL New Field])**.
-
-![Nieuw veld](../../images/ui/resources/schemas/custom-field-search.png)
-
-Hier geeft u een weergavenaam en gegevenstype op voor het veld. Onder **[!UICONTROL Assign field group]** selecteert u een veldgroep waaraan het nieuwe veld moet worden gekoppeld. Typ de naam van de veldgroep en als u dat eerder hebt gedaan [aangepaste veldgroepen maken](./field-groups.md#create) deze worden weergegeven in de vervolgkeuzelijst. U kunt ook een unieke naam in het veld typen om een nieuwe veldgroep te maken.
-
-![Veldgroep selecteren](../../images/ui/resources/schemas/select-field-group.png)
-
->[!WARNING]
->
->Als u een bestaande aangepaste veldgroep selecteert, nemen alle andere schema&#39;s die die veldgroep gebruiken ook het nieuwe toegevoegde veld over nadat u de wijzigingen hebt opgeslagen. Om deze reden, slechts selecteer een bestaande gebiedsgroep als u dit type van propagatie wilt. Anders kunt u beter een nieuwe aangepaste veldgroep maken.
-
-Als u klaar bent, selecteert u **[!UICONTROL Apply]**.
-
-![Veld toepassen](../../images/ui/resources/schemas/apply-field.png)
-
-Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder het canvas [huurder-id](../../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. De veldgroep waaraan u het nieuwe veld hebt gekoppeld, wordt ook weergegeven onder **[!UICONTROL Field groups]** in het linkerspoor.
-
-![Tenant-id](../../images/ui/resources/schemas/tenantId.png)
-
->[!NOTE]
->
->De overige velden die door de geselecteerde aangepaste veldgroep worden opgegeven, worden standaard uit het schema verwijderd. Als u enkele van deze velden aan het schema wilt toevoegen, selecteert u een veld dat tot de groep behoort en selecteert u vervolgens **[!UICONTROL Manage related fields]** in het rechterspoor.
-
-#### Aangepaste velden toevoegen aan de structuur van standaardveldgroepen {#custom-fields-for-standard-groups}
-
-Als het schema u werkt een voorwerp-type gebied heeft dat door een standaardgebiedsgroep wordt verstrekt, kunt u uw eigen douanevelden aan dat standaardobject toevoegen.
-
->[!WARNING]
->
->Om het even welke gebieden die aan een gebiedsgroep in één schema worden toegevoegd zullen ook in alle andere schema&#39;s verschijnen die die zelfde gebiedsgroep gebruiken. Als een aangepast veld wordt toegevoegd aan een standaardveldgroep, wordt die veldgroep geconverteerd naar een aangepaste veldgroep en is de oorspronkelijke standaardveldgroep niet meer beschikbaar.
->
->Als u aan de bètaversie van deze functie hebt deelgenomen, ontvangt u een dialoogvenster met informatie over de standaardveldgroepen die u eerder hebt aangepast. Zodra u **[!UICONTROL Acknowledge]**, worden de weergegeven bronnen geconverteerd naar aangepaste veldgroepen.
->
->![Bevestigingsdialoogvenster voor conversie van standaardveldgroepen](../../images/ui/resources/schemas/beta-extension-confirmation.png)
-
-Selecteer de plusknop (**+**) naast de hoofdmap van het object dat wordt geleverd door de standaardveldgroep.
-
-![Veld toevoegen aan standaardobject](../../images/ui/resources/schemas/add-field-to-standard-object.png)
-
-Er verschijnt een waarschuwingsbericht waarin u wordt gevraagd te bevestigen of u de standaardveldgroep wilt converteren. Selecteren **[!UICONTROL Continue creating field group]** om verder te gaan.
-
-![Conversie van veldgroep bevestigen](../../images/ui/resources/schemas/confirm-field-group-conversion.png)
-
-Het canvas verschijnt opnieuw met een naamloze plaatsaanduiding voor het nieuwe veld. De naam van de standaardveldgroep is toegevoegd met &quot;()[!UICONTROL Extended])&quot; om aan te geven dat deze in de oorspronkelijke versie is gewijzigd. Gebruik vanaf hier de besturingselementen in de rechterspoorstaaf om de eigenschappen van het veld te definiëren.
-
-![Veld toegevoegd aan standaardobject](../../images/ui/resources/schemas/standard-field-group-converted.png)
-
-Nadat u de wijzigingen hebt toegepast, wordt het nieuwe veld onder de naamruimte van de huurder-id weergegeven in het standaardobject. Deze geneste naamruimte voorkomt conflicten met veldnamen binnen de veldgroep zelf om te voorkomen dat wijzigingen worden verbroken in andere schema&#39;s die dezelfde veldgroep gebruiken.
-
-![Veld toegevoegd aan standaardobject](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## Een schema voor realtime klantprofiel inschakelen {#profile}
 
