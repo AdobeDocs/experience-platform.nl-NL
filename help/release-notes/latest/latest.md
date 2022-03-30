@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
+source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -11,80 +11,124 @@ ht-degree: 0%
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 7 maart 2022**
+**Releasedatum: 30 maart 2022**
 
->[!NOTE]
->
->Deze release werd verschoven van de oorspronkelijke datum van 23 februari naar 7 maart.
+Nieuwe functies in Adobe Experience Platform:
+
+- [Controlelogboeken](#audit-logs)
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Waarschuwingen](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [[!DNL Data collection]](#data-collection)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Identity Service]](#identity)
-- [[!DNL Sources]](#sources)
+- [[!DNL Query Service]](#query-service)
+- [Bronnen](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
-## [!DNL Dashboards] {#dashboards}
+## Controlelogboeken {#audit-logs}
 
-Adobe Experience Platform biedt meerdere [!DNL dashboards] waardoor u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen worden gevangen.
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Nieuwe standaarddoelen voor widgets | Met de volgende standaardwidgets kunt u verschillende meetgegevens visualiseren die betrekking hebben op uw doelen.<ul><li>Onlangs geactiveerde segmenten op doel. Deze widget geeft de bovenste vijf laatst geactiveerde segmenten in aflopende volgorde weer, afhankelijk van de gekozen bestemming.</li><li>Ontwikkeling van de omvang van het publiek. Deze widget geeft de relatie weer van de profieltelling over een tijdsperiode voor een segment dat aan die bestemmingsrekening in kaart is gebracht.</li><li>Niet-toegewezen segmenten op identiteit. Deze widget geeft een overzicht van de bovenste vijf niet-toegewezen segmenten die worden gerangschikt op basis van het aantal identiteiten voor een bepaald doel en een bepaalde identiteit.</li><li>Toegewezen segmenten op identiteit. Deze widget geeft een overzicht van de bovenste vijf toegewezen segmenten. De segmenten worden bevolen van hoog tot laag afhankelijk van hun respectieve tellingen van bron IDs die bestemmingsidentiteitskaart aanpassen die van het drop-down menu van widget wordt geselecteerd.</li><li>Veelvoorkomende doelgroepen. Deze widget bevat een lijst met de bovenste vijf segmenten die zijn geactiveerd voor de doelaccount die boven aan de pagina is gekozen, en het doel dat is geselecteerd in het vervolgkeuzemenu van de widget.</li></ul> Zie voor meer informatie over de beschikbare standaardwidgets de [documentatie van het dashboard van bestemmingen.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
-
-Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
-
-## Gegevensverzameling {#data-collection}
-
-Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en mogelijkheden te controleren. De auditlogboeken bevatten informatie over wie wat heeft gedaan en wanneer.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeterde UI-workflow voor configuratie gegevensstroom | De workflow voor het maken van een nieuwe gegevensstroom in de gebruikersinterface voor gegevensverzameling is bijgewerkt. Wanneer u services toevoegt aan een gegevensstroom, worden alleen de services waartoe u toegang hebt, opgenomen in de lijst met opties. Zie de handleiding op [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md) voor meer informatie . |
-| Gegevensvoorvoegsel voor gegevensverzameling | Als u de SDK van het Web van Adobe Experience Platform gebruikt, kunt u de mogelijkheden van de Prep van Gegevens nu hefboomwerking om uw gegevens aan de server van het Model van de Gegevens van de Ervaring (XDM) in kaart te brengen. Zie de sectie over [Gegevensvoorvoegsel voor gegevensverzameling](../../edge/fundamentals/datastreams.md#data-prep) in de gids voor gegevensstromen voor meer informatie. |
-| Apparaat-id&#39;s van eerste partij | U kunt nu uw eigen apparaat-id&#39;s naar het Adobe Experience Platform Edge Network sturen wanneer u klantgegevens verzamelt met de SDK van het Web Platform, waarmee u een oplossing kunt vinden voor recente browserbeperkingen met betrekking tot de levensduur van cookies van derden. Zie de handleiding op [apparaat-id&#39;s van eerste partij](../../edge/identity/first-party-device-ids.md) voor meer informatie . |
+| Auditlogboeken voor Dataset, Schema, Klasse, Veldgroep, Gegevenstype, Sandbox, Doel, Segment, Samenvoegen, Beleid, Berekende kenmerken, Productprofiel en Account (Adobe) | Dit zijn de middelen die door auditlogboeken worden geregistreerd. Als de eigenschap wordt toegelaten, zullen de controlelogboeken automatisch worden verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten. |
+| Controleverslagen exporteren | De controlelogboeken kunnen als `CSV` of `JSON` bestand. De gegenereerde bestanden worden rechtstreeks op uw computer opgeslagen. |
 
-Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+{style=&quot;table-layout:auto&quot;}
 
-## [!DNL Destinations] {#destinations}
+Raadpleeg voor meer informatie over auditlogs in Platform de [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+## Waarschuwingen {#alerts}
 
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| ----------- | ----------- |
-| (Bèta) Destination SDK-ondersteuning voor op bestanden gebaseerde doelen | [Destination SDK-ondersteuning voor op bestanden gebaseerde doelen](../../destinations/destination-sdk/file-based-destination-configuration.md) is momenteel in privé bèta en is slechts beschikbaar aan een geselecteerd aantal partners en klanten. De functionaliteit en bijbehorende documentatie kunnen worden gewijzigd voordat de algemene beschikbaarheidsrelease beschikbaar wordt.<br><br>Neem contact op met uw Adobe-accountvertegenwoordiger voor meer informatie over de functie. De Adobe-interne rekeningsvertegenwoordigers zouden uit naar de Experience Platform doelproducten en de technische teams moeten reiken om gesteunde gebruiksgevallen te bespreken. <br><br> In de bètafase van de steun van Destination SDK voor op dossier-gebaseerde bestemmingen, bètapartners en klanten kunnen gebruiken [Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) om privé bestemmingen te bouwen om van de volgende functionaliteit te profiteren: <ul><li>Maak een bestandsgebaseerde (batch) bestemming via Amazon S3, SFTP-servers, Azure Blob, Azure Data Lake Storage, Data Landing Zone storage.</li><li>Configureer en stel standaardopties voor het plannen en uitvoeren van bestanden in.</li><li>Configureer en stel opties in om uw geëxporteerde CSV-bestanden op te maken (scheidingstekens, escape-tekens en andere opties).</li><li>Mogelijkheid om aangepaste bestandsheaders in te stellen en te bewerken.</li><li>Mogelijkheid om gebeurtenismeldingen te ontvangen over het exporteren van bestanden en segmenten.</li><li>Mogelijkheid om aanvullende bestandstypen te exporteren, zoals CSV, TSV, JSON, Parquet.</li></ul>  <br>Om aan de slag te gaan met de nieuwe functionaliteit, leest u [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> De functionaliteit om privé of tot stand te brengen *streaming* de bestemmingen door Destination SDK te gebruiken zijn reeds beschikbaar aan alle klanten en partners van het Experience Platform. Lees de handleiding over hoe u [gebruik Destination SDK om een het stromen bestemming te vormen](/help/destinations/destination-sdk/configure-destination-instructions.md) voor meer informatie. |
-
-## [!DNL Identity Service] {#identity}
-
-Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen.
-
-Adobe Experience Platform [!DNL Identity Service] helpt u een beter inzicht te krijgen in uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van gebeurtenissen voor verschillende activiteiten van Platforms. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailberichten.
 
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe machtiging voor `view-identity-graph` | U kunt nu de opdracht `view-identity-graph` toestemming om te controleren of de gebruikers in uw organisatie de gegevens van de identiteitsgrafiek kunnen bekijken. Gebruikers zonder deze machtiging hebben geen toegang tot de viewer voor identiteitsgrafieken in de gebruikersinterface of bij toegang tot [!DNL Identity Service] API&#39;s die id&#39;s retourneren. Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over machtigingen. |
+| Nieuwe waarschuwingsregels | Er zijn nu twee nieuwe waarschuwingsregels beschikbaar voor bronnen die te maken hebben met gegevensinvoer. Zie het overzicht op [waarschuwingsregels](../../observability/alerts/rules.md) voor de bijgewerkte lijst met waarschuwingstypen. |
 
-Meer algemene informatie over [!DNL Identity Service], verwijst u naar de [Overzicht van identiteitsservice](../../identity-service/home.md).
+{style=&quot;table-layout:auto&quot;}
+
+Raadpleeg voor meer informatie over waarschuwingen in Platform de [waarschuwingsoverzicht](../../observability/alerts/overview.md).
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform biedt meerdere [!DNL dashboards] waardoor u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen wordt gevangen.
+
+### Profieldashboards
+
+Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgegevens (record) die uw organisatie heeft in de profielopslag in Experience Platform.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Widget niet-gesegmenteerde profielen | De widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
+| Trend-widget voor niet-gesegmenteerde profielen | Deze widget verschaft een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een segment is gekoppeld. De trend kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
+| Gesegmenteerde profielen opheffen op identiteitswidget | Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden weergegeven in een staafdiagram. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
+| Widget enkele identiteitsprofielen | Deze widget bevat een telling van de profielen van uw organisatie die slechts één type id hebben dat tot hun identiteit leidt, of een e-mail of ECID. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
+
+{style=&quot;table-layout:auto&quot;}
+
+Raadpleeg voor meer informatie over profielen de [Overzicht van profieldashboards](../../dashboards/guides/profiles.md).
+
+### Doeldashboards
+
+Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Widget aantal doelen | De widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen. Zie de [standaardwidgetdocumentatie voor doelen](../../dashboards/guides/destinations.md#standard-widgets) voor meer informatie . |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over de dashboards van Doelen in Platform, verwijs naar [Overzicht van doeldashboards](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
+
+## Query-service {#query-service}
+
+[!DNL Query Service] staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| `table_exists` | De nieuwe eigenschapbevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. De opdracht retourneert een Booleaanse waarde: `true` if de tabel **doet** bestaan, en `false` als de tabel dat doet **niet** bestaan. Zie de [SQL-syntaxisdocumentatie](../../query-service/sql/syntax.md) voor meer informatie . |
+
+{style=&quot;table-layout:auto&quot;}
+
+Raadpleeg voor meer informatie over de beschikbare functies de [Overzicht van Query Service](../../query-service/home.md).
 
 ## Bronnen {#sources}
 
 Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor inname looppas te plaatsen, en gegevensopname door te beheren.
 
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op het Platform voor B2B-gebruiksgevallen gebruiken. Zie de [broncatalogus](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
+| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de opdracht [!DNL Oracle Eloqua] bron voor naadloze invoer van gegevens uit uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) aan Platform. Zie de documentatie op [een [!DNL Oracle Eloqua] bronverbinding](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie . |
+| API-verbeteringen voor [!DNL Data Landing Zone] | De [!DNL Data Landing Zone] bron ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de [!DNL Flow Service] API. Zie de documentatie op [een [!DNL Data Landing Zone] bronverbinding](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) voor meer informatie . |
+
+{style=&quot;table-layout:auto&quot;}
 
 Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
