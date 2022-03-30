@@ -5,10 +5,10 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 575352d8ee6da092fd0fc3a3033e481ee59bd7d3
+source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
 workflow-type: tm+mt
-source-wordcount: '2378'
-ht-degree: 2%
+source-wordcount: '2448'
+ht-degree: 1%
 
 ---
 
@@ -381,6 +381,38 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
 Zie de handleiding op [logische organisatie van gegevenselementen](../best-practices/organize-data-assets.md) voor meer een gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
+
+## Tabel bestaat
+
+De `table_exists` SQL het bevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. De opdracht retourneert een Booleaanse waarde: `true` if de tabel **doet** bestaan, en `false` als de tabel dat doet **niet** bestaan.
+
+Door te controleren of een tabel bestaat voordat de instructies worden uitgevoerd, `table_exists` de functie vereenvoudigt het schrijven van een anoniem blok om zowel het `CREATE` en `INSERT INTO` gebruik.
+
+De volgende syntaxis definieert de `table_exists` opdracht:
+
+```SQL
+$$
+BEGIN
+
+#Set mytableexist to true if the table already exists.
+SET @mytableexist = SELECT table_exists('target_table_name');
+
+#Create the table if it does not already exist (this is a one time operation).
+CREATE TABLE IF NOT EXISTS target_table_name AS
+  SELECT *
+  FROM   profile_dim_date limit 10;
+
+#Insert data only if the table already exists. Check if @mytableexist = 'true'
+ INSERT INTO target_table_name           (
+                     select *
+                     from   profile_dim_date
+                     WHERE  @mytableexist = 'true' limit 20
+              ) ;
+EXCEPTION
+WHEN other THEN SELECT 'ERROR';
+
+END $$; 
+```
 
 ## [!DNL Spark] SQL-opdrachten
 
