@@ -1,11 +1,11 @@
 ---
+title: (Bèta) HTTP API-verbinding
 keywords: streaming;
-title: HTTP API-verbinding
 description: Met de HTTP API-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
+source-git-commit: 0d58445557490a5539279f55c34183994429c632
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---

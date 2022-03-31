@@ -1,11 +1,12 @@
 ---
 keywords: IP adres, IP waaier, de bestemmingen van de lijst van gewenste personen, de lijst van gewenste personen, lijst van gewenste personen die bestemmingen stromen
-title: 'IP adres lijst van gewenste personen voor het stromen bestemmingen '
+title: IP adres lijst van gewenste personen voor het stromen bestemmingen
 type: Documentation
-description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw HTTP REST API eindpunt veilig uit te voeren.
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw het eindpunt van HTTP REST API, Amazon Kinesis, of de instantie van de Hubs van de Gebeurtenis veilig uit te voeren Azure.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
