@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: d8983f08821b9157edd64fdba1f42a8ac9d38a3d
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1155'
 ht-degree: 1%
 
 ---
@@ -91,6 +91,18 @@ Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgege
 {style=&quot;table-layout:auto&quot;}
 
 Raadpleeg voor meer informatie over profielen de [Overzicht van profieldashboards](../../dashboards/guides/profiles.md).
+
+## Gegevensverzameling {#data-collection}
+
+Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md#configure) in de UI-gids voor gegevensstromen voor meer informatie. |
+
+Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 
 ### Doeldashboards
 
