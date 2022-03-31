@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
+source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
 workflow-type: tm+mt
-source-wordcount: '2448'
+source-wordcount: '2596'
 ht-degree: 1%
 
 ---
@@ -261,9 +261,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de tabel wel **niet** bestaan. |
 
+## DATABASE MAKEN
+
+De `CREATE DATABASE` maakt een ADLS-database.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## DATABASE DROP
 
-De `DROP DATABASE` een bestaande database neerzetten.
+De `DROP DATABASE` verwijdert de database uit een instantie.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -666,6 +674,7 @@ COPY query
 
 De `ALTER TABLE` Met deze opdracht kunt u primaire of buitenlandse toetsbeperkingen toevoegen of neerzetten en kolommen aan de tabel toevoegen.
 
+
 #### BEPERKING TOEVOEGEN OF VERWIJDEREN
 
 De volgende SQL-query&#39;s geven voorbeelden van het toevoegen of neerzetten van beperkingen aan een tabel.
@@ -704,6 +713,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### SCHEMA TOEVOEGEN
+
+De volgende SQL-query toont een voorbeeld van het toevoegen van een tabel aan een database/schema.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> ADLS-tabellen en -weergaven kunnen niet worden toegevoegd aan DWH-databases / -schema&#39;s.
+
+
+#### SCHEMA VERWIJDEREN
+
+De volgende SQL-query toont een voorbeeld van het verwijderen van een tabel uit een database/schema.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> DWH-tabellen en -weergaven kunnen niet worden verwijderd uit fysiek gekoppelde DWH-databases/-schema&#39;s.
+
+
+**Parameters**
+
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `table_name` | De naam van de tabel die u bewerkt. |
@@ -738,4 +775,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### DATAGROEPEN TONEN
+
+De `SHOW DATAGROUPS` keert een lijst van alle bijbehorende gegevensbestanden terug. Voor elke database bevat de tabel een schema, een groepstype, een onderliggend type, een onderliggende naam en een onderliggende id.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### DATAGROEPEN TONEN VOOR tabel
+
+De `SHOW DATAGROUPS FOR` Het bevel &#39;table_name&#39; keert een lijst van alle bijbehorende gegevensbestanden terug die de parameter als zijn kind bevatten. Voor elke database bevat de tabel een schema, een groepstype, een onderliggend type, een onderliggende naam en een onderliggende id.
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**Parameters**
+
+- `table_name`: De naam van de tabel waarvoor u gekoppelde databases wilt zoeken.
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
