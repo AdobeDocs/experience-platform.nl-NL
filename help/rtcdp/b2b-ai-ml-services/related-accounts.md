@@ -2,7 +2,8 @@
 title: Gerelateerde accounts in Real-Time CDP B2B Edition
 type: Documentation
 description: Een overzicht en meer informatie over de verwante rekeningeneigenschap in Experience Platform in real time CDP B2B.
-source-git-commit: 09fd6c30461a4229411ce67426fdcb247661f7cb
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 4%
@@ -53,4 +54,4 @@ Zie de documentatie voor meer informatie over de [hoe te om verwante rekeningen 
 
 U kunt accounts en verwante accounts segmenteren. Het besluit om verwante rekeningen in uw segmentdefinities te gebruiken hangt van uw marketing gebruiksgeval af. U kunt bijvoorbeeld verwante accounts gebruiken voor marketing- of advertentiecampagnes waarin u een lagere nauwkeurigheid accepteert in ruil voor een groter bereik.
 
-Zie een [segmenteringsvoorbeeld](/help/rtcdp/segmentation/b2b.md#related-account) dat gebruik maakt van verwante accounts.
+Zie een [segmenteringsvoorbeeld](/help/rtcdp/segmentation/b2b.md#related-accounts) dat gebruik maakt van verwante accounts.
