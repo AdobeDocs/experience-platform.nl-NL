@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;thuis;Intelligente services;populaire onderwerpen;intelligente service;Intelligente service
-solution: Intelligent Services
+solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic-legacy: Intelligent Services
 description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services gebruiken XDM-schema's (Experience Data Model) om dit te bereiken.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 0%

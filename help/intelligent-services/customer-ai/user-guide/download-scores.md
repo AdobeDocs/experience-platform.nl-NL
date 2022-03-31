@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;downloadscores;klantenservice;populaire onderwerpen;Exporteren;exporteren;klantenservice downloaden;klantenservice scores
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Scores downloaden in AI van klant
 topic-legacy: Downloading scores
 description: Met AI van de klant kunt u scores downloaden in de Parquet-bestandsindeling.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%

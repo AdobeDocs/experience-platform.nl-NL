@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;aan de slag;inhoud ai;handel ai;inhoud en handel ai;kleur extractie;Kleur extractie
-solution: Intelligent Services
+solution: Experience Platform
 title: Kleurextractie in de API voor Inhoud en Handel
 topic-legacy: Developer guide
 description: Wanneer u een afbeelding opgeeft, kan de service voor kleurextractie het histogram van pixelkleuren berekenen en deze sorteren op dominante kleuren in emmers.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 1%
