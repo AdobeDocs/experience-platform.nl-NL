@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
+source-git-commit: 8d0f39dff6b047d21d4dff17005405fc83941961
 workflow-type: tm+mt
 source-wordcount: '1157'
 ht-degree: 1%
@@ -94,18 +94,6 @@ Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgege
 
 Raadpleeg voor meer informatie over profielen de [Overzicht van profieldashboards](../../dashboards/guides/profiles.md).
 
-## Gegevensverzameling {#data-collection}
-
-Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md#configure) in de UI-gids voor gegevensstromen voor meer informatie. |
-
-Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
-
 ### Doeldashboards
 
 Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten.
@@ -119,6 +107,18 @@ Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organ
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over de dashboards van Doelen in Platform, verwijs naar [Overzicht van doeldashboards](../../dashboards/guides/destinations.md).
+
+## Gegevensverzameling {#data-collection}
+
+Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md#configure) in de UI-gids voor gegevensstromen voor meer informatie. |
+
+Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
