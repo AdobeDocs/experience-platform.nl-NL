@@ -1,18 +1,18 @@
 ---
-title: Vorm uw DataStream voor het Web SDK van het Experience Platform
-description: 'Leer hoe te om de gegevensstromen te vormen. '
-keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Dodes;url Doelen;Analytics Settings Blockreport suite id;
+title: Een DataStream configureren
+description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
+keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '1994'
 ht-degree: 1%
 
 ---
 
 # Een gegevensstroom configureren
 
-Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [configureren, opdracht](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), worden in gegevensstreams alle andere configuraties voor de SDK afgehandeld. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobile SDKs. Terwijl de [configureren, opdracht](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), worden in gegevensstreams alle andere configuraties voor de SDK afgehandeld. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
 In dit document worden de stappen beschreven voor het configureren van een gegevensstroom in de gebruikersinterface voor gegevensverzameling.
 
@@ -60,7 +60,7 @@ Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om 
 | [!UICONTROL First Party ID Cookie] | Als deze instelling is ingeschakeld, geeft het Edge Network de opdracht naar een opgegeven cookie te verwijzen wanneer u een [apparaat-id van eerste partij](../identity/first-party-device-ids.md)in plaats van deze waarde op te zoeken in het identiteitsoverzicht.<br><br>Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen. |
 | [!UICONTROL Third Party ID Sync] | De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Als deze instelling is ingeschakeld, kunt u opgeven welke container met id-syncs wordt uitgevoerd voor deze gegevensstroom. |
 
-De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Als u de SDK van Mobile gebruikt of uw gegevensstroom voor Platform anders niet configureert, selecteert u **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
+De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Selecteer **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
 
 ### Gegevensvoorvoegsel voor gegevensverzameling {#data-prep}
 
@@ -78,13 +78,78 @@ De subsecties hieronder behandelen de basisstappen voor het in kaart brengen van
 
 #### [!UICONTROL Select data]
 
-Selecteren **[!UICONTROL Save and Add Mapping]** nadat de [basisconfiguratiestap](#configure)en de **[!UICONTROL Select data]** wordt weergegeven. Van hier, moet u een steekproefJSON voorwerp verstrekken dat de structuur van de gegevens vertegenwoordigt u bij het verzenden naar Platform van plan bent. U kunt de optie selecteren om het object als een bestand te uploaden of het onbewerkte object in het tekstvak dat wordt weergegeven plakken.
+Selecteren **[!UICONTROL Save and Add Mapping]** nadat de [basisconfiguratiestap](#configure)en de **[!UICONTROL Select data]** wordt weergegeven. Van hier, moet u een steekproefJSON voorwerp verstrekken dat de structuur van de gegevens vertegenwoordigt u bij het verzenden naar Platform van plan bent.
+
+U moet dit JSON-object maken, zodat u het object kunt toewijzen aan de eigenschappen in uw gegevenslaag die u wilt vastleggen. Selecteer de onderstaande sectie om een voorbeeld van een JSON-object met de juiste indeling weer te geven.
+
++++JSON-voorbeeldbestand
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >Het JSON-object moet één hoofdknooppunt hebben `data` om de validatie te doorstaan.
 
-Als de JSON geldig is, wordt een voorvertoningsschema weergegeven in het rechterdeelvenster. Selecteren **[!UICONTROL Next]** om door te gaan.
+U kunt de optie selecteren om het object als een bestand te uploaden of het onbewerkte object in het tekstvak dat wordt weergegeven plakken. Als de JSON geldig is, wordt een voorvertoningsschema weergegeven in het rechterdeelvenster. Selecteren **[!UICONTROL Next]** om door te gaan.
 
 ![JSON-voorbeeld van verwachte binnenkomende gegevens](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ Selecteer vervolgens het schemapictogram (![Schema, pictogram](../images/datastr
 De toewijzingspagina wordt opnieuw weergegeven met de voltooide veldtoewijzing weergegeven. De **[!UICONTROL Mapping progress]** sectie wordt bijgewerkt met het totale aantal velden dat is toegewezen.
 
 ![Veld is toegewezen met voortgang weergegeven](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>Als u een array van objecten (in het bronveld) wilt toewijzen aan een array van verschillende objecten (in het doelveld), voegt u `[*]` na de arraynaam in de bron- en doelveldpaden, zoals hieronder wordt weergegeven.
+>
+>![Array-objecttoewijzing](../images/datastreams/array-object-mapping.png)
 
 Ga verder met de bovenstaande stappen om de overige velden toe te wijzen aan het doelschema. Hoewel u niet alle beschikbare brongebieden moet in kaart brengen, om het even welke gebieden in het doelschema die zoals vereist worden geplaatst moeten worden in kaart gebracht om deze stap te voltooien. De **[!UICONTROL Required fields]** teller geeft aan hoeveel vereiste velden nog niet zijn toegewezen in de huidige configuratie.
 
