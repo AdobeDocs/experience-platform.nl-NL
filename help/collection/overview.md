@@ -3,9 +3,9 @@ title: Edge Network Server-API
 description: Leer wat de Adobe Experience Platform Edge Network Server API is en hoe u deze kunt gebruiken.
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: gegevensverzameling;verzameling;Adobe Experience Platform Edge Network;server-API;
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: 4145e22519c1df2d5c010e563b81642a6f647cdc
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De [!DNL Server API] ondersteunt interactieve gegevensverzameling en batchgegeve
 1. Het interactieve eindpunt steunt communicatie met de diensten van Adobe Experience Platform en van Adobe Experience Cloud die geavanceerde segmentatie, verpersoonlijking en andere marketing gebruiksgevallen steunen.
 2. Het batcheindpunt zal toestaan dat verzoeken in partij worden verzonden wanneer de gegevens moeten worden gecontroleerd zonder een reactie van de toepassingen te ontvangen die worden geroepen.
 
-De [!DNL Server API] ondersteunt het volgende type verzoeken: De [!DNL Server API] steunt voor authentiek verklaarde verzoeken via [Adobe I/O](https://developer.adobe.com/), met de nieuwe `server.adobedc.net` eindpunt.
+De [!DNL Server API] ondersteunt het volgende type verzoeken:
 
 * Voor authentiek verklaarde verzoeken via [Adobe I/O](https://developer.adobe.com/), met de nieuwe `server.adobedc.net` eindpunt.
 * Niet-geverifieerde aanvragen via de `edge.adobedc.net` eindpunt.
