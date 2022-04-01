@@ -5,9 +5,9 @@ title: Overzicht gegevensbeheer
 topic-legacy: overview
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Marktdeelnemers zijn het eindpunt van gegevensbeheer. Ze vragen gegevens van de 
 
 ## Kader voor gegevensbeheer
 
-Het gegevensbeheerkader vereenvoudigt en stroomlijnt het proces om gegevens te categoriseren en het beleid van het gegevensgebruik te creëren. Zodra gegevensetiketten zijn toegepast en het beleid van het gegevensgebruik op zijn plaats is, kunnen de marketing acties worden geëvalueerd om het correcte gebruik van gegevens te verzekeren.
+Het gegevensbeheerkader vereenvoudigt en stroomlijnt het proces om gegevens te categoriseren en het beleid van het gegevensgebruik te creëren. Zodra gegevensetiketten zijn toegepast en het beleid van het gegevensgebruik is op zijn plaats, kunnen de marketing acties worden geëvalueerd om het correcte gebruik van gegevens te verzekeren.
 
 Het kader voor gegevensbeheer bestaat uit drie hoofdelementen: Labels, Beleid en Handhaving.
 
@@ -76,15 +76,18 @@ Zie het overzicht op [gegevensgebruikslabels](./labels/overview.md) voor meer in
 
 Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen mag uitvoeren [!DNL Experience Platform].
 
-Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat dat zegt dat specifieke types van gegevens, zoals Persoonlijk Identificeerbare Informatie (PII), niet kunnen worden uitgevoerd en een &quot;I&quot;etiket (de Gegevens van de Identiteit) is toegepast op de dataset, zult u een antwoord van ontvangen [!DNL Policy Service] u vertellen dat een beleid van het gegevensgebruik is geschonden.
+Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat dat zegt dat Persoonlijk Identificeerbare Informatie (PII) niet kan worden uitgevoerd, en een &quot;I&quot;etiket (identiteitsgegevens) is toegepast op de dataset; [!DNL Policy Service] verhindert om het even welke actie die deze dataset naar een derdebestemming zou uitvoeren. Als één van deze actiepogingen voorkomt, verzendt de Dienst van het Beleid een bericht die u vertelt dat een beleid van het gegevensgebruik is geschonden.
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevens stewards beleid tot stand brengen gebruikend [!DNL Policy Service] API of de [!DNL Experience Platform] gebruikersinterface.
+Er zijn twee soorten beleid beschikbaar:
+
+* **[!UICONTROL Data governance policy]**: Beperk de gegevensactivering op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de betrokken gegevens worden meegevoerd.
+* **[!UICONTROL Consent policy](bèta)**: De profielen filteren waarop kan worden geactiveerd [bestemmingen](../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten.
+
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevens stewards beleid tot stand brengen gebruikend [!DNL Policy Service] API of de [!DNL Experience Platform] gebruikersinterface. Voor meer informatie over het beleid en de marketingacties van het gegevensgebruik, zie [beleidsoverzicht](./policies/overview.md).
 
 >[!IMPORTANT]
 >
 >Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten.
-
-Voor meer informatie over het beleid en de marketingacties van het gegevensgebruik, zie [beleidsoverzicht](./policies/overview.md).
 
 ## Volgende stappen
 

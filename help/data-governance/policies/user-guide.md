@@ -5,16 +5,16 @@ title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
 
 # Beleid voor gegevensgebruik beheren in de gebruikersinterface
 
-Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de handelingen die u kunt uitvoeren in het dialoogvenster **Beleid** werkruimte in de [!DNL Experience Platform] gebruikersinterface.
+Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in het dialoogvenster **Beleid** werkruimte in de [!DNL Experience Platform] gebruikersinterface.
 
 >[!IMPORTANT]
 >
@@ -24,14 +24,18 @@ Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee 
 
 Deze handleiding vereist een goed begrip van het volgende: [!DNL Experience Platform] concepten:
 
-- [Data Governance](../home.md)
-- [Beleid voor gegevensgebruik](./overview.md)
+* [Data Governance](../home.md)
+* [Beleid voor gegevensgebruik](./overview.md)
 
 ## Bestaande beleidsvormen weergeven {#view-policies}
 
 In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Policies]** om de **[!UICONTROL Policies]** werkruimte. In de **[!UICONTROL Browse]** kunt u een lijst met beschikbare beleidsregels weergeven, inclusief de bijbehorende labels, marketingacties en status.
 
 ![](../images/policies/browse-policies.png)
+
+Als u toegang hebt tot het toestemmingsbeleid (momenteel in bèta), selecteert u **[!UICONTROL Consent policies]** schakelen om ze weer te geven in het dialoogvenster [!UICONTROL Browse] tab.
+
+![](../images/policies/consent-policy-toggle.png)
 
 Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een aangepast beleid is geselecteerd, worden aanvullende besturingselementen weergegeven om te bewerken, te verwijderen of [het beleid in-/uitschakelen](#enable).
 
@@ -42,6 +46,14 @@ Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een a
 Selecteer **[!UICONTROL Create policy]** in de rechterbovenhoek van het dialoogvenster **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** werkruimte.
 
 ![](../images/policies/create-policy-button.png)
+
+Afhankelijk van of u deel uitmaakt van de bètaversie voor het toestemmingsbeleid, komt een van de volgende situaties voor:
+
+* Als u geen deel uitmaakt van de bètaversie, wordt u onmiddellijk naar de werkstroom gebracht voor [invoering van een beleid voor gegevensbeheer](#create-governance-policy).
+* Als u deel uitmaakt van de bètaversie, biedt een dialoogvenster een extra optie voor [een beleid voor instemming ontwikkelen](#consent-policy).
+   ![](../images/policies/choose-policy-type.png)
+
+### Een beleid voor gegevensbeheer maken {#create-governance-policy}
 
 De **[!UICONTROL Create policy]** wordt weergegeven. Begin door een naam en een beschrijving voor het nieuwe beleid te verstrekken.
 
@@ -67,9 +79,62 @@ De **[!UICONTROL Browse]** wordt opnieuw weergegeven. Dit betekent dat het nieuw
 
 ![](../images/policies/created-policy.png)
 
+### Een toestemmingsbeleid maken (bèta) {#consent-policy}
+
+>[!IMPORTANT]
+>
+>Het beleid voor instemming wordt momenteel in de bètaversie gebruikt en uw organisatie heeft er nog geen toegang toe.
+
+Als u verkoos om een toestemmingsbeleid tot stand te brengen, verschijnt een nieuw scherm dat u toestaat om het nieuwe beleid te vormen.
+
+![](../images/policies/consent-policy-dialog.png)
+
+Als u het beleid voor toestemming wilt gebruiken, moet u toestemmingskenmerken in uw profielgegevens hebben. Zie de handleiding op [verwerking van toestemming in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) voor gedetailleerde stappen op hoe te om de vereiste attributen in uw unieschema te omvatten.
+
+Het beleid van de goedkeuring bestaat uit twee logische componenten:
+
+* **[!UICONTROL If]**: De voorwaarde die de beleidscontrole zal teweegbrengen. Dit kan gebaseerd zijn op een bepaalde marketingactie die wordt uitgevoerd, de aanwezigheid van bepaalde labels voor gegevensgebruik of een combinatie van beide.
+* **[!UICONTROL Then]**: De toestemmingskenmerken die aanwezig moeten zijn opdat een profiel wordt opgenomen in de actie die het beleid heeft geïnitieerd.
+
+#### Voorwaarden configureren
+
+Onder de **[!UICONTROL If]** selecteert u de marketingacties en/of labels voor gegevensgebruik die dit beleid moeten activeren. Selecteren **[!UICONTROL View all]** en **[!UICONTROL Select labels]** de volledige lijsten van de beschikbare marketingacties en etiketten te bekijken.
+
+Nadat u ten minste één voorwaarde hebt toegevoegd, kunt u **[!UICONTROL Add condition]** om verdere voorwaarden te blijven toevoegen zoals nodig, verkies het aangewezen voorwaardetype van dropdown.
+
+![](../images/policies/add-condition.png)
+
+Als u meer dan één voorwaarde selecteert, kunt u het pictogram gebruiken dat tussen hen verschijnt om de voorwaardelijke verhouding tussen &quot;EN&quot;en &quot;OF&quot;te schakelen.
+
+![](../images/policies/and-or-selection.png)
+
+#### Goedkeuringskenmerken selecteren
+
+Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
+
+Wanneer het selecteren van de toestemmingsattributen, kies de waarden voor de attributen die u dit beleid wilt controleren.
+
+![](../images/policies/select-schema-field.png)
+
+Nadat u minstens één toestemmingsattribuut hebt geselecteerd, **[!UICONTROL Policy properties]** worden bijgewerkt om het geschatte aantal profielen weer te geven dat in het kader van dit beleid is toegestaan, inclusief het percentage van de totale profielopslag. Deze schatting wordt automatisch bijgewerkt wanneer u de beleidsconfiguratie aanpast.
+
+![](../images/policies/audience-preview.png)
+
+Als u meer toestemmingskenmerken aan het beleid wilt toevoegen, selecteert u **[!UICONTROL Add result]**.
+
+![](../images/policies/add-result.png)
+
+U kunt voorwaarden en toestemmingseigenschappen aan het beleid blijven toevoegen en aanpassen zoals nodig. Als u tevreden bent met de configuratie, geeft u een naam en een optionele beschrijving voor het beleid op voordat u het beleid selecteert **[!UICONTROL Save]**.
+
+![](../images/policies/name-and-save.png)
+
+Het toestemmingsbeleid wordt nu tot stand gebracht en zijn status wordt geplaatst aan [!UICONTROL Disabled] standaard. Als u het beleid meteen wilt inschakelen, selecteert u de optie **[!UICONTROL Status]** schakelen in de rechterspoorstaaf.
+
+![](../images/policies/enable-consent-policy.png)
+
 ## Een beleid in- of uitschakelen {#enable}
 
-Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
+Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Voor een individueel beleid dat voor handhaving moet worden overwogen, moet u dat beleid manueel toelaten door API of UI.
 
 U kunt het beleid in- of uitschakelen in het dialoogvenster **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** werkruimte. Selecteer een aangepast beleid in de lijst om de details aan de rechterkant weer te geven. Onder **[!UICONTROL Status]**, selecteert u de schakelknop om het beleid in of uit te schakelen.
 
@@ -109,7 +174,7 @@ Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt
 
 >[!NOTE]
 >
->Als u probeert een marketingactie te verwijderen die door een bestaand beleid wordt gebruikt, wordt een foutbericht weergegeven dat aangeeft dat de verwijderpoging is mislukt.
+>Wanneer wordt geprobeerd een marketingactie te verwijderen die door een bestaand beleid wordt gebruikt, verschijnt een foutbericht dat aangeeft dat de verwijderpoging is mislukt.
 
 ![](../images/policies/delete-marketing-action.png)
 
