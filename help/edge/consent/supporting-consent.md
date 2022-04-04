@@ -3,9 +3,9 @@ title: Voorkeuren voor toestemming van de klant ondersteunen met de Adobe Experi
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK.
 keywords: toestemming;defaultConsent;default toestemming;setConsent;Profile Privacy field group;Experience Event Privacy field group;Privacy field group;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Als de gebruiker uit alle doeleinden kiest, voert de SDK geen van deze taken uit
 
 ## Goedkeuring configureren
 
-De gebruiker is standaard voor alle doeleinden ingeschakeld. Als u wilt voorkomen dat de SDK de bovenstaande taken uitvoert totdat de gebruiker het programma inschakelt, geeft u `"defaultConsent": "pending"` tijdens de SDK-configuratie als volgt door:
+De gebruiker is standaard voor alle doeleinden ingeschakeld. Als u wilt voorkomen dat de SDK de bovenstaande taken uitvoert totdat de gebruiker inklikt, geeft u `"defaultConsent": "pending"` tijdens SDK-configuratie als volgt:
 
 ```javascript
 alloy("configure", {
@@ -33,17 +33,17 @@ alloy("configure", {
 });
 ```
 
-Wanneer de standaardtoestemming voor het algemene doel op in behandeling wordt geplaatst, leidt het proberen om het even welke bevelen uit te voeren die van gebruiker opt-in voorkeur (bijvoorbeeld, `sendEvent` bevel) afhangen tot het bevel dat binnen SDK een rij wordt gevormd. Deze opdrachten worden pas verwerkt nadat u de aanmeldingsvoorkeuren van de gebruiker aan de SDK hebt doorgegeven.
+Wanneer de standaardtoestemming voor het algemene doel is ingesteld op in behandeling, wordt geprobeerd alle opdrachten uit te voeren die afhankelijk zijn van de gebruikersvoorkeuren (zoals `sendEvent` bevel) resulteert in het bevel dat binnen SDK een rij wordt gevormd. Deze opdrachten worden pas verwerkt nadat u de aanmeldingsvoorkeuren van de gebruiker aan de SDK hebt doorgegeven.
 
 >[!NOTE]
 >
 >Opdrachten worden alleen in het geheugen in de wachtrij geplaatst. Ze worden niet opgeslagen bij het laden van de pagina.
 
-Als u geen gebeurtenissen wilt verzamelen die zijn opgetreden voordat de gebruikersvoorkeuren zijn ingesteld, kunt u `"defaultConsent": "out"` tijdens de SDK-configuratie doorgeven. Het uitvoeren van opdrachten die afhankelijk zijn van de gebruikersaanmeldingsvoorkeuren, heeft pas effect nadat u de aanmeldingsvoorkeuren van de gebruiker aan de SDK hebt doorgegeven.
+Als u geen gebeurtenissen wilt verzamelen die zijn opgetreden voordat de aanmeldingsvoorkeuren van de gebruiker zijn ingesteld, kunt u `"defaultConsent": "out"` tijdens SDK-configuratie. Het uitvoeren van opdrachten die afhankelijk zijn van de gebruikersaanmeldingsvoorkeuren, heeft pas effect nadat u de aanmeldingsvoorkeuren van de gebruiker aan de SDK hebt doorgegeven.
 
 >[!NOTE]
 >
->Momenteel ondersteunt de SDK slechts één doel, alles of niets. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van de Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor Adobe Experience Platform [!DNL Web SDK] en NOT other Adobe JavaScript libraries.
+>Momenteel ondersteunt de SDK slechts één doel, alles of niets. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van de Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor Adobe Experience Platform [!DNL Web SDK] en NIET andere Adobe JavaScript-bibliotheken.
 
 Op dit punt wilt u de gebruiker wellicht vragen zich ergens in de gebruikersinterface aan te melden. Nadat de gebruikersvoorkeuren zijn verzameld, geeft u deze door aan de SDK.
 
@@ -53,9 +53,9 @@ De SDK ondersteunt versies 1.0 en 2.0 van de Adobe Experience Platform toestemmi
 
 ### De Adobe-standaardversie 2.0 gebruiken
 
-Als u Adobe Experience Platform gebruikt, moet u een privacyschemaveldgroep opnemen in uw profielschema. Zie [Beheer, privacy en beveiliging in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) voor meer informatie over de standaardversie van Adobe 2.0. U kunt gegevens toevoegen binnen het waardeobject hieronder die overeenkomen met het schema van het veld `consents` van de profielveldgroep [!UICONTROL Consents and Preferences].
+Als u Adobe Experience Platform gebruikt, moet u een privacyschemaveldgroep opnemen in uw profielschema. Zie [Bestuur, privacy en beveiliging in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) voor meer informatie over de Adobe standaardversie 2.0. U kunt gegevens toevoegen binnen het waardeobject hieronder die overeenkomen met het schema van het dialoogvenster `consents` van het [!UICONTROL Consents and Preferences] profielveldgroep.
 
-Als de gebruiker binnen kiest, voer `setConsent` bevel met de inzamelingsvoorkeur uit die aan `y` wordt geplaatst als volgt:
+Als de gebruiker binnen kiest, voer uit `setConsent` gebruiken als de voorkeur voor verzamelen is ingesteld op `y` als volgt:
 
 ```javascript
 alloy("setConsent", {
@@ -74,7 +74,7 @@ alloy("setConsent", {
 });
 ```
 
-In het tijdveld moet worden opgegeven wanneer de gebruiker zijn voorkeuren voor toestemming voor het laatst heeft bijgewerkt. Als de gebruiker ervoor kiest om te weigeren, voert u de opdracht `setConsent` uit met de verzamelvoorkeur ingesteld op `n` als volgt:
+In het tijdveld moet worden opgegeven wanneer de gebruiker zijn voorkeuren voor toestemming voor het laatst heeft bijgewerkt. Als de gebruiker ervoor kiest om te weigeren, voert u de opdracht `setConsent` gebruiken als de voorkeur voor verzamelen is ingesteld op `n` als volgt:
 
 ```javascript
 alloy("setConsent", {
@@ -93,13 +93,9 @@ alloy("setConsent", {
 });
 ```
 
->[!NOTE]
->
->Nadat een gebruiker heeft gekozen, zal SDK u niet toestaan om de gebruikers te plaatsen verzamelen toestemming aan `y`.
+### Werken met de standaard Adobe versie 1.0
 
-### Adobe standaardversie 1.0 gebruiken
-
-Als de gebruiker binnen kiest, voer `setConsent` bevel met de `general` optie uit die aan `in` wordt geplaatst als volgt:
+Als de gebruiker binnen kiest, voer uit `setConsent` gebruiken met de `general` optie ingesteld op `in` als volgt:
 
 ```javascript
 alloy("setConsent", {
@@ -113,7 +109,7 @@ alloy("setConsent", {
 });
 ```
 
-Als de gebruiker ervoor kiest om te weigeren, voert u de opdracht `setConsent` uit met de optie `general` ingesteld op `out` als volgt:
+Als de gebruiker ervoor kiest om te weigeren, voert u de opdracht `setConsent` gebruiken met de `general` optie ingesteld op `out` als volgt:
 
 ```javascript
 alloy("setConsent", {
@@ -127,13 +123,9 @@ alloy("setConsent", {
 });
 ```
 
->[!NOTE]
->
->Nadat een gebruiker heeft gekozen, zal SDK u niet toestaan om de gebruikers toestemming aan `in` te plaatsen.
-
 ## Voorkeuren voor machtigingen verzenden via de IAB TCF-standaard
 
-De SDK ondersteunt het opnemen van voorkeuren voor toestemming van gebruikers via de norm Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF). De toestemmingskoord kan door het zelfde `setConsent` bevel zoals hierboven als dit worden geplaatst:
+De SDK ondersteunt het opnemen van voorkeuren voor toestemming van gebruikers via de norm Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF). De toestemmingstekenreeks kan via hetzelfde worden ingesteld `setConsent` opdracht als hierboven:
 
 ```javascript
 alloy("setConsent", {
@@ -146,7 +138,7 @@ alloy("setConsent", {
 });
 ```
 
-Wanneer de toestemming op deze manier wordt geplaatst, wordt het Profiel van de Klant in real time bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het profiel-XDM-schema de veldgroep [Profielprivacy bevat. ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, moet [de het gebiedsgroep van de Privacy van de Gebeurtenis van de Ervaring ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) aan het schema van de Gebeurtenis van de Ervaring worden toegevoegd.
+Wanneer de toestemming op deze manier wordt geplaatst, wordt het Profiel van de Klant in real time bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het XDM-profielschema het volgende bevat: [Veld groep profielprivacyschema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, [Experience Event Privacy, veldgroep](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) moet worden toegevoegd aan het schema Experience Event.
 
 ## Meerdere standaarden verzenden in één aanvraag
 
@@ -176,10 +168,10 @@ alloy("setConsent", {
 
 ## Voorkeuren voor blijvende toestemming
 
-Nadat u gebruikersvoorkeuren aan de SDK hebt doorgegeven met de opdracht `setConsent`, behoudt de SDK de gebruikersvoorkeuren voor een cookie. De volgende keer dat de gebruiker uw website in de browser laadt, haalt de SDK deze voorkeuren op en gebruikt deze om te bepalen of gebeurtenissen naar Adobe kunnen worden verzonden.
+Nadat u gebruikersvoorkeuren aan de SDK hebt doorgegeven via het dialoogvenster `setConsent` de SDK de voorkeuren van de gebruiker voor een cookie blijft gebruiken. De volgende keer dat de gebruiker uw website in de browser laadt, haalt de SDK deze voorkeuren op en gebruikt deze om te bepalen of gebeurtenissen naar Adobe kunnen worden verzonden.
 
-U moet de gebruikersvoorkeuren afzonderlijk opslaan om het bevestigingsvenster met de huidige voorkeuren te kunnen weergeven. U kunt de gebruikersvoorkeuren niet ophalen uit de SDK. Als u er zeker van wilt zijn dat de gebruikersvoorkeuren synchroon blijven met de SDK, kunt u de opdracht `setConsent` aanroepen bij elke laadpagina. De SDK roept alleen een server aan als de voorkeuren zijn gewijzigd.
+U moet de gebruikersvoorkeuren afzonderlijk opslaan om het bevestigingsvenster met de huidige voorkeuren te kunnen weergeven. U kunt de gebruikersvoorkeuren niet ophalen uit de SDK. Om ervoor te zorgen dat de gebruikersvoorkeuren synchroon blijven met de SDK, kunt u de `setConsent` gebruiken bij elke pagina die wordt geladen. De SDK roept alleen een server aan als de voorkeuren zijn gewijzigd.
 
 ## Identiteiten synchroniseren tijdens instellen van toestemming
 
-Wanneer de standaardtoestemming hangende of uit is, `setConsent` kan het eerste verzoek zijn dat uit gaat en identiteit vestigt. Daarom kan het belangrijk zijn om identiteiten op het eerste verzoek te synchroniseren. De identiteitskaart kan aan `setConsent` bevel enkel als op &lt;a1 worden toegevoegd/> bevel. `sendEvent` Zie [Experience Cloud-id ophalen](../identity/overview.md)
+Wanneer de standaardtoestemming in behandeling of weg is, `setConsent` kan het eerste verzoek zijn dat uitgaat en identiteit vaststelt. Daarom kan het belangrijk zijn om identiteiten op het eerste verzoek te synchroniseren. Het identiteitsoverzicht kan worden toegevoegd aan `setConsent` op dezelfde manier als op de `sendEvent` gebruiken. Zie [Experience Cloud-id ophalen](../identity/overview.md)
