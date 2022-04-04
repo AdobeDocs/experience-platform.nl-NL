@@ -5,21 +5,21 @@ title: Clients verbinden met Query-service
 topic-legacy: connect
 description: In dit document wordt uitgelegd hoe u verbinding maakt met de Query-service via een groot aantal clienttoepassingen op het bureaublad en hoe u die verbindingen kunt verifiëren.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 76687d46508ea641ecb6f9b090cea228f8bbe549
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
-# Client verbinden met [!DNL Query Service]
+# Verbind cliënten met [!DNL Query Service]
 
-In deze sectie wordt uitgelegd hoe u verbinding maakt met [!DNL Query Service] vanuit diverse clienttoepassingen op het bureaublad en hoe u deze verbindingen kunt controleren. [!DNL Query Service] gebruikt het  [!DNL PostgreSQL] protocol, zodat verklaren de instructies in deze sectie hoe te om  [!DNL PostgreSQL] hulpmiddelen en bestuurders te gebruiken om vragen te verbinden en te schrijven.
+In deze sectie wordt uitgelegd hoe u verbinding kunt maken met [!DNL Query Service] van een verscheidenheid van Desktopcliënttoepassingen en hoe te om die verbindingen te verifiëren. [!DNL Query Service] gebruikt de [!DNL PostgreSQL] protocol, zodat verklaren de instructies in deze sectie hoe te gebruiken [!DNL PostgreSQL] tools en stuurprogramma&#39;s voor het maken van verbindingen en het schrijven van query&#39;s.
 
 Instructies worden gegeven voor de volgende cliënten:
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!DNL DbVisualizer]](./dbvisulaizer.md)
 - [[!DNL Looker]](./looker.md)
 - [[!DNL Postico (Mac)]](./postico.md)
 - [[!DNL Power BI (PC)]](./power-bi.md)
