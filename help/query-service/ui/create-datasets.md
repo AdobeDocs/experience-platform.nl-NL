@@ -6,37 +6,51 @@ topic-legacy: queries
 type: Tutorial
 description: Met Adobe Experience Platform Query Service kunt u gegevenssets maken vanuit de gebruikersinterface. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
 
-# Gegevenssets genereren op basis van resultaten in Query Service
+# Gegevenssets genereren op basis van resultaten in [!DNL Query Service]
 
-De ware kracht van [!DNL Query Service] wordt onthuld wanneer de vragen worden gebruikt om datasets in te produceren [!DNL Data Lake] om als input in meer vragen of in andere diensten zoals [!DNL Data Science Workspace], [!DNL Real-time Customer Profile], of [!DNL Analysis Workspace].
+[!DNL Query Service] staat u toe om vragen te gebruiken om datasets in te produceren [!DNL Data Lake]. Deze datasets kunnen dan als input voor meer vragen of in andere diensten zoals worden gebruikt [!DNL Data Science Workspace], realtime klantprofiel, of [!DNL Analysis Workspace].
 
-[!DNL Query Service] staat de verwezenlijking van datasets van UI toe. Voer de volgende stappen uit:
+## Gegevenssets genereren vanuit de gebruikersinterface van Adobe Experience Platform
 
-1. Schrijf uw vraag gebruikend een verbonden cliënt en bevestig de output.
-2. Aanmelden bij de [!DNL Platform] UI en ga naar Vragen.
-3. Zoek de query in de lijst en houd de muisaanwijzer boven de rij.
-4. Selecteer **[!UICONTROL Create Dataset]**. ![Image](../images/ui/create-datasets/output-dataset.png)
-5. Voer een naam voor een gegevensset in, voorafgegaan door uw LDAP-id (hoeft niet uniek of SQL-veilig te zijn). het systeem genereert een &quot;tabelnaam&quot; op basis van de hier gegeven naam).
-6. Voer een beschrijving van een gegevensset in en selecteer **[!UICONTROL Run Query]**.![Afbeelding](../images/ui/create-datasets/run-query.png)
-7. Bekijk de vraag volledig, en ga dan naar de pagina van de datasetlijst om de dataset te zien u enkel creeerde.
+Ga als volgt te werk om gegevenssets te maken van de gebruikersinterface van Adobe Experience Platform (UI):
+
+1. Maak een query met een verbonden client en valideer de uitvoer. Leren hoe u query&#39;s kunt schrijven met [!DNL Query Editor], lees de [!DNL Query Editor] UI-hulplijn [over het schrijven van vragen](./user-guide.md#writing-queries).
+
+2. In Platform UI, navigeer aan **[!UICONTROL Queries]** gevolgd door de **[!UICONTROL Browse]** en selecteert u de query die u hebt gemaakt. Voor meer informatie over hoe te om vragen te bekijken die voor uw organisatie binnen de UI van het Platform werden gecreeerd en werden bewaard, lees [[!DNL Query Service] overzicht](./overview.md#browse).
+
+3. Selecteer in het deelvenster Query-details de optie **[!UICONTROL Output dataset]**.
+
+   ![Gegevensset uitvoer selecteren](../images/ui/create-datasets/output-dataset.png)
+
+4. Voer in het dialoogvenster dat wordt weergegeven een naam in voor de gegevensset die is toegevoegd met uw LDAP-id. De naam van de gegevensset hoeft niet uniek of SQL-veilig te zijn. Merk op dat de lijstnaam voor uw dataset zal worden geproduceerd gebaseerd op de datasetnaam u hier creeert.
+
+5. Voer vervolgens een beschrijving in voor uw gegevensset in het dialoogvenster [!UICONTROL Description] veld en selecteer **[!UICONTROL Run query]**.
+
+   ![Query uitvoeren](../images/ui/create-datasets/run-query.png)
+
+6. Wanneer de query is uitgevoerd, navigeert u naar **[!UICONTROL Datasets]** om de dataset te bekijken u hebt gecreeerd. Meer over leren hoe te om gemeenschappelijke acties uit te voeren wanneer het werken met datasets binnen de Platform UI, zie [UI-gids voor gegevensbestanden](../../catalog/datasets/user-guide.md).
 
 Nadat een dataset wordt gecreeerd, kan het als een andere dataset in worden betreden [!DNL Data Lake] en worden gebruikt voor diverse gebruiksgevallen.
 
 >[!NOTE]
 >
->In een levende implementatie, moet u de etiketten van de Governance van Gegevens toepassen nadat de dataset wordt gecreeerd.
+>In een levende implementatie, moet u de etiketten van de Governance van Gegevens toepassen nadat de dataset wordt gecreeerd. Meer informatie over hoe te om de etiketten van het gegevensgebruik op datasets toe te passen, zie [Overzicht van labels voor gegevensgebruik](../../data-governance/labels/overview.md).
 
 ## Gegevenssets genereren met een vooraf gedefinieerde [!DNL Experience Data Model] schema
 
-Om een dataset met vooraf bepaald te produceren [!DNL Experience Data Model] (XDM) schema, zult u de SQL syntaxis moeten gebruiken. Voor meer informatie over welke syntaxis u moet gebruiken, gelieve te lezen [SQL-syntaxishandleiding](../sql/syntax.md#create-table-as-select).
+Gebruik de SQL syntaxis om een dataset met vooraf bepaald te produceren [!DNL Experience Data Model] (XDM) schema. Voor meer informatie over de syntaxis die door wordt gesteund [!DNL Query Service], lees de [SQL-syntaxishandleiding](../sql/syntax.md#create-table-as-select).
 
 ## Uitvoergegevenssets
 
-Datasets die met deze functie worden gemaakt, worden gegenereerd met een ad-hocschema dat overeenkomt met de structuur van de uitvoergegevens zoals gedefinieerd in de SQL-instructie. Voor sommige downstreamdiensten zijn gegevensbestanden met name vereist [!DNL Experience Data Model] (XDM) schema&#39;s. Verifieer de gegevens het formatteren vereisten voor de stroomafwaartse diensten alvorens uw vragen te schrijven.
+Datasets die met deze functie worden gemaakt, worden gegenereerd met een ad-hocschema dat overeenkomt met de structuur van de uitvoergegevens zoals gedefinieerd in de SQL-instructie. Sommige downstream diensten vereisen datasets met bepaalde schema&#39;s XDM. Verifieer de gegevens het formatteren vereisten voor de stroomafwaartse diensten alvorens uw vragen te schrijven.
+
+## Volgende stappen
+
+Nadat u dit document hebt gelezen, moet u nu weten hoe u het kunt gebruiken [!DNL Query Service] om datasets van het Platform UI te produceren. Voor meer informatie over hoe te om tot, schrijven, en vragen binnen de Platform UI uit te voeren, zie [[!DNL Query Service] Overzicht van gebruikersinterface](./overview.md).
