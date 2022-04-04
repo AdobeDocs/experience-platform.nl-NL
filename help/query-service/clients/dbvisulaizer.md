@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Connect DbVisualizer aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
-source-git-commit: e9653341756a2067e27ca0d0658c54fc93db7505
+source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
 
 # Verbinden [!DNL DbVisualizer] tot [!DNL Query Service] {#connect-dbvisualizer}
 
-In dit document worden de stappen beschreven voor het verbinden [!DNL DbVisualizer] Desktop met Adobe Experience Platform [!DNL Query Service].
+In dit document worden de stappen beschreven voor het verbinden van het [!DNL DbVisualizer] databasegereedschap met Adobe Experience Platform [!DNL Query Service].
 
 ## Aan de slag
 
-Voor deze handleiding hebt u al toegang tot de [!DNL DbVisualizer] bureaubladtoepassing en weet hoe u door de interface kunt navigeren. Als u het dialoogvenster [!DNL DbVisualizer] Desktop-app of raadpleeg voor meer informatie de [ambtenaar [!DNL DbVisualizer] documentatie](https://www.dbvis.com/download/).
+Voor deze handleiding hebt u al toegang tot de [!DNL DbVisualizer] bureaubladtoepassing en weet hoe u door de interface kunt navigeren. Als u het dialoogvenster [!DNL DbVisualizer] bureaubladtoepassing of raadpleeg voor meer informatie de [ambtenaar [!DNL DbVisualizer] documentatie](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Voer uw gebruikersnaam en wachtwoord in en selecteer **[!DNL Connect]**. Er vers
 
 ## Volgende stappen
 
-Nu hebt u verbinding [!DNL DbVisualizer] with [!DNL Query Service]kunt u [!DNL DbVisualizer] om query&#39;s te schrijven. Lees voor meer informatie over het schrijven en uitvoeren van query&#39;s de handleiding bij het uitvoeren van query.
+Nu hebt u verbinding [!DNL DbVisualizer] with [!DNL Query Service]kunt u [!DNL DbVisualizer] om query&#39;s te schrijven. Lees voor meer informatie over het schrijven en uitvoeren van query&#39;s de [handleiding voor het uitvoeren van query&#39;s](../best-practices/writing-queries.md).
