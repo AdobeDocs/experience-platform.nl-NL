@@ -3,9 +3,9 @@ title: Een DataStream configureren
 description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '2006'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om 
 | [!UICONTROL First Party ID Cookie] | Als deze instelling is ingeschakeld, geeft het Edge Network de opdracht naar een opgegeven cookie te verwijzen wanneer u een [apparaat-id van eerste partij](../identity/first-party-device-ids.md)in plaats van deze waarde op te zoeken in het identiteitsoverzicht.<br><br>Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen. |
 | [!UICONTROL Third Party ID Sync] | De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Als deze instelling is ingeschakeld, kunt u opgeven welke container met id-syncs wordt uitgevoerd voor deze gegevensstroom. |
 
-De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Selecteer **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
+De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Als u de SDK van Mobile gebruikt of uw gegevensstroom voor Platform anders niet configureert, selecteert u **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
 
 ### Gegevensvoorvoegsel voor gegevensverzameling {#data-prep}
 
@@ -70,11 +70,18 @@ De rest van deze sectie concentreert zich op de stappen om gegevens aan een gese
 
 De Prep van gegevens is de dienst van het Experience Platform die u toestaat om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM). Wanneer het vormen van een Platform-toegelaten gegevensstroom, kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar het Netwerk van de Rand van het Platform.
 
-De subsecties hieronder behandelen de basisstappen voor het in kaart brengen van uw gegevens binnen de UI van de Inzameling van Gegevens. Raadpleeg de volgende documentatie voor uitgebreide informatie over alle mogelijkheden van Data Prep, inclusief transformatiefuncties voor berekende velden:
+>[!NOTE]
+>
+>Raadpleeg de volgende documentatie voor uitgebreide informatie over alle mogelijkheden van Data Prep, inclusief transformatiefuncties voor berekende velden:
+>
+>* [Overzicht van Data Prep](../../data-prep/home.md)
+>* [Toewijzingsfuncties van Data Prep](../../data-prep/functions.md)
+>* [Gegevensindelingen verwerken met Data Prep](../../data-prep/data-handling.md)
 
-* [Overzicht van Data Prep](../../data-prep/home.md)
-* [Toewijzingsfuncties van Data Prep](../../data-prep/functions.md)
-* [Gegevensindelingen verwerken met Data Prep](../../data-prep/data-handling.md)
+
+De subsecties hieronder behandelen de basisstappen voor het in kaart brengen van uw gegevens binnen de UI van de Inzameling van Gegevens. Bekijk de volgende video voor een snelle demonstratie van deze stappen:
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Select data]
 
