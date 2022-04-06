@@ -5,7 +5,7 @@ title: Overzicht van de gebruikersinterface van JupyterLab
 topic-legacy: Overview
 description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: aa81dfd3d52b17984a0e9fb3f8863dabc4fa44ef
+source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 0%
@@ -29,7 +29,7 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 | **Kernels** | Kernels bieden laptop en andere [!DNL JupyterLab] front-ends de mogelijkheid om code uit te voeren en in verschillende programmeertalen te introspecteren. [!DNL Experience Platform] verstrekt extra kernels om ontwikkeling in te steunen [!DNL Python], R, PySpark, en [!DNL Spark]. Zie de [steenkool](#kernels) voor meer informatie. |
 | **Toegang tot gegevens** | Toegang tot bestaande datasets rechtstreeks vanuit [!DNL JupyterLab] met volledige ondersteuning voor lees- en schrijfmogelijkheden. |
 | **[!DNL Platform]serviceintegratie** | Dankzij de ingebouwde integratie kunt u andere [!DNL Platform] rechtstreeks vanuit [!DNL JupyterLab]. Een volledige lijst met ondersteunde integratie is te vinden in het gedeelte over [Integratie met andere diensten van de Platform](#service-integration). |
-| **Verificatie** | Naast <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">Ingebouwd beveiligingsmodel van JupyterLab</a>, wordt elke interactie tussen uw toepassing en Experience Platform, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **Verificatie** | Naast <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">Ingebouwd beveiligingsmodel van JupyterLab</a>, wordt elke interactie tussen uw toepassing en Experience Platform, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Ontwikkelingsbibliotheken** | In [!DNL Experience Platform], [!DNL JupyterLab] biedt vooraf geïnstalleerde bibliotheken voor [!DNL Python], R en PySpark. Zie de [aanhangsel](#supported-libraries) voor een volledige lijst met ondersteunde bibliotheken. |
 | **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet aan uw behoeften voldoen, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van [!DNL Platform] en uw gegevens veilig te houden. Zie de [steenkool](#kernels) voor meer informatie. |
 
