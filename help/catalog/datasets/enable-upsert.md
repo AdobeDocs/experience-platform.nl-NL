@@ -4,9 +4,9 @@ title: Een gegevensset voor profielupdates inschakelen met behulp van API's
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform API's kunt gebruiken om een gegevensset met "upsert"-mogelijkheden in te schakelen om updates uit te voeren naar gegevens in het realtime profiel van klanten.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 
 Deze zelfstudie behandelt het proces waarbij een dataset met &quot;upsert&quot;mogelijkheden wordt toegelaten om updates aan gegevens van het Profiel van de Klant in real time te maken. Dit omvat stappen voor het creëren van een nieuwe dataset en het vormen van een bestaande dataset.
 
+>[!NOTE]
+>
+>De upsert-workflow werkt alleen voor batchopname. Streaming opname is **niet** ondersteund.
+
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor deze verwante onderwerpen [!DNL Platform] diensten:
@@ -22,7 +26,7 @@ Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platf
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful API die u toestaat om datasets tot stand te brengen en hen te vormen voor [!DNL Real-time Customer Profile] en [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
-- [Inname in batch](../../ingestion/batch-ingestion/overview.md)
+- [Inname in batch](../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
 
@@ -102,11 +106,11 @@ Een succesvolle reactie toont een serie die identiteitskaart van de pas gecreëe
 
 ## Een bestaande gegevensset configureren {#configure-an-existing-dataset}
 
-De volgende stappen behandelen hoe te om een bestaande profiel-Toegelaten dataset voor update (&quot;upsert&quot;) functionaliteit te vormen.
+De volgende stappen behandelen hoe te om een bestaande profiel-Toegelaten dataset voor updatefunctionaliteit (upsert) te vormen.
 
 >[!NOTE]
 >
->Om een bestaande profiel-Toegelaten dataset voor &quot;upsert&quot;te vormen, moet u eerst de dataset voor Profiel onbruikbaar maken en dan het naast opnieuw toelaten `isUpsert` tag. Als de bestaande dataset niet voor Profiel wordt toegelaten, kunt u rechtstreeks aan de stappen te werk gaan voor [het toelaten van de dataset voor Profiel en upsert](#enable-the-dataset). Als u onzeker bent, tonen de volgende stappen u hoe te om te controleren als de dataset reeds wordt toegelaten.
+>Om een bestaande profiel-Toegelaten dataset voor upsert te vormen, moet u eerst de dataset voor Profiel onbruikbaar maken en dan het naast opnieuw toelaten `isUpsert` tag. Als de bestaande dataset niet voor Profiel wordt toegelaten, kunt u rechtstreeks aan de stappen te werk gaan voor [het toelaten van de dataset voor Profiel en upsert](#enable-the-dataset). Als u onzeker bent, tonen de volgende stappen u hoe te om te controleren als de dataset reeds wordt toegelaten.
 
 ### Controleren of de gegevensset is ingeschakeld voor profiel
 
@@ -220,6 +224,7 @@ curl -X PATCH \
 ```
 
 **Antwoord**
+
 Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `unifiedProfile` tag is nu uitgeschakeld.
 
 ```json
@@ -270,4 +275,4 @@ Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie ter
 
 ## Volgende stappen
 
-De gegevensset Profiel en Upsert-ingeschakeld kunnen nu worden gebruikt door batch- en streaming ingeslipworkflows om updates uit te voeren voor profielgegevens. Als u meer wilt weten over het opnemen van gegevens in Adobe Experience Platform, leest u eerst de [gegevensinvoer - overzicht](../../ingestion/home.md).
+De gegevensset Profiel en Upsert-ingeschakeld kunnen nu worden gebruikt door workflows voor het invoeren van batches om updates van profielgegevens te maken. Als u meer wilt weten over het opnemen van gegevens in Adobe Experience Platform, leest u eerst de [gegevensinvoer - overzicht](../../ingestion/home.md).

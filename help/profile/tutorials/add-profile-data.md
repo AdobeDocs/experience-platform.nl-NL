@@ -5,9 +5,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe te voegen aan het realtime profiel van de klant.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -19,28 +19,28 @@ In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe t
 
 ## Een schema inschakelen voor [!DNL Real-time Customer Profile]
 
-Gegevens die in [!DNL Experience Platform] voor gebruik door [!DNL Real-time Customer Profile] worden opgenomen moeten met een [!DNL Experience Data Model] (XDM) schema in overeenstemming zijn dat voor [!DNL Profile] wordt toegelaten. Een schema kan alleen worden ingeschakeld voor Profiel als het de klasse [!DNL XDM Individual Profile] of [!DNL XDM ExperienceEvent] implementeert.
+Gegevens die worden ingevoerd in [!DNL Experience Platform] voor gebruik door [!DNL Real-time Customer Profile] voldoen aan een [!DNL Experience Data Model] (XDM) schema dat wordt toegelaten voor [!DNL Profile]. Als u een schema wilt inschakelen voor Profiel, moet u ofwel de opdracht [!DNL XDM Individual Profile] of [!DNL XDM ExperienceEvent] klasse.
 
-U kunt een schema voor gebruik in [!DNL Real-time Customer Profile] toelaten gebruikend [!DNL Schema Registry] API of [!DNL Schema Editor] gebruikersinterface. Om te beginnen, volg de leerprogramma&#39;s voor [creërend een schema gebruikend APIs](../../xdm/tutorials/create-schema-api.md) of [creërend een schema gebruikend de Redacteur UI van het Schema](../../xdm/tutorials/create-schema-ui.md).
+U kunt een schema inschakelen voor gebruik in [!DNL Real-time Customer Profile] met de [!DNL Schema Registry] API of de [!DNL Schema Editor] gebruikersinterface. Volg de zelfstudies voor [een schema maken met behulp van API&#39;s](../../xdm/tutorials/create-schema-api.md) of [het creëren van een schema gebruikend de Redacteur UI van het Schema](../../xdm/tutorials/create-schema-ui.md).
 
 ## Gegevens toevoegen met batch-opname
 
-Alle gegevens die naar [!DNL Platform] worden geüpload met behulp van batch-opname, worden geüpload naar afzonderlijke gegevenssets. Alvorens deze gegevens door [!DNL Real-time Customer Profile] kunnen worden gebruikt, moet de dataset in kwestie specifiek worden gevormd. Voor volledige instructies, zie de zelfstudie over [het vormen van een dataset voor de Dienst van het Profiel en van de Identiteit](dataset-configuration.md).
+Alle gegevens geüpload naar [!DNL Platform] het gebruiken van partijingestie wordt geupload aan individuele datasets. Voordat deze gegevens kunnen worden gebruikt door [!DNL Real-time Customer Profile], moet de betrokken gegevensset specifiek worden geconfigureerd. Voor volledige instructies raadpleegt u de zelfstudie op [configureren van een gegevensset voor profiel- en identiteitsservice](dataset-configuration.md).
 
-Zodra de dataset is gevormd, kunt u beginnen gegevens in het op te nemen. Zie de [handleiding voor ontwikkelaars van batchinvoer](../../ingestion/batch-ingestion/api-overview.md) voor gedetailleerde stappen over het uploaden van bestanden in verschillende indelingen.
+Zodra de dataset is gevormd, kunt u beginnen gegevens in het op te nemen. Zie de [handleiding voor het ontwikkelen van batch-inhoud](../../ingestion/batch-ingestion/api-overview.md) voor gedetailleerde stappen voor het uploaden van bestanden in verschillende indelingen.
 
 ## Gegevens toevoegen met streaming opname
 
-Om het even welke stroom-ingebed gegevens die met een [!DNL Profile]-Toegelaten schema compatibel zijn zullen automatisch het aangewezen verslag in [!DNL Real-time Customer Profile] toevoegen of beschrijven. Als er meer dan één identiteit wordt opgegeven in de record of als er tijdreeksgegevens worden gebruikt, worden deze identiteiten zonder extra configuratie toegewezen aan de identiteitsgrafiek. Raadpleeg de [handleiding voor het streamen van ingeslikte toepassingen](../../ingestion/tutorials/streaming-record-data.md) voor meer informatie.
+Alle via een stream opgenomen gegevens die voldoen aan een [!DNL Profile]-enabled XDM schema zal automatisch het aangewezen verslag binnen toevoegen of overschrijven [!DNL Real-time Customer Profile]. Als er meer dan één identiteit wordt opgegeven in de record of als er tijdreeksgegevens worden gebruikt, worden deze identiteiten zonder extra configuratie toegewezen aan de identiteitsgrafiek. Zie de [handleiding voor streamingopname](../../ingestion/tutorials/streaming-record-data.md) voor meer informatie.
 
 ## Bevestig dat het uploaden is gelukt
 
 Wanneer het uploaden van gegevens naar een nieuwe dataset voor het eerst, of als deel van een proces dat een nieuwe ETL of een gegevensbron impliceert, wordt geadviseerd om de gegevens zorgvuldig te controleren om ervoor te zorgen het correct geupload is.
 
-Met de API [!DNL Real-time Customer Profile] Access kunt u batchgegevens ophalen terwijl deze in een gegevensset worden geladen. Als u geen van de entiteiten kunt terugwinnen u verwacht, kan uw dataset niet voor [!DNL Profile] worden toegelaten. Na het bevestigen dat uw dataset is toegelaten, zorg ervoor dat uw brongegevensformaat en herkenningstekens uw verwachtingen steunen.
+Met de [!DNL Real-time Customer Profile] Toegang API, kunt u partijgegevens terugwinnen aangezien het in een dataset wordt geladen. Als u geen van de entiteiten kunt terugwinnen u verwacht, kan uw dataset niet worden toegelaten voor [!DNL Profile]. Na het bevestigen dat uw dataset is toegelaten, zorg ervoor dat uw brongegevensformaat en herkenningstekens uw verwachtingen steunen.
 
-Voor gedetailleerde instructies over hoe te om tot entiteiten toegang te hebben die [!DNL Real-time Customer Profile] API gebruiken, gelieve te verwijzen naar [de gids van het eindpunt van entiteiten](../api/entities.md), ook gekend als &quot;[!DNL Profile Access] API&quot;.
+Voor gedetailleerde instructies over hoe te om tot entiteiten toegang te hebben gebruikend [!DNL Real-time Customer Profile] API, gelieve te verwijzen naar [eindgebruikershandleiding voor entiteiten](../api/entities.md), ook wel bekend als &quot;[!DNL Profile Access] API&quot;.
 
 ## Profielopslaggegevens bijwerken
 
-Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Dit kan door partij of het stromen opname worden gedaan en vereist een profiel-Toegelaten dataset die met een upsert markering wordt gevormd. Voor meer informatie over hoe te om een dataset voor attributenupdates te vormen, gelieve te verwijzen naar de zelfstudie voor [toelatend een dataset voor Profiel en upsert](../../catalog/datasets/enable-upsert.md).
+Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Dit kan door partijopname worden gedaan en vereist een profiel-Toegelaten dataset die met een upsert markering wordt gevormd. Voor meer informatie over hoe te om een dataset voor attributenupdates te vormen, gelieve te verwijzen naar het leerprogramma voor [het toelaten van een dataset voor Profiel en upsert](../../catalog/datasets/enable-upsert.md).
