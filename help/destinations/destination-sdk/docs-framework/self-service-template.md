@@ -2,9 +2,9 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1182'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,27 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-*Geef een kort overzicht voor uw bedrijf, inclusief de waarde die het aan klanten biedt. Voeg een koppeling toe naar de startpagina van de productdocumentatie voor meer informatie.*
+*Geef een kort overzicht van uw bedrijf, inclusief de waarde die het aan klanten biedt. Voeg een koppeling toe naar de startpagina van de productdocumentatie voor meer informatie.*
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door de *UW BESTEMMING* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *Koppeling of e-mailadres invoegen waar u voor updates kunt komen*
+>Deze documentatiepagina is gemaakt door de *UW BESTEMMING* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *Koppeling of e-mailadres invoegen waar u voor updates kunt komen, bijvoorbeeld `support@yourdestination.com`.*
+
+## Gebruiksscenario’s {#use-cases}
+
+Om u te helpen beter begrijpen hoe en wanneer u het *UW BESTEMMING* doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+
+### Hoofdletters gebruiken #1
+
+*Voor mobiele berichtenplatforms:*
+
+*Een homepage- en verkoopplatform wil mobiele meldingen naar Android- en iOS-apparaten van klanten doorsturen om hen te laten weten dat er 100 bijgewerkte aanbiedingen zijn in het gebied waar ze eerder naar een verhuur hebben gezocht.*
+
+### Hoofdletters gebruiken #2
+
+*Voor sociale netwerkplatforms:*
+
+*Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk kleding kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen offlinegegevens bouwen, en deze segmenten naar YOURDESTINATION verzenden, om advertenties in de sociale media van hun klanten te tonen.*
 
 ## Vereisten {#prerequisites}
 
@@ -38,13 +54,13 @@ ht-degree: 1%
 
 *Voeg in deze sectie informatie toe over de identiteiten die door uw bestemming worden gesteund. We hebben de tabel vooraf gevuld met enkele standaardwaarden. Verwijder de waarden die niet van toepassing zijn op de bestemming en alle waarden die niet zijn voorgevuld.*
 
-*UW BESTEMMING* ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+*UW BESTEMMING* ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | GAID | Google-advertentie-id | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
-| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) voor meer informatie . |
+| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
 | phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
@@ -66,31 +82,27 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 {style=&quot;table-layout:auto&quot;}
 
-## Gebruiksscenario’s {#use-cases}
-
-Om u te helpen beter begrijpen hoe en wanneer u het *UW BESTEMMING* doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
-
-### Hoofdletters gebruiken #1
-
-*Voor mobiele berichtenplatforms:*
-
-*Een homepage- en verkoopplatform wil mobiele meldingen naar Android- en iOS-apparaten van klanten doorsturen om hen te laten weten dat er 100 bijgewerkte aanbiedingen zijn in het gebied waar ze eerder naar een verhuur hebben gezocht.*
-
-### Hoofdletters gebruiken #2
-
-*Voor sociale netwerkplatforms:*
-
-*Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk kleding kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen offlinegegevens bouwen, en deze segmenten naar YOURDESTINATION verzenden, om advertenties in de sociale media van hun klanten te tonen.*
-
 ## Verbinden met de bestemming {#connect}
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-### Verbindingsparameters {#parameters}
+### Verifiëren voor bestemming {#authenticate}
 
-while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) voor deze bestemming moet u de volgende informatie opgeven:
+*Voeg de velden toe die klanten moeten invullen wanneer ze verificatie uitvoeren op uw bestemming. Deze gebieden zijn bestemming-specifiek en hangen van uw configuratie in Destination SDK af. De velden van uw bestemming zijn mogelijk niet gelijk aan de onderstaande velden. Neem ook een schermafbeelding op, vergelijkbaar met de onderstaande voorbeeldschermafbeelding.*
 
-*Voeg de gebieden toe die de klanten moeten invullen wanneer het vormen van een nieuwe bestemming. Deze gebieden zijn bestemming-specifiek en hangen van uw configuratie in Destination SDK af. De velden van uw bestemming zijn mogelijk niet gelijk aan de onderstaande velden.*
+Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
+
+![Voorbeeldscreenshot waarin wordt getoond hoe u verificatie uitvoert voor de bestemming](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+
+* **[!UICONTROL Bearer token]**: Vul de token van de drager in om te verifiëren bij de bestemming.
+
+### Doelgegevens invullen {#destination-details}
+
+*Voeg de gebieden toe die de klanten moeten invullen wanneer het vormen van een nieuwe bestemming. Deze gebieden zijn bestemming-specifiek en hangen van uw configuratie in Destination SDK af. De velden van uw bestemming zijn mogelijk niet gelijk aan de onderstaande velden. Neem ook een schermafbeelding op, vergelijkbaar met de onderstaande voorbeeldschermafbeelding.*
+
+Om details voor de bestemming te vormen, vul de vereiste gebieden in en selecteer **[!UICONTROL Next]**.
+
+![Voorbeeldschermafbeelding met informatie over het invullen van details voor uw bestemming](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -161,9 +173,9 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## Geëxporteerde gegevens {#exported-data}
+## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-*Voeg een opmerking toe over de manier waarop gegevens naar uw bestemming worden geëxporteerd. Dit zou de klant helpen ervoor zorgen dat zij correct met uw bestemming geïntegreerd hebben. U kunt bijvoorbeeld een voorbeeld-JSON opgeven, zoals hieronder.*
+*Voeg een alinea toe over de manier waarop gegevens naar uw doel worden geëxporteerd. Dit zou de klant helpen ervoor zorgen dat zij correct met uw bestemming geïntegreerd hebben. U kunt bijvoorbeeld een voorbeeld-JSON opgeven, zoals hieronder. Of, kon u screenshots en informatie van de interface van uw bestemming verstrekken die tonen hoe de klanten segmenten zouden moeten verwachten om in het bestemmingsplatform te bevolken.*
 
 ```
 {
@@ -205,8 +217,8 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-*U kunt verdere verbindingen aan uw productdocumentatie of om het even welke andere middelen verstrekken u belangrijk voor de klant om succesvol te zijn.*
+*U kunt verdere verbindingen aan uw productdocumentatie of om het even welke andere middelen verstrekken die u voor de klant belangrijk om vindt succesvol te zijn.*
