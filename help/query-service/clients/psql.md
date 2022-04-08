@@ -5,10 +5,10 @@ title: PSQL verbinden met Query Service
 topic-legacy: connect
 description: PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u PostgreSQL op uw computer installeert. U kunt het installeren door deze instructies te volgen.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 06d3a8aa6f2f73c2d5392a76fb5b36b18691cf0d
+source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 1%
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +22,11 @@ PSQL is een opdrachtregelinterface die wordt geïnstalleerd wanneer u de softwar
 
 Na het installeren van PSQL op uw computer, bent u klaar om PSQL met de Dienst van de Vraag te verbinden. Terugkeren naar de [!DNL Platform] UI, dan selecteren **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
-![Image](../images/clients/psql/connect-bi.png)
+Onder de **[!UICONTROL PSQL Command]** selecteert u de **[!UICONTROL Copy to clipboard]** icon (![Pictogram kopiëren](../images/clients/psql/copy-icon.png)) om de opdrachttekenreeks te kopiëren.
 
-Selecteer het pictogram om de sectie met het label te kopiëren **[!UICONTROL PSQL Command]**, dan kleef het bevelkoord in een terminal of bevel-lijn venster alvorens binnen te drukken.
+![Het tabblad Credentials van het dashboard Vragen met het pictogram Kopie gemarkeerd.](../images/clients/psql/connect-bi.png)
+
+Plak de bevelkoord in een terminal of bevel-lijn venster en druk **Enter** op uw toetsenbord.
 
 >[!IMPORTANT]
 >

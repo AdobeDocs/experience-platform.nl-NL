@@ -5,9 +5,9 @@ title: UI-gids voor zoekservice
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
+source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Met Adobe Experience Platform Query Service kunt u verbinding maken met externe 
 
 U kunt verlopen referenties gebruiken om snel een verbinding met een externe client in te stellen.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![Het tabblad Referenties van het dashboard Vragen met de sectie Verlopende referenties gemarkeerd.](../images/ui/credentials/expiring-credentials.png)
 
 De **[!UICONTROL Expiring credentials]** Deze sectie bevat de volgende informatie:
 
@@ -55,7 +55,7 @@ Alle vereiste toestemmingen worden nu gevormd in de Console van de Ontwikkelaar 
 
 Als u een set niet-vervallende gegevens wilt maken, gaat u terug naar de gebruikersinterface van het Platform en selecteert u **[!UICONTROL Queries]** van de linkernavigatie om tot [!UICONTROL Queries] werkruimte. Selecteer vervolgens de **[!UICONTROL Credentials]** tab gevolgd door **[!UICONTROL Generate credentials]**.
 
-![](../images/ui/credentials/generate-credentials.png)
+![Het dashboard van Vragen met het lusje van Referenties en Genereer geloofsbrieven benadrukte.](../images/ui/credentials/generate-credentials.png)
 
 Er wordt een dialoogvenster weergegeven waarin u referenties kunt genereren. Als u niet-vervallende gegevens wilt maken, moet u de volgende gegevens opgeven:
 
@@ -66,11 +66,11 @@ Er wordt een dialoogvenster weergegeven waarin u referenties kunt genereren. Als
 
 Als u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Generate credentials]** om uw referenties te genereren.
 
-![](../images/ui/credentials/create-account.png)
+![Het dialoogvenster Referenties genereren wordt gemarkeerd.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Wanneer de **[!UICONTROL Generate credentials]** wordt geselecteerd, wordt een configuratie JSON dossier gedownload aan uw lokale computer. Aangezien Adobe **niet** registreert de geproduceerde geloofsbrieven, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
+>Wanneer **[!UICONTROL Generate credentials]** is geselecteerd, wordt een JSON-configuratiebestand gedownload naar uw lokale computer. Aangezien Adobe **niet** registreert de geproduceerde geloofsbrieven, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
 >
 >Bovendien, als de geloofsbrieven niet gedurende 90 dagen worden gebruikt, zullen de geloofsbrieven worden verklaard.
 
@@ -82,7 +82,7 @@ Het configuratie-JSON-bestand bevat informatie zoals de naam van de technische a
 
 Nadat u de gegenereerde gegevens hebt opgeslagen, selecteert u **[!UICONTROL Close]**. U kunt nu een lijst zien van al uw niet-vervallende geloofsbrieven.
 
-![](../images/ui/credentials/list-credentials.png)
+![Het tabblad Credentials van het dashboard van Query&#39;s met de sectie Niet-vervallende referenties uitgevouwen.](../images/ui/credentials/list-credentials.png)
 
 U kunt uw niet-vervallende gegevens bewerken of verwijderen. Als u een niet-vervallende referentie wilt bewerken, selecteert u het potloodpictogram (![](../images/ui/credentials/edit-icon.png)). Als u een niet-vervallende referentie wilt verwijderen, selecteert u het verwijderingspictogram (![](../images/ui/credentials/delete-icon.png)).
 
@@ -92,7 +92,7 @@ Wanneer u een niet-verkennende referentie bewerkt, wordt een modaal veld weergeg
 - **[!UICONTROL Description]**: (Optioneel) Een beschrijving van de referenties die u genereert.
 - **[!UICONTROL Assigned to]**: De gebruiker waaraan de geloofsbrieven zullen worden toegewezen. Deze waarde moet het e-mailadres zijn van de gebruiker die de referenties maakt.
 
-![](../images/ui/credentials/update-credentials.png)
+![Het dialoogvenster Account bijwerken.](../images/ui/credentials/update-credentials.png)
 
 Als u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Update account]** om de update van uw referenties te voltooien.
 
@@ -112,11 +112,11 @@ In de onderstaande tabel worden de parameters beschreven die doorgaans vereist z
 
 | Parameter | Beschrijving |
 |---|---|
-| Server/host | De naam van de server/host waarmee u verbinding maakt. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-vervallende geloofsbrieven en neemt de vorm van aan `server.adobe.io`. De waarde is gevonden onder **[!UICONTROL Host]** in de [!UICONTROL EXPIRING CREDENTIALS] sectie.</ul></li> |
-| Poort | De poort voor de server/host waarmee u verbinding maakt. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-het verlopen geloofsbrieven en onder gevonden **[!UICONTROL Port]** in de [!UICONTROL EXPIRING CREDENTIALS] sectie. Een voorbeeldwaarde voor de haven zou zijn `80`.</ul></li> |
-| Database | De database waarmee u verbinding maakt. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-het verlopen geloofsbrieven en onder gevonden **[!UICONTROL Database]** in de [!UICONTROL EXPIRING CREDENTIALS] sectie. Een voorbeeldwaarde voor de database zou `prod:all`.</ul></li> |
-| Gebruikersnaam | De gebruikersnaam voor de gebruiker die verbinding maakt met de externe client. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-vervallende geloofsbrieven. De notatie heeft de vorm van een alfanumerieke tekenreeks voor `@AdobeOrg`. Deze waarde is te vinden onder **[!UICONTROL Username]**.</li></ul> |
-| Wachtwoord | Het wachtwoord voor de gebruiker die verbinding maakt met de externe client. <ul><li>Als u het verlopen geloofsbrieven gebruikt, kan dit onder worden gevonden **[!UICONTROL Password]** binnen de [!UICONTROL EXPIRING CREDENTIALS] sectie.</li><li>Als u niet-vervallende geloofsbrieven gebruikt, is deze waarde de samengevoegde argumenten van technicalAccountID en de referentie die uit het configuratieJSON dossier wordt genomen. De wachtwoordwaarde heeft de vorm: `{technicalAccountId}:{credential}`.</li></ul> |
+| **Server/host** | De naam van de server/host waarmee u verbinding maakt. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-vervallende geloofsbrieven en neemt de vorm van aan `server.adobe.io`. De waarde is gevonden onder **[!UICONTROL Host]** in de [!UICONTROL EXPIRING CREDENTIALS] sectie.</ul></li> |
+| **Poort** | De poort voor de server/host waarmee u verbinding maakt. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-het verlopen geloofsbrieven en onder gevonden **[!UICONTROL Port]** in de [!UICONTROL EXPIRING CREDENTIALS] sectie. Een voorbeeldwaarde voor de haven zou zijn `80`.</ul></li> |
+| **Database** | De database waarmee u verbinding maakt. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-het verlopen geloofsbrieven en onder gevonden **[!UICONTROL Database]** in de [!UICONTROL EXPIRING CREDENTIALS] sectie. Een voorbeeldwaarde voor de database zou `prod:all`.</ul></li> |
+| **Gebruikersnaam** | De gebruikersnaam voor de gebruiker die verbinding maakt met de externe client. <ul><li>Deze waarde wordt gebruikt voor zowel het verlopen van geloofsbrieven als niet-vervallende geloofsbrieven. De notatie heeft de vorm van een alfanumerieke tekenreeks voor `@AdobeOrg`. Deze waarde is te vinden onder **[!UICONTROL Username]**.</li></ul> |
+| **Wachtwoord** | Het wachtwoord voor de gebruiker die verbinding maakt met de externe client. <ul><li>Als u het verlopen geloofsbrieven gebruikt, kan dit onder worden gevonden **[!UICONTROL Password]** binnen de [!UICONTROL EXPIRING CREDENTIALS] sectie.</li><li>Als u niet-vervallende geloofsbrieven gebruikt, is deze waarde de samengevoegde argumenten van technicalAccountID en de referentie die uit het configuratieJSON dossier wordt genomen. De wachtwoordwaarde heeft de vorm: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Volgende stappen
 
