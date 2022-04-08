@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1753'
+source-wordcount: '1784'
 ht-degree: 2%
 
 ---
@@ -98,8 +98,8 @@ Dit is een voorbeeldconfiguratie van een fictieve streamingbestemming, Moviestar
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ Met deze optie kunt u:
    * Segment-id;
    * segmentstatus;
    * Identiteit of groepen van identiteiten.
+
+>[!NOTE]
+>
+>Wanneer het gebruiken van de configureerbare samenvoegingsoptie voor uw bestemming, houd rekening met de minimum en maximumwaarden die u voor de twee parameters kunt gebruiken `maxBatchAgeInSecs` (minimaal 1,800 en maximaal 3,600) en `maxNumEventsInBatch` (minimaal 1 000, maximaal 10 000).
 
 Voor gedetailleerde uitleg van de aggregatieparameters raadpleegt u de [API-eindpuntbewerkingen voor doelen](./destination-configuration-api.md) referentiepagina, waar elke parameter wordt beschreven.
 
