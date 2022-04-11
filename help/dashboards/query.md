@@ -1,62 +1,76 @@
 ---
 solution: Experience Platform
-title: Onbewerkte gegevenssets verkennen en verwerken waardoor Platform-dashboards kunnen worden aangestuurd
+title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Query-service
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, segment, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
+source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 1%
+source-wordcount: '838'
+ht-degree: 0%
 
 ---
 
-# Onderzoek, verifieer en proces dashboarddatasets gebruikend de Dienst van de Vraag
+# Ontdek, verifieer en proces dashboarddatasets gebruikend [!DNL Query Service]
 
-Adobe Experience Platform verstrekt belangrijke informatie over het profiel van uw organisatie, segment, en bestemmingsgegevens door dashboards beschikbaar binnen de UI van het Experience Platform. U kunt de Dienst van de Vraag van Adobe Experience Platform dan gebruiken om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die deze dashboards in het gegevensmeer aandrijven.
+Adobe Experience Platform verstrekt belangrijke informatie over het profiel van uw organisatie, segment, en bestemmingsgegevens door dashboards beschikbaar binnen de UI van het Experience Platform. U kunt dan Adobe Experience Platform gebruiken [!DNL Query Service] om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die deze dashboards in het gegevensmeer aandrijven.
 
-## Aan de slag met Query Service
+## Aan de slag met [!DNL Query Service]
 
-De Dienst van de Vraag van Adobe Experience Platform steunt marketers in het verkrijgen van inzicht van hun gegevens door het gebruik van standaardSQL toe te laten om gegevens in het gegevensmeer te vragen. De Dienst van de vraag biedt een gebruikersinterface en een API aan die kunnen worden gebruikt om zich bij om het even welke dataset in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe datasets voor gebruik in rapportering, machine het leren, of voor opname in het Profiel van de Klant in real time te vangen.
+Adobe Experience Platform [!DNL Query Service] steunt marketers in het verkrijgen van inzichten van hun gegevens door het gebruik van standaardSQL toe te laten om gegevens in het gegevensmeer te vragen. [!DNL Query Service] biedt een gebruikersinterface en API aan die kunnen worden gebruikt om zich bij om het even welke dataset in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe datasets voor gebruik in rapportering, machine het leren, of voor opname in het Profiel van de Klant in real time te vangen.
 
-Om meer over de Dienst van de Vraag en zijn rol binnen Experience Platform te leren, te beginnen door [overzicht van de Dienst van de Vraag te lezen](../query-service/home.md).
+Meer informatie over [!DNL Query Service] en zijn rol binnen het Experience Platform , gelieve eerst te lezen [[!DNL Query Service] overzicht](../query-service/home.md).
 
-## Beschikbare gegevenssets
+## Toegang tot beschikbare gegevenssets
 
-U kunt de Dienst van de Vraag gebruiken om ruwe datasets voor profiel, segment, en bestemmingsdashboards te vragen. De volgende secties beschrijven de ruwe datasets die u in het gegevensmeer kunt vinden.
+U kunt [!DNL Query Service] om ruwe datasets voor profiel, segment, en bestemmingsdashboards te vragen. Om uw beschikbare datasets, in het Experience Platform UI te bekijken, selecteer **Gegevenssets** in de linkernavigatie om het dashboard van Datasets te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
+
+![De Dataset doorbladert dashboard met het lusje van Datasets die in de linkernavigatie wordt benadrukt.](./images/query/browse-datasets.png)
+
+### Door het systeem gegenereerde gegevenssets
+
+>[!IMPORTANT]
+>
+>Door het systeem gegenereerde gegevenssets worden standaard verborgen. Standaard worden de [!UICONTROL Browse] het lusje toont slechts datasets die u gegevens in hebt opgenomen.
+
+Om systeem-geproduceerde datasets te bekijken, selecteer het filterpictogram (![Een filterpictogram.](./images/query/filter.png)) links van de zoekbalk.
+
+![Het tabblad Datasets Bladeren met het filterpictogram gemarkeerd.](./images/query/filter-datasets.png)
+
+Er verschijnt een zijbalk met twee schakelingen. [!UICONTROL Included in Profile] en [!UICONTROL Show system datasets]. De schakeloptie selecteren voor [!UICONTROL Show system datasets] om systeem-geproduceerde datasets binnen de doorbladerbare lijst van datasets te omvatten.
+
+![De Datasets doorbladeren tabel met de gemarkeerde schakeloptie voor systeemdatasets weergeven.](./images/query/show-system-datasets.png)
 
 ### Gegevensbestanden van profielkenmerken
 
 De dashboardinzichten van het profiel zijn gebonden aan fusiebeleid dat door uw organisatie is bepaald. Voor elk actief fusiebeleid, is er een dataset van profielattributen beschikbaar in het gegevenspeer.
 
-De naamgevingsconventie van deze gegevenssets is **Profile-Snapshot-Export** gevolgd door een door het systeem gegenereerde, willekeurige alfanumerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+De naamgevingsconventie van deze gegevenssets is **Profile-Snapshot-export** gevolgd door een door het systeem gegenereerde, willekeurige alfanumerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets [onderzoeken gebruikend de datasetkijker](../catalog/datasets/user-guide.md) in Experience Platform UI.
+Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
 ![](images/query/profile-attribute.png)
 
 #### Gegevenssets van profielkenmerken toewijzen om beleid-id&#39;s samen te voegen
 
-Elke profielkenmerkgegevensset heeft de naam **Profielmomentopname exporteren** gevolgd door een door het systeem gegenereerde, willekeurige alfanumerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+De alfanumerieke waarde die wordt toegewezen aan elke door het systeem gegenereerde profielkenmerkgegevensset is een willekeurige tekenreeks die wordt toegewezen aan een samenvoegbeleid-id van een van de samenvoegbeleidsregels die door uw organisatie worden gemaakt. De afbeelding van elke identiteitskaart van het fusiebeleid aan zijn verwante koord van de de gegevensreeks van profielattributen wordt gehandhaafd in `adwh_dim_merge_policies` dataset.
 
-Deze alpha numerieke waarde is een door het systeem gegenereerde, willekeurige tekenreeks die is toegewezen aan een samenvoegbeleid-id van een van de samenvoegbeleidsregels die door uw organisatie zijn gemaakt. De afbeelding van elke identiteitskaart van het fusiebeleid aan zijn verwante reeks van de profielkenmerkdataset wordt gehandhaafd in de `adwh_dim_merge_policies` dataset.
-
-De `adwh_dim_merge_policies` dataset bevat de volgende gebieden:
+De `adwh_dim_merge_policies` dataset bevat de volgende velden:
 
 * `merge_policy_name`
 * `merge_policy_id`
 * `merge_policy`
 * `dataset_id`
 
-Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Meer over het gebruiken van de Redacteur van de Vraag, verwijs naar [de gids UI van de Redacteur van de Vraag](../query-service/ui/user-guide.md).
+Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Als u meer wilt weten over het gebruik van de Query Editor, raadpleegt u de [Handleiding voor de Query Editor](../query-service/ui/user-guide.md).
 
 ### Gegevensset voor segmentmetagegevens
 
 Er is een dataset van segmentmeta-gegevens beschikbaar in het gegevensmeer die meta-gegevens voor elk van de segmenten van uw organisatie bevatten.
 
-De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-Export** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-export** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets [onderzoeken gebruikend de datasetkijker](../catalog/datasets/user-guide.md) in Experience Platform UI.
+Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
@@ -64,15 +78,15 @@ Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemoment
 
 De meta-gegevens voor elk van de geactiveerde bestemmingen van uw organisatie is beschikbaar als ruwe dataset in het gegevensmeer.
 
-De noemende overeenkomst van deze dataset is **DIM_Destination**.
+De naamgevingsconventie van deze gegevensset is **DIM_Doel**.
 
-Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset [onderzoeken gebruikend de datasetkijker](../catalog/datasets/user-guide.md) in Experience Platform UI.
+Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
 ## Voorbeeldquery
 
-De volgende voorbeeldvragen omvatten steekproef SQL die in de Dienst van de Vraag kan worden gebruikt om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die uw dashboards aandrijven.
+De volgende voorbeeldvragen omvatten voorbeeld SQL dat in kan worden gebruikt [!DNL Query Service] om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die uw dashboards aandrijven.
 
 ### Aantal profielen op identiteit
 
@@ -126,6 +140,6 @@ Select
 
 ## Volgende stappen
 
-Door deze gids te lezen, kunt u de Dienst van de Vraag nu gebruiken om verscheidene vragen uit te voeren om de ruwe datasets te onderzoeken en te verwerken die uw profiel, segment, en bestemmingsdashboards aandrijven.
+Door deze handleiding te lezen, kunt u nu [!DNL Query Service] om verscheidene vragen uit te voeren om de ruwe datasets te onderzoeken en te verwerken die uw profiel, segment, en bestemmingsdashboards aandrijven.
 
 Als u meer wilt weten over elk dashboard en de bijbehorende metriek, selecteert u een dashboard in de lijst met beschikbare dashboards in de documentatienavigatie.
