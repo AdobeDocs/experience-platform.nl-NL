@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
+source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '2668'
 ht-degree: 1%
 
 ---
@@ -420,6 +420,27 @@ EXCEPTION
 WHEN other THEN SELECT 'ERROR';
 
 END $$; 
+```
+
+## Inline {#inline}
+
+De inline functie scheidt de elementen van een array van structs en genereert de waarden in een tabel. Het kan alleen in het dialoogvenster `SELECT` lijst of een `LATERAL VIEW`.
+
+De inline functie **kan** worden geplaatst in een uitgezocht lijst waar er andere generatorfuncties zijn.
+
+Door gebrek, worden de geproduceerde kolommen genoemd &quot;col1&quot;, &quot;col2&quot;, etc. Als de expressie `NULL` dan worden geen rijen geproduceerd.
+
+**Voorbeeld**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+In het voorbeeld wordt het volgende geretourneerd:
+
+```text
+1  a Spark SQL
+2  b Spark SQL
 ```
 
 ## [!DNL Spark] SQL-opdrachten
