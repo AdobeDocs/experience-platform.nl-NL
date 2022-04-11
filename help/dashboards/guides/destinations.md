@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
+source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1585'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ Als een segment binnen de [!UICONTROL Mapped audience health] widget wijkt met e
 
 ![De widget gezondheid voor het toegewezen publiek.](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL Destinations count] (#destination-count)
+### [!UICONTROL Destinations count] {#destinations-count}
 
 De [!UICONTROL Destinations count] widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen.
 
