@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
+source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '773'
 ht-degree: 5%
 
 ---
@@ -48,6 +48,8 @@ ht-degree: 5%
       - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP-aansluiting](connectors/cloud-storage/sftp.md)
       - [Amazon S3- en Azure Blob-connector](connectors/cloud-storage/blob-s3.md)
+   - Toestemming en voorkeuren {#consent}
+      - [OneTrust-integratie](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-aansluiting](connectors/crm/salesforce.md)
@@ -109,6 +111,8 @@ ht-degree: 5%
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+      - Toestemming en voorkeuren {#consent}
+         - [OneTrust-integratie](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -203,6 +207,8 @@ ht-degree: 5%
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 en Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - Toestemming en voorkeuren {#consent}
+         - [OneTrust-integratie](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -250,6 +256,7 @@ ht-degree: 5%
       - [Gegevensstroom advertentieverbinding](tutorials/ui/dataflow/advertising.md)
       - [Batch-gegevens voor cloudopslagverbinding](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Gegevens over streaming cloudopslagverbinding](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [Verbindingsgegevens voor goedkeuring en voorkeuren](tutorials/ui/dataflow/consent-and-preferences.md)
       - [Gegevens CRM-verbinding](tutorials/ui/dataflow/crm.md)
       - [Gegevensstroom voor succesverbinding van klant](tutorials/ui/dataflow/customer-success.md)
       - [Gegevensstroom databaseverbinding](tutorials/ui/dataflow/databases.md)

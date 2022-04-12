@@ -5,9 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
+source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,13 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen z
 - [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
+
+### Toestemming en voorkeuren {#consent}
+
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een platform voor toestemming en voorkeurenbeheer van derden. Zie de volgende verwante documenten voor meer informatie:
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
 
 ### Customer Relationship Management (CRM) {#crm}
 
