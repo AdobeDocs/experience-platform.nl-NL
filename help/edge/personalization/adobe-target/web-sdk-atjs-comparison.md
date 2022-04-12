@@ -2,9 +2,10 @@
 title: Het vergelijken bij.js met het Web SDK van het Experience Platform
 description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
-source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
+exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2269'
 ht-degree: 2%
 
 ---
@@ -1224,5 +1225,5 @@ U hebt veelvoudige het zuiveren mogelijkheden wanneer het gebruiken van Web SDK:
 * Gebruiken [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 * [Web SDK debugenabled](../../../edge/fundamentals/debugging.md)
 * Gebruiken [Controle van webSDK-haken](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Gebruiken [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=en)
+* Gebruiken [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Doelovertrek

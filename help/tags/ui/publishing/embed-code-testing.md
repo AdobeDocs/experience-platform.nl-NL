@@ -1,9 +1,10 @@
 ---
 title: Insluitcodes testen met Adobe Experience Platform Debugger
 description: Leer hoe u met Foutopsporing op Platform verschillende insluitcodes voor Adobe Experience Platform op uw website lokaal kunt testen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Als u wijzigingen aanbrengt in uw tagbibliotheek die in Adobe Experience Platfor
 
 ## Vereisten
 
-Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en insluitcodes in de gebruikersinterface voor gegevensverzameling. Zie het [Omgevingenoverzicht](./environments.md) voor meer informatie.
+Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en insluitcodes in de gebruikersinterface voor gegevensverzameling. Zie de [Overzicht van omgevingen](./environments.md) voor meer informatie .
 
 Deze zelfstudie vereist ook dat u de browserextensie van Foutopsporing voor Platforms hebt geïnstalleerd. Foutopsporing voor Platforms is alleen beschikbaar voor Chrome- en Firefox-browsers. Gebruik een van de volgende koppelingen om de extensie te installeren voordat u de zelfstudie start:
 
@@ -27,7 +28,7 @@ Deze zelfstudie vereist ook dat u de browserextensie van Foutopsporing voor Plat
 
 ## Foutopsporing Platform openen op uw website
 
-Navigeer met de browser van uw keuze naar uw website en open de extensie Foutopsporing Platform. De site waarmee Foutopsporing op Platform is verbonden, wordt onder in het venster weergegeven. Als er momenteel tags op uw site worden uitgevoerd, wordt deze weergegeven op het tabblad [!UICONTROL Summary].
+Navigeer met de browser van uw keuze naar uw website en open de extensie Foutopsporing Platform. De site waarmee Foutopsporing op Platform is verbonden, wordt onder in het venster weergegeven. Als er momenteel tags op uw site worden uitgevoerd, wordt deze weergegeven in de [!UICONTROL Summary] tab.
 
 ![](./images/embed-code-testing/summary.png)
 
@@ -37,11 +38,11 @@ Navigeer met de browser van uw keuze naar uw website en open de extensie Foutops
 
 ## Insluitcodes vervangen
 
-Als Foutopsporing Platform is verbonden met uw site, selecteert u **[!UICONTROL Launch]** in de linkernavigatie. Hier ziet u informatie over de bibliotheek die momenteel op uw site wordt uitgevoerd, inclusief de omgeving en bijbehorende extensies. Selecteer **[!UICONTROL Configuration]** om besturingselementen voor het beheren van insluitcodes weer te geven.
+Als Foutopsporing Platform verbinding heeft met uw site, selecteert u **[!UICONTROL Launch]** in de linkernavigatie. Hier ziet u informatie over de bibliotheek die momenteel op uw site wordt uitgevoerd, inclusief de omgeving en bijbehorende extensies. Selecteer **[!UICONTROL Configuration]** om besturingselementen voor het beheren van insluitcodes weer te geven.
 
 ![](./images/embed-code-testing/launch-tab.png)
 
-Onder [!UICONTROL Page Embed Codes] wordt de insluitcode weergegeven die uw site momenteel gebruikt. Selecteer **[!UICONTROL Actions]** aan de rechterkant van de insluitcode en selecteer **[!UICONTROL Replace]**.
+Onder [!UICONTROL Page Embed Codes], wordt de insluitcode weergegeven die uw site momenteel gebruikt. Selecteren **[!UICONTROL Actions]** rechts van de insluitcode selecteert u vervolgens **[!UICONTROL Replace]**.
 
 ![](./images/embed-code-testing/replace.png)
 
@@ -51,10 +52,10 @@ Plak de insluitcode die u wilt testen in het opgegeven tekstvak en selecteer **[
 
 ![](./images/embed-code-testing/paste-code.png)
 
-Het tabblad **[!UICONTROL Configuration]** wordt opnieuw weergegeven, zodat u kunt zien dat de actieve insluitcode is vervangen door de code die u hebt opgegeven. U kunt nu de webbrowser gebruiken om te controleren of de insluitcode die u test, naar behoren werkt.
+De **[!UICONTROL Configuration]** wordt opnieuw weergegeven, zodat u kunt zien dat de actieve insluitcode is vervangen door de code die u hebt opgegeven. U kunt nu de webbrowser gebruiken om te controleren of de insluitcode die u test, naar behoren werkt.
 
 ![](./images/embed-code-testing/code-replaced.png)
 
 ## Volgende stappen
 
-In deze zelfstudie wordt besproken hoe u met behulp van Foutopsporing op Platform lokaal kunt schakelen tussen insluitcodes voor testdoeleinden. Raadpleeg de [documentatie bij Foutopsporing Platform](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html) voor meer informatie over de verschillende mogelijkheden.
+In deze zelfstudie wordt besproken hoe u met behulp van Foutopsporing op Platform lokaal kunt schakelen tussen insluitcodes voor testdoeleinden. Zie de [Documentatie foutopsporing Platform](../../../debugger/home.md) voor meer informatie over de verschillende mogelijkheden ervan.
