@@ -3,10 +3,10 @@ keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
+source-git-commit: c83c7e2a74a6bf4a7a4c9c04ccebfd0296c89bce
 workflow-type: tm+mt
-source-wordcount: '672'
-ht-degree: 1%
+source-wordcount: '906'
+ht-degree: 0%
 
 ---
 
@@ -30,17 +30,27 @@ Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](..
 
 ## Gebruiksscenario’s {#use-cases}
 
-Deze bestemming deelt publiek met advertentieservers en niet-Adobe verpersoonlijkingstoepassingen, die in real time moeten worden gebruikt, om te beslissen welke reclame gebruikers op een website zouden moeten zien.
+De [!DNL Custom personalization connection] laat u toe om uw eigen platforms van de verpersoonlijkingspartner te gebruiken (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), en ook leveraging Experience Platform Edge Network data collection &amp; segmentation capabilities, om een diepere klanterigvaring mogelijk te maken.
 
-### Hoofdletters en kleine letters gebruiken 1
+De hieronder beschreven gebruiksgevallen omvatten zowel personalisatie van de site als gerichte on-site reclame.
 
-**Homepage aanpassen**
+Om deze gebruiksgevallen toe te laten, hebben de klanten een snelle, gestroomlijnde manier nodig om segmentinformatie van Experience Platform terug te winnen en deze informatie naar hun aangewezen systemen te verzenden die zij als verbindingen van de douaneverpersoonlijking in het Experience Platform UI vormden.
 
-Een homepage- en verkoopwebsite wil hun homepage aanpassen op basis van segmentkwalificaties in Adobe Experience Platform. Het bedrijf kan selecteren welk publiek een gepersonaliseerde ervaring zou moeten krijgen en die in kaart brengen aan de bestemming van de douaneverpersoonlijking die voor hun niet-Adobe verpersoonlijkingstoepassing zoals het richten criteria was opgesteld.
+Deze systemen kunnen externe verpersoonlijkingsplatforms, inhoudsbeheersystemen, en servers, en andere toepassingen zijn die over het Web en de mobiele eigenschappen van klanten lopen.
 
-**Gerichte on-site reclame**
+### Zelfde paginagrootte {#same-page}
 
-Dezelfde website kan on-site advertenties aanwijzen met een andere set segmenten van Adobe Experience Platform als doelcriteria, waarbij een afzonderlijke aangepaste personalisatiebestemming voor de advertentieserver wordt gebruikt.
+Een gebruiker bezoekt een pagina van uw website. De klant kan de huidige informatie van het paginabezoek (bijvoorbeeld, verwijzend URL, browser taal, ingebedde productinfo) gebruiken om de volgende actie/besluit (bijvoorbeeld, verpersoonlijking) te selecteren, gebruikend de verbinding van de douaneverpersoonlijking voor niet-Adobe platforms (bijvoorbeeld, [!DNL Pega], [!DNL Optimizely], enz.).
+
+### Aanpassing van volgende pagina {#next-page}
+
+Een gebruiker bezoekt pagina A op uw website. Gebaseerd op deze interactie, heeft de gebruiker voor een reeks segmenten gekwalificeerd. De gebruiker klikt vervolgens op een koppeling die deze van pagina A naar pagina B verplaatst. De segmenten waarvoor de gebruiker tijdens de vorige interactie op pagina A in aanmerking kwam, samen met de profielupdates die door het huidige websitebezoek worden bepaald, zullen worden gebruikt om de volgende actie/beslissing (bijvoorbeeld welke advertentiebanner aan de bezoeker te tonen, of, in het geval van A/B het testen, welke versie van de pagina aan vertoning) te aandrijven.
+
+### Aanpassing van volgende sessie {#next-session}
+
+Een gebruiker bezoekt verschillende pagina&#39;s op uw website. Gebaseerd op deze interactie, heeft de gebruiker voor een reeks segmenten gekwalificeerd. De gebruiker beëindigt dan de huidige het doorbladeren zitting.
+
+De volgende dag keert de gebruiker terug naar dezelfde klantenwebsite. De segmenten waarvoor zij tijdens de vorige interactie met alle bezochte websitepagina&#39;s in aanmerking kwamen, samen met de profielupdates die door het huidige websitebezoek werden bepaald, zullen worden gebruikt om de volgende actie/beslissing te selecteren (bijvoorbeeld welke advertentiebanner aan de bezoeker moet worden getoond, of, in het geval van A/B-tests, welke versie van de pagina aan vertoning).
 
 ## Verbinden met de bestemming {#connect}
 
