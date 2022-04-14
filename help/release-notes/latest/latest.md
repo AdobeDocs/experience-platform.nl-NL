@@ -1,124 +1,125 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes
+description: The latest release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 63c25b1d99e55fae92c3c5e89025ac2bbcff5b03
+source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Adobe Experience Platform release notes
 
-**Releasedatum: 30 maart 2022**
+****
 
-Nieuwe functies in Adobe Experience Platform:
+New features in Adobe Experience Platform:
 
-- [Controlelogboeken](#audit-logs)
-- [Gerelateerde accounts in Real-Time CDP B2B Edition](#related-accounts)
+- [Audit logs](#audit-logs)
+- [Related accounts in Real-Time CDP B2B Edition](#related-accounts)
 
-Updates voor bestaande functies in Adobe Experience Platform:
+Updates to existing features in Adobe Experience Platform:
 
 - [Waarschuwingen](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Gegevensverzameling](#data-collection)
+- [Data collection](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Bronnen](#sources)
 
 <!-- - [Experience Data Model (XDM)](#xdm) -->
 
-## Controlelogboeken {#audit-logs}
+## Audit Logs {#audit-logs}
 
-Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en mogelijkheden te controleren. De auditlogboeken bevatten informatie over wie wat heeft gedaan en wanneer.
+Experience Platform allows you to audit user activity for various services and capabilities. The audit logs provide information about who did what and when.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Auditlogboeken voor Dataset, Schema, Klasse, Veldgroep, Gegevenstype, Sandbox, Doel, Segment, Samenvoegen, Beleid, Berekende kenmerken, Productprofiel en Account (Adobe) | Dit zijn de middelen die door auditlogboeken worden geregistreerd. Als de eigenschap wordt toegelaten, zullen de controlelogboeken automatisch worden verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten. |
-| Controleverslagen exporteren | De controlelogboeken kunnen als `CSV` of `JSON` bestand. De gegenereerde bestanden worden rechtstreeks op uw computer opgeslagen. |
+| Audit logs for Dataset, Schema, Class, Field group, Data type, Sandbox, Destination, Segment, Merge policy, Computed attribute, Product profile and Account (Adobe) | These are the resources which are recorded by audit logs. If the feature is enabled, the audit logs will be automatically collected as activity occurs. You do not need to manually enable log collection. |
+| Export audit logs | `CSV``JSON` The generated files are saved directly to your machine. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Raadpleeg voor meer informatie over auditlogs in Platform de [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
+[](../../landing/governance-privacy-security/audit-logs/overview.md)
 
-## Gerelateerde accounts in Real-Time CDP B2B Edition {#related-accounts}
+## Related accounts in Real-Time CDP B2B Edition {#related-accounts}
 
 >[!NOTE]
 >
->De functie Verwante accounts is alleen beschikbaar voor klanten van de Real-Time CDP B2B Edition.
+>The Related accounts feature is available for customers of the Real-Time CDP B2B Edition only.
 
-B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen, elk met inbegrip van slechts gedeeltelijke of zelfs conflicterende gegevens voor dezelfde reële bedrijfsentiteit. Dit zorgt voor een enorme uitdaging om tot een accuraat beeld van hun klanten te komen, waardoor de efficiëntie en effectiviteit van hun B2B-marketing- en -verkoopinspanningen afnemen. Met de vrijgave van de desbetreffende rekeningen, [!DNL Real-time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert. U kunt de verwante rekeningen in uw segmentdefinities omvatten om uw bereik uit te breiden of bredere criteria in uw segmenten toe te passen.
+B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts. [!DNL Real-time CDP B2B] You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments.
 
-Meer informatie over de functie vindt u op de volgende documentatiepagina&#39;s:
+Read more about the feature in the following documentation pages:
 
-- [Gerelateerde accounts in Real-Time CDP B2B Edition overzicht](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Het tabblad Verwante accounts in de gebruikersinterface voor het accountprofiel](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Hoe verwant rekeningen in segmentdefinities gebruiken](../../rtcdp/segmentation/b2b.md#related-accounts)
+- [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Meer over Echte - tijdCDP B2B Uitgave leren, zie [overzicht](../../rtcdp/overview.md).
+[](../../rtcdp/overview.md)
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van gebeurtenissen voor verschillende activiteiten van Platforms. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailberichten.
+Experience Platform allows you to subscribe to event-based alerts for various Platform activities. [!UICONTROL Alerts]
 
-**Bijgewerkte functies**
+****
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe waarschuwingsregels | Er zijn nu twee nieuwe waarschuwingsregels beschikbaar voor bronnen die te maken hebben met gegevensinvoer. Zie het overzicht op [waarschuwingsregels](../../observability/alerts/rules.md) voor de bijgewerkte lijst met waarschuwingstypen. |
+| New alert rules | Two new alert rules are now available for sources related to data ingestion. [](../../observability/alerts/rules.md) |
 
 {style=&quot;table-layout:auto&quot;}
 
-Raadpleeg voor meer informatie over waarschuwingen in Platform de [waarschuwingsoverzicht](../../observability/alerts/overview.md).
+[](../../observability/alerts/overview.md)
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform biedt meerdere [!DNL dashboards] waardoor u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen wordt gevangen.
+[!DNL dashboards]
 
-### Profieldashboards
+### Profile Dashboards
 
-Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgegevens (record) die uw organisatie heeft in de profielopslag in Experience Platform.
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform.
 
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Widget niet-gesegmenteerde profielen | De widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
-| Trend-widget voor niet-gesegmenteerde profielen | Deze widget verschaft een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een segment is gekoppeld. De trend kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
-| Gesegmenteerde profielen opheffen op identiteitswidget | Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden weergegeven in een staafdiagram. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
-| Widget enkele identiteitsprofielen | Deze widget bevat een telling van de profielen van uw organisatie die slechts één type id hebben dat tot hun identiteit leidt, of een e-mail of ECID. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
-
-{style=&quot;table-layout:auto&quot;}
-
-Raadpleeg voor meer informatie over profielen de [Overzicht van profieldashboards](../../dashboards/guides/profiles.md).
-
-### Doeldashboards
-
-Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten.
-
-**Bijgewerkte functies**
+****
 
 | Functie | Beschrijving |
 | --- | --- |
-| Widget aantal doelen | De widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen. Zie de [standaardwidgetdocumentatie voor doelen](../../dashboards/guides/destinations.md#standard-widgets) voor meer informatie . |
+| Unsegmented Profiles widget | The widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. [](../../dashboards/guides/profiles.md#standard-widgets) |
+| Unsegmented Profiles Trend widget | This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend can be visualized over 30 days, 90 days, and 12 month periods. [](../../dashboards/guides/profiles.md#standard-widgets) |
+| Unsegmented Profiles by Identity widget | This widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart. [](../../dashboards/guides/profiles.md#standard-widgets) |
+| Single identity profiles widget | This widget provides a count of your organization&#39;s profiles that only have one type of ID type that creates their identity, either an email or ECID. [](../../dashboards/guides/profiles.md#standard-widgets) |
 
 {style=&quot;table-layout:auto&quot;}
 
-Voor meer informatie over de dashboards van Doelen in Platform, verwijs naar [Overzicht van doeldashboards](../../dashboards/guides/destinations.md).
+[](../../dashboards/guides/profiles.md)
 
-## Gegevensverzameling {#data-collection}
+### Destinations Dashboards
 
-Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+The Destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform.
+
+****
+
+| Functie | Beschrijving |
+| --- | --- |
+| Destinations count widget | The widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. [](../../dashboards/guides/destinations.md#standard-widgets) |
+
+{style=&quot;table-layout:auto&quot;}
+
+[](../../dashboards/guides/destinations.md)
+
+## Data collection {#data-collection}
+
+Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md#configure) in de UI-gids voor gegevensstromen voor meer informatie. |
+| Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. [](../../edge/fundamentals/datastreams.md#configure) |
+| [](../../server-api/overview.md) | The Server API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases. |
 
-Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+[](../../collection/home.md)
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
@@ -132,34 +133,34 @@ Experience Data Model (XDM) is an open-source specification that provides common
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
-## Query-service {#query-service}
+## Query Service {#query-service}
 
-[!DNL Query Service] staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
+[!DNL Query Service][!DNL Data Lake] [!DNL Data Lake]
 
-**Bijgewerkte functies**
+****
 
 | Functie | Beschrijving |
 | --- | --- |
-| `table_exists` | De nieuwe eigenschapbevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. De opdracht retourneert een Booleaanse waarde: `true` if de tabel **doet** bestaan, en `false` als de tabel dat doet **niet** bestaan. Zie de [SQL-syntaxisdocumentatie](../../query-service/sql/syntax.md) voor meer informatie . |
+| `table_exists` | The new feature command is used to confirm whether or not a table currently exists in the system. `true`****`false`**** [](../../query-service/sql/syntax.md) |
 
 {style=&quot;table-layout:auto&quot;}
 
-Raadpleeg voor meer informatie over de beschikbare functies de [Overzicht van Query Service](../../query-service/home.md).
+[](../../query-service/home.md)
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor inname looppas te plaatsen, en gegevensopname door te beheren.
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughout.
 
-**Bijgewerkte functies**
+****
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op het Platform voor B2B-gebruiksgevallen gebruiken. Zie de [broncatalogus](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
-| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de opdracht [!DNL Oracle Eloqua] bron voor naadloze invoer van gegevens uit uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) aan Platform. Zie de documentatie op [een [!DNL Oracle Eloqua] bronverbinding](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie . |
-| API-verbeteringen voor [!DNL Data Landing Zone] | De [!DNL Data Landing Zone] bron ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de [!DNL Flow Service] API. Zie de documentatie op [een [!DNL Data Landing Zone] bronverbinding](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) voor meer informatie . |
+| New sources now available for B2B usage | You can now use all the available sources on Platform for B2B use cases. [](../../sources/home.md) |
+| [!DNL Oracle Eloqua] | [!DNL Oracle Eloqua][!DNL Oracle Eloqua] [ [!DNL Oracle Eloqua] ](../../sources/connectors/marketing-automation/oracle-eloqua.md) |
+| [!DNL Data Landing Zone] | [!DNL Data Landing Zone][!DNL Flow Service] [ [!DNL Data Landing Zone] ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) |
 
 {style=&quot;table-layout:auto&quot;}
 
-Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
+[](../../sources/home.md)
