@@ -5,9 +5,9 @@ seo-title: Advertising destinations overview
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
+source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 
 Momenteel ondersteunt Experience Platform de onderstaande reclamebestemmingen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindingen](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u [Verbindingen](../../destination-types.md#connections) op de pagina Doeltypen en -categorieën.
 
 ### Verbindingen
 
-* [Google Display en Video 360-verbinding](google-dv360.md)
+* [(bèta) Criteo-verbinding](criteo.md)
+* [Google Display &amp; Video 360-verbinding](google-dv360.md)
 * [Google Ads-verbinding](google-ads-destination.md)
 * [Google Ad Manager-verbinding](google-ad-manager.md)
 * [Google Customer Match-verbinding](google-customer-match.md)
@@ -55,4 +56,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindi
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Om segmenten naar advertentiebestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het instellen van een nieuwe bestemming.
+Om segmenten naar advertentiebestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
