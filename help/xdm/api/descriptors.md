@@ -5,9 +5,9 @@ title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: fecd57dde028dbcfa6b6f4481e6c2215ced36d4f
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ De `/descriptors` in de [!DNL Schema Registry] Met API kunt u beschrijvingen pro
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 ## Een lijst met descriptoren ophalen {#list}
 

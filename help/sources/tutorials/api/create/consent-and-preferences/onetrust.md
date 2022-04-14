@@ -3,9 +3,10 @@ keywords: Experience Platform;home;populaire onderwerpen;OneTrust
 solution: Experience Platform
 title: (bèta) Creeer een dataflow voor een bron van de Integratie OneTrust gebruikend de Dienst API van de Stroom
 description: Leer hoe u Adobe Experience Platform met OneTrust Integration kunt verbinden met behulp van de Flow Service API.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2313'
 ht-degree: 0%
 
 ---
@@ -6794,7 +6795,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md).
 
@@ -7786,4 +7787,3 @@ curl -X DELETE \
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
 U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de verbinding te proberen.
-

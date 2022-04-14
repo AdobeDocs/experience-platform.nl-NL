@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;field-groep;field-groep;iab;tcf;permission;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;field-groep;iab;tcf;permission;
 solution: Experience Platform
-title: IAB TCF 2.0 de Groep van het Gebied van het Schema van de toestemming
+title: IAB TCF 2.0 De Toegelaten Groep van het Gebied voor Gebeurtenisschema's
 topic-legacy: overview
 description: Dit document biedt een overzicht van de IAB TCF 2.0-groep met het schema voor instemming voor de XDM ExperienceEvent-klasse.
-source-git-commit: 7a0ac3970713e95438c6f0fdbd6175545ea7fdd0
+exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
+source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
-# [!UICONTROL IAB TCF 2.0 Consent] schemaveldgroep
+# [!UICONTROL IAB TCF 2.0 Consent] veldgroep voor gebeurtenisschema&#39;s
 
 >[!IMPORTANT]
 >
->Dit document behandelt de [!UICONTROL IAB TCF 2.0 Consent] schemagebiedgroep voor de klasse XDM ExperienceEvent. Deze veldgroep mag alleen worden gebruikt als u wijzigingen in de toestemming wilt bijhouden tijdens een tijdsverloop.
+>In dit document worden de [!UICONTROL IAB TCF 2.0 Consent] schemaveldgroep voor de klasse XDM ExperienceEvent. Deze veldgroep mag alleen worden gebruikt als u wijzigingen in de toestemming wilt bijhouden tijdens een tijdsverloop.
 >
->Merk op dat toestemmingswaarden die in gebeurtenisgegevens worden geregistreerd niet in automatische handhavingswerkschema&#39;s worden nageleefd. Voor automatische handhaving moet de toestemmingswaarden in de klasse van het Profiel van de Individuele XDM worden opgenomen en voor het Profiel van de Klant in real time worden toegelaten.
+>Merk op dat toestemmingswaarden die in gebeurtenisgegevens worden geregistreerd niet in automatische handhavingswerkschema&#39;s worden nageleefd. Om automatische handhaving te kunnen plaatsvinden, moeten de toestemmingswaarden in de klasse van het Profiel van Individuele XDM worden opgenomen en voor het Profiel van de Klant in real time worden toegelaten.
 >
->Raadpleeg in plaats daarvan [document](../profile/iab.md) voor de veldgroep die is bedoeld voor de klasse XDM Individual Profile.
+>Raadpleeg het volgende voor de veldgroep die is bedoeld voor de klasse Individueel profiel XDM [document](../profile/iab.md) in plaats daarvan.
 
-[!UICONTROL IAB TCF 2.0 Consent] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) klasse die wordt gebruikt om een timestamped reeksIAB toestemmingskoorden te vangen, om toestemming-verandering patronen in tijd te volgen.
+[!UICONTROL IAB TCF 2.0 Consent] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt voor het vastleggen van reeksen IAB-toestemmingstekenreeksen met tijdstempels, om toestemmings-veranderingspatronen in de loop van de tijd bij te houden.
 
 ![](../../images/field-groups/iab-event.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `consentStrings` | Array van [Goedgekeurde tekenreeksen](../../data-types/consent-string.md) | Een array van waarden van de toestemmingstekenreeks die aan de gebeurtenis zijn gekoppeld. |
+| `consentStrings` | Array van [Goedkeuringsstrings](../../data-types/consent-string.md) | Een array van waarden van de toestemmingstekenreeks die aan de gebeurtenis zijn gekoppeld. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Zie de gids op [IAB TCF 2.0 steun in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruiksgeval van deze gebiedsgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
+Zie de handleiding op [IAB TCF 2.0-ondersteuning in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruik van deze veldgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
 
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

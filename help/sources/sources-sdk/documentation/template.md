@@ -7,9 +7,9 @@ description: Leer hoe u Adobe Experience Platform verbindt met uw BRON met behul
 hide: true
 hidefromtoc: true
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2300'
+source-wordcount: '2296'
 ht-degree: 0%
 
 ---
@@ -289,7 +289,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
 
