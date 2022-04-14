@@ -2,9 +2,10 @@
 keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van problemen;gidsen;richtlijnen;grens;
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 2%
 
 ---
@@ -30,7 +31,7 @@ In de volgende tabel worden de statische limieten weergegeven die worden toegepa
 
 | Guardrail | Limiet | Notities |
 | --- | --- | --- |
-| Aantal identiteiten in een grafiek | 150 | De identiteitsgrafiek wordt niet bijgewerkt wanneer de limiet is bereikt. |
+| Aantal identiteiten in een grafiek | 150 | De limiet wordt toegepast op sandboxniveau. De identiteitsgrafiek wordt niet bijgewerkt wanneer de limiet is bereikt. |
 | Aantal identiteiten in een XDM-record | 20 | Het minimum aantal vereiste XDM-records is twee. |
 | Aantal aangepaste naamruimten | Geen | Het aantal aangepaste naamruimten dat u kunt maken, is niet beperkt. |
 | Aantal grafieken | Geen | Het aantal identiteitsgrafieken dat u kunt maken, is niet beperkt. |
