@@ -2,9 +2,9 @@
 title: XDM-velden definiëren in de API voor schemaregister
 description: Leer hoe u verschillende velden definieert bij het maken van XDM-bronnen (Custom Experience Data Model) in de Schema Registry API.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 3723e305740f859247350bd312b8b55e26cf4c24
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Zoek eerst het gewenste veldtype en gebruik de voorbeeldcode om uw API-aanvraag 
     <td>Beperkte opsommingswaarden worden opgegeven onder de <code>enum</code> array, terwijl optionele klantgerichte labels voor elke waarde onder <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
 "sampleField": { "type": "string", "enum": [ "value1", "value2", "value3" ], "meta:enum": { "value1": "Waarde 1", "waarde2": "Waarde 2", "waarde3": "Value 3" }, "default": "value1" }</pre>
-    <br>De <code>meta:enum</code> waarde is <strong>niet</strong> een opsomming declareren of gegevensvalidatie zelfstandig uitvoeren. In de meeste gevallen worden tekenreeksen onder <code>meta:enum</code> ook <code>enum</code> om ervoor te zorgen dat gegevens worden beperkt. Er zijn echter gevallen waarin <code>meta:enum</code> wordt verstrekt zonder overeenkomstige <code>enum</code> array. Zie de zelfstudie aan <a href="../tutorials/extend-soft-enum.md">uitbreiden, zachte nummers</a> voor meer informatie .
+    <br>De <code>meta:enum</code> waarde is <strong>niet</strong> een opsomming declareren of gegevensvalidatie zelfstandig uitvoeren. In de meeste gevallen worden tekenreeksen onder <code>meta:enum</code> ook <code>enum</code> om ervoor te zorgen dat gegevens worden beperkt. Er zijn echter gevallen waarin <code>meta:enum</code> wordt verstrekt zonder overeenkomstige <code>enum</code> array. Zie de zelfstudie aan <a href="../tutorials/suggested-values.md">voorgestelde waarden definiëren</a> voor meer informatie .
     </td>
   </tr>
   <tr>
@@ -176,16 +176,18 @@ Zoek eerst het gewenste veldtype en gebruik de voorbeeldcode om uw API-aanvraag 
 
 ## Aangepaste toewijzingstypen maken {#maps}
 
-Om &quot;map-als&quot;gegevens efficiënt in XDM te steunen, kunnen de voorwerpen met a worden geannoteerd `meta:xdmType` instellen op `map` om duidelijk te maken dat een voorwerp zou moeten worden beheerd alsof de belangrijkste reeks onbeperkt was. XDM stelt de volgende beperkingen op het gebruik van deze opslagwenk:
+Om &quot;map-als&quot;gegevens efficiënt in XDM te steunen, kunnen de voorwerpen met a worden geannoteerd `meta:xdmType` instellen op `map` om duidelijk te maken dat een voorwerp zou moeten worden beheerd alsof de belangrijkste reeks onbeperkt was. Gegevens die in kaartvelden worden ingevoerd, moeten tekenreekssleutels gebruiken en alleen tekenreeks- of geheel-getalwaarden (zoals bepaald door `additionalProperties.type`).
 
-* Type kaart MOET van het type zijn `object`
-* Voor typen kaarten MOET GEEN eigenschap zijn gedefinieerd (met andere woorden: &quot;lege&quot; objecten worden gedefinieerd)
-* Kaarttypen MOETEN één enkel `additionalProperties` schema dat de waarden beschrijft die binnen de kaart kunnen worden geplaatst
+XDM stelt de volgende beperkingen op het gebruik van deze opslagwenk:
+
+* Type kaart MOET van het type zijn `object`.
+* Voor typen toewijzingen MOET GEEN eigenschap zijn gedefinieerd (met andere woorden, ze definiëren &quot;lege&quot; objecten).
+* Kaarttypen MOETEN een `additionalProperties.type` veld dat de waarden beschrijft die binnen de kaart kunnen worden geplaatst, of `string` of `integer`.
 
 Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebruikt, aangezien zij de volgende prestatiesnadelen dragen:
 
-* De tijd van de reactie van de Dienst van de Vraag van Adobe Experience Platform degradeert van drie seconden aan tien seconden voor 100 miljoen verslagen
-* Kaarten moeten minder dan 16 sleutels hebben of anders risico op verdere afbraak
+* De tijd van de reactie van de Dienst van de Vraag van Adobe Experience Platform degradeert van drie seconden aan tien seconden voor 100 miljoen verslagen.
+* Kaarten moeten minder dan 16 sleutels hebben of anders risico op verdere afbraak.
 
 De gebruikersinterface van het Platform heeft ook beperkingen in hoe het de sleutels van kaart-type gebieden kan halen. Terwijl objecttekstvelden kunnen worden uitgebreid, worden kaarten als één veld weergegeven.
 
