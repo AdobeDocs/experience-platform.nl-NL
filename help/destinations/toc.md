@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 6257e06369060d7f71e837059977817cd495f62e
+source-git-commit: 4f057afec285af59a48dc4e28c08cfeba28597bf
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -187,6 +187,8 @@ ht-degree: 1%
       * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
       * [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/submit-destination.md)
+   * Referenties {#reference}
+      * [Ondersteunde transformatiefuncties](./destination-sdk/supported-functions.md)
    * Uw doel documenteren {#document-destination}
       * [Uw doel documenteren in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

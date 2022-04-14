@@ -1,10 +1,10 @@
 ---
-description: Als onderdeel van Destination SDK biedt Adobe hulpprogramma's voor ontwikkelaars die u helpen bij het configureren en testen van uw bestemming. Op deze pagina wordt beschreven hoe u een sjabloon voor berichttransformatie kunt maken en testen.
+description: Als deel van Destination SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u bij het vormen van en het testen van uw bestemming te helpen. Op deze pagina wordt beschreven hoe u een sjabloon voor berichttransformatie kunt maken en testen.
 title: Een sjabloon voor berichttransformatie maken en testen
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Als onderdeel van Destination SDK biedt Adobe hulpprogramma&#39;s voor ontwikkelaars die u helpen bij het configureren en testen van uw bestemming. Op deze pagina wordt beschreven hoe u een sjabloon voor berichttransformatie kunt maken en testen. Voor informatie over hoe te om uw bestemming te testen, lees [De doelconfiguratie testen](./test-destination.md).
+Als deel van Destination SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u bij het vormen van en het testen van uw bestemming te helpen. Op deze pagina wordt beschreven hoe u een sjabloon voor berichttransformatie kunt maken en testen. Voor informatie over hoe te om uw bestemming te testen, lees [De doelconfiguratie testen](./test-destination.md).
 
 Naar **een sjabloon voor berichttransformatie maken en testen** tussen het doelschema in Adobe Experience Platform en de berichtindeling die door uw bestemming wordt ondersteund, gebruikt u de *Sjabloonontwerpgereedschap* hieronder beschreven.  Lees meer over de gegevenstransformatie tussen bron en doelschema in [berichtenformaat](./message-format.md#using-templating).
 
@@ -23,7 +23,7 @@ Hieronder wordt geïllustreerd hoe het creëren van en het testen van een malpla
 
 ## Waarom u een malplaatje van de berichttransformatie moet creëren en testen {#why-create-message-transformation-template}
 
-Een van de eerste stappen bij het maken van uw bestemming in Destination SDK is na te denken over de manier waarop de gegevensindeling voor segmentlidmaatschap, identiteiten en profielkenmerken wordt getransformeerd wanneer deze van Adobe Experience Platform naar uw bestemming worden geëxporteerd. Vind informatie over de transformatie tussen Adobe XDM schema en uw bestemmingsschema in [berichtenformaat](./message-format.md#using-templating).
+Een van de eerste stappen bij het maken van uw bestemming in Destination SDK is na te denken over de manier waarop de gegevensindeling voor segmentlidmaatschap, identiteiten en profielkenmerken wordt getransformeerd wanneer deze worden geëxporteerd van Adobe Experience Platform naar uw bestemming. Vind informatie over de transformatie tussen Adobe XDM schema en uw bestemmingsschema in [berichtenformaat](./message-format.md#using-templating).
 
 De transformatie is alleen succesvol als u een transformatiesjabloon opgeeft, vergelijkbaar met dit voorbeeld: [Een sjabloon maken die segmenten, identiteiten en profielkenmerken verstuurt](./message-format.md#segments-identities-attributes).
 
@@ -40,6 +40,7 @@ Voordat u de sjabloon kunt maken, moet u de onderstaande stappen uitvoeren:
    * Gebruiken `maxUsersPerRequest` met een waarde groter dan één als u een API-aanroep naar uw bestemming meerdere profielen wilt opnemen, samen met hun segmentkwalificaties, identiteiten en profielkenmerken.
 2. [Een doelconfiguratie maken](./destination-configuration-api.md#create) en voeg identiteitskaart van de configuratie van de bestemmingsserver in toe `destinationDelivery.destinationServerId`.
 3. [Krijg identiteitskaart van de bestemmingsconfiguratie](./destination-configuration-api.md#retrieve-list) die u net hebt gemaakt, zodat u deze kunt gebruiken in het gereedschap voor het maken van sjablonen.
+4. Begrijpen [welke functies en filters u kunt gebruiken](./supported-functions.md) in de sjabloon voor berichttransformatie.
 
 ## Hoe te om het steekproefmalplaatje API te gebruiken en malplaatje API terug te geven om een malplaatje voor uw bestemming tot stand te brengen {#iterative-process}
 
