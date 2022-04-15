@@ -5,9 +5,9 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
 workflow-type: tm+mt
-source-wordcount: '2261'
+source-wordcount: '2385'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,14 @@ In het volgende document worden de verschillende invoer- en uitvoerbestanden bes
 Attribution AI werkt door de volgende datasets te analyseren om algoritmische scores te berekenen:
 
 - Adobe Analytics-gegevenssets die gebruikmaken van de [Bronconnector voor analyse](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Gegevensset Experience Event (EE)
-- Gegevensset met consumentenervaringen (CEE)
+- Gegevenssets van Experience Event (EE) in het algemeen op basis van het Adobe Experience Platform-schema
+- Gegevenssets met consumentenervaringen (CEE)
 
-U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Ga voor meer informatie over het toevoegen van meerdere datasets naar de [Gebruikershandleiding voor Attribution AI](./user-guide.md#identity).
+U kunt nu meerdere datasets toevoegen van verschillende bronnen op basis van de **identiteitsbewijs** (veld) als elk van de gegevenssets hetzelfde identiteitstype (naamruimte) heeft, zoals een ECID. Nadat u een identiteit en een naamruimte hebt geselecteerd, worden maatstaven voor de volledigheid van de kolom van de id weergegeven die het volume aangeven van de gegevens die worden vastgezet. Ga voor meer informatie over het toevoegen van meerdere datasets naar de [Gebruikershandleiding voor Attribution AI](./user-guide.md#identity).
+
+De kanaalgegevens worden niet altijd standaard toegewezen. In sommige gevallen, als mediaChannel (gebied) leeg is, zou u niet kunnen &quot;verdergaan&quot;tot u een gebied aan mediaChannel toewijst aangezien het een vereiste kolom is. Als het kanaal in de dataset wordt ontdekt, wordt het in kaart gebracht aan mediaChannel door gebrek. De andere kolommen, zoals **mediatype** en **media, actie** zijn nog steeds optioneel.
+
+Nadat u het kanaalveld hebt toegewezen, gaat u verder naar de stap &#39;Gebeurtenissen definiëren&#39;, waar u de conversiegebeurtenissen kunt selecteren, aanraakpuntgebeurtenissen kunt kiezen en specifieke velden kunt kiezen uit afzonderlijke datasets.
 
 >[!IMPORTANT]
 >
@@ -34,11 +38,9 @@ Voor meer informatie over het instellen van de [!DNL Consumer Experience Event] 
 
 Niet alle kolommen in de [!DNL Consumer Experience Event] (CEE) schema is verplicht voor Attribution AI.
 
->[!NOTE]
->
-> De volgende 9 kolommen zijn verplicht. Aanvullende kolommen zijn optioneel, maar aanbevolen/noodzakelijk als u dezelfde gegevens wilt gebruiken voor andere Adobe-oplossingen, zoals [!DNL Customer AI] en [!DNL Journey AI].
+U kunt de aanraakpunten configureren met de velden die hieronder in het schema of de geselecteerde gegevensset worden aanbevolen.
 
-| Verplichte kolommen | Vereist voor |
+| Aanbevolen kolommen | Vereist voor |
 | --- | --- |
 | Primair identiteitsveld | Aanraakpunt/Omzetting |
 | Tijdstempel | Aanraakpunt/Omzetting |
@@ -52,17 +54,11 @@ Niet alle kolommen in de [!DNL Consumer Experience Event] (CEE) schema is verpli
 
 Over het algemeen wordt de toewijzing uitgevoerd bij conversiekolommen zoals bestelling, aankopen en kassa&#39;s onder &quot;handel&quot;. De kolommen voor &quot;channel&quot; en &quot;marketing&quot; worden gebruikt om aanraakpunten voor Attribution AI te definiëren (bijvoorbeeld `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Voor optimale resultaten en inzichten verdient het aanbeveling zoveel mogelijk conversie- en aanraakpuntkolommen op te nemen. Bovendien hoeft u niet alleen de bovenstaande kolommen te gebruiken. U kunt andere aanbevolen of aangepaste kolommen opnemen als een conversie- of aanraakpuntdefinitie.
 
+Datasets van de de gebeurtenisgebeurtenis van de ervaring (EE) te hoeven niet uitdrukkelijk om Kanaal en Marketing te hebben mengt zolang de kanaal of campagneinformatie relevant om een touchpoint te vormen in één van het mengen of door gebieden aanwezig is.
+
 >[!TIP]
 >
 >Als u Adobe Analytics-gegevens gebruikt in uw CEE-schema, worden de aanraakpuntgegevens voor Analytics meestal opgeslagen in `channel.typeAtSource` (bijvoorbeeld `channel.typeAtSource = 'email'`).
-
-De kolommen hieronder zijn niet vereist maar het wordt geadviseerd dat u hen in uw CEE schema opneemt als u de beschikbare informatie hebt.
-
-**Aanvullende aanbevolen kolommen:**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## Historische gegevens {#data-requirements}
 
@@ -158,7 +154,6 @@ U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Be
 Selecteer vervolgens een veld in het dialoogvenster **[!UICONTROL Structure]** het venster van de UI, **[!UICONTROL Field properties]** wordt geopend. Within **[!UICONTROL Field properties]** Dit is het padveld dat wordt toegewezen aan de onbewerkte scores.
 
 ![Een schema kiezen](./images/input-output/field_properties.png)
-
 
 ### Geaggregeerde delingsscores {#aggregated-attribution-scores}
 

@@ -5,9 +5,9 @@ title: Handleiding voor Attribution AI-gebruikersinterface
 topic-legacy: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
+source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2277'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ In de voorproef van de dataset is een het percentagewaarde van de volledigheid v
 
 ### Een identiteit selecteren {#identity}
 
-Opdat veelvoudige datasets zich aan elkaar aansluiten, moet u een identiteitstype (dat ook als &quot;identiteitsnamespace&quot;wordt bekend) en een identiteitswaarde binnen die namespace selecteren. Als u meer dan één gebied als identiteit binnen uw schema onder zelfde namespace hebt toegewezen, verschijnen alle toegewezen identiteitswaarden in het identiteitsdrop-down die door namespace zoals wordt voorafgegaan `EMAIL (personalEmail.address)` of `EMAIL (workEmail.address)`.
+U kunt zich nu bij veelvoudige datasets aan elkaar aansluiten die op de identiteitskaart (gebied) worden gebaseerd. U moet een identiteitstype (ook wel een naamruimte genoemd) en een identiteitswaarde binnen die naamruimte selecteren. Als u meer dan één gebied als identiteit binnen uw schema onder zelfde namespace hebt toegewezen, verschijnen alle toegewezen identiteitswaarden in het identiteitsdrop-down die door namespace zoals wordt voorafgegaan `EMAIL (personalEmail.address)` of `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ Opdat veelvoudige datasets zich aan elkaar aansluiten, moet u een identiteitstyp
 
 Als u een identiteit wilt selecteren, selecteert u de onderstreepte waarde in de kolom Identiteit. De keuzelijst Selecteer een identiteit wordt weergegeven.
 
-![zelfde naamruimte selecteren](./images/user-guide/identity-type.png)
+![zelfde naamruimte selecteren](./images/user-guide/aai-identity-map.png)
 
 Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteert u het juiste identiteitsveld voor uw gebruik. Er zijn bijvoorbeeld twee e-mailidentiteiten beschikbaar binnen de naamruimte van de e-mail, een werk en persoonlijke e-mail. Afhankelijk van het gebruiksgeval, zal een persoonlijke e-mail eerder worden ingevuld en nuttiger in individuele voorspellingen zijn. Dit betekent dat u `EMAIL (personalEmail.address)` als uw identiteit.
 
-![Gegevenssleutel niet geselecteerd](./images/user-guide/select-identity.png)
+![Gegevenssleutel niet geselecteerd](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Er zijn drie verschillende typen invoergegevens die worden gebruikt voor het def
 
 ### Conversiegebeurtenissen definiëren {#define-conversion-events}
 
-Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door de optie **Veldnaam invoeren** vervolgkeuzemenu.
+Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door de gegevensset en het veld in het menu **Een gegevensset en veld selecteren** vervolgkeuzemenu.
 
-![ja-dropdown](./images/user-guide/conversion_event_2.png)
+![ja-dropdown](./images/user-guide/define-conversion-events.png)
 
 Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zijn recht. Het tweede vervolgkeuzemenu wordt gebruikt om verdere context aan uw gebeurtenis door het gebruik van verrichtingen te verstrekken. Voor deze conversiegebeurtenis wordt de standaardbewerking *exists* wordt gebruikt.
 
@@ -133,6 +133,8 @@ Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zij
 >Een tekenreeks onder uw *conversienaam* wordt bijgewerkt terwijl u de gebeurtenis definieert.
 
 ![geen vervolgkeuzelijst](./images/user-guide/conversion_event_1.png)
+
+Daarna, kunt u een gecombineerde dataset selecteren die door alle inputdatasets in de vorige stap te combineren wordt geproduceerd. Alternatief, kunt u een kolom selecteren die op individuele datasets van wordt gebaseerd **Een gegevensset en veld selecteren** vervolgkeuzemenu.
 
 De **[!UICONTROL Add event]** en **[!UICONTROL Add Group]** de knoppen worden gebruikt om uw conversie verder te definiëren. Afhankelijk van de conversie die u definieert, moet u mogelijk de opdracht **[!UICONTROL Add event]** en **[!UICONTROL Add group]** knoppen voor verdere context.
 
