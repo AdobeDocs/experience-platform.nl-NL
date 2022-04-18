@@ -2,9 +2,9 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een bestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,14 @@ Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming ve
 * (Alleen voor productieve integratie) een documentatie PR (pull-verzoek), volgens de instructies in de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md).
 * Een afbeeldingsbestand dat wordt weergegeven als een logo voor uw doelkaart in de catalogus met bestemmingen voor het Experience Platform.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Publicatietijd Adobe is 5 werkdagen.
+>* Publicatietijd Adobe is vijf werkdagen.
+>
+>* Als het team van de Adobe u vraagt om het even welke updates aan uw configuraties na uw aanvankelijke voorlegging aan te brengen, moet u een ander bestemmingspublicatieverzoek voorleggen nadat u de updates aanbrengt.
+>
+>* Zelfs nadat uw bestemming in de catalogus van het Experience Platform levend is, als u om het even welke updates aan uw configuraties moet maken, moet u een nieuw doel voorleggen publicatieverzoek voor de updates die in de configuraties moeten worden weerspiegeld.
+
 
 In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
 

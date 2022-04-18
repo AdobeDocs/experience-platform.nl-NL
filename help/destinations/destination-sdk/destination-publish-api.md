@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination/publish`.
 title: API-eindpuntbewerkingen voor doelen publiceren
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
+source-git-commit: a73a4ea93a432f60d62da5e234d8e357009b2d88
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '748'
 ht-degree: 2%
 
 ---
@@ -23,6 +23,7 @@ Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te di
 
 * Als partner van Destination SDK, wilt u uw geproduceerde bestemming beschikbaar over alle organisaties van het Experience Platform voor alle klanten van het Experience Platform aan gebruik maken;
 * U wilt uw aangepaste bestemming beschikbaar maken in uw eigen organisatie van het Experience Platform, voor alle sandboxen.
+* U maakt *alle updates* naar uw configuraties. De updates van de configuratie worden weerspiegeld in de bestemming slechts nadat u een nieuw het publiceren verzoek indient, dat door het team van het Experience Platform wordt goedgekeurd.
 
 ## Aan de slag met API-bewerkingen voor doelpublicatie {#get-started}
 

@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Het proces om uw bestemming in Experience Platform te vormen wordt hieronder ges
 2. [Verzoek om een Experience Platform-sandbox te leveren](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) en laat de toestemming van de bestemmingsauteur toe.
 3. [Uw integratie opbouwen](./configure-destination-instructions.md) in de productdocumentatie.
 4. [Integratie testen](./test-destination.md) in de productdocumentatie.
-5. [Uw integratie verzenden](./submit-destination.md) voor revisie door Adobe (de standaardresponstijd is 5 werkdagen).
+5. [Uw integratie verzenden](./submit-destination.md) voor een revisie van Adobe (de standaardresponstijd is vijf werkdagen).
 6. Als u een ISV of SI creeert [productievere integratie](./overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie op Experience League voor uw bestemming tot stand te brengen.
 7. Zodra uw integratie is goedgekeurd door Adobe, verschijnt deze in de [Catalogus Experience Platform](/help/destinations/catalog/overview.md).
 8. Als u uw integratie wilt bijwerken, volgt u hetzelfde proces.
