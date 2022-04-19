@@ -5,9 +5,9 @@ title: Connect Aqua Data Studio aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ Meld u aan bij de [!DNL Platform] UI en selecteer **[!UICONTROL Queries]** van d
 ### SSL-modus instellen
 
 Selecteer vervolgens de **[!DNL Driver]** tab. Onder **[!DNL Parameters]**, stelt u de waarde in als `?sslmode=require`
+
+>[!IMPORTANT]
+>
+>Zie de [[!DNL Query Service] SSL-documentatie](./ssl-modes.md) voor meer informatie over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en over het maken van verbindingen met deze service `verify-full` SSL-modus.
 
 ![Het lusje van de Bestuurder van de Studio van Gegevens Aqua met het benadrukte gebied van Parameters.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
