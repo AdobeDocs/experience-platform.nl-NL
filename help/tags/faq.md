@@ -1,9 +1,10 @@
 ---
 title: Handleiding voor het oplossen van problemen met tags
 description: Antwoorden op veelgestelde vragen over tags in Adobe Experience Platform.
-source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
+exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
+source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Dit document bevat antwoorden op veelgestelde vragen over tags in Adobe Experien
 
 Tags zijn de volgende generatie mogelijkheden voor tagbeheer die door Adobe worden geboden en die in Adobe Experience Platform zijn ingebouwd. Met labels kunnen clients:
 
-- Webproducten aan de clientzijde implementeren met behulp van integratie die *extensions* wordt genoemd
+- Webproducten aan de clientzijde implementeren met behulp van integraties die u noemt *extensions*
 - Dynamisch leveren van configuratie om clientimplementaties bij te werken in systeemeigen mobiele toepassingen
 - Op consistente wijze gegevens vastleggen, definiëren, beheren en uitwisselen tussen marketing- en advertentieproducten van andere leveranciers en van Adobe
 
@@ -28,7 +29,7 @@ De markeringen zijn een geavanceerd code en systeem van de configuratielevering 
 
 ## Hoeveel kost tags?
 
-Er worden geen extra kosten in rekening gebracht voor tags. Deze zijn beschikbaar voor elke [!DNL Adobe Experience Cloud]-klant.
+Er worden geen extra kosten in rekening gebracht voor tags. Ze zijn beschikbaar voor alle [!DNL Adobe Experience Cloud] klant.
 
 ## Ik hoorde dat er nu plug-ins zijn. Waar gaat het om?
 
@@ -91,20 +92,18 @@ De meeste Adobe-clients maken gebruik van modernere webplatformfuncties in de hu
 
 ## Werken labels voor systeemeigen mobiele apps?
 
-Ja! Tags ondersteunen nu mobiele eigenschappen en configuratie voor de nieuwe Adobe Experience Platform [Mobile SDK&#39;s](https://sdkdocs.com) om gegevensverzameling en -levering te implementeren in een systeemeigen mobiele app-omgeving. Raadpleeg [documentatie](https://sdkdocs.com) voor meer informatie.
+Ja! Tags ondersteunen nu mobiele eigenschappen en configuratie voor de nieuwe Adobe Experience Platform [Mobiele SDK&#39;s](https://sdkdocs.com) het implementeren van gegevensverzameling en -levering in een systeemeigen mobiele app-omgeving. Ga naar [documentatie](https://sdkdocs.com) voor meer informatie.
 
 ## Waarom zegt de UI dat er een fout is opgetreden bij het laden van mijn account?
 
-Als u een bericht ontvangt met de mededeling dat er een fout is opgetreden bij het laden van uw account, betekent dit dat uw account niet tot productprofielen voor tags behoort. Zie de gids op [het beheren van toestemmingen](./ui/administration/manage-permissions.md) leren hoe te om een productprofiel in Adobe Admin Console te vormen om toegang tot de UI van de Inzameling van Gegevens te verlenen.
+Als u een bericht ontvangt met de mededeling dat er een fout is opgetreden bij het laden van uw account, betekent dit dat uw account niet tot productprofielen voor tags behoort. Zie de handleiding op [machtigingen beheren](./ui/administration/manage-permissions.md) om te leren hoe te om een productprofiel in Adobe Admin Console te vormen om toegang tot de UI van de Inzameling van Gegevens te verlenen.
 
 ## Waarom kan ik geen eigenschappen in UI toevoegen?
 
 Als u geen nieuwe eigenschappen kunt maken wanneer u zich aanmeldt bij de gebruikersinterface voor gegevensverzameling, betekent dit dat uw account niet behoort tot een productprofiel dat het recht Eigenschappen beheren heeft.
 
-Zie de handleiding bij [het beheren van toestemmingen](./ui/administration/manage-permissions.md) om te leren hoe te om een productprofiel in Adobe Admin Console te vormen om het Manage juiste bezit te verlenen. Voor meer informatie over de verschillende rechten voor markeringen, zie het overzicht op [gebruikerstoestemmingen voor markeringen](./ui/administration/user-permissions.md).
+Zie de handleiding op [machtigingen beheren](./ui/administration/manage-permissions.md) om te leren hoe u een productprofiel in Adobe Admin Console configureert om het recht Eigenschappen beheren te verlenen. Voor meer informatie over de verschillende rechten voor tags raadpleegt u het overzicht over [gebruikersmachtigingen voor tags](./ui/administration/user-permissions.md).
 
 ## Wat als ik andere vragen heb?
 
-Als u andere vragen hebt, kunt u deze in de Gemeenschap Adobe vragen op de pagina met hoofdcodes op [https://adobe.com/go/launchme](https://adobe.com/go/launchme).
-
-Tags zijn slechts een voorbeeld van waar ons platform naartoe gaat: opener, beter geïntegreerd en zoals altijd toegewijd aan het succes van de klant.
+Als u andere vragen hebt, kunt u vragen stellen over [Community-pagina voor Adobe Experience Platform-gegevensverzameling](https://adobe.com/go/launchme) op Experience League, of sluit zich aan bij [officiële Slack-groep voor tagontwikkelaars](http://join.connectionsdevs.chat).
