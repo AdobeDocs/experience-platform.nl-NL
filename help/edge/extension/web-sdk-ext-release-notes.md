@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,13 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.11.0 - 22 april 2022
+
+* Verbeterde prestaties van de gebruikersinterface voor tags.
+* Sandboxkiezers toevoegen aan de extensieconfiguratie van gegevensstreams.
+
+Bevat versie 2.10.0 van de Adobe Experience Platform Web SDK Library.
 
 ## Versie 2.10.0 - 10 maart 2022
 

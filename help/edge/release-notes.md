@@ -3,14 +3,19 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
 
 # Aanvullende informatie
+
+## Versie 2.10.0 - 22 april 2022
+
+* Gebruik een blijvend iframe voor alle ID syncs en segmentbestemmingen.
+* Oplossing voor een probleem waarbij samengevoegde metrische profielen werden gedupliceerd in het dialoogvenster `sendEvent` resultaat.
 
 ## Versie 2.9.0 - 10 maart 2022
 
