@@ -3,9 +3,9 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (bèta) [!DNL Azure Event Hubs] verbinding
 description: Creeer een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag naar streamgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,16 @@ Om klanten&#39; veiligheid en nalevingsvereisten te ontmoeten, verstrekt het Exp
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="Segmentnamen opnemen"
+>abstract="Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de namen van de segmenten worden opgenomen die u exporteert. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Tijdstempels segment opnemen"
+>abstract="Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
 
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 

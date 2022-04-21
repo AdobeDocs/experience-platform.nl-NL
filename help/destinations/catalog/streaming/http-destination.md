@@ -3,9 +3,9 @@ title: (Bèta) HTTP API-verbinding
 keywords: streaming;
 description: Met de HTTP API-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0d58445557490a5539279f55c34183994429c632
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1545'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,36 @@ Om klanten&#39; veiligheid en nalevingsvereisten te ontmoeten, verstrekt het Exp
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Type clientgegevens"
+>abstract="Selecteren **Bodyformulier gecodeerd** de client-id en het clientgeheim in de hoofdtekst van de aanvraag of **Basisautorisatie** om client-id en clientgeheim op te nemen in een machtigingheader. Voorbeelden weergeven in de documentatie."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_headers"
+>title="Kopteksten"
+>abstract="Ga om het even welke douanekopballen in die u in de bestemmingsvraag, volgend dit formaat wilt worden omvat: `header1:value1,header2:value2,...headerN:valueN`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_endpoint"
+>title="HTTP-eindpunt"
+>abstract="De URL van het HTTP-eindpunt waarnaar u de profielgegevens wilt verzenden."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="Segmentnamen opnemen"
+>abstract="Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de namen van de segmenten worden opgenomen die u exporteert. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="Tijdstempels segment opnemen"
+>abstract="Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="Zoekparameters"
+>abstract="Naar keuze, kunt u vraagparameters aan het eindpunt URL van HTTP toevoegen. Maak de vraagparameters op u als volgt gebruikt: `parameter1=value&parameter2=value`."
 
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
