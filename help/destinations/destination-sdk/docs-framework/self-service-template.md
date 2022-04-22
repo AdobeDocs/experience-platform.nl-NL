@@ -2,18 +2,24 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 1%
+source-wordcount: '1231'
+ht-degree: 0%
 
 ---
 
-# UW BESTEMMING {#your-destination}
+# YourDestination-verbinding {#your-destination}
 
 *Terwijl u deze sjabloon doorloopt, vervangt of verwijdert u alle cursief gedrukte alinea&#39;s (te beginnen met deze alinea).*
 
 *Begin door de meta-gegevens (titel en beschrijving) bij te werken bij de bovenkant van de pagina. Negeer alle exemplaren van UICONTROL op deze pagina. Dit is een label waarmee de pagina in de verschillende talen die wij ondersteunen correct wordt vertaald in onze computervertaalprocessen. Nadat u de documentatie hebt verzonden, voegen we codes aan de documentatie toe.*
+
+>[!IMPORTANT]
+>
+>* Vul alle secties in deze sjabloon in in de volgorde waarin ze in de sjabloon worden beschreven.
+>* Deze sjabloon wordt niet regelmatig bijgewerkt, op basis van feedback van partners. Voordat u begint met het ontwerpen van documentatie voor uw bestemming, moet u controleren of u het gereedschap [laatste versie van de sjabloon](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+
 
 ## Overzicht {#overview}
 
@@ -21,23 +27,23 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door de *UW BESTEMMING* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *Koppeling of e-mailadres invoegen waar u voor updates kunt komen, bijvoorbeeld `support@yourdestination.com`.*
+>Deze documentatiepagina is gemaakt door de *YourDestination* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *Koppeling of e-mailadres invoegen waar u voor updates kunt komen, bijvoorbeeld `support@YourDestination.com`.*
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u te helpen beter begrijpen hoe en wanneer u het *UW BESTEMMING* doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u te helpen beter begrijpen hoe en wanneer u het *YourDestination* doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
-### Hoofdletters gebruiken #1
+### Hoofdletters gebruiken #1 {#use-case-1}
 
 *Voor mobiele berichtenplatforms:*
 
 *Een homepage- en verkoopplatform wil mobiele meldingen naar Android- en iOS-apparaten van klanten doorsturen om hen te laten weten dat er 100 bijgewerkte aanbiedingen zijn in het gebied waar ze eerder naar een verhuur hebben gezocht.*
 
-### Hoofdletters gebruiken #2
+### Hoofdletters gebruiken #2 {#use-case-2}
 
 *Voor sociale netwerkplatforms:*
 
-*Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk kleding kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen offlinegegevens bouwen, en deze segmenten naar YOURDESTINATION verzenden, om advertenties in de sociale media van hun klanten te tonen.*
+*Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk kleding kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen offlinegegevens bouwen, en deze segmenten naar YourDestination verzenden, om advertenties in de sociale media van hun klanten te tonen.*
 
 ## Vereisten {#prerequisites}
 
@@ -54,7 +60,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het *UW BESTEMMING* doel, hier z
 
 *Voeg in deze sectie informatie toe over de identiteiten die door uw bestemming worden gesteund. We hebben de tabel vooraf gevuld met enkele standaardwaarden. Verwijder de waarden die niet van toepassing zijn op de bestemming en alle waarden die niet zijn voorgevuld.*
 
-*UW BESTEMMING* ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+*YourDestination* ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -75,7 +81,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *UW BESTEMMING* bestemming. |
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *YourDestination* bestemming. |
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 | Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
@@ -106,72 +112,11 @@ Om details voor de bestemming te vormen, vul de vereiste gebieden in en selectee
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: Uw *UW BESTEMMING* account-id.
-
-
-<!--
-
-*Replace YOURDESTINATION with your destination name and TOBEFILLEDIN with the category that your destination belongs to.*
-
-1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the ***TOBEFILLEDIN*** category. Select ***YOURDESTINATION***, then select **[!UICONTROL Configure]**.
-
-
-    >[!NOTE]
-    >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destinations-workspace.html#catalog) section of the destination workspace documentation.  
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination1.png)
-
-2. In the **Account** step, if you had previously set up a connection to your *YOURDESTINATION* destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to *YOURDESTINATION*. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your *YOURDESTINATION* account.
-
-    >[!NOTE]
-    >
-    >Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your ***YOURDESTINATION*** account. This ensures that you don't complete the workflow with incorrect credentials.
-
-3. Once your credentials are confirmed and Adobe Experience Cloud is connected to your ***YOURDESTINATION*** account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
-
-4. In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill your account ID. <br> Also in this step, you can select any marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html).
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination2.png)
-
-5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow.
-
--->
+* **[!UICONTROL Account ID]**: Uw *YourDestination* account-id.
 
 ## Segmenten naar dit doel activeren {#activate}
 
 Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
-
-<!--
-
-To activate segments to *YOURDESTINATION*, follow the steps below: 
-
-1. In **[!UICONTROL Destinations > Browse]**, select the *YOURDESTINATION* destination where you want to activate your segments.
-
-2. Click the name of the destination. This takes you to the Activate flow.
-    ![activate-flow](./assets/yourdestination3.png)
-    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-3. Select **[!UICONTROL Activate]**;
-4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to *YOURDESTINATION*.
-    ![segments-to-destination](./assets/activate-segments-google-customer-match.png)
-5.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the source XDM schema to map to the target schema. Select **[!UICONTROL Add new mapping]** and browse your schema, select identity namespaces and map them to the corresponding target identity.  
-![identity mapping initial screen](./assets/gcm-identity-mapping.png) <br>&nbsp;
-   *Plain text email address as primary identity*: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below. Set up a mapping between any other attributes you plan to use.
-   ![identity mapping step](./assets/ssd-template-identity.png) <br>&nbsp;
-6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
-7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html#enforcement) in the data governance documentation section.
- 
-![confirm-selection](./assets/data-policy-violation.png)
-
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
-![confirm-selection](./assets/gcm-review.png)
-
--->
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
