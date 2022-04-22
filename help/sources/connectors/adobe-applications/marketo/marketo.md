@@ -5,9 +5,9 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Om verbinding te maken [!DNL Marketo] aan Platform, moet u waarden voor uw `munc
 
 Zie de stappen in het dialoogvenster [Verifieer uw Marketo-bronconnector](./marketo-auth.md) document om uw referenties op te halen.
 
-## Adobe Experience Cloud Audience Sharing instellen
+## Adobe-organisatietoewijzing instellen
 
-Voordat u toewijzingssets kunt maken voor [!DNL Marketo], moet u eerst Adobe Experience Cloud Audience Sharing instellen. Zie de handleiding voor gedetailleerde stappen over het voltooien van deze taak [Adobe Experience Cloud Audience Sharing instellen voor [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+Voordat u toewijzingssets kunt maken voor [!DNL Marketo], moet u eerst Adobe Organisatie-toewijzing instellen. Zie de handleiding voor gedetailleerde stappen over het voltooien van deze taak [Adobe Organisatie-toewijzing instellen voor [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## Experience Data Model (XDM)
 
