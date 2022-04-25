@@ -5,7 +5,7 @@ title: Overzicht gebruikersinterface Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 8236806efae6a4f570c3dd2ef78e80184e189b84
+source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
 workflow-type: tm+mt
 source-wordcount: '1749'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Handleiding Adobe Experience Platform UI
 
-Deze gids dient als inleiding aan het gebruiken van het gebruikersinterface van Adobe Experience Platform (UI), die verklaart wat de diverse componenten worden gebruikt voor en verbindingen aan verdere documentatie voor meer informatie verstrekt.
+Deze gids dient als inleiding aan het gebruiken van het gebruikersinterface van Adobe Experience Platform (UI), die verklaart wat de diverse componenten worden gebruikt voor en verbindingen verstrekt aan verdere documentatie voor meer informatie.
 
 Lees voor meer informatie over Adobe Experience Platform de [Overzicht van Experience Platform](home.md).
 
@@ -150,13 +150,13 @@ De **[!UICONTROL Services]** de sectie laat u gepubliceerde modellen voor geplan
 
 ### [!UICONTROL Data management]
 
-De **[!UICONTROL Schemas]** kunt u XDM-schema&#39;s (Experience Data Model) maken en beheren. Lees de zelfstudie voor meer informatie over schema&#39;s [een schema maken](../xdm/tutorials/create-schema-ui.md). Meer informatie over XDM vindt u in de [XDM System, overzicht](../xdm/home.md).
+De **[!UICONTROL Schemas]** In deze sectie kunt u XDM-schema&#39;s (Experience Data Model) maken en beheren. Lees de zelfstudie voor meer informatie over schema&#39;s [een schema maken](../xdm/tutorials/create-schema-ui.md). Meer informatie over XDM vindt u in de [XDM System, overzicht](../xdm/home.md).
 
 De **[!UICONTROL Datasets]** de sectie laat u datasets tot stand brengen en beheren. Meer informatie over datasets vindt u in het gedeelte [gebruikershandleiding voor gegevenssets](../catalog/datasets/user-guide.md).
 
 De **[!UICONTROL Queries]** in deze sectie kunt u query&#39;s maken en beheren, SQL-query&#39;s van de Adobe Experience Platform Query Service registreren en uw PostSQL-referenties bekijken. Meer informatie over query&#39;s vindt u in de [Gebruikershandleiding voor Query Service](../query-service/ui/overview.md).
 
-De **[!UICONTROL Monitoring]** kunt u de opname van batch- en streaming-tags controleren. Meer informatie over controle vindt u in het gedeelte [gebruikershandleiding voor het controleren van gegevensinvoer](../ingestion/quality/monitor-data-ingestion.md).
+De **[!UICONTROL Monitoring]** kunt u de opname van batch- en streaming-tags controleren. Meer informatie over controle vindt u in de [gebruikershandleiding voor het controleren van gegevensinvoer](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL Decisioning]
 
@@ -164,7 +164,7 @@ offer decisioning is een toepassingsservice die is geïntegreerd met Adobe Exper
 
 ### [!UICONTROL Administration]
 
-De gebruikersinterface van het Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Open dit dashboard door **[!UICONTROL License usage]** in de navigatie. Ga voor meer informatie over het dashboard voor licentiegebruik naar de [Handleiding voor het gebruiksdashboard voor licenties](license-usage-dashboard.md).
+De gebruikersinterface van het Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Open dit dashboard door **[!UICONTROL License usage]** in de navigatie. Ga voor meer informatie over het dashboard voor licentiegebruik naar de [Handleiding voor het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
