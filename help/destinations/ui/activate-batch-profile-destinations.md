@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c87bf1cbf8471c178597523b06d7d109c0c87a3e
+source-git-commit: a4c70c00bf2c44abc292d189de013eb1a243bdb0
 workflow-type: tm+mt
-source-wordcount: '2173'
+source-wordcount: '2145'
 ht-degree: 0%
 
 ---
@@ -77,12 +77,12 @@ Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Activeren na segmentevaluatie"
->abstract="De activering wordt onmiddellijk uitgevoerd nadat de dagelijkse segmentatietaak is voltooid. Zo weet u zeker dat de meest actuele profielen worden geëxporteerd. Behoefte om deze popover naar de nieuwe activeringsketende sectie voor correcte verbinding te verplaatsen."
+>abstract="De activering wordt onmiddellijk uitgevoerd nadat de dagelijkse segmentatietaak is voltooid. Zo weet u zeker dat de meest actuele profielen worden geëxporteerd."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="Geplande activering"
->abstract="De activering wordt uitgevoerd op een vast tijdstip van de dag. Behoefte om deze popover naar de nieuwe activeringsketende sectie voor correcte verbinding te verplaatsen."
+>abstract="De activering wordt uitgevoerd op een vast tijdstip van de dag."
 
 Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige opname van alle profielkwalificaties voor het geselecteerde segment te activeren.
 
