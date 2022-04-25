@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 5%
 
 ---
@@ -88,6 +88,7 @@ ht-degree: 5%
       - [Salesforce-Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Betalingen {#payments}
       - [PayPal-connector](connectors/payments/paypal.md)
+      - [Vierkante connector](connectors/payments/square.md)
    - Protocollen {#protocols}
       - [Generic OData-connector](connectors/protocols/odata.md)
       - [Algemene REST API-aansluiting](connectors/protocols/generic-rest.md)
@@ -150,6 +151,7 @@ ht-degree: 5%
          - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
+         - [Vierkant](tutorials/api/create/payments/square.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
          - [Algemene REST-API](tutorials/api/create/protocols/generic-rest.md)
@@ -248,6 +250,7 @@ ht-degree: 5%
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
+         - [Vierkant](tutorials/ui/create/payments/square.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}

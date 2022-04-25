@@ -5,9 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -133,7 +133,8 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een de
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL PayPal] connector](connectors/payments/paypal.md)
+- [[!DNL PayPal]](connectors/payments/paypal.md)
+- [[!DNL Square]](connectors/payments/square.md)
 
 ### Streaming {#streaming}
 

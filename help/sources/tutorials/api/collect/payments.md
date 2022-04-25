@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 964bdaab8a90983f1e40b33720580110ac9e40fe
+source-git-commit: 4cc1c164ca7caa0b64859cf67a4cc206bc6404d7
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al over een geldige [!DNL PayPal] basis verbinding-id. Als u deze id niet hebt, bekijkt u de stappen voor het [een [!DNL PayPal] basisverbinding](../create/payments/paypal.md) voordat u deze zelfstudie gaat uitvoeren.
+>Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een van de volgende betalingsbronnen op het Platform:<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
 
 ## Aan de slag
 
