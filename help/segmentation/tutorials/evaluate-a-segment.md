@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
+source-git-commit: 9d82065fdf1be087023284f153f1abedb7fdb67b
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Alle POST, PUT, en PATCH verzoeken vereisen een extra kopbal:
 
 - Inhoudstype: application/json
 
-## Een segment evalueren
+## Een segment evalueren {#evaluate-a-segment}
 
 Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
 

@@ -6,9 +6,9 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3198'
+source-wordcount: '3042'
 ht-degree: 0%
 
 ---
@@ -164,29 +164,6 @@ De detailspagina voor een dataflow, naast de details die op de dataflows lijst w
 Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten weergegeven die zijn uitgesloten. Er wordt informatie voor zowel de mislukte als de uitgesloten identiteiten weergegeven, inclusief de foutcode en beschrijving. Standaard worden in de lijst de mislukte identiteiten weergegeven. Als u uitgesloten identiteiten wilt weergeven, selecteert u de optie **[!UICONTROL Identities excluded]** schakelen.
 
 ![Dataflow-records voor batchdoelen](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## Het dashboard voor segmenttaken controleren {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segmenttaken"
->abstract="De mening van segmentbanen bevat informatie over de evaluatie en de uitvoerbanen voor al uw segmenten."
-
-Om toegang te krijgen tot [!UICONTROL Segment Jobs] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Segment Jobs]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de segmentevaluatie en de uitvoerbanen.
-
-![Dashboard voor bewaking van segmenttaken](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Gebruik de [!UICONTROL Segment Jobs] dashboard om te begrijpen als de profielevaluatie en de uitvoer op tijd en zonder enige uitzonderingen gebeurt, zodat kunnen de stroomafwaartse diensten voor bestemmingsactivering de recentste geëvalueerde profielgegevens hebben.
-
-De volgende metriek is beschikbaar voor segmentbanen:
-
-| Metrisch | Beschrijving |
----------|----------|
-| **[!UICONTROL Segment job]** | Geeft de naam van de segmenttaak aan. |
-| **[!UICONTROL Type]** | Geeft het type segmenttaak aan: exporteren of evalueren. Merk op dat in beide gevallen de segmentbaan evalueert of uitvoert *alles* segmenten die tot een organisatie behoren. |
-| **[!UICONTROL Job start]** | De datum en tijd waarop de segmenttaak is gestart. |
-| **[!UICONTROL Job end]** | De datum en de tijd toen de segmentbaan voltooide. |
-| **[!UICONTROL Status]** | De status van de voltooide taak - geslaagd of mislukt. |
 
 ## Het dashboard Bestemmingen controleren {#monitoring-destinations-dashboard}
 

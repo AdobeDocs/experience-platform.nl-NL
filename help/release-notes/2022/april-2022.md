@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 4bbf7642a456f36ea0fe7fc1c8d68ad37351ff4c
+source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 0%
+source-wordcount: '967'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 0%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Gegevensstromen](#dataflows)
 - [Experience Data Model (XDM)](#xdm)
+
+## Gegevensstromen {#dataflows}
+
+In Platform, worden de gegevens opgenomen van vele verschillende bronnen, binnen het systeem geanalyseerd, en geactiveerd aan een brede verscheidenheid van bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
+
+Gegevensstromen zijn een weergave van taken die gegevens over het Platform verplaatsen. Deze gegevensstromen worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Segmentdashboard | U kunt het controledashboard nu gebruiken om de gegevensstromen voor segmenten te controleren. Lees de handleiding voor meer informatie op [het controleren van segmenten in UI](../../dataflows/ui/monitor-segments.md) |
+
+Voor meer algemene informatie over gegevensstromen raadpleegt u de [gegevensstroomoverzicht](../../dataflows/home.md). Als u meer wilt weten over segmentatie, raadpleegt u de [segmentatieoverzicht](../../segmentation/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -70,3 +85,4 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
+
