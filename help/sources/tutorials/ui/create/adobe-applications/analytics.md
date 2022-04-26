@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
+source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -46,11 +46,17 @@ Onder de **[!UICONTROL Adobe applications]** categorie, selecteert u **[!UICONTR
 
 ### Gegevens selecteren
 
-De **[!UICONTROL Analytics source add data]** wordt weergegeven. Selecteren **[!UICONTROL Report Suite]** om een bronverbinding voor de gegevens van de Reeks van het Rapport van Analytics te beginnen, en dan de Reeks van het Rapport te selecteren u zou willen opnemen. Rapportsets die niet kunnen worden geselecteerd, zijn al opgenomen in deze sandbox of in een andere sandbox. Selecteren **[!UICONTROL Next]** om verder te gaan.
+De **[!UICONTROL Analytics source add data]** deze stap bevat een lijst met [!DNL Analytics] rapporteert reeksgegevens om een bronverbinding met te maken.
+
+Een rapportreeks kan worden opgenomen gebruikend slechts één enkele actieve dataflow. Het kan niet in veelvoudige dataflows worden gebruikt. Bovendien moet een rapportsuite tot hetzelfde gebied behoren als de sandbox-instantie van het Platform waarin de bronverbinding wordt gemaakt. Er is al een rapportsuite die niet selecteerbaar is, opgenomen in deze sandbox of in een andere sandbox.
+
+Er kunnen meerdere interne verbindingen worden gemaakt om meerdere rapportsuites over te brengen naar dezelfde sandbox. Als de rapportsuites verschillende schema&#39;s voor variabelen (zoals eVars of gebeurtenissen) hebben, zouden zij aan specifieke gebieden in de groepen van het douanegebied moeten worden in kaart gebracht en gegevensconflicten vermijden gebruikend [Gegevensprep](../../../../../data-prep/ui/mapping.md). Rapportsuites kunnen alleen aan één sandbox worden toegevoegd.
 
 >[!NOTE]
 >
->Er kunnen meerdere ingebouwde verbindingen worden gemaakt om meerdere rapportsuite in te voeren, maar slechts één rapportsuite kan tegelijk met Real-time Customer Data Platform worden gebruikt.
+>De gegevens van veelvoudige rapportreeksen kunnen voor het Profiel van de Gegevens van de Klant in real time slechts worden toegelaten als er geen gegevensconflicten zijn, zoals twee douaneeigenschappen (eVars, lijsten en steunen) die verschillende betekenis hebben, kunnen niet aan de zelfde attributen in XDM worden in kaart gebracht.
+
+Om een [!DNL Analytics] bronverbinding, selecteer een rapportreeks en selecteer dan **[!UICONTROL Next]** om verder te gaan.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -60,7 +66,7 @@ De **[!UICONTROL Analytics source add data]** wordt weergegeven. Selecteren **[!
 
 >[!IMPORTANT]
 >
->Ondersteuning voor Data Prep voor de [!DNL Analytics] De bron is momenteel in bèta. De functie en documentatie kunnen worden gewijzigd.
+>Transformaties van de Prep van gegevens kunnen latentie aan algemene dataflow toevoegen. De extra toegevoegde latentie is afhankelijk van de complexiteit van de transformatielogica.
 
 Voordat u uw [!DNL Analytics] gegevens aan doelXDM schema, moet u eerst selecteren of u een standaardschema of een douaneschema gebruikt.
 
