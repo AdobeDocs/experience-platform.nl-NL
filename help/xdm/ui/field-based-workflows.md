@@ -4,9 +4,9 @@ description: Leer hoe u velden van bestaande veldgroepen afzonderlijk kunt toevo
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De workflows die in dit document worden beschreven, bevinden zich momenteel in de bètaversie en uw organisatie heeft er wellicht nog geen toegang tot. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
+>De workflows die in dit bètadocument worden beschreven, zijn nu over het algemeen beschikbaar in Adobe Experience Platform. Raadpleeg voor de meest recente richtlijnen over werkstromen in het veld in de Schema-editor de [UI-hulplijn voor schema&#39;s](./resources/schemas.md) in plaats daarvan. Deze gids wordt binnenkort verwijderd.
 
 Adobe Experience Platform biedt een robuuste set gestandaardiseerde [veldgroepen](../schema/composition.md#field-group) voor gebruik in schema&#39;s van het Model van de Gegevens van de Ervaring (XDM). De structuur en de semantiek achter deze veldgroepen zijn zorgvuldig afgestemd op een grote verscheidenheid aan segmentatiegebruikstoepassingen en andere downstreamtoepassingen in Platform. U kunt ook uw eigen aangepaste veldgroepen definiëren voor unieke bedrijfsbehoeften.
 
