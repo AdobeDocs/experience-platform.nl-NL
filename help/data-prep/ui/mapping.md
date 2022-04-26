@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand
 title: UI-gids voor gegevenprepress
 description: Dit document biedt aanwijzingen voor het gebruik van functies voor gegevensvoorvoegsel in de gebruikersinterface van het Platform om CSV-bestanden toe te wijzen aan een XDM-schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
 workflow-type: tm+mt
-source-wordcount: '1564'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -168,6 +168,34 @@ De **[!UICONTROL Create calculated field]** wordt weergegeven. Het linkerdialoog
 U kunt handmatig velden, functies en operatoren toevoegen met de expressieeditor in het midden. Selecteer de editor om een expressie te maken. Als u klaar bent, selecteert u **[!UICONTROL Save]** om verder te gaan.
 
 ![creëren-berekend gebied](../images/ui/mapping/create-calculated-field.png)
+
+### Toewijzing importeren {#import}
+
+U kunt de afbeelding van een bestaande gegevensstroom opnieuw gebruiken om de handmatige configuratietijd van uw gegevensinvoer te verminderen en fouten te beperken. Selecteren **[!UICONTROL Import mapping]** om een bestaande afbeelding opnieuw te gebruiken.
+
+![import-mapping](../images/ui/mapping/import-mapping.png)
+
+De [!UICONTROL Import mapping] wordt weergegeven, op voorwaarde dat u een lijst met gegevensstromen hebt waaruit u kunt kiezen.
+
+Selecteer het voorvertoningspictogram om een voorvertoning weer te geven van de toewijzing van de gegevensstroom die u hebt geselecteerd.
+
+![lijsttoewijzing](../images/ui/mapping/list-mapping.png)
+
+In het voorvertoningsvenster kunt u bestaande toewijzingen controleren voordat u deze importeert naar uw gegevensstroom. Nadat u de toewijzing hebt geverifieerd, kunt u **[!UICONTROL Back]** om naar de lijst van gegevensstromen terug te keren en een andere reeks afbeelding te inspecteren, of u kunt selecteren **[!UICONTROL Select]** om verder te gaan.
+
+![voorvertoning toewijzen](../images/ui/mapping/preview-mapping.png)
+
+U kunt ook de toewijzing selecteren die u wilt importeren in de lijst met gegevensstromen. Selecteer de gegevensstroom die de afbeelding bevat die u wilt importeren en selecteer vervolgens **[!UICONTROL Select]** om verder te gaan.
+
+![select-mapping](../images/ui/mapping/select-mapping.png)
+
+De interface wordt bijgewerkt met de toewijzing die u hebt geïmporteerd.
+
+>[!NOTE]
+>
+>Om het even welke bestaande bijstellingsreeksen die u vestigt of de kaartaanbevelingen van ML worden vervangen door de afbeelding die u uit een bestaande dataflow invoerde.
+
+![in kaart gebracht-ingevoerd](../images/ui/mapping/mapping-imported.png)
 
 Selecteren **[!UICONTROL Preview data]** om afbeeldingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
 
