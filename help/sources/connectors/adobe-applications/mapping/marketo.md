@@ -5,7 +5,7 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
+source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
@@ -18,7 +18,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 >[!TIP]
 >
->Alles [!DNL Marketo] gegevenssets, behalve `Activities` now-ondersteuning `isDeleted`. Uw bestaande gegevensstromen zullen automatisch omvatten `isDeleted`, maar wordt alleen de vlag voor nieuw opgenomen gegevens opgenomen. Als u de vlag op al uw historische gegevens wilt toepassen, dan moet u uw bestaande dataflows tegenhouden en hen met de nieuwe afbeelding ontspannen. Houd er rekening mee dat als u `isDeleted`dan hebt u geen toegang meer tot de functionaliteit. Het is van essentieel belang dat de toewijzing wordt behouden nadat deze automatisch wordt gevuld.
+>Alles [!DNL Marketo] gegevenssets, behalve `Activities` now-ondersteuning `isDeleted`. Uw bestaande gegevensstromen zullen automatisch omvatten `isDeleted`, maar neemt alleen de vlag voor nieuw opgenomen gegevens op. Als u de vlag op al uw historische gegevens wilt toepassen, dan moet u uw bestaande dataflows tegenhouden en hen met de nieuwe afbeelding ontspannen. Houd er rekening mee dat als u `isDeleted`dan hebt u geen toegang meer tot de functionaliteit. Het is van essentieel belang dat de toewijzing wordt behouden nadat deze automatisch wordt gevuld.
 
 ## Activiteiten {#activities}
 
