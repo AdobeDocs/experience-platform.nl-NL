@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
+source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1395'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,10 @@ ht-degree: 1%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Gegevensstromen](#dataflows)
+- [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
+- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Bronnen](#sources)
 
 ## Gegevensstromen {#dataflows}
 
@@ -30,6 +33,19 @@ Gegevensstromen zijn een weergave van taken die gegevens over het Platform verpl
 | Segmentdashboard | U kunt het controledashboard nu gebruiken om de gegevensstromen voor segmenten te controleren. Lees de handleiding voor meer informatie op [het controleren van segmenten in UI](../../dataflows/ui/monitor-segments.md) |
 
 Voor meer algemene informatie over gegevensstromen raadpleegt u de [gegevensstroomoverzicht](../../dataflows/home.md). Als u meer wilt weten over segmentatie, raadpleegt u de [segmentatieoverzicht](../../segmentation/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Ondersteuning voor Adobe Analytics-bron | De Adobe Analytics-bron biedt nu ondersteuning voor functies voor het voorvertonen van gegevens, zodat u uw gegevens uit de Analytics-rapportenreeks kunt toewijzen aan een doel-XDM-schema wanneer u een gegevensstroom maakt. Zie de zelfstudie aan [een verbinding met een bron voor Analytics maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
+| Ondersteuning voor het importeren van bestaande toewijzingsregels | U kunt nu toewijzingsregels importeren uit een bestaande gegevensstroom om uw databaseconfiguraties te versnellen en fouten te beperken. Zie de zelfstudie aan [bestaande toewijzingsregels importeren](../../data-prep/ui/mapping.md) voor meer informatie . |
+
+Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -86,3 +102,30 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
+### Real-time Customer Data Platform B2B Edition {#B2B}
+
+Gebaseerd op Real-time Customer Data Platform (Real-Time CDP), is de Echte - tijdCDP B2B Uitgave speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Ondersteuning voor `isDeleted` functionaliteit | Alles [!DNL Marketo] gegevenssets, behalve `Activities` nu de `isDeleted` toewijzing. De nieuwe toewijzing wordt automatisch toegevoegd aan uw bestaande B2B dataflows. U kunt de `isDeleted` toewijzen aan filtergegevens die zijn verwijderd, zodat de gegevens in de [!DNL Data Lake] is consistent met uw brongegevens. Zie de [[!DNL Marketo] hulplijn met toewijzingsvelden](../../sources/connectors/adobe-applications/mapping/marketo.md) voor meer informatie over `isDeleted`. |
+
+Als u meer wilt weten over de Real-time Customer Data Platform B2B Edition, raadpleegt u de [B2B-overzicht](../../rtcdp/b2b-overview.md).
+
+## Bronnen {#sources}
+
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+
+Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Ondersteuning voor [!DNL OneTrust Integration] | U kunt nu de opdracht [!DNL OneTrust Integration] bron voor het toevoegen van toestemmings- en voorkeursgegevens uit uw [!DNL OneTrust] aan Platform. Zie de documentatie op [een [!DNL OneTrust Integration] bronverbinding](../../sources/connectors/consent-and-preferences/onetrust.md) voor meer informatie . |
+| Ondersteuning voor [!DNL Square] | U kunt nu de opdracht [!DNL Square] bron om betalingsgegevens van uw [!DNL Square] aan Platform. |
+| Ondersteuning voor het verwijderen van klantkenmerkgegevensstromen | U kunt nu dataflows verwijderen die zijn gemaakt met de bronconnector Klantkenmerken. |
+
+Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
