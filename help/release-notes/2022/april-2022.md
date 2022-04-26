@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
+source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1876'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,37 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Gegevensstromen](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Bronnen](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Platform biedt meerdere dashboards waardoor u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+
+De dashboards verstrekken pre-gevormde rapporteringsopties voor de gegevens van uw organisatie en zijn direct ingebouwd in het markeringswerkschema binnen Platform. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken.
+
+De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve dashboards. Zie de documentatie voor meer informatie over [widgets toevoegen via de Widget-bibliotheek](../../dashboards/customize/widget-library.md).
+
+| Functie | Dashboard | Beschrijving |
+| --------------------------------------------------------- | ------------- | ----------- |
+| [!UICONTROL Profiles added trend] | Profielen | Deze widget gebruikt een lijngrafiek om het totale aantal samengevoegde profielen te illustreren die de afgelopen 30 dagen, 90 dagen, of 12 maanden dagelijks aan de Opslag van het Profiel zijn toegevoegd. |
+| [!UICONTROL Audiences mapped to destination status] | Profielen | Deze widget geeft het totale aantal in kaart gebrachte en niet-toegewezen doelgroepen in één meting weer en gebruikt een donutdiagram om het proportionele verschil tussen de totalen aan te geven. |
+| [!UICONTROL Audiences size] | Profielen | Deze widget biedt een tabel met twee kolommen met maximaal 20 segmenten en het totale aantal soorten publiek in elk segment. De lijst is afhankelijk van het toegepaste samenvoegingsbeleid dat van hoog tot laag wordt bevolen volgens het totale aantal soorten publiek. |
+| [!UICONTROL Profile count trend] | Profielen | Deze widget gebruikt een lijngrafiek om de trend in het totale aantal profielen in het systeem in tijd te illustreren. De gegevens kunnen gedurende perioden van 30 dagen, 90 dagen en 12 maanden worden weergegeven. |
+| [!UICONTROL Single identity profiles by identity] | Profielen | Deze widget gebruikt een staafdiagram om het totale aantal profielen te illustreren dat met slechts één unieke id wordt geïdentificeerd. De widget ondersteunt maximaal vijf van de meest voorkomende identiteiten. |
+| [!UICONTROL Destination status] | Doelen | Deze widget geeft het totale aantal ingeschakelde bestemmingen als één enkele metrische waarde weer en gebruikt een doughnut grafiek om het proportionele verschil tussen toegelaten en gehandicapte bestemmingen te illustreren. |
+| [!UICONTROL Active destinations by destination platform] | Doelen | Deze widget gebruikt een twee-kolom lijst om een lijst van actieve bestemmingsplatforms en het totale aantal actieve bestemmingen voor elk bestemmingsplatform te tonen. |
+| [!UICONTROL Activated audiences across all destinations] | Doelen | Deze widget biedt het totale aantal soorten publiek dat op alle doelen in één meting is geactiveerd. |
+| [!UICONTROL Audience activation order] | Segmenten | Deze widget biedt een tabel met drie kolommen met de doelnaam, het platform en de activeringsdatum van het publiek. |
+| [!UICONTROL Audience size trend] | Segmenten | Deze widget biedt een illustratie van de lijngrafiek voor het totale aantal profielen dat gedurende 30 dagen, 90 dagen en perioden van 12 maanden aan de criteria van om het even welke segmentdefinitie voldoet. |
+| [!UICONTROL Audience size change trend] | Segmenten | Deze widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. |
+| [!UICONTROL Audience size trend by identity] | Segmenten | Deze widget illustreert de trend van de publieksgrootte voor een bepaald segment dat op een geselecteerd identiteitstype wordt gebaseerd. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. |
+
+Zie de documentatie voor meer informatie over [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), en [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
 
 ## Gegevensstromen {#dataflows}
 
