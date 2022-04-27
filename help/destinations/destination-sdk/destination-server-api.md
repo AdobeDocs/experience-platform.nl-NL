@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in Adobe Experience Platform Destination SDK via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: API-bewerkingen voor eindpunt doelserver
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
+source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1382'
 ht-degree: 1%
 
 ---
@@ -82,11 +82,13 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Configuratie maken voor een op een bestand gebaseerde doelserver {#create-file-based}
 
-### Voorbeeld: configuratie maken voor een SFTP-doelserver
-
 >[!IMPORTANT]
 >
 >Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
+
+### Voorbeeldconfiguratie SFTP-doelserver {#sftp-server-sample}
+
++++Een voorbeeld weergeven voor een [!DNL SFTP] doelserverconfiguratie
 
 U kunt een nieuwe configuratie van de bestemmingsserver van SFTP tot stand brengen door een verzoek van de POST aan `/authoring/destination-servers` eindpunt.
 
@@ -192,11 +194,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde configuratie van de bestemmingsserver terug.
 +++
 
-+++Voorbeeld: configuratie maken voor een Amazon S3-doelserver
+### [!DNL Amazon S3] voorbeeldconfiguratie doelserver {#s3-server-sample}
 
->[!IMPORTANT]
->
->Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
++++Een voorbeeld weergeven voor een [!DNL Amazon S3] doelserverconfiguratie
 
 U kunt een nieuwe Amazon S3 configuratie van de bestemmingsserver tot stand brengen door een verzoek van de POST aan `/authoring/destination-servers` eindpunt.
 
@@ -303,16 +303,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde configuratie van de bestemmingsserver terug.
 +++
 
-+++Voorbeeld: configuratie maken voor een Azure Blob-doelserver
+### [!DNL Azure Blob] voorbeeldconfiguratie doelserver {#blob-server-sample}
 
->[!IMPORTANT]
->
->Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
++++Een voorbeeld weergeven voor een [!DNL Azure Blob] doelserverconfiguratie
 
 U kunt een nieuwe configuratie van de de bestemmingsserver van Azure Blob tot stand brengen door een verzoek van de POST aan `/authoring/destination-servers` eindpunt.
 
 **API-indeling**
-
 
 ```http
 POST /authoring/destination-servers
@@ -415,16 +412,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde configuratie van de bestemmingsserver terug.
 +++
 
-+++Voorbeeld: configuratie maken voor een ADLS-doelserver (Azure Data Lake Storage)
+### [!DNL Azure Data Lake Storage] voorbeeldconfiguratie doelserver {#adls-server-sample}
 
->[!IMPORTANT]
->
->Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
++++Een voorbeeld weergeven voor een [!DNL Azure Data Lake Storage (ADLS)] doelserverconfiguratie
 
 U kunt een nieuwe configuratie van de bestemmingsserver tot stand brengen ADLS door een verzoek van de POST aan `/authoring/destination-servers` eindpunt.
 
 **API-indeling**
-
 
 ```http
 POST /authoring/destination-servers
@@ -523,18 +517,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde configuratie van de bestemmingsserver terug.
 +++
 
-+++Voorbeeld: creeer configuratie voor een gegevens Landing Zone (DLZ) bestemmingsserver
+### [!DNL Data Landing Zone] (DLZ) de voorbeeldconfiguratie van de bestemmingsserver {#dlz-server-sample}
 
->[!IMPORTANT]
->
->Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
++++Een voorbeeld weergeven voor een [!DNL Data Landing Zone (DLZ)] doelserverconfiguratie
 
-[!DNL Data Landing Zone] ([!DNL DLZ]) is [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden in Platform te brengen. Zie
+[!DNL Data Landing Zone] ([!DNL DLZ]) is [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden in Platform te brengen.
 
 U kunt een nieuwe configuratie van de bestemmingsserver tot stand brengen DLZ door een verzoek van de POST aan `/authoring/destination-servers` eindpunt.
 
 **API-indeling**
-
 
 ```http
 POST /authoring/destination-servers
@@ -640,7 +631,6 @@ U kunt een lijst van alle configuraties van de bestemmingsserver voor uw IMS Org
 
 **API-indeling**
 
-
 ```http
 GET /authoring/destination-servers
 ```
@@ -741,7 +731,6 @@ U kunt een bestaande configuratie van de bestemmingsserver bijwerken door een ve
 
 **API-indeling**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -788,7 +777,6 @@ U kunt gedetailleerde informatie over een specifieke configuratie van de bestemm
 
 **API-indeling**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -831,7 +819,6 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
    }
 }
 ```
-
 
 ## Een specifieke doelserverconfiguratie verwijderen {#delete}
 
