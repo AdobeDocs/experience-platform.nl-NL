@@ -6,9 +6,9 @@ description: In dit document wordt beschreven hoe u streaming doelen kunt maken 
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '2016'
+source-wordcount: '2052'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,14 @@ ht-degree: 0%
 >[!NOTE]
 >
 >De [!DNL Amazon Kinesis] en [!DNL Azure Event Hubs] de bestemmingen in Platform zijn momenteel in bèta . De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+>[!IMPORTANT]
+> 
+>Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions).
+>
+>Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
+>
+>Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens en een verbinding te maken met een streamingbestemming voor cloudopslag ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) of [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), maakt u een gegevensstroom naar de nieuwe bestemming en activeert u gegevens naar de nieuwe bestemming.
 
@@ -593,7 +601,7 @@ De geretourneerde reactie moet worden opgenomen in de `transformations` paramete
 }
 ```
 
-## Het gebruiken van de inzamelingen van Postman om met het stromen bestemmingen te verbinden  {#collections}
+## Postman-verzamelingen gebruiken om verbinding te maken met streaming doelen  {#collections}
 
 Als u op een meer gestroomlijnde manier verbinding wilt maken met de streamingdoelen die in deze zelfstudie worden beschreven, kunt u [[!DNL Postman]](https://www.postman.com/).
 
@@ -608,13 +616,13 @@ Klikken [hier](../assets/api/streaming-destination/DestinationPostmanCollection.
 
 Elke verzameling bevat de vereiste verzoeken en omgevingsvariabelen voor [!DNL AWS Kinesis], en [!DNL Azure Event Hub], respectievelijk.
 
-### Hoe de Postman-collecties te gebruiken
+### Postman-verzamelingen gebruiken
 
 Om met succes met de bestemmingen te verbinden gebruikend in bijlage [!DNL Postman] Voer de volgende stappen uit voor verzamelingen:
 
 * Downloaden en installeren [!DNL Postman];
 * [Downloaden](../assets/api/streaming-destination/DestinationPostmanCollection.zip) en ontpitten de bijgevoegde collecties;
-* Importeer de verzamelingen uit de bijbehorende mappen naar Postman;
+* Importeer de verzamelingen uit de desbetreffende mappen naar Postman;
 * Vul de omgevingsvariabelen in volgens de instructies in dit artikel;
 * Voer de [!DNL API] verzoeken van Postman, op basis van de instructies in dit artikel.
 

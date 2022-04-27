@@ -6,14 +6,18 @@ seo-title: Activation overview
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert voor verschillende soorten doelen.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: f4ae6831569e8a5b458c42f76810212174f04811
+source-git-commit: 5240e0db96a5072ab02a4c8b52e9c2d3dd4d6aa0
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 # Overzicht van activering
+
+>[!IMPORTANT]
+> 
+>Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Adobe Experience Platform ondersteunt een groot aantal bestemmingen. De workflow voor publiekactivering varieert per bestemming, op basis van het type publieksgegevens dat door de gebruikers wordt ondersteund en de frequentie waarmee de gegevens worden geëxporteerd.
 

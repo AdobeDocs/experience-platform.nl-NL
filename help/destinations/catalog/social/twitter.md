@@ -2,9 +2,9 @@
 title: Twitter Aangepast publiek, verbinding
 description: Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '650'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,6 @@ Voordat u uw [!DNL Twitter Custom Audiences] -bestemming, controleert u of u de 
 
 1. Uw [!DNL Twitter Ads] account moet in aanmerking komen voor reclame. Nieuw [!DNL Twitter Ads] de rekeningen komen niet in aanmerking voor reclame in de eerste twee weken nadat zij zijn gemaakt.
 2. Je Twitter-gebruikersaccount waarvoor je toegang hebt geautoriseerd in [!DNL Twitter Audience Manager] moet de *[!DNL Partner Audience Manager]* machtiging ingeschakeld.
-
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -55,6 +54,10 @@ Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketin
 
 ## Verbinden met doel {#connect}
 
+>[!IMPORTANT]
+> 
+>Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
@@ -66,6 +69,10 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **[!UICONTROL Account ID]**: Uw [!DNL Twitter Ads] account-id. Dit is te vinden in uw [!DNL Twitter Ads] instellingen.
 
 ## Segmenten naar dit doel activeren {#activate}
+
+>[!IMPORTANT]
+> 
+>Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
