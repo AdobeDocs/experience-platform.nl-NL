@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
+source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 1%
    * [Activeringsgegevens bewerken](./ui/edit-activation.md)
    * [Doelen verwijderen](./ui/delete-destinations.md)
    * [Dataflows bewaken](./ui/monitor-dataflows.md)
+   * [Abonneren op in-context-bestemmingswaarschuwingen](ui/alerts.md)
 * Doelcatalogus {#catalog}
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
    * Adobe-bestemmingen{#adobe}

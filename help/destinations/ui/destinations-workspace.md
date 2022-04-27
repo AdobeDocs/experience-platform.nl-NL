@@ -4,9 +4,9 @@ title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,7 @@ De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt g
 > * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Knop Segmenten activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]**om segmenten naar dat doel te verzenden.
 > * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Knop Verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**knop aan [remove](delete-destinations.md) een bestaande verbinding met een doel.
 > * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Weergeven in controleknop ](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]**om activeringsinformatie voor dit doel weer te geven in het dialoogvenster [controledashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Abonneren op waarschuwingen ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]**knop voor abonneren op waarschuwingen over doelgegevensstroom. U kunt zich op alarm intekenen om berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen. Zie [Abonneren op in-context-bestemmingswaarschuwingen](alerts.md) voor gedetailleerde informatie over waarschuwingen over bestemmingsgegevensstroom.
 
 
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
