@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronconnector in de UI om B2B-gegevens over te brengen naar Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
+source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Marketo Engage] bronschakelaar in UI
+
+>[!IMPORTANT]
+>
+>Voordat u een [!DNL Marketo Engage] bronverbinding en een gegevensstroom, moet u eerst ervoor zorgen dat u hebt [Adobe IMS-organisatie-id is toegewezen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Bovendien moet u ervoor zorgen dat u hebt voltooid [automatisch vullen [!DNL Marketo] B2B-naamruimten en -schema&#39;s](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) voordat u een bronverbinding en een gegevensstroom maakt.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Marketo Engage] (hierna &quot;[!DNL Marketo]&quot;) bronaansluiting in de gebruikersinterface om B2B-gegevens naar Adobe Experience Platform te brengen.
 
