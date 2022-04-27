@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
+source-git-commit: 54211c6166552ac86382d08da80fde3d9dad1257
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.11.1 - 22 april 2022
+
+* Opdrachtfout voor configureren van versie 2.11.0 is opgelost.
+
+Bevat versie 2.10.0 van de Adobe Experience Platform Web SDK Library.
 
 ## Versie 2.11.0 - 22 april 2022
 
