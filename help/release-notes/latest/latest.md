@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
+source-git-commit: 7b12a4094be3eed9b562fff2d0274a1e169913f3
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2255'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensstromen](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Bronnen](#sources)
@@ -89,6 +90,23 @@ Voor meer algemene informatie over gegevensstromen raadpleegt u de [gegevensstro
 | Ondersteuning voor het importeren van bestaande toewijzingsregels | U kunt nu toewijzingsregels importeren uit een bestaande gegevensstroom om uw databaseconfiguraties te versnellen en fouten te beperken. Zie de zelfstudie aan [bestaande toewijzingsregels importeren](../../data-prep/ui/mapping.md) voor meer informatie . |
 
 Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| [In-context alarm voor bestemmingsdataflows](../../destinations/ui/alerts.md) | U kunt nu op alarm intekenen wanneer het creëren van een bestemmingsgegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw dataflow looppas te ontvangen. U kunt ervoor kiezen waarschuwingen te ontvangen in de gebruikersinterface van het Experience Platform of via e-mail. |
+
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Maak verbinding met en activeer gegevens op het advertentieplatform van de website. |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Verbind en activeer gegevens aan het platform van Sendgrid voor transactie en marketing e-mail. |
 
 ## Experience Data Model (XDM) {#xdm}
 
