@@ -2,9 +2,9 @@
 title: XDM Business Person Details-schemaveldgroep
 description: Dit document biedt een overzicht van de XDM Business Person Details schema veldgroep.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '584'
 ht-degree: 2%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 2%
 | `workEmail` | [E-mailadres](../../data-types/email-address.md) | Het e-mailadres van het werk van de persoon. |
 | `workPhone` | [Telefoonnummer](../../data-types/phone-number.md) | Het telefoonnummer van het werktelefoonnummer van de persoon. |
 | `identityMap` | Kaart | Een kaartveld dat een set naamloze identiteiten voor de persoon bevat. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Voor een juist gebruik van dit veld voor [Klantprofiel in realtime](../../../profile/home.md)Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan . |
+| `isDeleted` | Boolean | Geeft aan of deze persoon is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in het realtime profiel van de klant. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
 | `organizations` | Array van tekenreeksen | Een lijst van organisatienamen waar de persoon werkt. |
 
 {style=&quot;table-layout:auto&quot;}

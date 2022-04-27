@@ -2,10 +2,10 @@
 title: XDM Business Account Person Relation Class
 description: Dit document biedt een overzicht van de XDM Business Account Person Relation-klasse in Experience Data Model (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 2%
+source-wordcount: '420'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM Business Account Person Relation] is een standaardklasse van de Gegevens van de Ervaring van het Model (XDM) die de minimum vereiste eigenschappen van een persoon vangt die met een bedrijfsrekening wordt geassocieerd.
 
-![](../../images/classes/b2b/business-account-person-relation.png)
+![De structuur van de XDM Business Account Person Relation-klasse zoals deze wordt weergegeven in de gebruikersinterface](../../images/classes/b2b/business-account-person-relation.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -30,12 +30,14 @@ ht-degree: 2%
 | `accountPersonID` | Tekenreeks | Een unieke identificatiecode voor de relatie-entiteit van de rekeningpersoon. |
 | `currencyCode` | Tekenreeks | De ISO 4217-valutacode die wordt gebruikt voor de relatie tussen de rekening en de persoon. |
 | `isActive` | Boolean | Geeft aan of de relatie tussen de account en de persoon actief is. |
+| `isDeleted` | Boolean | Geeft aan of deze relatie tussen account en persoon is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in het realtime profiel van de klant. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
 | `isDirect` | Boolean | Geeft aan of dit een directe relatie is tussen de rekening en de persoon. |
 | `isPrimary` | Boolean | Geeft aan of de persoon de primaire contactpersoon voor deze account is. |
 | `personID` | Tekenreeks | Een unieke identificatiecode voor de persoon in de relatie tussen de account en de persoon. |
-| `personRole` | Tekenreeks | De rol van de persoon in de relatie tussen de rekeninghouder en de persoon. |
+| `personRoles` | Array van tekenreeksen | Vermeldt de rollen voor de persoon in de account-persoonrelatie. |
 | `relationEndDate` | DateTime | De datum waarop de relatie tussen de rekening en de persoon eindigde. |
 | `relationStartDate` | DateTime | De datum waarop de relatie tussen de rekening en de persoon is begonnen. |
+| `relationshipSource` | Tekenreeks | De bron van de relatie tussen de rekeningpersoon. |
 
 {style=&quot;table-layout:auto&quot;}
 

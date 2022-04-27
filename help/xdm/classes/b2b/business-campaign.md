@@ -2,10 +2,10 @@
 title: XDM Business Campaign-klasse
 description: Dit document biedt een overzicht van de XDM Business Campaign-klasse in het XDM-model (Experience Data Model).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 3%
+source-wordcount: '221'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL XDM Business Campaign] is een standaardklasse van de Gegevens van de Ervaring van het Model (XDM) die de minimum vereiste eigenschappen van een bedrijfscampagne vangt.
 
-![](../../images/classes/b2b/business-campaign.png)
+![De structuur van de XDM Business Campaign-klasse zoals deze wordt weergegeven in de gebruikersinterface](../../images/classes/b2b/business-campaign.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -31,4 +31,6 @@ ht-degree: 3%
 
 {style=&quot;table-layout:auto&quot;}
 
-Zie de handleiding op [schema-relaties in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) om te leren hoe deze klasse conceptueel op de andere klassen B2B betrekking heeft en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.
+Als u wilt leren hoe deze klasse conceptueel betrekking heeft op de andere B2B-klassen en hoe u deze relaties kunt instellen in de gebruikersinterface van Adobe Experience Platform, raadpleegt u de handleiding op [schema-relaties in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)
+
+Zie de veldgroepverwijzing voor aanvullende velden die compatibel zijn met deze klasse [[!UICONTROL XDM Business Campaign Details]](../../field-groups/b2b-campaign/details.md).
