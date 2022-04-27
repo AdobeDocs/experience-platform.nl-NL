@@ -2,9 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentierechten;licenties;aanbevolen procedures
 title: Aanbevolen werkwijzen voor gegevensbeheer
 description: In dit document worden aanbevolen procedures beschreven en gereedschappen waarmee u uw licentierechten beter kunt beheren met Adobe Experience Platform.
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2586'
 ht-degree: 0%
 
 ---
@@ -193,7 +194,7 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 | [Adobe Analytics Data Prep-filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname |
 | [Adobe Audience Manager-bronverbindingsfilters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Bronverbindingsfilters van Audience Manager toepassen om onnodige gegevens uit te sluiten van inname |
 | [SDK-gegevensfilters toestaan](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Alloy-filters toepassen om onnodige gegevens uit te sluiten van inname |
-| [Gegevensfilters aan de serverzijde](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | Toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname.  Zie de documentatie op [gebeurtenissen en omstandigheden](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) voor aanvullende informatie. |
+| [Gegevensfilters voor doorsturen van gebeurtenissen](../../tags/ui/event-forwarding/overview.md) | Server-kant toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname.  Zie de documentatie op [tagregels](../../tags/ui/managing-resources/rules.md) voor aanvullende informatie. |
 | [Gebruikersinterface van dashboard voor licentiegebruik](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Bekijk een momentopname van de licentiegerelateerde gegevens van uw organisatie voor Experience Platform |
 | [API voor gegevensset-overlap](../../profile/tutorials/dataset-overlap-report.md) | Output de datasets die het meest aan uw Adresseerbare Publiek bijdraagt |
 | [Onbekende API voor profielrapport](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Hiermee wordt het effect van pseudoniem TTL voor verschillende tijddrempels uitgevoerd |

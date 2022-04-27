@@ -1,17 +1,17 @@
 ---
-title: Aanvullende informatie
+title: Opmerkingen bij de release Adobe Experience Platform Debugger
 description: De meest recente release bevat informatie over Adobe Experience Platform Debugger.
 keywords: debugger;ervaar de uitbreiding van Foutopsporing van het Platform;chroom;uitbreiding;versie nota's
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 1%
+source-wordcount: '295'
+ht-degree: 0%
 
 ---
 
-# Aanvullende informatie
+# Opmerkingen bij de release Adobe Experience Platform Debugger
 
 ## Versie 1.3.0 - 28 januari 2022
 
