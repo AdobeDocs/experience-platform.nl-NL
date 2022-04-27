@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Opmerkingen bij de release van Adobe Experience Platform
 breadcrumb-title: Opmerkingen bij de release Platform
 user-guide-description: Maandelijkse releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 5f6b46245781051da01a8051f023df11ff4c7d51
+source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '61'
+ht-degree: 60%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 0%
 
 * [Opmerkingen bij de release Huidige Platform](latest/latest.md)
 * 2022 {#2022}
+   * [April 2022](2022/april-2022.md)
    * [Maart 2022](2022/march-2022.md)
    * [Februari 2022](2022/february-2022.md)
    * [Januari 2022](2022/january-2022.md)

@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
+source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
 workflow-type: tm+mt
-source-wordcount: '1876'
+source-wordcount: '2137'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,28 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensstromen](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Bronnen](#sources)
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
+
+Met Attribution AI en Customer AI kunnen klanten geavanceerde AI/ML-modellen configureren voor marketingtoewijzing en klantgevoeligheid. De Multi eigenschap van de Dataset helpt klanten om veelvoudige datasets op het tijdstip van modelconfiguratie in te brengen zonder de behoefte om gegevens vooraf te verbinden en voor te bereiden.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. Attribution AI ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event. De AI van de klant steunt al deze schema&#39;s plus het schema van Adobe Audience Manager. Raadpleeg voor meer informatie over ondersteuning voor meerdere gegevenssets in Attribution AI &amp; Customer AI de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) en [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Nieuwe maatstaven voor modelevaluatie in AI van de Klant | Met nieuwe winstkaarten in AI-kaarten van klanten kunnen marketers de groepsgrootte bepalen op basis van hun budget- en ROI-doelstellingen. Met nieuwe diagrammen kunt u de kwaliteit van het model meten, zodat u een betere zichtbaarheid krijgt in de lift die ze boven willekeurige doelen kunnen plaatsen. Zie voor meer informatie de [inzichten met Customer AI ontdekken](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
+
+Voor meer informatie over [!DNL Intelligent Services], zie de [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
