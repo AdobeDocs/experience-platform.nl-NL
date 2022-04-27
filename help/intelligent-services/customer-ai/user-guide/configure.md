@@ -6,9 +6,9 @@ title: Een AI-instantie van een klant configureren
 topic-legacy: Instance creation
 description: Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
 workflow-type: tm+mt
-source-wordcount: '2525'
+source-wordcount: '2535'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Geef de vereiste waarden op en selecteer vervolgens **[!UICONTROL Next]** om doo
 
 ## Gegevens selecteren {#select-data}
 
-Door het ontwerp gebruikt de AI van de Klant Adobe Analytics, Adobe Audience Manager, Experience Event en Consumer Experience Event gegevens om de eigenschapscores te berekenen. Bij het selecteren van een gegevensset worden alleen gegevenssets weergegeven die compatibel zijn met Customer AI. Als u een gegevensset wilt selecteren, selecteert u de **+**) naast de naam van de gegevensset of schakelt u het selectievakje in om meerdere gegevenssets tegelijk toe te voegen. Gebruik de onderzoeksoptie om de datasets snel te vinden u in geinteresseerd bent.
+Door het ontwerp gebruikt de AI van de Klant Adobe Analytics, Adobe Audience Manager, Experience Events in het algemeen, en Consumer Experience Event-gegevens om de eigenschapscores te berekenen. Bij het selecteren van een gegevensset worden alleen gegevenssets weergegeven die compatibel zijn met Customer AI. Als u een gegevensset wilt selecteren, selecteert u de **+**) naast de naam van de gegevensset of schakelt u het selectievakje in om meerdere gegevenssets tegelijk toe te voegen. Gebruik de onderzoeksoptie om de datasets snel te vinden u in geinteresseerd bent.
 
 ![Gegevensset selecteren en zoeken](../images/user-guide/configure-dataset-page.png)
 
@@ -90,7 +90,9 @@ De voorvertoning van de gegevensset bevat een percentage voor volledigheid van d
 
 ### Een identiteit selecteren {#identity}
 
-Opdat veelvoudige datasets zich aan elkaar aansluiten, moet u een identiteitstype (dat ook als &quot;identiteitsnamespace&quot;wordt bekend) en een identiteitswaarde binnen die namespace selecteren. Als u meer dan één gebied als identiteit binnen uw schema onder zelfde namespace hebt toegewezen, verschijnen alle toegewezen identiteitswaarden in het identiteitsdrop-down die door namespace zoals wordt voorafgegaan `EMAIL (personalEmail.address)` of `EMAIL (workEmail.address)`.
+U kunt zich nu bij veelvoudige datasets aan elkaar aansluiten die op de identiteitskaart (gebied) worden gebaseerd. U moet een identiteitstype (ook wel een naamruimte genoemd) en een identiteitswaarde binnen die naamruimte selecteren. Als u meer dan één gebied als identiteit binnen uw schema onder zelfde namespace hebt toegewezen, verschijnen alle toegewezen identiteitswaarden in het identiteitsdrop-down die door namespace zoals wordt voorafgegaan `EMAIL (personalEmail.address)` of `EMAIL (workEmail.address)`.
+
+[zelfde naamruimte selecteren](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -98,7 +100,8 @@ Opdat veelvoudige datasets zich aan elkaar aansluiten, moet u een identiteitstyp
 
 Als u een identiteit wilt selecteren, selecteert u de onderstreepte waarde in de kolom Identiteit. De keuzelijst Selecteer een identiteit wordt weergegeven.
 
-![zelfde naamruimte selecteren](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[zelfde naamruimte selecteren](../images/user-guide/cai-identity-namespace.png)
 
 Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteert u het juiste identiteitsveld voor uw gebruik. Er zijn bijvoorbeeld twee e-mailidentiteiten beschikbaar binnen de naamruimte van de e-mail, een werk en persoonlijke e-mail. Afhankelijk van het gebruiksgeval, zal een persoonlijke e-mail eerder worden ingevuld en nuttiger in individuele voorspellingen zijn. Dit betekent dat `EMAIL (personalEmail.address)` wordt geselecteerd als de identiteit.
 
@@ -116,7 +119,8 @@ De **[!UICONTROL Define goal]** De stap verschijnt en het verstrekt een interact
 
 Als u een doel wilt maken, selecteert u **[!UICONTROL Enter Field Name]** en gevolgd door een veld uit de vervolgkeuzelijst. Selecteer de tweede invoer, een clausule voor de voorwaarde van de gebeurtenis, dan naar keuze verstrekken de doelwaarde om de gebeurtenis te voltooien. Aanvullende gebeurtenissen kunnen worden geconfigureerd door **[!UICONTROL Add event]**. Voltooi ten slotte het doel door een voorspelling in een aantal dagen toe te passen en selecteer **[!UICONTROL Next]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### Wordt uitgevoerd en wordt niet uitgevoerd
 
@@ -124,7 +128,8 @@ Bij het definiëren van uw doel kunt u **[!UICONTROL Will occur]** of **[!UICONT
 
 Als u bijvoorbeeld een app wilt instellen om te voorspellen of een klant een aankoop zal doen, kunt u **[!UICONTROL Will occur]** gevolgd door **[!UICONTROL All of]** en vervolgens voert u **commerce.purchase.id** (of een soortgelijk veld) en **[!UICONTROL exists]** als de operator.
 
-![komt voor](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![komt voor](../images/user-guide/cai-will-occur.png)
 
 Er kunnen zich echter gevallen voordoen waarin u wilt voorspellen of een gebeurtenis zich niet binnen een bepaald tijdsbestek zal voordoen. Om een doel met deze optie te vormen, selecteer **[!UICONTROL Will not occur]** in het bovenste vervolgkeuzemenu.
 

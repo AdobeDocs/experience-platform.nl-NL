@@ -6,9 +6,9 @@ title: Inzichten met Customer AI ontdekken
 topic-legacy: Discovering insights
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '2016'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Als u uw nieuwe segment wilt weergeven in de gebruikersinterface van het Platfor
 
 ![Alle segmenten](../images/insights/Segments-dashboard.png)
 
-## Samenvattingscijfers voor prestaties {#performance-metrics}
+## Historische prestaties {#historical-performance}
 
 De **[!UICONTROL Performance summary]** op het tabblad de werkelijke churn- of conversiekoersen, gescheiden in elk van de door de AI van de Klant gescoorde eigenvermogenssegmenten.
 
@@ -192,6 +192,37 @@ De onderste helft van de **[!UICONTROL Performance summary]** worden de resultat
 Afhankelijk van of u een churn of conversie voorspelt, wordt de [!UICONTROL Distribution of Scores] In de grafiek wordt de verdeling weergegeven van profielen die in elke stap zijn ingeklapt/omgezet en niet zijn ingechurd/niet zijn omgezet.
 
 ![afzonderlijke scores](../images/insights/scoring_tab.png)
+
+## Modelevaluatie {#model-evaluation}
+
+Naast het volgen van de voorspelde en daadwerkelijke resultaten in tijd op het Historische lusje van Prestaties, hebben de marketers nog meer transparantie over modelkwaliteit met het Modellusje van de Evaluatie. Met de diagrammen Lift en Gains kunt u de verschillen bepalen bij het gebruik van een voorspellend model in plaats van een willekeurige keuze. Bovendien kunt u bepalen hoeveel positieve resultaten bij elke score worden vastgelegd. Dit is nuttig voor segmentatie en voor het in overeenstemming brengen van rendement van investering met marketing acties.
+
+### Liftdiagram
+
+![lift](../images/user-guide/lift-chart.png)
+
+De liftgrafiek meet de verbetering van het gebruik van een voorspellend model in plaats van een willekeurige gerichtheid.
+
+Tot de indicatoren voor kwaliteitsmodellen behoren:
+
+- De hoge waarden van de lift in de eerste paar deciles. Dit betekent dat het model goed is in het identificeren van de gebruikers met de hoogste neiging om de actie van belang te ondernemen.
+- Waarden voor aflopende lift. Dit betekent dat klanten met hogere scores meer geneigd zijn om de actie van interesse te ondernemen dan mensen met lagere scores.
+
+### Winstgrafiek
+
+![winstschema](../images/user-guide/gains-chart.png)
+
+Het cumulatieve winstschema meet het percentage positieve resultaten dat wordt bereikt door scores boven een bepaalde drempel te richten. Na het sorteren van de klanten door middel van een prioriteitsscore van hoog naar laag, wordt de populatie opgesplitst in tientallen groepen van gelijke grootte. Een perfect model zou alle positieve resultaten in het hoogste score deciles vangen. Een basismethode voor willekeurige doelwitten legt positieve resultaten vast in verhouding tot de grootte van de groep - 30% van de gebruikers zou 30% van de resultaten vastleggen.
+
+Tot de indicatoren voor kwaliteitsmodellen behoren:
+
+- De cumulatieve winsten naderen snel 100%.
+- De cumulatieve winstcurve voor het model ligt dichter bij de linkerbovenhoek van het diagram.
+- De cumulatieve winstgrafiek kan worden gebruikt om de score te bepalen voor segmentatie en het richten. Als het model bijvoorbeeld 70% van de positieve resultaten in de eerste 2 score deciles vastlegt, wordt verwacht dat gebruikers met PercentileScore > 80 ongeveer 70% van de positieve resultaten zullen vastleggen.
+
+### AUC (Gebied onder de curve)
+
+De AUC weerspiegelt de sterkte van de verhouding tussen de rangschikking door score en het voorkomen van het voorspelde doel. An **AUC** 0,5 betekent dat het model niet beter is dan een willekeurige schatting. An **AUC** van 1 betekent dat het model perfect kan voorspellen wie de desbetreffende actie zal ondernemen.
 
 ## Volgende stappen
 
