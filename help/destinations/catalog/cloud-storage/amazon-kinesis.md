@@ -1,22 +1,22 @@
 ---
 keywords: Amazon Kinesis;kinesis-bestemming;kinesis
-title: (Beta) Amazon Kinesis-verbinding
+title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1778'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Amazon Kinesis] verbinding
+# [!DNL Amazon Kinesis] verbinding
 
 ## Overzicht {#overview}
 
 >[!IMPORTANT]
 >
->De [!DNL Amazon Kinesis] doel in Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+> Deze bestemming is alleen beschikbaar voor [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 De [!DNL Kinesis Data Streams] service door [!DNL Amazon Web Services] Hiermee kunt u grote stromen gegevensrecords in real-time verzamelen en verwerken.
 
@@ -90,9 +90,13 @@ Voor meer informatie over het beheren van toegang voor [!DNL Kinesis] gegevensst
 
 ## Verbinden met de bestemming {#connect}
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-### Verbindingsparameters {#parameters}
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). Wanneer u verbinding maakt met dit doel, moet u de volgende informatie opgeven:
+
+### Verificatiegegevens {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -104,13 +108,24 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 >title="Tijdstempels segment opnemen"
 >abstract="Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
 
-while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
+Voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]**:
+
+![Afbeelding van het UI-scherm met de voltooide velden voor de Amazon Kinesis-verificatiedetails](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel**: In [!DNL Amazon Web Services], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon Kinesis] account. Meer informatie in het dialoogvenster [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **regio**: Vermeld welke [!DNL Amazon Web Services] gebied waarnaar gegevens moeten worden gestreamd.
-* **Naam**: Geef een naam op voor uw verbinding met [!DNL Amazon Kinesis]
-* **Beschrijving**: Geef een beschrijving op voor uw verbinding met [!DNL Amazon Kinesis].
-* **stream**: Geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Platform exporteert gegevens naar deze stream.
+* **[!UICONTROL Region]**: Vermeld welke [!DNL Amazon Web Services] gebied waarnaar gegevens moeten worden gestreamd.
+
+### Doelgegevens {#destination-details}
+
+Na het vestigen van de authentificatieverbinding aan de bestemming van Amazon Kinesis, verstrek de volgende informatie voor de bestemming:
+
+![Afbeelding van het UI-scherm met de voltooide velden voor de Amazon Kinesis-doelgegevens](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+
+* **[!UICONTROL Name]**: Geef een naam op voor uw verbinding met [!DNL Amazon Kinesis]
+* **[!UICONTROL Description]**: Geef een beschrijving op voor uw verbinding met [!DNL Amazon Kinesis].
+* **[!UICONTROL stream]**: Geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Platform exporteert gegevens naar deze stream.
+* **[!UICONTROL Include Segment Names]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de namen van de segmenten worden opgenomen die u exporteert. Voor een voorbeeld van een gegevensexport waarbij deze optie is geselecteerd, raadpleegt u de [Geëxporteerde gegevens](#exported-data) hieronder.
+* **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Voor een voorbeeld van een gegevensexport waarbij deze optie is geselecteerd, raadpleegt u de [Geëxporteerde gegevens](#exported-data) hieronder.
 
 <!--
 
@@ -121,6 +136,10 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 -->
 
 ## Segmenten naar dit doel activeren {#activate}
+
+>[!IMPORTANT]
+> 
+>Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](../../ui/activate-streaming-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
@@ -153,6 +172,10 @@ Neem bijvoorbeeld deze gegevensstroom naar een [!DNL Amazon Kinesis] doel waar d
 Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de *drie toegewezen segmenten*. Bij de gegevensexport moet u `segmentMembership` object (zie [Geëxporteerde gegevens](#exported-data) (zie hieronder), zouden andere niet in kaart gebrachte segmenten kunnen verschijnen, als dat bepaalde profiel een lid van hen is. Als een profiel in aanmerking komt voor de klant met het segment DeLorean Cars, maar ook lid is van de segmenten &quot;Terug naar de toekomst&quot; film en science fiction, dan zullen deze andere twee segmenten ook aanwezig zijn in de `segmentMembership` -object van de gegevensexport, ook al worden deze niet toegewezen in de gegevensstroom.
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
+
+## Back-up van historische gegevens {#historical-data-backfill}
+
+Wanneer u een nieuw segment aan een bestaande bestemming toevoegt, of wanneer u een nieuwe bestemming en kaartsegmenten aan het creeert, voert het Experience Platform historische segmentkwalificatiegegevens naar de bestemming uit. Profielen die in aanmerking komen voor het segment *voor* het segment werd toegevoegd aan de bestemming wordt uitgevoerd naar de bestemming binnen ongeveer één uur.
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -210,6 +233,53 @@ Uw geëxporteerde [!DNL Experience Platform] gegevensterreinen in uw [!DNL Amazo
   }
 }
 ```
+
+Hieronder vindt u meer voorbeelden van geëxporteerde gegevens, afhankelijk van de UI-instellingen die u hebt geselecteerd in de doelstroom voor het verbinden van **[!UICONTROL Include Segment Names]** en **[!UICONTROL Include Segment Timestamps]** opties:
+
++++ In de onderstaande voorbeeldweergave voor gegevensexport worden segmentnamen opgenomen in `segmentMembership` sectie
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ In het onderstaande voorbeeld voor gegevensuitvoer zijn tijdstempels voor segmenten opgenomen in de `segmentMembership` sectie
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## Beperkingen en beleid opnieuw proberen {#limits-retry-policy}
+
+In 95 percent van de tijd, probeert het Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
+
+In het geval van ontbroken verzoeken aan uw bestemming van HTTP API, slaat het Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
 
 >[!MORELIKETHIS]
 >

@@ -4,9 +4,9 @@ title: Doeltypen en -categorieën
 seo-title: Destination types and categories
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lees deze pagina om de verschillende typen en categorieën Adobe Experience Platform-bestemmingen te begrijpen.
 
-## Doeltypen
+## Doeltypen {#destination-types}
 
 In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbindingen en extensies. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
 
@@ -25,16 +25,28 @@ In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbind
 
 **[!UICONTROL Profile Export]** en **[!UICONTROL Streaming Segment Export]** doelen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om de [Klantprofiel in realtime](../profile/home.md)segmentatie toepassen en segmenten en gekwalificeerde profielen exporteren naar bestemmingen.
 
-## Profielexportdoelen
+## Profielexportdoelen {#profile-export}
 
 Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als primaire sleutel. Experience Platform ondersteunt momenteel twee typen exportdoelen voor profielen:
 
-* [Streaming profiel exporteren doelen](#streaming-profile-export)
+* [Streaming profiel exportdoelen (ondernemingsdoelen)](#streaming-profile-export)
 * [Batchbestemmingen (op basis van bestanden)](#file-based)
 
-### Streaming profiel exporteren doelen {#streaming-profile-export}
+### Streaming profiel exportdoelen (ondernemingsdoelen) {#streaming-profile-export}
 
-Streaming profiel exportdoelen ontvangen segment- en profielgegevens als gegevensstreams voor Experience Platforms. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) en [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md) zijn voorbeelden van dergelijke bestemmingen .
+>[!IMPORTANT]
+>
+>De bestemmingen van de onderneming, of het stromen profiel de uitvoerbestemmingen, zijn beschikbaar aan [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) alleen aan klanten.
+
+Gebruik gegevensconnectors voor bedrijfsdoelgegevens om Real-time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
+
+Deze doelen ontvangen segment- en profielgegevens als gegevensstromen van Experience Platforms.
+
+De bestemmingen van de onderneming omvatten:
+
+* [HTTP API-bestemming](catalog/streaming/http-destination.md)
+* [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
 
 ### Batchbestemmingen (op basis van bestanden) {#file-based}
 
@@ -42,7 +54,7 @@ Bestandsgebaseerde doelen ontvangen `.csv` bestanden met profielen en/of kenmerk
 
 ## Streaming segment exportdoelen {#streaming-destinations}
 
-De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentgegevens. Deze bestemmingen gebruiken segment IDs of gebruiker IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)en zijn voorbeelden van dergelijke bestemmingen.
+De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentgegevens. Deze bestemmingen gebruiken segment IDs of gebruiker IDs. Reclame en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [Facebook](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen .
 
 ## Exporteren van profielen en segmentexportdoelen - video-overzicht {#video}
 

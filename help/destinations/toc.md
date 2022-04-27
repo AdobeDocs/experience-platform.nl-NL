@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '755'
 ht-degree: 1%
 
 ---
@@ -93,10 +93,10 @@ ht-degree: 1%
       * [De extensie Tekstomzetting bijhouden](./catalog/analytics/yext.md)
    * Opslagdoelen voor cloud {#cloud-storage}
       * [Overzicht van Cloud Storage-bestemmingen](./catalog/cloud-storage/overview.md)
-      * [(Beta) Amazon Kinesis-verbinding](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Amazon Kinesis-verbinding](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-verbinding](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-verbinding](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Azure Event Hubs-verbinding](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Azure Event Hubs-verbinding](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
       * [IP adres lijst van gewenste personen voor wolkenopslagbestemmingen](./catalog/cloud-storage/ip-address-allow-list.md)
    * Platforms voor gegevensbeheer {#data-management}
@@ -140,7 +140,7 @@ ht-degree: 1%
       * [linkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
    * Streaming doelen {#streaming}
-      * [ (Bèta) HTTP API-verbinding](./catalog/streaming/http-destination.md)
+      * [HTTP API-verbinding](./catalog/streaming/http-destination.md)
       * [IP adres lijst van gewenste personen voor het stromen bestemmingen](./catalog/streaming/ip-address-allow-list.md)
    * Onderzoeksbestemmingen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)

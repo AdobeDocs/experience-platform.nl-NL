@@ -6,9 +6,9 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3035'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Om toegang te krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICO
 
 >[!NOTE]
 >
->Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP-API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
+>Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
 
 Gebruik de [!UICONTROL Destinations] dashboard voor een algemeen idee van de gezondheid van uw activeringsstromen. Begin door inzichten op een bijeengevoegd niveau voor alle partij en het stromen bestemmingen te krijgen en dan neer te boor in gedetailleerde meningen voor dataflows, dataflow looppas, en geactiveerde segmenten voor een diepgaande blik op uw activeringsgegevens. De schermen in de [!UICONTROL Monitoring] het dashboard verstrekt actionable inzichten door metriek en foutenbeschrijvingen om u te helpen om het even welke problemen oplossen die zich in uw activeringsscenario&#39;s zouden kunnen voordoen.
 

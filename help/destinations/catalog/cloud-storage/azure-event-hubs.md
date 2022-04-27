@@ -1,22 +1,22 @@
 ---
 keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
-title: (bèta) [!DNL Azure Event Hubs] verbinding
+title: Azure Event Hubs-verbinding
 description: Creeer een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag naar streamgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1876'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Azure Event Hubs] verbinding
+# [!DNL Azure Event Hubs] verbinding
 
 ## Overzicht {#overview}
 
 >[!IMPORTANT]
 >
->De [!DNL Azure Event Hubs] doel in Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+> Deze bestemming is alleen beschikbaar voor [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 [!DNL Azure Event Hubs] is een groot platform voor gegevensstreaming en service voor het opnemen van gebeurtenissen. Het kan miljoenen gebeurtenissen per seconde ontvangen en verwerken. Gegevens die naar een gebeurtenishub worden verzonden, kunnen worden getransformeerd en opgeslagen met behulp van een realtime analyseprovider of batchadapters.
 
@@ -51,9 +51,25 @@ Om klanten&#39; veiligheid en nalevingsvereisten te ontmoeten, verstrekt het Exp
 
 ## Verbinden met de bestemming {#connect}
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-### Verbindingsparameters {#parameters}
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). Wanneer u verbinding maakt met dit doel, moet u de volgende informatie opgeven:
+
+### Verificatiegegevens {#authentication-information}
+
+#### Standaardverificatie {#standard-authentication}
+
+![Afbeelding van het UI-scherm met de voltooide velden voor de standaardverificatiegegevens van de Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+
+Als u **[!UICONTROL Standard authentication]** type om met uw eindpunt van HTTP te verbinden, ga hieronder de gebieden in en selecteer **[!UICONTROL Connect to destination]**:
+
+* **[!UICONTROL SAS Key Name]**: De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd.
+* **[!UICONTROL SAS Key]**: De primaire sleutel van de Gebeurtenishubs namespace. De `sasPolicy` de `sasKey` komt overeen met **beheren** rechten die worden geconfigureerd om de lijst Gebeurtenishubs te vullen. Meer informatie over verifiëren bij [!DNL Azure Event Hubs] met SAS-toetsen in de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]**: Vul uw [!DNL Azure Event Hubs] naamruimte. Meer informatie over [!DNL Azure Event Hubs] naamruimten in het dialoogvenster [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+#### Shared Access Signature (SAS)-verificatie {#sas-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
@@ -65,16 +81,32 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 >title="Tijdstempels segment opnemen"
 >abstract="Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
 
-while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
+![Afbeelding van het UI-scherm met de voltooide velden voor de standaardverificatiegegevens van de Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+
+Als u **[!UICONTROL Standard authentication]** type om met uw eindpunt van HTTP te verbinden, ga hieronder de gebieden in en selecteer **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL SAS Key Name]**: De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd.
 * **[!UICONTROL SAS Key]**: De primaire sleutel van de Gebeurtenishubs namespace. De `sasPolicy` de `sasKey` komt overeen met **beheren** rechten die worden geconfigureerd om de lijst Gebeurtenishubs te vullen. Meer informatie over verifiëren bij [!DNL Azure Event Hubs] met SAS-toetsen in de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Vul uw [!DNL Azure Event Hubs] naamruimte. Meer informatie over [!DNL Azure Event Hubs] naamruimten in het dialoogvenster [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Namespace]**: Vul uw [!DNL Azure Event Hubs] naamruimte. Meer informatie over [!DNL Azure Event Hubs] naamruimten in het dialoogvenster [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+### Doelgegevens {#destination-details}
+
+Na het vestigen van de authentificatieverbinding aan de Azure bestemming van de Hubs van de Gebeurtenis, verstrek de volgende informatie voor de bestemming:
+
+![Beeld van het scherm UI die voltooide gebieden voor de Azure de bestemmingsdetails van de Hubs van de Gebeurtenis tonen](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+
 * **[!UICONTROL Name]**: Geef een naam op voor de verbinding met [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Geef een beschrijving van de verbinding op.  Voorbeelden: &quot;Klanten met de hoogste rang&quot;, &quot;Klanten die geïnteresseerd zijn in keuzen&quot;.
 * **[!UICONTROL eventHubName]**: Geef een naam op voor de stream aan uw [!DNL Azure Event Hubs] bestemming.
+* **[!UICONTROL Include Segment Names]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de namen van de segmenten worden opgenomen die u exporteert. Voor een voorbeeld van een gegevensexport waarbij deze optie is geselecteerd, raadpleegt u de [Geëxporteerde gegevens](#exported-data) hieronder.
+* **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Voor een voorbeeld van een gegevensexport waarbij deze optie is geselecteerd, raadpleegt u de [Geëxporteerde gegevens](#exported-data) hieronder.
 
 ## Segmenten naar dit doel activeren {#activate}
+
+>[!IMPORTANT]
+> 
+>Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](../../ui/activate-streaming-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
@@ -107,6 +139,10 @@ Neem bijvoorbeeld deze gegevensstroom naar een [!DNL Azure Event Hubs] doel waar
 Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de *drie toegewezen segmenten*. Bij de gegevensexport moet u `segmentMembership` object (zie [Geëxporteerde gegevens](#exported-data) (zie hieronder), zouden andere niet in kaart gebrachte segmenten kunnen verschijnen, als dat bepaalde profiel een lid van hen is. Als een profiel in aanmerking komt voor de klant met het segment DeLorean Cars, maar ook lid is van de segmenten &quot;Terug naar de toekomst&quot; film en science fiction, dan zullen deze andere twee segmenten ook aanwezig zijn in de `segmentMembership` -object van de gegevensexport, ook al worden deze niet toegewezen in de gegevensstroom.
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
+
+## Back-up van historische gegevens {#historical-data-backfill}
+
+Wanneer u een nieuw segment aan een bestaande bestemming toevoegt, of wanneer u een nieuwe bestemming en kaartsegmenten aan het creeert, voert het Experience Platform historische segmentkwalificatiegegevens naar de bestemming uit. Profielen die in aanmerking komen voor het segment *voor* het segment werd toegevoegd aan de bestemming wordt uitgevoerd naar de bestemming binnen ongeveer één uur.
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -165,6 +201,52 @@ Uw geëxporteerde [!DNL Experience Platform] gegevensterreinen in uw [!DNL Azure
 }
 ```
 
+Hieronder vindt u meer voorbeelden van geëxporteerde gegevens, afhankelijk van de UI-instellingen die u hebt geselecteerd in de doelstroom voor het verbinden van **[!UICONTROL Include Segment Names]** en **[!UICONTROL Include Segment Timestamps]** opties:
+
++++ In de onderstaande voorbeeldweergave voor gegevensexport worden segmentnamen opgenomen in `segmentMembership` sectie
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ In het onderstaande voorbeeld voor gegevensuitvoer zijn tijdstempels voor segmenten opgenomen in de `segmentMembership` sectie
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## Beperkingen en beleid opnieuw proberen {#limits-retry-policy}
+
+In 95 percent van de tijd, probeert het Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
+
+In het geval van ontbroken verzoeken aan uw bestemming van HTTP API, slaat het Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
 
 >[!MORELIKETHIS]
 >
