@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2585'
 ht-degree: 1%
 
 ---
@@ -87,19 +87,15 @@ Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](
 | Geavanceerde Enterprise-doelconnectors | Drie schakelaars van de ondernemingsbestemming zijn nu over het algemeen beschikbaar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), en [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> De algemene beschikbaarheid van de schakelaars van de ondernemingsbestemming omvat alle mogelijkheden die eerder in de bètafase, en meer worden aangeboden: <ul><li>Nieuwe verificatiemogelijkheden, waaronder [Shared Access Signature in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) en meer [verificatietypen](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens aan toonder, OAuth 2) in de HTTP API-bestemming;</li><li>[Back-up maken van historische profielgegevens](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (het verzenden van historische profielen die voor het segment in aanmerking komen wanneer zij voor het eerst worden geactiveerd);</li><li>Dataflow loopmetriek wordt nu gesteund voor deze bestemmingen;</li><li>[Aanvullende segmentmetagegevens](../../destinations/catalog/streaming/http-destination.md#destination-details) opgenomen in de gegevenslading, met inbegrip van segmentnamen en segmenttijdstempels;</li><li>Ondersteuning voor [statische IP-adressen](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor klanten die Experience Platform moeten lijsten van gewenste personen.</li></ul> |
 | In-context alarm voor bestemmingsdataflows | U kunt nu [signaleren](../../destinations/ui/alerts.md) wanneer het creëren van een bestemmingsgegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw dataflow looppas te ontvangen. U kunt ervoor kiezen waarschuwingen te ontvangen in de gebruikersinterface van het Experience Platform of via e-mail. |
 
-<!--
+### Geen proces voor geavanceerde bedrijfsdoelconnectors {#release-process-enterprise-destinations}
 
-### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+Voor Amazon Kinesis, Azure Event Hubs, en HTTP API bestemmingen, tijdens het versieproces (die 27 april begint), zult u zowel de vroegere Beta bestemmingskaart, evenals de nieuwe algemeen beschikbare (GA) bestemmingskaart in de bestemmingscatalogus zien. Om het even welke gegevensstromen die door klanten worden gevormd die de bètabestemmingen gebruiken zullen in de volgende dagen aan de GA versie van de zelfde bestemming worden gemigreerd. Deze migratie zou uiteindelijk moeten zijn voltooid tegen het einde van dag vrijdag 29 april. De bètadoelen blijven zichtbaar tijdens dit korte tijdvenster en worden gelabeld als **Vervangen**.
 
-For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+Als u deze bestemmingen in de fase van Bèta hebt gebruikt, gelieve nota te nemen van het volgende:
 
-If you have been utilizing these destinations in the Beta phase, please note the following:
-
-- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
-- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
-- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
-
--->
+- Als eerder in Bèta met om het even welke 3 bestemmingen geweest zijn, is geen actie nodig. Alle gegevensstromen die als deel van Beta worden opgezet zullen functioneel blijven en aan de versie GA worden gemigreerd.
+- Als u deze bestemmingen vanaf 27 april wilt instellen, gelieve dit te doen met de nieuwe GA-versie van de bestemmingen.
+- De als afgekeurd gemarkeerde bètakaarten worden verwijderd zodra de releasebewerking is voltooid, naar schatting tegen het einde van dag 29 april. Het technische team van het Experience Platform volgt nauwlettend voor een succesvolle versieverrichting.
 
 **Nieuwe bestemmingen**
 
