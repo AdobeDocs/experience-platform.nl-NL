@@ -3,7 +3,7 @@ title: Overzicht van Core Event Forwarding Extension
 description: Leer over de gebeurtenis van de Kern door:sturen uitbreiding in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: d41779c5897b748130b88d3886472c7908347389
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Geef aangepaste code op die als voorwaarde voor de gebeurtenis moet bestaan. Geb
 1. Typ de aangepaste code.
 1. Selecteer **[!UICONTROL Save]**.
 
-Als u toegang wilt krijgen tot de waarde van een gegevenselement in aangepaste code, gebruikt u de methode `getDataElementValue`. Als u bijvoorbeeld de waarde van een gegevenselement met de naam `productName` wilt ophalen, schrijft u het volgende: 
+Als u toegang wilt krijgen tot de waarde van een gegevenselement in aangepaste code, gebruikt u de opdracht `getDataElementValue` methode. Bijvoorbeeld, om de waarde van een gegevenselement terug te winnen genoemd `productName`, schrijft het volgende: 
 
 ```javascript
 getDataElementValue('productName') 
@@ -40,25 +40,25 @@ getDataElementValue('productName')
 
 #### ruleStash, object
 
-In uw douanecode, zou u het `ruleStash` voorwerp ook kunnen gebruiken.
+In uw aangepaste code kunt u ook de opdracht `ruleStash` object.
 
 ```javascript
 arc.ruleStash: Object<string, *>`
 ```
 
 ```javascript
-logger.log(context.arc.ruleStash);
+utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` is een object dat elk resultaat van actiemodules verzamelt.
 
-Elke extensie heeft een eigen naamruimte. Als uw extensie bijvoorbeeld de naam `send-beacon` heeft, worden alle resultaten van de acties `send-beacon` opgeslagen in de naamruimte `ruleStash['send-beacon']`.
+Elke extensie heeft een eigen naamruimte. Als uw extensie bijvoorbeeld de naam heeft `send-beacon`alle resultaten van de `send-beacon` acties worden opgeslagen op de `ruleStash['send-beacon']` naamruimte.
 
-De naamruimte is uniek voor elke extensie en heeft aan het begin de waarde `undefined`.
+De naamruimte is uniek voor elke extensie en heeft de waarde `undefined` aan het begin.
 
-De naamruimte wordt overschreven door het geretourneerde resultaat van elke actie. Er gebeurt geen naamruimtemagie. Als u bijvoorbeeld een extensie `transform` hebt met twee handelingen: `generate-fullname` en `generate-fulladdress`, dan voeg de twee acties aan een regel toe.
+De naamruimte wordt overschreven door het geretourneerde resultaat van elke actie. Er gebeurt geen naamruimtemagie. Als u bijvoorbeeld een `transform` extensie met twee acties: `generate-fullname` en `generate-fulladdress`Voeg vervolgens de twee handelingen aan een regel toe.
 
-Als het resultaat van de `generate-fullname` actie `Firstname Lastname` is, dan verschijnt de regelstash als volgt nadat de actie wordt voltooid:
+Indien het resultaat van de `generate-fullname` handeling is `Firstname Lastname`Vervolgens ziet u de regelstash als volgt nadat de handeling is voltooid:
 
 ```js
 {
@@ -66,7 +66,7 @@ Als het resultaat van de `generate-fullname` actie `Firstname Lastname` is, dan 
 }
 ```
 
-Als het resultaat van de `generate-address` actie `3900 Adobe Way` is, dan verschijnt de regelstash als volgt nadat de actie wordt voltooid:
+Indien het resultaat van de `generate-address` handeling is `3900 Adobe Way`Vervolgens ziet u de regelstash als volgt nadat de handeling is voltooid:
 
 ```js
 {
@@ -74,9 +74,9 @@ Als het resultaat van de `generate-address` actie `3900 Adobe Way` is, dan versc
 }
 ```
 
-Merk op dat `Firstname Lastname` niet meer binnen de regelstreepje bestaat. Dit is omdat de `generate-address` actie het met het adres overtrok.
+Let op: `Firstname Lastname` bestaat niet meer binnen de regelstreepje. Dit komt omdat de `generate-address` de actie overtrok het met het adres.
 
-Als u de resultaten van beide acties binnen `transform` namespace in `ruleStash` wilt opslaan, kunt u uw actiemodule gelijkend op het volgende voorbeeld schrijven:
+Als u de resultaten van beide handelingen wilt opslaan in het dialoogvenster `transform` naamruimte in het dialoogvenster `ruleStash`U kunt uw actiemodule schrijven, vergelijkbaar met het volgende voorbeeld:
 
 ```javascript
 module.exports = (context) => {
@@ -89,7 +89,7 @@ module.exports = (context) => {
 }
 ```
 
-De eerste keer dat deze handeling wordt uitgevoerd, is `ruleStash` `undefined` en wordt geïnitialiseerd met een leeg object. De volgende keer dat de handeling wordt uitgevoerd, wordt `ruleStash` geretourneerd door de handeling toen deze eerder werd aangeroepen. Door een object als `ruleStash` te gebruiken, kunt u nieuwe gegevens toevoegen zonder dat gegevens verloren gaan die eerder zijn ingesteld door andere handelingen van de extensie.
+De eerste keer dat deze handeling wordt uitgevoerd, wordt `ruleStash` is `undefined` en wordt geïnitialiseerd met een leeg object. De volgende keer dat de handeling wordt uitgevoerd, `ruleStash` wordt geretourneerd door de handeling toen deze eerder werd aangeroepen. Een object gebruiken als `ruleStash` Hiermee kunt u nieuwe gegevens toevoegen zonder dat gegevens verloren gaan die eerder zijn ingesteld door andere handelingen uit de extensie.
 
 U moet voorzichtig zijn om altijd de volledige stash van de uitbreidingsregel te retourneren in dit geval. Als u slechts een waarde (bijvoorbeeld, 5) moest terugkeren, dan zou de regelstash als:
 
@@ -111,41 +111,41 @@ Als u een regel met veelvoudige voorwaarden hebt, is het mogelijk dat deze voorw
 
 De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
-**Gelijk:** de voorwaarde keert waar terug als de twee waarden gelijk zijn gebruikend een niet-strikte vergelijking (in JavaScript, == exploitant). De waarden kunnen van elk type zijn. Wanneer u een woord als _true_, _false_, _null_ of _undefined_ in een waardeveld typt, wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
+**Gelijk:** De voorwaarde retourneert true als de twee waarden gelijk zijn via een niet-strikte vergelijking (in JavaScript, de == operator). De waarden kunnen van elk type zijn. Als u een woord typt als _true_, _false_, _null_, of _ongedefinieerd_ in een waardeveld wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
 
-**Niet gelijk:** de voorwaarde retourneert true als de twee waarden niet gelijk zijn met een niet-strikte vergelijking (in JavaScript, de != operator). De waarden kunnen van elk type zijn. Wanneer u een woord als _true_, _false_, _null_ of _undefined_ in een waardeveld typt, wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
+**Niet gelijk:** De voorwaarde retourneert true als de twee waarden niet gelijk zijn aan een niet-strikte vergelijking (in JavaScript, de != operator). De waarden kunnen van elk type zijn. Als u een woord typt als _true_, _false_, _null_, of _ongedefinieerd_ in een waardeveld wordt het woord vergeleken als een tekenreeks en wordt het niet omgezet in het JavaScript-equivalent ervan.
 
-**Bevat:** de voorwaarde retourneert true als de eerste waarde de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
+**Bevat:** De voorwaarde retourneert true als de eerste waarde de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Bevat niet:** de voorwaarde retourneert true als de eerste waarde niet de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Bevat niet:** De voorwaarde retourneert true als de eerste waarde niet de tweede waarde bevat. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
-**Begint met:** de voorwaarde retourneert true als de eerste waarde met de tweede waarde begint. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
+**Begint met:** De voorwaarde retourneert true als de eerste waarde begint met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Begint niet met:** de voorwaarde retourneert true als de eerste waarde niet begint met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Begint niet met:** De voorwaarde retourneert true als de eerste waarde niet begint met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
-**Eindigt met:** de voorwaarde retourneert true als de eerste waarde eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
+**Eindigt met:** De voorwaarde retourneert true als de eerste waarde eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Niet eindigen met:** de voorwaarde retourneert true als de eerste waarde niet eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Eindigt niet met:** De voorwaarde retourneert true als de eerste waarde niet eindigt met de tweede waarde. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
 **Komt overeen met Regex:** De voorwaarde retourneert true als de eerste waarde overeenkomt met de reguliere expressie. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Komt niet overeen met Regex:** de voorwaarde retourneert true als de eerste waarde niet overeenkomt met de reguliere expressie. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
+**Komt niet overeen met Regex:** De voorwaarde retourneert true als de eerste waarde niet overeenkomt met de reguliere expressie. Getallen worden omgezet in tekenreeksen. Elke andere waarde dan een getal of tekenreeks resulteert in de voorwaarde die true retourneert.
 
-**Is minder dan:** De voorwaarde retourneert true als de eerste waarde kleiner is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**is kleiner dan:** De voorwaarde retourneert true als de eerste waarde kleiner is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is kleiner dan of gelijk aan:** de voorwaarde retourneert true als de eerste waarde kleiner dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**is kleiner dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde kleiner dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is groter dan:** de voorwaarde keert waar terug als de eerste waarde groter is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**Is groter dan:** De voorwaarde retourneert true als de eerste waarde groter is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is groter dan of gelijk aan:** de voorwaarde keert waar terug als de eerste waarde groter dan of gelijk aan de tweede waarde is. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**Is Waar:** de voorwaarde keert waar terug als de waarde een booleaanse waarde met de waarde waar is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
+**Is waar:** De voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde true. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
-**Is Truthy:** De voorwaarde retourneert true als de waarde waar is na de conversie naar een booleaanse waarde. Zie [Truthy-documentatie van MDN](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) voor voorbeelden van waarheidswaarden.
+**Is waar:** De voorwaarde retourneert true als de waarde waar is nadat deze is omgezet in een Booleaanse waarde. Zie [Truthy-documentatie van MDN](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) voor voorbeelden van waarheidswaarden.
 
-**Is Onwaar:** de voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde false. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde false resulteert in de voorwaarde die false retourneert.
+**Is onwaar:** De voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde false. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde false resulteert in de voorwaarde die false retourneert.
 
-**Is Falsy:** de voorwaarde retourneert true als de waarde false is nadat deze is omgezet in een Booleaanse waarde. Zie [Falsy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) voor voorbeelden van valse waarden.
+**Is false:** De voorwaarde retourneert true als de waarde false is na de conversie naar een Booleaanse waarde. Zie [Falsy-documentatie van MDN](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) voor voorbeelden van ongeldige waarden.
 
 
 
@@ -159,15 +159,15 @@ Geef de code op die wordt uitgevoerd nadat de gebeurtenis is geactiveerd en de v
 
 1. Geef de actiecode een naam.
 1. Selecteer **[!UICONTROL Open Editor]**.
-1. Bewerk de code en selecteer **[!UICONTROL Save]**.
+1. Bewerk de code en selecteer vervolgens **[!UICONTROL Save]**.
 
-Als u toegang wilt krijgen tot de waarde van een gegevenselement in aangepaste code, gebruikt u de methode `getDataElementValue`. Als u bijvoorbeeld de waarde van een gegevenselement met de naam `productName` wilt ophalen, schrijft u het volgende: 
+Als u toegang wilt krijgen tot de waarde van een gegevenselement in aangepaste code, gebruikt u de opdracht `getDataElementValue` methode. Bijvoorbeeld, om de waarde van een gegevenselement terug te winnen genoemd `productName`, schrijft het volgende: 
 
 ```javascript
 getDataElementValue('productName') 
 ```
 
-Gebeurtenis die acties door:sturen voert opeenvolgend uit. Het is ook mogelijk dat aangepaste code in één actie een waarde retourneert die in een volgende actie kan worden gebruikt. De teruggekeerde waarde kan uit code binnen die actie, of van het reactielichaam van een vraag komen die aan een externe bron wordt gemaakt. Als u wilt verwijzen naar gegevens van een eerder uitgevoerde handeling binnen één regel waarin de Core-extensie wordt gebruikt, maakt u een gegevenselement van het type `Path` en gebruikt u het volgende pad om te verwijzen naar de waarde van een variabele met de naam `productCategory` die is gedefinieerd in aangepaste code binnen de Core-extensie:
+Gebeurtenis die acties door:sturen voert opeenvolgend uit. Het is ook mogelijk dat aangepaste code in één actie een waarde retourneert die in een volgende actie kan worden gebruikt. De teruggekeerde waarde kan uit code binnen die actie, of van het reactielichaam van een vraag komen die aan een externe bron wordt gemaakt. Om gegevens van een eerder uitgevoerde actie binnen één enkele regel van verwijzingen te voorzien waar de uitbreiding van de Kern wordt gebruikt, creeer een gegevenselement van type `Path` en gebruik het volgende pad om naar de waarde van een variabele te verwijzen die `productCategory` gedefinieerd in aangepaste code binnen de Core-extensie:
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
@@ -183,11 +183,11 @@ De volgende secties beschrijven de types van gegevenselementen beschikbaar in de
 
 ### Aangepaste code
 
-U kunt aangepaste JavaScript invoeren in de gebruikersinterface door **[!UICONTROL Open Editor]** te selecteren en code in het editorvenster in te voegen.
+U kunt aangepaste JavaScript invoeren in de gebruikersinterface door  **[!UICONTROL Open Editor]** en code invoegen in het editorvenster.
 
-Een terugkeerverklaring is noodzakelijk in het redacteursvenster om erop te wijzen welke waarde als waarde van het gegevenselement zou moeten worden gebruikt. Als een retourinstructie niet is opgenomen of als de waarde `null` of `undefined` wordt geretourneerd, geeft de standaardwaarde van het gegevenselement `null` of `undefined` weer.
+Een terugkeerverklaring is noodzakelijk in het redacteursvenster om erop te wijzen welke waarde als waarde van het gegevenselement zou moeten worden gebruikt. Als een instructie return niet is opgenomen of als de waarde `null` of `undefined` wordt geretourneerd, geeft de standaardwaarde van het gegevenselement aan `null` of `undefined`.
 
-Als u toegang wilt krijgen tot de waarde van een gegevenselement in aangepaste code, gebruikt u de methode `getDataElementValue`. Als u bijvoorbeeld de waarde van een gegevenselement met de naam `productName` wilt ophalen, schrijft u het volgende: 
+Als u toegang wilt krijgen tot de waarde van een gegevenselement in aangepaste code, gebruikt u de opdracht `getDataElementValue` methode. Bijvoorbeeld, om de waarde van een gegevenselement terug te winnen genoemd `productName`, schrijft het volgende: 
 
 ```javascript
 getDataElementValue('productName') 
@@ -203,9 +203,9 @@ return getDataElementValue('section').concat(getDataElementValue('pName'));
 
 Er kan naar een pad naar een sleutelwaardepaar op een gebeurtenis die naar Adobe Experience Platform Edge Network wordt verzonden, worden verwezen met het gegevenstype Path.
 
-Als u wilt verwijzen naar het volledige object van een gebeurtenis, voert u `arc` in als het pad. Het acroniem `arc` staat voor de Context van het Middel van Adobe en is de top-level weg voor een gebeurtenis die naar het Netwerk van de Rand van Adobe Experience Platform wordt verzonden.
+Als u naar het volledige object van een gebeurtenis wilt verwijzen, voert u `arc` als het pad. Het acroniem `arc` staat voor de Context van het Middel van Adobe en is de top-level weg voor een gebeurtenis die naar Adobe Experience Platform Edge Network wordt verzonden.
 
-Met de `interact`-oproep van de client naar Edge Network hebt u bijvoorbeeld de volgende aanvraag, zoals u kunt zien op de browserconsole:
+Als u bijvoorbeeld de `interact` De vraag van de cliënt aan het Netwerk van Edge heeft het volgende verzoek zoals die van de browser console wordt gezien:
 
 ```javascript
 "events": [ 
@@ -218,7 +218,7 @@ Met de `interact`-oproep van de client naar Edge Network hebt u bijvoorbeeld de 
                      }] 
 ```
 
-Als u een pad wilt invoeren dat naar `pageName` verwijst, voert u het volgende in het padveld in:
+Een pad invoeren dat verwijst naar `pageName`voert u in het veld Pad het volgende in:
 
 ```javascript
 arc.event.xdm.page.pageName 
@@ -226,4 +226,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->De `interact` vraag van de cliënt heeft `events`, maar voor gebeurtenis door:sturen hebt u `event` nodig. Dit is omdat gebeurtenis door:sturen elke gebeurtenis individueel inspecteert, en niet als partij van veelvoudige gebeurtenissen zoals aangetoond op de cliënt.
+>De `interact` de vraag van de cliënt heeft `events`, maar voor het doorsturen van gebeurtenissen hebt u `event`. Dit is omdat gebeurtenis door:sturen elke gebeurtenis individueel inspecteert, en niet als partij van veelvoudige gebeurtenissen zoals aangetoond op de cliënt.
