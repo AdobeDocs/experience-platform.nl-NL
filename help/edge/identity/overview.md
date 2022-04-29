@@ -3,9 +3,9 @@ title: Identiteitsgegevens in het Web SDK van het Platform
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;Primaire;Identiteitskaart Namespace;Naamruimte id;AuthenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Dit document biedt een overzicht van hoe u ECID&#39;s kunt beheren met de SDK va
 
 De SDK van het Web van de Platform wijst ECIDs door het gebruik van koekjes toe en volgt, met veelvoudige beschikbare methodes om te vormen hoe deze koekjes worden geproduceerd.
 
-Wanneer een nieuwe gebruiker op uw website arriveert, probeert de Adobe Experience Cloud Identity Service een apparaatidentificatiecookie voor die gebruiker in te stellen. Voor nieuwe bezoekers wordt een ECID gegenereerd en geretourneerd in de eerste reactie van het Adobe Experience Platform Edge Network. Voor herhaalde bezoekers wordt de ECID opgehaald uit de `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie en toegevoegd aan de payload.
+Wanneer een nieuwe gebruiker op uw website arriveert, probeert de Adobe Experience Cloud Identity Service een apparaatidentificatiecookie voor die gebruiker in te stellen. Voor nieuwe bezoekers wordt een ECID gegenereerd en geretourneerd in de eerste reactie van het Adobe Experience Platform Edge Network. Voor herhaalde bezoekers wordt de ECID opgehaald uit de `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` koekje en toegevoegd aan de lading door het Netwerk van de Rand.
 
-Zodra het koekje dat ECID bevat is geplaatst, zal elk verder verzoek dat door het Web SDK van het Platform wordt geproduceerd ECID omvatten.
+Nadat het cookie met de ECID is ingesteld, bevat elk volgend verzoek dat door de Web SDK wordt gegenereerd, een gecodeerde ECID in het dialoogvenster `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
 Wanneer het gebruiken van koekjes voor apparatenidentificatie, hebt u twee opties om met het Netwerk van de Rand in wisselwerking te staan:
 
