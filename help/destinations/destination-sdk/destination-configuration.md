@@ -2,7 +2,7 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1784'
 ht-degree: 2%
@@ -220,7 +220,7 @@ Lees meer in de [Overzicht van naamruimte van id](https://experienceleague.adobe
 |---------|----------|------|
 | `acceptsAttributes` | Boolean | Hiermee geeft u aan of uw doel standaardprofielkenmerken accepteert. Gewoonlijk, worden deze attributen benadrukt in de documentatie van partners. |
 | `acceptsCustomNamespaces` | Boolean | Geeft aan of klanten aangepaste naamruimten kunnen instellen op uw bestemming. |
-| `allowedAttributesTransformation` | Tekenreeks | *Niet weergegeven in voorbeeldconfiguratie*. Wordt bijvoorbeeld gebruikt als de [!DNL Platform] de klant heeft onbewerkte e-mailadressen als attribuut en uw platform accepteert alleen gehashte e-mailadressen. In dit object kunt u de transformatie uitvoeren die moet worden toegepast (de e-mail bijvoorbeeld omzetten in kleine letters en vervolgens hash). Zie voor een voorbeeld `requiredTransformation` in de [API-naslaggids voor doelconfiguratie](./destination-configuration-api.md#update). |
+| `transformation` | Tekenreeks | *Niet weergegeven in voorbeeldconfiguratie*. Wordt bijvoorbeeld gebruikt als de [!DNL Platform] de klant heeft onbewerkte e-mailadressen als attribuut en uw platform accepteert alleen gehashte e-mailadressen. In dit object kunt u de transformatie uitvoeren die moet worden toegepast (de e-mail bijvoorbeeld omzetten in kleine letters en vervolgens hash). Zie voor een voorbeeld `requiredTransformation` in de [API-naslaggids voor doelconfiguratie](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | Wordt gebruikt voor gevallen waarin uw platform accepteert [standaardnaamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
 
 {style=&quot;table-layout:auto&quot;}
