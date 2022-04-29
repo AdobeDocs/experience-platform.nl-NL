@@ -3,32 +3,28 @@ title: Een DataStream configureren
 description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
+source-git-commit: 2275a32cfa9419d2ca407dd48a15f8d06354cd49
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '1986'
 ht-degree: 1%
 
 ---
 
 # Een gegevensstroom configureren
 
-Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobile SDKs. Terwijl de [configureren, opdracht](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), worden in gegevensstreams alle andere configuraties voor de SDK afgehandeld. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [configureren, opdracht](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), worden in gegevensstreams alle andere configuraties voor de SDK afgehandeld. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
 In dit document worden de stappen beschreven voor het configureren van een gegevensstroom in de gebruikersinterface voor gegevensverzameling.
 
 >[!NOTE]
 >
->Uw organisatie moet voor deze eigenschap worden voorzien om tot het in UI toegang te hebben. Vul het volgende in [formulier](https://adobe.ly/websdkaccess) om de nodige toegang te vragen.
+>Uw organisatie moet voor deze eigenschap worden voorzien om tot het in UI toegang te hebben. Vul het volgende in [formulier](https://adobe.ly/websdkaccess) om de nodige toegang te vragen. Om gegevensstromen te beheren, moet uw gebruikersrekening aan een productprofiel voor markeringen in worden toegevoegd [!DNL Adobe Experience Platform].
 
 ## Toegang krijgen tot [!UICONTROL Datastreams] werkruimte
 
 U kunt gegevensstromen in de UI van de Inzameling van Gegevens tot stand brengen en beheren door te selecteren **[!UICONTROL Datastreams]** in de linkernavigatie.
 
 ![Het lusje van gegevensstromen in de UI van de Inzameling van Gegevens](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->Terwijl u toegang hebt tot [!UICONTROL Datastreams] , ongeacht of u de mogelijkheden voor tagbeheer van Platform gebruikt, hebt u ontwikkelaarmachtigingen nodig om gegevensstromen zelf te beheren. Zie de [gebruikersmachtigingen](../../tags/ui/administration/user-permissions.md) artikel in de tagdocumentatie voor meer informatie.
 
 De [!UICONTROL Datastreams] wordt een lijst weergegeven met bestaande gegevensstromen, inclusief de vriendelijke naam, id en datum die als laatste is gewijzigd. Selecteer de naam van een gegevensstroom die u wilt [zijn details bekijken en de diensten vormen](#view-details).
 
@@ -60,7 +56,7 @@ Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om 
 | [!UICONTROL First Party ID Cookie] | Als deze instelling is ingeschakeld, geeft het Edge Network de opdracht naar een opgegeven cookie te verwijzen wanneer u een [apparaat-id van eerste partij](../identity/first-party-device-ids.md)in plaats van deze waarde op te zoeken in het identiteitsoverzicht.<br><br>Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen. |
 | [!UICONTROL Third Party ID Sync] | De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Als deze instelling is ingeschakeld, kunt u opgeven welke container met id-syncs wordt uitgevoerd voor deze gegevensstroom. |
 
-De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Als u de SDK van Mobile gebruikt of uw gegevensstroom voor Platform anders niet configureert, selecteert u **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
+De rest van deze sectie concentreert zich op de stappen om gegevens aan een geselecteerd Platform gebeurtenisschema in kaart te brengen. Selecteer **[!UICONTROL Save]** voordat u doorgaat naar de volgende sectie over [services toevoegen aan de gegevensstroom](#add-services).
 
 ### Gegevensvoorvoegsel voor gegevensverzameling {#data-prep}
 
