@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e19c70883785ff338623ea2e6433562a792b3841
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1855'
 ht-degree: 1%
 
 ---
@@ -19,8 +19,8 @@ Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzij
 
 Het verzendt gegevens op een oplossing-agnostische manier (XDM) naar het Netwerk van de Rand van Adobe Experience Platform, dat dan de gegevens aan oplossing specifieke formaten en bestemmingen in kaart brengt en het in real time verzendt.
 
-**Meer**
-[informatiePresentatie van de Top van Adobe](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)
+**Meer informatie**
+[Adobe Summit](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)
 
 ## Hoe verschilt Adobe Experience Platform Web SDK van eerdere oplossingen?
 
@@ -60,45 +60,43 @@ Adobe Experience Platform Web SDK kan gegevens ook rechtstreeks naar Adobe Exper
 
 ## Wat is de waarde van dit nieuwe Web SDK?
 
-**Prestaties:** de SDK van het web is kleiner dan het gebruik van alle huidige Adobe-bibliotheken en biedt aanzienlijk snellere paginaladingen.
+**Prestaties:** De web-SDK is kleiner dan alle huidige Adobe-bibliotheken en biedt aanzienlijk snellere paginaladingen.
 
-**Eenvoud:** de combinatie van XDM, Web SDK, markeringen, de oplossingen van de Rand van de Ervaring, van Adobe Experience Cloud, en Adobe Experience Platform leidt tot een makkelijk te begrijpen en eenvoudig-aan-volgt verhaal van de gegevensinzameling.
+**Eenvoud:** Met de combinatie van XDM, Web SDK, tags, Experience Edge, Adobe Experience Cloud-oplossingen en Adobe Experience Platform wordt een eenvoudig te begrijpen en eenvoudig te volgen artikel voor gegevensverzameling gemaakt.
 
 * **XDM:** Het oplossing-agnostische schema u gebruikt om gegevens naar Adobe te verzenden. Geen codes meer voor verkenners of vakjes.
-* **Adobe Experience Platform Web SDK:** maakt het gemakkelijk om gegevens naar Adobe Experience Platform Edge Network te verzenden en te ontvangen.
-* **Tags:** vereenvoudigt de implementatie en configuratie van de Web SDK (en eventuele andere JavaScript-tags) op een site.
-* **Geniet van Edge:de gegevens** gemakkelijk naar Adobe Experience Platform en oplossingen verzenden in de gewenste indeling.
-* **Adobe Experience Platform- en Adobe-oplossingen:** hun waardevoorstel inschakelen.
+* **Adobe Experience Platform Web SDK:** Hiermee kunt u gegevens eenvoudig verzenden naar en ontvangen van Adobe Experience Platform Edge Network.
+* **Tags:** Vereenvoudigt plaatsing en configuratie van Web SDK (en om het even welke andere markeringen JavaScript) op een plaats.
+* **Geniet van rand:** Verstuur de gegevens gemakkelijk naar Adobe Experience Platform en de oplossingen in het formaat dat zij nodig hebben.
+* **Adobe Experience Platform- en Adobe-oplossingen:** Schakel hun waardevoorstel in.
 
-**Controle:** Omdat alle gegevens één enkele en verbonden stroom van gegevens gebruiken, kunt u logisch gezien volgen en controleren hoe de gegevens bij elke milliseconde van zijn reis, aan en van toepassingen kijken.
+**Besturingselement:** Omdat alle gegevens één enkele en verbonden stroom van gegevens gebruiken, kunt u logisch gezien volgen en controleren hoe de gegevens bij elke milliseconde van zijn reis, aan en van toepassingen kijken.
 
 **Modern en klaar voor de toekomst:** De SDK van het Web en zijn verbinding aan het Netwerk van de Rand van de Ervaring hebben Adobe toegelaten om beduidend te moderniseren hoe Adobe zich met gegevensinzameling, verpersoonlijking, toestemming en de toekomst van derdekoekjes behandelt. (Het laat een eerste partijdomein toe, dat door Adobe wordt beheerd.)
 
-**Tijd-aan-waarde:** Adobe heeft hard gewerkt (en zal) blijven om het zo gemakkelijk mogelijk te maken om het Web SDK via markeringen op te stellen en cliënt-zijgegevens aan XDM in kaart te brengen.  Nadat dat werk wordt gedaan, kunnen alle andere Adobe oplossingen en de diensten van Adobe Experience Platform worden aangezet of van server-kant. Bijvoorbeeld, als u dit voor Adobe Analytics gebruikt en u Doel of Experience Platform wilt aanzetten, kunt u eenvoudig een knevel op de configuratie van DataStream draaien en die gebruiksgevallen oplichten.
+**Tijd-aan-waarde:** Adobe heeft hard gewerkt (en zal blijven) om het zo gemakkelijk mogelijk te maken om Web SDK via markeringen op te stellen en cliënt-zijgegevens aan XDM in kaart te brengen. Nadat dat werk wordt gedaan, kunnen alle andere Adobe oplossingen en de diensten van Adobe Experience Platform worden aangezet of van server-kant. Bijvoorbeeld, als u dit voor Adobe Analytics gebruikt en u Doel of Experience Platform wilt aanzetten, kunt u eenvoudig een knevel op de configuratie van DataStream draaien en die gebruiksgevallen oplichten.
 
 ## Wat is Alloy?
 
 Alloy is de codenaam voor het Web SDK van Adobe Experience Platform. Het wordt gebruikt binnen de broncode en filename van SDK, hoewel het Web SDK van Adobe Experience Platform de officiële naam is.
 
-## Moeten klanten Adobe Experience Platform kopen om de SDK van het Web te gebruiken?
+## Moeten klanten Adobe Experience Platform kopen om de [!DNL Web SDK]?
 
-Nee. Elke Adobe Digital Experience die klant kan gebruiken. Volledig gratis. Om het even welke klant die SDK van het Web wil gebruiken zal toegang worden verleend om schema&#39;s en datasets in Adobe Experience Platform UI tot stand te brengen.
+Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SDK gratis gebruiken. Om SDK van het Web te gebruiken, moet u uw organisatie hebben provisioned voor deze eigenschap. Vul het volgende in als u toegang wilt krijgen [formulier](https://adobe.ly/websdkaccess) en Adobe zal u toegang geven tot [Gebruikersinterface gegevensstromen](fundamentals/datastreams.md) en de gebruikersinterface van Adobe Experience Platform (indien nodig).
+
+Klanten die de [!DNL Web SDK] zal toegang worden verleend om schema&#39;s, datasets, en identiteitsnamespaces in Adobe Experience Platform UI tot stand te brengen.
 
 ## Wie zou SDK van het Web moeten gebruiken?
 
 Adobe Experience Platform Web SDK is ontwikkeld voor de volgende personen:
 
 * Adobe Experience Platform-gebruikers
-
-   Als u gegevens rechtstreeks van een apparaat naar Adobe Experience Platform moet verzenden, is dit de officieel aanbevolen manier.
-
-   Adobe is zich ervan bewust dat het gebruik van de Adobe Analytics-aansluiting sneller is als de klant al over Adobe Analytics beschikt, maar het is niet de langetermijnstrategie voor gegevensverzameling.
+   * Als u gegevens rechtstreeks van een apparaat naar Adobe Experience Platform moet verzenden, is dit de officieel aanbevolen manier.
+   * Adobe is zich ervan bewust dat het gebruik van de Adobe Analytics-aansluiting sneller is als de klant al over Adobe Analytics beschikt, maar het is niet de langetermijnstrategie voor gegevensverzameling.
 
 * Klanten met Adobe Experience Cloud-oplossingen
-
-   Nieuwe Adobe Analytics-, Adobe Audience Manager- en Adobe Target-klanten moeten beginnen met de nieuwe Web SDK en geen oude bibliotheken gebruiken.
-
-   Bestaande klanten die de meest geoptimaliseerde implementatie mogelijk willen krijgen, moeten de nieuwe Web SDK gebruiken.
+   * Nieuwe Adobe Analytics-, Adobe Audience Manager- en Adobe Target-klanten moeten beginnen met de nieuwe Web SDK en geen oude bibliotheken gebruiken.
+   * Bestaande klanten die de meest geoptimaliseerde implementatie mogelijk willen krijgen, moeten de nieuwe Web SDK gebruiken.
 
 
 ## Hoe krijg ik toegang om te beginnen Adobe Experience Platform Web SDK te gebruiken?
@@ -107,61 +105,61 @@ De SDK van het Web is momenteel beschikbaar aan het grote publiek en kan worden 
 
 ## Welke gebruiksgevallen worden momenteel ondersteund door de Web SDK?
 
-De SDK van het Web evolueert snel. Er wordt gewerkt aan meer gebruiksgevallen. U kunt de [lijst van momenteel gesteunde gebruiksgevallen hier vinden.](https://github.com/adobe/alloy/projects/5)
+De SDK van het Web evolueert snel. Er wordt gewerkt aan meer gebruiksgevallen. U kunt de [lijst met gebruiksgevallen die momenteel hier worden ondersteund.](https://github.com/adobe/alloy/projects/5)
 
 ## Moeten de huidige klanten hun plaatsen in de detailhandel brengen?
 
 Dat hangt ervan af. Adobe Experience Platform Web SDK kan in twee verschillende stijlen worden opgesteld. Een toekomstig migratiedocument zal extra details verstrekken.
 
-* **Alleen nog een tag:** Als de site al is gecodeerd voor oplossingen en u kunt de site niet opnieuw labelen, maar u wilt gegevens naar Adobe Experience Platform Edge Network verzenden voor gebruik van Experience Platforms of de volgende functies voor het doorsturen van gebeurtenissen (zie hieronder), kunt u de  `alloy.js` tag toevoegen aan de site, waar deze werkt als &quot;gewoon een andere tag&quot;.
+* **Nog een tag:** Als de site al is gecodeerd voor oplossingen en u kunt deze niet opnieuw labelen, maar u wilt gegevens naar Adobe Experience Platform Edge Network verzenden voor gebruik van Experience Platforms of naar de volgende functies voor het doorsturen van gebeurtenissen (zie hieronder), kunt u de optie `alloy.js` tag naar de site, waar het werkt als &quot;gewoon een andere tag&quot;.
 
-* **De enige tag:** Als u de Web SDK voor een Experience Cloud-oplossing wilt gebruiken, moet u deze voor  __ alle oplossingen op die pagina gebruiken. Als uw site bijvoorbeeld al gelabeld is voor Adobe Analytics en u deze wilt gebruiken voor Target, moet u deze zowel voor als voor andere sites in de toekomst gebruiken.
+* **Het enige label:** Als u SDK van het Web voor een oplossing van Experience Cloud wilt gebruiken, moet u het voor gebruiken _alles_ van de oplossingen op die pagina. Als uw site bijvoorbeeld al gelabeld is voor Adobe Analytics en u deze wilt gebruiken voor Target, moet u deze zowel voor als voor andere sites in de toekomst gebruiken.
 
-Met andere woorden, als u besluit om het Web SDK van Adobe Experience Platform voor niet-oplossingsgebruiksgevallen te gebruiken, kunt u de plaats etiketteren met `alloy.js` en zich bewegen alsof het een nieuwe oplossing is. Als u het voor Adobe Analytics, Doel, of Audience Manager, of voor toepassingsgebruiksgevallen wilt gebruiken, zou u om het even welke erfeniscode op uw pagina kunnen moeten verwijderen.
+Met andere woorden, als u besluit Adobe Experience Platform Web SDK voor niet-oplossingsgebruikgevallen te gebruiken, kunt u de plaats etiketteren met `alloy.js` en ga verder alsof het een nieuwe oplossing is. Als u het voor Adobe Analytics, Doel, of Audience Manager, of voor toepassingsgebruiksgevallen wilt gebruiken, zou u om het even welke erfeniscode op uw pagina kunnen moeten verwijderen.
 
 ## Kan ik de ECID&#39;s migreren wanneer ik Alloy ga gebruiken, zodat mijn websitebezoekers niet beginnen op te dagen als nieuwe bezoekers?
 
-Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in [de identiteitsdocumentatie van SDK van het Web van het Platform ](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) voor meer details.
+Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor ID-migratie in het dialoogvenster [Platform Web SDK-identiteitsdocumentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) voor meer informatie .
 
 ## Hoe is SDK van het Web verschillend dan markeringen?
 
-* **Tags in Experience** Platform beheren de apparaatcode. Gebruik hen om de code gemakkelijker op te stellen. Ze zijn vrij en krachtig.
+* **Labels in Experience Platform** de apparaatcode beheren. Gebruik hen om de code gemakkelijker op te stellen. Ze zijn vrij en krachtig.
 
-* **Adobe Experience Platform Web** SDK is de officiële naam van de nieuwe code die door markeringen voor de gebruiksgevallen van de Adobe zou worden opgesteld. Het is ook vrij en krachtig.
+* **Adobe Experience Platform Web SDK** Dit is de officiële naam van de nieuwe code die wordt geïmplementeerd door tags voor het gebruik van Adobe. Het is ook vrij en krachtig.
 
 * **`alloy.js`** is de bestandsnaam van de Adobe Experience Platform Web SDK-code.
 
 ## Moet ik markeringen gebruiken om het Web SDK op te stellen?
 
-Nee. U kunt het `alloy.js` dossier zelf downloaden.
+Nee. U kunt de `alloy.js` bestand zelf.
 
 Echter:
 
 * Adobe Experience Platform Web SDK vereist iets genoemd een identiteitskaart DataStream zodat kan het randnetwerk de stroom identificeren en bepalen wat met de gegevens te doen. Deze id wordt gemaakt in het Experience Platform. Dit betekent niet u de UI van de Inzameling van Gegevens moet gebruiken om eigenschappen tot stand te brengen of de code op te stellen JavaScript, maar u moet markeringen gebruiken om een configuratieidentiteitskaart tot stand te brengen.
 
-* Tags zijn niet alleen de beste beschikbare tag en SDK-beheer, maar maken het erg eenvoudig om `alloy.js` te implementeren en gegevens toe te wijzen aan XDM-schema&#39;s. Als u besluit om geen markeringen te gebruiken, zult u het opstellen van `alloy.js`, gebeurtenis, en het in kaart brengen van uw gegevens in XDM moeten beheren alvorens het te verzenden. Dit is een _veel_ moeilijker proces dan het gebruiken van markeringen.
+* Tags zijn niet alleen de beste beschikbare tag en SDK-manager, maar maken het erg eenvoudig om te implementeren `alloy.js` en kaartgegevens naar XDM-schema&#39;s. Als u besluit geen labels te gebruiken, moet u de implementatie beheren `alloy.js`, het voorkomen, en het in kaart brengen van uw gegevens in XDM alvorens het te verzenden. Dit is een _veel_ moeilijker te verwerken dan het gebruik van labels.
 
-* U wordt aangeraden labels te gebruiken om `alloy.js` te implementeren, zelfs als dit de enige tag is waarvoor u deze gebruikt.
+* U wordt aangeraden tags te gebruiken voor de implementatie `alloy.js`, zelfs als het de enige markering is u het voor gebruikt.
 
 ## Wat is gebeurtenis door:sturen?
 
-Als u onze SDKs gebruikt en XDM naar de Rand van de Ervaring verzendt, staat deze nieuwe eigenschapgebeurtenis door:sturen u toe om nieuwe server-zijuitbreidingen te installeren en die gegevens in kaart te brengen aan wat-en het te verzenden overal-van ons randnetwerk. Beschouw het als &quot;gegevensverzameling als een service.&quot;  Dit zal beschikbaar zijn voor kosten, en als deel van Adobe Experience Platform worden gebundeld.
+Als u onze SDKs gebruikt en XDM naar de Rand van de Ervaring verzendt, staat deze nieuwe eigenschapgebeurtenis door:sturen u toe om nieuwe server-zijuitbreidingen te installeren en die gegevens in kaart te brengen aan wat-en het te verzenden overal-van ons randnetwerk. Beschouw het als &quot;gegevensverzameling als een service&quot;. Dit zal beschikbaar zijn voor kosten, en als deel van Adobe Experience Platform worden gebundeld.
 
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
-Meer informatie over een CNAME is beschikbaar in de [Adobe documentatie](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
+Meer informatie over een CNAME is beschikbaar in het dialoogvenster [Adobe-documentatie](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
 
 ## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
 
 Ja, gebruikt momenteel SDK van het Web overal tussen 1-4 koekjes afhankelijk van uw implementatie. Hieronder volgt een lijst van de 4 koekjes die u met het Web SDK en de manier zou kunnen zien dat zij worden gebruikt:
 
-**kndct_orgid_identity:** Het identiteitscookie wordt gebruikt om de ECID op te slaan, evenals enkele andere informatie met betrekking tot de ECID.
+**kndct_orgid_identity:** Het identiteitscookie wordt gebruikt om de ECID op te slaan, evenals enige andere informatie met betrekking tot de ECID.
 
-**kCtr_orgid_permission:** In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen.
+**kndctr_orgid_toestemming:** In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen.
 
-**kCtr_orgid_personalization:** Dit cookie bevat sessiegegevens die Adobe Target gebruikt om webpagina&#39;s aan te passen.
+**kndctr_orgid_personalization:** Dit cookie bevat sessiegegevens die Adobe Target gebruikt om webpagina&#39;s aan te passen.
 
-**kndctr_orgid_consentcheck:** Deze op sessie gebaseerde cookie geeft de server de opdracht om de server met voorkeuren voor toestemming op te zoeken.
+**kndctr_orgid_consentcheck:** Deze op zitting-gebaseerde koekje geeft de server aan om de server van de toestemmingsvoorkeur omhoog te kijken.
 
 ## Welke browsers steunt het Web SDK van Adobe Experience Platform?
 
