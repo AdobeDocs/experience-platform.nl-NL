@@ -1,7 +1,8 @@
 ---
 title: Gegevenselementen
 description: De elementen van gegevens zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
+source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
 workflow-type: tm+mt
 source-wordcount: '1610'
 ht-degree: 0%
@@ -20,15 +21,15 @@ Eén gegevenselement is een variabele waarvan de waarde kan worden toegewezen aa
 
 >[!IMPORTANT]
 >
->Wijzigingen worden pas van kracht als ze [gepubliceerd](../publishing/overview.md) zijn.
+>Wijzigingen worden pas van kracht nadat ze [gepubliceerd](../publishing/overview.md).
 
 Gebruik gegevenselementen zo breed mogelijk tijdens het maken van regels om de definitie van dynamische gegevens te consolideren en de efficiëntie van het coderingsproces te verbeteren. U definieert de gegevensregels eenmaal en gebruikt deze vervolgens op meerdere plaatsen.
 
 Het concept van herbruikbare gegevenselementen is zeer krachtig en u zou hen als beste praktijken moeten gebruiken.
 
-Bijvoorbeeld, als er een bepaalde manier is dat u paginanamen of product IDs van verwijzingen voorziet of informatie van de parameters van het vraagkoord van een aangesloten marketing verbinding of van [!DNL AdWords], etc. haalt, kunt u een gegevenswoordenboek (gegevenselementen) tot stand brengen door informatie van zijn bron te krijgen en dan deze gegevens in diverse markeringsregels te gebruiken.
+Bijvoorbeeld als er een bepaalde manier is dat u paginanamen of product IDs van verwijzingen voorziet of informatie van de parameters van het vraagkoord van een verwante marketing verbinding of van [!DNL AdWords]enzovoort, kunt u een gegevenswoordenboek (gegevenselementen) maken door informatie van de bron op te halen en deze gegevens vervolgens in verschillende labelregels te gebruiken.
 
-Als u bijvoorbeeld de paginanaam gebruikt, kunt u een bepaald paginanaamschema gebruiken door naar een gegevenslaag, `document.title`-element of een titeltag in de website te verwijzen. Met tags in Adobe Experience Platform kunt u een gegevenselement maken als een enkel referentiepunt voor dat specifieke punt van gegevens. U kunt dit gegevenselement dan gebruiken in om het even welke regel die de paginanaam moet van verwijzingen voorzien. Als u om een of andere reden in de toekomst besluit om de manier te veranderen u paginanaam van verwijzingen voorziet (bijvoorbeeld, hebt u `document.title` van verwijzingen voorzien maar u nu een bepaalde gegevenslaag) wilt van verwijzingen voorzien, te hoeven u vele verschillende regels niet uit te geven om die verwijzing te veranderen. U wijzigt eenvoudig de verwijzing eenmaal in het gegevenselement en alle regels die naar dat gegevenselement verwijzen, worden automatisch bijgewerkt.
+Gebruikend paginanaam als voorbeeld, veronderstel u een bepaald pagina-naam schema door een gegevenslaag van verwijzingen te voorzien, `document.title` -element of een titeltag binnen de website. Met tags in Adobe Experience Platform kunt u een gegevenselement maken als een enkel referentiepunt voor dat specifieke punt van gegevens. U kunt dit gegevenselement dan gebruiken in om het even welke regel die de paginanaam moet van verwijzingen voorzien. Als u om een of andere reden in de toekomst besluit om de manier te wijzigen waarop u naar de paginanaam verwijst (bijvoorbeeld `document.title` maar u wilt nu naar een bepaalde gegevenslaag verwijzen), te hoeven u niet vele verschillende regels uit te geven om die verwijzing te veranderen. U wijzigt eenvoudig de verwijzing eenmaal in het gegevenselement en alle regels die naar dat gegevenselement verwijzen, worden automatisch bijgewerkt.
 
 >[!NOTE]
 >
@@ -36,8 +37,8 @@ Als u bijvoorbeeld de paginanaam gebruikt, kunt u een bepaald paginanaamschema g
 
 De elementen van gegevens worden bevolkt met gegevens wanneer zij in regels worden gebruikt of wanneer manueel geroepen in een manuscript. Op een hoog niveau kunt u:
 
-1. [Maak een gegevenselement](#create-a-data-element) als u dat nog niet hebt gedaan.
-1. Gebruik het gegevenselement in [rule](./rules.md) of een douanescript.
+1. [Een gegevenselement maken](#create-a-data-element), als je dat nog niet hebt gedaan.
+1. Het gegevenselement in een [regel](./rules.md) of een aangepast script.
 
 ## Gebruik van gegevenselementen
 
@@ -47,7 +48,7 @@ U kunt gegevenselementen in de regel het uitgeven interface gebruiken door het o
 
 ### In aangepast script
 
-U kunt gegevenselementen in douanescripts gebruiken door `_satellite` objecten syntaxis te gebruiken:
+U kunt gegevenselementen in douanescripts gebruiken door `_satellite` objectsyntaxis:
 
 `_satellite.getVar('data element name');`
 
@@ -55,11 +56,11 @@ U kunt gegevenselementen in douanescripts gebruiken door `_satellite` objecten s
 
 De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen kunt u een gegevenswoordenboek (of gegevenskaart) maken van veelgebruikte items op een pagina, ongeacht de oorsprong ervan (queryreeksen, URL&#39;s of cookiewaarden) voor elk object dat zich op uw site bevindt.
 
-1. Open vanuit een eigenschappenpagina het tabblad [!UICONTROL Data Elements] en selecteer **[!UICONTROL Create New Data Element]**.
+1. Open vanuit een eigenschappenpagina de [!UICONTROL Data Elements] tab, dan selecteren **[!UICONTROL Create New Data Element]**.
 1. Geef het gegevenselement een naam.
 1. Selecteer een extensie en typ deze.
 
-   De beschikbare elementtypen worden bepaald door de extensie. Voor informatie over de types beschikbaar met de de markeringsuitbreiding van de Kern, verwijs naar [Types van gegevenselementen](data-elements.md#types-of-data-elements).
+   De beschikbare elementtypen worden bepaald door de extensie. Voor informatie over de typen die beschikbaar zijn met de extensie Core raadpleegt u [Typen gegevenselementen](data-elements.md#types-of-data-elements).
 
 1. Geef alle gevraagde informatie over het gekozen type op in de opgegeven velden.
 1. (Optioneel) Voer een standaardwaarde in.
@@ -75,7 +76,7 @@ De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen 
       * De waarde wordt niet opgeslagen.
    * Paginaweergave
       * De waarde wordt vastgehouden in een JavaScript-variabele totdat de pagina wordt vernieuwd of een nieuwe pagina wordt geladen.
-      * Kan in scripts worden gemaakt en ingesteld met de objectsyntaxis `_satellite`:
+      * Kan in scripts worden gemaakt en ingesteld met `_satellite` objectsyntaxis:
 
          `_satellite.setVar('data_element_name')`
    * Sessie
@@ -86,7 +87,7 @@ De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen 
 
 1. Selecteer **[!UICONTROL Save]**.
 
-Wanneer u elementen maakt of bewerkt, kunt u deze opslaan en samenstellen in uw [actieve bibliotheek](../publishing/libraries.md#active-library). Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken met het vervolgkeuzemenu [!UICONTROL Active Library].
+Wanneer u elementen maakt of bewerkt, kunt u deze opslaan en samenstellen op uw [actieve bibliotheek](../publishing/libraries.md#active-library). Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken op basis van de [!UICONTROL Active Library] vervolgkeuzelijst.
 
 ## Typen gegevenselementen {#types-of-data-elements}
 
@@ -104,7 +105,7 @@ In het veld cookie naam kan naar een beschikbaar domeincookie worden verwezen.
 
 ### Aangepaste code
 
-U kunt aangepaste JavaScript invoeren in de gebruikersinterface door [!UICONTROL Open Editor] te selecteren en code in het editorvenster in te voegen.
+U kunt aangepaste JavaScript invoeren in de gebruikersinterface door  [!UICONTROL Open Editor] en code invoegen in het editorvenster.
 
 Een terugkeerverklaring is noodzakelijk in het redacteursvenster om erop te wijzen welke waarde als waarde van het gegevenselement zou moeten worden geplaatst. Als er geen instructie return is opgenomen, wordt het gegevenselement omgezet in `undefined`.  Hierdoor wordt de fallback geactiveerd om te zoeken naar een opgeslagen waarde en vervolgens naar een standaardwaarde als er geen opgeslagen waarde aanwezig is.
 
@@ -119,7 +120,7 @@ if (window.location.pathname == '/') {
 }
 ```
 
-De code van de douane kan het `event` voorwerp van de roepende regel als argument goedkeuren. Hierdoor kan de code daar waarde lezen.
+Aangepaste code kan het volgende accepteren `event` object van de aanroepende regel als een argument. Hierdoor kan de code daar waarde lezen.
 
 **Voorbeeld:**
 
@@ -129,13 +130,18 @@ var eventType = event.$type;
 return eventType; // if this data element is called from a "DOM Ready" event, then `core.dom-ready` is returned
 ```
 
-U kunt dit vervolgens gebruiken in aangepaste scripts door de objectsyntaxis `_satellite` te gebruiken:
+U kunt dit vervolgens gebruiken in aangepaste scripts met de opdracht `_satellite` objectsyntaxis:
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-Wanneer u de notatie `%..%` gebruikt, hoeft u alleen de naam van het gegevenselement op te geven. U hoeft `event` niet op te geven.
+Als u percentage (`%`), hoeft u alleen de naam van het gegevenselement op te geven. U hoeft niet op te geven `event`.
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### DOM-kenmerk
 
@@ -157,7 +163,7 @@ Met behulp van het padveld kan naar elk beschikbaar JavaScript-object of -variab
 
 Als u JavaScript-variabelen of objecteigenschappen in uw opmaak wilt verzamelen en deze wilt gebruiken met een van uw extensies of regels, kunnen gegevenselementen worden gebruikt om deze waarden vast te leggen. Deze manier, kunt u naar het gegevenselement door uw regels verwijzen, en als de bron van de gegevens ooit verandert, moet u slechts uw verwijzing naar de bron (het gegevenselement) in één plaats binnen UI van de Inzameling van Gegevens veranderen.
 
-Stel bijvoorbeeld dat uw markering een JavaScript-variabele bevat met de naam `Page_Name`, zoals in het volgende voorbeeld:
+Stel dat uw markering een JavaScript-variabele bevat met de naam `Page_Name`, als volgt:
 
 ```markup
 <script>
@@ -176,15 +182,15 @@ Als u een gegevensverzamelingsobject gebruikt als onderdeel van uw gegevenslaag,
 
 ### Lokale opslag
 
-Geef de naam van het lokale opslagitem op in het veld [!UICONTROL Local Storage Item Name].
+Geef de naam op van het lokale opslagitem in het dialoogvenster [!UICONTROL Local Storage Item Name] veld.
 
-Lokale opslag biedt browsers een manier om informatie van pagina tot pagina op te slaan ([https://www.w3schools.com/html/html5\_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
+Met lokale opslag kunnen browsers gegevens van pagina tot pagina opslaan ([https://www.w3schools.com/html/html5\_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
 
-Gebruik het opgegeven veld om de waarde op te geven die u hebt gemaakt voor een lokaal opslagitem, zoals `lastProductViewed.`
+Gebruik het opgegeven veld om de waarde op te geven die u voor een lokaal opslagitem hebt gemaakt, zoals `lastProductViewed.`
 
 ### Pagina-info
 
-Gebruik deze gegevenspunten om pagina-info vast te leggen voor gebruik in uw regellogica of om informatie te verzenden naar [!DNL Analytics] of externe volgsystemen.
+Gebruik deze gegevenspunten om paginainfo voor gebruik in uw regellogica te vangen of informatie te verzenden naar [!DNL Analytics] of externe volgsystemen.
 
 U kunt een van de volgende paginakenmerken selecteren voor gebruik in het gegevenselement:
 
@@ -197,7 +203,7 @@ U kunt een van de volgende paginakenmerken selecteren voor gebruik in het gegeve
 
 ### Tekenreeksparameter van query
 
-Geef één URL-parameter op in het veld [!UICONTROL URL Parameter].
+Geef één URL-parameter op in het dialoogvenster [!UICONTROL URL Parameter] veld.
 
 Alleen de naamsectie is nodig en speciale aanduidingen zoals &quot;?&quot; of &quot;=&quot; moet worden weggelaten
 
@@ -224,7 +230,7 @@ Maximaal: 1000000000
 
 ### Sessieopslag
 
-Geef de naam van het opslagitem voor de sessie op in het veld [!UICONTROL Session Storage Item Name].
+Geef de naam op van het opslagitem voor de sessie in het dialoogvenster [!UICONTROL Session Storage Item Name] veld.
 
 Sessieopslag is vergelijkbaar met lokale opslag, behalve dat de gegevens worden verwijderd nadat de sessie is beëindigd, terwijl lokale opslag of een cookie de gegevens kan behouden.
 
@@ -245,7 +251,7 @@ Selecteer een van de volgende kenmerken voor bezoekersgedrag:
 Enkele gangbare gebruiksgevallen zijn:
 
 * Een enquête weergeven nadat een bezoeker vijf minuten op de site is geweest
-* Als dit de landingspagina voor het bezoek is, vult een [!DNL Analytics] metrisch
+* Als dit de openingspagina voor het bezoek is, vult u een [!DNL Analytics] metrisch
 * Nieuwe aanbieding weergeven aan bezoeker na X-aantal aantal aantal sessies
 * Een nieuwsbrief weergeven als dit een nieuwe bezoeker is
 
