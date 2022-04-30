@@ -2,9 +2,9 @@
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 47391de09bcad1dc99340caa84cdfff13e9f5237
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1291'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Dit document dient als referentie voor het client-side `_satellite`-object en de verschillende functies die u ermee kunt uitvoeren.
+Dit document fungeert als referentie voor de client `_satellite` -object en de verschillende functies die u ermee kunt uitvoeren.
 
 ## `track`
 
@@ -31,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` brandt alle regels gebruikend het Directe gebeurtenistype van de Vraag dat met het bepaalde herkenningsteken van de de markeringsuitbreiding van de Kern is gevormd. Het bovenstaande voorbeeld brengt alle regels teweeg gebruikend een Directe gebeurtenistype van de Vraag waar het gevormde herkenningsteken `contact_submit` is. Er wordt ook een optioneel object met gerelateerde informatie doorgegeven. Het detailobject kan worden benaderd door `%event.detail%` in een tekstveld in te voeren in een voorwaarde of handeling of `event.detail` in de code-editor in een aangepaste codevoorwaarde of handeling.
+`track` brandt alle regels gebruikend het Directe gebeurtenistype van de Vraag dat met het bepaalde herkenningsteken van de de markeringsuitbreiding van de Kern is gevormd. Het bovenstaande voorbeeld brengt alle regels teweeg gebruikend een Directe gebeurtenistype van de Vraag waar het gevormde herkenningsteken is `contact_submit`. Er wordt ook een optioneel object met gerelateerde informatie doorgegeven. U kunt het detailobject openen door `%event.detail%` in een tekstveld in een voorwaarde of handeling of `event.detail` in de code-editor in een aangepaste codevoorwaarde of -handeling.
 
 ## `getVar`
 
@@ -49,7 +49,16 @@ var product = _satellite.getVar('product');
 
 In het gegeven voorbeeld, als een gegevenselement met een passende naam bestaat, zal de waarde van het gegevenselement zijn teruggekeerd. Als er geen overeenkomend gegevenselement bestaat, wordt gecontroleerd of een aangepaste variabele met een overeenkomende naam eerder is ingesteld met `_satellite.setVar()`. Als een aangepaste variabele wordt gevonden, wordt de waarde ervan geretourneerd.
 
-Merk op dat in vele vormgebieden in het gebruikersinterface van de Inzameling van Gegevens, u de `%%` syntaxis kunt gebruiken om variabelen van verwijzingen te voorzien, die de behoefte om `_satellite.getVar()` verminderen te roepen. Als u bijvoorbeeld %product% gebruikt, krijgt u toegang tot de waarde van het element met productgegevens of de aangepaste variabele.
+>[!NOTE]
+>
+>U kunt percentages gebruiken (`%`) syntaxis aan verwijzingsvariabelen voor vele vormgebieden in de UI van de Inzameling van Gegevens, die de behoefte vermindert om te roepen `_satellite.getVar()`. Als u bijvoorbeeld `%product%` heeft toegang tot de waarde van het element met productgegevens of de aangepaste variabele.
+
+Wanneer een gebeurtenis een regel teweegbrengt, kunt u het overeenkomstige regeltype overgaan `event` object in `_satellite.getVar()` zoals:
+
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
@@ -65,7 +74,7 @@ _satellite.setVar(name: string, value: *)
 _satellite.setVar('product', 'Circuit Pro');
 ```
 
-`setVar()` Hiermee stelt u een aangepaste variabele in met een bepaalde naam en waarde. De waarde van de variabele kan later worden betreden gebruikend `_satellite.getVar()`.
+`setVar()` Hiermee stelt u een aangepaste variabele in met een bepaalde naam en waarde. De waarde van de variabele kan later worden benaderd met `_satellite.getVar()`.
 
 U kunt optioneel meerdere variabelen tegelijk instellen door een object door te geven waarin de sleutels variabelenamen zijn en de waarden de respectievelijke variabelewaarden zijn.
 
@@ -87,7 +96,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Als de [!DNL Adobe Experience Cloud ID] uitbreiding op het bezit wordt geïnstalleerd, keert deze methode de instantie van identiteitskaart van de Bezoeker terug. Raadpleeg de [Experience Cloud ID Service documentation](https://experienceleague.adobe.com/docs/id-service/using/home.html) voor meer informatie.
+Als de [!DNL Adobe Experience Cloud ID] Als de extensie op de eigenschap is geïnstalleerd, retourneert deze methode de instantie van de bezoeker-id. Zie de [Documentatie Experience Cloud ID-service](https://experienceleague.adobe.com/docs/id-service/using/home.html) voor meer informatie .
 
 ## `logger`
 
@@ -115,7 +124,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-Met het `logger`-object kan een bericht worden aangemeld bij de browserconsole. Het bericht wordt alleen weergegeven als foutopsporing van tags is ingeschakeld door de gebruiker (door `_satellite.setDebug(true)` aan te roepen of een geschikte browserextensie te gebruiken).
+De `logger` Met dit object kan een bericht worden aangemeld bij de browserconsole. Het bericht wordt alleen weergegeven als foutopsporing van tags is ingeschakeld door de gebruiker (door `_satellite.setDebug(true)` of met een geschikte browserextensie).
 
 ### Waarschuwingen bij deponering van registratie
 
@@ -133,7 +142,7 @@ Dit registreert een waarschuwing aan de browser console. Het bericht wordt weerg
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` bevat functies voor het lezen en schrijven van cookies. Het is een belichte kopie van de externe bibliotheek js-cookie. Raadpleeg de [js-cookie documentatie](https://www.npmjs.com/package/js-cookie#basic-usage) voor meer informatie over geavanceerd gebruik van deze bibliotheek.
+`_satellite.cookie` bevat functies voor het lezen en schrijven van cookies. Het is een belichte kopie van de externe bibliotheek js-cookie. Voor meer informatie over geavanceerd gebruik van deze bibliotheek raadpleegt u de [js-cookie documentatie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Een cookie instellen {#cookie-set}
 
@@ -147,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->In de oude [`setCookie`](#setCookie) methode om koekjes te plaatsen, was het derde (facultatieve) argument aan deze functievraag een geheel dat op tijd-aan-levende (TTL) van het koekje wees. In deze nieuwe methode wordt een object &quot;attributes&quot; geaccepteerd als een derde argument. Als u een TTL voor een koekje wilt plaatsen gebruikend de nieuwe methode, moet u een `expires` bezit in het attributenvoorwerp verstrekken en het plaatsen aan de gewenste waarde. Dit wordt in het onderstaande voorbeeld getoond.
+>In het oude [`setCookie`](#setCookie) Bij het instellen van cookies was het derde (optionele) argument voor deze functieaanroep een geheel getal dat de &#39;time-to-live&#39; (TTL) van het cookie in dagen aangeeft. In deze nieuwe methode wordt een object &quot;attributes&quot; geaccepteerd als een derde argument. Als u een TTL voor een koekje wilt plaatsen gebruikend de nieuwe methode, moet u verstrekken `expires` in het object attributes en stel dit in op de gewenste waarde. Dit wordt in het onderstaande voorbeeld getoond.
 
 **Voorbeeld**
 
@@ -205,11 +214,11 @@ Dit object bevat informatie over de build van de huidige tagruntimebibliotheek. 
 
 ### `turbineVersion`
 
-Dit verstrekt [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) versie die binnen de huidige bibliotheek wordt gebruikt.
+Dit biedt de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) in de huidige bibliotheek wordt gebruikt.
 
 ### `turbineBuildDate`
 
-De ISO 8601-datum waarop de in de container gebruikte versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) is gemaakt.
+De ISO 8601-datum waarop de versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) in de container is gebruikt.
 
 ### `buildDate`
 
@@ -247,13 +256,13 @@ Het object bevat de volgende eigenschappen:
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | De id van het milieu. |
-| `stage` | De omgeving waarvoor deze bibliotheek is gemaakt. De mogelijke waarden zijn `development`, `staging` en `production`. |
+| `stage` | De omgeving waarvoor deze bibliotheek is gemaakt. De mogelijke waarden zijn: `development`, `staging`, en `production`. |
 
 ## `notify`
 
 >[!NOTE]
 >
->Deze methode is vervangen. Gebruik in plaats hiervan `_satellite.logger.log()`.
+>Deze methode is vervangen. Gebruik `_satellite.logger.log()` in plaats daarvan.
 
 **Code**
 
@@ -267,7 +276,7 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` logt een bericht aan de browser console. Het bericht wordt alleen weergegeven als foutopsporing van tags is ingeschakeld door de gebruiker (door `_satellite.setDebug(true)` aan te roepen of een geschikte browserextensie te gebruiken).
+`notify` logt een bericht aan de browser console. Het bericht wordt alleen weergegeven als foutopsporing van tags is ingeschakeld door de gebruiker (door `_satellite.setDebug(true)` of met een geschikte browserextensie).
 
 Een facultatief registrerenniveau kan worden overgegaan dat het stileren en het filtreren van het bericht zal beïnvloeden dat wordt geregistreerd. De ondersteunde niveaus zijn als volgt:
 
@@ -283,7 +292,7 @@ Als u geen registrerenniveau verstrekt of geen andere niveauwaarde overgaat, zal
 
 >[!IMPORTANT]
 >
->Deze methode is vervangen. Gebruik in plaats hiervan [`_satellite.cookie.set()`](#cookie-set).
+>Deze methode is vervangen. Gebruik [`_satellite.cookie.set()`](#cookie-set) in plaats daarvan.
 
 **Code**
 
@@ -303,7 +312,7 @@ Hiermee wordt een cookie ingesteld in de browser van de gebruiker. Het cookie bl
 
 >[!IMPORTANT]
 >
->Deze methode is vervangen. Gebruik in plaats hiervan [`_satellite.cookie.get()`](#cookie-get).
+>Deze methode is vervangen. Gebruik [`_satellite.cookie.get()`](#cookie-get) in plaats daarvan.
 
 **Code**
 
@@ -323,7 +332,7 @@ Dit leest een koekje van browser van de gebruiker.
 
 >[!NOTE]
 >
->Deze methode is vervangen. Gebruik in plaats hiervan [`_satellite.cookie.remove()`](#cookie-remove).
+>Deze methode is vervangen. Gebruik [`_satellite.cookie.remove()`](#cookie-remove) in plaats daarvan.
 
 **Code**
 
@@ -373,7 +382,7 @@ _satellite._monitors
 
 **Monster**
 
-Voeg op uw webpagina met een tagbibliotheek een codefragment toe aan uw HTML. Doorgaans wordt de code ingevoegd in het element `<head>` vóór het element `<script>` waarmee de tagbibliotheek wordt geladen. Hierdoor kan de monitor de vroegste systeemgebeurtenissen afvangen die in de tagbibliotheek voorkomen. Bijvoorbeeld:
+Voeg op uw webpagina met een tagbibliotheek een codefragment toe aan de HTML. Doorgaans wordt de code ingevoegd in de `<head>` element voor het `<script>` element dat de tagbibliotheek laadt. Hierdoor kan de monitor de vroegste systeemgebeurtenissen afvangen die in de tagbibliotheek voorkomen. Bijvoorbeeld:
 
 ```html
 <!DOCTYPE html>
@@ -415,34 +424,34 @@ Voeg op uw webpagina met een tagbibliotheek een codefragment toe aan uw HTML. Do
 </html>
 ```
 
-In het eerste scriptelement wordt, omdat de tagbibliotheek nog niet is geladen, het eerste `_satellite`-object gemaakt en wordt een array op `_satellite._monitors` geïnitialiseerd. Het script voegt vervolgens een monitorobject aan die array toe. Het monitorobject kan de volgende methoden opgeven, die later door de tagbibliotheek worden aangeroepen:
+In het eerste scriptelement, omdat de tagbibliotheek nog niet is geladen, wordt het eerste `_satellite` object wordt gemaakt en er wordt een array op `_satellite._monitors` is geïnitialiseerd. Het script voegt vervolgens een monitorobject aan die array toe. Het monitorobject kan de volgende methoden opgeven, die later door de tagbibliotheek worden aangeroepen:
 
 ### `ruleTriggered`
 
-Deze functie wordt aangeroepen nadat een gebeurtenis een regel activeert, maar voordat de voorwaarden en handelingen van de regel zijn verwerkt. Het gebeurtenisobject dat aan `ruleTriggered` is doorgegeven, bevat informatie over de regel die is geactiveerd.
+Deze functie wordt aangeroepen nadat een gebeurtenis een regel activeert, maar voordat de voorwaarden en handelingen van de regel zijn verwerkt. Het gebeurtenisobject dat wordt doorgegeven aan `ruleTriggered` bevat informatie over de regel die is geactiveerd.
 
 ### `ruleCompleted`
 
-Deze functie wordt aangeroepen nadat een regel volledig is verwerkt. Met andere woorden, de gebeurtenis heeft plaatsgevonden, alle voorwaarden zijn vervuld en alle handelingen zijn uitgevoerd. Het gebeurtenisobject dat aan `ruleCompleted` is doorgegeven, bevat informatie over de regel die is voltooid.
+Deze functie wordt aangeroepen nadat een regel volledig is verwerkt. Met andere woorden, de gebeurtenis heeft plaatsgevonden, alle voorwaarden zijn vervuld en alle handelingen zijn uitgevoerd. Het gebeurtenisobject dat wordt doorgegeven aan `ruleCompleted` bevat informatie over de regel die is voltooid.
 
 ### `ruleConditionFailed`
 
-Deze functie wordt aangeroepen nadat een regel is geactiveerd en een van de voorwaarden ervan is mislukt. Het gebeurtenisobject dat aan `ruleConditionFailed` is doorgegeven, bevat informatie over de regel die is geactiveerd en de voorwaarde die is mislukt.
+Deze functie wordt aangeroepen nadat een regel is geactiveerd en een van de voorwaarden ervan is mislukt. Het gebeurtenisobject dat wordt doorgegeven aan `ruleConditionFailed` bevat informatie over de regel die is geactiveerd en de voorwaarde die is mislukt.
 
-Als `ruleTriggered` wordt geroepen, of `ruleCompleted` of `ruleConditionFailed` zal kort daarna worden geroepen.
+Indien `ruleTriggered` wordt aangeroepen, ofwel `ruleCompleted` of `ruleConditionFailed` zal kort daarna worden geroepen.
 
 >[!NOTE]
 >
->Een monitor hoeft niet alle drie methoden op te geven (`ruleTriggered`, `ruleCompleted` en `ruleConditionFailed`). Tags in Adobe Experience Platform werken met alle ondersteunde methoden die door de monitor zijn geleverd.
+>Een monitor hoeft niet alle drie de methoden op te geven (`ruleTriggered`, `ruleCompleted`, en `ruleConditionFailed`). Tags in Adobe Experience Platform werken met alle ondersteunde methoden die door de monitor zijn geleverd.
 
 ### De monitor testen
 
 In het bovenstaande voorbeeld worden alle drie methoden in de monitor opgegeven. Wanneer ze worden opgeroepen, meldt de monitor relevante informatie. Als u dit wilt testen, stelt u twee regels in de tagbibliotheek in:
 
-1. Een regel die een klikgebeurtenis en een browser voorwaarde heeft die slechts overgaat als browser [!DNL Chrome] is.
-1. Een regel die een klikgebeurtenis en een browser voorwaarde heeft die slechts overgaat als browser [!DNL Firefox] is.
+1. Een regel die een klikgebeurtenis en een browser voorwaarde heeft die slechts overgaat als browser is [!DNL Chrome].
+1. Een regel die een klikgebeurtenis en een browser voorwaarde heeft die slechts overgaat als browser is [!DNL Firefox].
 
-Als u de pagina opent in [!DNL Chrome], open de browser console, en selecteer de pagina, verschijnt het volgende in de console:
+Als u de pagina opent in [!DNL Chrome], opent u de browserconsole en selecteert u de pagina. In de console wordt het volgende weergegeven:
 
 ![](../../images/debug.png)
 
