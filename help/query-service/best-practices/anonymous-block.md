@@ -2,9 +2,9 @@
 title: Anoniem blok in Query-service
 description: Het anonieme blok is een SQL syntaxis die door de Dienst van de Vraag van Adobe Experience Platform wordt gesteund, die u toestaat om een opeenvolging van vragen efficiënt uit te voeren
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 43c5bdbfa93872ba54bde72bbea8201b73e9dfee
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 Adobe Experience Platform Query Service ondersteunt anonieme blokken. Met de functie voor anonieme blokken kunt u een of meer SQL-instructies ketenen die op volgorde worden uitgevoerd. Zij bieden ook de mogelijkheid om uitzonderingen af te handelen.
 
 De anonieme blokeigenschap is een efficiënte manier om een opeenvolging van verrichtingen of vragen uit te voeren. De keten van vragen binnen het blok kan als malplaatje worden bewaard en gepland om bij een bepaald tijd of interval te lopen. Deze vragen kunnen worden gebruikt om gegevens te schrijven en toe te voegen om een nieuwe gegevensreeks tot stand te brengen en typisch gebruikt waar u een gebiedsdeel hebt.
+
+>[!IMPORTANT]
+>
+>Het plannen van vragen die anonieme blokken gebruiken is momenteel slechts mogelijk door [!DNL Query Service] API. Zie de documentatie voor [volledige instructies over het plannen van vragen door API](../api/scheduled-queries.md).
 
 De tabel bevat een uitsplitsing van de belangrijkste secties van het blok: uitvoering en afhandeling van uitzonderingen. De secties worden gedefinieerd door de trefwoorden `BEGIN`, `END`, en `EXCEPTION`.
 

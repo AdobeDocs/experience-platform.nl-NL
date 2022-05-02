@@ -5,9 +5,9 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '3395'
+source-wordcount: '3498'
 ht-degree: 1%
 
 ---
@@ -257,6 +257,8 @@ SELECT count(1) FROM myTableName
 +++Antwoord eerst, controleer de logboeken om de details van de fout te weten te komen. De sectie Veelgestelde vragen over [fouten in logbestanden zoeken](#error-logs) biedt meer informatie over hoe u dit kunt doen.
 
 U moet ook de documentatie controleren voor richtlijnen over het uitvoeren van [geplande vragen in UI](./ui/user-guide.md#scheduled-queries) en via [de API](./api/scheduled-queries.md).
+
+Het volgende is een lijst van overwegingen voor geplande vragen wanneer het gebruiken van [!DNL Query Editor]. Zij zijn niet van toepassing op de [!DNL Query Service] API:<br/>U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd.<br/>U **kan** voeg een programma aan een parameterized vraag toe.<br/>Geplande query&#39;s **kan** bevat een anoniem blok.<br/>U kunt alleen plannen **één** vraagmalplaatje gebruikend UI. Als u extra programma&#39;s aan een vraagmalplaatje wilt toevoegen, zult u API moeten gebruiken. Als er al een schema is toegevoegd met behulp van de API, kunt u geen aanvullende schema&#39;s toevoegen met behulp van de interface.
 +++
 
 ### Wat betekent de fout &quot;Sessiebeperking bereikt&quot;?

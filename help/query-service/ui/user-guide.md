@@ -5,9 +5,9 @@ title: UI-gids voor zoekprogramma
 topic-legacy: query editor
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5e0db96b833cabd0330b1073a2ab14d4528c68b4
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -18,25 +18,25 @@ ht-degree: 1%
 
 Voor meer informatie over de concepten en kenmerken van [!DNL Query Service], zie de [Overzicht van Query Service](../home.md). Om meer over te leren hoe te om het gebruikersinterface van de Dienst van de Vraag te navigeren [!DNL Platform], zie de [Overzicht van Query Service](./overview.md).
 
-## Aan de slag
+## Aan de slag {#getting-started}
 
 [!DNL Query Editor] verstrekt flexibele uitvoering van vragen door met te verbinden [!DNL Query Service]en query&#39;s worden alleen uitgevoerd als deze verbinding actief is.
 
-### Verbinding maken met [!DNL Query Service]
+### Verbinding maken met [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] duurt een paar seconden om te initialiseren en verbinding te maken met [!DNL Query Service] wanneer het wordt geopend. De console vertelt u wanneer het wordt verbonden, zoals hieronder getoond. Als u probeert om een vraag in werking te stellen alvorens de redacteur heeft verbonden, vertraagt het uitvoering tot de verbinding volledig is.
+[!DNL Query Editor] duurt een paar seconden om te initialiseren en verbinding te maken met [!DNL Query Service] wanneer het wordt geopend. De console vertelt u wanneer het wordt aangesloten, zoals hieronder getoond. Als u probeert om een vraag in werking te stellen alvorens de redacteur heeft verbonden, vertraagt het uitvoering tot de verbinding volledig is.
 
 ![Image](../images/ui/query-editor/connect.png)
 
-### Hoe de vragen van in werking worden gesteld [!DNL Query Editor]
+### Hoe de vragen van in werking worden gesteld [!DNL Query Editor] {#run-a-query}
 
 Zoekopdrachten uitgevoerd vanuit [!DNL Query Editor] interactief uitvoeren. Dit betekent dat als u de browser sluit of wegnavigeert, de query wordt geannuleerd. Dit is ook waar voor vragen die worden gemaakt om datasets van vraagoutput te produceren.
 
-## Query schrijven met [!DNL Query Editor]
+## Query schrijven met [!DNL Query Editor] {#query-authoring}
 
-Gebruiken [!DNL Query Editor], kunt u schrijven, uitvoeren, en sparen vragen voor de gegevens van de klantenervaring. Alle query&#39;s uitgevoerd in [!DNL Query Editor], of opgeslagen, zijn beschikbaar voor alle gebruikers in uw organisatie met toegang tot [!DNL Query Service].
+Gebruiken [!DNL Query Editor], kunt u schrijven, uitvoeren, en sparen vragen voor de gegevens van de klantenervaring. Alle query&#39;s uitgevoerd of opgeslagen in [!DNL Query Editor] zijn beschikbaar voor alle gebruikers in uw organisatie die toegang hebben tot [!DNL Query Service].
 
-### Toegang tot het [!DNL Query Editor]
+### Toegang tot het [!DNL Query Editor] {#accessing-query-editor}
 
 In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Queries]** in het navigatiemenu links om het dialoogvenster [!DNL Query Service] werkruimte. Selecteer vervolgens **[!UICONTROL Create Query]** rechtsboven in het scherm om query&#39;s te schrijven. Deze koppeling is beschikbaar op alle pagina&#39;s in het dialoogvenster [!DNL Query Service] werkruimte.
 
@@ -50,13 +50,13 @@ In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Queries]** in het n
 
 Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met grenzen op de teruggekeerde rijen ontwikkelt. Bijvoorbeeld, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nadat u hebt gecontroleerd dat uw vraag de verwachte output veroorzaakt, verwijder de grenzen en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren.
 
-### Schrijfgereedschappen in [!DNL Query Editor]
+### Schrijfgereedschappen in [!DNL Query Editor] {#writing-tools}
 
 - **Automatische syntaxismarkering:** Maakt het lezen en ordenen van SQL gemakkelijker.
 
 ![Afbeelding](../images/ui/query-editor/syntax-highlight.png)
 
-- **SQL-trefwoord automatisch aanvullen:** Begin uw vraag te typen dan de pijlsleutels te gebruiken om aan de gewenste termijn te navigeren en te drukken **Enter**.
+- **SQL trefwoord automatisch aanvullen:** Begin uw vraag te typen dan de pijlsleutels te gebruiken om aan de gewenste termijn te navigeren en te drukken **Enter**.
 
 ![Afbeelding](../images/ui/query-editor/syntax-auto.png)
 
@@ -64,7 +64,7 @@ Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met gren
 
 ![Afbeelding](../images/ui/query-editor/tables-auto.png)
 
-### Foutdetectie
+### Foutdetectie {#error-detection}
 
 [!DNL Query Editor] valideert automatisch een vraag aangezien u het schrijft, verstrekkend generische SQL bevestiging en specifieke uitvoeringsbevestiging. Als een rode onderstreping onder de query wordt weergegeven (zoals in de onderstaande afbeelding wordt getoond), vertegenwoordigt deze een fout binnen de query.
 
@@ -74,7 +74,7 @@ Wanneer fouten worden ontdekt, kunt u de specifieke foutenmeldingen bekijken doo
 
 ![Afbeelding](../images/ui/query-editor/linting-error.png)
 
-### Query-details
+### Query-details {#query-details}
 
 Terwijl u een query weergeeft in [!DNL Query Editor]de **[!UICONTROL Query Details]** bevat gereedschappen waarmee u de geselecteerde query kunt beheren.
 
@@ -86,9 +86,9 @@ In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste
 
 ### Geplande query&#39;s {#scheduled-queries}
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd. Bovendien, zult u **niet** kan een programma aan een parameterized vraag toevoegen.
+>Hier volgt een lijst met beperkingen voor geplande query&#39;s wanneer u de Query Editor gebruikt. Zij zijn niet van toepassing op de [!DNL Query Service] API:<br/>U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd.<br/>U **kan** voeg een programma aan een parameterized vraag toe.<br/>Geplande query&#39;s **kan** bevat een anoniem blok.
 
 Als u een schema aan een query wilt toevoegen, selecteert u **[!UICONTROL Add schedule]**.
 
@@ -114,7 +114,7 @@ Voor de dataset, hebt u de optie om of een bestaande dataset te gebruiken of een
 
 Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om een schema te maken.
 
-De pagina van vraagdetails verschijnt opnieuw, en nu het tonen van de details van het pas gecreëerde programma, met inbegrip van planningsidentiteitskaart, het programma zelf, en de de outputdataset van het programma. U kunt programmaidentiteitskaart gebruiken om meer informatie over de looppas van de geplande vraag zelf te zoeken. Lees voor meer informatie de [Geplande de eindpuntgids van vraaglooppas](../api/runs-scheduled-queries.md).
+De pagina van de vraagdetails verschijnt opnieuw, en toont nu de details van het pas gecreëerde programma, met inbegrip van planningsidentiteitskaart, het programma zelf, en de de outputdataset van het programma. U kunt programmaidentiteitskaart gebruiken om meer informatie over de looppas van de geplande vraag zelf te zoeken. Lees voor meer informatie de [Geplande de eindpuntgids van vraaglooppas](../api/runs-scheduled-queries.md).
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ De pagina van vraagdetails verschijnt opnieuw, en nu het tonen van de details va
 >
 > Bovendien, zou u de pagina moeten verfrissen als u wilt verzekeren u de recentste staat voor het programma hebt u bekijkt.
 
-#### Een schema verwijderen
+#### Een schema verwijderen {#delete-schedule}
 
 U kunt een schema verwijderen door **[!UICONTROL Delete a schedule]**.
 
@@ -132,11 +132,11 @@ U kunt een schema verwijderen door **[!UICONTROL Delete a schedule]**.
 >
 > Als u een programma voor een vraag wilt schrappen, moet u eerst het programma onbruikbaar maken.
 
-### Bezig met opslaan van query&#39;s
+### Bezig met opslaan van query&#39;s {#saving-queries}
 
 [!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Selecteer **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
 
-### Hoe te om vorige vragen te vinden
+### Hoe te om vorige vragen te vinden {#previous-queries}
 
 Alle query&#39;s uitgevoerd van [!DNL Query Editor] worden vastgelegd in de logbestandentabel. U kunt de zoekfunctionaliteit in het dialoogvenster **[!UICONTROL Log]** om query-uitvoeringen te zoeken. Opgeslagen query&#39;s worden weergegeven in het dialoogvenster **[!UICONTROL Browse]** tab.
 
@@ -146,11 +146,11 @@ Zie de [Overzicht van Query Service](./overview.md) voor meer informatie .
 >
 >Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De query is beschikbaar in [!DNL Query Service], moet het worden uitgevoerd of opgeslagen in [!DNL Query Editor].
 
-## Vragen uitvoeren met de Query Editor
+## Vragen uitvoeren met de Query Editor {#executing-queries}
 
 Een query uitvoeren in [!DNL Query Editor], kunt u SQL in de redacteur ingaan of een vorige vraag van laden **[!UICONTROL Log]** of **[!UICONTROL Browse]** en selecteert u **Afspelen**. De status van query-uitvoering wordt weergegeven in het dialoogvenster **[!UICONTROL Console]** en de uitvoergegevens worden weergegeven in het dialoogvenster **[!UICONTROL Results]** tab.
 
-### Console
+### Console {#console}
 
 De console biedt informatie over de status en werking van [!DNL Query Service]. De console toont de verbindingsstatus aan [!DNL Query Service], querybewerkingen die worden uitgevoerd en foutberichten die het resultaat zijn van deze query&#39;s.
 
@@ -160,13 +160,13 @@ De console biedt informatie over de status en werking van [!DNL Query Service]. 
 >
 >De console toont slechts fouten die uit het uitvoeren van een vraag voortkwamen. Er worden geen fouten met de queryvalidatie weergegeven voordat een query wordt uitgevoerd.
 
-### Zoekresultaten
+### Zoekresultaten {#query-results}
 
-Nadat een vraag heeft voltooid, worden de resultaten getoond in **[!UICONTROL Results]** tab, naast de **[!UICONTROL Console]** tab. In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie de [het produceren van datasetleerprogramma](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten te produceren in [!DNL Query Editor].
+Nadat een vraag is voltooid, worden de resultaten getoond in **[!UICONTROL Results]** tab, naast de **[!UICONTROL Console]** tab. In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie de [het produceren van datasetleerprogramma](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten te produceren in [!DNL Query Editor].
 
 ![Afbeelding](../images/ui/query-editor/query-results.png)
 
-## Zoekopdrachten uitvoeren met [!DNL Query Service] zelfstudievideo
+## Zoekopdrachten uitvoeren met [!DNL Query Service] zelfstudievideo {#query-tutorial-video}
 
 In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien wordt het gebruik van individuele eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en het gebruik van CREATE TABLE AS SELECT (CTAS) aangetoond.
 
