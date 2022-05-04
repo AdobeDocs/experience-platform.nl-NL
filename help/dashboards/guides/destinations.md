@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,9 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
 * [[!UICONTROL Destinations count]](#destinations-count)
+* [[!UICONTROL Destination status]](#destination-status)
+* [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -164,6 +167,28 @@ De [!UICONTROL Destinations count] widget geeft het totale aantal beschikbare ei
 Onder het totale aantal, selecteer **[!UICONTROL Destinations]** om naar de bestemmingen te navigeren doorbladert tabel. Deze pagina bevat een lijst met alle doelen waarmee u tot op heden verbinding hebt gemaakt.
 
 ![De widget Aantal bestemmingen.](../images/destinations/destinations-count.png)
+
+### [!UICONTROL Destination status] {#destination-status}
+
+De [!UICONTROL Destination status] widget geeft het totale aantal ingeschakelde bestemmingen als één enkele metrische waarde weer en gebruikt een donutgrafiek om het proportionele verschil tussen toegelaten en gehandicapte bestemmingen te illustreren.
+
+Individuele tellingen voor of toegelaten of gehandicapte bestemmingen worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+
+![De statuswidget Doel.](../images/destinations/destination-status.png)
+
+### [!UICONTROL Active destinations by destination platform] {#active-destinations-by-destination-platform}
+
+Widget verstrekt een twee kolomlijst om een lijst van actieve bestemmingsplatforms en het totale aantal actieve bestemmingen voor elk bestemmingsplatform te tonen. De lijst met doelplatforms is van hoog naar laag geordend.
+
+![De actieve bestemmingen door bestemmingsplatformwidget.](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
+
+De [!UICONTROL Activated audiences across all destinations] widget geeft het totale aantal soorten publiek aan dat voor alle bestemmingen in één meting wordt geactiveerd. Dit getal is nauwkeurig tot aan de meest recente opname.
+
+![Het actieve publiek voor alle doelen van de widget.](../images/destinations/activated-audiences-across-all-destinations.png)
+
+Selecteren **[!UICONTROL Audiences]** om naar de bestemmingen te navigeren [!UICONTROL Browse] tab. Deze pagina verstrekt een lijst van alle toegelaten bestemmingen en een verscheidenheid van relevante metriek. Zie de documentatie voor [meer informatie over de [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
 
 ## Volgende stappen
 

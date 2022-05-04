@@ -4,9 +4,9 @@ title: Segmentdashboard
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2842344f4b17d76bf1c3313500e691357df31ebc
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Voor een overzicht van alle functies van de Adobe Experience Platform Segmentati
 
 Het segmentdashboard toont een momentopname van de attributen (verslag) gegevens die uw organisatie binnen de opslag van het Profiel in Experience Platform heeft. De momentopname bevat geen gebeurtenis (tijdreeks)-gegevens.
 
-De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of monster van de gegevens, en het segmentdashboard werkt niet in echt bij - tijd.
+De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het segmentdashboard werkt niet in real time bij.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van wi
 
 ## Een segment selecteren
 
-Het dashboard selecteert automatisch een segment aan vertoning, nochtans kunt u het segment veranderen door het drop-down menu of de segmentselecteur te gebruiken.
+Het dashboard selecteert automatisch een segment aan vertoning, nochtans kunt u het segment veranderen door het dropdown menu of de segmentselecteur te gebruiken.
 
 Als u een ander segment wilt kiezen, selecteert u de vervolgkeuzelijst naast de segmentnaam of gebruikt u de segmentkiezer om het dialoogvenster voor segmentselectie te openen.
 
@@ -68,9 +68,12 @@ Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [[!UICONTROL Audience size]](#audience-size)
-* [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Audience activation order]](#audience-activation-order)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
+* [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
+* [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -79,18 +82,6 @@ De **[!UICONTROL Audience size]** widget geeft het totale aantal samengevoegde p
 Voor meer informatie over fragmenten en samengevoegde profielen, eerst leest u de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
-
-### [!UICONTROL Audience size trend] {#audience-size-trend}
-
-De **[!UICONTROL Audience size trend]** widget geeft informatie over het totale aantal profielen in het segment dat is vastgelegd tijdens de dagelijkse momentopname , gedurende de laatste 30 dagen , 90 dagen of 12 maanden . Deze widget geeft aan hoe de segmentgrootte in de loop der tijd kan zijn verschoven omdat nieuwe profielen in aanmerking komen voor of het segment verlaten.
-
-Voor meer informatie over segmentevaluatie en hoe profielen in aanmerking komen en uit segmenten verdwijnen, raadpleegt u de [Documentatie voor segmentatieservice](../../segmentation/home.md).
-
-![In het segmentoverzicht wordt de widget voor de doelgrootte weergegeven.](../images/segments/audience-size-trend-captions.png)
-
-De **[!UICONTROL Audience size trend]** widget biedt een [!UICONTROL Captions] in de rechterbovenhoek van de widget. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen. Een machine het leren model produceert automatisch titels om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven door de grafiek en de segmentgegevens te analyseren.
-
-![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor de doelgrootte.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -108,9 +99,37 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 
 De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identiteiten in alle samengevoegde profielen in het geselecteerde segment weer. Het totale aantal profielen per identiteit kan hoger zijn dan het totale aantal profielen in het segment, omdat aan één profiel meerdere identiteiten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke identiteit worden getoond kan meer dan de totale publieksgrootte in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, de veelvoudige identiteiten met die individuele klant kunnen worden geassocieerd.
 
+Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
+
+![De profielen op dialoogvenster voor identiteitsondertitels.](../images/segments/profiles-by-identity.png)
+
+Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
+
 Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/segments/profiles-by-identity.png)
+### [!UICONTROL Audience activation order] {#audience-activation-order}
+
+De [!UICONTROL Audience activation order] widget biedt een tabel met drie kolommen waarin de [!UICONTROL destination name]de [!UICONTROL platform]en de activering [!UICONTROL date] van het publiek. De lijst wordt geordend van hoog tot laag afhankelijk van recentie en kan maximaal 10 rijen bevatten.
+
+![De widget voor de activeringsvolgorde van het publiek.](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL Audience size trend] {#audience-size-trend}
+
+De [!UICONTROL Audience size trend] widget geeft een lijngrafiek voor het totale aantal profielen die voldoen aan de criteria van **alle** segmentdefinitie over een bepaalde periode. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+
+![De widget voor de doelgrootte.](../images/segments/audience-size-trend.png)
+
+### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
+
+Deze widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. Het voor analyse gekozen segment wordt geselecteerd uit het overzichtsvervolgkeuzemenu. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+
+![De widget voor het wijzigen van trends bij het bereik van publiek.](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
+
+Deze widget illustreert de trend van de publieksgrootte voor een bepaald segment op basis van het gekozen type identiteit in het vervolgkeuzemenu van de widget. Het segment dat voor analyse wordt gebruikt wordt geselecteerd van het overzichtsdrop-down. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
+
+![De trend voor de omvang van de doelgroep op identiteitswidget.](../images/segments/audience-size-trend-by-identity.png)
 
 ## Volgende stappen
 
