@@ -1,101 +1,72 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslag;Cloudopslag
-solution: Experience Platform
-title: Een hardop opslagsysteem verkennen met de Flow Service API
-topic-legacy: overview
+title: Een Cloud Storage-map verkennen met de Flow Service API
 description: Deze zelfstudie gebruikt de Flow Service API om een extern cloudopslagsysteem te verkennen.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 1333eac5e022ef32f051120496154a88e2f9324e
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 0%
+source-wordcount: '663'
+ht-degree: 1%
 
 ---
 
-# Een systeem voor cloudopslag verkennen met de [!DNL Flow Service]-API
+# Ontdek uw mappen voor cloudopslag met de [!DNL Flow Service] API
 
-Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om een extern cloudopslagsysteem te verkennen.
+Deze zelfstudie bevat stappen voor het verkennen en voorvertonen van de structuur en inhoud van uw cloudopslag met de [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+
+>[!NOTE]
+>
+>Als u uw cloudopslag wilt verkennen, moet u al beschikken over een geldige basis-verbindings-id voor een bron voor cloudopslag. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#cloud-storage) voor een lijst met bronnen voor cloudopslag waarmee u een basisverbinding kunt maken.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [Sandboxen](../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om een verbinding met een cloudopslagsysteem met de API [!DNL Flow Service] tot stand te brengen.
+### Platform-API&#39;s gebruiken
 
-### Verbindings-id verkrijgen
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
 
-Als u een externe cloudopslag wilt verkennen met behulp van [!DNL Platform] API&#39;s, moet u over een geldige verbinding-id beschikken. Als u nog geen verbinding hebt voor de opslag waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudies:
+## Ontdek uw mappen voor cloudopslag
 
-* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
-* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
-* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
-* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
-* [[!DNL FTP]](../create/cloud-storage/ftp.md)
-* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
-* [HDFS](../create/cloud-storage/hdfs.md)
-* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
-* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
+U kunt informatie over de structuur van uw mappen voor cloudopslag opvragen door een GET-aanvraag in te dienen bij de [!DNL Flow Service] API terwijl het verstrekken van de identiteitskaart van de basisverbinding van uw bron.
 
-### API-voorbeeldaanroepen lezen
-
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
-
-### Waarden verzamelen voor vereiste koppen
-
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
-
-* `Content-Type: application/json`
-
-## Ontdek uw cloudopslag
-
-Met de verbinding-id voor uw cloudopslag kunt u bestanden en mappen verkennen door GET-aanvragen uit te voeren. Wanneer u GET-aanvragen uitvoert om uw cloudopslag te verkennen, moet u de queryparameters opnemen die in de onderstaande tabel worden vermeld:
+Wanneer u GET-aanvragen uitvoert om uw cloudopslag te verkennen, moet u de queryparameters opnemen die in de onderstaande tabel worden vermeld:
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `objectType` | Het type object dat u wilt verkennen. Stel deze waarde in op: <ul><li>`folder`: Een specifieke map verkennen</li><li>`root`: Verken de hoofdmap.</li></ul> |
 | `object` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. |
 
-Gebruik de volgende vraag om de weg van het dossier te vinden u in [!DNL Platform] wilt brengen:
 
 **API-indeling**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=root
-GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONNECTION_ID}` | De verbindings-id voor de bronaansluiting van de cloud. |
+| `{BASE_CONNECTION_ID}` | De basis verbindings-id van de bron voor cloudopslag. |
 | `{PATH}` | Het pad van een map. |
 
 **Verzoek**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'http://platform.adobe.io/data/foundation/flowservice/connections/dc3c0646-5e30-47be-a1ce-d162cb8f1f07/explore?objectType=folder&object=root' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. Neem nota van het `path` bezit van het dossier u wenst uploadt, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
+Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. De `path` eigenschap van het bestand dat u wilt uploaden, aangezien u dit in de volgende stap moet opgeven om de structuur te controleren.
 
 ```json
 [
@@ -132,17 +103,17 @@ U kunt de structuur van een gegevensbestand van uw bron van de wolkenopslag insp
 **API-indeling**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De verbindings-id van de bronconnector van de cloudopslag. |
+| `{BASE_CONNECTION_ID}` | De verbindings-id van de bronconnector van de cloudopslag. |
 | `{FILE_PATH}` | Het pad naar het bestand dat u wilt inspecteren. |
-| `{FILE_TYPE}` | Het type bestand. Tot de ondersteunde bestandstypen behoren:<ul><li>DELIMITED</code>: Waarde gescheiden door scheidingstekens. DSV-bestanden moeten door komma&#39;s van elkaar worden gescheiden.</li><li>JSON</code>: JavaScript-objectnotatie. JSON-bestanden moeten XDM-compatibel zijn</li><li>PARQUET</code>: Apache Parquet. Parketbestanden moeten XDM-compatibel zijn.</li></ul> |
-| `{QUERY_PARAMS}` | Optionele queryparameters die kunnen worden gebruikt om resultaten te filteren. Zie de sectie over [queryparameters](#query) voor meer informatie. |
+| `{FILE_TYPE}` | Het type bestand. Tot de ondersteunde bestandstypen behoren:<ul><li>AFGELEGD</code>: Waarde gescheiden door scheidingstekens. DSV-bestanden moeten door komma&#39;s van elkaar worden gescheiden.</li><li>JSON</code>: JavaScript-objectnotatie. JSON-bestanden moeten XDM-compatibel zijn</li><li>PARQUET</code>: Apache Parquet. Parketbestanden moeten XDM-compatibel zijn.</li></ul> |
+| `{QUERY_PARAMS}` | Optionele queryparameters die kunnen worden gebruikt om resultaten te filteren. Zie de sectie over [queryparameters](#query) voor meer informatie . |
 
 **Verzoek**
 
@@ -186,7 +157,7 @@ Een succesvol antwoord geeft de structuur van het gevraagde dossier met inbegrip
 
 ## Query-parameters gebruiken {#query}
 
-De [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) steunt het gebruik van vraagparameters aan voorproef en inspecteer verschillende dossiertypes.
+De [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) ondersteunt het gebruik van queryparameters voor het voorvertonen en inspecteren van verschillende bestandstypen.
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
@@ -195,4 +166,4 @@ De [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refer
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend, het pad gevonden van het bestand dat u wilt inbrengen naar [!DNL Platform] en de structuur ervan bekeken. U kunt deze informatie in de volgende zelfstudie gebruiken om gegevens van uw cloudopslag te verzamelen en in Platform te brengen](../collect/cloud-storage.md).[
+Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend en hebt u het pad gevonden van het bestand waarnaar u wilt overbrengen [!DNL Platform]en de structuur ervan bekijken. U kunt deze informatie in de volgende zelfstudie gebruiken om [gegevens verzamelen van uw cloudopslag en deze in Platform brengen](../collect/cloud-storage.md).

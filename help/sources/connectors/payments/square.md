@@ -3,9 +3,10 @@ keywords: Experience Platform;thuis;populaire onderwerpen;vierkant
 solution: Experience Platform
 title: Overzicht van vierkante bronconnector
 description: Leer hoe u Square kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
-source-git-commit: cb2902455f965aced8d40859c36824710b9e695f
+exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 ## Verbinden [!DNL Square] naar Platform met API&#39;s
 
 * [Een vierkante basisverbinding maken met de Flow Service API](../../tutorials/api/create/payments/square.md)
-* [De gegevensstructuur en inhoud van een betalingsbron verkennen met de Flow Service API](../../tutorials/api/explore/payments.md)
+* [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Een gegevensstroom maken voor een betalingsbron met behulp van de Flow Service API](../../tutorials/api/collect/payments.md)
 
 ## Verbinden [!DNL Square] naar Platform met behulp van de gebruikersinterface

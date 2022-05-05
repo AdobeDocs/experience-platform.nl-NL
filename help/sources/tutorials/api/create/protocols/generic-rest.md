@@ -5,9 +5,10 @@ title: Een algemene REST API-basisverbinding maken met de Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Generic REST API met de Flow Service API kunt verbinden met Adobe Experience Platform.
-source-git-commit: 1a9c4d5ba3ba9201378e78c0e92dea5101668a24
+exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
+source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -187,4 +188,7 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Generic REST API] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u [protocoltoepassingen verkennen met behulp van de Flow Service API](../../explore/protocols.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Generic REST API] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+
+* [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
+* [Creeer een dataflow om protocolgegevens aan Platform te brengen gebruikend [!DNL Flow Service] API](../../collect/protocols.md)

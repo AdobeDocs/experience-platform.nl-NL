@@ -5,9 +5,9 @@ title: Bronoverzicht van Salesforce-Marketing Cloud
 topic-legacy: overview
 description: Leer hoe u Salesforce-Marketing Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 6876ad592e4924dc884568899662dfa9c8eecc62
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Salesforce Marketing Cloud] naar Platform met API&#39;s:
 
 * [Een basisverbinding voor een Salesforce-Marketing Cloud maken met de Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [Onderzoek de gegevensstructuur en de inhoud van een bron van de marketing automatisering gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/marketing-automation.md)
+* [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Een gegevensstroom maken voor een marketingautomatiseringsbron met behulp van de Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Verbinden [!DNL Salesforce Marketing Cloud] naar Platform met behulp van de gebruikersinterface

@@ -5,9 +5,9 @@ title: Zoho CRM Source Connector Overzicht
 topic-legacy: overview
 description: Leer hoe u Zoho CRM aan Adobe Experience Platform verbindt gebruikend APIs of het gebruikersinterface.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Raadpleeg voor gedetailleerde stappen over het verkrijgen van uw referenties de 
 In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Zoho CRM] Platforms met behulp van API&#39;s of de gebruikersinterface:
 
 - [Een [!DNL Zoho CRM] basisverbinding met de Flow Service API](../../tutorials/api/create/crm/zoho.md)
-- [Onderzoek de gegevensstructuur en de inhoud van een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/crm.md)
+- [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
 
 ## Verbinden [!DNL Zoho CRM] tot [!DNL Platform] gebruiken van UI

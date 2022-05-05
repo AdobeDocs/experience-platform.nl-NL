@@ -5,9 +5,9 @@ title: Overzicht van Snowflake Source Connector
 topic-legacy: overview
 description: Leer hoe u verbinding maakt tussen Snowflake en Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 ## Verbinden [!DNL Snowflake] naar Platform met API&#39;s
 
 - [Een Snowflake-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/snowflake.md)
-- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden [!DNL Snowflake] naar Platform met behulp van de gebruikersinterface

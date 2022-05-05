@@ -5,9 +5,9 @@ title: Overzicht van Google AdWords-bronnen
 topic-legacy: overview
 description: Leer hoe u Google AdWords met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: eaac380cb4329b9233b40105d51f3809737d6173
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ### API&#39;s gebruiken
 
-- [Een Google AdWords-basisverbinding maken met de Flow Service API](../../tutorials/api/create/advertising/ads.md)
-- [De gegevensstructuur en inhoud van een advertentiebron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/advertising.md)
-- [Een gegevensstroom maken voor een advertentiebron met behulp van de Flow Service API](../../tutorials/api/collect/advertising.md)
+* [Een Google AdWords-basisverbinding maken met de Flow Service API](../../tutorials/api/create/advertising/ads.md)
+* [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
+* [Een gegevensstroom maken voor een advertentiebron met behulp van de Flow Service API](../../tutorials/api/collect/advertising.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Een Google AdWords-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/advertising/ads.md)
-- [Een gegevensstroom maken voor een verbinding met een advertentiebron in de gebruikersinterface](../../tutorials/ui/dataflow/advertising.md)
+* [Een Google AdWords-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/advertising/ads.md)
+* [Een gegevensstroom maken voor een verbinding met een advertentiebron in de gebruikersinterface](../../tutorials/ui/dataflow/advertising.md)

@@ -5,9 +5,9 @@ title: Overzicht van Amazon Redshift Source Connector
 topic-legacy: overview
 description: Leer hoe u Amazon Redshift kunt verbinden met Adobe Experience Platform met behulp van API's of de gebruikersinterface.
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 600b216932a7d19440534c4b190fb2f3766c8785
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -16,21 +16,21 @@ ht-degree: 0%
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het Platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Tot de ondersteuning voor databaseproviders behoren [!DNL Amazon Redshift].
+Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het Platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Ondersteuning voor databaseproviders omvat [!DNL Amazon Redshift].
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
 
-De onderstaande documentatie biedt informatie over hoe u [!DNL Amazon Redshift] kunt verbinden met een Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Amazon Redshift] Platforms met behulp van API&#39;s of de gebruikersinterface:
 
-## [!DNL Amazon Redshift] verbinden met Platform met behulp van API&#39;s
+## Verbinden [!DNL Amazon Redshift] naar Platform met API&#39;s
 
 - [Een Amazon Redshift-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/redshift.md)
-- [Onderzoek de gegevensstructuur en de inhoud van een gegevensbestandbron gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/database-nosql.md)
+- [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## [!DNL Amazon Redshift] verbinden met Platform gebruikend UI
+## Verbinden [!DNL Amazon Redshift] naar Platform met behulp van de gebruikersinterface
 
 - [Een Amazon Redshift-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/redshift.md)
 - [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)

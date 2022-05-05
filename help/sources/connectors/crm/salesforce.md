@@ -5,9 +5,9 @@ title: Overzicht van de Salesforce Source Connector
 topic-legacy: overview
 description: Leer hoe u Salesforce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: bd3d3a83c030baaecccba2b1793b49ad8a6caa08
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Een succesvol verzoek leidt tot B2B namespaces en schema&#39;s volgens bètaspec
 In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Salesforce] Platforms met behulp van API&#39;s of de gebruikersinterface:
 
 - [Een Salesforce-basisverbinding maken met de Flow Service API](../../tutorials/api/create/crm/salesforce.md)
-- [Onderzoek de gegevensstructuur en de inhoud van een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/explore/crm.md)
+- [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
 
 ## Verbinden [!DNL Salesforce] naar Platform met behulp van de gebruikersinterface
