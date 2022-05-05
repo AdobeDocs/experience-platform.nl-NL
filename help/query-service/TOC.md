@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: 15d835fcbcb6e34995f153c14d90fc937792eefc
+source-git-commit: b5c9dd966e14739e570105892becd39990d9acfb
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '156'
 ht-degree: 2%
 
 ---
@@ -57,6 +57,7 @@ ht-degree: 2%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- [Handleiding controlelogboek](audit-log-guide.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
