@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een eCommerce-systeem van derden en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een e-com
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al over een geldige [!DNL Shopify] basis verbinding-id. Als u deze id niet hebt, bekijkt u de stappen voor het [een [!DNL Shopify] basisverbinding](../create/ecommerce/shopify.md) voordat u deze zelfstudie gaat uitvoeren.
+>Om een gegevensstroom tot stand te brengen, moet u reeds een geldige identiteitskaart van de basisverbinding met een E-commercebron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#ecommerce) voor een lijst van e-commercebronnen die u een basisverbinding met kunt tot stand brengen.
 
 ## Aan de slag
 

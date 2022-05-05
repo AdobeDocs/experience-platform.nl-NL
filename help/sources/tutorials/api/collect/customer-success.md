@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1327'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een succe
 
 >[!NOTE]
 >
->Om een gegevensstroom tot stand te brengen, moet u reeds een geldige identiteitskaart van de basisverbinding met om het even welke volgende bronnen van het klantensucces op Platform hebben:<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
+>Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een bron voor klantensucces. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#customer-success) voor een lijst van de bronnen van het klantensucces die u een basisverbinding kunt tot stand brengen met.
 
 ## Aan de slag
 

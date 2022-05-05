@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een proto
 
 >[!NOTE]
 >
->Om een gegevensstroom tot stand te brengen, moet u reeds een geldige identiteitskaart van de basisverbinding met om het even welke volgende protocolbronnen op Platform hebben:<ul><li>[Generic OData](../create/protocols/odata.md)</li><li>[Generieke REST](../create/protocols/generic-rest.md)</li></ul>
+>Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een protocolbron. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#protocols) voor een lijst met protocolbronnen waarmee u een basisverbinding kunt maken.
 
 ## Aan de slag
 

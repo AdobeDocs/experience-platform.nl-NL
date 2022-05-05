@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een systeem van derdeCRM en het brengen van hen in Platform gebruikend bronschakelaars en APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1329'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een CRM-b
 
 >[!NOTE]
 >
->Om een gegevensstroom tot stand te brengen, moet u reeds een geldige identiteitskaart van de basisverbinding met om het even welke volgende bronnen van CRM op Platform hebben:<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>Om een gegevensstroom tot stand te brengen, moet u reeds een geldige identiteitskaart van de basisverbinding met een bron van CRM hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#customer-relationship-management) voor een lijst van de bronnen van CRM die u een basisverbinding kunt tot stand brengen met.
 
 ## Aan de slag
 

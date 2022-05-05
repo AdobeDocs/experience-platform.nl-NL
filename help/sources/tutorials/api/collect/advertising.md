@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe advertentietoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en de Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al over een geldige [!DNL Google AdWords] basis verbinding-id. Als u deze id niet hebt, bekijkt u de stappen voor het [een [!DNL Google AdWords] basisverbinding](../create/advertising/ads.md) voordat u deze zelfstudie gaat uitvoeren.
+>Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een advertentiebron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#advertising) voor een lijst met advertentiebronnen waarmee u een basisverbinding kunt maken.
 
 ## Aan de slag
 

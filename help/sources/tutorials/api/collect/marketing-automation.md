@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het overbrengen van gegevens naar Adobe Experience Platform met behulp van bronconnectors en API's.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marke
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een van de volgende marketingautomatiseringsbronnen op het Platform:<ul><li>[[!DNL HubSpot]](../create/marketing-automation/hubspot.md)</li><li>[[!DNL Mailchimp Campaigns]](../create/marketing-automation/mailchimp-campaign.md)</li><li>[[!DNL Mailchimp Members]](../create/marketing-automation/mailchimp-members.md)</li><li>[[!DNL Salesforce Marketing Cloud]](../create/marketing-automation/salesforce-marketing-cloud.md)</li></ul>
+>Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een marketingautomatiseringsbron. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#marketing-automation) voor een lijst met marketingautomatiseringsbronnen waarmee u een basisverbinding kunt maken.
 
 ## Aan de slag
 
