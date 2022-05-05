@@ -3,7 +3,7 @@ title: Overzicht van Core Event Forwarding Extension
 description: Leer over de gebeurtenis van de Kern door:sturen uitbreiding in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 0%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 In uw aangepaste code kunt u ook de opdracht `ruleStash` object.
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` is een object dat elk resultaat van actiemodules verzamelt.
 
 Elke extensie heeft een eigen naamruimte. Als uw extensie bijvoorbeeld de naam heeft `send-beacon`alle resultaten van de `send-beacon` acties worden opgeslagen op de `ruleStash['send-beacon']` naamruimte.
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 De naamruimte is uniek voor elke extensie en heeft de waarde `undefined` aan het begin.
 
