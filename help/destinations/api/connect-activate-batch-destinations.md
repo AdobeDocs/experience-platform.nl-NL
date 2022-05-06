@@ -6,7 +6,7 @@ description: Stapsgewijze instructies voor het gebruik van de Flow Service API v
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '3119'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezel
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Bronnen in [!DNL Experience Platform] kan worden geïsoleerd naar specifieke virtuele sandboxen. In verzoeken om [!DNL Platform] API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
@@ -99,7 +99,7 @@ GET /connectionSpecs
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
@@ -156,7 +156,7 @@ POST /connections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -201,7 +201,7 @@ POST /sourceConnections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -265,7 +265,7 @@ In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -319,7 +319,7 @@ In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -349,7 +349,7 @@ In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -378,7 +378,7 @@ In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -419,7 +419,7 @@ In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -460,7 +460,7 @@ In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -501,7 +501,7 @@ In het onderstaande verzoek wordt een basisverbinding met SFTP-bestemmingen tot 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -568,7 +568,7 @@ Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Adobe Campaign",
@@ -615,7 +615,7 @@ Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Amazon S3",
@@ -651,7 +651,7 @@ Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Azure Blob",
@@ -687,7 +687,7 @@ Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Oracle Eloqua",
@@ -728,7 +728,7 @@ Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Oracle Responsys",
@@ -769,7 +769,7 @@ Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!D
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Salesforce Marketing Cloud",
@@ -810,7 +810,7 @@ In het onderstaande verzoek wordt een doelverbinding met SFTP-doelen vastgelegd 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for SFTP",
@@ -882,7 +882,7 @@ curl -X POST \
 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'x-api-key: {API_KEY}' \
--H 'x-gw-ims-org-id: {IMS_ORG}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
 -H 'x-sandbox-name: {SANDBOX_NAME}' \
 -H 'Content-Type: application/json' \
 -d  '{
@@ -966,7 +966,7 @@ PATCH /flows
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'If-Match: "{ETAG}"' \
@@ -1066,7 +1066,7 @@ GET /flows
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --header 'x-sandbox-name: prod' \
 --header 'If-Match: "{ETAG}"' 

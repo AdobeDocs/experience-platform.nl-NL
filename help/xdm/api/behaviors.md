@@ -5,7 +5,7 @@ title: Eindpunt van gedrags-API
 description: Het /behavior eindpunt in de Registratie API van het Schema staat u toe om al beschikbaar gedrag in de globale container terug te winnen.
 topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 1%
@@ -21,19 +21,19 @@ In het Model van Gegevens van de Ervaring (XDM), bepalen het gedrag de aard van 
 
 >[!NOTE]
 >
->Er zijn sommige gebruiksgevallen in Platform die het gebruik van schema vereisen dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie de zelfstudie over [het maken van een ad-hocschema](../tutorials/ad-hoc.md) voor meer informatie.
+>Er zijn sommige gebruiksgevallen in Platform die het gebruik van schema vereisen dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie de zelfstudie aan [een ad-hocschema maken](../tutorials/ad-hoc.md) voor meer informatie .
 >
->Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids op de [grondbeginselen van schemacompositie](../schema/composition.md).
+>Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids over [grondbeginselen van de schemacompositie](../schema/composition.md).
 
-Het `/behaviors` eindpunt in [!DNL Schema Registry] API staat u toe om beschikbaar gedrag in de `global` container te bekijken.
+De `/behaviors` in de [!DNL Schema Registry] Met API kunt u beschikbaar gedrag weergeven in het dialoogvenster `global` container.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 ## Een lijst met gedragingen ophalen {#list}
 
-U kunt een lijst van al beschikbaar gedrag terugwinnen door een verzoek van de GET aan het `/behaviors` eindpunt te doen.
+U kunt een lijst met alle beschikbare gedragingen ophalen door een GET-aanvraag in te dienen bij de `/behaviors` eindpunt.
 
 **API-indeling**
 
@@ -48,7 +48,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/global/behaviors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
@@ -90,7 +90,7 @@ curl -X GET \
 
 ## Gedrag opzoeken {#lookup}
 
-U kunt omhoog een specifiek gedrag kijken door zijn identiteitskaart in de weg van een verzoek van de GET aan het `/behaviors` eindpunt te verstrekken.
+U kunt een specifiek gedrag opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET aan te geven `/behaviors` eindpunt.
 
 **API-indeling**
 
@@ -100,20 +100,20 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BEHAVIOR_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gedrag dat u wilt opzoeken. |
+| `{BEHAVIOR_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het gedrag dat u wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
-Het volgende verzoek wint de details van het verslaggedrag door zijn `meta:altId` in de verzoekweg te verstrekken terug.
+Met het volgende verzoek worden de details van het recordgedrag opgehaald door het volgende op te geven `meta:altId` in het aanvraagpad.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/global/behaviors/_xdm.data.record \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed+json;version=1'
 ```
@@ -173,4 +173,4 @@ Een geslaagde reactie retourneert de details van het gedrag, inclusief de versie
 
 ## Volgende stappen
 
-Deze gids behandelde het gebruik van het `/behaviors` eindpunt in [!DNL Schema Registry] API. Zie de [gids voor klassen](./classes.md) voor meer informatie over het toewijzen van een gedrag aan een klasse met behulp van de API.
+In deze handleiding wordt ingegaan op het gebruik van het `/behaviors` in de [!DNL Schema Registry] API. Zie voor meer informatie over het toewijzen van gedrag aan een klasse met behulp van de API [hulplijn voor klassen eindpunt](./classes.md).

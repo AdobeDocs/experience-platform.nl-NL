@@ -5,7 +5,7 @@ title: Overzicht van de Salesforce Source Connector
 topic-legacy: overview
 description: Leer hoe u Salesforce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 0%
@@ -60,7 +60,7 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | `PRIVATE_KEY` | Een referentie die wordt gebruikt voor het verifiëren van uw [!DNL Postman] -instantie naar Experience Platform-API&#39;s. Zie de zelfstudie over het instellen van de ontwikkelaarsconsole en [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md) voor instructies over het ophalen van uw {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Een referentie die wordt gebruikt om te integreren in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Het Identity Management System (IMS) biedt het framework voor verificatie van Adobe-services. Met betrekking tot [!DNL Marketo]Deze waarde is vast en wordt altijd ingesteld op: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie de zelfstudie aan [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md) voor instructies over hoe u uw `{IMS_ORG}` informatie. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie de zelfstudie aan [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md) voor instructies over hoe u uw `{ORG_ID}` informatie. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | De naam van de virtuele sandboxpartitie die u gebruikt. | `prod` |
 | `TENANT_ID` | Een id die wordt gebruikt om ervoor te zorgen dat de bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Het URL-eindpunt waarnaar u API-aanroepen maakt. Deze waarde is vast en wordt altijd ingesteld op: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |

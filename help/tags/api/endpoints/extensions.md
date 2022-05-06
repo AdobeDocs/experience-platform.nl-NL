@@ -1,7 +1,8 @@
 ---
 title: Extensies, eindpunt
 description: Leer hoe te om vraag aan het /extensions eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 1%
@@ -10,13 +11,13 @@ ht-degree: 1%
 
 # Extensies, eindpunt
 
-In de Reactor-API vertegenwoordigt een extensie de geïnstalleerde instantie van een [extensiepakket](./extension-packages.md). Met een extensie worden de functies die door een extensiepakket worden gedefinieerd, beschikbaar gemaakt voor een [eigenschap](./properties.md). Deze functies worden benut bij het maken van [extensions](./data-elements.md) en [regelcomponenten](./rule-components.md).
+In de Reactor-API vertegenwoordigt een extensie de geïnstalleerde instantie van een [extensiepakket](./extension-packages.md). Met een extensie worden de functies die door een extensiepakket worden gedefinieerd, beschikbaar gemaakt voor een [eigenschap](./properties.md). Deze functies worden gebruikt bij het maken van [extensions](./data-elements.md) en [regelcomponenten](./rule-components.md).
 
 Een extensie behoort tot exact één eigenschap. Een eigenschap kan vele extensies hebben, maar niet meer dan één geïnstalleerde instantie van een opgegeven extensiepakket.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met extensies ophalen {#list}
 
@@ -36,7 +37,7 @@ GET properties/{PROPERTY_ID}/extensions
 
 >[!NOTE]
 >
->Met behulp van queryparameters kunnen weergegeven extensies worden gefilterd op basis van de volgende kenmerken:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Met behulp van queryparameters kunnen weergegeven extensies worden gefilterd op basis van de volgende kenmerken:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -45,7 +46,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -159,7 +160,7 @@ U kunt een extensie opzoeken door de id op te geven in het pad van een GET-aanvr
 
 >[!NOTE]
 >
->Wanneer extensies worden verwijderd, worden ze gemarkeerd als verwijderd in het systeem, maar worden ze niet daadwerkelijk verwijderd. Het is daarom mogelijk een verwijderde extensie op te halen. Verwijderde extensies kunnen worden geïdentificeerd door de aanwezigheid van een eigenschap `deleted_at` in de `meta` van de geretourneerde extensiegegevens.
+>Wanneer extensies worden verwijderd, worden ze gemarkeerd als verwijderd in het systeem, maar worden ze niet daadwerkelijk verwijderd. Het is daarom mogelijk een verwijderde extensie op te halen. Verwijderde extensies kunnen worden geïdentificeerd door de aanwezigheid van een `deleted_at` eigenschap in de `meta` van de geretourneerde extensiegegevens.
 
 **API-indeling**
 
@@ -180,7 +181,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX2ba586f436ac48e390a1ee7e8c9a8f6e \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -279,7 +280,7 @@ Een geslaagde reactie retourneert de details van de extensie.
 
 ## Een extensie maken of bijwerken {#create}
 
-Extensies worden gemaakt door te verwijzen naar een [extensiepakket](./extension-packages.md) en de geïnstalleerde extensie toe te voegen aan een eigenschap. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
+Extensies worden gemaakt door te verwijzen naar een [extensiepakket](./extension-packages.md) en het toevoegen van de geïnstalleerde extensie aan een eigenschap. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
 
 **API-indeling**
 
@@ -289,7 +290,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de eigenschap waaronder u de extensie wilt installeren. |
+| `PROPERTY_ID` | De `id` van de eigenschap waarop u de extensie wilt installeren. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -300,7 +301,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -325,7 +326,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `relationships.extension_package` | **(Vereist)** Een object dat verwijst naar de id van het extensiepakket dat wordt geïnstalleerd. |
-| `attributes.delegate_descriptor_id` | Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist. Zie de gids op [afgevaardigde beschrijver IDs](../guides/delegate-descriptor-ids.md) voor meer informatie. |
+| `attributes.delegate_descriptor_id` | Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist. Zie de handleiding op [id&#39;s gedelegeerde descriptor](../guides/delegate-descriptor-ids.md) voor meer informatie . |
 | `attributes.enabled` | Een Booleaanse waarde die aangeeft of de extensie is ingeschakeld. |
 | `attributes.settings` | A settings JSON object represented as a string. |
 
@@ -441,14 +442,14 @@ PATCH /extensions/{EXTENSION_ID}
 
 **Verzoek**
 
-Net als bij [het maken van een extensie](#create) moet een lokale versie van het herziene pakket worden geüpload via formuliergegevens.
+Zoals met [een extensie maken](#create), moet een lokale versie van het herziene pakket via formuliergegevens worden geüpload.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -466,14 +467,14 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | De kenmerken die u wilt herzien. Voor extensies kunt u de kenmerken `delegate_descriptor_id`, `enabled` en `settings` wijzigen. |
-| `meta.action` | Moet bij het maken van een revisie worden opgenomen met een waarde van `revise`. |
+| `attributes` | De kenmerken die u wilt herzien. Voor extensies kunt u hun `delegate_descriptor_id`, `enabled`, en `settings` kenmerken. |
+| `meta.action` | Moet worden opgenomen met een waarde van `revise` bij een herziening. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details van de herziene extensie, waarbij de eigenschap `meta.latest_revision_number` met 1 is verhoogd.
+Een succesvol antwoord geeft de details van de herziene verlenging terug, met zijn `meta.latest_revision_number` eigenschap verhoogd met 1.
 
 ```json
 {
@@ -586,26 +587,26 @@ curl -X DELETE \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder hoofdtekst van de reactie om aan te geven dat de extensie is verwijderd.
+Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responstekst om aan te geven dat de extensie is verwijderd.
 
 ## Notities voor een extensie beheren {#notes}
 
-Extensies zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie [de gids Notities eindpunt](./notes.md) voor meer informatie over hoe te om nota&#39;s voor uitbreidingen en andere compatibele middelen te beheren.
+Extensies zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe u notities voor extensies en andere compatibele bronnen kunt beheren.
 
 ## Gerelateerde bronnen ophalen voor een extensie {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een uitbreiding terug te winnen. Wanneer [het opzoeken van een uitbreiding](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een uitbreiding terug te winnen. Wanneer [zoeken naar een extensie](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
 
-Zie de [relatiehandleiding](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### Verwante bibliotheken weergeven voor een extensie {#libraries}
 
-U kunt een lijst maken van de bibliotheken die een uitbreiding gebruiken door `/libraries` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de bibliotheken die een extensie gebruiken, weergeven door ze toe te voegen `/libraries` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -626,7 +627,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -727,7 +728,7 @@ Een geslaagde reactie retourneert een lijst met bibliotheken die de opgegeven ex
 
 ### Verwante revisies weergeven voor een extensie {#revisions}
 
-U kunt de vorige revisies van een extensie weergeven door `/revisions` toe te voegen aan het pad van een opzoekverzoek.
+U kunt de vorige revisies van een extensie weergeven door deze toe te voegen `/revisions` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -748,7 +749,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -941,7 +942,7 @@ Een succesvol antwoord retourneert een lijst met revisies voor de opgegeven exte
 
 ### Het verwante extensiepakket voor een extensie opzoeken {#extension}
 
-U kunt het extensiepakket waarop een extensie is gebaseerd, opzoeken door `/extension_package` toe te voegen aan het pad van een GET-verzoek.
+U kunt het extensiepakket opzoeken waarop een extensie is gebaseerd door het toevoegen `/extension_package` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -962,7 +963,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1176,7 +1177,7 @@ Een geslaagde reactie retourneert de details van het extensiepakket waarop de op
 
 ### De verwante oorsprong opzoeken voor een extensie {#origin}
 
-U kunt de oorsprong van een extensie opzoeken door `/origin` toe te voegen aan het pad van een GET-verzoek. De oorsprong van een extensie is de vorige revisie die is bijgewerkt om de huidige revisie te maken.
+U kunt de oorsprong van een extensie opzoeken door deze toe te voegen `/origin` naar het pad van een GET-aanvraag. De oorsprong van een extensie is de vorige revisie die is bijgewerkt om de huidige revisie te maken.
 
 **API-indeling**
 
@@ -1197,7 +1198,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1296,7 +1297,7 @@ Een geslaagde reactie retourneert de details van de oorsprong van de opgegeven e
 
 ### De verwante eigenschap voor een extensie opzoeken {#property}
 
-U kunt het bezit opzoeken dat een uitbreiding bezit door `/property` aan de weg van een verzoek van de GET toe te voegen.
+U kunt de eigenschap die eigenaar is van een extensie opzoeken door deze toe te voegen `/property` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -1317,7 +1318,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

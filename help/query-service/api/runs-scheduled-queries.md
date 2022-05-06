@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;stel geplande vragen in werking;stel geplande vraag;de dienst van de vraag;geplande vragen;geplande vraag;
 solution: Experience Platform
-title: Het geplande Eindpunt van de Vraag loopt API van de Vraag
+title: Het geplande Eindpunt van de Vraag loopt API
 topic-legacy: runs for scheduled queries
 description: De volgende secties lopen door de diverse API vraag u voor het runnen van geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 0%
@@ -17,11 +16,11 @@ ht-degree: 0%
 
 ## Voorbeeld-API-aanroepen
 
-Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het richten vraag aan [!DNL Query Service] API. De volgende secties lopen door de diverse API vraag u kan maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+Nu u begrijpt welke kopballen aan gebruik zijn, bent u bereid beginnen het richten van vraag aan [!DNL Query Service] API. De volgende secties lopen door diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ### Hiermee wordt een lijst met alle uitvoeringen voor een opgegeven geplande query opgehaald
 
-U kunt een lijst van alle looppas voor een specifieke geplande vraag terugwinnen, ongeacht of zij momenteel lopen of reeds voltooid zijn. Dit wordt gedaan door een verzoek van de GET aan het `/schedules/{SCHEDULE_ID}/runs` eindpunt te doen, waar `{SCHEDULE_ID}` de `id` waarde van de geplande vraag is waarvan looppas u wenst terug te winnen.
+U kunt een lijst van alle looppas voor een specifieke geplande vraag terugwinnen, ongeacht of zij momenteel lopen of reeds voltooid zijn. Dit gebeurt door een verzoek van de GET aan `/schedules/{SCHEDULE_ID}/runs` eindpunt, waarbij `{SCHEDULE_ID}` is de `id` De waarde van de geplande vraag waarvan looppas u wenst terug te winnen.
 
 **API-indeling**
 
@@ -32,8 +31,8 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van de geplande vraag u wilt terugwinnen. |
-| `{QUERY_PARAMETERS}` | (*Facultatieve*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
+| `{SCHEDULE_ID}` | De `id` De waarde van de geplande query die u wilt ophalen. |
+| `{QUERY_PARAMETERS}` | (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
 
 **Parameters query**
 
@@ -41,10 +40,10 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Als u een `-` toevoegt voordat u een item (`orderby=-created`) hebt gemaakt, worden de items in aflopende volgorde gesorteerd. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. `start=2` retourneert bijvoorbeeld een lijst die begint bij de derde query. (*Standaardwaarde: 0*) |
-| `property` | Filterresultaten op basis van velden. De filters **must** moeten uit HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `state` en `externalTrigger`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan) en `==` (gelijk aan) en `!=` (niet gelijk aan). `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retourneert bijvoorbeeld alle regels die handmatig zijn gemaakt, geslaagd en gemaakt na 20 april 2019. |
+| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld: `start=2` Hiermee wordt een lijst geretourneerd die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `state`, en `externalTrigger`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), en  `==` (gelijk aan), en `!=` (niet gelijk aan). Bijvoorbeeld: `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retourneert alle handmatig gemaakte, geslaagd en na 20 april 2019 gemaakte uitvoeringen. |
 
 **Verzoek**
 
@@ -53,7 +52,7 @@ Het volgende verzoek wint de laatste vier looppas voor de gespecificeerde geplan
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -150,11 +149,11 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van looppas voor
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om een looppas voor een gespecificeerde geplande vraag ](#immediately-stop-a-run-for-a-specific-scheduled-query) tegen te houden.[
+>U kunt de waarde van `_links.cancel` tot [Een run voor een opgegeven geplande query stoppen](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Breng onmiddellijk een looppas voor een specifieke geplande vraag teweeg
 
-U kunt een looppas voor een gespecificeerde geplande vraag onmiddellijk teweegbrengen door een verzoek van de POST aan het `/schedules/{SCHEDULE_ID}/runs` eindpunt te doen, waar `{SCHEDULE_ID}` de `id` waarde van de geplande vraag is de waarvan looppas u wenst om te teweegbrengen.
+U kunt een looppas voor een gespecificeerde geplande vraag onmiddellijk teweegbrengen door een verzoek van de POST aan `/schedules/{SCHEDULE_ID}/runs` eindpunt, waarbij `{SCHEDULE_ID}` is de `id` De waarde van de geplande query waarvan u de uitvoering wilt activeren.
 
 **API-indeling**
 
@@ -167,7 +166,7 @@ POST /schedules/{SCHEDULE_ID}/runs
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -185,7 +184,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Haal details van een looppas voor een specifieke geplande vraag terug
 
-U kunt details over een looppas voor een specifieke geplande vraag terugwinnen door een verzoek van de GET tot het `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` eindpunt te richten en zowel identiteitskaart van de geplande vraag als looppas in de verzoekweg te verstrekken.
+U kunt details over een looppas voor een specifieke geplande vraag terugwinnen door een verzoek van de GET aan `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` eindpunt en het verstrekken van zowel identiteitskaart van de geplande vraag als looppas in de verzoekweg.
 
 **API-indeling**
 
@@ -195,15 +194,15 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van de geplande vraag waarvan looppas u wenst om details van terug te winnen. |
-| `{RUN_ID}` | De `id` waarde van de looppas u wenst om terug te winnen. |
+| `{SCHEDULE_ID}` | De `id` De waarde van de geplande vraag waarvan looppas u wenst om details van terug te winnen. |
+| `{RUN_ID}` | De `id` de waarde van de run die u wilt ophalen. |
 
 **Verzoek**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -246,7 +245,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van de gespecifice
 
 ### Stop onmiddellijk een looppas voor een specifieke geplande vraag
 
-U kunt een looppas voor een specifieke geplande vraag onmiddellijk tegenhouden door een verzoek van de PATCH aan het `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` eindpunt te doen en zowel identiteitskaart van de geplande vraag als looppas in de verzoekweg te verstrekken.
+U kunt een looppas voor een specifieke geplande vraag onmiddellijk tegenhouden door een verzoek van de PATCH aan `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` eindpunt en het verstrekken van zowel identiteitskaart van de geplande vraag als looppas in de verzoekweg.
 
 **API-indeling**
 
@@ -256,8 +255,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van de geplande vraag waarvan looppas u wenst om details van terug te winnen. |
-| `{RUN_ID}` | De `id` waarde van de looppas u wenst om terug te winnen. |
+| `{SCHEDULE_ID}` | De `id` De waarde van de geplande vraag waarvan looppas u wenst om details van terug te winnen. |
+| `{RUN_ID}` | De `id` de waarde van de run die u wilt ophalen. |
 
 **Verzoek**
 
@@ -266,7 +265,7 @@ Voor deze API-aanvraag wordt de JSON-syntaxis voor patch gebruikt voor het laden
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{

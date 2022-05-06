@@ -5,8 +5,7 @@ title: XMLServices API-eindpunt
 topic-legacy: Developer guide
 description: Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 0%
@@ -17,9 +16,9 @@ ht-degree: 0%
 
 Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 
-Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een [uitsnijdexpressie](https://en.wikipedia.org/wiki/Cron). Planningen kunnen worden gedefinieerd wanneer [een MLService](#create-an-mlservice) wordt gemaakt of door [een bestaande MLService](#update-an-mlservice) wordt bijgewerkt.
+Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een [uitsnijdexpressie](https://en.wikipedia.org/wiki/Cron). Planningen kunnen worden gedefinieerd wanneer [het creëren van een dienst MLService](#create-an-mlservice) of toegepast door [het bijwerken van een bestaande MLService](#update-an-mlservice).
 
-## Een MLService {#create-an-mlservice} maken
+## Een MLService maken {#create-an-mlservice}
 
 U kunt een dienst tot stand brengen MLService door een verzoek van de POST en een lading uit te voeren die een naam voor de dienst en een geldige identiteitskaart MLInstance verstrekt. De MLInstance die wordt gebruikt om een dienst te creëren MLService wordt vereist geen bestaande trainingsexperimenten te hebben maar u kunt verkiezen om de dienst MLService met een bestaand opgeleid model tot stand te brengen door overeenkomstige Deskundige identiteitskaart en opleidingsuitloopidentiteitskaart te verstrekken.
 
@@ -36,7 +35,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/mlServices \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json; profile=mlService.v1.json' \
     -d '{
@@ -78,7 +77,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde dienst MLService met inbegrip van zijn uniek herkenningsteken (`id`), Experiment ID voor opleiding (`trainingExperimentId`), Experiment ID voor het scoring (`scoringExperimentId`), en input opleidings dataset ID (`trainingDataSetId`) bevat.
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde dienst MLService met inbegrip van zijn uniek herkenningsteken bevat (`id`), experimentele id voor training (`trainingExperimentId`), Experimentele id voor scoring (`scoringExperimentId`) en de gegevensset-id voor de inputopleiding (`trainingDataSetId`).
 
 ```json
 {
@@ -107,9 +106,9 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 }
 ```
 
-## Een lijst met MLServices {#retrieve-a-list-of-mlservices} ophalen
+## Een lijst met MLServices ophalen {#retrieve-a-list-of-mlservices}
 
-U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
+U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
 
 **API-indeling**
 
@@ -121,25 +120,25 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Één van [beschikbare vraagparameters](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
+| `{QUERY_PARAMETER}` | Een van de [beschikbare queryparameters](./appendix.md#query) gebruikt om resultaten te filteren. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
 
-Het volgende verzoek bevat een vraag en wint een lijst van diensten terug MLS die zelfde identiteitskaart MLInstance (`{MLINSTANCE_ID}`) delen.
+Het volgende verzoek bevat een vraag en wint een lijst van diensten terug MLS die zelfde identiteitskaart MLInstance ( delen`{MLINSTANCE_ID}`).
 
 ```shell
 curl -X GET \
     'https://platform.adobe.io/data/sensei/mlServices?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van diensten MLServices en hun details met inbegrip van hun MLService ID (`{MLSERVICE_ID}`), Experiment ID voor opleiding (`{TRAINING_ID}`), Experiment ID voor het scoring (`{SCORING_ID}`), en input opleiding dataset ID (`{DATASET_ID}`) terug.
+Een succesvolle reactie keert een lijst van diensten MLS en hun details met inbegrip van hun MLService ID terug (`{MLSERVICE_ID}`), experimentele id voor training (`{TRAINING_ID}`), Experimentele id voor scoring (`{SCORING_ID}`) en de gegevensset-id voor de inputopleiding (`{DATASET_ID}`).
 
 ```json
 {
@@ -166,7 +165,7 @@ Een succesvolle reactie keert een lijst van diensten MLServices en hun details m
 }
 ```
 
-## Een specifieke MLService {#retrieve-a-specific-mlservice} ophalen
+## Een specifieke MLService ophalen {#retrieve-a-specific-mlservice}
 
 U kunt de details van een specifiek Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart MLService in de verzoekweg omvat.
 
@@ -185,7 +184,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -210,13 +209,13 @@ Een succesvolle reactie keert een lading terug die de details van de gevraagde M
 }
 ```
 
-## Een MLService {#update-an-mlservice} bijwerken
+## Een MLService bijwerken {#update-an-mlservice}
 
 U kunt een bestaande dienst bijwerken MLService door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van doelMLService in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET aan [wint de dienst MLS door ID](#retrieve-a-specific-mlservice) terug. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [wint de dienst MLS door identiteitskaart terug](#retrieve-a-specific-mlservice). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 **API-indeling**
 
@@ -233,7 +232,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json; profile=mlService.v1.json' \
     -d '{
@@ -308,7 +307,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -343,7 +342,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlServices?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

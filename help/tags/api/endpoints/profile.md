@@ -1,7 +1,8 @@
 ---
 title: Profielen, eindpunt
 description: Leer hoe te om vraag aan het /profiles eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -10,17 +11,17 @@ ht-degree: 1%
 
 # Profieleindpunt
 
-In de Reactor-API vertegenwoordigt een profiel een Adobe Experience Platform-gebruiker. De Reactor-API beschikt niet over een eigen database met gebruikers en machtigingen en is in plaats daarvan afhankelijk van Adobe-id&#39;s die worden beheerd door het identiteitsbeheersysteem (IMS)](https://helpx.adobe.com/enterprise/using/identity.html) van [Adobe.
+In de Reactor-API vertegenwoordigt een profiel een Adobe Experience Platform-gebruiker. De Reactor-API beschikt niet over een eigen database met gebruikers en machtigingen en is in plaats daarvan afhankelijk van Adobe-id&#39;s die worden beheerd door [Het identiteitsbeheersysteem van Adobe (IMS)](https://helpx.adobe.com/enterprise/using/identity.html).
 
 Een profiel bevat alle informatie over de aangemelde gebruiker, inclusief alle IMS-organisaties waartoe ze behoren, de productprofielen waartoe ze behoren binnen elke organisatie en de rechten die ze hebben van elk productprofiel.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Het huidige profiel ophalen {#lookup}
 
-U kunt de details van het momenteel het programma geopende profiel terugwinnen door een verzoek van de GET tot het `/profile` eindpunt te richten.
+U kunt de details van het momenteel het programma geopende profiel terugwinnen door een verzoek van de GET aan `/profile` eindpunt.
 
 **API-indeling**
 
@@ -35,7 +36,7 @@ curl -X GET \
   https://reactor.adobe.io/profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -99,4 +100,3 @@ Als de reactie is gelukt, worden de details van het profiel geretourneerd.
   }
 }
 ```
-

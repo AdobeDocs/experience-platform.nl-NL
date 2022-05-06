@@ -5,7 +5,7 @@ title: Segment Definition API Endpoint
 topic-legacy: developer guide
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 1%
@@ -14,21 +14,21 @@ ht-degree: 1%
 
 # Definitieeindpunt van segment
 
-Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een voorwerp dat een vraag inkapselt die in [!DNL Profile Query Language] (PQL) wordt geschreven. Dit object wordt ook wel een PQL-voorspelling genoemd. In PQL worden de regels voor het segment gedefinieerd op basis van voorwaarden die gerelateerd zijn aan record- of tijdreeksgegevens die u verschaft aan [!DNL Real-time Customer Profile]. Zie [PQL gids](../pql/overview.md) voor meer informatie bij het schrijven van vragen PQL.
+Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor het segment die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens worden gebaseerd u verstrekt aan [!DNL Real-time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
 
 Deze gids verstrekt informatie om u te helpen segmentdefinities beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om oproepen aan API, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen met succes te maken.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met segmentdefinities ophalen {#list}
 
-U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen.
+U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/segment/definitions` eindpunt.
 
 **API-indeling**
 
-Het `/segment/definitions` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle segmentdefinities beschikbaar voor uw organisatie terugwinnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+De `/segment/definitions` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle segmentdefinities beschikbaar voor uw organisatie terugwinnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
 
 ```http
 GET /segment/definitions
@@ -40,26 +40,26 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `start` | Geeft de beginverschuiving aan voor de gesegmenteerde definities die worden geretourneerd. | `start=4` |
-| `limit` | Geeft het aantal segmentdefinities op dat per pagina wordt geretourneerd. | `limit=20` |
+| `limit` | Specifies the number of segment definitions returned per page. | `limit=20` |
 | `page` | Geeft aan vanaf welke pagina de resultaten van segmentdefinities moeten beginnen. | `page=5` |
-| `sort` | Hiermee geeft u aan op welk veld de resultaten moeten worden gesorteerd. Wordt geschreven in de volgende indeling: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `sort` | Hiermee geeft u aan op welk veld de resultaten moeten worden gesorteerd. Is written in the following format: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Geeft aan of de segmentdefinitie streaming-ingeschakeld is. | `evaluationInfo.continuous.enabled=true` |
 
-**Verzoek**
+**Request**
 
 Het volgende verzoek zal de laatste twee segmentdefinities terugwinnen die binnen uw IMS Organisatie worden gepost.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst van segmentdefinities voor de opgegeven IMS-organisatie als JSON.
+A successful response returns HTTP status 200 with a list of segment definitions for the specified IMS organization as JSON.
 
 ```json
 {
@@ -70,7 +70,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van segmentdefin
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -110,7 +110,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van segmentdefin
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "test segment",
             "description": "",
             "expression": {
@@ -153,9 +153,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van segmentdefin
 
 ## Een nieuwe segmentdefinitie maken {#create}
 
-U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan het `/segment/definitions` eindpunt te doen.
+U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` eindpunt.
 
-**API-indeling**
+**API format**
 
 ```http
 POST /segment/definitions
@@ -167,7 +167,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -190,16 +190,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `name` | **Vereist.** Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name`. |
+| `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Consists of either an `id` or `name` field. |
 | `expression` | **Vereist.** Een entiteit die veldinformatie over de segmentdefinitie bevat. |
-| `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
+| `expression.type` | Specifies the expression type. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 | `description` | Een door de mens leesbare beschrijving van de definitie. |
 
 >[!NOTE]
 >
->Een segmentdefinitieexpressie kan ook verwijzen naar een berekend kenmerk. Voor meer informatie raadpleegt u de [berekende API-eindpuntgids voor kenmerken](../../profile/computed-attributes/ca-api.md)
+>Een segmentdefinitieexpressie kan ook verwijzen naar een berekend kenmerk. Voor meer informatie raadpleegt u de [berekende attribuut API eindpuntgids](../../profile/computed-attributes/ca-api.md)
 >
 >De functie voor berekende kenmerken staat in alfa en is niet beschikbaar voor alle gebruikers. Documentatie en functionaliteit kunnen worden gewijzigd.
 
@@ -215,7 +215,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -252,13 +252,13 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde id van de zojuist gemaakte segmentdefinitie. |
-| `evaluationInfo` | Een systeem-geproduceerd voorwerp dat vertelt welk type van evaluatie de segmentdefinitie zal ondergaan. Het kan batch, ononderbroken (ook wel streaming genoemd) of synchrone segmentatie zijn. |
+| `evaluationInfo` | A system-generated object that tells what type of evaluation the segment definition will undergo. Het kan batch, ononderbroken (ook wel streaming genoemd) of synchrone segmentatie zijn. |
 
 ## Een specifieke segmentdefinitie ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een verzoek van de GET tot de `/segment/definitions` eindpunt en het verstrekken van identiteitskaart van de segmentdefinitie u wenst om in de verzoekweg terug te winnen.
 
-**API-indeling**
+**API format**
 
 ```http
 GET /segment/definitions/{SEGMENT_ID}
@@ -266,14 +266,14 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | De waarde `id` van de segmentdefinitie u wilt terugwinnen. |
+| `{SEGMENT_ID}` | De `id` waarde van de segmentdefinitie u wilt terugwinnen. |
 
 **Verzoek**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -290,7 +290,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -328,7 +328,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id van de segmentdefinitie. |
 | `name` | Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name`. |
+| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -338,21 +338,21 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Bulk haalt segmentdefinities op {#bulk-get}
 
-U kunt gedetailleerde informatie over veelvoudige gespecificeerde segmentdefinities terugwinnen door een verzoek van de POST aan het `/segment/definitions/bulk-get` eindpunt te doen en de `id` waarden van de segmentdefinities in het verzoeklichaam te verstrekken.
+U kunt gedetailleerde informatie over veelvoudige gespecificeerde segmentdefinities terugwinnen door een verzoek van de POST aan `/segment/definitions/bulk-get` en het verstrekken van `id` waarden van de segmentdefinities in de aanvraaginstantie.
 
-**API-indeling**
+**API format**
 
 ```http
 POST /segment/definitions/bulk-get
 ```
 
-**Verzoek**
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
@@ -381,7 +381,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -420,7 +420,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -457,11 +457,11 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 }
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- |
-| `id` | Een door het systeem gegenereerde alleen-lezen-id van de segmentdefinitie. |
+| `id` | A system-generated read-only ID of the segment definition. |
 | `name` | Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name`. |
+| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -471,11 +471,11 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 
 ## Een specifieke segmentdefinitie verwijderen {#delete}
 
-U kunt verzoeken om een specifieke segmentdefinitie te schrappen door een verzoek van DELETE aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg te schrappen.
+You can request to delete a specific segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to delete in the request path.
 
 >[!NOTE]
 >
-> U zult **niet** een segment kunnen schrappen dat in een bestemmingsactivering wordt gebruikt.
+> U zult **niet** kan een segment schrappen dat in een bestemmingsactivering wordt gebruikt.
 
 **API-indeling**
 
@@ -485,14 +485,14 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | De waarde `id` van de segmentdefinitie u wilt schrappen. |
+| `{SEGMENT_ID}` | De `id` waarde van de segmentdefinitie die u wilt verwijderen. |
 
 **Verzoek**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -503,7 +503,7 @@ Een geslaagde reactie retourneert HTTP status 200 zonder bericht.
 
 ## Een specifieke segmentdefinitie bijwerken
 
-U kunt een specifieke segmentdefinitie bijwerken door een verzoek van PATCH aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg bij te werken.
+U kunt een specifieke segmentdefinitie bijwerken door een PATCH-verzoek in te dienen bij de `/segment/definitions` eindpunt en het verstrekken van identiteitskaart van de segmentdefinitie u wenst om in de verzoekweg bij te werken.
 
 **API-indeling**
 
@@ -513,7 +513,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | De waarde `id` van de segmentdefinitie u wilt bijwerken. |
+| `{SEGMENT_ID}` | De `id` waarde van de segmentdefinitie u wilt bijwerken. |
 
 **Verzoek**
 
@@ -523,7 +523,7 @@ Met het volgende verzoek wordt het land van het werkadres van de VS naar Canada 
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -560,7 +560,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bij
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -596,7 +596,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bij
 
 ## Segmentdefinitie omzetten
 
-U kunt een segmentdefinitie tussen `pql/text` en `pql/json` of `pql/json` in `pql/text` omzetten door een POST verzoek aan het `/segment/conversion` eindpunt te richten.
+U kunt een segmentdefinitie omzetten tussen `pql/text` en `pql/json` of `pql/json` tot `pql/text` door een POST aan de `/segment/conversion` eindpunt.
 
 **API-indeling**
 
@@ -606,13 +606,13 @@ POST /segment/conversion
 
 **Verzoek**
 
-Met het volgende verzoek wordt de indeling van de segmentdefinitie gewijzigd van `pql/text` in `pql/json`.
+Met het volgende verzoek wordt de indeling van de segmentdefinitie gewijzigd van `pql/text` tot `pql/json`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -657,4 +657,4 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs omg
 
 ## Volgende stappen
 
-Na het lezen van deze gids hebt u nu een beter inzicht in hoe de segmentdefinities werken. Lees voor meer informatie over het maken van een segment de zelfstudie [voor het maken van een segment](../tutorials/create-a-segment.md).
+Na het lezen van deze gids hebt u nu een beter inzicht in hoe de segmentdefinities werken. Lees voor meer informatie over het maken van een segment de [een segment maken](../tutorials/create-a-segment.md) zelfstudie.

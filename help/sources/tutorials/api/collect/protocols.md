@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Verzamel protocolgegevens;protocolgegevens
 solution: Experience Platform
-title: Creeer een Dataflow voor de Bronnen van Protocollen Gebruikend de Dienst API van de Stroom
+title: Create a Dataflow for Protocols Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Creeer een dataflow voor protocolbronnen Gebruikend [!DNL Flow Service] API
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocolbron en het brengen van gegevens naar Platform met behulp van [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a protocols source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -36,15 +36,15 @@ Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen
 
 Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
 
-## Een bronverbinding maken {#source}
+## Create a source connection {#source}
 
-U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
 
 Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
 
 Gebruik de volgende enum waarden voor op dossier-gebaseerde schakelaars:
 
-| Gegevensindeling | Enumwaarde |
+| Data format | Enumwaarde |
 | ----------- | ---------- |
 | Gescheiden | `delimited` |
 | JSON | `json` |
@@ -52,7 +52,7 @@ Gebruik de volgende enum waarden voor op dossier-gebaseerde schakelaars:
 
 Voor alle op lijst-gebaseerde schakelaars, plaats de waarde aan `tabular`.
 
-**API-indeling**
+**API format**
 
 ```http
 POST /sourceConnections
@@ -65,7 +65,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -121,15 +121,15 @@ curl -X POST \
     }'
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- |
 | `baseConnectionId` | De verbindings-id van uw protocoltoepassing |
 | `params.path` | Het pad van het bronbestand. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw protocoltoepassing. |
 
-**Antwoord**
+**Response**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is vereist in latere stappen om een doelverbinding te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. This ID is required in later steps to create a target connection.
 
 ```json
 {
@@ -154,7 +154,7 @@ Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, z
 
 ## Een doelverbinding maken {#target-connection}
 
-Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan gegevens meer. Met de [!DNL Flow Service] API, kunt u een doelverbinding tot stand brengen door deze herkenningstekens samen met de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
@@ -164,14 +164,14 @@ U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteits
 POST /targetConnections
 ```
 
-**Verzoek**
+**Request**
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -197,12 +197,12 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `data.schema.id` | De `$id` van het doel-XDM-schema. |
-| `params.dataSetId` | De id van de doeldataset. |
+| `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die wordt gebruikt om verbinding te maken met het Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id`). Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
+A successful response returns the new target connection&#39;s unique identifier (`id`). Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -215,7 +215,7 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` van het [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
 
 **API-indeling**
 
@@ -230,7 +230,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -310,7 +310,7 @@ GET /flowSpecs?property=name=="CRMToAEP"
 curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name=="CRMToAEP"' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -547,18 +547,18 @@ Een succesvolle reactie keert de details van de dataflow specificatie verantwoor
 
 ## Een gegevensstroom maken
 
-De laatste stap in de richting van het verzamelen van gegevens is het maken van een gegevensstroom. Op dit punt moeten de volgende vereiste waarden worden voorbereid:
+The last step towards collecting data is to create a dataflow. Op dit punt moeten de volgende vereiste waarden worden voorbereid:
 
 * [Bronverbinding-id](#source)
-* [Doelverbinding-id](#target)
-* [Toewijzing-id](#mapping)
-* [Dataflow-specificatie-id](#specs)
+* [Target connection ID](#target)
+* [Mapping ID](#mapping)
+* [Dataflow specification ID](#specs)
 
-Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
+A dataflow is responsible for scheduling and collecting data from a source. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
-Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde op gelijk aan of groter dan `15`.
+Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
 
-**API-indeling**
+**API format**
 
 ```http
 POST /flows
@@ -570,7 +570,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -613,17 +613,17 @@ curl -X POST \
     }'
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- |
 | `flowSpec.id` | De [stroom-specificatie-id](#specs) opgehaald in de vorige stap. |
 | `sourceConnectionIds` | De [bron-verbindings-id](#source) opgehaald in een eerdere stap. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) opgehaald in een eerdere stap. |
 | `transformations.params.mappingId` | De [toewijzing-id](#mapping) opgehaald in een eerdere stap. |
-| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. De ondersteunde indeling voor `deltaColumn` wanneer Generic OData wordt gebruikt `yyyy-MM-ddTHH:mm:ssZ`. |
-| `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
-| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
+| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. The supported format for `deltaColumn` when using Generic OData is `yyyy-MM-ddTHH:mm:ssZ`. |
+| `transformations.params.mappingId` | The mapping ID associated with your database. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
-| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Antwoord**
 
@@ -644,5 +644,5 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 Door dit leerprogramma te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een protocoltoepassing op een geplande basis te verzamelen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
+* [Real-time Customer Profile overview](../../../../profile/home.md)
 * [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)

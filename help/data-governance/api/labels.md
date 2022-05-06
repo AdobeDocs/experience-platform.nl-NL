@@ -5,7 +5,7 @@ title: API-eindpunt voor labels
 topic-legacy: developer guide
 description: Leer hoe u labels voor gegevensgebruik in Experience Platform beheert met de API voor beleidsservice.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 1%
@@ -14,19 +14,19 @@ ht-degree: 1%
 
 # Labels-eindpunt
 
-Met labels voor gegevensgebruik kunt u gegevens indelen volgens het gebruiksbeleid dat op die gegevens van toepassing kan zijn. Het `/labels` eindpunt in [!DNL Policy Service API] staat u toe om de etiketten van het gegevensgebruik binnen uw ervaringstoepassing programmatically te beheren.
+Met labels voor gegevensgebruik kunt u gegevens indelen volgens het gebruiksbeleid dat op die gegevens van toepassing kan zijn. De `/labels` in de [!DNL Policy Service API] kunt u gegevensgebruikslabels programmatisch beheren binnen uw ervaringstoepassing.
 
 >[!NOTE]
 >
->Het `/labels` eindpunt wordt slechts gebruikt om, gegevensgebruiksetiketten terug te winnen tot stand te brengen en bij te werken. Voor stappen op hoe te om etiketten aan datasets en gebieden toe te voegen gebruikend API vraag, verwijs naar de gids op [het beheren van datasetetiketten](../labels/dataset-api.md).
+>De `/labels` het eindpunt wordt slechts gebruikt om, gegevensgebruiksetiketten terug te winnen tot stand te brengen en bij te werken. Voor stappen op hoe te om etiketten aan datasets en gebieden toe te voegen gebruikend API vraag, verwijs naar de gids op [gegevenssetlabels beheren](../labels/dataset-api.md).
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 ## Een lijst met labels ophalen {#list}
 
-U kunt alle `core` of `custom` etiketten door een verzoek van de GET aan `/labels/core` of `/labels/custom`, respectievelijk te richten.
+U kunt alle `core` of `custom` etiketten door een verzoek van de GET aan `/labels/core` of `/labels/custom`, respectievelijk.
 
 **API-indeling**
 
@@ -44,13 +44,13 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van douanelabels terug die van het systeem worden teruggewonnen. Aangezien het voorbeeldverzoek hierboven aan `/labels/custom` werd gemaakt, toont de reactie hieronder slechts douanelabels.
+Een succesvolle reactie keert een lijst van douanelabels terug die van het systeem worden teruggewonnen. Aangezien de voorbeeldaanvraag hierboven is ingediend op `/labels/custom`In de onderstaande reactie worden alleen aangepaste labels weergegeven.
 
 ```json
 {
@@ -69,7 +69,7 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
             "category": "Custom",
             "friendlyName": "Banking Information",
             "description": "Data containing banking information for a customer.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594396718731,
             "createdClient": "{CLIENT_ID}",
@@ -88,7 +88,7 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
             "category": "Custom",
             "friendlyName": "Purchase History Data",
             "description": "Data containing information on past transactions",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594397415663,
             "createdClient": "{CLIENT_ID}",
@@ -108,7 +108,7 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
 
 ## Een label opzoeken {#look-up}
 
-U kunt een specifiek etiket opzoeken door het `name` bezit van dat etiket in de weg van een verzoek van de GET aan [!DNL Policy Service] API te omvatten.
+U kunt een specifiek label opzoeken door dat label op te nemen `name` eigenschap in het pad van een aanvraag van een GET naar de [!DNL Policy Service] API.
 
 **API-indeling**
 
@@ -119,18 +119,18 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LABEL_NAME}` | De eigenschap `name` van het aangepaste label dat u wilt opzoeken. |
+| `{LABEL_NAME}` | De `name` eigenschap van het aangepaste label dat u wilt opzoeken. |
 
 **Verzoek**
 
-Het volgende verzoek wint het douanelabel `L2`, zoals die in de weg wordt vermeld terug.
+Met het volgende verzoek wordt het aangepaste label opgehaald `L2`, zoals aangegeven in het pad.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -144,7 +144,7 @@ Als de reactie is gelukt, worden de details van het aangepaste label geretournee
     "category": "Custom",
     "friendlyName": "Purchase History Data",
     "description": "Data containing information on past transactions",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "sandboxName": "{SANDBOX_NAME}",
     "created": 1594397415663,
     "createdClient": "{CLIENT_ID}",
@@ -162,7 +162,7 @@ Als de reactie is gelukt, worden de details van het aangepaste label geretournee
 
 ## Een aangepast label maken of bijwerken {#create-update}
 
-Als u een aangepast label wilt maken of bijwerken, moet u een PUT aanvragen bij de [!DNL Policy Service]-API.
+Als u een aangepast label wilt maken of bijwerken, moet u de PUT [!DNL Policy Service] API.
 
 **API-indeling**
 
@@ -172,18 +172,18 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LABEL_NAME}` | De eigenschap `name` van een aangepast label. Als er geen aangepast label met deze naam bestaat, wordt een nieuw label gemaakt. Als er een label bestaat, wordt dat label bijgewerkt. |
+| `{LABEL_NAME}` | De `name` eigenschap van een aangepast label. Als er geen aangepast label met deze naam bestaat, wordt een nieuw label gemaakt. Als er een label bestaat, wordt dat label bijgewerkt. |
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuw label gemaakt, `L3`, waarmee gegevens worden beschreven die informatie bevatten over de geselecteerde betaalplannen van klanten.
+Met de volgende aanvraag wordt een nieuw label gemaakt. `L3`, waarin gegevens worden beschreven die informatie bevatten over de geselecteerde betalingsplannen van klanten.
 
 ```shell
 curl -X PUT \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "L3",
@@ -196,7 +196,7 @@ curl -X PUT \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | Een unieke tekenreeks-id voor het label. Deze waarde wordt gebruikt voor raadplegingsdoeleinden en het toepassen van het etiket op datasets en gebieden, en daarom wordt geadviseerd dat het kort en beknopt is. |
-| `category` | De categorie van het etiket. Terwijl u uw eigen categorieën voor douanelabels kunt tot stand brengen, wordt het sterk geadviseerd dat u `Custom` gebruikt als u het etiket in UI wilt verschijnen. |
+| `category` | De categorie van het etiket. Hoewel u uw eigen categorieën voor douanelabels kunt tot stand brengen, wordt het sterk geadviseerd om te gebruiken `Custom` als u het label in de gebruikersinterface wilt weergeven. |
 | `friendlyName` | Een vriendelijke naam voor het label, dat wordt gebruikt voor weergavedoeleinden. |
 | `description` | (Optioneel) Een beschrijving van het label voor verdere context. |
 
@@ -210,7 +210,7 @@ Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-
   "category": "Custom",
   "friendlyName": "Payment Plan",
   "description": "Data containing information on selected payment plans.",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "sandboxName": "{SANDBOX_NAME}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",
@@ -228,4 +228,4 @@ Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-
 
 ## Volgende stappen
 
-Deze gids behandelde het gebruik van het `/labels` eindpunt in de Dienst API van het Beleid. Voor stappen op hoe te om etiketten op datasets en gebieden toe te passen, verwijs naar [de gids van de etiketten van datasets API](../labels/dataset-api.md).
+In deze handleiding wordt ingegaan op het gebruik van het `/labels` eindpunt in de Dienst API van het Beleid. Voor stappen op hoe te om etiketten op datasets en gebieden toe te passen, verwijs naar [API-handleiding voor gegevenssetlabels](../labels/dataset-api.md).

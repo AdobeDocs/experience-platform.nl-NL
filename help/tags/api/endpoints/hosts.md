@@ -1,7 +1,8 @@
 ---
 title: Het eindpunt van hosts
 description: Leer hoe te om vraag aan het /hosts eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 1%
@@ -12,19 +13,19 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u hosts in de Reactor-API beheert. Voor meer algemene informatie over gastheren voor markeringen, zie de gids op [gastheren overzicht](../../ui/publishing/hosts/hosts-overview.md) in de het publiceren documentatie.
+>In dit document wordt beschreven hoe u hosts in de Reactor-API beheert. Voor meer algemene informatie over gastheren voor markeringen, zie de gids op [Overzicht van hosts](../../ui/publishing/hosts/hosts-overview.md) in de publicatiedocumentatie.
 
-In de Reactor-API definieert een host een bestemming waar een [build](./builds.md) kan worden geleverd.
+In de Reactor-API definieert een host een bestemming waarbij een [build](./builds.md) kan worden geleverd.
 
-Wanneer een gebruiker van tags in Adobe Experience Platform een build aanvraagt, controleert het systeem de Library om te bepalen naar welke [omgeving](./environments.md) de bibliotheek moet worden gebouwd. Elke omgeving heeft een relatie met een host die aangeeft waar de build moet worden geleverd.
+Wanneer een taggebruiker in Adobe Experience Platform om een build heeft gevraagd, controleert het systeem de Library om te bepalen welke [milieu](./environments.md) de bibliotheek moet worden gemaakt . Elke omgeving heeft een relatie met een host die aangeeft waar de build moet worden geleverd.
 
-Een gastheer behoort tot precies één [bezit](./properties.md), terwijl een bezit vele gastheren kan hebben. Een eigenschap moet ten minste één host hebben voordat u deze kunt publiceren.
+Een host behoort tot exact één host [eigenschap](./properties.md), terwijl een eigenschap veel hosts kan hebben. Een eigenschap moet ten minste één host hebben voordat u deze kunt publiceren.
 
 Een host kan door meerdere omgevingen binnen een eigenschap worden gebruikt. Het is gemeenschappelijk om één enkele gastheer op een bezit te hebben, en alle milieu&#39;s op dat bezit te hebben gebruiken de zelfde gastheer.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met hosts ophalen {#list}
 
@@ -38,13 +39,13 @@ GET /properties/{PROPERTY_ID}/hosts
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de eigenschap die eigenaar is van de hosts. |
+| `PROPERTY_ID` | De `id` van het bezit dat de gastheren bezit. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde gastheren worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde gastheren worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -53,7 +54,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRd428c2a25caa4b32af61495f5809b737/hosts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -131,7 +132,7 @@ curl -X GET \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -187,20 +188,20 @@ POST /properties/{PROPERTY_ID}/hosts
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) die u onder de host definieert. |
+| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de host onder definieert. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe host voor de opgegeven eigenschap gemaakt. De vraag associeert ook de gastheer met een bestaande uitbreiding door het `relationships` bezit. Zie de gids op [relaties](../guides/relationships.md) voor meer informatie.
+Met het volgende verzoek wordt een nieuwe host voor de opgegeven eigenschap gemaakt. De vraag associeert ook de gastheer met een bestaande uitbreiding door `relationships` eigenschap. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/properties/PRb25a704c0b7c4562835ccdf96d3afd31/hosts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -221,13 +222,13 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes.name` | **(Vereist)** Een leesbare naam voor de host. |
-| `attributes.type_of` | **(Vereist)** Het type host. U kunt uit twee opties kiezen: <ul><li>`akamai` voor  [door Adobe beheerde hosts](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` voor  [SFTP-hosts](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.type_of` | **(Vereist)** Het type host. U kunt uit twee opties kiezen: <ul><li>`akamai` for [Door Adobe beheerde hosts](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` for [SFTP-hosts](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Een optionele persoonlijke sleutel die moet worden gebruikt voor hostverificatie. |
-| `attributes.path` | Het pad dat moet worden toegevoegd aan de URL `server`. |
+| `attributes.path` | Het pad dat moet worden toegevoegd aan de `server` URL. |
 | `attributes.port` | Een geheel getal dat de specifieke serverpoort aangeeft die moet worden gebruikt. |
 | `attributes.server` | De host-URL voor de server. |
 | `attributes.username` | Een optionele gebruikersnaam voor verificatie. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `hosts` zijn. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `hosts`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -292,14 +293,14 @@ PATCH /hosts/{HOST_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt `name` voor een bestaande host bijgewerkt.
+De volgende aanvraag werkt de `name` voor een bestaande host.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -315,8 +316,8 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de host moeten worden bijgewerkt. De volgende kenmerken kunnen voor een host worden bijgewerkt: <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | De `id` van de host die u wilt bijwerken. Dit zou de `{HOST_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `hosts` zijn. |
+| `id` | De `id` van de host die u wilt bijwerken. Dit moet overeenkomen met de `{HOST_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `hosts`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -382,7 +383,7 @@ curl -X DELETE \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**
@@ -391,13 +392,13 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder antwoord,
 
 ## Verwante bronnen voor een host ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een gastheer terug te winnen. Als [een host](#lookup) opzoekt, worden deze relaties vermeld onder de eigenschap `relationships`.
+De volgende vraag toont aan hoe te om de verwante middelen voor een gastheer terug te winnen. Wanneer [zoeken naar een host](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
 
-Zie de [relatiehandleiding](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### De verwante eigenschap voor een host opzoeken {#property}
 
-U kunt het bezit opzoeken dat een gastheer bezit door `/property` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de eigenschap die eigenaar is van een host opzoeken door deze toe te voegen `/property` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -418,7 +419,7 @@ curl -X GET \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

@@ -4,10 +4,10 @@ description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Netwo
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: gegevensverzameling; authenticatie; Adobe Experience Platform Edge Network api; autorisatie
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '623'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,7 @@ Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verific
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 

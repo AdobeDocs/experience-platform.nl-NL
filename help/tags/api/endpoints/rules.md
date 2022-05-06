@@ -1,7 +1,8 @@
 ---
 title: Het eindpunt van regels
 description: Leer hoe te om vraag aan het /rules eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 1%
@@ -10,17 +11,17 @@ ht-degree: 1%
 
 # Het eindpunt van regels
 
-In de context van de markeringen van de gegevensinzameling, controleren de regels het gedrag van de middelen in een opgestelde bibliotheek. Een regel is samengesteld uit één of meerdere [regelcomponenten](./rule-components.md), bestaat om de regelcomponenten op een logische manier samen te binden. Het `/rules` eindpunt in Reactor API staat u toe om markeringsregels programmatically te beheren.
+In de context van de markeringen van de gegevensinzameling, controleren de regels het gedrag van de middelen in een opgestelde bibliotheek. Een regel bestaat uit een of meer [regelcomponenten](./rule-components.md), bestaat om de regelcomponenten op een logische manier aan elkaar te koppelen. De `/rules` Het eindpunt in Reactor API staat u toe om markeringsregels programmatically te beheren.
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in de UI van de Inzameling van Gegevens in wisselwerking te staan, verwijs naar [UI gids](../../ui/managing-resources/rules.md).
+>In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in de UI van de Inzameling van Gegevens in wisselwerking te staan, verwijs naar [UI-hulplijn](../../ui/managing-resources/rules.md).
 
-Een regel behoort tot exact één [eigenschap](./properties.md). Een eigenschap kan vele regels bevatten.
+Een regel behoort tot exact één regel [eigenschap](./properties.md). Een eigenschap kan vele regels bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met regels ophalen {#list}
 
@@ -40,7 +41,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde regels worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde regels worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -49,14 +50,14 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR41f64d2a9d9b4862b0582c5ff6a07504/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met regels voor de opgegeven eigenschap.
+Een succesvolle reactie keert een lijst van regels voor het gespecificeerde bezit terug.
 
 ```json
 {
@@ -145,7 +146,7 @@ U kunt een regel opzoeken door zijn identiteitskaart in de weg van een verzoek v
 
 >[!NOTE]
 >
->Wanneer regels worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapte regel terug te winnen. Verwijderde regels kunnen worden geïdentificeerd door de aanwezigheid van een eigenschap `meta.deleted_at`.
+>Wanneer regels worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapte regel terug te winnen. Verwijderde regels kunnen worden geïdentificeerd door de aanwezigheid van een `meta.deleted_at` eigenschap.
 
 **API-indeling**
 
@@ -166,7 +167,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RL14dc6a8c37b14b619ddb2b3ba489a1f5 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -257,7 +258,7 @@ POST /properties/{PROPERTY_ID}/rules
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van het bezit dat u een regel onder definieert. |
+| `PROPERTY_ID` | De `id` van de eigenschap waarop u een regel definieert. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,7 +269,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR03cc61073ef74fd2af21e4cfb6ed97a7/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -283,9 +284,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een door de mens leesbare naam voor de regel. |
+| `attributes.name` | **(Vereist)** Een door mensen leesbare naam voor de regel. |
 | `attributes.enabled` | Een booleaanse waarde die aangeeft of de regel is ingeschakeld. |
-| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde `rules` zijn. |
+| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde zijn `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,7 +366,7 @@ Een succesvolle reactie keert de details van de pas gecreëerde regel terug.
 
 ## Gebeurtenissen, voorwaarden en handelingen aan een regel toevoegen {#components}
 
-Zodra u [een regel](#create) hebt gecreeerd, kunt u beginnen zijn logica uit te bouwen door gebeurtenissen, voorwaarden, en acties toe te voegen (collectief die als regelcomponenten worden bedoeld). Zie de sectie over [het creëren van een regelcomponent](./rule-components.md#create) in `/rule_components` eindpuntgids om te leren hoe te om dit in Reactor API te doen.
+Eenmaal [een regel gemaakt](#create), kunt u beginnen zijn logica uit te bouwen door gebeurtenissen, voorwaarden, en acties toe te voegen (die collectief als regelcomponenten worden bedoeld). Zie de sectie over [een component rule maken](./rule-components.md#create) in de `/rule_components` eindpuntgids om te leren hoe te om dit in Reactor API te doen.
 
 ## Een regel bijwerken {#update}
 
@@ -385,14 +386,14 @@ PATCH /rules/{RULE_ID}
 
 **Verzoek**
 
-Het volgende verzoek werkt `name` van een bestaande regel bij.
+De volgende aanvraag werkt de `name` van een bestaande regel.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/rules/RLd2528a53c21a468f93cfd85244f16fdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
   "data": {
@@ -408,8 +409,8 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de regels de kenmerken vertegenwoordigen die voor de regel moeten worden bijgewerkt. De volgende kenmerken kunnen voor een regel worden bijgewerkt: <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | De `id` van de regel die u wilt bijwerken. Dit zou de `{RULE_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `rules` zijn. |
+| `id` | De `id` van de regel die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -499,7 +500,7 @@ DELETE /rules/{RULE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `RULE_ID` | De `id` van de regel die u wilt schrappen. |
+| `RULE_ID` | De `id` van de regel die u wilt verwijderen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -510,7 +511,7 @@ curl -X DELETE \
   https://reactor.adobe.io/rules/RLd2528a53c21a468f93cfd85244f16fdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**
@@ -519,17 +520,17 @@ Een succesvolle reactie keert HTTP status 204 (Geen Inhoud) zonder reactiekarakt
 
 ## Notities voor een regel beheren {#notes}
 
-Regels zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie [Nota&#39;s eindpuntgids](./notes.md) voor meer informatie over hoe te om nota&#39;s voor regels en andere compatibele middelen te beheren.
+Regels zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor regels en andere compatibele middelen te beheren.
 
 ## Verwante middelen voor een regel ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een regel terug te winnen. Wanneer [het opzoeken van een regel](#lookup), zijn deze verhoudingen vermeld onder de `relationships` regel.
+De volgende vraag toont aan hoe te om de verwante middelen voor een regel terug te winnen. Wanneer [regel opzoeken](#lookup), worden deze relaties vermeld in het `relationships` regel.
 
-Zie de [relatiehandleiding](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### Verwante bibliotheken weergeven voor een regel {#libraries}
 
-U kunt een lijst maken van de bibliotheken die een bepaalde regel gebruiken door `/libraries` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt een lijst maken van de bibliotheken die een bepaalde regel gebruiken door toe te voegen `/libraries` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -539,7 +540,7 @@ GET  /rules/{RULE_ID}/libraries
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_ID}` | De `id` van de regel waarvan bibliotheken u een lijst wilt maken. |
+| `{RULE_ID}` | De `id` van de regel waarvan u bibliotheken wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -550,7 +551,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RLd2528a53c21a468f93cfd85244f16fdd/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -651,7 +652,7 @@ Een succesvolle reactie keert een lijst van bibliotheken terug die de gespecific
 
 ### Verwante revisies voor een regel weergeven {#revisions}
 
-U kunt van de revisies voor een regel een lijst maken door `/revisions` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de revisies voor een regel weergeven door deze toe te voegen `/revisions` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -661,7 +662,7 @@ GET  /rules/{RULE_ID}/revisions
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_ID}` | De `id` van de regel waarvan u revisies wilt weergeven. |
+| `{RULE_ID}` | De `id` van de regel waarvan u de revisies wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -672,7 +673,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RL67de76e5bff9413aa8ad14e55172d8dc/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -829,7 +830,7 @@ Een succesvolle reactie keert een lijst van revisies terug die de gespecificeerd
 
 ### De gerelateerde oorsprong opzoeken voor een regel {#origin}
 
-U kunt de oorsprong (vorige versie) van een regel opzoeken door `/origin` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de oorsprong (vorige versie) van een regel opzoeken door deze toe te voegen `/origin` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -839,7 +840,7 @@ GET /rules/{RULE_ID}/origin
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_ID}` | De `id` van de regel waarvan oorsprong u omhoog wilt kijken. |
+| `{RULE_ID}` | De `id` van de regel waarvan u de oorsprong wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -850,7 +851,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RLb83ed2278dc045628c069ab7eb9bb866/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -931,7 +932,7 @@ Een succesvolle reactie keert de details van de gespecificeerde uitbreiding van 
 
 ### De verwante eigenschap voor een regel opzoeken {#property}
 
-U kunt het bezit opzoeken dat een regel bezit door `/property` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt het bezit opzoeken dat een regel bezit door toe te voegen `/property` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -952,7 +953,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RC3d0805fde85d42db8988090bc074bb44/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

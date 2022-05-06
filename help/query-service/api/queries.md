@@ -5,7 +5,7 @@ title: API-eindpunt voor query's
 topic-legacy: queries
 description: De volgende secties lopen door vraag u het gebruiken van het /query eindpunt in de Dienst API van de Vraag kunt maken.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ## Voorbeeld-API-aanroepen
 
-De volgende secties lopen door vraag u het gebruiken van het `/queries` eindpunt in [!DNL Query Service] API kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+De volgende secties lopen door vraag u kunt maken gebruikend `/queries` in de [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ### Een lijst met query&#39;s ophalen
 
-U kunt een lijst van alle vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/queries` eindpunt te richten.
+U kunt een lijst van alle vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan `/queries` eindpunt.
 
 **API-indeling**
 
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Facultatief*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven.
+- `{QUERY_PARAMETERS}`: (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven.
 
 **Parameters query**
 
@@ -37,12 +37,12 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Als u een `-` toevoegt voordat u een item (`orderby=-created`) hebt gemaakt, worden de items in aflopende volgorde gesorteerd. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. `start=2` retourneert bijvoorbeeld een lijst die begint bij de derde query. (*Standaardwaarde: 0*) |
-| `property` | Filterresultaten op basis van velden. De filters **must** moeten uit HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `updated`, `state` en `id`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan) en `~` (bevat). `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert bijvoorbeeld alle query&#39;s met de opgegeven id. |
-| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. `excludeSoftDeleted=false` zal bijvoorbeeld **include** zachte geschrapte vragen. (*Boolean, standaardwaarde: true*) |
-| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Als deze waarde is ingesteld op false, worden **include** niet-door de gebruiker gestuurde query&#39;s, zoals CURSOR-definities, FETCH of metagegevensquery&#39;s weergegeven. (*Boolean, standaardwaarde: true*) |
+| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld: `start=2` Hiermee wordt een lijst geretourneerd die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `updated`, `state`, en `id`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan), en `~` (bevat). Bijvoorbeeld: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert alle query&#39;s met de opgegeven id. |
+| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. Bijvoorbeeld: `excludeSoftDeleted=false` zal **include** verwijderde softquery&#39;s. (*Boolean, standaardwaarde: true*) |
+| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Als deze waarde is ingesteld op false, wordt **include** query&#39;s die niet door gebruikers worden gestuurd, zoals CURSOR-definities, FETCH of metagegevensquery&#39;s. (*Boolean, standaardwaarde: true*) |
 
 **Verzoek**
 
@@ -51,7 +51,7 @@ Met het volgende verzoek wordt de laatste query opgehaald die voor uw IMS-organi
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -119,7 +119,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst met query&#39;s 
 
 ### Een query maken
 
-U kunt een nieuwe vraag tot stand brengen door een verzoek van de POST aan het `/queries` eindpunt te doen.
+U kunt een nieuwe vraag tot stand brengen door een verzoek van de POST aan `/queries` eindpunt.
 
 **API-indeling**
 
@@ -135,7 +135,7 @@ Het volgende verzoek leidt tot een nieuwe vraag, die door de waarden wordt gevor
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van de nieuwe query. Nadat de query is geactiveerd en correct is uitgevoerd, verandert `state` van `SUBMITTED` in `SUCCESS`.
+Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van de nieuwe query. Nadat de query is geactiveerd en correct is uitgevoerd, wordt de opdracht `state` verandert van `SUBMITTED` tot `SUCCESS`.
 
 ```json
 {
@@ -198,11 +198,11 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om [uw gecreeerde vraag ](#cancel-a-query) te annuleren.
+>U kunt de waarde van `_links.cancel` tot [uw gemaakte query annuleren](#cancel-a-query).
 
 ### Een query ophalen op ID
 
-U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een verzoek van de GET aan het `/queries` eindpunt te doen en de waarde `id` van de vraag in de verzoekweg te verstrekken.
+U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een verzoek van de GET aan `/queries` eindpunt en het verstrekken van de vraag `id` waarde in het aanvraagpad.
 
 **API-indeling**
 
@@ -212,14 +212,14 @@ GET /queries/{QUERY_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_ID}` | De `id` waarde van de vraag u wilt terugwinnen. |
+| `{QUERY_ID}` | De `id` De waarde van de query die u wilt ophalen. |
 
 **Verzoek**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -269,11 +269,11 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om [uw gecreeerde vraag ](#cancel-a-query) te annuleren.
+>U kunt de waarde van `_links.cancel` tot [uw gemaakte query annuleren](#cancel-a-query).
 
 ### Een query annuleren
 
-U kunt verzoeken om een gespecificeerde vraag te schrappen door een verzoek van PATCH aan het `/queries` eindpunt te doen en de waarde `id` van de vraag in de verzoekweg te verstrekken.
+U kunt verzoeken om een opgegeven query te verwijderen door een PATCH-aanvraag in te dienen bij de `/queries` eindpunt en het verstrekken van de vraag `id` waarde in het aanvraagpad.
 
 **API-indeling**
 
@@ -283,7 +283,7 @@ PATCH /queries/{QUERY_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_ID}` | De waarde `id` van de vraag u wilt annuleren. |
+| `{QUERY_ID}` | De `id` De waarde van de query die u wilt annuleren. |
 
 
 **Verzoek**
@@ -294,7 +294,7 @@ Voor deze API-aanvraag wordt de JSON-syntaxis voor patch gebruikt voor het laden
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json',
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -304,7 +304,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `op` | Als u de query wilt annuleren, moet u de parameter op met de waarde `cancel ` instellen. |
+| `op` | Als u de query wilt annuleren, moet u de parameter op met de waarde instellen `cancel `. |
 
 **Antwoord**
 

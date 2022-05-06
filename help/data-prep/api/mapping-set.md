@@ -5,8 +5,7 @@ title: API-eindpunt voor toewijzingssets
 topic-legacy: mapping sets
 description: U kunt het `/mappingSets eindpunt ` in Adobe Experience Platform API gebruiken om kaartreeksen programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 0%
@@ -15,15 +14,15 @@ ht-degree: 0%
 
 # Punt voor toewijzingssets
 
-Toewijzingssets kunnen worden gebruikt om te definiëren hoe gegevens in een bronschema worden toegewezen aan dat van een doelschema. U kunt het `/mappingSets` eindpunt in de Prep API van Gegevens gebruiken om kaartreeksen programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
+Toewijzingssets kunnen worden gebruikt om te definiëren hoe gegevens in een bronschema worden toegewezen aan dat van een doelschema. U kunt de `/mappingSets` eindpunt in de Prep API van Gegevens om kaartreeksen programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
 
 ## Lijsttoewijzingssets
 
-U kunt een lijst van alle afbeeldingsreeksen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/mappingSets` eindpunt te doen.
+U kunt een lijst van alle toewijzingsreeksen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/mappingSets` eindpunt.
 
 **API-indeling**
 
-Het `/mappingSets` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel de meeste van deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om de kostbare overhead te helpen verminderen. Nochtans, moet u zowel `start` als `limit` parameters als deel van uw verzoek omvatten. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+De `/mappingSets` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel de meeste van deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om de kostbare overhead te helpen verminderen. U moet echter beide opties opnemen `start` en `limit` -parameters als onderdeel van uw verzoek. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -34,10 +33,10 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{LIMIT}` | (**Required**) specificeert het aantal teruggekeerde kaartreeksen. |
-| `{START}` | (**Required**) Specificeert de compensatie van de pagina&#39;s van resultaten. Als u de eerste pagina met resultaten wilt ophalen, stelt u de waarde in op `start=0`. |
+| `{LIMIT}` | (**Vereist**) Hiermee geeft u het aantal geretourneerde toewijzingssets op. |
+| `{START}` | (**Vereist**) Geeft de verschuiving van de pagina&#39;s met resultaten aan. Als u de eerste pagina met resultaten wilt ophalen, stelt u de waarde in op `start=0`. |
 | `{NAME}` | Filtert de toewijzingssets op naam. |
-| `{ORDER_BY}` | Hiermee sorteert u de volgorde van de resultaten. De enige ondersteunde velden zijn `createdDate` en `updatedDate`. U kunt de eigenschap voorvullen met `+` of `-` om deze te sorteren in oplopende of aflopende volgorde. |
+| `{ORDER_BY}` | Hiermee sorteert u de volgorde van de resultaten. De enige ondersteunde velden zijn `createdDate` en `updatedDate`. U kunt de eigenschap vooraf samenvoegen met `+` of `-` om het te sorteren in oplopende of dalende orde. |
 | `{EXPAND_SCHEMA}` | Een Booleaanse waarde die bepaalt of het volledige uitvoerschema wordt geretourneerd als onderdeel van de reactie. |
 
 **Verzoek**
@@ -48,7 +47,7 @@ Het volgende verzoek zal de laatste twee kaartreeksen binnen uw IMS Organisatie 
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -167,7 +166,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Een toewijzingsset maken
 
-U kunt een nieuwe mappingsreeks tot stand brengen door een verzoek van de POST aan het `/mappingSets` eindpunt te doen.
+U kunt een nieuwe toewijzingenset maken door een POST aan te vragen bij de `/mappingSets` eindpunt.
 
 **API-indeling**
 
@@ -184,7 +183,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -219,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | De id van het XDM-schema waarnaar u verwijst. |
-| `outputSchema.schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie over dit gebied kan in [de ontwikkelaarsgids van de Registratie van het Schema](../../xdm/api/schemas.md#lookup) worden gevonden. |
+| `outputSchema.schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie over dit veld vindt u in het gedeelte [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/schemas.md#lookup). |
 | `mappings.sourceType` | Het brontype beschrijft hoe de waarde uit de bron aan de bestemming zal worden gehaald. |
 | `mappings.source` | De locatie waar u de gegevens wilt toewijzen. |
 | `mappings.destination` | De locatie waar de gegevens moeten worden toegewezen. |
@@ -241,7 +240,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over de zojuist
 
 ## Toewijzingen valideren
 
-U kunt bevestigen dat uw afbeeldingen behoorlijk werken door een verzoek van de POST aan het `/mappingSets/validate` eindpunt te doen.
+U kunt controleren of uw toewijzingen goed werken door een POST aan te vragen bij de `/mappingSets/validate` eindpunt.
 
 **API-indeling**
 
@@ -258,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -315,7 +314,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met validatiegegevens voor de 
 
 ## Gegevens voorvertonen voor toewijzingen
 
-U kunt voorproef waaraan uw gegevens zullen worden in kaart gebracht door een verzoek van de POST aan het `/mappingSets/preview` eindpunt te doen.
+U kunt een voorvertoning bekijken van de gegevens waarnaar uw gegevens worden toegewezen door een POST aan te vragen bij de `/mappingSets/preview` eindpunt.
 
 **API-indeling**
 
@@ -330,7 +329,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
 {
@@ -394,7 +393,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een voorvertoning van de 
 
 ## Een toewijzingenset opzoeken
 
-U kunt een specifieke die afbeelding terugwinnen door zijn identiteitskaart in de weg van een verzoek van de GET aan het `/mappingSets` eindpunt te verstrekken wordt geplaatst. Dit eindpunt steunt ook verscheidene vraagparameters om u te helpen details over de gespecificeerde versie van de kaartreeks terugwinnen.
+U kunt een specifieke toewijzingenset terugwinnen door zijn identiteitskaart in de weg van een verzoek van de GET aan te verstrekken `/mappingSets` eindpunt. Dit eindpunt steunt ook verscheidene vraagparameters om u te helpen details over de gespecificeerde versie van de kaartreeks terugwinnen.
 
 **API-indeling**
 
@@ -406,7 +405,7 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**Required**) identiteitskaart van de mappenset die u wilt terugwinnen. |
+| `{MAPPING_SET_ID}` | (**Vereist**) De id van de toewijzingsset die u wilt ophalen. |
 | `{EXPAND_SCHEMA}` | Een Booleaanse queryparameter die bepaalt of het uitvoerschema moet worden geretourneerd als onderdeel van de reactie. |
 | `{VERSION}` | Een parameter van de geheelvraag die bepaalt welke versie van de afbeelding die wordt geplaatst om terug te winnen. |
 
@@ -418,7 +417,7 @@ Het volgende verzoek wint gedetailleerde informatie over een gespecificeerde map
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -538,7 +537,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
                 }
             },
             "version": "1.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/89abc189258b1cb1a816d8f2b2341a6d98000ed8f4008305"
         },
         "schemaRef": {
@@ -585,7 +584,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Een toewijzingsset bijwerken
 
-U kunt een mappingsreeks bijwerken door zijn identiteitskaart in de weg van een `PUT` verzoek aan het `mappingSets` eindpunt te verstrekken.
+U kunt een toewijzingsset bijwerken door de id ervan op te geven in het pad van een `PUT` verzoek aan de `mappingSets` eindpunt.
 
 **API-indeling**
 
@@ -604,7 +603,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -832,7 +831,7 @@ Het volgende verzoek retourneert alle toewijzingen in de opgegeven toewijzingens
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -936,7 +935,7 @@ Het volgende verzoek wint informatie over een specifieke afbeelding in de gespec
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings/394bec970d54410b98e1d4c55a3843ca \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

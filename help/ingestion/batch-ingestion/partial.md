@@ -5,7 +5,7 @@ title: Overzicht van partiële batchverwerking
 topic-legacy: overview
 description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 636d6dcbe8eb73b7898fc3794f6b4567956e5618
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezel
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 

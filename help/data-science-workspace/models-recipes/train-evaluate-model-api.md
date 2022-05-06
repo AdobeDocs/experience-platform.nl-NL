@@ -1,34 +1,33 @@
 ---
 keywords: Experience Platform;trainen en evalueren;Data Science Workspace;populaire onderwerpen;Sensei Machine Learning API
 solution: Experience Platform
-title: Een model trainen en evalueren met de API voor leren van Sensei-machines
+title: Een model trainen en evalueren met de API voor leren van Sensei Machine
 topic-legacy: tutorial
 type: Tutorial
-description: Deze zelfstudie laat u zien hoe u een model kunt maken, trainen en evalueren met API-aanroepen van Sensei Machine Learning.
+description: In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen voor leren van Sensei-machines.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 0%
 
 ---
 
-# Een model trainen en evalueren met de [!DNL Sensei Machine Learning]-API
+# Een model trainen en evalueren met behulp van de [!DNL Sensei Machine Learning] API
 
 
-In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Raadpleeg [dit document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) voor een gedetailleerde lijst met API-documentatie.
+In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Zie [dit document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) voor een gedetailleerde lijst van API documentatie.
 
 ## Vereisten
 
-Volg [Importeer een verpakte ontvanger met behulp van de API](./import-packaged-recipe-api.md) voor het maken van een engine, die nodig is om een model op te leiden en te evalueren met behulp van de API.
+Volg de [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-api.md) voor het maken van een engine, die nodig is om een model op te leiden en te evalueren met behulp van de API.
 
-Volg het [Experience Platform API authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) beginnen API vraag te maken.
+Volg de [Zelfstudie over Experience Platform API-verificatie](https://www.adobe.com/go/platform-api-authentication-en) om API-aanroepen te starten.
 
 In de zelfstudie hebt u nu de volgende waarden:
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
-- `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+- `{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 - `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 - Koppeling naar een Docker-afbeelding van een intelligente service
@@ -52,7 +51,7 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 ### Een MLInstance maken
 
-Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die wanneer het creëren van een Motor van [een verpakte Ontvanger gebruikend API](./import-packaged-recipe-ui.md) leerprogramma is teruggekeerd invoeren.
+Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U gebruikt de `{ENGINE_ID}` dat is geretourneerd bij het maken van een engine van de [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-ui.md) zelfstudie.
 
 **Verzoek**
 
@@ -62,12 +61,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d `{JSON_PAYLOAD}`
 ```
 
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: De configuratie van onze MLInstance. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
@@ -124,9 +123,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->In `{JSON_PAYLOAD}`, bepalen wij parameters die voor opleiding en het scoren in `tasks` serie worden gebruikt. De `{ENGINE_ID}` is identiteitskaart van de Motor u wilt gebruiken en het `tag` gebied is een facultatieve parameter die wordt gebruikt om de Instantie te identificeren.
+>In de `{JSON_PAYLOAD}`, definiëren we parameters die gebruikt worden voor training en scores in de `tasks` array. De `{ENGINE_ID}` is de id van de engine die u wilt gebruiken en de `tag` field is een facultatieve parameter die wordt gebruikt om de Instantie te identificeren.
 
-De reactie bevat `{INSTANCE_ID}` die MLInstance vertegenwoordigt die wordt gecreeerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
+Het antwoord bevat de `{INSTANCE_ID}` die staat voor de MLInstance die wordt gecreëerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
 
 **Antwoord**
 
@@ -173,12 +172,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY' \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Het gemaakte experimentele object. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
@@ -220,7 +219,7 @@ De reactie van het project Experiment ziet er zo uit.
 
 Gepland Experimenten worden gebruikt zodat wij niet te hoeven om elke enkele Runs van de Experiment via een API vraag tot stand te brengen. In plaats daarvan, verstrekken wij alle noodzakelijke parameters tijdens de verwezenlijking van de Experiment en elke looppas zal periodiek worden gecreeerd.
 
-Om op de verwezenlijking van een gepland Experiment te wijzen, moeten wij een `template` sectie in het lichaam van het verzoek toevoegen. In `template`, zijn alle noodzakelijke parameters voor het plannen van looppas inbegrepen zoals `tasks`, die op welke actie wijzen, en `schedule`, die op de timing van de geplande looppas wijst.
+Om de oprichting van een gepland experiment aan te geven, moeten we een `template` in de tekst van het verzoek. In `template`, alle noodzakelijke parameters voor het plannen van looppas inbegrepen zoals `tasks`, waarin wordt aangegeven welke actie wordt ondernomen, en `schedule`, die op de timing van de geplande looppas wijst.
 
 **Verzoek**
 
@@ -229,12 +228,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Te posten gegevensset. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
@@ -267,7 +266,7 @@ curl -X POST \
 }
 ```
 
-Wanneer wij een Experiment creëren, zou het lichaam, `{JSON_PAYLOAD}`, of `mlInstanceId` of de `mlInstanceQuery` parameter moeten bevatten. In dit voorbeeld wordt elke 20 minuten een uitvoering aangeroepen die in de parameter `cron` is ingesteld, te beginnen bij `startTime` tot `endTime`.
+Als we een experiment maken, het lichaam, `{JSON_PAYLOAD}`bevat `mlInstanceId` of de `mlInstanceQuery` parameter. In dit voorbeeld wordt elke 20 minuten een uitvoering aangeroepen die is ingesteld in het dialoogvenster `cron` parameter, beginnend bij `startTime` tot de `endTime`.
 
 **Antwoord**
 
@@ -307,7 +306,7 @@ Wanneer wij een Experiment creëren, zou het lichaam, `{JSON_PAYLOAD}`, of `mlIn
 
 ### Een experimentele training maken
 
-Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U zult `{EXPERIMENT_ID}` nodig hebben en verklaart wat `mode` u in het verzoeklichaam wilt teweegbrengen.
+Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U hebt de `{EXPERIMENT_ID}` en geeft aan wat `mode` u wilt in de aanvraaginstantie teweegbrengen.
 
 **Verzoek**
 
@@ -316,13 +315,13 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Als u een trainingsrun wilt maken, moet u het volgende opnemen in het hoofdgedeelte:
@@ -333,7 +332,7 @@ curl -X POST \
 }
 ```
 
-U kunt de configuratieparameters ook overschrijven door een `tasks`-array op te nemen:
+U kunt de configuratieparameters ook overschrijven door een `tasks` array:
 
 ```JSON
 {
@@ -352,7 +351,7 @@ U kunt de configuratieparameters ook overschrijven door een `tasks`-array op te 
 }
 ```
 
-U zult de volgende reactie krijgen die u `{EXPERIMENT_RUN_ID}` en de configuratie onder `tasks` zal vertellen.
+U krijgt het volgende antwoord dat u op de hoogte brengt van `{EXPERIMENT_RUN_ID}` en de configuratie onder `tasks`.
 
 **Antwoord**
 
@@ -378,7 +377,7 @@ U zult de volgende reactie krijgen die u `{EXPERIMENT_RUN_ID}` en de configurati
 
 ### De status Experimentair uitvoeren ophalen
 
-De status van de uitvoering van het experiment kan worden opgevraagd met `{EXPERIMENT_RUN_ID}`.
+U kunt de status van de Experimentrun opvragen bij de `{EXPERIMENT_RUN_ID}`.
 
 **Verzoek**
 
@@ -386,19 +385,19 @@ De status van de uitvoering van het experiment kan worden opgevraagd met `{EXPER
 curl -X GET \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs/{EXPERIMENT_RUN_ID}/status \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}'
 ```
 
 `{EXPERIMENT_ID}`: De id die het experiment vertegenwoordigt.\
 `{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 **Antwoord**
 
-De vraag van de GET zal de status in de `state` parameter zoals hieronder getoond verstrekken:
+De vraag van de GET zal de status in `state` parameter zoals hieronder getoond:
 
 ```JSON
 {
@@ -434,12 +433,12 @@ De vraag van de GET zal de status in de `state` parameter zoals hieronder getoon
 `{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
 `{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentenrun valt.
 
-Naast de staat `DONE`, omvatten andere staten:
+Naast de `DONE` staat , andere staten zijn :
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Om meer informatie te krijgen, kunnen de gedetailleerde logboeken onder de `tasklogs` parameter worden gevonden.
+Als u meer informatie wilt, vindt u de gedetailleerde logboekbestanden in het gedeelte `tasklogs` parameter.
 
 ### Het getrainde model ophalen
 
@@ -451,12 +450,12 @@ Om het opgeleide model te krijgen hierboven gecreeerd tijdens opleiding, doen wi
 curl -X GET \
   'https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de uitvoering van het experiment waarop u zich wilt richten. Dit vindt u in het antwoord bij het maken van uw experimentele versie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
@@ -490,7 +489,7 @@ De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland Experiment vóór zijn `endTime` wilt ophouden, kan dit worden gedaan door een verzoek van DELETE aan `{EXPERIMENT_ID}` te vragen
+Als u de uitvoering van een gepland experiment wilt stoppen vóór de uitvoering ervan `endTime`, kan dit worden gedaan door een verzoek van DELETE aan `{EXPERIMENT_ID}`
 
 **Verzoek**
 
@@ -498,12 +497,12 @@ Als u de uitvoering van een gepland Experiment vóór zijn `endTime` wilt ophoud
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 >[!NOTE]
 >
@@ -523,4 +522,4 @@ Hier volgt de reactie waarbij wordt gemeld dat het experiment is verwijderd.
 
 ## Volgende stappen
 
-In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In [volgende oefening](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het best presterende opgeleide model.
+In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentatieroutes en getrainde modellen. In de [volgende oefening](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het hoogste presterende getrainde model.

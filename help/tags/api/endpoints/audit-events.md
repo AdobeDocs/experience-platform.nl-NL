@@ -1,7 +1,8 @@
 ---
 title: Het eindpunt van gebeurtenissen controleren
 description: Leer hoe te om vraag aan het /audit_events eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 1%
@@ -12,11 +13,11 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->De implementatie van het `/audit_events` eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
+>De uitvoering van de `/audit_events` Het eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
 
-Een auditgebeurtenis is een record van een specifieke wijziging van een andere bron in de Reactor-API, die wordt gegenereerd op het moment dat de wijziging wordt aangebracht. Dit zijn systeemgebeurtenissen die aan door het gebruik van [callback](./callbacks.md) kunnen worden geabonneerd. Het `/audit_events` eindpunt in Reactor API staat u toe om controlegebeurtenissen binnen uw ervaringstoepassing programmatically te beheren.
+Een auditgebeurtenis is een record van een specifieke wijziging van een andere bron in de Reactor-API, die wordt gegenereerd op het moment dat de wijziging wordt aangebracht. Dit zijn systeemgebeurtenissen waarop kan worden geabonneerd door het gebruik van een [callback](./callbacks.md). De `/audit_events` Het eindpunt in Reactor API staat u toe om controlegebeurtenissen binnen uw ervaringstoepassing programmatically te beheren.
 
-Controlegebeurtenissen hebben de vorm van `{RESOURCE_TYPE}.{EVENT}`, zoals `build.created` of `rule.updated`.
+Auditgebeurtenissen worden gestructureerd in de vorm van `{RESOURCE_TYPE}.{EVENT}`, zoals `build.created` of `rule.updated`.
 
 Het middeltype kan om het even welke volgend zijn:
 
@@ -38,11 +39,11 @@ De volgende gebeurtenissen worden ondersteund voor elk brontype:
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met auditgebeurtenissen ophalen {#list}
 
-U kunt een lijst van controlegebeurtenissen voor alle eigenschappen terugwinnen die door uw organisatie worden bezeten door een verzoek van de GET aan het `/audit_events` eindpunt te doen.
+U kunt een lijst van controlegebeurtenissen voor alle eigenschappen terugwinnen die door uw organisatie worden bezeten door een verzoek van de GET tot aan `/audit_events` eindpunt.
 
 **API-indeling**
 
@@ -57,7 +58,7 @@ curl -X GET \
   https://reactor.adobe.io/audit_events \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -180,7 +181,7 @@ curl -X GET \
   https://reactor.adobe.io/audit_events/AEa98742de8ef044d8b86767aa6a15a674 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

@@ -6,7 +6,7 @@ title: Aan de slag met Customer AI
 topic-legacy: Getting started
 description: Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Het downloaden van AI-scores van de Klant gebeurt via een combinatie van API-aan
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 

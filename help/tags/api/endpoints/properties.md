@@ -1,7 +1,8 @@
 ---
 title: Het eindpunt Eigenschappen
 description: Leer hoe te om vraag aan het /properties eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 1%
@@ -10,7 +11,7 @@ ht-degree: 1%
 
 # Het eindpunt Eigenschappen
 
-Een eigenschap is een containerconstructie die de meeste andere bronnen bevat die beschikbaar zijn in de Reactor-API. U beheert eigenschappen programmatically gebruikend het `/properties` eindpunt.
+Een eigenschap is een containerconstructie die de meeste andere bronnen bevat die beschikbaar zijn in de Reactor-API. U beheert via programmacode de eigenschappen `/properties` eindpunt.
 
 In de middelhiërarchie, is een bezit de eigenaar van het volgende:
 
@@ -24,13 +25,13 @@ In de middelhiërarchie, is een bezit de eigenaar van het volgende:
 * [Regelcomponenten](./rule-components.md)
 * [Regels](./rules.md)
 
-Een eigenschap behoort tot exact één [bedrijf](./companies.md). Een bedrijf kan vele eigenschappen hebben.
+Een eigenschap behoort tot exact één eigenschap [bedrijf](./companies.md). Een bedrijf kan vele eigenschappen hebben.
 
-Voor meer algemene informatie over eigenschappen en hun rol in markeringsbeheer, zie het overzicht op [bedrijven en eigenschappen](../../ui/administration/companies-and-properties.md).
+Voor meer algemene informatie over eigenschappen en hun rol in markeringsbeheer, zie het overzicht over [bedrijven en eigendommen](../../ui/administration/companies-and-properties.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met eigenschappen ophalen {#list}
 
@@ -50,7 +51,7 @@ GET /companies/{COMPANY_ID}/properties
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde eigenschappen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde eigenschappen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -59,7 +60,7 @@ curl -X GET \
   https://reactor.adobe.io/companies/CO2bf094214ffd4785bb4bcf88c952a7c1/properties \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -279,7 +280,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR48ade10e6acf4385ba96214e9f5d31e1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -397,14 +398,14 @@ POST /company/{COMPANY_ID}/properties
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe eigenschap voor de opgegeven eigenschap gemaakt. De vraag associeert ook het bezit met een bestaande uitbreiding door het `relationships` bezit. Zie de gids op [relaties](../guides/relationships.md) voor meer informatie.
+Met het volgende verzoek wordt een nieuwe eigenschap voor de opgegeven eigenschap gemaakt. De vraag associeert ook het bezit met een bestaande uitbreiding door `relationships` eigenschap. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/companies/CO2bf094214ffd4785bb4bcf88c952a7c1/properties \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -427,14 +428,14 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes.name` | **(Vereist)** Een leesbare naam voor de eigenschap. |
-| `attributes.platform` | **(Vereist)** Het platform voor de eigenschap. Kan `web` zijn voor wegeigenschappen of `mobile` of `edge` voor mobiele eigenschappen. |
-| `attributes.domains` | **(Vereist voor wegeigenschappen)** Een array van URL-domeinen voor de eigenschap. |
+| `attributes.platform` | **(Vereist)** Het platform voor de eigenschap. Kan `web` voor wegeigenschappen, of `mobile` of `edge` voor mobiele eigenschappen. |
+| `attributes.domains` | **(Vereist voor westeigenschappen)** Een array van URL-domeinen voor de eigenschap. |
 | `attributes.development` | Een Booleaanse waarde die aangeeft of dit een ontwikkeleigenschap is. |
 | `attributes.privacy` | Een tekenreeks die kan worden gebruikt om te verwijzen naar overwegingen met betrekking tot privacy voor de eigenschap. |
 | `attributes.rule_component_sequencing_enabled` | Een Booleaanse waarde voor of regelcomponentsequencing moet worden ingeschakeld voor deze eigenschap. |
 | `attributes.ssl_enabled` | Een Booleaanse waarde die aangeeft of SSL (Secure Sockets Layer) moet worden ingeschakeld voor deze eigenschap. |
 | `attributes.undefined_vars_return_empty` | Een Booleaanse waarde die aangeeft of ongedefinieerde variabelen als leeg moeten worden geretourneerd voor deze eigenschap. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `properties` zijn. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -551,14 +552,14 @@ PATCH /properties/{PROPERTY_ID}
 
 **Verzoek**
 
-Met het volgende verzoek worden `name` en `domains` bijgewerkt voor een bestaande eigenschap.
+De volgende aanvraag werkt de `name` en `domains` voor een bestaande eigenschap.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/properties/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -577,8 +578,8 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de eigenschap moeten worden bijgewerkt. De volgende kenmerken kunnen worden bijgewerkt voor een eigenschap: <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
-| `id` | De `id` van de eigenschap die u wilt bijwerken. Dit zou de `{PROPERTY_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `properties` zijn. |
+| `id` | De `id` van de eigenschap die u wilt bijwerken. Dit moet overeenkomen met de `{PROPERTY_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -700,7 +701,7 @@ curl -X DELETE \
   https://reactor.adobe.io/properties/PR541dbb24bad54dceb04710d7a9e7a740 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**
@@ -709,17 +710,17 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responste
 
 ## Notities voor een eigenschap beheren {#notes}
 
-Eigenschappen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie [Notitie eindpuntgids](./notes.md) voor meer informatie over hoe te om nota&#39;s voor eigenschappen en andere compatibele middelen te beheren.
+Eigenschappen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor eigenschappen en andere compatibele middelen te beheren.
 
 ## Gerelateerde bronnen voor een eigenschap ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bezit terug te winnen. Wanneer [het opzoeken van een bezit](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bezit terug te winnen. Wanneer [zoeken, eigenschap](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
 
-Zie de [relatiehandleiding](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### Verwante callbacks voor een eigenschap weergeven {#callbacks}
 
-U kunt van [callbacks](./callbacks.md) een lijst maken die op een bezit door `/callbacks` aan de weg van een raadplegingsverzoek toe te voegen worden geregistreerd.
+U kunt de lijst [callbacks](./callbacks.md) die op een eigenschap zijn geregistreerd door toevoegen `/callbacks` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -740,7 +741,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -794,7 +795,7 @@ Een succesvolle reactie keert een lijst van callbacks terug die door het gespeci
 
 ### Verwante gegevenselementen weergeven voor een eigenschap {#data-elements}
 
-U kunt een lijst maken van [gegevenselementen](./data-elements.md) die door een bezit door `/data_elements` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
+U kunt de lijst [gegevenselementen](./data-elements.md) die eigendom zijn van een eigendom door bijvoegen `/data_elements` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -815,7 +816,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -935,7 +936,7 @@ Een geslaagde reactie retourneert een lijst met gegevenselementen die het eigend
 
 ### Verwante omgevingen weergeven voor een eigenschap {#environments}
 
-U kunt een lijst maken van [milieu&#39;s](./environments.md) die door een bezit door `/environments` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
+U kunt de lijst [omgevingen](./environments.md) die eigendom zijn van een eigendom door bijvoegen `/environments` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -956,7 +957,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR06c9196bc57048dd8ff169c27baeeca8/environments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1055,7 +1056,7 @@ Een geslaagde reactie retourneert een lijst met omgevingen die eigendom zijn van
 
 ### Verwante extensies weergeven voor een eigenschap {#extensions}
 
-U kunt een lijst maken van [extensions](./extensions.md) die door een bezit door `/extensions` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
+U kunt de lijst [extensions](./extensions.md) die eigendom zijn van een eigendom door bijvoegen `/extensions` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -1076,7 +1077,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1186,7 +1187,7 @@ Een succesvol antwoord retourneert een lijst met extensies die eigendom zijn van
 
 ### Verwante hosts voor een eigenschap weergeven {#hosts}
 
-U kunt van [hosts](./hosts.md) een lijst maken die door een bezit door `/hosts` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
+U kunt de lijst [gastheren](./hosts.md) die door een eigenschap worden gebruikt door toevoegen `/hosts` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -1207,7 +1208,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRd428c2a25caa4b32af61495f5809b737/hosts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1264,7 +1265,7 @@ Een succesvolle reactie keert een lijst van gastheren terug die door het gespeci
 
 ### Verwante regels voor een eigenschap weergeven {#rules}
 
-U kunt van [rules](./rules.md) een lijst maken die door een bezit door `/rules` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
+U kunt de lijst [regels](./rules.md) die door een eigenschap worden gebruikt door toevoegen `/rules` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -1285,7 +1286,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR41f64d2a9d9b4862b0582c5ff6a07504/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1377,7 +1378,7 @@ Een succesvolle reactie keert een lijst van regels terug die door een gespecific
 
 ### Verwante onderneming opzoeken voor een onroerend goed {#company}
 
-U kunt het bedrijf opzoeken dat een bezit door `/company` aan de weg van een raadplegingsverzoek toe te voegen bezit.
+U kunt het bedrijf opzoeken dat een bezit door toe te voegen bezit `/company` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -1387,7 +1388,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{PROPERTY_ID}` | De `id` van het bezit waarvan bedrijf u omhoog wilt kijken. |
+| `{PROPERTY_ID}` | De `id` van het bezit het waarvan bedrijf u wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1398,7 +1399,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/HT5d90148e72224224aac9bc0b01498b84/company \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

@@ -5,8 +5,7 @@ title: Efficiënt beleid API-eindpunt
 topic-legacy: developer guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor het weergeven van effectief beleid met behulp van de API voor toegangsbeheer voor Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 # Doeltreffend beleidseindpunt
 
-Om efficiënt beleid voor de huidige gebruiker te bekijken, doe een verzoek van de POST aan het `/acl/effective-policies` eindpunt in [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
+Om effectief beleid voor de huidige gebruiker te bekijken, doe een verzoek van de POST aan `/acl/effective-policies` in de [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
 
 **API-indeling**
 
@@ -25,14 +24,14 @@ POST /acl/effective-policies
 
 **Verzoek**
 
-De volgende verzoeken wint informatie over &quot;[!UICONTROL Manage Datasets]&quot;toestemming en toegang tot &quot;[!UICONTROL schemas]&quot;middeltype voor de huidige gebruiker terug.
+Met de volgende verzoeken wordt informatie opgehaald over &quot;[!UICONTROL Manage Datasets]&quot; toestemming en toegang tot &quot;[!UICONTROL schemas]&quot; resource type voor de huidige gebruiker.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/access-control/acl/effective-policies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -43,11 +42,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Voor een volledige lijst van toestemmingen en middeltypes die in de ladingsserie kunnen worden verstrekt, zie de bijlage sectie op [toegelaten toestemmingen en middeltypes](#accepted-permissions-and-resource-types).
+>Voor een volledige lijst van toestemmingen en middeltypes die in de ladingsserie kunnen worden verstrekt, zie de bijlage sectie op [geaccepteerde machtigingen en brontypen](#accepted-permissions-and-resource-types).
 
 **Antwoord**
 
-Een succesvolle reactie keert informatie over de toestemmingen en middeltypes terug die in het verzoek worden verstrekt. De reactie omvat de actieve toestemmingen de huidige gebruiker voor de middeltypes die in het verzoek worden gespecificeerd. Als om het even welke toestemmingen inbegrepen in de verzoeklading voor de huidige gebruiker actief zijn, keert API de toestemming met een koord (`*`) terug om erop te wijzen dat de toestemming actief is. Eventuele machtigingen die in de aanvraag zijn opgegeven en die niet actief zijn voor de gebruiker, worden weggelaten uit de antwoordlading.
+Een succesvolle reactie keert informatie over de toestemmingen en middeltypes terug die in het verzoek worden verstrekt. De reactie omvat de actieve toestemmingen de huidige gebruiker voor de middeltypes die in het verzoek worden gespecificeerd. Als er machtigingen in de payload van de aanvraag actief zijn voor de huidige gebruiker, retourneert de API de bevoegdheid met een asterisk (`*`) om aan te geven dat de machtiging actief is. Eventuele machtigingen die in de aanvraag zijn opgegeven en die niet actief zijn voor de gebruiker, worden weggelaten uit de antwoordlading.
 
 ```json
 {
@@ -66,15 +65,15 @@ Een succesvolle reactie keert informatie over de toestemmingen en middeltypes te
 
 ## Volgende stappen
 
-Dit document besprak hoe te om vraag aan [!DNL Access Control] API te maken om informatie over actieve toestemmingen en verwant beleid voor middeltypes terug te keren. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie [toegangsbeheeroverzicht](../home.md).
+In dit document wordt beschreven hoe u de [!DNL Access Control] API om informatie over actieve toestemmingen en verwant beleid voor middeltypes terug te keren. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie de [toegangsbeheeroverzicht](../home.md).
 
 ## Aanhangsel
 
-Deze sectie bevat aanvullende informatie voor het gebruik van de [!DNL Access Control]-API.
+Deze sectie verstrekt aanvullende informatie voor het gebruiken van [!DNL Access Control] API.
 
 ### Toegelaten toestemmingen en middeltypes
 
-Het volgende is een lijst van toestemmingen en middeltypes u in de nuttige lading van een verzoek van de POST aan het `/acl/active-permissions` eindpunt kunt omvatten.
+Hier volgt een lijst met machtigingen en typen bronnen die u kunt opnemen in de lading van een verzoek van een POST aan de `/acl/active-permissions` eindpunt.
 
 **Toestemmingen**
 

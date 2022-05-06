@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;Adobe Experience Platfo
 solution: Experience Platform
 title: Aan de slag met Adobe Experience Platform API's
 topic-legacy: api guide
-description: Adobe Experience Platform biedt API-services die nauw met elkaar zijn verbonden. Deze gids bevat informatie over de beschikbare diensten, vereiste kopballen voor verrichtingen CRUD, foutenmeldingen, de inzamelingen van Postman, en de vraag van steekproefAPI.
+description: Adobe Experience Platform biedt API-services die nauw met elkaar zijn verbonden. Deze handleiding bevat informatie over de beschikbare services, vereiste headers voor CRUD-bewerkingen, foutberichten, Postman-verzamelingen en voorbeeld-API-aanroepen.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: e62e4e3a12ad2a85de5b10c60fde3618cde84c4b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Om met succes vraag aan Platform eindpunten te maken, moet u voltooien [verifica
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ### Sandbox-header
 
@@ -44,11 +44,11 @@ Adobe Experience Platform API&#39;s maken gebruik van verschillende onderliggend
 
 Ga voor meer informatie over de onderliggende API-technologieën die door het Platform worden gebruikt, zoals bijvoorbeeld JSON-schemaobjecten, naar de [Grondbeginselen van Experience Platform API](api-fundamentals.md) hulplijn.
 
-## Postmanverzamelingen voor Experience Platform-API&#39;s
+## Postman-verzamelingen voor Experience Platform-API&#39;s
 
 Postman is een samenwerkingsplatform voor API-ontwikkeling waarmee u omgevingen kunt instellen met vooraf ingestelde variabelen, API-verzamelingen kunt delen, CRUD-aanvragen kunt stroomlijnen en nog veel meer. De meeste Platform API diensten hebben de inzamelingen van Postman die kunnen worden gebruikt om bij het maken van API vraag te helpen.
 
-Ga voor meer informatie over Postman over het instellen van een omgeving, een lijst met beschikbare verzamelingen en het importeren van verzamelingen naar de [Documentatie Platform Postman](postman.md).
+Ga voor meer informatie over Postman, zoals hoe u een omgeving kunt instellen, een lijst met beschikbare verzamelingen en hoe u verzamelingen kunt importeren naar de [Platform Postman-documentatie](postman.md).
 
 ## API-voorbeeldaanroepen lezen {#sample-api}
 
@@ -80,7 +80,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -144,4 +144,4 @@ In dit document zijn de vereiste kopteksten, beschikbare hulplijnen en een voorb
 
 Voor antwoorden op veelgestelde vragen raadpleegt u de [Handleiding voor het oplossen van problemen met Platforms](troubleshooting.md).
 
-Als u een Postman-omgeving wilt instellen en de beschikbare Postman-collecties wilt verkennen, raadpleegt u de [Platform Postman-gids](postman.md).
+Als u een Postman-omgeving wilt instellen en de beschikbare Postman-verzamelingen wilt verkennen, raadpleegt u de [Platform Postman-handleiding](postman.md).

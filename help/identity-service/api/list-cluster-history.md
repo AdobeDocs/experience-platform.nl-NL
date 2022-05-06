@@ -5,8 +5,7 @@ title: Cluster-geschiedenis van een identiteit ophalen
 topic-legacy: API guide
 description: Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. De Dienst van de identiteit verstrekt zicht in de clusterverenigingen van een bepaalde identiteit in tijd.
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -17,10 +16,10 @@ ht-degree: 0%
 
 Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. [!DNL Identity Service] geeft in de loop der tijd zichtbaarheid aan de clusterverenigingen van een bepaalde identiteit.
 
-Gebruik de optionele parameter `graph-type` om het uitvoertype aan te geven waaruit de cluster moet worden opgehaald. De opties zijn:
+Optioneel gebruiken `graph-type` parameter om op het outputtype te wijzen om de cluster van te krijgen. De opties zijn:
 
 - `None` - Geen identiteitsstitching uitvoeren.
-- `Private Graph` - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Als geen `graph-type` wordt verstrekt, is dit het gebrek.
+- `Private Graph` - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Indien niet `graph-type` is opgegeven, is dit de standaardinstelling.
 
 ## De clustergeschiedenis van één identiteit ophalen
 
@@ -32,42 +31,42 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Verzoek**
 
-Optie 1: Geef de identiteit op als naamruimte (`nsId`, op id) en als id-waarde (`id`).
+Optie 1: De identiteit opgeven als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?nsId=411&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 2: Geef de identiteit op als naamruimte (`ns`, op naam) en als id-waarde (`id`).
+Optie 2: De identiteit opgeven als naamruimte (`ns`, op naam) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?ns=AMO&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie van dit document over [het ophalen van de XID voor een identiteit](./list-native-id.md) voor meer informatie over het verkrijgen van de XID van een identiteit.
+Optie 3: De identiteit opgeven als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?xid=CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ## De clustergeschiedenis van meerdere identiteiten ophalen
 
-Gebruik de methode `POST` als een batchequivalent van de hierboven beschreven methode `GET` om de clusterhistorie van meerdere identiteiten te retourneren.
+Gebruik de `POST` methode als equivalent van de partij `GET` hierboven beschreven methode om de clusterhistorie van meerdere identiteiten te retourneren.
 
 >[!NOTE]
 >
@@ -110,7 +109,7 @@ Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij 
 
 **Studieverzoek**
 
-Het gebruik van `x-uis-cst-ctx: stub` header retourneert een stopbed response. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
+Gebruik van `x-uis-cst-ctx: stub` header retourneert een onderbroken reactie. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
 
 ```shell
 curl -X POST \
@@ -118,7 +117,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'x-uis-cst-ctx: stub' \
   -d '{
@@ -135,7 +134,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "xids": ["GYMBWaoXbMtZ1j4eAAACepuQGhs","b2NJK9a5X7x4LVE4rUqkMyM"],
@@ -151,7 +150,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "compositeXids": [{
@@ -219,4 +218,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga aan het volgende leerprogramma aan [lijstidentiteitstoewijzingen](./list-identity-mappings.md) te werk
+Ga naar de volgende zelfstudie om [lijst met identiteitstoewijzingen](./list-identity-mappings.md)

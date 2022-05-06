@@ -1,7 +1,8 @@
 ---
 title: Callbacks eindpunt
 description: Leer hoe te om vraag aan het /callbacks eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 1%
@@ -12,7 +13,7 @@ ht-degree: 1%
 
 Een callback is een bericht dat de Reactor API naar een specifieke URL verzendt (gewoonlijk één die door uw organisatie wordt ontvangen).
 
-Callbacks zijn bedoeld om samen met [auditgebeurtenissen](./audit-events.md) aan spooractiviteiten in Reactor API worden gebruikt. Telkens wanneer een controlegebeurtenis van een bepaald type wordt geproduceerd, kan een callback een passend bericht naar gespecificeerde URL verzenden.
+Callbacks zijn bedoeld om samen met [auditgebeurtenissen](./audit-events.md) de activiteiten in de Reactor-API volgen. Telkens wanneer een controlegebeurtenis van een bepaald type wordt geproduceerd, kan een callback een passend bericht naar gespecificeerde URL verzenden.
 
 De service achter de URL die in de callback is opgegeven, moet reageren met HTTP-statuscode 200 (OK) of 201 (Gemaakt). Als de dienst niet met één van beiden van deze statuscodes antwoordt, wordt de berichtlevering opnieuw geprobeerd met de volgende intervallen:
 
@@ -30,11 +31,11 @@ De service achter de URL die in de callback is opgegeven, moet reageren met HTTP
 
 Als alle leveringspogingen zijn mislukt, wordt het bericht genegeerd.
 
-Een callback behoort tot precies één [property](./properties.md). Een eigenschap kan vele callbacks hebben.
+Een callback behoort tot precies één [eigenschap](./properties.md). Een eigenschap kan vele callbacks hebben.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Callbacks weergeven {#list}
 
@@ -54,7 +55,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde callbacks op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde callbacks op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -63,7 +64,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -138,7 +139,7 @@ curl -X GET \
   https://reactor.adobe.io/callbacks/CBeef389cee8d84e69acef8665e4dcbef6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -191,7 +192,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van [eigenschap](./properties.md) die u de callback onder definieert. |
+| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de callback onder bepaalt. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -202,7 +203,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR5e22de986a7c4070965e7546b2bb108d/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -219,7 +220,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `url` | De bestemming URL voor het callback bericht. De URL moet de HTTPS-protocolextensie gebruiken. |
-| `subscriptions` | Een array van tekenreeksen die de gebeurtenistypen van de audit aangeven die de callback zullen activeren. Zie [de gids van het eindpunt van controlegebeurtenissen ](./audit-events.md) voor een lijst van mogelijke gebeurtenistypen. |
+| `subscriptions` | Een array van tekenreeksen die de gebeurtenistypen van de audit aangeven die de callback zullen activeren. Zie de [eindhandleiding voor auditgebeurtenissen](./audit-events.md) voor een lijst met mogelijke gebeurtenistypen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -277,14 +278,14 @@ PUT /callbacks/{CALLBACK_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt de `subscriptions`-array bijgewerkt voor een bestaande callback.
+De volgende aanvraag werkt de `subscriptions` array voor een bestaande callback.
 
 ```shell
 curl -X PUT \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -303,8 +304,8 @@ curl -X PUT \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de callback moeten worden bijgewerkt. Elke sleutel vertegenwoordigt het bepaalde callback attribuut dat moet worden bijgewerkt, samen met de overeenkomstige waarde het zou moeten worden bijgewerkt aan.<br><br>De volgende attributen kunnen voor callbacks worden bijgewerkt:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | De `id` van callback u wilt bijwerken. Dit zou de `{CALLBACK_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `callbacks` zijn. |
+| `id` | De `id` van de callback die u wilt bijwerken. Dit moet overeenkomen met de `{CALLBACK_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `callbacks`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -368,7 +369,7 @@ curl -X DELETE \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**

@@ -2,7 +2,7 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in Adobe Experience Platform Destination SDK via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: API-bewerkingen voor eindpunt doelserver
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1382'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver,
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -107,7 +107,7 @@ Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver,
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -214,7 +214,7 @@ Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver,
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -323,7 +323,7 @@ Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver,
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -432,7 +432,7 @@ Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver,
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -539,7 +539,7 @@ Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver,
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -642,7 +642,7 @@ Het volgende verzoek zal de lijst van de configuraties van de bestemmingsserver 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -746,7 +746,7 @@ Het volgende verzoek werkt een bestaande configuratie van de bestemmingsserver b
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -790,7 +790,7 @@ GET /authoring/destination-servers/{INSTANCE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -839,7 +839,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```

@@ -2,7 +2,7 @@
 description: Als deel van Destination SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u bij het vormen van en het testen van uw bestemming te helpen. Op deze pagina wordt beschreven hoe u een sjabloon voor berichttransformatie kunt maken en testen.
 title: Een sjabloon voor berichttransformatie maken en testen
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '960'
 ht-degree: 0%
@@ -70,7 +70,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 

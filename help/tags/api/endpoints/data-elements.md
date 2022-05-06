@@ -1,7 +1,8 @@
 ---
 title: Gegevenselementen, eindpunt
 description: Leer hoe te om vraag aan het /data_elements eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: ea346682-441b-415b-af06-094158eb7c71
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 1%
@@ -16,11 +17,11 @@ Als u meerdere gegevenselementen tegelijk gebruikt, resulteert dit in een gegeve
 
 Een gegevenselement behoort tot exact één [eigenschap](./properties.md). Een eigenschap kan veel gegevenselementen bevatten.
 
-Voor meer algemene informatie over gegevenselementen en hun gebruik in markeringen, zie [gegevenselementengids](../../ui/managing-resources/data-elements.md) in de documentatie UI.
+Voor meer algemene informatie over gegevenselementen en het gebruik ervan in tags raadpleegt u de [hulplijn met gegevenselementen](../../ui/managing-resources/data-elements.md) in de UI-documentatie.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met gegevenselementen ophalen {#list}
 
@@ -40,7 +41,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde gegevenselementen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde gegevenselementen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -49,7 +50,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -173,7 +174,7 @@ U kunt een gegevenselement opzoeken door zijn identiteitskaart in de weg van een
 
 >[!NOTE]
 >
->Wanneer gegevenselementen worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapt gegevenselement op te zoeken. Verwijderde gegevenselementen kunnen worden geïdentificeerd door de aanwezigheid van een `data.meta.deleted_at`-kenmerk.
+>Wanneer gegevenselementen worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapt gegevenselement op te zoeken. Verwijderde gegevenselementen kunnen worden geïdentificeerd door de aanwezigheid van een `data.meta.deleted_at` kenmerk.
 
 **API-indeling**
 
@@ -194,7 +195,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -313,20 +314,20 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) die u het gegevenselement onder definieert. |
+| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u het gegevenselement onder definieert. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuw gegevenselement voor de opgegeven eigenschap gemaakt. De vraag associeert ook het gegevenselement met een bestaande uitbreiding door het `relationships` bezit. Zie de gids op [relaties](../guides/relationships.md) voor meer informatie.
+Met de volgende aanvraag wordt een nieuw gegevenselement voor de opgegeven eigenschap gemaakt. De vraag associeert ook het gegevenselement met een bestaande uitbreiding door `relationships` eigenschap. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -355,13 +356,13 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes.name` | **(Vereist)** Een leesbare naam voor het gegevenselement. |
-| `attributes.delegate_descriptor_id` | **(Vereist)** Een opgemaakte tekenreeks die het gegevenselement koppelt aan een extensiepakket. Alle gegevenselementen moeten met een uitbreidingspakket worden geassocieerd wanneer zij eerst worden gecreeerd, aangezien elk uitbreidingspakket de compatibele types voor zijn elementen van gedelegeerde gegevens, evenals hun voorgenomen gedrag bepaalt. Zie de gids op [afgevaardigde beschrijver IDs](../guides/delegate-descriptor-ids.md) voor meer informatie. |
+| `attributes.delegate_descriptor_id` | **(Vereist)** Een opgemaakte tekenreeks die het gegevenselement koppelt aan een extensiepakket. Alle gegevenselementen moeten met een uitbreidingspakket worden geassocieerd wanneer zij eerst worden gecreeerd, aangezien elk uitbreidingspakket de compatibele types voor zijn elementen van gedelegeerde gegevens, evenals hun voorgenomen gedrag bepaalt. Zie de handleiding op [id&#39;s gedelegeerde descriptor](../guides/delegate-descriptor-ids.md) voor meer informatie . |
 | `attributes.settings` | A settings JSON object represented as a string. |
-| `attributes.default_value` | Een standaardwaarde die moet worden geretourneerd als het gegevenselement `undefined` oplevert. |
+| `attributes.default_value` | Een standaardwaarde die moet worden geretourneerd als het gegevenselement de waarde `undefined`. |
 | `attributes.enabled` | Een booleaanse waarde die aangeeft of het gegevenselement is ingeschakeld. |
 | `attributes.force_lower_case` | Een booleaanse waarde die aangeeft of de waarde van het gegevenselement moet worden omgezet in kleine letters voordat deze wordt opgeslagen. |
 | `attributes.clean_text` | Een booleaanse waarde die aangeeft of voorafgaande en navolgende witruimte uit de waarde van het gegevenselement moet worden verwijderd voordat deze wordt opgeslagen. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `data_elements` zijn. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -485,14 +486,14 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt `name` bijgewerkt voor een bestaand gegevenselement.
+De volgende aanvraag werkt de `name` voor een bestaand gegevenselement.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -507,9 +508,9 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [het creëren van een gegevenselement](#create) voor een lijst van attributen en hun gebruiksgeval. |
-| `id` | De `id` van het gegevenselement dat u wilt bijwerken. Dit zou de `{DATA_ELEMENT_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `data_elements` zijn. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [een gegevenselement maken](#create) voor een lijst van kenmerken en het gebruik ervan. |
+| `id` | De `id` van het gegevenselement dat u wilt bijwerken. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -619,7 +620,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte gegevenselement
 
 Wanneer u een gegevenselement bijwerkt, wordt een nieuwe revisie van het gegevenselement gecreeerd met de huidige (hoofd) revisie. Elke revisie van een gegevenselement zal zijn eigen identiteitskaart hebben. Het oorspronkelijke gegevenselement kan worden ontdekt door een oorsprongskoppeling.
 
-U kunt een gegevenselement herzien door een `meta.action` bezit van een waarde van `revise` in het lichaam van een verzoek van PATCH te voorzien.
+U kunt een gegevenselement wijzigen door een `meta.action` eigenschap met een waarde van `revise` in de tekst van een verzoek van PATCH.
 
 **API-indeling**
 
@@ -640,7 +641,7 @@ curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -658,16 +659,16 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [het creëren van een gegevenselement](#create) voor een lijst van attributen en hun gebruiksgeval. |
-| `meta.action` | Wanneer deze eigenschap is opgenomen met de waarde `revise`, geeft deze aan dat een nieuwe revisie voor het gegevenselement moet worden gemaakt. |
-| `id` | De `id` van het gegevenselement dat u wilt herzien. Dit zou de `{DATA_ELEMENT_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type bron dat wordt herzien. Voor dit eindpunt, moet de waarde `data_elements` zijn. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [een gegevenselement maken](#create) voor een lijst van kenmerken en het gebruik ervan. |
+| `meta.action` | Indien opgenomen met een waarde van `revise`, geeft deze eigenschap aan dat een nieuwe revisie voor het gegevenselement moet worden gemaakt. |
+| `id` | De `id` van het gegevenselement dat u wilt herzien. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type bron dat wordt herzien. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de nieuwe herziening voor het gegevenselement terug, zoals die door de verhoogde `meta.latest_revision_number` attributen wordt vermeld.
+Een succesvol antwoord retourneert de details van de nieuwe revisie voor het gegevenselement, zoals aangegeven door de verhoogde `meta.latest_revision_number` kenmerk.
 
 ```json
 {
@@ -790,7 +791,7 @@ curl -X DELETE \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**
@@ -799,17 +800,17 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responsie
 
 ## Notities beheren voor een gegevenselement {#notes}
 
-Gegevenselementen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie [Notitie eindpuntgids](./notes.md) voor meer informatie over hoe te om nota&#39;s voor gegevenselementen en andere compatibele middelen te beheren.
+Gegevenselementen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor gegevenselementen en andere compatibele middelen te beheren.
 
 ## Gerelateerde bronnen voor een gegevenselement ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een gegevenselement terug te winnen. Wanneer [een gegevenselement](#lookup) omhoog kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een gegevenselement terug te winnen. Wanneer [zoeken, gegevenselement](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
 
-Zie de [relatiehandleiding](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### Verwante bibliotheken weergeven voor een gegevenselement {#libraries}
 
-U kunt een lijst maken van de bibliotheken die een gegevenselement gebruiken door `/libraries` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de bibliotheken weergeven die een gegevenselement gebruiken door ze toe te voegen `/libraries` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -819,7 +820,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan bibliotheken u wilt een lijst maken. |
+| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u bibliotheken wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -830,7 +831,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -931,7 +932,7 @@ Een geslaagde reactie retourneert een lijst met bibliotheken die het opgegeven g
 
 ### Verwante revisies weergeven voor een gegevenselement {#revisions}
 
-U kunt een lijst maken van de vorige revisies van een gegevenselement door `/revisions` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de vorige revisies van een gegevenselement weergeven door het toevoegen `/revisions` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -941,7 +942,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan revisies u wilt vermelden. |
+| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u de revisies wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -952,7 +953,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1165,7 +1166,7 @@ Een succesvol antwoord retourneert een lijst met revisies voor het opgegeven geg
 
 ### De verwante extensie voor een gegevenselement opzoeken {#extension}
 
-U kunt de uitbreiding opzoeken die een gegevenselement door `/extension` aan de weg van een verzoek van de GET gebruikt toe te voegen.
+U kunt de extensie die een gegevenselement gebruikt, opzoeken door deze toe te voegen `/extension` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -1175,7 +1176,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan uitbreiding u omhoog wilt kijken. |
+| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u de extensie wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1186,7 +1187,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1285,7 +1286,7 @@ Een geslaagde reactie retourneert de details van de extensie die het opgegeven g
 
 ### De gerelateerde oorsprong van een gegevenselement opzoeken {#origin}
 
-U kunt de oorsprong van een gegevenselement opzoeken door `/origin` aan de weg van een verzoek van de GET toe te voegen. De oorsprong van een gegevenselement is de vorige revisie die is bijgewerkt om de huidige revisie te maken.
+U kunt de oorsprong van een gegevenselement opzoeken door het toe te voegen `/origin` naar het pad van een GET-aanvraag. De oorsprong van een gegevenselement is de vorige revisie die is bijgewerkt om de huidige revisie te maken.
 
 **API-indeling**
 
@@ -1295,7 +1296,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan oorsprong u omhoog wilt kijken. |
+| `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u de oorsprong wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1306,7 +1307,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1415,7 +1416,7 @@ Een geslaagde reactie retourneert de details van de oorsprong van het opgegeven 
 
 ### De verwante eigenschap voor een gegevenselement opzoeken {#property}
 
-U kunt het bezit opzoeken dat een gegevenselement bezit door `/property` aan de weg van een verzoek van de GET toe te voegen.
+U kunt de eigenschap die eigenaar is van een gegevenselement opzoeken door het toevoegen `/property` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -1436,7 +1437,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u de API's voor leren van Sensei Machine Learning kunt gebruiken om een expert en een experimentele run te maken.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -30,12 +30,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Experiment Run-object dat moet worden verzonden. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
@@ -118,12 +118,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
@@ -183,12 +183,12 @@ Om de Runs van de Experiment voor geplande Experimenten te krijgen, wordt de vra
 curl -X GET \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`: De id die correspondeert met de Experiment die de Run heeft ondergaan.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 Aangezien er meerdere experimentele runtime&#39;s zijn voor een specifiek experiment, heeft het gegeven antwoord een array van run-id&#39;s.
 
@@ -226,12 +226,12 @@ Als u de uitvoering van een gepland experiment wilt stoppen vóór de uitvoering
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 >[!NOTE]
 >

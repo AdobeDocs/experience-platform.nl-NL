@@ -5,8 +5,7 @@ title: Een aangepaste naamruimte maken in de API voor de identiteitsservice
 topic-legacy: API guide
 description: Met de API Naamruimte-id kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 1%
@@ -15,9 +14,9 @@ ht-degree: 1%
 
 # Een aangepaste naamruimte maken in de Identity Service API
 
-Met de API [!DNL Identity Namespace] kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
+Met de [!DNL Identity Namespace] API, kunt u een naamruimte van de aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
 
-Raadpleeg [de documentatie bij Veelgestelde vragen over identiteitsservice](../troubleshooting-guide.md) voor aanbevelingen over het maken van aangepaste naamruimten.
+Zie voor aanbevelingen over het maken van aangepaste naamruimten [de documentatie bij de veelgestelde vragen over de identiteitsservice](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -38,7 +37,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "name": "Loyalty Member",
         "code": "Loyalty",
@@ -65,4 +64,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om de native id van een identiteit ](./list-native-id.md) weer te geven[
+Ga naar de volgende zelfstudie om [de native id van een identiteit weergeven](./list-native-id.md)

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies voor de Adobe Experience Platform Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie IMS op Experience Platform beschikbaar zijn.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 - Toestemming om [!DNL Experience Platform] API-aanroepen. Voltooi de [Adobe Experience Platform API&#39;s verifiëren en openen](https://www.adobe.com/go/platform-api-authentication-en) zelfstudie voor het verkrijgen van de volgende waarden om deze zelfstudie te voltooien:
    - Autorisatie: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - Klantgeheim: `{CLIENT_SECRET}`
    - Clientcertificaat: `{PRIVATE_KEY}`
 - Voorbeeldgegevens en bronbestanden voor de [Recipe detailhandel](../pre-built-recipes/retail-sales.md). Download de benodigde middelen voor dit en andere [!DNL Data Science Workspace] zelfstudies van de [Adobe openbare Git-opslagplaats](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -50,7 +50,7 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}

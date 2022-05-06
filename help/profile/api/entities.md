@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot gegevens van het profiel Real-time klanten met behulp van RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 0%
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
 
-Met Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profile]-gegevens met RESTful-API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Raadpleeg de [Gebruikershandleiding voor profielen](../ui/user-guide.md) voor meer informatie over het gebruik van de interface [!DNL Platform].
+Adobe Experience Platform biedt toegang tot [!DNL Real-time Customer Profile] gegevens die RESTful APIs of het gebruikersinterface gebruiken. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie over het gebruik van profielen via het dialoogvenster [!DNL Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor profielen](../ui/user-guide.md).
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 ## Profielgegevens benaderen op identiteit
 
-U kunt tot een [!DNL Profile] entiteit toegang hebben door een verzoek van de GET tot `/access/entities` eindpunt te richten en de identiteit van de entiteit als reeks vraagparameters te verstrekken. Deze identiteit bestaat uit een ID-waarde (`entityId`) en de naamruimte identity (`entityIdNS`).
+U hebt toegang tot een [!DNL Profile] door een verzoek tot GET aan de `/access/entities` eindpunt en het verstrekken van de identiteit van de entiteit als reeks vraagparameters. Deze identiteit bestaat uit een ID-waarde (`entityId`) en de naamruimte van de identiteit (`entityIdNS`).
 
-De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [vraagparameters](#query-parameters) sectie van bijlage.
+De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [queryparameters](#query-parameters) het aanhangsel.
 
 **API-indeling**
 
@@ -41,7 +41,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -120,7 +120,7 @@ curl -X GET \
 
 ## Profielgegevens benaderen op basis van lijst met identiteiten
 
-U kunt tot veelvoudige profielentiteiten door hun identiteiten toegang hebben door een verzoek van de POST aan het `/access/entities` eindpunt te richten en de identiteiten in de nuttige lading te verstrekken. Deze identiteiten bestaan uit een waarde van identiteitskaart (`entityId`) en een identiteitsnamespace (`entityIdNS`).
+U kunt meerdere profielentiteiten benaderen door een POST aan te vragen bij de `/access/entities` en het verstrekken van de identiteiten in de lading. Deze identiteiten bestaan uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
 
 **API-indeling**
 
@@ -138,7 +138,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "schema":{
@@ -183,17 +183,17 @@ curl -X POST \
 |---|---|
 | `schema.name` | ***(Vereist)*** De naam van het XDM-schema waartoe de entiteit behoort. |
 | `fields` | De XDM-velden die moeten worden geretourneerd, als een array van tekenreeksen. Standaard worden alle velden geretourneerd. |
-| `identities` | ***(Vereist)*** Een array die een lijst met identiteiten bevat voor de entiteiten waartoe u toegang wilt hebben. |
+| `identities` | ***(Vereist)*** Een array met een lijst met identiteiten voor de entiteiten waartoe u toegang wilt hebben. |
 | `identities.entityId` | De id van een entiteit waartoe u toegang wilt hebben. |
 | `identities.entityIdNS.code` | De naamruimte van een entiteit-id waartoe u toegang wilt hebben. |
 | `timeFilter.startTime` | Begintijd van het tijdbereikfilter, inclusief. Moet op milliseconde granularity zijn. De standaardinstelling is, indien deze niet wordt opgegeven, het begin van de beschikbare tijd. |
 | `timeFilter.endTime` | Eindtijd van tijdbereikfilter, uitgesloten. Moet op milliseconde granularity zijn. De standaardinstelling (indien niet opgegeven) is het einde van de beschikbare tijd. |
 | `limit` | Aantal records dat moet worden geretourneerd. Alleen van toepassing op het aantal geretourneerde ervaringsgebeurtenissen. Standaard: 1.000. |
-| `orderby` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` met als standaardwaarde `+timestamp`. |
+| `orderby` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` waarbij de standaardwaarde wordt `+timestamp`. |
 | `withCA` | De vlag van de eigenschap voor het toelaten van gegevens verwerkte attributen voor raadpleging. Standaard: false. |
 
-**Met een**
-geslaagde reactie worden de gevraagde velden van entiteiten geretourneerd die in de aanvraaginstantie zijn opgegeven.
+**Antwoord**
+Een succesvol antwoord retourneert de gevraagde velden met entiteiten die in de aanvraaginstantie zijn opgegeven.
 
 ```json
 {
@@ -334,9 +334,9 @@ geslaagde reactie worden de gevraagde velden van entiteiten geretourneerd die in
 
 ## De gebeurtenissen van de tijdreeks van de toegang voor een profiel door identiteit
 
-U kunt tot de gebeurtenissen van de tijdreeks door de identiteit van hun bijbehorende profielentiteit toegang hebben door een verzoek van de GET aan het `/access/entities` eindpunt te richten. Deze identiteit bestaat uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
+U kunt tot de gebeurtenissen van de tijdreeks door de identiteit van hun bijbehorende profielentiteit toegang hebben door een verzoek van de GET tot te richten `/access/entities` eindpunt. Deze identiteit bestaat uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
 
-De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [vraagparameters](#query-parameters) sectie van bijlage.
+De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [queryparameters](#query-parameters) het aanhangsel.
 
 **API-indeling**
 
@@ -346,14 +346,14 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een profielentiteit gevonden op ID en worden de waarden opgehaald voor de eigenschappen `endUserIDs`, `web` en `channel` voor alle gebeurtenissen uit de tijdreeks die aan de entiteit zijn gekoppeld.
+Met het volgende verzoek wordt een profielentiteit gevonden op ID en worden de waarden voor de eigenschappen opgehaald `endUserIDs`, `web`, en `channel` voor alle aan de entiteit gerelateerde tijdreeksgebeurtenissen.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -363,7 +363,7 @@ Een succesvolle reactie keert een gepagineerde lijst van de gebeurtenissen van d
 
 >[!NOTE]
 >
->Het verzoek specificeerde een grens van één (`limit=1`), daarom `count` in de reactie hieronder is 1 en slechts één entiteit is teruggekeerd.
+>In het verzoek is een limiet van één opgegeven (`limit=1`), `count` in de onderstaande reactie is 1 en wordt slechts één entiteit geretourneerd.
 
 ```json
 {
@@ -414,11 +414,11 @@ Een succesvolle reactie keert een gepagineerde lijst van de gebeurtenissen van d
 
 ### Een volgende pagina met resultaten openen
 
-Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s van resultaten zijn, zal het `_page.next` bezit een identiteitskaart bevatten. Daarnaast biedt de eigenschap `_links.next.href` een aanvraag-URI voor het ophalen van de volgende pagina. Om de resultaten terug te winnen, doe een ander verzoek van de GET aan het `/access/entities` eindpunt, nochtans moet u zeker zijn om `/entities` met de waarde van verstrekte URI te vervangen.
+Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s van resultaten zijn, `_page.next` eigenschap zal een id bevatten. Daarnaast worden de `_links.next.href` eigenschap biedt een aanvraag-URI voor het ophalen van de volgende pagina. Om de resultaten terug te winnen, doe een ander verzoek van de GET aan `/access/entities` eindpunt, nochtans moet u zeker zijn vervangen `/entities` met de waarde van de opgegeven URI.
 
 >[!NOTE]
 >
->Zorg ervoor dat u niet per ongeluk `/entities/` in de verzoekweg herhaalt. Deze mag slechts eenmaal voorkomen, `/access/entities?start=...`
+>Zorg ervoor dat u niet per ongeluk herhaalt `/entities/` in het aanvraagpad. Het mag slechts eenmaal voorkomen, `/access/entities?start=...`
 
 **API-indeling**
 
@@ -428,24 +428,24 @@ GET /access/{NEXT_URI}
 
 | Parameter | Beschrijving |
 |---|---|
-| `{NEXT_URI}` | De URI-waarde die wordt opgehaald uit `_links.next.href`. |
+| `{NEXT_URI}` | De URI-waarde is overgenomen van `_links.next.href`. |
 
 **Verzoek**
 
-Het volgende verzoek wint de volgende pagina van resultaten door `_links.next.href` URI als verzoekweg terug te gebruiken.
+Met het volgende verzoek wordt de volgende resultatenpagina opgehaald met de `_links.next.href` URI als aanvraagpad.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Als de reactie is gelukt, wordt de volgende pagina met resultaten geretourneerd. Dit antwoord heeft geen volgende pagina&#39;s van resultaten, zoals die door de lege koordwaarden van `_page.next` en `_links.next.href` worden vermeld.
+De volgende pagina met resultaten wordt als resultaat gegeven. Dit antwoord bevat geen volgende pagina&#39;s met resultaten, zoals wordt aangegeven door de lege tekenreekswaarden van `_page.next` en `_links.next.href`.
 
 ```json
 {
@@ -496,7 +496,7 @@ Als de reactie is gelukt, wordt de volgende pagina met resultaten geretourneerd.
 
 ## Gebeurtenissen in tijdreeksen benaderen voor meerdere profielen op basis van identiteit
 
-U kunt tot gebeurtenissen van de tijdreeks van veelvoudige bijbehorende profielen toegang hebben door een verzoek van de POST aan het `/access/entities` eindpunt te richten en de profielidentiteiten in de nuttige lading te verstrekken. Deze identiteiten bestaan elk uit een waarde van identiteitskaart (`entityId`) en een identiteitsnamespace (`entityIdNS`).
+U kunt tot de gebeurtenissen van de tijdreeks van veelvoudige bijbehorende profielen toegang hebben door een POST te verzoeken aan `/access/entities` en het verstrekken van de profielidentiteiten in de lading. Deze identiteiten bestaan elk uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
 
 **API-indeling**
 
@@ -514,7 +514,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "schema": {
@@ -548,11 +548,11 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 |---|---|
 | `schema.name` | **(VEREIST)** Het XDM-schema van de op te halen entiteit |
-| `relatedSchema.name` | Als `schema.name` `_xdm.context.experienceevent` is moet deze waarde het schema voor de profielentiteit specificeren die de gebeurtenissen van de tijdreeks met betrekking tot zijn. |
-| `identities` | **(VEREIST)** Een arraylijst met profielen waaruit de bijbehorende tijdreeksgebeurtenissen kunnen worden opgehaald. Elke ingang in de serie wordt geplaatst op één van twee manieren: 1) gebruiken van een volledig gekwalificeerde identiteit die uit de waarde van identiteitskaart en namespace of 2) het verstrekken van een XID bestaat. |
+| `relatedSchema.name` | Indien `schema.name` is `_xdm.context.experienceevent` deze waarde moet het schema opgeven voor de profielentiteit waarop de tijdreeksgebeurtenissen betrekking hebben. |
+| `identities` | **(VEREIST)** Een array met profielen waaruit de bijbehorende tijdreeksgebeurtenissen moeten worden opgehaald. Elke ingang in de serie wordt geplaatst op één van twee manieren: 1) gebruiken van een volledig gekwalificeerde identiteit die uit de waarde van identiteitskaart en namespace of 2) het verstrekken van een XID bestaat. |
 | `fields` | Hiermee worden de gegevens die naar een opgegeven set velden worden geretourneerd, geïsoleerd. Hiermee kunt u filteren welke schemavelden worden opgenomen in opgehaalde gegevens. Voorbeeld: persoonlijke e-mail,persoon.naam,persoon.geslacht |
 | `mergePolicyId` | Hiermee wordt het samenvoegingsbeleid aangegeven waarmee de geretourneerde gegevens moeten worden beheerd. Als niet in de de dienstvraag wordt gespecificeerd, zal het gebrek van uw organisatie voor dat schema worden gebruikt. Als er geen standaardbeleid voor samenvoegen is geconfigureerd, bestaat de standaardinstelling uit geen profielsamenvoeging en geen identiteitsstitching. |
-| `orderby` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` met als standaardwaarde `+timestamp`. |
+| `orderby` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` waarbij de standaardwaarde wordt `+timestamp`. |
 | `timeFilter.startTime` | Geef de begintijd op voor het filteren van tijdreeksobjecten (in milliseconden). |
 | `timeFilter.endTime` | Geef de eindtijd op voor het filteren van tijdreeksobjecten (in milliseconden). |
 | `limit` | Numerieke waarde die het maximumaantal objecten aangeeft dat moet worden geretourneerd. Standaard: 1000 |
@@ -768,19 +768,19 @@ Een geslaagde reactie retourneert een gepagineerde lijst met gebeurtenissen uit 
 }`
 ```
 
-In dit voorbeeldantwoord, verstrekt het eerste vermelde profiel (&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;) een waarde voor `_links.next.payload`, betekenend dat er extra pagina&#39;s van resultaten voor dit profiel zijn. Zie de volgende sectie over [toegang tot extra resultaten](#access-additional-results) voor details op hoe te om tot die extra resultaten toegang te hebben.
+In dit voorbeeldantwoord biedt het eerste weergegeven profiel (&quot;GkouAW-yD9aoRCPhRYROJ-TextAFW&quot;) een waarde voor `_links.next.payload`, wat betekent dat er extra resultatenpagina&#39;s zijn voor dit profiel. Zie de volgende sectie over [toegang tot aanvullende resultaten](#access-additional-results) voor meer informatie over de toegang tot deze aanvullende resultaten.
 
 ### Toegang tot extra resultaten {#access-additional-results}
 
-Wanneer het terugwinnen van de gebeurtenissen van de tijdreeks kan er vele resultaten zijn die, daarom worden teruggekeerd vaak gepagineerd de resultaten. Als er volgende pagina&#39;s van resultaten voor een bepaald profiel zijn, zal de `_links.next.payload` waarde voor dat profiel een ladingsvoorwerp bevatten.
+Wanneer het terugwinnen van de gebeurtenissen van de tijdreeks kan er vele resultaten zijn die, daarom worden teruggekeerd vaak gepagineerd de resultaten. Als er volgende pagina&#39;s met resultaten voor een bepaald profiel zijn, kunt u `_links.next.payload` De waarde voor dat profiel bevat een object payload.
 
-Gebruikend deze nuttige lading in het verzoeklichaam, kunt u een extra verzoek van de POST aan het `access/entities` eindpunt uitvoeren om de verdere pagina van tijdreeksgegevens voor dat profiel terug te winnen.
+Gebruikend deze nuttige lading in het verzoeklichaam, kunt u een extra verzoek van de POST aan `access/entities` eindpunt om de verdere pagina van tijdreeksgegevens voor dat profiel terug te winnen.
 
 ## De gebeurtenissen van de tijdreeks van de toegang in veelvoudige schemaentiteiten
 
-U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Lees voor meer informatie over relatiebeschrijvers de [!DNL Schema Registry] API-ontwikkelaarshandleiding [descriptoreindgebruikershandleiding](../../xdm/api/descriptors.md).
+U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Voor meer informatie over relatiebeschrijvers, gelieve te lezen [!DNL Schema Registry] Handleiding voor API-ontwikkelaars [eindhulplijn descriptorpunt](../../xdm/api/descriptors.md).
 
-U kunt queryparameters opnemen in het aanvraagpad om op te geven tot welke gegevens u toegang wilt krijgen. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [vraagparameters](#query-parameters) sectie van bijlage.
+U kunt queryparameters opnemen in het aanvraagpad om op te geven tot welke gegevens u toegang wilt krijgen. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [queryparameters](#query-parameters) het aanhangsel.
 
 **API-indeling**
 
@@ -798,7 +798,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Antwoord**
@@ -884,31 +884,31 @@ Een geslaagde reactie retourneert een gepagineerde lijst met gebeurtenissen uit 
 
 ### Een volgende pagina met resultaten openen
 
-Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s van resultaten zijn, zal het `_page.next` bezit een identiteitskaart bevatten. Bovendien, verstrekt het `_links.next.href` bezit een verzoek URI om de verdere pagina terug te winnen door extra verzoeken van GET aan het `access/entities` eindpunt te doen.
+Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s van resultaten zijn, `_page.next` eigenschap zal een id bevatten. Daarnaast worden de `_links.next.href` eigenschap biedt een aanvraag-URI voor het ophalen van de volgende pagina door aanvullende GET-aanvragen in te dienen bij de `access/entities` eindpunt.
 
 ## Volgende stappen
 
-Door deze handleiding te volgen hebt u toegang gekregen tot [!DNL Real-time Customer Profile] gegevensvelden, profielen en tijdreeksgegevens. Als u wilt leren hoe u andere gegevensbronnen kunt openen die zijn opgeslagen in [!DNL Platform], raadpleegt u [Overzicht van gegevenstoegang](../../data-access/home.md).
+Door deze handleiding te volgen, hebt u toegang tot [!DNL Real-time Customer Profile] gegevensvelden, profielen en tijdreeksgegevens. Leren hoe u toegang krijgt tot andere gegevensbronnen die zijn opgeslagen in [!DNL Platform], zie de [Overzicht van gegevenstoegang](../../data-access/home.md).
 
 ## Aanhangsel {#appendix}
 
-In de volgende sectie vindt u aanvullende informatie over de toegang tot [!DNL Profile]-gegevens met behulp van de API.
+De volgende sectie verstrekt aanvullende informatie betreffende de toegang tot van [!DNL Profile] gegevens die de API gebruiken.
 
 ### Parameters query {#query-parameters}
 
-De volgende parameters worden gebruikt in de weg voor GET verzoeken aan het `/access/entities` eindpunt. Ze dienen om de profielentiteit te identificeren die u wilt benaderen en de gegevens te filteren die in de reactie worden geretourneerd. De vereiste parameters worden geëtiketteerd, terwijl de rest facultatief is.
+De volgende parameters worden gebruikt in het pad voor verzoeken van de GET aan de `/access/entities` eindpunt. Ze dienen om de profielentiteit te identificeren die u wilt benaderen en de gegevens te filteren die in de reactie worden geretourneerd. De vereiste parameters worden geëtiketteerd, terwijl de rest facultatief is.
 
 | Parameter | Beschrijving | Voorbeeld |
 |---|---|---|
 | `schema.name` | **(VEREIST)** Het XDM-schema van de op te halen entiteit | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | Als `schema.name` &quot;_xdm.context.experienceEvent&quot;is, moet deze waarde het schema specificeren voor de profielentiteit waaraan de gebeurtenissen van de tijdreeks gerelateerd zijn. | `relatedSchema.name=_xdm.context.profile` |
+| `relatedSchema.name` | Indien `schema.name` is &quot;_xdm.context.experienceEvent&quot;, moet deze waarde het schema opgeven voor de profielentiteit waaraan de tijdreeksgebeurtenissen gerelateerd zijn. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(VEREIST)** De id van de entiteit. Als de waarde van deze parameter geen XID is, moet ook een naamruimteparameter voor identiteit worden opgegeven (zie `entityIdNS` hieronder). | `entityId=janedoe@example.com` |
-| `entityIdNS` | Als `entityId` niet als XID wordt verstrekt, moet dit gebied de identiteitsnaamruimte specificeren. | `entityIdNE=email` |
-| `relatedEntityId` | Als `schema.name` &quot;_xdm.context.experienceEvent&quot; is, moet deze waarde de naamruimte van de identiteit van de verwante profielentiteit opgeven. Deze waarde volgt dezelfde regels als `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | Als `schema.name` &quot;_xdm.context.experienceEvent&quot; is, moet deze waarde de naamruimte van de identiteit opgeven voor de entiteit die is opgegeven in `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
+| `entityIdNS` | Indien `entityId` wordt niet opgegeven als een XID, moet in dit veld de naamruimte van de identiteit worden opgegeven. | `entityIdNE=email` |
+| `relatedEntityId` | Indien `schema.name` is &quot;_xdm.context.ExperienceEvent&quot;, moet deze waarde de naamruimte van de gerelateerde profielentiteit opgeven. Deze waarde volgt dezelfde regels als `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityIdNS` | Indien `schema.name` is &quot;_xdm.context.experienceEvent&quot;, moet deze waarde de naamruimte van de identiteit opgeven voor de entiteit die is opgegeven in `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
 | `fields` | Filtert de gegevens die in de reactie worden geretourneerd. Gebruik dit om te specificeren welke schemagebiedwaarden in opgehaalde gegevens moeten omvatten. Voor meerdere velden scheidt u waarden met een komma zonder spaties tussen | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | Hiermee wordt het samenvoegingsbeleid aangegeven waarmee de geretourneerde gegevens moeten worden beheerd. Als niet in de vraag wordt gespecificeerd, zal het gebrek van uw organisatie voor dat schema worden gebruikt. Als er geen standaardbeleid voor samenvoegen is geconfigureerd, bestaat de standaardinstelling uit geen profielsamenvoeging en geen identiteitsstitching. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` met als standaardwaarde `+timestamp`. | `orderby=-timestamp` |
+| `orderBy` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` waarbij de standaardwaarde wordt `+timestamp`. | `orderby=-timestamp` |
 | `startTime` | Geef de begintijd op voor het filteren van tijdreeksobjecten (in milliseconden). | `startTime=1539838505` |
 | `endTime` | Geef de eindtijd op voor het filteren van tijdreeksobjecten (in milliseconden). | `endTime=1539838510` |
 | `limit` | Numerieke waarde die het maximumaantal objecten aangeeft dat moet worden geretourneerd. Standaard: 1000 | `limit=100` |

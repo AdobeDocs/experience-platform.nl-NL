@@ -5,8 +5,7 @@ title: Catalogusobjecten weergeven
 topic-legacy: developer guide
 description: U kunt een lijst van alle beschikbare voorwerpen van een specifiek type door één enkele API vraag terugwinnen, met beste praktijken die filters omvatten die de grootte van de reactie beperken.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
@@ -26,29 +25,29 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type object dat moet worden vermeld. [!DNL Catalog] Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Zie de gids op [het filtreren gegevens van de Catalogus](filter-data.md) voor meer informatie. |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te vermelden object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. Meerdere parameters worden gescheiden door ampersands (`&`). Zie de handleiding op [catalogusgegevens filteren](filter-data.md) voor meer informatie . |
 
 **Verzoek**
 
-Het steekproefverzoek wint hieronder een lijst van datasets, met een `limit` filter terug die de reactie op vijf resultaten vermindert, en een `properties` filter dat de eigenschappen beperkt die voor elke dataset worden getoond.
+Het steekproefverzoek wint hieronder een lijst van datasets, met terug `limit` filter de respons op vijf resultaten verminderen en `properties` filter dat de eigenschappen beperkt die voor elke dataset worden getoond.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?limit=5&properties=name,description,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van [!DNL Catalog] voorwerpen in de vorm van sleutel-waarde paren terug, die door de vraagparameters worden gefiltreerd die in het verzoek worden verstrekt. Voor elk zeer belangrijk-waardepaar, vertegenwoordigt de sleutel een uniek herkenningsteken voor het [!DNL Catalog] voorwerp in kwestie, die dan in een andere vraag aan [mening kan worden gebruikt dat specifiek voorwerp](look-up-object.md) voor meer details.
+Een geslaagde reactie retourneert een lijst met [!DNL Catalog] objecten in de vorm van sleutel-waardeparen, gefilterd door de vraagparameters die in het verzoek worden verstrekt. Voor elk sleutel-waardepaar vertegenwoordigt de sleutel een unieke herkenningsteken voor [!DNL Catalog] voorwerp in kwestie, dat dan in een andere vraag kan worden gebruikt aan [bekijken dat specifiek object](look-up-object.md) voor meer informatie .
 
 >[!NOTE]
 >
->Als een geretourneerd object geen van de gevraagde eigenschappen bevat die door de query `properties` worden aangegeven, retourneert het antwoord alleen de gevraagde eigenschappen die het wel bevat, zoals hieronder in ***`Sample Dataset 3`*** en ***`Sample Dataset 4`*** wordt getoond.
+>Als een geretourneerd object geen van de gevraagde eigenschappen bevat die door de `properties` vraag, keert de reactie slechts de gevraagde eigenschappen terug die het omvat, zoals aangetoond in ***`Sample Dataset 3`*** en ***`Sample Dataset 4`*** hieronder.
 
 ```json
 {

@@ -5,7 +5,7 @@ title: API-eindpunt voor taken exporteren
 topic-legacy: developer guide
 description: De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het /export/job eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform gebruiken, die u toestaat om, uitvoerbanen programmatically terug te winnen tot stand te brengen en te annuleren.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 1%
@@ -52,7 +52,7 @@ De volgende aanvraag haalt de laatste twee exporttaken binnen uw IMS-organisatie
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -226,7 +226,7 @@ Het volgende verzoek leidt tot een nieuwe uitvoerbaan, die door de parameters wo
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -308,7 +308,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de nieuwe expo
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "status": "NEW",
     "filter": {
         "segments": [
@@ -400,7 +400,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -422,7 +422,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "status": "SUCCEEDED",
     "filter": {
         "segments": [
@@ -496,7 +496,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

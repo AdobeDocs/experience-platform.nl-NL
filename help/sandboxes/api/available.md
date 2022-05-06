@@ -5,7 +5,7 @@ title: Beschikbaar API-eindpunt voor sandboxen
 topic-legacy: developer guide
 description: U kunt een lijst maken van de sandboxen die beschikbaar zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het beschikbare sandboxeindpunt.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie [appendix document](./appendix.md#query) voor een lijst van beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
 
 **Verzoek**
 
@@ -37,12 +37,12 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**
 
-Een succesvol antwoord retourneert een lijst met sandboxen die beschikbaar zijn voor de huidige gebruiker, inclusief details zoals `name`, `title`, `state` en `type`.
+Een succesvol antwoord retourneert een lijst met sandboxen die beschikbaar zijn voor de huidige gebruiker, inclusief details zoals `name`, `title`, `state`, en `type`.
 
 ```json
 {

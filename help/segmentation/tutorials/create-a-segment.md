@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u een segmentdefinitie kunt ontwikkelen, testen, voorvertonen en opslaan met de Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezel
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
@@ -59,7 +59,7 @@ De eerste stap in segmentatie is een segment te bepalen, dat in een constructie 
 
 U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` in de [!DNL Segmentation] API. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segment met succes wordt bepaald.
 
-Lees voor een gedetailleerde uitleg van de manier waarop u een segment definieert de [segmentdefinitiehandleiding](../api/segment-definitions.md#create).
+Voor een gedetailleerde uitleg van de definitie van een segment leest u de [segmentdefinitiehandleiding](../api/segment-definitions.md#create).
 
 ## Een publiek schatten en voorvertonen {#estimate-and-preview-an-audience}
 
@@ -74,7 +74,7 @@ Er zijn twee vereiste stappen om een voorvertoning van uw segment te bekijken of
 
 ### Hoe schattingen worden gegenereerd
 
-Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Dientengevolge zullen nieuwe toegevoegde velden of extra verzamelde gegevens de volgende dag in schattingen worden weerspiegeld.
+Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Bijgevolg zullen nieuwe toegevoegde velden of verzamelde aanvullende gegevens de volgende dag in schattingen worden weergegeven.
 
 De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in het profielarchief. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 

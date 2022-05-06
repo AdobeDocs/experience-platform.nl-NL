@@ -6,7 +6,7 @@ description: Dit artikel illustreert de end-to-end workflow voor het activeren v
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 0%
@@ -73,7 +73,7 @@ Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verific
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
@@ -134,7 +134,7 @@ Nadat de segmentexporttaak is voltooid, kunt u de activering activeren.
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -d '
 {

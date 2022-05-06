@@ -5,7 +5,7 @@ title: Overzicht van Adobe Privacy JavaScript-bibliotheek
 topic-legacy: overview
 description: Met de Adobe Privacy JavaScript-bibliotheek kunt u gegevenssubject-id's ophalen voor gebruik in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 7f3a0594147a8cea292263f60aa45dc5ebb8484e
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 4%
@@ -56,7 +56,7 @@ Alle apps die gebruikmaken van de [!DNL Privacy JS Library] moet een nieuw `Adob
 
 ```js
 var adobePrivacy = new AdobePrivacy({
-    imsOrgID: "{IMS_ORG}",
+    imsOrgID: "{ORG_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"

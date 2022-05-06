@@ -6,7 +6,8 @@ topic-legacy: developer guide
 description: Dit document verstrekt een inleiding aan de eerste vereiste informatie u moet kennen alvorens te proberen om een nieuwe bron tot stand te brengen gebruikend Bronnen SDK.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: ba131442-ff20-4854-87fe-918aa313382d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -40,7 +41,7 @@ Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verific
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Alle middelen in Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 

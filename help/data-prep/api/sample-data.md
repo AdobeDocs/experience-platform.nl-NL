@@ -4,8 +4,7 @@ solution: Experience Platform
 title: API-eindpunt voor voorbeeldgegevens
 topic-legacy: sample data
 description: 'U kunt het `-/steekproeven'' eindpunt in Adobe Experience Platform API gebruiken om kaartsteekproefgegevens programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen. '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 0%
@@ -15,15 +14,15 @@ ht-degree: 0%
 
 # Gegevenseindpunt van sample
 
-Voorbeeldgegevens kunnen worden gebruikt bij het maken van een schema voor uw toewijzingsset. U kunt het `/samples` eindpunt in de Prep API van Gegevens gebruiken om, steekproefgegevens programmatically terug te winnen tot stand te brengen en bij te werken.
+Voorbeeldgegevens kunnen worden gebruikt bij het maken van een schema voor uw toewijzingsset. U kunt de `/samples` eindpunt in de Prep API van Gegevens om programmatically steekproefgegevens terug te winnen, tot stand te brengen en bij te werken.
 
 ## Voorbeeldgegevens weergeven
 
-U kunt een lijst van alle gegevens van de toewijzingssteekproef voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/samples` eindpunt te doen.
+U kunt een lijst van alle gegevens van de toewijzingssteekproef voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/samples` eindpunt.
 
 **API-indeling**
 
-Het `/samples` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Momenteel, moet u zowel `start` als `limit` parameters als deel van uw verzoek omvatten.
+De `/samples` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. U moet op dit moment beide opties opnemen `start` en `limit` -parameters als onderdeel van uw verzoek.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -42,7 +41,7 @@ Met het volgende verzoek worden de laatste twee voorbeeldgegevens van de toewijz
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -88,7 +87,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over de laatste
 
 ## Voorbeeldgegevens maken
 
-U kunt steekproefgegevens tot stand brengen door een verzoek van de POST aan het `/samples` eindpunt te doen.
+U kunt voorbeeldgegevens maken door een POST aan te vragen bij de `/samples` eindpunt.
 
 ```http
 POST /samples
@@ -101,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -129,7 +128,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over de nieuwe 
 
 ## Voorbeeldgegevens maken door een bestand te uploaden
 
-U kunt steekproefgegevens tot stand brengen gebruikend een dossier door een verzoek van de POST aan het `/samples/upload` eindpunt te richten.
+U kunt voorbeeldgegevens maken met behulp van een bestand door een POST aan te vragen bij de `/samples/upload` eindpunt.
 
 **API-indeling**
 
@@ -144,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
@@ -168,7 +167,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over de nieuwe 
 
 ## Een specifiek voorbeeldgegevensobject opzoeken
 
-U kunt een specifiek voorwerp van steekproefgegevens opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET aan het `/samples` eindpunt te verstrekken.
+U kunt een specifiek voorwerp van steekproefgegevens opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET aan te verstrekken `/samples` eindpunt.
 
 **API-indeling**
 
@@ -186,7 +185,7 @@ GET /samples/{SAMPLE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -209,7 +208,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over het voorbe
 
 ## Voorbeeldgegevens bijwerken
 
-U kunt een specifiek voorwerp van steekproefgegevens bijwerken door zijn identiteitskaart in de weg van een verzoek van de PUT aan het `/samples` eindpunt te verstrekken.
+U kunt een specifiek voorbeeldgegevensobject bijwerken door de id ervan op te geven in het pad van een verzoek van de PUT aan de `/samples` eindpunt.
 
 **API-indeling**
 
@@ -229,7 +228,7 @@ Met het volgende verzoek worden de opgegeven voorbeeldgegevens bijgewerkt. Speci
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {

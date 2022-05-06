@@ -5,7 +5,7 @@ title: API-handleiding voor gegevenstoegang
 topic-legacy: developer guide
 description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 1%
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # API-handleiding voor gegevenstoegang
 
-De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van opgenomen datasets binnen [!DNL Experience Platform] wordt geconcentreerd.
+De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van opgenomen datasets binnen wordt geconcentreerd [!DNL Experience Platform].
 
 ![Toegang tot gegevens op Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## API-specificatieverwijzing
 
-De naslagdocumentatie voor de Swagger-API vindt u [hier](https://www.adobe.io/experience-platform-apis/references/data-access/).
+De naslagdocumentatie voor de Swagger-API is te vinden [hier](https://www.adobe.io/experience-platform-apis/references/data-access/).
 
 ## Terminologie
 
@@ -51,7 +51,7 @@ GET /batches/{BATCH_ID}/files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -94,7 +94,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-De array `"data"` bevat een lijst met alle bestanden in de opgegeven batch. Elk geretourneerd bestand heeft een eigen unieke id (`{FILE_ID}`) in het veld `"dataSetFileId"`. Deze unieke id kan vervolgens worden gebruikt om het bestand te openen of te downloaden.
+De `"data"` array bevat een lijst met alle bestanden in de opgegeven batch. Elk geretourneerd bestand heeft een eigen unieke id (`{FILE_ID}`) in de `"dataSetFileId"` veld. Deze unieke id kan vervolgens worden gebruikt om het bestand te openen of te downloaden.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
@@ -103,7 +103,7 @@ De array `"data"` bevat een lijst met alle bestanden in de opgegeven batch. Elk 
 
 ## Bestanden in een batch openen en downloaden
 
-Door een dossier herkenningsteken (`{FILE_ID}`) te gebruiken, kan API van de Toegang van Gegevens worden gebruikt om tot specifieke details van een dossier, met inbegrip van zijn naam, grootte in bytes, en een verbinding toegang te hebben om te downloaden.
+Door een bestand-id te gebruiken (`{FILE_ID}`), kan de API voor gegevenstoegang worden gebruikt voor toegang tot specifieke gegevens van een bestand, zoals de naam, grootte in bytes en een koppeling die moet worden gedownload.
 
 De reactie bevat een gegevensarray. Afhankelijk van het feit of het bestand waarnaar de id verwijst een afzonderlijk bestand of een map is, kan de geretourneerde gegevensarray één item of een lijst met bestanden bevatten die tot die map behoren. Elk bestandselement bevat de details van het bestand.
 
@@ -115,7 +115,7 @@ GET /files/{FILE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{FILE_ID}` | Gelijk aan `"dataSetFileId"`, identiteitskaart van het te betreden dossier. |
+| `{FILE_ID}` | Gelijk aan `"dataSetFileId"`, de id van het bestand dat moet worden geopend. |
 
 **Verzoek**
 
@@ -123,7 +123,7 @@ GET /files/{FILE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -221,7 +221,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -236,8 +236,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Aanvullende codevoorbeelden
 
-Voor extra steekproeven, gelieve te verwijzen naar [gegevens tot leerprogramma](tutorials/dataset-data.md).
+Voor extra monsters raadpleegt u de [zelfstudie over gegevenstoegang](tutorials/dataset-data.md).
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer
 
-[!DNL Platform] maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor abonnement via de  [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over [abonneren op gegevensinvoer-meldingen](../ingestion/quality/subscribe-events.md) voor meer informatie.
+[!DNL Platform] maakt specifieke gebeurtenissen van hoge waarde beschikbaar voor abonnement via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie aan [abonneren op gegevensinvoer](../ingestion/quality/subscribe-events.md) voor meer informatie .

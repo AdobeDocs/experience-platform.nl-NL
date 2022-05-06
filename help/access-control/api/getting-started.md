@@ -5,7 +5,7 @@ title: API-handleiding voor toegangsbeheer
 topic-legacy: developer guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. De volgende secties verstrekken extra informatie die de ontwikkelaars zullen moeten weten om met succes vraag aan de Registratie API van het Schema te maken.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: b1edea734f58762cfa895f768ea8e2969fdd5c02
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezel
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 

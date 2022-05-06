@@ -5,7 +5,7 @@ title: Een gegevensset maken met API's
 topic-legacy: datasets
 description: Dit document bevat algemene stappen voor het maken van een gegevensset met Adobe Experience Platform API's en het vullen van de gegevensset met behulp van een bestand.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezel
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
@@ -78,7 +78,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -105,7 +105,7 @@ De indeling van het reactieobject is afhankelijk van de header Accepteren die in
         "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:immutableTags": [
         "union"
     ],
@@ -196,7 +196,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name":"LoyaltyMembersDataset",
@@ -243,7 +243,7 @@ De aanvraaginstantie bevat een veld &quot;datasetId&quot;, waarvan de waarde `{D
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'accept: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -260,7 +260,7 @@ Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject
 ```JSON
 {
     "id": "5d01230fc78a4e4f8c0c6b387b4b8d1c",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updated": 1552694873602,
     "status": "loading",
     "created": 1552694873602,
@@ -386,7 +386,7 @@ Een positieve reactie retourneert een object met de bijbehorende `status` kenmer
 ```JSON
 {
     "5b7129a879323401ef2a6486": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "created": 1534142888068,
         "createdClient": "{CREATED_CLIENT}",
         "createdUser": "{CREATED_BY}",
@@ -418,7 +418,7 @@ Een negatief antwoord retourneert een object met de waarde `"failed"` in haar `"
 ```JSON
 {
     "5b96ce65badcf701e51f075d": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "status": "failed",
         "relatedObjects": [
             {

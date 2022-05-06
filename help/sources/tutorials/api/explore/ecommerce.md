@@ -5,48 +5,47 @@ title: Ontdek een eCommerce-verbinding met behulp van de Flow Service API
 topic-legacy: overview
 description: Deze zelfstudie gebruikt de Flow Service API om eCommerce-verbindingen te verkennen.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 1%
 
 ---
 
-# Een eCommerce-verbinding verkennen met de API [!DNL Flow Service]
+# Ontdek een eCommerce-verbinding met de [!DNL Flow Service] API
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om een externe **[!UICONTROL eCommerce]**-verbinding te verkennen.
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om een derde te verkennen **[!UICONTROL eCommerce]** verbinding.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Sources]](../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een **[!UICONTROL eCommerce]**-verbinding met de [!DNL Flow Service]-API.
+De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een **[!UICONTROL eCommerce]** verbinding met de [!DNL Flow Service] API.
 
 ### Verbindings-id verkrijgen
 
-Als u uw **[!UICONTROL eCommerce]**-verbinding wilt verkennen met [!DNL Platform] API&#39;s, moet u over een geldige verbinding-id beschikken. Als u nog geen verbinding hebt voor de **[!UICONTROL eCommerce]**-verbinding waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudie:
+Om uw **[!UICONTROL eCommerce]** verbinding gebruiken [!DNL Platform] API&#39;s, moet u een geldige verbinding-id hebben. Als u nog geen verbinding hebt voor de **[!UICONTROL eCommerce]** Als u een verbinding wilt maken waarmee u wilt werken, kunt u er een maken aan de hand van de volgende zelfstudie:
 
 * [Schopify](../create/ecommerce/shopify.md)
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +55,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Uw gegevenstabellen verkennen
 
-Met uw **[!UICONTROL eCommerce]**-verbindings-id kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in [!DNL Platform] in te gaan.
+Uw **[!UICONTROL eCommerce]** verbindings identiteitskaart, kunt u uw gegevenslijsten onderzoeken door verzoeken van de GET uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in te gaan [!DNL Platform].
 
 **API-indeling**
 
@@ -66,7 +65,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONNECTION_ID}` | Uw **[!UICONTROL eCommerce]** verbindings-id. |
+| `{CONNECTION_ID}` | Uw **[!UICONTROL eCommerce]** verbinding-id. |
 
 **Verzoek**
 
@@ -75,13 +74,13 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connections/582f4f8d-71e9-4a5c-a164-9d2056318d6c/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie van lijsten van uw **[!UICONTROL eCommerce]** verbinding terug. Zoek de lijst u in [!DNL Platform] wilt brengen en nota nemen van zijn `path` bezit, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
+Een succesvol antwoord retourneert een array met tabellen uit uw **[!UICONTROL eCommerce]** verbinding. Zoek de tabel waarin u wilt plaatsen [!DNL Platform] en neemt nota van zijn `path` eigenschap, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
 
 ```json
 [
@@ -118,7 +117,7 @@ Een succesvolle reactie keert een serie van lijsten van uw **[!UICONTROL eCommer
 
 ## De structuur van een tabel Inspect
 
-Om de structuur van een lijst van uw **[!UICONTROL eCommerce]** verbinding te inspecteren, voer een verzoek van de GET uit terwijl het specificeren van de weg van een lijst binnen een `object` vraagparameter.
+De structuur van een tabel vanuit uw **[!UICONTROL eCommerce]** verbinding, voer een verzoek van de GET uit terwijl het specificeren van de weg van een lijst binnen een `object` queryparameter.
 
 **API-indeling**
 
@@ -128,8 +127,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De verbindings-id van uw **[!UICONTROL eCommerce]**-verbinding. |
-| `{TABLE_PATH}` | Het pad van een tabel binnen uw **[!UICONTROL eCommerce]**-verbinding. |
+| `{CONNECTION_ID}` | De verbinding-id van uw **[!UICONTROL eCommerce]** verbinding. |
+| `{TABLE_PATH}` | Het pad van een tabel in uw **[!UICONTROL eCommerce]** verbinding. |
 
 **Verzoek**
 
@@ -138,13 +137,13 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connections/582f4f8d-71e9-4a5c-a164-9d2056318d6c/explore?objectType=table&object=Orders' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De details betreffende elk van de kolommen van de lijst worden gevestigd binnen elementen van `columns` serie.
+Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De details betreffende elk van de kolommen van de lijst worden gevestigd binnen elementen van `columns` array.
 
 ```json
 {
@@ -198,4 +197,4 @@ Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De detail
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u uw **[!UICONTROL eCommerce]** verbinding onderzocht, het weg van de lijst gevonden u in [!DNL Platform] wenst in te gaan, en informatie over zijn structuur verkregen. U kunt deze informatie in de volgende zelfstudie gebruiken om eCommerce-gegevens te verzamelen en naar Platform te brengen](../collect/ecommerce.md).[
+Door deze zelfstudie te volgen, hebt u uw **[!UICONTROL eCommerce]** verbinding, hebt u het pad gevonden van de tabel waarin u wilt opnemen [!DNL Platform]en heeft informatie over de structuur ervan verkregen. U kunt deze informatie in de volgende zelfstudie gebruiken om [eCommerce-gegevens verzamelen en in Platform brengen](../collect/ecommerce.md).

@@ -5,8 +5,7 @@ title: XMLInstances API Endpoint
 topic-legacy: Developer guide
 description: Een MLInstance is een huur van een bestaande Motor met een aangewezen reeks configuraties die om het even welke trainingsparameters, het scoren parameters, of configuraties van hardwaremiddelen bepalen.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -15,13 +14,13 @@ ht-degree: 0%
 
 # MLInstances, eindpunt
 
-Een MLInstance is een huur van een bestaande [Motor](./engines.md) met een aangewezen reeks configuraties die om het even welke opleidingsparameters, scoringsparameters, of configuraties van hardwaremiddelen bepaalt.
+Een MLInstance is het verpakken van een bestaand [Engine](./engines.md) met een geschikte set configuraties die trainingsparameters, scoringsparameters of configuraties van hardwarebronnen definiëren.
 
-## Een MLInstance {#create-an-mlinstance} maken
+## Een MLInstance maken {#create-an-mlinstance}
 
-U kunt een instantie tot stand brengen MLInstance door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit een geldige identiteitskaart van de Motor (`{ENGINE_ID}`) en een aangewezen reeks standaardconfiguraties bestaat.
+U kunt een instantie tot stand brengen MLI door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit een geldige identiteitskaart van de Motor bestaat (`{ENGINE_ID}`) en een geschikte set standaardconfiguraties.
 
-Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Raadpleeg de appendix-secties over [PySpark- en Spark-bronconfiguraties](./appendix.md#resource-config) en [Python CPU- en GPU-configuraties](./appendix.md#cpu-gpu-config) voor meer informatie.
+Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Raadpleeg de bijlagen bij de [PySpark- en Spark-bronconfiguraties](./appendix.md#resource-config) en [Python CPU- en GPU-configuraties](./appendix.md#cpu-gpu-config) voor meer informatie .
 
 **API-indeling**
 
@@ -36,7 +35,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -84,7 +83,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van nieuw gecreeerd MLInstance met zijn uniek herkenningsteken (`id`) bevat.
+Een geslaagde reactie retourneert een payload die de details bevat van de nieuwe MLInstance, inclusief de unieke id (`id`).
 
 ```json
 {
@@ -131,7 +130,7 @@ Een succesvolle reactie keert een lading terug die de details van nieuw gecreeer
 
 ## Een lijst met MLInstances ophalen
 
-U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
+U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
 
 **API-indeling**
 
@@ -143,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Één van [beschikbare vraagparameters](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
+| `{QUERY_PARAMETER}` | Een van de [beschikbare queryparameters](./appendix.md#query) gebruikt om resultaten te filteren. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
@@ -153,7 +152,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -197,7 +196,7 @@ Een succesvolle reactie keert een lijst van instanties MLInstances en hun detail
 }
 ```
 
-## Hiermee wordt een specifieke MLInstance {#retrieve-specific} opgehaald
+## Een specifieke MLInstance ophalen {#retrieve-specific}
 
 U kunt de details van een specifieke instantie terugwinnen MLI door een verzoek uit te voeren van de GET dat identiteitskaart van gewenste MLInstance in de verzoekweg omvat.
 
@@ -218,7 +217,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -276,7 +275,7 @@ U kunt een bestaande instantie bijwerken door zijn eigenschappen door een verzoe
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET aan [terugwinning MLInstance door ID](#retrieve-specific) uitvoert. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [Win MLInstance door identiteitskaart terug](#retrieve-specific). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de opleidings- en scoringsparameters van een MLInstance bij terwijl deze in eerste instantie beschikken over de volgende eigenschappen:
 
@@ -330,7 +329,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -425,7 +424,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances?engineId=22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -441,7 +440,7 @@ curl -X DELETE \
 
 ## Een MLInstance verwijderen
 
-U kunt één enkele instantie schrappen MLI door een verzoek van de DELETE uit te voeren die identiteitskaart van doelMLInstance in de verzoekweg omvat.
+U kunt één enkele instantie verwijderen MLI door een verzoek van DELETE uit te voeren dat identiteitskaart van doelMLInstance in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -460,7 +459,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

@@ -4,68 +4,68 @@ solution: Experience Platform
 title: Gegevens gegevensset weergeven met de API voor gegevenstoegang
 topic-legacy: tutorial
 type: Tutorial
-description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
+description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 0%
 
 ---
 
-# Gegevenssetgegevens weergeven met behulp van [!DNL Data Access] API
+# Gegevenssetgegevens weergeven met [!DNL Data Access] API
 
-Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en downloaden van gegevens die zijn opgeslagen in een gegevensset met de API [!DNL Data Access] in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van [!DNL Data Access] API, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
+Dit document biedt een stapsgewijze zelfstudie over het zoeken naar, toegang krijgen tot en downloaden van gegevens die zijn opgeslagen in een gegevensset met behulp van de [!DNL Data Access] API in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van worden geïntroduceerd [!DNL Data Access] API, zoals pagineren en gedeeltelijke downloads.
 
 ## Aan de slag
 
-Dit leerprogramma vereist een werkend begrip over om een dataset tot stand te brengen en te bevolken. Zie de [zelfstudie over het maken van gegevenssets](../../catalog/datasets/create.md) voor meer informatie.
+Deze zelfstudie vereist een goed begrip van hoe u een gegevensset kunt maken en vullen. Zie de [zelfstudie over het maken van gegevenssets](../../catalog/datasets/create.md) voor meer informatie .
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
+>Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
+All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
-- Inhoudstype: application/json
+- Content-Type: application/json
 
 ## Sequentiediagram
 
-Deze zelfstudie volgt de stappen die in het onderstaande reeksdiagram worden beschreven en markeert de kernfunctionaliteit van de [!DNL Data Access] API.</br>
+Deze zelfstudie volgt de stappen die in het onderstaande volgordediagram worden beschreven en markeert de kernfunctionaliteit van de [!DNL Data Access] API.</br>
 ![](../images/sequence_diagram.png)
 
-Met de API [!DNL Catalog] kunt u informatie ophalen over batches en bestanden. Met de API [!DNL Data Access] kunt u deze bestanden openen en downloaden via HTTP als volledige of gedeeltelijke downloads, afhankelijk van de grootte van het bestand.
+De [!DNL Catalog] Met API kunt u informatie over batches en bestanden ophalen. De [!DNL Data Access] Met API kunt u deze bestanden openen en downloaden via HTTP als volledige of gedeeltelijke downloads, afhankelijk van de grootte van het bestand.
 
 ## De gegevens zoeken
 
-Voordat u de [!DNL Data Access] API kunt gebruiken, moet u de locatie identificeren van de gegevens die u wilt benaderen. In [!DNL Catalog] API, zijn er twee eindpunten die u kunt gebruiken om de meta-gegevens van een organisatie te doorbladeren en identiteitskaart van een partij of een dossier terug te winnen dat u wilt toegang hebben:
+Voordat u begint met het gebruik van de [!DNL Data Access] API, moet u de plaats van de gegevens identificeren die u wilt toegang hebben. In de [!DNL Catalog] API, zijn er twee eindpunten die u kunt gebruiken om de meta-gegevens van een organisatie te doorbladeren en identiteitskaart van een partij of een dossier terug te winnen dat u wilt toegang hebben:
 
-- `GET /batches`: Retourneert een lijst met batches onder uw organisatie
+- `GET /batches`: Returns a list of batches under your organization
 - `GET /dataSetFiles`: Hiermee wordt een lijst met bestanden binnen uw organisatie geretourneerd
 
-Raadpleeg de [API-naslaggids](https://www.adobe.io/experience-platform-apis/references/catalog/) voor een uitgebreide lijst met eindpunten in de [!DNL Catalog]-API.
+Voor een uitgebreide lijst met eindpunten in het dialoogvenster [!DNL Catalog] API, gelieve te verwijzen naar [API-naslag](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Een lijst met batches ophalen onder uw IMS-organisatie
 
-Met de API [!DNL Catalog] kunt u een lijst met batches in uw organisatie retourneren:
+Met de [!DNL Catalog] API, kunt u een lijst van partijen onder uw organisatie terugkeren:
 
 **API-indeling**
 
@@ -79,18 +79,18 @@ GET /batches
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Response**
 
-De reactie bevat een object dat een lijst bevat met alle batches die betrekking hebben op de IMS-organisatie, waarbij elke waarde op hoofdniveau een batch vertegenwoordigt. De afzonderlijke batchobjecten bevatten de gegevens voor die specifieke batch. De onderstaande reactie is geminimaliseerd voor ruimte.
+De reactie bevat een object dat een lijst bevat met alle batches die betrekking hebben op de IMS-organisatie, waarbij elke waarde op hoofdniveau een batch vertegenwoordigt. De afzonderlijke batchobjecten bevatten de gegevens voor die specifieke batch. The response below has been minimized for space.
 
 ```json
 {
     "{BATCH_ID_1}": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "created": 1516640135526,
         "createdClient": "{CREATED_CLIENT}",
         "createdUser": "{CREATED_BY}",
@@ -108,7 +108,7 @@ De reactie bevat een object dat een lijst bevat met alle batches die betrekking 
 
 ### De lijst met batches filteren
 
-Filters moeten vaak een bepaalde batch zoeken om relevante gegevens voor een bepaald gebruiksgeval op te halen. Parameters kunnen aan een `GET /batches` verzoek worden toegevoegd om de teruggekeerde reactie te filtreren. De onderstaande aanvraag retourneert alle batches die na een opgegeven tijd zijn gemaakt, binnen een bepaalde gegevensset, gesorteerd op het tijdstip waarop ze zijn gemaakt.
+Filters moeten vaak een bepaalde batch zoeken om relevante gegevens voor een bepaald gebruiksgeval op te halen. Parameters kunnen worden toegevoegd aan een `GET /batches` verzoek om de geretourneerde reactie te filteren. De onderstaande aanvraag retourneert alle batches die na een opgegeven tijd zijn gemaakt, binnen een bepaalde gegevensset, gesorteerd op het tijdstip waarop ze zijn gemaakt.
 
 **API-indeling**
 
@@ -120,7 +120,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 | -------- | ----------- |
 | `{START_TIMESTAMP}` | De begintijdstempel in milliseconden (bijvoorbeeld 1514836799000). |
 | `{DATASET_ID}` | De id van de gegevensset. |
-| `{SORT_BY}` | Sorteert de reactie met de opgegeven waarde. Met `desc:created` worden de objecten bijvoorbeeld op aanmaakdatum in aflopende volgorde gesorteerd. |
+| `{SORT_BY}` | Sorts the response by the value provided. For example, `desc:created` sorts the objects by creation date in descending order. |
 
 **Verzoek**
 
@@ -128,7 +128,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1521053542579&dataSet=5cd9146b21dae914b71f654f&orderBy=desc:created' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -136,7 +136,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 
 ```json
 {   "{BATCH_ID_3}": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "relatedObjects": [
             {
                 "id": "5c01a91863540f14cd3d0439",
@@ -163,7 +163,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
         "version": "1.0.116"
     },
     "{BATCH_ID_4}": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "status": "success",
         "relatedObjects": [
             {
@@ -192,13 +192,13 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Een volledige lijst van parameters en filters kan in [Catalog API verwijzing](https://www.adobe.io/experience-platform-apis/references/catalog/) worden gevonden.
+A full list of parameters and filters can be found in the [Catalog API reference](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Een lijst ophalen van alle bestanden die tot een bepaalde batch behoren
 
-Nu u de id hebt van de batch waartoe u toegang wilt hebben, kunt u de [!DNL Data Access] API gebruiken om een lijst met bestanden op te halen die tot die batch behoren.
+Nu u de id hebt van de batch waartoe u toegang wilt hebben, kunt u de opdracht [!DNL Data Access] API om een lijst met bestanden op te halen die bij die batch horen.
 
-**API-indeling**
+**API format**
 
 ```http
 GET /batches/{BATCH_ID}/files
@@ -214,7 +214,7 @@ GET /batches/{BATCH_ID}/files
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168966814cd81d3d3/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -249,13 +249,13 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 | -------- | ----------- |
 | `data._links.self.href` | De URL voor toegang tot dit bestand. |
 
-De reactie bevat een gegevensarray met alle bestanden in de opgegeven batch. De bestanden worden verwezen door hun bestands-id, die u vindt in het veld `dataSetFileId`.
+The response contains a data array that lists all the files within the specified batch. Naar bestanden wordt verwezen door hun bestands-id, die u vindt onder de `dataSetFileId` veld.
 
-## Een bestand openen met een bestands-id
+## Access a file using a file ID
 
-Als u een unieke bestands-id hebt, kunt u de [!DNL Data Access] API gebruiken om toegang te krijgen tot de specifieke details over het bestand, zoals de naam, grootte in bytes en een koppeling om het bestand te downloaden.
+Als u een unieke bestands-id hebt, kunt u de opdracht [!DNL Data Access] API voor toegang tot de specifieke gegevens over het bestand, zoals de naam, grootte in bytes en een koppeling om het te downloaden.
 
-**API-indeling**
+**API format**
 
 ```http
 GET /files/{FILE_ID}
@@ -271,7 +271,7 @@ GET /files/{FILE_ID}
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -304,9 +304,9 @@ Afhankelijk van of de bestands-id naar een afzonderlijk bestand of naar een map 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{FILE_NAME}.parquet` | De naam van het bestand. |
-| `_links.self.href` | De URL waarmee het bestand moet worden gedownload. |
+| `_links.self.href` | The URL to download the file. |
 
-**Zaak 2: Bestand-id verwijst naar een map**
+**Case 2: File ID points to a directory**
 
 **Antwoord**
 
@@ -347,13 +347,13 @@ Afhankelijk van of de bestands-id naar een afzonderlijk bestand of naar een map 
 }
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- | 
 | `data._links.self.href` | De URL waarmee het gekoppelde bestand moet worden gedownload. |
 
-Deze reactie keert een folder terug die twee afzonderlijke dossiers, met IDs `{FILE_ID_2}` en `{FILE_ID_3}` bevat. In dit scenario moet u de URL van elk bestand volgen om toegang te krijgen tot het bestand.
+Deze reactie retourneert een map met twee afzonderlijke bestanden, met id&#39;s `{FILE_ID_2}` en `{FILE_ID_3}`. In dit scenario moet u de URL van elk bestand volgen om toegang te krijgen tot het bestand.
 
-## De metagegevens van een bestand ophalen
+## Retrieve the metadata of a file
 
 U kunt de metagegevens van een bestand ophalen door een HEAD-verzoek in te dienen. Hiermee worden de metagegevenskoppen van het bestand geretourneerd, inclusief de grootte in bytes en bestandsindeling.
 
@@ -363,7 +363,7 @@ U kunt de metagegevens van een bestand ophalen door een HEAD-verzoek in te diene
 HEAD /files/{FILE_ID}?path={FILE_NAME}
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- |
 | `{FILE_ID}` | De id van het bestand. |
 | `{FILE_NAME}` | De bestandsnaam (bijvoorbeeld profiles.parquet) |
@@ -374,7 +374,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -384,9 +384,9 @@ De antwoordheaders bevatten de metagegevens van het bestand waarnaar wordt gevra
 - `Content-Length`: Geeft de grootte van de payload in bytes aan
 - `Content-Type`: Geeft het bestandstype aan.
 
-## De inhoud van een bestand openen
+## Access the contents of a file
 
-U kunt de inhoud van een bestand ook benaderen met de API [!DNL Data Access].
+You can also access the contents of a file using the [!DNL Data Access] API.
 
 **API-indeling**
 
@@ -394,30 +394,30 @@ U kunt de inhoud van een bestand ook benaderen met de API [!DNL Data Access].
 GET /files/{FILE_ID}?path={FILE_NAME}
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- |
 | `{FILE_ID}` | De id van het bestand. |
-| `{FILE_NAME}` | De bestandsnaam (bijvoorbeeld profiles.parquet). |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet). |
 
-**Verzoek**
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Met een succesvol antwoord wordt de inhoud van het bestand geretourneerd.
+A successful response returns the file&#39;s contents.
 
 ## Gedeeltelijke inhoud van een bestand downloaden
 
-Met de API [!DNL Data Access] kunt u bestanden downloaden in blokken. Een bereikkoptekst kan worden opgegeven tijdens een `GET /files/{FILE_ID}`-verzoek om een specifieke bytebereik te downloaden uit een bestand. Als het bereik niet wordt opgegeven, downloadt de API standaard het gehele bestand.
+De [!DNL Data Access] API staat voor het downloaden van dossiers in brokken toe. A range header can be specified during a `GET /files/{FILE_ID}` request to download a specific range of bytes from a file. Als het bereik niet wordt opgegeven, downloadt de API standaard het gehele bestand.
 
-Het voorbeeld van de HEAD in [vorige sectie](#retrieve-the-metadata-of-a-file) geeft de grootte van een specifiek dossier in bytes.
+The HEAD example in the [previous section](#retrieve-the-metadata-of-a-file) gives the size of a specific file in bytes.
 
 **API-indeling**
 
@@ -425,37 +425,37 @@ Het voorbeeld van de HEAD in [vorige sectie](#retrieve-the-metadata-of-a-file) g
 GET /files/{FILE_ID}?path={FILE_NAME}
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- |
-| `{FILE_ID} ` | De id van het bestand. |
+| `{FILE_ID} ` | The file&#39;s identifier. |
 | `{FILE_NAME}` | De bestandsnaam (bijvoorbeeld profiles.parquet) |
 
-**Verzoek**
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Range: bytes=0-99'
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Beschrijving |
 | -------- | ----------- | 
 | `Range: bytes=0-99` | Geeft het bereik aan van bytes dat moet worden gedownload. Als dit niet is opgegeven, downloadt de API het gehele bestand. In dit voorbeeld worden de eerste 100 bytes gedownload. |
 
-**Antwoord**
+**Response**
 
 De hoofdtekst van de reactie bevat de eerste 100 bytes van het bestand (zoals opgegeven door de header &quot;Range&quot; in de aanvraag) samen met HTTP Status 206 (Partiële inhoud). De reactie omvat ook de volgende kopteksten:
 
 - Content-Length: 100 (het aantal geretourneerde bytes)
-- Inhoudstype: application/parquet (er is een Parquet-bestand aangevraagd en daarom is het type responsinhoud `parquet`)
+- Content-type: application/parquet (a Parquet file was requested, therefore the response content type is `parquet`)
 - Inhoudsbereik: bytes 0-99/249058 (het gevraagde bereik (0-99) van het totale aantal bytes (249058))
 
 ## Paginering van API-reactie configureren
 
-Reacties binnen de [!DNL Data Access] API worden gepagineerd. Standaard is het maximumaantal items per pagina 100. U kunt parameters voor paginering gebruiken om het standaardgedrag te wijzigen.
+Reacties binnen de [!DNL Data Access] API&#39;s worden gepagineerd. Standaard is het maximumaantal items per pagina 100. U kunt parameters voor paginering gebruiken om het standaardgedrag te wijzigen.
 
 - `limit`: U kunt het aantal items per pagina volgens uw vereisten opgeven met de parameter &quot;limit&quot;.
 - `start`: De verschuiving kan worden ingesteld door de queryparameter &quot;start&quot;.
@@ -481,15 +481,15 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c7ebc14cd6b098e/files?start=0&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Reactie**:
+**Antwoord**:
 
-De reactie bevat een `"data"`-array met één element, zoals opgegeven door de aanvraagparameter `limit=1`. This element is an object containing the details of the first available file, as specified by the `start=0` parameter in the request (Herinner dat in op nul gebaseerde nummering, the first element is &quot;0&quot;).
+De reactie bevat een `"data"` array met één element, zoals opgegeven door de parameter request `limit=1`. This element is an object containing the details of the first available file, as specified by the `start=0` parameter in the request (remember that in zero-based numbering, the first element is &quot;0&quot;).
 
-De waarde `_links.next.href` bevat de koppeling naar de volgende pagina met reacties, waar u kunt zien dat de parameter `start` is doorgegaan naar `start=1`.
+The `_links.next.href` value contains the link to the next page of responses, where you can see that the `start` parameter has advanced to `start=1`.
 
 ```json
 {

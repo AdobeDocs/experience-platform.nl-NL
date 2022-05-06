@@ -1,8 +1,8 @@
 ---
-description: Als onderdeel van Destination SDK biedt Adobe hulpprogramma's voor ontwikkelaars die u helpen bij het configureren en testen van uw bestemming. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen.
+description: Als deel van Destination SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u bij het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen.
 title: De doelconfiguratie testen
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Als onderdeel van Destination SDK biedt Adobe hulpprogramma&#39;s voor ontwikkelaars die u helpen bij het configureren en testen van uw bestemming. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen. Voor informatie over hoe u een sjabloon voor berichttransformatie kunt maken, leest u [Een sjabloon voor berichttransformatie maken en testen](./create-template.md).
+Als deel van Destination SDK, verstrekt Adobe ontwikkelaarshulpmiddelen om u bij het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen. Voor informatie over hoe u een sjabloon voor berichttransformatie kunt maken, leest u [Een sjabloon voor berichttransformatie maken en testen](./create-template.md).
 
 Naar **test als uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren**, gebruikt u de *Gereedschap Doel testen*. Met dit hulpmiddel, kunt u uw bestemmingsconfiguratie testen door berichten naar uw REST API eindpunt te verzenden.
 
@@ -60,7 +60,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -118,7 +118,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw ''
 ```

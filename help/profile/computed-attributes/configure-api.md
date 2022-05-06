@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit gebied kan worden gecreeerd gebruikend de Registratie API van het Schema om een schema en een groep van het douanegebied te bepalen die het gegevens verwerkte attributengebied zal houden.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit gebied kan worden gecreeerd gebruikend de Registratie API van het Schema om een schema en een groep van het douaneschemagebied te bepalen die het gegevens verwerkte attributengebied zal houden. Het wordt aanbevolen een apart schema en een veldgroep met &quot;berekende kenmerken&quot; te maken waarin uw organisatie alle kenmerken kan toevoegen die als berekende kenmerken moeten worden gebruikt. Dit laat uw organisatie toe om het gegevens verwerkte attributenschema van andere schema&#39;s schoon te scheiden die voor gegevensopname worden gebruikt.
 
-De workflow in dit document schetst hoe u de API voor het schemaregister kunt gebruiken om een profiel-ingeschakeld schema &quot;Berekend kenmerk&quot; te maken dat verwijst naar een aangepaste veldgroep. Dit document bevat voorbeeldcode die specifiek is voor berekende kenmerken, maar raadpleeg de [Handleiding voor schemaregistratie-API](../../xdm/api/overview.md) voor gedetailleerde informatie over het definiëren van veldgroepen en schema&#39;s met behulp van de API.
+De workflow in dit document schetst hoe u de API voor het schemaregister kunt gebruiken om een profiel-ingeschakeld schema &quot;Berekend kenmerk&quot; te maken dat verwijst naar een aangepaste veldgroep. Dit document bevat voorbeeldcode die specifiek is voor berekende kenmerken. Raadpleeg echter de [Handleiding Schema Registry API](../../xdm/api/overview.md) voor gedetailleerde informatie over het definiëren van veldgroepen en schema&#39;s met behulp van de API.
 
 ## Een veldgroep met berekende kenmerken maken
 
-Om een gebiedsgroep tot stand te brengen die de Registratie API van het Schema gebruikt, begin door een verzoek van de POST aan het `/tenant/fieldgroups` eindpunt te doen en de details van de gebiedsgroep in het verzoeklichaam te verstrekken. Voor details betreffende het werken met gebiedsgroepen die de Registratie API van het Schema gebruiken, gelieve te verwijzen naar [de eindpuntgids van de gebiedsgroepen API](../../xdm/api/field-groups.md).
+Om een gebiedsgroep tot stand te brengen die de Registratie API van het Schema gebruikt, begin door een verzoek van de POST aan `/tenant/fieldgroups` en het verstrekken van de details van de gebiedsgroep in het verzoeklichaam. Voor meer informatie over het werken met veldgroepen met de API voor het schemaregister raadpleegt u de [API-eindgebruikershandleiding voor veldgroepen](../../xdm/api/field-groups.md).
 
 **API-indeling**
 
@@ -39,7 +39,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -84,7 +84,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de nieuwe veldgroep, inclusief `$id`, `meta:altIt` en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de nieuwe veldgroep, inclusief de `$id`, `meta:altIt`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
 
 ```json
 {
@@ -120,7 +120,7 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -146,9 +146,9 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
 
 ## Veldgroep bijwerken met extra berekende kenmerken
 
-Aangezien meer gegevens verwerkte attributen nodig zijn, kunt u de gegevens verwerkte groep van het attributengebied met extra attributen bijwerken door een verzoek van de PUT aan het `/tenant/fieldgroups` eindpunt te doen. Voor deze aanvraag moet u de unieke id opnemen van de veldgroep die u in het pad hebt gemaakt en alle nieuwe velden die u in de hoofdtekst wilt toevoegen.
+Naarmate meer berekende kenmerken nodig zijn, kunt u de veldgroep met berekende kenmerken bijwerken met extra kenmerken door een PUT aan te vragen bij de `/tenant/fieldgroups` eindpunt. Voor deze aanvraag moet u de unieke id opnemen van de veldgroep die u in het pad hebt gemaakt en alle nieuwe velden die u in de hoofdtekst wilt toevoegen.
 
-Voor meer informatie betreffende het bijwerken van een gebiedsgroep gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [de eindpuntgids van de gebiedsgroepen API](../../xdm/api/field-groups.md).
+Raadpleeg voor meer informatie over het bijwerken van een veldgroep met de API voor het schemaregister [API-eindgebruikershandleiding voor veldgroepen](../../xdm/api/field-groups.md).
 
 **API-indeling**
 
@@ -158,7 +158,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 **Verzoek**
 
-Dit verzoek voegt nieuwe gebieden met betrekking tot `purchaseSummary` informatie toe.
+Met dit verzoek voegt u nieuwe velden toe die betrekking hebben op `purchaseSummary` informatie.
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -285,7 +285,7 @@ Met een geslaagde reactie worden de details van de bijgewerkte veldgroep geretou
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -311,9 +311,9 @@ Met een geslaagde reactie worden de details van de bijgewerkte veldgroep geretou
 
 ## Een schema maken dat geschikt is voor profielen
 
-Om een schema tot stand te brengen gebruikend de Registratie API van het Schema, begin door een verzoek van de POST aan het `/tenant/schemas` eindpunt te doen en de details van het schema in het verzoeklichaam te verstrekken. Het schema moet ook voor [!DNL Profile] worden toegelaten en als deel van het verenigingsschema voor de schemaklasse verschijnen.
+Om een schema tot stand te brengen gebruikend de Registratie API van het Schema, begin door een verzoek van de POST aan `/tenant/schemas` eindpunt en het verstrekken van de details van het schema in het verzoeklichaam. Het schema moet ook zijn ingeschakeld voor [!DNL Profile] en verschijnen als deel van het verenigingsschema voor de schemaklasse.
 
-Voor meer informatie over [!DNL Profile]-Toegelaten schema&#39;s en verenigingsschema&#39;s, te herzien gelieve [[!DNL Schema Registry] API gids](../../xdm/api/overview.md) en [de documentatie van de schemacompositie](../../xdm/schema/composition.md).
+Voor meer informatie over [!DNL Profile]- toegelaten schema&#39;s en verenigingsschema&#39;s, gelieve te herzien [[!DNL Schema Registry] API-handleiding](../../xdm/api/overview.md) en de [basisdocumentatie over schemacompositie](../../xdm/schema/composition.md).
 
 **API-indeling**
 
@@ -323,7 +323,7 @@ POST /tenants/schemas
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuw schema dat verwijzingen `computedAttributesFieldGroup` eerder in dit document (gebruikend zijn unieke identiteitskaart) wordt gecreeerd en voor het de unieschema van het Profiel (gebruikend `meta:immutableTags` serie) wordt toegelaten. Voor gedetailleerde instructies op hoe te om een schema tot stand te brengen gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [schema&#39;s API eindpuntgids](../../xdm/api/schemas.md).
+Het volgende verzoek leidt tot een nieuw schema dat verwijzingen naar `computedAttributesFieldGroup` die eerder in dit document is gemaakt (met de unieke id) en die is ingeschakeld voor het schema voor de profielunie (met het gereedschap `meta:immutableTags` array). Voor gedetailleerde instructies over hoe te om een schema tot stand te brengen gebruikend de Registratie API van het Schema, gelieve te verwijzen naar [schema&#39;s API eindpuntgids](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -331,7 +331,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -366,7 +366,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die de details bevat van het nieuwe schema, inclusief `$id`, `meta:altId` en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe schema, inclusief de `$id`, `meta:altId`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
 
 ```json
 {
@@ -400,7 +400,7 @@ Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die 
     "https://ns.adobe.com/xdm/context/identitymap",
     "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -434,4 +434,4 @@ Een succesvolle reactie retourneert HTTP-status 201 (gemaakt) en een lading die 
 
 ## Volgende stappen
 
-Nu u een schema en gebiedsgroep hebt gecreeerd waarin uw gegevens verwerkte attributen zullen worden opgeslagen, kunt u de gegevens verwerkte attributen tot stand brengen gebruikend het `/computedattributes` API eindpunt. Voor gedetailleerde stappen aan het creëren van een gegevens verwerkt attribuut in API, volg de stappen die in [gegevens verwerkte attributen API eindpuntgids](ca-api.md) worden verstrekt.
+Nu u een schema en veldgroep hebt gemaakt waarin uw berekende kenmerken worden opgeslagen, kunt u het berekende kenmerk maken met het gereedschap `/computedattributes` API-eindpunt. Voer de stappen in het dialoogvenster [API-eindpuntgids voor berekende kenmerken](ca-api.md).

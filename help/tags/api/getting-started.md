@@ -2,7 +2,7 @@
 title: Aan de slag met de Reactor-API
 description: Leer hoe u aan de slag kunt met de Reactor-API, inclusief stappen voor het genereren van de vereiste toegangsreferenties.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 0%
@@ -15,23 +15,23 @@ Voor het gebruik van de [Reactor-API](https://www.adobe.io/experience-platform-a
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 In deze handleiding wordt uitgelegd hoe u de Adobe Developer Console kunt gebruiken om de waarden voor elk van deze kopteksten te verzamelen, zodat u aanroepen kunt starten naar de Reactor-API.
 
 ## Toegang voor ontwikkelaars tot Adobe Experience Platform
 
-Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u ontwikkelaarstoegang tot het Experience Platform hebben. Volg de eerste stappen in het dialoogvenster [Zelfstudie over verificatie van Experience Platforms](https://www.adobe.com/go/platform-api-authentication-en). Zodra u bij de stap &quot;Genereer toegangsgeloofsbrieven in de Console van de Ontwikkelaar van de Adobe&quot;aankomt, terugkeer aan dit leerprogramma om de geloofsbrieven te produceren specifiek voor Reactor API.
+Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u ontwikkelaarstoegang tot het Experience Platform hebben. Volg de eerste stappen in het dialoogvenster [Zelfstudie over verificatie van Experience Platforms](https://www.adobe.com/go/platform-api-authentication-en). Wanneer u de stap &#39;Toegangsgegevens genereren in Adobe Developer Console&#39; hebt bereikt, gaat u terug naar deze zelfstudie om de referenties te genereren die specifiek zijn voor de Reactor-API.
 
 ## Toegangsreferenties genereren
 
-Gebruikend de Console van de Ontwikkelaar van Adobe, moet u de volgende drie toegangsgeloofsbrieven produceren:
+Met Adobe Developer Console moet u de volgende drie toegangsreferenties genereren:
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-De id van uw IMS-organisatie (`{IMS_ORG}`) en API-sleutel (`{API_KEY}`) kan in toekomstige API-aanroepen opnieuw worden gebruikt nadat deze zijn gegenereerd. Nochtans, uw toegangstoken (`{ACCESS_TOKEN}`) is tijdelijk en moet om de 24 uur opnieuw worden gegenereerd.
+De id van uw IMS-organisatie (`{ORG_ID}`) en API-sleutel (`{API_KEY}`) kan in toekomstige API-aanroepen opnieuw worden gebruikt nadat deze zijn gegenereerd. Nochtans, uw toegangstoken (`{ACCESS_TOKEN}`) is tijdelijk en moet om de 24 uur opnieuw worden gegenereerd.
 
 De stappen voor het genereren van deze waarden worden hieronder in detail besproken.
 
@@ -70,13 +70,13 @@ Selecteer in de lijst de gewenste productprofielen en selecteer vervolgens **gec
 Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op de Experience Platform Reactor API pagina. Hier omlaag schuiven naar de **Serviceaccount (JWT)** sectie, die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan Reactor API worden vereist:
 
 * **CLIENT-ID**: De client-id is vereist `{API_KEY}` die in de `x-api-key` header.
-* **ORGANISATIE-ID**: De organisatie-id is de `{IMS_ORG}` waarde die moet worden gebruikt in de `x-gw-ims-org-id` header.
+* **ORGANISATIE-ID**: De organisatie-id is de `{ORG_ID}` waarde die moet worden gebruikt in de `x-gw-ims-org-id` header.
 
 ![](../images/api/getting-started/access-creds.png)
 
 ### Verificatie voor elke sessie
 
-Nu hebt u uw `{API_KEY}` en `{IMS_ORG}` waarden, de laatste stap genereert een `{ACCESS_TOKEN}` waarde.
+Nu hebt u uw `{API_KEY}` en `{ORG_ID}` waarden, de laatste stap genereert een `{ACCESS_TOKEN}` waarde.
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ Een succesvolle reactie keert een nieuw toegangstoken, evenals het aantal second
 
 ## Volgende stappen
 
-Als u de stappen in deze zelfstudie uitvoert, hebt u geldige waarden voor `{IMS_ORG}`, `{API_KEY}`, en `{ACCESS_TOKEN}`. U kunt deze waarden nu testen door ze te gebruiken in een eenvoudig cURL-verzoek aan de Reactor-API.
+Als u de stappen in deze zelfstudie uitvoert, hebt u geldige waarden voor `{ORG_ID}`, `{API_KEY}`, en `{ACCESS_TOKEN}`. U kunt deze waarden nu testen door ze te gebruiken in een eenvoudig cURL-verzoek aan de Reactor-API.
 
 Begin door te proberen een API vraag te maken aan [lijst alle bedrijven](./endpoints/companies.md#list).
 
@@ -167,4 +167,4 @@ Nadat u hebt bevestigd dat uw toegangsreferenties werken, gaat u verder met de d
 
 JWT-bibliotheken en SDK&#39;s: [https://jwt.io/](https://jwt.io/)
 
-Ontwikkeling van de Postman-API: [https://www.postman.com/](https://www.postman.com/)
+Postman API-ontwikkeling: [https://www.postman.com/](https://www.postman.com/)

@@ -5,8 +5,7 @@ title: Schemas API Endpoint
 topic-legacy: schemas
 description: U kunt het `/functies' eindpunt in Adobe Experience Platform API gebruiken om uw kaartuitdrukkingen en lijst beschikbare kaartsetfuncties te bevestigen.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -15,11 +14,11 @@ ht-degree: 0%
 
 # Functie-eindpunten
 
-Met toewijzingsfuncties kunt u gegevens transformeren tussen bron- en doelschema&#39;s. U kunt het `/languages/el` eindpunt gebruiken om uw uitdrukkingen te bevestigen evenals een lijst van alle beschikbare afbeelding-vastgestelde functies te krijgen.
+Met toewijzingsfuncties kunt u gegevens transformeren tussen bron- en doelschema&#39;s. U kunt de `/languages/el` eindpunt om uw uitdrukkingen te bevestigen evenals een lijst van alle beschikbare afbeelding-vastgestelde functies te krijgen.
 
 ## Expressies valideren
 
-U kunt bevestigen als uw huidige uitdrukking geldig is door een verzoek van de POST aan het `/languages/el/validate` eindpunt te doen.
+U kunt valideren of uw huidige expressie geldig is door een POST aan te vragen bij de `/languages/el/validate` eindpunt.
 
 **API-indeling**
 
@@ -34,7 +33,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -55,7 +54,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met de validatiestatus van de 
 
 ## Lijsttoewijzingsfuncties
 
-U kunt een lijst van alle afbeelding-vastgestelde functies terugwinnen beschikbaar aan u door een verzoek van de GET aan het `/languages/el/functions` eindpunt te doen.
+U kunt een lijst van alle afbeelding-vastgestelde functies terugwinnen beschikbaar aan u door een verzoek van de GET aan `/languages/el/functions` eindpunt.
 
 **API-indeling**
 
@@ -69,7 +68,7 @@ GET /languages/el/functions
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -120,7 +119,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van alle beschik
 
 ## Operatoren voor lijsttoewijzing
 
-U kunt een lijst van alle afbeelding-vastgestelde exploitanten terugwinnen beschikbaar aan u door een verzoek van de GET aan het `/languages/el/operators` eindpunt te doen.
+U kunt een lijst van alle in kaart gebrachte exploitanten terugwinnen beschikbaar aan u door een verzoek van de GET aan `/languages/el/operators` eindpunt.
 
 **API-indeling**
 
@@ -134,7 +133,7 @@ GET /languages/el/operators
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

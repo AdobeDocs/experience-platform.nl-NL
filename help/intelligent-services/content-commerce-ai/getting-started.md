@@ -5,7 +5,7 @@ title: Aan de slag met AI voor Inhoud en Handel
 topic-legacy: Getting started
 description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. Om vraag aan Adobe I/O APIs en de I/O Integratie van de Console te maken, moet u het authentificatieleerprogramma eerst voltooien.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Een Postman-omgeving maken (optioneel)
 

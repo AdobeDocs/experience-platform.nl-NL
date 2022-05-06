@@ -1,7 +1,8 @@
 ---
 title: Buildeindpunt
 description: Leer hoe te om vraag aan het /builds eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 1%
@@ -10,21 +11,21 @@ ht-degree: 1%
 
 # Buildeindpunt
 
-Extensies, regels en gegevenselementen zijn de bouwstenen van tags in Adobe Experience Platform. Wanneer u uw toepassing wilt maken iets doen, worden deze bouwstenen toegevoegd aan een [bibliotheek](./libraries.md). Om een bibliotheek op uw ervaringstoepassing op te stellen, wordt de bibliotheek gecompileerd in een bouwstijl. Met het `/builds`-eindpunt in de Reactor-API kunt u builds programmatisch beheren binnen uw ervaringstoepassing.
+Extensies, regels en gegevenselementen zijn de bouwstenen van tags in Adobe Experience Platform. Wanneer u wilt dat uw toepassing iets doet, worden deze bouwstenen toegevoegd aan een [bibliotheek](./libraries.md). Om een bibliotheek op uw ervaringstoepassing op te stellen, wordt de bibliotheek gecompileerd in een bouwstijl. De `/builds` Het eindpunt in Reactor API staat u toe om bouwstijlen binnen uw ervaringstoepassing programmatically te beheren.
 
 Een build is het feitelijke bestand (of de bestanden) die in uw web- en mobiele toepassing zijn geladen. De inhoud van elke build varieert op basis van de volgende factoren:
 
 * De bronnen die in de bibliotheek zijn opgenomen
-* De configuratie van de [omgeving](./environments.md) waarin de bibliotheek is gemaakt
-* Het platform van [bezit](./properties.md) waartot de bouwstijl behoort
+* De configuratie van de [milieu](./environments.md) waarin de bibliotheek is gebouwd
+* Het platform van de [eigenschap](./properties.md) waarvan de build deel uitmaakt
 
 Een build behoort tot precies één bibliotheek. Een bibliotheek kan veel builds bevatten.
 
-Raadpleeg het [publicatieoverzicht](../../ui/publishing/overview.md) voor meer algemene informatie over builds en hoe deze in de publicatieworkflow voor tags passen.
+Voor meer algemene informatie over builds en hoe deze passen in de publicatieworkflow voor tags raadpleegt u de [publicatieoverzicht](../../ui/publishing/overview.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met builds ophalen {#list}
 
@@ -38,13 +39,13 @@ GET /libraries/{LIBRARY_ID}/builds
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `LIBRARY_ID` | De `id` van de bibliotheek waarvan bouwt u wilt een lijst maken. |
+| `LIBRARY_ID` | De `id` van de bibliotheek waarvan u de builds wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde bouwstijlen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde bouwstijlen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -53,7 +54,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LBad32d71feff844b7b5a11dd0bf030964/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -166,7 +167,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BL8238895201d548718bda2d0bf2b83467 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -270,7 +271,7 @@ curl -X POST \
   https://reactor.adobe.io/libraries/LBd8eaef8283fe40738348db65a8984475/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwoord**
@@ -349,7 +350,7 @@ Een succesvolle reactie keert de details van nieuw gecreeerd bouwstijl terug.
 
 ## Een build opnieuw publiceren {#republish}
 
-U kunt een build opnieuw publiceren vanuit een [gepubliceerde bibliotheek](./libraries.md#publish) door de id ervan op te nemen in het pad van een PATCH-verzoek.
+U kunt een build opnieuw publiceren op basis van een [gepubliceerde bibliotheek](./libraries.md#publish) door zijn identiteitskaart in de weg van een verzoek van de PATCH op te nemen.
 
 **API-indeling**
 
@@ -365,14 +366,14 @@ PATCH /builds/{BUILD_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt `app_id` bijgewerkt voor een bestaande toepassingsconfiguratie.
+De volgende aanvraag werkt de `app_id` voor een bestaande toepassingsconfiguratie.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -387,8 +388,8 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De `id` van de build die u wilt bijwerken. Dit zou de `{BUILD_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `builds` zijn. |
+| `id` | De `id` van de build die u wilt bijwerken. Dit moet overeenkomen met de `{BUILD_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `builds`. |
 | `meta.action` | Het type PATCH-actie dat moet worden uitgevoerd. Moet worden ingesteld op `republish`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -470,13 +471,13 @@ Een succesvolle reactie keert de details van opnieuw gepubliceerde bouwstijl ter
 
 ## Verwante middelen voor een build ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bouwstijl terug te winnen. Als [een build](#lookup) opzoekt, worden deze relaties vermeld onder de eigenschap `relationships`.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bouwstijl terug te winnen. Wanneer [zoeken naar een build](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
 
-Zie de [relatiehandleiding](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### Verwante gegevenselementen weergeven voor een build {#data-elements}
 
-U kunt van de verwante gegevenselementen voor een bouwstijl een lijst maken door `/data_elements` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de verwante gegevenselementen voor een bouwstijl van een lijst maken door toe te voegen `/data_elements` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -497,7 +498,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -617,7 +618,7 @@ Een succesvolle reactie keert een lijst van gegevenselementen terug die met de b
 
 ### Verwante extensies weergeven voor een build {#extensions}
 
-U kunt van de verwante uitbreidingen voor een bouwstijl een lijst maken door `/extensions` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de verwante extensies weergeven voor een build door deze toe te voegen `/extensions` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -638,7 +639,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -748,7 +749,7 @@ Een succesvol antwoord retourneert een lijst met extensies die verwant zijn aan 
 
 ### Verwante regels voor een build weergeven {#rules}
 
-U kunt van de verwante regels voor een bouwstijl een lijst maken door `/rules` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de verwante regels voor een bouwstijl vermelden door toe te voegen `/rules` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -758,7 +759,7 @@ GET  /builds/{BUILD_ID}/rules
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BUILD_ID}` | De `id` van de bouwstijl waarvan regels wilt u een lijst maken. |
+| `{BUILD_ID}` | De `id` van de build waarvan u de regels wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -769,7 +770,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -861,7 +862,7 @@ Een succesvolle reactie keert een lijst van regels terug die met de bouwstijl ve
 
 ### De verwante bibliotheek opzoeken voor een build {#library}
 
-U kunt de verwante bibliotheek voor een bouwstijl terugwinnen door `/library` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de verwante bibliotheek voor een bouwstijl terugwinnen door toe te voegen `/library` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -882,7 +883,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/library \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -974,7 +975,7 @@ curl -X GET \
 
 ### De verwante omgeving opzoeken voor een build {#environment}
 
-U kunt het verwante milieu voor een bouwstijl terugwinnen door `/environment` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt het verwante milieu voor een bouwstijl terugwinnen door toe te voegen `/environment` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -995,7 +996,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

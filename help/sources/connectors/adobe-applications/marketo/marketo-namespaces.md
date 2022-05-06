@@ -5,7 +5,7 @@ title: B2B-naamruimten en -schema's
 topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # B2B-naamruimten en -schema&#39;s
 
-Dit document bevat informatie over de onderliggende instelling voor de naamruimten en schema&#39;s die met B2B-bronnen moeten worden gebruikt. Dit document bevat ook informatie over het instellen van uw Postman-automatiseringsprogramma dat nodig is voor het genereren van B2B-naamruimten en -schema&#39;s.
+Dit document bevat informatie over de onderliggende instelling voor de naamruimten en schema&#39;s die met B2B-bronnen moeten worden gebruikt. Dit document bevat ook informatie over het instellen van het Postman-hulpprogramma voor automatisering dat vereist is voor het genereren van B2B-naamruimten en -schema&#39;s.
 
 >[!IMPORTANT]
 >
@@ -44,7 +44,7 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | `PRIVATE_KEY` | Een referentie die wordt gebruikt voor het verifiëren van uw [!DNL Postman] -instantie naar Experience Platform-API&#39;s. Zie de zelfstudie over het instellen van de ontwikkelaarsconsole en [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../../landing/postman.md) voor instructies over het ophalen van uw {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Een referentie die wordt gebruikt om te integreren in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Het Identity Management System (IMS) biedt het framework voor verificatie van Adobe-services. Met betrekking tot [!DNL Marketo]Deze waarde is vast en wordt altijd ingesteld op: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie de zelfstudie aan [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../../landing/postman.md) voor instructies over hoe u uw `{IMS_ORG}` informatie. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie de zelfstudie aan [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../../landing/postman.md) voor instructies over hoe u uw `{ORG_ID}` informatie. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | De naam van de virtuele sandboxpartitie die u gebruikt. | `prod` |
 | `TENANT_ID` | Een id die wordt gebruikt om ervoor te zorgen dat de bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Het URL-eindpunt waarnaar u API-aanroepen maakt. Deze waarde is vast en wordt altijd ingesteld op: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |

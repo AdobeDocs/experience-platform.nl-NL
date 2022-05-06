@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform kunt u in real-time zorgen voor een gecoördineerde, consistente en gepersonaliseerde ervaring voor uw klanten op meerdere kanalen, door de juiste gegevens direct beschikbaar te maken en voortdurend bij te werken naarmate de wijzigingen zich voordoen. Dit wordt gedaan door het gebruik van randen, een geografisch geplaatste server die gegevens opslaat en het gemakkelijk toegankelijk voor toepassingen maakt.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Edge-projectieconfiguraties en eindpunten van doelen
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in echt te drijven - tijd, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform biedt realtime toegang tot gegevens via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in echt te verstrekken - tijd. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze gids verstrekt gedetailleerde instructies voor het gebruiken van [!DNL Real-time Customer Profile] API om met randprojecties, met inbegrip van bestemmingen en configuraties te werken.
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in echt te drijven - tijd, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform biedt realtime toegang tot gegevens via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in echt te verstrekken - tijd. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de [!DNL Real-time Customer Profile] API om met randprojecties, met inbegrip van bestemmingen en configuraties te werken.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 >[!NOTE]
 >
->Verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een `Content-Type` kopbal. In dit document worden meerdere `Content-Type` gebruikt. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u correcte `Content-Type` voor elk verzoek gebruikt.
+>De verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een `Content-Type` header. Meer dan één `Content-Type` wordt gebruikt in dit document. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u de correcte gebruikt `Content-Type` voor elk verzoek.
 
 ## Projectiebestemmingen
 
@@ -30,7 +30,7 @@ Een projectie kan naar een of meer randen worden gerouteerd door de locaties op 
 
 ### Alle doelen weergeven
 
-U kunt van de randbestemmingen een lijst maken die reeds voor uw organisatie door een verzoek van de GET aan het `/config/destinations` eindpunt te richten zijn gecreeerd.
+U kunt een lijst maken van de randbestemmingen die reeds voor uw organisatie door een verzoek van de GET aan te richten `/config/destinations` eindpunt.
 
 **API-indeling**
 
@@ -45,13 +45,13 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-De reactie omvat een `projectionDestinations` serie met de details voor elke bestemming die als individueel voorwerp binnen de serie wordt getoond. Als er geen projecties zijn geconfigureerd, retourneert de array `projectionDestinations` leeg.
+De reactie omvat een `projectionDestinations` array met de details voor elk doel weergegeven als een afzonderlijk object binnen de array. Als er geen projecties zijn geconfigureerd, wordt de `projectionDestinations` array retourneert leeg.
 
 >[!NOTE]
 >
@@ -105,13 +105,13 @@ De reactie omvat een `projectionDestinations` serie met de details voor elke bes
 | Eigenschap | Beschrijving |
 |---|---|
 | `_links.self.href` | Op het hoogste niveau, past de weg aan die wordt gebruikt om het verzoek van de GET te doen. Binnen elk individueel bestemmingsvoorwerp, kan dit weg in een verzoek van de GET worden gebruikt om de details van een specifieke bestemming direct te zoeken. |
-| `id` | Binnen elk bestemmingsvoorwerp, `"id"` toont read-only, systeem-geproduceerde unieke identiteitskaart voor de bestemming. Deze ID wordt gebruikt wanneer het van verwijzingen voorzien van een specifieke bestemming en wanneer het creëren van projectieconfiguraties. |
+| `id` | Binnen elk doelobject wordt het `"id"` toont read-only, systeem-geproduceerde unieke identiteitskaart voor de bestemming. Deze ID wordt gebruikt wanneer het van verwijzingen voorzien van een specifieke bestemming en wanneer het creëren van projectieconfiguraties. |
 
-Voor meer informatie betreffende de attributen van een individuele bestemming, te zien gelieve de sectie over [het creëren van een bestemming](#create-a-destination) die volgt.
+Voor meer informatie over de kenmerken van een individuele bestemming raadpleegt u de sectie over [een doel maken](#create-a-destination) dat volgt .
 
 ### Een doel maken {#create-a-destination}
 
-Als de bestemming u vereist niet reeds bestaat, kunt u een nieuwe projectiebestemming tot stand brengen door een verzoek van de POST aan het `/config/destinations` eindpunt te doen.
+Als de bestemming u vereist niet reeds bestaat, kunt u een nieuwe projectiebestemming tot stand brengen door een verzoek van de POST aan het `/config/destinations` eindpunt.
 
 **API-indeling**
 
@@ -125,14 +125,14 @@ Met de volgende aanvraag wordt een nieuwe randbestemming gemaakt.
 
 >[!NOTE]
 >
->Het verzoek van de POST om een bestemming tot stand te brengen vereist specifieke `Content-Type` kopbal, zoals hieronder getoond. Als u een onjuiste `Content-Type`-header gebruikt, treedt een HTTP Status 415 (Unsupported Media Type)-fout op.
+>Het verzoek van de POST om een bestemming tot stand te brengen vereist een specifieke `Content-Type` header, zoals hieronder weergegeven. Onjuist gebruiken `Content-Type` resulteert in een HTTP Status 415 (Unsupported Media Type) fout.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json; version=1' \
   -d '{
@@ -154,7 +154,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van het nieuwe randdoel, inclusief de alleen-lezen, door het systeem gegenereerde unieke id (`id`).
+Een succesvol antwoord retourneert de details van het nieuwe randdoel, inclusief de alleen-lezen, door het systeem gegenereerde unieke id (`id`).
 
 ```json
 {
@@ -180,7 +180,7 @@ Een geslaagde reactie retourneert de details van het nieuwe randdoel, inclusief 
 
 ### Een doel weergeven
 
-Als u unieke identiteitskaart van een projectiebestemming kent, kunt u een raadplegingsverzoek uitvoeren om zijn details te bekijken. Dit wordt gedaan door een verzoek van de GET aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming in de verzoekweg te doen.
+Als u unieke identiteitskaart van een projectiebestemming kent, kunt u een raadplegingsverzoek uitvoeren om zijn details te bekijken. Dit gebeurt door een verzoek van de GET aan `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming in de verzoekweg.
 
 **API-indeling**
 
@@ -201,13 +201,13 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations/9d66c06e-c745-480c-b64c-1d5234d25f4b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Het reactieobject geeft de details van de projectiebestemming weer. Het `id` attribuut zou identiteitskaart van de projectiebestemming moeten aanpassen die in het verzoek werd verstrekt.
+Het reactieobject geeft de details van de projectiebestemming weer. De `id` attribuut zou identiteitskaart van de projectiebestemming moeten aanpassen die in het verzoek werd verstrekt.
 
 ```json
 {
@@ -227,7 +227,7 @@ Het reactieobject geeft de details van de projectiebestemming weer. Het `id` att
 
 ### Een doel bijwerken
 
-Een bestaande bestemming kan worden bijgewerkt door een verzoek van de PUT aan het `/config/destinations` eindpunt te doen en met inbegrip van identiteitskaart van de bestemming die in de verzoekweg moet worden bijgewerkt. Deze verrichting herschrijft hoofdzakelijk de bestemming, daarom moeten de zelfde attributen in het lichaam van het verzoek worden verstrekt zoals wanneer het creëren van een nieuwe bestemming wordt verstrekt.
+Een bestaande bestemming kan worden bijgewerkt door een verzoek van de PUT aan `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming die in de verzoekweg moet worden bijgewerkt. Deze verrichting herschrijft hoofdzakelijk de bestemming, daarom moeten de zelfde attributen in het lichaam van het verzoek worden verstrekt zoals wanneer het creëren van een nieuwe bestemming wordt verstrekt.
 
 >[!CAUTION]
 >
@@ -245,18 +245,18 @@ PUT /config/destinations/{DESTINATION_ID}
 
 **Verzoek**
 
-Het volgende verzoek werkt de bestaande bestemming bij om een tweede plaats (`dataCenters`) te omvatten.
+Het volgende verzoek werkt de bestaande bestemming bij om een tweede plaats (`dataCenters`).
 
 >[!IMPORTANT]
 >
->Het verzoek van de PUT vereist specifieke `Content-Type` kopbal, zoals hieronder getoond. Als u een onjuiste `Content-Type`-header gebruikt, treedt een HTTP Status 415 (Unsupported Media Type)-fout op.
+>Het verzoek van de PUT vereist een specifieke `Content-Type` header, zoals hieronder weergegeven. Onjuist gebruiken `Content-Type` resulteert in een HTTP Status 415 (Unsupported Media Type) fout.
 
 ```shell
 curl -X PUT \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json' \
   -d '{
@@ -272,11 +272,11 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `currentVersion` | De huidige versie van de bestaande bestemming. De waarde van het `version` attribuut wanneer het uitvoeren van een raadplegingsverzoek voor de bestemming. |
+| `currentVersion` | De huidige versie van de bestaande bestemming. De waarde van de `version` attribuut wanneer het uitvoeren van een raadplegingsverzoek voor de bestemming. |
 
 **Antwoord**
 
-De reactie omvat de bijgewerkte details voor de bestemming, met inbegrip van zijn identiteitskaart en nieuwe `version` van de bestemming.
+De reactie bevat de bijgewerkte gegevens voor de bestemming, inclusief de id en de nieuwe `version` van de bestemming.
 
 ```json
 {
@@ -297,11 +297,11 @@ De reactie omvat de bijgewerkte details voor de bestemming, met inbegrip van zij
 
 ### Een doel verwijderen
 
-Als uw organisatie niet meer een projectiebestemming vereist, kan het worden geschrapt door een verzoek van de DELETE aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming te schrappen die u in de verzoekweg wenst te schrappen.
+Als uw organisatie niet langer een projectiebestemming vereist, kan het worden geschrapt door een verzoek van de DELETE aan te richten `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming die u wenst om in de verzoekweg te schrappen.
 
 >[!CAUTION]
 >
->De API-reactie op het verwijderingsverzoek is onmiddellijk, maar de werkelijke wijzigingen in de gegevens aan de randen worden asynchroon uitgevoerd. Met andere woorden, de profielgegevens worden verwijderd van alle randen (de `dataCenters` die in de projectiebestemming zijn opgegeven), maar het proces duurt even om te voltooien.
+>De API-reactie op het verwijderingsverzoek is onmiddellijk, maar de werkelijke wijzigingen in de gegevens aan de randen worden asynchroon uitgevoerd. Met andere woorden, de profielgegevens worden uit alle randen verwijderd (de `dataCenters` opgegeven in de projectiebestemming), maar het proces duurt langer.
 
 **API-indeling**
 
@@ -321,7 +321,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -331,11 +331,11 @@ De verwijderaanvraag retourneert HTTP-status 204 (Geen inhoud) en een lege antwo
 
 ## Projectieconfiguraties
 
-Projectieconfiguraties bieden informatie over de gegevens die aan elke rand beschikbaar moeten zijn. In plaats van een volledig [!DNL Experience Data Model] (XDM) schema aan de rand te projecteren, verstrekt een projectie slechts specifieke gegevens, of gebieden, van het schema. Uw organisatie kan meer dan één projectieconfiguratie voor elk schema bepalen XDM.
+Projectieconfiguraties bieden informatie over de gegevens die aan elke rand beschikbaar moeten zijn. In plaats van een complete [!DNL Experience Data Model] (XDM) schema aan de rand, verstrekt een projectie slechts specifieke gegevens, of gebieden, van het schema. Uw organisatie kan meer dan één projectieconfiguratie voor elk schema bepalen XDM.
 
 ### Alle projectieconfiguraties weergeven
 
-U kunt van alle projectieconfiguraties een lijst maken die voor uw organisatie door een verzoek van de GET aan het `/config/projections` eindpunt te richten zijn gecreeerd. U kunt facultatieve parameters aan de verzoekweg ook toevoegen om tot projectieconfiguraties voor een bepaald schema toegang te hebben of een individuele projectie door zijn naam te zoeken.
+U kunt alle projectieconfiguraties die voor uw organisatie zijn gemaakt, weergeven door een GET-aanvraag in te dienen bij de `/config/projections` eindpunt. U kunt facultatieve parameters aan de verzoekweg ook toevoegen om tot projectieconfiguraties voor een bepaald schema toegang te hebben of een individuele projectie door zijn naam te zoeken.
 
 **API-indeling**
 
@@ -352,24 +352,24 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 >[!NOTE]
 >
->`schemaName` is vereist wanneer het gebruiken van de  `name` parameter, aangezien een naam van de projectieconfiguratie slechts uniek in de context van een schemaklasse is.
+>`schemaName` is vereist wanneer u de `name` parameter, aangezien een naam van de projectieconfiguratie slechts uniek in de context van een schemaklasse is.
 
 **Verzoek**
 
-Het volgende verzoek maakt een lijst van alle projectieconfiguraties verbonden aan de [!DNL Experience Data Model] schemaklasse, [!DNL XDM Individual Profile]. Voor meer informatie over XDM en zijn rol binnen [!DNL Platform], gelieve te beginnen door [XDM systeemoverzicht](../../xdm/home.md) te lezen.
+Het volgende verzoek maakt een lijst van alle projectieconfiguraties verbonden aan de [!DNL Experience Data Model] schema-klasse, [!DNL XDM Individual Profile]. Voor meer informatie over XDM en zijn rol binnen [!DNL Platform], te beginnen met het lezen van de [XDM System, overzicht](../../xdm/home.md).
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met projectieconfiguraties binnen het basiskenmerk `_embedded`, dat zich in de array `projectionConfigs` bevindt. Als er geen projectieconfiguraties zijn gemaakt voor uw organisatie, is de `projectionConfigs`-array leeg.
+Een succesvolle reactie keert een lijst van projectieconfiguraties binnen de wortel terug `_embedded` kenmerk, opgenomen in de `projectionConfigs` array. Als er geen projectieconfiguraties zijn gemaakt voor uw organisatie, `projectionConfigs` array is leeg.
 
 ```json
 {
@@ -437,14 +437,14 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->Het verzoek van de POST om een configuratie tot stand te brengen vereist specifieke `Content-Type` kopbal, zoals hieronder getoond. Als u een onjuiste `Content-Type`-header gebruikt, treedt een HTTP Status 415 (Unsupported Media Type)-fout op.
+>Het verzoek van de POST om een configuratie tot stand te brengen vereist een specifieke `Content-Type` header, zoals hieronder weergegeven. Onjuist gebruiken `Content-Type` resulteert in een HTTP Status 415 (Unsupported Media Type) fout.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
@@ -456,7 +456,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `selector` | Een tekenreeks die een lijst bevat met eigenschappen in het schema die moeten worden gerepliceerd naar de randen. De beste werkwijzen voor het werken met kiezers zijn beschikbaar in de sectie [Kiezers](#selectors) van dit document. |
+| `selector` | Een tekenreeks die een lijst bevat met eigenschappen in het schema die moeten worden gerepliceerd naar de randen. De beste werkwijzen voor het werken met kiezers zijn beschikbaar in het dialoogvenster [Kiezers](#selectors) van dit document. |
 | `name` | Een beschrijvende naam voor de nieuwe projectieconfiguratie. |
 | `destinationId` | De id voor de randbestemming waarnaar de gegevens worden geprojecteerd. |
 
@@ -502,15 +502,15 @@ Een succesvolle reactie keert de details van de pas gecreëerde projectieconfigu
 
 ## Kiezers {#selectors}
 
-Een kiezer is een door komma&#39;s gescheiden lijst met XDM-veldnamen. In een projectieconfiguratie geeft de kiezer de eigenschappen aan die in projecties moeten worden opgenomen. De notatie van de parameterwaarde `selector` wordt losjes gebaseerd op de syntaxis van XPath. Hieronder wordt een overzicht gegeven van de ondersteunde syntaxis, met aanvullende voorbeelden ter referentie.
+Een kiezer is een door komma&#39;s gescheiden lijst met XDM-veldnamen. In een projectieconfiguratie geeft de kiezer de eigenschappen aan die in projecties moeten worden opgenomen. Het formaat van de `selector` De parameterwaarde wordt losjes gebaseerd op de syntaxis van XPath. Hieronder wordt een overzicht gegeven van de ondersteunde syntaxis, met aanvullende voorbeelden ter referentie.
 
 ### Ondersteunde syntaxis
 
 * Gebruik komma&#39;s om meerdere velden te selecteren. Gebruik geen spaties.
 * Gebruik puntnotatie om geneste velden te selecteren.
-   * Als u bijvoorbeeld een veld met de naam `field` wilt selecteren dat is genest in een veld met de naam `foo`, gebruikt u de kiezer `foo.field`.
-* Bij het opnemen van een veld dat subvelden bevat, worden ook alle subvelden standaard geprojecteerd. U kunt de subvelden die worden geretourneerd echter filteren met haakjes `"( )"`.
-   * `addresses(type,city.country)` retourneert bijvoorbeeld alleen het adrestype en het land waarin de adresstad zich bevindt voor elk arrayelement `addresses`.
+   * Als u bijvoorbeeld een veld met de naam `field` dat genest is in een veld met de naam `foo`, gebruik de kiezer `foo.field`.
+* Bij het opnemen van een veld dat subvelden bevat, worden ook alle subvelden standaard geprojecteerd. U kunt echter wel de subvelden filteren die worden geretourneerd door haakjes te gebruiken `"( )"`.
+   * Bijvoorbeeld: `addresses(type,city.country)` retourneert alleen het adrestype en het land waarin de adresstad zich voor elke instantie bevindt `addresses` arrayelement.
    * Het bovenstaande voorbeeld is gelijk aan `addresses.type,addresses.city.country`.
 
 >[!NOTE]
@@ -524,11 +524,11 @@ Een kiezer is een door komma&#39;s gescheiden lijst met XDM-veldnamen. In een pr
 
 ### Voorbeelden van de parameter selector
 
-In de volgende voorbeelden worden voorbeeldparameters `selector` weergegeven, gevolgd door de gestructureerde waarden die ze vertegenwoordigen.
+In het volgende voorbeeld ziet u een voorbeeld `selector` parameters, gevolgd door de gestructureerde waarden die ze vertegenwoordigen.
 
 **person.lastName**
 
-Retourneert het `lastName`-subveld van het `person`-object in de gevraagde bron.
+Hiermee wordt het `lastName` subveld van de `person` -object in de gevraagde bron.
 
 ```json
 {
@@ -540,7 +540,7 @@ Retourneert het `lastName`-subveld van het `person`-object in de gevraagde bron.
 
 **adressen**
 
-Retourneert alle elementen in de array `addresses`, inclusief alle velden in elk element, maar geen andere velden.
+Hiermee worden alle elementen in het dialoogvenster geretourneerd `addresses` array, met inbegrip van alle gebieden in elk element, maar geen andere gebieden.
 
 ```json
 {
@@ -567,7 +567,7 @@ Retourneert alle elementen in de array `addresses`, inclusief alle velden in elk
 
 **person.lastName,adressen**
 
-Retourneert het veld `person.lastName` en alle elementen in de array `addresses`.
+Hiermee wordt het `person.lastName` en alle elementen in het `addresses` array.
 
 ```json
 {
@@ -624,7 +624,7 @@ Retourneert alleen het stadsveld voor alle elementen in de array adressen.
 
 **adressen (type,plaats)**
 
-Retourneert alleen de waarden van de velden `type` en `city` voor elk element in de array `addresses`. Alle andere subvelden in elk `addresses`-element worden uitgefilterd.
+Retourneert alleen de waarden van het dialoogvenster `type` en `city` velden voor elk element in het dialoogvenster `addresses` array. Alle andere subvelden in elk subveld `addresses` element wordt uitgefilterd.
 
 ```json
 {
@@ -649,4 +649,4 @@ Retourneert alleen de waarden van de velden `type` en `city` voor elk element in
 
 ## Volgende stappen
 
-Deze gids heeft u de stappen betrokken getoond om projecties en bestemmingen te vormen, met inbegrip van hoe te om de `selector` parameter behoorlijk te formatteren. U kunt nieuwe projectiebestemmingen en configuraties nu tot stand brengen specifiek voor de behoeften van uw organisatie.
+Deze gids heeft u de stappen getoond betrokken om prognoses en bestemmingen te vormen, met inbegrip van hoe te behoorlijk formatteren `selector` parameter. U kunt nieuwe projectiebestemmingen en configuraties nu tot stand brengen specifiek voor de behoeften van uw organisatie.

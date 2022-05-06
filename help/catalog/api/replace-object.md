@@ -5,8 +5,7 @@ title: Een catalogusobject vervangen
 topic-legacy: developer guide
 description: U kunt de inhoud van een voorwerp van de Catalogus beschrijven gebruikend een verzoek van de PUT, waar het volledige middel met de verzoeklading wordt vervangen.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -15,11 +14,11 @@ ht-degree: 0%
 
 # Een catalogusobject vervangen
 
-U kunt de inhoud van een [!DNL Catalog] voorwerp beschrijven gebruikend een verzoek van de PUT, waar het volledige middel met de verzoeklading wordt vervangen.
+U kunt de inhoud van een [!DNL Catalog] object dat gebruikmaakt van een verzoek om PUT, waarbij de volledige bron wordt vervangen door de lading van het verzoek.
 
 >[!NOTE]
 >
->Als u slechts een paar specifieke gebieden binnen een [!DNL Catalog] voorwerp moet bijwerken, kan het gebruiken van een verzoek van de PATCH efficiënter zijn.
+>Als u slechts een paar specifieke gebieden binnen a moet bijwerken [!DNL Catalog] -object, is het gebruik van een PATCH-verzoek wellicht efficiënter.
 
 **API-indeling**
 
@@ -29,7 +28,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te vervangen voorwerp. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te vervangen object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
@@ -42,7 +41,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "New Dataset Name",

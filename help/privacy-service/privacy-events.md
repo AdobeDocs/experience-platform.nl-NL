@@ -5,9 +5,9 @@ title: Abonneren op Privacy Service Events
 topic-legacy: privacy events
 description: Leer hoe te om aan de gebeurtenissen van de Privacy Service in te schrijven gebruikend een vooraf gevormde webhaak.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '435'
 ht-degree: 1%
 
 ---
@@ -38,11 +38,11 @@ Raadpleeg de volgende documentatie bij de Privacy Service voordat u deze zelfstu
 
 Om [!DNL Privacy Service Events], moet u Adobe Developer Console gebruiken om een webhaak te registreren bij uw [!DNL Privacy Service] integratie.
 
-Volg de zelfstudie op [abonneren op [!DNL I/O Event] meldingen](../observability/alerts/subscribe.md) voor gedetailleerde stappen over hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Privacy Service Events]** als uw gebeurtenisprovider om toegang te krijgen tot de hierboven vermelde gebeurtenissen.
+Volg de zelfstudie op [abonneren op [!DNL I/O Event]-meldingen](../observability/alerts/subscribe.md) voor gedetailleerde stappen over hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Privacy Service Events]** als uw gebeurtenisprovider om toegang te krijgen tot de hierboven vermelde gebeurtenissen.
 
 ## Ontvangen [!DNL Privacy Service Event] meldingen
 
-Nadat u de webhaak en privacytaken hebt geregistreerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden weergegeven met de webhaak zelf of door de **[!UICONTROL Debug Tracing]** in het overzicht van de gebeurtenisregistratie van uw project in de Adobe Developer Console.
+Nadat u de webhaak en privacytaken hebt geregistreerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden weergegeven met de webhaak zelf of door de **[!UICONTROL Debug Tracing]** in het overzicht van de gebeurtenisregistratie van uw project in Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
@@ -57,7 +57,7 @@ De volgende JSON is een voorbeeld van een [!DNL Privacy Service Event] berichtla
   "source":"https://ns.adobe.com/platform/gdpr",
   "time":"Wed Oct 23 18:52:32 GMT 2019",
   "data":{
-    "imsOrg":"{IMS_ORG}",
+    "imsOrg":"{ORG_ID}",
     "value":{
       "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
       "message":"analytics.access.complete"

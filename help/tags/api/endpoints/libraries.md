@@ -1,7 +1,8 @@
 ---
 title: Einde bibliotheken
 description: Leer hoe te om vraag aan het /libraries eindpunt in Reactor API te maken.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 1%
@@ -10,15 +11,15 @@ ht-degree: 1%
 
 # Einde bibliotheken
 
-Een bibliotheek is een verzameling tagbronnen ([extensions](./extensions.md), [rules](./rules.md) en [data elements](./data-elements.md)) die het gewenste gedrag van een [eigenschap](./properties.md) vertegenwoordigen. Het `/libraries` eindpunt in Reactor API staat u toe om bibliotheken binnen uw markeringseigenschappen programmatically te beheren.
+Een bibliotheek is een verzameling tagbronnen ([extensions](./extensions.md), [regels](./rules.md), en [gegevenselementen](./data-elements.md)) die het gewenste gedrag van een [eigenschap](./properties.md). De `/libraries` het eindpunt in Reactor API staat u toe om bibliotheken binnen uw markeringseigenschappen programmatically te beheren.
 
 Een bibliotheek behoort tot precies één eigenschap. Een eigenschap kan veel bibliotheken bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Lees voordat u doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe u de API kunt verifiëren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
-Voordat u met bibliotheken gaat werken in de Reactor-API, is het belangrijk dat u de rollen begrijpt die de bibliotheekstatus en -omgevingen spelen bij het bepalen welke handelingen u op een bepaalde bibliotheek kunt uitvoeren. Zie de handleiding op de [bibliotheekpublicatiestroom](../../ui/publishing/publishing-flow.md) voor meer informatie.
+Voordat u met bibliotheken gaat werken in de Reactor-API, is het belangrijk dat u de rollen begrijpt die de bibliotheekstatus en -omgevingen spelen bij het bepalen welke handelingen u op een bepaalde bibliotheek kunt uitvoeren. Zie de handleiding op de [publicatiestroom van bibliotheken](../../ui/publishing/publishing-flow.md) voor meer informatie .
 
 ## Een lijst met bibliotheken ophalen {#list}
 
@@ -38,7 +39,7 @@ GET /properties/{PROPERTY_ID}/libraries
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde bibliotheken op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Zie de gids op [het filtreren reacties](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde bibliotheken op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -47,7 +48,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR4bc17fb09ed845b1acfb0f6600a1f3c0/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -169,7 +170,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -269,20 +270,20 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) die u onder de bibliotheek definieert. |
+| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de bibliotheek onder aan het definiëren bent. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe bibliotheek voor de opgegeven eigenschap gemaakt. Wanneer u eerst een bibliotheek maakt, kan alleen het `name`-kenmerk worden geconfigureerd. Als u gegevenselementen, extensies en regels wilt toevoegen aan de bibliotheek, moet u relaties maken. Zie de sectie over [het beheren van bibliotheekbronnen](#resources) voor meer informatie.
+Met de volgende aanvraag wordt een nieuwe bibliotheek voor de opgegeven eigenschap gemaakt. Bij het maken van een bibliotheek alleen de bijbehorende `name` attribuut kan worden gevormd. Als u gegevenselementen, extensies en regels wilt toevoegen aan de bibliotheek, moet u relaties maken. Zie de sectie over [bibliotheekbronnen beheren](#resources) voor meer informatie .
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -296,8 +297,8 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een leesbare naam voor de bibliotheek. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `libraries` zijn. |
+| `attributes.name` | **(Vereist)** Een voor mensen leesbare naam voor de bibliotheek. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -409,7 +410,7 @@ De gegevenselementen, uitbreidingen, regels, en het milieu die met een bibliothe
 
 ### Bronnen toevoegen aan een bibliotheek {#add-resources}
 
-U kunt middelen aan een bibliotheek toevoegen door `/relationships` aan de weg van een verzoek van de POST toe te voegen, die door het middeltype wordt gevolgd.
+U kunt bronnen toevoegen aan een bibliotheek door deze toe te voegen `/relationships` aan de weg van een verzoek van de POST, die door het middeltype wordt gevolgd.
 
 **API-indeling**
 
@@ -433,7 +434,7 @@ curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -459,7 +460,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details van de toegevoegde relaties. Als u een [opzoekverzoek](#lookup) voor de bibliotheek uitvoert, worden de toegevoegde relaties onder de eigenschap `relationships` weergegeven.
+Een succesvolle reactie retourneert de details van de toegevoegde relaties. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de toegevoegde relaties onder de `relationships` eigenschap.
 
 ```json
 {
@@ -482,7 +483,7 @@ Een succesvolle reactie retourneert de details van de toegevoegde relaties. Als 
 
 ### De bronnen voor een bibliotheek vervangen {#replace-resources}
 
-U kunt alle bestaande middelen van een bepaald type voor een bibliotheek vervangen door `/relationships` aan de weg van een verzoek van de PATCH toe te voegen, die door het middeltype wordt gevolgd dat u vervangt.
+U kunt alle bestaande bronnen van een bepaald type voor een bibliotheek vervangen door deze toe te voegen `/relationships` aan de weg van een verzoek van de PATCH, die door het middeltype wordt gevolgd dat u vervangt.
 
 **API-indeling**
 
@@ -499,14 +500,14 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **Verzoek**
 
-De volgende aanvraag vervangt de extensies voor een bibliotheek door de extensies in de array `data`.
+Met de volgende aanvraag worden de extensies voor een bibliotheek vervangen door de extensies in het dialoogvenster `data` array.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -528,7 +529,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Wanneer u een [opzoekverzoek](#lookup) voor de bibliotheek uitvoert, worden de relaties onder de eigenschap `relationships` weergegeven.
+Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de relaties onder de `relationships` eigenschap.
 
 ```json
 {
@@ -547,7 +548,7 @@ Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Wann
 
 ### Bronnen voor een bibliotheek verwijderen {#remove-resources}
 
-U kunt bestaande middelen uit een bibliotheek verwijderen door `/relationships` aan de weg van een verzoek van DELETE toe te voegen, die door het middeltype wordt gevolgd dat u verwijdert.
+U kunt bestaande bronnen uit een bibliotheek verwijderen door deze toe te voegen `/relationships` aan de weg van een verzoek van de DELETE, die door het middeltype wordt gevolgd dat u verwijdert.
 
 **API-indeling**
 
@@ -564,14 +565,14 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een regel uit een bibliotheek verwijderd. Eventuele bestaande regels die niet in de `data`-array zijn opgenomen, worden niet verwijderd.
+Met het volgende verzoek wordt een regel uit een bibliotheek verwijderd. Bestaande regels die niet in de `data` array wordt niet verwijderd.
 
 ```shell
 curl -X DELETE \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -593,7 +594,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor het middeltype terug. Als er geen relaties bestaan voor dit type resource, wordt de eigenschap `data` geretourneerd als een lege array. Wanneer u een [opzoekverzoek](#lookup) voor de bibliotheek uitvoert, worden de relaties onder de eigenschap `relationships` weergegeven.
+Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor het middeltype terug. Als er geen relaties bestaan voor dit brontype, `data` eigenschap wordt geretourneerd als een lege array. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de relaties onder de `relationships` eigenschap.
 
 ```json
 {
@@ -609,7 +610,7 @@ Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor he
 
 ## Bibliotheek toewijzen aan een omgeving {#environment}
 
-U kunt een bibliotheek aan een milieu `/relationships/environment` aan de weg van een verzoek van de POST toewijzen.
+U kunt een bibliotheek toewijzen aan een omgeving  `/relationships/environment` naar het pad van een POST-verzoek.
 
 **API-indeling**
 
@@ -630,7 +631,7 @@ curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -650,7 +651,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details van de relatie. Als u een [opzoekverzoek](#lookup) voor de bibliotheek uitvoert, wordt de toegevoegde relatie onder de eigenschap `relationships` weergegeven.
+Een succesvolle reactie retourneert de details van de relatie. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de toegevoegde verhouding onder `relationships` eigenschap.
 
 ```json
 {
@@ -667,7 +668,7 @@ Een succesvolle reactie retourneert de details van de relatie. Als u een [opzoek
 
 ## Een bibliotheek overzetten {#transition}
 
-U kunt een bibliotheek naar een verschillende het publiceren staat overbrengen door zijn identiteitskaart in de weg van een verzoek van PATCH te omvatten en een aangewezen `meta.action` waarde in de nuttige lading te leveren.
+U kunt een bibliotheek naar een verschillende het publiceren staat overgaan door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten en aangewezen te verstrekken `meta.action` waarde in de lading.
 
 **API-indeling**
 
@@ -683,14 +684,14 @@ PATCH /libraries/{LIBRARY_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt de status van een bestaande bibliotheek gewijzigd op basis van de waarde van `meta.action` die in de payload wordt opgegeven. De beschikbare acties voor een bibliotheek zijn afhankelijk van de huidige publicatiestatus, zoals wordt beschreven in de [publicatiestroom](../../ui/publishing/publishing-flow.md#state).
+Met het volgende verzoek wordt de status van een bestaande bibliotheek gewijzigd op basis van de waarde van `meta.action` in de lading worden verstrekt. De beschikbare acties voor een bibliotheek zijn afhankelijk van de huidige publicatiestatus, zoals in het dialoogvenster [publicatiestroom](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -706,8 +707,8 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `meta.action` | De specifieke overgangsactie die u in de bibliotheek wilt maken. De volgende acties zijn beschikbaar, afhankelijk van de huidige publicatiestatus van de bibliotheek: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | De `id` van de bibliotheek die u wilt bijwerken. Dit zou de `{LIBRARY_ID}` waarde moeten aanpassen die in de verzoekweg wordt verstrekt. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `libraries` zijn. |
+| `id` | De `id` van de bibliotheek die u wilt bijwerken. Dit moet overeenkomen met de `{LIBRARY_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -826,7 +827,7 @@ curl -X POST \
   https://reactor.adobe.io/libraries/LB80c337c956804738b2db2ea2f69fcdf0/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
 ```
 
@@ -904,17 +905,17 @@ curl -X POST \
 
 ## Notities voor een bibliotheek beheren {#notes}
 
-Bibliotheken zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie [Notitie eindpuntgids](./notes.md) voor meer informatie over hoe te om nota&#39;s voor bibliotheken en andere compatibele middelen te beheren.
+Bibliotheken zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor bibliotheken en andere compatibele middelen te beheren.
 
 ## Gerelateerde bronnen voor een bibliotheek ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bibliotheek terug te winnen. Als [een bibliotheek](#lookup) opzoekt, worden deze relaties vermeld onder de eigenschap `relationships`.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bibliotheek terug te winnen. Wanneer [bibliotheek zoeken](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
 
-Zie de [relatiehandleiding](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### Verwante gegevenselementen weergeven voor een bibliotheek {#data-elements}
 
-U kunt een lijst maken van de gegevenselementen die een bibliotheek gebruikt door `/data_elements` aan de weg van een raadplegingsverzoek toe te voegen.
+U kunt de gegevenselementen weergeven die in een bibliotheek worden gebruikt door deze toe te voegen `/data_elements` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -924,7 +925,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan gegevenselementen u wilt vermelden. |
+| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de gegevenselementen wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -935,7 +936,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1055,7 +1056,7 @@ Een geslaagde reactie retourneert een lijst met gegevenselementen die de opgegev
 
 ### Verwante extensies weergeven voor een bibliotheek {#extensions}
 
-U kunt de extensies weergeven die een bibliotheek gebruikt door `/extensions` toe te voegen aan het pad van een opzoekverzoek.
+U kunt de extensies weergeven die een bibliotheek gebruikt door ze toe te voegen `/extensions` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -1076,7 +1077,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1186,7 +1187,7 @@ Een succesvol antwoord retourneert een lijst met extensies die de opgegeven bibl
 
 ### Verwante regels voor een bibliotheek weergeven {#rules}
 
-U kunt een lijst maken van de regels die een bibliotheek door `/rules` aan de weg van een raadplegingsverzoek toe te voegen gebruikt.
+U kunt de regels weergeven die een bibliotheek gebruikt door deze toe te voegen `/rules` naar het pad van een opzoekverzoek.
 
 **API-indeling**
 
@@ -1196,7 +1197,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan regels u wilt vermelden. |
+| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de regels wilt weergeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1207,7 +1208,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1299,7 +1300,7 @@ Een geslaagde reactie retourneert een lijst met regels die de opgegeven biblioth
 
 ### De verwante omgeving opzoeken voor een bibliotheek {#related-environment}
 
-U kunt de omgeving opzoeken waaraan een bibliotheek is toegewezen door `/environment` toe te voegen aan het pad van een GET-verzoek.
+U kunt de omgeving opzoeken waaraan een bibliotheek is toegewezen door het toevoegen `/environment` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -1309,7 +1310,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan omgeving u wilt opzoeken. |
+| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de omgeving wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1320,7 +1321,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1411,7 +1412,7 @@ Een geslaagde reactie retourneert de details van de omgeving waaraan de opgegeve
 
 ### De verwante eigenschap voor een bibliotheek opzoeken {#property}
 
-U kunt het bezit opzoeken dat een bibliotheek door `/property` aan de weg van een verzoek van de GET bezit toe te voegen.
+U kunt de eigenschap die eigenaar is van een bibliotheek opzoeken door deze toe te voegen `/property` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -1432,7 +1433,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1534,7 +1535,7 @@ Een geslaagde reactie retourneert de details van de eigenschap die eigenaar is v
 
 ### De upstream opzoeken voor een bibliotheek {#upstream}
 
-U kunt de volgende bibliotheek opzoeken vanaf een bibliotheek door `/upstream_library` toe te voegen aan het pad van een GET-verzoek.
+U kunt de volgende bibliotheek upstream opzoeken vanuit een bibliotheek door deze toe te voegen `/upstream_library` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -1544,7 +1545,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan upstream bibliotheek u omhoog wilt zoeken. |
+| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de upstream-bibliotheek wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1555,7 +1556,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/upstream_library \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

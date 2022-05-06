@@ -5,8 +5,7 @@ title: Insights API Endpoint
 topic-legacy: Developer guide
 description: Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper in staat te stellen optimale XML-modellen te evalueren en te kiezen door relevante evaluatiemetriek weer te geven.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper
 
 ## Een lijst met inzichten ophalen
 
-U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
+U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
 
 **API-indeling**
 
@@ -34,13 +33,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat en elk inzicht heeft een unieke id ( `id` ). Bovendien zult u `context` ontvangen die de unieke herkenningstekens bevat die met dat bepaalde inzicht volgend op de gebeurtenissen van Inzichten en metrieke gegevens worden geassocieerd.
+Een succesvolle reactie retourneert een payload die een lijst met inzichten bevat en elk inzicht heeft een unieke id ( `id` ). Bovendien ontvangt u `context` die de unieke id&#39;s bevat die zijn gekoppeld aan dat bepaalde inzicht dat volgt op de gebeurtenissen Insights en metrische gegevens.
 
 ```json
 {
@@ -109,7 +108,7 @@ Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat 
 
 ## Een specifiek inzicht ophalen
 
-Om omhoog een bepaald inzicht te kijken doe een verzoek van de GET en verstrek geldig `{INSIGHT_ID}` in de verzoekweg. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
+Als u een bepaald inzicht wilt opzoeken, vraagt u een GET aan en geeft u een geldige `{INSIGHT_ID}` in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
 
 **API-indeling**
 
@@ -128,13 +127,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights/08b8d174-6b0d-4d7e-acd8-1c4c908e14b2 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de inzichten unieke herkenningsteken (`id`) omvat. Bovendien zult u `context` ontvangen die de unieke herkenningstekens bevat die met het bepaalde inzicht volgend op de gebeurtenissen van Inzichten en metrieke gegevens worden geassocieerd.
+Een geslaagde reactie retourneert een payload die de unieke id voor inzichten bevat (`id`). Bovendien ontvangt u `context` die de unieke id&#39;s bevat die zijn gekoppeld aan het specifieke inzicht dat volgt op de gebeurtenissen Insights en metrische gegevens.
 
 ```json
 {
@@ -200,7 +199,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H `Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json`
     -d {
@@ -230,7 +229,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie zal een lading terugkeren die `{INSIGHT_ID}` en om het even welke parameters heeft die u in het aanvankelijke verzoek verstrekte.
+Een geslaagde reactie retourneert een lading die een `{INSIGHT_ID}` en alle parameters die u in het oorspronkelijke verzoek hebt opgegeven.
 
 ```json
 {
@@ -265,7 +264,7 @@ Een succesvolle reactie zal een lading terugkeren die `{INSIGHT_ID}` en om het e
 
 ## Hiermee wordt een lijst met standaardmetriek voor algoritmen opgehaald
 
-U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkel verzoek van de GET aan het metrieke eindpunt uit te voeren. Om metrisch bepaald te vragen doe een verzoek van de GET en verstrek geldig `{ALGORITHM}` in de verzoekweg.
+U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkel verzoek van de GET aan het metrieke eindpunt uit te voeren. Om bepaalde metrisch te vragen doe een verzoek van de GET en verstrek geldig `{ALGORITHM}` in het aanvraagpad.
 
 **API-indeling**
 
@@ -280,20 +279,20 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Verzoek**
 
-Het volgende verzoek bevat een vraag en wint specifieke metrisch door algoritmeherkenningsteken `{ALGORITHM}` terug te gebruiken
+Het volgende verzoek bevat een vraag en wint specifieke metrisch door het algoritmeherkenningsteken te gebruiken terug `{ALGORITHM}`
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/sensei/insights/metrics?algorithm={ALGORITHM}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die de unieke id `algorithm` en een array met standaardmeetwaarden bevat.
+Een geslaagde reactie retourneert een payload die de `algorithm` unieke id en een array van standaardmeetgegevens.
 
 ```json
 {

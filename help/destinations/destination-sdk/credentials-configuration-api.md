@@ -2,7 +2,7 @@
 description: Op deze pagina worden alle API-bewerkingen beschreven die u kunt uitvoeren met het API-eindpunt `/authoring/credentials`.
 title: API-bewerkingen van het eindpunt Credentials
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 2%
@@ -52,7 +52,7 @@ Het volgende verzoek leidt tot een nieuwe geloofsgeloofsconfiguratie, die door d
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -156,7 +156,7 @@ Het volgende verzoek zal de lijst van geloofsgeloofsconfiguraties terugwinnen di
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
@@ -210,7 +210,7 @@ Het volgende verzoek werkt een bestaande geloofsgeloofsconfiguratie bij, die doo
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/n55affa0-3747-4030-895d-1d1236bb3680 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -251,7 +251,7 @@ GET /authoring/credentials/{INSTANCE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials/n55affa0-3747-4030-895d-1d1236bb3680 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -297,7 +297,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credentials/n55affa0-3747-4030-895d-1d1236bb3680 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
