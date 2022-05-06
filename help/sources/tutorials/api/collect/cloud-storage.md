@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1549'
 ht-degree: 0%
 
 ---
@@ -38,9 +38,9 @@ Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s 
 
 ## Een bronverbinding maken {#source}
 
-U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
+U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan `sourceConnections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding, de weg aan het brondossier dat u, en overeenkomstige identiteitskaart van de verbindingsspecificatie van uw bron wilt opnemen.
 
-Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
+Wanneer u een bronverbinding maakt, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
 
 Gebruik de volgende opsommingswaarden voor bestandsgebaseerde bronnen:
 
@@ -52,22 +52,13 @@ Gebruik de volgende opsommingswaarden voor bestandsgebaseerde bronnen:
 
 Voor alle op tabellen gebaseerde bronnen stelt u de waarde in op `tabular`.
 
-- [Een bronverbinding maken met behulp van aangepaste, gescheiden bestanden](#using-custom-delimited-files)
-- [Een bronverbinding maken met gecomprimeerde bestanden](#using-compressed-files)
-
 **API-indeling**
 
 ```http
 POST /sourceConnections
 ```
 
-### Een bronverbinding maken met behulp van aangepaste, gescheiden bestanden {#using-custom-delimited-files}
-
 **Verzoek**
-
-U kunt een gescheiden bestand met een aangepast scheidingsteken invoeren door een `columnDelimiter` als een eigenschap. Elke waarde van één teken is een toegestaan kolomscheidingsteken. Indien niet opgegeven, een komma `(,)` wordt gebruikt als standaardwaarde.
-
-Met de volgende voorbeeldaanvraag wordt een bronverbinding voor een gescheiden bestandstype gemaakt met door tabs gescheiden waarden.
 
 ```shell
 curl -X POST \
@@ -78,16 +69,20 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud Storage source connection",
+        "description: "Source connection for a cloud storage source",
+        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
         "data": {
             "format": "delimited",
-            "columnDelimiter": "\t"
+            "properties": {
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
+            }
         },
         "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
+            "path": "/acme/summerCampaign/account.csv",
+            "type": "file"
         },
         "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -98,69 +93,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `baseConnectionId` | De unieke verbinding-id van het externe cloudopslagsysteem dat u benadert. |
-| `data.format` | Een opsommingswaarde die het kenmerk data format definieert. |
-| `data.columnDelimiter` | U kunt elk scheidingsteken voor kolommen van één teken gebruiken om platte bestanden te verzamelen. Deze eigenschap is alleen vereist bij het opnemen van CSV- of TSV-bestanden. |
+| `baseConnectionId` | De basis verbindings-id van de bron voor cloudopslag. |
+| `data.format` | De indeling van de gegevens die u naar het Platform wilt verzenden. Ondersteunde waarden zijn: `delimited`, `JSON`, en `parquet`. |
+| `data.properties` | (Optioneel) Een set eigenschappen die u op uw gegevens kunt toepassen wanneer u een bronverbinding maakt. |
+| `data.properties.columnDelimiter` | (Optioneel) Een scheidingsteken voor één tekenkolom dat u kunt opgeven bij het verzamelen van vlakke bestanden. Elke waarde van één teken is een toegestaan kolomscheidingsteken. Indien niet opgegeven, wordt een komma (`,`) wordt gebruikt als standaardwaarde. **Opmerking**: De `columnDelimiter` Deze eigenschap kan alleen worden gebruikt bij het opnemen van bestanden met scheidingstekens. |
+| `data.properties.encoding` | (Optioneel) Een eigenschap die het coderingstype definieert dat moet worden gebruikt bij het invoeren van gegevens naar het Platform. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
+| `data.properties.compressionType` | (Optioneel) Een eigenschap die het gecomprimeerde bestandstype voor inname definieert. De ondersteunde gecomprimeerde bestandstypen zijn: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, en `tar`. **Opmerking**: De `compressionType` Deze eigenschap kan alleen worden gebruikt bij het opnemen van afgebakende of JSON-bestanden. |
 | `params.path` | Het pad van het bronbestand dat u opent. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke externe cloudopslagsysteem. Zie de [aanhangsel](#appendix) voor een lijst van verbindingsspecificaties-id&#39;s. |
-
-**Antwoord**
-
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
-```
-
-### Een bronverbinding maken met gecomprimeerde bestanden {#using-compressed-files}
-
-**Verzoek**
-
-U kunt ook gecomprimeerde JSON- of gescheiden-bestanden opnemen door de bijbehorende `compressionType` als een eigenschap. De lijst met ondersteunde gecomprimeerde bestandstypen is:
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-Met de volgende voorbeeldaanvraag wordt een bronverbinding gemaakt voor een gecomprimeerd, gescheiden bestand met behulp van een `gzip` bestandstype.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `data.properties.compressionType` | Bepaalt het gecomprimeerde bestandstype voor inname. Deze eigenschap is alleen vereist bij het invoegen van gecomprimeerde JSON- of gescheiden bestanden. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke bron voor cloudopslag. Zie de [aanhangsel](#appendix) voor een lijst van verbindingsspecificaties-id&#39;s. |
 
 **Antwoord**
 
