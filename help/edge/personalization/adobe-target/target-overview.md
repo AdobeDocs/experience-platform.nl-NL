@@ -3,7 +3,7 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
 workflow-type: tm+mt
 source-wordcount: '1266'
 ht-degree: 3%
@@ -88,7 +88,7 @@ Zie voor meer informatie [Categorieën voor soorten publiek](https://experiencel
 
 Reactietokens worden vooral gebruikt voor het verzenden van metagegevens naar derden, zoals Google, Facebook, enz. De tokens van de reactie zijn teruggekeerd in `meta` veld binnen `propositions` -> `items`. Hier volgt een voorbeeld:
 
-```
+```json
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
   "scope": "__view__",
@@ -112,7 +112,7 @@ Reactietokens worden vooral gebruikt voor het verzenden van metagegevens naar de
 Als u de reactietokens wilt verzamelen, moet u zich abonneren op `alloy.sendEvent` beloven, doorlopen `propositions`
 en verwijder de gegevens uit `items` -> `meta`. Elke `proposition` heeft een `renderAttempted` Booleaans veld dat aangeeft of de `proposition` is weergegeven of niet. Zie het onderstaande voorbeeld:
 
-```
+```js
 alloy("sendEvent",
   {
     renderDecisions: true,
@@ -183,7 +183,7 @@ Normaal [!DNL Platform Web SDK] code die deze opdracht gebruikt ziet er als volg
 
 **`sendEvent`met profielgegevens**
 
-```
+```js
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
@@ -193,7 +193,7 @@ alloy("sendEvent", {
 
 **Profielkenmerken verzenden naar Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
@@ -232,7 +232,7 @@ De volgende tabellijsten [!DNL Recommendations] kenmerken en of elk kenmerk word
 
 **Recommendations-kenmerken verzenden naar Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
