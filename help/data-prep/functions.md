@@ -5,7 +5,7 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5b40476051ceb20cd4d43f6a49b0ee984c17abc3
+source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
 workflow-type: tm+mt
 source-wordcount: '4164'
 ht-degree: 2%
@@ -135,7 +135,6 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| size_of | Retourneert de grootte van de invoer. | <ul><li>INVOER: **Vereist** Het object waarvan u de grootte wilt vinden.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Controleert of een object leeg is. | <ul><li>INVOER: **Vereist** Het object dat u wilt controleren, is leeg.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | Hiermee maakt u een lijst met objecten. | <ul><li>INVOER: **Vereist** Een groepering van sleutel- en arrayparen.</li></ul> | arrays_to_object(INPUT) | monster nodig | monster nodig |
 | to_object | Hiermee maakt u een object op basis van de opgegeven platte sleutel/waardeparen. | <ul><li>INVOER: **Vereist** Een platte lijst met sleutel/waardeparen.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
@@ -163,6 +162,7 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 | add_to_array | Voegt elementen aan het einde van de array toe. | <ul><li>ARRAY: **Vereist** De array waaraan u elementen toevoegt.</li><li>WAARDEN: De elementen die u aan de array wilt toevoegen.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&quot;a&quot;, &quot;b&quot;], &quot;c&quot;, &quot;d&quot;) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;] |
 | join_arrays | Combineert de arrays met elkaar. | <ul><li>ARRAY: **Vereist** De array waaraan u elementen toevoegt.</li><li>WAARDEN: De array(s) die u aan de bovenliggende array wilt toevoegen.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&quot;a&quot;, &quot;b&quot;], [&quot;c&quot;], [&quot;d&quot;, &quot;e&quot;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Neemt een lijst van input en zet het in een serie om. | <ul><li>INCLUDE_NULLS: **Vereist** Een booleaanse waarde die aangeeft of null al dan niet moet worden opgenomen in de responsarray.</li><li>WAARDEN: **Vereist** De elementen die in een array moeten worden omgezet.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| size_of | Retourneert de grootte van de invoer. | <ul><li>INVOER: **Vereist** Het object waarvan u de grootte wilt vinden.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style=&quot;table-layout:auto&quot;}
 
