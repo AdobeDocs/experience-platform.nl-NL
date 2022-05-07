@@ -5,7 +5,7 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
 workflow-type: tm+mt
 source-wordcount: '3498'
 ht-degree: 1%
@@ -442,7 +442,7 @@ WHERE T2.ID IS NULL
 
 Deze sectie bevat informatie over het exporteren van gegevens en beperkingen.
 
-### Is er een manier om gegevens uit de Dienst van de Vraag na vraagverwerking te halen en de resultaten in een Csv- dossier te bewaren?
+### Is er een manier om gegevens uit de Dienst van de Vraag na vraagverwerking te halen en de resultaten in een Csv- dossier te bewaren? {#export-csv}
 
 ++ + Antwoord Ja. De gegevens kunnen uit de Dienst van de Vraag worden gehaald en er is ook de optie om de resultaten in formaat CSV via een SQL bevel op te slaan.
 
