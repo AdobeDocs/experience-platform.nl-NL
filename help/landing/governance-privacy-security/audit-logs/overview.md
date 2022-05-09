@@ -2,9 +2,9 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met controlelogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
@@ -35,6 +35,8 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 | [Berekend kenmerk](../../../profile/computed-attributes/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Productprofiel](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Account (Adobe)](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Zoekopdrachtsjabloon](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [Geplande query](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 
 ## Toegang tot auditlogboeken
 
