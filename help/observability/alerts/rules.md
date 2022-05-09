@@ -4,9 +4,9 @@ title: Standaardwaarschuwingsregels
 description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
+source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ De volgende waarschuwingsregels gelden specifiek voor [Gegevensinname](../../ing
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Fout bij uitvoeren bronstroom | Deze waarschuwing treedt op wanneer een fout optreedt bij het opnemen van gegevens van een bronverbinding. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Vertraging bij inname | Deze waarschuwing wordt geactiveerd wanneer een batch-opname-flow langer duurt dan 150 minuten om te verwerken. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven. |
-| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Ingestief | Deze waarschuwing wordt geactiveerd wanneer de verhouding van mislukte records ten opzichte van alle records een drempel van 0,5% overschrijdt |
+| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Ingestief | Deze waarschuwing treedt op wanneer de verhouding van mislukte records ten opzichte van alle records een drempel van 0,5% overschrijdt. |
+| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Het percentage kippingen overschrijdt de drempel | Deze waarschuwing treedt op wanneer de verhouding tussen overgeslagen id&#39;s en totaal aantal id&#39;s een drempel overschrijdt. |
 
 {style=&quot;table-layout:auto&quot;}
 
