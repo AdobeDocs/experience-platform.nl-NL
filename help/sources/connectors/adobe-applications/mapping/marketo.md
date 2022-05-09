@@ -5,9 +5,9 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
+source-git-commit: 5118a12dee0adf17e755003361ca841be99da62b
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -338,7 +338,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 | `state` | `workAddress.state` |
 | `address` | `workAddress.street1` |
 | `phone` | `workPhone.number` |
-| `company` | `organizations` |
+| `company` | `organizations` / `b2b.companyName` |
 | `leadScore` | `personComponents.personScore` |
 | `leadSource` | `personComponents.personSource` |
 | `leadStatus` | `personComponents.personStatus` |
