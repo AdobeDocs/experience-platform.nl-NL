@@ -3,11 +3,11 @@ keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de diens
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
-description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
+description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '3498'
+source-wordcount: '3504'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Deze sectie bevat informatie over prestaties, beperkingen en processen.
 
 ### Kan ik Postman gebruiken voor de API voor zoekservices?
 
-+++Antwoord ja, kunt u visualiseren en met alle Adobe API diensten in wisselwerking staan gebruikend Postman (een vrije, derdetoepassing). Kijk naar de [Postman Setup Guide](https://video.tv.adobe.com/v/28832) voor geleidelijke instructies op hoe te opstelling een project in de Console van de Ontwikkelaar van de Adobe en verwerft alle noodzakelijke geloofsbrieven voor gebruik met Postman. Zie de officiële documentatie voor [richtlijnen voor het starten, uitvoeren en delen van Postman-verzamelingen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Antwoord ja, kunt u visualiseren en met alle Adobe API diensten in wisselwerking staan gebruikend Postman (een vrije, derdetoepassing). Kijk naar de [Postman Setup Guide](https://video.tv.adobe.com/v/28832) voor stapsgewijze instructies voor het instellen van een project in Adobe Developer Console en het verkrijgen van alle vereiste gegevens voor gebruik met Postman. Zie de officiële documentatie voor [richtlijnen voor het starten, uitvoeren en delen van Postman-verzamelingen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Is er een grens aan het maximumaantal rijen die van een vraag door UI zijn teruggekeerd?

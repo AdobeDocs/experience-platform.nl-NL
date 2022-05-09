@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Inleiding tot Experience Platform-dashboards
+title: Overzicht van dashboards
 type: Documentation
 description: Ontdek meerdere dashboards in Adobe Experience Platform om belangrijke informatie over de gegevens van uw organisatie te bekijken, zoals die tijdens dagelijkse momentopnamen worden vastgelegd.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

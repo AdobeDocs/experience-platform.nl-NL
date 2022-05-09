@@ -5,10 +5,10 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '2741'
-ht-degree: 1%
+source-wordcount: '2747'
+ht-degree: 2%
 
 ---
 
@@ -459,7 +459,12 @@ select inline(productListItems) from source_dataset limit 10;
 
 De uit de `source_dataset` worden gebruikt om de doeltabel te vullen.
 
-| SKU | _Experience | hoeveelheid | prijsTotaal | |—+—+—+—| | product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pas,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 | | product-id-5 | (&quot;(&quot;(&quot;(&quot;(A, geslaagd, B, NULL)&quot;)&quot;)&quot;) | | | | product-id-2 | (&quot;(&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 | | product-id-4 | (&quot;(&quot;(&quot;(&quot;(BM, pas, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
+| SKU | _experience | hoeveelheid | priceTotal |
+|---------------------|-----------------------------------|----------|--------------|
+| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pas,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;) |  |  |
+| product-id-2 | (&quot;(&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 |
+| product-id-4 | (&quot;(&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL-opdrachten
 
