@@ -3,9 +3,9 @@ keywords: reclame; criterium;
 title: Criteverbinding
 description: Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '808'
 ht-degree: 2%
 
 ---
@@ -138,4 +138,4 @@ Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens com
 ## Aanvullende bronnen
 
 * [Criteo Help Center](https://help.criteo.com/kb/en)
-* [Criteo Developer Portal](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Criteo Developer Portal](https://developers.criteo.com)
