@@ -5,9 +5,9 @@ title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
+source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Als u meer dan één voorwaarde selecteert, kunt u het pictogram gebruiken dat t
 
 #### Goedkeuringskenmerken selecteren
 
-Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
+Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen te kunnen opnemen in de actie waarop dit beleid betrekking heeft. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
 
 Wanneer het selecteren van de toestemmingsattributen, kies de waarden voor de attributen die u dit beleid wilt controleren.
 
@@ -131,6 +131,10 @@ U kunt voorwaarden en toestemmingseigenschappen aan het beleid blijven toevoegen
 Het toestemmingsbeleid wordt nu tot stand gebracht en zijn status wordt geplaatst aan [!UICONTROL Disabled] standaard. Als u het beleid meteen wilt inschakelen, selecteert u de optie **[!UICONTROL Status]** schakelen in de rechterspoorstaaf.
 
 ![](../images/policies/enable-consent-policy.png)
+
+#### Beleidshandhaving verifiëren
+
+Nadat u een toestemmingsbeleid hebt gecreeerd en toegelaten, kunt u voorproef hoe het uw toegelaten publiek wanneer het activeren van segmenten aan bestemmingen beïnvloedt. Zie de sectie over [goedkeuring beleidsevaluatie](../enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 
 ## Een beleid in- of uitschakelen {#enable}
 

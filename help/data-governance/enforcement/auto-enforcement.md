@@ -5,9 +5,9 @@ title: Automatische beleidscontrole
 topic-legacy: guide
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
+source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1688'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Wanneer een segment voor het eerst wordt geactiveerd, [!DNL Policy Service] cont
 
 * De labels voor gegevensgebruik die worden toegepast op velden en gegevenssets binnen het segment dat moet worden geactiveerd.
 * Het marketingdoel van de bestemming.
-<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
+* (Bèta) De profielen die om in de segmentactivering hebben goedgekeurd te worden omvat, die op uw gevormd toestemmingsbeleid wordt gebaseerd.
 
 >[!NOTE]
 >
@@ -58,16 +58,14 @@ In Experience Platform gaat het bij de beleidshandhaving om de volgende begrotin
 1. Groepen profielen zijn verdeeld in **segmenten** op basis van gemeenschappelijke kenmerken.
 1. Segmenten worden geactiveerd naar de volgende laag **bestemmingen**.
 
-Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijdragen tot het overtreden van een beleid, zoals in de onderstaande tabel wordt beschreven:
+Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijdragen tot de handhaving van het beleid, zoals in de onderstaande tabel wordt aangegeven:
 
 | Gegevenslijnfase | Rol bij de handhaving van het beleid |
 | --- | --- |
-| Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op de dataset of het gebiedsniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt. |
+| Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op de dataset of het gebiedsniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br>Eventuele toestemmingskenmerken die van uw klanten worden verzameld, worden ook in gegevenssets opgeslagen. Als u toegang tot toestemmingsbeleid (momenteel in bèta) hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van segmenten worden uitgesloten die aan een bestemming worden geactiveerd. |
 | Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie . |
 | Segment | De regels van het segment bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het segment alle toegepaste gebruikslabels voor die velden over. De schendingen van het beleid zullen voorkomen als u een segment activeert de waarvan geërfte etiketten door het toepasselijke beleid van de doelbestemming worden beperkt, dat op zijn marketing gebruiksgeval wordt gebaseerd. |
-| Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, het marketinggeval dat u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming. Beleidsovertredingen treden op als u een segment activeert waarvan de gebruikslabels zijn beperkt door het toepasselijke beleid van de doelbestemming. |
-<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br>Het beleid van het gebruik van gegevens komt schendingen voor als u een segment activeert de waarvan gebruiksetiketten voor de marketing actie van de doelbestemming beperkt zijn.<br><br>(Beta) Wanneer een segment wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
 
 >[!IMPORTANT]
 >
@@ -77,15 +75,14 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 
 Wanneer beleidsschendingen voorkomen, verstrekken de resulterende berichten die in UI verschijnen nuttige hulpmiddelen om de schending bijdragende gegevenslijn te onderzoeken helpen de kwestie oplossen. Meer details worden verstrekt in de volgende sectie.
 
-## Berichten over beleidsovertredingen {#enforcement}
+## Beleidshandhavingsberichten {#enforcement}
 
-<!-- (TO INCLUDE FOR PHASE 2)
-The sections below outline the different policy enforcement messages that appear in the Platform UI:
+In de volgende secties worden de verschillende beleidshandhavingsberichten beschreven die in de gebruikersinterface van het Platform worden weergegeven:
 
-* [Data usage policy violation](#data-usage-violation)
-* [Consent policy evaluation](#consent-policy-evaluation)
+* [Beleidsschending gegevensgebruik](#data-usage-violation)
+* [Goedkeuring van het beleid](#consent-policy-evaluation)
 
-### Data usage policy violation {#data-usage-violation} -->
+### Beleidsschending gegevensgebruik {#data-usage-violation}
 
 Als een beleidsovertreding optreedt tijdens een poging een segment te activeren (of [het aanbrengen van veranderingen in een reeds geactiveerd segment](#policy-enforcement-for-activated-segments)) de actie wordt voorkomen en een pop-up lijkt erop te wijzen dat een of meer beleidsmaatregelen zijn overtreden. Als een schending is opgetreden, wordt de **[!UICONTROL Save]** De knop is uitgeschakeld voor de entiteit die u wijzigt totdat de juiste componenten worden bijgewerkt om te voldoen aan het beleid voor gegevensgebruik.
 
@@ -109,19 +106,55 @@ Selecteren **[!UICONTROL List view]** om de gegevenskoppeling als een lijst weer
 
 ![](../images/enforcement/list-view.png)
 
-<!-- (TO INCLUDE FOR PHASE 2)
-### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+### Goedkeuring beleidsevaluatie (bèta) {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>Het beleid voor instemming wordt momenteel in de bètaversie gebruikt en uw organisatie heeft er nog geen toegang toe.
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+Als u [gemaakt toestemmingsbeleid](../policies/user-guide.md#consent-policy) en u activeert een segment naar een bestemming, kunt u zien hoe uw toestemmingsbeleid het percentage profielen beïnvloedt die in de activering inbegrepen zijn.
 
-Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+#### Evaluatie vóór activering
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
- -->
+Zodra u het **[!UICONTROL Review]** stap wanneer [een doel activeren](../../destinations/ui/activation-overview.md), selecteert u **[!UICONTROL View applied policies]**.
+
+![De knop toegepast beleid weergeven in de doelworkflow voor activeren](../images/enforcement/view-applied-policies.png)
+
+Er wordt een dialoogvenster voor beleidscontrole weergegeven waarin u een voorvertoning ziet van de invloed die het beleid voor uw toestemming heeft op het publiek met instemming van de geactiveerde segmenten.
+
+![Dialoogvenster voor beleidscontrole voor toestemming in de gebruikersinterface van het Platform](../images/enforcement/consent-policy-check.png)
+
+In het dialoogvenster ziet u het publiek met toestemming voor één segment tegelijk. Om de beleidsevaluatie voor een verschillend segment te bekijken, gebruik dropdown menu boven het diagram om van de lijst te selecteren.
+
+![Segmentschakelaar in het dialoogvenster voor beleidscontrole](../images/enforcement/segment-switcher.png)
+
+Gebruik het linkerspoor om tussen het toepasselijke toestemmingsbeleid voor het geselecteerde segment te schakelen. Beleid dat niet is geselecteerd, wordt weergegeven in &quot;[!UICONTROL Other policies]&quot; deel van het diagram.
+
+![Beleidsschakelaar in het dialoogvenster Beleidscontrole](../images/enforcement/policy-switcher.png)
+
+In het diagram wordt de overlapping tussen drie groepen profielen weergegeven:
+
+1. Profielen die in aanmerking komen voor het geselecteerde segment
+1. Profielen die in aanmerking komen voor het geselecteerde toestemmingsbeleid
+1. Profielen die in aanmerking komen voor het andere toepasselijke toestemmingsbeleid voor het segment (aangeduid als &quot;[!UICONTROL Other policies]&quot; in het diagram)
+
+De profielen die voor alle drie bovengenoemde groepen in aanmerking komen, vertegenwoordigen het goedgekeurde publiek voor het geselecteerde segment, samengevat in de juiste spoorstaaf.
+
+![Samenvattingssectie in het dialoogvenster Beleidscontrole](../images/enforcement/summary.png)
+
+Houd de muisaanwijzer boven een van de soorten publiek in het diagram om het aantal profielen in het diagram weer te geven.
+
+![Het benadrukken van een diagramsectie in de dialoog van de beleidscontrole](../images/enforcement/highlight-segment.png)
+
+Het publiek met toestemming wordt vertegenwoordigd door de centrale overlapping van het diagram en kan worden gemarkeerd zoals de andere secties.
+
+![Toestemming voor publiek in diagram markeren](../images/enforcement/consented-audience.png)
+
+#### Doorvoerbeheer
+
+Wanneer de gegevens aan een bestemming worden geactiveerd, tonen de gegevens van de stroomlooppas het aantal identiteiten die wegens actief toestemmingsbeleid werden uitgesloten.
+
+![Metrische gegevens van uitgesloten identiteiten voor een gegevensstroomuitvoering](../images/enforcement/dataflow-run-enforcement.png)
 
 ## Beleidshandhaving voor geactiveerde segmenten {#policy-enforcement-for-activated-segments}
 
