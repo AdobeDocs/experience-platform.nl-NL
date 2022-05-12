@@ -4,9 +4,9 @@ title: Segmentdashboard
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,12 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 
 ### [!UICONTROL Audience size] {#audience-size}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesize"
+>title="Grootte publiek"
+>abstract="Deze widget geeft het totale aantal samengevoegde profielen in het geselecteerde segment weer. Dit getal is afhankelijk van het samenvoegbeleid dat op de gegevens wordt toegepast en is correct op het moment van de meest recente opname."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Meer informatie in documentatie"
+
 De **[!UICONTROL Audience size]** widget geeft het totale aantal samengevoegde profielen weer binnen het geselecteerde segment op het moment dat de opname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
 
 Voor meer informatie over fragmenten en samengevoegde profielen, eerst leest u de [Overzicht van het realtime klantprofiel](../../profile/home.md).
@@ -85,9 +91,15 @@ Voor meer informatie over fragmenten en samengevoegde profielen, eerst leest u d
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_identityoverlap"
+>title="Identiteitsoverlapping"
+>abstract="Deze widget toont de overlapping van profielen in uw segment met beide gekozen identiteiten. De cirkels geven de relatieve grootte van elke identiteit weer. Het aantal profielen met beide naamruimten wordt weergegeven door de overlapping tussen de cirkels."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Meer informatie in documentatie"
+
 De **[!UICONTROL Identity overlap]** widget geeft een Venn-diagram weer of stelt een diagram in waarin de overlapping van profielen in uw segment met meerdere identiteiten wordt weergegeven.
 
-Nadat u de vervolgkeuzemenu&#39;s op de widget hebt gebruikt om de identiteiten te selecteren die u wilt vergelijken, worden cirkels weergegeven met de relatieve grootte van elke identiteit, waarbij het aantal profielen met beide naamruimten wordt weergegeven door de grootte van de overlapping tussen de cirkels.
+Use the dropdown menus on the widget to select the identities that you wish to compare. De cirkels geven de relatieve grootte van elke gekozen identiteit weer, waarbij het aantal profielen dat beide naamruimten bevat, wordt weergegeven door de grootte van de overlapping tussen de cirkels.
 
 Als een klant op meer dan één kanaal met uw merk in wisselwerking staat, zullen de veelvoudige identiteiten met die individuele klant worden geassocieerd, daarom is het waarschijnlijk dat uw organisatie veelvoudige profielen zal hebben die fragmenten van meer dan één identiteit bevatten.
 
@@ -97,11 +109,17 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
-De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identiteiten in alle samengevoegde profielen in het geselecteerde segment weer. Het totale aantal profielen per identiteit kan hoger zijn dan het totale aantal profielen in het segment, omdat aan één profiel meerdere identiteiten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke identiteit worden getoond kan meer dan de totale publieksgrootte in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, de veelvoudige identiteiten met die individuele klant kunnen worden geassocieerd.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_profilesbyidentity"
+>title="Profielen op identiteit"
+>abstract="Deze widget geeft de indeling van de identiteiten in elk samengevoegd profiel in het geselecteerde segment weer."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Meer informatie in documentatie"
+
+De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identiteiten in elk samengevoegd profiel in het geselecteerde segment weer. Het totale aantal profielen per identiteit kan hoger zijn dan het totale aantal profielen in het segment, omdat aan één profiel meerdere identiteiten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke identiteit worden getoond kan meer dan de totale publieksgrootte in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, de veelvoudige identiteiten met die individuele klant kunnen worden geassocieerd.
 
 Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![De profielen op dialoogvenster voor identiteitsondertitels.](../images/segments/profiles-by-identity.png)
+![The profiles by identity captions dialog.](../images/segments/profiles-by-identity.png)
 
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 
@@ -115,22 +133,36 @@ De [!UICONTROL Audience activation order] widget biedt een tabel met drie kolomm
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
-De [!UICONTROL Audience size trend] widget geeft een lijngrafiek voor het totale aantal profielen die voldoen aan de criteria van **alle** segmentdefinitie over een bepaalde periode. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Ontwikkeling van de omvang van het publiek"
+>abstract="This widget provides information regarding the total number of profiles that meet the criteria of **any** segment definition, as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Meer informatie in documentatie"
 
-![De widget voor de doelgrootte.](../images/segments/audience-size-trend.png)
+De **[!UICONTROL Audience size trend]** widget geeft een lijngrafiek voor het totale aantal profielen die voldoen aan de criteria van **alle** segmentdefinitie over een bepaalde periode. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+
+Deze widget bevat ook de automatische [!UICONTROL Captions] waar een machine het leren model de grafiek en segmentgegevens analyseert en automatisch titels produceert om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
+
+![In het segmentoverzicht wordt de widget voor de doelgrootte weergegeven.](../images/segments/audience-size-trend-captions.png)
+
+Het dialoogvenster voor automatische bijschriften wordt geopend en verschaft inzicht in uw gegevens.
+
+![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor de doelgrootte.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+Voor meer informatie over segmentevaluatie en hoe profielen in aanmerking komen en uit segmenten verdwijnen, raadpleegt u de [Documentatie voor segmentatieservice](../../segmentation/home.md).
 
 ### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
 
-Deze widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. Het voor analyse gekozen segment wordt geselecteerd uit het overzichtsvervolgkeuzemenu. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+Deze widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. The segment chosen for analysis is selected from the overview dropdown. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
 
 ![De widget voor het wijzigen van trends bij het bereik van publiek.](../images/segments/audience-size-change-trend.png)
 
 ### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
 
-Deze widget illustreert de trend van de publieksgrootte voor een bepaald segment op basis van het gekozen type identiteit in het vervolgkeuzemenu van de widget. Het segment dat voor analyse wordt gebruikt wordt geselecteerd van het overzichtsdrop-down. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
+This widget illustrates the audience size trend for a particular segment based on the identity type chosen from the widget dropdown menu. Het segment dat voor analyse wordt gebruikt wordt geselecteerd van het overzichtsdrop-down. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. The time period is chosen from a dropdown menu in the widget.
 
 ![De trend voor de omvang van de doelgroep op identiteitswidget.](../images/segments/audience-size-trend-by-identity.png)
 
 ## Volgende stappen
 
-Door dit document te volgen, zou u van het segmentdashboard moeten kunnen de plaats bepalen en een segment selecteren om te bekijken. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Als u meer wilt weten over het werken met segmenten in de gebruikersinterface van het Experience Platform, raadpleegt u de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md).
+Door dit document te volgen, zou u van het segmentdashboard moeten kunnen de plaats bepalen en een segment selecteren om te bekijken. You should also understand the metrics displayed in the available widgets. Als u meer wilt weten over het werken met segmenten in de gebruikersinterface van het Experience Platform, raadpleegt u de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md).

@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '2784'
+source-wordcount: '3336'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ De maatstaven die worden weergegeven in het dialoogvenster [!UICONTROL Profiles]
 
 Voor meer informatie over fusiebeleid, met inbegrip van hoe te om, een standaard fusiebeleid voor uw organisatie tot stand te brengen uit te geven en te verklaren, gelieve te beginnen door te lezen [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
 
-Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden weergegeven, maar u kunt het samenvoegbeleid dat is geselecteerd wijzigen in het vervolgkeuzemenu. Als u een ander samenvoegbeleid wilt kiezen, selecteert u de vervolgkeuzelijst naast de naam van het samenvoegbeleid en selecteert u vervolgens het samenvoegbeleid dat u wilt weergeven.
+Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden gebruikt. Het toegepaste samenvoegbeleid kan worden gewijzigd via het vervolgkeuzemenu naast de naam van het samenvoegbeleid.
 
 >[!NOTE]
 >
@@ -113,6 +113,12 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 
 ### [!UICONTROL Profile count] {#profile-count}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilecount"
+>title="Aantal profielen"
+>abstract="Deze widget geeft het totale aantal samengevoegde profielen weer in de profielopslag op het moment dat de momentopname werd gemaakt. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="Meer informatie in documentatie"
+
 De **[!UICONTROL Profile count]** In de widget wordt het totale aantal samengevoegde profielen weergegeven in de profielopslag op het moment dat de momentopname is gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
 Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voor meer informatie.
@@ -127,7 +133,15 @@ Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voo
 
 ### [!UICONTROL Profiles added] {#profiles-added}
 
-De **[!UICONTROL Profiles added]** widget geeft het totale aantal samengevoegde profielen weer dat aan de profielenwinkel is toegevoegd vanaf de laatste opname die is gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon. U kunt de keuzekiezer gebruiken om de profielen weer te geven die in de afgelopen 30 dagen, 90 dagen of 12 maanden zijn toegevoegd.
+<!-- This CONTEXTUALHELP was commented out because this widget name will change. Details in https://jira.corp.adobe.com/browse/PLAT-120313  -->
+
+<!-- >[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilesadded"
+>title="Profiles added"
+>abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation" -->
+
+De **[!UICONTROL Profiles added]** In de widget wordt het totale aantal samengevoegde profielen weergegeven dat op het moment van de laatste opname aan de profielopslag is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon. U kunt de keuzekiezer gebruiken om de profielen weer te geven die in de afgelopen 30 dagen, 90 dagen of 12 maanden zijn toegevoegd.
 
 >[!NOTE]
 >
@@ -136,6 +150,12 @@ De **[!UICONTROL Profiles added]** widget geeft het totale aantal samengevoegde 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Profiles added trend] {#profiles-added-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilesaddedtrend"
+>title="Profielen hebben trend toegevoegd"
+>abstract="Deze widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielopslag is toegevoegd. Het nummer hangt ook af van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Profiles added trend]** widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielwinkel is toegevoegd. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen. Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
@@ -150,6 +170,12 @@ Een machine het leren model produceert automatisch titels voor het beschrijven v
 ![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor profielen toegevoegd.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilesbyidentity"
+>title="Profielen op identiteit"
+>abstract="Deze widget geeft de indeling van alle samengevoegde profielen in uw profielarchief op basis van identiteiten weer."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identiteiten in alle samengevoegde profielen in uw profielarchief weer. Het totale aantal profielen op basis van identiteit (met andere woorden, door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan het totale aantal samengevoegde profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
@@ -167,9 +193,15 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
-De **[!UICONTROL Identity overlap]** widget geeft een Venn-diagram weer, of een setdiagram, waarin de overlapping van profielen in uw Profile Store met meerdere identiteiten wordt weergegeven.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_identityoverlap"
+>title="Identiteitsoverlapping"
+>abstract="Deze widget gebruikt een Venn-diagram om de overlapping weer te geven van profielen in uw profielarchief die de twee geselecteerde identiteiten bevatten."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="Meer informatie in documentatie"
 
-Nadat u de vervolgkeuzemenu&#39;s op de widget hebt gebruikt om de identiteiten te selecteren die u wilt vergelijken, worden cirkels weergegeven met de relatieve grootte van elke identiteit, waarbij het aantal profielen met beide naamruimten wordt weergegeven door de grootte van de overlapping tussen de cirkels. Als een klant op meer dan één kanaal met uw merk in wisselwerking staat, zullen de veelvoudige identiteiten met die individuele klant worden geassocieerd, daarom is het waarschijnlijk dat uw organisatie veelvoudige profielen zal hebben die fragmenten van meer dan één identiteit bevatten.
+De **[!UICONTROL Identity overlap]** widget gebruikt een Venn-diagram, of een setdiagram, om de overlapping weer te geven van profielen in uw profielarchief die de twee geselecteerde identiteiten bevatten.
+
+Gebruik de widgetvervolgkeuzemenu&#39;s om de identiteiten te selecteren die u wilt vergelijken. De cirkels tonen het relatieve totale aantal profielen die elke identiteit bevatten. Het aantal profielen met beide identiteiten wordt weergegeven door de grootte van de overlapping tussen de cirkels. Als een klant op meer dan één kanaal met uw merk in wisselwerking staat, zullen de veelvoudige identiteiten met die individuele klant worden geassocieerd, daarom is het waarschijnlijk dat uw organisatie veelvoudige profielen zal hebben die fragmenten van meer dan één identiteit bevatten.
 
 Voor meer informatie over profielfragmenten begint u met het lezen van de sectie over [profielfragmenten versus samengevoegde profielen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in het overzicht van het profiel van de Klant in real time.
 
@@ -179,11 +211,23 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 
 ### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_singleidentityprofiles"
+>title="Eén identiteitsprofiel"
+>abstract="Deze widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="Meer informatie in documentatie"
+
 De [!UICONTROL Single Identity Profiles] widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn. Het aantal profielen wordt gegenereerd op basis van de gegevens in de meest recente momentopname.
 
 ![Widget Single Identity Profiles.](../images/profiles/single-identity-profiles.png)
 
 ### [!UICONTROL Unsegmented profiles] {#unsegmented-profiles}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_unsegmentedprofiles"
+>title="Niet-gesegmenteerde profielen"
+>abstract="Deze widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld en biedt de mogelijkheid om profielen in uw hele organisatie te activeren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="Meer informatie in documentatie"
 
 De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Het wijst ook op de kans om profielen uit te sluiten die geen adequate ROI verstrekken.
 
@@ -191,11 +235,23 @@ De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen we
 
 ### [!UICONTROL Unsegmented profiles trend] {#unsegmented-profiles-trend}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_unsegmentedprofilestrend"
+>title="Trend voor niet-gesegmenteerde profielen"
+>abstract="Deze widget verschaft een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een segment is gekoppeld. De trend van profielen die niet aan om het even welk segment verbonden zijn kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-trend" text="Meer informatie in documentatie"
+
 De [!UICONTROL Unsegmented Profiles Trend] widget geeft een illustratie van de lijngrafiek voor het aantal profielen die niet aan om het even welk segment over een bepaalde periode in bijlage zijn. De trend van profielen die niet aan om het even welk segment verbonden zijn kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld op de y-as en de tijd op de x-as.
 
 ![De trendwidget voor niet-gesegmenteerde profielen.](../images/profiles/unsegmented-profiles-trend.png)
 
-### [!UICONTROL Unsegmented profiles by identity] (#unsegmented-profiles-by-identity)
+### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
+>title="Gesegmenteerde profielen opsplitsen op identiteit"
+>abstract="Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="Meer informatie in documentatie"
 
 De [!UICONTROL Unsegmented Profiles by Identity] widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden in een staafdiagram weergegeven, zodat ze gemakkelijk kunnen worden vergeleken.
 
@@ -245,13 +301,19 @@ Adobe verstrekt veelvoudige widgets om de volledigheid van de ingebedde profiele
 
 Als u meer wilt weten over elk van de widgets voor de doeltreffendheid van het profiel, selecteert u de naam van een widget in de volgende lijst:
 
-* [[!UICONTROL Attribute quality assessment]](#attribute-quality-assessment)
-* [[!UICONTROL Profile completeness]](#profile-completeness)
-* [[!UICONTROL Profile completeness trend]](#profile-completeness-trend)
+* [[!UICONTROL Attribute quality assessment]](#attributes-quality-assessment)
+* [[!UICONTROL Profiles by completeness]](#profiles-by-completeness)
+* [[!UICONTROL Profiles completeness trend]](#profiles-completeness-trend)
 
-### (bèta) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
+### (bèta) [!UICONTROL Attributes quality assessment] {#attributes-quality-assessment}
 
-Deze widget toont de volledigheid en de kardinaliteit van elk profielkenmerk sinds de laatste verwerkingsdatum. Deze informatie wordt voorgesteld als een lijst met vier kolommen waar elke rij in de lijst één enkel attribuut vertegenwoordigt.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_attributesqualityassessment"
+>title="Kenmerken, kwaliteitsbeoordeling"
+>abstract="Deze widget geeft de volledigheid en kardinaliteit van alle profielen weer, afhankelijk van hun kenmerken. Elke rij beschrijft één kenmerk. De **Profielen** bevat het aantal profielen met dit kenmerk en de waarden zijn niet-null. De **Volledigheid** Het percentage wordt bepaald door het totale aantal profielen dat dit kenmerk heeft en wordt gevuld met waarden die niet gelijk zijn aan null, gedeeld door het totale aantal niet-lege waarden in de profielen voor dat kenmerk. **Kardinaal** Hiermee wordt het totale aantal unieke niet-null-waarden van dit kenmerk voor alle kenmerken aangegeven."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attributes-quality-assessment" text="Meer informatie in documentatie"
+
+De [!UICONTROL Attribute quality assessment] widget geeft de volledigheid en de kardinaliteit van alle profielen aan volgens hun kenmerken . De gegevens zijn nauwkeurig tot de laatste verwerkingsdatum. Deze informatie wordt voorgesteld als een lijst met vier kolommen waar elke rij in de lijst één enkel attribuut vertegenwoordigt.
 
 | Kolom | Beschrijving |
 |---|---|
@@ -262,19 +324,31 @@ Deze widget toont de volledigheid en de kardinaliteit van elk profielkenmerk sin
 
 ![De widget voor kwaliteitsbeoordeling van kenmerken](../images/profiles/attributes-quality-assessment.png)
 
-### (bèta) [!UICONTROL Profiles by completeness] {#profile-completeness}
+### (bèta) [!UICONTROL Profiles by completeness] {#profiles-by-completeness}
 
-Deze widget maakt een cirkeldiagram met de volledigheid van het profiel sinds de laatste verwerkingsdatum. De volledigheid van een profiel wordt gemeten door het percentage attributen die met niet-krachtwaarden onder alle waargenomen attributen worden gevuld.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilesbycompleteness"
+>title="Profielen op volledigheid"
+>abstract="In het donutdiagram wordt het percentage van profielkenmerken weergegeven dat wordt gevuld met waarden die niet gelijk zijn aan null voor alle waargenomen kenmerken. Het illustreert het percentage profielen dat hoog, gemiddeld of laag volledig is. Voor profielen met hoge volledigheid zijn meer dan 70% van de bijbehorende kenmerken ingevuld. Normale volledigheidprofielen hebben tussen 30% en 70% van hun gevulde kenmerken. Lage volledigheidsprofielen hebben minder dan 30% van hun attributen gevuld."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Meer informatie in documentatie"
+
+De [!UICONTROL Profiles by completeness] widget maakt een donut-overzicht van de volledigheid van het profiel sinds de laatste verwerkingsdatum. De volledigheid van een profiel wordt gemeten door het percentage attributen die met niet-krachtwaarden onder alle waargenomen attributen worden gevuld.
 
 Deze widget geeft het percentage profielen weer dat hoog, gemiddeld of laag volledig is. Door gebrek, zijn er drie gevormde niveaus van volledigheid:
 
-* Hoge volledigheid: Profielen hebben meer dan 70% van de gevulde kenmerken.
-* Normale volledigheid: Profielen zijn voor minder dan 70% en voor meer dan 30% gevuld.
-* Lage volledigheid: Profielen zijn voor minder dan 30% gevuld.
+* Hoge volledigheid: Profielen hebben meer dan 70% van hun kenmerken ingevuld.
+* Normale volledigheid: Profielen hebben tussen 30% en 70% van de bijbehorende kenmerken ingevuld.
+* Lage volledigheid: Profielen hebben minder dan 30% van de bijbehorende kenmerken ingevuld.
 
 ![De profielen op de widget Volledigheid](../images/profiles/profiles-by-completeness.png)
 
-### (bèta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
+### (bèta) [!UICONTROL Profiles completeness trend] {#profiles-completeness-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilescompletenesstrend"
+>title="trend van volledigheid profielen"
+>abstract="Deze widget maakt een gestapeld vlakdiagram waarin de trend van de volledigheid van het profiel in de loop der tijd wordt weergegeven. De volledigheid wordt gemeten door het percentage attributen die met niet-krachteloze waarden onder alle waargenomen attributen worden gevuld."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Meer informatie in documentatie"
 
 Deze widget maakt een gestapeld vlakdiagram waarin de trend van de volledigheid van het profiel in de loop der tijd wordt weergegeven. De volledigheid wordt gemeten door het percentage attributen die met niet-krachtwaarden onder alle waargenomen attributen worden gevuld. De profielvolledigheid wordt gecategoriseerd als hoog, gemiddeld of laag volledig sinds de laatste verwerkingsdatum.
 
