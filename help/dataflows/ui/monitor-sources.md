@@ -6,9 +6,9 @@ title: De Dataflows van de monitor voor Bronnen in UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: ed88ebe7822f60ace2babd7d5a04d2d92d83cf49
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -130,102 +130,9 @@ U kunt het broodkruimelsysteem bij de hoogste kopbal gebruiken om uw weg terug n
 
 ![broodkruimels](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## Controle tussen verschillende services {#cross-service-monitoring}
-
-Het bovenste deel van het dashboard bevat een voorstelling van de innamestroom van het bronniveau tot [!DNL Identity Service]en [!DNL Profile]. Elke cel bevat een puntmarkering die de aanwezigheid aangeeft van fouten die zich in dat stadium van inname hebben voorgedaan. Een groene stip betekent een foutloze opname, terwijl een rode stip betekent dat er een fout is opgetreden in dat specifieke stadium van inname.
-
-![cross-service-monitoring](../assets/ui/monitor-sources/cross-service-monitoring.png)
-
-Zoek op de pagina met gegevensstromen een geslaagde gegevensstroom en selecteer het filterpictogram ![filter](../assets/ui/monitor-sources/filter.png) naast het, om zijn dataflow looppas informatie te zien.
-
-![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
-
-De [!UICONTROL Source ingestion] Deze pagina bevat informatie die de geslaagde inname van uw gegevensstroom bevestigt. Van hier, kunt u beginnen de reis van uw gegevensstroom van bron-niveau te controleren, aan [!DNL Identity Service]en vervolgens naar [!DNL Profile].
-
-Selecteren **[!UICONTROL Identities]** om inname te zien in de [!UICONTROL Identities] in.
-
-![bronnen](../assets/ui/monitor-sources/sources.png)
-
-### [!DNL Identity] cijfers {#identity-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_identity_processing"
->title="Identiteitsverwerking"
->abstract="De weergave Identiteitsverwerking bevat informatie over records die aan de identiteitsdienst zijn toegevoegd, zoals het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_identity"
->title="Gegevens gegevensstroom"
->abstract="Op de pagina met details over uitvoering van de Dataflow-software wordt meer informatie weergegeven over de uitvoering van uw identiteitsgegevens, waaronder de IMS-organisatie-id en de uitvoerid van de dataflow."
-
-De [!UICONTROL Identity processing] pagina bevat informatie over records die aan worden toegevoegd [!DNL Identity Service], inclusief het aantal toegevoegde identiteiten, gemaakte grafieken en bijgewerkte grafieken.
-
-Filterpictogram selecteren ![filter](../assets/ui/monitor-sources/filter.png) naast de dataflow run start time om meer informatie over uw [!DNL Identity] dataflow run.
-
-![identiteiten](../assets/ui/monitor-sources/identities.png)
-
-| Identiteitswaarden | Beschrijving |
-| ---------------- | ----------- |
-| [!UICONTROL Records received] | Het aantal records dat is ontvangen van [!DNL Data Lake]. |
-| [!UICONTROL Records failed] | Het aantal records dat niet in het Platform is opgenomen als gevolg van fouten in de gegevens. |
-| [!UICONTROL Records skipped] | Het aantal records dat is ingesloten, maar niet in [!DNL Identity Service] omdat de recordrij slechts één id bevat. |
-| [!UICONTROL Records ingested] | Het aantal records waarin [!DNL Identity Service]. |
-| [!UICONTROL Total records] | Het totale aantal records, inclusief mislukte records, records overgeslagen, [!DNL Identities] toegevoegde, en gedupliceerde verslagen. |
-| [!UICONTROL Identities added] | Het aantal netto nieuwe id&#39;s dat wordt toegevoegd aan [!DNL Identity Service]. |
-| [!UICONTROL Graphs created] | Het aantal netto nieuwe identiteitsgrafieken dat is gemaakt in [!DNL Identity Service]. |
-| [!UICONTROL Graphs updated] | Het aantal bestaande identiteitsgrafieken dat met nieuwe randen is bijgewerkt. |
-| [!UICONTROL Failed dataflow runs] | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
-| [!UICONTROL Processing time] | De tijdstempel vanaf het begin van de opname tot aan de voltooiing. |
-| [!UICONTROL Status] | Bepaalt de algemene status van een gegevensstroom. De mogelijke statuswaarden zijn: <ul><li>`Success`: Geeft aan dat een gegevensstroom actief is en gegevens opneemt volgens het schema dat is opgegeven.</li><li>`Failed`: Geeft aan dat het activeringsproces van een gegevensstroom is onderbroken door fouten. </li><li>`Processing`: Geeft aan dat de gegevensstroom nog niet actief is. Deze status wordt vaak direct na het maken van een nieuwe gegevensstroom aangetroffen.</li></ul> |
-
-De [!UICONTROL Dataflow run details] pagina geeft meer informatie over uw [!DNL Identity] dataflow run, inclusief de IMS Org ID en de dataflow run ID. Op deze pagina ziet u ook de bijbehorende foutcode en het foutbericht van [!DNL Identity Service], indien er fouten optreden in het innameproces.
-
-Selecteren **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** om terug te keren naar de vorige pagina.
-
-![identity-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
-
-Van de [!UICONTROL Identity processing] pagina, selecteert u **[!UICONTROL Profiles]** om de status van records te zien die in de [!UICONTROL Profiles] in.
-
-![profielen selecteren](../assets/ui/monitor-sources/select-profiles.png)
-
-### [!DNL Profile] cijfers {#profile-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profile_processing"
->title="Profielverwerking"
->abstract="De profielverwerkingsweergave bevat informatie over records die worden opgenomen in de profielservice, zoals het aantal gemaakte profielfragmenten, bijgewerkte profielfragmenten en het totale aantal profielfragmenten."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_profile"
->title="Gegevens gegevensstroom"
->abstract="Op de pagina met details over gegevensuitvoering in de dataflow-runtime van DataFlow wordt meer informatie weergegeven over uw profiel, waaronder de IMS-organisatie-id en de uitvoerings-id van de dataflow."
-
-De [!UICONTROL Profile processing] pagina bevat informatie over records die aan worden toegevoegd [!DNL Profile], inclusief het aantal gemaakte profielfragmenten, de bijgewerkte profielfragmenten en het totale aantal profielfragmenten.
-
-Filterpictogram selecteren ![filter](../assets/ui/monitor-sources/filter.png) naast de dataflow run start time om meer informatie over uw [!DNL Profile] dataflow run.
-
-![profielen](../assets/ui/monitor-sources/profiles.png)
-
-| Profielafmetingen | Beschrijving |
-| --------------- | ----------- |
-| [!UICONTROL Records received] | Het aantal records dat is ontvangen van [!DNL Data Lake]. |
-| [!UICONTROL Records failed ] | Het aantal records dat is ingesloten, maar niet in [!DNL Profile] vanwege fouten. |
-| [!UICONTROL Profile fragments added] | Het aantal netto nieuwe [!DNL Profile] fragmenten toegevoegd. |
-| [!UICONTROL Profile fragments updated] | Het aantal bestaande [!DNL Profile] fragmenten bijgewerkt |
-| [!UICONTROL Total Profile fragments] | The total number of records written into [!DNL Profile], met inbegrip van alle bestaande [!DNL Profile] fragmenten bijgewerkt en nieuw [!DNL Profile] gemaakte fragmenten. |
-| [!UICONTROL Failed dataflow runs] | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
-| [!UICONTROL Processing time] | De tijdstempel vanaf het begin van de opname tot aan de voltooiing. |
-| [!UICONTROL Status] | Bepaalt de algemene status van een gegevensstroom. De mogelijke statuswaarden zijn: <ul><li>`Success`: Geeft aan dat een gegevensstroom actief is en gegevens opneemt volgens het schema dat is opgegeven.</li><li>`Failed`: Geeft aan dat het activeringsproces van een gegevensstroom is onderbroken door fouten. </li><li>`Processing`: Geeft aan dat de gegevensstroom nog niet actief is. Deze status wordt vaak direct na het maken van een nieuwe gegevensstroom aangetroffen.</li></ul> |
-
-De [!UICONTROL Dataflow run details] pagina geeft meer informatie over uw [!DNL Profile] dataflow run, inclusief de IMS Org ID en de dataflow run ID. Op deze pagina ziet u ook de bijbehorende foutcode en het foutbericht van [!DNL Profile], indien er fouten optreden in het innameproces.
-
-![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
-
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes de gegevensstroom van de opname van bron-niveau gecontroleerd, aan [!DNL Identity Service]en [!DNL Profile], met de **[!UICONTROL Monitoring]** dashboard. U hebt ook met succes fouten geïdentificeerd die tot de mislukking van gegevensstromen tijdens het innameproces hebben bijgedragen. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes de gegevensstroom van de opname van bron-niveau gecontroleerd gebruikend **[!UICONTROL Monitoring]** dashboard. U hebt ook met succes fouten geïdentificeerd die tot de mislukking van gegevensstromen tijdens het innameproces hebben bijgedragen. Raadpleeg de volgende documenten voor meer informatie:
 
-* [Overzicht van het realtime klantprofiel](../../profile/home.md)
-* [Overzicht van de Data Science Workspace](../../data-science-workspace/home.md)
+* [Identiteiten in gegevensstromen controleren](./monitor-identities.md)
+* [Profielen controleren in gegevensstromen](./monitor-profiles.md)
