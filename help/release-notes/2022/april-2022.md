@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
+source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2794'
 ht-degree: 1%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensstromen](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Bronnen](#sources)
 
@@ -171,17 +171,31 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
+Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen voor de klant. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
 
-Met Attribution AI en Customer AI kunnen klanten geavanceerde AI/ML-modellen configureren voor marketingtoewijzing en klantgevoeligheid. De Multi eigenschap van de Dataset helpt klanten om veelvoudige datasets op het tijdstip van modelconfiguratie in te brengen zonder de behoefte om gegevens vooraf te verbinden en voor te bereiden.
+### Attribution AI
+
+Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
 
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. Attribution AI ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event. De AI van de klant steunt al deze schema&#39;s plus het schema van Adobe Audience Manager. Raadpleeg voor meer informatie over ondersteuning voor meerdere gegevenssets in Attribution AI &amp; Customer AI de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) en [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. Attribution AI ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event. Raadpleeg voor meer informatie over ondersteuning voor meerdere gegevenssets in Attribution AI de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md). |
+
+Voor meer informatie over [!DNL Intelligent Services], zie de [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
+
+### Customer AI
+
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. AI van de Klant steunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event en het Adobe Audience Manager-schema. Raadpleeg voor meer informatie over ondersteuning voor meerdere gegevenssets in de AI van de Klant de [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Nieuwe maatstaven voor modelevaluatie in AI van de Klant | Met nieuwe winstkaarten in AI-kaarten van klanten kunnen marketers de groepsgrootte bepalen op basis van hun budget- en ROI-doelstellingen. Met nieuwe diagrammen kunt u de kwaliteit van het model meten, zodat u een betere zichtbaarheid krijgt in de lift die ze boven willekeurige doelen kunnen plaatsen. Zie voor meer informatie de [inzichten met Customer AI ontdekken](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
 
 Voor meer informatie over [!DNL Intelligent Services], zie de [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
