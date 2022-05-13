@@ -2,9 +2,9 @@
 title: Integratie van auditlogboek voor query-service
 description: De controlelogboeken van de Dienst van de vraag handhaven verslagen voor diverse gebruikersacties om een controletraject voor het oplossen van problemenkwesties te vormen of het naleven van het beleid van het collectieve gegevensbeheer en regelgevende vereisten. Dit leerprogramma verstrekt een overzicht van de eigenschappen van het controlelogboek specifiek voor de Dienst van de Vraag.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '775'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ De categorieën controlelogboeken die door [!DNL Query Service] De bedragen zijn
 |---|---|
 | [!UICONTROL Scheduled query] | Met deze categorie kunt u de programma&#39;s controleren die zijn gemaakt, bijgewerkt of verwijderd binnen [!DNL Query Service]. |
 | [!UICONTROL Query template] | Met deze categorie kunt u de verschillende handelingen (maken, bijwerken en verwijderen) controleren die op een querysjabloon zijn uitgevoerd. |
-| [!UICONTROL Query] | Met deze categorie kunt u query-uitvoeringen controleren. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## Een [!DNL Query Service] auditlogboek {#perform-an-audit-log}
 

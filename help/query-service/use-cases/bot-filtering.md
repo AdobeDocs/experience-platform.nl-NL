@@ -1,9 +1,10 @@
 ---
 title: Bot Filtreren in de Dienst van de Vraag met het Leren van de Machine
 description: Dit document biedt een overzicht van het gebruik van Query Service en het leren van computers om zowel de activiteit te bepalen als hun acties te filteren van echt verkeer van websitebezoekers.
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 5%
 
 ---
@@ -164,6 +165,6 @@ Het voorbeeldmodel bepaalde met een hoge mate van nauwkeurigheid dat om het even
 
 ## Volgende stappen
 
-Door dit document te lezen hebt u een beter inzicht in hoe u Query Service en het leren van machines kunt gebruiken om beide activiteiten te bepalen en te filteren.
+Door dit document te lezen, hebt u een beter inzicht in hoe te gebruiken [!DNL Query Service] en het leren van machines om beide activiteit te bepalen en te filteren.
 
-Andere documenten die de voordelen van [!DNL Query Service] aan de strategische bedrijfsinzichten van uw organisatie zijn de verlaten browse use casevoorbeeld.
+Andere documenten die de voordelen van [!DNL Query Service] voor de strategische bedrijfsinzichten van uw organisatie: [In de steek gelaten gebruikt geval](./abandoned-browse.md) voorbeeld.

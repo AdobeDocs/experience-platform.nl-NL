@@ -5,7 +5,7 @@ title: Overzicht van Query Service
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de rol van de Dienst van de Vraag binnen Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
+source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Segmentation Service] kunnen gebruikers hun klan
 
 ### Adobe Analytics browse-dissident
 
-Dit [browservoorbeeld centreert bij gebruik van Adobe [!DNL Analytics]](./use-cases/abandoned-cart.md) gegevens om een bepaald actief publiek te creëren. [!DNL Query Service] past complexe logica voor segmentatie aan om diverse gepersonaliseerde attributen voor gebruik stroomafwaarts te berekenen, of zeer te vereenvoudigen hoe u uw segmenten bouwt.
+Dit [browservoorbeeld centreert bij gebruik van Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) gegevens om een bepaald actief publiek te creëren. [!DNL Query Service] past complexe logica voor segmentatie aan om diverse gepersonaliseerde attributen voor gebruik stroomafwaarts te berekenen, of zeer te vereenvoudigen hoe u uw segmenten bouwt.
 
 ### Laagere BI-dashboards
 
