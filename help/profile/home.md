@@ -4,9 +4,9 @@ title: Overzicht van realtime-klantprofiel
 topic-legacy: guide
 description: In realtime Klantprofiel worden gegevens uit verschillende bronnen samengevoegd en biedt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '2046'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,24 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 De verhouding tussen het Profiel van de Klant in real time en andere diensten binnen Experience Platform wordt benadrukt in het volgende diagram:
 
-![](images/profile-overview/profile-in-platform.png)
+![De relatie tussen het Real-Time Klantprofiel en andere services in Adobe Experience Platform. In dit diagram ziet u dat Profiel een van de kerncomponenten van Adobe Experience Platform is.](images/profile-overview/profile-in-platform.png)
 
 ## Werken met profielen
 
 [!DNL Real-time Customer Profile] voegt gegevens van verschillende bedrijfssystemen samen en verleent dan toegang tot die gegevens in de vorm van klantenprofielen met verwante gebeurtenissen van de tijdreeksen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek. In de volgende secties worden enkele kernconcepten beschreven die u moet begrijpen om profielen op effectieve wijze te kunnen maken en onderhouden binnen het Platform.
+
+### Samenstelling van profielentiteit
+
+Een profiel van de Klant in real time wordt samengesteld uit een belangrijkste entiteit, genoemd **primaire entiteit** en diverse ondersteunende entiteiten. De primaire entiteit bestaat uit eigenschappen, gedrag, en segmentlidmaatschap van een profiel. Andere entiteiten staan de segmenteringsmotor toe om gegevens buiten de primaire entiteit van het profiel te gebruiken, en omvatten het volgende:
+
+- **Maateenheid**: De entiteit die wordt gebruikt om het proces voor gegevensmodellering voor informatie te vereenvoudigen die over gebeurtenissen of profielverslagen wordt gedeeld. Dit wordt ook wel de opgezochte entiteit of classificatieentiteit genoemd.
+- **B2B-entiteit**: Entiteiten die de verhouding van het profiel met zaken-aan-zaken rekeningen en kansen beschrijven.
+
+![Een diagram waarin de samenstelling van de profielentiteit wordt toegelicht.](./images/profile-overview/profile-entity-composition.png)
+
+>[!IMPORTANT]
+>
+>Aangezien dimensionale en B2B-entiteiten alleen buiten de primaire entiteit bestaan, worden deze alleen gebruikt voor batchsegmentatie.
 
 ### Profielgegevensopslag
 
@@ -115,9 +128,9 @@ Gegevensbeheer is een reeks strategieën en technologieën die worden gebruikt o
 
 Aangezien gegevensbeheer betrekking heeft op de toegang tot gegevens, speelt het binnen [!DNL Experience Platform] op verschillende niveaus:
 
-* Labels voor gegevensgebruik
-* Beleid voor gegevenstoegang
-* Toegangscontrole van gegevens voor marketingacties
+- Labels voor gegevensgebruik
+- Beleid voor gegevenstoegang
+- Toegangscontrole van gegevens voor marketingacties
 
 Gegevensbeheer wordt op verschillende punten beheerd. Dit zijn onder andere het bepalen van welke gegevens worden ingevoerd [!DNL Platform] en welke gegevens toegankelijk zijn na inname voor een bepaalde marketingactie. Voor meer informatie, begin door te lezen [gegevensbeheer - overzicht](../data-governance/home.md).
 
