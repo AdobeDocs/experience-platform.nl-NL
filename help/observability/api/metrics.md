@@ -5,10 +5,10 @@ title: Metrics API Endpoint
 topic-legacy: developer guide
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 1%
+source-wordcount: '1409'
+ht-degree: 0%
 
 ---
 
@@ -201,23 +201,12 @@ In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergeg
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | Het totale aantal gemaakte gegevenssets. | N.v.t. |
 | timeseries.ingestion.dataset.size | Cumulatieve grootte van alle gegevens die voor één dataset voor of alle datasets worden opgenomen. | Dataset-id |
 | timeseries.ingestion.dataset.dailysize | Grootte van gegevens die op een dagelijkse gebruiksbasis voor één dataset of voor alle datasets worden opgenomen. | Dataset-id |
 | timeseries.ingestion.dataset.batchfailed.count | Aantal ontbroken partijen voor één dataset of voor alle datasets. | Dataset-id |
 | timeseries.ingestion.dataset.batchsuccess.count | Aantal partijen die voor één dataset of voor alle datasets worden opgenomen. | Dataset-id |
 | timeseries.ingestion.dataset.recordsuccess.count | Aantal verslagen die voor één dataset of voor alle datasets worden opgenomen. | Dataset-id |
-| **timeseries.data.collection.validation.total.messages.rate** | Het totale aantal berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.valid.messages.rate** | Het totale aantal geldige berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.invalid.messages.rate** | Het totale aantal ongeldige berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.category.type.count** | Het totale aantal ongeldige &quot;type&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.category.range.count** | Het totale aantal ongeldige &quot;waaier&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.category.format.count** | Het totale aantal ongeldige &quot;formaat&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.category.pattern.count** | Het totale aantal ongeldige &quot;patroon&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
 | **timeseries.data.collection.validation.category.presence.count** | Het totale aantal ongeldige &quot;aanwezigheid&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.category.enum.count** | Het totale aantal ongeldige &quot;enum&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.category.unclassi.count** | Het totale aantal ongeldige &quot;niet-geclassificeerde&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
-| **timeseries.data.collection.validation.category.unknown.count** | Het totale aantal ongeldige &quot;onbekende&quot;berichten voor één dataset of voor alle datasets. | Dataset-id |
 | **timeseries.data.collection.inlet.total.messages.receive** | Het totale aantal berichten dat voor één gegevensinlaat of voor alle gegevensinlaten wordt ontvangen. | Inlet-id |
 | **timeseries.data.collection.inlet.total.messages.size.receive** | Totale grootte van gegevens die voor één gegevensinlaat of voor alle gegevensinlaten worden ontvangen. | Inlet-id |
 | **timeseries.data.collection.inlet.success** | Het totale aantal geslaagde HTTP-aanroepen naar één gegevensinlaat of naar alle gegevensinlaten. | Inlet-id |
@@ -233,40 +222,11 @@ In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergeg
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Aantal records dat naar de gegevensbron is geschreven door [!DNL Identity Service]voor één gegevensset of alle gegevensreeksen. | Dataset-id |
 | timeseries.identity.dataset.recordfailed.count | Aantal records mislukt door [!DNL Identity Service]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
-| timeseries.identity.dataset.namespacecode.recordsuccess.count | Aantal identiteitsrecords dat is ingevoerd voor een naamruimte. | Namespace-id (**Vereist**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Aantal identiteitsrecords dat is mislukt door een naamruimte. | Namespace-id (**Vereist**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Aantal identiteitsrecords dat door een naamruimte is overgeslagen. | Namespace-id (**Vereist**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Aantal unieke identiteiten dat is opgeslagen in de identiteitsgrafiek voor uw IMS-organisatie. | N.v.t. |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor een namespace worden opgeslagen. | Namespace-id (**Vereist**) |
-| timeseries.identity.graph.imsorg.numidgraphs.count | Aantal unieke grafiekidentiteiten die in de identiteitsgrafiek voor uw IMS Organisatie worden opgeslagen. | N.v.t. |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw IMS Organisatie voor een bepaalde grafieksterkte worden opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot;, of &quot;sterk&quot;). | Grafieksterkte (**Vereist**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Privacy Service] {#privacy}
-
-In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Privacy Service].
-
-| Metrische informatie | Beschrijving | ID-queryparameter |
-| ---- | ---- | ---- |
-| timeseries.gdpr.jobs.totaljobs.count | Het totale aantal banen dat door de GDPR is gecreëerd. | ENV (**Vereist**) |
-| timeseries.gdpr.jobs.completedjobs.count | Totaal aantal voltooide banen van GDPR. | ENV (**Vereist**) |
-| timeseries.gdpr.jobs.errorjobs.count | Totaal aantal fouttaken van GDPR. | ENV (**Vereist**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Query Service] {#query}
-
-In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergegeven [!DNL Query Service].
-
-| Metrische informatie | Beschrijving | ID-queryparameter |
-| ---- | ---- | ---- |
-| timeseries.queryservice.query.scheduleonce.count | Het totale aantal eenmalige geplande query&#39;s. | N.v.t. |
-| timeseries.queryservice.query.scheduledrecurring.count | Het totale aantal terugkerende geplande query&#39;s. | N.v.t. |
-| timeseries.queryservice.query.batchquery.count | Het totale aantal uitgevoerde batchquery&#39;s. | N.v.t. |
-| timeseries.queryservice.query.scheduledquery.count | Het totale aantal uitgevoerde geplande query&#39;s. | N.v.t. |
-| timeseries.queryservice.query.interactivequery.count | Het totale aantal uitgevoerde interactieve query&#39;s. | N.v.t. |
-| timeseries.queryservice.query.batchfrompsqlquery.count | Het totale aantal uitgevoerde batchquery&#39;s van PSQL. | N.v.t. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -278,18 +238,7 @@ De volgende tabel bevat metriek voor [!DNL Real-time Customer Profile].
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Aantal records dat is gelezen van de [!DNL Data Lake] door [!DNL Profile]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
 | timeseries.profiles.dataset.recordsuccess.count | Aantal records dat naar de gegevensbron is geschreven door [!DNL Profile]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
-| timeseries.profiles.dataset.recordfailed.count | Aantal records mislukt door [!DNL Profile]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
 | timeseries.profiles.dataset.batchsuccess.count | Aantal [!DNL Profile] partijen die voor een dataset of voor alle datasets worden opgenomen. | Dataset-id |
-| timeseries.profiles.dataset.batchfailed.count | Aantal [!DNL Profile] batches zijn mislukt voor één gegevensset of voor alle gegevenssets. | Dataset-id |
-| platform.ups.ingest.streaming.request.m1_rate | Binnenkomend aanvraagpercentage. | IMS Org (**Vereist**) |
-| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Ingestie succespercentage. | IMS Org (**Vereist**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | Het tarief van nieuwe verslagen die voor een dataset worden opgenomen. | Dataset-id (**Vereist**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Het tarief van uit-van-orde timestamped verslagen voor creeer verzoek om een dataset. | Dataset-id (**Vereist**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Tijdstempel voor laatst maken recordverzoek voor een dataset. | Dataset-id (**Vereist**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Snelheid van tijdstempelde records zonder volgorde voor updateverzoek voor een dataset. | Dataset-id (**Vereist**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Tijdstempel voor laatste verzoek van updaterecord voor een gegevensset. | Dataset-id (**Vereist**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | Gemiddelde recordgrootte. | IMS Org (**Vereist**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | Snelheid van updateverzoeken voor verslagen die voor een dataset worden opgenomen. | Dataset-id (**Vereist**) |
 
 {style=&quot;table-layout:auto&quot;}
 
