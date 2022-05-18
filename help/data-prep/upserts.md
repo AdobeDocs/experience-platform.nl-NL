@@ -2,9 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegevens;Prep;streaming;upsert;streaming upsert
 title: Gedeeltelijke rijupdates naar profielservice verzenden met Data Prep
 description: Dit document bevat informatie over het verzenden van gedeeltelijke rijupdates naar de profielservice met behulp van Data Prep.
-source-git-commit: 26059af9f899b4ccf5701899c9ac8111d56488e8
+exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
+source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -241,6 +242,14 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
   }
  }'
 ```
+
+## Bekende beperkingen en belangrijke overwegingen
+
+In het volgende voorbeeld wordt een lijst met bekende beperkingen beschreven die in acht moeten worden genomen bij het streamen van updates met [!DNL Data Prep]:
+
+* De streaming upserts methode zou slechts moeten worden gebruikt wanneer het verzenden van gedeeltelijke rijupdates naar [!DNL Profile Service]. Gedeeltelijke rij-updates zijn **niet** verbruikt door data Lake.
+* De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Identiteiten kunnen alleen worden toegevoegd met de opdracht `identity: create` bewerking.
+* De streaming upserts-methode ondersteunt momenteel alleen primitieve attributen met één waarde (zoals gehele getallen, datums, tijdstempels en tekenreeksen) en objecten. De streaming upserts-methode ondersteunt het vervangen, toevoegen of overschrijven van arraykenmerken en specifieke arrayindexen niet.
 
 ## Volgende stappen
 
