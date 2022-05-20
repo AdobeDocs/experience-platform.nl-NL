@@ -5,9 +5,9 @@ title: Handleiding voor probleemoplossing voor identiteitsservice
 topic-legacy: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,7 @@ In API-aanroepen wordt naar identiteiten verwezen door hun samengestelde identit
 
 ## Hoe verwerkt de Identiteitsdienst persoonlijk identificeerbare informatie (PII)?
 
-De Dienst van de identiteit leidt tot een sterke, unidirectionele cryptografische knoeiboel van PII voorafgaand aan het aanhouden van waarden. Identiteitsgegevens in de naamruimten &#39;Telefoon&#39; en &#39;E-mail&#39; worden automatisch gehasht met SHA-256, waarbij de waarden &#39;E-mail&#39; automatisch worden omgezet in kleine letters voordat er hashing optreedt.
-
-## Moet ik alle PII versleutelen voordat ik naar Platform verstuur?
-
-U hoeft de PII-gegevens niet handmatig te coderen voordat u deze in het Platform opneemt. Door het `I1` Het Platform zet deze velden automatisch om in hashed-id-waarden bij inname van het gegevensgebruikslabel naar alle toepasselijke gegevensvelden.
-
-Voor stappen over het toepassen en beheren van labels voor gegevensgebruik raadpleegt u de [zelfstudie over labels voor gegevensgebruik](../data-governance/labels/user-guide.md).
+De Dienst van de identiteit heeft standaardnamespaces om het opnemen van gehakte identiteitswaarden voor telefoonaantallen en e-mails te steunen. U bent echter verantwoordelijk voor de hash van waarden. Voor meer informatie over het hashen van gegevens die in Platform worden opgenomen, zie [[!DNL Data Prep] handleiding voor toewijzingsfuncties](../data-prep/functions.md#hashing).
 
 ## Zijn er overwegingen bij het hakken van op PII-Gebaseerde identiteiten?
 
