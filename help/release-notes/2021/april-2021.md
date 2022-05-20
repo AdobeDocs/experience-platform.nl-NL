@@ -1,17 +1,16 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform voor 21 april 2021.
+title: Opmerkingen bij de release van Adobe Experience Platform, april 2021
+description: In de release van april 2021 staat een opmerking voor Adobe Experience Platform.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '888'
 ht-degree: 1%
 
 ---
-
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
@@ -33,10 +32,10 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor het bewerken van toewijzingen voor bestaande gegevensstromen | U kunt nu de sets met toewijzingen van een bestaande gegevensstroom bijwerken. U kunt geen toewijzingssets bijwerken voor gegevensstromen die voor eenmalig gebruik waren gepland. Deze functie wordt niet ondersteund voor HTTP API, Adobe Analytics, Adobe Audience Manager en [!DNL Marketo Engage]. Voor meer informatie, zie de zelfstudie over [het bijwerken van bronnen dataflows in UI](../../sources/tutorials/ui/update-dataflows.md). |
-| Ondersteuning voor streaming-opname | U kunt nu functies van het gegevensvoorvoegsel gebruiken wanneer u een streamingbronverbinding maakt. Zie de zelfstudie over het maken van een streamingbronverbinding in de UI](../../sources/tutorials/ui/create/streaming/http.md) voor meer informatie.[ |
+| Ondersteuning voor het bewerken van toewijzingen voor bestaande gegevensstromen | U kunt nu de sets met toewijzingen van een bestaande gegevensstroom bijwerken. U kunt geen toewijzingssets bijwerken voor gegevensstromen die voor eenmalig gebruik waren gepland. Deze functie wordt niet ondersteund voor HTTP API, Adobe Analytics, Adobe Audience Manager en [!DNL Marketo Engage]. Raadpleeg de zelfstudie voor meer informatie [het bijwerken van bronnen dataflows in UI](../../sources/tutorials/ui/update-dataflows.md). |
+| Ondersteuning voor streaming-opname | U kunt nu functies van het gegevensvoorvoegsel gebruiken wanneer u een streamingbronverbinding maakt. Raadpleeg de zelfstudie voor meer informatie [het creëren van een het stromen bronverbinding in UI](../../sources/tutorials/ui/create/streaming/http.md). |
 
-Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
+Zie voor meer informatie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
@@ -44,7 +43,7 @@ Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wo
 
 | Functie | Beschrijving |
 | --- | --- |
-| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en groepen van het schemagebied in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Raadpleeg de documentatie bij [industriedomodellen](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten met elkaar betrekking hebben voor verschillende gevallen van industrieel gebruik. |
+| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en groepen van het schemagebied in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Zie de documentatie op [bedrijfsgegevensmodellen](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten op elkaar betrekking hebben voor verschillende gevallen van gebruik in de industrie . |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -52,15 +51,15 @@ Intelligente services stellen marketinganalisten en praktijkmensen in staat om g
 
 ### Customer AI
 
-AI van de klant beschikbaar in het Platform van de Gegevens van de Klant in real time, wordt gebruikt om douanescores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Ondersteuning voor Adobe Analytics-gegevens | Bijgewerkte functionaliteit om de datasets van Adobe Analytics via de bron van Analytics schakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
 | Ondersteuning voor Adobe Audience Manager-gegevens | Bijgewerkte functionaliteit om de datasets van Adobe Audience Manager via de Audience Manager bronschakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
-| Overzicht van modelprestaties | AI van de klant heeft nu een [overzicht van de modelprestaties tabel](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) op de pagina met inzichten van de serviceversie. Op het tabblad Modelprestaties worden alle werkelijke conversie- en koelingssnelheden weergegeven. Hierdoor kun je ontcijferen en begrijpen wat er gebeurt in elk van je nevenemmers. |
+| Overzicht van modelprestaties | AI van klant heeft nu een [overzicht van modelprestaties, tabblad](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) binnen de pagina van de Inzichten van de de dienstinstantie. Op het tabblad Modelprestaties worden alle werkelijke conversie- en koelingssnelheden weergegeven. Hierdoor kun je ontcijferen en begrijpen wat er gebeurt in elk van je nevenemmers. |
 
-Voor meer informatie over gesteunde datasets, te zien [[!DNL Intelligent Services] de documentatie van de gegevensvoorbereiding](../../intelligent-services/data-preparation.md).
+Voor meer informatie over ondersteunde gegevenssets raadpleegt u de [[!DNL Intelligent Services] documentatie over gegevensvoorbereiding](../../intelligent-services/data-preparation.md).
 
 ### Attribution AI
 
@@ -70,21 +69,21 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 | ------- | ----------- |
 | Ondersteuning voor Adobe Analytics-gegevens | Bijgewerkte functionaliteit om de datasets van Adobe Analytics via de bron van Analytics schakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
 
-Voor meer informatie over gesteunde datasets, te zien [[!DNL Intelligent Services] de documentatie van de gegevensvoorbereiding](../../intelligent-services/data-preparation.md).
+Voor meer informatie over ondersteunde gegevenssets raadpleegt u de [[!DNL Intelligent Services] documentatie over gegevensvoorbereiding](../../intelligent-services/data-preparation.md).
 
 ## Segmenteringsservice {#segmentation}
 
-Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt bouwen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile]-gegevens. Deze segmenten worden centraal gevormd en gehandhaafd op Platform, die hen gemakkelijk toegankelijk maken door om het even welke toepassing van de Adobe.
+Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze segmenten worden centraal gevormd en gehandhaafd op Platform, die hen gemakkelijk toegankelijk maken door om het even welke toepassing van de Adobe.
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Aanvullende aggregatiefuncties | De functies van de telling zijn toegevoegd in de Bouwer van het Segment. Met telfuncties kunt u tellen hoe vaak de opgegeven gebeurtenis is uitgevoerd. Meer informatie over de tellingsfuncties kan in de sectie van tellingsfuncties van [de gids van de Bouwer van het Segment](../../segmentation/ui/segment-builder.md#count-functions) worden gevonden |
+| Aanvullende aggregatiefuncties | De functies van de telling zijn toegevoegd in de Bouwer van het Segment. Met telfuncties kunt u tellen hoe vaak de opgegeven gebeurtenis is uitgevoerd. Meer informatie over de telfuncties vindt u in de sectie voor telfuncties van het dialoogvenster [Handleiding Segment Builder](../../segmentation/ui/segment-builder.md#count-functions) |
 
-Voor meer informatie over [!DNL Segmentation Service], te zien gelieve [Segmentatieoverzicht](../../segmentation/home.md).
+Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -94,7 +93,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (bèta) | U kunt nu een [!DNL Marketo Engage] bronverbinding tot stand brengen gebruikend UI om B2B gegevens aan Platform te brengen en deze gegevens bijgewerkt te houden gebruikend Platform-verbonden toepassingen. Zie de [[!DNL Marketo Engage] documentatie van de bronconnector](../../sources/connectors/adobe-applications/marketo/marketo.md) voor meer informatie. |
+| [!DNL Marketo Engage] (bèta) | U kunt nu een [!DNL Marketo Engage] bronverbinding die UI gebruikt om B2B- gegevens aan Platform te brengen en deze gegevens bijgewerkt te houden gebruikend Platform-verbonden toepassingen. Zie voor meer informatie de [[!DNL Marketo Engage] documentatie van bronaansluiting](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 | Bètabronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
-Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
+Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).

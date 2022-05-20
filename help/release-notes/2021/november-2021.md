@@ -1,9 +1,10 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
+title: Opmerkingen bij de release van Adobe Experience Platform november 2021
+description: De release van november 2021 bevat notities voor Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -90,4 +91,3 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 | Aangepaste profielkenmerken | De AI van de Klant steunt nu het bepalen van de gebieden van de gegevensreeks van het douaneprofiel (met timestamps) in uw gegevens naast standaardgebeurtenisgebieden. Met deze optie kunt u aanvullende profielkenmerken toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model worden verbeterd en kunnen de resultaten nauwkeuriger worden weergegeven. |
 
 Voor meer informatie over AI van de Klant, gelieve te zien [AI-documentatie van klant](../../intelligent-services/customer-ai/overview.md).
-

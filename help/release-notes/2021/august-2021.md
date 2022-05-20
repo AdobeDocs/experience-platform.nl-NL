@@ -1,13 +1,13 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform voor 25 augustus 2021.
+title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2021
+description: De release van augustus 2021 bevat opmerkingen voor Adobe Experience Platform.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '712'
 ht-degree: 3%
 
 ---
@@ -42,10 +42,10 @@ Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelij
 
 | Functie | Beschrijving |
 | --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | De Doel SDK van Adobe Experience Platform is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald. |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald. |
 | [Verbeteringen van de bruikbaarheid van bestemmingen](../../destinations/ui/activation-overview.md) | De verbeteringen van de bruikbaarheid aan bestemmingen laten marketers toe om segmenten aan bestaande bestemmingen naadloos te activeren. |
 
-Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Waarnembaarheidsinzichten {#observability}
 
@@ -55,9 +55,9 @@ Met behulp van observability Insights kunt u de activiteiten van Platforms volge
 
 | Functie | Beschrijving |
 | --- | --- |
-| Waarschuwingen | U kunt zich nu abonneren op belangrijke waarschuwingen met betrekking tot workflows die op het Platform worden uitgevoerd. Nadat u zich hebt geabonneerd op specifieke waarschuwingsregels, ontvangt u meldingen en e-mails in de gebruikersinterface wanneer een belangrijke levenscyclusgebeurtenis plaatsvindt (zoals het opnemen van gegevens) of als er problemen zijn die uw aandacht vereisen (zoals het mislukken van een innamestroom of het langer duren dan u had verwacht van een segmenttaak). Voor meer informatie, zie [alarm overzicht](../../observability/alerts/overview.md). |
+| Waarschuwingen | U kunt zich nu abonneren op belangrijke waarschuwingen met betrekking tot workflows die op het Platform worden uitgevoerd. Nadat u zich hebt geabonneerd op specifieke waarschuwingsregels, ontvangt u meldingen en e-mails in de gebruikersinterface wanneer een belangrijke levenscyclusgebeurtenis plaatsvindt (zoals het opnemen van gegevens) of als er problemen zijn die uw aandacht vereisen (zoals het mislukken van een innamestroom of het langer duren dan u had verwacht van een segmenttaak). Zie voor meer informatie de [waarschuwingsoverzicht](../../observability/alerts/overview.md). |
 
-Zie [Overzicht van de Inzichten van de Waarnembaarheid](../../observability/home.md) voor meer informatie over de dienst.
+Zie de [Overzicht van waarnemingsinformatie](../../observability/home.md) voor meer informatie over de dienst.
 
 ## Klantprofiel in realtime {#profile}
 
@@ -65,9 +65,9 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bladeren door profielen op samenvoegbeleid of identiteit | Wanneer u door profielen in Experience Platform bladert, kunt u nu door samenvoegbeleid bladeren om een voorvertoning weer te geven van 20 voorbeeldprofielen op basis van het geselecteerde samenvoegbeleid. U kunt ook op identiteit bladeren om naar een specifiek profiel te zoeken dat een naamruimte van de identiteit en verwante identiteitswaarde gebruikt. Voor meer informatie, zie [Realtime gids UI van het Profiel van de Klant](../../profile/ui/user-guide.md). |
+| Bladeren door profielen op samenvoegbeleid of identiteit | Wanneer u door profielen in Experience Platform bladert, kunt u nu door samenvoegbeleid bladeren om een voorvertoning weer te geven van 20 voorbeeldprofielen op basis van het geselecteerde samenvoegbeleid. U kunt ook op identiteit bladeren om naar een specifiek profiel te zoeken dat een naamruimte van de identiteit en verwante identiteitswaarde gebruikt. Zie voor meer informatie de [Gebruikershandleiding voor gebruikersprofiel voor realtime klanten](../../profile/ui/user-guide.md). |
 
-Als u meer wilt weten over Real-time klantprofiel, inclusief zelfstudies en aanbevolen procedures voor het werken met profielgegevens, leest u eerst het [Real-time Customer Profile overview](../../profile/home.md).
+Als u meer wilt weten over het realtime profiel van de klant, inclusief zelfstudies en aanbevolen procedures voor het werken met profielgegevens, leest u eerst de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
 ## Bronnen {#sources}
 
@@ -77,6 +77,6 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bronaansluiting voor lokale bestandsupload | De categorie voor het opnemen van bestanden is hernoemd naar het lokale systeem, zodat u lokale bestanden rechtstreeks naar het Platform kunt brengen via de lokale connector voor het uploaden van bestanden. De gegevens die door deze schakelaar worden opgenomen kunnen door het Dashboard van de Controle worden gecontroleerd. Zie het [overzicht van de bron voor het uploaden van lokale bestanden](../../sources/connectors/local-system/local-file-upload.md) voor meer informatie. |
+| Bronaansluiting voor lokale bestandsupload | De categorie voor het opnemen van bestanden is hernoemd naar het lokale systeem, zodat u lokale bestanden rechtstreeks naar het Platform kunt brengen via de lokale connector voor het uploaden van bestanden. De gegevens die door deze schakelaar worden opgenomen kunnen door het Dashboard van de Controle worden gecontroleerd. Zie de [overzicht van bron van lokale bestandsupload](../../sources/connectors/local-system/local-file-upload.md) voor meer informatie . |
 
-Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
+Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).

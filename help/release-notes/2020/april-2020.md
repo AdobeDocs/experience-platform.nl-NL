@@ -1,14 +1,14 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform 8 april 2020
+title: Opmerkingen bij de release van Adobe Experience Platform, april 2020
+description: Release-aantekeningen voor Adobe Experience Platform van april 2020.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: opmerkingen bij de release;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '983'
 ht-degree: 3%
 
 ---

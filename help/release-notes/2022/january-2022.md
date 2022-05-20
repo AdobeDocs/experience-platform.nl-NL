@@ -1,10 +1,10 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
+title: Opmerkingen bij de release van Adobe Experience Platform Januari 2022
+description: Opmerkingen bij de release van januari 2022 voor Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1341'
 ht-degree: 1%
 
 ---
