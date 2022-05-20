@@ -5,9 +5,9 @@ title: Overzicht van afstemming van segment
 topic-legacy: overview
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,13 @@ Om een partner te verbinden die hun [!UICONTROL connect ID]Voer de unieke id-waa
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Feed maken
+### Feed maken {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="Beperkte gevallen van marketinggebruik"
+>abstract="Beperkte gevallen van marketinggebruik helpen uw partners te helpen ervoor te zorgen dat gedeelde segmenten correct worden gebruikt volgens uw beperkingen op het gebied van gegevensbeheer."
+>text="Learn more in documentation"
 
 A **voeden** is een groepering van gegevens (segmenten), de regels voor hoe dat gegeven kan worden blootgesteld of worden gebruikt, en de configuraties die bepalen hoe uw gegevens tegen de gegevens van uw partners worden aangepast. Een diervoeder kan onafhankelijk worden beheerd en via [!DNL Segment Match].
 
