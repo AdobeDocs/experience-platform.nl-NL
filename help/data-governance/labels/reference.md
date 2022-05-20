@@ -5,9 +5,9 @@ title: Woordenlijst met gegevensgebruikslabels
 topic-legacy: labels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '2053'
 ht-degree: 1%
 
 ---
@@ -55,6 +55,8 @@ Eén type gegevens dat u als gevoelig kunt aanmerken, kan verschillende typen ge
 | --- | --- |
 | **S1** | Gegevens die breedte- en lengtegraad aangeven die kunnen worden gebruikt om de precieze locatie van een apparaat te bepalen. |
 | **S2** | Gegevens die kunnen worden gebruikt om een breed gedefinieerd geofence-gebied te bepalen. |
+| **PSPD** | De toegelaten Gevoelige Persoonlijke Gegevens (PSPD) verwijst naar gegevens die u door Adobe contractueel wordt toegelaten om te uploaden die &quot;gevoelig&quot;wordt geacht, &quot;speciale categorie van gegevens&quot;, of een gelijkaardige term die door toepasselijke wetten wordt gebruikt. Dit sluit specifiek beschermde gezondheidsinformatie (PHI) en andere gereglementeerde gezondheidsgegevens uit. |
+| **RHD** | Gegevens die verwijzen naar beschermde gezondheidsinformatie (PHI) of informatie over een patiënt die door Adobe contractueel geüpload mag worden. |
 
 ## Aanhangsel
 
@@ -88,7 +90,7 @@ De combinatie van gegevens van verschillende sites, waaronder een combinatie van
 
 Het gebruik van gegevens buiten de locatie alleen voor doelgerichte doeleinden zou waarschijnlijk ook als op rente gebaseerde doelgerichtheid worden aangemerkt, aangezien gegevens buiten de locatie doorgaans worden verzameld en verwerkt om conclusies te trekken over de belangen van de gebruikers.
 
-Het toewijzen van inhoud of advertenties die alleen gegevens ter plaatse gebruiken, zou echter doorgaans niet worden aangemerkt als doelgerichte actie op basis van interesse. On-site doelwitten die anders niet als doelgericht op basis van interesse worden beschouwd, worden behandeld als twee afzonderlijke labels. Specifiek, richt het Etiket C6 de on-site en richt zich en het melden en spreekt specifiek aan de selectie, levering, en het melden van, en Etiket C7 adressen on-site inhoudselectie, levering, en het melden (de inhoud het richten op).
+Het toewijzen van inhoud of advertenties die alleen gegevens ter plaatse gebruiken, zou echter doorgaans niet worden aangemerkt als doelgerichte actie op basis van interesse. On-site doelwitten die anders niet als doelgericht op basis van interesse worden beschouwd, worden behandeld als twee afzonderlijke labels. Specifiek, richt het Etiket C6 de onsite en richt zich en het melden en spreekt specifiek aan de selectie, levering, en het melden van, en Etiket C7 adressen on-site inhoudselectie, levering, en het melden (de inhoud die van de plaats richt zich).
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
 
@@ -98,7 +100,7 @@ DAA: Online gedragsreclame. Gegevens van een bepaalde computer of een bepaald ap
 
 #### C6 {#c6}
 
-Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties zijn gescheiden van on-site inhoud en worden gedekt door een label [C7](#c7). Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond, en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. *[Zie label C5 voor deze vereisten.](#c5)*
+Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties zijn gescheiden van on-site inhoud en worden gedekt door een label [C7](#c7). Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond, en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de activiteiten ter plaatse van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. *[Zie label C5 voor deze vereisten.](#c5)*
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
 
