@@ -6,9 +6,9 @@ title: Invoer en uitvoer in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3084'
 ht-degree: 0%
 
 ---
@@ -259,11 +259,15 @@ Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op b
 
 Als u kenmerken van Adobe Audience Manager wilt gebruiken, moet u een bronverbinding maken met de [Audience Manager-bronaansluiting](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). De bronschakelaar leidt automatisch tot het schema met de juiste gebiedsgroep(en). U hoeft niet handmatig extra gebeurtenistypen toe te voegen om het schema te laten werken met Customer AI.
 
-Wanneer u een nieuwe klant-AI-instantie configureert, `audienceName` en `audienceID` U kunt een bepaalde eigenschap selecteren om te scoren terwijl u uw doel definieert.
+Wanneer u een nieuwe klant-AI-instantie configureert, `audienceName` en `audienceID` U kunt een bepaalde eigenschap voor scoring selecteren bij het definiëren van uw doel.
 
 ## AI-uitvoergegevens van klant
 
 De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een Real-time dataset van het Profiel van de Klant hebt toegelaten, kunt u inzichten van het Profiel van de Klant in real time in [Segment Builder](../../segmentation/ui/segment-builder.md). Als u geen profiel-Toegelaten dataset hebt, kunt u [De AI-uitvoer van de klant downloaden](./user-guide/download-scores.md) dataset beschikbaar op het data Lake.
+
+U kunt de outputdataset onder vinden **Gegevenssets** in Platform. Alle AI-uitvoergegevenssets van de klant beginnen met de naam **AI-scores van klant - Naam_van_app** terwijl alle AI-uitvoerschema&#39;s van de Klant met de naam beginnen **AI-schema van klant - Naam_van_app**.
+
+![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
 >[!NOTE]
 >
