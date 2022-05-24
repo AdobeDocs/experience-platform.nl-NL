@@ -4,23 +4,24 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '777'
 ht-degree: 5%
 
 ---
 
 
-# Bronaansluitingen {#sources}
+# Bronnen {#sources}
 
-- [Overzicht van bronconnectors](home.md)
+- [Overzicht van bronnen](home.md)
 - Beschikbare bronconnectors {#connectors}
    - Adobe-toepassingen {#adobe-applications}
-      - [Bronconnector voor analytische classificaties](connectors/adobe-applications/classifications.md)
-      - [Bronconnector voor analyse](connectors/adobe-applications/analytics.md)
-      - [Audience Manager-bronaansluiting](connectors/adobe-applications/audience-manager.md)
-      - [Klantkenmerken bronaansluiting](connectors/adobe-applications/customer-attributes.md)
+      - [Bron voor analytische classificaties](connectors/adobe-applications/classifications.md)
+      - [Analysebron](connectors/adobe-applications/analytics.md)
+      - [Bron Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Kenmerkbron van klant](connectors/adobe-applications/customer-attributes.md)
+      - [Bron gegevensverzameling](connectors/adobe-applications/data-collection.md)
       - Veldtoewijzingen {#mapping}
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)

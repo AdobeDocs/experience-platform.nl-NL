@@ -5,9 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f0b8b5d16739b2bec6e1a11b718962de3faed463
+source-git-commit: 365e36351bf18864c677f53dffbc30b47f29b074
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Ado
 - [Een gegevensbronverbinding voor Adobe Analytics Classifications maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Overzicht van Adobe Analytics Report Suite-gegevensbronverbinding](connectors/adobe-applications/analytics.md)
 - [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Adobe-gegevensverzameling](connectors/adobe-applications/data-collection.md)
 - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] connectoroverzicht](connectors/adobe-applications/marketo/marketo.md)
 - [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
