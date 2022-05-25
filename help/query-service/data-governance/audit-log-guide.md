@@ -2,9 +2,9 @@
 title: Integratie van auditlogboek voor query-service
 description: De controlelogboeken van de Dienst van de vraag handhaven verslagen voor diverse gebruikersacties om een controletraject voor het oplossen van problemenkwesties te vormen of het naleven van het beleid van het collectieve gegevensbeheer en regelgevende vereisten. Dit leerprogramma verstrekt een overzicht van de eigenschappen van het controlelogboek specifiek voor de Dienst van de Vraag.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
+source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '875'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ De categorieën controlelogboeken die door [!DNL Query Service] De bedragen zijn
 
 | Categorie | Beschrijving |
 |---|---|
-| [!UICONTROL Scheduled query] | Met deze categorie kunt u de programma&#39;s controleren die zijn gemaakt, bijgewerkt of verwijderd binnen [!DNL Query Service]. |
+| [!UICONTROL Query] | Met deze categorie kunt u query-uitvoeringen controleren. |
 | [!UICONTROL Query template] | Met deze categorie kunt u de verschillende handelingen (maken, bijwerken en verwijderen) controleren die op een querysjabloon zijn uitgevoerd. |
-<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
+| [!UICONTROL Scheduled query] | Met deze categorie kunt u de programma&#39;s controleren die zijn gemaakt, bijgewerkt of verwijderd binnen [!DNL Query Service]. |
 
 ## Een [!DNL Query Service] auditlogboek {#perform-an-audit-log}
 
@@ -42,7 +42,7 @@ De teruggekeerde gegevens van het controlelogboek bevatten de volgende informati
 | Kolomnaam | Beschrijving |
 |---|---|
 | [!UICONTROL Timestamp] | De exacte datum en tijd van de actie die in een `month/day/year hour:minute AM/PM` gebruiken. |
-| [!UICONTROL Asset Name] | De waarde voor de [!UICONTROL Asset Name] wordt bepaald door de categorie die als filter wordt gekozen. Wanneer u de [!UICONTROL Scheduled query] categorie is **naam van schema**. Wanneer u de [!UICONTROL Query template] categorie, dit is de **sjabloonnaam**. |
+| [!UICONTROL Asset Name] | De waarde voor de [!UICONTROL Asset Name] wordt bepaald door de categorie die als filter wordt gekozen. Wanneer u de [!UICONTROL Scheduled query] categorie is **naam van schema**. Wanneer u de [!UICONTROL Query template] categorie, dit is de **sjabloonnaam**. Wanneer u de [!UICONTROL Query] categorie, dit is de **sessie-id** |
 | [!UICONTROL Category] | Dit veld komt overeen met de categorie die u in de vervolgkeuzelijst met filters hebt geselecteerd. |
 | [!UICONTROL Action] | Dit kan worden gemaakt, verwijderd, bijgewerkt of uitgevoerd. Welke acties beschikbaar zijn, is afhankelijk van de categorie die u als filter hebt gekozen. |
 | [!UICONTROL User] | Dit veld bevat de gebruikersnaam die de query heeft uitgevoerd. |
@@ -53,13 +53,25 @@ De teruggekeerde gegevens van het controlelogboek bevatten de volgende informati
 >
 >Meer vraagdetails worden verstrekt door de logboekresultaten in of CSV of JSON dossierformaten te downloaden, dan door gebrek in het dashboard van het controlelogboek wordt getoond.
 
+## Deelvenster Details
+
 Selecteer een rij controlelogbestandresultaten om een deelvenster met details rechts van het scherm te openen.
 
 ![Hiermee wordt het tabblad Actief dashboard van Audits gecontroleerd, waarbij het deelvenster Details is gemarkeerd.](../images/audit-log/details-panel.png)
 
->[!NOTE]
->
->U kunt het deelvenster Details gebruiken om de [!UICONTROL Asset ID]. De waarde van de [!UICONTROL Asset ID] wijzigingen afhankelijk van de categorie die in de controle wordt gebruikt. Wanneer u de [!UICONTROL Query template] de categorie [!UICONTROL Asset ID] is de **sjabloon-id**. Wanneer u de [!UICONTROL Scheduled query] de categorie [!UICONTROL Asset ID] is de  **schema-id**.
+U kunt het deelvenster Details gebruiken om de [!UICONTROL Asset ID] en de [!UICONTROL Event status].
+
+De waarde van de [!UICONTROL Asset ID] wijzigingen afhankelijk van de categorie die in de controle wordt gebruikt.
+
+* Wanneer u de [!UICONTROL Query] de categorie [!UICONTROL Asset ID] is de  **sessie-id**.
+* Wanneer u de [!UICONTROL Query template] de categorie [!UICONTROL Asset ID] is de **sjabloon-id** en vooraf vastgesteld met `[!UICONTROL templateID:]`.
+* Wanneer u de [!UICONTROL Scheduled query] de categorie [!UICONTROL Asset ID] is de  **schema-id** en vooraf vastgesteld met `[!UICONTROL scheduleID:]`.
+
+De waarde van de [!UICONTROL Event status] wijzigingen afhankelijk van de categorie die in de controle wordt gebruikt.
+
+* Wanneer u de [!UICONTROL Query] de categorie [!UICONTROL Event status] veld bevat een lijst met alle **query-id&#39;s** uitgevoerd door de gebruiker binnen die sessie.
+* Wanneer u de [!UICONTROL Query template] de categorie [!UICONTROL Event status] veld biedt de **sjabloonnaam** als voorvoegsel voor de status van de gebeurtenis.
+* Wanneer u de [!UICONTROL Query schedule] de categorie [!UICONTROL Event status] veld biedt de **naam van schema** als voorvoegsel voor de status van de gebeurtenis.
 
 ## Beschikbare filters voor [!DNL Query Service] categorieën controlelogboeken {#available-filters}
 
@@ -68,9 +80,9 @@ Welke filters beschikbaar zijn, is afhankelijk van de categorie die is geselecte
 | Filter | Beschrijving |
 |---|---|
 | Categorie | Zie de [[!DNL Query Service] categorieën controlelogboeken](#audit-log-categories) voor een volledige lijst van beschikbare categorieën. |
-| Actie | Wanneer u verwijst naar [!DNL Query Service] auditcategorieën, update is een **wijziging van het bestaande formulier**, delete is de **schrapping van het schema of de sjabloon**, create is **een nieuw schema of sjabloon maken** en voert een query uit. |
+| Actie | Wanneer u verwijst naar [!DNL Query Service] auditcategorieën, update is een **wijziging van het bestaande formulier**, delete is de **schrapping van het schema of de sjabloon**, create is **een nieuw schema of sjabloon maken** en wordt uitgevoerd **uitvoeren, query**. |
 | Gebruiker | Voer de volledige gebruikersnaam in (bijvoorbeeld johndoe@acme.com) om te filteren op gebruiker. |
-| Status | Dit filter is niet van toepassing op de [!DNL Query Service] auditlogboeken. De [!UICONTROL Allow], [!UICONTROL Success], en [!UICONTROL Failure] de opties zullen niet de resultaten filtreren terwijl de [!UICONTROL Deny] filter uit **alles** logboeken. |
+| Status | De [!UICONTROL Allow], [!UICONTROL Success], en [!UICONTROL Failure] opties filteren de logbestanden op basis van de status of de status van de gebeurtenis, terwijl de optie [!UICONTROL Deny] filter uit **alles** logboeken. |
 | Datum | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. |
 
 ## Volgende stappen
