@@ -2,7 +2,7 @@
 title: De extensie Adobe Experience Platform Web SDK configureren
 description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in de UI van de Inzameling van Gegevens te vormen.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 0%
@@ -51,7 +51,7 @@ De [!UICONTROL Edge Domain] is het domein waarvan de extensie Adobe Experience P
 
 Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een gegevensstroom-id gebruikt om naar de serverconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
-Zie de handleiding op [gegevensstromen](../fundamentals/datastreams.md) voor meer informatie .
+Zie de handleiding op [gegevensstromen](../datastreams/overview.md) voor meer informatie .
 
 
 ## [!UICONTROL Privacy]

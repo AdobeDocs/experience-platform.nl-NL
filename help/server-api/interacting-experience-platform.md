@@ -4,10 +4,10 @@ description: Leer hoe u de Edge Network Server-API gebruikt om te communiceren m
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Experience Platform
 keywords: gegevensverzameling; uitlaat; analytische gegevens; Adobe Experience Platform Edge Network api;aep
 exl-id: c49e40b7-9653-40f1-9db5-8941b20de8a3
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '71'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Om de gegevensinzameling van het Experience Platform toe te laten, moet u eerst [configureren, gegevensstroom](../edge/fundamentals/datastreams.md) gebeurtenissen door:sturen in Experience Platform datasets.
+Om de gegevensinzameling van het Experience Platform toe te laten, moet u eerst [configureren, gegevensstroom](../edge/datastreams/overview.md) gebeurtenissen door:sturen in Experience Platform datasets.
 
 Zodra gevormd, zou de gegevensstroomconfiguratie montages voor moeten omvatten `com_adobe_experience_platform`, zoals in het onderstaande voorbeeld wordt getoond:
 

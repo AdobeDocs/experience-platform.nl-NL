@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
-source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
+source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '178'
 ht-degree: 13%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 13%
 * [Overzicht van Platform Web SDK](home.md)
 * Grondbeginselen {#fundamentals}
    * [Vereisten](fundamentals/prerequisite.md)
-   * [Een gegevensstroom configureren](fundamentals/datastreams.md)
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
    * [De SDK configureren](fundamentals/configuring-the-sdk.md)
    * [Opdrachten uitvoeren](fundamentals/executing-commands.md)
@@ -27,6 +26,9 @@ ht-degree: 13%
    * [Een CSP configureren](fundamentals/configuring-a-csp.md)
    * [Interactie met meerdere eigenschappen](fundamentals/interacting-with-multiple-properties.md)
    * [Ondersteunde gebruiksgevallen](fundamentals/supported-use-cases.md)
+* DataStreams {#datastreams}
+   * [Overzicht](./datastreams/overview.md)
+   * [Gegevensvoorvoegsel voor gegevensverzameling](./datastreams/data-prep.md)
 * Identiteit {#identity}
    * [Overzicht](identity/overview.md)
    * [Apparaat-id&#39;s van eerste partij](identity/first-party-device-ids.md)

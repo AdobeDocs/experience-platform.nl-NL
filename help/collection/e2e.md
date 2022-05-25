@@ -2,7 +2,7 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van de technologieën voor gegevensverzameling van Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: a1369c0d7af5808d7ff830ce017e686f7697181e
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '2536'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Selecteer in de gebruikersinterface voor gegevensverzameling de optie **[!UICONT
 
 ![DataStreams](./images/e2e/datastreams.png)
 
-De configuratievereisten voor een gegevensstroom hangen af van welke producten en mogelijkheden u gegevens naar verzendt. Voor gedetailleerde informatie over de configuratieopties voor elk product raadpleegt u de [datastreams, overzicht](../edge/fundamentals/datastreams.md).
+De configuratievereisten voor een gegevensstroom hangen af van welke producten en mogelijkheden u gegevens naar verzendt. Voor gedetailleerde informatie over de configuratieopties voor elk product raadpleegt u de [datastreams, overzicht](../edge/datastreams/overview.md).
 
 ## De SDK van het Web installeren en configureren {#install}
 

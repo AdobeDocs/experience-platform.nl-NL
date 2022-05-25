@@ -4,7 +4,7 @@ description: Leer hoe u de Edge Network Server-API gebruikt om te communiceren m
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: gegevensverzameling; uitlaat; analytische gegevens; Adobe Experience Platform Edge Network api;analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Analytics-gegevensverzameling werkt door XDM-gegevens te vertalen naar een
 
 U kunt ook [XDM-waarden handmatig toewijzen](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) naar verouderde analytische variabelen.
 
-Om Adobe Analytics in staat te stellen gegevens van server API te ontvangen, moet u [configureren, gegevensstroom](../edge/fundamentals/datastreams.md#adobe-analytics-settings) om gebeurtenissen naar Adobe Analytics door te sturen, door de rapportsuite-id in te voeren in de configuratiepagina van de gegevensstroom.
+Om Adobe Analytics in staat te stellen gegevens van server API te ontvangen, moet u [configureren, gegevensstroom](../edge/datastreams/overview.md#adobe-analytics-settings) om gebeurtenissen naar Adobe Analytics door te sturen, door de rapportsuite-id in te voeren in de configuratiepagina van de gegevensstroom.
 
 ![Adobe Analytics DataStream-configuratie](assets/analytics-datastream.png)
 
@@ -33,7 +33,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Verzoek {#request}
 
-Het onderstaande voorbeeld bevat verschillende automatisch toegewezen waarden uit de `_experience.analytics` veldgroep. De klasse bevat ook op JSON gebaseerde gegevenslagen. Hoewel deze gegevenslagen niet automatisch kunnen worden toegewezen, is het mogelijk [Gegevensvoorvoegsel voor gegevensverzameling](../edge/fundamentals/datastreams.md#data-prep) om deze waarden toe te wijzen aan een schema dat gebiedsgroepen bevat hierboven van verwijzingen voorzien.
+Het onderstaande voorbeeld bevat verschillende automatisch toegewezen waarden uit de `_experience.analytics` veldgroep. De klasse bevat ook op JSON gebaseerde gegevenslagen. Hoewel deze gegevenslagen niet automatisch kunnen worden toegewezen, is het mogelijk [Gegevensvoorvoegsel voor gegevensverzameling](../edge/datastreams/data-prep.md) om deze waarden toe te wijzen aan een schema dat gebiedsgroepen bevat hierboven van verwijzingen voorzien.
 
 Alle waarden die gebruikers toewijzen aan die velden, worden automatisch toegewezen aan de juiste analysewaarden, alsof deze zijn opgenomen in de API-aanvraag.
 

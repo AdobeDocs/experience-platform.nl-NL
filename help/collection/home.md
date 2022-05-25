@@ -5,7 +5,7 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 3%
@@ -26,7 +26,7 @@ De technologieën van de gegevensinzameling die door Experience Platform worden 
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
-* [DataStreams](../edge/fundamentals/datastreams.md)
+* [DataStreams](../edge/datastreams/overview.md)
 * [Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
@@ -46,7 +46,7 @@ Het samenpersen van deze bibliotheken versnelt gegevensinzameling en consolideer
 
 ## Platform Edge Network en gegevensstreams {#edge}
 
-Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met tags kunt u [gegevensstromen](../edge/fundamentals/datastreams.md) voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder de clientcode te wijzigen.
+Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met tags kunt u [gegevensstromen](../edge/datastreams/overview.md) voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder de clientcode te wijzigen.
 
 ![DataStreams en Adobe-oplossingen](./images/home/adobe-solutions.png)
 

@@ -4,7 +4,8 @@ description: Leer hoe te om cliënt-zijregistreren voor Adobe Analytics voor Doe
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: doel;a4t;registreren;web sdk;ervaring;platform;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 0%
@@ -39,7 +40,7 @@ De volgende subsecties schetsen hoe te om cliënt-zijregistreren van Analytics v
 
 ### Logboekregistratie op de client voor Analytics inschakelen {#enable-analytics-client-side-logging}
 
-Als u wilt overwegen Analytics-logboekregistratie op de client voor uw implementatie is ingeschakeld, moet u de Adobe Analytics-configuratie in uw [datastream](../../../fundamentals/datastreams.md).
+Als u wilt overwegen Analytics-logboekregistratie op de client voor uw implementatie is ingeschakeld, moet u de Adobe Analytics-configuratie in uw [datastream](../../../datastreams/overview.md).
 
 ![Configuratie van analysegegevensstroom uitgeschakeld](../assets/disable-analytics-datastream.png)
 

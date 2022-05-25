@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2022
 description: In de release van maart 2022 staat Adobe Experience Platform vermeld.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 9a506fcecc94ba20906133e60e4ff54fbe0403a3
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 1%
@@ -114,7 +114,7 @@ Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen 
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../edge/fundamentals/datastreams.md#configure) in de UI-gids voor gegevensstromen voor meer informatie. |
+| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../edge/datastreams/overview.md#create) in de UI-gids voor gegevensstromen voor meer informatie. |
 | [Edge Network Server-API](../../server-api/overview.md) | De server API staat klanten toe om met het Netwerk van de Rand van het Experience Platform in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te aandrijven. |
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).

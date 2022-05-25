@@ -3,7 +3,7 @@ title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b0cc2343a502e180267d86bca4a699c02f2d6f3d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 1%
@@ -53,7 +53,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
    ![](assets/decision-scope-copy.png)
 
-* **Gegevensstromen:** Lees voor meer informatie de [gegevensstromen](../../fundamentals/datastreams.md) documentatie.
+* **Gegevensstromen:** Lees voor meer informatie de [gegevensstromen](../../datastreams/overview.md) documentatie.
 
 * **Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe [Platform Web SDK gebruikt Identity Service](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
 Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
-1. Adobe Experience Platform ingeschakeld in uw [datastream](../../fundamentals/datastreams.md) en schakel het selectievakje &quot;Offer decisioning&quot; in
+1. Adobe Experience Platform ingeschakeld in uw [datastream](../../datastreams/overview.md) en schakel het selectievakje &quot;Offer decisioning&quot; in
 
    ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
 

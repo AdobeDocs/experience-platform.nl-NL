@@ -3,7 +3,7 @@ keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](..
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
-**Profielaanvraag** - u vraagt om alle segmenten die voor één profiel in kaart worden gebracht in de bestemming van de douaneverpersoonlijking. Verschillende aangepaste verpersoonlijkingsdoelen kunnen worden ingesteld voor verschillende [Gegevensstromen voor gegevensverzameling Adobe](../../../edge/fundamentals/datastreams.md).
+**Profielaanvraag** - u vraagt om alle segmenten die voor één profiel in kaart worden gebracht in de bestemming van de douaneverpersoonlijking. Verschillende aangepaste verpersoonlijkingsdoelen kunnen worden ingesteld voor verschillende [Gegevensstromen voor gegevensverzameling Adobe](../../../edge/datastreams/overview.md).
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -73,7 +73,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
 * **[!UICONTROL Integration alias]**: Deze waarde wordt verzonden naar het Web SDK van het Experience Platform als JSON objecten naam.
-* **[!UICONTROL Datastream ID]**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten in de reactie op de pagina zullen worden omvat. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [Een gegevensstroom configureren](../../../edge/fundamentals/datastreams.md) voor meer informatie .
+* **[!UICONTROL Datastream ID]**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten in de reactie op de pagina zullen worden omvat. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [Een gegevensstroom configureren](../../../edge/datastreams/overview.md) voor meer informatie .
 
 ## Segmenten naar dit doel activeren {#activate}
 

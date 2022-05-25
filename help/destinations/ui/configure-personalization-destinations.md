@@ -6,7 +6,7 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Leer hoe te om verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Bij het configureren van de gegevensstroom, onder **[!UICONTROL Adobe Experience
 
 ![Configuratie DataStream](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-Voor meer informatie over hoe u een gegevensstroom instelt, volgt u de instructies in het dialoogvenster [Platform Web SDK-documentatie](../../edge/fundamentals/datastreams.md).
+Voor meer informatie over hoe u een gegevensstroom instelt, volgt u de instructies in het dialoogvenster [Platform Web SDK-documentatie](../../edge/datastreams/overview.md).
 
 ## Stap 2: Vorm uw verpersoonlijkingsbestemming {#configure-destination}
 

@@ -2,7 +2,7 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: e19c70883785ff338623ea2e6433562a792b3841
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 1%
@@ -82,7 +82,7 @@ Alloy is de codenaam voor het Web SDK van Adobe Experience Platform. Het wordt g
 
 ## Moeten klanten Adobe Experience Platform kopen om de [!DNL Web SDK]?
 
-Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SDK gratis gebruiken. Om SDK van het Web te gebruiken, moet u uw organisatie hebben provisioned voor deze eigenschap. Vul het volgende in als u toegang wilt krijgen [formulier](https://adobe.ly/websdkaccess) en Adobe zal u toegang geven tot [Gebruikersinterface gegevensstromen](fundamentals/datastreams.md) en de gebruikersinterface van Adobe Experience Platform (indien nodig).
+Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SDK gratis gebruiken. Om SDK van het Web te gebruiken, moet u uw organisatie hebben provisioned voor deze eigenschap. Vul het volgende in als u toegang wilt krijgen [formulier](https://adobe.ly/websdkaccess) en Adobe zal u toegang geven tot [Gebruikersinterface gegevensstromen](datastreams/overview.md) en de gebruikersinterface van Adobe Experience Platform (indien nodig).
 
 Klanten die de [!DNL Web SDK] zal toegang worden verleend om schema&#39;s, datasets, en identiteitsnamespaces in Adobe Experience Platform UI tot stand te brengen.
 
