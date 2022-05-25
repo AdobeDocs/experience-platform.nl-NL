@@ -7,9 +7,9 @@ topic-legacy: Customer AI Overview
 description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
 landing-page-description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: fccb5e6193d9c456d0035ef5c7d2adf5ffe883a4
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ De volgende video is ontworpen ter ondersteuning van uw inzicht in de AI van de 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## Hoe werkt het?
+## Werking
 
 De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om karn of de scores van de omzetneigheidswaarde te voorspellen. Adobe realiseert zich dat de definitie van kurn en omzetting niet over alle gebruiksgevallen uniform is en om deze reden, hebt u de capaciteit om douanedoeldoelstellingen als reeks voorwaarden te bepalen. U kunt het voorspelde doel vormen zolang de gebeurtenis van belang binnen de gegevens van de de Gebeurtenis van de Ervaring van de consument van de input aanwezig is.
 
