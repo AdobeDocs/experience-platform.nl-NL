@@ -2,16 +2,16 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2793'
+source-wordcount: '2490'
 ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 27 april 2022**
+**Releasedatum: 25 mei 2022**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
@@ -19,7 +19,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensstromen](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [Doelen](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Bronnen](#sources)
@@ -94,27 +94,9 @@ Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| Geavanceerde Enterprise-doelconnectors | Drie schakelaars van de ondernemingsbestemming zijn nu over het algemeen beschikbaar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), en [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> De algemene beschikbaarheid van de schakelaars van de ondernemingsbestemming omvat alle mogelijkheden die eerder in de bètafase, en meer worden aangeboden: <ul><li>Nieuwe verificatiemogelijkheden, waaronder [Shared Access Signature in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) en meer [verificatietypen](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens aan toonder, OAuth 2) in de HTTP API-bestemming;</li><li>[Back-up maken van historische profielgegevens](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (het verzenden van historische profielen die voor het segment in aanmerking komen wanneer zij voor het eerst worden geactiveerd);</li><li>Dataflow loopmetriek wordt nu gesteund voor deze bestemmingen;</li><li>[Aanvullende segmentmetagegevens](../../destinations/catalog/streaming/http-destination.md#destination-details) opgenomen in de gegevenslading, met inbegrip van segmentnamen en segmenttijdstempels;</li><li>Ondersteuning voor [statische IP-adressen](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor klanten die Experience Platform moeten lijsten van gewenste personen.</li></ul> |
-| In-context alarm voor bestemmingsdataflows | U kunt nu [signaleren](../../destinations/ui/alerts.md) wanneer het creëren van een bestemmingsgegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw dataflow looppas te ontvangen. U kunt ervoor kiezen waarschuwingen te ontvangen in de gebruikersinterface van het Experience Platform of via e-mail. |
+| Nieuwste profielkwalificaties exporteren [na dagelijkse segmentbeoordeling](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | U kunt nu een volledige dossieruitvoer, één of dagelijks, met de recentste profielkwalificaties plannen, nadat de dagelijkse segmentevaluatie volledig is. |
+| Optionele gegevensstroom-id voor [Adobe Target-bestemmingen](../../destinations/catalog/personalization/adobe-target-connection.md) | Om de verpersoonlijking van Adobe Target voor gebruikers toe te laten die niet het Web SDK van het Experience Platform kunnen uitvoeren, is de selectie van gegevensstroom identiteitskaart nu facultatief wanneer het vormen van de bestemmingen van Adobe Target. Als u geen gegevensstroom gebruikt, ondersteunen segmenten die van Experience Platform naar doel zijn geëxporteerd alleen de volgende-sessiepersonalisatie, terwijl randsegmentatie is uitgeschakeld, samen met alle [use cases](../../destinations/ui/configure-personalization-destinations.md) die afhankelijk zijn van randsegmentatie. |
 
-### Geen proces voor geavanceerde bedrijfsdoelconnectors {#release-process-enterprise-destinations}
-
-Voor Amazon Kinesis, Azure Event Hubs, en HTTP API bestemmingen, tijdens het versieproces (die 27 april begint), zult u zowel de vroegere Beta bestemmingskaart, evenals de nieuwe algemeen beschikbare (GA) bestemmingskaart in de bestemmingscatalogus zien. Om het even welke gegevensstromen die door klanten worden gevormd die de bètabestemmingen gebruiken zullen in de volgende dagen aan de GA versie van de zelfde bestemming worden gemigreerd. Deze migratie zou uiteindelijk moeten zijn voltooid tegen het einde van dag vrijdag 29 april. De bètadoelen blijven zichtbaar tijdens dit korte tijdvenster en worden gelabeld als **Vervangen**.
-
-Als u deze bestemmingen in de fase van Bèta hebt gebruikt, gelieve nota te nemen van het volgende:
-
-- Als eerder in Bèta met om het even welke 3 bestemmingen geweest zijn, is geen actie nodig. Alle gegevensstromen die als deel van Beta worden opgezet zullen functioneel blijven en aan de versie GA worden gemigreerd.
-- Als u deze bestemmingen vanaf 27 april wilt instellen, gelieve dit te doen met de nieuwe GA-versie van de bestemmingen.
-- De als afgekeurd gemarkeerde bètakaarten worden verwijderd zodra de releasebewerking is voltooid, naar schatting tegen het einde van dag 29 april. Het technische team van het Experience Platform volgt nauwlettend voor een succesvolle versieverrichting.
-
-**Nieuwe bestemmingen**
-
-| Bestemming | Beschrijving |
-| ----------- | ----------- |
-| [!DNL Criteo] | Gegevens verbinden met en activeren op de [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) reclameplatform. |
-| [!DNL Sendgrid] | Gegevens verbinden met en activeren op de [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) platform voor e-mails over transacties en marketing. |
-
-Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

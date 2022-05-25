@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2170'
+source-wordcount: '2331'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,20 @@ Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand 
    * **[!UICONTROL Once]**: U kunt een eenmalige volledige bestandsexport plannen.
    * **[!UICONTROL Daily]**: Plan de volledige bestandsuitvoer eenmaal per dag, elke dag, op het door u opgegeven tijdstip.
 
-1. Gebruik de **[!UICONTROL Time]** om de tijd van de dag te kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
+1. Gebruik de **[!UICONTROL Time]** om te selecteren of de uitvoer onmiddellijk na segmentevaluatie of op een geplande basis, op een bepaald tijdstip zou moeten gebeuren. Wanneer u de **[!UICONTROL Scheduled]** kunt u de kiezer gebruiken om de tijd van de dag te kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
+
+   >[!NOTE]
+   >
+   >De **[!UICONTROL After segment evaluation]** hieronder beschreven optie is momenteel alleen beschikbaar voor het selecteren van bètaklanten.
+
+   Gebruik de **[!UICONTROL After segment evaluation]** als u wilt dat de activeringstaak onmiddellijk wordt uitgevoerd nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Dit zorgt ervoor dat wanneer de activeringstaak wordt uitgevoerd, de meest recente profielen naar uw bestemming worden uitgevoerd.
+
+   <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
+
+   ![Afbeelding die de evaluatieoptie Na-segment markeert in de activeringsstroom voor batchbestemmingen.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+Gebruik de **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip te laten uitvoeren. Dit zorgt ervoor dat de gegevens van het Experience Platform profielgegevens tezelfdertijd elke dag worden uitgevoerd, maar de profielen u uitvoert kunnen niet de meest bijgewerkte zijn, afhankelijk van of de batch-segmentatietaak heeft voltooid alvorens de activeringstaak weg te slaan.
+
+   ![Afbeelding die de optie Scheduled markeert in de activeringsstroom voor batchbestemmingen en die de tijdkiezer weergeeft.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
    >[!IMPORTANT]
    >
@@ -110,7 +123,6 @@ Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand 
    > Wanneer u een exportinterval selecteert, wordt de laatste dag van het interval niet in de exportbewerking opgenomen. Als u bijvoorbeeld een interval van 4-11 januari selecteert, wordt het laatste bestand op 10 januari geëxporteerd.
 
 1. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
-
 
 ### Incrementele bestanden exporteren {#export-incremental-files}
 

@@ -6,14 +6,20 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Leer hoe te om verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 99a60621bca43ecf2dacb6202e005bbd8f191c99
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
 # Vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking
+
+## Overzicht {#overview}
+
+>[!NOTE]
+>
+>Wanneer [configureren van Adobe Target-verbinding](../catalog/personalization/adobe-target-connection.md) zonder een gegevensstroom-id worden de in dit artikel beschreven gebruiksgevallen niet ondersteund.
 
 Adobe Experience Platform gebruikt [randsegmentatie](../../segmentation/ui/edge-segmentation.md) om klanten toe te laten om publiekssegmenten tot stand te brengen en te richten op hoge schaal, in echt - tijd.
 
