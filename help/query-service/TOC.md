@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: 1d49e7d1adcccc012f4d189f8cfba8bbdc895894
+source-git-commit: 36202327f0885309fa6790d2eb0ec6cfa9bb8780
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '171'
 ht-degree: 6%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 6%
    - [Voorbeeld van Adobe Target-query&#39;s](sample-queries/adobe-target.md)
 - Data Governance {#data-governance}
    - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
+   - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)
