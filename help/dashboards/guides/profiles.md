@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3336'
+source-wordcount: '3540'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,8 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
+* [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Profiles count change trend by identity]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -290,6 +292,25 @@ Deze widget gebruikt een staafdiagram om het totale aantal profielen te illustre
 Houd de muisaanwijzer boven afzonderlijke balken om een dialoogvenster weer te geven met het totale aantal profielen voor een identiteit.
 
 ![De widget Single Identity-profielen op basis van identiteit.](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
+
+Deze widget gebruikt een Venn-diagram om de overlapping van twee geselecteerde segmenten weer te geven. Het samenvoegbeleid wordt gekozen uit de overzichtsvervolgkeuzelijst boven aan de pagina en de segmenten voor analyse worden geselecteerd uit twee vervolgkeuzemenu&#39;s binnen de widget. Het totale aantal profielen binnen de relevante segmentdefinitie kan worden gezien door de cursor over een cirkel of de doorsnede te bewegen.
+
+Aangezien widget de visuele oversteekplaats van segmentdefinities toont, kunt u uw segmenteringsstrategie optimaliseren door gelijkenissen tussen uw segmentdefinities te bestuderen.
+
+![Het dashboard Profielen UI van het Platform met de dropdown van het fusiebeleid en widgetsegmentdalingen benadrukt.](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Deze widget filtert het aantal profielen op basis van een geselecteerde bronidentiteit en het samenvoegbeleid en illustreert vervolgens de wijziging in aantal voor verschillende periodes aan de hand van een lijngrafiek. Het samenvoegbeleid wordt geselecteerd in de overzichtsvervolgkeuzelijst boven aan de pagina. De bronidentiteit en de tijdsperiode worden geselecteerd in de widgetvervolgkeuzemenu&#39;s. De trend kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden.
+
+Met deze widget kunt u de behoeften voor doelactivering beheren door het groeipatroon van profielen aan te tonen die met een vereiste identiteit zijn gefilterd.
+
+![De trend in het aantal profielen verandert per identiteitswidget.](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (bèta) Profielefficiëntiewidgets {#profile-efficacy-widgets}
 

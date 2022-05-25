@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2499'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Destination status]](#destination-status)
 * [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Activated audiences]](#activated-audiences)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -69,13 +70,13 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >abstract="Deze widget geeft de meest actieve doelen van uw organisatie weer op basis van het aantal in kaart gebrachte segmenten. Deze getallen zijn nauwkeurig op het moment van de laatste opname. Deze rangschikking biedt inzicht in welke bestemmingen momenteel het meest worden gebruikt en markeert de doelen die mogelijk onderbenut zijn."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="Meer informatie in documentatie"
 
-The **[!UICONTROL Most used destinations]** widget displays your organization&#39;s top destinations by the number of segments mapped, as of the last snapshot. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized.
+De **[!UICONTROL Most used destinations]** widget geeft de belangrijkste doelen van uw organisatie weer op basis van het aantal segmenten dat is toegewezen, vanaf de laatste momentopname. Deze rangschikking biedt inzicht in welke bestemmingen worden gebruikt en toont mogelijk ook de bestemmingen die mogelijk onderbenut zijn.
 
-For example, if you configured a destination yesterday but have not mapped any segments to it, you would be able to see that the destination is currently underutilized.
+Bijvoorbeeld, als u een bestemming gisteren vormde maar geen segmenten aan het in kaart gebracht, zou u kunnen zien dat de bestemming momenteel onderbenut is.
 
-The number of mapped segments shown in the segment count column is accurate as of the last daily snapshot. Als u een nieuw segment toewijst aan de bestemming, wordt de telling pas bijgewerkt wanneer de volgende momentopname wordt gemaakt.
+Het aantal in kaart gebrachte segmenten die in de kolom van de segmenttelling worden getoond is nauwkeurig vanaf de laatste dagelijkse momentopname. Als u een nieuw segment toewijst aan de bestemming, wordt de telling pas bijgewerkt wanneer de volgende momentopname wordt gemaakt.
 
-Selecting the name of a destination from the list shown on the widget will take you to the destination details as linked from the **[!UICONTROL Browse]** tab. U kunt ook **[!UICONTROL View All]** om naar de **[!UICONTROL Browse]** en selecteert u vervolgens de naam van een bestemming om de details ervan weer te geven.
+Als u de naam van een doel selecteert in de lijst die wordt weergegeven op de widget, gaat u naar de doeldetails die zijn gekoppeld vanuit het menu **[!UICONTROL Browse]** tab. U kunt ook **[!UICONTROL View All]** om naar de **[!UICONTROL Browse]** en selecteert u vervolgens de naam van een bestemming om de details ervan weer te geven.
 
 ![](../images/destinations/most-used-destinations.png)
 
@@ -89,7 +90,7 @@ Selecting the name of a destination from the list shown on the widget will take 
 
 De **[!UICONTROL Recently created destinations]** widget laat u toe om een lijst van onlangs gevormde bestemmingen van uw organisatie te zien.
 
-De gecreeerde getoonde datum is nauwkeurig aan de laatste dagelijkse momentopname. In other words, if you create a new destination, it will not appear in the list until after the next snapshot is taken.
+De gecreeerde getoonde datum is nauwkeurig aan de laatste dagelijkse momentopname. Met andere woorden, als u een nieuwe bestemming creeert, zal het niet in de lijst verschijnen tot nadat de volgende momentopname wordt genomen.
 
 Als u de naam van een doel selecteert in de lijst die wordt weergegeven op de widget, gaat u naar de doeldetails die zijn gekoppeld vanuit het menu **[!UICONTROL Browse]** tab. U kunt ook **[!UICONTROL View All]** om naar de **[!UICONTROL Browse]** en selecteert u vervolgens de naam van een bestemming om de details ervan weer te geven.
 
@@ -121,11 +122,11 @@ Voor meer informatie over het werken met segmenten in Experience Platform, gelie
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
 >title="Onlangs geactiveerde segmenten op doel"
 >abstract="Met deze widget worden de bovenste vijf laatst geactiveerde segmenten in aflopende volgorde weergegeven, afhankelijk van het doel dat u hebt gekozen in de overzichtsvervolgkeuzelijst."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="Learn more from documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="Meer informatie in documentatie"
 
-The **[!UICONTROL Recently activated segments by destination]** widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown. It is similar to the [!UICONTROL Recently activated segments] widget, but the data displayed **only** applies to the selected destination.
+De **[!UICONTROL Recently activated segments by destination]** widget geeft de bovenste vijf laatst geactiveerde segmenten in aflopende volgorde weer, afhankelijk van het doel dat u hebt gekozen in de overzichtsvervolgkeuzelijst. Het lijkt op het [!UICONTROL Recently activated segments] widget, maar de gegevens worden weergegeven **alleen** wordt toegepast op het geselecteerde doel.
 
-This widget contains two metrics: the segment name and the date that the segment was last activated to the destination. The data displayed is correct as of the last daily snapshot.
+Deze widget bevat twee metriek: de segmentnaam en de datum dat het segment het laatst aan de bestemming werd geactiveerd. De weergegeven gegevens zijn correct vanaf de laatste dagelijkse momentopname.
 
 U kunt de details van een segment bekijken door de naam van een segment van de getoonde lijst te selecteren.
 
@@ -171,15 +172,15 @@ In de kolom met identiteiten wordt het aantal bron-id&#39;s in het segment getel
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
->title="Mapped segments by identity"
->abstract="Deze widget biedt een bovenste lijst van vijf **toegewezen** segmenten. The list is ordered from high to low according to the number of source IDs contained within the segments. De doel-id die moet worden geteld, wordt geselecteerd in het vervolgkeuzemenu onder de titel van de widget. The destination IDs available from the widget drop-down are dependant on the destination chosen at the top of the overview dashboard."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="Learn more from documentation"
+>title="Toegewezen segmenten op identiteit"
+>abstract="Deze widget biedt een bovenste lijst van vijf **toegewezen** segmenten. De lijst wordt bevolen van hoog aan laag volgens het aantal bron IDs bevat binnen de segmenten. De doel-id die moet worden geteld, wordt geselecteerd in het vervolgkeuzemenu onder de titel van de widget. De doel-id&#39;s die beschikbaar zijn in de keuzelijst met widgets zijn afhankelijk van de bestemming die boven aan het overzichtsdashboard is gekozen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="Meer informatie in documentatie"
 
 Deze widget biedt een bovenste lijst van vijf **toegewezen** segmenten. De lijst wordt bevolen van hoog aan laag volgens het aantal bron IDs bevat binnen de segmenten. De doel-id die moet worden geteld, wordt geselecteerd in het vervolgkeuzemenu onder de titel van de widget. De doel-id&#39;s die beschikbaar zijn in de vervolgkeuzelijst in de widget, worden gewijzigd op basis van het doelaccountfilter dat boven aan het overzichtsdashboard is gekozen.
 
 ![De toegewezen segmenten op identiteitswidget.](../images/destinations/mapped-segments-by-identity.png)
 
-The **[!UICONTROL Mapped segments by identity]** widget highlights at a glance, the likelihood of successfully targeting profile opportunities for a campaign within the chosen destination. Een efficiënte gerichte campagne is niet afhankelijk van het aantal profielen dat naar de bestemming wordt verzonden, maar van het aantal bron-id&#39;s dat waarschijnlijk met de doel-id&#39;s wordt aangepast om nuttige en uitvoerbare gegevens te verschaffen.
+De **[!UICONTROL Mapped segments by identity]** in één oogopslag wordt de nadruk gelegd op de waarschijnlijkheid om profielkansen voor een campagne binnen de gekozen bestemming met succes te richten . Een efficiënte gerichte campagne is niet afhankelijk van het aantal profielen dat naar de bestemming wordt verzonden, maar van het aantal bron-id&#39;s dat waarschijnlijk met de doel-id&#39;s wordt aangepast om nuttige en uitvoerbare gegevens te verschaffen.
 
 ### Algemeen publiek {#common-audiences}
 
@@ -187,20 +188,20 @@ The **[!UICONTROL Mapped segments by identity]** widget highlights at a glance, 
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Algemeen publiek"
 >abstract="Deze widget bevat een lijst met de bovenste vijf segmenten die zijn geactiveerd voor de doelaccount die boven aan de pagina is gekozen, en het doel dat is geselecteerd in het vervolgkeuzemenu van de widget. De lijst met segmenten wordt geordend op basis van hoe recent ze zijn geactiveerd. Het laatst geactiveerde segment wordt bovenaan weergegeven."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="Learn more from documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="Meer informatie in documentatie"
 
-The **[!UICONTROL Common audiences]** widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown. De lijst met segmenten wordt geordend op basis van hoe recent ze zijn geactiveerd. Het laatst geactiveerde segment wordt bovenaan weergegeven.
+De **[!UICONTROL Common audiences]** widget bevat een lijst met de bovenste vijf segmenten die worden geactiveerd over de doelaccount die boven aan de pagina is gekozen, en het doel dat is geselecteerd in de widgetvervolgkeuzelijst. De lijst met segmenten wordt geordend op basis van hoe recent ze zijn geactiveerd. Het laatst geactiveerde segment wordt bovenaan weergegeven.
 
-The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each listed segment.
+De [!UICONTROL AUDIENCE SIZE] de kolom verstrekt het totale profielaantal van elk vermeld segment.
 
-![The Common audiences widget.](../images/destinations/common-audiences.png)
+![De widget Algemeen publiek.](../images/destinations/common-audiences.png)
 
 ### Gewijzigde gezondheid van het publiek {#mapped-audience-health}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
->title="Mapped audience health"
->abstract="Deze widget biedt een lijst met maximaal 20 toegewezen segmenten waarvan het totale aantal profielen afwijkt met een factor van ten minste één standaardafwijking van de gemiddelde 30 dagen-publieksgrootte die aan die bestemming is toegewezen. Het verstrekt een berekende metrisch voor de spreiding van publieksgrootte van het gemiddelde over de laatste 30 dagen. The audience sizes are sorted from high to low."
+>title="Gewijzigde gezondheid van het publiek"
+>abstract="Deze widget biedt een lijst met maximaal 20 toegewezen segmenten waarvan het totale aantal profielen afwijkt met een factor van ten minste één standaardafwijking van de gemiddelde 30 dagen-publieksgrootte die aan die bestemming is toegewezen. Het verstrekt een berekende metrisch voor de spreiding van publieksgrootte van het gemiddelde over de laatste 30 dagen. De grootten van de doelgroep worden gesorteerd van hoog naar laag."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="Meer informatie in documentatie"
 
 De widget biedt een lijst met maximaal 20 in kaart gebrachte segmenten waarvan het totale aantal profielen, vanaf de laatste dagelijkse momentopname, met een factor van minstens één standaardafwijking afwijkt van de gemiddelde 30 dagen-publieksgrootte die aan die bestemming is toegewezen.
@@ -213,14 +214,14 @@ Als het aantal aan een segment toegewezen profielen de afgelopen 30 dagen buiten
 
 Als een segment binnen de [!UICONTROL Mapped audience health] widget wijkt met een ruime marge af, moet u naar het trenddiagram voor de doelgrootte verwijzen en het afwijkende segment zoeken. De trend kan meer inzicht in de gezondheid van uw segment verstrekken.
 
-![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
+![De widget gezondheid voor het toegewezen publiek.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Destinations count] {#destinations-count}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_destinationscount"
 >title="Aantal doelen"
->abstract="This widget provides the total number of available endpoints where an audience can be activated and delivered within the system. Dit aantal omvat zowel actieve als inactieve bestemmingen."
+>abstract="Deze widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="Meer informatie in documentatie"
 
 De [!UICONTROL Destinations count] widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen.
@@ -250,6 +251,18 @@ De [!UICONTROL Activated audiences across all destinations] widget geeft het tot
 ![Het actieve publiek voor alle doelen van de widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Selecteren **[!UICONTROL Audiences]** om naar de bestemmingen te navigeren [!UICONTROL Browse] tab. Deze pagina verstrekt een lijst van alle toegelaten bestemmingen en een verscheidenheid van relevante metriek. Zie de documentatie voor [meer informatie over de [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Activated audiences] {#activated-audiences}
+
+Deze widget biedt één meting voor het totale aantal soorten publiek dat aan een doel wordt geactiveerd.
+
+![De widget voor geactiveerd publiek.](../images/destinations/activated-audiences.png)
+
+Selecteren **[!UICONTROL Audiences]** om naar de detailspagina van het bestemmingdashboard te navigeren. De [!UICONTROL Activation data] wordt een lijst weergegeven met segmenten die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing) en andere relevante informatie voor de gegevensexport, zoals het exporttype, de planning en de frequentie. Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
+
+![De pagina met informatie over het doeldashboard met het tabblad Activeringsgegevens is gemarkeerd.](../images/destinations/activation-data-tab.png)
+
+Deze widget helpt u de waarde van uw bestemmingen te begrijpen die op het aantal publiek wordt gebaseerd dat bij een blik wordt geactiveerd. Het biedt ook eenvoudig toegang tot meer gedetailleerde informatie voor verdere analyse.
 
 ## Volgende stappen
 
