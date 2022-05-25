@@ -5,9 +5,9 @@ title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
+source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -79,11 +79,11 @@ De **[!UICONTROL Browse]** wordt opnieuw weergegeven. Dit betekent dat het nieuw
 
 ![](../images/policies/created-policy.png)
 
-### Een toestemmingsbeleid maken (bèta) {#consent-policy}
+### Een toestemmingsbeleid maken {#consent-policy}
 
 >[!IMPORTANT]
 >
->Het beleid voor instemming wordt momenteel in de bètaversie gebruikt en uw organisatie heeft er nog geen toegang toe.
+>Het beleid van de toestemming is momenteel slechts beschikbaar voor organisaties die Adobe Shield voor Gezondheidszorg hebben gekocht.
 
 Als u verkoos om een toestemmingsbeleid tot stand te brengen, verschijnt een nieuw scherm dat u toestaat om het nieuwe beleid te vormen.
 
