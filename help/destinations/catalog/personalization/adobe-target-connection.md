@@ -67,7 +67,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **Naam**: Vul de voorkeursnaam voor dit doel in.
 * **Beschrijving**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
-* **DataStream-id**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten zullen worden omvat. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemming van het Doel hebben. Zie [configureren van een gegevensstroom](../../../edge/fundamentals/datastreams.md#target) voor gedetailleerde informatie over hoe te om een gegevensstroom voor Adobe Target te vormen.
+* **DataStream-id**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten zullen worden omvat. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemming van het Doel hebben. Zie [configureren van een gegevensstroom](../../../edge/datastreams/overview.md#target) voor gedetailleerde informatie over hoe te om een gegevensstroom voor Adobe Target te vormen.
    * **[!UICONTROL None]**: Selecteer deze optie als u de personalisatie van Adobe Target moet configureren, maar u de optie [Experience Platform Web SDK](../../../edge/home.md). Als u deze optie gebruikt, ondersteunen segmenten die van Experience Platform naar doel zijn geëxporteerd, alleen verpersoonlijking van volgende sessie en wordt randsegmentatie uitgeschakeld. Zie de onderstaande tabel voor meer informatie.
 
 | Geen gegevensstroom geselecteerd | Gegevensstroom geselecteerd |
