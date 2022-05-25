@@ -5,7 +5,7 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 365e36351bf18864c677f53dffbc30b47f29b074
+source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 0%
@@ -85,6 +85,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een to
 
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
+- [[!DNL Zendesk]](connectors/customer-success/zendesk.md)
 
 ### Database {#database}
 

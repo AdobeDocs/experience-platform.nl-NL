@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: be3967e7045e159736952e369a55df322afd9fec
+source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '781'
 ht-degree: 5%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 5%
    - Klantsucces {#customer-success}
       - [Salesforce Service Cloud-aansluiting](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow-connector](connectors/customer-success/servicenow.md)
+      - [Zendesk-connector](connectors/customer-success/zendesk.md)
    - Databases {#databases}
       - [Amazon Redshift-connector](connectors/databases/redshift.md)
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
@@ -123,6 +124,7 @@ ht-degree: 5%
       - Klantsucces {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Databases {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
@@ -221,6 +223,7 @@ ht-degree: 5%
       - Klant geslaagd {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Databases {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive op Azure HDInsights](tutorials/ui/create/databases/hive.md)
