@@ -5,9 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
+source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -28,22 +28,22 @@ Bronnen in Experience Platform worden ingedeeld in de volgende categorieën:
 
 Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager, worden ingesloten. Zie de volgende verwante documenten voor meer informatie:
 
-- [Overzicht Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager-bronoverzicht](connectors/adobe-applications/audience-manager.md)
 - [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Overzicht van Adobe Analytics Classifications Data Source Connection](connectors/adobe-applications/classifications.md)
 - [Een gegevensbronverbinding voor Adobe Analytics Classifications maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Overzicht van Adobe Analytics Report Suite-gegevensbronverbinding](connectors/adobe-applications/analytics.md)
 - [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe-gegevensverzameling](connectors/adobe-applications/data-collection.md)
+- [Overzicht van de bron van Adobe-gegevensverzameling](connectors/adobe-applications/data-collection.md)
 - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] connectoroverzicht](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage] bronoverzicht](connectors/adobe-applications/marketo/marketo.md)
 - [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Reclame {#advertising}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Cloud Storage {#cloud-storage}
 
