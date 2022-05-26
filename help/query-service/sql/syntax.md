@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '3050'
 ht-degree: 2%
 
 ---
@@ -714,7 +714,7 @@ COPY query
 >
 >Het volledige uitvoerpad wordt `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTER TABLE
+### ALTER TABLE {#alter-table}
 
 De `ALTER TABLE` Met deze opdracht kunt u primaire of buitenlandse toetsbeperkingen toevoegen of neerzetten en kolommen aan de tabel toevoegen.
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >Het tabelschema moet uniek zijn en mag niet worden gedeeld door meerdere tabellen. Daarnaast is de naamruimte verplicht voor primaire-sleutelbeperkingen.
 
+#### Primaire en secundaire identiteiten toevoegen of verwijderen
+
+De `ALTER TABLE` bevel staat u toe om beperkingen voor zowel primaire als secundaire kolommen van de identiteitslijst direct door SQL toe te voegen of te schrappen.
+
+De volgende voorbeelden voegen een primaire identiteit en een secundaire identiteit toe door beperkingen toe te voegen.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+Identiteiten kunnen ook worden verwijderd door beperkingen neer te zetten, zoals in het onderstaande voorbeeld wordt getoond.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+Zie het document over het instellen van identiteiten in een ad hoc dataset voor meer gedetailleerde informatie.
+
 #### KOLOM TOEVOEGEN
 
 De volgende SQL-query&#39;s geven voorbeelden van het toevoegen van kolommen aan een tabel.
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### Ondersteunde gegevenstypen
+
+De volgende lijst maakt een lijst van de toegelaten gegevenstypes voor het toevoegen van kolommen aan een lijst met [!DNL Postgres SQL], XDM en de [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
+
+| — | PSQL-client | XDM | ADR | Beschrijving |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | Een numeriek gegevenstype dat wordt gebruikt voor de opslag van grote gehele getallen tussen -9.223.372.036.854.775.807 en 9.223.372.036.854.775.807 in 8 bytes. |
+| 2 | `integer` | `int4` | `integer` | Een numeriek gegevenstype dat wordt gebruikt om gehele getallen op te slaan, van -2.147.483.648 tot 2.147.483.647 in 4 bytes. |
+| 3 | `smallint` | `int2` | `smallint` | Een numeriek gegevenstype dat wordt gebruikt voor het opslaan van gehele getallen tussen -32.768 en 215-1 32.767 in 2 bytes. |
+| 4 | `tinyint` | `int1` | `tinyint` | Een numeriek gegevenstype dat wordt gebruikt om gehele getallen tussen 0 en 255 op te slaan in 1 byte. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Een gegevenstype van een teken dat een variabele grootte heeft. `varchar` wordt het best gebruikt wanneer de grootte van de ingangen van kolomgegevens aanzienlijk varieert. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` en `FLOAT` zijn geldige synoniemen voor `DOUBLE PRECISION`. `double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` is een geldige synoniem voor `double precision`.`double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
+| 8 | `date` | `date` | `date` | De `date` Het gegevenstype is 4-byte opgeslagen kalenderdatumwaarden zonder tijdstempelinformatie. De geldige datumnotatie loopt van 01-01-0001 tot en met 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | Een gegevenstype dat wordt gebruikt om een instant in de tijd op te slaan, uitgedrukt als een kalenderdatum en tijd van dag. `datetime` omvat de kwalificatoren van: jaar, maand, dag, uur, seconde, en fractie. A `datetime` de verklaring kan om het even welke ondergroep van deze tijdeenheden omvatten die in die opeenvolging worden aangesloten, of zelfs slechts één enkele tijdeenheid omvatten. |
+| 10 | `char(len)` | `string` | `char(len)` | De `char(len)` trefwoord wordt gebruikt om aan te geven dat het item een teken met een vaste lengte is. |
 
 #### SCHEMA TOEVOEGEN
 
