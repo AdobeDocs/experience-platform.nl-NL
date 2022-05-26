@@ -73,7 +73,7 @@ Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en
 
 | Functie | Naam | Beschrijving | | — | — | — | | Toegevoegde middelen | <ul><li> Toegangsbeheerbeleid </li><li> Rol </li><li> Controlelogboeken </li><li> Werkorder </li><li> Naamruimte identiteit </li><li> Identiteitsgrafiek </li><li> Query </li><li> Gegevensset </li><li> Gegevensstroom bron </li></ul> | Bronnen van controlelogbestanden worden automatisch opgenomen wanneer de activiteit plaatsvindt. Als de eigenschap wordt toegelaten moet u niet manueel logboekinzameling toelaten. |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 Raadpleeg voor meer informatie over auditlogs in Platform de [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
 
