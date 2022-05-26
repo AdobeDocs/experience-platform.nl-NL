@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1536'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -71,9 +71,11 @@ Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en
 
 **Bijgewerkte functies**
 
-| Functie | Naam | Beschrijving | | — | — | — | | Toegevoegde middelen | <ul><li> Toegangsbeheerbeleid </li><li> Rol </li><li> Controlelogboeken </li><li> Werkorder </li><li> Naamruimte identiteit </li><li> Identiteitsgrafiek </li><li> Query </li><li> Gegevensset </li><li> Gegevensstroom bron </li></ul> | Bronnen van controlelogbestanden worden automatisch opgenomen wanneer de activiteit plaatsvindt. Als de eigenschap wordt toegelaten moet u niet manueel logboekinzameling toelaten. |
+| Functie | Naam | Beschrijving |
+| --- | --- | --- |
+| Toegevoegde bronnen | <ul><li> Toegangsbeheerbeleid </li><li> Rol </li><li> Controlelogboeken </li><li> Werkorder </li><li> Naamruimte identiteit </li><li> Identiteitsgrafiek </li><li> Query </li><li> Gegevensset </li><li> Gegevensstroom bron </li></ul> | De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt. Als de eigenschap wordt toegelaten moet u niet manueel logboekinzameling toelaten. |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Raadpleeg voor meer informatie over auditlogs in Platform de [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
 
