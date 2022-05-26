@@ -4,9 +4,9 @@ description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe E
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: e539ee73b04230ac6e3dc4801ce0f8446bec8de6
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="Werkorder-id&#39;s"
->abstract="Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Met andere woorden, een werkorder is een specifiek proces voor gegevenshygiëne, dat de huidige status en andere gerelateerde details omvat. Aan elke werkorder wordt automatisch een eigen unieke id toegewezen. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Met andere woorden, een werkorder is een specifiek proces voor gegevenshygiëne, dat de huidige status en andere gerelateerde details omvat. Aan elke werkorder wordt automatisch een eigen unieke id toegewezen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
 >[!IMPORTANT]
 >
