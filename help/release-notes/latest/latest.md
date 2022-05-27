@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
+source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1667'
 ht-degree: 2%
 
 ---
@@ -20,16 +20,29 @@ ht-degree: 2%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Waarschuwingen](#alerts)
 - [Controlelogboeken](#audit-logs)
 - [Dashboards](#dashbaords)
 - [Gegevensverzameling](#data-collection)
-
 <!-- - [Data Governance](#data-governance) -->
 - [Gegevensprep](#data-prep)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
+
+## Waarschuwingen {#alerts}
+
+Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van gebeurtenissen voor verschillende activiteiten van Platforms. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailberichten.
+
+**Bijgewerkte functies**
+
+| Functie | Alarmregel | Beschrijving |
+| --- | --- | --- |
+| Nieuwe waarschuwingsregel | Het percentage kippingen overschrijdt de drempel | U kunt de waarschuwing nu gebruiken om meldingen te ontvangen wanneer de gegevensstroom van uw bronnen de drempelwaarden voor identiteiten overschrijdt. Zie het overzicht op [waarschuwingsregels](../../observability/alerts/rules.md) voor de bijgewerkte lijst met waarschuwingstypen. |
+
+{style=&quot;table-layout:auto&quot;}
+
 
 <!-- ## Attribute-based access control {#abac}
 
