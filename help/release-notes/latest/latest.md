@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
+source-git-commit: 1b417935d557f7d58039c508544ed768f6ad1cc4
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1701'
 ht-degree: 2%
 
 ---
@@ -252,7 +252,8 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 | Functie | Beschrijving |
 | --- | --- |
 | Bètaversie van [!DNL Zendesk] bron | Gebruik de [!DNL Zendesk] bron om gebruiker, agent, en organisatiegegevens van uw in te voeren [!DNL Zendesk] instantie voor [!DNL Profile] verrijking. Zie de [[!DNL Zendesk] bronoverzicht](../../sources/connectors/customer-success/zendesk.md) voor meer informatie . |
-| Ondersteuning voor gegevensverzameling Adobe | Gebruik de broncatalogus in Platform om tot uw gegevens op het Netwerk van de Rand van het Platform, met inbegrip van Prep van Gegevens voor de Inzameling van Gegevens en betere steun voor de waarschuwingen van de Prep van Gegevens toegang te hebben. Zie de [Overzicht van de bron van Adobe-gegevensverzameling](../../sources/connectors/adobe-applications/data-collection.md) voor meer informatie . |
+| Algemene beschikbaarheid van B2B [!DNL Microsoft Dynamics] bron | U kunt nu de opdracht [!DNL Microsoft Dynamics] bron om B2B-objecten zoals accounts, mogelijkheden, campagnes, marketinglijsten en leden van marketinglijsten in te voeren. Zie de [[!DNL Microsoft Dynamics] bronoverzicht](../../sources/connectors/crm/ms-dynamics.md) voor meer informatie . |
+| Ondersteuning voor gegevensverzameling Adobe | Gebruik de broncatalogus om tot uw gegevens van de Rand van de Ervaring van de Inzameling van Gegevens, met inbegrip van Prep van Gegevens voor de Inzameling van Gegevens en betere steun voor gegevenswaarschuwingen van Prep van Gegevens toegang te hebben. Zie de [Overzicht van de bron van Adobe-gegevensverzameling](../../sources/connectors/adobe-applications/data-collection.md) voor meer informatie . |
 | Ondersteuning voor het opnemen van bestanden met `ISO-8859-1` coderen | Gebruik de `encoding` parameter voor opnemen `ISO-8859-1` Gecodeerde bestanden met een bron voor cloudopslag die met de [!DNL Flow Service] API. Zie de handleiding op [maken van een bronverbinding voor cloudopslag](../../sources/tutorials/api/collect/cloud-storage.md) voor meer informatie . |
 
 {style=&quot;table-layout:auto&quot;}
