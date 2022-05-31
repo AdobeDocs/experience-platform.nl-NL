@@ -5,9 +5,9 @@ description: Dit document bevat informatie over op kenmerken gebaseerd toegangsb
 hide: true
 hidefromtoc: true
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Op attributen-gebaseerde toegangscontrole is momenteel beschikbaar in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten. Deze mogelijkheid is beschikbaar voor alle Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
+
+Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie voor meer informatie over sandboxen de [Overzicht van sandboxen](../../../sandboxes/home.md).
+
+## Sandboxen configureren
 
 Als u de details en rollen wilt weergeven waaraan een sandbox is toegewezen, selecteert u de optie **[!UICONTROL Sandboxes]** tab.
 

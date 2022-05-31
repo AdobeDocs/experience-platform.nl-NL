@@ -5,10 +5,10 @@ description: Dit document bevat informatie over op kenmerken gebaseerd toegangsb
 hide: true
 hidefromtoc: true
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '373'
+ht-degree: 3%
 
 ---
 
@@ -17,6 +17,17 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >Op attributen-gebaseerde toegangscontrole is momenteel beschikbaar in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten. Deze mogelijkheid is beschikbaar voor alle Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
+
+Machtigingen zijn het gebied van Adobe Experience Cloud waar beheerders gebruikersrollen en toegangsbeleid kunnen definiëren om toegangsmachtigingen voor functies en objecten binnen een producttoepassing te beheren.
+
+Met toestemmingen, kunt u vormen:
+
+* [Labels](./labels.md)
+* [Toestemmingen](./permissions.md)
+* [Beleid](./permissions.md)
+* [Rollen](./roles.md)
+* [Sandboxen](./sandboxes.md)
+* [Gebruikers](./users.md)
 
 Om tot op attribuut-gebaseerde toegangsbeheertoestemmingen toegang te hebben voor [!DNL Experience Cloud], moet u een beheerder voor uw organisatie zijn die een abonnement op heeft [!DNL Experience Cloud]. Terwijl Adobe flexibele beheerderhiërarchieën voor uw organisaties steunt, moet u een productbeheerder voor Adobe Experience Platform zijn om toestemmingen te vormen. Zie het Adobe Help Center-artikel op [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie .
 

@@ -5,9 +5,9 @@ description: Dit document bevat informatie over op kenmerken gebaseerd toegangsb
 hide: true
 hidefromtoc: true
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Op attributen-gebaseerde toegangscontrole is momenteel beschikbaar in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten. Deze mogelijkheid is beschikbaar voor alle Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
+
+De toestemmingen zijn het gebied van Experience Cloud waar de beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
+
+Door Toestemmingen, kunt u rollen tot stand brengen en beheren, evenals de gewenste middeltoestemmingen voor deze rollen toewijzen. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld.
 
 Onmiddellijk na [een nieuwe rol creëren](#create-a-new-role), u bent teruggekeerd aan **[!UICONTROL Roles]** tab. Als u machtigingen bewerkt voor een bestaande rol, selecteert u de rol in het menu **[!UICONTROL Roles]** tab. U kunt ook de filteroptie gebruiken om de resultaten te filteren om een rol te zoeken.
 
