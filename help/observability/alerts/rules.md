@@ -4,7 +4,7 @@ title: Standaardwaarschuwingsregels
 description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
+source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -29,7 +29,6 @@ De volgende waarschuwingsregels gelden specifiek voor [Gegevensinname](../../ing
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Vertraging bij inname | Deze waarschuwing wordt geactiveerd wanneer een batch-opname-flow langer duurt dan 150 minuten om te verwerken. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Ingestief | Deze waarschuwing treedt op wanneer de verhouding van mislukte records ten opzichte van alle records een drempel van 0,5% overschrijdt. |
-| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Het percentage kippingen overschrijdt de drempel | Deze waarschuwing treedt op wanneer de verhouding tussen overgeslagen id&#39;s en totaal aantal id&#39;s een drempel overschrijdt. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,6 +82,7 @@ De volgende waarschuwingsregels gelden specifiek voor [bestemmingen](../../desti
 | Run-info doelstroom | Uitvoersucces bestemming | Deze waarschuwing wordt geactiveerd wanneer een segment is geactiveerd naar een doel. |
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Uitvoervertraging bestemming | Deze waarschuwing wordt geactiveerd wanneer een doelstroom langer dan 150 minuten duurt om een segment te activeren. |
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Uitvoerfout bestemming | Deze waarschuwing wordt geactiveerd wanneer een fout optreedt tijdens het activeren van een segment op een doel. |
+| Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Het percentage kippingen overschrijdt de drempel | Deze waarschuwing wordt geactiveerd wanneer de verhouding van overgeslagen id&#39;s tot totale id&#39;s een drempel overschrijdt. |
 
 {style=&quot;table-layout:auto&quot;}
 
