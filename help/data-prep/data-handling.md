@@ -5,9 +5,9 @@ title: Gegevensindelingen verwerken met Data Prep
 topic-legacy: overview
 description: Dit document geeft een overzicht van hoe de verschillende gegevenstypen in de Prep van Gegevens worden behandeld.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '575'
 ht-degree: 9%
 
 ---
@@ -106,3 +106,7 @@ In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voo
 | V | Tijdzone-id | Tekst | America/Los_Angeles |
 | O | Verschuiving tijdzone | Tekst | GMT+8 |
 | Q/q | Kwartaal van het jaar | Getal/tekst | 3. 03; Q3; 3de kwartaal |
+
+## Kaarten {#maps}
+
+Kaarten worden momenteel niet ondersteund in [!DNL Data Prep].
