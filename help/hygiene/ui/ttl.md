@@ -2,11 +2,9 @@
 title: TTL's voor gegevenssets beheren
 description: Leer hoe te om een tijd te plannen om (TTL) voor een dataset in Adobe Experience Platform UI te leven.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -27,13 +25,11 @@ Als u een nieuwe aanvraag wilt maken, selecteert u **[!UICONTROL Create request]
 
 ![Afbeelding die de [!UICONTROL Create request] knop die wordt geselecteerd](../images/ui/ttl/create-request-button.png)
 
-Het dialoogvenster Aanvragen wordt geopend. Onder de **[!UICONTROL Action]** sectie, selecteert u **[!UICONTROL Dataset]** om de beschikbare controles voor TTL het plannen bij te werken.
-
-![Afbeelding die de [!UICONTROL Dataset] optie geselecteerd](../images/ui/ttl/create-request-button.png)
+<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for TTL scheduling-->
 
 ### Selecteer een datum en een dataset
 
-Onder de **[!UICONTROL Action]** selecteert u een datum waarop de gegevensset moet worden verwijderd. U kunt de datum handmatig invoeren (in de notatie `mm/dd/yyyy`) of selecteer het kalenderpictogram (![Afbeelding van het kalenderpictogram](../images/ui/ttl/calendar-icon.png)) om de datum in een dialoogvenster te selecteren.
+Het dialoogvenster Aanvragen wordt geopend. Onder de **[!UICONTROL Action]** selecteert u een datum waarop de gegevensset moet worden verwijderd. U kunt de datum handmatig invoeren (in de notatie `mm/dd/yyyy`) of selecteer het kalenderpictogram (![Afbeelding van het kalenderpictogram](../images/ui/ttl/calendar-icon.png)) om de datum in een dialoogvenster te selecteren.
 
 ![Afbeelding met een vervaldatum die wordt ingesteld voor de TTL](../images/ui/ttl/select-date.png)
 
@@ -49,11 +45,11 @@ Volgende, onder **[!UICONTROL Dataset Details]**, selecteert u het databasepicto
 
 Zodra u een dataset en een datum van TTL hebt geselecteerd, selecteer **[!UICONTROL Submit]**.
 
-![Afbeelding die de [!UICONTROL Submit] knop die wordt geselecteerd](../images/ui/ttl/select-dataset.png)
+![Afbeelding die de [!UICONTROL Submit] knop die wordt geselecteerd](../images/ui/ttl/submit.png)
 
 U wordt gevraagd de datum te bevestigen dat de dataset door zal worden geschrapt. Selecteren **[!UICONTROL Submit]** om door te gaan.
 
-Nadat het verzoek is verzonden, wordt een werkorder gemaakt en wordt deze weergegeven op het tabblad [!UICONTROL Consumer] tabblad van het dialoogvenster [!UICONTROL Data Hygiene] werkruimte. Van hier, kunt u de status van de het werkorde controleren aangezien het het verzoek verwerkt.
+Nadat het verzoek is verzonden, wordt een werkorder gemaakt en wordt deze weergegeven op het hoofdtabblad van het dialoogvenster [!UICONTROL Data Hygiene] werkruimte. Van hier, kunt u de status van de het werkorde controleren aangezien het het verzoek verwerkt.
 
 ## Een TTL bewerken of annuleren
 
@@ -63,6 +59,4 @@ Op de detailpagina van TTL, toont de juiste spoorstaaf controles om de geplande 
 
 ## Volgende stappen
 
-Dit document behandelde hoe te om dataset TTLs in de UI van het Experience Platform te plannen. Voor informatie over hoe te om andere taken van de gegevenshygiëne in UI uit te voeren, verwijs naar [Overzicht van de interface voor gegevenshygiëne](./overview.md).
-
-Leren hoe te om datasetTTLs te plannen gebruikend de Hygiene API van Gegevens, verwijs naar [dataset TTL eindpuntgids](../api/ttl.md).
+Dit document behandelde hoe te om dataset TTLs in de UI van het Experience Platform te plannen. Leren hoe te om datasetTTLs te plannen gebruikend de Hygiene API van Gegevens, verwijs naar [dataset TTL eindpuntgids](../api/ttl.md).

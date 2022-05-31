@@ -2,11 +2,9 @@
 title: Overzicht van gegevenshygiëne
 description: Met Adobe Experience Platform Data Hygiene kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 0%
 
 Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
 
-Met de mogelijkheden voor gegevenshygiëne van het Platform kunt u uw opgeslagen consumentengegevens beheren via programmatische verwijderingen van consumentengegevens en gegevenssets.
+Dankzij de mogelijkheden voor gegevenshygiëne van het Platform kunt u de opgeslagen consumentengegevens beheren via de verwijderingen van programmatische gegevenssets.
 
 ## [!UICONTROL Data Hygiene] UI-werkruimte
 
-De [!UICONTROL Data Hygiene] De werkruimte in de UI van het Platform staat u toe om de verrichtingen van de gegevenshygiëne te vormen en te plannen en te verifiëren dat uw verslagen zoals verwacht worden gehandhaafd.
+De [!UICONTROL Data Hygiene] De werkruimte in de interface van het Platform staat u toe om verrichtingen van de gegevenshygiëne te vormen en te plannen, die helpen ervoor te zorgen dat uw verslagen worden gehandhaafd zoals verwacht.
 
 Voor gedetailleerde stappen bij het beheren van de taken van de gegevenshygiëne in UI, zie [Handleiding voor gegevenshygiëne](./ui/overview.md).
 

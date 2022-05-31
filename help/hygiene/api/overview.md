@@ -2,11 +2,9 @@
 title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '309'
 ht-degree: 1%
 
 ---
@@ -41,9 +39,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Dit document bevat een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/api-guide.md#sample-api) in de gids Aan de slag voor Experience Platform APIs.
 
-## Werkorders
+<!-- ## Work orders
 
-Een werkorder is een representatie van een gegevenshygiënetaak waarmee de identiteit van de consument wordt verwijderd uit een specifieke gegevensset of uit alle gegevenssets. Zie de [eindpuntgids voor werkorders](./workorder.md) voor meer informatie over het werken met werkorders in de API.
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## Tijd om te leven (TTL) voor datasets
 

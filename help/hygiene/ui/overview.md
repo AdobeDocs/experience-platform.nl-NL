@@ -2,11 +2,9 @@
 title: UI-gids voor gegevenshygiëne
 description: Leer hoe u taken voor gegevenshygiëne beheert in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -25,8 +23,7 @@ Als u de werkruimte wilt openen, selecteert u **[!UICONTROL Data Hygiene]** in d
 
 ![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het Platform](../images/ui/overview/home.png)
 
-Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verzoeken van de gegevenshygiëne creëren. Raadpleeg de volgende secties van deze handleiding voor meer informatie:
+Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verrichtingen van de gegevenshygiëne vormen. Raadpleeg de volgende secties van deze handleiding voor meer informatie:
 
 * [Door bestaande werkorders bladeren](./browse.md)
-* [Consumentengegevens verwijderen](./delete-consumer.md)
 * [Tijd beheren om te leven (TTL) voor datasets](./ttl.md)
