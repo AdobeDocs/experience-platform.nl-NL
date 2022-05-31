@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
 title: Toegangsbeheer op basis van kenmerken maakt een rol
-description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Dit document bevat informatie over het beheer van rollen via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---

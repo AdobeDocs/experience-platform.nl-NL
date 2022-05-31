@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
 title: Op kenmerken gebaseerde sandboxen voor toegangsbeheer
-description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Dit document bevat informatie over het beheer van sandboxen via de machtigingsinterface in Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---

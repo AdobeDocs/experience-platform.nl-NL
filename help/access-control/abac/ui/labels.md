@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
 title: Op kenmerken gebaseerde toegangsbeheerlabels beheren
-description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Dit document bevat informatie over het beheer van labels via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---

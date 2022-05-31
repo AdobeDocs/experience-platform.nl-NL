@@ -2,10 +2,8 @@
 keywords: Experience Platform;huis;populaire onderwerpen;Op kenmerk-Gebaseerd Toegangsbeheer;op attribuut-gebaseerde toegangscontrole
 title: Aan de slag met het op kenmerken gebaseerde toegangsbeheer
 description: Met het op kenmerken gebaseerde toegangsbeheer kunt u rollen en beleid in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
-hide: true
-hidefromtoc: true
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
