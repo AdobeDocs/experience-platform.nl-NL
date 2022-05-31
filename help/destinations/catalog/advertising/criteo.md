@@ -3,9 +3,9 @@ keywords: reclame; criterium;
 title: Criteverbinding
 description: Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
+source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '930'
 ht-degree: 2%
 
 ---
@@ -24,11 +24,13 @@ Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring
 
 * U moet een beheerdersgebruikersaccount hebben op [Centrum voor systeembeheer](https://marketing.criteo.com).
 * U hebt uw advertentie-id voor de website nodig (vraag uw contactpersoon voor de website als u deze id niet hebt).
+* U moet [!DNL GUM caller ID], voor het geval u wilt gebruiken [!DNL GUM ID] als id.
 
 ## Beperkingen {#limitations}
 
 * Criteo biedt momenteel geen ondersteuning voor het verwijderen van gebruikers uit het publiek.
-* Criteuse accepteert alleen [!DNL SHA-256]-hashed en onbewerkte e-mails (om te zetten in [!DNL SHA-256] vóór verzending). Stuur geen PII (Persoonlijke identificeerbare gegevens, zoals de naam of het telefoonnummer van een persoon).
+* Criteuse accepteert alleen [!DNL SHA-256]-hashed en onbewerkte e-mails (om te zetten in [!DNL SHA-256] vóór verzending). Stuur geen PII (Persoonlijke identificeerbare gegevens, zoals namen van personen of telefoonnummers).
+* De criteo heeft minstens één id nodig die door de cliënt moet worden verstrekt. Prioriteiten [!DNL GUM ID] als id over gehashte e-mail aangezien het tot betere passende tarief bijdraagt.
 
 ![Vereisten](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -39,6 +41,7 @@ Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel w
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
 | `email_sha256` | E-mailadressen die met het algoritme SHA-256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA-256-gehashte e-mailadressen. Wanneer het bronveld hashkenmerken bevat, controleert u de [!UICONTROL Apply transformation] als u wilt dat het Platform de gegevens bij activering automatisch verbergt. |
+| `gum_id` | Criteo [!DNL GUM] cookie-id | [!DNL GUM IDs] cliënten toestaan een correspondentie aan te houden tussen hun systeem voor gebruikersidentificatie en de gebruikersidentificatie van de Commissie ([!DNL UID]). Als het id-type `GUM`, een aanvullende parameter [!DNL GUM Caller ID], moet ook worden opgenomen. Neem contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of om meer informatie hierover te krijgen `GUM` synchroniseren, indien nodig. |
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -98,6 +101,7 @@ Vul de volgende verbindingsparameters in nadat u de bestemming hebt geverifieerd
 | Beschrijving | Een beschrijving waarmee u deze bestemming in de toekomst kunt identificeren. | Nee |
 | API-versie | Criteo API-versie. Selecteer Voorvertoning. | Ja |
 | Adverteerder-id | Identiteitskaart van Adverteerder van de website van uw organisatie. Neem contact op met uw accountmanager van de website voor deze informatie. | Ja |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] van uw organisatie. Neem contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of om meer informatie hierover te krijgen [!DNL GUM] synchroniseren, indien nodig. | Ja, telkens [!DNL GUM ID] wordt opgegeven als id |
 
 ## Segmenten naar dit doel activeren {#activate-segments}
 
@@ -114,21 +118,29 @@ U kunt de geëxporteerde segmenten zien in het dialoogvenster [Centro](https://m
 De door de [!DNL Criteo] De verbinding ziet er ongeveer als volgt uit:
 
 ```json
-{ 
-  "data": { 
-    "type": "ContactlistWithUserAttributesAmendment", 
-    "attributes": { 
-      "operation": "add", 
-      "identifierType": "sha256email", 
-      "identifiers": [ 
-        { 
-          "identifier": "1c8494bbc4968277345133cca6ba257b9b3431b8a84833a99613cf075a62a16d", 
-          "attributes": [{ "key": "customValue", "value": "1" }] 
-        } 
-      ] 
-    } 
-  } 
-} 
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Gegevensgebruik en -beheer {#data-usage}
