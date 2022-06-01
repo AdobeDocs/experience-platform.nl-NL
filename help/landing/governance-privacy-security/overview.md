@@ -5,10 +5,9 @@ title: Overzicht van beheer, privacy en beveiliging
 topic-legacy: overview
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -33,7 +32,7 @@ Het beheer van gegevens is een essentieel begrip dat met elke mogelijkheid in Ex
 
 Als dienst van het Platform, staat het Beheer van Gegevens van Adobe Experience Platform u toe om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren dat op gegevensgebruik van toepassing is. Het speelt een belangrijke rol binnen Experience Platform op diverse niveaus, met inbegrip van het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, beleidshandhaving, en gegevenslijn.
 
-Zie [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie.
+Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie .
 
 ### Catalogus en gegevenssets {#catalog}
 
@@ -41,7 +40,7 @@ Catalogusservice is het systeem voor het opnemen van gegevens voor de locatie en
 
 De catalogus organiseert ingebedde gegevens in datasets, met elke dataset die meta-gegevens bevat die kunnen worden gebruikt om de gegevens te etiketteren en te categoriseren het bevat.
 
-Zie [Overzicht van de Catalogusservice](../../catalog/home.md) voor meer informatie over de service. Om te leren hoe te om datasets in Experience Platform te beheren, zie [datasets overzicht](../../catalog/datasets/overview.md).
+Zie de [Overzicht van Catalog Service](../../catalog/home.md) voor meer informatie over de dienst. Om te leren hoe te om datasets in Experience Platform te beheren, zie [Overzicht van gegevenssets](../../catalog/datasets/overview.md).
 
 ## Privacy {#privacy}
 
@@ -53,25 +52,29 @@ Wettelijke privacyregels zoals de Algemene Verordening van de Europese Unie inza
 
 Adobe Experience Platform Privacy Service biedt een RESTful-API en -gebruikersinterface waarmee u deze aanvragen kunt beheren. Met Privacy Service kunt u verzoeken indienen om toegang te krijgen tot of persoonlijke klantgegevens te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
 
-Zie [Overzicht van de Privacy Service](../../privacy-service/home.md) voor meer informatie.
+Zie de [Overzicht van Privacy Service](../../privacy-service/home.md) voor meer informatie .
 
 ### Goedkeuring {#consent}
 
 Veel wettelijke privacyverordeningen hebben vereisten ingevoerd voor actieve en specifieke toestemming op het gebied van gegevensverzameling, personalisatie en andere gevallen van marketinggebruik. Om aan deze vereisten te voldoen, staat het Experience Platform u toe om toestemmingsinformatie in individuele klantenprofielen te vangen en die voorkeur te gebruiken als bepalende factor in hoe de gegevens van elke klant in stroomafwaartse werkschema&#39;s van de Platform worden gebruikt.
 
-Als u wilt leren hoe u toestemming en voorkeursgegevens van klanten kunt verwerken met de Adobe-standaard, raadpleegt u het overzicht over de verwerking van [toestemming in Experience Platform](./consent/adobe/overview.md).
+Als u wilt leren hoe u toestemming van klanten en voorkeursgegevens kunt verwerken met de Adobe-standaard, raadpleegt u het overzicht over [verwerking van toestemming in Experience Platform](./consent/adobe/overview.md).
 
-Voor informatie over hoe de gegevens van de de toestemmingstoestemming van de procesklant in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0, zie het overzicht over [IAB TCF 2.0 steun in Platform](./consent/iab/overview.md).
+Voor informatie over hoe de gegevens van de de toestemmingstoestemming van de procesklant in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0, zie het overzicht over [IAB TCF 2.0-ondersteuning in Platform](./consent/iab/overview.md).
 
 ## Beveiliging {#security}
 
 De integriteit en veiligheid van uw gegevens zijn onmisbaar voor uw bedrijf, en dit risico vereist industrie-leidende veiligheidsmogelijkheden. Om deze uitdaging het hoofd te bieden, biedt Platform verschillende tools om uw gegevensbewerkingen beter te beveiligen.
 
+### Gegevenscodering
+
+Alle gegevens van het Platform worden in doorvoer en in rust versleuteld. Document weergeven op [gegevenscodering in Platform](./encryption.md) voor meer informatie .
+
 ### Toegangsbeheer {#access-control}
 
 Experience Platform gebruikt Adobe Admin Console om op rol-gebaseerde toegangsbeheer aan diverse mogelijkheden van het Platform te verstrekken. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 
-Zie [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie.
+Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie .
 
 ### Sandboxen {#sandboxes}
 
@@ -79,7 +82,7 @@ Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwi
 
 Om aan de behoefte aan ontwikkelingsflexibiliteit te voldoen, verstrekt het Experience Platform zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen om u te helpen uw digitale ervaringstoepassingen ontwikkelen die op uw eigen ontwikkelingscyclus worden gebaseerd.
 
-Zie het [overzicht van sandboxen](../../sandboxes/home.md) voor meer informatie.
+Zie de [sandboxen, overzicht](../../sandboxes/home.md) voor meer informatie .
 
 ## Volgende stappen
 
