@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2464'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,15 @@ Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming]
 
 1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab.
 
-   ![Tabblad Doelcatalogus](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![Afbeelding die aangeeft hoe u het tabblad Doelcatalogus kunt openen](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Selecteren **[!UICONTROL Activate segments]** op de kaart die overeenkomt met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-   ![Knop Segmenten activeren](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+   ![Afbeelding die de knop Segmenten activeren markeert](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
 1. Selecteer de doelverbinding die u wilt gebruiken om uw segmenten te activeren en selecteer vervolgens **[!UICONTROL Next]**.
 
-   ![Doel selecteren](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![Afbeelding die aangeeft hoe een of meerdere doelen moeten worden geselecteerd om segmenten te activeren](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Naar de volgende sectie gaan [uw segmenten selecteren](#select-segments).
 
@@ -47,7 +47,7 @@ Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming]
 
 Gebruik de selectievakjes links van de segmentnamen om de segmenten te selecteren die u wilt activeren naar het doel en selecteer vervolgens **[!UICONTROL Next]**.
 
-![Segmenten selecteren](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![Afbeelding markeren hoe een of meerdere segmenten moeten worden geselecteerd om te activeren](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
 ## Segmentexport plannen {#scheduling}
@@ -68,7 +68,7 @@ Gebruik de selectievakjes links van de segmentnamen om de segmenten te selectere
 
 Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt dat u naar uw bestemming wilt verzenden.
 
-![De knop Planning maken](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Afbeelding die de knop Planning maken markeert](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Volledige bestanden exporteren {#export-full-files}
 
@@ -90,7 +90,7 @@ Selecteer **[!UICONTROL Create schedule]** knoop die aan het segment beantwoordt
 
 Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige opname van alle profielkwalificaties voor het geselecteerde segment te activeren.
 
-![Volledige bestanden exporteren](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Afbeelding van de gebruikersinterface met de schakeloptie Volledige bestanden exporteren geselecteerd.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Gebruik de **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
@@ -132,7 +132,7 @@ Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te a
 >
 >Het eerste geëxporteerde incrementele bestand bevat alle profielen die in aanmerking komen voor een segment en die als backfill werken.
 
-![Incrementele bestanden exporteren](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Afbeelding van de gebruikersinterface met de schakeloptie Incrementele bestanden exporteren geselecteerd.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Gebruik de **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
@@ -164,11 +164,15 @@ De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en 
 
 Selecteer het potloodpictogram om een modaal venster te openen en de bestandsnamen te bewerken. Bestandsnamen mogen maximaal 255 tekens bevatten.
 
-![bestandsnaam configureren](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+>[!NOTE]
+>
+>In de onderstaande afbeelding ziet u hoe bestandsnamen kunnen worden bewerkt voor Amazon S3-doelen, maar het proces is identiek voor alle batchbestemmingen (bijvoorbeeld SFTP of Azure Blob Storage).
+
+![Afbeelding die het potloodpictogram markeert. Hiermee worden bestandsnamen geconfigureerd.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
 In de bestandsnaameditor kunt u verschillende componenten selecteren om aan de bestandsnaam toe te voegen.
 
-![Bestandsnaamopties bewerken](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![Afbeelding met alle beschikbare opties voor de bestandsnaam.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
 De doelnaam en segment-id kunnen niet uit bestandsnamen worden verwijderd. Naast deze, kunt u het volgende toevoegen:
 
@@ -191,15 +195,15 @@ Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren 
 
 1. In de **[!UICONTROL Select attributes]** pagina, selecteert u **[!UICONTROL Add new field]**.
 
-   ![Nieuwe toewijzing toevoegen](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![Afbeelding die de knop Nieuw veld toevoegen markeert.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
 1. Selecteer de pijl rechts van de knop **[!UICONTROL Schema field]** vermelding.
 
-   ![Bronveld selecteren](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+   ![Afbeeldingsmarkering waarmee u een bronveld kunt selecteren.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
 1. In de **[!UICONTROL Select field]** pagina, selecteert u de XDM-kenmerken die u naar het doel wilt verzenden en kiest u **[!UICONTROL Select]**.
 
-   ![Bronveldpagina selecteren](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   ![Afbeelding waarin de verschillende velden worden weergegeven die beschikbaar zijn als bronvelden.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
 1. Herhaal stap 1 tot en met 3 om meer toewijzingen toe te voegen.
 
@@ -211,7 +215,7 @@ Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmen
 * Als de `segmentMembership.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
 * Als de `segmentMembership.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
 
-![aanbevolen kenmerken](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
+![Afbeelding met vooraf ingevulde aanbevolen kenmerken in de toewijzingsstap van de workflow voor segmentactivering.](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
 
 ### Verplichte kenmerken {#mandatory-attributes}
 
@@ -384,11 +388,11 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 >
 >In deze stap controleert Adobe Experience Platform op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [Beleidshandhaving](../../rtcdp/privacy/data-governance-overview.md#enforcement) in de sectie Documentatie inzake gegevensbeheer.
 
-![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
+![Afbeelding met een voorbeeld van een schending van gegevensbeleid.](../assets/common/data-policy-violation.png)
 
 Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
-![Controleren](../assets/ui/activate-batch-profile-destinations/review.png)
+![Afbeelding die het revisiescherm van de workflow voor segmentactivering weergeeft.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ## Segmentactivering verifiëren {#verify}
 

@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1778'
 ht-degree: 0%
@@ -98,6 +98,15 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 ### Verificatiegegevens {#authentication-information}
 
+Voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]**:
+
+![Afbeelding van het UI-scherm met de voltooide velden voor de Amazon Kinesis-verificatiedetails](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+
+* **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel**: In [!DNL Amazon Web Services], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon Kinesis] account. Meer informatie in het dialoogvenster [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL Region]**: Vermeld welke [!DNL Amazon Web Services] gebied waarnaar gegevens moeten worden gestreamd.
+
+### Doelgegevens {#destination-details}
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Segmentnamen opnemen"
@@ -107,15 +116,6 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Tijdstempels segment opnemen"
 >abstract="Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
-
-Voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]**:
-
-![Afbeelding van het UI-scherm met de voltooide velden voor de Amazon Kinesis-verificatiedetails](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
-
-* **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel**: In [!DNL Amazon Web Services], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon Kinesis] account. Meer informatie in het dialoogvenster [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Region]**: Vermeld welke [!DNL Amazon Web Services] gebied waarnaar gegevens moeten worden gestreamd.
-
-### Doelgegevens {#destination-details}
 
 Na het vestigen van de authentificatieverbinding aan de bestemming van Amazon Kinesis, verstrek de volgende informatie voor de bestemming:
 
