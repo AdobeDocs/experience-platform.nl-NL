@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;populaire onderwerpen;Salesforce;salesforce;field mapping;Field mapping;marketo;B2B;b2b
 title: Toewijzingsvelden voor Microsoft Dynamics
 description: De onderstaande tabellen bevatten de toewijzingen tussen de bronvelden van Microsoft Dynamics en de bijbehorende XDM-velden.
-source-git-commit: 607c739df61912bea6c48e00118569dde49abc8a
+exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
+source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -48,6 +49,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `emailaddress1` | `personComponents.workEmail.address` |
 | `firstname` | `person.name.firstName` |
 | `fullname` | `person.name.fullName` |
+| `lastname` | `person.name.lastName` |
 | `jobtitle` | `extendedWorkDetails.jobTitle` |
 | `middlename` | `person.name.middleName` |
 | `mobilephone` | `mobilePhone.number` |
@@ -129,6 +131,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `telephone1` | `accountPhone.number` |
 | `tickersymbol` | `accountOrganization.tickerSymbol` |
 | `websiteurl` | `accountOrganization.website` |
+| `concat(accountid,"@${CRM_ORG_ID}.Dynamics")` | `accountKey.sourceKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
