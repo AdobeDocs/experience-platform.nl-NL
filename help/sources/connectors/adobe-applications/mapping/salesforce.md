@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;Salesforce;salesforce;f
 title: Salesforce-toewijzingsvelden
 description: De onderstaande tabellen bevatten de toewijzingen tussen Salesforce-bronvelden en de bijbehorende XDM-velden.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: d96c1db480957e8b0cbff01171ae11d8eaa801be
+source-git-commit: 93b6782bbb9ec25c720633a38c41cb70c251f017
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 1%
@@ -67,6 +67,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `ReportsToId` | `extendedWorkDetails.reportsToID` |
 | `Salutation` | `person.name.courtesyTitle` |
 | `Title` | `extendedWorkDetails.jobTitle` |
+| `"Contact"` | `b2b.personType` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,8 +76,6 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
-| `ConvertedContactId` | `b2b.convertedContactID` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactID` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
 | `Email` | `workEmail.address` | Secundaire identiteit. |
@@ -113,6 +112,16 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Suffix` | `person.name.suffix` |
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
+| `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
+| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `"Lead"` | `b2b.personType` |
+| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
+| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -152,7 +161,6 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `ParentId` | `accountParentKey.sourceID` |
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountParentKey` |
 | `Phone` | `accountPhone.number` |
-| `Rating` | `accountOrganization.rating` |
 | `ShippingCity` | `accountShippingAddress.city` |
 | `ShippingCountry` | `accountShippingAddress.country` |
 | `ShippingLatitude` | `accountShippingAddress._schema.latitude` |
@@ -166,6 +174,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `TickerSymbol` | `accountOrganization.tickerSymbol` |
 | `Tradestyle` | `accountTradeStyle` | data.com, functie |
 | `Type` | `accountType` |
+| `Website` | `accountOrganization.website` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -203,6 +212,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `StageName` | `opportunityStage` |
 | `TotalOpportunityQuantity` | `opportunityQuantity` |
 | `Type` | `opportunityType` |
+| `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -255,6 +265,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
 | `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `CurrencyIsoCode` | `actualCost.currencyCode` |
 
 ## Campagnelid {#campaign-member}
 
@@ -277,6 +288,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `FirstRespondedDate` | `firstRespondedDate` |
+| `Type` | `b2b.personType` |
 
 ## Volgende stappen
 
