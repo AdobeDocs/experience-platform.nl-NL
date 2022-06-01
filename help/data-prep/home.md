@@ -5,9 +5,9 @@ title: Overzicht van Data Prep
 topic-legacy: overview
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,14 @@ De Prep van gegevens kan robuust verschillende formaten van gegevens behandelen 
 ## gedeeltelijke rijupdates verzenden met [!DNL Data Prep]
 
 Streaming updates in [!DNL Data Prep] staat u toe om gedeeltelijke rijupdates te verzenden naar [!DNL Profile Service] gegevens te maken en nieuwe identiteitskoppelingen te maken met één API-aanvraag. Meer informatie over het streamen van upserts in [!DNL Data Prep], zie het document op [gedeeltelijke rijupdates verzenden](./upserts.md).
+
+## Op kenmerken gebaseerd toegangsbeheer in [!DNL Data Prep]
+
+Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van kenmerken.
+
+Op attribuut-gebaseerde toegangscontrole zorgt ervoor dat u slechts de attributen kunt in kaart brengen die u toegang tot hebt. Kenmerken waartoe u geen toegang hebt, kunnen niet worden gebruikt in doorvoertoewijzingen en berekende velden. Als u dus geen toegang hebt tot een vereist veld, kunt u geen toewijzing opslaan. Bovendien kunt u geen objecten of objectarrays toewijzen als u geen toegang hebt tot een van de onderliggende kenmerken. U kunt echter andere elementen binnen de object- of objectarray afzonderlijk toewijzen.
+
+Zie de [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md) voor meer informatie .
 
 ## Volgende stappen
 
