@@ -5,9 +5,9 @@ title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: labels
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ De **[!UICONTROL Show Inherited Labels]** de knevel is door gebrek, dat u toesta
 
 ![Overerfde labels verbergen](../images/labels/inherited-labels.png)
 
-## Labels op veldniveau beheren
+## Labels beheren op het niveau van het gegevenssetveld
 
 Doorgaan met de workflow voor [gegevensgebruikslabels toevoegen en bewerken op gegevenssetniveau](#add-labels)kunt u ook labels op veldniveau beheren in het dialoogvenster **[!UICONTROL Data Governance]** werkruimte voor die dataset.
 
@@ -99,6 +99,12 @@ U kunt deze stappen herhalen om door te gaan met het toevoegen en bewerken van l
 ![Selecteer meerdere velden om labels op veldniveau tegelijk toe te passen.](../images/labels/multiple-fields.png)
 
 Het is belangrijk om te herinneren dat de overerving zich van top-level slechts (dataset → gebieden) beweegt, betekenend dat de etiketten die op het gebiedsniveau worden toegepast niet aan andere gebieden of datasets worden verspreid.
+
+## Labels op schemaniveau beheren
+
+U kunt labels rechtstreeks toevoegen aan een schema of aan velden binnen dat schema. Om het even welke gebieden die op het schemaniveau worden toegepast zullen aan alle datasets verspreiden die op dat schema worden gebaseerd.
+
+Zie de zelfstudie aan [beheren, labels op schemaniveau](../../xdm/tutorials/labels.md) voor meer informatie .
 
 ## Aangepaste labels beheren
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wo
 
 Met op attribuut-gebaseerde toegangscontrole, kunt u:
 
-* Kenmerken toepassen op veldgroepen en/of -klassen. Hierdoor kunnen in meerdere schema&#39;s met dezelfde veldgroepen of klassen velden worden gelabeld met dezelfde kenmerken, afhankelijk van de configuraties op veldniveau of veldniveau.
+* [Labels voor gegevensgebruik toepassen op veldgroepen en -klassen](../../xdm/tutorials/labels.md). Hierdoor kunnen in meerdere schema&#39;s met dezelfde veldgroepen of klassen velden worden gelabeld met dezelfde kenmerken, afhankelijk van de configuraties op veldniveau of veldniveau.
 * Vorm gebruikerstoegang tot specifieke XDM schemagebieden afhankelijk van de toestemmingsreeksen die op rollen worden toegepast die aan gebruikers worden toegewezen.
 
 Voor meer informatie over XDM, verwijs naar [XDM-overzicht](../../xdm/home.md).
