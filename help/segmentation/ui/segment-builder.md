@@ -5,9 +5,9 @@ title: UI-gids voor segmentBuilder
 topic-legacy: ui guide
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2552'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,14 @@ ht-degree: 0%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Bouwstenen voor segmentdefinitie
+## Bouwstenen voor segmentdefinitie {#building-blocks}
 
-De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daarnaast kunnen de kenmerken en gebeurtenissen in bestaande doelgroepen ook worden gebruikt als componenten voor nieuwe definities.
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="Velden"
+>abstract="De drie veldtypen waaruit een segment bestaat, zijn kenmerken, gebeurtenissen en doelgroepen. Met kenmerken kunt u Profielkenmerken gebruiken die horen bij de klasse Individueel profiel XDM, gebeurtenissen kunt u een publiek maken op basis van handelingen of gebeurtenissen die plaatsvinden met XDM ExperienceEvent-gegevenselementen en publiek kunt geïmporteerde soorten publiek uit externe bronnen gebruiken."
+
+De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daarnaast kunnen de kenmerken en gebeurtenissen in bestaande doelgroepen worden gebruikt als componenten voor nieuwe definities.
 
 U kunt deze bouwstenen zien in de **[!UICONTROL Fields]** aan de linkerkant van het dialoogvenster [!DNL Segment Builder] werkruimte. **[!UICONTROL Fields]** bevat een tab voor elk van de belangrijkste bouwstenen: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot;, en &quot;[!UICONTROL Audiences]&quot;.
 
@@ -210,7 +215,19 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segmenteigenschappen
+## Segmenteigenschappen {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="Segmenteigenschappen"
+>abstract="In de sectie met segmenteigenschappen wordt een schatting weergegeven van de grootte van het resulterende segment, waarbij het aantal gekwalificeerde profielen wordt weergegeven in vergelijking met het totale aantal profielen. Dit staat u toe om uw segmentdefinitie zonodig aan te passen alvorens het publiek zelf te bouwen."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="Ramingen vernieuwen"
+>abstract="U kunt de ramingen van uw segment vernieuwen om onmiddellijk een voorvertoning te zien van hoeveel profielen voor het voorgestelde segment in aanmerking zouden komen. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Meer informatie in documentatie"
+
 
 Bij het samenstellen van een segmentdefinitie worden de **[!UICONTROL Segment Properties]** aan de rechterkant van de werkruimte wordt een schatting van de grootte van het resulterende segment weergegeven, zodat u de segmentdefinitie naar wens kunt aanpassen voordat u het publiek zelf gaat maken.
 

@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1701'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,16 @@ Ga voor meer informatie naar de [segmentdashboardhulplijn](../../dashboards/guid
 
 ## Bladeren {#browse}
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="Churn"
+>abstract="Het koord vertegenwoordigt het percentage profielen die binnen een segmentdefinitie in vergelijking met de laatste tijd veranderen de segmentbaan liep."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="Evaluatiemethode"
+>abstract="De methodes van de evaluatie voor segmenten omvatten partij, het stromen, en rand."
+
 Selecteer **[!UICONTROL Browse]** voor een lijst met alle segmentdefinities voor uw IMS-organisatie.
 
 ![](../images/ui/overview/segment-browse-all.png)
@@ -65,7 +75,7 @@ De uitsplitsing toont een staafgrafiek die het percentage van profielen schetst 
 
 De kolom vertegenwoordigt het percentage profielen die binnen een segmentdefinitie in vergelijking met de laatste tijd veranderen de segmentbaan liep, terwijl de profieltelling het totale aantal profielen vertegenwoordigt die voor het segment kwalificeren.
 
-De evaluatiemethode kan streaming of batch zijn. Streaming segmenten worden voortdurend geëvalueerd terwijl gegevens in het systeem worden ingevoerd. De segmenten van de partij worden geëvalueerd volgens een vastgesteld programma.
+De evaluatiemethode kan streaming, batch of edge zijn. Streaming segmenten worden voortdurend geëvalueerd terwijl gegevens in het systeem worden ingevoerd. De segmenten van de partij worden geëvalueerd volgens een vastgesteld programma. De segmenten van de rand worden geëvalueerd in real time, die voor de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte toestaan.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
