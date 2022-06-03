@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '392'
 ht-degree: 25%
 
 ---
@@ -119,6 +119,9 @@ ht-degree: 25%
       * [!DNL BrightCove] video bijhouden {#brightcove}
          * [Overzicht](./extensions/web/brightcove/overview.md)
          * [Aanvullende informatie](./extensions/web/brightcove/release-notes.md)
+      * Google-gegevenslaag {#google-data-layer}
+         * [Overzicht](./extensions/web/google-data-layer/overview.md)
+         * [Aanvullende informatie](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL YouTube] video tracking-extensie {#youtube}
          * [Overzicht](./extensions/web/youtube/overview.md)
          * [Aanvullende informatie](./extensions/web/youtube/release-notes.md)
