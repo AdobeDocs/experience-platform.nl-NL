@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API-documentatie
 breadcrumb-title: Edge Network Server API-documentatie
 user-guide-description: Leer wat de Server API van het Netwerk van Edge is en hoe u het kunt gebruiken.
 feature: Data Collection
-source-git-commit: c6ecd493bd8366d49ca0b9dd851c92c5ce732d18
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 5%
+source-wordcount: '63'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 * Interactie met andere Adobe-oplossingen {#interacting-other-adobe-solutions}
    * [Interactie met Adobe Analytics](interacting-adobe-analytics.md)
 * Personalisatie {#personalization}
-   * [Inhoud voor personalisatie ophalen uit Adobe-oplossingen](personalization-overview.md)
+   * [Overzicht van personalisatie](personalization-overview.md)
    * [Personalisatie via Offer decisioning](personalization-offer-decisioning.md)
    * [Personalisatie via Adobe Target](personalization-target.md)
 * [Foutafhandeling](error-handling.md)

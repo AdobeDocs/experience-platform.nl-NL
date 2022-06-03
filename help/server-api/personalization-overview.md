@@ -1,19 +1,17 @@
 ---
-title: Inhoud voor personalisatie ophalen uit andere Adobe-oplossingen
+title: Overzicht van personalisatie
 description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adobe
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: personalisatie; server-API; Adobe Experience Platform Edge Network personalisatie ophalen
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 7%
 
 ---
 
 
-# Inhoud voor personalisatie ophalen uit Adobe-oplossingen
-
-## Overzicht {#overview}
+# Overzicht van personalisatie
 
 Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-oplossingen voor personalisatie, waaronder [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) en [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
@@ -138,7 +136,7 @@ De gepersonaliseerde inhoud die van verpersoonlijkingsoplossingen wordt teruggew
 **API-indeling**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### Verzoek {#request}
