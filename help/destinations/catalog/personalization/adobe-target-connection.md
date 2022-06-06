@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
+source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,11 @@ ht-degree: 0%
 
 Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 
-Adobe Target is een personalisatieverbinding in Adobe Experience Platform.
+Adobe Target is een personalisatieverbinding in de Adobe Experience Platform-bestemmingscatalogus.
 
 ## Vereisten {#prerequisites}
+
+### DataStream-id {#datastream-id}
 
 Bij het configureren van de Adobe Target-verbinding naar [een gegevensstroom-id gebruiken](#parameters), moet u beschikken over de [Adobe Experience Platform Web SDK](../../../edge/home.md) geïmplementeerd.
 
@@ -27,6 +29,15 @@ Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te ge
 >[!IMPORTANT]
 >
 >Voordat u een [!DNL Adobe Target] verbinding, lees de gids over hoe te [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/configure-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platforms. Voor personalisatie op dezelfde pagina en op de volgende pagina moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
+
+### Vereisten in Adobe Target {#prerequisites-in-adobe-target}
+
+Controleer in Adobe Target of de gebruiker:
+
+* Toegang tot de [standaardwerkruimte](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
+* De **Fiatteur** [rol](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+
+Meer informatie over het verlenen van machtigingen voor [Doelpremie](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) en voor [Doelstandaard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
