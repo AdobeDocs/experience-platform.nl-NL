@@ -6,9 +6,9 @@ description: Dit artikel illustreert de end-to-end workflow voor het activeren v
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,10 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Voordat u segmenten kunt activeren via de API voor ad-hocactivering, moet u eerst een activeringsstroom hebben geconfigureerd in de gebruikersinterface van het Platform voor het gekozen doel.
 
-Dit omvat het ingaan van in het activeringswerkschema, het selecteren van uw segmenten, het vormen van een programma, en het activeren van hen.
+Dit omvat het ingaan van in het activeringswerkschema, het selecteren van uw segmenten, het vormen van een programma, en het activeren van hen. U kunt de UI of API gebruiken om een activeringsstroom tot stand te brengen:
 
-Zie de volgende zelfstudie voor gedetailleerde instructies op hoe te om een activeringsstroom voor uw partijbestemmingen te vormen: [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../ui/activate-batch-profile-destinations.md).
+* [Gebruik de interface van het Platform om een activeringsstroom te creëren aan de uitvoerbestemmingen van het partijprofiel](../ui/activate-batch-profile-destinations.md)
+* [Gebruik de Flow Service API om verbinding te maken met exportdoelen voor batchprofielen en gegevens te activeren](../api/connect-activate-batch-destinations.md)
 
 ## Stap 4: Vraag de meest recente segment-exporttaak-id aan {#segment-export-id}
 
@@ -156,7 +157,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u segmenten wilt activeren. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u segmenten wilt activeren. U kunt deze id&#39;s ophalen vanuit de gebruikersinterface van het Platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van de segmenten die u wilt activeren voor het geselecteerde doel. |
 | <ul><li>`exportId1`</li></ul> | De id die wordt geretourneerd in het antwoord van de [segmentexport](../../segmentation/api/export-jobs.md#retrieve-list) taak. Zie [Stap 4: Vraag de meest recente segment-exporttaak-id aan](#segment-export-id) voor instructies over hoe u deze id kunt vinden. |
 
