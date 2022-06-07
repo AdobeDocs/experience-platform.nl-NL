@@ -2,8 +2,10 @@
 keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
+hide: true
+hidefromtoc: true
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 7ac7f533bb8547865b53892d371059aa60d2232e
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%
