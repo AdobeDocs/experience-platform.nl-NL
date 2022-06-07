@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Zendesk Source Connector
 description: Leer hoe u Zendesk met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 In deze sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd om uw [!DNL Zendesk] account.
 
-* De eerste stap bij het verifiëren van uw [!DNL Zendesk] account is om ervoor te zorgen dat je [!DNL Zendesk] ondersteuningsaccount. Als u er nog geen hebt, raadpleegt u de [[!DNL Zendesk]registratiepagina](https://www.zendesk.com/register/) om uw Zendesk-account te registreren en te maken.
+* De eerste stap bij het verifiëren van uw [!DNL Zendesk] account is om ervoor te zorgen dat je [!DNL Zendesk] ondersteuningsaccount. Als u er nog geen hebt, raadpleegt u de [[!DNL Zendesk] registratiepagina](https://www.zendesk.com/register/) om uw Zendesk-account te registreren en te maken.
 * Als u zich hebt geregistreerd, navigeert u naar de [[!DNL Zendesk] website](https://www.zendesk.com/login/) en uw **subdomein**.
 * Selecteer vervolgens **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Ten slotte haalt u uw API-token op van de **[!DNL API token]** sectie.
