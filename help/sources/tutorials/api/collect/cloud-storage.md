@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,8 @@ curl -X POST \
 | `data.properties.columnDelimiter` | (Optioneel) Een scheidingsteken voor één tekenkolom dat u kunt opgeven bij het verzamelen van vlakke bestanden. Elke waarde van één teken is een toegestaan kolomscheidingsteken. Indien niet opgegeven, wordt een komma (`,`) wordt gebruikt als standaardwaarde. **Opmerking**: De `columnDelimiter` Deze eigenschap kan alleen worden gebruikt bij het opnemen van bestanden met scheidingstekens. |
 | `data.properties.encoding` | (Optioneel) Een eigenschap die het coderingstype definieert dat moet worden gebruikt bij het invoeren van gegevens naar het Platform. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
 | `data.properties.compressionType` | (Optioneel) Een eigenschap die het gecomprimeerde bestandstype voor inname definieert. De ondersteunde gecomprimeerde bestandstypen zijn: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, en `tar`. **Opmerking**: De `compressionType` Deze eigenschap kan alleen worden gebruikt bij het opnemen van afgebakende of JSON-bestanden. |
-| `params.path` | Het pad van het bronbestand dat u opent. |
+| `params.path` | Het pad van het bronbestand dat u opent. Deze parameter verwijst naar een afzonderlijk bestand of naar een volledige map. |
+| `params.type` | Het bestandstype van het brongegevensbestand dat u opgeeft. Tekst gebruiken `file` om een afzonderlijk bestand in te voeren en type te gebruiken `folder` om een volledige map in te voeren. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke bron voor cloudopslag. Zie de [aanhangsel](#appendix) voor een lijst van verbindingsspecificaties-id&#39;s. |
 
 **Antwoord**
