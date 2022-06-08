@@ -4,9 +4,9 @@ description: In de gebruikersinterface van Adobe Experience Platform leert u hoe
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -62,12 +62,12 @@ Als u consumentengegevens uit alle datasets wilt verwijderen, selecteert u **[!U
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Primaire identiteit"
->abstract="Een primaire identiteit is een kenmerk dat een record koppelt aan het profiel van een consument in Experience Platform. Het primaire identiteitsgebied voor een dataset wordt bepaald door het schema dat de dataset op gebaseerd is. In deze kolom moet u het type (of de naamruimte) opgeven voor de primaire identiteit van de consument, zoals &quot;email&quot; voor e-mailadressen en &quot;ecid&quot; voor Experience Cloud-id&#39;s. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="Een primaire identiteit is een kenmerk dat een record koppelt aan het profiel van een consument in Experience Platform. Het primaire identiteitsgebied voor een dataset wordt bepaald door het schema dat de dataset op gebaseerd is. In deze kolom, moet u het type (of namespace) voor de primaire identiteit van de consument, zoals verstrekken `email` voor e-mailadressen en `ecid` voor Experience Cloud-id&#39;s. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Identiteitswaarde"
->abstract="In deze kolom, moet u de waarde voor de primaire identiteit van de consument verstrekken, die met het identiteitstype moet beantwoorden dat in de linkerkolom wordt verstrekt. Als het primaire identiteitstype &quot;e-mail&quot; is, moet de waarde het e-mailadres van de consument zijn. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="In deze kolom, moet u de waarde voor de primaire identiteit van de consument verstrekken, die met het identiteitstype moet beantwoorden dat in de linkerkolom wordt verstrekt. Als het primaire identiteitstype `email`, moet de waarde het e-mailadres van de consument zijn. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
 Bij het verwijderen van consumentengegevens moet u identiteitsgegevens opgeven, zodat het systeem kan bepalen welke records moeten worden verwijderd. Voor om het even welke dataset in Platform, worden de verslagen geschrapt gebaseerd op **primaire identiteit** gebied dat door het schema van de dataset wordt bepaald.
 
