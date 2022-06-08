@@ -4,9 +4,9 @@ description: In de gebruikersinterface van Adobe Experience Platform leert u hoe
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
+source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
@@ -144,4 +144,10 @@ Nadat het verzoek is verzonden, wordt een werkorder gemaakt en wordt deze weerge
 
 In dit document wordt beschreven hoe consumentengegevens in de gebruikersinterface van het Experience Platform kunnen worden verwijderd. Voor informatie over hoe te om andere taken van de gegevenshygiëne in UI uit te voeren, verwijs naar [Overzicht van de interface voor gegevenshygiëne](./overview.md).
 
-Raadpleeg voor meer informatie over het verwijderen van consumentenrecords met de Data Hygiene-API [eindpuntgids voor werkorders](../api/workorder.md).
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
+To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->
