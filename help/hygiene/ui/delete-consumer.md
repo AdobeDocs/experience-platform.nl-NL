@@ -4,7 +4,7 @@ description: In de gebruikersinterface van Adobe Experience Platform leert u hoe
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Als u consumentengegevens uit alle datasets wilt verwijderen, selecteert u **[!U
 >
 >Het selecteren van **[!UICONTROL All datasets]** Deze optie kan ertoe leiden dat het verwijderen langer duurt en dat het verwijderen van records mogelijk niet correct verloopt.
 
-## Verstrek de identiteit van de consument {#identities}
+## Verstrek de identiteit van de consument {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
