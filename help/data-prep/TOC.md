@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Handleiding voor voorinstelling van gegevens
 user-guide-description: Bereid uw gegevens voor voor inname in Adobe Experience Platform.
 feature: Data Prep
-source-git-commit: 752c662876df012dbcb44db6168705be2a5375ce
+source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '50'
 ht-degree: 10%
 
 ---
@@ -25,4 +25,5 @@ ht-degree: 10%
 - [Gegevensindelingen verwerken](./data-handling.md)
 - [Toewijzingssets](mapping-set.md)
 - [Stroom upserts](upserts.md)
+- [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
