@@ -4,9 +4,9 @@ description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Netwo
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: gegevensverzameling; authenticatie; Adobe Experience Platform Edge Network api; autorisatie
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 1%
 
 ## Overzicht
 
-De [!DNL Adobe Experience Platform Edge Network Server API] behandelt zowel voor authentiek verklaarde als niet voor authentiek verklaarde gegevensinzameling, afhankelijk van de bron van gebeurtenissen en het API inzamelingsdomein.
+De [!DNL Edge Network Server API] behandelt zowel voor authentiek verklaarde als niet voor authentiek verklaarde gegevensinzameling, afhankelijk van de bron van gebeurtenissen en het API inzamelingsdomein.
 
-Voor elk verzoek [!DNL Server API] verifieert de datastream `access_type` instellen.
+Voor elk verzoek [!DNL Server API] verifieert de datastream [!DNL access type] instellen. Met deze instelling kunnen klanten een gegevensstroom configureren voor het accepteren van geverifieerde gegevens of van geverifieerde en niet-geverifieerde gegevens. Standaard worden beide typen gegevens geaccepteerd.
 
-Met deze instelling kunnen klanten een gegevensstroom configureren voor het accepteren van geverifieerde gegevens of van geverifieerde en niet-geverifieerde gegevens. Standaard worden beide typen gegevens geaccepteerd.
+Voor details bij het vormen van het gegevenstroomtoegangstype, zie de documentatie over hoe te [een gegevensstroom maken en configureren](../edge/datastreams/overview.md#create).
 
-Hieronder volgt een overzicht van het gedrag, gebaseerd op de `access_type` configuratie en het eindpunt waarop het verzoek wordt ontvangen.
+Hieronder volgt een overzicht van het gedrag, gebaseerd op de datastream [!DNL Access Type] configuratie en het eindpunt waarop het verzoek wordt ontvangen.
 
-| `access_type` | edge.adobedc.net | server.adobedc.net |
+| [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
 | gemengd (standaard) | Aanvraag wordt niet geverifieerd | Aanvraag voor verificatie |
 | geverifieerd | Aanvraag voor verificatie | Aanvraag voor verificatie |
