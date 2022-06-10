@@ -2,13 +2,13 @@
 title: Id's delen via mobiel naar web en verschillende domeinen
 description: Leer hoe u id's van bezoekers van mobiele naar webeigenschappen en in verschillende domeinen kunt behouden
 keywords: Identiteit;mobiel;id;delen;domein;cross-domain;sdk;platform;
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
-
 
 # Id&#39;s delen via mobiel naar web en verschillende domeinen
 
@@ -32,9 +32,11 @@ Een technologieverkoper wil zijn bezoekersactiviteit rapporteren met informatie 
 
 ## Vereisten {#prerequisites}
 
-Als u de id&#39;s voor mobiel naar internet en voor andere domeinen wilt delen, moet u de update naar [!DNL Web SDK] versie 2.11.0 of hoger.
+Als u de id&#39;s van mobiel naar web en tussen domeinen wilt delen, moet u [!DNL Web SDK] versie 2.11.0 of hoger.
 
 Voor mobiele Edge Network-implementaties wordt deze functie ondersteund in het dialoogvenster [Identiteit voor Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extensie die begint met versie 1.1.0 (iOS en Android).
+
+Deze functie is ook compatibel met [!DNL VisitorAPI.js] versie 1.7.0 of hoger.
 
 ## Id&#39;s delen via mobiele apparaten {#mobile-to-web}
 
