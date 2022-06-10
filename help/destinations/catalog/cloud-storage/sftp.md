@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 715533352e84573f60f012504988595af6146e2f
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -50,8 +50,8 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH-toets"
->abstract="De sleutel SSH vereist een koord Base64."
+>title="Persoonlijke SSH-sleutel"
+>abstract="De persoonlijke sleutel van SSH moet als Base64-Gecodeerde koord worden geformatteerd en moet niet wachtwoord-beschermd zijn. "
 
 Wanneer [verbinden](../../ui/connect-destination.md) aan deze bestemming, moet u de volgende informatie verstrekken:
 
@@ -59,7 +59,7 @@ Wanneer [verbinden](../../ui/connect-destination.md) aan deze bestemming, moet u
 
 Als u **[!UICONTROL Basic authentication]** type voor verbinding met uw SFTP-locatie:
 
-![Basisverificatie van SFTP-bestemming](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![Basisverificatie van SFTP-bestemming](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Host]**: Het adres van uw opslagplaats SFTP;
 * **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
@@ -77,11 +77,11 @@ Als u **[!UICONTROL SFTP with SSH key]** verificatietype voor verbinding met uw 
 * **[!UICONTROL Domain]**: Vul het IP-adres of de domeinnaam van uw SFTP-account in
 * **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
 * **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
-* **[!UICONTROL SSH Key]**: De SSH-sleutel om u aan te melden bij uw SFTP-opslaglocatie.
+* **[!UICONTROL SSH Key]**: De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet zijn opgemaakt als een Base64-gecodeerde tekenreeks en mag niet met een wachtwoord zijn beveiligd.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet worden geschreven als een [!DNL Base64] gecodeerde tekenreeks.
    * Voorbeeld: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Zie onder een voorbeeld van een correct geformatteerde sleutel PGP, met het middelste deel verkort voor beknoptheid.
 
-      ![PGP-toets](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![PGP-toets](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### Doelgegevens {#destination-details}
 
