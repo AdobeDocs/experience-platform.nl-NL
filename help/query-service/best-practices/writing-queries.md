@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 2%
@@ -318,4 +318,8 @@ De Service van de vraag normaliseert persisted gegevens in Adobe Experience Plat
 
 Door dit document te lezen, bent u op enkele belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe u de SQL-syntaxis kunt gebruiken om uw eigen query&#39;s te schrijven, leest u de [SQL-syntaxisdocumentatie](../sql/syntax.md).
 
-Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, te lezen gelieve de gidsen op [Adobe Analytics-voorbeeldvragen](../sample-queries/adobe-analytics.md), [Adobe Target-voorbeeldvragen](../sample-queries/adobe-target.md), of [Voorbeeldquery&#39;s van ExperienceEvent](../sample-queries/experience-event.md).
+Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, gelieve de volgende documentatie van het gebruiksgeval te lezen:
+
+- [Analyseinzichten](../use-cases/analytics-insights.md)
+- [Activiteitenanalyse met Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
+- [Voorbeeldquery&#39;s van ExperienceEvent](../sample-queries/experience-event.md).

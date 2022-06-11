@@ -5,9 +5,9 @@ title: Voorbeeldquery's voor Adobe Analytics-gegevens
 topic-legacy: queries
 description: Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden getransformeerd in XDM ExperienceEvents en als datasets opgenomen in Adobe Experience Platform. Dit document schetst een aantal gebruiksgevallen waarin de Dienst van de Vraag van deze gegevens gebruik maakt en steekproefvragen omvat die worden ontworpen om met uw datasets van Adobe Analytics te werken.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
+source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '975'
 ht-degree: 1%
 
 ---
@@ -16,107 +16,9 @@ ht-degree: 1%
 
 Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in gegevens die overeenkomen met de [!DNL XDM ExperienceEvent] klasse en opgenomen in Adobe Experience Platform als datasets.
 
-In dit document wordt een aantal gebruiksgevallen beschreven waarbij Adobe Experience Platform [!DNL Query Service] maakt gebruik van deze gegevens, met inbegrip van steekproefvragen die worden ontworpen om met uw datasets van Adobe Analytics te werken. Zie de documentatie op [Toewijzing van het veld Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie over toewijzing aan [!DNL Experience Events].
+In dit document wordt een aantal gebruiksgevallen beschreven waarbij Adobe Experience Platform [!DNL Query Service] maakt gebruik van deze gegevens. Zie de documentatie op [Toewijzing van het veld Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie over toewijzing aan [!DNL Experience Events].
 
-## Aan de slag
-
-De SQL voorbeelden door dit document vereisen u om SQL uit te geven en de verwachte parameters voor uw vragen in te vullen die op de dataset, de eVar, de gebeurtenis, of het tijdkader worden gebaseerd u in het evalueren geinteresseerd bent. Geef parameters op waar u ze ziet `{ }` in de volgende SQL-voorbeelden.
-
-## Algemeen gebruikte SQL-voorbeelden
-
-In de volgende voorbeelden worden SQL-query&#39;s getoond voor veelvoorkomende gebruiksscenario&#39;s voor het analyseren van uw Adobe Analytics-gegevens.
-
-### Aantal uren bezoekers voor een bepaalde dag
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Count(DISTINCT enduserids._experience.aaid.id) AS Visitor_Count 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
-
-### De bovenste tien weergegeven pagina&#39;s voor een bepaalde dag
-
-```sql
-SELECT web.webpagedetails.name AS Page_Name, 
-       Sum(web.webpagedetails.pageviews.value) AS Page_Views 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY web.webpagedetails.name 
-ORDER BY page_views DESC 
-LIMIT  10;
-```
-
-### De tien meest actieve gebruikers
-
-```sql
-SELECT enduserids._experience.aaid.id AS aaid, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY enduserids._experience.aaid.id
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### Top 10 steden per gebruikersactiviteit
-
-```sql
-SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY state_city
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### De tien meest bekeken producten
-
-```sql
-SELECT Product_SKU,
-       Sum(Product_Views) AS Total_Product_Views
-FROM  (SELECT Explode(productlistitems.sku) AS Product_SKU, 
-              commerce.productviews.value   AS Product_Views 
-       FROM   {TARGET_TABLE}
-            WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-              AND commerce.productviews.value IS NOT NULL) 
-GROUP BY Product_SKU 
-ORDER BY Total_Product_Views DESC
-LIMIT  10;
-```
-
-### Top 10 van totale orderontvangsten
-
-```sql
-SELECT Purchase_ID, 
-       Round(Sum(Product_Items.priceTotal * Product_Items.quantity), 2) AS Total_Order_Revenue 
-FROM   (SELECT commerce.`order`.purchaseid AS Purchase_ID, 
-               Explode(productlistitems)   AS Product_Items 
-        FROM   {TARGET_TABLE} 
-        WHERE  commerce.`order`.purchaseid IS NOT NULL 
-                AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-
-GROUP BY Purchase_ID 
-ORDER BY total_order_revenue DESC 
-LIMIT  10;
-```
-
-### Aantal gebeurtenissen per dag
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Sum(_experience.analytics.event1to100.{TARGET_EVENT}.value) AS Event_Count
-FROM   {TARGET_TABLE}
-WHERE  _experience.analytics.event1to100.{TARGET_EVENT}.value IS NOT NULL 
-        AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
+Zie de [documentatie over het gebruik van analysemogelijkheden](../use-cases/analytics-insights.md) om te leren hoe te om de Dienst van de Vraag te gebruiken om actionable inzichten van ingebedde gegevens van Adobe Analytics tot stand te brengen.
 
 ## Deduplicatie
 
