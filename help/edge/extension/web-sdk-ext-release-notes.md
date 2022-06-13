@@ -2,16 +2,27 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
+source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
 
+
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.12.0 - 13 juni 2022
+
+* De `identityMap` data element to populate the namespace options based on the sandboxes defined by the extension settings.
+* Toegevoegd **[!UICONTROL Redirect with identity]** actie voor het delen van domeinidentiteit.
+* Documentatiekoppelingen toegevoegd aan de `sendEvent` handeling.
+* Bijgewerkte gebruikersinterfacebibliotheek React Spectrum.
+* Verbeteringen in de gebruikersinterface.
+
+Bevat versie 2.11.0 van de Adobe Experience Platform Web SDK Library.
 
 ## Versie 2.11.2 - 3 mei 2022
 

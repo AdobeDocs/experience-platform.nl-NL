@@ -3,14 +3,32 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
 
+
 # Aanvullende informatie
+
+In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
+Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](extension/web-sdk-ext-release-notes.md).
+
+## Versie 2.11.0 - 13 juni 2022
+
+**Nieuwe functies**
+
+* U kunt nu nauwkeuriger persoonlijke ervaringen bieden door gebruikers-id&#39;s te delen tussen mobiele apps en mobiele webinhoud, en tussen domeinen. Zie de [speciale documentatie](identity/id-sharing.md) voor meer informatie.
+* U kunt nu een array met voorstellingen renderen of uitvoeren vanuit [!DNL Adobe Target] in toepassingen van één pagina, zonder de analytische meetgegevens te verhogen. Dit vermindert rapportagefouten en vergroot de nauwkeurigheid van de analyse. Zie de [speciale documentatie](personalization/rendering-personalization-content.md#applypropositions) voor meer informatie.
+* Aanvullende informatie toegevoegd aan de `getLibraryInfo` bevel met inbegrip van beschikbare bevelen en de definitieve configuratie voor de instantie.
+
+**Oplossingen en verbeteringen**
+
+* Bijgewerkte cookie-instellingen die moeten worden gebruikt `sameSite="none"` en `secure` markering op [!DNL HTTPS] pagina&#39;s.
+* Correctie van een probleem waarbij gepersonaliseerde inhoud niet correct werd toegepast tijdens het gebruik van het dialoogvenster `eq` pseudo-kiezer.
+* Probleem verholpen waarbij `localTimezoneOffset` kan de validatie van het Experience Platform niet voltooien.
 
 ## Versie 2.10.1 - 3 mei 2022
 
