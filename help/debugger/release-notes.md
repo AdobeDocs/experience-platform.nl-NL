@@ -4,14 +4,26 @@ description: De meest recente release bevat informatie over Adobe Experience Pla
 keywords: debugger;ervaar de uitbreiding van Foutopsporing van het Platform;chroom;uitbreiding;versie nota's
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Debugger
+
+## Versie 1.3.2 - 9 juni 2022
+
+* Er is een standaardavatar toegevoegd wanneer de gebruiker is aangemeld.
+* Er is syntaxismarkering toegevoegd aan JSON-objecten in logbestanden.
+
+## Versie 1.3.1 - 24 mei 2022
+
+* Bijgewerkte afhankelijkheden.
+* Correctie van het probleem met Analytics waarbij resultaten na het proces niet konden worden ingeschakeld.
+* Foutopsporingsprogramma bood verbinding met aanmeldvenster Adobe. Dit probleem is nu opgelost.
+* Het probleem met AT.js waarbij logberichten niet werden weergegeven in Foutopsporing, is opgelost.
 
 ## Versie 1.3.0 - 28 januari 2022
 
