@@ -5,9 +5,9 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,10 @@ Zie de stappen in het dialoogvenster [Verifieer uw Marketo-bronconnector](./mark
 ## Adobe-organisatietoewijzing instellen
 
 Voordat u toewijzingssets kunt maken voor [!DNL Marketo], moet u eerst Adobe Organisatie-toewijzing instellen. Zie de handleiding voor gedetailleerde stappen over het voltooien van deze taak [Adobe Organisatie-toewijzing instellen voor [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## B2B-naamruimten instellen en hulpprogramma voor automatisch genereren van schema&#39;s
+
+Gebruik vervolgens de B2B-naamruimte en het schema auto-generation hulpprogramma om de Platform-ontwikkelaarsconsole en de Postman-omgeving in te stellen. Hierdoor kunt u uw B2B-naamruimten en -schema&#39;s automatisch vullen. Voor gedetailleerde instructies raadpleegt u de handleiding op [B2B-naamruimten instellen en hulpprogramma voor automatisch genereren van schema&#39;s](./marketo-namespaces.md)
 
 ## Experience Data Model (XDM)
 
