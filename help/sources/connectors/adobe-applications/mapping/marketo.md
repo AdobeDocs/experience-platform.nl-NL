@@ -5,9 +5,9 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 >Alles [!DNL Marketo] gegevenssets, behalve `Activities` now-ondersteuning `isDeleted`. Uw bestaande gegevensstromen zullen automatisch omvatten `isDeleted`, maar neemt alleen de vlag voor nieuw opgenomen gegevens op. Als u de vlag op al uw historische gegevens wilt toepassen, dan moet u uw bestaande dataflows tegenhouden en hen met de nieuwe afbeelding ontspannen. Houd er rekening mee dat als u `isDeleted`dan hebt u geen toegang meer tot de functionaliteit. Het is van essentieel belang dat de toewijzing wordt behouden nadat deze automatisch wordt gevuld.
 
 ## Activiteiten {#activities}
+
+De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als u standaardactiviteiten wilt gebruiken, moet u het schema bijwerken met de [schema automatisch genereren](../marketo/marketo-namespaces.md) omdat u nieuwe `activities` de gegevensstroom zonder uw schema bij te werken, zal de toewijzingsmalplaatjes ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nieuwe of bijgewerkte velden worden echter niet in het Platform opgenomen.
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
