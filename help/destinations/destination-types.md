@@ -4,9 +4,9 @@ title: Doeltypen en -categorieën
 seo-title: Destination types and categories
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbind
 
 ## Verbindingen {#connections}
 
-**[!UICONTROL Profile Export]** en **[!UICONTROL Streaming Segment Export]** doelen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om de [Klantprofiel in realtime](../profile/home.md)segmentatie toepassen en segmenten en gekwalificeerde profielen exporteren naar bestemmingen.
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, en **[!DNL Edge Personalization]** doelen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om de [Klantprofiel in realtime](../profile/home.md)segmentatie toepassen en segmenten en gekwalificeerde profielen exporteren naar bestemmingen.
 
 ## Profielexportdoelen {#profile-export}
 
@@ -55,6 +55,12 @@ Bestandsgebaseerde doelen ontvangen `.csv` bestanden met profielen en/of kenmerk
 ## Streaming segment exportdoelen {#streaming-destinations}
 
 De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentgegevens. Deze bestemmingen gebruiken segment IDs of gebruiker IDs. Reclame en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [Facebook](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen .
+
+## Edge-verpersoonlijkingsdoelen {#edge-personalization-destinations}
+
+De het verpersoonlijkingsbestemmingen van de rand in Experience Platform omvatten [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepast aanpassingsdoel](/help/destinations/catalog/personalization/custom-personalization.md). Door deze bestemmingen te gebruiken, kunt u zelfde-pagina en volgende-pagina gebruiksgevallen van het verpersoonlijkingsgebruik voor uw klanten toelaten.
+
+Meer informatie over hoe [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## Exporteren van profielen en segmentexportdoelen - video-overzicht {#video}
 
