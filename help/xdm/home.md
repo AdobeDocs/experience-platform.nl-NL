@@ -5,9 +5,9 @@ title: XDM-systeemoverzicht
 topic-legacy: overview
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '2039'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,12 @@ Raadpleeg de volgende documentatie voor meer informatie over het beheren van en 
 
 ## Gegevensgedrag in XDM-systeem {#data-behaviors}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_behavior"
+>title="Gedrag van gegevens"
+>abstract="Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen: record, tijdreeksen en ad hoc. De schema&#39;s van het verslag verstrekken informatie over de attributen van een onderwerp, terwijl de tijdreeksregelingen een momentopname van het systeem vangen op het tijdstip een actie werd genomen. Ad hoc schema&#39;s vangen gebieden die namespaces voor gebruik slechts door één enkele dataset zijn."
+>text="See the documentation for more information on data behaviors in Platform."
+
 Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen:
 
 * **Opnemen**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
@@ -67,7 +73,7 @@ Hoewel u uw eigen klassen kunt definiëren in het dialoogvenster [!DNL Schema Re
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
-[!UICONTROL XDM Individual Profile] is een op records gebaseerde klasse die een unieke representatie vormt van de kenmerken van zowel geïdentificeerde als gedeeltelijk geïdentificeerde onderwerpen. De profielen die hoogst geïdentificeerd zijn kunnen voor persoonlijke mededelingen of gerichte overeenkomsten worden gebruikt, en kunnen gedetailleerde persoonlijke informatie zoals naam, geslacht, geboortedatum, plaats, en contactinformatie met inbegrip van telefoonaantallen en e-mailadressen bevatten.
+[!UICONTROL XDM Individual Profile] is een op records gebaseerde klasse die een unieke weergave vormt van de kenmerken van zowel geïdentificeerde als gedeeltelijk geïdentificeerde onderwerpen. De profielen die hoogst geïdentificeerd zijn kunnen voor persoonlijke mededelingen of gerichte overeenkomsten worden gebruikt, en kunnen gedetailleerde persoonlijke informatie zoals naam, geslacht, geboortedatum, plaats, en contactinformatie met inbegrip van telefoonaantallen en e-mailadressen bevatten.
 
 Minder geïdentificeerde profielen kunnen alleen uit anonieme gedragssignalen bestaan, zoals browsercookies. In dit geval worden de gegevens van het verspreide profiel gebruikt om een informatiebasis te bouwen waarin de belangen en voorkeuren van het anonieme profiel worden gesorteerd en opgeslagen. Deze id&#39;s kunnen in de loop der tijd gedetailleerder worden naarmate het onderwerp zich aanmeldt voor meldingen, abonnementen, aankopen, enzovoort. Deze toename van profielkenmerken kan uiteindelijk resulteren in een bepaald onderwerp en een hogere mate van gerichte betrokkenheid mogelijk maken.
 

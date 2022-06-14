@@ -6,66 +6,72 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een verb
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
 
 # Bepaal een verband tussen twee schema&#39;s gebruikend [!DNL Schema Editor]
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_relationships"
+>title="Schema-relaties"
+>abstract="Schema&#39;s die tot verschillende klassen behoren, kunnen contextueel worden gekoppeld via relatievelden, zodat u complexere segmentatieregels kunt maken."
+>text="See the documentation for more information on schema relationships."
+
 >[!NOTE]
 >
->Als u Real-time Platform B2B Edition van de Gegevens van de Klant gebruikt, zie de gids op [het creëren van B2B verhoudingen](./relationship-b2b.md) in plaats daarvan.
+>Als u Real-time Customer Data Platform B2B Edition gebruikt, raadpleegt u de handleiding op [B2B-relaties maken](./relationship-b2b.md) in plaats daarvan.
 
-De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Door deze relaties te definiëren binnen de structuur van uw [!DNL Experience Data Model] (XDM)-schema&#39;s kunt u complexe inzichten in uw klantgegevens opdoen.
+De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Deze relaties definiëren binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staan u toe om complexe inzichten in uw klantengegevens te bereiken.
 
-Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het samenvoegingsschema en [!DNL Real-time Customer Profile], is dit alleen van toepassing op schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema van verwijzingen voorziet.
+Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het union-schema en [!DNL Real-time Customer Profile]Dit geldt alleen voor schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema van verwijzingen voorziet.
 
-Dit document biedt een zelfstudie voor het definiëren van een relatie tussen twee schema&#39;s met behulp van de Schema-editor in de gebruikersinterface [!DNL Experience Platform]. Zie de zelfstudie over [het definiëren van een relatie met de Schemaregistratie-API](relationship-api.md) voor stappen voor het definiëren van schemarelaties met de API.
+Dit document bevat een zelfstudie voor het definiëren van een relatie tussen twee schema&#39;s met behulp van de Schema-editor in het dialoogvenster [!DNL Experience Platform] gebruikersinterface. Raadpleeg de zelfstudie voor meer informatie over het definiëren van schema-relaties met de API [een relatie definiëren met de API voor het schemaregister](relationship-api.md).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van [!DNL XDM System] en de Redacteur van het Schema in [!DNL Experience Platform] UI. Lees de volgende documentatie voordat u met deze zelfstudie begint:
+Deze zelfstudie vereist een goed begrip van [!DNL XDM System] en de Schema-editor in de [!DNL Experience Platform] UI. Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in  [!DNL Experience Platform].
+* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
 * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
-* [Maak een schema met het [!DNL Schema Editor]](create-schema-ui.md) volgende: Een zelfstudie waarin de basisbeginselen van het werken met de  [!DNL Schema Editor]code worden besproken.
+* [Een schema maken met de opdracht [!DNL Schema Editor]](create-schema-ui.md): Een zelfstudie waarin de basisbeginselen van het werken met de [!DNL Schema Editor].
 
 ## Een bron- en doelschema definiëren
 
-Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhouding zullen worden bepaald. Voor demonstratiedoeleinden, leidt dit leerprogramma tot een verband tussen leden van het loyaliteitsprogramma van een organisatie (die in een &quot;[!DNL Loyalty Members]&quot;schema wordt bepaald) en hun favoriet hotel (die in een &quot;[!DNL Hotels]&quot;schema wordt bepaald).
+Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhouding zullen worden bepaald. Voor demonstratiedoeleinden creëert deze zelfstudie een relatie tussen leden van het loyaliteitsprogramma van een organisatie (gedefinieerd in een &quot;[!DNL Loyalty Members]&quot; schema) en hun favoriete hotel (gedefinieerd in &quot;[!DNL Hotels]&quot; schema).
 
 >[!IMPORTANT]
 >
->Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-time Customer Profile] worden toegelaten. Zie de sectie op [toelatend een schema voor gebruik in Profiel](./create-schema-ui.md#profile) in de zelfstudie van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
+>Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en geschikt zijn gemaakt voor [!DNL Real-time Customer Profile]. Zie de sectie over [een schema inschakelen voor gebruik in profiel](./create-schema-ui.md#profile) in de zelfstudie van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
-De verhoudingen van het schema worden vertegenwoordigd door een specifiek gebied binnen een **bronschema** dat naar een ander gebied binnen een **bestemmingsschema** verwijst. In de stappen die volgen, &quot;[!DNL Loyalty Members]&quot;zal het bronschema zijn, terwijl &quot;[!DNL Hotels]&quot;als bestemmingsschema zal dienst doen.
+Schemarelaties worden vertegenwoordigd door een specifiek veld binnen een **bronschema** dat verwijst naar een ander veld binnen een **doelschema**. In de volgende stappen: &quot;[!DNL Loyalty Members]&quot; wordt het bronschema, terwijl &quot;[!DNL Hotels]&quot; fungeert als het doelschema.
 
 Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk schema dat in dit leerprogramma wordt gebruikt alvorens een verhouding is bepaald.
 
 ### [!DNL Loyalty Members] schema
 
-Het bronschema &quot;[!DNL Loyalty Members]&quot;is gebaseerd op [!DNL XDM Individual Profile] klasse, en is het schema dat in het leerprogramma voor [het creëren van een schema in UI](create-schema-ui.md) werd geconstrueerd. Het omvat een `loyalty` voorwerp onder zijn `_tenantId` namespace, die verscheidene loyaliteitsspecifieke gebieden omvat. Één van deze gebieden, `loyaltyId`, dient als primaire identiteit voor het schema onder [!UICONTROL Email] namespace. Zoals u onder **[!UICONTROL Schema Properties]** ziet, is dit schema ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
+Het bronschema &quot;[!DNL Loyalty Members]&quot; is gebaseerd op de [!DNL XDM Individual Profile] en is het schema dat in de zelfstudie voor [het creëren van een schema in UI](create-schema-ui.md). Het omvat een `loyalty` object onder `_tenantId` namespace, die verscheidene loyaliteitsspecifieke gebieden omvat. Een van deze velden, `loyaltyId`, dient als primaire identiteit voor het schema onder het [!UICONTROL Email] naamruimte. Zoals onder **[!UICONTROL Schema Properties]**, is dit schema ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### [!DNL Hotels] schema
 
-Het bestemmingsschema &quot;[!DNL Hotels]&quot;is gebaseerd op een douane &quot;[!DNL Hotels]&quot;klasse, en bevat gebieden die een hotel beschrijven.
+Het doelschema &quot;[!DNL Hotels]&quot; is gebaseerd op een aangepaste &quot;[!DNL Hotels]&quot; en bevat velden die een hotel beschrijven.
 
 ![](../images/tutorials/relationship/hotels.png)
 
-Om aan een verhouding deel te nemen, moet het bestemmingsschema een primaire identiteit hebben. In dit voorbeeld wordt het veld `hotelId` gebruikt als de primaire identiteit met een aangepaste naamruimte &#39;Hotel ID&#39;.
+Om aan een verhouding deel te nemen, moet het bestemmingsschema een primaire identiteit hebben. In dit voorbeeld wordt `hotelId` wordt gebruikt als primaire identiteit, gebruikend een douane &quot;identiteitskaart van het Hotel namespace.
 
 ![Primaire identiteit van hotel](../images/tutorials/relationship/hotel-identity.png)
 
 >[!NOTE]
 >
->Raadpleeg de [documentatie bij Identiteitsservice](../../identity-service/namespaces.md#manage-namespaces) voor meer informatie over het maken van aangepaste naamruimten.
+>Als u wilt leren hoe u aangepaste naamruimten kunt maken, raadpleegt u de [Identiteitsdocumentatie](../../identity-service/namespaces.md#manage-namespaces).
 
-Zodra de primaire identiteit is geplaatst, moet het bestemmingsschema dan voor [!DNL Real-time Customer Profile] worden toegelaten.
+Zodra de primaire identiteit is geplaatst, moet het bestemmingsschema dan worden toegelaten voor [!DNL Real-time Customer Profile].
 
 ![Inschakelen voor profiel](../images/tutorials/relationship/hotel-profile.png)
 
@@ -73,31 +79,31 @@ Zodra de primaire identiteit is geplaatst, moet het bestemmingsschema dan voor [
 
 >[!NOTE]
 >
->Deze stap wordt slechts vereist als uw bronschema geen specifiek tekenreeks-type gebied heeft dat als verwijzing naar het bestemmingsschema moet worden gebruikt. Als dit gebied reeds in uw bronschema wordt bepaald, sla aan de volgende stap van [over het bepalen van een relatieveld](#relationship-field) over.
+>Deze stap wordt slechts vereist als uw bronschema geen specifiek tekenreeks-type gebied heeft dat als verwijzing naar het bestemmingsschema moet worden gebruikt. Als dit veld al in uw bronschema is gedefinieerd, gaat u verder met de volgende stap van [relatieveld definiëren](#relationship-field).
 
 Om een verband tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat als verwijzing naar het bestemmingsschema moet worden gebruikt. U kunt dit gebied aan het bronschema toevoegen door een nieuwe groep van het schemagebied te creëren.
 
-Selecteer **[!UICONTROL Add]** in de sectie **[!UICONTROL Field groups]** om te beginnen.
+Begin door te selecteren **[!UICONTROL Add]** in de **[!UICONTROL Field groups]** sectie.
 
 ![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-Het dialoogvenster [!UICONTROL Add field group] wordt weergegeven. Selecteer **[!UICONTROL Create new field group]**. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe veldgroep. Selecteer **[!UICONTROL Add field groups]** wanneer gebeëindigd.
+De [!UICONTROL Add field group] wordt weergegeven. Selecteer **[!UICONTROL Create new field group]**. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe veldgroep. Selecteren **[!UICONTROL Add field groups]** wanneer gereed.
 
 ![](../images/tutorials/relationship/create-field-group.png)
 
-Het canvas verschijnt weer met &quot;[!DNL Favorite Hotel]&quot; in de sectie **[!UICONTROL Field groups]**. Selecteer de naam van de veldgroep en selecteer **[!UICONTROL Add field]** naast het veld op hoofdniveau `Loyalty Members`.
+Het canvas verschijnt opnieuw met &quot;[!DNL Favorite Hotel]&quot; weergegeven in de **[!UICONTROL Field groups]** sectie. Selecteer de naam van de veldgroep en selecteer **[!UICONTROL Add field]** naast het hoofdniveau `Loyalty Members` veld.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Er wordt een nieuw veld weergegeven op het canvas onder de naamruimte `_tenantId`. Geef onder **[!UICONTROL Field properties]** een veldnaam en weergavenaam voor het veld op en stel het type in op &quot;[!UICONTROL String]&quot;.
+Er wordt een nieuw veld weergegeven op het canvas onder de `_tenantId` naamruimte. Onder **[!UICONTROL Field properties]** geeft u een veldnaam en weergavenaam voor het veld op en stelt u het type in op &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Selecteer **[!UICONTROL Apply]** als u klaar bent.
+Als u klaar bent, selecteert u **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Het bijgewerkte veld `favoriteHotel` wordt weergegeven op het canvas. Selecteer **[!UICONTROL Save]** om uw wijzigingen in het schema te voltooien.
+De bijgewerkte `favoriteHotel` wordt weergegeven op het canvas. Selecteren **[!UICONTROL Save]** om uw wijzigingen in het schema te voltooien.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -105,18 +111,18 @@ Het bijgewerkte veld `favoriteHotel` wordt weergegeven op het canvas. Selecteer 
 
 Zodra uw bronschema een specifiek die verwijzingsgebied heeft wordt bepaald, kunt u het als relatiegebied aanwijzen.
 
-Selecteer het veld `favoriteHotel` op het canvas en schuif omlaag onder **[!UICONTROL Field properties]** totdat het selectievakje **[!UICONTROL Relationship]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
+Selecteer `favoriteHotel` veld op het canvas, schuiven vervolgens omlaag onder **[!UICONTROL Field properties]** tot de **[!UICONTROL Relationship]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Selecteer dropdown voor **[!UICONTROL Reference schema]** en selecteer het bestemmingsschema voor de verhouding (&quot;[!DNL Hotels]&quot;in dit voorbeeld). Als het bestemmingsschema voor [!DNL Profile] wordt toegelaten, wordt **[!UICONTROL Reference identity namespace]** gebied automatisch geplaatst aan namespace van de primaire identiteit van het bestemmingsschema. Als voor het schema geen primaire identiteit is gedefinieerd, moet u de naamruimte die u wilt gebruiken handmatig selecteren in het vervolgkeuzemenu. Selecteer **[!UICONTROL Apply]** wanneer gebeëindigd.
+Vervolgkeuzelijst selecteren voor **[!UICONTROL Reference schema]** en selecteer het bestemmingsschema voor de verhouding (&quot;[!DNL Hotels]&quot; in dit voorbeeld). Als het doelschema is ingeschakeld voor [!DNL Profile]de **[!UICONTROL Reference identity namespace]** wordt het veld automatisch ingesteld op de naamruimte van de primaire identiteit van het doelschema. Als voor het schema geen primaire identiteit is gedefinieerd, moet u de naamruimte die u wilt gebruiken handmatig selecteren in het vervolgkeuzemenu. Selecteren **[!UICONTROL Apply]** wanneer gereed.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-Het veld `favoriteHotel` wordt nu gemarkeerd als een relatie op het canvas en geeft de naam en naamruimte van de referentie-identiteit van het doelschema weer. Selecteer **[!UICONTROL Save]** om uw wijzigingen op te slaan en de workflow te voltooien.
+De `favoriteHotel` Het veld wordt nu gemarkeerd als een relatie op het canvas en geeft de naam en naamruimte voor de referentie-id van het doelschema weer. Selecteren **[!UICONTROL Save]** om uw wijzigingen op te slaan en de workflow te voltooien.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een één-op-één verhouding tussen twee schema&#39;s tot stand gebracht gebruikend [!DNL Schema Editor]. Voor stappen op hoe te om verhoudingen te bepalen gebruikend API, zie de zelfstudie op [het bepalen van een verhouding gebruikend de Registratie API van het Schema](relationship-api.md).
+Door dit leerprogramma te volgen, hebt u met succes een één-aan-één verhouding tussen twee schema&#39;s gecreeerd gebruikend [!DNL Schema Editor]. Raadpleeg de zelfstudie voor meer informatie over het definiëren van relaties met de API [een relatie definiëren met de API voor het schemaregister](relationship-api.md).

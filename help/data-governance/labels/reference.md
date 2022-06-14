@@ -5,14 +5,20 @@ title: Woordenlijst met gegevensgebruikslabels
 topic-legacy: labels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2083'
 ht-degree: 1%
 
 ---
 
 # Verklarende woordenlijst met gegevensgebruikslabels
+
+>[!CONTEXTUALHELP]
+>id="platform_policies_labeltype"
+>title="Labeltypen"
+>abstract="Er zijn verschillende categorieën labels voor gegevensgebruik. Adobe-bepaalde etiketten omvatten contractetiketten, identiteitslabels, en gevoelige etiketten. De etiketten die door uw organisatie worden bepaald zijn gecategoriseerd als douanelabels."
+>text="See the data usage labels glossary for more information on these label types."
 
 Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Adobe Experience Platform Data Governance biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
 
