@@ -3,9 +3,9 @@ keywords: Google klant match;Google klant match;Google Customer Match
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1683'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **[!UICONTROL Name]**: Geef een naam op voor deze doelverbinding
 * **[!UICONTROL Description]**: Geef een beschrijving voor deze doelverbinding
-* **[!UICONTROL Account ID]**: je Google-client-id. De indeling van de id is xxx-xxx-xxxx.
+* **[!UICONTROL Account ID]**: uw [Customer ID Google Adds](https://support.google.com/google-ads/answer/1704344?hl=en). De indeling van de id is xxx-xxx-xxxx. Als u het [!DNL Google Ads Manager Account (My Client Center)], gebruik uw account-id voor Manager niet. Gebruik de [Customer ID Google Adds](https://support.google.com/google-ads/answer/1704344?hl=en) in plaats daarvan.
 
 >[!IMPORTANT]
 >
