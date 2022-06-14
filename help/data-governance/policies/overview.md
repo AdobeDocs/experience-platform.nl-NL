@@ -5,9 +5,9 @@ title: Overzicht van beleidsregels voor gegevensgebruik
 topic-legacy: policies
 description: Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen het Experience Platform, of dat u er een beperking voor hebt.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid
 Er zijn twee soorten beleid beschikbaar:
 
 * **[!UICONTROL Data governance policy]**: Beperk de gegevensactivering op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de betrokken gegevens worden meegevoerd.
-* **[!UICONTROL Consent policy](bèta)**: De profielen filteren waarop kan worden geactiveerd [bestemmingen](../../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten
+* **[!UICONTROL Consent policy]**: De profielen filteren waarop kan worden geactiveerd [bestemmingen](../../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten
 
 Dit document biedt een overzicht op hoog niveau van het beleid voor gegevensgebruik en bevat koppelingen naar verdere documentatie voor het werken met het beleid in de gebruikersinterface of de API.
 
@@ -91,4 +91,4 @@ In de onderstaande tabel worden de belangrijkste marketingacties beschreven die 
 | Onsite reclame | Een handeling die gegevens gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. |
 | Onsite personalisatie | Een actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend. |
 | Segmentovereenkomst | Een actie die gegevens voor de Gelijke van het Segment van Adobe Experience Platform gebruikt, die voor twee of meer gebruikers van het Platform toestaat om segmentgegevens uit te wisselen. Door beleid in te schakelen dat naar deze handeling verwijst, kunt u beperken welke gegevens worden gebruikt voor Segment Match. Als het kernbeleid &#39;Gegevens delen beperken&#39; bijvoorbeeld is ingeschakeld, worden alle gegevens met een [C11-label](../labels/reference.md#c11) kan niet worden gebruikt voor Segment Match. |
-| Single Identity Personalization | Een handeling die vereist dat één identiteit wordt gebruikt voor verpersoonlijkingsdoeleinden in plaats van dat identiteiten uit meerdere bronnen worden gekoppeld. |
+| Eén identiteit aanpassen | Een handeling die vereist dat één identiteit wordt gebruikt voor verpersoonlijkingsdoeleinden in plaats van dat identiteiten uit meerdere bronnen worden gekoppeld. |

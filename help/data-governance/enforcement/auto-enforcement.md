@@ -5,9 +5,9 @@ title: Automatische beleidscontrole
 topic-legacy: guide
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Wanneer een segment voor het eerst wordt geactiveerd, [!DNL Policy Service] cont
 
 * De labels voor gegevensgebruik die worden toegepast op velden en gegevenssets binnen het segment dat moet worden geactiveerd.
 * Het marketingdoel van de bestemming.
-* (Bèta) De profielen die om in de segmentactivering hebben goedgekeurd te worden omvat, die op uw gevormd toestemmingsbeleid wordt gebaseerd.
+* De profielen die hebben ingestemd met opname in de segmentactivering, op basis van uw geconfigureerde beleid voor toestemming.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 
 | Gegevenslijnfase | Rol bij de handhaving van het beleid |
 | --- | --- |
-| Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op de dataset of het gebiedsniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br>Eventuele toestemmingskenmerken die van uw klanten worden verzameld, worden ook in gegevenssets opgeslagen. Als u toegang tot toestemmingsbeleid (momenteel in bèta) hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van segmenten worden uitgesloten die aan een bestemming worden geactiveerd. |
+| Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op de dataset of het gebiedsniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br>Eventuele toestemmingskenmerken die van uw klanten worden verzameld, worden ook in gegevenssets opgeslagen. Als u toegang tot toestemmingsbeleid hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van segmenten worden uitgesloten die aan een bestemming worden geactiveerd. |
 | Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie . |
 | Segment | De regels van het segment bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het segment alle toegepaste gebruikslabels voor die velden over. De schendingen van het beleid zullen voorkomen als u een segment activeert de waarvan geërfte etiketten door het toepasselijke beleid van de doelbestemming worden beperkt, dat op zijn marketing gebruiksgeval wordt gebaseerd. |
 | Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br>Het beleid van het gebruik van gegevens komt schendingen voor als u een segment activeert de waarvan gebruiksetiketten voor de marketing actie van de doelbestemming beperkt zijn.<br><br>(Beta) Wanneer een segment wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |

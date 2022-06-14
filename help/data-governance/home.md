@@ -5,9 +5,9 @@ title: Overzicht gegevensbeheer
 topic-legacy: overview
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naa
 Er zijn twee soorten beleid beschikbaar:
 
 * **[!UICONTROL Data governance policy]**: Beperk de gegevensactivering op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de betrokken gegevens worden meegevoerd.
-* **[!UICONTROL Consent policy](bèta)**: De profielen filteren waarop kan worden geactiveerd [bestemmingen](../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten.
+* **[!UICONTROL Consent policy]**: De profielen filteren waarop kan worden geactiveerd [bestemmingen](../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten.
 
 Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevens stewards beleid tot stand brengen gebruikend [!DNL Policy Service] API of de [!DNL Experience Platform] gebruikersinterface. Voor meer informatie over het beleid en de marketingacties van het gegevensgebruik, zie [beleidsoverzicht](./policies/overview.md).
 
