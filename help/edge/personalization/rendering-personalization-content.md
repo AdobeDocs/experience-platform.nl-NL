@@ -3,9 +3,9 @@ title: Persoonlijke inhoud renderen met de SDK van het Adobe Experience Platform
 description: Leer hoe u persoonlijke inhoud kunt renderen met de SDK van Adobe Experience Platform Web.
 keywords: personalisatie;renderDecisions;sendEvent;DecisionScopes;proposities;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### flikkering beheren
 
 De SDK biedt faciliteiten aan [flikkering beheren](../personalization/manage-flicker.md) tijdens het verpersoonlijkingsproces.
+
+## Profielen renderen in toepassingen van één pagina zonder metrische gegevens te verhogen {#applypropositions}
+
+De `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Hierdoor wordt de rapportnauwkeurigheid vergroot.
+
+>[!IMPORTANT]
+>
+>Indien voorstellen voor de `__view__` bereik is weergegeven bij laden van pagina, hun `renderAttempted` markering wordt ingesteld op `true`. De `applyPropositions` de opdracht wordt niet opnieuw gerenderd `__view__` bereikvoorstellingen die de `renderAttempted: true` markering.
+
+### Hoofdlettergebruik 1: Weergavevoorstellingen van één pagina opnieuw renderen
+
+Het gebruiksgeval dat in het onderstaande voorbeeld wordt beschreven, rendert de eerder opgehaalde en weergegeven voorstellingen van de kartonweergave opnieuw zonder weergavemeldingen te verzenden.
+
+In het onderstaande voorbeeld wordt `sendEvent` wordt getriggerd op een wijziging in de weergave en wordt het resulterende object in een constante opgeslagen.
+
+Wanneer vervolgens de weergave of een component wordt bijgewerkt, wordt de `applyPropositions` wordt aangeroepen, met de voorstellen van het vorige `sendEvent` om de weergavevoorstellingen opnieuw te renderen.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Hoofdlettergebruik 2: Proposities renderen die geen kiezer hebben
+
+Dit gebruiksgeval is van toepassing op activiteitenaanbiedingen die zijn gemaakt met de [!DNL Target Form-based Experience Composer].
+
+U moet de kiezer, de handeling en het bereik opgeven in het dialoogvenster `applyPropositions` vraag.
+
+Ondersteund `actionTypes` zijn:
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+Als u geen meta-gegevens voor een beslissingswerkingsgebied verstrekt, zullen de bijbehorende voorstellen niet worden teruggegeven.
