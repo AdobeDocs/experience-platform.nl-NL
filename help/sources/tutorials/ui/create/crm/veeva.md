@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Een Veeva CRM-bronverbinding maken in de gebruikersinterface
 topic-legacy: overview
 type: Tutorial
-description: Learn how to create a Veeva CRM source connection using the Adobe Experience Platform UI.
+description: Leer hoe u een Veeva CRM-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: 8b4e3b9e95dd4c2ff8f3b5a1399eb7d114024bb6
+source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '411'
 ht-degree: 1%
 
 ---
 
-# Create a [!DNL Veeva CRM] source connection in the UI
+# Een [!DNL Veeva CRM] bronverbinding in de gebruikersinterface
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens van CRM op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Veeva CRM] bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
 
@@ -28,16 +28,16 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 Als u al een geldige [!DNL Veeva CRM] account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/crm.md).
 
-### Gather required credentials
+### Vereiste referenties verzamelen
 
-| Credential | Beschrijving |
+| Credentials | Beschrijving |
 | ---------- | ----------- |
 | `environmentUrl` | De URL van de [!DNL Veeva CRM] broninstantie. |
 | `username` | De gebruikersnaam voor de [!DNL Veeva CRM] gebruikersaccount. |
 | `password` | Het wachtwoord voor de [!DNL Veeva CRM] gebruikersaccount. |
 | `securityToken` | De beveiligingstoken voor de [!DNL Veeva CRM] gebruikersaccount. |
 
-Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Veeva CRM] document](https://developer.veevacrm.com/api/#order-management-rest-api).
+Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Verbind uw [!DNL Veeva CRM] account
 
@@ -45,7 +45,7 @@ Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volg
 
 Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. Alternatively, you can find the specific source you wish to work with using the search option.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de [!UICONTROL CRM] categorie, selecteert u **[!UICONTROL Veeva CRM]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
