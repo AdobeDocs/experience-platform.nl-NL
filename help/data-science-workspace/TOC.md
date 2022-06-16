@@ -5,10 +5,10 @@ breadcrumb-title: Werkruimtegids voor gegevenswetenschappen
 user-guide-description: Gebruik computerleren om modellen en recepten te ontwikkelen, te trainen en te scoren met Adobe Sensei- en JupyterLab-laptops.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: ec69c859a7b40f3d527c73405b358862ebdb92e7
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '236'
+ht-degree: 1%
 
 ---
 
@@ -35,11 +35,6 @@ ht-degree: 2%
    * [MLServices](api/mlservices.md)
    * [Inzichten](api/insights.md)
    * [Aanhangsel](api/appendix.md)
-* Real-time Machine Learning (alfa) {#real-time-machine-learning}
-   * [Overzicht](real-time-machine-learning/home.md)
-   * [Aan de slag](real-time-machine-learning/getting-started.md)
-   * [Laptops beheren](real-time-machine-learning/rtml-authoring-notebook.md)
-   * [Referentiehandleiding knooppunt](real-time-machine-learning/node-reference.md)
 * Vooraf gebouwde recepten {#pre-built-recipes}
    * [Recept voor productaanbevelingen](pre-built-recipes/product-recommendations.md)
    * [Voorspelling van productaankoop](pre-built-recipes/product-purchase-prediction.md)
