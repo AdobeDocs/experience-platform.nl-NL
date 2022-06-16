@@ -5,7 +5,7 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
+source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -45,6 +45,12 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een de
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
+<!-- ### Analytics {#analytics}
+
+Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
+
 ### Cloud Storage {#cloud-storage}
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
@@ -68,7 +74,6 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen z
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een platform voor toestemming en voorkeurenbeheer van derden. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
-
 
 ### Customer Relationship Management (CRM) {#customer-relationship-management}
 

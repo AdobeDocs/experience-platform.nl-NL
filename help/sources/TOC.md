@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
+source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '795'
 ht-degree: 5%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 5%
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Reclame {#advertising}
       - [Google AdWords-connector](connectors/advertising/ads.md)
+   - Analytics {#analytics}
+      - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
    - Cloud-opslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-connector](connectors/cloud-storage/s3.md)
@@ -101,6 +103,8 @@ ht-degree: 5%
    - Een basisverbinding maken {#create}
       - Reclame {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - Analyse {#analytics}
+         - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -197,8 +201,10 @@ ht-degree: 5%
          - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - Reclame {#create}
+      - Reclame {#advertising}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - Analyse {#analytics}
+         - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -263,6 +269,7 @@ ht-degree: 5%
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Een gegevensstroom configureren {#dataflow}
       - [Gegevensstroom advertentieverbinding](tutorials/ui/dataflow/advertising.md)
+      - [Gegevensstroom analytische verbinding](tutorials/ui/dataflow/analytics.md)
       - [Batch-gegevens voor cloudopslagverbinding](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Gegevens over streaming cloudopslagverbinding](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Verbindingsgegevens voor goedkeuring en voorkeuren](tutorials/ui/dataflow/consent-and-preferences.md)
