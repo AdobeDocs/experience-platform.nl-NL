@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;Salesforce;salesforce;f
 title: Salesforce-toewijzingsvelden
 description: De onderstaande tabellen bevatten de toewijzingen tussen Salesforce-bronvelden en de bijbehorende XDM-velden.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 7921eded0a63b8667e693aefab87013c12cd4061
+source-git-commit: 5a8c5c4f6d569ea1c587b12e5d72cd471b111921
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 1%
@@ -34,6 +34,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `HomePhone` | `homePhone.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `b2b.personKey.sourceID` |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
@@ -83,6 +84,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `IsConverted` | `b2b.isConverted` |
+| `isDeleted` | `isDeleted` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID` |
@@ -144,6 +146,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Description` | `accountDescription` |
 | `DunsNumber` | `accountOrganization.DUNSNumber` | data.com, functie |
 | `Fax` | `accountFax.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `Industry` | `accountOrganization.industry` |
@@ -199,6 +202,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `ForecastCategoryName` | `forecastCategoryName` |
 | `Id` | `opportunityKey.sourceID` |
 | `IsClosed` | `isClosed` |
+| `isDeleted` | `isDeleted` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -228,6 +232,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -244,6 +249,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `Name` | `campaignName` |
@@ -272,6 +278,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `"Salesforce"` | `campaignKey.sourceType` |
