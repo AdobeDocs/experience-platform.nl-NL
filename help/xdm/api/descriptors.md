@@ -5,9 +5,9 @@ title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1834'
 ht-degree: 0%
 
 ---
@@ -311,7 +311,7 @@ Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsbeschrijving moet deze waarde worden ingesteld op `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Het pad naar de specifieke eigenschap die de identiteit zal zijn. Het pad moet beginnen met een &quot;/&quot; en niet eindigen met een pad. Plaats geen &quot;eigenschappen&quot; in het pad (gebruik bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;) |
@@ -347,7 +347,7 @@ Met beschrijvingen van familienaam kan een gebruiker de `title`, `description`, 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een beschrijvende naam moet deze waarde worden ingesteld op `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Het pad naar de specifieke eigenschap die de identiteit zal zijn. Het pad moet beginnen met een &quot;/&quot; en niet eindigen met een pad. Plaats geen &quot;eigenschappen&quot; in het pad (gebruik bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;) |
@@ -377,7 +377,7 @@ Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een relatiebeschrijving moet deze waarde worden ingesteld op `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de relatie wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
@@ -386,7 +386,6 @@ Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#
 | `xdm:destinationProperty` | Optioneel pad naar een doelveld binnen het doelschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### Referentie-identiteitsdescriptor
 
@@ -404,8 +403,32 @@ De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsbeschrijving van een referentie moet deze waarde worden ingesteld op `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de descriptor wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
 | `xdm:identityNamespace` | De naamruimtecode van de identiteit voor de eigenschap source. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### Vervangen velddescriptor
+
+U kunt [een veld binnen een aangepaste XDM-bron vervangen](../tutorials/field-deprecation.md#custom) door een `meta:status` kenmerk ingesteld op `deprecated` op het betrokken gebied. Als u velden die worden verschaft door standaard XDM-bronnen in uw schema&#39;s wilt vervangen, kunt u echter een vervangen velddescriptor toewijzen aan het desbetreffende schema om hetzelfde effect te bereiken. Met de [correct `Accept` header](../tutorials/field-deprecation.md#verify-deprecation)kunt u vervolgens bekijken welke standaardvelden zijn vervangen voor een schema wanneer u het opzoekt in de API.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `@type` | Het type descriptor. Voor een beschrijving van de veldafdrukking moet deze waarde worden ingesteld op `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | De URI `$id` van het schema waarop u de descriptor toepast. |
+| `xdm:sourceVersion` | De versie van het schema waarop u de descriptor toepast. Moet worden ingesteld op `1`. |
+| `xdm:sourceProperty` | Het pad naar de eigenschap in het schema waarop u de descriptor toepast. Als u de descriptor op meerdere eigenschappen wilt toepassen, kunt u een lijst met paden opgeven in de vorm van een array (bijvoorbeeld `["/firstName", "/lastName"]`). |
+
+{style=&quot;table-layout:auto&quot;}

@@ -5,9 +5,9 @@ title: Aan de slag met de API voor schemaregistratie
 description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -211,6 +211,7 @@ De volgende tabel bevat compatibele `Accept` headerwaarden, inclusief waarden me
 | `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkte XDM met `$ref` en `allOf`. Geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` kenmerken en `allOf` opgelost. Geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` kenmerken en `allOf` opgelost. Beschrijvers worden opgenomen. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. Verouderde velden worden aangegeven met een `meta:status` kenmerk van `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 

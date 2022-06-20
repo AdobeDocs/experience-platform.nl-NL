@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '468'
 ht-degree: 6%
 
 ---
@@ -171,12 +171,13 @@ ht-degree: 6%
    * [Een schema maken in de gebruikersinterface](tutorials/create-schema-ui.md)
    * [Een schema maken in de API](tutorials/create-schema-api.md)
    * [Aangepaste velden in de API definiëren](./tutorials/custom-fields-api.md)
+   * [Voorgestelde waarden toevoegen aan een veld (API)](tutorials/suggested-values.md)
+   * [Een XDM-veld verwijderen](tutorials/field-deprecation.md)
    * [Een schemarelatie definiëren in de UI](tutorials/relationship-ui.md)
    * [Een schemarelatie definiëren in de API](tutorials/relationship-api.md)
    * [Definieer een schemarelatie in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [De labels voor gegevensgebruik voor een schema beheren](tutorials/labels.md)
-   * [Een ad-hocschema (API) maken](tutorials/ad-hoc.md)
-   * [Voorgestelde waarden toevoegen aan een veld (API)](tutorials/suggested-values.md)
+   * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

@@ -5,16 +5,16 @@ title: Schemas API Endpoint
 description: Het /schemas eindpunt in de Registratie API van het Schema staat u toe om schema's XDM binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
 
 # Schemas, eindpunt
 
-Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt invoeren. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. De `/schemas` in de [!DNL Schema Registry] Met API kunt u schema&#39;s programmatisch beheren binnen uw ervaringstoepassing.
+Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt opnemen. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. De `/schemas` in de [!DNL Schema Registry] Met API kunt u schema&#39;s programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
@@ -138,6 +138,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle op
 | `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf`, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. Verouderde velden worden aangegeven met een `meta:status` kenmerk van `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 
