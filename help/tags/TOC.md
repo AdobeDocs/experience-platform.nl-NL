@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1d1d070de0a62c42cdda3f021cafad731a73709b
+source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '394'
 ht-degree: 25%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 25%
    * [Overzicht](./ui/event-forwarding/overview.md)
    * [Aan de slag](./ui/event-forwarding/getting-started.md)
    * [Onbewerkte gegevens configureren](./ui/event-forwarding/secrets.md)
-   * [Bewaking](./ui/event-forwarding/monitoring.md)
+   * [Controle (bèta)](./ui/event-forwarding/monitoring.md)
 * Beheer {#admin}
    * [Overzicht](./ui/administration/overview.md)
    * [Bedrijven en eigendommen](./ui/administration/companies-and-properties.md)

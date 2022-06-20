@@ -2,9 +2,10 @@
 title: Activiteiten controleren bij doorsturen van gebeurtenissen
 description: Leer hoe te om gebruik, fouten te controleren, en tijd in uw gebeurtenis gegevens te verwerken door:sturen eigenschappen.
 feature: Event Forwarding
-source-git-commit: 4de448fb5e8ed94d23ebfbcc1bfe19bcfd36fbca
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
+source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -22,6 +23,12 @@ De **[!UICONTROL Monitoring]** in de UI van de Inzameling van Gegevens staat u t
 ## Vereisten
 
 Deze gids veronderstelt dat u gebeurtenis hebt gekocht door:sturen en dat u een werkend inzicht in hebt hoe gebeurtenis het door:sturen werkt. Zie de [overzicht van gebeurtenissen doorsturen](./overview.md) voor meer informatie .
+
+## Video-overzicht
+
+Bekijk de volgende video voor een overzicht op hoog niveau van de controlefunctie:
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## Eigenschappen en omgevingen selecteren
 
