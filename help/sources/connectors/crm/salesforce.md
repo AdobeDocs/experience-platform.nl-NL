@@ -5,9 +5,9 @@ title: Overzicht van de Salesforce Source Connector
 topic-legacy: overview
 description: Leer hoe u Salesforce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 - [Contactrollen opportunity](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Campagnes](../adobe-applications/mapping/salesforce.md#campaign)
 - [Campagneleden](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [Contactpersoon account](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## Stel de [!DNL Salesforce] naamruimte en schema automatisch genereren
 
