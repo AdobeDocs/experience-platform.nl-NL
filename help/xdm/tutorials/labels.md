@@ -1,9 +1,10 @@
 ---
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,8 @@ Een label dat wordt toegepast op een schemaveld, geeft het gebruiksbeleid aan da
 
 Terwijl de etiketten kunnen worden toegepast op individuele datasets (en gebieden binnen die datasets), kunt u etiketten op het schemaniveau ook toepassen. Wanneer de etiketten rechtstreeks op een schema worden toegepast, worden die etiketten verspreid aan alle bestaande en toekomstige datasets die op dat schema gebaseerd zijn.
 
+Bovendien verspreidt om het even welk gebiedsetiket dat u in één schema toevoegt aan alle andere schema&#39;s die het zelfde gebied van een gedeelde klasse of een gebiedsgroep in dienst nemen. Dit helpt ervoor te zorgen dat de gebruiksregels voor gelijkaardige gebieden over uw volledig gegevensmodel verenigbaar zijn.
+
 Deze zelfstudie behandelt de stappen voor het toevoegen van labels aan een schema met behulp van de Schema-editor in de gebruikersinterface van het Platform.
 
 ## Aan de slag
@@ -32,7 +35,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 ## Selecteer een schema of veld waaraan u labels wilt toevoegen
 
-De etiketten kunnen slechts op schema&#39;s worden toegepast, en kunnen niet aan de componenten worden toegevoegd die omhoog die schema&#39;s (klassen, gebiedsgroepen, en gegevenstypes) maken. Als u wilt beginnen met het toevoegen van labels, moet u eerst [een bestaand schema selecteren om te bewerken](../ui/resources/schemas.md#edit) of [een nieuw schema maken](../ui/resources/schemas.md#create) om de structuur ervan weer te geven in de Schema-editor.
+Als u wilt beginnen met het toevoegen van labels, moet u eerst [een bestaand schema selecteren om te bewerken](../ui/resources/schemas.md#edit) of [een nieuw schema maken](../ui/resources/schemas.md#create) om de structuur ervan weer te geven in de Schema-editor.
 
 Als u de labels voor een afzonderlijk veld wilt bewerken, selecteert u het veld op het canvas en selecteert u vervolgens **[!UICONTROL Manage access]** in het rechterspoor.
 
