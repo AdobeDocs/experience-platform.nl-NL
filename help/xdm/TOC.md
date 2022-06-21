@@ -4,9 +4,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '472'
 ht-degree: 6%
 
 ---
@@ -161,7 +161,9 @@ ht-degree: 6%
    * [Datatypen](api/data-types.md)
    * [Beschrijvers](api/descriptors.md)
    * [Unies](api/unions.md)
-   * [Exporteren/importeren](api/export-import.md)
+   * [CSV naar schemaomzetting](api/csv-to-schema.md)
+   * [Exporteren](api/export.md)
+   * [Importeren](api/import.md)
    * [Voorbeeldgegevens](api/sample-data.md)
    * [Controlelogboek](api/audit-log.md)
    * [Ad-hocregelingen](api/ad-hoc.md)

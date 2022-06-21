@@ -5,7 +5,7 @@ title: Beperkingen voor XDM-veldtypen
 topic-legacy: overview
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 279a1d90be82188ad6fd9d2bb9123354d0046b0d
+source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Lees voordat u deze handleiding gebruikt de [grondbeginselen van de schemacompos
 
 Als u van plan bent om uw eigen veldtypen in de API te definiëren, wordt u ten zeerste aangeraden om te beginnen met de [Handleiding voor ontwikkelaars van het schema Register](../api/getting-started.md) voor meer informatie over het maken van veldgroepen en gegevenstypen waarin u aangepaste velden kunt opnemen. Als u de interface van het Experience Platform gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [velden definiëren in de gebruikersinterface](../ui/fields/overview.md) leren hoe u beperkingen implementeert op velden die u definieert binnen aangepaste veldgroepen en gegevenstypen.
 
-## Basisstructuur en voorbeelden
+## Basisstructuur en voorbeelden {#basic-types}
 
 XDM wordt gebouwd bovenop het Schema van JSON, en daarom erven de gebieden XDM een gelijkaardige syntaxis wanneer het bepalen van hun type. Begrijpen hoe de verschillende gebiedstypes in het Schema JSON worden vertegenwoordigd kan helpen op de basisbeperkingen van elk type wijzen.
 
