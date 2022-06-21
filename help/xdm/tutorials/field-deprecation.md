@@ -1,16 +1,18 @@
 ---
 title: Een XDM-veld verwijderen
 description: Leer hoe u XDM-velden (Experience Data Model) in de Schema Registry-API kunt vervangen.
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
 
 # Een XDM-veld verwijderen
 
-In het Model van Gegevens van de Ervaring (XDM), kunt u een gebied binnen een schema of douanemiddel verwerpen door het [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). In dit document wordt beschreven hoe velden voor verschillende XDM-bronnen moeten worden vervangen.
+In het Model van Gegevens van de Ervaring (XDM), kunt u een gebied binnen een schema of douanemiddel verwerpen door het [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Als een veld wordt afgekeurd, wordt dit verborgen achter UI&#39;s verderop, zoals de [!UICONTROL Profiles] -werkruimte en -Customer Journey Analytics, maar dit is anders een vaste wijziging die geen negatieve invloed heeft op bestaande gegevensstromen.
+
+In dit document wordt beschreven hoe velden voor verschillende XDM-bronnen moeten worden vervangen.
 
 ## Aan de slag
 
