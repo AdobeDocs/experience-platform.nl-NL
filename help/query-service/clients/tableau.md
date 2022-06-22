@@ -5,9 +5,9 @@ title: Connect Tableau naar Query Service
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van Tableau met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,13 @@ Controleer of u de **[!UICONTROL SSL Required]** voordat u probeert verbinding t
 >
 >Zie de [[!DNL Query Service] SSL-documentatie](./ssl-modes.md) voor meer informatie over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en over het maken van verbindingen met deze service `verify-full` SSL-modus.
 
-Nadat u al uw referenties hebt ingevuld, selecteert u **[!DNL Sign In]** om door te gaan.
-
 ![](../images/clients/tableau/sign-in.png)
+
+>[!IMPORTANT]
+>
+>De genestelde gegevensstructuren in derdehulpmiddelen van BI kunnen worden afgevlakt om hun bruikbaarheid te verbeteren en de vereiste werkbelasting te verminderen om gegevens terug te winnen, te analyseren, om te zetten en te melden. Zie de documentatie op de[`FLATTEN` functie](../best-practices/flatten-nested-data.md) voor instructies over het activeren van deze instelling wanneer u verbinding maakt met een database.
+
+Nadat u al uw referenties hebt ingevuld, selecteert u **[!DNL Sign In]** om door te gaan.
 
 U hebt nu verbinding gemaakt met Adobe Experience Platform en er wordt een lijst met uw tabellen weergegeven aan de zijkant.
 

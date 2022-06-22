@@ -5,9 +5,9 @@ title: Verbinding maken met Power BI-zoekservice
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 69f57a0e2293e438a0e5c986d888027892cc6359
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1012'
 ht-degree: 1%
 
 ---
@@ -53,6 +53,10 @@ Het dialoogvenster PostgreSQl-database wordt weergegeven met daarin waarden voor
 Voor de **[!DNL Server]** in Power BI, ga de waarde voor de gastheer in die in de sectie van de Verantwoordelijkheden van de Dienst van de Vraag wordt gevonden. Voor productie, voeg haven toe `:80` tot het einde van de hosttekenreeks. Bijvoorbeeld, `made-up.platform-query.adobe.io:80`.
 
 De **[!DNL Database]** het veld kan &quot;all&quot; of een tabelnaam van een gegevensset zijn. Bijvoorbeeld, `prod:all`.
+
+>[!IMPORTANT]
+>
+>De genestelde gegevensstructuren in derdehulpmiddelen van BI kunnen worden afgevlakt om hun bruikbaarheid te verbeteren en de vereiste werkbelasting te verminderen om gegevens terug te winnen, te analyseren, om te zetten en te melden. Zie de documentatie op de[`FLATTEN` functie](../best-practices/flatten-nested-data.md) voor instructies over het activeren van deze instelling wanneer u verbinding maakt met een database.
 
 ![Het Power BI-dashboard met de invoervelden voor de server en database gemarkeerd.](../images/clients/power-bi/postgresql-database-dialog.png)
 
