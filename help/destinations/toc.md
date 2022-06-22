@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
+source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '761'
 ht-degree: 1%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 1%
       * [Stem van het overzicht van de bestemmingen van de Klant](./catalog/voice/overview.md)
       * [De extensie Digitale feedback bevestigen](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoc-tags, extensie](./catalog/voice/invoca.md)
+      * [verbinding met Medallia](./catalog/voice/medallia-connector.md)
       * [extensie Medallia](./catalog/voice/medallia.md)
       * [URL-inbox-extensie Talk](./catalog/voice/talkurl.md)
 * Destination SDK {#destination-sdk}
