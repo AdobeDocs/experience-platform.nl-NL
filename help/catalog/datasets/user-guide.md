@@ -5,9 +5,9 @@ title: UI-gids voor gegevensbestanden
 topic-legacy: datasets
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,13 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ervoor zorgen dat de regels, beperkingen en beleidsregels betreffende het gebruik van klantgegevens worden nageleefd.
 
-## Gegevensbestanden weergeven
+## Gegevensbestanden weergeven {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="Negatieve getallen in gegevenssetactiviteit"
+>abstract="Negatieve getallen in geneste records betekenen dat een gebruiker bepaalde batches in een geselecteerd tijdbereik heeft verwijderd."
+>text="Learn more in documentation"
 
 In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Datasets]** in de linkernavigatie om het dialoogvenster **[!UICONTROL Datasets]** dashboard. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
 
