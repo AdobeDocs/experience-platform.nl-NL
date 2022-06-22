@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie begeleidt u door de vereiste stappen om een recept te maken met behulp van de sjabloon voor het maken van het recept voor JupyterLab-laptops.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ De [!UICONTROL Recipe Builder] -laptop biedt u de mogelijkheid om training en sc
 >
 >De [!UICONTROL Recipe Builder] laptop ondersteunt het werken met alle bestandsindelingen, maar de functie voor het maken van recept wordt momenteel alleen ondersteund [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe_builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
 Wanneer u [!UICONTROL Recipe Builder] -laptop van de draagtas, wordt de laptop geopend op een nieuw tabblad.
 

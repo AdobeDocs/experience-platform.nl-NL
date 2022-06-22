@@ -5,7 +5,7 @@ title: Overzicht van de Data Science Workspace
 topic-legacy: overview
 description: Deze handleiding biedt een overzicht van de belangrijkste concepten met betrekking tot de Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Alle gegevens in Adobe Experience Platform voldoen aan een gestandaardiseerd XDM
 Als u niet onmiddellijk de gegevens vindt u wenst, maar het bestaat buiten Adobe Experience Platform, is het een vrij eenvoudige taak om extra datasets in te voeren, die ook in het gestandaardiseerde XDM schema zal omzetten.\
 U kunt [!DNL Jupyter Notebook] om de verwerking van gegevens te vereenvoudigen - mogelijk te beginnen met een laptopsjabloon of een laptop die u eerder hebt gebruikt voor koopkracht.
 
-![](./images/home/notebook_templates.png)
+![](./images/home/notebook_templates-new.png)
 
 ### Auteur van het recept
 
