@@ -1,11 +1,10 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 56d43d93be7aca059a38e9428ad5680dd52ad6f9
+title: Opmerkingen bij de release van Adobe Experience Platform juni 2022
+description: In de release van juni 2022 staat Adobe Experience Platform vermeld.
+source-git-commit: 98b9e79fadecc6e0d5ee8e86b785fd905643f725
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 1%
+source-wordcount: '639'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +15,7 @@ ht-degree: 1%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
 
@@ -33,6 +33,20 @@ De Werkruimte van de Wetenschap van gegevens gebruikt machine het leren en kunst
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, zie [overzichtsdocumentatie](../../data-science-workspace/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Activeer profielen voor gerichte Media enquêtes en koppel inzameling terug om klantenbehoeften en verwachtingen beter te begrijpen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Query-service {#query-service}
 
