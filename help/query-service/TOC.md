@@ -4,7 +4,7 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 5%
@@ -47,10 +47,6 @@ ht-degree: 5%
 - Voorbeeldquery&#39;s {#sample-queries}
    - [Voorbeeld van query&#39;s voor ervaringsgebeurtenissen](sample-queries/experience-event.md)
    - [Voorbeeld van Adobe Analytics-query&#39;s](sample-queries/adobe-analytics.md)
-- Data Governance {#data-governance}
-   - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
-   - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
-   - [Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema&#39;s](./data-governance/ad-hoc-schema-labels.md)
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)
@@ -69,6 +65,10 @@ ht-degree: 5%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- Data Governance {#data-governance}
+   - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
+   - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
+   - [Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema&#39;s](./data-governance/ad-hoc-schema-labels.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
