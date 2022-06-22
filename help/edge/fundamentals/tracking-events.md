@@ -3,9 +3,9 @@ title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -218,14 +218,6 @@ De `sendEvent` bevel keert een belofte terug die met een wordt opgelost `result`
 >[!WARNING]
 >
 >`destinations` is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
-
-**conclusies**: Inzichten in real-time machine leren. [Meer informatie over real-time leren van machines.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
-
->[!WARNING]
->
->`inferences` is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
-
-
 
 ## Gebeurtenissen globaal wijzigen {#modifying-events-globally}
 
