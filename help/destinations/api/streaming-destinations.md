@@ -6,9 +6,9 @@ description: In dit document wordt beschreven hoe u streaming doelen kunt maken 
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2231'
 ht-degree: 0%
 
 ---
@@ -471,10 +471,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`: Gebruik de gegevensstroom die u in de vorige stap hebt verkregen.
-* `{ETAG}`: Gebruik het label dat u in de vorige stap hebt verkregen.
-* `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Ga naar **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecteert u **[!UICONTROL Segmentation Service API]** in het linkernavigatiemenu, en zoek naar `GET /segment/definitions` bewerking in **[!UICONTROL Segment Definitions]**.
-* `{PROFILE_ATTRIBUTE}`: Bijvoorbeeld: `personalEmail.address` of `person.lastName`
+| Eigenschap | Beschrijving |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | Gebruik in de URL de id van de gegevensstroom die u in de vorige stap hebt gemaakt. |
+| `{ETAG}` | Krijg de `{ETAG}` uit het antwoord in de vorige stap, [Een gegevensstroom maken](#create-dataflow). De antwoordindeling in de vorige stap heeft escape-aanhalingstekens. U moet de niet-beschermde waarden in de kopbal van het verzoek gebruiken. Zie het onderstaande voorbeeld: <br> <ul><li>Voorbeeld van reactie: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Waarde die u in uw verzoek wilt gebruiken: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom. |
+| `{SEGMENT_ID}` | Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, raadpleegt u [een segmentdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
+| `{PROFILE_ATTRIBUTE}` | Bijvoorbeeld: `"person.lastName"` |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een segment wilt toevoegen aan een gegevensstroom, gebruikt u de opdracht `add` bewerking. |
+| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een segment toevoegt aan een gegevensstroom, gebruikt u het pad dat in het voorbeeld is opgegeven. |
+| `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
+| `id` | Geef de id op van het segment dat u toevoegt aan de doelgegevensstroom. |
+| `name` | *Optioneel*. Geef de naam op van het segment dat u toevoegt aan de doelgegevensstroom. Merk op dat dit gebied niet verplicht is en u kunt met succes een segment aan de bestemmingsdataflow toevoegen zonder zijn naam te verstrekken. |
 
 **Antwoord**
 
@@ -597,7 +604,7 @@ De geretourneerde reactie moet worden opgenomen in de `transformations` paramete
 }
 ```
 
-## Postman-verzamelingen gebruiken om verbinding te maken met streaming doelen  {#collections}
+## Gebruiken [!DNL Postman] verzamelingen voor verbinding met streaming doelen  {#collections}
 
 Als u op een meer gestroomlijnde manier verbinding wilt maken met de streamingdoelen die in deze zelfstudie worden beschreven, kunt u [[!DNL Postman]](https://www.postman.com/).
 
@@ -612,17 +619,21 @@ Klikken [hier](../assets/api/streaming-destination/DestinationPostmanCollection.
 
 Elke verzameling bevat de vereiste verzoeken en omgevingsvariabelen voor [!DNL AWS Kinesis], en [!DNL Azure Event Hub], respectievelijk.
 
-### Postman-verzamelingen gebruiken
+### Hoe wordt de [!DNL Postman] verzamelingen {#how-to-use-postman-collections}
 
 Om met succes met de bestemmingen te verbinden gebruikend in bijlage [!DNL Postman] Voer de volgende stappen uit voor verzamelingen:
 
 * Downloaden en installeren [!DNL Postman];
 * [Downloaden](../assets/api/streaming-destination/DestinationPostmanCollection.zip) en ontpitten de bijgevoegde collecties;
-* Importeer de verzamelingen uit de desbetreffende mappen naar Postman;
+* De verzamelingen uit de bijbehorende mappen importeren in [!DNL Postman];
 * Vul de omgevingsvariabelen in volgens de instructies in dit artikel;
-* Voer de [!DNL API] verzoeken van Postman, op basis van de instructies in dit artikel.
+* Voer de [!DNL API] verzoeken van [!DNL Postman]op basis van de instructies in dit artikel.
 
-## Volgende stappen
+## API-foutafhandeling {#api-error-handling}
+
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van de Platform voor meer informatie over het interpreteren van foutenreacties.
+
+## Volgende stappen {#next-steps}
 
 Door deze zelfstudie te volgen, hebt u met succes Platform met één van uw aangewezen het stromen bestemmingen verbonden en opstelling een gegevensstroom aan de respectieve bestemming. De uitgaande gegevens kunnen nu in de bestemming voor klantenanalyse of om het even welke andere gegevensverrichtingen worden gebruikt u zou willen uitvoeren. Raadpleeg de volgende pagina&#39;s voor meer informatie:
 

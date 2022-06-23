@@ -7,9 +7,9 @@ landing-page-description: Vind antwoorden op vaak gestelde vragen en een gids vo
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: ef565383ab6abfe93eb8ed6a86216642eec11f6e
+source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1851'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,7 @@ Alle API-aanroepen in [!DNL Platform] specifieke aanvraagheaders vereisen. Om te
 
 Dit foutbericht wordt weergegeven wanneer een `Authorization` header ontbreekt in een API-aanvraag. Zorg ervoor dat de machtigingheader is opgenomen met een geldig toegangstoken voordat u het opnieuw probeert.
 
-### OAuth-token is niet geldig
+### OAuth-token is niet geldig {#oauth-token-is-not-valid}
 
 ```json
 {
@@ -120,7 +120,7 @@ Dit foutbericht wordt weergegeven wanneer een `Authorization` header ontbreekt i
 
 Dit foutbericht wordt weergegeven wanneer het toegangstoken in het dialoogvenster `Authorization` header is not valid. Controleer of het token correct is ingevoerd, of [een nieuw token genereren](https://www.adobe.com/go/platform-api-authentication-en) in de Adobe I/O Console.
 
-### API-sleutel is vereist
+### API-sleutel is vereist {#api-key-is-required}
 
 ```json
 {
@@ -131,7 +131,7 @@ Dit foutbericht wordt weergegeven wanneer het toegangstoken in het dialoogvenste
 
 Dit foutbericht wordt weergegeven wanneer een API-sleutelheader (`x-api-key`) ontbreekt in een API-aanvraag. Zorg ervoor dat de header is opgenomen met een geldige API-sleutel voordat u het opnieuw probeert.
 
-### API-sleutel is ongeldig
+### API-sleutel is ongeldig {#api-key-is-invalid}
 
 ```json
 {
@@ -142,8 +142,7 @@ Dit foutbericht wordt weergegeven wanneer een API-sleutelheader (`x-api-key`) on
 
 Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutelheader (`x-api-key`) is ongeldig. Controleer of u de sleutel correct hebt ingevoerd voordat u het opnieuw probeert. Als u de API-sleutel niet kent, kunt u deze vinden in het dialoogvenster [Adobe I/O-console](https://console.adobe.io): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een specifieke integratie om de API-sleutel onder te zoeken **Client Credentials**.
 
-
-### Ontbrekende koptekst
+### Ontbrekende koptekst {#missing-header}
 
 ```json
 {
@@ -154,7 +153,7 @@ Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutel
 
 Dit foutbericht wordt weergegeven als een IMS org-header (`x-gw-ims-org-id`) ontbreekt in een API-aanvraag. Zorg ervoor dat de koptekst is opgenomen in de id van uw IMS-organisatie voordat u het opnieuw probeert.
 
-### Profiel is niet geldig
+### Profiel is niet geldig {#profile-is-not-valid}
 
 ```json
 {
@@ -165,7 +164,19 @@ Dit foutbericht wordt weergegeven als een IMS org-header (`x-gw-ims-org-id`) ont
 
 Dit foutbericht wordt weergegeven wanneer de gebruiker of de Adobe I/O-integratie (geïdentificeerd door de [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` header) heeft geen recht om te bellen naar [!DNL Experience Platform] API&#39;s voor de IMS Org die worden geleverd in het dialoogvenster `x-gw-ims-org-id` header. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, kunt u deze vinden in de [Adobe I/O-console](https://console.adobe.io): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een specifieke integratie om de id onder te zoeken **Client Credentials**.
 
-### Geldig inhoudstype niet opgegeven
+### Fout bij vernieuwen van tag {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+U kunt een etiketfout ontvangen als een verandering op om het even welke bron of bestemmingsentiteit zoals stroom, verbinding, bronschakelaar, of doelverbinding door een andere API bezoeker werd aangebracht. Vanwege de niet-overeenkomende versie wordt de wijziging die u wilt aanbrengen, niet toegepast op de laatste versie van de entiteit.
+
+Als u dit wilt verhelpen, moet u de entiteit opnieuw ophalen, ervoor zorgen dat de wijzigingen compatibel zijn met de nieuwe versie van de entiteit en vervolgens de nieuwe tag in het dialoogvenster `If-Match` en tot slot de API-aanroep.
+
+### Geldig inhoudstype niet opgegeven {#valid-content-type-not-specified}
 
 ```json
 {
@@ -178,7 +189,7 @@ Dit foutbericht wordt weergegeven wanneer de gebruiker of de Adobe I/O-integrati
 
 Dit foutbericht wordt weergegeven wanneer een POST-, PUT- of PATCH-aanvraag ongeldig is of ontbreekt `Content-Type` header. Zorg ervoor dat de koptekst is opgenomen in de aanvraag en dat de waarde ervan `application/json`.
 
-### Gebruikersgebied ontbreekt
+### Gebruikersgebied ontbreekt {#user-region-is-missing}
 
 ```json
 {
