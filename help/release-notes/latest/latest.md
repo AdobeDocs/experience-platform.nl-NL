@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform juni 2022
 description: In de release van juni 2022 staat Adobe Experience Platform vermeld.
-source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
+source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '802'
 ht-degree: 2%
 
 ---
@@ -52,6 +52,15 @@ Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens,
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| [(Beta) Google Ad Manager 360-verbinding](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | De [!DNL Google Ad Manager 360] verbinding maakt batch-upload mogelijk voor [!DNL publisher provided identifiers] (PPID) in [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Google Ad Manager 360] verbinding, neem contact op met uw Adobe-vertegenwoordiger en geef uw [!DNL IMS Organization ID]. |
+| (bèta) Destination SDK-ondersteuning voor [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) bestandsgebaseerde doelen en [configureerbare bestandsnamen](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | U kunt de Destination SDK nu gebruiken om Google Cloud Storage-doelen te maken en aangepaste bestandsnamen voor geëxporteerde bestanden te definiëren via bestandsnaammacro&#39;s. <br><br> Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Nieuwe bestemmingen**
 
