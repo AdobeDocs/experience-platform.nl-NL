@@ -6,9 +6,9 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
+source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
 workflow-type: tm+mt
-source-wordcount: '3052'
+source-wordcount: '3062'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,7 @@ Voor batchbestemmingen wordt de [!UICONTROL Dataflow runs] bevat metrische gegev
 Elke individuele dataflow run toont de volgende details:
 
 - **[!UICONTROL Dataflow run start]**: De tijd dat dataflow begon bij.
+- **[!UICONTROL Segment]**: De naam van het segment verbonden aan elke dataflow looppas.
 - **[!UICONTROL Processing time]**: De hoeveelheid tijd het voor dataflow nam om te worden verwerkt.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt.
 - **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten die met succes aan de geselecteerde bestemming als deel van dataflow looppas werden geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde segmenten.
