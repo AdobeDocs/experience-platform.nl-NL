@@ -3,9 +3,9 @@ title: Het vergelijken bij.js met het Web SDK van het Experience Platform
 description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
+source-git-commit: 7bdf4c01ad3b361b3bc53574d4da1096757c815c
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2286'
 ht-degree: 2%
 
 ---
@@ -462,11 +462,22 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
+Meer informatie over de `applyOffers` van de [speciale documentatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+
 
 ### Web SDK gebruiken
 
-Deze functie wordt momenteel niet ondersteund in Web SDK.
+U kunt de doelactiviteiten toepassen met behulp van de `applyPropositions` gebruiken.
+
+Voorbeeld:
+
+```javascript
+alloy("applyPropositions", {
+    propositions: [...]
+});
+```
+
+Meer informatie over de `applyPropositions` van de [speciale documentatie](../../personalization/rendering-personalization-content.md#applypropositions).
 
 ## Hoe kan ik gebeurtenissen volgen?
 
