@@ -1,10 +1,11 @@
 ---
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: (Bèta) op dossier-gebaseerde opties van de bestemmingsconfiguratie voor Destination SDK
-source-git-commit: 5186e90b850f1e75ec358fa01bfb8a5edac29277
+exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
+source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
 workflow-type: tm+mt
-source-wordcount: '1884'
-ht-degree: 3%
+source-wordcount: '2268'
+ht-degree: 2%
 
 ---
 
@@ -278,7 +279,7 @@ U kunt de in dit document beschreven functionaliteit configureren met de `/autho
    },
    "batchConfig":{
       "allowMandatoryFieldSelection":true,
-      "allowJoinKeyFieldSelection":true,
+      "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
       "allowedExportMode":[
          "DAILY_FULL_EXPORT",
@@ -290,11 +291,20 @@ U kunt de in dit document beschreven functionaliteit configureren met de `/autho
          "EVERY_6_HOURS",
          "EVERY_8_HOURS",
          "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+         "ONCE"
       ],
       "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultStartTime":"00:00",
+      "filenameConfig": {
+            "allowedFilenameAppendOptions": [
+                "SEGMENT_NAME",
+                "DATETIME",
+                "TIMESTAMP",
+                "DESTINATION_NAME",
+                "SANDBOX_NAME"
+            ],
+            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
+      }
    },
    "backfillHistoricalProfileData":true
 }
@@ -324,7 +334,7 @@ Deze sectie in de bestemmingsconfiguratie produceert [Nieuwe bestemming configur
 
 Afhankelijk van welke [verificatieoptie](authentication-configuration.md##supported-authentication-types) u in het `authType` wordt de pagina Experience Platform voor de gebruikers als volgt gegenereerd:
 
-### Amazon S3-verificatie
+### Amazon S3-verificatie {#s3}
 
 Wanneer u het Amazon S3 authentificatietype vormt, worden de gebruikers vereist om de S3 geloofsbrieven in te voeren.
 
@@ -352,7 +362,7 @@ Wanneer u SFTP met SSH zeer belangrijke authentificatietype vormt, worden de geb
 
 Gebruik deze sectie om gebruikers te vragen aangepaste velden in te vullen, specifiek voor uw doel, wanneer u verbinding maakt met het doel in de gebruikersinterface van het Experience Platform.
 
-In het onderstaande voorbeeld: `customerDataFields` vereist dat gebruikers een naam voor hun bestemming invoeren en een [!DNL Amazon S3] De naam van de emmertje en omslagweg, evenals een compressietype en een dossierformaat.
+In het onderstaande voorbeeld: `customerDataFields` vereist dat gebruikers een naam voor hun bestemming invoeren en een [!DNL Amazon S3] De naam van de emmertje en de omslagweg, evenals een compressietype, dossierformaat, en verscheidene andere opties van de dossieruitvoer.
 
 ```json
  "customerDataFields":[
@@ -649,6 +659,7 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de workflow vo
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
+}
 ```
 
 | Parameter | Type | Beschrijving |
@@ -722,37 +733,96 @@ Klanten kunnen bijvoorbeeld een [!DNL Platform] [!DNL IDFA] naamruimte naar een 
 Deze sectie verwijst naar de instellingen voor het exporteren van bestanden in de bovenstaande configuratie die Adobe moet gebruiken voor uw doel in de Adobe Experience Platform-gebruikersinterface.
 
 ```json
- "batchConfig":{
-      "allowMandatoryFieldSelection":true,
-      "allowDedupeKeyFieldSelection":true,
-      "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
-         "DAILY_FULL_EXPORT",
-         "FIRST_FULL_THEN_INCREMENTAL"
+"batchConfig":{
+   "allowMandatoryFieldSelection":true,
+   "allowDedupeKeyFieldSelection":true,
+   "defaultExportMode":"DAILY_FULL_EXPORT",
+   "allowedExportMode":[
+      "DAILY_FULL_EXPORT",
+      "FIRST_FULL_THEN_INCREMENTAL"
+   ],
+   "allowedScheduleFrequency":[
+      "DAILY",
+      "EVERY_3_HOURS",
+      "EVERY_6_HOURS",
+      "EVERY_8_HOURS",
+      "EVERY_12_HOURS",
+      "ONCE"
+   ],
+   "defaultFrequency":"DAILY",
+   "defaultStartTime":"00:00",
+   "filenameConfig":{
+      "allowedFilenameAppendOptions":[
+         "SEGMENT_NAME",
+         "DESTINATION_INSTANCE_ID",
+         "DESTINATION_INSTANCE_NAME",
+         "ORGANIZATION_NAME",
+         "SANDBOX_NAME",
+         "DATETIME",
+         "CUSTOM_TEXT"
       ],
-      "allowedScheduleFrequency":[
-         "DAILY",
-         "EVERY_3_HOURS",
-         "EVERY_6_HOURS",
-         "EVERY_8_HOURS",
-         "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+      "defaultFilenameAppendOptions":[
+         "SEGMENT_ID",
+         "DATETIME"
       ],
-      "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
    }
+}
 ```
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `allowMandatoryFieldSelection` | Boolean | Instellen op `true` zodat klanten kunnen opgeven welke profielkenmerken verplicht zijn. De standaardwaarde is `false`. Zie [Verplichte kenmerken](../ui/activate-batch-profile-destinations.md#mandatory-attributes) voor meer informatie . |
 | `allowDedupeKeyFieldSelection` | Boolean | Instellen op `true` om klanten toe te staan deduplicatietoetsen te specificeren. De standaardwaarde is `false`.  Zie [Deduplicatietoetsen](../ui/activate-batch-profile-destinations.md#deduplication-keys) voor meer informatie . |
-| `defaultExportMode` | Enum | Hiermee definieert u de standaardexportmodus voor bestanden. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> De standaardwaarde is `DAILY_FULL_EXPORT`. Zie de [documentatie voor batchactivering](../ui/activate-batch-profile-destinations.md#scheduling) voor meer informatie over het plannen van het exporteren van bestanden. |
+| `defaultExportMode` | Enum | Hiermee definieert u de standaardexportmodus voor bestanden. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> De standaardwaarde is `DAILY_FULL_EXPORT`. Zie de [documentatie voor batchactivering](../ui/activate-batch-profile-destinations.md#scheduling) voor meer informatie over het plannen van het exporteren van bestanden. |
 | `allowedExportModes` | Lijst | Hiermee definieert u de exportmodi voor bestanden die beschikbaar zijn voor klanten. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Lijst | Hiermee definieert u de exportfrequentie voor bestanden die beschikbaar is voor klanten. Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
-| `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> De standaardwaarde is `DAILY`. |
+| `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> De standaardwaarde is `DAILY`. |
 | `defaultStartTime` | Tekenreeks | Hiermee definieert u de standaardbegintijd voor het exporteren van het bestand. Gebruikt een bestandsindeling van 24 uur. De standaardwaarde is &quot;00:00&quot;. |
+| `filenameConfig.allowedFilenameAppendOptions` | Tekenreeks | *Vereist*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Hiermee bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (onder andere segment-id, naam van de organisatie, datum en tijd van export). Wanneer instellen `defaultFilename`, moet u dubbele macro&#39;s voorkomen. <br><br>Ondersteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de orde waarin u de macro&#39;s bepaalt, zal Experience Platform UI altijd hen in de hier voorgestelde orde tonen. <br><br> Indien `defaultFilename` is leeg, de `allowedFilenameAppendOptions` lijst moet ten minste één macro bevatten. |
+| `filenameConfig.defaultFilenameAppendOptions` | Tekenreeks | *Vereist*. Vooraf geselecteerde standaardbestandsnaammacro&#39;s die gebruikers kunnen uitschakelen.<br><br> De macro&#39;s in deze lijst zijn een subset van de macro&#39;s die zijn gedefinieerd in `allowedFilenameAppendOptions`. |
+| `filenameConfig.defaultFilename` | Tekenreeks | *Optioneel*. Hiermee definieert u de standaardbestandsnamen van macro&#39;s voor de geëxporteerde bestanden. Deze kunnen niet worden overschreven door gebruikers. <br><br>Elke macro gedefinieerd door `allowedFilenameAppendOptions` wordt toegevoegd na de `defaultFilename` macro&#39;s. <br><br>Indien `defaultFilename` is leeg, moet u ten minste één macro definiëren in `allowedFilenameAppendOptions`. |
+
+
+### Configuratie bestandsnaam {#file-name-configuration}
+
+Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geëxporteerde bestandsnamen moeten bevatten. De macro&#39;s in de onderstaande tabel beschrijven de elementen in de gebruikersinterface in het dialoogvenster [bestandsnaamconfiguratie](../ui/activate-batch-profile-destinations.md#file-names) scherm.
+
+Als beste praktijken moet u altijd omvatten `SEGMENT_ID` in de geëxporteerde bestandsnamen. Segment-id&#39;s zijn uniek, dus het opnemen ervan in de bestandsnaam is de beste manier om ervoor te zorgen dat bestandsnamen ook uniek zijn.
+
+| Macro | UI-label | Beschrijving | Voorbeeld |
+|---|---|---|---|
+| `DESTINATION` | [!UICONTROL Destination] | Doelnaam in de gebruikersinterface. | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door Platform gegenereerde segment-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Door gebruiker gedefinieerde segmentnaam | VIP abonnee |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Unieke, door Platform gegenereerde id van de doelinstantie | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Door gebruiker gedefinieerde naam van de doelinstantie. | Mijn advertentiebestemming 2022 |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Naam van de klantenorganisatie in Adobe Experience Platform. | Naam van mijn organisatie |
+| `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Naam van de sandbox die door de klant wordt gebruikt. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` en `TIMESTAMP` beide definiëren wanneer het bestand is gegenereerd, maar in verschillende indelingen. <br><br><ul><li>`DATETIME` gebruikt de volgende indeling: YYYMMDD_HMMSS.</li><li>`TIMESTAMP` gebruikt de Unix-indeling van 10 cijfers. </li></ul> `DATETIME` en `TIMESTAMP` elkaar uitsluiten en niet gelijktijdig kunnen worden gebruikt. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL Custom text] | Door de gebruiker gedefinieerde aangepaste tekst die in de bestandsnaam moet worden opgenomen. Kan niet gebruiken in `defaultFilename`. | My_custom_text |
+| `TIMESTAMP` | [!UICONTROL Date and time] | Tijdstempel van 10 cijfers van het tijdstip waarop het bestand is gegenereerd, in Unix-indeling. | 1652131584 |
+
+
+![UI-afbeelding die het configuratiescherm voor de bestandsnaam met vooraf geselecteerde macro&#39;s weergeeft](assets/file-name-configuration.png)
+
+In het voorbeeld in de bovenstaande afbeelding wordt de volgende macroconfiguratie voor de bestandsnaam gebruikt:
+
+```json
+"filenameConfig":{
+   "allowedFilenameAppendOptions":[
+      "CUSTOM_TEXT",
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilenameAppendOptions":[
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilename": "%DESTINATION%"
+}
+```
+
 
 ## Historische profielkwalificaties {#profile-backfill}
 

@@ -2,7 +2,7 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '1784'
 ht-degree: 2%
@@ -271,6 +271,7 @@ Gebruik de `maxUsersPerRequest` om het maximumaantal profielen te specificeren d
 Deze optie werkt het best als u eerder grote partijen, met duizenden profielen op de zelfde vraag zou nemen. Met deze optie kunt u ook de geëxporteerde profielen samenvoegen op basis van complexe aggregatieregels.
 
 Met deze optie kunt u:
+
 * Stel de maximale tijd en het maximale aantal profielen in dat moet worden samengevoegd voordat een API-aanroep naar uw bestemming wordt uitgevoerd.
 * De geëxporteerde profielen bundelen die aan de bestemming zijn toegewezen op basis van:
    * Segment-id;

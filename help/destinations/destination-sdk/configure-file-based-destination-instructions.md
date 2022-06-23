@@ -1,9 +1,10 @@
 ---
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
 title: (Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -259,8 +260,9 @@ Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"auth
 * Als u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in de bestemmingsconfiguratie, zie de volgende secties voor de authentificatietypen die door Destination SDK voor op dossier-gebaseerde bestemmingen worden gesteund:
 
    * [Amazon S3-verificatie](authentication-configuration.md#s3)
-   * [Azure-verbindingstekenreeks](authentication-configuration.md#blob)
-   * [Azure-service-principal](authentication-configuration.md#adls)
+   * [Azure Blob](authentication-configuration.md#blob)
+   * [Azure Data Lake Storage](authentication-configuration.md#adls)
+   * [Google Cloud Storage](authentication-configuration.md#gcs)
    * [SFTP-verificatie met SSH-sleutel](authentication-configuration.md#sftp-ssh)
    * [SFTP-verificatie met wachtwoord](authentication-configuration.md#sftp-password)
 

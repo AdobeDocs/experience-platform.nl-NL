@@ -1,9 +1,10 @@
 ---
 description: De server en de specificaties van de dossierconfiguratie voor op dossier-gebaseerde bestemmingen kunnen in Adobe Experience Platform Destination SDK via het /destination-servers eindpunt worden gevormd.
 title: (Bèta) de opties van de configuratie voor op dossier-gebaseerde bestemmingsserverspecificaties
-source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
+exl-id: 56434e36-0458-45d9-961d-f6505de998f7
+source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '895'
 ht-degree: 8%
 
 ---
@@ -37,7 +38,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
         }
     },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -50,6 +51,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
 | `fileBasedS3Destination.bucket.value` | Tekenreeks | De naam van de [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt. |
 | `fileBasedS3Destination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
 | `fileBasedS3Destination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | Object | Zie [bestandsindelingconfiguratie](#file-configuration) voor nadere uitleg over deze paragraaf. |
 
 ## Specificatie van SFTP-doelserver op basis van bestanden {#sftp-example}
 
@@ -70,7 +72,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
       "encryptionMode" : "PGP"
    },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -85,6 +87,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
 | `fileBasedSftpDestination.hostName.value` | Tekenreeks | De hostnaam van de bestemmingsopslag. |
 | `port` | Geheel | De SFTP-serverpoort. |
 | `encryptionMode` | Tekenreeks | Geeft aan of bestandsversleuteling moet worden gebruikt. Ondersteunde waarden: <ul><li>PGP</li><li>Geen</li></ul> |
+| `fileConfigurations` | Object | Zie [bestandsindelingconfiguratie](#file-configuration) voor nadere uitleg over deze paragraaf. |
 
 ## Op basis van bestand [!DNL Azure Data Lake Storage] ([!DNL ADLS]) specificatie doelserver {#adls-example}
 
@@ -99,7 +102,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -110,6 +113,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
 | `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Azure Data Lake Storage] doelen, stel deze in op `FILE_BASED_ADLS_GEN2`. |
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | Object | Zie [bestandsindelingconfiguratie](#file-configuration) voor nadere uitleg over deze paragraaf. |
 
 ## Op basis van bestand [!DNL Azure Blob Storage] specificatie doelserver {#blob-example}
 
@@ -128,7 +132,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -141,6 +145,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
 | `fileBasedAzureBlobDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.container.value` | Tekenreeks | De naam van de [!DNL Azure Blob Storage] container die door deze bestemming moet worden gebruikt. |
+| `fileConfigurations` | Object | Zie [bestandsindelingconfiguratie](#file-configuration) voor nadere uitleg over deze paragraaf. |
 
 ## Op basis van bestand [!DNL Data Landing Zone] ([!DNL DLZ]) specificatie doelserver {#dlz-example}
 
@@ -156,7 +161,7 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
       "useCase": "Your use case"
    },
    "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -167,8 +172,41 @@ De server en de specificaties van de dossierconfiguratie voor op dossier-gebasee
 | `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Data Landing Zone] doelen, stel deze in op `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | Tekenreeks | *Vereist.*  Gebruik `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | Object | Zie [bestandsindelingconfiguratie](#file-configuration) voor nadere uitleg over deze paragraaf. |
 
-## Bestandsgebaseerde configuratie van doelbestanden {#file-configuration}
+## Op basis van bestand [!DNL Google Cloud Storage] specificatie doelserver {#gcs-example}
+
+```json
+{
+   "name":"Google Cloud Storage Server",
+   "destinationServerType":"FILE_BASED_GOOGLE_CLOUD",
+   "fileBasedGoogleCloudStorageDestination":{
+      "bucket":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.bucket}}"
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+   "fileConfigurations":{
+      // See the file formatting configuration section further below on this page
+   }
+}
+```
+
+| Parameter | Type | Beschrijving |
+|---|---|---|
+| `name` | Tekenreeks | De naam van de doelverbinding. |
+| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Google Cloud Storage] doelen, stel deze in op `FILE_BASED_GOOGLE_CLOUD`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Tekenreeks | *Vereist.*  Gebruik `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | Tekenreeks | De naam van de [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt. |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | Object | Zie [bestandsindelingconfiguratie](#file-configuration) voor nadere uitleg over deze paragraaf. |
+
+## Configuratie bestandsindeling {#file-configuration}
 
 In deze sectie worden de instellingen voor de bestandsindeling voor het geëxporteerde bestand beschreven `CSV` bestanden. U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het systeem voor het ontvangen van bestanden aan uw zijde, zodat u de bestanden die u van het Experience Platform hebt ontvangen, optimaal kunt lezen en interpreteren.
 
@@ -239,7 +277,8 @@ In deze sectie worden de instellingen voor de bestandsindeling voor het geëxpor
                 "templatingStrategy": "NONE",
                 "value": "\n"
             }
-        }
+        },
+        "maxFileRowCount":5000000
     }
 ```
 
@@ -260,3 +299,4 @@ In deze sectie worden de instellingen voor de bestandsindeling voor het geëxpor
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt één teken in dat wordt gebruikt voor escape voor het aanhalingsteken. | `\` wanneer de escape- en aanhalingstekens verschillend zijn. `\0` wanneer de escape- en aanhalingsteken hetzelfde zijn. |
 | `csvOptions.emptyValue.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt de tekenreeksrepresentatie in van een lege waarde. | `""` |
 | `csvOptions.lineSep.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Hiermee definieert u het lijnscheidingsteken dat moet worden gebruikt voor schrijven. De maximumlengte is 1 teken. | `\n` |
+| `maxFileRowCount` | Optioneel | Maximumaantal rijen dat het geëxporteerde bestand kan bevatten. Configureer dit op basis van de vereisten voor de bestandsgrootte van het doelplatform. | N.v.t. |

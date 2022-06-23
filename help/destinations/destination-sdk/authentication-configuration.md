@@ -2,9 +2,9 @@
 description: Gebruik de gesteunde authentificatieconfiguraties in Adobe Experience Platform Destination SDK om gebruikers voor authentiek te verklaren en gegevens te activeren aan uw bestemmingspunt.
 title: Verificatieconfiguratie
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 631c0ac02cb7f4f95500897ca224aa532393c109
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,16 @@ De authentificatieconfiguratie die u selecteert bepaalt hoe het Experience Platf
 
 Adobe Experience Platform Destination SDK ondersteunt verschillende verificatietypen:
 
-* Waardere verificatie
-* (bèta) Amazon S3-verificatie
-* (Beta) Azure-verbindingstekenreeks
-* (Beta) Azure service principal
-* (Beta) SFTP met SSH-sleutel
-* (Beta) SFTP met wachtwoord
-* OAuth 2 met vergunningscode
-* OAUth 2 met wachtwoordsubsidie
-* OAuth 2 met clientaanmeldingsgegevens verlenen
+* [Waardere verificatie](#bearer)
+* [(bèta) Amazon S3-verificatie](#s3)
+* [(Beta) Azure Blob Storage](#blob)
+* [(Beta) Azure Data Lake Storage](#adls)
+* [(bèta) Google Cloud Storage](#gcs)
+* [(Beta) SFTP met SSH-sleutel](#sftp-ssh)
+* [(Beta) SFTP met wachtwoord](#sftp-password)
+* [OAuth 2 met vergunningscode](#oauth2)
+* [OAUth 2 met wachtwoordsubsidie](#oauth2)
+* [OAuth 2 met clientaanmeldingsgegevens verlenen](#oauth2)
 
 U kunt de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt.
 
@@ -41,11 +42,11 @@ De authentificatie van de drager wordt gesteund voor het stromen bestemmingen in
 Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"BEARER"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BEARER"
+   }
+]
 ```
 
 ## (bèta) [!DNL Amazon S3] verificatie {#s3}
@@ -59,11 +60,11 @@ Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuth
 Als u Amazon S3-verificatie voor uw bestemming wilt instellen, configureert u de `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"S3"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"S3"
+   }
+]
 ```
 
 ## (bèta) [!DNL Azure Blob Storage] {#blob}
@@ -77,11 +78,11 @@ Als u Amazon S3-verificatie voor uw bestemming wilt instellen, configureert u de
 Aan opstelling [!DNL Azure Blob] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_CONNECTION_STRING"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_CONNECTION_STRING"
+   }
+]
 ```
 
 ## (bèta) [!DNL Azure Data Lake Storage] {#adls}
@@ -95,12 +96,29 @@ Aan opstelling [!DNL Azure Blob] de authentificatie voor uw bestemming, vormt `c
 Aan opstelling [!DNL Azure Data Lake Storage] (ADLS) authentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_SERVICE_PRINCIPAL"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_SERVICE_PRINCIPAL"
+   }
+]
 ```
+
+## (bèta) [!DNL Google Cloud Storage] {#gcs}
+
+[!DNL Google Cloud Storage] de authentificatie wordt gesteund voor op dossier-gebaseerde bestemmingen in Experience Platform.
+
+>[!IMPORTANT]
+>
+>Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"GOOGLE_CLOUD_STORAGE"
+   }
+]
+```
+
 
 ## (bèta) [!DNL SFTP] verificatie met [!DNL SSH] key {#sftp-ssh}
 
@@ -113,11 +131,11 @@ Aan opstelling [!DNL Azure Data Lake Storage] (ADLS) authentificatie voor uw bes
 Om de authentificatie van SFTP met de sleutel van SSH voor uw bestemming te plaatsen, vorm `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_SSH_KEY"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_SSH_KEY"
+   }
+]
 ```
 
 ## (bèta) [!DNL SFTP] verificatie met wachtwoord {#sftp-password}
@@ -131,11 +149,11 @@ Om de authentificatie van SFTP met de sleutel van SSH voor uw bestemming te plaa
 Als u SFTP-verificatie wilt instellen met een wachtwoord voor uw doel, configureert u de `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_PASSWORD"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_PASSWORD"
+   }
+]
 ```
 
 ## [!DNL OAuth 2] verificatie {#oauth2}

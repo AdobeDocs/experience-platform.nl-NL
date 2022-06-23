@@ -2,7 +2,7 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination.
 title: API-eindpuntbewerkingen voor doelen
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 1%
@@ -35,7 +35,7 @@ POST /authoring/destinations
 
 Het volgende verzoek leidt tot een nieuwe het stromen bestemmingsconfiguratie, die door de parameters wordt gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters voor het stromen bestemmingen die door `/authoring/destinations` eindpunt. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -200,7 +200,14 @@ POST /authoring/destinations
 
 Met de volgende aanvraag wordt een nieuwe [!DNL Amazon S3] op dossier-gebaseerde bestemmingsconfiguratie, die door de parameters wordt gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters voor op dossier-gebaseerde bestemmingen die door `/authoring/destinations` eindpunt. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",
