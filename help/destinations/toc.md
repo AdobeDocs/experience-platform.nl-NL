@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: e017f98ba2fbeab9fe1a785cc7710f75d3dd496a
+source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '778'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 1%
       * [Google Ads-verbinding](./catalog/advertising/google-ads-destination.md)
       * [Google Ads-extensie](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager-verbinding](./catalog/advertising/google-ad-manager.md)
-      * [Google Ad Manager 360-verbinding](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [(Beta) Google Ad Manager 360-verbinding](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match-verbinding](./catalog/advertising/google-customer-match.md)
       * [Google Display &amp; Video 360-verbinding](./catalog/advertising/google-dv360.md)
       * [Google-tag-extensie](./catalog/advertising/gtag-advertising.md)
