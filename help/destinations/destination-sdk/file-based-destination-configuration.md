@@ -2,7 +2,7 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: (Bèta) op dossier-gebaseerde opties van de bestemmingsconfiguratie voor Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 89e05ed522aed697ba3a2f06137546fd5673920d
+source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 2%
@@ -308,7 +308,6 @@ U kunt de in dit document beschreven functionaliteit configureren met de `/autho
             "CUSTOM_TEXT"
          ],
          "defaultFilenameAppendOptions":[
-            "SEGMENT_ID",
             "DATETIME"
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
@@ -759,22 +758,21 @@ Deze sectie verwijst naar de instellingen voor het exporteren van bestanden in d
    "defaultFrequency":"DAILY",
    "defaultStartTime":"00:00",
    "filenameConfig":{
-      "allowedFilenameAppendOptions":[
-         "SEGMENT_NAME",
-         "DESTINATION_INSTANCE_ID",
-         "DESTINATION_INSTANCE_NAME",
-         "ORGANIZATION_NAME",
-         "SANDBOX_NAME",
-         "DATETIME",
-         "CUSTOM_TEXT"
-      ],
-      "defaultFilenameAppendOptions":[
-         "SEGMENT_ID",
-         "DATETIME"
-      ],
-      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      },
    }
-}
 ```
 
 | Parameter | Type | Beschrijving |
