@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform juni 2022
 description: In de release van juni 2022 staat Adobe Experience Platform vermeld.
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '824'
 ht-degree: 2%
 
 ---
@@ -67,6 +67,7 @@ Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens,
 | ----------- | ----------- |
 | [(bèta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | De [!DNL Google Ad Manager 360] verbinding maakt batch-upload mogelijk voor [!DNL publisher provided identifiers] (PPID) in [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Google Ad Manager 360] verbinding, neem contact op met uw Adobe-vertegenwoordiger en geef uw [!DNL IMS Organization ID]. |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Activeer profielen voor gerichte Media enquêtes en koppel inzameling terug om klantenbehoeften en verwachtingen beter te begrijpen. |
+| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | De Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) de bestemming staat u toe om voor authentiek verklaarde eerste-partijsegmenten met goedgekeurde adverteerders en gebruikers voor campagneactivering met DSP te delen. |
 
 {style=&quot;table-layout:auto&quot;}
 
