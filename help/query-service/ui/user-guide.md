@@ -5,9 +5,9 @@ title: UI-gids voor zoekprogramma
 topic-legacy: query editor
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1585'
 ht-degree: 1%
 
 ---
@@ -135,6 +135,10 @@ U kunt een schema verwijderen door **[!UICONTROL Delete a schedule]**.
 ### Bezig met opslaan van query&#39;s {#saving-queries}
 
 [!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Selecteer **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
+
+>[!NOTE]
+>
+>Vragen die zijn genoemd en opgeslagen in de Query-editor, zijn beschikbaar als sjablonen in het dashboard Query [!UICONTROL Browse] tab. Zie de [sjabloondocumentatie](./query-templates.md) voor meer informatie .
 
 ### Hoe te om vorige vragen te vinden {#previous-queries}
 

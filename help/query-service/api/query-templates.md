@@ -3,11 +3,11 @@ keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;vraagmal
 solution: Experience Platform
 title: API-eindpunt voor querysjablonen
 topic-legacy: query templates
-description: De volgende documentatie loopt door de diverse API vraag u het gebruiken van vraagmalplaatjes voor de Dienst API van de Vraag kunt maken.
+description: Deze gids specificeert de diverse vraag API van het vraagmalplaatje u kunt maken gebruikend de Dienst API van de Vraag.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 ## Voorbeeld-API-aanroepen
 
-Nu u begrijpt welke kopballen aan gebruik zijn, bent u bereid beginnen het richten van vraag aan [!DNL Query Service] API. De volgende secties lopen door diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+In de volgende secties worden de verschillende API-aanroepen beschreven die u kunt maken met de [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+
+Zie de [UI-query sjabloondocumentatie](../ui/query-templates.md) voor informatie over het creëren van malplaatjes door de UI van het Experience Platform.
 
 ### Een lijst met querysjablonen ophalen
 
