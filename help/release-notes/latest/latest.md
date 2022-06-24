@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform juni 2022
 description: In de release van juni 2022 staat Adobe Experience Platform vermeld.
-source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 6eadd71984814548522da32ae6d88a49c3ba704f
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -14,25 +15,10 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Verbeteringen voor [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations is nu slimmer en sneller. De nieuwe bevestigingscontroles verminderen beduidend de gemeenschappelijkste afbeeldingsfouten, zo verminderend tijd-aan-Waarde. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Voor meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
