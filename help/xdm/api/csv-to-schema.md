@@ -1,9 +1,10 @@
 ---
 title: CSV-sjabloon naar API-eindpunt voor schemaconversie
 description: Het /rpc/csv2schema eindpunt in de Registratie API van het Schema staat u toe om malplaatjes te gebruiken CSV om de schema's van de Gegevens van de Ervaring van het Model (XDM) automatisch tot stand te brengen.
-source-git-commit: 3860724b97987e555e12807c47f65fe040912d69
+exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 5%
 
 ---
@@ -14,7 +15,7 @@ De `/rpc/csv2schema` in de [!DNL Schema Registry] Met API kunt u automatisch een
 
 ## Aan de slag
 
-De `/rpc/csv2schema` eindpunt maakt deel uit van [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+De `/rpc/csv2schema` eindpunt maakt deel uit van [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Adobe Experience Platform API te kunnen uitvoeren.
 
 De `/rpc/csv2schema` het eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door het [!DNL Schema Registry]. Anders dan bij andere eindpunten in het deelvenster [!DNL Schema Registry] API, RPC-eindpunten vereisen geen extra headers zoals `Accept` of `Content-Type`en geen `CONTAINER_ID`. In plaats daarvan moeten ze de opdracht `/rpc` naamruimte, zoals wordt getoond in de API-aanroepen hieronder.
 
