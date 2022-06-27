@@ -2,11 +2,9 @@
 keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; e-mailmarketingbestemmingen activeren; cloudopslagdoelen activeren
 title: De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen
 type: Tutorial
-seo-title: Activate audience data to streaming profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 0%

@@ -2,11 +2,9 @@
 keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; e-mailmarketingbestemmingen activeren; cloudopslagdoelen activeren
 title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
-seo-title: Activate audience data to batch profile export destinations
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2f38f98567523a5b2830be99782658cd8863771e
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '2464'
 ht-degree: 0%

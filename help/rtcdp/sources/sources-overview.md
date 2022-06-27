@@ -1,20 +1,17 @@
 ---
 keywords: rtcdp-bronnen;bronnen rtcdp;realtime bronnen voor klantgegevensplatform
-title: Bronnen in Platform van de Gegevens van de Klant in real time
-seo-title: Bronnen in Platform van de Gegevens van de Klant in real time
-description: Dit document verstrekt een overzicht van Bronnen in Real-Time Platform van de Gegevens van de Klant
-seo-description: Dit document verstrekt een overzicht van Bronnen in Real-Time Platform van de Gegevens van de Klant
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+title: Bronnen in Real-time Customer Data Platform
+description: Dit document biedt een overzicht van bronnen in Real-time Customer Data Platform
+exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
 
+# Bronnen in Real-time Customer Data Platform
 
-# Bronnen in Platform van de Gegevens van de Klant in real time
+[!DNL Real-Time Customer Data Platform] staat gegevens toe om uit externe bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen.
 
-[!DNL Real-Time Customer Data Platform] staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen.
-
-Lees de [documentatie voor bronnen](../../sources/home.md) voor een gedetailleerder overzicht van bronnen, inclusief een lijst met beschikbare bronnen en koppelingen naar zelfstudies.
+Voor een gedetailleerder overzicht van bronnen, inclusief een lijst met beschikbare bronnen en koppelingen naar zelfstudies, leest u de [documentatie bronnen](../../sources/home.md).

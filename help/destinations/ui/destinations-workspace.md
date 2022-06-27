@@ -1,12 +1,11 @@
 ---
 keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen ui;catalogus;doelcatalogus;
 title: Werkruimte Doelen
-description: De werkruimte van Doelen bestaat uit vier secties, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
-seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
+description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---

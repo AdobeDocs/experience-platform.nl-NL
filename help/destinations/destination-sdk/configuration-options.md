@@ -1,17 +1,15 @@
 ---
 description: De bestemmingsdienst in Adobe Experience Platform gebruikt configuratiemalplaatjes voor verscheidene componenten die omhoog de bestemmingsfunctionaliteit bouwen. Samen, staan deze componenten Experience Platform toe om met bestemmingspartners te verbinden, douaneberichten te verzenden, en profielgegevens over het digitale ecosysteem te activeren.
-seo-description: The destinations service in Adobe Experience Platform uses configuration templates for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination partners, send custom messages, and activate profile data across the digital ecosystem.
-seo-title: Configuration options in Destination SDK
-title: Configuratieopties in SDK van bestemming
+title: Configuratieopties in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 0%
 
 ---
 
-# Configuratieopties in SDK van bestemming
+# Configuratieopties in Destination SDK
 
 ## Overzicht {#overview}
 
@@ -24,11 +22,11 @@ De bestemmingsdienst in Adobe Experience Platform gebruikt configuratiemalplaatj
 * **Verificatieconfiguratie**: Deze instellingen bepalen hoe Adobe Experience Platform-gebruikers verbinding maken met uw bestemming.
 * **Configuratie van metagegevens voor publiek**: Dit malplaatje staat u toe om te vormen hoe het publiek/de segmenten programmatically worden gecreeerd, bijgewerkt, of in uw bestemming geschrapt.
 
-![Sjablonen en configuraties voor de SDK-bestemming](./assets/self-service-configuration.png)
+![Destination SDK sjablonen en configuraties](./assets/self-service-configuration.png)
 
 ## Verwante koppelingen {#related-links}
 
-De pagina&#39;s hieronder verstrekken meer details over de functionaliteit en de configuratieopties beschikbaar in Doel SDK, en de overeenkomstige API verrichtingen die u kunt uitvoeren.
+De onderstaande pagina&#39;s bevatten meer informatie over de functionaliteit en configuratieopties die beschikbaar zijn in Destination SDK en de bijbehorende API-bewerkingen die u kunt uitvoeren.
 
 | Functiebeschrijving | API-referentie |
 |--- |--- |

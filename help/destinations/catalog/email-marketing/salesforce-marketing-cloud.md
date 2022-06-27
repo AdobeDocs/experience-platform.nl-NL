@@ -1,11 +1,11 @@
 ---
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;salesforce bestemming
 title: Verbinding met Salesforce-Marketing Cloud
-seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
+description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---

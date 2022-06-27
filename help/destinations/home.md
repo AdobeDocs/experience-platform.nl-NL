@@ -1,13 +1,11 @@
 ---
 keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;activate gegevens;activate;
 title: Overzicht van doelen
-seo-title: Destinations overview
-description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
-seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

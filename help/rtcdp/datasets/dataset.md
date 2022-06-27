@@ -1,20 +1,17 @@
 ---
 keywords: gegevenssets;rtcdp-gegevenssets
-title: Datasets in Real-Time Customer Data Platform
-seo-title: Overzicht van gegevenssets in Adobe Experience Platform
+title: Datasets in Real-time Customer Data Platform
 description: Overzicht van gegevenssets in Adobe Experience Platform
-seo-description: Overzicht van gegevenssets in Adobe Experience Platform
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+exl-id: 86df38d4-820a-4767-a9ed-3b50b2ae709c
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# Datasets in Real-time Customer Data Platform
 
-# Datasets in Real-Time Customer Data Platform
+Binnen de gebruikersinterface van Adobe Experience Platform, kunt u alle datasets bekijken en beheren die uw organisatie IMS heeft gemaakt, en nieuwe creëren. Selecteer **[!UICONTROL Datasets]** in de linkernavigatie. De **[!UICONTROL Browse]** Het lusje bevat een lijst van datasets, met inbegrip van kolommen die naam tonen, creeerde (datum en tijd), bron, schema, en laatste partijstatus, evenals de datum en de tijd de dataset het laatst werd bijgewerkt.
 
-Binnen de gebruikersinterface van Adobe Experience Platform, kunt u alle datasets bekijken en beheren die uw organisatie IMS heeft gemaakt, en nieuwe creëren. Om Datasets in UI te doorbladeren, selecteer **[!UICONTROL Datasets]** in de linkernavigatie. Het **[!UICONTROL Browse]** lusje bevat een lijst van datasets, met inbegrip van kolommen die naam, gecreeerd (datum en tijd), bron, schema, en laatste partijstatus tonen, evenals de datum en de tijd de dataset het laatst werd bijgewerkt.
-
-Voor informatie over Datasets in [!DNL Experience Platform], begin door [Overzicht Datasets](../../catalog/datasets/overview.md) te lezen.
+Voor informatie over gegevensbestanden in [!DNL Experience Platform], te beginnen met het lezen van de [Overzicht van gegevenssets](../../catalog/datasets/overview.md).

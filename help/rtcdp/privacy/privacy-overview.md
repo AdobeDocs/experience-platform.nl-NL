@@ -1,11 +1,9 @@
 ---
 keywords: gegevensbeheer rtcdp;rtcdp gegevensbeheer;realtime gegevensprofielbeheer van klanten;privacy rtcdp;rtcdp privacy
 title: Privacy in Real-time Customer Data Platform
-seo-title: Privacy in Real-time Customer Data Platform
 description: Met Real-time Customer Data Platform kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen voldoen aan de privacyregels.
-seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: e3519817559dca372e228ed19bba4f9adf279768
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
@@ -24,7 +22,7 @@ Wettelijke privacyvoorschriften zoals [!DNL General Data Protection Regulation] 
 
 >[!IMPORTANT]
 >
-> De verzoeken van de privacy die door Adobe Experience Platform Privacy Service voor de Marketo Engage van de Adobe worden voorgelegd zijn op in real time CDP B2B slechts klanten van toepassing.
+> De verzoeken van de privacy die door Adobe Experience Platform Privacy Service voor Adobe Marketo Engage worden voorgelegd zijn slechts op klanten in real time CDP B2B van toepassing.
 
 ## Mogelijkheden voor uitschakelen
 

@@ -2,9 +2,8 @@
 keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
-seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
