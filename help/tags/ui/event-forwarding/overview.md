@@ -3,7 +3,7 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -67,7 +67,7 @@ De typen gegevenselementen die beschikbaar zijn in het doorsturen van gebeurteni
 
 Terwijl de gegevenselementen zelf worden gecreeerd en gevormd de zelfde manier in gebeurtenis door:sturen aangezien zij voor markeringen zijn, zijn er sommige belangrijke syntaxisverschillen wanneer het over komt hoe zij gegevens van het Netwerk van de Rand van het Platform van verwijzingen voorzien.
 
-#### Verwijzen naar gegevens van het Netwerk van de Rand van het Platform {#edge}
+#### Verwijzen naar gegevens van het Netwerk van de Rand van het Platform {#data-element-path}
 
 Als u wilt verwijzen naar gegevens van Platform Edge Network, moet u een gegevenselement maken dat een geldig pad naar die gegevens biedt. Selecteer **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Path]** voor het type.
 

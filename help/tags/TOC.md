@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
+source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 25%
 
 ---
@@ -107,6 +107,9 @@ ht-degree: 25%
       * Adobe Target v2 {#target-v2}
          * [Overzicht](./extensions/web/target-v2/overview.md)
          * [Aanvullende informatie](./extensions/web/target-v2/release-notes.md)
+      * [!DNL BrightCove] video bijhouden {#brightcove}
+         * [Overzicht](./extensions/web/brightcove/overview.md)
+         * [Aanvullende informatie](./extensions/web/brightcove/release-notes.md)
       * Gebruikelijke plug-ins voor Analytics {#plugins}
          * [Overzicht](./extensions/web/plugins/overview.md)
          * [Aanvullende informatie](./extensions/web/plugins/release-notes.md)
@@ -114,12 +117,11 @@ ht-degree: 25%
          * [Overzicht](./extensions/web/core/overview.md)
          * [Gebeurtenis doorsturen](./extensions/web/core/event-forwarding.md)
          * [Aanvullende informatie](./extensions/web/core/release-notes.md)
+      * [!DNL Mailchimp] Rand {#mailchimp-edge}
+         * [Overzicht](./extensions/web/mailchimp/overview.md)
       * [!DNL Marketo Munchkin] {#marketo}
          * [Overzicht](./extensions/web/marketo/overview.md)
          * [Aanvullende informatie](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] video bijhouden {#brightcove}
-         * [Overzicht](./extensions/web/brightcove/overview.md)
-         * [Aanvullende informatie](./extensions/web/brightcove/release-notes.md)
       * Google-gegevenslaag {#google-data-layer}
          * [Overzicht](./extensions/web/google-data-layer/overview.md)
          * [Aanvullende informatie](./extensions/web/google-data-layer/release-notes.md)
