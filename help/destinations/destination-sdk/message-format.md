@@ -2,9 +2,9 @@
 description: Deze pagina is gericht op de berichtindeling en de profieltransformatie in gegevens die van Adobe Experience Platform naar bestemmingen worden geëxporteerd.
 title: Berichtindeling
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2266'
+source-wordcount: '2272'
 ht-degree: 1%
 
 ---
@@ -83,6 +83,8 @@ Gezien het berichtformaat, zijn de overeenkomstige transformaties als volgt:
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Profielstructuur in Experience Platform {#profile-structure}
 
@@ -1194,6 +1196,8 @@ De onderstaande tabel bevat een beschrijving van de functies in de bovenstaande 
 | `destination.segmentNames` | Wijs van segmentnamen in Adobe Experience Platform namespace aan segmentnamen in het systeem van de partner toe. |
 | `addedSegments(listOfSegments)` | Retourneert alleen de segmenten met status `realized` of `existing`. |
 | `removedSegments(listOfSegments)` | Retourneert alleen de segmenten met status `exited`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Volgende stappen {#next-steps}
 
