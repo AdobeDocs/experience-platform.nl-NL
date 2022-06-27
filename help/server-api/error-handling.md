@@ -1,13 +1,11 @@
 ---
 title: Foutafhandeling
 description: Meer informatie over de mogelijke fouten die kunnen optreden bij het uitvoeren van API-aanvragen voor de Adobe Experience Platform Edge Network Server-API.
-seo-description: Learn about the possible errors you might encounter when performing API requests to the Adobe Experience Platform Edge Network Server API.
-keywords: fout;code;handling;edge;network;gateway;api
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '765'
+ht-degree: 2%
 
 ---
 

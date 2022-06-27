@@ -1,12 +1,10 @@
 ---
 title: Verificatie
-description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Network Server API configureert
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-keywords: gegevensverzameling; authenticatie; Adobe Experience Platform Edge Network api; autorisatie
+description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Network Server-API configureert.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---

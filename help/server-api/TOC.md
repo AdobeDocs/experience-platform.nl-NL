@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Edge Network Server API-documentatie
 breadcrumb-title: Edge Network Server API-documentatie
-user-guide-description: Leer wat de Server API van het Netwerk van Edge is en hoe u het kunt gebruiken.
+user-guide-description: De Adobe Experience Platform Edge Network Server-API biedt klanten een geoptimaliseerde manier om te communiceren met Adobe Experience Cloud- of Adobe Experience Platform Edge-services. Leer hoe u de server-API kunt gebruiken voor verschillende gebruiksgevallen voor gegevensverzameling, personalisatie, advertenties en marketing.
 feature: Data Collection
-source-git-commit: 6fb2b4ab47e9964e64fd94c49623f4c60689094c
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '106'
+ht-degree: 2%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 0%
 # Edge Network Server API-documentatie {#edge-network-server-api}
 
 
-* [Overzicht](overview.md)
-* [Prestatiegerichten](guardrails.md)
+* [Overzicht van de Edge Network Server-API](overview.md)
+* [Prestatiehandleidingen voor Edge Network Server API](guardrails.md)
 * [Verificatie](authentication.md)
 * Gegevensverzameling {#data-collection}
    * [Gegevensverzameling voor één gebeurtenis](interactive-data-collection.md)

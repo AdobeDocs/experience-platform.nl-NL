@@ -1,14 +1,13 @@
 ---
 title: Personalisatie via Offer decisioning
-description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen via Offer decisioning te leveren en te renderen
-keywords: personalisatie; server-API; Adobe Experience Platform Edge Network personalisatie ophalen;target;offer decisioning;
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen via Offer decisioning te leveren en weer te geven.
+exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
-
 
 # Personalisatie via Offer decisioning
 
@@ -260,4 +259,3 @@ In de onderstaande tabel worden de belangrijkste elementen van dat gedeelte van 
 | `content` | De inhoud die aan de voorgestelde aanbieding in het formaat van een koord wordt geassocieerd. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | De afbeeldingsinhoud die aan de voorgestelde aanbieding is gekoppeld, wordt weergegeven in de vorm van een URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | JSON-object dat de kenmerken bevat die aan de voorgestelde aanbieding zijn gekoppeld. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
-

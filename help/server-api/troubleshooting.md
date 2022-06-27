@@ -1,13 +1,11 @@
 ---
 title: Problemen oplossen
-description: Leer hoe u fouten kunt oplossen bij gebruik van de Adobe Experience Platform Edge Network Server-API
-seo-description: Learn how to troubleshoot errors when using the Adobe Experience Platform Edge Network Server API
-keywords: edge network;gateway;api;problemen oplossen;fouten;griffon
+description: Leer hoe u fouten kunt oplossen wanneer u de Edge Network Server-API gebruikt.
 exl-id: f0223fca-30ec-4229-93a5-3faa6cef5482
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '96'
+ht-degree: 2%
 
 ---
 

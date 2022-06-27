@@ -1,12 +1,12 @@
 ---
-title: Edge Network Server-API
+title: Overzicht van de Edge Network Server-API
 description: Leer wat de Server API van het Netwerk van Edge is en hoe u het kunt gebruiken.
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: gegevensverzameling;verzameling;Adobe Experience Platform Edge Network;server-API;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---

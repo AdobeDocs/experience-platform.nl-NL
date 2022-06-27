@@ -1,12 +1,10 @@
 ---
 title: Gegevensverzameling
-description: Leer hoe de Adobe Experience Platform Edge Network Server API de verzamelde gegevens structureert
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: gegevensverzameling;verzameling;Adobe Experience Platform Edge Network;api;structuur
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+description: Leer hoe de Adobe Experience Platform Edge Network Server API de verzamelde gegevens structureert.
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 3%
 
 ---
 

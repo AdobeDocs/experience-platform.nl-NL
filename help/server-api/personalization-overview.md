@@ -1,15 +1,13 @@
 ---
 title: Overzicht van personalisatie
-description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adobe
-seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
-keywords: personalisatie; server-API; Adobe Experience Platform Edge Network personalisatie ophalen
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adobe.
+exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '741'
 ht-degree: 7%
 
 ---
-
 
 # Overzicht van personalisatie
 
