@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
 title: (Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -280,8 +280,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Stap 5: Uw doel publiceren {#publish-destination}
 
+>[!NOTE]
+>
+>Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
+
 Na het vormen van en het testen van uw bestemming, gebruik [doel-publicatie-API](./destination-publish-api.md) om uw configuratie ter controle naar Adobe te verzenden.
 
 ## Stap 6: Uw doel documenteren {#document-destination}
+
+>[!NOTE]
+>
+>Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
 Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](./overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in te stellen in [Catalogus Experience Platform doelen](/help/destinations/catalog/overview.md).

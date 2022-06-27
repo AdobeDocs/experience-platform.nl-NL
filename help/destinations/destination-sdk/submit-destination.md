@@ -1,17 +1,21 @@
 ---
-description: Deze pagina verstrekt alle informatie u voor overzicht een bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
-title: Ter controle een bestemming verzenden die is geschreven in Destination SDK
+description: Deze pagina verstrekt alle informatie u voor overzicht een geproduceerde bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
+title: Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
-# Ter controle een bestemming verzenden die is geschreven in Destination SDK
+# Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 
 ## Overzicht {#overview}
+
+>[!IMPORTANT]
+>
+>Het hier gedocumenteerde proces wordt slechts vereist voor partners die geproduceerde (openbare) bestemmingen voorleggen. Als u een privé bestemming voor uw eigen gebruik creeert, te hoeven u niet om deze materialen te produceren en te delen met Adobe.
 
 Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Platform doelen](/help/destinations/catalog/overview.md), moet u Adobe bepaalde informatie geven over de bestemming en de uitgevoerde tests om ervoor te zorgen dat gebruikers de best mogelijke ervaring hebben met het activeren van gegevens op uw platform.
 
@@ -22,7 +26,7 @@ Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming ve
    * Een API vraag die aan uw bestemmingshindpunt wordt gemaakt.
    * De API reactie die van uw bestemmingshindpunt wordt ontvangen.
 * Het bewijs dat u een bestemmings het publiceren verzoek voor uw bestemming gebruikend hebt voorgelegd [doel-publicatie-API](./destination-publish-api.md).
-* (Alleen voor productieve integratie) een documentatie PR (pull-verzoek), volgens de instructies in de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md).
+* Een documentatie PR (trekkingsverzoek), volgens de instructies die in de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md).
 * Een afbeeldingsbestand dat wordt weergegeven als een logo voor uw doelkaart in de catalogus met bestemmingen voor het Experience Platform.
 
 >[!IMPORTANT]

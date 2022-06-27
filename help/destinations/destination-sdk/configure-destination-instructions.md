@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -174,8 +174,16 @@ Als deel van het proces om uw bestemming te testen, moet u het Experience Platfo
 
 ## Stap 7: Uw doel publiceren {#publish-destination}
 
+>[!NOTE]
+>
+>Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
+
 Na het vormen van en het testen van uw bestemming, gebruik [doel-publicatie-API](./destination-publish-api.md) om uw configuratie ter controle naar Adobe te verzenden.
 
 ## Stap 8: Uw doel documenteren {#document-destination}
+
+>[!NOTE]
+>
+>Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
 Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](./overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in te stellen in [Catalogus Experience Platform doelen](/help/destinations/catalog/overview.md).

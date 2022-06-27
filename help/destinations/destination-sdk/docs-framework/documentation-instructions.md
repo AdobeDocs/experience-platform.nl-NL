@@ -2,14 +2,18 @@
 title: Uw doel documenteren in Adobe Experience Platform
 description: Stapsgewijze instructies voor het maken van een documentatiepagina voor uw bestemming in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 3c871471802e905b58acf8cd25db6788f49b9e43
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
 # Uw doel documenteren in Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>Het hier gedocumenteerde proces wordt slechts vereist voor partners die geproduceerde (openbare) bestemmingen voorleggen. Als u een privé bestemming voor uw eigen gebruik creeert, te hoeven u niet om documentatie voor uw bestemming tot stand te brengen en te publiceren.
 
 ## Overzicht {#overview}
 

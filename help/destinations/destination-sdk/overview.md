@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '704'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ De toegang van Destination SDK varieert gebaseerd op uw status als partner of Ex
 | Independent Software Vendor (ISV) | Verbinden met [Adobe Exchange-programma](https://partners.adobe.com/exchangeprogram/experiencecloud.html) en verzoek om een Experience Platform-sandbox beschikbaar te maken voor toegang tot Destination SDK. |
 | Systeemintegrator (SI) | U dient op Gold- of Platinum-niveau te zijn in de [Adobe Solution Partner-programma](https://solutionpartners.adobe.com/home.html)en u krijgt een sandbox met Experience Platforms en toegang tot Destination SDK. |
 | De klant van het Experience Platform op de [Activeringspakket](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | Standaard krijgt u toegang tot sandboxen en Destination SDK voor Experience Platforms. |
-| De klant van het Experience Platform op de [CDP-pakket in realtime](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | U hebt geen toegang tot Destination SDK, maar u hebt toegang tot alle geproduceerde bestemmingen die door andere bedrijven worden gevormd die Destination SDK gebruiken en over de organisaties van het Experience Platform worden gepubliceerd. |
+| De klant van het Experience Platform op de [Real-time CDP Ultimate-pakket](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | U hebt geen toegang tot Destination SDK, maar u hebt toegang tot alle geproduceerde bestemmingen die door andere bedrijven worden gevormd die Destination SDK gebruiken en over de organisaties van het Experience Platform worden gepubliceerd. |
 
 {style=&quot;table-layout:auto&quot;}
 
