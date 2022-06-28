@@ -2,14 +2,18 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination/publish`.
 title: API-eindpuntbewerkingen voor doelen publiceren
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 2%
+source-wordcount: '779'
+ht-degree: 1%
 
 ---
 
 # API-bewerkingen voor eindpunt doelen publiceren {#publish-destination}
+
+>[!IMPORTANT]
+>
+>U hoeft dit API-eindpunt alleen te gebruiken als u een geproductieerde (openbare) bestemming verzendt die door andere klanten van het Experience Platform moet worden gebruikt. Als u een privé bestemming voor uw eigen gebruik creeert, te hoeven u niet om de bestemming formeel voor te leggen gebruikend het publiceren API.
 
 >[!IMPORTANT]
 >
@@ -22,8 +26,9 @@ Nadat u hebt gevormd en uw bestemming getest, kunt u het voorleggen aan Adobe vo
 Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te dienen wanneer:
 
 * Als partner van Destination SDK, wilt u uw geproduceerde bestemming beschikbaar over alle organisaties van het Experience Platform voor alle klanten van het Experience Platform aan gebruik maken;
-* U wilt uw aangepaste bestemming beschikbaar maken in uw eigen organisatie van het Experience Platform, voor alle sandboxen.
 * U maakt *alle updates* naar uw configuraties. De updates van de configuratie worden weerspiegeld in de bestemming slechts nadat u een nieuw het publiceren verzoek indient, dat door het team van het Experience Platform wordt goedgekeurd.
+
+<!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## Aan de slag met API-bewerkingen voor doelpublicatie {#get-started}
 
