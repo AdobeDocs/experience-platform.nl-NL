@@ -3,18 +3,23 @@ title: Consumentengegevens verwijderen met de API voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 hide: true
 hidefromtoc: true
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
 # Consumentengegevens verwijderen met de Data Hygiene-API
 
+>[!IMPORTANT]
+>
+>De API voor gegevenshygiëne bevindt zich momenteel in een bètaversie. De in dit document beschreven functionaliteit kan worden gewijzigd.
+
 Met de API voor gegevenshygiëne kunt u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch corrigeren of verwijderen.
 
-U hebt toegang tot de API via het volgende hoofdpad: `https://platform.adobe.io/data/core/hygiene/`
+U hebt toegang tot de API via hetzelfde hoofdpad als de [Privacy Service-API](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Aan de slag
 
@@ -52,7 +57,7 @@ De payload van het verzoek heeft een vergelijkbare structuur als een [aanvraag v
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
