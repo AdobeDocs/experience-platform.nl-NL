@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
+source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1955'
 ht-degree: 1%
 
 ---
@@ -157,9 +157,7 @@ Ja, gebruikt momenteel SDK van het Web overal tussen 1-4 koekjes afhankelijk van
 
 **kndctr_orgid_toestemming:** In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen.
 
-**kndctr_orgid_personalization:** Dit cookie bevat sessiegegevens die Adobe Target gebruikt om webpagina&#39;s aan te passen.
-
-**kndctr_orgid_consentcheck:** Deze op zitting-gebaseerde koekje geeft de server aan om de server van de toestemmingsvoorkeur omhoog te kijken.
+**kndctr_orgid_cluster:** In dit cookie wordt het gebied Experience Edge opgeslagen dat de verzoeken van de huidige gebruiker weergeeft. Het gebied wordt gebruikt in de weg URL zodat de Rand van de Ervaring de aanvraag naar het correcte gebied kan leiden. Dit koekje heeft een leven van 30 minuten, zodat als een gebruiker met een verschillend IP adres verbindt, het verzoek aan het dichtste gebied kan worden verpletterd.
 
 Wanneer het gebruiken van SDK van het Web, plaatst het Netwerk van de Rand één of meerdere hierboven koekjes. Het netwerk van de Rand plaatst alle koekjes met `secure` en `sameSite="none"` kenmerken.
 
