@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 0%
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](extension/web-sdk-ext-release-notes.md).
+
+## Versie 2.12.0 - 29 juni 2022
+
+* Verander de verzoeken aan het Netwerk van de Rand om te gebruiken `cluster` de locatie van de cookie als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
+* Hiermee worden de geconfigureerde functies in de opdrachtreactie van getLibraryInfo gerenderd.
 
 ## Versie 2.11.0 - 13 juni 2022
 
