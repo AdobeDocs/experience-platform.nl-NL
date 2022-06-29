@@ -5,9 +5,9 @@ title: UI-gids voor streamingsegmentatie
 topic-legacy: ui guide
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Nadat u een voor streaming geschikt segment hebt gemaakt, kunt u details van dat
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Meer bepaald, details over de **[!UICONTROL total qualified audience size]** worden weergegeven. De **[!UICONTROL Total qualified audience size]** toont het totale aantal gekwalificeerde publiek van de laatste voltooide looppas van de segmentbaan. Als een segmentbaan niet binnen de laatste 24 uren werd voltooid, zal het aantal publiek van een raming in plaats daarvan worden genomen.
+In het bijzonder de **[!UICONTROL Total qualified]** De metrische waarde wordt weergegeven. Hiermee wordt het totale aantal gekwalificeerde doelgroepen weergegeven op basis van batch- en streaming-evaluaties voor dit segment.
 
-Onderaan ziet u een lijngrafiek met het aantal segmenten dat in de afgelopen 24 uur is gekwalificeerd en gediskwalificeerd. De vervolgkeuzelijst kan worden aangepast om de laatste 24 uur, vorige week of 30 dagen weer te geven.
+Onderliggende lijn is een lijngrafiek die het aantal nieuwe doelgroepen toont die in de laatste 24 uur werden bijgewerkt gebruikend de het stromen evaluatiemethode. De vervolgkeuzelijst kan worden aangepast om de laatste 24 uur, vorige week of 30 dagen weer te geven. De **[!UICONTROL New audience updated]** De metrische waarde is gebaseerd op de verandering in publieksgrootte tijdens de geselecteerde tijdwaaier, zoals die door het stromen segmentatie wordt geëvalueerd. Deze metrisch omvat niet het totale gekwalificeerde publiek van de dagelijkse evaluatie van de segmentpartij.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Onderaan ziet u een lijngrafiek met het aantal segmenten dat in de afgelopen 24 
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-De extra informatie over de laatste segmentevaluatie kan worden gevonden door de informatiebel te selecteren.
+De extra informatie over de laatste segmentevaluatie kan worden gevonden door de informatiebel naast te selecteren **[!UICONTROL Total qualified]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
