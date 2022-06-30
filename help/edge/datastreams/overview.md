@@ -3,7 +3,7 @@ title: Overzicht gegevensstromen
 description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1687'
 ht-degree: 1%
@@ -179,4 +179,4 @@ De hoofdpagina van de [!UICONTROL Datastreams] wordt de werkruimte opnieuw weerg
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om gegevensstromen in de Inzameling van Gegevens UI te beheren. Voor meer informatie over om SDK van het Web na vestiging een gegevensstroom te installeren en te vormen, verwijs naar [E2E-handleiding voor gegevensverzameling](../../collection/e2e.md#install).
+Deze gids behandelde hoe te om gegevensstromen in de Inzameling van Gegevens UI te beheren. Voor meer informatie over om SDK van het Web na vestiging een gegevensstroom te installeren en te vormen, verwijs naar [E2E-handleiding voor gegevensverzameling](../../rtcdp-connections/e2e.md#install).

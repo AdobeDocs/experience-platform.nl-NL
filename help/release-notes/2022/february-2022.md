@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, februari 2022
 description: In de release van februari 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen 
 | Gegevensvoorvoegsel voor gegevensverzameling | Als u de SDK van het Web van Adobe Experience Platform gebruikt, kunt u de mogelijkheden van de Prep van Gegevens nu hefboomwerking om uw gegevens aan de server van het Model van de Gegevens van de Ervaring (XDM) in kaart te brengen. Zie de sectie over [Gegevensvoorvoegsel voor gegevensverzameling](../../edge/datastreams/data-prep.md) in de gids voor gegevensstromen voor meer informatie. |
 | Apparaat-id&#39;s van eerste partij | U kunt nu uw eigen apparaat-id&#39;s naar het Adobe Experience Platform Edge Network sturen wanneer u klantgegevens verzamelt met de SDK van het Web Platform, waarmee u een oplossing kunt vinden voor recente browserbeperkingen met betrekking tot de levensduur van cookies van derden. Zie de handleiding op [apparaat-id&#39;s van eerste partij](../../edge/identity/first-party-device-ids.md) voor meer informatie . |
 
-Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../rtcdp-connections/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
