@@ -5,9 +5,9 @@ title: Overzicht van streaming inscriptie
 topic-legacy: overview
 description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 968f2635330fb0fa8a55b17b30bd8557f7d70335
+source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Voor meer informatie over het toelaten van een dataset voor [!DNL Profile] en [!
 
 | Bestemming | Verwachte vertraging |
 | --------- | ---------------- |
-| Klantprofiel in realtime | &lt; 15 minuten, bij het 95e percentiel |
+| Klantprofiel in realtime | &lt; 1 minuut |
 | Data Lake | &lt; 60 minuten |
 
 ## Vraag per seconden (RPS) om hulp bij het streamen van opname
