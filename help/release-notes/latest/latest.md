@@ -1,11 +1,11 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform juni 2022
-description: In de release van juni 2022 staat Adobe Experience Platform vermeld.
+title: Opmerkingen bij de release van Adobe Experience Platform
+description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
+source-git-commit: def32d9667c4630de760d228c88676eb9d5a6de4
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 2%
+source-wordcount: '1720'
+ht-degree: 1%
 
 ---
 
@@ -18,6 +18,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
 
@@ -74,6 +75,46 @@ Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens,
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Klasse | [[!UICONTROL Medication]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Een branche in de gezondheidszorg die details vastlegt over een stof die wordt gebruikt voor medische behandeling, met name een geneesmiddel of geneesmiddel. |
+| Klasse | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Een klasse in de gezondheidszorg die details over een medisch plan, zoals een gezondheidsplan of een verzekeringsplan, vastlegt. |
+| Klasse | [[!UICONTROL Provider]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Een klasse in de gezondheidszorg die gegevens over een zorgleverancier vastlegt. |
+| Klasse | [[!UICONTROL Payer]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Een branche in de gezondheidszorg die gegevens over een verzekeringsmaatschappij opneemt. |
+| Klasse | [[!UICONTROL Live Event Schedule]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Een klasse in de sport- en entertainmentindustrie die gegevens vastlegt over een live-evenementenschema, zoals een reisconcertschema of de planning van een sportteam. |
+| Klasse | [[!UICONTROL Location]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Een sport- en entertainmentbranche die de locatie van een live evenement vastlegt, zoals een concertzaal of sportarena. |
+| Veldgroep | [[!UICONTROL Healthcare medication]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Een veldgroep voor de [!UICONTROL Medication] klasse waarin details over de medicatie worden vastgelegd, zoals merknaam, partijnummer en hoeveelheid. |
+| Veldgroep | [[!UICONTROL Healthcare Plan Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Een veldgroep voor de [!UICONTROL Plan] klasse die details zoals netwerk, type, en actieve status vangt. |
+| Veldgroep | [[!UICONTROL Healthcare Provider]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Een veldgroep voor de [!UICONTROL Provider] een klasse die gegevens vastlegt van een individuele gezondheidswerker of een organisatie van gezondheidsinstellingen die een vergunning heeft om medische diagnoses en behandelingen te verrichten. |
+| Veldgroep | [[!UICONTROL Healthcare Member Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Een veldgroep voor de [!UICONTROL XDM Individual Profile] klasse die gegevens vastlegt van een persoon die een dienst of zorg heeft of zal ontvangen, zoals contactinformatie, eerstelijnsarts, en planinformatie. |
+| Veldgroep | [[!UICONTROL Sitetool Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] klas die informatie vastlegt die verzameld is door scholen zoals chatbot, enquête, enzovoort. |
+| Veldgroep | [[!UICONTROL Live Event Ticket Purchase]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] een klasse die de aankoopgeschiedenis vastlegt voor tickets voor een live evenement, zoals een concert of een sportspel. |
+| Veldgroep | [[!UICONTROL Sports and Entertainment Event Schedule]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Een veldgroep voor de [!UICONTROL Live Event Schedule] klasse die verdere details over het programma, zoals de aantrekkingspagina, de openingstijden van de deur, en meer vangen. |
+| Veldgroep | [[!UICONTROL Sports Entertainment Event Venue]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Een veldgroep voor de [!UICONTROL Location] klasse die nadere details over de plaats van de gebeurtenis, zoals zitcapaciteit en aangewezen marktgebieden (DMAs) vangt. |
+| Algemeen schema | (Meerdere) | Er zijn nieuwe algemene schema&#39;s beschikbaar voor doelmeetgegevens voor RTCDP-inzichten. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1560) voor meer informatie . |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving bijwerken |
+| --- | --- | --- |
+| Gedraging | [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Een gebeurtenistype voor een mediastatus toegevoegd. |
+| Veldgroep | [[!UICONTROL Lodging Reservation]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Er is een uitcheckeigenschap toegevoegd. |
+| Gegevenstype | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Toegevoegde frames-begin en frames-einde velden. |
+| Extensie | [[!UICONTROL Workfront Change Event]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Er zijn twee velden toegevoegd die worden gebruikt voor het opslaan van kenmerken om de gebruiker en de tijd van een gebeurtenis create te identificeren. |
+| Extensie | [[!UICONTROL Adobe CJM ExperienceEvent - Message interaction details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Abonnement, toestemming, aangepaste e-mail en aanvullende gegevensinformatie toegevoegd in het landingspagina-object. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
 ## Query-service {#query-service}
 
