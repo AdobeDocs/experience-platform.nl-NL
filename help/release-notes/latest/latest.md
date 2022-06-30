@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform juni 2022
 description: In de release van juni 2022 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6eadd71984814548522da32ae6d88a49c3ba704f
+source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 1%
+source-wordcount: '1032'
+ht-degree: 2%
 
 ---
 
@@ -15,10 +15,25 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
+
+## Gegevensverzameling {#data-collection}
+
+Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [De configuratie van het Type van toegang voor gegevensstromen](../../edge/datastreams/overview.md#create) | Wanneer u een nieuwe gegevensstroom maakt, kunt u nu selecteren welk type aanvragen door het Edge-netwerk worden geaccepteerd: <ul><li>**[!UICONTROL Mixed Authentication]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand zowel voor authentiek verklaarde als unauthenticated verzoeken goed. Selecteer deze optie als u de SDK van het Web wilt gebruiken of [Mobile SDK](https://aep-sdks.gitbook.io/docs/), samen met de [Server-API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand slechts voor authentiek verklaarde verzoeken goed. Selecteer deze optie als u alleen de Server-API wilt gebruiken en niet-geverifieerde aanvragen door de [!DNL Edge Network]. </li></ul> |
+| [Profielen renderen](../../edge/personalization/rendering-personalization-content.md#applypropositions) in toepassingen van één pagina zonder stijgende metriek. | De zojuist toegevoegde `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Hierdoor wordt de rapportnauwkeurigheid vergroot. |
+| [Id&#39;s delen via mobiel naar web en verschillende domeinen](../../edge/identity/id-sharing.md) | De SDK van het Web van Adobe Experience Platform ondersteunt nu mogelijkheden voor het delen van bezoekers-id&#39;s die u in staat stellen gepersonaliseerde ervaringen nauwkeuriger te leveren, tussen mobiele apps en mobiele webinhoud, en over domeinen. |
+
+Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
