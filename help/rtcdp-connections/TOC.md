@@ -5,7 +5,7 @@ user-guide-title: Real-time Customer Data Platform-verbindingen
 breadcrumb-title: Real-time Customer Data Platform-verbindingen
 user-guide-description: Gegevensverzameling op de client inschakelen voor Adobe Experience Platform Edge Network.
 feature: Data Collection
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 08541ed2d179040a1faef0dace477f268687fd54
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 ---
 
 
-# Real-time Customer Data Platform-verbindingen {#collection}
+# Real-time Customer Data Platform-verbindingen {#rtcdp-connections}
 
 - [Overzicht RTCDP-verbindingen](home.md)
 - [Overzicht van begin tot einde](e2e.md)
