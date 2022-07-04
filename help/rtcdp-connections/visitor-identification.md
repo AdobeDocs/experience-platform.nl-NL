@@ -4,18 +4,16 @@ description: Leer hoe bezoekers worden geïdentificeerd met de Adobe Experience 
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: edge network;gateway;api;bezoeker;identificatie
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 5%
+source-wordcount: '151'
+ht-degree: 4%
 
 ---
 
 # Identificatie van bezoekers
 
-## Overzicht {#overview}
-
-De Edge Network Server-API ondersteunt [identificatie van de bezoeker via de ID van de eerste partij ([!DNL FPID])](visitor-identification-fpid.md)
+De Edge Network Server-API ondersteunt [identificatie van de bezoeker via de ID van de eerste partij ([!DNL FPID])](visitor-identification-fpid.md).
 
 Alle gebruikers-id&#39;s dienen te worden opgegeven in de `identityMap` veldgroep. Deze veldgroep is opgenomen in de AEP Web SDK `ExperienceEvent` mixin.
 

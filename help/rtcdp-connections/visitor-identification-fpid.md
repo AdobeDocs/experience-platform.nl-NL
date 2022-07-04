@@ -4,16 +4,14 @@ description: Leer hoe u bezoekers consistent kunt identificeren via de server-AP
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: edge network;gateway;api;bezoeker;identificatie;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # Visitor-identificatie via FPID
-
-## Overzicht
 
 [!DNL First-party IDs] (`FPIDs`) zijn apparaat-id&#39;s die door klanten worden gegenereerd, beheerd en opgeslagen. Dit geeft klanten controle over het identificeren van gebruikersapparaten. Door verzenden `FPIDs`, genereert het Edge-netwerk geen gloednieuwe `ECID` voor een aanvraag die er geen bevat.
 
@@ -35,7 +33,7 @@ De `ECID` op deze manier verkregen `identity.fetch` query:
 }
 ```
 
-Voor aanvragen die zowel een `FPID` en `ECID`de `ECID` reeds in het verzoek aanwezig is, heeft voorrang op het verzoek dat uit het `FPID`. Daarom zal het Netwerk van de Rand gebruiken `ECID` reeds verstrekt en zal niet één van gegeven berekenen `FPID`.
+Voor aanvragen die zowel een `FPID` en `ECID`de `ECID` reeds in het verzoek aanwezig is, heeft voorrang op het verzoek dat uit het `FPID`. Met andere woorden, het Edge-netwerk gebruikt de `ECID` en de `FPID` wordt genegeerd. Een nieuwe `ECID` alleen wordt gegenereerd wanneer een `FPID` wordt alleen verstrekt.
 
 In termen van apparaat-id&#39;s worden de `server` gegevensstromen moeten `FPID` als apparaat-id. Andere identiteiten (d.w.z. `EMAIL`) kan ook worden verstrekt binnen het verzoeklichaam, maar het Netwerk van de Rand vereist dat een primaire identiteit uitdrukkelijk wordt verstrekt. Primaire identiteit is de basisidentiteit waarin de profielgegevens worden opgeslagen.
 
