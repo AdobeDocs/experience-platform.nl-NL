@@ -2,9 +2,9 @@
 title: Bronnen in Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de rol van bronnen in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Met Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via vers
 Als u wilt weten hoe bronnen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 Zie de [overzicht van bronconnectors](../../sources/home.md) voor meer informatie over de soorten bronnen die in Adobe Experience Platform beschikbaar zijn.
+
+>[!IMPORTANT]
+>
+>U moet toegang hebben tot [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) om aan B2B-schema&#39;s deel te nemen [Klantprofiel in realtime](../proile/../../profile/home.md).
 
 De volgende documenten bevatten meer informatie over het gebruik van [!DNL Marketo] om B2B-gegevens naar het Platform te brengen:
 

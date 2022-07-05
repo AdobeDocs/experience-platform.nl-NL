@@ -5,9 +5,9 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) (hierna &quot;[!DNL Marketo]&quot;) is een volledige oplossing voor het beheer van leads en B2B-marketers die de ervaringen van klanten willen transformeren door in elke fase van complexe inkoopritten te gaan werken.
 
 Met de [!DNL Marketo] bronaansluiting, kunt u B2B-gegevens van [!DNL Marketo] om deze gegevens te Platforms en up-to-date te houden gebruikend Platform-Verbonden toepassingen.
+
+>[!IMPORTANT]
+>
+>U moet toegang hebben tot [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) om aan [Klantprofiel in realtime](../../../../profile/home.md).
 
 Dit document biedt een overzicht van de [!DNL Marketo] bronschakelaar, met inbegrip van informatie over hoe te om de schakelaar voor authentiek te verklaren, hoe te om in kaart te brengen [!DNL Marketo] velden naar Experience Data Model (XDM) en de gegevenslatentie van de connector.
 
