@@ -5,9 +5,9 @@ title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1837'
 ht-degree: 0%
 
 ---
@@ -389,7 +389,7 @@ Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#
 
 #### Referentie-identiteitsdescriptor
 
-De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext aan de primaire identiteit van een schemagebied, toelatend het om door gebieden in andere schema&#39;s worden van verwijzingen voorzien. Velden moeten al zijn gelabeld met een identiteitsdescriptor voordat er een verwijzingsdescriptor op kan worden toegepast.
+De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext aan de primaire identiteit van een schemagebied, toelatend het om door gebieden in andere schema&#39;s worden van verwijzingen voorzien. Het bestemmingsschema moet reeds een primair identiteitsgebied hebben dat alvorens het door andere schema&#39;s door dit beschrijver kan worden bedoeld.
 
 ```json
 {
@@ -406,7 +406,7 @@ De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext 
 | `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsbeschrijving van een referentie moet deze waarde worden ingesteld op `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
-| `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de descriptor wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
+| `xdm:sourceProperty` | Pad naar het veld in het bronschema dat wordt gebruikt om naar het doelschema te verwijzen. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | De naamruimtecode van de identiteit voor de eigenschap source. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience Data Model;Experience Data Model;Data Model;Data Model;Schema Register;Schema;Schema;Schema;Schema's;Relationship;RelationshipDescriptor;RelationshipDescriptor;ReferentieIdentiteit;ReferentieIdentiteit;
-solution: Experience Platform
 title: Definieer een relatie tussen twee schema's met behulp van de API voor het schemaregister
 description: Dit document verstrekt een zelfstudie voor het bepalen van een één-op-één verhouding tussen twee schema's die door uw organisatie worden bepaald gebruikend de Registratie API van het Schema.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -110,13 +109,13 @@ Neem de `$id` De waarden van de twee schema&#39;s u een verband tussen wilt bepa
 
 ## Een referentieveld definiëren voor het bronschema
 
-Binnen de [!DNL Schema Registry]Relatiebeschrijvers werken hetzelfde als buitenlandse sleutels in relationele databasetabellen: Een veld in het bronschema fungeert als een verwijzing naar het primaire identiteitsveld van een doelschema. Als uw bronschema geen gebied voor dit doel heeft, kunt u een groep van het schemagebied met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet een `type` waarde van &quot;[!DNL string]&quot;.
+Binnen de [!DNL Schema Registry]Relatiebeschrijvers werken hetzelfde als buitenlandse sleutels in relationele databasetabellen: Een veld in het bronschema fungeert als een verwijzing naar het primaire identiteitsveld van een doelschema. Als uw bronschema geen gebied voor dit doel heeft, kunt u een groep van het schemagebied met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet een `type` waarde van `string`.
 
 >[!IMPORTANT]
 >
->In tegenstelling tot het bestemmingsschema, kan het bronschema zijn primaire identiteit als verwijzingsgebied niet gebruiken.
+>Het bronschema kan zijn primaire identiteit niet als verwijzingsgebied gebruiken.
 
-In deze zelfstudie wordt het doelschema &quot;[!DNL Hotels]&quot; bevat een `hotelId` gebied dat als primaire identiteit van het schema dient, en daarom ook als zijn verwijzingsgebied zal handelen. Het bronschema &quot;[!DNL Loyalty Members]&quot; heeft geen speciaal veld dat als referentie moet worden gebruikt en moet een nieuwe veldgroep krijgen die een nieuw veld aan het schema toevoegt: `favoriteHotel`.
+In deze zelfstudie wordt het doelschema &quot;[!DNL Hotels]&quot; bevat een `hotelId` veld dat als primaire identiteit van het schema fungeert. Het bronschema &quot;[!DNL Loyalty Members]&quot; heeft geen speciaal veld dat moet worden gebruikt als verwijzing naar `hotelId`en daarom moet er een aangepaste veldgroep worden gemaakt om een nieuw veld aan het schema toe te voegen: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -344,9 +343,9 @@ Een succesvol antwoord keert de details van het bijgewerkte schema terug, dat nu
 
 ## Een beschrijving voor een referentie-id maken {#reference-identity}
 
-Op schemavelden moet een identiteitsreferentie-descriptor zijn toegepast als deze worden gebruikt als referentie van andere schema&#39;s in een relatie. Aangezien `favoriteHotel` veld in &quot;[!DNL Loyalty Members]&quot; verwijst naar de `hotelId` veld in &quot;[!DNL Hotels]&quot;, `hotelId` moet een referentie-identiteitsbeschrijving krijgen.
+Op schemavelden moet een identiteitsbeschrijving van de referentie zijn toegepast als deze worden gebruikt als een verwijzing naar een ander schema in een relatie. Aangezien `favoriteHotel` veld in &quot;[!DNL Loyalty Members]&quot; verwijst naar de `hotelId` veld in &quot;[!DNL Hotels]&quot;, `favoriteHotel` moet een referentie-identiteitsbeschrijving krijgen.
 
-Creeer een verwijzingsbeschrijver voor het bestemmingsschema door een verzoek van de POST aan het `/tenant/descriptors` eindpunt.
+Creeer een verwijzingsbeschrijver voor het bronschema door een verzoek van de POST aan het `/tenant/descriptors` eindpunt.
 
 **API-indeling**
 
@@ -356,7 +355,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een verwijzingsdescriptor gemaakt voor de `hotelId` veld in het doelschema &quot;[!DNL Hotels]&quot;.
+Met de volgende aanvraag wordt een verwijzingsdescriptor gemaakt voor de `favoriteHotel` veld in het bronschema &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -368,33 +367,33 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. Voor verwijzingsbeschrijvingen moet de waarde &quot;xdm:descriptorReferenceIdentity&quot; zijn. |
-| `xdm:sourceSchema` | De `$id` URL van het doelschema. |
-| `xdm:sourceVersion` | Het versienummer van het doelschema. |
-| `sourceProperty` | Het pad naar het primaire identiteitsveld van het doelschema. |
-| `xdm:identityNamespace` | De naamruimte van de identiteit van het verwijzingsveld. Dit moet dezelfde naamruimte zijn die wordt gebruikt wanneer het veld wordt gedefinieerd als de primaire identiteit van het schema. Zie de [Overzicht van naamruimte in identiteit](../../identity-service/home.md) voor meer informatie . |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor verwijzingsbeschrijvingen moet de waarde `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | De `$id` URL van het bronschema. |
+| `xdm:sourceVersion` | Het versienummer van het bronschema. |
+| `sourceProperty` | De weg aan het gebied in het bronschema dat zal worden gebruikt om naar de primaire identiteit van het bestemmingsschema te verwijzen. |
+| `xdm:identityNamespace` | De naamruimte van de identiteit van het verwijzingsveld. Dit moet zelfde namespace zijn zoals de primaire identiteit van het bestemmingsschema. Zie de [Overzicht van naamruimte in identiteit](../../identity-service/home.md) voor meer informatie . |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de pas gecreëerde verwijzingsbeschrijver voor het bestemmingsschema terug.
+Een succesvol antwoord retourneert de details van de zojuist gemaakte verwijzingsdescriptor voor het bronveld.
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -403,7 +402,7 @@ Een succesvolle reactie keert de details van de pas gecreëerde verwijzingsbesch
 
 ## Relatiebeschrijvingen maken {#create-descriptor}
 
-Relatiebeschrijvingen maken een één-op-één relatie tussen een bronschema en een doelschema. Zodra u een verwijzingsbeschrijver voor het bestemmingsschema hebt bepaald, kunt u een nieuwe relatiebeschrijver tot stand brengen door een verzoek van de POST aan `/tenant/descriptors` eindpunt.
+Relatiebeschrijvingen maken een één-op-één relatie tussen een bronschema en een doelschema. Nadat u een id voor de referentie-id voor het juiste veld in het bronschema hebt gedefinieerd, kunt u een nieuwe relatiedescriptor maken door een POST aan te vragen bij de `/tenant/descriptors` eindpunt.
 
 **API-indeling**
 
@@ -413,7 +412,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe relatiebeschrijving gemaakt met &quot;[!DNL Loyalty Members]&quot; als het bronschema en &quot;[!DNL Legacy Loyalty Members]&quot; als het doelschema.
+Met het volgende verzoek wordt een nieuwe relatiebeschrijving gemaakt met &quot;[!DNL Loyalty Members]&quot; als het bronschema en &quot;[!DNL Hotels]&quot; als het doelschema.
 
 ```shell
 curl -X POST \
@@ -436,13 +435,13 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat moet worden gemaakt. De `@type` value for relationship descriptors is &quot;xdm:descriptorOneToOne&quot;. |
+| `@type` | Het type descriptor dat moet worden gemaakt. De `@type` value for relationship descriptors is `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | De `$id` URL van het bronschema. |
 | `xdm:sourceVersion` | Het versienummer van het bronschema. |
 | `xdm:sourceProperty` | Het pad naar het verwijzingsveld in het bronschema. |
 | `xdm:destinationSchema` | De `$id` URL van het doelschema. |
 | `xdm:destinationVersion` | Het versienummer van het doelschema. |
-| `xdm:destinationProperty` | Het pad naar het verwijzingsveld in het doelschema. |
+| `xdm:destinationProperty` | Het pad naar het primaire identiteitsveld in het doelschema. |
 
 {style=&quot;table-layout:auto&quot;}
 
