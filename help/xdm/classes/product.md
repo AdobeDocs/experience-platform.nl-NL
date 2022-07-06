@@ -1,16 +1,17 @@
 ---
 title: Productklasse
 description: Dit document biedt een overzicht van de productklasse in het XDM (Experience Data Model).
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
+source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '208'
 ht-degree: 2%
 
 ---
 
 # [!UICONTROL Product] class
 
-In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Product] klasse legt de minimale set eigenschappen vast die een product definiëren.
+In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Product] klasse legt de minimumreeks eigenschappen vast die een handelsproduct definiëren.
 
 ![](../images/classes/product.png)
 
@@ -29,7 +30,7 @@ In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Product] klasse 
 
 ## Compatibele veldgroepen {#field-groups}
 
-Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM Individual Profile] klasse. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
+Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!UICONTROL Product] klasse. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
 * [[!UICONTROL Product catalog]](../field-groups/product/product-catalog.md)
 * [[!UICONTROL Product category]](../field-groups/product/product-category.md)
