@@ -1,7 +1,8 @@
 ---
 title: Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema's
 description: Een handleiding voor het beperken van toegang tot gegevensvelden in ad-hocschema's die via Adobe Experience Platform Query Service worden gegenereerd.
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -41,7 +42,7 @@ Als u een gegevenslabel wilt toevoegen, navigeert u naar [!UICONTROL Schemas] he
 
 ## Ontdek ad-hocschema&#39;s in de schemainventaris van de UI van het Platform
 
-Als u de weergave van ad-hocschema&#39;s in de gebruikersinterface van het Platform wilt inschakelen, selecteert u het filterpictogram (../images/data-governance/filter.png) links van het zoekveld en selecteert u **[!UICONTROL Show adhoc schemas] in de linkerspoorstaaf die verschijnt.
+Selecteer het filterpictogram (![Een filterpictogram.](../images/data-governance/filter.png)) links van het zoekveld en selecteer **[!UICONTROL Show adhoc schemas] in de linkerspoorstaaf die verschijnt.
 
 ![De opties voor het dashboardfilter van het Schema laten spoor met de schakeloptie &#39;Ad-hocschema tonen&#39; ingeschakeld.](../images/data-governance/adhoc-schema-toggle.png)
 
