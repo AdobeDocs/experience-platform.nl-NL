@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '814'
 ht-degree: 1%
 
 ---
@@ -184,10 +184,17 @@ ht-degree: 1%
       * [API-bewerkingen van het eindpunt Credentials](./destination-sdk/credentials-configuration-api.md)
       * [API-bewerkingen voor eindpunten publiceren](./destination-sdk/destination-publish-api.md)
       * Referentie voor ontwikkelaarsgereedschappen {#developer-tools-reference}
-         * [API-bewerkingen voor voorbeeldsjablonen ophalen](./destination-sdk/sample-template-api.md)
-         * [API-bewerkingen voor sjablonen renderen](./destination-sdk/render-template-api.md)
-         * [API-bewerkingen voor doeltesten](./destination-sdk/destination-testing-api.md)
-         * [Voorbeeld van API-bewerkingen voor het genereren van profielen](./destination-sdk/sample-profile-generation-api.md)
+         * API voor streaming doeltest {#streaming-destination-testing-api}
+            * [API-bewerkingen voor voorbeeldsjablonen ophalen](./destination-sdk/sample-template-api.md)
+            * [API-bewerkingen voor sjablonen renderen](./destination-sdk/render-template-api.md)
+            * [API-bewerkingen voor doeltesten](./destination-sdk/destination-testing-api.md)
+            * [Voorbeeld van API-bewerkingen voor het genereren van profielen](./destination-sdk/sample-profile-generation-api.md)
+         * API voor doeltesten op basis van bestanden {#file-based-destination-testing-api}
+            * [API-overzicht voor testen op basis van bestand](./destination-sdk/file-based-destination-testing-overview.md)
+            * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](./destination-sdk/file-based-destination-testing-api.md)
+            * [Gedetailleerde activeringsresultaten weergeven](./destination-sdk/file-based-destination-results-api.md)
+            * [Gevalideerde klantvelden valideren](./destination-sdk/file-based-render-template-api.md)
    * Hulplijnen {#guides}
       * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
       * [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](./destination-sdk/configure-file-based-destination-instructions.md)
