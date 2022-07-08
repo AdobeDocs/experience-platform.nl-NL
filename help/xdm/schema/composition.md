@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
 workflow-type: tm+mt
-source-wordcount: '3840'
+source-wordcount: '3951'
 ht-degree: 0%
 
 ---
@@ -131,19 +131,27 @@ In de volgende tabel wordt aangegeven welke wijzigingen worden ondersteund bij h
 
 | Ondersteunde wijzigingen | Wijzigingen doorlopen (niet ondersteund) |
 | --- | --- |
-| <ul><li>Nieuwe velden toevoegen aan de bron</li><li>Een verplicht veld optioneel maken</li><li>Nieuwe verplichte velden maken*</li><li>De weergavenaam en beschrijving van de bron wijzigen</li><li>Het schema toestaan om aan Profiel deel te nemen</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Bestaande velden verplaatsen naar een andere locatie in de structuur</li><li>Het schema verwijderen</li><li>Het schema uitschakelen om deel te nemen aan profiel</li></ul> |
+| <ul><li>Nieuwe velden toevoegen aan de bron</li><li>Een vereist veld optioneel maken</li><li>Nieuwe vereiste velden maken*</li><li>De weergavenaam en beschrijving van de bron wijzigen</li><li>Het schema toestaan om aan Profiel deel te nemen</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Bestaande velden verplaatsen naar een andere locatie in de structuur</li><li>Het schema verwijderen</li><li>Het schema uitschakelen om deel te nemen aan profiel</li></ul> |
 
-\**Zie de [onderafdeling](#post-ingestion-required-fields) voor belangrijke overwegingen met betrekking tot het instellen van nieuwe verplichte velden.*
+\**Raadpleeg de onderstaande sectie voor belangrijke overwegingen met betrekking tot [nieuwe vereiste velden instellen](#post-ingestion-required-fields).*
 
-#### Velden instellen als verplicht na invoegen {#post-ingestion-required-fields}
+### Vereiste velden
+
+Afzonderlijke schemavelden kunnen [gemarkeerd als vereist](../ui/fields/required.md), wat betekent dat alle opgenomen records gegevens in die velden moeten bevatten om de validatie te kunnen doorstaan. Bijvoorbeeld, kan het plaatsen van het primaire identiteitsgebied van een schema zoals vereist helpen ervoor zorgen dat alle ingebedde verslagen aan het Profiel van de Klant in real time zullen deelnemen, terwijl het plaatsen van een timestamp gebied zoals vereist ervoor zorgt dat alle tijd-reeksgebeurtenissen chronologisch worden bewaard.
+
+>[!IMPORTANT]
+>
+>Ongeacht of een schemagebied wordt vereist of niet, keurt het Platform niet goed `null` of lege waarden voor een ingesloten veld. Als er geen waarde is voor een bepaald veld in een record of gebeurtenis, moet de sleutel voor dat veld worden uitgesloten van de opname-lading.
+
+#### Velden instellen zoals vereist na invoegen {#post-ingestion-required-fields}
 
 Als een veld is gebruikt om gegevens in te voeren en oorspronkelijk niet is ingesteld als vereist, heeft dat veld mogelijk een null-waarde voor sommige records. Als u dit veld na invoer als vereist instelt, moeten alle toekomstige records een waarde voor dit veld bevatten, ook al kunnen historische records null zijn.
 
-Houd rekening met het volgende wanneer u een eerder optioneel veld verplicht stelt:
+Houd rekening met het volgende wanneer u een eerder optioneel veld naar wens instelt:
 
 1. Als u historische gegevens controleert en de resultaten in een nieuwe dataset schrijft, zullen sommige rijen ontbreken omdat zij ongeldige waarden voor het vereiste gebied bevatten.
 1. Als het veld deelneemt aan [Klantprofiel in realtime](../../profile/home.md) en als u gegevens exporteert voordat u deze zo nodig instelt, is de waarde voor sommige profielen mogelijk null.
-1. U kunt de API van de Registratie van het Schema gebruiken om een timestamped verandering voor alle middelen XDM in Platform, met inbegrip van nieuwe verplichte gebieden te bekijken. Zie de handleiding op de [controlelogeindpunt](../api/audit-log.md) voor meer informatie .
+1. U kunt de API van de Registratie van het Schema gebruiken om een timestamped verandering voor alle middelen XDM in Platform, met inbegrip van nieuwe vereiste gebieden te bekijken. Zie de handleiding op de [controlelogeindpunt](../api/audit-log.md) voor meer informatie .
 
 ### Schema&#39;s en gegevensinvoer
 
