@@ -5,9 +5,9 @@ title: Segment Membership Details Schema Field Group
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van het Lidmaatschap van het Segment.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 5f28c9eceb42ee19f7a8b22604ff36f8ffbd89b1
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL Segment Membership Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De gebiedsgroep verstrekt één enkel kaartgebied dat informatie betreffende segmentlidmaatschap, met inbegrip van welke segmenten het individu tot, de laatste kwalificatietijd behoort, en wanneer het lidmaatschap geldig tot is.
+[!UICONTROL Segment Membership Details] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). De gebiedsgroep verstrekt één enkel kaartgebied dat informatie betreffende segmentlidmaatschap, met inbegrip van welke segmenten het individu tot, de laatste kwalificatietijd behoort, en wanneer het lidmaatschap geldig tot is.
 
 >[!WARNING]
 >
->Hoewel het veld `segmentMembership` handmatig aan uw profielschema moet worden toegevoegd met behulp van deze veldgroep, moet u niet handmatig proberen dit veld te vullen of bij te werken. Het systeem werkt automatisch de `segmentMembership` kaart voor elk profiel bij aangezien de segmentatietaken worden uitgevoerd.
+>Terwijl de `segmentMembership` moet handmatig aan uw profielschema worden toegevoegd met deze veldgroep. U moet niet handmatig proberen dit veld te vullen of bij te werken. Het systeem werkt automatisch de `segmentMembership` kaart voor elk profiel als segmentatietaken worden uitgevoerd.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 {style=&quot;table-layout:auto&quot;}
 
-Hier volgt een voorbeeld van een `segmentMembership`-kaart die door het systeem is gevuld voor een bepaald profiel. Segmentlidmaatschappen worden gesorteerd op naamruimte, zoals aangegeven door de sleutels op hoofdniveau van het object. De afzonderlijke sleutels onder elke naamruimte vertegenwoordigen vervolgens de id&#39;s van de segmenten waarvan het profiel lid is. Elk segmentobject bevat verschillende subvelden met meer informatie over het lidmaatschap:
+Hier volgt een voorbeeld `segmentMembership` kaart die het systeem voor een bepaald profiel heeft gevuld. Segmentlidmaatschappen worden gesorteerd op naamruimte, zoals aangegeven door de sleutels op hoofdniveau van het object. De afzonderlijke sleutels onder elke naamruimte vertegenwoordigen vervolgens de id&#39;s van de segmenten waarvan het profiel lid is. Elk segmentobject bevat verschillende subvelden met meer informatie over het lidmaatschap:
 
 ```json
 {
@@ -77,8 +77,8 @@ Hier volgt een voorbeeld van een `segmentMembership`-kaart die door het systeem 
 | `xdm:version` | De versie van het segment waarvoor dit profiel in aanmerking kwam. |
 | `xdm:lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
 | `xdm:validUntil` | Een tijdstempel waarin wordt aangegeven wanneer het segmentlidmaatschap niet langer geldig is. |
-| `xdm:status` | Geeft aan of het segmentlidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`existing`: Het profiel maakte al deel uit van het segment voorafgaand aan de aanvraag en blijft bij het lidmaatschap.</li><li>`realized`: Het profiel voert het segment in als onderdeel van de huidige aanvraag.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
-| `xdm:payload` | Sommige segmentlidmaatschappen omvatten een lading die extra waarden beschrijft die direct met het lidmaatschap verband houden. Voor elk lidmaatschap kan slechts één lading van een bepaald type worden verstrekt. `xdm:payloadType` Hiermee wordt het type van de lading (`boolean`,  `number`,  `propensity`of  `string`) aangegeven, terwijl de eigenschap sibling de waarde voor het ladingstype bevat. |
+| `xdm:status` | Een koordgebied dat erop wijst of het segmentlidmaatschap als deel van het huidige verzoek is gerealiseerd. De volgende waarden worden geaccepteerd: <ul><li>`existing`: Het profiel maakte al deel uit van het segment voorafgaand aan de aanvraag en blijft bij het lidmaatschap.</li><li>`realized`: Het profiel voert het segment in als onderdeel van de huidige aanvraag.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
+| `xdm:payload` | Sommige segmentlidmaatschappen omvatten een lading die extra waarden beschrijft die direct met het lidmaatschap verband houden. Voor elk lidmaatschap kan slechts één lading van een bepaald type worden verstrekt. `xdm:payloadType` Hiermee wordt het type lading aangegeven (`boolean`, `number`, `propensity`, of `string`), terwijl de eigenschap sibling de waarde voor het ladingstype bevat. |
 
 {style=&quot;table-layout:auto&quot;}
 
