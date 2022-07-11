@@ -5,9 +5,9 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7379'
+source-wordcount: '7422'
 ht-degree: 0%
 
 ---
@@ -257,6 +257,8 @@ ht-degree: 0%
 **Geofence**: Een geofence is een virtuele geografische grens, gedefinieerd door GPS- of RFID-technologie, die software in staat stelt een reactie te activeren wanneer een mobiel apparaat een bepaald gebied binnenkomt of verlaat.
 
 **GDPR (algemene gegevensbeschermingsverordening)**: De algemene verordening inzake gegevensbescherming (GDPR) is een juridisch kader dat richtsnoeren vaststelt voor het verzamelen en verwerken van persoonsgegevens van personen binnen de Europese Unie (EU). De GDPR stelt de beginselen vast voor gegevensbeheer en de rechten van het individu en bestrijkt alle bedrijven die zich bezighouden met de gegevens van EU-burgers.
+
+**Guardrails**: De begeleiding is drempels die begeleiding voor gegevens en systeemgebruik, prestatiesoptimalisering, en vermijding van fouten of onverwachte resultaten in Adobe Experience Platform verstrekken. De begeleiding kan naar uw gebruik of gebruik van gegevens en verwerking met betrekking tot uw vergunningsrechten verwijzen.
 
 ## H
 
