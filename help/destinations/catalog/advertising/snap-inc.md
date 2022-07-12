@@ -1,9 +1,9 @@
 ---
 title: (Bèta) Magnetische Inc-verbinding
 description: Leer hoe u verbinding maakt met het Platform Snapchat Ads en uw publiekssegmenten exporteert vanuit Experience Platform.
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '988'
 ht-degree: 1%
 
 ---
@@ -103,6 +103,12 @@ Om details voor de bestemming te vormen, vul de vereiste gebieden in en selectee
 >[!IMPORTANT]
 > 
 >Door het invoeren van een onjuiste of ongeldige account-id voor Snapchat wordt het activeren van segmenten mislukt. Controleer nogmaals of je de juiste gebruikersnaam voor je advertentieaccount hebt ingevoerd.
+
+### Waarschuwingen inschakelen {#enable-alerts}
+
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
 ## Segmenten naar dit doel activeren {#activate}
 

@@ -1,7 +1,7 @@
 ---
 description: Deze pagina verklaart hoe te om het /testing/destinationInstance API eindpunt te gebruiken om de volledige details van uw testende resultaten te bekijken. Dit API eindpunt keert het zelfde resultaat terug zoals u zou verkrijgen wanneer het gebruiken van de Dienst API van de Stroom om dataflows te controleren.
 title: Gedetailleerde activeringsresultaten weergeven
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Voordat u de `/testing/destinationInstance` aan, zorg ervoor u aan de volgende v
 
 Zodra u [gevalideerde doelconfiguratie](file-based-destination-testing-api.md), kunt u gedetailleerde activeringsresultaten bekijken door een GET-verzoek in te dienen bij de `authoring/testing/destinationInstance/` eindpunt en verstrekkend bestemmingsidentiteitskaart van de bestemmingsinstantie van de bestemming die u test, en de stroom in werking stelt IDs van de geactiveerde segmenten.
 
-U kunt de volledige API-URL die u nodig hebt, vinden in het dialoogvenster `results` eigenschap geretourneerd in de [reactie van de bestemmings testende vraag](file-based-destination-testing-api.md).
+U kunt de volledige API-URL vinden die u moet gebruiken in het dialoogvenster `results` eigenschap geretourneerd in de [reactie van de bestemmings testende vraag](file-based-destination-testing-api.md).
 
 **API-indeling**
 

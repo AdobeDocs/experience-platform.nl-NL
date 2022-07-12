@@ -1,9 +1,9 @@
 ---
 description: Deze pagina verklaart hoe te om het /sample-profiles API eindpunt van Destination SDK te gebruiken om steekproefprofielen te produceren die op een bronschema worden gebaseerd. U kunt deze voorbeeldprofielen gebruiken om de op een bestand gebaseerde doelconfiguratie te testen.
 title: Voorbeeldprofielen genereren op basis van een bronschema
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 De eerste stap bij het testen van uw op een bestand gebaseerde bestemming is het gebruik van de `/sample-profiles` eindpunt om een steekproefprofiel te produceren dat op uw bestaand bronschema wordt gebaseerd.
 
-Voorbeeldprofielen zijn bedoeld om u te helpen de JSON-structuur van een profiel te begrijpen. Bovendien geven ze u een backbone die u kunt aanpassen met uw eigen profielgegevens voor verdere doeltests.
+Voorbeeldprofielen kunnen u helpen de JSON-structuur van een profiel te begrijpen. Bovendien geven ze u een standaardinstelling die u kunt aanpassen met uw eigen profielgegevens voor verdere doeltests.
 
 ## Aan de slag {#getting-started}
 
@@ -51,7 +51,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 Het volgende verzoek produceert een steekproefprofiel dat op het bronschema wordt gebaseerd dat in de bestemmingsinstantie met het overeenkomstige wordt bepaald `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

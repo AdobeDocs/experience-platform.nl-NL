@@ -1,9 +1,9 @@
 ---
 description: De op dossier-gebaseerde bestemmings het testen API is een inzameling van eindpunten die u kunt gebruiken om de configuratie van uw op dossier-gebaseerde bestemmingen te bevestigen die door de Destination SDK worden gebouwd.
 title: API voor doeltesten op basis van bestanden
-source-git-commit: d2d362f4b61e04fc2fa4d9cd9db70ed94a850642
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -23,34 +23,34 @@ Voor de beste testresultaten raden we u aan deze API te gebruiken op basis van h
 
 Zie de secties hieronder voor een kort overzicht van wat elk eindpunt kan doen.
 
-## Eindpunt van voorbeeldgeneratie {#sample-generation-endpoint}
+## Voorbeeldprofielen genereren {#generate-sample-profiles}
 
-Dit eindpunt helpt u steekproefprofielen produceren die op uw bestaand bronschema worden gebaseerd.
+Gebruik de `/sample-profiles` API eindpunt om steekproefprofielen te produceren die op uw bestaand bronschema worden gebaseerd.
 
-Voorbeeldprofielen zijn bedoeld om u te helpen de JSON-structuur van een profiel te begrijpen. Bovendien geven ze u een backbone die u kunt aanpassen met uw eigen profielgegevens voor verdere doeltests.
+Voorbeeldprofielen kunnen u helpen de JSON-structuur van een profiel te begrijpen. Bovendien geven ze u een standaardinstelling die u kunt aanpassen met uw eigen profielgegevens voor verdere doeltests.
 
 Zie de [speciale documentatie](file-based-sample-profile-generation-api.md) voor meer informatie over het genereren van voorbeeldprofielen.
 
-## Testeindpunt voor doelconfiguratie {#destination-configuration-testing-endpoint}
+## Doelconfiguratie testen {#test-destination-configuration}
 
-Dit eindpunt helpt u testen als uw op dossier-gebaseerde bestemming correct wordt gevormd en verifieert de integriteit van gegevensstromen aan uw gevormde bestemming.
+Gebruik de `/testing/destinationInstance` API eindpunt om te testen als uw op dossier-gebaseerde bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 
 U kunt verzoeken aan het testende eindpunt met of zonder het toevoegen van [voorbeeldprofielen](file-based-sample-profile-generation-api.md) aan de vraag. Als u geen profielen verzendt op de aanvraag, genereert de API automatisch een voorbeeldprofiel en voegt deze toe aan de aanvraag.
 
 Zie de [speciale documentatie](file-based-destination-testing-api.md) om te leren hoe te om uw bestemmingsconfiguratie met steekproefprofielen te testen.
 
-## Het eindpunt van de activeringsresultaten {#activation-results}
+## Gedetailleerde activeringsresultaten weergeven {#view-detailed-activation-results}
 
-Dit eindpunt helpt u de volledige details van uw op dossier-gebaseerde bestemmingstestresultaten bekijken.
+Gebruik de `/testing/destinationInstance` Het API-eindpunt voor u geeft de volledige details weer van de testresultaten van de bestandsgebaseerde bestemming.
 
 Dit API eindpunt keert het zelfde resultaat terug zoals u zou verkrijgen wanneer het gebruiken van [Flow Service-API](../api/update-destination-dataflows.md) om de gegevensstromen te controleren.
 
 Zie de [speciale documentatie](file-based-destination-results-api.md) voor meer informatie over gedetailleerde activeringsresultaten.
 
-## Rendereindpunt van klantvelden {#customer-fields-rendering-endpoint}
+## Gegevensvelden van klanten renderen {#render-customer-data-fields}
 
-Dit eindpunt helpt u visualiseren hoe templatized [klantgegevensvelden](file-based-destination-configuration.md#customer-data-fields) bepaald in uw bestemmingsconfiguratie zou als kijken.
+Gebruik de `/authoring/testing/template/render` API-eindpunt om te visualiseren hoe de sjablonen zijn gemaakt [klantgegevensvelden](file-based-destination-configuration.md#customer-data-fields) bepaald in uw bestemmingsconfiguratie zou als kijken.
 
-Het eindpunt produceert willekeurige waarden voor uw gebieden van klantengegevens, en keert hen in de reactie terug. Hierdoor kunt u de semantische structuur van gegevensvelden van klanten, zoals emmernamen of mappaden, valideren.
+Het API eindpunt produceert willekeurige waarden voor uw gebieden van klantengegevens, en keert hen in de reactie terug. Hierdoor kunt u de semantische structuur van gegevensvelden van klanten, zoals emmernamen of mappaden, valideren.
 
-Zie de [speciale documentatie](file-based-render-template-api.md) voor meer informatie over gedetailleerde activeringsresultaten.
+Zie de [speciale documentatie](file-based-render-template-api.md) om te leren hoe u waarden voor de gegevensvelden van uw klanten kunt genereren en visualiseren.
