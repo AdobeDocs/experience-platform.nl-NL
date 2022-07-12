@@ -6,24 +6,36 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een verb
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
 
-# Bepaal een verband tussen twee schema&#39;s gebruikend [!DNL Schema Editor]
+# Bepaal een één-op-één verhouding tussen twee schema&#39;s gebruikend [!DNL Schema Editor]
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="Schema-relaties"
->abstract="Schema&#39;s die tot verschillende klassen behoren, kunnen contextueel worden gekoppeld via relatievelden, zodat u complexere segmentatieregels kunt maken."
+>abstract="Schema&#39;s die tot verschillende klassen behoren, kunnen via relatievelden contextueel worden gekoppeld, zodat u complexere segmentatieregels kunt maken."
+>text="See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_reference_schema"
+>title="Referentieschema"
+>abstract="Selecteer het schema waarmee u een relatie wilt maken. Dit schema kan een andere klasse zijn dan het huidige schema."
+>text="See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_identity_namespace"
+>title="Naamruimte van verwijzing"
+>abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om aan een relatie te kunnen deelnemen."
 >text="See the documentation for more information on schema relationships."
 
 >[!NOTE]
 >
->Als u Real-time Customer Data Platform B2B Edition gebruikt, raadpleegt u de handleiding op [B2B-relaties maken](./relationship-b2b.md) in plaats daarvan.
+>Raadpleeg de handleiding voor meer informatie over het maken van een vele-op-één relatie in Real-time Customer Data Platform B2B Edition [B2B-relaties maken](./relationship-b2b.md).
 
 De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Deze relaties definiëren binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staan u toe om complexe inzichten in uw klantengegevens te bereiken.
 
@@ -110,6 +122,10 @@ De bijgewerkte `favoriteHotel` wordt weergegeven op het canvas. Selecteren **[!U
 ## Een relatieveld definiëren voor het bronschema {#relationship-field}
 
 Zodra uw bronschema een specifiek die verwijzingsgebied heeft wordt bepaald, kunt u het als relatiegebied aanwijzen.
+
+>[!NOTE]
+>
+>In de onderstaande stappen wordt beschreven hoe u een relatieveld definieert met behulp van de besturingselementen voor rechterspoor op het canvas. Als u toegang hebt tot de Real-Time CDP B2B Edition, kunt u ook een een-op-een relatie definiëren met behulp van de [zelfde dialoogvenster](./relationship-b2b.md#relationship-field) zoals wanneer het creëren van vele-aan-één verhoudingen.
 
 Selecteer `favoriteHotel` veld op het canvas, schuiven vervolgens omlaag onder **[!UICONTROL Field properties]** tot de **[!UICONTROL Relationship]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
 
