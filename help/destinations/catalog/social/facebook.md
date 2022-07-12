@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1829'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,6 @@ Er zijn twee methoden om telefoonnummers te activeren in [!DNL Facebook]:
 >
 >Telefoonnummers die in de `Phone` naamruimte kan niet worden geactiveerd in [!DNL Facebook].
 
-
 ## Vereisten voor e-mailhashing {#email-hashing-requirements}
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en hebben [!DNL Platform] hash deze na activering.
@@ -124,7 +123,7 @@ Voordat u de `Extern_ID` naamruimte waarnaar gegevens moeten worden verzonden [!
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook] doel en activeer segmenten.
 
@@ -134,13 +133,31 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 >
 >De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Raadpleeg voor de meest recente informatie de [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
-### Verbindingsparameters {#parameters}
+### Verifiëren voor bestemming {#authenticate}
 
-while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
+1. Zoek het Facebook-doel in de doelcatalogus en selecteer **[!UICONTROL Set Up]**.
+2. Selecteer **[!UICONTROL Connect to destination]**.
+   ![Verifiëren voor Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Voer uw Facebook-gegevens in en selecteer **Aanmelden**.
+
+### Doelgegevens invullen {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_facebook_accountid"
+>title="Account-id"
+>abstract="Je account-id voor Facebook Advertentie. Je kunt deze id vinden in je Facebook Ads Manager account. Geef bij het invoeren van deze id altijd een voorvoegsel op `act_`."
+
+Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: uw [!DNL Facebook Ad Account ID]. U kunt deze id vinden in uw [!DNL Facebook Ads Manager] account. Geef bij het invoeren van deze id altijd een voorvoegsel op `act_`.
+* **[!UICONTROL Account ID]**: Uw [!DNL Facebook Ad Account ID]. U kunt deze id vinden in uw [!DNL Facebook Ads Manager] account. Geef bij het invoeren van deze id altijd een voorvoegsel op `act_`.
+
+### Waarschuwingen inschakelen {#enable-alerts}
+
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
 ## Segmenten naar dit doel activeren {#activate}
 

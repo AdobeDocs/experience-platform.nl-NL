@@ -1,25 +1,19 @@
 ---
-title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
+title: Zelfbedieningssjabloon // Vervangen door naam van doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
-exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
+
 
 # YourDestination-verbinding {#your-destination}
 
 *Terwijl u deze sjabloon doorloopt, vervangt of verwijdert u alle cursief gedrukte alinea&#39;s (te beginnen met deze alinea).*
 
 *Begin door de meta-gegevens (titel en beschrijving) bij te werken bij de bovenkant van de pagina. Negeer alle exemplaren van UICONTROL op deze pagina. Dit is een label waarmee de pagina in de verschillende talen die wij ondersteunen correct wordt vertaald in onze computervertaalprocessen. Nadat u de documentatie hebt verzonden, voegen we codes aan de documentatie toe.*
-
->[!IMPORTANT]
->
->* Vul alle secties in deze sjabloon in in de volgorde waarin ze in de sjabloon worden beschreven.
->* Deze sjabloon wordt niet regelmatig bijgewerkt, op basis van feedback van partners. Voordat u begint met het ontwerpen van documentatie voor uw bestemming, moet u controleren of u het gereedschap [laatste versie van de sjabloon](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
-
 
 ## Overzicht {#overview}
 
@@ -33,13 +27,13 @@ ht-degree: 0%
 
 Om u te helpen beter begrijpen hoe en wanneer u het *YourDestination* doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
-### Hoofdletters gebruiken #1 {#use-case-1}
+### Hoofdletters gebruiken #1
 
 *Voor mobiele berichtenplatforms:*
 
 *Een homepage- en verkoopplatform wil mobiele meldingen naar Android- en iOS-apparaten van klanten doorsturen om hen te laten weten dat er 100 bijgewerkte aanbiedingen zijn in het gebied waar ze eerder naar een verhuur hebben gezocht.*
 
-### Hoofdletters gebruiken #2 {#use-case-2}
+### Hoofdletters gebruiken #2
 
 *Voor sociale netwerkplatforms:*
 
@@ -102,7 +96,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
 
-![Voorbeeldscreenshot waarin wordt getoond hoe u verificatie uitvoert voor de bestemming](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Voeg hier een verbinding aan één of meerdere steekproefscreenshots toe die gebruikers tonen hoe te om aan uw bestemming voor authentiek te verklaren](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL Bearer token]**: Vul de token van de drager in om te verifiëren bij de bestemming.
 
@@ -112,7 +106,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Voorbeeldschermafbeelding met informatie over het invullen van details voor uw bestemming](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Voeg hier een verbinding aan één of meerdere steekproefscreenshots toe die gebruikers tonen hoe te om details voor uw bestemming in te vullen](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -130,7 +124,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](../../ui/activate/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
@@ -176,8 +170,8 @@ Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](http
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-*U kunt verdere verbindingen aan uw productdocumentatie of om het even welke andere middelen verstrekken die u voor de klant belangrijk om vindt succesvol te zijn.*
+*U kunt verdere verbindingen aan uw productdocumentatie of om het even welke andere middelen verstrekken u belangrijk voor de klant om succesvol te zijn.*

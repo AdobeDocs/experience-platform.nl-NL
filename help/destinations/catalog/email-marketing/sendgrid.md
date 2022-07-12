@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;sendGrid;sendGrid bestemming
 title: SendGrid-verbinding
 description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij exporteren en deze activeren in SendGrid voor uw bedrijfsbehoeften.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1518'
 ht-degree: 1%
 
 ---
@@ -78,8 +78,9 @@ Marketing teams die SendGrid gebruiken, kunnen een mailinglijst maken in SendGri
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). De stappen specifiek voor deze bestemming worden hieronder in detail geïllustreerd.
+### Verifiëren voor bestemming {#authenticate}
 
 1. Binnen de [!DNL Adobe Experience Platform] console, navigeren naar **Doelen**.
 
@@ -96,7 +97,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### Verbindingsparameters {#parameters}
+### Doelgegevens invullen {#destination-details}
 
 while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) voor deze bestemming moet u de volgende informatie opgeven:
 
@@ -104,6 +105,12 @@ while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/des
 * **[!UICONTROL Description]**: Een optionele beschrijving waarmee u deze bestemming in de toekomst kunt identificeren.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### Waarschuwingen inschakelen {#enable-alerts}
+
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
 ## Segmenten naar dit doel activeren {#activate}
 
