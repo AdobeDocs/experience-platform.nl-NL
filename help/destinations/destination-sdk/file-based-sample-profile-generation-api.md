@@ -1,9 +1,9 @@
 ---
 description: Deze pagina verklaart hoe te om het /sample-profiles API eindpunt van Destination SDK te gebruiken om steekproefprofielen te produceren die op een bronschema worden gebaseerd. U kunt deze voorbeeldprofielen gebruiken om de op een bestand gebaseerde doelconfiguratie te testen.
 title: Voorbeeldprofielen genereren op basis van een bronschema
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 | -------- | ----------- |
 | `segmentMembership` | Een object map dat het segmentlidmaatschap van de persoon beschrijft. Voor meer informatie over `segmentMembership`, lezen [Details segmentlidmaatschap](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
-| `status` | Geeft aan of het segmentlidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`existing`: Het profiel maakte al deel uit van het segment voorafgaand aan de aanvraag en blijft bij het lidmaatschap.</li><li>`realized`: Het profiel voert het segment in als onderdeel van de huidige aanvraag.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
+| `status` | Een koordgebied dat erop wijst of het segmentlidmaatschap als deel van het huidige verzoek is gerealiseerd. De volgende waarden worden geaccepteerd: <ul><li>`existing`: Het profiel maakte al deel uit van het segment voorafgaand aan de aanvraag en blijft bij het lidmaatschap.</li><li>`realized`: Het profiel voert het segment in als onderdeel van de huidige aanvraag.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, zie [basis van schemacompositie](../../xdm/schema/composition.md#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
