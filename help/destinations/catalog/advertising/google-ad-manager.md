@@ -3,9 +3,9 @@ keywords: google en manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: Google Ad Manager, voorheen bekend als DoubleClick voor Publishers of DoubleClick AdX, is een advertentieplatform uit Google dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 0c5d3ae2f43b0eeb6c86f535e37a906b7c414600
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -64,8 +64,8 @@ Voordat u het dialoogvenster [!DNL Google Ad Manager] bestemming in Platform, mo
 
 * **Account-id**: De account-id van Adobe met Google. Account-id: 87933855.
 * **Klant-id**: De klant-id van Adobe met Google. Klant-id: 89690775.
-* **Netwerk-id**: dit is je account met [!DNL Google Ad Manager]
-* **Koppeling-id voor publiek**: dit is je account met [!DNL Google Ad Manager]
+* **Netwerkcode**: Dit is uw [!DNL Google Ad Manager] netwerk-id, gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface en in de URL.
+* **Koppeling-id voor publiek**: Dit is een specifieke id die aan uw [!DNL Google Ad Manager] netwerk (niet uw [!DNL Network code]), ook gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface.
 * Je accounttype. DFP door Google of AdX koper.
 
 ## Verbinden met de bestemming {#connect}
