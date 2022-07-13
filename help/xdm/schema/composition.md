@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '3951'
+source-wordcount: '4062'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,7 @@ Zowel de verslagen als de tijdreeksschema&#39;s bevatten een kaart van identitei
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identiteiten in schema&#39;s"
->abstract="Identiteiten zijn sleutelvelden in een schema die kunnen worden gebruikt om een onderwerp te identificeren, zoals een e-mailadres of een marketing-id. Deze gebieden worden gebruikt om de identiteitsgrafiek voor elk individu te construeren en klantenprofielen te bouwen."
->text="See the documentation for more information on identities in schemas."
+>abstract="Identiteiten zijn sleutelvelden in een schema die kunnen worden gebruikt om een onderwerp te identificeren, zoals een e-mailadres of een marketing-id. Deze gebieden worden gebruikt om de identiteitsgrafiek voor elk individu te construeren en klantenprofielen te bouwen. Zie de documentatie voor meer informatie over identiteiten in schema&#39;s."
 
 Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform]. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk wanneer het denken over schema&#39;s om over klantenidentiteiten te denken en welke gebieden kunnen worden gebruikt om een onderwerp te identificeren ongeacht waar de gegevens uit kunnen komen.
 
@@ -169,6 +168,11 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
 ### Klasse {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="Klasse"
+>abstract="Elk schema is gebaseerd op één klasse. De klasse definieert het gedrag van het schema en de algemene eigenschappen die alle schema&#39;s die op die klasse zijn gebaseerd, moeten bevatten. Zie de documentatie om meer over te leren hoe de klassen in schemacompositie betrokken zijn."
+
 Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
 
 De klasse van een schema bepaalt welke gebiedsgroepen voor gebruik in dat schema in aanmerking zullen komen. Dit wordt nader besproken in het [volgende sectie](#field-group).
@@ -182,6 +186,11 @@ De volgende schermafbeelding toont hoe klassen worden weergegeven in de gebruike
 Voor de meest recente lijst van beschikbare standaardXDM klassen, verwijs naar [officiële XDM-opslagplaats](https://github.com/adobe/xdm/tree/master/components/classes). U kunt ook naar de handleiding verwijzen op [XDM-componenten verkennen](../ui/explore.md) als u liever bronnen in de gebruikersinterface weergeeft.
 
 ### Veldgroep {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="Veldgroep"
+>abstract="Veldgroepen zijn herbruikbare componenten waarmee u schema&#39;s met extra kenmerken kunt uitbreiden. De meeste veldgroepen zijn alleen compatibel met bepaalde klassen. U kunt standaardveldgroepen gebruiken die door Adobe worden gedefinieerd of u kunt handmatig uw eigen aangepaste veldgroepen definiëren. Zie de documentatie om meer over te leren hoe de gebiedsgroepen in schemacompositie betrokken zijn."
 
 Een veldgroep is een herbruikbare component die een of meer velden definieert die bepaalde functies implementeren, zoals persoonlijke gegevens, hotelvoorkeuren of adres. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert.
 

@@ -5,9 +5,9 @@ title: XDM-systeemoverzicht
 topic-legacy: overview
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2050'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,7 @@ Raadpleeg de volgende documentatie voor meer informatie over het beheren van en 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Gedrag van gegevens"
->abstract="Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen: record, tijdreeksen en ad hoc. De schema&#39;s van het verslag verstrekken informatie over de attributen van een onderwerp, terwijl de tijdreeksregelingen een momentopname van het systeem vangen op het tijdstip een actie werd genomen. Ad hoc schema&#39;s vangen gebieden die namespaces voor gebruik slechts door één enkele dataset zijn."
->text="See the documentation for more information on data behaviors in Platform."
+>abstract="Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen: record, tijdreeksen en ad hoc. De schema&#39;s van het verslag verstrekken informatie over de attributen van een onderwerp, terwijl de tijdreeksregelingen een momentopname van het systeem vangen op het tijdstip een actie werd genomen. Ad hoc schema&#39;s vangen gebieden die namespaces voor gebruik slechts door één enkele dataset zijn. Zie de documentatie voor meer informatie over gegevensgedrag in Platform."
 
 Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen:
 

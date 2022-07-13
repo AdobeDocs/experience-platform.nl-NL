@@ -6,9 +6,9 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een verb
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
@@ -18,30 +18,27 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="Schema-relaties"
->abstract="Schema&#39;s die tot verschillende klassen behoren, kunnen via relatievelden contextueel worden gekoppeld, zodat u complexere segmentatieregels kunt maken."
->text="See the documentation for more information on schema relationships."
+>abstract="Schema&#39;s die tot verschillende klassen behoren, kunnen via relatievelden contextueel worden gekoppeld, zodat u complexere segmentatieregels kunt maken. Zie de documentatie voor meer informatie over schemaverhoudingen."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="Referentieschema"
->abstract="Selecteer het schema waarmee u een relatie wilt maken. Dit schema kan een andere klasse zijn dan het huidige schema."
->text="See the documentation for more information on schema relationships."
+>abstract="Selecteer het schema waarmee u een relatie wilt maken. Dit schema kan een andere klasse zijn dan het huidige schema. Zie de documentatie voor meer informatie over schemaverhoudingen."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Naamruimte van verwijzing"
->abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om aan een relatie te kunnen deelnemen."
->text="See the documentation for more information on schema relationships."
-
->[!NOTE]
->
->Raadpleeg de handleiding voor meer informatie over het maken van een vele-op-één relatie in Real-time Customer Data Platform B2B Edition [B2B-relaties maken](./relationship-b2b.md).
+>abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om aan een relatie te kunnen deelnemen. Zie de documentatie voor meer informatie over schemaverhoudingen."
 
 De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Deze relaties definiëren binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staan u toe om complexe inzichten in uw klantengegevens te bereiken.
 
 Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het union-schema en [!DNL Real-time Customer Profile]Dit geldt alleen voor schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema van verwijzingen voorziet.
 
 Dit document bevat een zelfstudie voor het definiëren van een relatie tussen twee schema&#39;s met behulp van de Schema-editor in het dialoogvenster [!DNL Experience Platform] gebruikersinterface. Raadpleeg de zelfstudie voor meer informatie over het definiëren van schema-relaties met de API [een relatie definiëren met de API voor het schemaregister](relationship-api.md).
+
+>[!NOTE]
+>
+>Raadpleeg de handleiding voor meer informatie over het maken van een vele-op-één relatie in Real-time Customer Data Platform B2B Edition [B2B-relaties maken](./relationship-b2b.md).
 
 ## Aan de slag
 

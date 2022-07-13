@@ -2,9 +2,9 @@
 title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
 description: Leer hoe u een vele-op-één relatie tussen twee schema's in Real-time Customer Data Platform B2B Edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Referentieschema"
->abstract="Selecteer het schema u een verband met wilt vestigen. Afhankelijk van de klasse van het schema, kan het bestaande verhoudingen met andere entiteiten in de context B2B ook hebben."
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->Als u Real-time Customer Data Platform B2B Edition niet gebruikt of een een-op-een relatie wilt maken, raadpleegt u de handleiding [een één-op-één relatie maken](./relationship-ui.md) in plaats daarvan.
+>abstract="Selecteer het schema u een verband met wilt vestigen. Afhankelijk van de klasse van het schema, kan het bestaande verhoudingen met andere entiteiten in de context B2B ook hebben. Zie de documentatie om te leren hoe de B2B schemaklassen op elkaar betrekking hebben."
 
 Real-time Customer Data Platform B2B Edition biedt verschillende XDM-klassen (Experience Data Model) die fundamentele B2B-gegevensentiteiten vastleggen, waaronder [rekeningen](../classes/b2b/business-account.md), [kansen](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md)en meer. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik binnen [Klantprofiel in realtime](../../profile/home.md), kunt u gegevens uit verschillende bronnen samenvoegen in een verenigde vertegenwoordiging genoemd een unieschema.
 
@@ -32,6 +27,8 @@ Het volgende diagram verstrekt een voorbeeld van hoe de verschillende klassen B2
 Deze zelfstudie behandelt de stappen om een vele-aan-één verhouding tussen twee schema&#39;s in Echte - tijd CDP B2B Uitgave te bepalen.
 
 >[!NOTE]
+>
+>Als u Real-time Customer Data Platform B2B Edition niet gebruikt of een een-op-een relatie wilt maken, raadpleegt u de handleiding [een één-op-één relatie maken](./relationship-ui.md) in plaats daarvan.
 >
 >Dit leerprogramma concentreert zich op hoe te om relaties tussen B2B- schema&#39;s in het Platform UI manueel te vestigen. Als u gegevens van een B2B bronverbinding brengt, kunt u een auto-generatienut gebruiken om de vereiste schema&#39;s, identiteiten, en verhoudingen in plaats daarvan tot stand te brengen. Raadpleeg de documentatie bij bronnen over B2B-naamruimten en -schema&#39;s voor meer informatie over [het gebruik van het hulpprogramma voor automatisch genereren](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -54,8 +51,7 @@ Schemarelaties worden vertegenwoordigd door een specifiek veld binnen een **bron
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Naamruimte van verwijzing"
->abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om aan een relatie te kunnen deelnemen."
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om aan een relatie te kunnen deelnemen. Raadpleeg de documentatie voor meer informatie over identiteiten in B2B-relaties."
 
 Om een verhouding te vestigen, moet het bestemmingsschema een bepaalde primaire identiteit hebben. Houd er bij het instellen van een primaire identiteit voor een B2B-entiteit rekening mee dat op tekenreeks gebaseerde entiteit-id&#39;s elkaar kunnen overlappen als u deze verzamelt op verschillende systemen of locaties, wat tot gegevensconflicten in Platform kan leiden.
 
@@ -88,14 +84,12 @@ Het doelschema &quot;[!DNL Accounts]&quot; is gebaseerd op de [!UICONTROL XDM Ac
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="Relatienaam uit huidig schema"
->abstract="A label that describes the relationship from the current schema to the reference schema (example, &#39;Related Account&#39;). Dit label wordt gebruikt in Profiel en Segmentatie om context te geven aan gegevens van verwante B2B-entiteiten."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="A label that describes the relationship from the current schema to the reference schema (example, &#39;Related Account&#39;). Dit label wordt gebruikt in Profiel en Segmentatie om context te geven aan gegevens van verwante B2B-entiteiten. Zie de documentatie om meer over het bouwen van B2B schemaverhoudingen te leren."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="Relatienaam van referentieschema"
->abstract="A label that describes the relationship from the reference schema to the current schema (example, &#39;Related Opportunity&#39;). Dit label wordt gebruikt in Profiel en Segmentatie om context te geven aan gegevens van verwante B2B-entiteiten."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="A label that describes the relationship from the reference schema to the current schema (example, &#39;Related Opportunity&#39;). Dit label wordt gebruikt in Profiel en Segmentatie om context te geven aan gegevens van verwante B2B-entiteiten. Zie de documentatie om meer over het bouwen van B2B schemaverhoudingen te leren."
 
 Om een verband tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat verwijzingen de primaire identiteit van het bestemmingsschema. De standaard B2B-klassen omvatten specifieke bronsleutelvelden voor algemeen verwante bedrijfsentiteiten. De [!UICONTROL XDM Business Opportunity] klasse bevat bronsleutelvelden voor een verwante account (`accountKey`) en een daarmee samenhangende campagne (`campaignKey`). U kunt echter ook andere [!UICONTROL B2B Source] velden naar het schema door aangepaste veldgroepen te gebruiken als u meer dan de standaardcomponenten nodig hebt.
 

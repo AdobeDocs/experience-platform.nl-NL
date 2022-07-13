@@ -5,9 +5,9 @@ title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '2817'
+source-wordcount: '2823'
 ht-degree: 0%
 
 ---
@@ -225,8 +225,7 @@ Nadat u de wijzigingen hebt toegepast, wordt het nieuwe veld onder de naamruimte
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Een schema voor profiel inschakelen"
->abstract="Wanneer een schema voor Profiel wordt toegelaten, nemen om het even welke datasets die van dit schema worden gecreeerd aan het Profiel van de Klant in real time deel, dat gegevens uit ongelijksoortige bronnen samenvoegt om een volledige mening van elke klant te construeren. Als een schema eenmaal is gebruikt om gegevens in te voeren in Profiel, kan het niet worden uitgeschakeld."
->text="See the documentation for more information on enabling a schema for Profile."
+>abstract="Wanneer een schema voor Profiel wordt toegelaten, nemen om het even welke datasets die van dit schema worden gecreeerd aan het Profiel van de Klant in real time deel, dat gegevens uit ongelijksoortige bronnen samenvoegt om een volledige mening van elke klant te construeren. Als een schema eenmaal is gebruikt om gegevens in te voeren in Profiel, kan het niet worden uitgeschakeld. Raadpleeg de documentatie voor meer informatie."
 
 [Klantprofiel in realtime](../../../profile/home.md) voegt gegevens uit verschillende bronnen samen om een volledige weergave van elke afzonderlijke klant samen te stellen. Als u wilt dat de gegevens die door een schema worden vastgelegd, aan dit proces deelnemen, moet u het schema inschakelen voor gebruik in [!DNL Profile].
 
