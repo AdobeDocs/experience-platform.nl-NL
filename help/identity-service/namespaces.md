@@ -5,9 +5,9 @@ title: Overzicht van id-naamruimte
 topic-legacy: overview
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,13 @@ Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevat
 
 ![](images/identity-service-stitching.png)
 
-### Identiteitstypen
+### Identiteitstypen {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="Type identiteit opgeven"
+>abstract="Het identiteitstype bepaalt of gegevens worden opgeslagen in de identiteitsgrafiek. De herkenningstekens van niet-mensen zullen niet worden opgeslagen, en alle andere identiteitstypes zullen."
+>text="Learn more in documentation"
 
 Gegevens kunnen worden geïdentificeerd door verschillende typen identiteiten. Het identiteitstype wordt gespecificeerd op het tijdstip dat identiteitskaart namespace wordt gecreeerd en controleert al dan niet het gegeven aan de identiteitsgrafiek en om het even welke speciale instructies voor hoe die gegevens zouden moeten worden behandeld wordt voortgeduurd. Alle identiteitstypen behalve **Id van niet-personen** volgt hetzelfde gedrag bij het aansluiten van een naamruimte en de bijbehorende ID-waarde op een identiteitsgrafiekcluster. Gegevens worden niet samengevoegd bij gebruik **Id van niet-personen**.
 

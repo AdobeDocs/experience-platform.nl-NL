@@ -5,9 +5,9 @@ title: Overzicht van identiteitsservice
 topic-legacy: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Voordat u in de details van [!DNL Identity Service]Hier volgt een korte samenvat
 | Term | Definitie |
 | --- | --- |
 | Identiteit | Een identiteit is gegevens die uniek zijn voor een entiteit, doorgaans een individuele persoon. Een identiteit, zoals een login identiteitskaart, ECID, of loyaliteitsidentiteitskaart, wordt ook bedoeld als &quot;bekende identiteit&quot;. |
-| ECID | Experience Cloud ID (ECID) is een naamruimte voor gedeelde identiteit die wordt gebruikt in Experience Platform- en Adobe Experience Cloud-toepassingen. ECID verstrekt een stichting voor klantenidentiteit en als primaire identiteitskaart voor apparaten en als basisknoop voor identiteitsgrafieken gebruikt. Zie de [ECID-overzicht](./ecid.md) voor meer informatie . |
+| ECID | Experience Cloud-id (ECID) is een naamruimte voor gedeelde identiteit die wordt gebruikt in Experience Platform- en Adobe Experience Cloud-toepassingen. ECID verstrekt een stichting voor klantenidentiteit en als primaire identiteitskaart voor apparaten en als basisknoop voor identiteitsgrafieken gebruikt. Zie de [ECID-overzicht](./ecid.md) voor meer informatie . |
 | Naamruimte identiteit | Een naamruimte voor identiteiten maakt onderscheid tussen de context of het type van een identiteit. Een identiteit onderscheidt bijvoorbeeld &quot;name&quot;<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken en de context voor identiteitswaarden te verstrekken. Zo kunt u bepalen dat twee [!DNL Profile] fragmenten die verschillende primaire id&#39;s bevatten, maar dezelfde waarde voor de componenten `email` naamruimte van identiteit is in feite hetzelfde individu. Zie de [Overzicht van naamruimte in identiteit](./namespaces.md) voor meer informatie . |
 | Identiteitsgrafiek | Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten, die u toestaan om te visualiseren en beter te begrijpen welke klantenidentiteiten samen worden vastgemaakt, en hoe. Zie de zelfstudie aan [de viewer voor identiteitsgrafieken gebruiken](./ui/identity-graph-viewer.md) voor meer informatie . |
 | Persoonlijk identificeerbare informatie (PII) | PII is informatie die een klant, zoals een e-mailadres of een telefoonaantal direct kan identificeren. PII-waarden worden vaak gebruikt om overeen te komen. de meervoudige identiteit van een klant op verschillende systemen. |
@@ -63,10 +63,21 @@ Voorbeelden van [!DNL Identity Service] de implementatie omvat :
 - Een bank geeft mogelijk de voorkeur aan &quot;rekeningnummer&quot; in offlinegegevenssets, zoals filiaaltransacties. Ze kunnen afhankelijk zijn van de &#39;inlognaam&#39; in online gegevenssets, omdat de meeste bezoekers tijdens hun bezoek zouden worden geverifieerd.
 - Uw klanten kunnen unieke merkgebonden IDs, zoals GUID of andere universeel unieke herkenningstekens ook hebben.
 
-## Identiteitsnaamruimten
+## Naamruimte identiteit {#identity-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Identiteitsnaamruimten"
+>abstract="Een naamruimte voor identiteiten maakt onderscheid tussen de context of het type van een identiteit. Een identiteit onderscheidt bijvoorbeeld &quot;name&quot;<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Identiteitswaarden"
+>abstract="Een identiteitswaarde is een herkenningsteken die een uniek individu, een organisatie, of een middel vertegenwoordigt. De context of het type van identiteit die de waarde vertegenwoordigt wordt bepaald door een overeenkomstige identiteitsnaamruimte. Wanneer recordgegevens in profielfragmenten overeenkomen, moeten de naamruimte en de identiteitswaarde overeenkomen. Wanneer de recordgegevens in profielfragmenten overeenkomen, moeten de naamruimte en de identiteitswaarde overeenkomen."
+>text="Learn more in documentation"
 
 Als je iemand vraagt: &quot;Wat is je id?&quot; zonder verdere context zou het voor hen moeilijk zijn een nuttig antwoord te geven . Door dezelfde logica is een tekenreekswaarde die een identiteitswaarde vertegenwoordigt, of het nu een door het systeem gegenereerde id of een e-mailadres is, alleen compleet wanneer deze wordt geleverd met een kwalificatie die de context van de tekenreekswaarde geeft: de naamruimte identity.
-
 
 Uw klanten kunnen met uw merk door een combinatie online en off-line kanalen in wisselwerking staan, resulterend in de uitdaging van hoe te om die gefragmenteerde interactie in één enkele klantenidentiteit te verzoenen.
 
