@@ -4,10 +4,10 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: b93221a9611de719d5194c387d582e77a162a1fd
+source-git-commit: b35581387a8b75f365db433b6138fdd8a7f96db0
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 5%
+source-wordcount: '199'
+ht-degree: 6%
 
 ---
 
@@ -44,7 +44,9 @@ ht-degree: 5%
    - [Anoniem blok](best-practices/anonymous-block.md)
    - [Incrementeel laden](best-practices/incremental-load.md)
    - [Gegevensdeduplicatie](best-practices/deduplication.md)
-- [Afgeleide kenmerken](derived-attributes.md)
+- Afgeleide kenmerken {#derived-attributes}
+   - [Overzicht](derived-attributes/overview.md)
+   - [Gebruiksscenario voor Deciles](derived-attributes/deciles-use-case.md)
 - Voorbeeldquery&#39;s {#sample-queries}
    - [Voorbeeld van query&#39;s voor ervaringsgebeurtenissen](sample-queries/experience-event.md)
    - [Voorbeeld van Adobe Analytics-query&#39;s](sample-queries/adobe-analytics.md)

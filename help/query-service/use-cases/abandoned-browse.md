@@ -4,7 +4,7 @@ title: Voorbeeld van gebruik van hoofdletters/kleine letters voor Adobe Experien
 topic-legacy: tutorial
 description: Een end-to-end voorbeeld om de veelzijdigheid en de voordelen van de Dienst van de Vraag van Adobe Experience Platform aan te tonen.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 06655e930e447b48089891ca930da89854b8320b
+source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Dit document en de bijbehorende videopresentatie bieden een end-to-end workflow op hoog niveau waarop wordt getoond hoe Adobe Experience Platform [!DNL Query Service] profiteert van de strategische zakelijke inzichten van uw organisatie. Gebruikend een doorbladerend gebruiksgeval als voorbeeld, illustreert deze gids de volgende belangrijkste concepten:
 
-* Het belangrijkste belang van gegevensverwerking voor het maximaliseren van het potentieel van Adobe Experience Platform
+* Het belangrijkste belang van gegevensverwerking om het potentieel van Adobe Experience Platform te maximaliseren.
 * Manieren om de vraag te bouwen die op uw bestaande gegevensarchitectuur wordt gebaseerd.
 * Zorg voor gegevenskwaliteit die aan uw behoeften voldoet, en methoden om eventuele tekortkomingen te beperken.
 * Het proces om een vraag te plannen om bij een vastgestelde frequentie voor gebruik stroomafwaarts in segmentatie en bestemmingen voor verpersoonlijking te lopen.
