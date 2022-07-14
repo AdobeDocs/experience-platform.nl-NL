@@ -1,7 +1,8 @@
 ---
 title: Gegevensbeheer in Query-service
 description: Dit overzicht behandelt de belangrijkste elementen van gegevensbeheer in de Dienst van de Vraag van het Experience Platform.
-source-git-commit: d81ef9b9b6fdf7612d2afead13e925c8a9daf902
+feature: Data Governance
+source-git-commit: ec063a0f5600729d3575f98898ade04443f29f2a
 workflow-type: tm+mt
 source-wordcount: '2659'
 ht-degree: 0%
