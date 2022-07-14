@@ -3,19 +3,18 @@ keywords: Experience Platform;home;populaire onderwerpen;analytische toewijzings
 solution: Experience Platform
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 topic-legacy: overview
-description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
+description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
 workflow-type: tm+mt
-source-wordcount: '3405'
+source-wordcount: '3401'
 ht-degree: 0%
 
 ---
 
 # Toewijzingen van analytische velden
 
-Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
+Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -23,7 +22,7 @@ Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de An
 
 Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het XDM-model (Experience Data Model).
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende XDM-veld (*XDM field*) en het type ervan (*XDM type*) en een beschrijving van het veld (*Description*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analyse*), het overeenkomstige XDM-veld (*XDM-veld*) en het type (*XDM-type*, alsmede een beschrijving van het veld (*Beschrijving*).
 
 >[!NOTE]
 >
@@ -58,7 +57,7 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 | j_jscript | environment.browserDetails.javaScriptVersion | string | De versie van JavaScript die door de browser wordt ondersteund. |
 | user_agent | environment.browserDetails.userAgent | string | De userAgent-tekenreeks die in de HTTP-header wordt verzonden. |
 | mobileappid | toepassing.</span>name | string | De mobiele toepassings-id wordt opgeslagen in de volgende indeling: `[AppName][BundleVersion]`. |
-| mobileapparaat | device.model | string | De naam van het mobiele apparaat. Op iOS wordt het opgeslagen als een door komma&#39;s gescheiden tekenreeks van 2 cijfers. Het eerste getal vertegenwoordigt de apparaatgeneratie en het tweede getal vertegenwoordigt de apparaatfamilie. |
+| mobileapparaat | device.model | string | De naam van het mobiele apparaat. In iOS wordt de notatie opgeslagen als een door komma&#39;s gescheiden tekenreeks van 2 cijfers. Het eerste getal vertegenwoordigt de apparaatgeneratie en het tweede getal vertegenwoordigt de apparaatfamilie. |
 | pointofinterest | placeContext.POIinteraction.POIDetail.</span>name | string | Wordt gebruikt door mobiele services. Vertegenwoordigt het aandachtspunt. |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | getal | Wordt gebruikt door mobiele services. Geeft de afstand van het punt van de belangstelling aan. |
 | mobiele plaatsnauwkeurigheid | placeContext.POIinteraction.POIDetail.geoInteractionDetails.deviceGeoAccuracy | getal | Verzameld van de contextgegevensvariabele a.loc.acc. Geeft de nauwkeurigheid van de GPS in meters aan op het moment van verzameling. |
@@ -84,7 +83,7 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 | videofeedtype | media.mediaTimed.primaryAssetViewDetails.sourceFeed | string | Type videofeed. |
 | mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | getal | Belangrijkste baken voor mobiele services. |
 | mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | getal | Beacon minor mobiele diensten. |
-| mobilebeaconuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | Mobile Services-baken UUID. |
+| mobilebeaconuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | Mobile Services beacon UUID. |
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._id | string | Video sessie-id. |
 | videogene | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | array | Videogenre. | {title (Object), description (Object), type (Object), meta:xdmType (Object), items (tekenreeks), meta:xdmField (Object)} |
 | mobiele installaties | application.firstLaunches | Object | Dit wordt geactiveerd bij de eerste uitvoering na installatie of herinstallatie | {id (string), value (number)} |
@@ -128,7 +127,7 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 
 ## Toewijzingsvelden splitsen
 
-Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen XDM.
+Deze velden hebben één bron, maar toewijzen aan **meerdere** XDM-locaties.
 
 | Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ---------- |
@@ -142,7 +141,7 @@ Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen 
 
 Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd. Voor het genereren in XDM is logica vereist die verder gaat dan een directe kopie van Adobe Analytics.
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende XDM-veld (*XDM field*) en het type ervan (*XDM type*) en een beschrijving van het veld (*Description*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analyse*), het overeenkomstige XDM-veld (*XDM-veld*) en het type (*XDM-type*, alsmede een beschrijving van het veld (*Beschrijving*).
 
 >[!NOTE]
 >
@@ -157,7 +156,7 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 | m_Cookies | environment.browserDetails.cookiesEnabled | boolean | Een variabele die in de dimensie van de Steun van het Koekje wordt gebruikt. |
 | m_event_list | commerce.purchase, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemovals, commerce.productListViews | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. | {id (string), value (number)} |
 | m_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event20 , _experience.analytics.event201to300.event201 -_experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event30 1to400.event400, _experience.analytics.event401to500.event401 -_experience.analytics.event401to500.event500, _experience.analytics.event501to600.event5 01 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event7 01to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event 900, _experience.analytics.event901to1000.event901 -_experience.analytics.event901to1000.event1000 | Object | Aangepaste gebeurtenissen die worden geactiveerd tijdens de hit. | {id (Object), value (Object)} |
-| m_geo_country | placeContext.geo.countryCode | string | Afkorting van het land waar de treffer vandaan kwam, dat is gebaseerd op het OT. |
+| m_geo_country | placeContext.geo.countryCode | string | Afkorting van het land waar de treffer vandaan kwam, dat van het OT is gebaseerd. |
 | m_geo_latitude | placeContext.geo._schema.latitude | getal | <!-- MISSING --> |
 | m_geo_longitude | placeContext.geo._schema.longitude | getal | <!-- MISSING --> |
 | m_java_enabled | environment.browserDetails.javaEnabled | boolean | Een markering die aangeeft of Java is ingeschakeld. |
@@ -202,9 +201,9 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics 
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) vereisen geavanceerdere transformaties voordat ze van Adobe Analytics-velden naar XDM (Experience Data Model) kunnen worden toegewezen. Wanneer u deze geavanceerde transformaties uitvoert, gebruikt u Adobe Experience Platform Query Service en vooraf gebouwde functies (zogenaamde door Adobe gedefinieerde functies) voor sessionisatie, attributie en deduplicatie.
 
-Voor meer informatie over het uitvoeren van deze transformaties met de Dienst van de Vraag, gelieve de [Adobe-bepaalde functies](../../../../query-service/sql/adobe-defined-functions.md) documentatie te bezoeken.
+Ga voor meer informatie over het uitvoeren van deze transformaties met gebruik van Query Service naar de [Adobe-gedefinieerde functies](../../../../query-service/sql/adobe-defined-functions.md) documentatie.
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende XDM-veld (*XDM field*) en het type ervan (*XDM type*) en een beschrijving van het veld (*Description*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analyse*), het overeenkomstige XDM-veld (*XDM-veld*) en het type (*XDM-type*, alsmede een beschrijving van het veld (*Beschrijving*).
 
 >[!NOTE]
 >
