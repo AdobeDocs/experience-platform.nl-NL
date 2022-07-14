@@ -1,9 +1,7 @@
 ---
 title: 'Hoofdlettergebruik van op decile gebaseerde afgeleide kenmerken '
 description: Deze gids toont de stappen die worden vereist om de Dienst van de Vraag te gebruiken om op decile-Gebaseerde afgeleide attributen voor gebruik met uw gegevens van het Profiel tot stand te brengen.
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 1%

@@ -1,10 +1,8 @@
 ---
 title: Afgeleide kenmerken
 description: Afgeleide attributen verstrekken een geschikte manier om attributen van uw keus te produceren die bij om het even welke regelmatige kappigheid en naar keuze gepubliceerd in uw gegevens van het Profiel van de Klant in real time kunnen worden vernieuwd. Dit document biedt een overzicht van hoe u de Query-service kunt gebruiken om afgeleide kenmerken te maken voor gebruik met uw profielgegevens.
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: ae11d6f622c42d08373b7454ef920a80abaf2425
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
