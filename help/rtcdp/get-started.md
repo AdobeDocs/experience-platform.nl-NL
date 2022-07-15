@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Aan de slag met Real-time Customer Data Platform
 
-Deze gids Aan de slag leidt u door een steekproefimplementatie van Real-time Customer Data Platform (Real-time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van de instellingen.
+Deze gids Aan de slag leidt u door een steekproefimplementatie van Real-time Customer Data Platform (Real-time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
 
 In dit voorbeeld ziet u de kracht van Real-time Customer Data Platform, aangedreven door Adobe Experience Platform, om:
 
@@ -190,7 +190,7 @@ Alle profielinformatie Luma heeft over Sarah displays. Dit omvat haar persoonlij
 
 | Categorie | Beschrijving |
 |---|---|
-| Identiteiten | Hiermee geeft u de identiteiten weer die aan elkaar zijn gekoppeld in [!DNL Platform] van Sarah&#39;s interacties met Luma over kanalen en apparaten. Haar ECID van de website wordt weergegeven. Haar identiteit omvat ook de ECID van haar mobiele app, haar e-mailadres, een CRM-id van de onlangs toegevoegde [!DNL Microsoft Dynamics] dataset, en een loyaliteitsidentiteitskaart die in Adobe Experience Platform van het systeem van de loyaliteit Luma wordt overgegaan. |
+| Identiteiten | Hiermee geeft u de identiteiten weer die aan elkaar zijn gekoppeld in [!DNL Platform] van Sarah&#39;s interacties met Luma via kanalen en apparaten. Haar ECID van de website wordt weergegeven. Haar identiteit omvat ook de ECID van haar mobiele app, haar e-mailadres, een CRM-id van de onlangs toegevoegde [!DNL Microsoft Dynamics] dataset, en een loyaliteitsidentiteitskaart die in Adobe Experience Platform van het systeem van de loyaliteit Luma wordt overgegaan. |
 | Gebeurtenissen | Toont alle interactiegegevens van Sarah met het merk Luma. Dit omvat het item dat ze net bekeken heeft, alles wat ze in het verleden bekeken heeft, de e-mails die ze heeft ontvangen, haar interacties met het callcenter, en op welk kanaal en apparaat deze interacties plaatsvonden. |
 
 Het profiel in real time CDP vermindert het werkschema van het marketingteam Luma van weken aan notulen en ontgrendelt mogelijkheden voor verpersoonlijking die op deze 360 graadklantenmening wordt gebaseerd. In het profiel worden de gedragsgegevens samengevoegd vanaf het moment dat ze door de site bladert voordat ze zich aanmeldt, met haar bestaande klantprofiel, en wordt een uitgebreide weergave van Sarah gemaakt.

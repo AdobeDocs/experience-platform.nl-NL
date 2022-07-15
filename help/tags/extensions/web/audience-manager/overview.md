@@ -1,7 +1,8 @@
 ---
 title: Overzicht Adobe Audience Manager-extensie
 description: Meer informatie over de Adobe Audience Manager-tagextensie in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -20,13 +21,13 @@ Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het g
 
 >[!NOTE]
 >
->Deze extensie is niet bedoeld voor het doorsturen van gebeurtenissen van Adobe Analytics-gegevens. Gebruik voor het doorsturen van gebeurtenissen de extensie [Adobe Analytics](../analytics/overview.md).
+>Deze extensie is niet bedoeld voor het doorsturen van gebeurtenissen van Adobe Analytics-gegevens. Gebruik voor het doorsturen van gebeurtenissen de [Adobe Analytics-extensie](../analytics/overview.md).
 
 ## De Adobe Audience Manager-extensie configureren
 
-Als de extensie Adobe Audience Manager nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de aanwijzer op de extensie Adobe Audience Manager en selecteert u **[!UICONTROL Install]**.
+Als de extensie Adobe Audience Manager nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de aanwijzer boven de Adobe Audience Manager-extensie en selecteert u **[!UICONTROL Install]**.
 
-Als u de extensie wilt configureren, opent u het tabblad [!UICONTROL Extensions], plaatst u de muis boven de extensie en selecteert u **[!UICONTROL Configure]**.
+Als u de extensie wilt configureren, opent u de [!UICONTROL Extensions] , plaatst u de cursor boven de extensie en selecteert u vervolgens **[!UICONTROL Configure]**.
 
 ### DIL-instellingen
 
@@ -44,13 +45,13 @@ Deze instelling kan niet worden gewijzigd.
 
 Als de URL overeenkomt met een van de uitgesloten paden, wordt de extensie niet geladen.
 
-Selecteer **[!UICONTROL Add Path]** om een uitgesloten URL te specificeren.
+Selecteren **[!UICONTROL Add Path]** om een uitgesloten URL op te geven.
 
 Schakel Regex in als de URL een reguliere expressie is.
 
 #### DIL Site Catalyst-module gebruiken
 
-De [SiteCatalyst module](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html) werkt met DIL om de markeringselementen van Analytics naar Audience Manager te verzenden.
+De [SiteCatalyst, module](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html) werkt met DIL om elementen van de tag Analytics naar de Audience Manager te verzenden.
 
 Gebruik de Code-editor om het bestand siteCatalyst.init te configureren.
 
@@ -58,17 +59,17 @@ U kunt ook een notitie maken met informatie over deze configuratie.
 
 #### DIL Google Analytics-module gebruiken
 
-Schakel de module [Google Analytics in](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html).
+De optie [Google Analytics, module](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html).
 
 #### DIL.Initialisatie-eigenschappen maken
 
-Voeg initialisatie-eigenschappen toe die worden gebruikt door [DIL.create](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) en de naamruimtesubeigenschap voor het [bezoekorService-object](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html). In de codeopmerkingen in de Code-editor zijn twee voorbeelden van voorbeeldgebruik opgenomen.
+Initialisatie-eigenschappen toevoegen die worden gebruikt door [DIL.create](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) en de naamruimte-subeigenschap voor de [Object bezoekorService](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html). In de codeopmerkingen in de Code-editor zijn twee voorbeelden van voorbeeldgebruik opgenomen.
 
-Selecteer **[!UICONTROL Choose an Item]** om extra eigenschappen toe te voegen.
+Selecteren **[!UICONTROL Choose an Item]** om extra eigenschappen toe te voegen.
 
-Houd de muisaanwijzer boven de pictogrammen &#39;i&#39; om te zien wat elke eigenschap doet. U kunt meer informatie voor de eigenschappen in [de documentatie van de DIL van de Audience Manager](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) vinden.
+Houd de muisaanwijzer boven de pictogrammen &#39;i&#39; om te zien wat elke eigenschap doet. Meer informatie over de eigenschappen vindt u in het dialoogvenster [Audience Manager DIL](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html).
 
-Selecteer **[!UICONTROL Save]** wanneer u klaar bent met het vormen van de uitbreiding.
+Selecteren **[!UICONTROL Save]** wanneer u klaar bent met het configureren van de extensie.
 
 ## Handelingstypen voor Adobe Audience Manager-extensies
 

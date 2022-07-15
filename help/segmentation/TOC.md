@@ -54,7 +54,7 @@ ht-degree: 5%
    - [Filterfuncties](pql/filter-functions.md)
    - [Logische kwantoren](pql/logical-quantifiers.md)
    - [Diverse functies](pql/misc-functions.md)
-- Tutorials {#tutorials}
+- Lesbestanden {#tutorials}
    - [Een segment maken](tutorials/create-a-segment.md)
    - [Een segment maken (video)](video/create-segment.md)
    - [Een dynamisch segment maken (video)](video/create-a-dynamic-segment.md)

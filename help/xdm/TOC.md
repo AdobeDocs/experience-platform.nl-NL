@@ -169,7 +169,7 @@ ht-degree: 6%
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Mixinen (afgekeurd)](api/mixins.md)
    * [Aanhangsel](api/appendix.md)
-* Tutorials {#tutorials}
+* Lesbestanden {#tutorials}
    * [Een schema maken in de gebruikersinterface](tutorials/create-schema-ui.md)
    * [Een schema maken in de API](tutorials/create-schema-api.md)
    * [Aangepaste velden in de API definiëren](./tutorials/custom-fields-api.md)

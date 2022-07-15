@@ -23,7 +23,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 
 De output van de Attribution AI kan over diverse dimensies worden gescheiden en kan over verschillende stadia van de klantenreis worden gebruikt. Dit wordt verwezenlijkt zonder het moeten bedrijfsbehoeften vertalen om het leren problemen van de machine, het kiezen van algoritmen, opleiding, of het opstellen van modellen te machineren.
 
-Attribution AI-gegevens kunnen afkomstig zijn van Adobe (bijvoorbeeld [!DNL Analytics]) of niet-Adobe gegevensbronnen.
+Attribution AI-gegevens kunnen afkomstig zijn van Adobe (bijvoorbeeld [!DNL Analytics]) of niet-Adobe-gegevensbronnen.
 
 Attribution AI ondersteunt twee categorieën scores, algoritmisch en op regels gebaseerd. Algoritmische scores omvatten incrementele en beïnvloede scores. Op regels gebaseerde scores zijn onder andere First touch, Last touch, Linear, U-shaped en Time-Decay.
 
@@ -37,14 +37,14 @@ U kunt Attribution AI gebruiken als hulp bij het gebruik van de volgende voorbee
 
 - **Directe rapportage**: Geef managers inzicht in de werkelijke incrementele impact van marketing, zowel als geheel als per kanaal, regio, SKU, enz.
 - **Begrotingstoewijzing**: Beslissingen over begrotingstoewijzing via marketingkanaal informeren.
-- **Optimalisatie** van campagne: Begrijp binnen elk kanaal welke campagnes, creatieven, en sleutelwoorden beter werken waarvoor SKUs of Geos. Zo kunt u naar elk kanaal kijken zodat het marketingteam hun tactiek kan optimaliseren.
-- **Toekenning** van de volledige trechter: Begrijp het effect van de marketing over de volledige klantenreis. Bijvoorbeeld gratis account voor betaalde conversie en hoger.
+- **Campagne optimaliseren**: Begrijp binnen elk kanaal welke campagnes, creatieven, en sleutelwoorden beter werken waarvoor SKUs of Geos. Zo kunt u naar elk kanaal kijken zodat het marketingteam hun tactiek kan optimaliseren.
+- **Toekenning van de volledige trechter**: Begrijp het effect van de marketing over de volledige klantenreis. Bijvoorbeeld gratis account voor betaalde conversie en hoger.
 - **Partnerevaluaties**: De doeltreffendheid van agentschappen en partners evalueren op basis van toewijzingsresultaten.
 
 ### Extra functies
 
-Attribution AI biedt ook integratie met andere Adobe-oplossingen zoals [!DNL Adobe Analytics]. Hierdoor kunt u deze oplossingen gebruiken om het aanpasbare algoritmische model te gebruiken voor het evalueren van de mediaprestaties en het bieden van analytische inzichten.
+Attribution AI biedt ook integratie met andere Adobe-oplossingen, zoals [!DNL Adobe Analytics]. Hierdoor kunt u deze oplossingen gebruiken om het aanpasbare algoritmische model te gebruiken voor het evalueren van de mediaprestaties en het bieden van analytische inzichten.
 
 ## Volgende stappen
 
-U kunt beginnen door [te volgen begonnen ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste pre-verzoeken om Attribution AI. Als u al over uw gegevens en gegevens beschikt, gaat u naar de [gebruikershandleiding](./user-guide.md). Deze gids begeleidt u door het creëren van een geval en het voorleggen van het voor opleiding en het scoren.
+U kunt beginnen door [aan de slag](./getting-started.md) hulplijn. Deze gids begeleidt u door vestiging alle vereiste pre-verzoeken om Attribution AI. Als u al over uw gegevens en gegevens beschikt, gaat u naar de [Gebruikershandleiding voor Attribution AI](./user-guide.md). Deze gids begeleidt u door het creëren van een geval en het voorleggen van het voor opleiding en het scoren.

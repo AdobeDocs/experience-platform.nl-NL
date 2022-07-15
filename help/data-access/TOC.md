@@ -16,6 +16,6 @@ ht-degree: 2%
 
 - [Overzicht van gegevenstoegang](home.md)
 - [API voor gegevenstoegang](api.md)
-- Tutorials {#tutorials}
+- Lesbestanden {#tutorials}
    - [Gegevenssetgegevens weergeven](tutorials/dataset-data.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
