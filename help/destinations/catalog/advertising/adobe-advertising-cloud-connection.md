@@ -2,9 +2,9 @@
 title: Adobe Advertising Cloud DSP-verbinding
 description: Adobe Advertising Cloud DSP is een geïntegreerde bestemming voor de [!DNL Adobe Real-time Customer Data Profile], zodat u geverifieerde first-party-segmenten kunt delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Een mediabedrijf met een DSP account voert een herrichtingscampagne namens zijn 
 
 ## Vereisten {#prerequisites}
 
-* DSP instellingen op accountniveau en op campagnereniveau om delen met segmenten mogelijk te maken [!DNL LiveRamp RampID], waarin klantgegevens worden omgezet in [!DNL RampIDs] om doelsegmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren.
+* DSP instellingen op accountniveau en op campagnereniveau om delen met segmenten mogelijk te maken [!DNL LiveRamp RampID], waarin klantgegevens worden omgezet in [!DNL RampIDs] om doelsegmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren. [!DNL RampID] via een partnerschap tussen DSP en [!DNL LiveRamp]en u hebt uw eigen [!DNL LiveRamp] lidmaatschap om het te gebruiken.
 * De Experience Cloud organisatie-id voor de account van het Experience Platform. Je kunt je id vinden op je [!DNL Real-Time CDP] pagina met gebruikersprofielen.
 * A [[!DNL Real-Time CDP] bron in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) om segmenten te ontvangen voor activering van de campagne. Uw DSP accountteam zal de bron maken met uw Experience Cloud-organisatie-id.
 * De bronsleutel voor de DSP account of adverteerder, die wordt gegenereerd wanneer een [[!DNL Real-Time CDP] bron wordt gemaakt in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Uw DSP accountteam zal deze sleutel met u delen. U gaat het binnen het Experience Platform gebruiken om een doelverbinding met de Advertising Cloud DSP-bestemming te maken, zoals [hieronder beschreven](#authenticate).
