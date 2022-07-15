@@ -6,7 +6,7 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4a9511f055854ab574aca46f44acf155b0c16af6
+source-git-commit: bbace3c3768ef9b130c94f3d7519d52dfadeafa1
 workflow-type: tm+mt
 source-wordcount: '3062'
 ht-degree: 0%
@@ -168,16 +168,16 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ## Het dashboard Bestemmingen controleren {#monitoring-destinations-dashboard}
 
->[!CONTEXTUALHELP]
->id="platform_monitoring_activation"
->title="Activering"
->abstract="De weergave voor doelactivering bevat informatie over de activeringsstatus van het segment en de maatstaven die vanuit het realtime profiel van de klant zijn genomen om unieke identiteiten te genereren."
-
 >[!NOTE]
 >
 >- Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
 >- Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) bestemmingen, uitgesloten identiteiten worden momenteel niet weergegeven.
 
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="Activering"
+>abstract="De weergave voor doelactivering bevat informatie over de activeringsstatus van het segment en de maatstaven die vanuit het realtime profiel van de klant zijn genomen om unieke identiteiten te genereren."
 
 Om toegang te krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Destinations]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de banen van de bestemmingslooppas.
 
