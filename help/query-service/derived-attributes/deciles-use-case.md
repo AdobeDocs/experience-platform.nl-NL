@@ -1,7 +1,8 @@
 ---
-title: 'Hoofdlettergebruik van op decile gebaseerde afgeleide kenmerken '
+title: Hoofdlettergebruik van op decile gebaseerde afgeleide kenmerken
 description: Deze gids toont de stappen die worden vereist om de Dienst van de Vraag te gebruiken om op decile-Gebaseerde afgeleide attributen voor gebruik met uw gegevens van het Profiel tot stand te brengen.
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 1%
@@ -59,7 +60,7 @@ In de volgende tabel worden de voorbeeldgegevens in het dialoogvenster `_profile
 
 >[!NOTE]
 >
->Voor de beknoptheid, de inhouds-id `_profilefoundationreportingstg` is weggelaten vanaf het begin van de naamruimte in de kolomtitels en latere vermeldingen in het hele document.
+>Voor de beknoptheid, de huurder-id `_profilefoundationreportingstg` is weggelaten vanaf het begin van de naamruimte in de kolomtitels en latere vermeldingen in het hele document.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ Stel de vraag in werking om de decile dataset te bevolken. U kunt de vraag als m
 ## Volgende stappen
 
 Het bovenstaande voorbeeld van het gebruik markeert de stappen waarmee u decile-kenmerken beschikbaar kunt maken in het realtime profiel van de klant. Dit staat voor de Dienst van de Segmentatie, of via een gebruikersinterface of RESTful API, toe om publiek te kunnen produceren dat op deze decile emmers wordt gebaseerd. Zie de [Overzicht van segmentatieservice](../../segmentation/home.md) voor informatie over om, segmenten tot stand te brengen te evalueren en toegang te hebben.
-
