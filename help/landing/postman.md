@@ -5,9 +5,9 @@ title: Postman in Adobe Experience Platform
 topic-legacy: api guide
 description: Dit document bevat stappen waarin wordt beschreven hoe u een Postman-omgeving instelt, Postman-verzamelingen importeert en een lijst met beschikbare verzamelingen voor elke service van Platforms.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ De volgende videohandleiding geeft een overzicht van het maken en instellen van 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Postcollecties {#collections}
+## Postman-verzamelingen {#collections}
 
 Een map met alle beschikbare Postman-verzamelingen kunt u vinden op [Experience Platform Postman samples GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). U kunt ook een Postman-verzamelingskoppeling vinden in elk afzonderlijk wagerbestand in het dialoogvenster [API-naslagdocumentatie](https://www.adobe.com/go/platform-api-reference-en) op Adobe I/O.
 
@@ -32,7 +32,7 @@ Als u een Postman-verzameling wilt downloaden, selecteert u **[!DNL Raw]** van d
 
 ## Een Postman-verzameling importeren {#import}
 
-Om een [Postboeking](#collections), moet u een omgeving instellen. Als u de omgeving hebt ingesteld, selecteert u de **[!DNL Manage Environments]** in de rechterbovenhoek.
+Om een [Postman-collectie](#collections), moet u een omgeving instellen. Als u de omgeving hebt ingesteld, selecteert u de **[!DNL Manage Environments]** in de rechterbovenhoek.
 
 ![omgevingskiezer beheren](./images/api-guide/environment-selector.png)
 
@@ -52,9 +52,9 @@ Ga voor meer informatie over de gebruikersinterface van Postman en de beschikbar
 
 >[!WARNING]
 >
->Zoals opgemerkt in de Adobe I/O toegangstoken van Postman inzameling, zijn de gesignaleerde generatiemethodes geschikt voor **niet-productiegebruik**. Bij lokaal ondertekenen wordt een JavaScript-bibliotheek geladen van een externe host en bij extern ondertekenen wordt de persoonlijke sleutel verzonden naar een webservice die eigendom is van en wordt beheerd door Adobe. Hoewel Adobe deze persoonlijke sleutel niet opslaat, mogen productietoetsen nooit met iemand worden gedeeld.
+>Zoals vermeld in de Identity Management Service (IMS) Postman-collectie, zijn de vermelde generatiemethoden geschikt voor **niet-productiegebruik**. Bij lokaal ondertekenen wordt een JavaScript-bibliotheek geladen van een externe host en bij extern ondertekenen wordt de persoonlijke sleutel verzonden naar een webservice die eigendom is van en wordt beheerd door Adobe. Hoewel Adobe deze persoonlijke sleutel niet opslaat, mogen productietoetsen nooit met iemand worden gedeeld.
 
-In de onderstaande video wordt het [Adobe I/O toegangstoken genereren, verzameling](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) die van de openbare bewaarplaats GitHub kunnen worden gedownload.
+In de onderstaande video wordt het [Identity Management Service (IMS) Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) die van de openbare bewaarplaats GitHub kunnen worden gedownload.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
