@@ -1,9 +1,9 @@
 ---
 title: (Bèta) De handelsbank - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1018'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Dit document is ontworpen om u te helpen profielen te activeren voor uw [!DNL Tr
 
 Voordat u segmenten kunt activeren [!DNL The Trade Desk], moet u contact opnemen met uw [!DNL The Trade Desk] accountmanager om het CRM-instapcontract te ondertekenen. [!DNL The Trade Desk] zal dan toestemming geven en uw adverteerder identiteitskaart delen om uw bestemming te vormen.
 
-## Vereisten voor ID-afstemming (#id-matching-requirements)
+## Vereisten voor ID-afstemming {#id-matching-requirements}
 
 Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen. Lees de [Overzicht van naamruimte van id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl) voor meer informatie .
 
@@ -50,7 +50,7 @@ Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA25
 
 {style=&quot;table-layout:auto&quot;}
 
-## Vereisten voor e-mailhashing (#hashing-requirements)
+## Vereisten voor e-mailhashing {#hashing-requirements}
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen of onbewerkte e-mailadressen gebruiken.
 
@@ -77,11 +77,11 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Verbinden met de bestemming {#connect}
 
-### Verifiëren voor bestemming (#authenticate)
+### Verifiëren voor doel {#authenticate}
 
 [!DNL The Trade Desk] De Bestemming van CRM is een dagelijkse lading van het partijdossier en vereist geen authentificatie door de gebruiker.
 
-### Bestemmingsdetails invullen (#fill-in-details)
+### Bestemmingsdetails invullen {#fill-in-details}
 
 Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) voor deze bestemming moet u de volgende informatie opgeven:
 
@@ -120,7 +120,7 @@ Doelvelden selecteren:
 * Selecteer `Email` naamruimte als doelidentiteit wanneer uw bronnaamruimte of -kenmerk `Email`.
 * Selecteer `Email_LC_SHA256` naamruimte als doelidentiteit wanneer uw bronnaamruimte of -kenmerk `Email_LC_SHA256`.
 
-## Gegevens exporteren valideren (#validate)
+## Gegevens exporteren valideren {#validate}
 
 Om te controleren dat de gegevens correct uit Experience Platform en naar worden uitgevoerd [!DNL The Trade Desk], zoek de segmenten onder de Adobe 1PD-datatielijn in [!DNL The Trade Desk] Platform voor gegevensbeheer (DMP). Hier volgen de stappen om de bijbehorende id te vinden in het dialoogvenster [!DNL Trade Desk] UI:
 
