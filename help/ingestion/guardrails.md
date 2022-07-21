@@ -2,9 +2,10 @@
 keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Dit document biedt richtlijnen voor het opnemen van gegevens in Adobe Experience Platform
-source-git-commit: 3f558c9c11945cc9af51c42f7ed872101521259f
+exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
+source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -32,7 +33,7 @@ In de volgende tabel worden de hulplijnen weergegeven die u moet gebruiken bij h
 | Type opname | Richtsnoeren | Notities |
 | --- | --- | --- |
 | Streaming opname | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>U kunt 20000 verzoeken per seconde aan Profiel binnen één minuut verwerken.</li><li>U kunt tot 20000 verzoeken per seconde aan gegevens verwerken meer binnen 15 minuten.</li></ul> | Gebruik de batch-opname-API als u een hogere gegevensdoorvoer nodig hebt. |
-| Streaming bronnen | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>Streaming bronnen ondersteunen tussen 4000 en 5000 aanvragen per seconde wanneer een nieuwe bronverbinding wordt gemaakt.</li><li>U kunt tussen 4000 en 5000 verzoeken per seconde aan gegevens verwerken meer.</li></ul> | Streaming bronnen zoals [!DNL Kafka], [!DNL Azure Event Hubs], en [!DNL Amazon Kinesis] niet de [!DNL Data Collection Core Service] (DCCS) route en kan verschillende productiegrenzen hebben. Zie de [overzicht van bronnen](../sources/home.md) voor een catalogus met bronnen die u kunt gebruiken voor gegevensinvoer. |
+| Streaming bronnen | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>Streaming bronnen ondersteunen tussen 4000 en 5000 aanvragen per seconde wanneer een nieuwe bronverbinding wordt gemaakt. **Opmerking**: Het kan tot 30 minuten duren voor het stromen gegevens volledig worden verwerkt tot gegevens meer.</li><li>U kunt tussen 4000 en 5000 verzoeken per seconde aan gegevens verwerken meer. **Opmerking**: Het kan tot 30 minuten duren voor het stromen gegevens volledig worden verwerkt tot gegevens meer.</li></ul> | Streaming bronnen zoals [!DNL Kafka], [!DNL Azure Event Hubs], en [!DNL Amazon Kinesis] niet de [!DNL Data Collection Core Service] (DCCS) route en kan verschillende productiegrenzen hebben. Zie de [overzicht van bronnen](../sources/home.md) voor een catalogus met bronnen die u kunt gebruiken voor gegevensinvoer. |
 
 ## Volgende stappen
 
