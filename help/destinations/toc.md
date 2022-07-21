@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '823'
 ht-degree: 1%
 
 ---
@@ -72,6 +72,7 @@ ht-degree: 1%
       * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
       * [(bèta) Snapchat Ads-verbinding](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
+      * [De Trade Desk CRM-verbinding](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-verbinding](./catalog/advertising/datax.md)
    * Analysedoelen {#analytics}
