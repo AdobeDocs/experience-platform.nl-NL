@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -27,31 +27,9 @@ Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience
 
 Bovendien is voor deze zelfstudie vereist dat u al een streamingverbinding hebt gemaakt. Voor meer informatie over het maken van een streamingverbinding leest u de [een zelfstudie over streamingverbindingen maken](./create-streaming-connection.md).
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
+### Platform-API&#39;s gebruiken
 
-### API-voorbeeldaanroepen lezen
-
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
-
-### Waarden verzamelen voor vereiste koppen
-
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
-
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
-
-- Inhoudstype: application/json
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../landing/api-guide.md).
 
 ## Stel een schema samen dat van de klasse XDM ExperienceEvent wordt gebaseerd
 
@@ -342,7 +320,15 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
                 "contentType": "application/vnd.adobe.xed-full+json;version=1"
-            }
+            },
+        "identityMap": {
+                "Email": [
+                  {
+                    "id": "acme_user@gmail.com",
+                    "primary": true
+                  }
+                ]
+              },
         },
         "xdmEntity":{
             "_id": "9af5adcc-db9c-4692-b826-65d3abe68c22",

@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
@@ -26,31 +26,9 @@ Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience
    - [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/getting-started.md): Een uitgebreide gids die elk van de beschikbare eindpunten van [!DNL Schema Registry] API en hoe te om tot hen te richten. Hieronder valt ook het weten van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
+### Platform-API&#39;s gebruiken
 
-### API-voorbeeldaanroepen lezen
-
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
-
-### Waarden verzamelen voor vereiste koppen
-
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
-
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
-
-- Inhoudstype: application/json
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../landing/api-guide.md).
 
 ## Stel een schema samen dat van wordt gebaseerd [!DNL XDM Individual Profile] class
 
@@ -304,7 +282,8 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{ORG_ID}",
-        "datasetId": "{DATASET_ID}"
+        "datasetId": "{DATASET_ID}",
+        "flowId": "{FLOW_ID}",
     },
     "body": {
         "xdmMeta": {
