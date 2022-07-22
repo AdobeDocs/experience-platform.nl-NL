@@ -2,9 +2,9 @@
 title: Gebruikersmachtigingen voor tags
 description: Leer over de verschillende soorten toestemmingen beschikbaar voor markeringen en sommige basisimplementatiestrategieën voor verschillende zaken van bedrijfsgebruik.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Deze gids verstrekt een overzicht van de verschillende soorten toestemmingen bes
 
 >[!NOTE]
 >
->Voor stappen op hoe te om toestemmingen voor gebruikers te vormen die Admin Console gebruiken, gelieve te verwijzen naar de zelfstudie over [het beheren van toestemmingen voor markeringen](./manage-permissions.md).
+>Voor stappen over hoe te om toestemmingen voor gebruikers te vormen die Admin Console gebruiken, gelieve te verwijzen naar het leerprogramma op [machtigingen voor gegevensverzameling beheren](../../../rtcdp-connections/permissions.md).
 
 ## Machtigingstypen
 
@@ -55,8 +55,8 @@ De volgende tabel geeft een overzicht van de beschikbare eigendomsrechten en de 
 | **Ontwikkelen** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Regels en gegevenselementen maken</li><li>Bibliotheken maken en deze bouwen in bestaande ontwikkelomgevingen</li><li>Bibliotheek ter goedkeuring verzenden</li></ul>De meeste dagelijkse taken in UI van de Inzameling van Gegevens vereisen dit recht. |
 | **Goedkeuren** | Hierdoor kunt u een verzonden bibliotheek gebruiken en bouwen naar de testomgeving. U kunt ook een bibliotheek goedkeuren voor publicatie nadat het testen is voltooid. |
 | **Publicatie** | Hierdoor kunt u goedgekeurde bibliotheken publiceren naar de productieomgeving. |
-| **Extensies beheren** | Op deze manier kunt u de volgende handelingen uitvoeren: <ul><li>Nieuwe extensies installeren op een eigenschap</li><li>De configuratie voor een reeds geïnstalleerde extensie wijzigen</li><li>Een extensie verwijderen</li></ul>Zie de documentatie van het extensieoverzicht voor [meer informatie over extensies](../managing-resources/extensions/overview.md). Deze rol behoort gewoonlijk tot IT of Marketing, afhankelijk van uw organisatie. |
-| **Omgevingen beheren** | Hierdoor kunt u omgevingen maken en wijzigen. Raadpleeg de [documentatie over omgevingen](../publishing/environments.md) voor meer informatie. Deze rol behoort gewoonlijk tot de IT-groep. |
+| **Extensies beheren** | Op deze manier kunt u de volgende handelingen uitvoeren: <ul><li>Nieuwe extensies installeren op een eigenschap</li><li>De configuratie voor een reeds geïnstalleerde extensie wijzigen</li><li>Een extensie verwijderen</li></ul>Raadpleeg de documentatie bij het overzicht van extensies voor [meer informatie over extensies](../managing-resources/extensions/overview.md). Deze rol behoort gewoonlijk tot IT of Marketing, afhankelijk van uw organisatie. |
+| **Omgevingen beheren** | Hierdoor kunt u omgevingen maken en wijzigen. Zie de [omgevingdocumentatie](../publishing/environments.md) voor meer informatie . Deze rol behoort gewoonlijk tot de IT-groep. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -66,9 +66,9 @@ De rechten van het bedrijf zijn op toestemmingen van toepassing die veelvoudige 
 
 | Bedrijfsrecht | Beschrijving |
 | --- | --- |
-| **Eigenschappen beheren** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Nieuwe eigenschappen maken</li><li>Metagegevens en instellingen op eigenschapsniveau wijzigen</li><li>Eigenschappen verwijderen</li></ul>Beheerders voeren deze rol gewoonlijk uit. Zie de [eigenschappendocumentatie](companies-and-properties.md) voor meer informatie. |
+| **Eigenschappen beheren** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Nieuwe eigenschappen maken</li><li>Metagegevens en instellingen op eigenschapsniveau wijzigen</li><li>Eigenschappen verwijderen</li></ul>Beheerders voeren deze rol gewoonlijk uit. Zie de [eigenschappendocumentatie](companies-and-properties.md) voor meer informatie . |
 | **Extensies ontwikkelen** | Biedt de mogelijkheid extensiepakketten te maken en aan te passen die eigendom zijn van het bedrijf, inclusief privéreleases en verzoeken om openbare publicatie. |
-| **App Configurations beheren** | Dit is alleen beschikbaar als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en push-berichten.  Op deze manier kunt u de apps beheren waarvan Experience Cloud kennis heeft, samen met de vereiste pushgegevens die nodig zijn om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification Service. |
+| **App Configurations beheren** | Dit is alleen beschikbaar als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en push-berichten.  Op deze manier kunt u de apps beheren die Experience Cloud bekend zijn, samen met de vereiste pushreferenties om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification Service. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -121,4 +121,4 @@ De volgende lijst verstrekt sommige voorbeelden van de soorten rollen u in uw or
 
 ## Volgende stappen
 
-Dit document bevat een overzicht van de beschikbare machtigingen voor tags in Experience Platform. Zie de handleiding over het beheren van gebruikersmachtigingen](./manage-permissions.md) voor informatie over het configureren van productprofielen voor tags in Adobe Admin Console.[
+Dit document bevat een overzicht van de beschikbare machtigingen voor tags in Experience Platform. Raadpleeg de handleiding voor informatie over het configureren van productprofielen voor tags in Adobe Admin Console [het beheren van gebruikerstoestemmingen voor gegevensinzameling](../../../rtcdp-connections/permissions.md).

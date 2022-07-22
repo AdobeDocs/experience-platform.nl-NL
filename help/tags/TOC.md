@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 0103f1af37dc202087d3c81d495de88d3de7c377
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 25%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 25%
    * [Overzicht](./ui/administration/overview.md)
    * [Bedrijven en eigendommen](./ui/administration/companies-and-properties.md)
    * [Gebruikersmachtigingen](./ui/administration/user-permissions.md)
-   * [Machtigingen beheren](./ui/administration/manage-permissions.md)
 * Extensies {#extensions}
    * [Overzicht](./extensions/overview.md)
    * Adobe-extensies {#adobe}

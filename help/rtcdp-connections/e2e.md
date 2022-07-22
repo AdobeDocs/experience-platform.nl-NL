@@ -2,9 +2,9 @@
 title: Overzicht van end-to-end Real-time Customer Data Platform-verbindingen
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van Real-time Customer Data Platform Connections.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '2530'
+source-wordcount: '2531'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Dit leerprogramma gebruikt UI van de Inzameling van Gegevens om een schema tot s
 * Ontwikkelen
 * Extensies beheren
 
-Zie de handleiding op [machtigingen voor tags beheren](../tags/ui/administration/manage-permissions.md) leren hoe u toegang tot eigendommen en eigendomsrechten kunt verlenen.
+Zie de handleiding op [machtigingen voor gegevensverzameling beheren](./permissions.md) leren hoe u toegang tot eigendommen en eigendomsrechten kunt verlenen.
 
 Om de diverse producten van de Inzameling van Gegevens te gebruiken die in deze gids worden vermeld, moet u toegang tot gegevensstromen en de capaciteit ook hebben om schema&#39;s tot stand te brengen en te beheren. Als u toegang tot één van deze eigenschappen nodig hebt, gelieve uw CSM te contacteren om u te helpen de noodzakelijke toegang krijgen. Houd er rekening mee dat als u Adobe Experience Platform niet hebt aangeschaft, Adobe u zonder extra kosten toegang krijgt tot de SDK.
 
