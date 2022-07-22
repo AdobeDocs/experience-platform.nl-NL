@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: (Bèta) op dossier-gebaseerde opties van de bestemmingsconfiguratie voor Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2353'
 ht-degree: 2%
 
 ---
@@ -369,6 +369,8 @@ Wanneer u SFTP met SSH zeer belangrijke authentificatietype vormt, worden de geb
 Gebruik deze sectie om gebruikers te vragen aangepaste velden in te vullen, specifiek voor uw doel, wanneer u verbinding maakt met het doel in de gebruikersinterface van het Experience Platform.
 
 In het onderstaande voorbeeld: `customerDataFields` vereist dat gebruikers een naam voor hun bestemming invoeren en een [!DNL Amazon S3] De naam van de emmertje en de omslagweg, evenals een compressietype, dossierformaat, en verscheidene andere opties van de dossieruitvoer.
+
+U kunt tot de klanteninput van de gebieden van klantgegevens toegang hebben en gebruiken in malplaatje. De macro gebruiken `{{customerData.name}}`. Als u gebruikers bijvoorbeeld vraagt een Amazon S3 emmerveld in te voeren, met de naam `bucket`kunt u de sjabloon openen door de macro te gebruiken `{{customerData.bucket}}`. Bekijk een voorbeeld van hoe een gebied van klantengegevens in wordt gebruikt [doelserverconfiguratie](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[

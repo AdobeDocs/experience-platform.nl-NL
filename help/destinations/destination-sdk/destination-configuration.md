@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1885'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Dit is een voorbeeldconfiguratie van een fictieve streamingbestemming, Moviestar
    ],
    "customerDataFields":[
       {
-         "name":"endpointsInstance",
+         "name":"endpointRegion",
          "type":"string",
          "title":"Select Endpoint",
          "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
@@ -158,9 +158,13 @@ Gebruikers selecteren **[!UICONTROL Connect to destination]** om de OAuth 2 auth
 
 ## Gegevensvelden van de klant {#customer-data-fields}
 
-Gebruik deze sectie om gebruikers te vragen aangepaste velden in te vullen, specifiek voor uw doel, wanneer u verbinding maakt met het doel in de gebruikersinterface van het Experience Platform. De configuratie wordt weerspiegeld in de authentificatiestroom zoals hieronder getoond:
+Gebruik deze sectie om gebruikers te vragen aangepaste velden in te vullen, specifiek voor uw doel, wanneer u verbinding maakt met het doel in de gebruikersinterface van het Experience Platform. De configuratie wordt weerspiegeld in de authentificatiestroom zoals hieronder getoond.
 
 ![Aangepaste veldverificatiestroom](./assets/custom-field-authentication-flow.png)
+
+>[!TIP]
+>
+>U kunt tot de klanteninput van de gebieden van klantgegevens toegang hebben en gebruiken in malplaatje. De macro gebruiken `{{customerData.name}}`. Als u gebruikers bijvoorbeeld vraagt een veld met de naam voor de klant in te voeren `userId`kunt u de sjabloon openen door de macro te gebruiken `{{customerData.userId}}`. Bekijk een voorbeeld van hoe een gebied van klantengegevens in URL van uw API eindpunt, in wordt gebruikt [doelserverconfiguratie](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs).
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
@@ -178,10 +182,12 @@ Gebruik deze sectie om gebruikers te vragen aangepaste velden in te vullen, spec
 
 Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe voor uw bestemming in het gebruikersinterface van Adobe Experience Platform zou moeten gebruiken. Zie hieronder:
 
+![Image of UI attributes configuration.](/help/destinations/destination-sdk/assets/ui-attributes-configuration.png)
+
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Doelcatalogus](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruiken `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` is de naam van uw bestemming. Voor een bestemming genoemd Moviestar, zou u gebruiken `http://www.adobe.com/go/destinations-moviestar-en`. Merk op dat deze verbinding slechts werkt nadat Adobe uw bestemming live plaatst en de documentatie wordt gepubliceerd. |
-| `category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees voor meer informatie [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees voor meer informatie [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br> Je kunt momenteel slechts één rubriek per bestemming selecteren. |
 | `connectionType` | Tekenreeks | `Server-to-server` is momenteel de enige beschikbare optie. |
 | `frequency` | Tekenreeks | Verwijst naar het type gegevens dat door de bestemming wordt gesteund. Ondersteunde waarden: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
@@ -201,7 +207,6 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de workflow vo
 | `identityRequired` | Boolean | Gebruiken `true` als gebruikers naamruimten van het Experience Platform aan uw gewenste schema moeten kunnen toewijzen. |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 ## Identiteiten en kenmerken {#identities-and-attributes}
 
