@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1798'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [[Gegevensverzameling]](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
-- [Real-time Customer Data Platform-verbindingen](#data-collection)
 - [Bronnen](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -61,6 +61,23 @@ Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens,
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Gegevensverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [De configuratie van het Type van toegang voor gegevensstromen](../../edge/datastreams/overview.md#create) | Wanneer u een nieuwe gegevensstroom maakt, kunt u nu selecteren welk type aanvragen door het Edge-netwerk worden geaccepteerd: <ul><li>**[!UICONTROL Mixed Authentication]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand zowel voor authentiek verklaarde als unauthenticated verzoeken goed. Selecteer deze optie als u de SDK van het Web wilt gebruiken of [Mobile SDK](https://aep-sdks.gitbook.io/docs/), samen met de [Server-API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand slechts voor authentiek verklaarde verzoeken goed. Selecteer deze optie als u alleen de Server-API wilt gebruiken en niet-geverifieerde aanvragen door de [!DNL Edge Network]. </li></ul> |
+| [Profielen renderen](../../edge/personalization/rendering-personalization-content.md#applypropositions) in toepassingen van één pagina zonder stijgende metriek. | De zojuist toegevoegde `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Hierdoor wordt de rapportnauwkeurigheid vergroot. |
+| [Id&#39;s delen via mobiel naar web en verschillende domeinen](../../edge/identity/id-sharing.md) | De SDK van het Web van Adobe Experience Platform ondersteunt nu mogelijkheden voor het delen van bezoekers-id&#39;s die u in staat stellen gepersonaliseerde ervaringen nauwkeuriger te leveren, tussen mobiele apps en mobiele webinhoud, en over domeinen. |
+| [Google Data Layer-tagextensie](../../tags/extensions/web/google-data-layer/overview.md) | Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van tags. |
+| [Google Ads Enhanced Conversions-gebeurtenis door:sturen extensie](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Met de extensie Google Ads Enhanced Conversions kunt u uw Google Ads-conversies in real-time verbeteren. |
+| [Mailchimp-gebeurtenis door:sturen, extensie](../../tags/extensions/web/mailchimp/overview.md) | De gebeurtenis die van Mailchimp uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API Mailchimp die e-mails voor de marketing campagnes van Mailchimp, reizen, of transacties kan teweegbrengen. |
+
+Zie voor meer informatie de [overzicht van gegevensverzameling](../../rtcdp-connections/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -116,20 +133,6 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over de Diensten van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
-
-## Real-time Customer Data Platform-verbindingen {#data-collection}
-
-Real-time Customer Data Platform Connections biedt een reeks technologieën waarmee u gegevens van de client-side-klantervaring kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| [De configuratie van het Type van toegang voor gegevensstromen](../../edge/datastreams/overview.md#create) | Wanneer u een nieuwe gegevensstroom maakt, kunt u nu selecteren welk type aanvragen door het Edge-netwerk worden geaccepteerd: <ul><li>**[!UICONTROL Mixed Authentication]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand zowel voor authentiek verklaarde als unauthenticated verzoeken goed. Selecteer deze optie als u de SDK van het Web wilt gebruiken of [Mobile SDK](https://aep-sdks.gitbook.io/docs/), samen met de [Server-API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand slechts voor authentiek verklaarde verzoeken goed. Selecteer deze optie als u alleen de Server-API wilt gebruiken en niet-geverifieerde aanvragen door de [!DNL Edge Network]. </li></ul> |
-| [Profielen renderen](../../edge/personalization/rendering-personalization-content.md#applypropositions) in toepassingen van één pagina zonder stijgende metriek. | De zojuist toegevoegde `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Hierdoor wordt de rapportnauwkeurigheid vergroot. |
-| [Id&#39;s delen via mobiel naar web en verschillende domeinen](../../edge/identity/id-sharing.md) | De SDK van het Web van Adobe Experience Platform ondersteunt nu mogelijkheden voor het delen van bezoekers-id&#39;s die u in staat stellen gepersonaliseerde ervaringen nauwkeuriger te leveren, tussen mobiele apps en mobiele webinhoud, en over domeinen. |
-
-Zie voor meer informatie de [Overzicht van Real-Time CDP-verbindingen](../../rtcdp-connections/home.md).
 
 ## Bronnen {#sources}
 
