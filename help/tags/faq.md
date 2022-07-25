@@ -2,7 +2,7 @@
 title: Handleiding voor het oplossen van problemen met tags
 description: Antwoorden op veelgestelde vragen over tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 0%
@@ -96,13 +96,13 @@ Ja! Tags ondersteunen nu mobiele eigenschappen en configuratie voor de nieuwe Ad
 
 ## Waarom zegt de UI dat er een fout is opgetreden bij het laden van mijn account?
 
-Als u een bericht ontvangt met de mededeling dat er een fout is opgetreden bij het laden van uw account, betekent dit dat uw account niet tot productprofielen voor tags behoort. Zie de handleiding op [machtigingen beheren](../rtcdp-connections/permissions.md) om te leren hoe te om een productprofiel in Adobe Admin Console te vormen om toegang tot de UI van de Inzameling van Gegevens te verlenen.
+Als u een bericht ontvangt met de mededeling dat er een fout is opgetreden bij het laden van uw account, betekent dit dat uw account niet tot productprofielen voor tags behoort. Zie de handleiding op [machtigingen beheren](../collection/permissions.md) om te leren hoe te om een productprofiel in Adobe Admin Console te vormen om toegang tot de UI van de Inzameling van Gegevens te verlenen.
 
 ## Waarom kan ik geen eigenschappen in UI toevoegen?
 
 Als u geen nieuwe eigenschappen kunt maken wanneer u zich aanmeldt bij de gebruikersinterface voor gegevensverzameling, betekent dit dat uw account niet behoort tot een productprofiel dat het recht Eigenschappen beheren heeft.
 
-Zie de handleiding op [machtigingen beheren](../rtcdp-connections/permissions.md) om te leren hoe u een productprofiel in Adobe Admin Console configureert om het recht Eigenschappen beheren te verlenen. Voor meer informatie over de verschillende rechten voor tags raadpleegt u het overzicht over [gebruikersmachtigingen voor tags](./ui/administration/user-permissions.md).
+Zie de handleiding op [machtigingen beheren](../collection/permissions.md) om te leren hoe u een productprofiel in Adobe Admin Console configureert om het recht Eigenschappen beheren te verlenen. Voor meer informatie over de verschillende rechten voor tags raadpleegt u het overzicht over [gebruikersmachtigingen voor tags](./ui/administration/user-permissions.md).
 
 ## Wat als ik andere vragen heb?
 

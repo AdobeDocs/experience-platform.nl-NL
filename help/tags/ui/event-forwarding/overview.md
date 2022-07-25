@@ -3,7 +3,7 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -20,11 +20,11 @@ Door:sturen van gebeurtenissen in Adobe Experience Platform staat u toe om verza
 
 Dit document biedt een overzicht op hoog niveau van het doorsturen van gebeurtenissen in Platform.
 
-![Doorzending van gebeurtenissen in het ecosysteem van gegevensverzameling](../../../rtcdp-connections/images/home/event-forwarding.png)
+![Doorzending van gebeurtenissen in het ecosysteem van gegevensverzameling](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Voor informatie over hoe gebeurtenis het door:sturen binnen het ecosysteem van de gegevensinzameling in Platform past, zie [overzicht van gegevensverzameling](../../../rtcdp-connections/home.md).
+>Voor informatie over hoe gebeurtenis het door:sturen binnen het ecosysteem van de gegevensinzameling in Platform past, zie [overzicht van gegevensverzameling](../../../collection/home.md).
 
 Het door:sturen van de gebeurtenis gecombineerd met Adobe Experience Platform [Web SDK](../../../edge/home.md) en [Mobile SDK](https://aep-sdks.gitbook.io/docs/) biedt de volgende voordelen:
 

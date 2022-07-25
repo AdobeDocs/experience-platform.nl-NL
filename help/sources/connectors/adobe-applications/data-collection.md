@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;bron;gegevensv
 title: Adobe-gegevensverzameling
 description: Dit document biedt een overzicht van de bron voor gegevensverzameling Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Een gegevensstroom is een configuratie die het Netwerk van de Rand vertelt waar 
 
 ![gegevensstromen](./images/data-collection/datastreams.png)
 
-Voor uitvoerige stappen op hoe te om de UI van de Inzameling van Gegevens te gebruiken, zie [end-to-end overzicht gegevensverzameling](../../../rtcdp-connections/e2e.md).
+Voor uitvoerige stappen op hoe te om de UI van de Inzameling van Gegevens te gebruiken, zie [end-to-end overzicht gegevensverzameling](../../../collection/e2e.md).
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe te om tot de Inzameling van Gegevens UI toegang te hebben gebruikend de bronwerkruimte. Voor meer informatie over de Inzameling van Gegevens, zie [Overzicht van gegevensverzameling](../../../rtcdp-connections/e2e.md).
+Door dit document te lezen, hebt u geleerd hoe te om tot de Inzameling van Gegevens UI toegang te hebben gebruikend de bronwerkruimte. Voor meer informatie over de Inzameling van Gegevens, zie [Overzicht van gegevensverzameling](../../../collection/e2e.md).

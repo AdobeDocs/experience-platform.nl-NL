@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1798'
 ht-degree: 1%
@@ -77,7 +77,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | [Google Ads Enhanced Conversions-gebeurtenis door:sturen extensie](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Met de extensie Google Ads Enhanced Conversions kunt u uw Google Ads-conversies in real-time verbeteren. |
 | [Mailchimp-gebeurtenis door:sturen, extensie](../../tags/extensions/web/mailchimp/overview.md) | De gebeurtenis die van Mailchimp uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API Mailchimp die e-mails voor de marketing campagnes van Mailchimp, reizen, of transacties kan teweegbrengen. |
 
-Zie voor meer informatie de [overzicht van gegevensverzameling](../../rtcdp-connections/home.md).
+Zie voor meer informatie de [overzicht van gegevensverzameling](../../collection/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
