@@ -1,7 +1,8 @@
 ---
 title: Het dashboard Accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
-source-git-commit: 4ff30c689808e0513245852625efc4a162ab2c0e
+exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
+source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 0%
@@ -42,7 +43,7 @@ De [!UICONTROL Browse] kunt u de alleen-lezen accountprofielen die in uw organis
 
 Selecteer [!UICONTROL Profile ID] uit de resultaten die op de [!UICONTROL Browse] om de [!UICONTROL Details] voor het accountprofiel.
 
-![Op het tabblad Accountprofielen worden de resultaten weergegeven en de profiel-id gemarkeerd.](../images/account-profiles/account-profiles-browse-tab.png) —>
+![Op het tabblad Accountprofielen worden de resultaten weergegeven en de profiel-id gemarkeerd.](../images/account-profiles/account-profiles-browse-tab.png)
 
 De accountprofielgegevens die worden weergegeven op het tabblad [!UICONTROL Details] tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Zie de documentatie op [bladeren door accountprofielen in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) voor meer informatie over de weergavemogelijkheden van het accountprofiel in de gebruikersinterface van het Platform.
 

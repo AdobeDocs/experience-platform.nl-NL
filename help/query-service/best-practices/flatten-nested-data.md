@@ -2,7 +2,8 @@
 keywords: Experience Platform;query-service;Query-service;geneste gegevensstructuren;geneste gegevens;afvlakken;geneste gegevens afvlakken;samenvoegen;
 title: Geneste gegevensstructuren samenvoegen voor gebruik met BI-gereedschappen
 description: In dit document wordt uitgelegd hoe u XDM-schema's voor alle tabellen en weergaven tijdens een sessie afvlakt wanneer u BI-gereedschappen van derden gebruikt met Query Service.
-source-git-commit: 3c9a1f552760b34bfb2c4246382fcb2d66e563d0
+exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
+source-git-commit: a7f273383293359cf6adbcc0a508fb19d2789339
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 0%
@@ -55,7 +56,7 @@ prod:all?FLATTEN
 
 In het voorbeeldschema dat in deze handleiding wordt gebruikt, wordt de standaardveldgroep gebruikt [!UICONTROL Commerce Details], die de `commerce` de objectstructuur en de `productListItems` array. Zie de XDM-documentatie voor [meer informatie over de [!UICONTROL Commerce Details] veldgroep](../../xdm/field-groups/event/commerce-details.md). In de onderstaande afbeelding ziet u een weergave van de schemastructuur.
 
-![Een schema van de het gebiedsgroep van de Details van de Handel met inbegrip van `commerce` en `productListItems` structuren.](../images/best-practices/final-subscription-schema.png)
+![Een schema van de het gebiedsgroep van de Details van de Handel met inbegrip van `commerce` en `productListItems` structuren.](../images/best-practices/flatten-nested-data/commerce-details.png)
 
 Als uw hulpmiddel van BI geen genestelde gegevensstructuren steunt, kan het moeilijk zijn om van verwijzingen te voorzien genestelde gebieden indien zij geserialiseerde waarden (zoals bevatten `commerce` en `productListItems` in het voorbeeldschema). Deze waarden kunnen verschijnen als delen van één gecodeerde waarde `commerce` tekenreeksveld en zijn niet realistisch onbruikbaar.
 
