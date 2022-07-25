@@ -5,7 +5,7 @@ title: Overzicht van Veva CRM Source Connector
 topic-legacy: overview
 description: Leer hoe u Veeva CRM met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: ec0d6be6fde8ea7a0378769810079e3e62e9fd60
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -32,5 +32,5 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ## Verbinden [!DNL Veeva CRM] tot [!DNL Platform] gebruiken van UI
 
-- [Een Microsoft Dynamics-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/veeva.md)
+- [Een Veeva CRM-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/veeva.md)
 - [Een gegevensstroom maken voor een CRM-bronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)
