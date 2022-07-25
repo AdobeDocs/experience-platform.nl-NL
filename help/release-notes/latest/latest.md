@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 4addf64a819cd302b514334ce9cd949e96d0e698
 workflow-type: tm+mt
 source-wordcount: '1798'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
-- [[Gegevensverzameling]](#data-collection)
+- [Gegevensverzameling](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
