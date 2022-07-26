@@ -1,21 +1,18 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Data Landing Zone;data landingszone
-solution: Experience Platform
 title: Gegevenslandingszone verbinden met Platform via de gebruikersinterface
-topic-legacy: overview
-type: Tutorial
 description: Leer hoe te om een van de Bron van de Gebied van Gegevens te creëren die de gebruikersinterface van het Platform gebruiken.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: b007cdf92811b453df5b5d005456a05cd845b769
+source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
 
 # Verbinden [!DNL Data Landing Zone] naar Platform met behulp van de gebruikersinterface
 
-[!DNL Data Landing Zone] is een op cloud gebaseerde gegevensopslagfaciliteit voor tijdelijke opslag van bestanden die bij Adobe Experience Platform wordt geleverd. Gegevens worden automatisch verwijderd uit de [!DNL Data Landing Zone] na zeven dagen.
+[!DNL Data Landing Zone] is een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden die naar Adobe Experience Platform kunnen worden overgebracht. Gegevens worden automatisch verwijderd uit de [!DNL Data Landing Zone] na zeven dagen.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Data Landing Zone] bronverbinding via de gebruikersinterface van het Platform.
 
@@ -38,7 +35,24 @@ Onder de [!UICONTROL cloud storage] categorie, selecteert u [!DNL Data Landing Z
 
 De [!UICONTROL Add data] wordt weergegeven, zodat u een interface hebt voor het selecteren en voorvertonen van de gegevens die u naar het Platform wilt verzenden.
 
+* Het linkerdeel van de interface is een omslagbrowser, die u van een lijst van dossiers van uw container voorziet die u aan Platform kunt dan brengen.
+* In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
+
+Selecteer het bestand dat u naar het Platform wilt brengen en wacht een paar minuten totdat de rechterinterface wordt bijgewerkt in een voorvertoningsscherm.
+
 ![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+
+>[!TIP]
+>
+>Platform detecteert automatisch eigenschapgegevens van het bestand dat u hebt geselecteerd, inclusief informatie over de gegevensindeling van het bestand, het opgegeven kolomscheidingsteken en het compressietype.
+
+Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. Standaard wordt in de voorvertoningsinterface het eerste bestand weergegeven in de map die u hebt geselecteerd.
+
+Als u een voorvertoning van een ander bestand wilt weergeven, selecteert u het voorvertoningspictogram naast de naam van het bestand dat u wilt inspecteren.
+
+Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+
+![bestandsdetectie](../../../../images/tutorials/create/dlz/file-detection.png)
 
 Raadpleeg de zelfstudie voor een gedetailleerde, stapsgewijze handleiding voor het maken van een gegevensstroom voor een bron voor cloudopslag. [een gegevensstroom voor cloudopslag maken om gegevens naar het Platform te brengen](../../dataflow/batch/cloud-storage.md).
 
