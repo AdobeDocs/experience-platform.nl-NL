@@ -1,22 +1,18 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Data Explorer;azure Data Explorer
 solution: Experience Platform
-title: Azure Data Explorer Source Connector - Overzicht
+title: Azure Data Explorer Source Overview
 topic-legacy: overview
 description: Leer hoe u Azure Data Explorer met Adobe Experience Platform verbindt via API's of de gebruikersinterface.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Azure Data Explorer] connector
-
->[!NOTE]
->
->De [!DNL Azure Data Explorer] -connector bevindt zich in bèta. Zie de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# [!DNL Azure Data Explorer] bron
 
 Adobe Experience Platform biedt native connectiviteit voor databaseproviders, zoals [!DNL Microsoft], MySQL en [!DNL Azure]. U kunt uw gegevens van deze systemen overbrengen naar [!DNL Platform].
 
