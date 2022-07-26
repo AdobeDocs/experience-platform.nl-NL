@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar profielservice verzenden met Data Prep
 description: Dit document bevat informatie over het verzenden van gedeeltelijke rijupdates naar de profielservice met behulp van Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 0f1b9cdde3452afdf8cf045cf0a6660ee0ce56cf
+source-git-commit: cc3ecbd8544839246d54f72b894ad27e850c0c90
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
@@ -249,7 +249,7 @@ In het volgende voorbeeld wordt een lijst met bekende beperkingen beschreven die
 
 * De streaming upserts methode zou slechts moeten worden gebruikt wanneer het verzenden van gedeeltelijke rijupdates naar [!DNL Profile Service]. Gedeeltelijke rij-updates zijn **niet** verbruikt door data Lake.
 * De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Er worden nieuwe identiteiten gemaakt als deze niet bestaan. Daarom `identity` bewerking moet altijd zijn ingesteld op maken. Als er al een identiteit bestaat, is de bewerking een no-op.
-* De streaming upserts-methode ondersteunt momenteel alleen primitieve attributen met één waarde (zoals gehele getallen, datums, tijdstempels en tekenreeksen) en objecten. De streaming upserts-methode ondersteunt het vervangen, toevoegen of overschrijven van arraykenmerken en specifieke arrayindexen niet.
+* De streaming upserts-methode ondersteunt momenteel alleen primitieve attributen met één waarde (zoals gehele getallen, datums, tijdstempels en tekenreeksen) en objecten.
 * De streaming upserts-methode ondersteunt momenteel niet [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) en [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## Volgende stappen
