@@ -4,10 +4,10 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
+source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 6%
+source-wordcount: '502'
+ht-degree: 5%
 
 ---
 
@@ -25,14 +25,19 @@ ht-degree: 6%
       * [Overzicht](./schema/industries/overview.md)
       * [Detailhandel](./schema/industries/retail.md)
       * [Financiële diensten](./schema/industries/financial.md)
+      * [Gezondheidszorg](./schema/industries/healthcare.md)
       * [Telecommunicatie](./schema/industries/telecom.md)
       * [Reizen en gastvrijheid](./schema/industries/travel-hospitality.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [Geneesmiddelen](./classes/medication.md)
+   * [Payer](./classes/payer.md)
+   * [Plan](./classes/plan.md)
    * [Beleid](./classes/policy.md)
    * [Product](./classes/product.md)
+   * [Provider](./classes/provider.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
    * B2B-klassen {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
@@ -45,12 +50,13 @@ ht-degree: 6%
       * [Leden van XDM Business Marketing List](./classes/b2b/business-marketing-list-members.md)
 * Veldgroepen {#field-groups}
    * Afzonderlijk XDM-profiel {#profile}
+      * [Inhoud en voorkeuren](./field-groups/profile/consents.md)
       * [Demografische details](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 Toestemming](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Gegevens van het lid in de gezondheidszorg](./field-groups/profile/healthcare-member-details.md)
       * [Loyalty-details](./field-groups/profile/loyalty-details.md)
       * [Persoonlijke contactgegevens](./field-groups/profile/personal-contact-details.md)
-      * [Inhoud en voorkeuren](./field-groups/profile/consents.md)
       * [Details segmentlidmaatschap](./field-groups/profile/segmentation.md)
       * [Telecom-abonnement](./field-groups/profile/telecom-subscription.md)
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
@@ -58,6 +64,8 @@ ht-degree: 6%
       * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+      * [Reclamegegevens](./field-groups/event/advertising-details.md)
+      * [Toepassingsdetails](./field-groups/event/application-details.md)
       * [Balansoverdrachten](./field-groups/event/balance-transfers.md)
       * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
       * [Kaarthandelingen](./field-groups/event/card-actions.md)
@@ -73,6 +81,7 @@ ht-degree: 6%
       * [Voorbehoud voor indiening](./field-groups/event/lodging-reservation.md)
       * [Gegevens prijsaanvraag](./field-groups/event/quote-request-details.md)
       * [Reserveringsdetails](./field-groups/event/reservation-details.md)
+      * [Sitetool - details](./field-groups/event/sitetool-details.md)
       * [Zoeken op ondersteuningssite](./field-groups/event/support-site-search.md)
       * [Upgradedetails](./field-groups/event/upgrade-details.md)
       * [Details uploaden](./field-groups/event/upsell-details.md)
@@ -81,11 +90,19 @@ ht-degree: 6%
       * [XDM Business Campaign - details](./field-groups/b2b-campaign/details.md)
    * XDM Business Campaign-leden {#b2b-campaign-members}
       * [XDM Business Campaign-leden - Gegevens](./field-groups/b2b-campaign-members/details.md)
+   * Geneesmiddelen {#medication}
+      * [Gezondheidszorg](./field-groups/medication/healthcare-medication.md)
+   * Plan {#plan}
+      * [Details van het zorgplan](./field-groups/plan/healthcare-plan-details.md)
    * Product {#product}
       * [Productcatalogus](./field-groups/product/product-catalog.md)
       * [Productcategorie](./field-groups/product/product-category.md)
+   * Provider {#provider}
+      * [Gezondheidszorgverlener](./field-groups/provider/healthcare-provider.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
 * Datatypen {#data-types}
+   * [Accountgegevens](./data-types/account-details.md)
+   * [Ad break](./data-types/ad-break.md)
    * [Toepassing](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
@@ -111,6 +128,7 @@ ht-degree: 6%
    * [Geo-vorm](./data-types/geo-shape.md)
    * [Identiteit](./data-types/identity.md)
    * [Impressies](./data-types/impressions.md)
+   * [Implementatiedetails](./data-types/implementation-details.md)
    * [Interne site zoeken](./data-types/internal-site-search.md)
    * [Toetswaardenpaar](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
