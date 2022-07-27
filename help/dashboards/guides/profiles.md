@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
 workflow-type: tm+mt
-source-wordcount: '3540'
+source-wordcount: '3590'
 ht-degree: 0%
 
 ---
@@ -106,6 +106,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
@@ -258,6 +259,32 @@ De [!UICONTROL Unsegmented Profiles Trend] widget geeft een illustratie van de l
 De [!UICONTROL Unsegmented Profiles by Identity] widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden in een staafdiagram weergegeven, zodat ze gemakkelijk kunnen worden vergeleken.
 
 ![De widget Niet-gesegmenteerde profielen op basis van identiteit.](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL Audiences] {#audiences}
+
+Deze widget geeft het totale aantal segmenten weer dat gereed is om te worden geactiveerd, op basis van het gekozen samenvoegbeleid dat op de profielgegevens wordt toegepast.
+
+Selecteren **[!UICONTROL Audiences]** om naar de [!UICONTROL Segments] dashboard [!UICONTROL Browse] tab. Van daar kunt u een lijst van alle segmentdefinities voor uw organisatie zien.
+
+![De widget Soorten publiek.](../images/profiles/audiences.png)
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+<!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+
+<!-- ![The Audiences change trend widget.]() -->
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
+<!-- ![The Audiences overlap report widget.]() -->
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 

@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2499'
+source-wordcount: '2548'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Mapped audiences]](#mapped-audiences)
 * [[!UICONTROL Mapped audience health]](#mapped-audience-health)
 * [[!UICONTROL Destinations count]](#destinations-count)
 * [[!UICONTROL Destination status]](#destination-status)
@@ -195,6 +196,14 @@ De **[!UICONTROL Common audiences]** widget bevat een lijst met de bovenste vijf
 De [!UICONTROL AUDIENCE SIZE] de kolom verstrekt het totale profielaantal van elk vermeld segment.
 
 ![De widget Algemeen publiek.](../images/destinations/common-audiences.png)
+
+### Toegewezen publiek {#mapped-audiences}
+
+De [!UICONTROL Mapped audiences] widget geeft het totale aantal toegewezen doelgroepen weer dat kan worden geactiveerd voor het doel dat boven aan de pagina is geselecteerd.
+
+Selecteren **[!UICONTROL Segments]** om naar het dashboard Segmenten te navigeren [!UICONTROL Browse] tab. Deze werkruimte toont een lijst van alle segmentdefinities voor uw organisatie.
+
+![De widget voor toegewezen doelgroepen.](../images/destinations/mapped-audiences.png)
 
 ### Gewijzigde gezondheid van het publiek {#mapped-audience-health}
 
