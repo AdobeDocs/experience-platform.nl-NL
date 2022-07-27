@@ -4,7 +4,7 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
 source-wordcount: '2548'
 ht-degree: 0%
@@ -41,7 +41,7 @@ U kunt de weergave van het dashboard voor doelen wijzigen door **[!UICONTROL Mod
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
 
-## Standaardwidgets
+## Standaardwidgets {#standard-widgets}
 
 Adobe verstrekt veelvoudige standaardwidgets die u kunt gebruiken om verschillende metriek met betrekking tot uw bestemmingen te visualiseren en de volledigheid van de segmenten beschikbaar voor uw gegevensanalyse te beoordelen. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
 
