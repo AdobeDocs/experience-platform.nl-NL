@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc910ec906e2d59f3a35b81377f7c97b7cafbabe
+source-git-commit: 93ac391370ddd1fe596b8515bd520fb870a10a3c
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1843'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,9 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Dashboards](#dashboards)
 - [Gegevensverzameling](#collection)
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+
 <!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
 - [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
@@ -98,6 +100,29 @@ Zie voor meer informatie de [overzicht van gegevensverzameling](../../collection
 {style=&quot;table-layout:auto&quot;}
 
 Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| [Bestand nu exporteren (bèta)](../../destinations/ui/export-file-now.md) | Exporteer een volledig bestand zonder het huidige exportschema van een eerder gepland segment te onderbreken. Deze export komt bovenop de eerder geplande export en verandert de exportfrequentie van het segment niet. <br> De bestandsuitvoer wordt onmiddellijk geactiveerd en de meest recente resultaten worden opgehaald uit de gesegmenteerde Experience Platforms. <br> <br>Neem contact op met uw Adobe-vertegenwoordiger voor toegang tot deze functie. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [(bèta) De [!DNL Trade Desk] - CRM-verbinding](../../destinations/catalog/advertising/tradedesk-emails.md) | Gebruiken [!DNL The Trade Desk] CRM-bestemming om profielen te activeren voor uw [!DNL Trade Desk] account voor doelgroepen en suppressie op basis van CRM-gegevens. <br><br>Deze bestemming is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd. |
+| [(bèta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Met deze bestemming kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in Snapchat-advertenties en deze gebruiken om hun advertenties te activeren. <br><br>Deze bestemming is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
