@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: 26fb80a2a09b8374ddec8e164817855169fa0a81
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,7 @@ ht-degree: 1%
       * [Verkenningsextensie](./catalog/personalization/gainsight.md)
       * [KickFire-extensie](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization-extensie](./catalog/personalization/marketo-web-personalization.md)
+      * [Verbinding met PEGA-client](./catalog/personalization/pega.md)
    * Sociale bestemmingen{#social}
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
