@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3639'
 ht-degree: 0%
 
 ---
@@ -98,8 +98,10 @@ Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [[!UICONTROL Profile count]](#profile-count)
-* [[!UICONTROL Profiles added]](#profiles-added)
-* [[!UICONTROL Profiles added trend]](#profiles-added-trend)
+* [[!UICONTROL Profile count trend]](#profile-count-trend)
+* [[!UICONTROL Profile count change]](#profile-count-change)
+* [[!UICONTROL Profiles count change trend]](#profiles-count-change-trend)
+* [[!UICONTROL Profiles count change trend by identity]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Single identity profiles]](#single-identity-profiles)
@@ -109,10 +111,8 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
-* [[!UICONTROL Profile count trend]](#profile-count-trend)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL Profiles count change trend by identity]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -120,7 +120,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >id="platform_dashboards_profiles_profilecount"
 >title="Aantal profielen"
 >abstract="Deze widget geeft het totale aantal samengevoegde profielen weer in de profielopslag op het moment dat de momentopname werd gemaakt. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Profile count]** In de widget wordt het totale aantal samengevoegde profielen weergegeven in de profielopslag op het moment dat de momentopname is gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
@@ -134,43 +134,57 @@ Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voo
 
 ![](../images/profiles/profile-count.png)
 
-### [!UICONTROL Profiles added] {#profiles-added}
+### [!UICONTROL Profile count trend] {#profile-count-trend}
 
-<!-- This CONTEXTUALHELP was commented out because this widget name will change. Details in https://jira.corp.adobe.com/browse/PLAT-120313  -->
+De [!UICONTROL Profile count trend] widget gebruikt een lijngrafiek om de trend in het totale aantal profielen in het systeem in tijd te illustreren. Dit totale aantal bevat alle profielen die sinds de laatste dagelijkse momentopname in het systeem zijn geïmporteerd. De gegevens kunnen gedurende perioden van 30 dagen, 90 dagen en 12 maanden worden weergegeven. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
 
-<!-- >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profilesadded"
->title="Profiles added"
->abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation" -->
+![De trendwidget Aantal profielen.](../images/profiles/profile-count-trend.png)
 
-De **[!UICONTROL Profiles added]** In de widget wordt het totale aantal samengevoegde profielen weergegeven dat op het moment van de laatste opname aan de profielopslag is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon. U kunt de keuzekiezer gebruiken om de profielen weer te geven die in de afgelopen 30 dagen, 90 dagen of 12 maanden zijn toegevoegd.
+### [!UICONTROL Profile count change] {#profile-count-change}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilescountchange"
+>title="Wijziging van aantal profielen"
+>abstract="Deze widget geeft het totale aantal samengevoegde profielen weer **added** naar de profielenwinkel op het moment van de laatste opname. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
+
+De **[!UICONTROL Profile count change]** wordt het aantal samengevoegde profielen weergegeven dat sinds de vorige momentopname aan de profielopslag is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon. U kunt de keuzekiezer gebruiken om het aantal toegevoegde profielen weer te geven in de afgelopen 30 dagen, 90 dagen of 12 maanden.
 
 >[!NOTE]
 >
->De [!UICONTROL Profiles added] widget geeft het aantal toegevoegde profielen aan **na** de eerste profielopname en de instelling van de Profile Store. Met andere woorden, als uw organisatie de Profile Store heeft ingesteld en op dag 1 4.000.000 heeft ingeslikt, is het dashboard binnen 24 uur beschikbaar, maar de [!UICONTROL Profiles added] widget wordt ingesteld op 0. Dit wordt gedaan om een piek te vermijden verbonden aan de aanvankelijke opname van profielen in het systeem. In de komende 30 dagen, neemt uw organisatie een extra 1.000.000 profielen in de Opslag van het Profiel op. Nadat de volgende opname wordt genomen, [!UICONTROL Profiles added] widget zou in totaal 1.000.000 toegevoegde profielen weergeven, terwijl de widget [!UICONTROL Profile count] widget zou in totaal 5.000.000 profielen weergeven.
+>De [!UICONTROL Profile count change] widget geeft het aantal toegevoegde profielen aan **na** de eerste profielopname en de instelling van de Profile Store. Met andere woorden, als uw organisatie de Profile Store heeft ingesteld en op dag 1 4.000.000 heeft ingeslikt, is het dashboard binnen 24 uur beschikbaar, maar de [!UICONTROL Profile count change] widget wordt ingesteld op 0. Dit wordt gedaan om een piek te vermijden verbonden aan de aanvankelijke opname van profielen in het systeem. In de komende 30 dagen, neemt uw organisatie een extra 1.000.000 profielen in de Opslag van het Profiel op. Nadat de volgende opname wordt genomen, [!UICONTROL Profile count change] widget zou in totaal 1.000.000 toegevoegde profielen weergeven, terwijl de widget [!UICONTROL Profile count] widget zou in totaal 5.000.000 profielen weergeven.
 
-![](../images/profiles/profiles-added.png)
+![Het dashboard Profielen van UI van het Platform met de benadrukte de verandering van het Aantal van het Profiel widget.](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL Profiles added trend] {#profiles-added-trend}
+### [!UICONTROL Profiles count change trend] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="Profielen hebben trend toegevoegd"
->abstract="Deze widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielopslag is toegevoegd. Het nummer hangt ook af van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Meer informatie in documentatie"
+>title="Ontwikkeling van aantal profielen"
+>abstract="Deze widget geeft het aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielwinkel is toegevoegd. Het nummer hangt ook af van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
-De **[!UICONTROL Profiles added trend]** widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielwinkel is toegevoegd. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen. Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+De **[!UICONTROL Profiles count change trend]** widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielwinkel is toegevoegd. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen. Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
 Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voor meer informatie.
 
-De **[!UICONTROL Profiles added trend]** widget geeft een &#39;bijschriftknop&#39; in de rechterbovenhoek van de widget weer. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
+De **[!UICONTROL Profiles count change trend]** widget geeft een &#39;bijschriftknop&#39; in de rechterbovenhoek van de widget weer. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![Het tabblad Profieloverzicht waarin de trendwidget Profielen wordt weergegeven waaraan de knop Bijschriften is gemarkeerd.](../images/profiles/profiles-added-trend-captions.png)
+![Het tabblad Profieloverzicht waarin de trendwidget voor het wijzigen van het aantal profielen wordt weergegeven met de knop Bijschriften gemarkeerd.](../images/profiles/profiles-count-change-trend-captions.png)
 
 Een machine het leren model produceert automatisch titels voor het beschrijven van de belangrijkste tendensen en belangrijke gebeurtenissen door de grafiek en de gegevens te analyseren.
 
-![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor profielen toegevoegd.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![Het dialoogvenster met automatische bijschriften voor de trendwidget voor het aantal profielen verandert.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+
+### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Deze widget filtert het aantal profielen op basis van een geselecteerde bronidentiteit en het samenvoegbeleid en illustreert vervolgens de wijziging in aantal voor verschillende periodes aan de hand van een lijngrafiek. Het samenvoegbeleid wordt geselecteerd in de overzichtsvervolgkeuzelijst boven aan de pagina. De bronidentiteit en de tijdsperiode worden geselecteerd in de widgetvervolgkeuzemenu&#39;s. De trend kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden.
+
+Met deze widget kunt u de behoeften voor doelactivering beheren door het groeipatroon van profielen aan te tonen die met een vereiste identiteit zijn gefilterd.
+
+![De trend in het aantal profielen verandert per identiteitswidget.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
@@ -178,7 +192,7 @@ Een machine het leren model produceert automatisch titels voor het beschrijven v
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profielen op identiteit"
 >abstract="Deze widget geeft de indeling van alle samengevoegde profielen in uw profielarchief op basis van identiteiten weer."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identiteiten in alle samengevoegde profielen in uw profielarchief weer. Het totale aantal profielen op basis van identiteit (met andere woorden, door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan het totale aantal samengevoegde profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
@@ -200,7 +214,7 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Identiteitsoverlapping"
 >abstract="Deze widget gebruikt een Venn-diagram om de overlapping weer te geven van profielen in uw profielarchief die de twee geselecteerde identiteiten bevatten."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Identity overlap]** widget gebruikt een Venn-diagram, of een setdiagram, om de overlapping weer te geven van profielen in uw profielarchief die de twee geselecteerde identiteiten bevatten.
 
@@ -218,7 +232,7 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Eén identiteitsprofiel"
 >abstract="Deze widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De [!UICONTROL Single Identity Profiles] widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn. Het aantal profielen wordt gegenereerd op basis van de gegevens in de meest recente momentopname.
 
@@ -230,7 +244,7 @@ De [!UICONTROL Single Identity Profiles] widget bevat een aantal profielen van u
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Niet-gesegmenteerde profielen"
 >abstract="Deze widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld en biedt de mogelijkheid om profielen in uw hele organisatie te activeren."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Het wijst ook op de kans om profielen uit te sluiten die geen adequate ROI verstrekken.
 
@@ -254,7 +268,7 @@ De [!UICONTROL Unsegmented Profiles Trend] widget geeft een illustratie van de l
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Gesegmenteerde profielen opsplitsen op identiteit"
 >abstract="Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De [!UICONTROL Unsegmented Profiles by Identity] widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden in een staafdiagram weergegeven, zodat ze gemakkelijk kunnen worden vergeleken.
 
@@ -306,12 +320,6 @@ Om uitvoerige informatie over een segment te zien, selecteer een segmentnaam van
 
 Zie de documentatie voor meer informatie over de [[!UICONTROL Segments] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
-### [!UICONTROL Profile count trend] {#profile-count-trend}
-
-De [!UICONTROL Profile count trend] widget gebruikt een lijngrafiek om de trend in het totale aantal profielen in het systeem in tijd te illustreren. Dit totale aantal bevat alle profielen die sinds de laatste dagelijkse momentopname in het systeem zijn geïmporteerd. De gegevens kunnen gedurende perioden van 30 dagen, 90 dagen en 12 maanden worden weergegeven. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
-
-![De trendwidget Aantal profielen.](../images/profiles/profile-count-trend.png)
-
 ### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
 
 Deze widget gebruikt een staafdiagram om het totale aantal profielen te illustreren dat met slechts één unieke id wordt geïdentificeerd. De widget ondersteunt maximaal vijf van de meest voorkomende identiteiten.
@@ -327,16 +335,6 @@ Deze widget gebruikt een Venn-diagram om de overlapping van twee geselecteerde s
 Aangezien widget de visuele oversteekplaats van segmentdefinities toont, kunt u uw segmenteringsstrategie optimaliseren door gelijkenissen tussen uw segmentdefinities te bestuderen.
 
 ![Het dashboard Profielen UI van het Platform met de dropdown van het fusiebeleid en widgetsegmentdalingen benadrukt.](../images/profiles/audience-overlap-by-merge-policy.png)
-
-### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
-
-<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
-
-Deze widget filtert het aantal profielen op basis van een geselecteerde bronidentiteit en het samenvoegbeleid en illustreert vervolgens de wijziging in aantal voor verschillende periodes aan de hand van een lijngrafiek. Het samenvoegbeleid wordt geselecteerd in de overzichtsvervolgkeuzelijst boven aan de pagina. De bronidentiteit en de tijdsperiode worden geselecteerd in de widgetvervolgkeuzemenu&#39;s. De trend kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden.
-
-Met deze widget kunt u de behoeften voor doelactivering beheren door het groeipatroon van profielen aan te tonen die met een vereiste identiteit zijn gefilterd.
-
-![De trend in het aantal profielen verandert per identiteitswidget.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 
 ## (bèta) Profielefficiëntiewidgets {#profile-efficacy-widgets}
@@ -359,7 +357,7 @@ Als u meer wilt weten over elk van de widgets voor de doeltreffendheid van het p
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="Kenmerken, kwaliteitsbeoordeling"
 >abstract="Deze widget geeft de volledigheid en kardinaliteit van alle profielen weer, afhankelijk van hun kenmerken. Elke rij beschrijft één kenmerk. De **Profielen** bevat het aantal profielen met dit kenmerk en de waarden zijn niet-null. De **Volledigheid** Het percentage wordt bepaald door het totale aantal profielen dat dit kenmerk heeft en wordt gevuld met waarden die niet gelijk zijn aan null, gedeeld door het totale aantal niet-lege waarden in de profielen voor dat kenmerk. **Kardinaal** Hiermee wordt het totale aantal unieke niet-null-waarden van dit kenmerk voor alle kenmerken aangegeven."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attributes-quality-assessment" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De [!UICONTROL Attribute quality assessment] widget geeft de volledigheid en de kardinaliteit van alle profielen aan volgens hun kenmerken . De gegevens zijn nauwkeurig tot de laatste verwerkingsdatum. Deze informatie wordt voorgesteld als een lijst met vier kolommen waar elke rij in de lijst één enkel attribuut vertegenwoordigt.
 
@@ -378,7 +376,7 @@ De [!UICONTROL Attribute quality assessment] widget geeft de volledigheid en de 
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="Profielen op volledigheid"
 >abstract="In het donutdiagram wordt het percentage van profielkenmerken weergegeven dat wordt gevuld met waarden die niet gelijk zijn aan null voor alle waargenomen kenmerken. Het illustreert het percentage profielen dat hoog, gemiddeld of laag volledig is. Voor profielen met hoge volledigheid zijn meer dan 70% van de bijbehorende kenmerken ingevuld. Normale volledigheidprofielen hebben tussen 30% en 70% van hun gevulde kenmerken. Lage volledigheidsprofielen hebben minder dan 30% van hun attributen gevuld."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 De [!UICONTROL Profiles by completeness] widget maakt een donut-overzicht van de volledigheid van het profiel sinds de laatste verwerkingsdatum. De volledigheid van een profiel wordt gemeten door het percentage attributen die met niet-krachtwaarden onder alle waargenomen attributen worden gevuld.
 
@@ -396,7 +394,7 @@ Deze widget geeft het percentage profielen weer dat hoog, gemiddeld of laag voll
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="trend van volledigheid profielen"
 >abstract="Deze widget maakt een gestapeld vlakdiagram waarin de trend van de volledigheid van het profiel in de loop der tijd wordt weergegeven. De volledigheid wordt gemeten door het percentage attributen die met niet-krachteloze waarden onder alle waargenomen attributen worden gevuld."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Meer informatie in documentatie"
 
 Deze widget maakt een gestapeld vlakdiagram waarin de trend van de volledigheid van het profiel in de loop der tijd wordt weergegeven. De volledigheid wordt gemeten door het percentage attributen die met niet-krachtwaarden onder alle waargenomen attributen worden gevuld. De profielvolledigheid wordt gecategoriseerd als hoog, gemiddeld of laag volledig sinds de laatste verwerkingsdatum.
 
