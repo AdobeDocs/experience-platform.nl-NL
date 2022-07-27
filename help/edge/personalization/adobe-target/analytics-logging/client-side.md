@@ -5,9 +5,9 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: doel;a4t;registreren;web sdk;ervaring;platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,7 @@ Hieronder ziet u een voorbeeld van een `interact` reactie wanneer Analytics clie
 }
 ```
 
-Voorstellen voor Form-based Experience Composer-activiteiten kunnen zowel inhoud bevatten als metrische items klikken onder hetzelfde voorstel. Dus in plaats van één analysetoken voor weergave van inhoud in `scopeDetails.characteristics.analyticsToken` eigenschap, deze kunnen zowel een analysetoken voor weergave als een klik hebben die onder `scopeDetails.characteristics.analyticsTokens` object, in `display` en `click` eigendommen, overeenkomstig.
+Voorstellen voor Form-based Experience Composer-activiteiten kunnen zowel inhoud bevatten als metrische items klikken onder hetzelfde voorstel. Dus in plaats van één analysetoken voor weergave van inhoud in `scopeDetails.characteristics.analyticsToken` eigenschap, kunnen zowel een display- als een click-analysetoken zijn opgegeven in `scopeDetails.characteristics.analyticsDisplayToken` en `scopeDetails.characteristics.analyticsClickToken` eigendommen, overeenkomstig.
 
 ```json
 {
@@ -162,14 +162,10 @@ Voorstellen voor Form-based Experience Composer-activiteiten kunnen zowel inhoud
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -208,11 +204,11 @@ Voorstellen voor Form-based Experience Composer-activiteiten kunnen zowel inhoud
 }
 ```
 
-Alle waarden van `scopeDetails.characteristics.analyticsToken`, alsmede `scopeDetails.characteristics.analyticsTokens.display` (voor weergegeven inhoud) en `scopeDetails.characteristics.analyticsTokens.click` (voor klikmetriek) zijn de nuttige ladingen A4T die moeten worden verzameld en inbegrepen als `tnta` in de [API voor gegevensinvoer](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) vraag.
+Alle waarden van `scopeDetails.characteristics.analyticsToken`, alsmede `scopeDetails.characteristics.analyticsDisplayToken` (voor weergegeven inhoud) en `scopeDetails.characteristics.analyticsClickToken` (voor klikmetriek) zijn de nuttige ladingen A4T die moeten worden verzameld en inbegrepen als `tnta` in de [API voor gegevensinvoer](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) vraag.
 
 >[!IMPORTANT]
 >
->Merk op dat sommige `analyticsToken`/`analyticsTokens` eigenschappen kunnen meerdere tokens bevatten, samengevoegd als één door komma&#39;s gescheiden tekenreeks.
+>De `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` eigenschappen kunnen meerdere tokens bevatten, samengevoegd als één door komma&#39;s gescheiden tekenreeks.
 >
 >In de implementatievoorbeelden in de volgende sectie worden meerdere analytische tokens intern verzameld. Als u een array van analytische tokens wilt aaneenschakelen, gebruikt u een soortgelijke functie:
 >
@@ -344,13 +340,10 @@ Van hier, moet u code uitvoeren om de voorstellen uit te voeren en een lading te
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -392,8 +385,8 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
@@ -420,8 +413,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }
