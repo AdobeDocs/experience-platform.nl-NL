@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 97f68a0d11b1b1fb51f230eee5f1f1e6b6ca2307
+source-git-commit: a8faa3a146669e206b9aa129f5541a7511c1854a
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '842'
 ht-degree: 1%
 
 ---
@@ -104,6 +104,8 @@ ht-degree: 1%
       * [Azure Event Hubs-verbinding](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
       * [IP adres lijst van gewenste personen voor wolkenopslagbestemmingen](./catalog/cloud-storage/ip-address-allow-list.md)
+   * Klantrelatie Relationship Management (CRM)-bestemmingen {#crm-destinations}
+      * [Salesforce CRM-verbinding](./catalog/crm/salesforce.md)
    * Platforms voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
