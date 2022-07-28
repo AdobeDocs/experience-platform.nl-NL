@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
+source-git-commit: 4876df90e7e715c89e0614a9e1e81c3e7091bccb
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '2012'
 ht-degree: 1%
 
 ---
@@ -120,8 +120,12 @@ Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../..
 
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
-| [(bèta) De [!DNL Trade Desk] - CRM-verbinding](../../destinations/catalog/advertising/tradedesk-emails.md) | Gebruiken [!DNL The Trade Desk] CRM-bestemming om profielen te activeren voor uw [!DNL Trade Desk] account voor doelgroepen en suppressie op basis van CRM-gegevens. <br><br>Deze bestemming is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd. |
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | Met de Marketo Engage-doelupdate kunt u het maken van statische lijsten stroomlijnen met automatisering en gebruikers in staat stellen extra velden op hun leads in te voeren. Meer informatie over de verbeteringen in Marketo V2 vindt u hieronder: <br><ul><li>In de **[!UICONTROL Schedule segment]** in Marketo V1 moet u handmatig een **Toewijzing-id** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.</li><li>In de **[!UICONTROL Mapping]** In Marketo V1 kon u in stap van de activeringsworkflow XDM-velden toewijzen aan slechts drie doelvelden in Marketo: `firstName`, `lastName`, en `companyName`. Met de Marketo V2-release kunt u nu XDM-velden toewijzen aan veel meer velden in Marketo. Lees voor meer informatie [ondersteunde kenmerken in Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul> |
+| [PegPeg-klantbeslissingshub](../../destinations/catalog/personalization/pega.md) | Gebruik profielattributen en de informatie van het segmentlidmaatschap van Adobe Experience Platform in de Hub van het Besluit van de Klant van Pega als pretors in adaptieve modellen en help de volgende-best-actie beslissing leveren |
+| [(API) Salesforce-Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | Met deze bestemming kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in Snapchat-advertenties en deze gebruiken om hun advertenties te activeren. |
+| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Werk contactgegevens bij in de Salesforce-Marketing Cloud met profiel- en segmentgegevens in het Experience Platform |
 | [(bèta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Met deze bestemming kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in Snapchat-advertenties en deze gebruiken om hun advertenties te activeren. <br><br>Deze bestemming is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd. |
+| [(bèta) De [!DNL Trade Desk] - CRM-verbinding](../../destinations/catalog/advertising/tradedesk-emails.md) | Gebruiken [!DNL The Trade Desk] CRM-bestemming om profielen te activeren voor uw [!DNL Trade Desk] account voor doelgroepen en suppressie op basis van CRM-gegevens. <br><br>Deze bestemming is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd. |
 
 {style=&quot;table-layout:auto&quot;}
 
