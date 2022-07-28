@@ -3,9 +3,9 @@ keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbe
 title: Gebruikersgids voor accountprofiel
 description: Door het gebruik van accountprofielen kunt u met Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: e94753236623343dcd739ff65c18248c1112f361
+source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Selecteren **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linke
 
 ![Tabblad Overzicht waarin widgets worden weergegeven](images/b2b-account-profile-overview.png)
 
-Zie de documentatie op de [[!UICONTROL Account Profiles]] (../../dashboards/guides/account-profiles.md) dashboard voor meer informatie.
+Zie de documentatie op de [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard voor meer informatie.
 
 ## Accountprofielen zoeken {#browse-account-profiles}
 
