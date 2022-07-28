@@ -2,9 +2,9 @@
 title: Het Eindpunt van de tijd-aan-Levende (TTL) API van de Dataset
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om dataset TTLs in Adobe Experience Platform programmatically te plannen.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1313'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die Adobe Shield voor gezondheidszorg hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
 
 De `/ttl` Het eindpunt in de Hygiene API van Gegevens staat u toe om tijd-aan-levende (TTL) protocollen voor datasets in Adobe Experience Platform te plannen.
 

@@ -2,9 +2,9 @@
 title: Bladeren in werkorders voor gegevenshygiëne
 description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die Adobe Shield voor gezondheidszorg hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
 
 Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Een werkorder vertegenwoordigt een specifiek proces van de gegevenshygiëne, zoals een geplande tijd te leven (TTL) voor een dataset, die zijn huidige status en andere verwante details omvat.
 

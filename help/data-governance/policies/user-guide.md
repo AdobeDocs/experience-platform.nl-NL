@@ -5,9 +5,9 @@ title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ De **[!UICONTROL Browse]** wordt opnieuw weergegeven. Dit betekent dat het nieuw
 
 >[!IMPORTANT]
 >
->Het beleid van de toestemming is momenteel slechts beschikbaar voor organisaties die Adobe Shield voor Gezondheidszorg hebben gekocht.
+>Het beleid van de toestemming is momenteel slechts beschikbaar voor organisaties die het Schild van de Gezondheidszorg hebben gekocht.
 
 Als u verkoos om een toestemmingsbeleid tot stand te brengen, verschijnt een nieuw scherm dat u toestaat om het nieuwe beleid te vormen.
 
@@ -110,7 +110,7 @@ Als u meer dan één voorwaarde selecteert, kunt u het pictogram gebruiken dat t
 
 #### Goedkeuringskenmerken selecteren
 
-Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen te kunnen opnemen in de actie waarop dit beleid betrekking heeft. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
+Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
 
 Wanneer het selecteren van de toestemmingsattributen, kies de waarden voor de attributen die u dit beleid wilt controleren.
 

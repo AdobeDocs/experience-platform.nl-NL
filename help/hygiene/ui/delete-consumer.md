@@ -4,9 +4,9 @@ description: In de gebruikersinterface van Adobe Experience Platform leert u hoe
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die Adobe Shield voor gezondheidszorg hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
 
 De [[!UICONTROL Data Hygiene] werkruimte](./overview.md) in de gebruikersinterface van Adobe Experience Platform kunt u de consumentengegevens verwijderen die deelnemen aan Identiteitsservice en Real-time klantprofiel.
 
