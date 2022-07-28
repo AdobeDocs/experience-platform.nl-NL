@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4876df90e7e715c89e0614a9e1e81c3e7091bccb
+source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2041'
 ht-degree: 1%
 
 ---
@@ -95,14 +95,11 @@ Zie voor meer informatie de [overzicht van gegevensverzameling](../../collection
 | Functie | Beschrijving |
 | --- | --- |
 | Verbeteringen voor [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations is nu slimmer en sneller. Met nieuwe validatiecontroles worden de meest voorkomende toewijzingsfouten aanzienlijk verminderd, waardoor de tijd tot waarde verder wordt verkort. |
+| Hiërarchische ondersteuning voor streaming upsets | U kunt nu functies gebruiken `upsert_array_append` en `upsert_array_replace` om arrays en objecten bij te werken bij het streamen van upserts naar profiel. Zie de [[!DNL Data Prep] handleiding voor toewijzingsfuncties](../../data-prep/functions.md) voor meer informatie . |
 
 {style=&quot;table-layout:auto&quot;}
 
 Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
-
-<!--
-| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
--->
 
 ## [!DNL Destinations] {#destinations}
 
