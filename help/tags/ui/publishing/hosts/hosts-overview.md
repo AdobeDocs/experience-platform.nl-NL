@@ -1,7 +1,8 @@
 ---
 title: Overzicht van hosts
 description: Meer informatie over de verschillende hostingopties die beschikbaar zijn in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
+source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 2%
@@ -25,4 +26,4 @@ Gebruik de bovenstaande koppelingen voor gedetailleerde informatie over elk type
 
 Dezelfde host kan worden gebruikt voor meerdere omgevingen binnen een eigenschap.
 
-Lees de [Self-hosting Guide](./self-hosting-libraries.md) voor meer informatie, zodat u kunt kiezen tussen zelfhosting en Adobe-beheer voor u.
+Lees voor meer informatie om u te helpen te kiezen tussen zelfhosting en Adobe om de hosting voor u te beheren de [zelfhostinghandleiding](./self-hosting-libraries.md).
