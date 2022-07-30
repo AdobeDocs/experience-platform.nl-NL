@@ -4,7 +4,7 @@ title: Toegang voor dashboards van Experience Platforms verkrijgen en verlenen
 type: Documentation
 description: Gebruikers de mogelijkheid bieden om dashboards van Experience Platforms weer te geven, te bewerken en bij te werken met Adobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 6%
@@ -56,7 +56,7 @@ De volgende toegang-controle matrijs verstrekt een verdeling waarvan toestemming
 | [!DNL Dashboards] [!DNL Inventory] <br/>(het tabblad Bladeren) | INGESCHAKELD | N.v.t. | N.v.t. | N.v.t. |
 | [!DNL Dashboards] [!DNL Integrations] tab <br/>(wordt gebruikt om Power BI te installeren) | INGESCHAKELD | **Ten minste één VEREIST** | N.v.t. | N.v.t. |
 | Knop Power BI installeren en workflow | INGESCHAKELD | N.v.t. | **VEREIST** | N.v.t. |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashbaords.<br/>De mogelijkheid om widgetschema&#39;s te bewerken en nieuwe kenmerken toe te voegen voor widgetaanpassing | **Standaard dashboard beheren vereist** | **VEREIST (voor elk respectieve dashboard)** | N.v.t. | N.v.t. |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashboards.<br/>De mogelijkheid om widgetschema&#39;s te bewerken en nieuwe kenmerken toe te voegen voor widgetaanpassing | **Standaard dashboard beheren vereist** | **VEREIST (voor elk respectieve dashboard)** | N.v.t. | N.v.t. |
 | [!DNL License Usage Dashboard] | N.v.t. | N.v.t. | N.v.t. | INGESCHAKELD |
 
 {style=&quot;table-layout:auto&quot;}

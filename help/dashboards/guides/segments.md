@@ -4,9 +4,9 @@ title: Segmentdashboard
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1515'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,9 @@ Als u een ander segment wilt kiezen, selecteert u de vervolgkeuzelijst naast de 
 
 Het segmentdashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over het geselecteerde segment verschaft.
 
-De datum en tijd &#39;laatst bijgewerkt&#39; op een widget geeft aan wanneer de laatste momentopname van de gegevens is gemaakt. De datum en het tijdstip van de momentopname worden in UTC vermeld; het bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast de segmentvervolgkeuzelijst. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. Het tijdstempel van de momentopname wordt in UTC weergegeven; het bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
-![](../images/segments/widget-timestamp.png)
+![Het tabblad Overzicht van segmenten met een widgettijdstempel gemarkeerd.](../images/segments/widget-timestamp.png)
 
 ## Standaardwidgets {#standard-widgets}
 
@@ -68,13 +68,13 @@ Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [[!UICONTROL Audience size]](#audience-size)
-* [[!UICONTROL Identity overlap]](#identity-overlap)
-* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Audience activation order]](#audience-activation-order)
 * [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
 * [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 * [[!UICONTROL Audience overlap]](#audience-overlap)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -89,6 +89,61 @@ De **[!UICONTROL Audience size]** widget geeft het totale aantal samengevoegde p
 Voor meer informatie over fragmenten en samengevoegde profielen, eerst leest u de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
+
+### [!UICONTROL Audience size trend] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Ontwikkeling van de omvang van het publiek"
+>abstract="Deze widget bevat informatie over het totale aantal profielen dat voldoet aan de criteria van **alle** segmentdefinitie, zoals vastgelegd tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen, 90 dagen, of 12 maanden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Meer informatie in documentatie"
+
+De **[!UICONTROL Audience size trend]** widget geeft een lijngrafiek voor het totale aantal profielen die voldoen aan de criteria van **alle** segmentdefinitie over een bepaalde periode. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+
+Deze widget bevat ook de automatische [!UICONTROL Captions] waar een machine het leren model de grafiek en segmentgegevens analyseert en automatisch titels produceert om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
+
+![In het segmentoverzicht wordt de widget voor de doelgrootte weergegeven.](../images/segments/audience-size-trend-captions.png)
+
+Het dialoogvenster voor automatische bijschriften wordt geopend en verschaft inzicht in uw gegevens.
+
+![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor de doelgrootte.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+Voor meer informatie over segmentevaluatie en hoe profielen in aanmerking komen en uit segmenten verdwijnen, raadpleegt u de [Documentatie voor segmentatieservice](../../segmentation/home.md).
+
+### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
+
+Deze widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. Het voor analyse gekozen segment wordt geselecteerd uit het overzichtsvervolgkeuzemenu. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+
+![De widget voor het wijzigen van trends bij het bereik van publiek.](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
+
+Deze widget illustreert de trend van de publieksgrootte voor een bepaald segment op basis van het gekozen type identiteit in het vervolgkeuzemenu van de widget. Het segment dat voor analyse wordt gebruikt wordt geselecteerd van het overzichtsdrop-down. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
+
+![De trend voor de omvang van de doelgroep op identiteitswidget.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Audience activation order] {#audience-activation-order}
+
+De [!UICONTROL Audience activation order] widget biedt een tabel met drie kolommen waarin de [!UICONTROL destination name]de [!UICONTROL platform]en de activering [!UICONTROL date] van het publiek. De lijst wordt geordend van hoog tot laag afhankelijk van recentie en kan maximaal 10 rijen bevatten.
+
+![De widget voor de activeringsvolgorde van het publiek.](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL Audience overlap] {#audience-overlap}
+
+Deze widget vertegenwoordigt het aantal profielen van twee segmenten die aan de criteria voor beide segmentdefinities voldoen. De segmenten die voor vergelijking worden gebruikt, worden geselecteerd in de widgetdropdown menu&#39;s. Het totale aantal profielen in de desbetreffende segmentdefinitie kan worden gezien door de muis boven een cirkel of het snijpunt van het Venn-diagram te houden.
+
+Met deze widget kunt u uw segmentatiestrategie optimaliseren door de gelijkenissen in de resultaten van uw segmentdefinities te visualiseren.
+
+![De widget publiek overlapt.](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -125,61 +180,6 @@ Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bij
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 
 Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
-
-### [!UICONTROL Audience activation order] {#audience-activation-order}
-
-De [!UICONTROL Audience activation order] widget biedt een tabel met drie kolommen waarin de [!UICONTROL destination name]de [!UICONTROL platform]en de activering [!UICONTROL date] van het publiek. De lijst wordt geordend van hoog tot laag afhankelijk van recentie en kan maximaal 10 rijen bevatten.
-
-![De widget voor de activeringsvolgorde van het publiek.](../images/segments/audience-activation-order.png)
-
-### [!UICONTROL Audience size trend] {#audience-size-trend}
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_segments_audiencesizetrend"
->title="Ontwikkeling van de omvang van het publiek"
->abstract="Deze widget bevat informatie over het totale aantal profielen dat voldoet aan de criteria van **alle** segmentdefinitie, zoals vastgelegd tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen, 90 dagen, of 12 maanden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Meer informatie in documentatie"
-
-De **[!UICONTROL Audience size trend]** widget geeft een lijngrafiek voor het totale aantal profielen die voldoen aan de criteria van **alle** segmentdefinitie over een bepaalde periode. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
-
-Deze widget bevat ook de automatische [!UICONTROL Captions] waar een machine het leren model de grafiek en segmentgegevens analyseert en automatisch titels produceert om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
-
-![In het segmentoverzicht wordt de widget voor de doelgrootte weergegeven.](../images/segments/audience-size-trend-captions.png)
-
-Het dialoogvenster voor automatische bijschriften wordt geopend en verschaft inzicht in uw gegevens.
-
-![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor de doelgrootte.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
-
-Voor meer informatie over segmentevaluatie en hoe profielen in aanmerking komen en uit segmenten verdwijnen, raadpleegt u de [Documentatie voor segmentatieservice](../../segmentation/home.md).
-
-### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
-
-Deze widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. Het voor analyse gekozen segment wordt geselecteerd uit het overzichtsvervolgkeuzemenu. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
-
-![De widget voor het wijzigen van trends bij het bereik van publiek.](../images/segments/audience-size-change-trend.png)
-
-### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
-
-Deze widget illustreert de trend van de publieksgrootte voor een bepaald segment op basis van het gekozen type identiteit in het vervolgkeuzemenu van de widget. Het segment dat voor analyse wordt gebruikt wordt geselecteerd van het overzichtsdrop-down. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
-
-![De trend voor de omvang van de doelgroep op identiteitswidget.](../images/segments/audience-size-trend-by-identity.png)
-
-### [!UICONTROL Audience overlap] {#audience-overlap}
-
-Deze widget vertegenwoordigt het aantal profielen van twee segmenten die aan de criteria voor beide segmentdefinities voldoen. De segmenten die voor vergelijking worden gebruikt, worden geselecteerd in de widgetdropdown menu&#39;s. Het totale aantal profielen in de desbetreffende segmentdefinitie kan worden gezien door de muis boven een cirkel of het snijpunt van het Venn-diagram te houden.
-
-Met deze widget kunt u uw segmentatiestrategie optimaliseren door de gelijkenissen in de resultaten van uw segmentdefinities te visualiseren.
-
-![De widget publiek overlapt.](../images/segments/audience-overlap.png)
-
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
-
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
-
-<!-- ![The Audience overlap report widget.]() -->
-
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## Volgende stappen
 

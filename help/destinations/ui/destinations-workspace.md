@@ -3,9 +3,9 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1055'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ De **[!UICONTROL Overview]** tabblad geeft de [!UICONTROL Destinations] dashboar
 >
 >Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, [!UICONTROL Destinations] dashboard en [!UICONTROL Overview] zijn niet zichtbaar. In plaats daarvan selecteert u [!UICONTROL Destinations] van de linkernavigatie toont de [[!UICONTROL Catalog] tab](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![Het tabblad Overzicht van het dashboard Doelen.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 

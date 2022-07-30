@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '3639'
+source-wordcount: '3664'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,9 @@ Zie de gids UI van het unieschema om meer over te leren [verenigingsschema&#39;s
 
 Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over uw profielgegevens verschaft.
 
-De datum en tijd &#39;laatst bijgewerkt&#39; op een widget geeft aan wanneer de laatste momentopname van de gegevens is gemaakt. De datum en het tijdstip van de momentopname worden in UTC vermeld; het bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast de vervolgkeuzelijst Samenvoegingsbeleid. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. Het tijdstempel van de momentopname wordt in UTC weergegeven; het bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+
+![Het tabblad Overzicht van het dashboard Profielen met de meest recente tijdstempel voor momentopnamen gemarkeerd.](../images/profiles/snapshot-timestamp.png)
 
 ## Standaardwidgets {#standard-widgets}
 
@@ -105,13 +107,13 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Single identity profiles]](#single-identity-profiles)
+* [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
-* [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL Profile count] {#profile-count}
@@ -238,6 +240,14 @@ De [!UICONTROL Single Identity Profiles] widget bevat een aantal profielen van u
 
 ![Widget Single Identity Profiles.](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
+
+Deze widget gebruikt een staafdiagram om het totale aantal profielen te illustreren dat met slechts één unieke id wordt geïdentificeerd. De widget ondersteunt maximaal vijf van de meest voorkomende identiteiten.
+
+Houd de muisaanwijzer boven afzonderlijke balken om een dialoogvenster weer te geven met het totale aantal profielen voor een identiteit.
+
+![De widget Single Identity-profielen op basis van identiteit.](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL Unsegmented profiles] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -319,14 +329,6 @@ Om uitvoerige informatie over een segment te zien, selecteer een segmentnaam van
 ![De widget Doelgrootte met een segmentnaam en de gemarkeerde segmenttekst weergeven.](../images/profiles/audiences-size-view-all-segments.png)
 
 Zie de documentatie voor meer informatie over de [[!UICONTROL Segments] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
-
-### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
-
-Deze widget gebruikt een staafdiagram om het totale aantal profielen te illustreren dat met slechts één unieke id wordt geïdentificeerd. De widget ondersteunt maximaal vijf van de meest voorkomende identiteiten.
-
-Houd de muisaanwijzer boven afzonderlijke balken om een dialoogvenster weer te geven met het totale aantal profielen voor een identiteit.
-
-![De widget Single Identity-profielen op basis van identiteit.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 

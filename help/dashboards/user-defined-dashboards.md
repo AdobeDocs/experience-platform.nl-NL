@@ -1,7 +1,8 @@
 ---
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
-source-git-commit: 47e74a0cabbf40df3a45e835ca3a1e9a36fb4532
+exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 0%
@@ -68,9 +69,9 @@ De voorvertoningslijst bevat informatie over de tabellen in het gegevensmodel. D
 
 Selecteren **[!UICONTROL Next]** om uw keuze van het gegevensmodel te bevestigen. In de volgende weergave wordt een lijst weergegeven met de beschikbare tabellen in de linkertrack. Selecteer een tabel voor een uitgebreide uitsplitsing van de gegevens in de geselecteerde tabel.
 
-De [!UICONTROL Preview] deelvenster bevat tabbladen voor [!UICONTROL Sample records] en [!UICONTROL Attributes].The [!UICONTROL Sample records] bevat een subset van de records uit de geselecteerde tabel in een tabelweergave. De [!UICONTROL Attributes] bevat de kenmerknaam, het gegevenstype en de brontabel voor elk kenmerk dat aan de geselecteerde tabel is gekoppeld.
+De [!UICONTROL Preview] deelvenster bevat tabbladen voor [!UICONTROL Sample records] en [!UICONTROL Attributes]. De [!UICONTROL Sample records] bevat een subset van de records uit de geselecteerde tabel in een tabelweergave. De [!UICONTROL Attributes] bevat de kenmerknaam, het gegevenstype en de brontabel voor elk kenmerk dat aan de geselecteerde tabel is gekoppeld.
 
-Selecteer een tabel in de lijst in de linkertrack om gegevens voor de widget op te geven en selecteer [!UICONTROL Select] om terug te keren naar de widgetcomposer.
+Selecteer een tabel in de lijst in de linkertrack om gegevens voor de widget op te geven en selecteer **[!UICONTROL Select]** om terug te keren naar de widgetcomposer.
 
 ![Het dialoogvenster Gegevens selecteren met de optie gemarkeerd.](./images/user-defined-dashboards/select-a-table.png)
 
@@ -117,7 +118,3 @@ U kunt widgets opnieuw rangschikken en de grootte ervan wijzigen in deze werkrui
 Door dit document te lezen hebt u een beter inzicht in hoe u een aangepast dashboard kunt maken en hoe u aangepaste widgets voor dat dashboard kunt maken, bewerken en bijwerken.
 
 Om de beschikbare pre-gevormde metriek en visualisaties voor te ontdekken [profielen](./guides/profiles.md#standard-widgets), [segmenten](./guides/segments.md#standard-widgets), en [bestemmingen](./guides/destinations.md#standard-widgets) dashboards, zie de lijst van standaardwidgets in hun respectieve documentatie.
-
-
-
-
