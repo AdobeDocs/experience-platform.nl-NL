@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -205,6 +205,12 @@ ht-degree: 1%
       * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
       * [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/submit-destination.md)
+      * Bestandsgebaseerde doelen configureren {#configure-file-based-destinations}
+         * [(Bèta) Vorm een bestemming van Amazon S3 met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanedossier - noem](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [(bèta) Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [(Beta) Configureer een Azure Blob Storage-bestemming met aangepaste opties voor bestandsindeling en aangepaste bestandsnaamconfiguratie](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [(Beta) Vorm een Azure bestemming van de Opslag van het Gegevensmeer met de opties van de douanedossier het formatteren en de configuratie van de douanedossier - noem](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(Beta) Vorm een bestemming SFTP met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanenaam van het dossier](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Referenties {#reference}
       * [Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen](./destination-sdk/rate-limiting-retry-policy.md)
       * [Ondersteunde transformatiefuncties](./destination-sdk/supported-functions.md)
