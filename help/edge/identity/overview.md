@@ -3,9 +3,9 @@ title: Identiteitsgegevens in het Web SDK van het Platform
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;Primaire;Identiteitskaart Namespace;Naamruimte id;AuthenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
+source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1355'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,10 @@ alloy("sendEvent", {
 ```
 
 Elke eigenschap binnen `identityMap` staat voor identiteiten die tot een bepaalde [naamruimte identity](../../identity-service/namespaces.md). De eigenschapsnaam moet het naamruimtesymbool voor de identiteit zijn. Dit symbool staat in de Adobe Experience Platform-gebruikersinterface onder &quot;[!UICONTROL Identities]&quot;. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
+
+>[!IMPORTANT]
+>
+>De naamruimte-id die in het dialoogvenster `identityMap` is hoofdlettergevoelig. Gebruik de juiste naamruimte-id om onvolledige gegevensverzameling te voorkomen.
 
 Elk identiteitsobject in de array identities bevat de volgende eigenschappen:
 
