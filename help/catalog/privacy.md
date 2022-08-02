@@ -5,9 +5,9 @@ title: De verwerking van het privacy- verzoek in het meer van Gegevens
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1383'
 ht-degree: 1%
 
 ---
@@ -148,9 +148,9 @@ In het volgende gedeelte wordt beschreven hoe u privacyverzoeken kunt indienen v
 
 ### De gebruikersinterface gebruiken
 
-Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL AEP Data Lake]** en/of **[!UICONTROL Profile]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die zijn opgeslagen in de [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk.
+Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL AEP Data Lake]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die zijn opgeslagen in de [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Afbeelding met het product Data Lake dat is geselecteerd in het dialoogvenster voor het maken van een privacyverzoek](./images/privacy/product-value.png)
 
 ### De API gebruiken
 
