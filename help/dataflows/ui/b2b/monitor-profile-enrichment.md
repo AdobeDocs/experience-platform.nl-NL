@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Verbeteringstaken voor profielen controleren
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
-# Bewaak profielverrijkingstaken in de gebruikersinterface (#monitor-profile-enrichment)
+# Verbeteringstaken voor profielen controleren in de gebruikersinterface {#monitor-profile-enrichment}
 
 Gebruik de [!UICONTROL Profile Enrichment] dashboard om te begrijpen of de banen van de profielverrijking met succes liepen en voltooiden, en de basismetriek te bekijken om de doeltreffendheid van de verrijking te meten.
 
@@ -38,7 +38,7 @@ De volgende cijfers zijn beschikbaar voor verrijkingstaken van het accountprofie
 | **[!UICONTROL Status]** | Geeft de status (geslaagd, mislukt of verwerkt) van de verwante accounttaak aan. |
 | **[!UICONTROL Message]** | Geeft een fout- of waarschuwingsbericht voor een bepaalde taak aan. |
 
-## Lood naar account overeenkomende profielverrijking (#lead-to-account-matching)
+## Verrijking van overeenkomende profielen voor accounts leiden {#lead-to-account-matching}
 
 De [!UICONTROL Lead to account matching] op het dashboard worden de basismaatstaven en de dagelijkse taakrun-status weergegeven die specifiek zijn voor het [Overeenkomende lead-account](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profielverrijking.
 
