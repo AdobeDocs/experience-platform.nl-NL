@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ba6ef979945ccd7decf4816c3410f2468b596ed
+source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2252'
 ht-degree: 1%
 
 ---
@@ -15,15 +15,14 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Opmerkingen bij de release van Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Dashboards](#dashboards)
-   - [Gegevensverzameling](#data-collection)
-   - [[!DNL Data Prep]](#data-prep)
-   - [[!DNL Destinations]](#destinations)
-   - [Experience Data Model (XDM)](#xdm)
-   - [Real-time Customer Data Platform B2B Edition](#b2b)
-   - [Klantprofiel in realtime](#profile)
-   - [Bronnen](#sources)
+- [Dashboards](#dashboards)
+- [Gegevensverzameling](#data-collection)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Real-time Customer Data Platform B2B Edition](#b2b)
+- [Klantprofiel in realtime](#profile)
+- [Bronnen](#sources)
 
 ## Dashboards {#dashboards}
 
