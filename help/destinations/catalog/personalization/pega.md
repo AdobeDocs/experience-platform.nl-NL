@@ -1,13 +1,13 @@
 ---
 title: Verbinding met PEGA-client
 description: Gebruik de bestemming van de Hub van het Besluit van de Klant van Pega in Adobe Experience Platform om profielattributen en segmentlidmaatschapsgegevens naar de Hub van het Besluit van de Klant van Pega voor volgende-best-actie beslissing te verzenden.
-source-git-commit: 475b3b6dceefe968ffb451193cee4d7ed6387c86
+exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
+source-git-commit: f06afec31b7fa550a612280b8ad665b8393ee2e3
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 0%
 
 ---
-
 
 # Verbinding met PEGA-client
 
@@ -39,7 +39,7 @@ Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platfo
 
 * Vorm de Component van het Lidmaatschap van het Segment van Adobe in uw [!DNL Pega Customer Decision Hub] -instantie.
 * OAuth 2.0 configureren [Clientregistratie met clientreferenties](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) subsidietype in uw [!DNL Pega Customer Decision Hub] -instantie.
-* Configureren [realtime gegevensstroom](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flow)  voor de gegevensstroom van het Lidmaatschap van het Adobe Segment in uw [!DNL Pega Customer Decision Hub] -instantie.
+* Configureren [realtime gegevensstroom](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) voor de gegevensstroom van het Lidmaatschap van het Adobe Segment in uw [!DNL Pega Customer Decision Hub] -instantie.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
