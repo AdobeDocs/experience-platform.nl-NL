@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbeteringstaken voor profielen controleren
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Gebruik de [!UICONTROL Profile Enrichment] dashboard om te begrijpen of de banen
 
 In de [UI Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** van de linkernavigatie om tot [!UICONTROL Monitoring] dashboard. Selecteer in de weergavekiezer de optie **B2B-stroom** om de specifieke dashboardelementen voor [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  De [!UICONTROL Monitoring] dashboard bevat de basismeetgegevens van de meest recente succesvolle uitvoering en de dagelijkse taakstatus tot 90 dagen in het verleden.
 
-## Verrijking profiel van verwante accounts (#related-accounts)
+## Verrijking van het accountprofiel {#related-accounts}
 
 De [!UICONTROL Related accounts] het dashboard toont basismeetgegevens en de status van de dagelijkse baan specifiek voor [Gerelateerde accounts](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) profielverrijking.
 
