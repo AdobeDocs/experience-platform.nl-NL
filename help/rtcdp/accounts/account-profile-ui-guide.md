@@ -3,9 +3,9 @@ keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbe
 title: Gebruikersgids voor accountprofiel
 description: Door het gebruik van accountprofielen kunt u met Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,26 @@ Selecteren **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linke
 ![Tabblad Overzicht waarin widgets worden weergegeven](images/b2b-account-profile-overview.png)
 
 Zie de documentatie op de [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard voor meer informatie.
+
+## Configureer lead in account matching {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Alleen B2B AI-beheerders kunnen de &#39;lead to account matching&#39;-service inschakelen, uitschakelen en configureren. Wanneer u de service uitschakelt, worden de resultaten van de overeenkomst binnen 24 uur verwijderd.
+
+Selecteer **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie. Op de **[!UICONTROL Overview]** tab, selecteert u **[!UICONTROL Settings]** in de rechterbovenhoek.
+
+![Instellingen selecteren](images/b2b-configuring-accounts-profile.png)
+
+De **[!UICONTROL Account settings]** wordt geopend. Selecteer hier de **[!UICONTROL Enable lead-to-account-matching]** schakelen om de functie in te schakelen. Gebruik het vervolgkeuzemenu om **[!UICONTROL Daily]** voor de **[!UICONTROL Matching cadence]** instellen. Selecteer ten slotte de relevante **[!UICONTROL Matching criteria]** opties gevolgd door **[!UICONTROL Save]** om uw instellingen te bevestigen en terug te keren naar de **[!UICONTROL Account Profiles]** scherm.
+
+>[!NOTE]
+>
+> Het adres kan niet als enige passende criteria worden gebruikt. Een of meer andere criteria moeten worden geselecteerd.
+
+![Accountinstellingen configureren](images/b2b-configuring-account-settings.png)
+
+Voor meer informatie over het maken van overeenkomsten met accounts raadpleegt u de [Lood-aan-rekening aanpassing in real time CDP B2B overzicht](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Accountprofielen zoeken {#browse-account-profiles}
 
