@@ -3,24 +3,24 @@ keywords: Experience Platform;thuis;populaire onderwerpen;gegevens meer privacy;
 solution: Experience Platform
 title: De verwerking van het privacy- verzoek in het meer van Gegevens
 topic-legacy: overview
-description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
+description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het datumpigment zijn opgeslagen.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1383'
-ht-degree: 1%
+source-wordcount: '1423'
+ht-degree: 0%
 
 ---
 
-# Behandeling van een privacyverzoek in de [!DNL Data Lake]
+# Behandeling van het privacyverzoek in het datumpigment
 
 Adobe Experience Platform [!DNL Privacy Service] verwerkt verzoeken van klanten om toegang, om zich uit verkoop te laten, of hun persoonsgegevens te schrappen zoals bepaald door wettelijke en organisatorische privacyregels.
 
-Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor klantgegevens die zijn opgeslagen in het [!DNL Data Lake].
+Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het datumpigment zijn opgeslagen.
 
 >[!NOTE]
 >
->In deze handleiding wordt alleen uitgelegd hoe u een verzoek om privacy kunt indienen voor het Data Lake in Experience Platform. Als u ook privacyverzoeken wilt indienen voor de gegevensopslag van het Profiel van de Klant in real time, raadpleegt u de handleiding op [verwerking van privacyverzoeken voor profiel](../profile/privacy.md) in aanvulling op deze zelfstudie.
+>In deze handleiding wordt alleen uitgelegd hoe u een verzoek om privacy kunt indienen voor het datumpeer in Experience Platform. Als u ook privacyverzoeken wilt indienen voor de gegevensopslag van het Profiel van de Klant in real time, raadpleegt u de handleiding op [verwerking van privacyverzoeken voor profiel](../profile/privacy.md) in aanvulling op deze zelfstudie.
 >
 >Raadpleeg voor meer informatie over het indienen van privacyverzoeken voor andere Adobe Experience Cloud-toepassingen de [Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -43,7 +43,7 @@ Voor meer informatie over naamruimten in [!DNL Experience Platform], zie de [Ove
 
 ## Identiteitsgegevens toevoegen aan gegevenssets
 
-Bij het maken van privacyverzoeken voor de [!DNL Data Lake], moeten geldige identiteitswaarden (en de bijbehorende naamruimten) worden verstrekt voor elke individuele klant om van hun gegevens de plaats te bepalen en het dienovereenkomstig te verwerken. Daarom moeten alle datasets die aan privacyverzoeken onderworpen zijn een identiteitsbeschrijver in hun bijbehorend schema XDM bevatten.
+Wanneer het creëren van privacyverzoeken voor het gegevens meer, moeten de geldige identiteitswaarden (en hun bijbehorende namespaces) voor elke individuele klant worden verstrekt om van hun gegevens de plaats te bepalen en het dienovereenkomstig te verwerken. Daarom moeten alle datasets die aan privacyverzoeken onderworpen zijn een identiteitsbeschrijver in hun bijbehorend schema XDM bevatten.
 
 >[!NOTE]
 >
@@ -138,27 +138,27 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u privacyverzoeken kunt opmaken voor de [!DNL Data Lake]. U wordt ten zeerste aangeraden de [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) of [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentatie voor volledige stappen over hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om ingediende gegevens van de gebruikersidentiteit in verzoek te formatteren lading.
+>In deze sectie wordt beschreven hoe u privacyverzoeken voor het datumpigment kunt opmaken. U wordt ten zeerste aangeraden de [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) of [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentatie voor volledige stappen over hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om ingediende gegevens van de gebruikersidentiteit in verzoek te formatteren lading.
 
-In het volgende gedeelte wordt beschreven hoe u privacyverzoeken kunt indienen voor de [!DNL Data Lake] met de [!DNL Privacy Service] UI of API.
+In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het gegevenspeer kunt maken met behulp van de [!DNL Privacy Service] UI of API.
 
 >[!IMPORTANT]
 >
->De hoeveelheid tijd die een privacyverzoek kan duren om te voltooien, kan niet worden gegarandeerd. Als er zich wijzigingen voordoen in het datameer terwijl een aanvraag nog wordt verwerkt, kan ook niet worden gegarandeerd of die records al dan niet worden verwerkt.
+>De hoeveelheid tijd die een privacyverzoek kan duren om te voltooien, kan niet worden gegarandeerd. Als er zich wijzigingen voordoen in het datumpeer terwijl een aanvraag nog wordt verwerkt, kan ook niet worden gegarandeerd of die records al dan niet worden verwerkt.
 
 ### De gebruikersinterface gebruiken
 
-Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL AEP Data Lake]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die zijn opgeslagen in de [!DNL Data Lake].
+Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL AEP Data Lake]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die in het datapenmeer zijn opgeslagen.
 
-![Afbeelding met het product Data Lake dat is geselecteerd in het dialoogvenster voor het maken van een privacyverzoek](./images/privacy/product-value.png)
+![Afbeelding die het product van de datumpigment weergeeft dat is geselecteerd in het dialoogvenster voor het maken van een privacyverzoek](./images/privacy/product-value.png)
 
 ### De API gebruiken
 
-Bij het maken van taakaanvragen in de API worden alle `userIDs` die een specifieke `namespace` en `type` afhankelijk van de gegevensopslag waarop zij van toepassing zijn. Id&#39;s voor de [!DNL Data Lake] moet `unregistered` voor hun `type` en een `namespace` waarde die overeenkomt met een van de [privacylabels](#privacy-labels) die aan de toepasselijke gegevensbestanden zijn toegevoegd.
+Bij het maken van taakaanvragen in de API worden alle `userIDs` die een specifieke `namespace` en `type` afhankelijk van de gegevensopslag waarop zij van toepassing zijn. Id&#39;s voor het datumpeer moeten `unregistered` voor hun `type` en een `namespace` waarde die overeenkomt met een van de [privacylabels](#privacy-labels) die aan de toepasselijke gegevensbestanden zijn toegevoegd.
 
-Bovendien `include` array van de aanvraag payload moet de productwaarden voor de verschillende gegevensopslagruimten bevatten waarnaar de aanvraag wordt verzonden. Bij het indienen van verzoeken aan de [!DNL Data Lake], moet de array de waarde bevatten `aepDataLake`.
+Bovendien `include` array van de aanvraag payload moet de productwaarden voor de verschillende gegevensopslagruimten bevatten waarnaar de aanvraag wordt verzonden. Bij het indienen van aanvragen voor het gegevensmeer moet de array de waarde bevatten `aepDataLake`.
 
-Met de volgende aanvraag wordt een nieuwe privacytaak gemaakt voor de [!DNL Data Lake], met de niet-geregistreerde `email_label` naamruimte. Het omvat ook de productwaarde voor de [!DNL Data Lake] in de `include` array:
+Met het volgende verzoek wordt een nieuwe privacytaak voor het datumpeer gemaakt, waarbij de niet-geregistreerde `email_label` naamruimte. Het omvat ook de productwaarde voor het gegevensmeer in het `include` array:
 
 ```shell
 curl -X POST \
@@ -205,19 +205,19 @@ curl -X POST \
 
 ## Verzoek om verwerking verwijderen
 
-Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL Privacy Service], [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] dat het verzoek is ontvangen en de betrokken gegevens zijn gemarkeerd voor verwijdering. De records worden vervolgens verwijderd uit de [!DNL Data Lake] binnen zeven dagen. Tijdens dat venster van zeven dagen worden de gegevens via de elektronische weg verwijderd en zijn ze daarom door niemand toegankelijk [!DNL Platform] service.
+Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL Privacy Service], [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] dat het verzoek is ontvangen en de betrokken gegevens zijn gemarkeerd voor verwijdering. De gegevens worden vervolgens binnen zeven dagen uit het datumpeer verwijderd. Tijdens dat venster van zeven dagen worden de gegevens via de elektronische weg verwijderd en zijn ze daarom door niemand toegankelijk [!DNL Platform] service.
 
-In toekomstige versies [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] nadat de gegevens fysiek zijn verwijderd.
+Als u ook `ProfileService` of `identity` in de privacyaanvraag worden de bijbehorende gegevens afzonderlijk verwerkt. Zie de sectie over [aanvraagverwerking voor profiel verwijderen](../profile/privacy.md#delete) voor meer informatie .
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten die betrekking hebben op het verwerken van privacyverzoeken voor de [!DNL Data Lake]. U wordt aangeraden de documentatie in deze handleiding te blijven lezen om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken.
+Door dit document te lezen, bent u geïntroduceerd aan de belangrijke concepten betrokken bij de verwerking van privacyverzoeken voor het gegevenspeer. U wordt aangeraden de documentatie in deze handleiding te blijven lezen om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken.
 
 Document weergeven op [verwerking van privacyverzoeken voor realtime klantprofiel](../profile/privacy.md) voor stappen in de verwerking van privacyverzoeken voor de [!DNL Profile] opslaan.
 
 ## Aanhangsel
 
-De volgende sectie bevat aanvullende informatie voor de verwerking van privacyverzoeken in het dialoogvenster [!DNL Data Lake].
+De volgende sectie bevat aanvullende informatie voor het verwerken van privacyverzoeken in het datumpigment.
 
 ### Geneste toewijzingsvelden labelen {#nested-maps}
 
