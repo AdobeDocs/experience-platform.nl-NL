@@ -3,9 +3,10 @@ keywords: Experience Platform;thuis;populaire onderwerpen;
 title: Handleiding voor het oplossen van problemen met Data Prep
 topic-legacy: troubleshooting
 description: Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform Data Prep.
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
+source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -25,3 +26,7 @@ Hieronder volgt een lijst met veelgestelde vragen over [!DNL Data Prep] en hun a
 Als de kolommen gemarkeerd zijn als **Vereist** worden geannuleerd vanwege transformatieproblemen, wordt de rij niet ingevoegd. Wanneer gedeeltelijke gegevensopname wordt toegelaten, kunt u de drempel van dergelijke verwerpingen plaatsen alvorens de volledige stroom ontbreekt. Als het ongeldig gemaakte attribuut geen bevestigingen van het schemaniveau beïnvloedde, zal de rij blijven worden opgenomen.
 
 Alle rijen die ongeldig zijn, zelfs zonder transformatiefouten, worden eveneens afgewezen. Een gegevensinvoerstroom kan bijvoorbeeld een doorvoertoewijzing (geen transformatielogica) naar een vereist veld hebben en er is geen binnenkomende waarde voor dat kenmerk. Deze rij wordt afgewezen.
+
+### Hoe kan ik aan speciale tekens in een veld ontsnappen?
+
+U kunt speciale tekens in een veld laten ontsnappen door `${...}`. JSON-bestanden die echter velden met een punt (`.`) worden niet ondersteund door dit mechanisme. Wanneer het in wisselwerking staan met hiërarchieën, als een kindattribuut een periode (`.`), moet u een backslash gebruiken (`\`) gebruiken om speciale tekens te verwijderen. Bijvoorbeeld: `address` is een object dat het kenmerk bevat `street.name`, dan kan worden verwezen naar `address.street\.name` in plaats van `address.street.name`.

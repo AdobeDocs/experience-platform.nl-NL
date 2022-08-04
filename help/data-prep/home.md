@@ -5,9 +5,9 @@ title: Overzicht van Data Prep
 topic-legacy: overview
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
+source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,10 @@ Lees voor meer informatie over de verschillende toewijzingsfuncties de [handleid
 Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
 
 Lees voor meer informatie over berekende velden de [hulplijn voor berekende velden](./functions.md#calculated-fields).
+
+### Speciale tekens voor Escape
+
+U kunt speciale tekens in een veld laten ontsnappen door `${...}`. JSON-bestanden die echter velden met een punt (`.`) worden niet ondersteund door dit mechanisme. Wanneer het in wisselwerking staan met hiërarchieën, als een kindattribuut een periode (`.`), moet u een backslash gebruiken (`\`) gebruiken om speciale tekens te verwijderen. Bijvoorbeeld: `address` is een object dat het kenmerk bevat `street.name`, dan kan worden verwezen naar `address.street\.name` in plaats van `address.street.name`.
 
 ## Toewijzingsset
 
