@@ -5,9 +5,9 @@ user-guide-title: Edge Network Server API-documentatie
 breadcrumb-title: Edge Network Server API-documentatie
 user-guide-description: De Adobe Experience Platform Edge Network Server-API biedt klanten een geoptimaliseerde manier om te communiceren met Adobe Experience Cloud- of Adobe Experience Platform Edge-services. Leer hoe u de server-API kunt gebruiken voor verschillende gebruiksgevallen voor gegevensverzameling, personalisatie, advertenties en marketing.
 feature: Data Collection
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '108'
 ht-degree: 2%
 
 ---
@@ -28,5 +28,6 @@ ht-degree: 2%
    * [Overzicht van personalisatie](personalization-overview.md)
    * [Personalisatie via Adobe Target](personalization-target.md)
    * [Personalisatie via Offer decisioning](personalization-offer-decisioning.md)
+* [Tips voor locatie](location-hints.md)
 * [Foutafhandeling](error-handling.md)
 * [Problemen oplossen](troubleshooting.md)
