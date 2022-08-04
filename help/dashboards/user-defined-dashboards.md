@@ -2,9 +2,9 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 0%
 
 Met Adobe Experience Platform-dashboards kunt u snel inzicht krijgen en de visualisatie aanpassen via de door de gebruiker gedefinieerde dashboards-functie. Met deze functie kunt u aangepaste dashboards maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren.
 
-## Aan de slag
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Als u dashboards wilt weergeven in Adobe Experience Platform, moet u de juiste machtiging hebben ingeschakeld. Lees de [Documentatie voor dashboards-machtigingen](./permissions.md#available-permissions) om te leren hoe u gebruikers de mogelijkheid biedt om dashboards van Experience Platforms weer te geven, te bewerken en bij te werken met Adobe Admin Console. Als u geen beheerdersrechten voor uw organisatie hebt, neemt u contact op met uw productbeheerder om de vereiste machtigingen te verkrijgen.
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## Aangepaste dashboards maken
 
 Als u eerst een aangepast dashboard wilt maken, navigeert u naar het dashboardoverzicht. Selecteren **[!UICONTROL Dashboards]** van de linkernavigatie van het Platform UI gevolgd door **[!UICONTROL Create dashboard]**.
 
-Voor meer informatie over de beschikbare vooraf geconfigureerde dashboards raadpleegt u de [Overzicht van dashboardinventaris](./inventory.md).
+![Het dashboardoverzicht met dashboards in de linkernavigatie en &quot;creëren dashboard&quot;benadrukte.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->Door een aangepast dashboard toe te voegen, wordt de lijst met vooraf geconfigureerde dashboards verwijderd uit de dashboardvoorraad. In plaats daarvan bestaat de dashboardvoorraad uitsluitend uit door de gebruiker gedefinieerde dashboards.
-
-![Het dashboardoverzicht met de markering &#39;Het dashboard maken&#39;.](./images/user-defined-dashboards/create-dashboard.png)
+Voordat u een aangepast dashboard toevoegt, is de dashboardvoorraad leeg en wordt &#39;&#39;Geen dashboards gevonden&#39;&#39; weergegeven. bericht. Zodra u hebt gemaakt, worden alle door de gebruiker gedefinieerde dashboards vermeld in de dashboardvoorraad.
 
 De [!UICONTROL Create dashboard] wordt weergegeven. Voer een beschrijvende naam in voor de verzameling widgets die u wilt maken en selecteer **[!UICONTROL Save]**.
 
@@ -85,9 +83,9 @@ Het gegevensmodel en de geselecteerde tabel worden boven aan de linkertrack weer
 >
 >U kunt het gekozen gegevensmodel wijzigen door het potloodpictogram te selecteren (![Potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) in het linkerspoor.
 
-De ovalen selecteren (`...`) naast een kenmerknaam om een kenmerk aan de X- of Y-as toe te voegen.
+Selecteer het pictogram Toevoegen (./images/user-defined-dashboards/add-icon.png) naast een kenmerknaam om een kenmerk aan de X- of Y-as toe te voegen.
 
-![De widgetcomposer met de elliptische vervolgkeuzelijst gemarkeerd om kenmerken aan een widgetas toe te voegen.](./images/user-defined-dashboards/attributes-dropdown.png)
+![De widgetcomposer met het vervolgkeuzemenu voor het pictogram Toevoegen gemarkeerd om kenmerken aan een widgetas toe te voegen.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 Selecteer vervolgens het type grafiek of grafiek in het menu [!UICONTROL Marks] vervolgkeuzelijst voor het genereren van een voorvertoning van de huidige instellingen van de widget. In de [!UICONTROL Properties] aan de rechterkant van het scherm typt u een naam voor de widget in het deelvenster [!UICONTROL Widget title] tekstveld.
 
