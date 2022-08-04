@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerlabels beheren
 description: Dit document bevat informatie over het beheer van labels via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 3d7b3471c363c036c41171789b7dcbed5489f2ee
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het in Platform wordt opgenomen, of zodra de gegevens voor gebruik in Platform beschikbaar worden.
 
 ## Een nieuw label maken
+
+>[!NOTE]
+>
+>U moet over beheerdersrechten beschikken om een aangepast label te maken. Het verwijderen van labels wordt momenteel niet ondersteund.
 
 Als u een nieuw label wilt maken, selecteert u de optie **[!UICONTROL Labels]** op de zijbalk en selecteert u **[!UICONTROL Create Label]**.
 
