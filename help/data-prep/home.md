@@ -5,9 +5,9 @@ title: Overzicht van Data Prep
 topic-legacy: overview
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Lees voor meer informatie over de verschillende toewijzingsfuncties de [handleid
 
 ### Berekende velden
 
-Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
+Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken. Berekende velden mogen maximaal 4096 tekens lang zijn.
 
 Lees voor meer informatie over berekende velden de [hulplijn voor berekende velden](./functions.md#calculated-fields).
 

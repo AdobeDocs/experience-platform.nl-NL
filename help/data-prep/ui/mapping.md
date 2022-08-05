@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand
 title: UI-gids voor gegevenprepress
 description: Dit document biedt aanwijzingen voor het gebruik van functies voor gegevensvoorvoegsel in de gebruikersinterface van het Platform om CSV-bestanden toe te wijzen aan een XDM-schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -149,7 +149,7 @@ Wanneer gebeëindigd, selecteer het schemapictogram om de interface van het doel
 
 #### Berekende velden {#calculated-fields}
 
-Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
+Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken. Berekende velden mogen maximaal 4096 tekens lang zijn.
 
 Als u een berekend veld wilt maken, selecteert u **[!UICONTROL New field type]** en selecteer vervolgens **[!UICONTROL Add calculated field]**
 

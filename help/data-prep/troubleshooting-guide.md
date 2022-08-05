@@ -4,9 +4,9 @@ title: Handleiding voor het oplossen van problemen met Data Prep
 topic-legacy: troubleshooting
 description: Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform Data Prep.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ Alle rijen die ongeldig zijn, zelfs zonder transformatiefouten, worden eveneens 
 ### Hoe kan ik aan speciale tekens in een veld ontsnappen?
 
 U kunt speciale tekens in een veld laten ontsnappen door `${...}`. JSON-bestanden die echter velden met een punt (`.`) worden niet ondersteund door dit mechanisme. Wanneer het in wisselwerking staan met hiërarchieën, als een kindattribuut een periode (`.`), moet u een backslash gebruiken (`\`) gebruiken om speciale tekens te verwijderen. Bijvoorbeeld: `address` is een object dat het kenmerk bevat `street.name`, dan kan worden verwezen naar `address.street\.name` in plaats van `address.street.name`.
+
+### Wat is de maximumlengte van berekende velden?
+
+Berekende velden mogen maximaal 4096 tekens lang zijn.
