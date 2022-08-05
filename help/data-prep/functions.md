@@ -5,7 +5,7 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Als deze conventie niet wordt gevolgd door een veldnaam, moet de veldnaam worden
 Bovendien, als een gebiedsnaam is **alle** van de volgende gereserveerde trefwoorden: `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 Gegevens binnen subvelden zijn toegankelijk met behulp van de puntnotatie. Als er bijvoorbeeld een `name` -object, om toegang te krijgen tot `firstName` veld, gebruiken `name.firstName`.
