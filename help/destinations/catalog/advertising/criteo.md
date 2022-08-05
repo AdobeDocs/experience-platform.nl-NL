@@ -3,9 +3,9 @@ keywords: reclame; criterium;
 title: Criteverbinding
 description: Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,6 @@ Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring
 
 ## Beperkingen {#limitations}
 
-* Criteo biedt momenteel geen ondersteuning voor het verwijderen van gebruikers uit het publiek.
 * Criteuse accepteert alleen [!DNL SHA-256]-hashed en onbewerkte e-mails (om te zetten in [!DNL SHA-256] vóór verzending). Stuur geen PII (Persoonlijke identificeerbare gegevens, zoals namen van personen of telefoonnummers).
 * De criteo heeft minstens één id nodig die door de cliënt moet worden verstrekt. Prioriteiten [!DNL GUM ID] als id over gehashte e-mail aangezien het tot betere passende tarief bijdraagt.
 
@@ -41,7 +40,7 @@ Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel w
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
 | `email_sha256` | E-mailadressen die met het algoritme SHA-256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA-256-gehashte e-mailadressen. Wanneer het bronveld hashkenmerken bevat, controleert u de [!UICONTROL Apply transformation] als u wilt dat het Platform de gegevens bij activering automatisch verbergt. |
-| `gum_id` | Criteo [!DNL GUM] cookie-id | [!DNL GUM IDs] cliënten toestaan een correspondentie aan te houden tussen hun systeem voor gebruikersidentificatie en de gebruikersidentificatie van de Commissie ([!DNL UID]). Als het id-type `GUM`, een aanvullende parameter [!DNL GUM Caller ID], moet ook worden opgenomen. Neem contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of om meer informatie hierover te krijgen `GUM` synchroniseren, indien nodig. |
+| `gum_id` | Criteo [!DNL GUM] cookie-id | [!DNL GUM IDs] cliënten toestaan een correspondentie aan te houden tussen hun systeem voor gebruikersidentificatie en de gebruikersidentificatie van de Commissie ([!DNL UID]). Als het id-type `gum_id`, een aanvullende parameter [!DNL GUM Caller ID], moet ook worden opgenomen. Neem contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of om meer informatie hierover te krijgen [!DNL GUM ID] synchroniseren, indien nodig. |
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -99,7 +98,6 @@ Vul de volgende verbindingsparameters in nadat u de bestemming hebt geverifieerd
 | --- | --- | --- |
 | Naam | Een naam waarmee u deze bestemming in de toekomst kunt herkennen. De naam die u hier kiest, is [!DNL Audience] naam in het Centrum van het Beheer van de Nota en kan niet in later stadium worden gewijzigd. | Ja |
 | Beschrijving | Een beschrijving waarmee u deze bestemming in de toekomst kunt identificeren. | Nee |
-| API-versie | Criteo API-versie. Selecteer Voorvertoning. | Ja |
 | Adverteerder-id | Identiteitskaart van Adverteerder van de website van uw organisatie. Neem contact op met uw accountmanager van de website voor deze informatie. | Ja |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] van uw organisatie. Neem contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of om meer informatie hierover te krijgen [!DNL GUM] synchroniseren, indien nodig. | Ja, telkens [!DNL GUM ID] wordt opgegeven als id |
 
@@ -121,7 +119,7 @@ Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](../.
 
 U kunt de geëxporteerde segmenten zien in het dialoogvenster [Centro](https://marketing.criteo.com/audience-manager/dashboard).
 
-De door de [!DNL Criteo] De verbinding ziet er ongeveer als volgt uit:
+De aanvraaginstantie voor het toevoegen van een gebruikersprofiel dat door de [!DNL Criteo] De verbinding ziet er ongeveer als volgt uit:
 
 ```json
 {
@@ -129,6 +127,34 @@ De door de [!DNL Criteo] De verbinding ziet er ongeveer als volgt uit:
     "type": "ContactlistWithUserAttributesAmendment",
     "attributes": {
       "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+De aanvraaginstantie voor het verwijderen van gebruikersprofielen die door de [!DNL Criteo] De verbinding ziet er ongeveer als volgt uit:
+
+```json
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "remove",
       "identifierType": "gum",
       "gumCallerId": "123",
       "identifiers": [
