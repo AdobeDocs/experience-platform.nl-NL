@@ -2,9 +2,9 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1282'
 ht-degree: 2%
 
 ---
@@ -70,19 +70,36 @@ Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot
 >
 >Voor meer informatie over hoe deze toestemmingen mogelijkheden in markeringen beïnvloeden, met inbegrip van beleidsstrategieën voor gemeenschappelijke scenario&#39;s, zie de tagdocumentatie op [gebruikersmachtigingen](../tags/ui/administration/user-permissions.md).
 
-## Rechten voor Adobe Experience Platform-gegevensverzameling beheren {#manage}
+## Machtigingen beheren {#manage}
 
->[!IMPORTANT]
->
->Deze sectie behandelt slechts hoe te om toestemmingen voor het product van de Gegevensverzameling van Adobe Experience Platform in Admin Console te beheren. De stappen voor het beheer van machtigingen onder het Adobe Experience Platform-product zijn echter vergelijkbaar.
->
->Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor gedetailleerde instructies over het beheren van Platform toestemmingen. Afhankelijk van product SKUs uw organisatie toegang tot heeft, kunt u niet elke toestemming hebben beschikbaar aan u.
+Zoals in de vorige sectie wordt geschetst, worden de toestemmingen voor gegevensinzameling beheerd door twee productbenamingen in Admin Console: **Adobe Experience Platform** en **Adobe Experience Platform-gegevensverzameling**.
 
-Om toestemmingen voor de Inzameling van Gegevens te beheren, login aan [Admin Console](https://adminconsole.adobe.com/) en selecteert u **[!UICONTROL Products]** in de bovenste navigatie. Selecteer hier de kaart voor **[!UICONTROL Adobe Experience Platform Data Collection]**.
+Meld u aan om deze machtigingen te beheren [Admin Console](https://adminconsole.adobe.com/) en selecteert u **[!UICONTROL Products]** in de bovenste navigatie. Van hier, selecteer de productkaart voor de toestemmingen u wilt vormen. Raadpleeg de onderstaande subsecties voor informatie over het beheren van de relevante machtigingen onder elk product in de Admin Console:
+
+* [Adobe Experience Platform-machtigingen](#manage-platform)
+* [Machtigingen voor Adobe Experience Platform-gegevensverzameling](#manage-collection)
+
+### Rechten beheren onder Adobe Experience Platform {#manage-platform}
+
+Van de **[!UICONTROL Products]** weergave in Admin Console, selecteert u **[!UICONTROL Adobe Experience Platform Data Collection]**. Selecteer het productprofiel waarvoor u machtigingen wilt bewerken en navigeer naar het **[!UICONTROL Permissions]** tab.
+
+Als u toegang wilt tot functies voor gegevensverzameling, moet u alle machtigingen inschakelen in het dialoogvenster **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]**, en **[!UICONTROL Data Collection]** categorieën.
+
+![Afbeelding die de productkaart voor gegevensverzameling in Admin Console weergeeft](./images/permissions/platform-permission-card.png)
+
+Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor gedetailleerde instructies over het beheren van Platform toestemmingen.
+
+>[!NOTE]
+>
+>Afhankelijk van product SKUs uw organisatie toegang tot heeft, kunt u niet elke toestemming van het Platform beschikbaar aan u hebben.
+
+### Rechten beheren in Adobe Experience Platform Data Collection {#manage-collection}
+
+Van de **[!UICONTROL Products]** weergave in Admin Console, selecteert u **[!UICONTROL Adobe Experience Platform Data Collection]**.
 
 ![Afbeelding die de productkaart voor gegevensverzameling in Admin Console weergeeft](./images/permissions/data-collection-card.png)
 
-### Een productprofiel selecteren of maken
+#### Een productprofiel selecteren of maken
 
 In het volgende scherm wordt een lijst weergegeven met beschikbare productprofielen voor gegevensverzameling onder uw organisatie, waarbij het standaardprofiel **[!DNL Default Data Collection All Access]**. U kunt desgewenst het standaardproductprofiel bewerken of u kunt **[!UICONTROL New Profile]** om er een te maken. Als u veelvoudige rollen of gebruikersgroepen in uw organisatie hebt die verschillende niveaus van toegang vereisen, zou u een afzonderlijk productprofiel voor elk van hen moeten creëren.
 
@@ -92,7 +109,7 @@ Nadat u een productprofiel hebt geselecteerd of gemaakt, kunt u de opdracht **[!
 
 ![Afbeelding met het tabblad Machtigingen voor een Admin Console met productprofielen](./images/permissions/edit-permission-categories.png)
 
-### Machtigingen voor het productprofiel bewerken {#edit-permissions}
+#### Machtigingen voor het productprofiel bewerken {#edit-permissions}
 
 Wanneer u machtigingen voor een profiel bewerkt, worden in de linkerkolom de beschikbare machtigingen vermeld, terwijl de machtigingen die in het profiel zijn opgenomen in de rechterkolom worden weergegeven. Selecteer de vermelde toestemmingen om hen tussen één van beide kolom te bewegen.
 
@@ -110,7 +127,7 @@ De weergave van het productprofiel wordt opnieuw weergegeven met de toegevoegde 
 
 ![Afbeelding met de toegevoegde machtigingen voor het productprofiel](./images/permissions/permissions-added.png)
 
-### Gebruikers toewijzen aan het productprofiel {#assign-users}
+#### Gebruikers toewijzen aan het productprofiel {#assign-users}
 
 Als u gebruikers wilt toewijzen aan het productprofiel (en hun de geconfigureerde machtigingen van het profiel wilt verlenen), selecteert u de optie **[!UICONTROL Users]** tab, gevolgd door **[!UICONTROL Add user]**.
 
