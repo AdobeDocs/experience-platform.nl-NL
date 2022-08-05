@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
+source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
 workflow-type: tm+mt
-source-wordcount: '2252'
+source-wordcount: '2254'
 ht-degree: 1%
 
 ---
@@ -177,7 +177,7 @@ Gebaseerd op Real-time Customer Data Platform (Real-Time CDP), is de Echte - tij
 
 | Functie | Beschrijving |
 | --- | --- |
-| Overeenkomende lead-account | Met overeenkomsten van account tot account kunt u profielen van bekende personen aansluiten bij accountprofielen. U kunt gegevens dan segmenteren en richten in een context B2B zoals rekeningen of kansen. De dagelijkse banen gebruiken zowel deterministische als probabilistische factoren om persoonprofielen aan te passen die niet reeds aan om het even welke rekening aan een best-gematchte rekening worden geassocieerd. U kunt dan beslissen of dergelijke overeenkomsten in uw segmentdefinities worden opgenomen |
+| Overeenkomende lead-account | Met Aanpassen aan account kunt u profielen van bekende personen toevoegen aan accountprofielen. U kunt gegevens dan segmenteren en richten in een context B2B zoals rekeningen of kansen. De dagelijkse banen gebruiken zowel deterministische als probabilistische factoren om persoonprofielen aan te passen die niet reeds aan om het even welke rekening aan een best-gematchte rekening worden geassocieerd. U kunt dan beslissen of dergelijke overeenkomsten in uw segmentdefinities worden opgenomen |
 
 Zie het document over [maken tot rekeningafstemming](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
