@@ -4,9 +4,9 @@ title: De publieksgegevens van de activering aan het stromen profiel de uitvoerb
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,15 @@ Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming]
 
 1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab.
 
-   ![Tabblad Doelcatalogus](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![Afbeelding die het tabblad van de doelcatalogus weergeeft.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. Selecteren **[!UICONTROL Activate segments]** op de kaart die overeenkomt met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-   ![Knop Segmenten activeren](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![Afbeelding die de activesegmentcontrole markeert op het tabblad Doelcatalogus.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. Selecteer de doelverbinding die u wilt gebruiken om uw segmenten te activeren en selecteer vervolgens **[!UICONTROL Next]**.
 
-   ![Doel selecteren](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![Afbeelding met een selectie van twee doelen waarmee u verbinding kunt maken.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Naar de volgende sectie gaan [uw segmenten selecteren](#select-segments).
 
@@ -45,11 +45,11 @@ Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming]
 
 Gebruik de selectievakjes links van de segmentnamen om de segmenten te selecteren die u wilt activeren naar het doel en selecteer vervolgens **[!UICONTROL Next]**.
 
-![Segmenten selecteren](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![Afbeelding die de selectie van selectievakjes markeert in de stap Segmenten selecteren van de activeringsworkflow.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## Profielkenmerken selecteren {#select-attributes}
 
-Selecteer de profielkenmerken die u naar de doelbestemming wilt verzenden.
+In de **[!UICONTROL Mapping]** Selecteer de profielkenmerken die u naar de doelbestemming wilt verzenden.
 
 >[!NOTE]
 >
@@ -59,19 +59,19 @@ Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmen
 * Als de `segmentMembership.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
 * Als de `segmentMembership.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
 
-![aanbevolen kenmerken](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
+![Afbeelding met de vooraf ingevulde, aanbevolen kenmerken in de toewijzingsstap.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. In de **[!UICONTROL Select attributes]** pagina, selecteert u **[!UICONTROL Add new field]**.
 
-   ![Nieuwe toewijzing toevoegen](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![Afbeelding die het besturingselement Nieuw veld toevoegen in de toewijzingsstap markeert.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. Selecteer de pijl rechts van de knop **[!UICONTROL Schema field]** vermelding.
 
-   ![Bronveld selecteren](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![Afbeelding die markeert hoe u een bronveld selecteert in de toewijzingsstap.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. In de **[!UICONTROL Select field]** pagina, selecteert u de XDM-kenmerken die u naar het doel wilt verzenden en kiest u **[!UICONTROL Select]**.
 
-   ![Bronveldpagina selecteren](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Afbeelding met een selectie XDM-velden die u kunt selecteren als bronvelden.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. Als u meer toewijzingen wilt toevoegen, herhaalt u stap 1 tot en met 3 en selecteert u **[!UICONTROL Next]**.
@@ -84,11 +84,11 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 >
 >In deze stap controleert Adobe Experience Platform op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [Beleidshandhaving](../../rtcdp/privacy/data-governance-overview.md#enforcement) in de sectie Documentatie inzake gegevensbeheer.
 
-![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
+![Afbeelding die een schending van een gegevensbeleid in de revisiestap weergeeft.](../assets/common/data-policy-violation.png)
 
 Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
-![Controleren](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Afbeelding met de revisiestap van de activeringsworkflow.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## Segmentactivering verifiëren {#verify}
 
