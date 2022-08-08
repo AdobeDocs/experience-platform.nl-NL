@@ -2,7 +2,7 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
 source-wordcount: '1885'
 ht-degree: 2%
@@ -285,7 +285,7 @@ Met deze optie kunt u:
 
 >[!NOTE]
 >
->Wanneer het gebruiken van de configureerbare samenvoegingsoptie voor uw bestemming, houd rekening met de minimum en maximumwaarden die u voor de twee parameters kunt gebruiken `maxBatchAgeInSecs` (minimaal 1,800 en maximaal 3,600) en `maxNumEventsInBatch` (minimaal 1 000, maximaal 10 000).
+>Wanneer het gebruiken van de configureerbare samenvoegingsoptie voor uw bestemming, houd rekening met de minimum en maximumwaarden die u voor de twee parameters kunt gebruiken `maxBatchAgeInSecs` (minimaal 1,800 en maximaal 3,600) en `maxNumEventsInBatch` (minimaal 1.000, maximaal 10.000).
 
 Voor gedetailleerde uitleg van de aggregatieparameters raadpleegt u de [API-eindpuntbewerkingen voor doelen](./destination-configuration-api.md) referentiepagina, waar elke parameter wordt beschreven.
 
