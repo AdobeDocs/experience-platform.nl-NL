@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
+source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '943'
 ht-degree: 1%
 
 ---
@@ -210,6 +210,7 @@ ht-degree: 1%
          * [(bèta) Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [(Beta) Configureer een Azure Blob Storage-bestemming met aangepaste opties voor bestandsindeling en aangepaste bestandsnaamconfiguratie](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
          * [(Beta) Vorm een Azure bestemming van de Opslag van het Gegevensmeer met de opties van de douanedossier het formatteren en de configuratie van de douanedossier - noem](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(bèta) Vorm een bestemmings van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanedossier - noem](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [(Beta) Vorm een bestemming SFTP met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanenaam van het dossier](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Referenties {#reference}
       * [Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen](./destination-sdk/rate-limiting-retry-policy.md)
