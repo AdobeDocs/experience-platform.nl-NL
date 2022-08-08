@@ -2,9 +2,9 @@
 title: Bladeren in werkorders voor gegevenshygiëne
 description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,10 @@ Selecteer het trechter-pictogram (![Afbeelding van het trechter-pictogram](../im
 
 | Filter | Beschrijving |
 | --- | --- |
-| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder. |
-| [!UICONTROL Date created] | Filter op basis van de datum waarop het TTL-verzoek voor de gegevensset is ingediend. |
-| [!UICONTROL Deletion date] | Filter dat op de schrappingsdatum wordt gebaseerd dat TTL gepland heeft. |
-| [!UICONTROL Date updated] | Filter op basis van de datum waarop de dataset-TTL voor het laatst is bijgewerkt. De creaties en vervalsingen van TTL worden geteld als updates. |
+| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Pending]**: De taak is gemaakt, maar is nog niet uitgevoerd. A [De tijd-aan-levende (TTL) verzoek van de dataset](./ttl.md) neemt deze status aan vóór de geplande verwijderingsdatum. Zodra de verwijderingsdatum is bereikt, wordt de status bijgewerkt naar [!UICONTROL Executing] tenzij de taak vooraf wordt geannuleerd.</li><li>**[!UICONTROL Executing]**: De taak is gestart en wordt momenteel verwerkt.</li><li>**[!UICONTROL Cancelled]**: De taak is geannuleerd als onderdeel van een handmatig gebruikersverzoek.</li></ul> |
+| [!UICONTROL Date created] | Filter op basis van de datum waarop de werkorder is gemaakt. |
+| [!UICONTROL Expiration date] | De verzoeken van TTL van de filter die op de geplande schrappingsdatum voor de dataset in kwestie worden gebaseerd. |
+| [!UICONTROL Date updated] | De verzoeken van TTL van de filter die op toen de het werkorde laatst werd bijgewerkt worden gebaseerd. De creaties en vervalsingen van TTL worden geteld als updates. |
 
 {style=&quot;table-layout:auto&quot;}
 
