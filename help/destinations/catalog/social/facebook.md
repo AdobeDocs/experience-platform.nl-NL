@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
@@ -165,7 +165,6 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Oorsprong van het publiek"
 >abstract="Kies hoe de klantgegevens in het segment oorspronkelijk zijn verzameld. De gegevens worden in Facebook weergegeven wanneer een gebruiker voor het segment is ingesteld"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Meer informatie in documentatie"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

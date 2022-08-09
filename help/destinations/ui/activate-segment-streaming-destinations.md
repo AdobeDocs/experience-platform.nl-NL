@@ -4,9 +4,9 @@ title: De publieksgegevens van de activering aan het stromen segment de uitvoerb
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten toe te wijzen aan segmentstreamingdoelen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,6 @@ Voor sommige segment streamingdoelen moet u bronkenmerken of naamruimten selecte
 >id="platform_destinations_activate_applytransformation"
 >title="Transformatie toepassen"
 >abstract="Schakel deze optie in als u niet-gehashte bronvelden gebruikt, zodat Adobe Experience Platform deze automatisch verbergt bij activering."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Meer informatie in documentatie"
 
 Wanneer u ongehashte bronkenmerken toewijst aan doelkenmerken die de bestemming verwacht te worden gehasht (bijvoorbeeld: `email_lc_sha256` of `phone_sha256`), controleert u de **Transformatie toepassen** als u wilt dat Adobe Experience Platform de bronkenmerken bij activering automatisch hasht.
 
@@ -95,7 +94,6 @@ Wanneer u ongehashte bronkenmerken toewijst aan doelkenmerken die de bestemming 
 >id="platform_destinations_activate_enddate"
 >title="Einddatum"
 >abstract="Het toevoegen van een einddatum voor segmentprogramma is niet beschikbaar."
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Meer informatie in documentatie"
 
 Standaard worden de [!UICONTROL Segment schedule] op de pagina worden alleen de nieuw geselecteerde segmenten weergegeven die u hebt gekozen in de huidige activeringsstroom.
 
