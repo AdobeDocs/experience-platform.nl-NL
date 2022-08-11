@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release Common Analytics Plugins Extension
 description: De meest recente release bevat de extensie Common Analytics Plugins in Adobe Experience Platform.
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
-source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
+source-git-commit: c0aa12e9d50e3d1a05a8692a153242f2e6c044ca
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 5%
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 #### Functies
 
-Insteekmodules die cookies instellen, gebruiken nu de beveiligde markering
+* Insteekmodules die cookies instellen, gebruiken nu de beveiligde markering
 
 ## 23 juni 2021
 
