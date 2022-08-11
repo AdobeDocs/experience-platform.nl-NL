@@ -1,14 +1,23 @@
 ---
 title: Opmerkingen bij de release Common Analytics Plugins Extension
 description: De meest recente release bevat de extensie Common Analytics Plugins in Adobe Experience Platform.
-source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
+exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
+source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '329'
 ht-degree: 5%
 
 ---
 
 # Opmerkingen bij de release Common Analytics Plugins
+
+## 3 juni 2022
+
+### Common Analytics Plugins Extension 3.0.7
+
+#### Functies
+
+Insteekmodules die cookies instellen, gebruiken nu de beveiligde markering
 
 ## 23 juni 2021
 
@@ -75,7 +84,7 @@ ht-degree: 5%
 
 * Probleem verholpen waardoor compatibiliteit met versie 2.0.X met oudere versies werd voorkomen
 * Documentkoppelingen wezen op onjuiste documentatie. Dit probleem is nu opgelost.
-* Probleem verholpen waarbij `getTimeSinceLastVisit` tweemaal verscheen in de initialiseringsactie
+* Probleem verholpen waarbij `getTimeSinceLastVisit` twee keer verscheen in de initialiseringsactie
 
 ## 15 november 2019
 
@@ -84,9 +93,9 @@ ht-degree: 5%
 #### Opgeloste problemen
 
 * Nieuwe insteekacties voor afzonderlijke insteekmodules ter ondersteuning van achterwaartse compatibiliteit
-* Probleem verholpen met de `cleanStr`-plug-in
-* Probleem verholpen met de `getResponsiveLayout`-plug-in
-* Probleem verholpen met de `getPageName`-plug-in
+* Probleem verholpen met de `cleanStr` insteekmodule
+* Probleem verholpen met de `getResponsiveLayout` insteekmodule
+* Probleem verholpen met de `getPageName` insteekmodule
 
 #### Functies
 
