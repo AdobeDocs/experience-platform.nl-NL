@@ -3,9 +3,9 @@ title: Vereisten voor het Gebruiken van het Web SDK van Adobe Experience Platfor
 description: Meer informatie over de voorwaarden voor het gebruik van Adobe Experience Platform Web SDK.
 keywords: 1st-partijdomein;CNAME;schema;creeer schema;lancering;aep Web sdk uitbreiding;uitbreiding;configuratie identiteitskaart;configuratiehulpmiddel;gegevenselement;creeer gegevenselement;XDM Voorwerp;sendEvent;send Gebeurtenis;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
+source-git-commit: 853c0a662592939c280c7e7ede8235d1b6155b2f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,4 @@ Als u de Adobe Experience Platform Web SDK wilt gebruiken, moet u eerst:
 
 ## Machtigingen beheren voor Adobe Experience Platform Web SDK
 
-Als je Adobe Experience Platform wilt gaan gebruiken, moet je het recht hebben [machtigingen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) om uw schema&#39;s te maken en identiteiten te beheren. U vindt de minimale machtigingen die nodig zijn in de categorie Gegevensmodellering en identiteiten.
-
-![](../images/AEP-permission-categories.png)
-
-Geef gebruikers binnen de categorie Gegevensmodellering de machtigingen Schema&#39;s beheren en Schema&#39;s weergeven.
-
-![](../images/data-modeling-permissions.png)
-
-Geef gebruikers binnen de categorie Identity Management de machtigingen Naamruimten beheren en Identiteitsnaamruimten weergeven.
-
-![](../images/identity-management-permissions.png)
+Als u Adobe Experience Platform Web SDK wilt gaan gebruiken, moet u de juiste machtigingen hebben geconfigureerd. Raadpleeg onze documentatie voor meer informatie over het instellen van uw configuratie [beheer van gegevensverzamelingsmachtigingen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
