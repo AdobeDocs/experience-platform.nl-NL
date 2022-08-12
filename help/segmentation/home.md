@@ -5,9 +5,9 @@ title: Overzicht van segmentatieservice
 topic-legacy: overview
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1630'
 ht-degree: 0%
 
 ---
@@ -46,25 +46,47 @@ Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinit
 >
 >Bovendien, als time-to-live (TTL) op de dataset wordt toegelaten, zou dit het lidmaatschap van het gecreeerde segment kunnen beïnvloeden. Voor meer informatie over TTL en hoe het segmentatie kan beïnvloeden, gelieve te lezen [TTL-gids voor profielservice](../profile/apply-ttl.md).
 
-## Segmenten evalueren
+## Segmenten evalueren {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="Evaluatiemethoden"
+>abstract="Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie."
 
 Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie.
 
-### Streaming segmentering
+### Streaming segmentering {#streaming}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="Streaming evaluatie"
+>abstract="Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evalueer gebeurtenissen in bijna real time met het stromen segmentatie"
 
 Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en bewaard, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
 Lees voor meer informatie over streamingsegmentatie de [documentatie over streamingsegmentatie](./api/streaming-segmentation.md).
 
-### Batchsegmentatie
+### Batchsegmentatie {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="Batchevaluatie"
+>abstract="Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Nadat u het segment hebt gemaakt, wordt het opgeslagen en opgeslagen zodat u het voor gebruik kunt exporteren."
 
 Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Zodra gecreeerd, wordt dit segment bewaard en opgeslagen zodat u het voor gebruik kunt uitvoeren.
 
 Batchsegmenten worden automatisch elke 24 uur geëvalueerd. Als u een partijsegment op bestelling wilt evalueren, kunt u een segmentbaan gebruiken. Lees voor meer informatie over segmenttaken de [segmenttaakdocumentatie](./api/segment-jobs.md).
 
-### Randsegmentatie
+### Randsegmentatie {#edge}
 
-De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk op de Rand van de Ervaring te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginalitalisering.
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="Edge-evaluatie"
+>abstract="De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk op de Rand van de Ervaring te evalueren, toelatend de kwesties van het de verpersoonlijkingsgebruik van de zelfde pagina en van de volgende pagina."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI-hulplijn"
+
+De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk te evalueren [over Experience Edge](../edge/home.md)en maakt het gebruik van hoofdletters en kleine letters mogelijk.
 
 Voor meer informatie over randsegmentatie leest u de optie [API-documentatie](./api/edge-segmentation.md) of de [UI-documentatie](./ui/edge-segmentation.md).
 
