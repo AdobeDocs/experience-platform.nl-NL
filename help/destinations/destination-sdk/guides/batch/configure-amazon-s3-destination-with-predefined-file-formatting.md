@@ -1,7 +1,8 @@
 ---
 description: Leer hoe u Destination SDK gebruikt om een Amazon S3-bestemming te configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 title: (bèta) Vorm een bestemming van Amazon S3 met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanenaam van het dossier.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -117,10 +118,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }

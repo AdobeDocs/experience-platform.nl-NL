@@ -2,9 +2,9 @@
 description: De server en de specificaties van de dossierconfiguratie voor op dossier-gebaseerde bestemmingen kunnen in Adobe Experience Platform Destination SDK via het /destination-servers eindpunt worden gevormd.
 title: (Bèta) de opties van de configuratie voor op dossier-gebaseerde bestemmingsserverspecificaties
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '899'
 ht-degree: 8%
 
 ---
@@ -284,10 +284,6 @@ In deze sectie worden de instellingen voor de bestandsindeling voor het geëxpor
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ In deze sectie worden de instellingen voor de bestandsindeling voor het geëxpor
 | `csvOptions.timestampFormat.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt de tekenreeks in die een tijdstempelindeling aangeeft. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt één teken in dat wordt gebruikt voor escape voor het aanhalingsteken. | `\` wanneer de escape- en aanhalingstekens verschillend zijn. `\0` wanneer de escape- en aanhalingsteken hetzelfde zijn. |
 | `csvOptions.emptyValue.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt de tekenreeksrepresentatie in van een lege waarde. | `""` |
-| `csvOptions.lineSep.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Hiermee definieert u het lijnscheidingsteken dat moet worden gebruikt voor schrijven. De maximumlengte is 1 teken. | `\n` |
 | `maxFileRowCount` | Optioneel | Maximumaantal rijen dat het geëxporteerde bestand kan bevatten. Configureer dit op basis van de vereisten voor de bestandsgrootte van het doelplatform. | N.v.t. |
 
 {style=&quot;table-layout:auto&quot;}

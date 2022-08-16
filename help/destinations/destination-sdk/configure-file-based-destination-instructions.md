@@ -2,7 +2,7 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
 title: (Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
@@ -110,10 +110,6 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
