@@ -5,9 +5,9 @@ title: UI-gids voor streamingsegmentatie
 topic-legacy: ui guide
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -106,10 +106,6 @@ Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ing
 ### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
 
 Een segment wordt gedefinieerd als batch- of streaming segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmenten die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
-
-### Kan een gebruiker een segment definiëren als batch- of streaming-segmentatie?
-
-Op dit ogenblik, kan de gebruiker niet bepalen of een segment gebruikend partij of het stromen opname wordt geëvalueerd, aangezien het systeem automatisch zal bepalen met welke methode het segment zal worden geëvalueerd.
 
 ### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot; segmenten toe terwijl het aantal onder &quot;Laatste X dagen&quot; nul blijft binnen de sectie met segmentdetails?
 

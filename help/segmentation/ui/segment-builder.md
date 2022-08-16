@@ -5,9 +5,9 @@ title: UI-gids voor segmentBuilder
 topic-legacy: ui guide
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '3018'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 
-![](../images/ui/segment-builder/segment-builder.png)
+![De UI van de segmentbouwer wordt getoond.](../images/ui/segment-builder/segment-builder.png)
 
 ## Bouwstenen voor segmentdefinitie {#building-blocks}
 
@@ -29,13 +29,13 @@ De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daar
 
 U kunt deze bouwstenen zien in de **[!UICONTROL Fields]** aan de linkerkant van het dialoogvenster [!DNL Segment Builder] werkruimte. **[!UICONTROL Fields]** bevat een tab voor elk van de belangrijkste bouwstenen: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot;, en &quot;[!UICONTROL Audiences]&quot;.
 
-![](../images/ui/segment-builder/segment-fields.png)
+![De sectie met velden van de Segment Builder wordt gemarkeerd.](../images/ui/segment-builder/segment-fields.png)
 
 ### Attributen
 
 De **[!UICONTROL Attributes]** kunt u bladeren [!DNL Profile] kenmerken van de [!DNL XDM Individual Profile] klasse. Elke map kan worden uitgevouwen om extra kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. De [regelbouwcanvas](#rule-builder-canvas) wordt later in deze handleiding gedetailleerder besproken.
 
-![](../images/ui/segment-builder/attributes.png)
+![De sectie met kenmerken van de velden Segment Builder wordt gemarkeerd.](../images/ui/segment-builder/attributes.png)
 
 ### Gebeurtenissen
 
@@ -51,7 +51,7 @@ Elk type component kan worden gezocht door zijn naam in de onderzoeksbar te type
 
 Vervolgens kunt u eenvoudig slepen en neerzetten [!DNL ExperienceEvents] en &quot;[!UICONTROL Event Types]&quot; in uw segmentdefinitie.
 
-![](../images/ui/segment-builder/events-eventTypes.png)
+![De gebeurtenissensectie van de gebruikersinterface van Segment Builder wordt gemarkeerd.](../images/ui/segment-builder/events.png)
 
 Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. Dit omvat &quot;[!UICONTROL Event Types]&quot;. Als &quot;[!UICONTROL Event Types]De lijst is niet zichtbaar of u kunt alleen &quot;[!UICONTROL Any]&quot; als een &quot;[!UICONTROL Event Type]&quot;, selecteert u de **tandwielpictogram** naast **[!UICONTROL Fields]** selecteert u vervolgens **[!UICONTROL Show full XDM schema]** krachtens **[!UICONTROL Available Fields]**. Selecteer **tandwielpictogram** nogmaals om terug te keren naar de **[!UICONTROL Fields]** en u moet nu meerdere &quot;[!UICONTROL Event Types]&quot; en schema-velden, ongeacht of deze gegevens bevatten of niet.
 
@@ -103,7 +103,7 @@ Op de **[!UICONTROL Audiences]** kunt u alle beschikbare bronnen weergeven als e
 
 U kunt de muisaanwijzer boven de ⓘ naast een doelgroep houden om informatie over het publiek weer te geven, zoals de id, beschrijving en maphiërarchie, om het publiek te zoeken.
 
-![](../images/ui/segment-builder/audience-folder-structure.png)
+![Een afbeelding die aangeeft hoe de maphiërarchie werkt voor het publiek.](../images/ui/segment-builder/audience-folder-structure.png)
 
 U kunt ook naar soorten publiek zoeken met de zoekbalk, die [Zoeksyntaxis van Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Op de **[!UICONTROL Audiences]** als u een map op hoofdniveau selecteert, wordt de zoekbalk weergegeven, zodat u in die map kunt zoeken. Zoekresultaten beginnen pas te worden gevuld wanneer hele woorden zijn ingevoerd. Als u bijvoorbeeld een publiek wilt zoeken met de naam `Online Shoppers`typt u &quot;Online&quot; in de zoekbalk. Nadat het woord &quot;Online&quot; volledig is getypt, worden zoekresultaten met het woord &quot;Online&quot; weergegeven.
 
@@ -113,7 +113,7 @@ Een segmentdefinitie is een inzameling van regels die worden gebruikt om zeer be
 
 Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tegel uit de **[!UICONTROL Fields]** en laat vallen het op het canvas van de regelbouwer. Vervolgens krijgt u contextspecifieke opties, afhankelijk van het type gegevens dat u wilt toevoegen. Beschikbare gegevenstypen zijn: tekenreeksen, datums, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot;, en het publiek.
 
-![](../images/ui/segment-builder/rule-builder-canvas.png)
+![Het lege canvas van de regelbouwer.](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
@@ -121,11 +121,11 @@ Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tege
 
 Wanneer u een waarde voor het kenmerk selecteert, wordt een lijst met opsommingswaarden weergegeven die het kenmerk kan bevatten.
 
-![](../images/ui/segment-builder/enum-list.png)
+![Een afbeelding die de lijst weergeeft met opsommingswaarden die een kenmerk kan hebben.](../images/ui/segment-builder/enum-list.png)
 
 Als u een waarde in deze lijst met nummers selecteert, krijgt de waarde een effen rand. Voor velden die `meta:enum` (soft) opsommingen, kunt u ook een waarde selecteren die **niet** in de lijst van opsommingen. Als u uw eigen waarde maakt, krijgt deze de omtrek met een gestippelde rand en een waarschuwing dat deze waarde niet in de opsommingslijst voorkomt.
 
-![](../images/ui/segment-builder/enum-warning.png)
+![Een waarschuwing die wordt weergegeven als u een waarde invoegt die geen deel uitmaakt van de opsommingslijst.](../images/ui/segment-builder/enum-warning.png)
 
 ### Soorten publiek toevoegen
 
@@ -137,7 +137,7 @@ Voor [!DNL Platform] publiek gemaakt met [!DNL Segment Builder], krijgt u de opt
 >
 >Wanneer u een publiek uit een externe bron toevoegt, wordt alleen verwezen naar het publiekslidmaatschap. U kunt het publiek niet in regels omzetten, en daarom kunnen de regels die worden gebruikt om het originele publiek tot stand te brengen niet in de nieuwe segmentdefinitie worden gewijzigd.
 
-![](../images/ui/segment-builder/add-audience-to-segment.png)
+![In deze afbeelding ziet u hoe u een publiekskenmerk omzet in regels.](../images/ui/segment-builder/add-audience-to-segment.png)
 
 Als er conflicten optreden wanneer een publiek wordt omgezet in regels, [!DNL Segment Builder] zal proberen de bestaande opties zo goed mogelijk te behouden.
 
@@ -145,11 +145,11 @@ Als er conflicten optreden wanneer een publiek wordt omgezet in regels, [!DNL Se
 
 U kunt ook een op code gebaseerde versie weergeven van een regel die is gemaakt in het dialoogvenster [!DNL Segment Builder]. Zodra u uw regel binnen het canvas van de regelbouwer hebt gecreeerd, kunt u selecteren **[!UICONTROL Code view]** om uw segment als PQL te zien.
 
-![](../images/ui/segment-builder/code-view.png)
+![De knop voor de codeweergave is gemarkeerd, zodat u het segment kunt zien als PQL.](../images/ui/segment-builder/code-view.png)
 
 De mening van de code verstrekt een knoop die u toestaat om de waarde van het segment in API vraag te kopiëren. Om de recentste versie van het segment te krijgen, zorg ervoor u uw recentste veranderingen in het segment hebt bewaard.
 
-![](../images/ui/segment-builder/copy-code.png)
+![De knop Copy code is gemarkeerd, zodat u ](../images/ui/segment-builder/copy-code.png)
 
 ### Samenvoegingsfuncties
 
@@ -157,15 +157,15 @@ Een aggregatie in [!DNL Segment Builder] is een berekening voor een groep XDM-ke
 
 Als u een aggregatiefunctie wilt maken, selecteert u een gebeurtenis in de linkertrack en voegt u deze in de [!UICONTROL Events] container.
 
-![](../images/ui/segment-builder/select-event.png)
+![De gebeurtenissensectie wordt gemarkeerd.](../images/ui/segment-builder/events.png)
 
 Nadat u de gebeurtenis in de container Gebeurtenissen hebt geplaatst, selecteert u het pictogram Ovalen (...), gevolgd door **[!UICONTROL Aggregate]**.
 
-![](../images/ui/segment-builder/add-aggregation.png)
+![De geaggregeerde tekst wordt gemarkeerd. Als u dit selecteert, kunt u aggregatiefuncties selecteren.](../images/ui/segment-builder/add-aggregation.png)
 
 De samenvoeging wordt nu toegevoegd. U kunt nu de aggregatiefunctie selecteren, kiezen welk kenmerk wordt geaggregeerd, de gelijkheidsfunctie en de waarde. In het onderstaande voorbeeld zou dit segment elk profiel kwalificeren dat een som aangekochte waarden heeft die groter is dan $100, zelfs als elke afzonderlijke aankoop minder dan $100 is.
 
-![](../images/ui/segment-builder/filled-aggregation.png)
+![De gebeurtenisregels, die een samenvoegingsfunctie weergeven.](../images/ui/segment-builder/filled-aggregation.png)
 
 ### Telfuncties {#count-functions}
 
@@ -173,15 +173,15 @@ De functies van de telling in de Bouwer van het Segment worden gebruikt om gespe
 
 Om een telfunctie tot stand te brengen, selecteer een gebeurtenis van de linkerspoorstaaf en neem het in in [!UICONTROL Events] container.
 
-![](../images/ui/segment-builder/add-event.png)
+![De gebeurtenisvelden worden gemarkeerd.](../images/ui/segment-builder/events.png)
 
 Nadat u de gebeurtenis in de gebeurtenissencontainer hebt geplaatst, selecteert u de knop [!UICONTROL At least 1] knop.
 
-![](../images/ui/segment-builder/add-count.png)
+![De optie Minstens wordt gemarkeerd en geeft het gebied weer dat moet worden geselecteerd om een volledige lijst met telfuncties weer te geven.](../images/ui/segment-builder/add-count.png)
 
 De telfunctie wordt nu toegevoegd. U kunt nu de telfunctie en de waarde van de functie selecteren. In het onderstaande voorbeeld wordt elke gebeurtenis met ten minste één klik opgenomen.
 
-![](../images/ui/segment-builder/select-count.png)
+![Er wordt een lijst met telfuncties weergegeven en gemarkeerd.](../images/ui/segment-builder/select-count.png)
 
 ## Containers
 
@@ -189,13 +189,13 @@ Segmentregels worden geëvalueerd in de volgorde waarin ze worden weergegeven. D
 
 Zodra u minstens één tegel aan het canvas van de regelbouwer hebt toegevoegd, kunt u beginnen om containers toe te voegen. Als u een nieuwe container wilt maken, selecteert u de ovalen (...) in de rechterbovenhoek van het element en selecteert u vervolgens **[!UICONTROL Add container]**.
 
-![](../images/ui/segment-builder/add-container.png)
+![De knop voor het toevoegen van containers is gemarkeerd. Hiermee kunt u een container toevoegen als een onderliggend item van de eerste container.](../images/ui/segment-builder/add-container.png)
 
 Een nieuwe container wordt weergegeven als het onderliggende element van de eerste container, maar u kunt de hiërarchie aanpassen door de containers te slepen en te verplaatsen. Het standaardgedrag van een container is &quot;[!UICONTROL Include]&quot; het kenmerk, de gebeurtenis of het publiek dat wordt opgegeven. U kunt de regel instellen op &quot;[!UICONTROL Exclude]&quot;-profielen die voldoen aan de containercriteria door **[!UICONTROL Include]** in de linkerbovenhoek van de tegel en selecteert u &quot;[!UICONTROL Exclude]&quot;.
 
 Een onderliggende container kan ook inline worden geëxtraheerd en toegevoegd aan de bovenliggende container door &quot;container opheffen&quot; te selecteren in de onderliggende container. Selecteer de ellipsen (...) in de hoger-juiste hoek van de kindcontainer om tot deze optie toegang te hebben.
 
-![](../images/ui/segment-builder/include-exclude.png)
+![Opties waarmee u de container kunt opheffen of verwijderen, worden gemarkeerd.](../images/ui/segment-builder/include-exclude.png)
 
 Zodra u **[!UICONTROL Unwrap container]** de onderliggende container wordt verwijderd en de criteria worden inline weergegeven.
 
@@ -203,7 +203,7 @@ Zodra u **[!UICONTROL Unwrap container]** de onderliggende container wordt verwi
 >
 >Wanneer het unwrapping containers, zorg ervoor dat de logica de gewenste segmentdefinitie blijft ontmoeten.
 
-![](../images/ui/segment-builder/unwrapped-container-inline.png)
+![De container wordt weergegeven nadat deze is losgekoppeld.](../images/ui/segment-builder/unwrapped-container.png)
 
 ## Beleid samenvoegen
 
@@ -213,7 +213,7 @@ U kunt een samenvoegbeleid selecteren dat overeenkomt met uw marketingdoel voor 
 
 Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u het tandwielpictogram in het dialoogvenster **[!UICONTROL Fields]** gebruikt u vervolgens de **[!UICONTROL Merge Policy]** vervolgkeuzelijst om het samenvoegbeleid te selecteren dat u wilt gebruiken.
 
-![](../images/ui/segment-builder/merge-policy-selector.png)
+![De kiezer voor het samenvoegbeleid wordt gemarkeerd. Hiermee kunt u kiezen welk samenvoegbeleid moet worden geselecteerd voor uw segmentdefinitie.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Segmenteigenschappen {#segment-properties}
 
@@ -228,18 +228,29 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >abstract="U kunt de ramingen van uw segment vernieuwen om onmiddellijk een voorvertoning te zien van hoeveel profielen voor het voorgestelde segment in aanmerking zouden komen. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Meer informatie in documentatie"
 
-
 Bij het samenstellen van een segmentdefinitie worden de **[!UICONTROL Segment Properties]** aan de rechterkant van de werkruimte wordt een schatting van de grootte van het resulterende segment weergegeven, zodat u de segmentdefinitie naar wens kunt aanpassen voordat u het publiek zelf gaat maken.
 
-De **[!UICONTROL Segment Properties]** is ook waar u belangrijke informatie over uw segmentdefinitie, met inbegrip van zijn naam en beschrijving kunt specificeren. De definitienamen van het segment worden gebruikt om uw segment onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
+De **[!UICONTROL Segment Properties]** de sectie is ook waar u belangrijke informatie over uw segmentdefinitie, met inbegrip van zijn naam, beschrijving, en evaluatietype kunt specificeren. De definitienamen van het segment worden gebruikt om uw segment onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
 
 Terwijl u de segmentdefinitie blijft maken, kunt u een gepagineerde voorvertoning van het publiek weergeven door **[!UICONTROL View Profiles]**.
 
-![](../images/ui/segment-builder/segment-properties.png)
+![De sectie met segmentdefinitie-eigenschappen wordt gemarkeerd. De segmenteigenschappen omvatten, maar zijn niet beperkt tot, de segmentnaam, beschrijving, en evaluatiemethode.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
 >De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het genereren van segmentramingen vindt u in het gedeelte [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmenten.
+
+U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten voor welke evaluatietypen dit segment in aanmerking komt, kunt u het bladerpictogram selecteren ![mappictogram met een vergrootglas](../images/ui/segment-builder/segment-evaluation-select-icon.png) om een lijst van de beschikbare methodes van de segmentbeoordeling te zien.
+
+De [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, gelieve te lezen [streamingsegmentatie](./streaming-segmentation.md#query-types) of de [randsegmentatie](./edge-segmentation.md#query-types) overzichten.
+
+![Het pop-upvenster Selectie voor de evaluatiemethode verschijnt. Dit toont aan welke methodes van segmentbeoordeling in aanmerking komen en voor het segment niet in aanmerking komen.](../images/ui/segment-builder/select-evaluation-method.png)
+
+Als u een ongeldige evaluatiemethode selecteert, zult u worden ertoe aangezet om of uw regels van de segmentdefinitie te veranderen of de evaluatiemethode te veranderen.
+
+![De evaluatiemethode pop - op. Als een niet in aanmerking komende methode van de segmentbeoordeling wordt geselecteerd, verklaart pop - op waarom het niet in aanmerking komt.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+
+Meer informatie over de verschillende evaluatiemethodes van de segmentdefinitie kan in worden gevonden [segmentatieoverzicht](../home.md#evaluate-segments).
 
 ## Volgende stappen {#next-steps}
 

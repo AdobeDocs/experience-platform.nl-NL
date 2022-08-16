@@ -5,9 +5,9 @@ title: 'Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1873'
 ht-degree: 0%
 
 ---
@@ -429,10 +429,6 @@ Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ing
 ### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
 
 Een segment wordt gedefinieerd als batch- of streaming segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmenten die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
-
-### Kan een gebruiker een segment definiëren als batch- of streaming-segmentatie?
-
-Op dit ogenblik, kan de gebruiker niet bepalen of een segment gebruikend partij of het stromen opname wordt geëvalueerd, aangezien het systeem automatisch zal bepalen met welke methode het segment zal worden geëvalueerd.
 
 ### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot; segmenten toe terwijl het aantal onder &quot;Laatste X dagen&quot; nul blijft binnen de sectie met segmentdetails?
 
