@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release Adobe Target Extension
 description: De meest recente release bevat informatie over de Adobe Target-tagextensie in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '520'
 ht-degree: 3%
 
 ---
@@ -14,11 +15,18 @@ ht-degree: 3%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
+## 16 september 2021
+
+### Adobe Target Extension 0.11.4
+
+* Bijgewerkt naar at.js v1.8.3
+* Toegevoegd `SameSite=None` en `Secure` kenmerken bij het instellen van cookies
+
 ## 24 juli 2020
 
 ### Adobe Target Extension 0.11.3
 
-* Het probleem waarbij de extensie mislukte als een script of code `default`-eigenschap toevoegt aan `window` of `document` is opgelost.
+* Het probleem waarbij een extensie mislukte als een script of code wordt toegevoegd, is opgelost. `default` aan de `window` of `document`
 
 ## 15 juni 2020
 
@@ -54,7 +62,7 @@ ht-degree: 3%
 
 ### Adobe Target Extension 0.10.0
 
-* Probleem met gegevenselementen die door de meest recente Google Chrome-wijzigingen werd veroorzaakt, is opgelost.
+* Probleem met gegevenselementen verholpen die werd veroorzaakt door de meest recente Google Chrome-wijzigingen
 
 ## 14 maart 2019
 
@@ -106,7 +114,7 @@ ht-degree: 3%
 ### Adobe Target Extension 0.7.2
 
 * Kleine wijzigingen
-* De eigenschap `exchangeUrl` in het bestand `extension.json` is bijgewerkt
+* De `exchangeUrl` eigenschap in de `extension.json` file
 
 ## 1 augustus 2018
 
