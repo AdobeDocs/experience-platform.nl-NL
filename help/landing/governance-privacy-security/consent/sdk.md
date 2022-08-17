@@ -3,9 +3,9 @@ title: Gegevens met toestemming van de klant verwerken met de Adobe Experience P
 topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten te verwerken in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 79bc41c713425e14bb3c12646b9b71b2c630618b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1344'
 ht-degree: 0%
 
 ---
@@ -98,14 +98,19 @@ Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Z
 
 Zodra u de uitbreiding SDK in uw website hebt geïntegreerd, kunt u beginnen te gebruiken het Web SDK van het Platform `setConsent` om toestemmingsgegevens naar het Platform te verzenden.
 
->[!IMPORTANT]
->
->De `setConsent` de opdracht werkt alleen gegevens rechtstreeks bij in de opslag Profiel en verzendt geen gegevens naar het gegevensmeer.
+De `setConsent` voert twee handelingen uit:
+
+1. Hiermee werkt u de profielkenmerken van de gebruiker rechtstreeks bij in het archief Profiel. Hiermee worden geen gegevens naar het datumpigment verzonden.
+1. Hiermee maakt u een [Experience Event](../../../xdm/classes/experienceevent.md) dat een tijdstempelaccount van de gebeurtenis voor wijziging van de toestemming vastlegt. Deze gegevens worden rechtstreeks naar het datumpigment verzonden en kunnen worden gebruikt om wijzigingen in de voorkeur voor toestemming in de loop van de tijd bij te houden.
+
+### Wanneer wordt u aangeroepen `setConsent`
 
 Er zijn twee scenario&#39;s waarin `setConsent` moet op uw site worden aangeroepen:
 
 1. Wanneer toestemming op de pagina wordt geladen (met andere woorden op elke pagina die wordt geladen)
 1. Als onderdeel van een CMP-haak of gebeurtenislistener die wijzigingen in toestemmingsinstellingen detecteert
+
+### `setConsent` syntaxis
 
 >[!NOTE]
 >
