@@ -125,7 +125,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | zone_date_to_utc | Converteert een datum in een tijdzone naar een datum in UTC. | <ul><li>DATUM: **Vereist** De datum die u wilt omzetten.</li></ul> | zone_date_to_utc &#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | Converteert een datum van één tijdzone naar een andere tijdzone. | <ul><li>DATUM: **Vereist** De datum die u wilt omzetten.</li><li>ZONE: **Vereist** De tijdzone waarnaar u de datum wilt converteren.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;} &#x200B;
+{style=&quot;table-layout:auto&quot;}
 
 ### Hiërarchieën - Objecten {#objects}
 
