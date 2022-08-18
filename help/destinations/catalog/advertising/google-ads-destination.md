@@ -3,9 +3,9 @@ keywords: Google-advertenties;Google-advertenties;google-adwords;Google AdWords;
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een online advertentieservice waarmee bedrijven per klik reclame kunnen betalen voor zoekopdrachten, grafische weergaven, YouTube-video's en mobiele displays in de app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!NOTE]
 >
->De lijst van gewenste personen is verplicht voordat u de eerste [!DNL Google Ads] bestemming in Platform. Controleer of de hieronder beschreven lijst van gewenste personen is voltooid door [!DNL Google] voordat u een doel maakt.
+>Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ads] bestemming in Platform. Controleer of het hieronder beschreven proces voor het aanbieden van een aanbieding is voltooid door [!DNL Google] voordat u een doel maakt.
+>De uitzondering op deze regel is [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
 Voordat u het dialoogvenster [!DNL Google Ads] bestemming in Platform, moet u contact opnemen [!DNL Google] voor Adobe die op de lijst met toegestane gegevensproviders moet worden geplaatst, en dat uw account aan de lijst van gewenste personen wordt toegevoegd. Contact [!DNL Google] en verstrekt de volgende informatie:
 
