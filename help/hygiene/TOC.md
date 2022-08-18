@@ -4,10 +4,10 @@ user-guide-title: Help bij Gegevenshygiëne
 breadcrumb-title: Handleiding gegevenshygiëne
 user-guide-description: Verzoeken om consumentengegevens beheren om te voldoen aan wettelijke privacyregels zoals GDPR en CCPA.
 feature: Data Hygiene
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 3%
+source-wordcount: '48'
+ht-degree: 4%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 3%
 * Interface gegevenshygiëne {#ui}
    * [Overzicht](./ui/overview.md)
    * [Door bestaande werkorders bladeren](./ui/browse.md)
-   * [Tijd beheren om te leven (TTL) voor datasets](./ui/ttl.md)
+   * [Verlopen gegevenssets beheren](./ui/dataset-expiration.md)
    * [Consumentengegevens verwijderen](./ui/delete-consumer.md)
 * API voor gegevenshygiëne {#api}
    * [Overzicht](./api/overview.md)
-   * [Datasettijd om te leven (TTL)](./api/ttl.md)
+   * [Verlopen gegevensset](./api/dataset-expiration.md)
    * [Consumentenverwijdertaken](./api/jobs.md)

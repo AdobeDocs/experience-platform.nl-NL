@@ -2,9 +2,9 @@
 title: Bladeren in werkorders voor gegevenshygiëne
 description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 525e2520bb6140b00cfb7e68579eb2d0288ad9b1
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
 
-Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Een werkorder vertegenwoordigt een specifiek proces van de gegevenshygiëne, zoals een geplande tijd te leven (TTL) voor een dataset, die zijn huidige status en andere verwante details omvat.
+Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Een werkorder vertegenwoordigt een specifiek proces van de gegevenshygiëne, zoals een geplande gegevenssetvervaldatum, die zijn huidige status en andere verwante details omvat.
 
 In deze handleiding wordt uitgelegd hoe u bestaande werkorders in de gebruikersinterface van Adobe Experience Platform kunt weergeven en beheren.
 
@@ -31,7 +31,7 @@ Wanneer u voor het eerst toegang krijgt tot **[!UICONTROL Data Hygiene]** in de 
 
 ![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het Platform](../images/ui/browse/work-order-list.png)
 
-<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
+<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png) -->
 
@@ -41,10 +41,10 @@ Selecteer het trechter-pictogram (![Afbeelding van het trechter-pictogram](../im
 
 | Filter | Beschrijving |
 | --- | --- |
-| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Pending]**: De taak is gemaakt, maar is nog niet uitgevoerd. A [De tijd-aan-levende (TTL) verzoek van de dataset](./ttl.md) neemt deze status aan vóór de geplande verwijderingsdatum. Zodra de verwijderingsdatum is bereikt, wordt de status bijgewerkt naar [!UICONTROL Executing] tenzij de taak vooraf wordt geannuleerd.</li><li>**[!UICONTROL Executing]**: Het TTL-verzoek is gestart en wordt momenteel verwerkt.</li><li>**[!UICONTROL Cancelled]**: De taak is geannuleerd als onderdeel van een handmatig gebruikersverzoek.</li></ul> |
+| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Pending]**: De taak is gemaakt, maar is nog niet uitgevoerd. A [Vervalaanvraag gegevensset](./dataset-expiration.md) neemt deze status aan vóór de geplande verwijderingsdatum. Zodra de verwijderingsdatum is bereikt, wordt de status bijgewerkt naar [!UICONTROL Executing] tenzij de taak vooraf wordt geannuleerd.</li><li>**[!UICONTROL Executing]**: Het verzoek van de datasetvervaldatum is begonnen en verwerkt momenteel.</li><li>**[!UICONTROL Cancelled]**: De taak is geannuleerd als onderdeel van een handmatig gebruikersverzoek.</li></ul> |
 | [!UICONTROL Date created] | Filter op basis van de datum waarop de werkorder is gemaakt. |
-| [!UICONTROL Expiration date] | De verzoeken van TTL van de filter die op de geplande schrappingsdatum voor de dataset in kwestie worden gebaseerd. |
-| [!UICONTROL Date updated] | De verzoeken van TTL van de filter die op toen de het werkorde laatst werd bijgewerkt worden gebaseerd. De creaties en vervalsingen van TTL worden geteld als updates. |
+| [!UICONTROL Expiration date] | Verzoeken voor de vervaldatum van de gegevensset voor filters op basis van de geplande verwijderingsdatum voor de gegevensset in kwestie. |
+| [!UICONTROL Date updated] | Verzoeken van de de gegevenssetvervaldatum van de filter die op toen de het werkorde het laatst werd bijgewerkt worden gebaseerd. Ontwerpen en vervaldatums worden als updates geteld. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -68,12 +68,12 @@ The details of a consumer delete request are read-only, displaying its basic att
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset TTL details -->
+### Dataset expiration details -->
 
-De detailspagina voor een dataset TTL verstrekt informatie over zijn basisattributen, met inbegrip van de geplande vervaldatum op de dagen die resteren alvorens de schrapping voorkomt. In de juiste rail, kunt u controles gebruiken om TTL uit te geven of te annuleren.
+De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basisattributen, met inbegrip van de geplande vervaldatum op de dagen die resteren alvorens de schrapping voorkomt. In het rechterspoor kunt u besturingselementen gebruiken om de vervaldatum te bewerken of te annuleren.
 
-![Afbeelding die de detailpagina voor een gegevensset-TTL-werkvolgorde weergeeft](../images/ui/browse/ttl-details.png)
+![Afbeelding die de detailpagina voor een werkorder voor het verlopen van een gegevensset weergeeft](../images/ui/browse/ttl-details.png)
 
 ## Volgende stappen
 
-Deze handleiding besprak hoe u bestaande werkorders voor gegevenshygiëne in de gebruikersinterface van het Platform kunt weergeven en beheren. Zie de handleiding voor informatie over het maken van uw eigen werkorders [het plannen van een dataset TTL](./ttl.md).
+Deze handleiding besprak hoe u bestaande werkorders voor gegevenshygiëne in de gebruikersinterface van het Platform kunt weergeven en beheren. Zie de handleiding voor informatie over het maken van uw eigen werkorders [het plannen van een datasetvervaldatum](./dataset-expiration.md).
