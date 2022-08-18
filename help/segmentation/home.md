@@ -5,9 +5,9 @@ title: Overzicht van segmentatieservice
 topic-legacy: overview
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -53,15 +53,15 @@ Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinit
 >title="Evaluatiemethoden"
 >abstract="Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie."
 
-Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie.
-
-### Streaming segmentering {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Streaming evaluatie"
->abstract="Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie."
+>abstract="Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evalueer gebeurtenissen in bijna real time met het stromen segmentatie"
+
+Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie.
+
+### Streaming segmentering {#streaming}
 
 Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en bewaard, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
