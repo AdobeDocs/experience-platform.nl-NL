@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbeteringstaken voor profielen controleren
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,23 @@ De volgende metriek is beschikbaar voor lood aan de banen van de de profielverri
 | **[!UICONTROL Last successful run]** | Geeft de datum en tijd aan van de laatste geslaagde poging om een overeenkomstige taak uit te voeren. |
 | **[!UICONTROL Status]** | Geeft de status (geslaagd, mislukt of verwerkt) aan van de lead in de overeenkomende taak van de account. |
 
+## Verrijking van het profiel voor lood en accountscoring {#predictive-lead-to-account-scoring}
+
+De [!UICONTROL Predictive lead and account scoring] op het dashboard worden de basismaatstaven en de dagelijkse taakrun-status weergegeven die specifiek zijn voor het [Voorspelend lood en account scoring](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profielverrijking.
+
+![Verrijking van het profiel voor lood en accountscoring](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+De volgende metriek is beschikbaar voor voorspellende lood en de banen van de de profielverrijking van de rekening:
+
+| Metrisch | Beschrijving |
+| --------- | ---------- |
+| **[!UICONTROL Job start]** | Geeft de begindatum en -tijd aan van de voorspellende lead- en accountscoringstaak die wordt uitgevoerd. |
+| **[!UICONTROL Processing time]** | De totale tijd die nodig is om de taak te voltooien. |
+| **[!UICONTROL Score name]** | De scorenaam van de taak. |
+| **[!UICONTROL Profile type]** | Het type van de score: <ul><li>Persoon</li><li>Account</li></ul>. |
+| **[!UICONTROL Job type]** | Het type taak:<ul><li>Scores</li><li>Training</li>. |
+| **[!UICONTROL Status]** | Geeft de status (geslaagd, mislukt of verwerkt) van de voorspellende lead- en accountscoringtaak aan. |
+
 ## UI-besturingselementen {#ui-controls}
 
 In deze sectie worden diverse gebruikersinterface-opties (UI) in de monitoringinterface beschreven waarmee u de metriek kunt filteren die op de pagina wordt weergegeven.
@@ -79,3 +96,4 @@ Door deze zelfstudie te volgen, kunt u metriek voor profielverrijkingsbanen met 
 * [Verwante rekeningen in real time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Het tabblad Verwante accounts in de gebruikersinterface voor het accountprofiel](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Lood-aan-rekening matching in real time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Predictieve lead- en account scoring in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

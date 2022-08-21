@@ -2,9 +2,9 @@
 title: De Gevallen van het Gebruik van de segmentatie voor Echte - tijdCDP B2B Uitgave
 description: Een overzicht van de diverse beschikbare Echte - tijdCDP B2B de gebruiksgevallen van de Uitgave.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,12 @@ Zoek alle mensen die een &quot;Beslissingsmaker&quot;van om het even welke geslo
 Zoek alle mensen die werken in een afdeling Personeelszaken (HR) en die verwant zijn aan om het even welke rekening *of een van de aan de rekening gerelateerde rekeningen* dat minstens één open kans heeft ter waarde van het gegeven bedrag ( $ 1 miljoen) of meer. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM Business Opportunity] klasse.
 
 ![UI die segmentatie voor verwante rekeningen toont](../assets/segmentation/segmentation-related-accounts.png)
+
+### Voorbeeld 9: Gebruik loodscores en/of accountscores om profiel te kwalificeren {#account-scoring}
+
+Alle profielen zoeken met een hoofdscore van meer dan 80.
+
+![UI die segmentatie voor voorspelbare lood en rekeningshet tonen van account toont](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
 ## Volgende stappen {#next-steps}
 
