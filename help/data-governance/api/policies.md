@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
-title: API-eindpunt voor beleidsregels
+title: API-eindpunt voor beleidsregels voor gegevensgebruik
 topic-legacy: developer guide
 description: Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen Experience Platform mag uitvoeren. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensgebruik.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1840'
 ht-degree: 0%
 
 ---
 
-# Eind beleid
+# beleidseindpunt voor gegevensgebruik
 
 Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen mag uitvoeren [!DNL Experience Platform]. De `/policies` in de [!DNL Policy Service API] staat u toe om het beleid van het gegevensgebruik voor uw organisatie programmatically te beheren.
+
+>[!IMPORTANT]
+>
+>Dit eindpunt moet niet worden verward met het `/policies` in de [API voor toegangsbeheer](../../access-control/abac/api/policies.md), die wordt gebruikt om het beleid van de toegangscontrole te beheren.
 
 ## Aan de slag
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;vraag;vraagredacteur;de redacteur van de vraag;de redacteur van de Vraag;
 solution: Experience Platform
-title: UI-gids voor zoekservice
+title: Handleiding Query Service Credentials
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Voordat u niet-vervallende gegevens kunt genereren, moet u de volgende stappen i
 
 Voor meer informatie over het toewijzen van machtigingen leest u de documentatie op [toegangsbeheer](../../access-control/home.md).
 
-Alle vereiste toestemmingen worden nu gevormd in de Console van de Ontwikkelaar van Adobe voor de gebruiker om de het verlopen geloofsbrieven te gebruiken eigenschap.
+Alle vereiste machtigingen zijn nu geconfigureerd in Adobe Developer Console, zodat de gebruiker de functie voor het verlopen van referenties kan gebruiken.
 
 ### Referenties genereren
 

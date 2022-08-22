@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;api;Op attributen-Gebaseerd Toegangsbeheer;op attributen-gebaseerd toegangsbeheer
 solution: Experience Platform
-title: API-eindpunt voor beleidsregels
+title: API-eindpunt voor toegangsbeheerbeleid
 description: Het /policies eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om beleid in Adobe Experience Platform programmatically te beheren.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
 
-# Eind beleid
+# Doel van toegangsbeheerbeleid
 
 >[!IMPORTANT]
 >
 >Op attributen-gebaseerde toegangscontrole is momenteel beschikbaar in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten. Deze mogelijkheid is beschikbaar voor alle Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
 
-Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Het beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. De `/policies` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om beleid, met inbegrip van informatie over de regels programmatically te beheren die hen evenals hun respectieve onderwerpvoorwaarden beheersen.
+Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen om toelaatbare en ontoelaatbare acties te vestigen. Dit beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. De `/policies` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om beleid, met inbegrip van informatie over de regels programmatically te beheren die hen evenals hun respectieve onderwerpvoorwaarden beheersen.
+
+>[!IMPORTANT]
+>
+>Dit eindpunt moet niet worden verward met het `/policies` in de [API voor gegevensbeheer](../../../data-governance/api/policies.md), die wordt gebruikt voor het beheer van beleidsregels voor gegevensgebruik.
 
 ## Aan de slag
 

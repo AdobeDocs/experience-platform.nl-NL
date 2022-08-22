@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
-title: API-eindpunt voor taken exporteren
+title: API-eindpunt voor exporteren van profielen
 topic-legacy: guide
 type: Documentation
 description: In realtime klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
 
-# Eindpunt van taken exporteren
+# Het eindpunt voor exporteren van profielen
 
 [!DNL Real-time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. Bijvoorbeeld, publiekssegmenten van [!DNL Profile] gegevens kunnen worden geëxporteerd voor activering en profielkenmerken kunnen worden geëxporteerd voor rapportage.
 
