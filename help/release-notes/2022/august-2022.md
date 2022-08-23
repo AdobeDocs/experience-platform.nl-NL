@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2022
 description: De release van augustus 2022 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: 5e7ceda9ed126a2c003fb51302393631e0425cd2
+source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 4%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Gegevensprep](#data-prep)
 - [Bronnen](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Ondersteuning voor het opnemen van records met waarschuwingen | Met Data Prep worden nu waarschuwingen (niet-kritieke fouten) gelokaliseerd voor de velden en kan de rest van de rij worden ingevoegd. Alle maptransformatiefouten worden nu gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingepakt, worden als geslaagd beschouwd, met een waarschuwing.  De bewaking wordt ook ondersteund in registers met waarschuwingen en diagnostische details. Gedeeltelijke invoer van records met waarschuwingen is momenteel alleen beschikbaar voor streaming gegevens. Raadpleeg de documentatie over [opnemen, records met waarschuwingen](../../sources/tutorials/ui/monitor-streaming.md) voor meer informatie . |
+
+{style=&quot;table-layout:auto&quot;}
+
+Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
 ## Bronnen {#sources}
 
