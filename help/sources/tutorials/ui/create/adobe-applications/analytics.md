@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '2047'
 ht-degree: 0%
 
 ---
@@ -151,6 +151,82 @@ De volgende documentatie verstrekt verdere middelen bij het begrip Prep van Gege
 * [Overzicht van Data Prep](../../../../../data-prep/home.md)
 * [Toewijzingsfuncties van Data Prep](../../../../../data-prep/functions.md)
 * [Berekende velden toevoegen](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+### Filteren voor [!DNL Profile Service] (bèta)
+
+>[!IMPORTANT]
+>
+>Ondersteuning voor filteren [!DNL Analytics] gegevens worden momenteel in bèta weergegeven en zijn niet voor alle gebruikers beschikbaar. De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+Nadat u de toewijzingen voor uw [!DNL Analytics] de gegevens van de rapportreeks, kunt u het filtreren regels en voorwaarden toepassen om gegevens te omvatten of uit te sluiten van opname aan [!DNL Profile Service]. Ondersteuning voor filteren is alleen beschikbaar voor [!DNL Analytics] gegevens en gegevens worden alleen gefilterd voordat ze worden ingevoerd [!DNL Profile.] Alle gegevens worden opgenomen in het data Lake.
+
+#### Filteren op rijniveau
+
+U kunt gegevens filteren voor [!DNL Profile] opname op rij- en kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt het rijen-niveau filtreren ook gebruiken om voorwaarden te verbinden gebruikend `AND` alsmede `OR`en de omstandigheden negeren bij gebruik van `NOT`.
+
+Als u uw [!DNL Analytics] gegevens op rijniveau, selecteer **[!UICONTROL Row filter]**.
+
+![rijfilter](../../../../images/tutorials/create/analytics/row-filter.png)
+
+Gebruik het linkerspoor om door de schemahiërarchie te navigeren en de schemaattributen van uw keus te selecteren om een bepaald schema verder te boren.
+
+![links](../../../../images/tutorials/create/analytics/left-rail.png)
+
+Nadat u het kenmerk hebt geïdentificeerd dat u wilt configureren, selecteert u het kenmerk en sleept u het van de linkerspoorstaaf naar het filterdeelvenster.
+
+![filteren, deelvenster](../../../../images/tutorials/create/analytics/filtering-panel.png)
+
+Selecteer **[!UICONTROL equals]** en selecteer vervolgens een voorwaarde in het vervolgkeuzevenster dat wordt weergegeven.
+
+De lijst configureerbare voorwaarden omvat:
+
+* [!UICONTROL equals]
+* [!UICONTROL does not equal]
+* [!UICONTROL starts with]
+* [!UICONTROL ends with]
+* [!UICONTROL does not end with]
+* [!UICONTROL contains]
+* [!UICONTROL does not contain]
+* [!UICONTROL exists]
+* [!UICONTROL does not exist]
+
+![voorwaarden](../../../../images/tutorials/create/analytics/conditions.png)
+
+Voer vervolgens de waarden in die u wilt opnemen op basis van het kenmerk dat u hebt geselecteerd. In het onderstaande voorbeeld: [!DNL Apple] en [!DNL Google] worden geselecteerd voor inname als onderdeel van de **[!UICONTROL Manufacturer]** kenmerk.
+
+![include-fabrikant](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+
+Om uw het filtreren voorwaarden verder te specificeren, voeg een ander attribuut van het schema toe en voeg dan waarden toe die op dat attribuut worden gebaseerd. In het onderstaande voorbeeld wordt **[!UICONTROL Model]** kenmerk is toegevoegd en modellen zoals [!DNL iPhone 13] en [!DNL Google Pixel 6] gefilterd voor inname.
+
+![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+
+Als u een nieuwe container wilt toevoegen, selecteert u de ovalen (`...`) rechtsboven in de filterinterface en selecteer vervolgens **[!UICONTROL Add container]**.
+
+![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+
+Als een nieuwe container is toegevoegd, selecteert u **[!UICONTROL Include]** en selecteer vervolgens **[!UICONTROL Exclude]** in het vervolgkeuzevenster dat wordt weergegeven.
+
+![uitsluiten](../../../../images/tutorials/create/analytics/exclude.png)
+
+Voltooi vervolgens hetzelfde proces door de schemakenmerken te slepen en de bijbehorende waarden toe te voegen die u niet wilt filteren. In het onderstaande voorbeeld wordt [!DNL iPhone 12], [!DNL iPhone 12 mini], en [!DNL Google Pixel 5] alle gefilterd zijn van uitsluiting van **[!UICONTROL Model]** kenmerk, liggend is uitgesloten van de **[!UICONTROL Screen orientation]** en modelnummer [!DNL A1633] is uitgesloten van **[!UICONTROL Model number]**.
+
+Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+
+![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
+
+#### Filteren op kolomniveau
+
+Selecteren **[!UICONTROL Column filter]** in de koptekst om filteren op kolomniveau toe te passen.
+
+![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+
+De pagina wordt bijgewerkt in een interactieve schemastructuur, die uw schemakenattributen op kolom-niveau toont. Van hier, kunt u de kolommen van gegevens selecteren u van zou willen uitsluiten [!DNL Profile] ingestie. U kunt ook een kolom uitvouwen en specifieke kenmerken voor uitsluiting selecteren.
+
+Standaard, alles [!DNL Analytics] ga naar [!DNL Profile] en dit proces maakt het mogelijk vertakkingen van XDM-gegevens uit te sluiten [!DNL Profile] ingestie.
+
+Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+
+![kolommen geselecteerd](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### Gegevens over gegevensstroom opgeven
 
