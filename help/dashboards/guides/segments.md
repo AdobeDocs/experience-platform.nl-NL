@@ -4,9 +4,9 @@ title: Handleiding dashboard voor segmenten
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1516'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,6 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >id="platform_dashboards_segments_audiencesize"
 >title="Grootte publiek"
 >abstract="Deze widget geeft het totale aantal samengevoegde profielen in het geselecteerde segment weer. Dit getal is afhankelijk van het samenvoegbeleid dat op de gegevens wordt toegepast en is correct op het moment van de meest recente opname."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Audience size]** widget geeft het totale aantal samengevoegde profielen weer binnen het geselecteerde segment op het moment dat de opname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
 
@@ -96,7 +95,6 @@ Voor meer informatie over fragmenten en samengevoegde profielen, eerst leest u d
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Ontwikkeling van de omvang van het publiek"
 >abstract="Deze widget bevat informatie over het totale aantal profielen dat voldoet aan de criteria van **alle** segmentdefinitie, zoals vastgelegd tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen, 90 dagen, of 12 maanden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Audience size trend]** widget geeft een lijngrafiek voor het totale aantal profielen die voldoen aan de criteria van **alle** segmentdefinitie over een bepaalde periode. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
 
@@ -151,7 +149,6 @@ Met deze widget kunt u uw segmentatiestrategie optimaliseren door de gelijkeniss
 >id="platform_dashboards_segments_identityoverlap"
 >title="Identiteitsoverlapping"
 >abstract="Deze widget toont de overlapping van profielen in uw segment met beide gekozen identiteiten. De cirkels geven de relatieve grootte van elke identiteit weer. Het aantal profielen met beide naamruimten wordt weergegeven door de overlapping tussen de cirkels."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Identity overlap]** widget geeft een Venn-diagram weer of stelt een diagram in waarin de overlapping van profielen in uw segment met meerdere identiteiten wordt weergegeven.
 
@@ -169,7 +166,6 @@ Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experi
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profielen op identiteit"
 >abstract="Deze widget geeft de indeling van de identiteiten in elk samengevoegd profiel in het geselecteerde segment weer."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Meer informatie in documentatie"
 
 De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identiteiten in elk samengevoegd profiel in het geselecteerde segment weer. Het totale aantal profielen per identiteit kan hoger zijn dan het totale aantal profielen in het segment, omdat aan één profiel meerdere identiteiten kunnen zijn gekoppeld. Met andere woorden, het samenvoegen van de waarden die voor elke identiteit worden getoond kan meer dan de totale publieksgrootte in het segment totaal omdat als een klant met uw merk op meer dan één kanaal interactie aangaat, de veelvoudige identiteiten met die individuele klant kunnen worden geassocieerd.
 
