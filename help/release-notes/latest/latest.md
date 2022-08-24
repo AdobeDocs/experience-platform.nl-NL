@@ -2,88 +2,74 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a82381d6133fe793fc0f4be38b6e064684581afb
+source-git-commit: 0e23475fd120858b59794742860b7afececfece2
 workflow-type: tm+mt
-source-wordcount: '2363'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 27 juli 2022**
+**Releasedatum: 24 augustus 2022**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Dashboards](#dashboards)
-- [Gegevensverzameling](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [[!DNL Dashboards]](#dashboards)
+- [Gegevensprep](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-time Customer Data Platform B2B Edition](#b2b)
 - [Klantprofiel in realtime](#profile)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
-## Dashboards {#dashboards}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-Adobe Experience Platform biedt meerdere [!DNL dashboards] waardoor u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen wordt gevangen.
+Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen voor de klant. Dit staat voor marketing analisten toe om modellen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
 
-### Accountprofielen, dashboards
+### Attribution AI
 
-Op het dashboard Accountprofielen wordt een momentopname weergegeven van gebundelde accountgegevens van de verschillende bronnen via uw marketingkanalen en van de verschillende systemen die uw organisatie momenteel gebruikt om klantaccountgegevens op te slaan.
+Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor privacy | <li>Attribution AI ondersteunt nu het definiëren van gebruikersrollen en het te beheren toegangsbeleid [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing.</li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li>Doorheen [attribuut-based toegangsbeheer](../../../help/access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Dit kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>[Gegevenshygiëne](../../../help/hygiene/home.md) met de mogelijkheden in Attribution AI kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat wanneer u gegevens wilt verwijderen, Attribution AI de verwijderde gegevens niet meer hoeft te gebruiken.</li><li>Attribution AI gebruikt Platform datasets. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Opmerking**: Attribution AI zal pas eind kw4 2022 beschikbaar zijn voor klanten van het gezondheidsschild.
+
+Zie voor meer informatie over Attribution AI de [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overzicht.
+
+### Customer AI
+
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor privacy | <li>De AI van de Klant steunt nu het bepalen van gebruikersrollen en toegangsbeleid om te leiden [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing.</li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Deze kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>[Gegevenshygiëne](../../../help/hygiene/home.md) Met de mogelijkheden van de AI van de Klant kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.</li><li>Klant-AI maakt gebruik van gegevenssets van Platforms. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Opmerking**: Klanten met een AI van de Klant zullen pas eind kw4 2022 beschikbaar zijn voor klanten met een Zorgschild.
+
+Voor meer informatie over AI van de Klant, gelieve te zien [Customer AI](../../intelligent-services/customer-ai/overview.md) overzicht.
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform biedt meerdere [!DNL dashboards] waardoor u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen worden gevangen.
 
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Totaal aantal accounts per bedrijfswidget | Deze widget geeft het totale aantal accounts in één meting weer en gebruikt een donutgrafiek om de proportionele aantallen te illustreren voor de bedrijfstakken die het totale aantal vormen. |
-| Widget accountprofielen toegevoegd | Deze widget gebruikt een kleurengecodeerd staafdiagram om het aantal profielen te illustreren dat gedurende een bepaalde periode aan een account is toegevoegd, en het aandeel van verschillende bedrijfstakken die deze toegevoegde profielen vormen. |
+| Geplande activeringswidget | De [!UICONTROL Scheduled activations] widget biedt een tabellarische weergave van de laatst geactiveerde doelen. Voor elk segment bevat dit de naam, het doelplatform en de begin- en einddatum van de activering. Met deze widget kunt u in één oogopslag zien waar en wanneer het publiek wordt geactiveerd en kunt u dubbele of overbodige activeringen transparanter maken. Deze geaccumuleerde informatie benadrukt ook waar om het even welke activiteiten zijn weggelaten. |
 
-{style=&quot;table-layout:auto&quot;}
-
-Zie de [Real-time CDP, B2B Edition overzicht](../../rtcdp/b2b-overview.md) voor meer informatie over de beschikbare B2B-functies, of [end-to-end zelfstudie](../../rtcdp/b2b-tutorial.md) Meer informatie over het maken van accountprofielen als onderdeel van de B2B-workflow.
-
-Zie voor meer informatie over de widgets die beschikbaar zijn om de gegevens over uw accountprofiel te visualiseren, de [accountprofielen, widget-documentatie](../../dashboards/guides/account-profiles.md#standard-widgets).
-
-### Profieldashboards
-
-Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgegevens (record) die uw organisatie heeft in de profielopslag in Experience Platform.
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Widget voor toegewezen soorten publiek | Deze widget geeft het totale aantal toegewezen doelgroepen weer dat kan worden geactiveerd voor het doel dat is geselecteerd in het vervolgkeuzemenu Profielen. |
-
-Raadpleeg voor meer informatie over het dashboard Profielen de [Overzicht van profieldashboards](../../dashboards/guides/profiles.md).
-
-### Doeldashboards
-
-Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten.
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Widget Soorten publiek | Deze widget geeft het totale aantal segmenten weer dat gereed is om te worden geactiveerd, op basis van het gekozen samenvoegbeleid dat op de profielgegevens wordt toegepast. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Voor meer informatie over het dashboard Doelen raadpleegt u de [Overzicht van het dashboard Doelen](../../dashboards/guides/destinations.md).
-
-## Gegevensverzameling {#collection}
-
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Machtigingsbeheer via Adobe Admin Console | De toegang tot gegevensverzamelingsmogelijkheden wordt nu beheerd via Adobe Admin Console onder de kaart voor Adobe Experience Platform-gegevensverzameling. Zie de handleiding op [gegevensverzamelingsmachtigingen](../../collection/permissions.md) voor meer informatie .<br><br>De toestemmingen voor gegevensstromen worden nu ook beheerd door Admin Console onder de kaart voor Adobe Experience Platform, die veiligheid over de vorige methode verbetert om deze toestemmingen voor elke gebruiker manueel te plaatsen. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Zie voor meer informatie de [overzicht van gegevensverzameling](../../collection/home.md).
+Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -93,94 +79,43 @@ Zie voor meer informatie de [overzicht van gegevensverzameling](../../collection
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeteringen voor [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations is nu slimmer en sneller. Met nieuwe validatiecontroles worden de meest voorkomende toewijzingsfouten aanzienlijk verminderd, waardoor de tijd tot waarde verder wordt verkort. |
-| Hiërarchische ondersteuning voor streaming upsets | U kunt nu functies gebruiken `upsert_array_append` en `upsert_array_replace` om arrays en objecten bij te werken bij het streamen van upserts naar profiel. Zie de [[!DNL Data Prep] handleiding voor toewijzingsfuncties](../../data-prep/functions.md) voor meer informatie . |
+| Ondersteuning voor het opnemen van records met waarschuwingen | Met Data Prep worden nu waarschuwingen (niet-kritieke fouten) gelokaliseerd voor de velden en kan de rest van de rij worden ingevoegd. Alle maptransformatiefouten worden nu gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingepakt, worden als geslaagd beschouwd, met een waarschuwing.  De bewaking wordt ook ondersteund in registers met waarschuwingen en diagnostische details. Gedeeltelijke invoer van records met waarschuwingen is momenteel alleen beschikbaar voor streaming gegevens. Raadpleeg de documentatie over [opnemen, records met waarschuwingen](../../sources/tutorials/ui/monitor-streaming.md) voor meer informatie . |
 
 {style=&quot;table-layout:auto&quot;}
 
 Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| ----------- | ----------- |
-| [Bestand nu exporteren (bèta)](../../destinations/ui/export-file-now.md) | Exporteer een volledig bestand zonder het huidige exportschema van een eerder gepland segment te onderbreken. Deze export komt bovenop de eerder geplande export en verandert de exportfrequentie van het segment niet. <br> De bestandsuitvoer wordt onmiddellijk geactiveerd en de meest recente resultaten worden opgehaald uit de gesegmenteerde Experience Platforms. <br> <br>Neem contact op met uw Adobe-vertegenwoordiger voor toegang tot deze functie. |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Nieuwe bestemmingen**
-
-| Bestemming | Beschrijving |
-| ----------- | ----------- |
-| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | Met de Marketo Engage-doelupdate kunt u het maken van statische lijsten stroomlijnen met automatisering en gebruikers in staat stellen extra velden op hun leads in te voeren. Meer informatie over de verbeteringen in Marketo V2 vindt u hieronder: <br><ul><li>In de **[!UICONTROL Schedule segment]** in Marketo V1 moet u handmatig een **Toewijzing-id** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.</li><li>In de **[!UICONTROL Mapping]** In Marketo V1 kon u in stap van de activeringsworkflow XDM-velden toewijzen aan slechts drie doelvelden in Marketo: `firstName`, `lastName`, en `companyName`. Met de Marketo V2-release kunt u nu XDM-velden toewijzen aan veel meer velden in Marketo. Lees voor meer informatie [ondersteunde kenmerken in Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul> |
-| [PegPeg-klantbeslissingshub](../../destinations/catalog/personalization/pega.md) | Gebruik profielattributen en de informatie van het segmentlidmaatschap van Adobe Experience Platform in de Hub van het Besluit van de Klant van Pega als pretors in adaptieve modellen en help de volgende-best-actie beslissing leveren |
-| [(API) Salesforce-Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | Met deze bestemming kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in Snapchat-advertenties en deze gebruiken om hun advertenties te activeren. |
-| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Werk contactgegevens bij in de Salesforce-Marketing Cloud met profiel- en segmentgegevens in het Experience Platform |
-| [(bèta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Met deze bestemming kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in Snapchat-advertenties en deze gebruiken om hun advertenties te activeren. <br><br>Deze bestemming is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd. |
-| [(bèta) De [!DNL Trade Desk] - CRM-verbinding](../../destinations/catalog/advertising/tradedesk-emails.md) | Gebruiken [!DNL The Trade Desk] CRM-bestemming om profielen te activeren voor uw [!DNL Trade Desk] account voor doelgroepen en suppressie op basis van CRM-gegevens. <br><br>Deze bestemming is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
-
 ## Experience Data Model (XDM) {#xdm}
 
 XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
 
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Gegevensmodel van de zorgsector | Er is een standaardgegevensmodel voor de gezondheidszorg ingevoerd ter ondersteuning van vijf gangbare gevallen in de branche die verband houden met het verhogen van de digitale verwerving, het verbeteren van de programmainschrijving en het bevorderen van informatie over geneesmiddelen. Zie het overzicht op de [gezondheidsgegevensmodel](../../xdm/schema/industries/healthcare.md) voor meer informatie over deze gebruiksgevallen en de standaard XDM componenten die hen steunen.<br><br>Er is een nieuw industriefilter toegevoegd aan de [!UICONTROL Schemas] UI om u te helpen bij het doorbladeren van aan gezondheidszorg gerelateerde componenten wanneer het bouwen van douaneschema&#39;s. |
-
-{style=&quot;table-layout:auto&quot;}
-
 **Nieuwe XDM-componenten**
-
->[!WARNING]
->
->De nieuwe XDM-componenten in de onderstaande tabel zijn experimenteel en worden momenteel getest. Van deze componenten wordt verwacht dat ze worden bijgewerkt met breukveranderingen (indien vereist) voordat ze worden gestabiliseerd. Plan uw ontwikkelingsinspanningen dienovereenkomstig.
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL Weather]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | Een op record gebaseerde klasse die wordt gebruikt voor het vastleggen van weergegevens. |
-| Veldgroep | [[!UICONTROL Current Weather]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] en [!UICONTROL Weather] klassen, gebruikt voor het vastleggen van de huidige weersomstandigheden voor een postcode. |
-| Veldgroep | [[!UICONTROL Forecasted Weather]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] en [!UICONTROL Weather] klassen, gebruikt voor het vastleggen van de voorspelde weersomstandigheden voor een postcode. |
-| Veldgroep | [[!UICONTROL Product Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] en [!UICONTROL Weather] klassen, die worden gebruikt voor het vastleggen van productspecifieke triggers die invloed hebben op weersomstandigheden die bekend zijn om het gedrag van de consument. |
-| Veldgroep | [[!UICONTROL Relative Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] en [!UICONTROL Weather] klassen, gebruikt voor het vastleggen van relatieve triggers die invloed hebben op weersomstandigheden die bekend zijn om het gedrag van de consument te stimuleren. |
-| Veldgroep | [[!UICONTROL Severe Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] en [!UICONTROL Weather] klassen, gebruikt voor het vastleggen, activeert dat ernstige weersomstandigheden die het consumentengedrag beïnvloeden, worden aangestuurd. |
-| Veldgroep | [[!UICONTROL Weather Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] en [!UICONTROL Weather] klassen, die worden gebruikt voor het vastleggen van algemene triggers die invloed uitoefenen op weersomstandigheden die bekend zijn om het gedrag van de consument te stimuleren. |
-| Veldgroep | [[!UICONTROL MediaCollection Interaction Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] klasse die details over een mediacommunicatie vastlegt. |
-| Veldgroep | [[!UICONTROL MediaReporting Interaction Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | Een veldgroep voor de [!UICONTROL XDM ExperienceEvent] klasse die details over een interactie met media rapportering vangt. |
-| Gegevenstype | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Hiermee legt u details over een advertentie-element vast. |
-| Gegevenstype | [[!UICONTROL Advertising Pod details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | Hiermee legt u details vast over een advertentiepod. Dit is een reeks van meerdere advertenties die binnen één advertentieeinde worden afgespeeld. |
-| Gegevenstype | [[!UICONTROL Chapter details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | Hiermee legt u details vast over een hoofdstuk of segment in een stuk video-inhoud. |
-| Gegevenstype | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Hiermee legt u details vast over een afspeelfout van de video. |
-| Gegevenstype | [[!UICONTROL Player event details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | Hiermee worden aan gebeurtenissen gerelateerde details over een videospeler vastgelegd, inclusief de positie van de afspeelkop en de sessie-id. |
-| Gegevenstype | [[!UICONTROL Player state data information]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | Hiermee worden aan de status gerelateerde details over een videospeler vastgelegd. |
-| Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Hiermee worden gegevens over de kwaliteit van de ervaring (QoE) over een videoafspeelgebeurtenis vastgelegd. |
-| Gegevenstype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Hiermee legt u sessiedetails vast over een videoafspeelgebeurtenis. |
+| Algemeen schema | [[!UICONTROL AJO Entity Schema]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Beschrijft gedenormaliseerde entiteiten voor Adobe Journey Optimizer. |
+| Klasse | [[!UICONTROL AJO Execution Entities]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | Beschrijft de uitvoeringsentiteiten van Adobe Journey Optimizer voor gebruik in segmentatie. |
+| Veldgroep | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Een omvattende veldgroep die verwijst naar alle objectspecifieke veldgroepen op een lager niveau voor Adobe Workfront. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Veldgroep | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Er zijn twee nieuwe eigenschappen toegevoegd: `origTimeStamp` en `experienceID`. |
+| Veldgroep | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Naast [!UICONTROL XDM Individual Profile], kan deze veldgroep nu ook worden gebruikt in schema&#39;s die op de klasse van de Rekening van Bedrijfs XDM worden gebaseerd. |
+| Veldgroep | (Meerdere) | Verschillende veldgroepen met betrekking tot de B2B-activiteiten van Marketo zijn bijgewerkt naar een stabiele status. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1593/files) voor meer informatie. |
+| Veldgroep | (Meerdere) | Verschillende aan het weer gerelateerde veldgroepen zijn bijgewerkt om fouten op te lossen die voorkwamen voor `uvIndex` en `sunsetTime`. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1602/files) voor meer informatie. |
+| Gegevenstype | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Een nieuwe eigenschap `productImageUrl` is toegevoegd. |
+| Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Een nieuwe eigenschap `framesPerSecond` is toegevoegd. |
+| Gegevenstype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` is hernoemd naar `appVersion`. `meta:enum` en `description` de velden zijn ook bijgewerkt. |
+| Gegevenstypen en veldgroepen | (Meerdere) | Verschillende mediatypen en veldgroepen hebben nieuwe velden en bijgewerkte beschrijvingen. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1582/files) voor meer informatie. |
+| (Alle) | (Meerdere) | Alle schemaobjecten die een `enum` veld bevat nu ook een overeenkomend veld `meta:enum` veld voor het aangeven van de weergavewaarden voor elke restrictie. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1601/files) voor meer informatie. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
-
-## Real-time Customer Data Platform B2B Edition {#b2b}
-
-Gebaseerd op Real-time Customer Data Platform (Real-Time CDP), is de Echte - tijdCDP B2B Uitgave speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Overeenkomende lead-account | Met Aanpassen aan account kunt u profielen van bekende personen toevoegen aan accountprofielen. U kunt gegevens dan segmenteren en richten in een context B2B zoals rekeningen of kansen. De dagelijkse banen gebruiken zowel deterministische als probabilistische factoren om persoonprofielen aan te passen die niet reeds aan om het even welke rekening aan een best-gematchte rekening worden geassocieerd. U kunt dan besluiten of om dergelijke gelijken in uw segmentdefinities te omvatten. <br><br>Zie het document over [maken tot rekeningafstemming](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). Voor instructies over hoe te om lood te vormen tot rekening het aanpassen, zie [Gebruikersgids voor accountprofielen](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).</li> |
-| Voorspelend lood en account scoring | De voorspellende Lood en het Scoren van de Rekening gebruikt een boom-gebaseerde (willekeurige bos/gradient het steunen) machine het leren methode die het leren van en het voorspellen voor de de omzettingsgebeurtenissen van het opportuniteitsstadium, en het groeperen van persoonactiviteiten op rekeningsniveau impliceert om de rekeningsscores te produceren. De belangrijkste invloedrijke factoren zijn ook beschikbaar op zowel het geaggregeerde als het eenheidspeil om B2B-marketers te helpen beter te begrijpen welke elementen de scores hebben bepaald. <br><br>Zie het document over [voorspellende lead en accountscoring](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). Zie de handleiding voor informatie over het beheren van uw scores [beheer van voorspellende lead- en accountscoring in Real-time Customer Data Platform, B2B Edition.](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
-
-Zie het document over [opwaardering van monitorprofielen in de gebruikersinterface](../../dataflows/ui/b2b/monitor-profile-enrichment.md). Meer over Echte - tijdCDP B2B Uitgave leren, zie [Real-time CDP B2B-overzicht](../../rtcdp/overview.md).
 
 ## Klantprofiel in realtime {#profile}
 
@@ -188,11 +123,23 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Opschonen van kenmerken van rand met zwevend profiel (beperkte versie) | Als uw organisatie toegang heeft tot deze functie, verwijdert de profielservice de kenmerken van de restrand van het gebruikersactiviteitgebied dagelijks, zodat uw profielen nauwkeuriger worden weergegeven in uw systeem. Deze opruiming vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd en moet gevolgen hebben voor profielen die worden samengevoegd in gegevenssets waarin `com_adobe_aep_profile_region_dataset` is gemarkeerd als true. Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek de fragmenten van het de randattribuut van het leftover voorafgaand aan deze versie omvatte. |
+| Opschonen van kenmerken van rand met zwevend profiel | Voor alle organisaties, verwijdert de Dienst van het Profiel nu randattributen van gebruikersactiviteitengebied op een dagelijkse basis om een nauwkeurigere vertegenwoordiging van uw profielen in uw systeem te geven. Deze opschoonbewerking vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd. Dit heeft gevolgen voor profielen die worden samengevoegd in gegevenssets waarin `com_adobe_aep_profile_region_dataset` is gemarkeerd als `true`. Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek de fragmenten van het de randattribuut van het leftover voorafgaand aan deze versie omvatte. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Als u meer wilt weten over het realtime profiel van de klant, inclusief zelfstudies en aanbevolen procedures voor het werken met profielgegevens, leest u eerst de [Overzicht van het realtime klantprofiel](../../profile/home.md).
+
+## Segmenteringsservice {#segmentation}
+
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor 4000 segmenten | Alle organisaties met Platform kunnen nu tot 4000 segmentdefinities steunen. Voor meer informatie over hoe deze wijziging de segmenttaak-API&#39;s beïnvloedt, leest u de [segmenttaakeindgebruikershandleiding](../../segmentation/api/segment-jobs.md) |
+
+Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
@@ -204,9 +151,11 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene beschikbaarheid van de [!DNL Azure Data Explorer] bron | Gebruik de Azure Data Explorer-bron om gegevens van uw [!DNL Azure] -instantie naar Experience Platform. Zie de [[!DNL Azure Data Explorer] bronoverzicht](../../sources/connectors/databases/data-explorer.md) voor meer informatie . |
-| Algemene beschikbaarheid van [!DNL Generic OData] bron | Gebruik de [!DNL Generic OData] bron om middelen van systemen te brengen die open gegevensprotocol aan Experience Platform steunen. Zie de [[!DNL Generic OData] bronoverzicht](../../sources/connectors/protocols/odata.md) voor meer informatie . |
-| Ondersteuning voor automatische detectie van eigenschappen van bronbestanden voor [!DNL Data Landing Zone] in interface Experience Platform | De [!DNL Data Landing Zone] De bron ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de interface van het Experience Platform. Zie de documentatie op [een [!DNL Data Landing Zone] bronverbinding](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) voor meer informatie . |
+| Algemene beschikbaarheid van Self-Serve Bronnen (Batch SDK) | Ontwikkel, test, en integreer uw REST API-based gegevensbron om partijgegevens in Experience Platform in te voeren gebruikend gemakkelijk om bronspecificaties te vormen. Met Bronnen SDK kunt u: <ul><li>Vorm een nieuwe bron aan de catalogus van het Experience Platform.</li><li>Bepaal specificaties voor uw bron, met inbegrip van informatie betreffende gesteunde authentificatietypen, het plannen, en hoe de middelgegevens worden gehaald.</li><li>Maak gebruikersgerichte documentatie voor uw nieuwe bron.</li></ul> Lees de documentatie over [Self-Serve Sources (Batch SDK)](../../sources/sources-sdk/overview.md). |
+| Algemene beschikbaarheid van [!DNL Google BigQuery] bron | Gebruik de [!DNL Google BigQuery] bron om gegevens van uw [!DNL Google BigQuery] datawarepot aan Experience Platform. Voor meer informatie leest u de documentatie op het tabblad [[!DNL Google BigQuery] bron](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] bron (bèta) | Gebruik de [!DNL Teradata Vantage] bron voor het opnemen van gegevens van hybride multi-wolkomgevingen naar Experience Platform. Voor meer informatie leest u de documentatie op het tabblad [[!DNL Teradata Vantage] bron](../../sources/connectors/databases/teradata-vantage.md). |
+| Ondersteuning voor verschillende regio&#39;s van Adobe Analytics-bronnen | U kunt nu rapportsuites uit om het even welke regio (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen. Rapportsuites moeten worden toegewezen aan dezelfde organisatie als de Sandbox-instantie van het Experience Platform waarin de bronverbinding wordt gemaakt. Lees voor meer informatie de handleiding op [een Adobe Analytics-bronverbinding maken in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| API-ondersteuning voor inname op aanvraag | Gebruik inname op aanvraag om een ad-hocflowrun voor een bepaalde gegevensstroom te maken met de [!DNL Flow Service] API. De gecreeerde looppas van de stroom moet aan éénmalige opname worden geplaatst. Lees voor meer informatie de handleiding op [een flow-run maken voor opname op aanvraag met behulp van de API](../../sources/tutorials/api/on-demand-ingestion.md) voor meer informatie . |
 
 {style=&quot;table-layout:auto&quot;}
 

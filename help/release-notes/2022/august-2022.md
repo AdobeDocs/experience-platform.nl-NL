@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2022
 description: De release van augustus 2022 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
+source-git-commit: 208dbba4c2ed4abb51b90073eeee0663e2b2f35f
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1828'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,50 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensprep](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Klantprofiel in realtime](#profile)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen voor de klant. Dit staat voor marketing analisten toe om modellen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
+
+### Attribution AI
+
+Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor privacy | <li> Attribution AI ondersteunt nu het definiëren van gebruikersrollen en het te beheren toegangsbeleid [machtigingen](../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li> <li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Dit kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li> <li>[Gegevenshygiëne](../../help/hygiene/home.md) met de mogelijkheden in Attribution AI kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat wanneer u gegevens wilt verwijderen, Attribution AI de verwijderde gegevens niet meer hoeft te gebruiken.</li><li>Attribution AI gebruikt Platform datasets. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Opmerking**: Attribution AI zal pas eind kw4 2022 beschikbaar zijn voor klanten van het gezondheidsschild.
+
+Zie voor meer informatie over Attribution AI de [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overzicht.
+
+### Customer AI
+
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor privacy | <li> De AI van de Klant steunt nu het bepalen van gebruikersrollen en toegangsbeleid om te leiden [machtigingen](../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li> <li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Deze kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li> <li>[Gegevenshygiëne](../../help/hygiene/home.md) Met de mogelijkheden van de AI van de Klant kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.</li><li>Klant-AI maakt gebruik van gegevenssets van Platforms. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Opmerking**: Klanten met een AI van de Klant zullen pas eind kw4 2022 beschikbaar zijn voor klanten met een Zorgschild.
+
+Voor meer informatie over AI van de Klant, gelieve te zien [Customer AI](../../intelligent-services/customer-ai/overview.md) overzicht.
 
 ## [!DNL Dashboards] {#dashboards}
 
