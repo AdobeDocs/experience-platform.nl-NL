@@ -5,9 +5,9 @@ title: API-eindpunt voor planningen
 topic-legacy: developer guide
 description: Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2011'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met schema&#39;s ophalen {#retrieve-list}
 
-U kunt een lijst van alle programma&#39;s voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/config/schedules` eindpunt.
+U kunt een lijst van alle programma&#39;s voor uw organisatie terugwinnen door een verzoek van de GET tot de `/config/schedules` eindpunt.
 
 **API-indeling**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Verzoek**
 
-Het volgende verzoek zal de laatste tien programma&#39;s terugwinnen die binnen uw IMS Organisatie worden gepost.
+Het volgende verzoek zal de laatste tien programma&#39;s terugwinnen die binnen uw organisatie worden gepost.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \

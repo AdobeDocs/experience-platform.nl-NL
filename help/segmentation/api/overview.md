@@ -4,57 +4,63 @@ title: API-handleiding voor segmentatieservice
 topic-legacy: guide
 description: Met de segmentatieservice-API kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: b48ead4255d50585cd315436ccb9727d86142d4c
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor Segmenteringsservice-API
 
-[!DNL Adobe Experience Platform Segmentation Service] kunt u segmenten samenstellen en een publiek genereren  [!DNL Adobe Experience Platform] op basis van uw  [!DNL Real-time Customer Profile] gegevens.
+[!DNL Adobe Experience Platform Segmentation Service] staat u toe om segmenten te bouwen en publiek te produceren in [!DNL Adobe Experience Platform] van uw [!DNL Real-time Customer Profile] gegevens.
 
-De [!DNL Segmentation Service] API verstrekt veelvoudige eindpunten die u toestaan om uw segmenteringsverrichtingen in [!DNL Experience Platform] programmatically te beheren. Dit overzichtsdocument verstrekt inleiding op hoog niveau aan elk van deze eindpunten, en verbindingen aan hun bijbehorende eindpuntgidsen voor details. Alvorens de individuele eindpuntgidsen te lezen, gelieve te verwijzen naar [begonnen gids](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
+De [!DNL Segmentation Service] API verstrekt veelvoudige eindpunten die u toestaan om uw segmenteringsverrichtingen programmatically te beheren in [!DNL Experience Platform]. Dit overzichtsdocument verstrekt inleiding op hoog niveau aan elk van deze eindpunten, en verbindingen aan hun bijbehorende eindpuntgidsen voor details. Voor het lezen van de individuele eindpuntgidsen, gelieve te verwijzen naar [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt u de [API-referentie voor segmentatieservice](https://www.adobe.io/experience-platform-apis/references/segmentation/).
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt u de [Verwijzing naar API voor segmentatieservice](https://www.adobe.io/experience-platform-apis/references/segmentation/).
+
+## Doelgroepen
+
+Soorten publiek is een verzameling mensen met een vergelijkbaar gedrag en/of vergelijkbare kenmerken. Deze kunnen worden geproduceerd of door Platform of uit externe bronnen te gebruiken. U kunt de `/audiences` eindpunt om alle publiek terug te winnen, een nieuw publiek te creëren, details van een specifiek publiek terug te winnen, een specifiek publiek bij te werken, of een specifiek publiek te schrappen.
+
+Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [eindgebruikershandleiding](./audiences.md).
 
 ## Exporttaken
 
-De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het `/export/jobs` eindpunt gebruiken om alle uitvoerbanen terug te winnen, een nieuwe uitvoerbaan tot stand te brengen, details van een specifieke uitvoerbaan terug te winnen, of een specifieke uitvoerbaan te annuleren.
+De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt de `/export/jobs` eindpunt om alle uitvoerbanen terug te winnen, een nieuwe uitvoerbaan tot stand te brengen, details van een specifieke uitvoerbaan terug te winnen, of een specifieke uitvoerbaan te annuleren.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve [de gids van het de baaneindpunt van de uitvoer](./export-jobs.md).
+Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [eindgebruikershandleiding exporttaken](./export-jobs.md).
 
 ## Voorvertoningen en ramingen
 
-De voorproeven verstrekken een gepagineerde lijst van kwalificerende profielen voor een segmentdefinitie, die u toestaat om de resultaten tegen te vergelijken wat u verwacht. U kunt het `/preview` eindpunt gebruiken om een nieuwe voorproefbaan tot stand te brengen of resultaten van een specifieke voorproefbaan op te zoeken.
+De voorproeven verstrekken een gepagineerde lijst van kwalificerende profielen voor een segmentdefinitie, die u toestaat om de resultaten tegen te vergelijken wat u verwacht. U kunt de `/preview` eindpunt om een nieuwe voorproefbaan tot stand te brengen of resultaten van een specifieke voorproefbaan op te zoeken.
 
-Schattingen bieden statistische informatie voor segmentdefinities, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten. U kunt het `/estimate` eindpunt gebruiken om een schatting van een segmentdefinitie te bekijken.
+Schattingen bieden statistische informatie voor segmentdefinities, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten. U kunt de `/estimate` eindpunt om een schatting van een segmentdefinitie te bekijken.
 
 Lees voor meer informatie over het gebruik van deze eindpunten de [handleiding voor voorvertoningen en schattingen van eindpunten](./previews-and-estimates.md).
 
-## Planner
+## Planningen
 
-Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren. U kunt het `/config/schedules` eindpunt gebruiken om een lijst van programma&#39;s terug te winnen, een nieuw programma tot stand te brengen, details van een specifiek programma terug te winnen, een specifiek programma bij te werken, of een specifiek programma te schrappen.
+Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren. U kunt de `/config/schedules` eindpunt om een lijst van programma&#39;s terug te winnen, een nieuw programma tot stand te brengen, details van een specifiek programma terug te winnen, een specifiek programma bij te werken, of een specifiek programma te schrappen.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve [planningseindgids](./schedules.md).
+Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [plannings eindgids](./schedules.md).
 
 ## Segmentdefinities
 
-Segmentdefinities definiëren welke profielen deel uitmaken van welke doelsegmenten. U kunt het `/segment/definitions` eindpunt gebruiken om segmentdefinities te beheren.
+Segmentdefinities definiëren welke profielen deel uitmaken van welke doelsegmenten. U kunt de `/segment/definitions` eindpunt om segmentdefinities te beheren.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve [segmentdefinities eindgids](./segment-definitions.md).
+Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [segmentdefinities, eindhulplijn](./segment-definitions.md).
 
 ## Segmenttaken
 
-De banen van het segment verwerken eerder vastgestelde segmentdefinities om een publiekssegment te produceren. U kunt het `/segment/jobs` eindpunt gebruiken om segmentbanen te beheren.
+De banen van het segment verwerken eerder vastgestelde segmentdefinities om een publiekssegment te produceren. U kunt de `/segment/jobs` eindpunt om segmentbanen te beheren.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve [segmentbanen eindgids](./segment-jobs.md).
+Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [eindgids voor segmenttaken](./segment-jobs.md).
 
 ## Segmentzoekopdracht
 
-Het onderzoek van het segment wordt gebruikt om gebieden te zoeken die zich over diverse gegevensbronnen bevinden en hen in bijna real time terug te keren. Om met segmentonderzoek te beginnen te werken, zie [de gids van het onderzoekseindpunt](segment-search.md)
+Het onderzoek van het segment wordt gebruikt om gebieden te zoeken die zich over diverse gegevensbronnen bevinden en hen in bijna real time terug te keren. Als u met segmentzoekopdrachten wilt gaan werken, raadpleegt u de [zoekeindpuntgids](segment-search.md)
 
 ## Volgende stappen
 
-Om met [!DNL Segmentation Service] API te beginnen, herzie de verschillende eindpuntgidsen voor gedetailleerde stappen op hoe te om vraag aan de diverse eindpunten van de dienst te maken. Meer over het werken met segmenten gebruikend [!DNL Platform] UI, zie [de gebruikershandleiding van de Segmentatie](../ui/overview.md).
+Ga als volgt te werk: [!DNL Segmentation Service] API, herzie de verschillende eindpuntgidsen voor gedetailleerde stappen op hoe te om vraag aan de diverse eindpunten van de dienst te maken. Als u meer wilt weten over het werken met segmenten met de opdracht [!DNL Platform] UI, zie [Gebruikershandleiding voor segmentatie](../ui/overview.md).
