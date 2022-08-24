@@ -5,10 +5,10 @@ title: API-eindpunt segmenttaken
 topic-legacy: developer guide
 description: Het eindpunt van segmentbanen in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om segmentbanen voor uw organisatie programmatically te beheren.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 1%
+source-wordcount: '1511'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met segmenttaken ophalen {#retrieve-list}
 
-U kunt een lijst van alle segmentbanen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te dienen `/segment/jobs` eindpunt.
+U kunt een lijst van alle segmentbanen voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/segment/jobs` eindpunt.
 
 **API-indeling**
 
@@ -57,7 +57,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Antwoord**
 
-Een succesvolle reactie keert HTTP status 200 met een lijst van segmentbanen voor de gespecificeerde organisatie IMS als JSON terug. De volgende reactie keert een lijst van alle succesvolle segmentbanen voor de organisatie IMS terug.
+Een succesvolle reactie keert HTTP status 200 met een lijst van segmentbanen voor de gespecificeerde organisatie IMS als JSON terug. De reactie verschilt echter, afhankelijk van het aantal segmenten binnen de segmenttaak.
+
+**Minder dan of gelijk aan 1500 segmenten in uw segmentbaan**
+
+Als u minder dan 1500 segmenten hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmenten binnen worden getoond `children.segments` kenmerk.
 
 >[!NOTE]
 >
@@ -164,6 +168,102 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van segmentbanen voo
 }
 ```
 
+**Meer dan 1500 segmenten**
+
+Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, wat aangeeft dat alle segmenten worden geëvalueerd.
+
+>[!NOTE]
+>
+>De volgende reactie is afgebroken voor de ruimte en geeft alleen de eerste geretourneerde taak weer.
+
+```json
+{
+    "_page": {
+        "totalCount": 14,
+        "pageSize": 14
+    },
+    "children": [
+        {
+            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+            "sandbox": {
+                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "profileInstanceId": "ups",
+            "source": "scheduler",
+            "status": "SUCCEEDED",
+            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+            "computeJobId": 8811,
+            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+            "segments": [
+                {
+                    "segmentId": "*",
+                }
+            ],
+            "metrics": {
+                "totalTime": {
+                    "startTimeInMs": 1573203617195,
+                    "endTimeInMs": 1573204395655,
+                    "totalTimeInMs": 778460
+                },
+                "profileSegmentationTime": {
+                    "startTimeInMs": 1573204266727,
+                    "endTimeInMs": 1573204395655,
+                    "totalTimeInMs": 128928
+                },
+                "totalProfiles": 13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
+                },
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+                }
+            },
+            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "properties": {
+                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+            },
+            "_links": {
+                "cancel": {
+                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+                    "method": "DELETE"
+                },
+                "checkStatus": {
+                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+                    "method": "GET"
+                }
+            },
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        }
+    ],
+    "_links": {
+        "next": {}
+    }
+}
+```
+
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de segmenttaak. |
@@ -189,6 +289,10 @@ U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan
 POST /segment/jobs
 ```
 
+Wanneer het creëren van een nieuwe segmentbaan, zullen het verzoek en de reactie afhankelijk van het aantal segmenten binnen de segmentbaan verschillen.
+
+**Minder dan of gelijk aan 1500 segmenten in uw segmentbaan**
+
 **Verzoek**
 
 ```shell
@@ -198,12 +302,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-[
-  {
-    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-  }
-]'
+ -d '[
+    {
+        "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    }
+ ]'
 ```
 
 | Eigenschap | Beschrijving |
@@ -212,12 +315,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde segmentbaan terug.
+Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gecreëerde segmentbaan terug.
 
 ```json
 {
-    "id": "d3b4a50d-dfea-43eb-9fca-557ea53771fd",
-    "imsOrgId": "{ORG_ID}",
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -225,43 +328,82 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
         "default": true
     },
     "profileInstanceId": "ups",
-    "source": "api",
-    "status": "NEW",
+    "source": "scheduler",
+    "status": "PROCESSING",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
     "segments": [
         {
-            "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+            "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
-                "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                "id": "7863c010-e092-41c8-ae5e-9e533186752e",
                 "expression": {
                     "type": "PQL",
-                    "format": "pql/text",
+                    "format": "pql/json",
                     "value": "workAddress.country = \"US\""
                 },
-                "mergePolicyId": "e161dae9-52f0-4c7f-b264-dc43dd903d56",
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                 "mergePolicy": {
-                    "id": "e161dae9-52f0-4c7f-b264-dc43dd903d56",
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                     "version": 1
                 }
             }
         }
     ],
-    "requestId": "Hw1jdAHeuWHVKVxcAPFrLCbbjkriDl9v",
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
     "_links": {
         "cancel": {
-            "href": "/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd",
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
             "method": "DELETE"
         },
         "checkStatus": {
-            "href": "/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd",
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
             "method": "GET"
         }
     },
-    "updateTime": 1579304260000,
-    "creationTime": 1579304260897,
-    "updateEpoch": 1579304260
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
 }
 ```
 
@@ -272,6 +414,126 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | `segments` | Een object dat informatie bevat over de segmentdefinities waarop deze segmenttaak wordt uitgevoerd. |
 | `segments.segment.id` | De id van de segmentdefinitie die u hebt opgegeven. |
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |
+
+**Meer dan 1500 segmenten**
+
+**Verzoek**
+
+>[!NOTE]
+>
+>Terwijl u een segmentbaan met meer dan 1500 segmenten kunt tot stand brengen, is dit **sterk niet aanbevolen**.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ]
+ }'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `schema.name` | De naam van het schema voor de segmenten. |
+| `segments.segmentId` | Wanneer het runnen van een segmentbaan met meer dan 1500 segmenten, zult u moeten overgaan `*` als segment-id om aan te geven dat u een segmentatietaak met alle segmenten wilt uitvoeren. |
+
+**Antwoord**
+
+Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde segmentbaan terug.
+
+```json
+{
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "profileInstanceId": "ups",
+    "source": "scheduler",
+    "status": "PROCESSING",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ],
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
+    "_links": {
+        "cancel": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "DELETE"
+        },
+        "checkStatus": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "GET"
+        }
+    },
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `id` | Een door het systeem gegenereerde alleen-lezen-id voor de nieuwe segmenttaak. |
+| `status` | De huidige status voor de segmenttaak. Aangezien de segmentbaan nieuw wordt gecreeerd, zal de status altijd zijn `NEW`. |
+| `segments` | Een object dat informatie bevat over de segmentdefinities waarop deze segmenttaak wordt uitgevoerd. |
+| `segments.segment.id` | De `*` betekent dat deze segmentbaan voor alle segmenten binnen uw organisatie loopt. |
 
 ## Een specifieke segmenttaak ophalen {#get}
 
@@ -299,7 +561,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentbaan terug.
+Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentbaan terug.  De reactie verschilt echter afhankelijk van het aantal segmenten binnen de segmenttaak.
+
+**Minder dan of gelijk aan 1500 segmenten in uw segmentbaan**
+
+Als u minder dan 1500 segmenten hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmenten binnen worden getoond `children.segments` kenmerk.
 
 ```json
 {
@@ -361,6 +627,87 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 }
 ```
 
+**Meer dan 1500 segmenten**
+
+Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, wat aangeeft dat alle segmenten worden geëvalueerd.
+
+```json
+{
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "profileInstanceId": "ups",
+    "source": "scheduler",
+    "status": "SUCCEEDED",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ],
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
+    "_links": {
+        "cancel": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "DELETE"
+        },
+        "checkStatus": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "GET"
+        }
+    },
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
+}
+```
+
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de segmenttaak. |
@@ -403,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Antwoord**
 
-Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug.
+Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van de `children.segments` Het kenmerk verschilt afhankelijk van de vraag of de segmenttaak voor meer dan 1500 segmenten wordt uitgevoerd.
 
 >[!NOTE]
 >
@@ -444,20 +791,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen 
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-                    "segment": {
-                        "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-                        "expression": {
-                            "type": "PQL",
-                            "format": "pql/json",
-                            "value": "{PQL_EXPRESSION}"
-                        },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                        "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                            "version": 1
-                        }
-                    }
+                    "segmentId": "*"
                 }
             ],
             "updateTime": 1573204395000,

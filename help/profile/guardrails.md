@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 'Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
+source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 1%
@@ -109,9 +109,9 @@ De instructies in deze sectie verwijzen naar het aantal en de aard van de segmen
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Segmenten per sandbox | 10 000 | Zacht | Een organisatie kan in totaal meer dan 10.000 segmenten hebben, zolang er minder dan 10.000 segmenten in elke individuele zandbak zijn. Het maken van extra segmenten kan van invloed zijn op de systeemprestaties. |
+| Segmenten per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 segmenten hebben, zolang er minder dan 4000 segmenten in elke afzonderlijke sandbox zijn. Het maken van extra segmenten kan van invloed zijn op de systeemprestaties. |
 | Streaming segmenten per sandbox | 500 | Zacht | Een organisatie kan in totaal meer dan 500 streaming segmenten hebben, zolang er zich in elke sandbox minder dan 500 streaming segmenten bevinden. Het maken van extra streaming segmenten kan van invloed zijn op de systeemprestaties. |
-| Batchsegmenten per sandbox | 10 000 | Zacht | Een organisatie kan meer dan 10.000 partijsegmenten in totaal hebben, zolang er minder dan 10.000 partijsegmenten in elke individuele zandbak zijn. Het maken van extra batchsegmenten kan van invloed zijn op de systeemprestaties. |
+| Batchsegmenten per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 batchsegmenten hebben, zolang er zich in elke sandbox minder dan 4000 batchsegmenten bevinden. Het maken van extra batchsegmenten kan van invloed zijn op de systeemprestaties. |
 
 {style=&quot;table-layout:auto&quot;}
 
