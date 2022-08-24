@@ -4,9 +4,9 @@ title: Handleiding dashboard voor segmenten
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1578'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Audience overlap]](#audience-overlap)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Scheduled activations]](#scheduled-activations)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -176,6 +177,14 @@ Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bij
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 
 Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+### Geplande activeringen {#scheduled-activations}
+
+De [!UICONTROL Scheduled activations] widget biedt een tabellarische weergave van de laatst geactiveerde doelen. De tabel bevat het doelplatform, de naam van de activeringsstroom naar dit doel en de begin- en einddatum van de activering voor het geselecteerde segment. Als er geen einddatum voor de activering is opgegeven, wordt deze weergegeven als [!UICONTROL Ongoing]. Het segment voor analyse wordt geselecteerd van dropdown bij de bovenkant van de pagina.
+
+Met de widget kunt u in één oogopslag zien waar en wanneer het publiek wordt geactiveerd en kunt u dubbele of overbodige activeringen transparanter maken. Deze geaccumuleerde informatie benadrukt ook waar om het even welke activiteiten zijn weggelaten.
+
+![De widget Geplande activeringen.](../images/segments/scheduled-activations.png)
 
 ## Volgende stappen
 
