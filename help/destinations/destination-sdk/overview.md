@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
+source-git-commit: c207b6700a31c59b00af6d55264c7a345219d999
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -53,18 +53,17 @@ Door Destination SDK, steunt Adobe Experience Platform integratie in real time m
 
 Lees meer over de technische vereisten aan de kant van de bestemmingen in de [integratievereisten](./integration-prerequisites.md) artikel.
 
-
 ## Toegang tot Destination SDK krijgen {#get-access}
 
-De toegang van Destination SDK varieert gebaseerd op uw status als partner of Experience Platform klant. Zie de onderstaande tabel voor meer informatie.
+De toegang van Destination SDK varieert gebaseerd op uw status als partner of Experience Platform, de klant van Real-Time CDP. Zie de onderstaande tabel voor meer informatie.
 
 
 | Type van partner of klant | Toegang tot Destination SDK |
 ---------|----------|
 | Independent Software Vendor (ISV) | Verbinden met [Adobe Exchange-programma](https://partners.adobe.com/exchangeprogram/experiencecloud.html) en verzoek om een Experience Platform-sandbox beschikbaar te maken voor toegang tot Destination SDK. |
 | Systeemintegrator (SI) | U dient op Gold- of Platinum-niveau te zijn in de [Adobe Solution Partner-programma](https://solutionpartners.adobe.com/home.html)en u krijgt een sandbox met Experience Platforms en toegang tot Destination SDK. |
-| De klant van het Experience Platform op de [Activeringspakket](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | Standaard krijgt u toegang tot sandboxen en Destination SDK voor Experience Platforms. |
-| De klant van het Experience Platform op de [Real-time CDP Ultimate-pakket](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | U hebt geen toegang tot Destination SDK, maar u hebt toegang tot alle geproduceerde bestemmingen die door andere bedrijven worden gevormd die Destination SDK gebruiken en over de organisaties van het Experience Platform worden gepubliceerd. |
+| De klant van het Experience Platform op de [Activeringspakket](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | Standaard krijgt u toegang tot sandboxen en Destination SDK voor Experience Platforms. <br> U krijgt ook toegang tot alle geproduceerde bestemmingen die door andere bedrijven worden gevormd die Destination SDK gebruiken en over organisaties van de Experience Platform worden gepubliceerd. |
+| De klant van het Experience Platform op de [Real-Time CDP Ultimate-pakket](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Standaard krijgt u toegang tot sandboxen en Destination SDK voor Experience Platforms. <br> U krijgt ook toegang tot alle geproduceerde bestemmingen die door andere bedrijven worden gevormd die Destination SDK gebruiken en over organisaties van de Experience Platform worden gepubliceerd. |
 
 {style=&quot;table-layout:auto&quot;}
 
