@@ -4,14 +4,20 @@ description: De meest recente release bevat informatie over Adobe Experience Pla
 keywords: debugger;ervaar de uitbreiding van Foutopsporing van het Platform;chroom;uitbreiding;versie nota's
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: b4e3b40942390ef183ccb01f65702ae400a5e22f
+source-git-commit: f2733cca00f98e85cd1b3944c5127f5c1c89594e
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Debugger
+
+## Versie 1.4.0 - 24 augustus 2022
+
+* Toegevoegde steun voor de hybride implementatie van SDK van het Web.
+* Foutbericht toegevoegd wanneer het inschakelen van Doelovertrek mislukt.
+* Bijgewerkte afhankelijkheden.
 
 ## Versie 1.3.3 - 20 juni 2022
 
