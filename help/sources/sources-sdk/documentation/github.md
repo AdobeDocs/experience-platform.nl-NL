@@ -4,10 +4,8 @@ solution: Experience Platform
 title: Gebruik de Interface van het Web van GitHub om een Pagina van de Documentatie van Bronnen te creëren
 topic-legacy: tutorial
 description: Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan auteursdocumentatie te gebruiken en een trekkingsverzoek (PR) voor te leggen.
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%
@@ -36,19 +34,19 @@ Als de vork is voltooid, selecteert u **master** en voert u een naam voor de nie
 
 ![vertakking maken](../assets/create-branch.png)
 
-In de de omslagstructuur van GitHub van uw forked bewaarplaats, navigeer aan [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) en selecteer vervolgens in de lijst de juiste categorie voor uw bron. Als u bijvoorbeeld documentatie maakt voor een nieuwe bron voor cloudopslag, selecteert u **cloudopslag**.
+In de de omslagstructuur van GitHub van uw forked bewaarplaats, navigeer aan [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) en selecteer vervolgens in de lijst de juiste categorie voor uw bron. Als u bijvoorbeeld documentatie voor een nieuwe CRM-bron maakt, selecteert u **crm**.
 
 >[!TIP]
 >
 >Als u documentatie voor UI creeert, dan navigeer aan [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) en selecteer de juiste categorie voor uw bron. Als u uw afbeeldingen wilt toevoegen, navigeert u naar [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) Voeg vervolgens uw schermafbeeldingen toe aan de `sdk` map.
 
-![cloudopslag](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-Er wordt een map met bestaande bronnen voor cloudopslag weergegeven. Als u documentatie voor een nieuwe bron wilt toevoegen, selecteert u **Bestand toevoegen** en selecteer vervolgens **Nieuw bestand maken** in het vervolgkeuzemenu dat wordt weergegeven.
+Er wordt een map met bestaande CRM-bronnen weergegeven. Als u documentatie voor een nieuwe bron wilt toevoegen, selecteert u **Bestand toevoegen** en selecteer vervolgens **Nieuw bestand maken** in het vervolgkeuzemenu dat wordt weergegeven.
 
 ![maken-nieuw bestand](../assets/create-new-file.png)
 
-Geef het bronbestand een naam `YOURSOURCE.md` waarbij UURSOURCE de naam van uw bron in Platform is. Als uw bedrijf bijvoorbeeld [!DNL Mailchimp], dan moet uw bestandsnaam `mailchimp.md`.
+Geef het bronbestand een naam `YOURSOURCE.md` waarbij UURSOURCE de naam van uw bron in Platform is. Als uw bedrijf bijvoorbeeld ACME CRM is, moet uw bestandsnaam `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

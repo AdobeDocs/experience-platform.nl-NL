@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Een verbindingsspecificatie bijwerken met behulp van de Flow Service API (bèta)
+title: Een verbindingsspecificatie bijwerken met de Flow Service API
 topic-legacy: developer guide
 description: U kunt de eigenschappen van een verbindingsspecificatie bijwerken via een PUT-bewerking.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
-# Een verbindingsspecificatie bijwerken met behulp van de Flow Service API (bèta)
+# Een verbindingsspecificatie bijwerken met de Flow Service API
 
 U kunt de eigenschappen van een verbindingsspecificatie bijwerken via een PUT-bewerking. Wanneer het bijwerken van een verbindingsspecificatie door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer het creëren van een nieuwe verbindingsspecificatie in een verzoek van de POST.
 

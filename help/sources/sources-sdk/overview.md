@@ -1,48 +1,42 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: 'Bronnen: Overzicht SDK (bèta)'
+title: Zelfbedieningsbronnen (Batch SDK) - Overzicht
 topic-legacy: overview
-description: Adobe Experience Platform Sources SDK is een set configuratie-API's waarmee u een REST API-gebaseerde bron kunt integreren met behulp van de Flow Service API om uw gegevens naar het Experience Platform te brengen.
-hide: true
-hidefromtoc: true
+description: Adobe Experience Platform Self-Serve Sources (Batch SDK) is een set configuratie-API's waarmee u een REST API-bron kunt integreren met behulp van de Flow Service API om uw gegevens naar het Experience Platform te brengen.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
 
-# Overzicht SDK van bronnen (bètaversie)
+# Overzicht van Self-Serve Sources (Batch SDK)
 
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
+Adobe Experience Platform Self-Serve Sources (Batch SDK) is een framework waarmee u een REST API-gebaseerde bron kunt integreren in de catalogus met bronnen in het Experience Platform met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Self-Serve Sources (Batch SDK) beschikt over een set configuratie-API&#39;s om uw eigen bron te maken en uw batchgegevens naar het Experience Platform te brengen.
 
-Adobe Experience Platform Sources SDK is een set configuratie-API&#39;s waarmee u een REST API-bron kunt integreren met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om uw gegevens naar het Experience Platform te brengen.
+Met Self-Serve Bronnen (Batch SDK) kunt u:
 
-Met Bronnen SDK kunt u:
-
-* Een nieuwe bron voor de catalogus met Platforms configureren, compleet met functies voor maken, lezen, bijwerken en verwijderen met de opdracht [!DNL Flow Service] API.
+* Vorm en integreer een nieuwe bron aan de catalogus van het Experience Platform gebruikend [!DNL Flow Service] API.
 * Definieer specificaties voor uw bron, inclusief informatie over ondersteunde verificatietypen en hoe brongegevens worden opgehaald.
 * Maak gebruikersgerichte documentatie voor uw nieuwe bron.
 
-De documentatie van SDK van Bronnen verstrekt instructies voor u om Adobe Experience Platform Sources SDK te gebruiken om een REST API-based bronintegratie met Platform te vormen, te testen en vrij te geven, en uw bron te hebben deel van de steeds groeiende broncatalogus worden.
+De Self-Serve documentatie van Bronnen verstrekt instructies om, een REST API-Gebaseerde bronintegratie met Experience Platform te vormen te testen en vrij te geven, en uw bron te hebben deel van de alsmaar groeiende broncatalogus worden.
 
 ![catalogus](./assets/catalog.png)
 
 ## Bronnen begrijpen
 
-Het Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Het Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Experience Platform. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
-Voor meer informatie over bronnen, en om een lijst van verschillende bronnen te zien momenteel gesteund op Platform, zie [overzicht van bronnen](../home.md).
+Voor meer informatie over bronnen, en om een lijst van verschillende bronnen te zien momenteel gesteund op Experience Platform, zie [overzicht van bronnen](../home.md).
 
 ## Een bron maken
 
-Via Sources SDK kunt u uw eigen REST API-bron integreren en uw gegevens naar het Platform brengen met [!DNL Flow Service]. De bronnen SDK staat u toe om een nieuwe bron met Platform te integreren, door nieuwe verbindingsspecificatie te creëren en voor te leggen door [!DNL Flow Service] API.
+Via Self-Serve Sources kunt u uw eigen REST API-bron integreren en uw gegevens naar het Experience Platform brengen met [!DNL Flow Service]. U kunt een bron aan de catalogus van bronnen van het Experience Platform integreren door, nieuwe verbindingsspecificatie te creëren te vormen en voor te leggen door [!DNL Flow Service] API.
 
-Zie de handleiding op [een nieuwe verbindingsspecificatie maken](./api/api-overview.md) voor informatie over hoe te om een nieuwe bron aan Platform te integreren.
+Zie de handleiding op [een nieuwe verbindingsspecificatie maken](./api/api-overview.md) voor informatie over hoe te om een nieuwe bron aan Experience Platform te integreren.
 
 ## Uw bron documenteren
 
@@ -52,18 +46,18 @@ Als uw bron is gemaakt, raadpleegt u de [documentatiehandleiding](./documentatio
 
 Het stapsgewijze proces voor het configureren van uw bron in Experience Platform wordt hieronder beschreven:
 
-* Lees de [Bronnen: SDK API-handleiding](./api/api-overview.md);
-   * Lees de [gids Aan de slag](./api/getting-started.md);
-   * Volg de zelfstudie op [een nieuwe verbindingsspecificatie maken](./api/create.md);
-   * Volg de zelfstudie op [bijwerken van uw verbindingsspecificatie](./api/update-connection-specs.md);
+* Lees de [Zelfbedieningsbronnen (Batch SDK) API-handleiding](./api/api-overview.md).
+   * Lees de [gids Aan de slag](./api/getting-started.md).
+   * Volg de zelfstudie op [een nieuwe verbindingsspecificatie maken](./api/create.md).
+   * Volg de zelfstudie op [bijwerken van uw verbindingsspecificatie](./api/update-connection-specs.md).
    * Volg de zelfstudie op [het toevoegen van uw nieuwe identiteitskaart van de verbindingsspecificatie aan een stroomspecificatie](./api/update-flow-specs.md)
    * [Nieuwe bron verzenden](./api/submit.md).
-* Voor een beter inzicht in de structuur en eigenschappen van een verbindingsspecificatie raadpleegt u de handleiding op [configuratieopties voor Bronnen SDK](./config/config.md);
-   * Zie de handleiding op [configureren van verificatiespecificaties](./config/authspec.md);
-   * Zie de handleiding op [configureren van uw bronspecificaties](./config/sourcespec.md);
-   * Zie de handleiding op [configureren, specificaties](./config/explorespec.md);
-* Als u wilt beginnen met het documenteren van de bron, raadpleegt u de [overzicht van het creëren van documentatie voor Bronnen SDK](./documentation/doc-overview.md)
-   * U kunt dit [bron-API documentatiesjabloon](./documentation/template.md) om uw API-documentatie te structureren;
-   * U kunt dit [de documentatiesjabloon van bron UI](./documentation/ui-template.md) om uw UI-documentatie te structureren;
-   * Zie de handleiding op [het gebruiken van de het Webinterface van GitHub](./documentation/github.md) voor stappen op hoe te om documentatie tot stand te brengen die GitHub gebruikt;
+* Lees de handleiding voor een beter inzicht in de structuur en eigenschappen van een verbindingsspecificatie [configuratieopties voor Self-Serve Bronnen (Batch SDK)](./config/config.md).
+   * Lees de handleiding op [configureren van verificatiespecificaties](./config/authspec.md) om een beter inzicht in de verschillende authentificatietypen te verkrijgen die u voor uw bron kunt gebruiken.
+   * Lees de handleiding op [configureren van uw bronspecificaties](./config/sourcespec.md) voor informatie over de verschillende paginatietypen, het plannen formaten, en douaneschema&#39;s die voor uw bron kunnen worden gevormd.
+   * Lees de handleiding op [configureren, specificaties](./config/explorespec.md) voor informatie over hoe u de parameters definieert die nodig zijn voor het verkennen en inspecteren van objecten in uw bron.
+* Als u de bron wilt documenteren, leest u de [overzicht bij het creëren van documentatie voor Zelfbediening Bronnen](./documentation/doc-overview.md)
+   * U kunt dit [bron-API documentatiesjabloon](./documentation/template.md) om uw API-documentatie te structureren.
+   * U kunt dit [de documentatiesjabloon van bron UI](./documentation/ui-template.md) om uw UI-documentatie te structureren.
+   * Zie de handleiding op [het gebruiken van de het Webinterface van GitHub](./documentation/github.md) voor stappen op hoe te om documentatie tot stand te brengen gebruikend GitHub.
    * Zie de handleiding op [een teksteditor gebruiken](./documentation/text-editor.md) voor stappen voor het maken van documentatie met behulp van uw lokale computer.

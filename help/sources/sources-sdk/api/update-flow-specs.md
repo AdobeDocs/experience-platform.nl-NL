@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Stroomspecificaties bijwerken met behulp van de Flow Service API (bèta)
+title: Stroomspecificaties bijwerken met de Flow Service API
 topic-legacy: developer guide
-description: Het volgende document bevat stappen voor het ophalen en bijwerken van stroomspecificaties met behulp van de Flow Service API voor Sources SDK.
-hide: true
-hidefromtoc: true
+description: Het volgende document bevat stappen voor het ophalen en bijwerken van stroomspecificaties met behulp van de Flow Service API voor Self-Serve Sources (Batch SDK).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
 
-# Stroomspecificaties bijwerken met de opdracht [!DNL Flow Service] API (bèta)
-
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
+# Stroomspecificaties bijwerken met de opdracht [!DNL Flow Service] API
 
 Als u een nieuwe id voor de verbindingsspecificatie hebt gegenereerd, moet u deze id toevoegen aan een stroomspecificatie om een gegevensstroom te kunnen maken.
 
 De specificaties van de stroom bevatten informatie die een stroom bepaalt, met inbegrip van bron en doel verbindings IDs die het steunt, transformatiespecificaties die nodig zijn om op de gegevens worden toegepast, en het plannen van parameters die worden vereist om een stroom te produceren. U kunt de stroomspecificaties bewerken met de `/flowSpecs` eindpunt.
 
-In het volgende document worden stappen beschreven voor het ophalen en bijwerken van stroomspecificaties met behulp van de [!DNL Flow Service] API voor Sources SDK.
+In het volgende document worden stappen beschreven voor het ophalen en bijwerken van stroomspecificaties met behulp van de [!DNL Flow Service] API voor Self-Serve Sources (Batch SDK).
 
 ## Aan de slag
 

@@ -4,21 +4,15 @@ solution: Experience Platform
 title: Uw bron documenteren
 topic-legacy: overview
 description: De laatste stap voordat je nieuwe bron live kan worden gemaakt in Adobe Experience Platform is het documenteren van je nieuwe bron.
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # Uw bron documenteren
-
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
 
 De laatste stap voordat uw nieuwe bron live in Adobe Experience Platform kan worden ingesteld, is het documenteren van uw nieuwe bron.
 

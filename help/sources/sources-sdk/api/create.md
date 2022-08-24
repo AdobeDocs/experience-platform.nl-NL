@@ -1,28 +1,22 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: Een nieuwe verbindingsspecificatie maken met behulp van de Flow Service API (bèta)
+title: Een nieuwe verbindingsspecificatie maken met de Flow Service API
 topic-legacy: tutorial
-description: Het volgende document verstrekt stappen op hoe te om een verbindingsspecificatie tot stand te brengen gebruikend de Dienst API van de Stroom en een nieuwe bron door Bronnen SDK te integreren.
-hide: true
-hidefromtoc: true
+description: Het volgende document verstrekt stappen op hoe te om een verbindingsspecificatie tot stand te brengen gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen te integreren.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
 
-# Een nieuwe verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API (bèta)
-
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
+# Een nieuwe verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API
 
 Een verbindingsspecificatie vertegenwoordigt de structuur van een bron. Het bevat informatie over de authentificatievereisten van een bron, bepaalt hoe de brongegevens kunnen worden onderzocht en worden geïnspecteerd, en verstrekt informatie over de attributen van een bepaalde bron. De `/connectionSpecs` in de [!DNL Flow Service] API staat u toe om de verbindingsspecificaties binnen uw organisatie programmatically te beheren.
 
-In het volgende document worden de volgende stappen beschreven voor het maken van een verbindingsspecificatie met de opdracht [!DNL Flow Service] API en integreer een nieuwe bron door Bronnen SDK.
+In het volgende document worden de volgende stappen beschreven voor het maken van een verbindingsspecificatie met de opdracht [!DNL Flow Service] API en een nieuwe bron integreren via Self-Serve Sources (Batch SDK).
 
 ## Aan de slag
 
@@ -30,16 +24,37 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 
 ## Artefacten verzamelen
 
-De eerste stap bij het maken van een nieuwe bron via [!DNL Sources SDK] moet coördineren met uw Adobe-vertegenwoordiger en waarden identificeren voor de overeenkomstige bron **pictogram**, **beschrijving**, **label**, en **categorie**.
+Als u een nieuwe batchbron wilt maken met behulp van Self-Serve Sources, moet u eerst coördineren met Adobe, een persoonlijke Git-opslagplaats aanvragen en op de details met betrekking tot het label, de beschrijving, de categorie en het pictogram voor uw bron uitlijnen met Adobe.
 
-| Artefacten | Beschrijving | Voorbeeld |
+Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
+
+* Bronnen
+   * {your_source}
+      * Artefacten
+         * {your_source}-category.txt
+         * {your_source}-description.txt
+         * {your_source}-icon.svg
+         * {your_source}-label.txt
+         * {your_source}-connectionSpec.json
+
+| Artefacten (bestandsnamen) | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Label | De naam van de bron. | [!DNL MailChimp Members] |
-| Beschrijving | Een korte beschrijving van de bron. | Een live binnenkomende verbinding maken met uw [!DNL Mailchimp Members] bijvoorbeeld om zowel historische als geplande gegevens in Experience Platform in te voeren. |
-| Pictogram | De afbeelding of het logo dat de bron vertegenwoordigt. Het pictogram wordt weergegeven in de UI-weergave van het Platform van uw bron. | `mailchimp-members-icon.svg` |
-| Categorie | De categorie van je bron. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {your_source} | De naam van de bron. Deze map moet alle artefacten bevatten die betrekking hebben op uw bron, in uw persoonlijke Git-opslagplaats. | `mailchimp-members` |
+| {your_source}-category.txt | De categorie waartoe uw bron behoort, opgemaakt als een tekstbestand. De lijst van beschikbare broncategorieën die door Zelfbediening Bronnen (de Band SDK) worden gesteund omvat: <ul><li>Reclame</li><li>Analytics</li><li>Toestemming en voorkeuren</li><li>CRM</li><li>Klant geslaagd</li><li>Database</li><li>e-commerce</li><li>Marketing Automation</li><li>Betalingen</li><li>Protocollen</li></ul> **Opmerking**: Neem contact op met uw Adobe als u van mening bent dat de bron niet in een van de bovenstaande categorieën past. | `mailchimp-members-category.txt` Geef in het bestand de categorie van de bron op, bijvoorbeeld: `marketingAutomation`. |
+| {your_source}-description.txt | Een korte beschrijving van de bron. | [!DNL Mailchimp Members] is een marketingautomatiseringsbron die u kunt gebruiken om [!DNL Mailchimp Members] gegevens naar Experience Platform. |
+| {your_source}-icon.svg | De afbeelding die moet worden gebruikt om uw bron weer te geven in de catalogus met bronnen in het Experience Platform. Dit pictogram moet een SVG-bestand zijn. |
+| {your_source}-label.txt | De naam van de bron zoals deze moet worden weergegeven in de catalogus met bronnen van het Experience Platform. | Mailchimp-leden |
+| {your_source}-connectionSpec.json | Een JSON-bestand dat de verbindingsspecificatie van uw bron bevat. Dit bestand is in eerste instantie niet vereist omdat u de verbindingsspecificatie invult als u deze handleiding invult. | `mailchimp-members-connectionSpec.json` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Tijdens de testperiode van uw verbindingsspecificatie, in plaats van zeer belangrijke waarden, kunt u gebruiken `text` in het verbindingsdossier.
+
+Nadat u de benodigde bestanden hebt toegevoegd aan uw persoonlijke Git-opslagplaats, moet u een pull-aanvraag (PR) maken die door Adobe kan worden gecontroleerd. Wanneer uw PR wordt goedgekeurd en samengevoegd, zult u van identiteitskaart worden voorzien die voor uw verbindingsspecificatie kan worden gebruikt om naar het etiket, de beschrijving, en het pictogram van uw bron te verwijzen.
+
+Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron kunt toevoegen, zoals geavanceerd het plannen, douaneschema, of verschillende paginatypen, te herzien gelieve de gids op [bronspecificaties configureren](../config/sourcespec.md).
 
 ## Sjabloon voor verbindingsspecificatie kopiëren
 
@@ -68,10 +83,6 @@ Nadat u de vereiste artefacten hebt verzameld, kopieert en plakt u de onderstaan
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -206,6 +217,10 @@ Nadat u de vereiste artefacten hebt verzameld, kopieert en plakt u de onderstaan
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -480,9 +495,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -495,7 +510,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -508,9 +523,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -523,7 +538,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -547,10 +562,19 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                    "_links",
+                    "total_items",
+                    "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+                },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",

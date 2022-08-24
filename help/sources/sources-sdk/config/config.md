@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Configuration options in Sources SDK
+title: Configuratieopties in Self-Serve Sources (Batch SDK)
 topic-legacy: overview
-description: Dit document verstrekt een overzicht van de configuraties u moet voorbereiden om Bronnen SDK te gebruiken.
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
+exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
 
-# Configuration options in Sources SDK
+# Configuratieopties in Self-Serve Sources (Batch SDK)
 
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
-
-Dit document verstrekt een overzicht van de configuraties u moet voorbereiden om Bronnen SDK te gebruiken.
+Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
 
 ## Verbindingsspecificatie
 
-Verbindingsspecificaties retourneren de verbindingseigenschappen van een bron. Zij omvatten authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen en een vaste identiteitskaart van de verbindingsspecificatie die aan een bepaalde bron wordt toegewezen. De specificaties van de verbinding zijn huurder en organisatie IMS agnostic. Een typische verbindingsspecificatie bevat basisinformatie over een bepaalde bron, evenals drie verschillende secties: `authSpec`, `sourceSpec`, en `exploreSpec`.
+Verbindingsspecificaties retourneren de verbindingseigenschappen van een bron. Zij omvatten authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen en een vaste identiteitskaart van de verbindingsspecificatie die aan een bepaalde bron wordt toegewezen. De specificaties van de verbinding zijn huurder en organisatie agnostisch. Een typische verbindingsspecificatie bevat basisinformatie over een bepaalde bron, evenals drie verschillende secties: `authSpec`, `sourceSpec`, en `exploreSpec`.
 
 | Specificaties | Beschrijving |
 | --- | --- |
@@ -41,5 +36,3 @@ Zie de volgende documenten voor instructies over hoe u de waarden van elk deel v
 * [Uw verificatiespecificatie configureren](./authspec.md)
 * [Uw bronspecificatie configureren](./sourcespec.md)
 * [Uw verkenningsspecificatie configureren](./explorespec.md)
-
-

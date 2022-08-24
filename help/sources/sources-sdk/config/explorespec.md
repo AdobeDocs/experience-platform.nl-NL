@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Vorm onderzoek specificaties voor Bronnen SDK
+title: Configureren van de specificaties voor Self-Serve Sources (Batch SDK)
 topic-legacy: overview
-description: Dit document verstrekt een overzicht van de configuraties u moet voorbereiden om Bronnen SDK te gebruiken.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
 
-
-# Vorm onderzoek specificaties voor Bronnen SDK
+# Configureren van de specificaties voor Self-Serve Sources (Batch SDK)
 
 De specificaties van het onderzoek bepalen de parameters die voor het onderzoeken van en het inspecteren van voorwerpen in uw bron worden vereist. Met de specificaties verkennen definieert u ook de indeling voor reacties die wordt geretourneerd wanneer objecten worden doorzocht en geïnspecteerd.
 
@@ -87,4 +85,4 @@ De specificaties van het onderzoek bepalen de parameters die voor het onderzoeke
 
 ## Volgende stappen
 
-Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan en een volledige verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API. Zie de [[!DNL Sources SDK] API-handleiding](../api/api-overview.md) voor meer informatie .
+Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan en een volledige verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API. Zie de [Zelfbedieningsbronnen (Batch SDK) API-handleiding](../api/api-overview.md) voor meer informatie .

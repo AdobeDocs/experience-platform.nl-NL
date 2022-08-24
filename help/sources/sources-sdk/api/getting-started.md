@@ -1,30 +1,24 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: Aan de slag met Sources SDK (bèta)
+title: Aan de slag met Self-Serve Sources (Batch SDK)
 topic-legacy: developer guide
-description: Dit document verstrekt een inleiding aan de eerste vereiste informatie u moet kennen alvorens te proberen om een nieuwe bron tot stand te brengen gebruikend Bronnen SDK.
-hide: true
-hidefromtoc: true
+description: Dit document verstrekt een inleiding aan de eerste vereiste informatie u moet kennen alvorens te proberen om een nieuwe bron tot stand te brengen gebruikend Zelfbediening Bronnen (de Band SDK).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# Aan de slag met Sources SDK (bèta)
+# Aan de slag met Self-Serve Sources (Batch SDK)
 
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
-
-Bronnen met SDK kunt u uw eigen op REST gebaseerde bron integreren om gegevens over te brengen naar Adobe Experience Platform. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen vraag aan te maken [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Met Self-Serve Sources (Batch SDK) kunt u uw eigen REST-gebaseerde bron integreren en batchgegevens naar Adobe Experience Platform overbrengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen vraag aan te maken [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Vereisten
 
-Om Bronnen SDK te gebruiken, moet u ervoor zorgen dat u toegang hebt tot een IMS Organisatie Sandbox voorzien van de Bronnen van Adobe Experience Platform.
+Als u Self-Serve Sources (Batch SDK) wilt gebruiken, dient u ervoor te zorgen dat u toegang hebt tot een IMS Organisatie-sandbox die is ingericht met Adobe Experience Platform Sources.
 
 Deze handleiding vereist ook een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
@@ -33,7 +27,7 @@ Deze handleiding vereist ook een goed begrip van de volgende onderdelen van Adob
 
 ## API-voorbeeldaanroepen lezen
 
-De SDK van Bronnen en [!DNL Flow Service] API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de gids voor het oplossen van problemen met Experience Platforms.
+De Self-Serve Bronnen (Batch SDK) en [!DNL Flow Service] API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de gids voor het oplossen van problemen met Experience Platforms.
 
 ## Waarden verzamelen voor vereiste koppen
 
@@ -57,4 +51,4 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Volgende stappen
 
-Beginnen creërend een nieuwe bron met Bronnen SDK, zie het leerprogramma op [een nieuwe bron maken](./create.md).
+Als u een nieuwe bron wilt maken met Self-Serve Sources (Batch SDK), raadpleegt u de zelfstudie over [een nieuwe bron maken](./create.md).

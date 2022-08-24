@@ -1,24 +1,19 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Verzend uw bron (bèta)
+title: Uw bron verzenden
 topic-legacy: overview
-description: Het volgende document verstrekt stappen op hoe te om een nieuwe bron te testen en te verifiëren gebruikend de Dienst API van de Stroom en een nieuwe bron door Bronnen SDK te integreren.
-hide: true
-hidefromtoc: true
-source-git-commit: 274784a5b82d12497f7437fdeaf665dd64224c2d
+description: Het volgende document verstrekt stappen op hoe te om een nieuwe bron te testen en te verifiëren gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen (de Band SDK) te integreren.
+exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
 
-# Uw bron verzenden (bèta)
+# Uw bron verzenden
 
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
-
-De laatste stap naar de integratie van uw nieuwe bron in Adobe Experience Platform met [!DNL Sources SDK] moet je bron testen voor verificatie. Als dit lukt, kunt u de nieuwe bron verzenden door contact op te nemen met uw Adobe-vertegenwoordiger.
+De laatste stap voor het integreren van uw nieuwe bron in Adobe Experience Platform met behulp van Self-Serve Sources (Batch SDK) is het testen van uw bron voor verificatie. Als dit lukt, kunt u de nieuwe bron verzenden door contact op te nemen met uw Adobe-vertegenwoordiger.
 
 In het volgende document worden stappen beschreven voor het testen van en het opsporen van fouten in uw bron met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -27,13 +22,13 @@ In het volgende document worden stappen beschreven voor het testen van en het op
 * Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
 * Raadpleeg de zelfstudie voor informatie over het genereren van referenties voor Platform-API&#39;s [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md).
 * Voor informatie over het instellen [!DNL Postman] voor Platform-API&#39;s raadpleegt u de zelfstudie [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md).
-* Download de [[!DNL Sources SDK] verzameling en omgeving van verificaties hier](../assets/sdk-verification.zip) en volgt u de hieronder beschreven stappen.
+* Download de [Verzameling en omgeving van zelfbedieningsbronnen hier](../assets/sdk-verification.zip) en volgt u de hieronder beschreven stappen.
 
 ## De bron testen
 
-Als u de bron wilt testen, moet u de opdracht [[!DNL Sources SDK] verzameling van verificaties en omgeving](../assets/sdk-verification.zip) op [!DNL Postman] terwijl u de juiste omgevingsvariabelen voor uw bron aanbiedt.
+Als u de bron wilt testen, moet u de opdracht [Verzameling en omgeving van zelfbedieningsbronnen](../assets/sdk-verification.zip) op [!DNL Postman] terwijl u de juiste omgevingsvariabelen voor uw bron aanbiedt.
 
-Als u wilt beginnen met testen, moet u eerst de verzameling en omgeving instellen op [!DNL Postman]. Geef vervolgens de id van de verbindingsspecificatie op die u wilt testen. Deze id moet dezelfde id zijn die u hebt gegenereerd met [!DNL Sources SDK].
+Als u wilt beginnen met testen, moet u eerst de verzameling en omgeving instellen op [!DNL Postman]. Geef vervolgens de id van de verbindingsspecificatie op die u wilt testen.
 
 ### Geef het volgende op `authSpecName`
 

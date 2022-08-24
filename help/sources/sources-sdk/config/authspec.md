@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Verificatiespecificaties voor Bronnen SDK configureren
+title: Verificatiespecificaties configureren voor Self-Serve Sources (Batch SDK)
 topic-legacy: overview
-description: Dit document verstrekt een overzicht van de configuraties u moet voorbereiden om Bronnen SDK te gebruiken.
-hide: true
-hidefromtoc: true
+description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '535'
 ht-degree: 1%
 
 ---
 
-# Verificatiespecificaties voor Bronnen SDK configureren
+# Verificatiespecificaties configureren voor Self-Serve Sources (Batch SDK)
 
 De verificatiespecificaties bepalen hoe Adobe Experience Platform-gebruikers verbinding kunnen maken met uw bron.
 
@@ -21,7 +19,7 @@ De `authSpec` array bevat informatie over de verificatieparameters die zijn vere
 
 ## Verificatiespecificaties
 
-Momenteel [!DNL Sources SDK] steunt OAuth 2 verfrist codes en basisauthentificatie. Zie de lijsten hieronder voor begeleiding bij het gebruiken van OAuth 2 verfrist code en basisauthentificatie
+Self-Serve Bronnen (Batch SDK) steunt OAuth 2 verfrist codes en basisauthentificatie. Zie de lijsten hieronder voor begeleiding bij het gebruiken van OAuth 2 verfrist code en basisauthentificatie
 
 ### Code voor 2 vernieuwen
 
@@ -36,10 +34,6 @@ OAuth 2 verfrist code voor veilige toegang tot een toepassing door een tijdelijk
     "type": "object",
     "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path."
-      },
       "authorizationTestUrl": {
         "description": "Authorization test url to validate accessToken.",
         "type": "string"

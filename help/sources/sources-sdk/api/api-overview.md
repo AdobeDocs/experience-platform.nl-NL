@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: 'Bronnen: SDK API Guide (bèta)'
+title: Zelfbedieningsbron (Batch SDK) API-handleiding
 topic-legacy: overview
 description: Dit document biedt een overzicht van het proces voor het maken van een nieuwe bron, inclusief stappen voor het ophalen, schrijven en verzenden van een nieuwe verbindingsspecificatie met behulp van de Flow Service API.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
-# Bronnen: SDK API Guide (bèta)
-
->[!IMPORTANT]
->
->Bronnen-SDK bevindt zich momenteel in bètaversie en uw organisatie heeft mogelijk nog geen toegang tot deze SDK. De functionaliteit die in deze documentatie wordt beschreven, kan worden gewijzigd.
+# Zelfbedieningsbron (Batch SDK) API-handleiding
 
 Dit document biedt een overzicht van het proces voor het maken van een nieuwe bron, inclusief stappen voor het schrijven en verzenden van een nieuwe verbindingsspecificatie met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 [!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
-De [!DNL Flow Service] API verstrekt verscheidene eindpunten die u toestaan om de verbinding en stroomspecificaties voor een nieuwe bron programmatically te beheren die u door Bronnen SDK integreert.
+De [!DNL Flow Service] API verstrekt verscheidene eindpunten die u toestaan om de verbinding en stroomspecificaties voor een nieuwe bron programmatically te beheren die u door Zelfbediening Bronnen (Band SDK) integreert.
 
 ## Een nieuwe verbindingsspecificatie maken
 
@@ -50,4 +45,4 @@ Als u uw bron voor integratie naar het Experience Platform wilt verzenden, moet 
 
 ## Volgende stappen
 
-Als u het gereedschap [!DNL Flow Service] API en creeer een nieuwe bron door Bronnen SDK, lees [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.
+Als u het gereedschap [!DNL Flow Service] API en maak een nieuwe bron via Self-Serve Sources (Batch SDK), lees de [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.
