@@ -2,13 +2,13 @@
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;api salesforce marketing cloudbestemming
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1866'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL (API) Salesforce Marketing Cloud] verbinding
 
@@ -48,7 +48,7 @@ Ga naar de Salesforce [proefversie](https://www.salesforce.com/in/form/signup/fr
 
 #### Aangepast veld maken in Salesforce {#prerequisites-custom-field}
 
-Het aangepaste kenmerk van het type maken `Text Area Long` welk Experience Platform zal gebruiken om de segmentstatus binnen de Marketing Cloud van Salesforce bij te werken.
+U moet een aangepast kenmerk van het type maken `Text Area Long`, welk Experience Platform zal gebruiken om de segmentstatus binnen de Marketing Cloud van Salesforce bij te werken. In het werkschema om segmenten aan de bestemming te activeren, in **[Segmentatieschema](#schedule-segment-export-example)** stap, zult u het douanekenmerk als afbeelding identiteitskaart voor elk segment gebruiken u activeert.
 
 Raadpleeg de documentatie bij de Salesforce-Marketing Cloud op [aangepaste velden maken](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) als u aanvullende instructies nodig hebt.
 
@@ -72,6 +72,8 @@ Noteer de onderstaande items voordat u de Salesforce-bestemming verifieert.
 | --- | --- | --- |
 | <ul><li>Salesforce-voorvoegsel Marketing Cloud</li></ul> | Zie [Domeinvoorvoegsel van Salesforce-Marketing Cloud](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) voor aanvullende richtsnoeren. | <ul><li>Als uw domein is zoals hieronder, hebt u de benadrukte waarde nodig.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul> |
 | <ul><li>Client-id</li><li>Clientgeheim</li></ul> | Zie de [Salesforce-documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) als u aanvullende instructies nodig hebt. | <ul><li>r23kxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxT4xxxxxxxx</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -140,7 +142,7 @@ Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/hel
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
-Om uw publieksgegevens van Adobe Experience Platform naar de bestemming van de Marketing Cloud van Salesforce correct te verzenden, moet u door de stap van de gebiedstoewijzing gaan. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de Salesforce-doelvelden van de Marketing Cloud:
+Om uw publieksgegevens van Adobe Experience Platform naar de bestemming van de Marketing Cloud van Salesforce correct te verzenden, moet u door de stap van de gebiedstoewijzing gaan. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Volg onderstaande stappen om uw XDM-velden correct toe te wijzen aan de Salesforce-doelvelden van de Marketing Cloud.
 
 De lijst met kenmerktoewijzingen die kan worden ingesteld voor de [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) wordt hieronder gegeven. Het doel gebruikt de [REST-API voor kenmerkgedefinieerde definities in Salesforce-zoekopdracht](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) om de kenmerken op te halen die in Salesforce zijn gedefinieerd voor uw contactpersonen en die specifiek zijn voor uw account.
 
@@ -148,7 +150,7 @@ De lijst met kenmerktoewijzingen die kan worden ingesteld voor de [Salesforce RE
 > 
 > Hoewel de namen van uw kenmerken overeenkomen met uw Salesforce-account, worden de toewijzingen voor `contactKey` en `personalEmail.address` zijn verplicht.
 
-1. Klik in de stap Toewijzing op **[!UICONTROL Add new mapping]**, ziet u een nieuwe toewijzingsrij op het scherm.
+1. Klik in de stap Toewijzing op **[!UICONTROL Add new mapping]**. U ziet nu een nieuwe toewijzingsrij op het scherm.
    ![Nieuwe toewijzing toevoegen](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
 1. Kies in het venster Bronveld selecteren de optie **[!UICONTROL Select attributes]** en voeg de gewenste toewijzingen toe.
@@ -172,7 +174,7 @@ De lijst met kenmerktoewijzingen die kan worden ingesteld voor de [Salesforce RE
 
 ### De segmentuitvoer van het programma en voorbeeld {#schedule-segment-export-example}
 
-Bij het uitvoeren van de [Segmentexport plannen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) stap u moet de segmenten van het Platform aan het douanekenmerk in Salesforce manueel in kaart brengen.
+Bij het uitvoeren van de [Segmentexport plannen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de segmenten van het Platform aan het douanekenmerk in Salesforce manueel in kaart brengen.
 
 Om dit te doen, selecteer elk segment, dan ga het overeenkomstige douanekenmerk van Salesforce in **[!UICONTROL Mapping ID]** veld.
 
@@ -233,4 +235,3 @@ Als u een gegevensstroomuitvoering controleert en het foutbericht hieronder ziet
 * Zie de [Prijsstelling Salesforce Marketing Cloud Engagement](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) pagina naar *Download de vergelijkingstabel van de Volledige Uitgave* als een pdf waarin de limieten worden uiteengezet die in uw plan worden opgelegd.
 * De [API-overzicht](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) pagina details extra limieten.
 * Er is een KB-item beschikbaar waarin deze details worden gesorteerd [hier](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20has%20was%20added%20in,interactie%20with%20the%20REST%2DAPI).
-
