@@ -6,20 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
+source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '2047'
+source-wordcount: '2076'
 ht-degree: 0%
 
 ---
 
 # Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics-bronverbinding in de gebruikersinterface [!DNL Analytics] Rapporteer Suite-gegevens naar Adobe Experience Platform.
+Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics-bronverbinding in de gebruikersinterface om Adobe Analytics-rapportsuite met gegevens naar Adobe Experience Platform te brengen.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
 * [XDM-systeem (Experience Data Model)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
 * [Klantprofiel in realtime](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -30,7 +30,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
 * **Standaardkenmerk**: Standaardkenmerken zijn alle kenmerken die vooraf door Adobe zijn gedefinieerd. Zij bevatten dezelfde betekenis voor alle klanten en zijn beschikbaar in de [!DNL Analytics] brongegevens en [!DNL Analytics] schemaveldgroepen.
-* **Aangepast kenmerk**: Aangepaste kenmerken zijn alle kenmerken in de aangepaste variabelenhiërarchie in [!DNL Analytics]. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een Reeks van het Rapport te vangen, en zij kunnen in hun gebruik van de Reeks van het Rapport aan de Reeks van het Rapport verschillen. Aangepaste kenmerken zijn eVars, props en lijsten. Zie het volgende [[!DNL Analytics] documentatie over conversievariabelen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) voor meer informatie over eVars.
+* **Aangepast kenmerk**: Aangepaste kenmerken zijn alle kenmerken in de aangepaste variabelenhiërarchie in [!DNL Analytics]. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een rapportreeks te vangen, en zij kunnen in hun gebruik van rapportreeks aan rapportreeks verschillen. Aangepaste kenmerken zijn eVars, props en lijsten. Zie het volgende [[!DNL Analytics] documentatie over conversievariabelen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) voor meer informatie over eVars.
 * **Willekeurig kenmerk in veldgroepen Aangepast**: Kenmerken die afkomstig zijn van veldgroepen die door klanten zijn gemaakt, zijn allemaal door de gebruiker gedefinieerd en worden beschouwd als standaard- of aangepaste kenmerken.
 * **Vriendelijke namen**: Vriendelijke namen zijn door mensen verschafte labels voor aangepaste variabelen in een [!DNL Analytics] uitvoering. Zie het volgende [[!DNL Analytics] documentatie over conversievariabelen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) voor meer informatie over vriendelijke namen .
 
@@ -48,13 +48,17 @@ Onder de **[!UICONTROL Adobe applications]** categorie, selecteert u **[!UICONTR
 
 De **[!UICONTROL Analytics source add data]** deze stap bevat een lijst met [!DNL Analytics] rapporteert reeksgegevens om een bronverbinding met te maken.
 
-Een rapportreeks kan worden opgenomen gebruikend slechts één enkele actieve dataflow. Het kan niet in veelvoudige dataflows worden gebruikt. Bovendien moet een rapportsuite tot hetzelfde gebied behoren als de sandbox-instantie van het Platform waarin de bronverbinding wordt gemaakt. Er is al een rapportsuite die niet selecteerbaar is, opgenomen in deze sandbox of in een andere sandbox.
+Een rapportsuite is een container met gegevens die de basis vormt van [!DNL Analytics] rapportage. Een organisatie kan vele rapportreeksen hebben, elk die verschillende datasets bevatten.
+
+U kunt rapportsuites van om het even welk gebied (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen zolang zij aan de zelfde organisatie zoals de zandbakinstantie van het Experience Platform worden in kaart gebracht waarin de bronverbinding wordt gecreeerd. Een rapportreeks kan worden opgenomen gebruikend slechts één enkele actieve dataflow. Er is al een rapportsuite die niet selecteerbaar is, opgenomen in de sandbox die u gebruikt of in een andere sandbox.
 
 Er kunnen meerdere interne verbindingen worden gemaakt om meerdere rapportsuites over te brengen naar dezelfde sandbox. Als de rapportsuites verschillende schema&#39;s voor variabelen (zoals eVars of gebeurtenissen) hebben, zouden zij aan specifieke gebieden in de groepen van het douanegebied moeten worden in kaart gebracht en gegevensconflicten vermijden gebruikend [Gegevensprep](../../../../../data-prep/ui/mapping.md). Rapportsuites kunnen alleen aan één sandbox worden toegevoegd.
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
->De gegevens van veelvoudige rapportreeksen kunnen voor het Profiel van de Gegevens van de Klant in real time slechts worden toegelaten als er geen gegevensconflicten zijn, zoals twee douaneeigenschappen (eVars, lijsten en steunen) die verschillende betekenis hebben, kunnen niet aan de zelfde attributen in XDM worden in kaart gebracht.
+>Gegevens uit meerdere rapportsuites kunnen alleen voor realtime klantgegevensprofiel worden ingeschakeld als er geen gegevensconflicten zijn, zoals twee aangepaste eigenschappen (eVars, lijsten en props) die een andere betekenis hebben.
 
 Om een [!DNL Analytics] bronverbinding, selecteer een rapportreeks en selecteer dan **[!UICONTROL Next]** om verder te gaan.
 
@@ -162,7 +166,7 @@ Nadat u de toewijzingen voor uw [!DNL Analytics] de gegevens van de rapportreeks
 
 #### Filteren op rijniveau
 
-U kunt gegevens filteren voor [!DNL Profile] opname op rij- en kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt het rijen-niveau filtreren ook gebruiken om voorwaarden te verbinden gebruikend `AND` alsmede `OR`en de omstandigheden negeren bij gebruik van `NOT`.
+U kunt gegevens filteren voor [!DNL Profile] opname op rij- en kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt het rijen-niveau filtreren ook gebruiken om voorwaarden te verbinden gebruikend `AND` alsmede `OR`en de omstandigheden negeren bij `NOT`.
 
 Als u uw [!DNL Analytics] gegevens op rijniveau, selecteer **[!UICONTROL Row filter]**.
 

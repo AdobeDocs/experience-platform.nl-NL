@@ -5,18 +5,14 @@ title: Google BigQuery Source Connector - Overzicht
 topic-legacy: overview
 description: Leer hoe u Google BigQuery via API's of de gebruikersinterface met Adobe Experience Platform kunt verbinden.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Google BigQuery] connector
-
->[!NOTE]
->
->De [!DNL Google BigQuery] is in bèta. Zie de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# [!DNL Google BigQuery]
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
@@ -40,6 +36,7 @@ Verbinding maken [!DNL Google BigQuery] aan Platform, moet u waarden voor de vol
 | `clientID` | De client-id is de helft van uw [!DNL Google BigQuery] OAuth 2.0 geloofsbrieven. |
 | `clientSecret` | Het clientgeheim is de andere helft van uw [!DNL Google BigQuery] OAuth 2.0 geloofsbrieven. |
 | `refreshToken` | Met het token Vernieuwen kunt u nieuwe toegangstokens voor uw API verkrijgen. Toegangstokens hebben beperkte levensduur en kunnen verlopen tijdens de uitvoering van uw project. U kunt gebruiken verfrist teken om verdere toegangstokens voor uw project voor authentiek te verklaren en te verzoeken wanneer nodig. |
+| `largeResultsDataSetId` | De vooraf gemaakte  [!DNL Google BigQuery] dataset ID die wordt vereist om steun voor grote resultaatreeksen toe te laten. |
 
 Voor gedetailleerde instructies over hoe te om geloofsbrieven te produceren OAuth 2.0 voor [!DNL Google] API&#39;s, zie het volgende [[!DNL Google] OAuth 2.0-verificatiegids](https://developers.google.com/identity/protocols/oauth2).
 
