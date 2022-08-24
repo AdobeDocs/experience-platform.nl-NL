@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2022
 description: De release van augustus 2022 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
+source-git-commit: 30aa5db39d63c238a3f70e48f6a88e8885b1f3ee
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1930'
 ht-degree: 1%
 
 ---
@@ -14,10 +15,10 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [Gegevensprep](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Klantprofiel in realtime](#profile)
 - [Segmenteringsservice](#segmentation)
@@ -35,7 +36,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor privacy | <li> Attribution AI ondersteunt nu het definiëren van gebruikersrollen en het te beheren toegangsbeleid [machtigingen](../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li> <li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Dit kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li> <li>[Gegevenshygiëne](../../help/hygiene/home.md) met de mogelijkheden in Attribution AI kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat wanneer u gegevens wilt verwijderen, Attribution AI de verwijderde gegevens niet meer hoeft te gebruiken.</li><li>Attribution AI gebruikt Platform datasets. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
+| Ondersteuning voor privacy | <li>Attribution AI ondersteunt nu het definiëren van gebruikersrollen en het te beheren toegangsbeleid [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing.</li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li>Doorheen [attribuut-based toegangsbeheer](../../../help/access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Dit kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>[Gegevenshygiëne](../../../help/hygiene/home.md) met de mogelijkheden in Attribution AI kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat wanneer u gegevens wilt verwijderen, Attribution AI de verwijderde gegevens niet meer hoeft te gebruiken.</li><li>Attribution AI gebruikt Platform datasets. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -51,7 +52,7 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor privacy | <li> De AI van de Klant steunt nu het bepalen van gebruikersrollen en toegangsbeleid om te leiden [machtigingen](../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li> <li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Deze kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li> <li>[Gegevenshygiëne](../../help/hygiene/home.md) Met de mogelijkheden van de AI van de Klant kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.</li><li>Klant-AI maakt gebruik van gegevenssets van Platforms. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
+| Ondersteuning voor privacy | <li>De AI van de Klant steunt nu het bepalen van gebruikersrollen en toegangsbeleid om te leiden [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing.</li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Deze kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>[Gegevenshygiëne](../../../help/hygiene/home.md) Met de mogelijkheden van de AI van de Klant kunt u alleen bijgewerkte gegevens gebruiken voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.</li><li>Klant-AI maakt gebruik van gegevenssets van Platforms. Om de naleving van GDPR te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken tot toegang en schrapping van hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant in real time te respecteren. Alle gegevens worden in doorvoer en in rust versleuteld.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,6 +85,32 @@ Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht
 {style=&quot;table-layout:auto&quot;}
 
 Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) is een Platform van de Uitvoering van de Verkoop met de meeste B2B koper-verkoper interactiegegevens in de wereld en significante investeringen in merkgebonden AI technologieën om verkoopgegevens in intelligentie om te zetten. [!DNL Outreach] helpt organisaties hun verkoopbetrokkenheid te automatiseren en op inkomstenintelligentie te handelen om hun efficiency, voorspelbaarheid, en groei te verbeteren. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -123,6 +150,7 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
+| Harde limiet voor beleid samenvoegen | Platform zal nu een harde limiet opleggen aan **vijf** samenvoegbeleid per sandbox. Als uw sandbox momenteel meer dan vijf samenvoegbeleidsregels heeft, **niet** kan nieuw samenvoegbeleid maken totdat de sandbox minder dan vijf samenvoegbeleidsregels heeft. |
 | Opschonen van kenmerken van rand met zwevend profiel | Voor alle organisaties, verwijdert de Dienst van het Profiel nu randattributen van gebruikersactiviteitengebied op een dagelijkse basis om een nauwkeurigere vertegenwoordiging van uw profielen in uw systeem te geven. Deze opschoonbewerking vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd. Dit heeft gevolgen voor profielen die worden samengevoegd in gegevenssets waarin `com_adobe_aep_profile_region_dataset` is gemarkeerd als `true`. Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek de fragmenten van het de randattribuut van het leftover voorafgaand aan deze versie omvatte. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
+source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '820'
 ht-degree: 5%
 
 ---
@@ -292,23 +292,26 @@ ht-degree: 5%
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
    - [Abonneren op waarschuwingen voor bronnen](tutorials/ui/alerts.md)
-- Bronnen-SDK {#sdk}
+- Self-Serve Sources (Batch SDK) {#sdk}
    - [Overzicht](sources-sdk/overview.md)
-   - [Configuratieopties](sources-sdk/config/config.md)
-   - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
-   - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
-   - [Uitgebreide specificatie configureren](sources-sdk/config/explorespec.md)
-   - [Overzicht SDK API van bronnen](sources-sdk/api/api-overview.md)
-   - [Aan de slag](sources-sdk/api/getting-started.md)
-   - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
-   - [Een verbindingsspecificatie bijwerken](sources-sdk/api/update-connection-specs.md)
-   - [Een stroomspecificatie bijwerken](sources-sdk/api/update-flow-specs.md)
-   - [Uw bron verzenden](sources-sdk/api/submit.md)
-   - [Uw bron documenteren in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-   - [Gebruik de het Webinterface van GitHub om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
-   - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
-   - [Zelfbediening API-sjabloon voor documentatie](sources-sdk/documentation/template.md)
-   - [Zelfbediening UI-sjabloon voor documentatie](sources-sdk/documentation/ui-template.md)
+   - Uw verbindingsspecificatie configureren {#config}
+      - [Configuratieopties](sources-sdk/config/config.md)
+      - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
+      - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
+      - [Uitgebreide specificatie configureren](sources-sdk/config/explorespec.md)
+   - Zelfbedieningsbronnen (Batch SDK) API-handleiding {#self-serve-api}
+      - [API-overzicht van Self-Serve Sources (Batch SDK)](sources-sdk/api/api-overview.md)
+      - [Aan de slag](sources-sdk/api/getting-started.md)
+      - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
+      - [Een verbindingsspecificatie bijwerken](sources-sdk/api/update-connection-specs.md)
+      - [Een stroomspecificatie bijwerken](sources-sdk/api/update-flow-specs.md)
+      - [Uw bron verzenden](sources-sdk/api/submit.md)
+   - Documentatiegids {#documentation}
+      - [Uw bron documenteren in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+      - [Gebruik de het Webinterface van GitHub om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
+      - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
+      - [Zelfbediening API-sjabloon voor documentatie](sources-sdk/documentation/template.md)
+      - [Zelfbediening UI-sjabloon voor documentatie](sources-sdk/documentation/ui-template.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
