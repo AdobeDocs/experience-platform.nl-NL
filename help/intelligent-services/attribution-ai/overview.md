@@ -6,9 +6,9 @@ topic-legacy: Attribution AI
 description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren. Voorbeelden van aanraakpunten zijn weergave- en impressies, e-mail verzenden, e-mail openen en klikken met betaalde zoekopdrachten.
 landing-page-description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ U kunt Attribution AI gebruiken als hulp bij het gebruik van de volgende voorbee
 
 ### Extra functies
 
-Attribution AI biedt ook integratie met andere Adobe-oplossingen, zoals [!DNL Adobe Analytics]. Hierdoor kunt u deze oplossingen gebruiken om het aanpasbare algoritmische model te gebruiken voor het evalueren van de mediaprestaties en het bieden van analytische inzichten.
+Attribution AI biedt ook integratie met andere Adobe-oplossingen, zoals [!DNL Customer Journey Analytics]. Hierdoor kunt u deze oplossingen gebruiken om het aanpasbare algoritmische model te gebruiken voor het evalueren van de mediaprestaties en het bieden van analytische inzichten.
 
 ## Volgende stappen
 

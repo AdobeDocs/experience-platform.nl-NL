@@ -6,9 +6,9 @@ title: Aan de slag met Customer AI
 topic-legacy: Getting started
 description: Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,12 @@ Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sa
 ### API-voorbeeldaanroepen lezen
 
 Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md) in de gids voor het oplossen van problemen met Experience Platforms.
+
+## Toestemmingen
+
+Wanneer u toegangsbeheer gebruikt, **AI van klant weergeven** en **AI van klant beheren** toegangsrechten verlenen toegang tot verschillende functies van de AI van de Klant. De **AI van klant beheren** met bevoegdheid **maken**,**update**, **delete**, **enable**, of **disable** een instantie **AI van klant weergeven** Hiermee kunt u het document lezen of weergeven. De **maken**, **update** en **delete** acties worden vastgelegd in auditlogboeken.
+
+Raadpleeg de documentatie voor meer informatie [toewijzen van machtigingen voor toegangsbeheer](../../../help/access-control/home.md) of hoe [gebruik controlelogboeken om toegang en activiteit te controleren](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Volgende stappen
 

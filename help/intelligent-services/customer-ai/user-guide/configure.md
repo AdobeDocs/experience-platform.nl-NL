@@ -4,20 +4,21 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Een AI-instantie van een klant configureren
 topic-legacy: Instance creation
-description: Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
+description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+
 # Een Customer AI-instantie configureren
 
-De AI van de klant, als deel van de Intelligente Diensten staat u toe om de scores van de douanedichtheid te produceren zonder het moeten zich over machine het leren ongerust maken.
+AI van de klant, als deel van AI/de Diensten van ML laat u toe om de scores van de douanedichtheid te produceren zonder het moeten zich over machine het leren ongerust maken.
 
-Intelligente services bieden de AI van de Klant als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
+AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 
 ## Een instantie maken {#set-up-your-instance}
 
@@ -191,6 +192,18 @@ U kunt belangrijke gegevenssetvelden voor profielen definiëren (met tijdstempel
 
 ![een aangepast profielkenmerk toevoegen](../images/user-guide/profile-attributes.png)
 
+#### Profielkenmerken selecteren in de opname van Profiel exporteren
+
+U kunt er ook voor kiezen om profielkenmerken op te nemen uit de dagelijkse geëxporteerde momentopname van profiel. Deze kenmerken worden gesynchroniseerd met het exporteren van de profielmomentopname en geven de laatst beschikbare waarde weer.
+
+>[!WARNING]
+>
+> Zorg ervoor dat u geen profielkenmerk selecteert dat wordt bijgewerkt als resultaat van het voorspellingsdoel of dat sterk is gecorreleerd met het voorspellingsdoel. Dit veroorzaakt gegevenslekkage en overmaat van het model. Een voorbeeld van een dergelijk kenmerk is `total_purchases_in_the_last_3_months` dat de conversie van aankopen voorspelt.
+
+>[!NOTE]
+>
+>Ondersteuning voor het gebruik van profielkenmerken van de UPS-momentopname-export is op verzoek beschikbaar in de gebruikersinterface.
+
 ### Een voorbeeld van een aangepaste gebeurtenis toevoegen {#custom-event}
 
 In het volgende voorbeeld worden een aangepast gebeurtenis- en profielkenmerk toegevoegd aan een Customer AI-instantie. Het doel van de AI-instantie van de klant is te voorspellen hoe waarschijnlijk het is dat een klant in de komende 60 dagen een ander Luma-product zal kopen. Doorgaans zijn productgegevens gekoppeld aan een SKU van het product. In dit geval is de SKU `prd1013`. Nadat het AI-model van de Klant is opgeleid/gecodeerd, kan deze SKU worden gekoppeld aan een gebeurtenis en worden weergegeven als een invloedrijke factor voor een aandrijfsegment.
@@ -234,6 +247,38 @@ Als de instantie met succes wordt gecreeerd, wordt een voorspelling onmiddellijk
 >Afhankelijk van de grootte van de invoergegevens kan het voltooien van de voorspelling 24 uur duren.
 
 Door deze sectie te volgen, hebt u een geval van AI van de Klant gevormd en een voorspelling in werking gesteld. Als de profielschakeloptie is ingeschakeld, worden profielen met ingesneden inzichten automatisch met voorspelde scores gevuld. Wacht tot 24 uur voordat u doorgaat naar de volgende sectie van deze zelfstudie.
+
+### Op kenmerken gebaseerd toegangsbeheer
+
+>[!IMPORTANT]
+>
+>Toegangsbeheer op basis van kenmerken is momenteel alleen beschikbaar in een beperkte versie.
+
+[Op kenmerken gebaseerd toegangsbeheer](../../../access-control/abac/overview.md) is een mogelijkheid van Adobe Experience Platform die beheerders in staat stelt de toegang tot specifieke objecten en/of mogelijkheden te beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
+
+Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen met labels die bereik voor organisatie of gegevensgebruik definiëren. Parallel hieraan kunnen beheerders de gebruikers- en rolbeheerinterface gebruiken om toegangsbeleid te definiëren rondom XDM-schemavelden en de toegang die gebruikers of groepen gebruikers (interne, externe of externe gebruikers) krijgen beter te beheren. Bovendien, op attribuut-gebaseerde toegangsbeheer staat beheerders toe om toegang tot specifieke segmenten te beheren.
+
+Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+
+Als gevolg van attribuut-gebaseerde toegangscontrole, zouden sommige gebieden en functionaliteiten toegang beperkt hebben en niet voor bepaalde de dienstinstanties van AI van de Klant onbeschikbaar zijn. Voorbeelden zijn Identiteit, Score Definition en Klonen.
+
+![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van de service.](../images/user-guide/unavailable-functionalities.png)
+
+Bovenaan in de AI-werkruimte van de klant **pagina met inzichten**, merk op dat de details in de zijbalk, de score, de identiteit, en de profielattributen allen &quot;Toegang Beperkt tonen.&quot;
+
+![De AI-werkruimte van de Klant met de beperkte velden van het schema gemarkeerd.](../images/user-guide/access-restricted.png)
+
+<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+
+![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
+
+Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create instance workflow]** pagina, lijkt een waarschuwing u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+
+![De AI-werkruimte van de Klant met de beperkte velden van de voorvertoningsdatasets met de beperkte schemaresultaten gemarkeerd.](../images/user-guide/restricted-dataset-preview.png)
+
+Nadat u een instantie met beperkte informatie hebt gemaakt, gaat u verder naar **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+
+![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van de service.](../images/user-guide/information-not-displayed.png)
 
 ## Volgende stappen {#next-steps}
 

@@ -5,9 +5,9 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -234,6 +234,12 @@ In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewe
 | action | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campagne_groep | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.campagneGroup |
 | campagne_naam | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.campagneName |
+
+>[!IMPORTANT]
+>
+> - Attribution AI gebruikt alleen bijgewerkte gegevens voor verdere training en scoring. Op dezelfde manier geldt dat wanneer u gegevens wilt verwijderen, Attribution AI de verwijderde gegevens niet meer hoeft te gebruiken.
+> - Om de naleving van GDPR in Attribution AI te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken te respecteren om tot hun gegevens over het datumpeer toegang te hebben en te schrappen, de Dienst van de Identiteit, en het Profiel van de Klant in real time.
+> - Alle gegevens worden in doorvoer en in rust versleuteld. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Volgende stappen {#next-steps}

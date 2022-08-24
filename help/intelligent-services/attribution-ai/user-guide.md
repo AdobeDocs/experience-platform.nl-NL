@@ -5,9 +5,9 @@ title: Handleiding voor Attribution AI-gebruikersinterface
 topic-legacy: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -250,7 +250,7 @@ Typ ten slotte de landcode in het dialoogvenster **[!UICONTROL Enter Field Value
 
 ### Trainingsvenster {#training-window}
 
-Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het belangrijk om uw model te trainen met historische gegevens die uw zaken vertegenwoordigen. Standaard wordt het model getraind met twee kwartalen (zes maanden) aan conversiegebeurtenisgegevens. Selecteer het vervolgkeuzemenu om de standaardinstelling te wijzigen. U kunt kiezen om met één tot vier kwart van gegevens (3-12 maanden) te trainen.
+Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het belangrijk om uw model te trainen met historische gegevens die uw zaken vertegenwoordigen. Standaard wordt het model getraind met twee kwartalen (zes maanden) conversiegebeurtenisgegevens. Selecteer het vervolgkeuzemenu om de standaardinstelling te wijzigen. U kunt kiezen om met één tot vier kwart van gegevens (3-12 maanden) te trainen.
 
 >[!NOTE]
 >
@@ -261,6 +261,36 @@ Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het be
 Als u uw trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finish]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Selecteren **[!UICONTROL Ok]** om naar de **[!UICONTROL Service instances]** pagina waar u uw de dienstinstantie kunt zien.
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
+
+### Op kenmerken gebaseerd toegangsbeheer
+
+>[!IMPORTANT]
+>
+>Toegangsbeheer op basis van kenmerken is momenteel alleen beschikbaar in een beperkte versie.
+
+[Op kenmerken gebaseerd toegangsbeheer](../../../help/access-control/abac/overview.md) is een mogelijkheid van Adobe Experience Platform die beheerders in staat stelt de toegang tot specifieke objecten en/of mogelijkheden te beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
+
+Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen met labels die bereik voor organisatie of gegevensgebruik definiëren. Parallel hieraan kunnen beheerders de gebruikers- en rolbeheerinterface gebruiken om toegangsbeleid te definiëren rondom XDM-schemavelden en de toegang die gebruikers of groepen gebruikers (interne, externe of externe gebruikers) krijgen beter te beheren. Bovendien, op attribuut-gebaseerde toegangsbeheer staat beheerders toe om toegang tot specifieke segmenten te beheren.
+
+Via attribuut-based toegangsbeheer, kunnen de beheerders gebruikers&#39; toegang tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+
+Wegens op attribuut-gebaseerde toegangsbeheer, zouden sommige gebieden en functionaliteiten toegang beperkt kunnen hebben en voor bepaalde de dienstinstanties van de Attribution AI niet beschikbaar zijn. Voorbeelden zijn Identiteit, Score Definition en Klonen.
+
+Bovenaan in de werkruimte Attribution AI **pagina met inzichten** hebben de gegevens die in de zijbalk worden weergegeven beperkte toegang.
+
+![De werkruimte van de Attribution AI met de beperkte gebieden van het benadrukte schema.](./images/user-guide/access-restricted.png)
+
+Als u datasets met beperkte schema&#39;s op selecteert **[!UICONTROL Create instance workflow]** pagina, verschijnt een waarschuwingsteken naast de naam van de dataset met het bericht: [!UICONTROL Restricted information is excluded].
+
+![De werkruimte van de Attribution AI met de beperkte gebieden van de geselecteerde datasets met beperkte schemaresultaten benadrukte.](./images/user-guide/restricted-info-excluded.png)
+
+Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create instance workflow]** pagina, lijkt een waarschuwing u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+
+![De werkruimte van de Attribution AI met de beperkte gebieden van de vooraf bekeken schemaresultaten benadrukt.](./images/user-guide/restricted-dataset-preview.png)
+
+Nadat u een instantie met beperkte informatie hebt gemaakt, gaat u verder naar **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+
+![De werkruimte Attribution AI met de beperkte velden van de instantieresultaten gemarkeerd.](./images/user-guide/information-not-displayed.png)
 
 ## Volgende stappen
 
