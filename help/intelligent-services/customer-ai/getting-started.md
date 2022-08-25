@@ -6,9 +6,9 @@ title: Aan de slag met Customer AI
 topic-legacy: Getting started
 description: Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sa
 
 Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md) in de gids voor het oplossen van problemen met Experience Platforms.
 
-## Toestemmingen
+## GDPR en encryptie {#gdpr-and-encryption}
 
 Wanneer u toegangsbeheer gebruikt, **AI van klant weergeven** en **AI van klant beheren** toegangsrechten verlenen toegang tot verschillende functies van de AI van de Klant. De **AI van klant beheren** met bevoegdheid **maken**,**update**, **delete**, **enable**, of **disable** een instantie **AI van klant weergeven** Hiermee kunt u het document lezen of weergeven. De **maken**, **update** en **delete** acties worden vastgelegd in auditlogboeken.
 

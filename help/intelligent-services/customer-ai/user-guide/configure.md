@@ -6,9 +6,9 @@ title: Een AI-instantie van een klant configureren
 topic-legacy: Instance creation
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2977'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ Als de instantie met succes wordt gecreeerd, wordt een voorspelling onmiddellijk
 
 Door deze sectie te volgen, hebt u een geval van AI van de Klant gevormd en een voorspelling in werking gesteld. Als de profielschakeloptie is ingeschakeld, worden profielen met ingesneden inzichten automatisch met voorspelde scores gevuld. Wacht tot 24 uur voordat u doorgaat naar de volgende sectie van deze zelfstudie.
 
-### Op kenmerken gebaseerd toegangsbeheer
+## Op kenmerken gebaseerd toegangsbeheer
 
 >[!IMPORTANT]
 >

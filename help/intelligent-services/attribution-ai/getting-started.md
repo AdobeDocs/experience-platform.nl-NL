@@ -5,9 +5,9 @@ title: Aan de slag in de Attribution AI
 topic-legacy: Getting started
 description: De volgende gidsen vereisen een inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het gebruiken van Attribution AI. Lees de volgende documenten voordat u de zelfstudies start.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sa
 
 Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md) in de gids voor het oplossen van problemen met Experience Platforms.
 
-## Toestemmingen {#permissions}
+## ## GDPR en versleuteling {#gdpr-and-encryption}
 
 Wanneer het gebruiken van op rol-gebaseerd toegangsbeheer, **Attribution AI weergeven** en **Attribution AI beheren** toegangsrechten verlenen toegang tot verschillende functies van Attribution AI. De **Attribution AI beheren** laat u **maken**, **klonen**, **bewerken**, **delete**, **enable**, of **disable** een instantie **Attribution AI weergeven** laat u **lezen** of **weergave** het. De **maken**, **bewerken** en **delete** acties worden vastgelegd in auditlogboeken.
 

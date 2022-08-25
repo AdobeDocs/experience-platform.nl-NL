@@ -6,9 +6,9 @@ title: Invoer en uitvoer in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
@@ -286,7 +286,6 @@ In de onderstaande tabel worden de verschillende kenmerken beschreven die in de 
 
 >[!NOTE]
 >
-> - Klanten-AI gebruiken alleen bijgewerkte gegevens voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.
 > - Om de naleving van GDPR in Klant AI te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service gebruiken om protocollen op te zetten om klantenverzoeken te respecteren om tot hun gegevens over het datumpeer, de Dienst van de Identiteit, en het Profiel van de Klant toegang te hebben en te schrappen Real-time.
 > - Alle gegevens worden in doorvoer en in rust versleuteld. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md)
 

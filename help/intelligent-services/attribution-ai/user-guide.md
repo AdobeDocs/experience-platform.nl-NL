@@ -5,9 +5,9 @@ title: Handleiding voor Attribution AI-gebruikersinterface
 topic-legacy: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2616'
 ht-degree: 0%
 
 ---
@@ -262,7 +262,7 @@ Als u uw trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finish]*
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
 
-### Op kenmerken gebaseerd toegangsbeheer
+## Op kenmerken gebaseerd toegangsbeheer
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ Wegens op attribuut-gebaseerde toegangsbeheer, zouden sommige gebieden en functi
 
 Bovenaan in de werkruimte Attribution AI **pagina met inzichten** hebben de gegevens die in de zijbalk worden weergegeven beperkte toegang.
 
-![De werkruimte van de Attribution AI met de beperkte gebieden van het benadrukte schema.](./images/user-guide/access-restricted.png)
+![De werkruimte van de Attribution AI met de beperkte schemagebieden benadrukt.](./images/user-guide/access-restricted.png)
 
 Als u datasets met beperkte schema&#39;s op selecteert **[!UICONTROL Create instance workflow]** pagina, verschijnt een waarschuwingsteken naast de naam van de dataset met het bericht: [!UICONTROL Restricted information is excluded].
 
-![De werkruimte van de Attribution AI met de beperkte gebieden van de geselecteerde datasets met beperkte schemaresultaten benadrukte.](./images/user-guide/restricted-info-excluded.png)
+![De werkruimte van de Attribution AI met de beperkte benadrukt datasetgebieden.](./images/user-guide/restricted-info-excluded.png)
 
 Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create instance workflow]** pagina, lijkt een waarschuwing u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![De werkruimte van de Attribution AI met de beperkte gebieden van de vooraf bekeken schemaresultaten benadrukt.](./images/user-guide/restricted-dataset-preview.png)
+![De werkruimte Attribution AI met de beperkte resultaten van de voorvertoonde schemavelden gemarkeerd.](./images/user-guide/restricted-dataset-preview.png)
 
 Nadat u een instantie met beperkte informatie hebt gemaakt, gaat u verder naar **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
