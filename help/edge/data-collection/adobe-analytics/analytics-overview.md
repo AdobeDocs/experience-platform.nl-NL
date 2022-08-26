@@ -3,9 +3,9 @@ title: Adobe Analytics gebruiken met Platform Web SDK
 description: Leer hoe u gegevens naar Adobe Analytics verzendt met de Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ De Adobe Experience Platform [!DNL Edge Network] Hiermee worden veel XDM-variabe
 
 ## Handmatig toegewezen gegevens
 
-Gegevens die niet automatisch door het Edge-netwerk worden toegewezen, zijn toegankelijk via verwerkingsregels. De gegevens worden afgevlakt met behulp van puntnotatie en zijn beschikbaar als contextData.
+Alle gegevens die niet automatisch worden toegewezen door de [!DNL Edge Network] is toegankelijk via verwerkingsregels. De gegevens worden afgevlakt met behulp van puntnotatie en zijn beschikbaar als contextData.
 
 Als je een schema had dat er zo uitzag.
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 Hier volgt een voorbeeld van een verwerkingsregel waarin deze gegevens worden gebruikt.
 
 ![Interface voor verwerkingsregels](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Met de inzameling van de Rand van de Ervaring, worden alle gebeurtenissen verzonden naar Analytics evenals naar andere diensten u voor uw gegevensstroom hebt gevormd. Bijvoorbeeld, als u zowel Analytics als Doel als diensten hebt gevormd en u afzonderlijke vraag naar verpersoonlijking en voor Analytics maakt, zullen beide gebeurtenissen naar Analytics evenals Doel worden verzonden. Deze gebeurtenissen worden opgenomen in de analytische rapportage en kunnen van invloed zijn op metriek zoals de stuiteringsfrequentie.
