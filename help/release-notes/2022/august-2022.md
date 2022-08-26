@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2022
 description: De release van augustus 2022 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
+source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '2045'
 ht-degree: 1%
 
 ---
@@ -90,17 +90,13 @@ Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../..
 
 [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
-<!--
+**Nieuwe of bijgewerkte functies**
 
-**New or updated features**
-
-| Feature | Description |
+| Functie | Beschrijving |
 | ----------- | ----------- |
-|  ||
+| (Bèta) Op attributen-gebaseerde verpersoonlijkingssteun voor verpersoonlijkingsbestemmingen | Met de bètaversie van op attribuut-gebaseerde verpersoonlijking, zult u twee nieuwe kaarten in zien [doelcatalogus](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: Deze connector is momenteel in bèta beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit van de Adobe Target V1-kaart voegt de Target V2-connector een [toewijzingsstap](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) aan de activeringswerkstroom, waarmee u profielkenmerken kunt toewijzen aan Adobe Target, waardoor op kenmerken gebaseerde personalisatie op dezelfde pagina en op een volgende pagina mogelijk is.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: Deze connector is momenteel in bèta beschikbaar voor een beperkt aantal klanten. Naast de door de **[!UICONTROL Custom Personalization]** de **[!UICONTROL Custom Personalization With Attributes]** connector voegt een optionele [toewijzingsstap](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) aan de activeringswerkstroom, die u toestaat om profielattributen aan uw douanebestemming van de douaneverpersoonlijking in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li></ul> <br> Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, **[!UICONTROL Custom Personalization With Attributes]** doel vereist dat u de [Edge Network Server-API](../../server-api/overview.md) voor gegevensverzameling. Bovendien moeten alle API-aanroepen van de server worden uitgevoerd in een [geverifieerde context](../../server-api/authentication.md). |
 
-{style="table-layout:auto"}
-
--->
+{style=&quot;table-layout:auto&quot;}
 
 **Nieuwe bestemmingen**
 
