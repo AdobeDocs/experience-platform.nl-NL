@@ -5,7 +5,7 @@ title: Gebruik de Interface van het Web van GitHub om een Pagina van de Document
 topic-legacy: tutorial
 description: Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan auteursdocumentatie te gebruiken en een trekkingsverzoek (PR) voor te leggen.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Geef het bronbestand een naam `YOURSOURCE.md` waarbij UURSOURCE de naam van uw b
 
 ## Auteur de documentatiepagina voor uw bron
 
-Als u de nieuwe bron wilt documenteren, plakt u de inhoud van het dialoogvenster [source documentation template](./template.md) in de GitHub-webeditor. U kunt de sjabloon ook downloaden [hier](../assets/template.zip).
+Als u de nieuwe bron wilt documenteren, plakt u de inhoud van het dialoogvenster [source documentation template](./template.md) in de GitHub-webeditor. U kunt de sjabloon ook downloaden [hier](../assets/api-template.zip).
 
 Met het malplaatje dat over aan de interface van de Webredacteur van GitHub wordt gekopieerd, volg de instructies die op het malplaatje worden geschetst en geef de waarden uit die relevante informatie voor uw bron bevatten.
 

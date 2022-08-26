@@ -5,7 +5,7 @@ title: Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina
 topic-legacy: tutorial
 description: Dit document bevat stappen voor het gebruik van uw lokale omgeving bij het schrijven van documentatie voor uw bron en het indienen van een pull-verzoek (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Volgende, typ `Adobe Markdown Authoring` in de zoekbalk en selecteer vervolgens 
 
 ![installeren](../assets/install.png)
 
-Download de [source documentation template](../assets/template.zip) en extraheer het bestand naar `experience-platform.en/help/sources/tutorials/api/create/...` with [`...`] die de categorie van uw keuze vertegenwoordigt. Als u bijvoorbeeld een databasebron maakt, selecteert u de databasemap.
+Download de [source documentation template](../assets/api-template.zip) en extraheer het bestand naar `experience-platform.en/help/sources/tutorials/api/create/...` with [`...`] die de categorie van uw keuze vertegenwoordigt. Als u bijvoorbeeld een databasebron maakt, selecteert u de databasemap.
 
 Volg ten slotte de instructies in de sjabloon en bewerk de sjabloon met de relevante informatie over de bron.
 
