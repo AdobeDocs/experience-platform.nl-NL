@@ -5,7 +5,7 @@ title: Connect DbVisualizer aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -45,7 +45,7 @@ De drie vereiste bestuurderseigenschappen worden gezien in de onderstaande tabel
 | Eigenschap | Beschrijving |
 | ------ | ------ |
 | `PGHOST` | De hostnaam voor de [!DNL PostgreSQL] server. Deze waarde is uw Experience Platform [!UICONTROL Host] referentie. |
-| `SSL` | Dit bepaalt het gebruik van SSL-vereisten. U **moet** Gebruik de waarde &quot;1&quot; om deze vereiste in te schakelen. |
+| `SSL` | Dit bepaalt het gebruik van SSL-vereisten. U **moet** de waarde gebruiken `require` om deze eis mogelijk te maken. |
 | `user` | De gebruikersnaam die aan de database is gekoppeld, is uw organisatie-id. Het is een alfanumerieke tekenreeks die eindigt in `@adobe.org` |
 
 >[!IMPORTANT]
