@@ -3,14 +3,33 @@ keywords: aangepaste personalisatie; bestemming; ervaringsplatformbestemming;
 title: Aangepaste aanpassingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats een manier lopen om segmentinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het segmentlidmaatschap van het gebruikersprofiel wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1254'
 ht-degree: 0%
 
 ---
 
 # Aangepaste aanpassingsverbinding {#custom-personalization-connection}
+
+## Doelwijziging {#changelog}
+
+Met de bètaversie van de verbeterde **[!UICONTROL Custom personalization]** bestemmingsschakelaar, zou u twee kunnen zien **[!UICONTROL Custom personalization]** kaarten in de lijst met bestemmingen.
+
+De **[!UICONTROL Custom Personalization With Attributes]** -connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Naast de door de **[!UICONTROL Custom Personalization]** de **[!UICONTROL Custom Personalization With Attributes]** connector voegt een optionele [toewijzingsstap](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) aan de activeringswerkstroom, die u toestaat om profielattributen aan uw douanebestemming van de douaneverpersoonlijking in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.
+
+>[!IMPORTANT]
+>
+>Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, **[!UICONTROL Custom Personalization With Attributes]** doel vereist dat u de [Edge Network Server-API](/help/server-api/overview.md) voor gegevensverzameling. Bovendien moeten alle API-aanroepen van de server worden uitgevoerd in een [geverifieerde context](../../../server-api/authentication.md).
+>
+>Als u reeds SDK van het Web of Mobiele SDK voor uw integratie gebruikt, kunt u attributen via de Server API op twee manieren terugwinnen:
+>
+> * Voeg een integratie aan de serverzijde toe die attributen via de server API terugwint.
+> * Werk uw clientconfiguratie bij met een aangepaste Javascript-code om kenmerken op te halen via de server-API.
+>
+> Als u de bovenstaande vereisten niet opvolgt, is personalisatie alleen gebaseerd op segmentlidmaatschap, identiek aan de ervaring die door de **[!UICONTROL Custom Personalization]** -aansluiting.
+
+![Afbeelding van de twee aangepaste verpersoonlijkingsdoelkaarten in een weergave naast elkaar.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Overzicht {#overview}
 
@@ -30,7 +49,7 @@ Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](..
 
 ## Gebruiksscenario’s {#use-cases}
 
-De [!DNL Custom personalization connection] laat u toe om uw eigen platforms van de verpersoonlijkingspartner te gebruiken (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), en ook leveraging Experience Platform Edge Network data collection &amp; segmentation capabilities, om een diepere klanterigvaring mogelijk te maken.
+De [!DNL Custom Personalization Connection] laat u toe om uw eigen platforms van de verpersoonlijkingspartner te gebruiken (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), evenals merkgebonden systemen (bijvoorbeeld, in-house CMS), terwijl ook het gebruiken van de gegevensinzameling van het Netwerk van de Rand van het Experience Platform &amp; segmenteringsmogelijkheden, om een diepere klantenverpersoonlijkheidservaring te drijven.
 
 De hieronder beschreven gebruiksgevallen omvatten zowel personalisatie van de site als gerichte on-site reclame.
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Voorbeeld van reactie voor [!UICONTROL Custom Personalization With Attributes]
+
+Wanneer u **[!UICONTROL Custom Personalization With Attributes]** De API-reactie zal er ongeveer zo uitzien als hieronder.
+
+Het verschil tussen **[!UICONTROL Custom Personalization With Attributes]** en **[!UICONTROL Custom Personalization]** is de opname van `attributes` in de API-reactie.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

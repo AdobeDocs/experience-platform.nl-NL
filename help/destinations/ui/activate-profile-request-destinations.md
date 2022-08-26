@@ -4,9 +4,9 @@ title: De publieksgegevens van de activering aan de bestemmingen van het profiel
 type: Tutorial
 description: Leer hoe te om de publieksgegevens te activeren u in Adobe Experience Platform hebt door segmenten aan de bestemmingen van het profielverzoek in kaart te brengen.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,13 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-In dit artikel wordt uitgelegd welke workflow is vereist voor het activeren van publieksgegevens in Adobe Experience Platform-profielen voor aanvraagdoelen. De voorbeelden van de bestemmingen van het profielverzoek zijn [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepaste personalisatie](../../destinations/catalog/personalization/custom-personalization.md) verbindingen.
+In dit artikel wordt uitgelegd welke workflow is vereist voor het activeren van publieksgegevens in Adobe Experience Platform-profielen voor aanvraagdoelen. Indien samen gebruikt met [randsegmentatie](../../segmentation/ui/edge-segmentation.md), laten deze bestemmingen zelfde-pagina en volgende-pagina het gebruiksgevallen van de verpersoonlijking op uw Web-eigenschappen toe. Meer informatie over [het toelaten van zelfde pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen](/help/destinations/ui/configure-personalization-destinations.md).
+
+De voorbeelden van de bestemmingen van het profielverzoek zijn [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepaste personalisatie](../../destinations/catalog/personalization/custom-personalization.md) verbindingen.
 
 ## Vereisten {#prerequisites}
 
-Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming](./connect-destination.md). Als u dat nog niet hebt gedaan, gaat u naar de [doelcatalogus](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming](./connect-destination.md). Als u dat nog niet hebt gedaan, gaat u naar de [doelcatalogus](../catalog/overview.md), doorblader de gesteunde verpersoonlijkingsbestemmingen, en vorm de bestemming die u wilt gebruiken.
 
 ### Samenvoegingsbeleid segment {#merge-policy}
 
@@ -35,7 +37,7 @@ Momenteel, steunen de bestemmingen van het profielverzoek slechts de activering 
 
    ![Tabblad Doelcatalogus](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Selecteren **[!UICONTROL Activate segments]** op de kaart die overeenkomt met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
+1. Selecteren **[!UICONTROL Activate segments]** op de kaart die overeenkomt met de aanpassingsbestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
    ![Knoppen activeren](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
@@ -50,6 +52,22 @@ Momenteel, steunen de bestemmingen van het profielverzoek slechts de activering 
 Gebruik de selectievakjes links van de segmentnamen om de segmenten te selecteren die u wilt activeren naar het doel en selecteer vervolgens **[!UICONTROL Next]**.
 
 ![Segmenten selecteren](../assets/ui/activate-profile-request-destinations/select-segments.png)
+
+## (bèta) Kaartkenmerken {#map-attributes}
+
+>[!IMPORTANT]
+>
+>De afbeeldingsstap, die op attributen-gebaseerde verpersoonlijking voor toelaat [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en [algemene verpersoonlijkingsbestemmingen](/help/destinations/catalog/personalization/custom-personalization.md), is momenteel in bèta en uw organisatie heeft er wellicht nog geen toegang tot. Deze documentatie kan worden gewijzigd.
+
+Selecteer de kenmerken op basis waarvan u gebruiksgevallen voor personalisatie voor uw gebruikers wilt inschakelen. Dit betekent dat als de waarde van een attribuut verandert of als een attribuut aan een profiel wordt toegevoegd, dat profiel een lid van het segment zal worden en aan de verpersoonlijkingsbestemming zal worden geactiveerd.
+
+Het toevoegen van kenmerken is optioneel en u kunt doorgaan naar de volgende stap en personalisatie op dezelfde pagina en op de volgende pagina inschakelen zonder kenmerken te selecteren. Als u geen attributen in deze stap toevoegt, zal de verpersoonlijking nog voorkomen gebaseerd op het segmentlidmaatschap en de kwalificaties van de identiteitskaart voor profielen.
+
+![Afbeelding waarin de toewijzingsstap wordt weergegeven terwijl een kenmerk is geselecteerd](../assets/ui/activate-profile-request-destinations/mapping-step.png)
+
+Als u kenmerken wilt toevoegen, selecteert u de optie **[!UICONTROL Add new field]** besturing en zoek of navigeer naar het gewenste XDM-kenmerkveld, zoals hieronder wordt weergegeven.
+
+![Schermopname die laat zien hoe een XDM-kenmerk in de toewijzingsstap moet worden geselecteerd](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
 
 ## Segmentexport plannen {#scheduling}
 

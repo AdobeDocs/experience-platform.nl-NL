@@ -3,14 +3,23 @@ keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
 
 # Adobe Target-verbinding {#adobe-target-connection}
+
+## Doelwijziging {#changelog}
+
+>[!IMPORTANT]
+>
+>Met de bètaversie van de verbeterde Adobe Target V2 bestemmingsschakelaar, zou u twee kaarten van Adobe Target in de bestemmingscatalogus kunnen zien.
+>De Adobe Target V2 bestemmingsschakelaar is momenteel in bèta en slechts beschikbaar aan een geselecteerd aantal klanten. Naast de functionaliteit die door de kaart van Adobe V1 wordt verstrekt, voegt de schakelaar van het Doel V2 toe a [toewijzingsstap](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) aan de activeringswerkstroom, waarmee u profielkenmerken kunt toewijzen aan Adobe Target, waardoor op kenmerken gebaseerde personalisatie op dezelfde pagina en op een volgende pagina mogelijk is.
+
+![Afbeelding van de twee Adobe Target-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 
 ## Overzicht {#overview}
 
