@@ -5,9 +5,9 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '2443'
+source-wordcount: '2484'
 ht-degree: 0%
 
 ---
@@ -237,8 +237,9 @@ In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewe
 
 >[!IMPORTANT]
 >
-> - Om de naleving van GDPR in Attribution AI te vergemakkelijken, kunt u Adobe Experience Platform Privacy Service aan opstellingsprotocollen gebruiken om klantenverzoeken te respecteren om tot hun gegevens over het datumpeer toegang te hebben en te schrappen, de Dienst van de Identiteit, en het Profiel van de Klant in real time.
-> - Alle gegevens worden in doorvoer en in rust versleuteld. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AI gebruikt alleen bijgewerkte gegevens voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.
+> - Attribution AI gebruikt Platform datasets. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, dienen merken de Privacy Service van het Platform te gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-time Customer Profile te verwijderen.
+> - Alle datasets die wij voor input/output van modellen gebruiken zullen de richtlijnen van het Platform volgen. De Encryptie van Gegevens van het Platform is op gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Volgende stappen {#next-steps}
