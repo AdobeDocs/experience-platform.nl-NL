@@ -4,9 +4,9 @@ title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Que
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, segment, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,16 @@ De naamgevingsconventie van deze gegevensset is **DIM_Doel**.
 Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
 ![](images/query/destinations-metadata.png)
+
+## (Beta) CDP-rapporten (Customer Data Platform)
+
+>[!IMPORTANT]
+>
+>De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
+
+De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten stelt SQL bloot die de inzichten voor diverse profiel, bestemming en segmentatiewidgets drijft. U kunt deze SQl vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en KPI gebruiksgevallen tot stand te brengen.
+
+CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met segmenten en bestemmingen. Zie de CDP documentatie van het Gegevensmodel van Inzichten voor gedetailleerde informatie over hoe te [Pas de CDP Modellen van Gegevens van Inzichten op uw specifieke KPI gebruiksgevallen toe](./cdp-insights-data-model.md).
 
 ## Voorbeeldquery
 
