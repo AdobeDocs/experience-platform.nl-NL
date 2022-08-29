@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API;voorvertoning;voorbeeld
 title: Voorbeeld van voorbeeldstatus (Profile Preview) API-eindpunt
-description: Gebruikend het eindpunt van de voorproefvoorbeeldstatus, een deel van Real-time het Profiel van de Klant API, kunt u de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voorproef en rapporten produceren die datasetoverlapping, identiteitsoverlapping, en onbekende profielen tonen.
+description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2877'
+source-wordcount: '2870'
 ht-degree: 0%
 
 ---
@@ -465,25 +465,25 @@ Dit rapport bevat de volgende informatie:
 * Er zijn 24 profielen die bestaan uit `AAID` en `ECID` naamruimten.
 * Er zijn 6.565 profielen die slechts een `ECID` identiteit.
 
-## Rapport met onbekende profielen genereren
+## Rapport voor niet-geselecteerde profielen genereren
 
-Via het onbekende profielrapport kunt u de compositie van de profielopslag van uw organisatie beter zichtbaar maken. Een &quot;onbekend profiel&quot; verwijst naar elk profiel dat gedurende een bepaalde periode niet is gekoppeld en inactief is. Een &quot;niet-gekoppeld&quot; profiel is een profiel dat slechts één profielfragment bevat, terwijl een &quot;inactief&quot; profiel een profiel is dat geen nieuwe gebeurtenissen heeft toegevoegd voor de opgegeven periode. Het onbekende profielrapport geeft een indeling van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
+U kunt de samenstelling van de Opslag van het Profiel van uw organisatie door het niet-gesloten profielrapport meer zichtbaar worden. Een &quot;niet-gekoppeld&quot; profiel is een profiel dat slechts één profielfragment bevat. Een &quot;onbekend&quot; profiel is een profiel dat is gekoppeld aan pseudoniem naamruimten, zoals `ECID` en `AAID`. Onbekende profielen zijn inactief, wat betekent dat er geen nieuwe gebeurtenissen zijn toegevoegd voor de opgegeven periode. Het rapport met niet-opgeslagen profielen bevat een indeling van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
 
-U kunt het rapport met onbekende profielen genereren door een verzoek om GET naar de `/previewsamplestatus/report/unknownProfiles` eindpunt.
+U kunt het rapport met niet-gekoppelde profielen genereren door een verzoek tot GET aan de `/previewsamplestatus/report/unstitchedProfiles` eindpunt.
 
 **API-indeling**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Verzoek**
 
-Het volgende verzoek retourneert het rapport met onbekende profielen.
+Het volgende verzoek retourneert het rapport met niet-ingestelde profielen.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol verzoek retourneert HTTP Status 200 (OK) en het onbekende profielrapport.
+Een succesvolle aanvraag retourneert HTTP Status 200 (OK) en het rapport met niet-opgeslagen profielen.
 
 >[!NOTE]
 >
->Voor de toepassing van deze handleiding is het verslag ingekort en omvat het alleen `"120days"` en &quot;`7days`&quot;tijdsperiodes. Het volledige onbekende profielrapport geeft een indeling van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
+>Voor de toepassing van deze handleiding is het verslag ingekort en omvat het alleen `"120days"` en &quot;`7days`&quot;tijdsperiodes. Het volledige rapport met ongeordende profielen bevat een uitsplitsing van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ Een succesvol verzoek retourneert HTTP Status 200 (OK) en het onbekende profielr
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `data` | De `data` bevat de informatie die wordt geretourneerd voor het rapport met onbekende profielen. |
-| `totalNumberOfProfiles` | Het totale aantal unieke profielen in het profielarchief. Dit is gelijk aan het adresseerbare aantal. Het bevat zowel bekende als onbekende profielen. |
+| `data` | De `data` bevat de informatie die wordt geretourneerd voor het rapport met niet-ingestelde profielen. |
+| `totalNumberOfProfiles` | Het totale aantal unieke profielen in het profielarchief. Dit is gelijk aan het adresseerbare aantal. Het bevat zowel bekende als niet-gebonden profielen. |
 | `totalNumberOfEvents` | The total number of ExperienceEvents in the Profile Store. |
-| `unknownProfiles` | Een object met een uitsplitsing van onbekende profielen (niet gekoppeld en inactief) naar tijdsperiode. Het rapport met onbekende profielen bevat een indeling van profielen voor tijdvakken van 7, 30, 60, 90 en 120 dagen. |
-| `countOfProfiles` | Het aantal onbekende profielen voor de tijdsperiode of het aantal onbekende profielen voor de naamruimte. |
+| `unstitchedProfiles` | Een object met een uitsplitsing van niet-ingestelde profielen naar tijdsperiode. Het rapport met niet-opgeslagen profielen bevat een uitsplitsing van profielen voor tijdvakken van 7, 30, 60, 90 en 120 dagen. |
+| `countOfProfiles` | Het aantal niet-gekoppelde profielen voor de tijdsperiode of het aantal niet-gebonden profielen voor de naamruimte. |
 | `eventsAssociated` | Het aantal ExperienceEvents voor het tijdbereik of het aantal gebeurtenissen voor de naamruimte. |
-| `nsDistribution` | Een object dat afzonderlijke naamruimten bevat met de distributie van onbekende profielen en gebeurtenissen voor elke naamruimte. Opmerking: Het totaal optellen `countOfProfiles` voor elke naamruimte van de identiteit in het dialoogvenster `nsDistribution` object is gelijk aan `countOfProfiles` voor de periode. Hetzelfde geldt voor `eventsAssociated` per naamruimte en het totaal `eventsAssociated` per tijdsperiode. |
+| `nsDistribution` | Een object dat afzonderlijke naamruimten bevat met de distributie van niet-gekoppelde profielen en gebeurtenissen voor elke naamruimte. Opmerking: Het totaal optellen `countOfProfiles` voor elke naamruimte van de identiteit in het dialoogvenster `nsDistribution` object is gelijk aan `countOfProfiles` voor de periode. Hetzelfde geldt voor `eventsAssociated` per naamruimte en het totaal `eventsAssociated` per tijdsperiode. |
 | `reportTimestamp` | De tijdstempel van het rapport. |
 
-### Het rapport met onbekende profielen interpreteren
+### Het rapport met niet-opgeslagen profielen interpreteren
 
 De resultaten van het rapport kunnen inzicht geven in hoeveel ongeordende en inactieve profielen uw organisatie binnen haar Opslag van het Profiel heeft.
 
@@ -586,9 +586,9 @@ Neem het volgende fragment uit het `data` object:
 Dit rapport bevat de volgende informatie:
 
 * Er zijn 1.782 profielen die slechts één profielfragment bevatten en de afgelopen zeven dagen geen nieuwe gebeurtenissen hebben.
-* Er zijn 29.151 ExperienceEvents die zijn gekoppeld aan de 1.782 onbekende profielen.
-* Er zijn 1.734 onbekende profielen met één profielfragment uit de naamruimte van ECID.
-* Er zijn 28.591 gebeurtenissen verbonden aan de 1.734 onbekende profielen die één enkel profielfragment van identiteitskaart namespace van ECID bevatten.
+* Er zijn 29.151 ExperienceEvents die zijn gekoppeld aan de 1.782 niet-ingestelde profielen.
+* Er zijn 1.734 niet-gekoppelde profielen die één profielfragment uit de naamruimte ECID bevatten.
+* Er zijn 28.591 gebeurtenissen gekoppeld aan de 1.734 niet-gekoppelde profielen die één profielfragment uit de naamruimte van de ECID bevatten.
 
 ## Volgende stappen
 
