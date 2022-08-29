@@ -5,9 +5,9 @@ title: Creeer een dataflow voor de Leden van Mailchimp gebruikend de Dienst API 
 topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform met MailChimp-leden kunt verbinden met behulp van de Flow Service API.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2500'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip 
 
 ### Een [!DNL Mailchimp] basisverbinding met basisverificatie
 
-Als u een [!DNL Mailchimp] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, `username`, en `password`.
+Als u een [!DNL Mailchimp] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van geloofsbrieven voor uw `authorizationTestUrl`, `username`, en `password`.
 
 **API-indeling**
 
@@ -60,7 +60,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
@@ -75,7 +74,6 @@ curl -X POST \
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
 | `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verbinden met Platform. |
-| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL Mailchimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
 | `auth.params.authorizationTestUrl` | (Optioneel) De autorisatietest-URL wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |
 | `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL Mailchimp] account. Dit is vereist voor basisverificatie. |
 | `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL Mailchimp] account. Dit is vereist voor basisverificatie. |
@@ -93,7 +91,7 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke
 
 ### Een [!DNL Mailchimp] basisverbinding met OAuth 2-vernieuwingscode
 
-Als u een [!DNL Mailchimp] basisverbinding die OAuth 2 gebruikt verfrist code, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van geloofsbrieven voor uw `host`, `authorizationTestUrl`, en `accessToken`.
+Als u een [!DNL Mailchimp] basisverbinding die OAuth 2 gebruikt verfrist code, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van geloofsbrieven voor uw `authorizationTestUrl`, en `accessToken`.
 
 **API-indeling**
 
@@ -123,7 +121,6 @@ curl -X POST \
       "auth": {
           "specName": "oAuth2RefreshCode",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "accessToken": "{ACCESS_TOKEN}"
           }
@@ -137,7 +134,6 @@ curl -X POST \
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat u de bron hebt geregistreerd met de [!DNL Flow Service] API. |
 | `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
-| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt [!DNL Mailchimp] API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
 | `auth.params.authorizationTestUrl` | (Optioneel) De autorisatietest-URL wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |
 | `auth.params.accessToken` | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
@@ -623,311 +619,26 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 }
 ```
 
-## Uw gegevensstroom controleren
+## Aanhangsel
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien.
+In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 
-**API-indeling**
+### Uw gegevensstroom controleren
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Lees de handleiding voor volledige API-voorbeelden op [de gegevensstroom van uw bronnen controleren met behulp van de API](../../monitor.md).
 
-**Verzoek**
+### Uw gegevensstroom bijwerken
 
-Het volgende verzoek wint de specificaties voor een bestaande gegevensstroom terug.
+Werk de details van uw dataflow, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij door een verzoek van de PATCH aan het `/flows` eindpunt van [!DNL Flow Service] API, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke gegevens van uw gegevensstroom opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [bronnen bijwerken met behulp van de API](../../update-dataflows.md).
 
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### Uw account bijwerken
 
-**Antwoord**
+Werk de naam, beschrijving en referenties van uw bronaccount bij door een PATCH-verzoek uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding als vraagparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke bronaccount opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [het bijwerken van uw bronrekening gebruikend API](../../update.md).
 
-Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`).
+### Uw gegevensstroom verwijderen
 
-```json
-{
-    "items": [
-        {
-            "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-            "createdAt": 1633044829955,
-            "updatedAt": 1633044838006,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{ORG_ID}",
-            "name": "MailChimp Members dataflow",
-            "description": "MailChimp Members dataflow",
-            "flowSpec": {
-                "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "version": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "etag": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "sourceConnectionIds": [
-                "e70d2773-711f-43ee-b956-9a1a5da03dd8"
-            ],
-            "targetConnectionIds": [
-                "43e141f6-6385-4d80-a4e4-c0fb59abbd43"
-            ],
-            "inheritedAttributes": {
-                "sourceConnections": [
-                    {
-                        "id": "e70d2773-711f-43ee-b956-9a1a5da03dd8",
-                        "connectionSpec": {
-                            "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                            "version": "1.0"
-                        },
-                        "baseConnection": {
-                            "id": "05c595e5-edc3-45c8-90bb-fcf556b57c4b",
-                            "connectionSpec": {
-                                "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                                "version": "1.0"
-                            }
-                        }
-                    }
-                ],
-                "targetConnections": [
-                    {
-                        "id": "43e141f6-6385-4d80-a4e4-c0fb59abbd43",
-                        "connectionSpec": {
-                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-                            "version": "1.0"
-                        }
-                    }
-                ]
-            },
-            "scheduleParams": {
-                "startTime": "1633044818",
-                "frequency": "minute",
-                "interval": 15
-            },
-            "transformations": [
-                {
-                    "name": "Mapping",
-                    "params": {
-                        "mappingId": "5a365b23962d4653b9d9be25832ee5b4",
-                        "mappingVersion": 0
-                    }
-                }
-            ],
-            "runs": "/flows/209812ad-7bef-430c-b5b2-a648aae72094/runs",
-            "lastOperation": {
-                "started": 1633044829988,
-                "updated": 0,
-                "operation": "create"
-            }
-        }
-    ]
-}
-```
+Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van dataflow wilt u als deel van de vraagparameter schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen, gegevensstromen met behulp van de API](../../delete-dataflows.md).
 
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `items` | Bevat één enkele lading meta-gegevens verbonden aan uw specifieke stroomlooppas. |
-| `id` | Hiermee geeft u de id weer die overeenkomt met uw gegevensstroom. |
-| `state` | Toont de huidige staat van uw gegevensstroom. |
-| `inheritedAttributes` | Bevat de attributen die uw stroom, zoals IDs voor zijn overeenkomstige basis, bron, en doelverbinding bepalen. |
-| `scheduleParams` | Bevat informatie over het innameschema van uw gegevensstroom, zoals zijn begintijd (in epoche tijd), frequentie, en interval. |
-| `transformations` | Bevat informatie over de transformatie-eigenschappen die op de gegevensstroom zijn toegepast. |
-| `runs` | Geeft de bijbehorende runtime-id van de flow weer. U kunt deze id gebruiken om specifieke flowuitvoering te controleren. |
+### Uw account verwijderen
 
-## Uw gegevensstroom bijwerken
-
-Voer een PATCH-verzoek uit aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het nieuwe programma u wilt gebruiken.
-
->[!IMPORTANT]
->
->De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
-
-**API-indeling**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Verzoek**
-
-De volgende aanvraag werkt uw schema voor de uitvoering van de flow bij, evenals de naam en beschrijving van uw gegevensstroom.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
-  -d '[
-          {
-              "op": "replace",
-              "path": "/scheduleParams/frequency",
-              "value": "day"
-          },
-          {
-              "op": "replace",
-              "path": "/name",
-              "value": "MailChimp Members Dataflow 2.0"
-          },
-          {
-              "op": "replace",
-              "path": "/description",
-              "value": "MailChimp Members Dataflow Updated"
-          }
-      ]'
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
-| `path` | Het pad van de parameter die moet worden bijgewerkt. |
-| `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
-
-**Antwoord**
-
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
-
-```json
-{
-    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## Uw gegevensstroom verwijderen
-
-Met een bestaande stroom-id kunt u een gegevensstroom verwijderen door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API.
-
-**API-indeling**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt schrappen. |
-
-**Verzoek**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst. U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan dataflow te proberen. De API retourneert een HTTP 404 (Not Found)-fout die aangeeft dat de gegevensstroom is verwijderd.
-
-## De verbinding bijwerken
-
-Als u de naam, beschrijving en referenties van uw verbinding wilt bijwerken, moet u een PATCH-verzoek uitvoeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe informatie u wilt gebruiken.
-
->[!IMPORTANT]
->
->De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
-
-**API-indeling**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | De unieke `id` waarde voor de verbinding u wilt bijwerken. |
-
-**Verzoek**
-
-De volgende aanvraag bevat een nieuwe naam en beschrijving, plus een nieuwe set referenties waarmee u de verbinding kunt bijwerken.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
-  -d '[
-      {
-          "op": "replace",
-          "path": "/auth/params",
-          "value": {
-              "username": "mailchimp-member-activity-user",
-              "password": "{NEW_PASSWORD}"
-          }
-      },
-      {
-          "op": "replace",
-          "path": "/name",
-          "value": "MailChimp Members Connection 2.0"
-      },
-      {
-          "op": "add",
-          "path": "/description",
-          "value": "Updated MailChimp Members Connection"
-      }
-  ]'
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de verbinding bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
-| `path` | Het pad van de parameter die moet worden bijgewerkt. |
-| `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
-
-**Antwoord**
-
-Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw verbinding-id opgeeft.
-
-```json
-{
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## Verbinding verwijderen
-
-Zodra u een bestaande identiteitskaart van de basisverbinding hebt, voer een verzoek van de DELETE aan [!DNL Flow Service] API.
-
-**API-indeling**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | De unieke `id` waarde voor de basisverbinding u wilt schrappen. |
-
-**Verzoek**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
-
-U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de verbinding te proberen.
+Uw account verwijderen door een DELETE-verzoek uit te voeren aan de [!DNL Flow Service] API terwijl het verstrekken van de identiteitskaart van de basisverbinding van de rekening u wilt schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen van uw bronaccount met behulp van de API](../../delete.md).

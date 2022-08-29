@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bro
 title: (Bèta) creeer een BronVerbinding en Dataflow voor Mixpanel gebruikend de Dienst API van de Stroom
 description: Leer hoe u Adobe Experience Platform met Mixpanel kunt verbinden met behulp van de Flow Service API.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2050'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,6 @@ Om verbinding te maken [!DNL Mixpanel] als u een Platform wilt maken, moet u waa
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `host` | De [!DNL Mixpanel] onbewerkte API-eindpunt voor gegevensexport. Zie de [!DNL Raw Data Export API] in de [Referentiedocumentatie van de API van Mixpanel](https://developer.mixpanel.com/reference/overview) voor meer informatie . | `https://data.mixpanel.com` |
 | `username` | De gebruikersnaam van de serviceaccount die overeenkomt met uw [!DNL Mixpanel] account. Zie de [[!DNL Mixpanel] serviceaccountdocumentatie](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) voor meer informatie . | `Test8.6d4ee7.mp-service-account` |
 | `password` | Het wachtwoord voor de serviceaccount dat overeenkomt met uw [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | `projectId` | Uw [!DNL Mixpanel] project-id. Deze id is vereist om een bronverbinding te maken. Zie de [[!DNL Mixpanel] documentatie over projectinstellingen](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) en de [[!DNL Mixpanel] gids over het maken en beheren van projecten](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) voor meer informatie . | `2384945` |
@@ -75,7 +74,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "https://data.mixpanel.com",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
           }
@@ -90,7 +88,6 @@ curl -X POST \
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
 | `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
 | `auth.params.` | Bevat de geloofsbrieven die worden vereist om uw bron voor authentiek te verklaren. |
-| `auth.params.host` | Het unieke domein dat specifiek is voor uw account dat tijdens het registratieproces is gemaakt. |
 | `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL Mixpanel] account. |
 | `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL Mixpanel] account. |
 
@@ -672,392 +669,26 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 }
 ```
 
-## Uw gegevensstroom controleren
+## Aanhangsel
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien.
+In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 
-**API-indeling**
+### Uw gegevensstroom controleren
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Lees de handleiding voor volledige API-voorbeelden op [de gegevensstroom van uw bronnen controleren met behulp van de API](../../monitor.md).
 
-**Verzoek**
+### Uw gegevensstroom bijwerken
 
-Het volgende verzoek wint de specificaties voor een bestaande gegevensstroom terug.
+Werk de details van uw dataflow, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij door een verzoek van de PATCH aan het `/flows` eindpunt van [!DNL Flow Service] API, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke gegevens van uw gegevensstroom opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [bronnen bijwerken met behulp van de API](../../update-dataflows.md).
 
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### Uw account bijwerken
 
-**Antwoord**
+Werk de naam, beschrijving en referenties van uw bronaccount bij door een PATCH-verzoek uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding als vraagparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke bronaccount opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [het bijwerken van uw bronrekening gebruikend API](../../update.md).
 
-Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`).
+### Uw gegevensstroom verwijderen
 
-```json
-{
-    "items": [
-        {
-            "createdAt": 1596656079576,
-            "updatedAt": 1596656113526,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
-            "sandboxName": "prod",
-            "id": "9830305a-985f-47d0-b030-5a985fd7d004",
-            "flowId": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-            "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\"",
-            "metrics": {
-                "durationSummary": {
-                    "startedAtUTC": 1596656058198,
-                    "completedAtUTC": 1596656113306
-                },
-                "sizeSummary": {
-                    "inputBytes": 24012,
-                    "outputBytes": 17128
-                },
-                "recordSummary": {
-                    "inputRecordCount": 100,
-                    "outputRecordCount": 99,
-                    "failedRecordCount": 1
-                },
-                "fileSummary": {
-                    "inputFileCount": 1,
-                    "outputFileCount": 1,
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                },
-                "statusSummary": {
-                    "status": "success",
-                    "errors": [
-                        {
-                            "code": "CONNECTOR-2001-500",
-                            "message": "Error occurred at promotion activity."
-                        }
-                    ],
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                }
-            },
-            "activities": [
-                {
-                    "id": "copyActivity",
-                    "updatedAtUTC": 1596656095088,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656058198,
-                        "completedAtUTC": 1596656089650,
-                        "extensions": {
-                            "windowStart": 1596653708000,
-                            "windowEnd": 1596655508000
-                        }
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 24012
-                    },
-                    "recordSummary": {},
-                    "fileSummary": {
-                        "inputFileCount": 1,
-                        "outputFileCount": 1
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "extensions": {
-                            "type": "one-time"
-                        }
-                    },
-                    "sourceInfo": [
-                        {
-                            "id": "c0e18602-f9ea-44f9-a186-02f9ea64f9ac",
-                            "type": "SourceConnection",
-                            "reference": {
-                                "type": "AdfRunId",
-                                "ids": [
-                                    "8a8eb0cc-e283-4605-ac70-65a5adb1baef"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "promotionActivity",
-                    "updatedAtUTC": 1596656113485,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656095333,
-                        "completedAtUTC": 1596656113306
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 17128
-                    },
-                    "recordSummary": {
-                        "inputRecordCount": 100,
-                        "outputRecordCount": 99,
-                        "failedRecordCount": 1
-                    },
-                    "fileSummary": {
-                        "inputFileCount": 2,
-                        "outputFileCount": 1,
-                        "extensions": {
-                            "manifest": {
-                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
-                            }
-                        }
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "errors": [
-                            {
-                                "code": "CONNECTOR-2001-500",
-                                "message": "Error occurred at promotion activity."
-                            }
-                        ],
-                        "extensions": {
-                            "manifest": {
-                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
-                            },
-                            "errors": [
-                                {
-                                    "code": "INGEST-1212-400",
-                                    "message": "Encountered 1 errors in the data. Successfully ingested 99 rows. Review the associated diagnostic files for additional details."
-                                },
-                                {
-                                    "code": "MAPPER-3700-400",
-                                    "recordCount": 1,
-                                    "message": "Mapper Transform Error"
-                                }
-                            ]
-                        }
-                    },
-                    "targetInfo": [
-                        {
-                            "id": "47166b83-01c7-4b65-966b-8301c70b6562",
-                            "type": "TargetConnection",
-                            "reference": {
-                                "type": "Batch",
-                                "ids": [
-                                    "01EF01X41KJD82Y9ZX6ET54PCZ"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "_links": {}
-}
-```
+Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van dataflow wilt u als deel van de vraagparameter schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen, gegevensstromen met behulp van de API](../../delete-dataflows.md).
 
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `items` | Bevat één enkele lading meta-gegevens verbonden aan uw specifieke stroomlooppas. |
-| `metrics` | Bepaalt kenmerken van de gegevens in de stroomlooppas. |
-| `activities` | Hiermee bepaalt u hoe de gegevens worden getransformeerd. |
-| `durationSummary` | Definieert de begin- en eindtijd van de flowuitvoering. |
-| `sizeSummary` | Definieert het volume van de gegevens in bytes. |
-| `recordSummary` | Hiermee definieert u het recordaantal van de gegevens. |
-| `fileSummary` | Hiermee definieert u het aantal bestanden van de gegevens. |
-| `statusSummary` | Bepaalt of de stroomlooppas een succes of een mislukking is. |
+### Uw account verwijderen
 
-## Uw gegevensstroom bijwerken
-
-Voer een PATCH-verzoek uit aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het nieuwe programma u wilt gebruiken.
-
->[!IMPORTANT]
->
->De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke tag van de dataflow die u wilt bijwerken.
-
-**API-indeling**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Verzoek**
-
-De volgende aanvraag werkt uw schema voor de uitvoering van de flow bij, evenals de naam en beschrijving van uw gegevensstroom.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "New dataflow name"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Updated dataflow description"
-            }
-        ]'
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
-| `path` | Het pad van de parameter die moet worden bijgewerkt. |
-| `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
-
-**Antwoord**
-
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
-
-```json
-{
-    "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## Uw gegevensstroom verwijderen
-
-Met een bestaande stroom-id kunt u een gegevensstroom verwijderen door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API.
-
-**API-indeling**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt schrappen. |
-
-**Verzoek**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst. U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan dataflow te proberen. De API retourneert een HTTP 404 (Not Found)-fout die aangeeft dat de gegevensstroom is verwijderd.
-
-## De verbinding bijwerken
-
-Als u de naam, beschrijving en referenties van uw verbinding wilt bijwerken, moet u een PATCH-verzoek uitvoeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe informatie u wilt gebruiken.
-
->[!IMPORTANT]
->
->De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
-
-**API-indeling**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | De unieke `id` waarde voor de verbinding u wilt bijwerken. |
-
-**Verzoek**
-
-De volgende aanvraag bevat een nieuwe naam en beschrijving, plus een nieuwe set referenties waarmee u de verbinding kunt bijwerken.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: 1400dd53-0000-0200-0000-5f3f23450000' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/auth/params",
-            "value": {
-                "username": "salesforce-connector-username",
-                "password": "{NEW_PASSWORD}",
-                "securityToken": "{NEW_SECURITY_TOKEN}"
-            }
-        },
-        {
-            "op": "replace",
-            "path": "/name",
-            "value": "Test salesforce connection"
-        },
-        {
-            "op": "add",
-            "path": "/description",
-            "value": "A test salesforce connection"
-        }
-    ]'
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de verbinding bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
-| `path` | Het pad van de parameter die moet worden bijgewerkt. |
-| `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
-
-**Antwoord**
-
-Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw verbinding-id opgeeft.
-
-```json
-{
-    "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## Verbinding verwijderen
-
-Zodra u een bestaande identiteitskaart van de basisverbinding hebt, voer een verzoek van de DELETE aan [!DNL Flow Service] API.
-
-**API-indeling**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | De unieke `id` waarde voor de basisverbinding u wilt schrappen. |
-
-**Verzoek**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
-
-U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de verbinding te proberen.
+Uw account verwijderen door een DELETE-verzoek uit te voeren aan de [!DNL Flow Service] API terwijl het verstrekken van de identiteitskaart van de basisverbinding van de rekening u wilt schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen van uw bronaccount met behulp van de API](../../delete.md).

@@ -4,9 +4,9 @@ title: Verificatiespecificaties configureren voor Self-Serve Sources (Batch SDK)
 topic-legacy: overview
 description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '525'
 ht-degree: 1%
 
 ---
@@ -105,7 +105,6 @@ OAuth 2 verfrist code voor veilige toegang tot een toepassing door een tijdelijk
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ OAuth 2 verfrist code voor veilige toegang tot een toepassing door een tijdelijk
 
 ### Basisverificatie
 
-Basisverificatie is een verificatietype waarmee u toegang kunt krijgen tot uw toepassing door een combinatie te gebruiken van de host-URL van uw toepassing, uw gebruikersnaam en uw accountwachtwoord.
+Basisverificatie is een verificatietype waarmee u toegang krijgt tot uw toepassing door een combinatie van uw gebruikersnaam en wachtwoord voor uw account te gebruiken.
 
 ```json
 {
@@ -148,10 +147,6 @@ Basisverificatie is een verificatietype waarmee u toegang kunt krijgen tot uw to
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ Basisverificatie is een verificatietype waarmee u toegang kunt krijgen tot uw to
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ Basisverificatie is een verificatietype waarmee u toegang kunt krijgen tot uw to
 | `authSpec.spec.type` | Definieert het gegevenstype van het schema. | `object` |
 | `authSpec.spec.description` | Geeft meer informatie weer specifiek voor uw verificatietype. |
 | `authSpec.spec.properties` | Bevat informatie over de geloofsbrieven die voor de authentificatie worden gebruikt. |
-| `authSpec.spec.properties.host` | De host-URL van de toepassing. |
 | `authSpec.spec.properties.username` | De accountgebruikersnaam die aan uw toepassing is gekoppeld. |
 | `authSpec.spec.properties.password` | Het accountwachtwoord dat aan uw toepassing is gekoppeld. |
-| `authSpec.spec.required` | Hiermee geeft u de velden op die verplicht moeten worden ingevuld in het Platform. | `host` |
+| `authSpec.spec.required` | Hiermee geeft u de velden op die verplicht moeten worden ingevuld in het Platform. | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ Hier volgt een voorbeeld van een voltooide verificatiespecificatie met behulp va
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ Hier volgt een voorbeeld van een voltooide verificatiespecificatie met behulp va
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ Hier volgt een voorbeeld van een voltooide verificatiespecificatie met behulp va
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ Hier volgt een voorbeeld van een voltooide verificatiespecificatie met behulp va
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]
