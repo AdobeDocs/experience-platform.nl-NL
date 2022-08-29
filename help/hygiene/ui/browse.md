@@ -2,9 +2,9 @@
 title: Bladeren in werkorders voor gegevenshygiëne
 description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 0b7196b195fc5ee8abb45ccb93f1fcc9a000a603
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,11 @@ Selecteer het trechter-pictogram (![Afbeelding van het trechter-pictogram](../im
 {style=&quot;table-layout:auto&quot;}
 
 ## De details van een werkorder weergeven
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_statusbyservice"
+>title="Status per service"
+>abstract="Verzoeken om gegevenshygiëne worden onafhankelijk door meerdere diensten van de Experience Platform verwerkt. Deze sectie schetst de huidige verwerkingsstatus van het verzoek voor elke respectieve dienst. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
 Selecteer de id van een vermelde werkorder om de details ervan weer te geven.
 
