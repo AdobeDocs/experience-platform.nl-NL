@@ -4,9 +4,9 @@ title: De publieksgegevens van de activering aan de bestemmingen van het profiel
 type: Tutorial
 description: Leer hoe te om de publieksgegevens te activeren u in Adobe Experience Platform hebt door segmenten aan de bestemmingen van het profielverzoek in kaart te brengen.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,23 @@ Het toevoegen van kenmerken is optioneel en u kunt doorgaan naar de volgende sta
 
 ![Afbeelding waarin de toewijzingsstap wordt weergegeven terwijl een kenmerk is geselecteerd](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-Als u kenmerken wilt toevoegen, selecteert u de optie **[!UICONTROL Add new field]** besturing en zoek of navigeer naar het gewenste XDM-kenmerkveld, zoals hieronder wordt weergegeven.
+### Bronkenmerken selecteren {#select-source-attributes}
 
-![Schermopname die laat zien hoe een XDM-kenmerk in de toewijzingsstap moet worden geselecteerd](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+Als u bronkenmerken wilt toevoegen, selecteert u de optie **[!UICONTROL Add new field]** controle op de **[!UICONTROL Source field]** kolom en zoek of navigeer naar het gewenste XDM-kenmerkveld, zoals hieronder wordt weergegeven.
+
+![Schermopname die laat zien hoe u een doelkenmerk in de toewijzingsstap selecteert](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### Doelkenmerken selecteren {#select-target-attributes}
+
+>[!NOTE]
+>
+>Sommige bestemmingen vereisen u om bronattributen slechts te selecteren, terwijl anderen zowel bron als doelattributen vereisen.
+>
+>Op dit moment worden de [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) doel vereist alleen bronkenmerken, terwijl [Aangepaste aanpassing met kenmerken](../catalog/personalization/custom-personalization.md) vereist zowel bron- als doelkenmerken.
+
+Als u doelkenmerken wilt toevoegen, selecteert u de optie **[!UICONTROL Add new field]** controle op de **[!UICONTROL Target field]** kolom en typ in de naam van het aangepaste kenmerk waaraan u het bronkenmerk wilt toewijzen.
+
+![Schermopname die laat zien hoe een XDM-kenmerk in de toewijzingsstap moet worden geselecteerd](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## Segmentexport plannen {#scheduling}
 
