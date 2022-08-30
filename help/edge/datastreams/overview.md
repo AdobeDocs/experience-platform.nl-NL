@@ -3,9 +3,9 @@ title: Overzicht gegevensstromen
 description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1641'
 ht-degree: 1%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 1%
 Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [configureren, opdracht](../fundamentals/configuring-the-sdk.md) in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), worden in gegevensstreams alle andere configuraties voor de SDK afgehandeld. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
 In dit document worden de stappen beschreven voor het configureren van een gegevensstroom in de gebruikersinterface voor gegevensverzameling.
-
->[!NOTE]
->
->Uw organisatie moet voor deze eigenschap worden voorzien om tot het in UI toegang te hebben. Vul het volgende in [formulier](https://adobe.ly/websdkaccess) om de nodige toegang te vragen. Om gegevensstromen te beheren, moet uw gebruikersrekening aan een productprofiel voor markeringen in worden toegevoegd [!DNL Adobe Experience Platform].
 
 ## Toegang krijgen tot [!UICONTROL Datastreams] werkruimte
 
