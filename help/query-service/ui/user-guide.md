@@ -5,9 +5,9 @@ title: UI-gids voor zoekprogramma
 topic-legacy: query editor
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1829'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,37 @@ Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met gren
 
 - **Tabel en veld automatisch aanvullen:** Typ de tabelnaam die u wilt gebruiken `SELECT` van, dan gebruik de pijlsleutels om aan de lijst te navigeren u zoekt, en drukt **Enter**. Als een tabel eenmaal is geselecteerd, worden de velden in die tabel automatisch herkend.
 
-![Afbeelding](../images/ui/query-editor/tables-auto.png)
+![De de bevellijninterface van de Redacteur van de Vraag tonend drop-down suggesties.](../images/ui/query-editor/tables-auto.png)
+
+### (Bèta) de auto-volledige configuratieknevel UI {#auto-complete}
+
+>[!IMPORTANT]
+>
+>De configuratieschakeloptie voor automatisch aanvullen van UI is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
+
+De [!DNL Query Editor] stelt automatisch potentiële SQL sleutelwoorden samen met lijst of kolomdetails voor de vraag voor aangezien u het schrijft. De functie voor automatisch aanvullen is standaard ingeschakeld en kan op elk gewenst moment worden uitgeschakeld of ingeschakeld door de optie [!UICONTROL Syntax auto-complete] knevel aan het hoogste recht van de Redacteur van de Vraag.
+
+De auto-volledige configuratie het plaatsen is per gebruiker en voor de opeenvolgende logins voor die gebruiker herinnerd.
+
+![De Redacteur van de vraag met de syntaxis auto-volledige knevel benadrukt.](../images/ui/query-editor/auto-complete-toggle.png)
+
+Als u deze functie uitschakelt, worden meerdere metagegevensopdrachten niet verwerkt en worden aanbevelingen gedaan die de snelheid van de auteur bij het bewerken van query&#39;s ten goede komen.
+
+Wanneer u de schakeloptie gebruikt om de functie voor automatisch aanvullen in te schakelen, worden aanbevolen suggesties voor tabel- en kolomnamen en SQL-trefwoorden na een korte pauze beschikbaar. Een succesbericht in de console onder de Redacteur van de Vraag wijst op de eigenschap actief is.
+
+Als u de functie voor automatisch aanvullen uitschakelt, wordt de functie pas van kracht nadat u een pagina hebt vernieuwd. Er wordt een bevestigingsvenster weergegeven met drie opties wanneer u het dialoogvenster [!UICONTROL Syntax auto-complete] schakelen:
+
+- [!UICONTROL Cancel]
+- [!UICONTROL Save changes and refresh]
+- [!UICONTROL Refresh without saving changes]
+
+>[!IMPORTANT]
+>
+>Als u een query schrijft of bewerkt wanneer u deze functie uitschakelt, moet u eventuele wijzigingen in de query opslaan voordat u de pagina vernieuwt, anders gaat alle voortgang verloren.
+
+![Het bevestigingsvenster om de functie voor automatisch aanvullen uit te schakelen.](../images/ui/query-editor/confirmation-dialog.png)
+
+Selecteer de gewenste optie om de functie voor automatisch aanvullen uit te schakelen.
 
 ### Foutdetectie {#error-detection}
 
