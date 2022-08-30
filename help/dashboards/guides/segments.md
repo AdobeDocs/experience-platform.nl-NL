@@ -4,9 +4,9 @@ title: Handleiding dashboard voor segmenten
 description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1594'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,10 @@ Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van wi
 Het dashboard selecteert automatisch een segment aan vertoning, nochtans kunt u het segment veranderen door het dropdown menu of de segmentselecteur te gebruiken.
 
 Als u een ander segment wilt kiezen, selecteert u de vervolgkeuzelijst naast de segmentnaam of gebruikt u de segmentkiezer om het dialoogvenster voor segmentselectie te openen.
+
+>[!IMPORTANT]
+>
+>Alleen segmenten met een profielaantal groter dan nul worden weergegeven in de lijst met selecteerbare segmenten.
 
 ![](../images/segments/change-segment.png)
 
