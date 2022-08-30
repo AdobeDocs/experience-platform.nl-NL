@@ -4,9 +4,9 @@ title: Doeldashboardgids
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -215,6 +215,10 @@ Alle publieksgrootten in het systeem worden gesorteerd van hoge naar lage publie
 Als het aantal aan een segment toegewezen profielen de afgelopen 30 dagen buiten één standaardafwijking van de gemiddelde toegewezen profielgrootte ligt, wijst dit op een anomalie in het systeem en het zou moeten worden onderzocht.
 
 Als een segment binnen de [!UICONTROL Mapped audience health] widget wijkt met een ruime marge af, moet u naar het trenddiagram voor de doelgrootte verwijzen en het afwijkende segment zoeken. De trend kan meer inzicht in de gezondheid van uw segment verstrekken.
+
+>[!NOTE]
+>
+>De standaardgrootte van de widget voor de volksgezondheid toewijzen kan de tabelinformatie belemmeren. Wijzig de grootte van de widget om de leesbaarheid van de omgezette segmentnamen en kolomtitels te verbeteren. Raadpleeg de documentatie bij het wijzigen van dashboards voor hulp bij [hoe u de grootte van een widget wijzigt](../customize/modify.md).
 
 ![De widget gezondheid voor het toegewezen publiek.](../images/destinations/mapped-audience-health.png)
 
