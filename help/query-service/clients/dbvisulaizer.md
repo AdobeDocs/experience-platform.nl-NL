@@ -5,9 +5,9 @@ title: Connect DbVisualizer aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
+source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -40,12 +40,13 @@ Selecteer in de werkruimte Databaseverbinding de optie **[!DNL Properties]** tab
 
 ![De werkruimte Databaseverbinding met de tab Eigenschappen gemarkeerd.](../images/clients/dbvisualizer/driver-properties.png)
 
-De drie vereiste bestuurderseigenschappen worden gezien in de onderstaande tabel.
+De bestuurderseigenschappen die in de lijst hieronder worden gezien worden geadviseerd om het gebruik van SSL met DBVisualizer toe te laten.
 
 | Eigenschap | Beschrijving |
 | ------ | ------ |
 | `PGHOST` | De hostnaam voor de [!DNL PostgreSQL] server. Deze waarde is uw Experience Platform [!UICONTROL Host] referentie. |
-| `SSL` | Dit bepaalt het gebruik van SSL-vereisten. U **moet** de waarde gebruiken `require` om deze eis mogelijk te maken. |
+| `ssl` | De SSL-waarde definiëren `1` om het gebruik van SSL in te schakelen. |
+| `sslmode` | Dit bepaalt het gebruik van SSL-vereisten. U **moet** de waarde gebruiken `require` om deze eis mogelijk te maken. |
 | `user` | De gebruikersnaam die aan de database is gekoppeld, is uw organisatie-id. Het is een alfanumerieke tekenreeks die eindigt in `@adobe.org` |
 
 >[!IMPORTANT]
