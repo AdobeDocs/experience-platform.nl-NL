@@ -2,9 +2,9 @@
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '720'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,12 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
    * [Schema-editor](../ui/overview.md): Leer om schema&#39;s en andere middelen in de UI van het Platform tot stand te brengen en te beheren.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Verstrekt de infrastructuur voor het afdwingen van de beperkingen van het gegevensgebruik op de verrichtingen van het Platform, gebruikend beleid dat bepaalt welke marketing acties (of niet) op geëtiketteerde gegevens kunnen worden uitgevoerd.
 
-## Selecteer een schema of veld waaraan u labels wilt toevoegen
+## Selecteer een schema of veld waaraan u labels wilt toevoegen {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="Regelgevingslabels bewerken"
+>abstract="Pas een label toe op een schemaveld om het gebruiksbeleid aan te geven dat van toepassing is op de gegevens in dat specifieke veld."
 
 Als u wilt beginnen met het toevoegen van labels, moet u eerst [een bestaand schema selecteren om te bewerken](../ui/resources/schemas.md#edit) of [een nieuw schema maken](../ui/resources/schemas.md#create) om de structuur ervan weer te geven in de Schema-editor.
 

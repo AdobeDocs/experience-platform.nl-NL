@@ -5,9 +5,9 @@ title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: labels
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,12 @@ U kunt labels rechtstreeks toevoegen aan een schema of aan velden binnen dat sch
 
 Zie de zelfstudie aan [beheren, labels op schemaniveau](../../xdm/tutorials/labels.md) voor meer informatie .
 
-## Aangepaste labels beheren
+## Aangepaste labels beheren {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="Labels maken"
+>abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Platform biedt een standaardset labels die u kunt gebruiken, maar u kunt ook aangepaste labels maken die specifiek zijn voor uw organisatie."
 
 U kunt uw eigen labels voor aangepast gebruik maken in het dialoogvenster **[!UICONTROL Policies]** werkruimte in de [!DNL Experience Platform] UI. Selecteren **[!UICONTROL Policies]** in de linkernavigatie, dan selecteren **[!UICONTROL Labels]** om een lijst met bestaande labels weer te geven. Selecteer **[!UICONTROL Create label]**.
 
