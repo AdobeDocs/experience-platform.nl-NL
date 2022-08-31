@@ -2,7 +2,7 @@
 title: Bladeren in werkorders voor gegevenshygiëne
 description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
+source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -55,25 +55,29 @@ Selecteer het trechter-pictogram (![Afbeelding van het trechter-pictogram](../im
 >title="Status per service"
 >abstract="Verzoeken om gegevenshygiëne worden onafhankelijk door meerdere diensten van de Experience Platform verwerkt. Deze sectie schetst de huidige verwerkingsstatus van het verzoek voor elke respectieve dienst. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_numberofidentities"
+>title="Aantal identiteiten"
+>abstract="Het aantal identiteiten waarvoor is gevraagd dat ze in deze werkorder moeten worden verwijderd. De in de telling opgenomen identiteiten hoeven niet noodzakelijkerwijs in de betrokken gegevensbestanden te bestaan. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_responsemessages"
+>title="Reactie verwijderen door consument"
+>abstract="Wanneer een proces van de consumentenschrapping een reactie van het systeem ontvangt, worden deze berichten getoond onder **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+
 Selecteer de id van een vermelde werkorder om de details ervan weer te geven.
 
 ![Afbeelding met een werkorder-id die is geselecteerd](../images/ui/browse/select-work-order.png)
 
 <!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Consumer delete details
-
->[!CONTEXTUALHELP]
->id="platform_hygiene_responsemessages"
->title="Consumer delete response"
->abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
-
+### Consumer delete details {#consumer-delete}
 
 The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details -->
+### Dataset expiration details {#dataset-expiration} -->
 
 De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basisattributen, met inbegrip van de geplande vervaldatum op de dagen die resteren alvorens de schrapping voorkomt. In het rechterspoor kunt u besturingselementen gebruiken om de vervaldatum te bewerken of te annuleren.
 
