@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen in real-time aan uw klanten te leveren.
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '248'
 ht-degree: 7%
 
 ---
@@ -40,11 +40,11 @@ ht-degree: 7%
    * [Taalondersteuning](documentation/language-support.md)
 * Toepassingsservices op basis van Platform {#ecosystem}
    * [Overzicht](application-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-   * [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
    * [Real-time Customer Data Platform (alle edities)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Integraties van Platforms met Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Bestuur, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)

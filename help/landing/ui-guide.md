@@ -5,9 +5,9 @@ title: Overzicht gebruikersinterface Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,7 @@ De **[!UICONTROL Monitoring]** kunt u de opname van batch- en streaming-tags con
 
 ### [!UICONTROL Decisioning]
 
-offer decisioning is een toepassingsservice die is geïntegreerd met Adobe Experience Platform. Zo kunt u Experience Platform gebruiken om uw klanten op het juiste moment de beste aanbieding en ervaring te bieden op alle aanraakpunten. Meer informatie over Offer decisioning, inclusief werken met [!UICONTROL Offers] en [!UICONTROL Activities] bezoek de [Documentatie offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Adobe Journey Optimizer is een toepassingsservice die boven op het Experience Platform is gebouwd. Het staat u toe om krachtige beslissingstechnologieën te gebruiken om de beste aanbieding en ervaring aan uw klanten over alle aanrakingspunten op het juiste ogenblik te leveren. Meer informatie over Journey Optimizer, waaronder werken met [!UICONTROL Offers] en [!UICONTROL Activities] bezoek de [Journey Optimizer-documentatie](https://experienceleague.adobe.com/docs/journey-optimizer.html).
 
 ### [!UICONTROL Administration]
 
