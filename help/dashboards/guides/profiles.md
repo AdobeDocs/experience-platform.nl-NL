@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3532'
+source-wordcount: '3551'
 ht-degree: 0%
 
 ---
@@ -171,9 +171,9 @@ De **[!UICONTROL Profiles count change trend]** widget geeft een &#39;bijschrift
 
 ![Het tabblad Profieloverzicht waarin de trendwidget voor het wijzigen van het aantal profielen wordt weergegeven met de knop Bijschriften gemarkeerd.](../images/profiles/profiles-count-change-trend-captions.png)
 
-Een machine het leren model produceert automatisch titels voor het beschrijven van de belangrijkste tendensen en belangrijke gebeurtenissen door de grafiek en de gegevens te analyseren.
+Een machine het leren model produceert automatisch titels voor het beschrijven van de belangrijkste tendensen en belangrijke gebeurtenissen door de grafiek en de gegevens te analyseren. Annotaties worden op basis van de bijschriften toegevoegd aan het diagram. Selecteer een bijschrift waarop u de bijbehorende annotatie wilt toepassen.
 
-![Het dialoogvenster met automatische bijschriften voor de trendwidget voor het aantal profielen verandert.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![Het dialoogvenster met automatische bijschriften voor de trendwidget voor het aantal profielen verandert.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
 
