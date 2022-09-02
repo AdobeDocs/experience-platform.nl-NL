@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
+source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3033'
 ht-degree: 2%
 
 ---
@@ -554,25 +554,23 @@ EXECUTE name [ ( parameter ) ]
 De `EXPLAIN` toont het bevel het uitvoeringsplan voor de geleverde verklaring. In het uitvoeringsplan ziet u hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand.  Als er naar meerdere tabellen wordt verwezen, wordt aangegeven welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Wanneer `option` kan één van zijn:
+Gebruik de `FORMAT` trefwoord met de `EXPLAIN` gebruiken om de indeling van de reactie te definiëren.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `ANALYZE` | Als de `option` contains `ANALYZE`, worden de runtime en andere statistieken weergegeven. |
-| `FORMAT` | Als de `option` contains `FORMAT`wordt de uitvoerindeling opgegeven die `TEXT` of `JSON`. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter wordt standaard ingesteld op `TEXT`. |
+| `FORMAT` | Gebruik de `FORMAT` gebruiken om de uitvoerindeling op te geven. De beschikbare opties zijn `TEXT` of `JSON`. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter wordt standaard ingesteld op `TEXT`. |
 | `statement` | Alle `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, of `CREATE MATERIALIZED VIEW AS` de verklaring, waarvan uitvoeringsplan u wilt zien. |
 
 >[!IMPORTANT]
 >
->Houd er rekening mee dat de instructie daadwerkelijk wordt uitgevoerd wanneer de instructie `ANALYZE` wordt gebruikt. Hoewel `EXPLAIN` verwijdert uitvoer die een `SELECT` retourneert, treden andere bijwerkingen van de instructie op zoals gewoonlijk.
+>Elke uitvoer die een `SELECT` de verklaring zou kunnen terugkeren wordt verworpen wanneer looppas met `EXPLAIN` trefwoord. Andere bijwerkingen van de instructie treden op zoals gebruikelijk.
 
 **Voorbeeld**
 
@@ -585,7 +583,7 @@ EXPLAIN SELECT * FROM foo;
 ```console
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
