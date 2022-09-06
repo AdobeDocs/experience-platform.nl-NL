@@ -2,9 +2,9 @@
 title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in de Inzameling UI van Gegevens te vormen om aan eindpunten voor authentiek te verklaren die in gebeurtenis door:sturen eigenschappen worden gebruikt.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,8 @@ Er zijn momenteel drie ondersteunde geheime typen:
 | --- | --- |
 | [!UICONTROL Token] | Een enkele tekenreeks met tekens die een verificatietoken-waarde vertegenwoordigt die door beide systemen bekend en begrepen is. |
 | [!UICONTROL HTTP] | Bevat respectievelijk twee tekenreekskenmerken voor een gebruikersnaam en wachtwoord. |
-| [!UICONTROL OAuth2] | Bevat diverse kenmerken die de [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. Alleen de [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) versie van OAuth2 wordt gesteund. |
+| [!UICONTROL OAuth 2] | Bevat diverse kenmerken die de [type clientverificatietype](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) voor de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
+| [!UICONTROL Google OAuth 2] | Bevat diverse kenmerken die de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie voor gebruik in de [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) en [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -65,7 +66,8 @@ Van hier, verschillen de stappen om het geheim tot stand te brengen afhankelijk 
 
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
-* [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -83,11 +85,11 @@ Als u een HTTP-geheim wilt maken, selecteert u **[!UICONTROL Simple HTTP]** van 
 
 ![HTTP-geheim](../../images/ui/event-forwarding/secrets/http-secret.png)
 
-### [!UICONTROL OAuth2] {#oauth2}
+### [!UICONTROL OAuth 2] {#oauth2}
 
-Als u een OAuth2-geheim wilt maken, selecteert u **[!UICONTROL OAuth2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Geef in de onderstaande velden uw [[!UICONTROL Client ID] en [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)en uw [Autorisatie-URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Authorization URL] in de UI van de Inzameling van Gegevens is een aaneenschakeling tussen de gastheer van de vergunningsserver en de symbolische weg.
+Als u een OAuth 2-geheim wilt maken, selecteert u **[!UICONTROL OAuth 2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Geef in de onderstaande velden uw [[!UICONTROL Client ID] en [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] in de UI van de Inzameling van Gegevens is een aaneenschakeling tussen de gastheer van de vergunningsserver en de symbolische weg.
 
-![OAuth2, geheim](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
+![OAuth 2-geheim](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
 Onder **[!UICONTROL Credential Options]**, kunt u andere referentie-opties opgeven, zoals `scope` en `audience` in de vorm van sleutelwaardeparen. Als u meer sleutelwaardeparen wilt toevoegen, selecteert u **[!UICONTROL Add another]**.
 
@@ -107,7 +109,24 @@ Als de verschuiving Vernieuwen bijvoorbeeld is ingesteld op de standaardwaarde v
 
 Als u klaar bent, selecteert u **[!UICONTROL Create Secret]** om het geheim te bewaren.
 
-![OAuth2-verschuiving opslaan](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+![OAuth 2-verschuiving opslaan](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL Google OAuth 2] {#google-oauth2}
+
+Als u een Google OAuth 2-geheim wilt maken, selecteert u **[!UICONTROL Google OAuth 2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Onder **[!UICONTROL Scopes]**, selecteert u de Google API&#39;s die u met dit geheim toegang wilt verlenen. De volgende producten worden momenteel ondersteund:
+
+* [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+
+Als u klaar bent, selecteert u **[!UICONTROL Create Secret]**.
+
+![Google OAuth 2-geheim](../../images/ui/event-forwarding/secrets/google-oauth.png)
+
+Er verschijnt een pop-up met de mededeling dat het geheim handmatig moet worden geautoriseerd via Google. Selecteren **[!UICONTROL Create & Authorize]** om door te gaan.
+
+![Google-autorisatiepopup](../../images/ui/event-forwarding/secrets/google-authorization.png)
+
+Er wordt een dialoogvenster weergegeven waarin u de referenties voor uw Google-account kunt invoeren. Volg de herinneringen om gebeurtenis door:sturen toegang tot uw gegevens onder het geselecteerde werkingsgebied te verlenen. Zodra het vergunningsproces volledig is, wordt het geheim gecreeerd.
 
 ## Een geheim bewerken
 
@@ -131,7 +150,7 @@ U kunt een geheime uitwisseling van het het uitgeven scherm opnieuw proberen of 
 | --- | --- |
 | [!UICONTROL Token] | Selecteren **[!UICONTROL Exchange Secret]** om de geheime uitwisseling opnieuw te proberen. Deze controle is slechts beschikbaar wanneer er een milieu verbonden aan het geheim is. |
 | [!UICONTROL HTTP] | Als er geen omgeving aan het geheim is gekoppeld, selecteert u **[!UICONTROL Exchange Secret]** de referentie aan base64 om te wisselen. Als een omgeving is gekoppeld, selecteert u **[!UICONTROL Exchange and Deploy Secret]** om uit te wisselen om base64 te gebruiken en het geheim op te stellen. |
-| [!UICONTROL OAuth2] | Selecteren **[!UICONTROL Generate Token]** om de geloofsbrieven uit te wisselen en een toegangstoken van de authentificatieleverancier terug te keren. |
+| [!UICONTROL OAuth 2] | Selecteren **[!UICONTROL Generate Token]** om de geloofsbrieven uit te wisselen en een toegangstoken van de authentificatieleverancier terug te keren. |
 
 ## Een geheim verwijderen
 

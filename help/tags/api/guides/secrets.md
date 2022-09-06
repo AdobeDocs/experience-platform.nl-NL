@@ -1,9 +1,10 @@
 ---
 title: Geheimen in de Reactor-API
 description: Leer de grondbeginselen van hoe te om geheimen in Reactor API voor gebruik in gebeurtenishet door:sturen te vormen.
-source-git-commit: 6822199c3ecf4414893a8b8dfc650e3da40a6470
+exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ Er zijn momenteel drie ondersteunde geheime typen die in het dialoogvenster `typ
 | --- | --- |
 | `token` | Een enkele tekenreeks met tekens die een verificatietoken-waarde vertegenwoordigt die door beide systemen bekend en begrepen is. |
 | `simple-http` | Bevat respectievelijk twee tekenreekskenmerken voor een gebruikersnaam en wachtwoord. |
-| `oauth2` | Bevat diverse kenmerken die de [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. De gebeurtenis die u door:sturen vraagt om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
+| `oauth2-client_credentials` | Bevat diverse kenmerken die de [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. De gebeurtenis die u door:sturen vraagt om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -26,9 +27,14 @@ Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor geb
 
 ## Credentials
 
-Elk geheim bevat een `credentials` kenmerk dat de respectieve referentie-waarden bevat. Elk type geheim heeft verschillende vereiste attributen, zoals aangetoond in de hieronder secties.
+Elk geheim bevat een `credentials` kenmerk dat de respectieve referentie-waarden bevat. Wanneer [een geheim maken in de API](../endpoints/secrets.md#create), heeft elk type geheim andere vereiste kenmerken, zoals in de volgende secties wordt getoond:
 
-### `token`
+* [&quot;token&quot;](#token)
+* [` simple-http`](#simple-http)
+* [&quot;oauth2-client_credentials&quot;](#oauth2-client_credentials)
+* [&quot;oauth2-google&quot;](#oauth2-google)
+
+### `token` {#token}
 
 Geheimen met een `type_of` waarde van `token` slechts één enkel attribuut onder vereisen `credentials`:
 
@@ -40,7 +46,7 @@ Geheimen met een `type_of` waarde van `token` slechts één enkel attribuut onde
 
 Het token wordt opgeslagen als een statische waarde en daarom is het geheim `expires_at` en `refresh_at` eigenschappen zijn ingesteld op `null` wanneer het geheim wordt gecreeerd.
 
-### `simple-http`
+### `simple-http` {#simple-http}
 
 Geheimen met een `type_of` waarde van `simple-http` de volgende kenmerken vereisen onder `credentials`:
 
@@ -53,23 +59,19 @@ Geheimen met een `type_of` waarde van `simple-http` de volgende kenmerken vereis
 
 Wanneer het geheim wordt gecreeerd, worden de twee attributen geruild met een codering BASE64 van `username:password`. Na de uitwisseling is het geheim `expires_at` en `refresh_at` eigenschappen zijn ingesteld op `null`.
 
-### `oauth2`
+### `oauth2-client_credentials` {#oauth2-client_credentials}
 
->[!NOTE]
->
->Alleen de [Subsidietype Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) wordt ondersteund voor OAuth-geheimen.
-
-Geheimen met een `type_of` waarde van `oauth2` de volgende kenmerken vereisen onder `credentials`:
+Geheimen met een `type_of` waarde van `oauth2-client_credentials` de volgende kenmerken vereisen onder `credentials`:
 
 | Referentiekenmerk | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `client_id` | Tekenreeks | De client-id voor de OAuth-integratie. |
 | `client_secret` | Tekenreeks | Het clientgeheim voor de OAuth-integratie. Deze waarde wordt niet opgenomen in de API-reactie. |
-| `authorization_url` | Tekenreeks | De autorisatie-URL voor de OAuth-integratie. |
+| `token_url` | Tekenreeks | De autorisatie-URL voor de OAuth-integratie. |
 | `refresh_offset` | Geheel | *(Optioneel)* De waarde in seconden waarmee de vernieuwingsbewerking moet worden verschoven. Als dit kenmerk wordt weggelaten bij het maken van het geheim, wordt de waarde ingesteld op `14400` (vier uur) standaard. |
 | `options` | Object | *(Optioneel)* Geeft aanvullende opties voor de OAuth-integratie op:<ul><li>`scope`: Een tekenreeks die de [OAuth 2.0-bereik](https://oauth.net/2/scope/) voor de referenties.</li><li>`audience`: Een tekenreeks die een [Auth0-toegangstoken](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
-Wanneer een `oauth2` geheim wordt gecreeerd of bijgewerkt, `client_id` en `client_secret` (en eventueel `options`) worden uitgewisseld in een verzoek van de POST aan de `authorization_url`, volgens de stroom van de Referenties van de Cliënt van het protocol OAuth.
+Wanneer een `oauth2-client_credentials` geheim wordt gecreeerd of bijgewerkt, `client_id` en `client_secret` (en eventueel `options`) worden uitgewisseld in een verzoek van de POST aan de `token_url`, volgens de stroom van de Referenties van de Cliënt van het protocol OAuth.
 
 >[!NOTE]
 >
@@ -89,13 +91,29 @@ Als de uitwisseling succesvol is, wordt de de statusattributen van het geheim ge
 
 Als de uitwisseling om welke reden dan ook mislukt, `status_details` in het dialoogvenster `meta` objectupdates met relevante informatie.
 
-### Een `oauth2` geheim
+#### Een `oauth2-client_credentials` geheim
 
-Als een `oauth2` geheim is toegewezen aan een milieu en zijn status is `succeeded` (de geloofsbrieven werden met succes geruild), een nieuwe uitwisseling wordt automatisch uitgevoerd op `refresh_at`.
+Als een `oauth2-client_credentials` geheim is toegewezen aan een milieu en zijn status is `succeeded` (de geloofsbrieven werden met succes geruild), een nieuwe uitwisseling wordt automatisch uitgevoerd op `refresh_at`.
 
 Als de uitwisseling succesvol is, `refresh_status` in het dialoogvenster `meta` object is ingesteld op `succeeded` while `expires_at`, `refresh_at`, en `activated_at` dienovereenkomstig worden bijgewerkt.
 
 Als de uitwisseling ontbreekt, wordt de verrichting geprobeerd nog drie keer met de laatste poging niet meer dan twee uur alvorens het toegangstoken verloopt. Als alle pogingen mislukken, `refresh_status_details` kenmerk van de `meta` objectupdates met relevante details.
+
+### `oauth2-google` {#oauth2-google}
+
+Geheimen met een `type_of` waarde van `oauth2-google` vereist het volgende kenmerk onder `credentials`:
+
+| Referentiekenmerk | Gegevenstype | Beschrijving |
+| --- | --- | --- |
+| `scopes` | Array | Hiermee geeft u de Google-productbereiken voor verificatie weer. Het volgende bereik wordt ondersteund:<ul><li>[Google-advertenties](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+
+Nadat u de `oauth2-google` geheim , het antwoord bevat een `meta.token_url` eigenschap. U moet deze URL kopiëren en in browser plakken om de Google-verificatiestroom te voltooien.
+
+#### Een `oauth2-google` geheim
+
+De autorisatie-URL voor een `oauth2-google` het geheim verloopt één uur nadat het geheim (zoals vermeld door `meta.token_url_expires_at`). Na deze tijd, moet het geheim opnieuw worden geautoriseerd om het authentificatieproces te vernieuwen.
+
+Zie de [punthulplijn voor geheimen](../endpoints/secrets.md#reauthorize) voor meer informatie over het opnieuw autoriseren van een `oauth2-google` geheim door een PATCH-verzoek in te dienen bij de Reactor-API.
 
 ## Omgevingsrelatie
 
@@ -107,7 +125,7 @@ Een geheim kan slechts aan één milieu worden geassocieerd. Zodra het verband t
 >
 >De enige uitzondering op deze regel is wanneer het milieu in kwestie wordt geschrapt. In dit geval wordt de relatie gewist en kan het geheim worden toegewezen aan een andere omgeving.
 
-Nadat de geloofsbrieven van een geheim met succes zijn geruild, voor een geheim om met een milieu worden geassocieerd, het uitwisselingsartefact (het symbolische koord voor `token`, de Base64-gecodeerde tekenreeks voor `simple-http`of de toegangstoken voor `oauth2`) veilig in de omgeving wordt opgeslagen.
+Nadat de geloofsbrieven van een geheim met succes zijn geruild, voor een geheim om met een milieu worden geassocieerd, het uitwisselingsartefact (het symbolische koord voor `token`, de Base64-gecodeerde tekenreeks voor `simple-http`of de toegangstoken voor `oauth2-client_credentials`) veilig in de omgeving wordt opgeslagen.
 
 Nadat het uitwisselingsartefact met succes op het milieu wordt bewaard, `activated_at` wordt ingesteld op de huidige UTC-tijd en kan nu worden verwezen met behulp van een gegevenselement. Zie de [volgende sectie](#referencing-secrets) voor meer informatie over het verwijzen naar geheimen.
 
