@@ -2,9 +2,9 @@
 title: Bot Filtreren in de Dienst van de Vraag met het Leren van de Machine
 description: Dit document biedt een overzicht van het gebruik van Query Service en het leren van computers om zowel de activiteit te bepalen als hun acties te filteren van echt verkeer van websitebezoekers.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 5%
 
 ---
@@ -29,8 +29,12 @@ Dit voorbeeld gebruikt [!DNL Jupyter Notebook] als ontwikkelomgeving. Hoewel er 
 
 De twee kenmerken die worden gebruikt om gegevens voor beide detectie te extraheren, zijn:
 
-* Marketing Cloud-id (MCID): Dit biedt een universele, permanente id die uw bezoekers identificeert voor alle Adobe-oplossingen.
+* Experience Cloud Bezoeker-ID (ECID, ook bekend als MCID): Dit biedt een universele, permanente id die uw bezoekers identificeert voor alle Adobe-oplossingen.
 * Tijdstempel: Dit geeft de tijd en datum in UTC-indeling wanneer een activiteit op de website is opgetreden.
+
+>[!NOTE]
+>
+>Het gebruik van `mcid` wordt nog steeds gevonden in naamruimteverwijzingen naar de Experience Cloud Visitor-id, zoals in het onderstaande voorbeeld wordt getoond.
 
 De volgende SQL-instructie biedt een eerste voorbeeld om beide activiteiten te identificeren. De instructie gaat ervan uit dat als een bezoeker binnen één minuut 50 klikken uitvoert, de gebruiker een bot is.
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-De expressie filtert de MCID&#39;s van alle bezoekers die aan de drempel voldoen, maar behandelt geen spikes in verkeer vanaf andere intervallen.
+De expressie filtert de ECID&#39;s (`mcid`) van alle bezoekers die aan de drempelwaarde voldoen, maar die zich niet bezighouden met verkeersopstoppingen van andere intervallen.
 
 ## De beide detectie verbeteren door machines te leren
 
@@ -53,7 +57,7 @@ De eerste SQL-instructie kan worden verfijnd tot een extractiequery voor functie
 
 De voorbeeldverklaring wordt uitgebreid van één minuut met maximaal 60 klikken, om vijf minuten en 30 minuten periodes met kliktellingen van respectievelijk 300, en 1800 te omvatten.
 
-De voorbeeldverklaring verzamelt het maximumaantal kliks voor elke MCID over de diverse duur. De eerste instructie is uitgebreid met een minuut (60 seconden), 5 minuten (300 seconden) en een uur (1800 seconden).
+De voorbeeldinstructie verzamelt het maximumaantal klikken voor elke ECID (`mcid`) over de verschillende perioden. De eerste instructie is uitgebreid met een minuut (60 seconden), 5 minuten (300 seconden) en een uur (1800 seconden).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -167,4 +171,4 @@ Het voorbeeldmodel bepaalde met een hoge mate van nauwkeurigheid dat om het even
 
 Door dit document te lezen, hebt u een beter inzicht in hoe te gebruiken [!DNL Query Service] en het leren van machines om beide activiteit te bepalen en te filteren.
 
-Andere documenten die de voordelen van [!DNL Query Service] voor de strategische bedrijfsinzichten van uw organisatie: [In de steek gelaten gebruikt geval](./abandoned-browse.md) voorbeeld.
+Andere documenten die de voordelen van [!DNL Query Service] volgens de strategische bedrijfsinzichten van uw organisatie [In de steek gelaten gebruikt geval](./abandoned-browse.md) voorbeeld.

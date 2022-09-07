@@ -5,9 +5,9 @@ title: Gegevens voorbereiden voor gebruik in intelligente services
 topic-legacy: Intelligent Services
 description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services gebruiken XDM-schema's (Experience Data Model) om dit te bereiken.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2906'
+source-wordcount: '2923'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,10 @@ Hoewel het gebruik van alle sleutelvelden sterk wordt aanbevolen, zijn er twee v
 Een van de velden in uw schema moet zijn ingesteld als primair identiteitsveld, waardoor [!DNL Intelligent Services] om elk geval van tijdreeksgegevens aan een individuele persoon te verbinden.
 
 U moet bepalen welk veld het beste kan worden gebruikt als primaire identiteit op basis van de bron en de aard van uw gegevens. Een identiteitsveld moet een **naamruimte identity** Dit geeft het type identiteitsgegevens aan dat het veld als waarde verwacht. Voorbeelden van geldige naamruimtewaarden zijn:
+
+>[!NOTE]
+>
+>De Experience Cloud-id (ECID) wordt ook wel MCID genoemd en wordt nog steeds gebruikt in naamruimten.
 
 * &quot;email&quot;
 * &quot;phone&quot;

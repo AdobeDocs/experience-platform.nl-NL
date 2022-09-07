@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1048'
 ht-degree: 2%
 
 ---
@@ -48,6 +48,10 @@ Vragen ingediend via [!DNL Query Service] API wordt niet-interactief uitgevoerd.
 ## Een specifiek veld binnen een object openen
 
 Als u toegang wilt krijgen tot een veld binnen een object in de query, kunt u beide puntnotaties gebruiken (`.`) of vierkante haakjes (`[]`). De volgende SQL-instructie gebruikt puntnotatie om de `endUserIds` object naar beneden `mcid` object.
+
+>[!NOTE]
+>
+>De Experience Cloud-id (ECID) wordt ook wel MCID genoemd en wordt nog steeds gebruikt in naamruimten.
 
 ```sql
 SELECT endUserIds._experience.mcid

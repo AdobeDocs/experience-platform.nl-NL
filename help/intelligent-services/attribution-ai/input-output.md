@@ -5,9 +5,9 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2484'
+source-wordcount: '2497'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ In de volgende tabel worden de schemavelden in de voorbeelduitvoer van onbewerkt
 | commerce_order_purchaseCity (String) | Waar | De extra Kolom van de dataset van de Score. <br> **Voorbeeld:** stad: San Jose |
 | customerProfile (Object) | Onwaar | Identiteitsgegevens van de gebruiker die wordt gebruikt om het model te bouwen. |
 | identity (Object) | Onwaar | Bevat de details van de gebruiker die wordt gebruikt om het model te bouwen zoals `id` en `namespace`. |
-| id (String) | Waar | Identiteitskaart van de gebruiker zoals koekje identiteitskaart of identiteitskaart of MCID etc. <br> **Voorbeeld:** 1734876272540865634468320891369597404 |
+| id (String) | Waar | Identiteitskaart van de gebruiker zoals koekje identiteitskaart, identiteitskaart van Adobe Analytics (HULP), of identiteitskaart van de Experience Cloud (ECID, ook gekend als MCID of als bezoekersidentiteitskaart) enz. <br> **Voorbeeld:** 1734876272540865634468320891369597404 |
 | namespace (String) | Waar | Naamruimte die wordt gebruikt om de paden en daardoor het model samen te stellen. <br> **Voorbeeld:** steun |
 | touchpointsDetail (Object Array) | Waar | De lijst met gegevens van aanraakpunten die leiden tot de conversie die is besteld door | aanraakpunt of tijdstempel. |
 | touchpointName (String) | Waar | Naam van touchpoint dat tijdens opstelling werd gevormd. <br> **Voorbeeld:** PAID_SEARCH_CLICK |

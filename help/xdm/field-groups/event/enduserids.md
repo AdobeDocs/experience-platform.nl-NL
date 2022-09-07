@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schemaontwerp;veldgroep;veldgroep;enduserids;eindgebruiker;eindgebruiker;ids;
 solution: Experience Platform
 title: Detailsveldgroep eindgebruiker - ID
 topic-legacy: overview
-description: This document provides an overview of the End User ID Details schema field group.
+description: Dit document bevat een overzicht van de veldgroep Eindgebruikersgegevens.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -17,22 +17,22 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->The names of several schema field groups have changed. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL End User ID Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/experienceevent.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven. De veldgroep biedt een `endUserIDs`-object op hoofdniveau, dat zelf een alleen-lezen `_experience`-veld bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
+[!UICONTROL End User ID Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), gebruikt om de identiteitsgegevens van een individu te beschrijven in verschillende Adobe-toepassingen. De veldgroep biedt een basisniveau `endUserIDs` object, dat zelf een alleen-lezen object bevat `_experience` veld waarvan de waarden automatisch worden bijgewerkt wanneer gegevens worden ingevoerd.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
-| Property | Gegevenstype | Beschrijving |
+| Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `aacustomid` | [Identity](../../data-types/identity.md) | Aangepaste eindgebruiker-id&#39;s voor Adobe Analytics Cloud. |
-| `aaid` | [Identiteit](../../data-types/identity.md) | End user IDs for Adobe Analytics Cloud. |
-| `acid` | [Identity](../../data-types/identity.md) | End user IDs for Adobe Campaign. |
-| `adcloud` | [Identiteit](../../data-types/identity.md) | End user IDs for Adobe Advertising Cloud. |
-| `emailid` | [Identity](../../data-types/identity.md) | E-mailadres-id&#39;s. |
-| `mcid` | [Identiteit](../../data-types/identity.md) | Adobe Marketing Cloud-id. |
-| `phonenumberid` | [Identiteit](../../data-types/identity.md) | Phone number IDs. |
-| `tntid` | [Identity](../../data-types/identity.md) | End user IDs for Adobe Target. |
+| `aacustomid` | [Identiteit](../../data-types/identity.md) | Aangepaste eindgebruiker-id&#39;s voor Adobe Analytics Cloud. |
+| `aaid` | [Identiteit](../../data-types/identity.md) | Eindgebruiker-id&#39;s voor Adobe Analytics Cloud. |
+| `acid` | [Identiteit](../../data-types/identity.md) | Eindgebruiker-id&#39;s voor Adobe Campaign. |
+| `adcloud` | [Identiteit](../../data-types/identity.md) | Eindgebruiker-id&#39;s voor Adobe Advertising Cloud. |
+| `emailid` | [Identiteit](../../data-types/identity.md) | E-mailadres-id&#39;s. |
+| `mcid` | [Identiteit](../../data-types/identity.md) | Adobe Marketing Cloud-id (MCID). De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
+| `phonenumberid` | [Identiteit](../../data-types/identity.md) | Telefoonnummer-id&#39;s. |
+| `tntid` | [Identiteit](../../data-types/identity.md) | Eindgebruiker-id&#39;s voor Adobe Target. |
 
 {style=&quot;table-layout:auto&quot;}
 

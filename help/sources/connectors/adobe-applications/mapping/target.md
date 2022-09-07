@@ -5,19 +5,18 @@ title: Adobe Target-gebeurtenisgegevens toewijzen aan XDM
 topic-legacy: overview
 description: Leer hoe u Adobe Target-gebeurtenisvelden kunt toewijzen aan een XDM-schema (Experience Data Model) voor gebruik in Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
 
 # Toewijzingen doelveld
 
-Met Adobe Experience Platform kunt u Adobe Target-gegevens invoeren via de doelbronconnector. Wanneer u de aansluiting gebruikt, moeten alle gegevens uit doelvelden worden toegewezen aan de velden [Experience Data Model (XDM)](../../../../xdm/home.md) die zijn gekoppeld aan de klasse XDM ExperienceEvent.
+Met Adobe Experience Platform kunt u Adobe Target-gegevens invoeren via de doelbronconnector. Wanneer u de aansluiting gebruikt, moeten alle gegevens uit doelvelden worden toegewezen aan de [Experience Data Model (XDM)](../../../../xdm/home.md) velden die zijn gekoppeld aan de klasse XDM ExperienceEvent.
 
-De volgende lijst schetst de gebieden van een schema van de Gebeurtenis van de Ervaring (*XDM het gebied ExperienceEvent*) en de overeenkomstige gebieden van het Doel zij aan (*het gebied van het Verzoek van het Doel*) zouden moeten worden in kaart gebracht. Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
+In de volgende tabel worden de velden van een Experience Event-schema (*XDM ExperienceEvent-veld*) en de bijbehorende doelvelden waaraan ze moeten worden toegewezen (*Veld voor doelaanvraag*). Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
 
 >[!NOTE]
 >
@@ -29,12 +28,12 @@ De volgende lijst schetst de gebieden van een schema van de Gebeurtenis van de E
 | **`dataSource`** |  | Gevormd aan &quot;1&quot;voor alle cliënten. |
 | `dataSource._id` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | De unieke id van deze gegevensbron. Dit zou worden verstrekt door het individu of het systeem dat de gegevensbron creeerde. |
 | `dataSource.code` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Een sneltoets naar de volledige @id. U kunt ten minste een van de code of @id gebruiken. Soms wordt deze code de integratiecode van de gegevensbron genoemd. |
-| `dataSource.tags` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Tags worden gebruikt om aan te geven hoe aliassen die door een bepaalde gegevensbron worden vertegenwoordigd, door toepassingen met die aliassen moeten worden geïnterpreteerd.<br><br>Voorbeelden:<br><ul><li>`isAVID`: Gegevensbronnen die de bezoeker-id&#39;s van Analytics vertegenwoordigen.</li><li>`isCRSKey`: Gegevensbronnen die aliassen vertegenwoordigen die als sleutels in CRS zouden moeten worden gebruikt.</li></ul>De markeringen worden geplaatst wanneer de gegevensbron wordt gecreeerd maar zij zijn ook inbegrepen in pijpleidingsberichten wanneer het van verwijzingen voorzien van een bepaalde gegevensbron. |
+| `dataSource.tags` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | De markeringen worden gebruikt om erop te wijzen hoe de aliassen die door een bepaalde gegevensbron worden vertegenwoordigd door toepassingen zouden moeten worden geïnterpreteerd die die aliassen gebruiken.<br><br>Voorbeelden:<br><ul><li>`isAVID`: Gegevensbronnen die de bezoeker-id&#39;s van Analytics vertegenwoordigen.</li><li>`isCRSKey`: Gegevensbronnen die aliassen vertegenwoordigen die als sleutels in CRS zouden moeten worden gebruikt.</li></ul>De markeringen worden geplaatst wanneer de gegevensbron wordt gecreeerd maar zij zijn ook inbegrepen in pijpleidingsberichten wanneer het van verwijzingen voorzien van een bepaalde gegevensbron. |
 | **`timestamp`** | Tijdstempel voor gebeurtenis |
 | **`channel`** | `context.channel` | Werkt alleen met weergave. De opties zijn &quot;web&quot; en &quot;mobiel&quot;, waarbij &quot;web&quot; de standaardwaarde is. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | De Experience Cloud-id (ECID) wordt ook wel MCID genoemd en wordt nog steeds gebruikt in naamruimten. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |

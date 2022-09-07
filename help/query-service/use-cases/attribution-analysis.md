@@ -1,9 +1,10 @@
 ---
 title: Attributieanalyse
 description: In dit document wordt uitgelegd hoe u met Query Service een techniek voor het meten van de marketingeffectiviteit kunt maken op basis van het marketingtoewijzingsmodel van eerste en laatste aanraking.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -68,6 +69,10 @@ De resultaten voor de toewijzingsquery&#39;s worden gegeven in de `first_touch` 
 Met Eerste aanraakattributie wordt 100% van de verantwoordelijkheid voor een succesvol resultaat van het oorspronkelijke kanaal dat de consument heeft gekend, erkend. Dit SQL voorbeeld wordt gebruikt om de interactie te benadrukken die tot een verdere reeks klantenacties leidde.
 
 Met de onderstaande query worden de eerste aanraakwaarde en details van het kanaal in het doel geretourneerd [!DNL Experience Event] dataset. Het geeft ook een `struct` -object voor het geselecteerde kanaal met de eerste aanraakwaarde, tijdstempel en kenmerk voor elke rij.
+
+>[!NOTE]
+>
+>De Experience Cloud-id (ECID) wordt ook wel MCID genoemd en wordt nog steeds gebruikt in naamruimten.
 
 **Zoeksyntaxis**
 

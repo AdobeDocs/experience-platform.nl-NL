@@ -5,9 +5,9 @@ title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 topic-legacy: overview
 description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '3401'
+source-wordcount: '3431'
 ht-degree: 0%
 
 ---
@@ -186,9 +186,9 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analy
 | ip | environment.ipV4 | string | Het IP Adres, dat op de kopbal van HTTP van het beeldverzoek wordt gebaseerd. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | boolean | De gebruikte versie van JavaScript. |
 | mcvisid_high + mcvisid_low | identityMap | object | De Experience Cloud-bezoeker-id. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | De Experience Cloud-bezoeker-id. |
-| mcvisid_high | endUserIDs._experience.mcid.primary | boolean | De Experience Cloud-bezoeker-id. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | De Experience Cloud-bezoeker-id. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | De Experience Cloud-id (ECID) wordt ook wel MCID genoemd en wordt soms gebruikt in naamruimten. |
+| mcvisid_high | endUserIDs._experience.mcid.primary | boolean | De Experience Cloud-id (ECID) wordt ook wel MCID genoemd en wordt soms gebruikt in naamruimten. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | De Experience Cloud-id (ECID) wordt ook wel MCID genoemd en wordt soms gebruikt in naamruimten. |
 | mcvisid_low | identityMap | object | De Experience Cloud-bezoeker-id. |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | string | Id voor tikken. The analytics field sdid_high and sdid_low is the additional data id used to stitch two (or more) inkomend hits together. |
 | Moblebeaconproximiteit | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Bandennabijheid mobiele services. |
