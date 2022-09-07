@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3551'
+source-wordcount: '3620'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,14 @@ U kunt de weergave van het dialoogvenster [!UICONTROL Profiles] dashboard door *
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
 
+### Widgets toevoegen {#add-widget}
+
+Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets te bekijken die aan uw dashboard moeten worden toegevoegd.
+
+![Het dashboardoverzicht Profielen met de toegevoegde widget gemarkeerd.](../images/profiles/profiles-overview-add-widget.png)
+
+In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste segmenuwidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets. [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+
 ## (Beta) Gegevens over de werkzaamheid van profielen {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden gebruik
 
 >[!NOTE]
 >
->In het vervolgkeuzemenu ziet u alleen samenvoegbeleid voor de klasse Individueel profiel van XDM. Nochtans, als uw organisatie veelvoudige samenvoegingsbeleid heeft gecreeerd, kan het betekenen dat u zult moeten scrollen om de volledige lijst van beschikbare samenvoegingsbeleid te bekijken.
+>Het vervolgkeuzemenu bevat alleen samenvoegbeleidsregels die gebruikmaken van de `_xdm.context.profile` schema. Nochtans, als uw organisatie veelvoudige samenvoegingsbeleid heeft gecreeerd, kan het betekenen dat u moet scrollen om de volledige lijst van beschikbare samenvoegingsbeleid te bekijken.
 
-![](../images/profiles/select-merge-policy.png)
+![Het tabblad Profielen met de vervolgkeuzelijst Samenvoegbeleid gemarkeerd.](../images/profiles/select-merge-policy.png)
 
 ## Unieregelingen
 

@@ -4,9 +4,9 @@ title: Doeldashboardgids
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2537'
+source-wordcount: '2648'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ De [!UICONTROL Destinations] het dashboard toont een momentopname van de bestemm
 >
 >Wijzigingen of updates die zijn aangebracht in de gegevens nadat de momentopname is gemaakt, worden pas in het dashboard weergegeven als de volgende momentopname is gemaakt.
 
-## Het dashboard voor doelen verkennen
+## Ontdek de [!UICONTROL Destinations] dashboard {#explore}
 
 Als u naar het dashboard voor doelen wilt navigeren binnen de interface van het Platform, selecteert u **[!UICONTROL Destinations]** in het linkerspoor, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
@@ -37,11 +37,19 @@ De datum en tijd van de meest recente momentopname worden getoond bij de bovenka
 
 ![Het overzicht van de Doelen UI van het Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
 
-### Het dashboard voor doelen wijzigen
+### De [!UICONTROL Destinations] dashboard {#modify}
 
-U kunt de weergave van het dashboard voor doelen wijzigen door **[!UICONTROL Modify dashboard]**. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot de **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
+Selecteren **[!UICONTROL Modify dashboard]** om de verschijning van het dashboard van bestemmingen te veranderen. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot de widgetbibliotheek. In de widgetbibliotheek kunt u de beschikbare widgets verkennen en aangepaste widgets maken voor uw organisatie.
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
+
+### Widgets toevoegen {#add-widget}
+
+Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets te bekijken die aan uw dashboard moeten worden toegevoegd.
+
+![Het dashboardoverzicht Doelen met de markering Widget toevoegen.](../images/destinations/destinations-overview-add-widget.png)
+
+In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste segmenuwidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
 
 ## Standaardwidgets {#standard-widgets}
 
@@ -80,7 +88,7 @@ Het aantal in kaart gebrachte segmenten die in de kolom van de segmenttelling wo
 
 Als u de naam van een doel selecteert in de lijst die wordt weergegeven op de widget, gaat u naar de doeldetails die zijn gekoppeld vanuit het menu **[!UICONTROL Browse]** tab. U kunt ook **[!UICONTROL View All]** om naar de **[!UICONTROL Browse]** en selecteert u vervolgens de naam van een bestemming om de details ervan weer te geven.
 
-![](../images/destinations/most-used-destinations.png)
+![Het tabblad Overzicht van het dashboard Doelen met de meest gebruikte doelwidget gemarkeerd.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Recently created destinations] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Als u de naam van een doel selecteert in de lijst die wordt weergegeven op de wi
 
 Om meer over te leren hoe te om specifieke soorten bestemmingen te vormen, bezoek [documentatie voor doelen](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![Het tabblad Overzicht van het dashboard Doelen met de onlangs gemaakte widget voor doelen gemarkeerd.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Recently activated segments] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Als u de naam van een segment selecteert in de lijst die wordt weergegeven op de
 
 Voor meer informatie over het werken met segmenten in Experience Platform, gelieve te beginnen door te lezen [Overzicht van segmentatieservice](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![Het tabblad Overzicht van het dashboard Doelen met de widget Onlangs geactiveerde segmenten gemarkeerd.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
 
@@ -129,7 +137,7 @@ Deze widget bevat twee metriek: de segmentnaam en de datum dat het segment het l
 
 U kunt de details van een segment bekijken door de naam van een segment van de getoonde lijst te selecteren.
 
-![Onlangs geactiveerde segmenten op doelwidget.](../images/destinations/recently-activated-segments-by-destination.png)
+![De onlangs geactiveerde segmenten op bestemmingswidget.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -144,7 +152,7 @@ Een tijdsperiode voor de publiekstrend over de afgelopen 30 dagen, 90 dagen, of 
 
 Het tweede vervolgkeuzemenu bevat alle beschikbare segmenten die naar de doelaccount kunnen worden verzonden die boven aan het dashboard is gekozen.
 
-![De trendwidget voor de doelgrootte.](../images/destinations/audience-size-trend.png)
+![De widget voor de doelgrootte.](../images/destinations/audience-size-trend.png)
 
 De **[!UICONTROL Audience size trend]** widget biedt een [!UICONTROL Captions] in de rechterbovenhoek van de widget. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen. Een machine het leren model produceert automatisch titels om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven door de grafiek en de segmentgegevens te analyseren.
 

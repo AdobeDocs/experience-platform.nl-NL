@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;profiel;segment;segmenten;segmentatie;gebruikersinterface;UI;aanpassing;segmentdashboard;dashboard
 title: Handleiding dashboard voor segmenten
-description: 'Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt. '
+description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1699'
 ht-degree: 0%
 
 ---
 
-# Segmentdashboard {#segment-dashboard}
+# [!UICONTROL Segments] dashboard {#segment-dashboard}
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw segmenten kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot en met het segmentdashboard in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
 Voor een overzicht van alle functies van de Adobe Experience Platform Segmentation Service in de gebruikersinterface van het Platform gaat u naar de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md).
 
-## Segmentdashboardgegevens
+## [!UICONTROL Segments] dashboardgegevens
 
 Het segmentdashboard toont een momentopname van de attributen (verslag) gegevens die uw organisatie binnen de opslag van het Profiel in Experience Platform heeft. De momentopname bevat geen gebeurtenis (tijdreeks)-gegevens.
 
@@ -27,7 +27,7 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 >
 >Wijzigingen of updates die zijn aangebracht in de gegevens nadat de momentopname is gemaakt, worden pas in het dashboard weergegeven als de volgende momentopname is gemaakt.
 
-## Het segmentdashboard verkennen
+## Ontdek de [!UICONTROL Segments] dashboard {#explore}
 
 Ga naar de [!UICONTROL Segments] dashboard in de interface van het Platform, selecteert u **[!UICONTROL Segments]** in het linkerspoor, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
@@ -35,13 +35,21 @@ Ga naar de [!UICONTROL Segments] dashboard in de interface van het Platform, sel
 >
 >Als uw organisatie nieuw aan Platform is en nog niet de actieve datasets van het Profiel of gecreeerd verenigingsbeleid heeft, [!UICONTROL Segments] het dashboard is niet zichtbaar. In plaats daarvan [!UICONTROL Overview] het lusje toont verbindingen en documentatie om u te helpen met segmentatie beginnen.
 
-![](../images/segments/dashboard-overview.png)
+![Het tabblad Overzicht van het dashboard Segmenten.](../images/segments/dashboard-overview.png)
 
-### Het wijzigen van [!UICONTROL Segments] dashboard
+### De [!UICONTROL Segments] dashboard {#modify}
 
 U kunt de weergave van het dialoogvenster [!UICONTROL Segments] dashboard door **[!UICONTROL Modify dashboard]**. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot de **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
+
+### Widgets toevoegen {#add-widget}
+
+Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets te bekijken die aan uw dashboard moeten worden toegevoegd.
+
+![Het dashboardoverzicht Segmenten met de widget toevoegen gemarkeerd.](../images/segments/segments-overview-add-widget.png)
+
+In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste segmenuwidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets. [Een widget toevoegen](../customize/widget-library.md#add-widgets).
 
 ## Een segment selecteren
 
@@ -53,9 +61,9 @@ Als u een ander segment wilt kiezen, selecteert u de vervolgkeuzelijst naast de 
 >
 >Alleen segmenten met een profielaantal groter dan nul worden weergegeven in de lijst met selecteerbare segmenten.
 
-![](../images/segments/change-segment.png)
+![Het dashboardoverzicht van Segmenten met het algemene segmentvervolgkeuzemenu gemarkeerd.](../images/segments/change-segment.png)
 
-![](../images/segments/select-segment-dialog.png)
+![Het dialoogvenster Segment selecteren waarin alle beschikbare segmenten worden weergegeven.](../images/segments/select-segment-dialog.png)
 
 ## Widgets en metriek
 
@@ -92,7 +100,7 @@ De **[!UICONTROL Audience size]** widget geeft het totale aantal samengevoegde p
 
 Voor meer informatie over fragmenten en samengevoegde profielen, eerst leest u de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
-![](../images/segments/audience-size.png)
+![Het dashboardoverzicht Segmenten met de widget Poortgrootte gemarkeerd.](../images/segments/audience-size.png)
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -105,7 +113,7 @@ De **[!UICONTROL Audience size trend]** widget geeft een lijngrafiek voor het to
 
 Deze widget bevat ook de automatische [!UICONTROL Captions] waar een machine het leren model de grafiek en segmentgegevens analyseert en automatisch titels produceert om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![In het segmentoverzicht wordt de widget voor de doelgrootte weergegeven.](../images/segments/audience-size-trend-captions.png)
+![In het overzicht Segmenten wordt de widget voor de doelgrootte weergegeven.](../images/segments/audience-size-trend-captions.png)
 
 Het dialoogvenster voor automatische bijschriften wordt geopend en verschaft inzicht in uw gegevens.
 
@@ -163,7 +171,7 @@ Als een klant op meer dan één kanaal met uw merk in wisselwerking staat, zulle
 
 Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/segments/identity-overlap.png)
+![Het dashboardoverzicht Segmenten met de widget Identiteitsoverlap gemarkeerd.](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
@@ -176,7 +184,7 @@ De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identit
 
 Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![De profielen op dialoogvenster voor identiteitsondertitels.](../images/segments/profiles-by-identity.png)
+![Het dialoogvenster Profielen op identiteitsbijschriften.](../images/segments/profiles-by-identity.png)
 
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 
