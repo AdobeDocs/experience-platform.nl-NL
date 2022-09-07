@@ -5,9 +5,9 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
 workflow-type: tm+mt
-source-wordcount: '3504'
+source-wordcount: '3737'
 ht-degree: 1%
 
 ---
@@ -252,6 +252,16 @@ SELECT count(1) FROM myTableName
 +++De Dienst van de Vraag van het Antwoord verstrekt verscheidene ingebouwde SQL helperfuncties om SQL functionaliteit uit te breiden. Zie het document voor een volledige lijst van [SQL-functies die worden ondersteund door Query Service](./sql/spark-sql-functions.md).
 +++
 
+### Alles native [!DNL Spark SQL] ondersteunde functies of zijn gebruikers beperkt tot alleen de wrapper [!DNL Spark SQL] functies van Adobe?
+
++++Antwoord tot nog toe, niet alle open-bron [!DNL Spark SQL] functies zijn getest op data Lake data. Nadat de tests en bevestigingen zijn uitgevoerd, worden ze toegevoegd aan de lijst met ondersteunde items. Raadpleeg de [lijst met ondersteunde [!DNL Spark SQL] functies](./sql/spark-sql-functions.md) om te controleren op een specifieke functie.
++++
+
+### Kunnen de gebruikers hun eigen user-defined functies (UDF) bepalen die over andere vragen kunnen worden gebruikt?
+
++++Antwoord wegens overwegingen van de gegevensveiligheid, wordt de douanedefinitie van UDFs niet toegestaan.
++++
+
 ### Wat moet ik doen als mijn geplande query mislukt?
 
 +++Antwoord eerst, controleer de logboeken om de details van de fout te weten te komen. De sectie Veelgestelde vragen over [fouten in logbestanden zoeken](#error-logs) biedt meer informatie over hoe u dit kunt doen.
@@ -438,6 +448,11 @@ WHERE T2.ID IS NULL
 
 +++
 
+### Kan ik een dataset tot stand brengen gebruikend een vraag CTAS met een dubbel onderstreeptekennaam zoals die getoond in UI? Bijvoorbeeld: `test_table_001`.
+
++++Antwoord nr, is dit een opzettelijke beperking over Experience Platform die op alle diensten van Adobe, met inbegrip van de Dienst van de Vraag van toepassing is. Een naam met twee onderstrepingstekens is aanvaardbaar als schema en datasetnaam, maar de lijstnaam voor de dataset kan slechts één enkel onderstrepingsteken bevatten.
++++
+
 ## Data exporteren {#exporting-data}
 
 Deze sectie bevat informatie over het exporteren van gegevens en beperkingen.
@@ -462,6 +477,25 @@ FROM <table_name>
 +++Antwoord nr. Er is momenteel geen functie beschikbaar voor het ophalen van opgenomen gegevens.
 +++
 
+### Waarom retourneert de gegevensconnector Analytics geen gegevens?
+
++++Antwoord Een algemene oorzaak voor dit probleem is het opvragen van tijdreeksgegevens zonder tijdfilter. Bijvoorbeeld:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Moet worden geschreven als:
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## Gereedschappen van derden {#third-party-tools}
 
 Deze sectie bevat informatie over het gebruik van hulpmiddelen van derden, zoals PSQL en Power BI.
@@ -473,7 +507,13 @@ Deze sectie bevat informatie over het gebruik van hulpmiddelen van derden, zoals
 
 ### Is er een manier om de Dienst van de Vraag eenmaal voor ononderbroken gebruik met een derdehulpmiddel aan te sluiten?
 
-++ antwoord ja, kunnen de derdeDesktopcliënten met de Dienst van de Vraag door een eenmalig opstelling van niet-vervallende geloofsbrieven worden verbonden. Niet-vervallende gegevens kunnen worden gegenereerd door een geautoriseerde gebruiker en worden ontvangen in een JSON-bestand dat naar de lokale computer is gedownload. Volledig [richtlijnen voor het maken en downloaden van niet-vervallende referenties](./ui/credentials.md#non-expiring-credentials) te vinden in de documentatie.
+++ antwoord ja, kunnen de derdeDesktopcliënten met de Dienst van de Vraag door een eenmalig opstelling van niet-vervallende geloofsbrieven worden verbonden. Niet-vervallende gegevens kunnen worden gegenereerd door een geautoriseerde gebruiker en worden ontvangen in een JSON-bestand dat automatisch wordt gedownload naar de lokale computer. Volledig [richtlijnen voor het maken en downloaden van niet-vervallende referenties](./ui/credentials.md#non-expiring-credentials) te vinden in de documentatie.
++++
+
+### Waarom werken mijn niet-vervallende geloofsbrieven niet?
+
++++Antwoord De waarde voor niet vervallende geloofsbrieven is de samengevoegde argumenten van `technicalAccountID` en de `credential` uit de configuratie-JSON-bestand. De wachtwoordwaarde heeft de vorm: `{{technicalAccountId}:{credential}}`.
+Raadpleeg de documentatie voor meer informatie over hoe u [Verbinding maken met externe clients met referenties](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Welk soort redacteurs van derdeSQL kan ik met de Redacteur van de Dienst van de Vraag verbinden?
