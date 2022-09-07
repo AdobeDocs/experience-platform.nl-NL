@@ -4,7 +4,7 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 5%
@@ -34,7 +34,7 @@ ht-degree: 5%
          - [Marketo Engage-verificatiegids](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Reclame {#advertising}
-      - [Google AdWords-connector](connectors/advertising/ads.md)
+      - [Google Ads-connector](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
    - Cloud-opslag {#cloud-storage}
@@ -103,7 +103,7 @@ ht-degree: 5%
 - API-zelfstudies {#api-tutorials}
    - Een basisverbinding maken {#create}
       - Reclame {#advertising}
-         - [Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Google-advertenties](tutorials/api/create/advertising/ads.md)
       - Analyse {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - Cloud-opslag {#cloud-storage}
@@ -205,7 +205,7 @@ ht-degree: 5%
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Reclame {#advertising}
-         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Google-advertenties](tutorials/ui/create/advertising/ads.md)
       - Analyse {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - Cloud-opslag {#cloud-storage}

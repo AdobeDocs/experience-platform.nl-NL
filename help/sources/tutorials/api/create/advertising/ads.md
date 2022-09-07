@@ -1,51 +1,48 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;google adwords;Google AdWords;adwords
-solution: Experience Platform
-title: Een Google AdWords Base Connection maken met de Flow Service API
-topic-legacy: overview
-type: Tutorial
-description: Leer hoe u Adobe Experience Platform kunt verbinden met Google AdWords met behulp van de Flow Service API.
+keywords: Experience Platform;thuis;populaire onderwerpen;Google-advertenties;Google-advertenties;google-advertenties;advertenties
+title: Een Google Ads Base Connection maken met de Flow Service API
+description: Leer hoe u Adobe Experience Platform met Google Ads kunt verbinden met behulp van de Flow Service API.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 56419f41188c9bfdbeda7dde680f269b980a37f0
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 1%
+source-wordcount: '698'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Google AdWords] basisverbinding met de [!DNL Flow Service] API
+# Een Google Ads-basisverbinding maken met de [!DNL Flow Service] API
 
 >[!NOTE]
 >
->De [!DNL Google AdWords] -connector bevindt zich in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De Google Ads-bron is bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Google AdWords] (hierna &quot;[!DNL AdWords]&quot;) het gebruik van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In deze zelfstudie worden de stappen doorlopen waarmee u een basisverbinding voor Google Ads kunt maken met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Experience Platforms.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Experience Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL AdWords] met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met Google Ads via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om te verbinden met [!DNL AdWords]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+Om [!DNL Flow Service] Als u verbinding wilt maken met Google Ads, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `clientCustomerId` | De client-id van de [!DNL AdWords] account. |
-| `developerToken` | Het ontwikkelaarstoken verbonden aan de managerrekening. |
-| `refreshToken` | Het vernieuwingstoken dat wordt verkregen van [!DNL Google] om toegang te verlenen tot [!DNL AdWords]. |
-| `clientId` | De client-id van de [!DNL Google] toepassing die wordt gebruikt om het vernieuwingstoken te verkrijgen. |
-| `clientSecret` | Het clientgeheim van de [!DNL Google] toepassing die wordt gebruikt om het vernieuwingstoken te verkrijgen. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AdWords] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `clientCustomerId` | De client-id is het accountnummer dat overeenkomt met de Google Ads-clientaccount die u wilt beheren met de Google Ads-API. Deze id volgt de sjabloon van `123-456-7890`. |
+| `developerToken` | Met de ontwikkelaarstoken hebt u toegang tot de API voor Google Ads. U kunt dezelfde ontwikkelaarstoken gebruiken om aanvragen in te dienen voor al uw Google Ads-accounts. Haal de ontwikkelaarstoken op door [aanmelden bij uw beheerdersaccount](https://ads.google.com/home/tools/manager-accounts/) en navigeert vervolgens naar de [!DNL API Center] pagina. |
+| `refreshToken` | Het token Vernieuwen maakt deel uit van [!DNL OAuth2] verificatie. Dit teken staat u toe om uw toegangstokens na het verlopen opnieuw te produceren. |
+| `clientId` | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van [!DNL OAuth2] verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing te identificeren bij Google. |
+| `clientSecret` | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van [!DNL OAuth2] verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing te identificeren bij Google. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor Google Ads is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
-Raadpleeg deze voor meer informatie over deze waarden [Google AdWords-document](https://developers.google.com/adwords/api/docs/guides/authentication).
+Het API-overzichtsdocument lezen voor [meer informatie over hoe je aan de slag gaat met Google Ads](https://developers.google.com/google-ads/api/docs/first-call/overview).
 
 ### Platform-API&#39;s gebruiken
 
@@ -55,7 +52,7 @@ Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s 
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL AdWords] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw de authentificatiegeloofsbrieven van Google Adds als deel van de verzoekparameters.
 
 **API-indeling**
 
@@ -65,45 +62,45 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL AdWords]:
+Met de volgende aanvraag wordt een basisverbinding voor Google Ads gemaakt:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json'
-    -d '{
-        "name": "google-AdWords connection",
-        "description": "Connection for google-AdWords",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
-                "developerToken": "{DEVELOPER_TOKEN}",
-                "authenticationType": "{AUTHENTICATION_TYPE}"
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}",
-                "refreshToken": "{REFRESH_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "d771e9c1-4f26-40dc-8617-ce58c4b53702",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json'
+  -d '{
+      "name": "Google Ads base connection",
+      "description": "Google Ads base connection",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
+              "developerToken": "{DEVELOPER_TOKEN}",
+              "authenticationType": "{AUTHENTICATION_TYPE}"
+              "clientId": "{CLIENT_ID}",
+              "clientSecret": "{CLIENT_SECRET}",
+              "refreshToken": "{REFRESH_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "d771e9c1-4f26-40dc-8617-ce58c4b53702",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | De client-id van uw [!DNL AdWords] account. |
-| `auth.params.developerToken` | De ontwikkelaarstoken van uw [!DNL AdWords] account. |
-| `auth.params.refreshToken` | Het vernieuwingstoken van uw [!DNL AdWords] account. |
-| `auth.params.clientID` | De client-id van uw [!DNL AdWords] account. |
-| `auth.params.clientSecret` | Het clientgeheim van uw [!DNL AdWords] account. |
-| `connectionSpec.id` | De [!DNL Google AdWords] Verbindingsspecificatie-id: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | De client-id van je Google Ads-account. |
+| `auth.params.developerToken` | De ontwikkelaarstoken van uw Google Ads-account. |
+| `auth.params.refreshToken` | Het token Vernieuwen van je Google Ads-account. |
+| `auth.params.clientID` | De client-id van je Google Ads-account. |
+| `auth.params.clientSecret` | Het clientgeheim van je Google Ads-account. |
+| `connectionSpec.id` | De Google Ads-verbindingsspecificatie-id: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Antwoord**
 
@@ -118,7 +115,7 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Google AdWords] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Aan de hand van deze zelfstudie hebt u een Google Ads-basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
 * [Maak een gegevensstroom om advertentiegegevens naar het Platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/advertising.md)

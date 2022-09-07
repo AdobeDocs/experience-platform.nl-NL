@@ -5,9 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Ado
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md)
+- [Google-advertenties](connectors/advertising/ads.md)
 
 ### Analytics {#analytics}
 
