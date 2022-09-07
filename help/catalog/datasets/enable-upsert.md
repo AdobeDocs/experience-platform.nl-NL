@@ -4,9 +4,9 @@ title: Een gegevensset voor profielupdates inschakelen met behulp van API's
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform API's kunt gebruiken om een gegevensset met "upsert"-mogelijkheden in te schakelen om updates uit te voeren naar gegevens in het realtime profiel van klanten.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Verzoek**
 
-Door `unifiedProfile` krachtens `tags` in de aanvraaginstantie zal de dataset worden toegelaten voor [!DNL Profile] bij het maken. Binnen de `unifiedProfile` array, toevoegen `isUpsert:true` zal de capaciteit voor de dataset toevoegen om updates te steunen.
+Door beide opties op te nemen `unifiedIdentity` en de `unifiedProfile` krachtens `tags` in de aanvraaginstantie zal de dataset worden toegelaten voor [!DNL Profile] bij het maken. Binnen de `unifiedProfile` array, toevoegen `isUpsert:true` zal de capaciteit voor de dataset toevoegen om updates te steunen.
 
 ```shell
 curl -X POST \
@@ -75,24 +75,27 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "fields":[],
+        "fields": [],
         "schemaRef": {
-          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
-          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "tags": {
-          "unifiedProfile": [
-            "enabled:true",
-            "isUpsert:true"
-          ]
+            "unifiedIdentity": [
+                "enabled: true"
+            ],
+            "unifiedProfile": [
+                "enabled: true",
+                "isUpsert: true"
+            ]
         }
       }'
 ```
 
 | Eigenschap | Beschrijving |
-|---|---|
+| -------- | ----------- |
 | `schemaRef.id` | De id van de [!DNL Profile]- toegelaten schema waarop de dataset zal worden gebaseerd. |
-| `{TENANT_ID}` | De naamruimte binnen de [!DNL Schema Registry] die bronnen van uw IMS-organisatie bevat. Zie de [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
+| `{TENANT_ID}` | De naamruimte binnen de [!DNL Schema Registry] die bronnen van uw organisatie bevat. Zie de [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
 
 **Antwoord**
 
@@ -147,6 +150,9 @@ curl -X GET \
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
             ],
             "unifiedProfile": [
                 "enabled:true"
