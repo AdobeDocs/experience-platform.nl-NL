@@ -2,7 +2,7 @@
 title: Geheimen in de Reactor-API
 description: Leer de grondbeginselen van hoe te om geheimen in Reactor API voor gebruik in gebeurtenishet door:sturen te vormen.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 1%
@@ -107,11 +107,11 @@ Geheimen met een `type_of` waarde van `oauth2-google` vereist het volgende kenme
 | --- | --- | --- |
 | `scopes` | Array | Hiermee geeft u de Google-productbereiken voor verificatie weer. Het volgende bereik wordt ondersteund:<ul><li>[Google-advertenties](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-Nadat u de `oauth2-google` geheim , het antwoord bevat een `meta.token_url` eigenschap. U moet deze URL kopiëren en in browser plakken om de Google-verificatiestroom te voltooien.
+Nadat u de `oauth2-google` geheim , het antwoord bevat een `meta.authorization_url` eigenschap. U moet deze URL kopiëren en in browser plakken om de Google-verificatiestroom te voltooien.
 
 #### Een `oauth2-google` geheim
 
-De autorisatie-URL voor een `oauth2-google` het geheim verloopt één uur nadat het geheim (zoals vermeld door `meta.token_url_expires_at`). Na deze tijd, moet het geheim opnieuw worden geautoriseerd om het authentificatieproces te vernieuwen.
+De autorisatie-URL voor een `oauth2-google` het geheim verloopt één uur nadat het geheim (zoals vermeld door `meta.authorization_url_expires_at`). Na deze tijd, moet het geheim opnieuw worden geautoriseerd om het authentificatieproces te vernieuwen.
 
 Zie de [punthulplijn voor geheimen](../endpoints/secrets.md#reauthorize) voor meer informatie over het opnieuw autoriseren van een `oauth2-google` geheim door een PATCH-verzoek in te dienen bij de Reactor-API.
 
