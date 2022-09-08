@@ -5,9 +5,9 @@ title: UI-gids voor segmentBuilder
 topic-legacy: ui guide
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3018'
+source-wordcount: '3019'
 ht-degree: 0%
 
 ---
@@ -226,7 +226,7 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Ramingen vernieuwen"
 >abstract="U kunt de ramingen van uw segment vernieuwen om onmiddellijk een voorvertoning te zien van hoeveel profielen voor het voorgestelde segment in aanmerking zouden komen. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
 Bij het samenstellen van een segmentdefinitie worden de **[!UICONTROL Segment Properties]** aan de rechterkant van de werkruimte wordt een schatting van de grootte van het resulterende segment weergegeven, zodat u de segmentdefinitie naar wens kunt aanpassen voordat u het publiek zelf gaat maken.
 

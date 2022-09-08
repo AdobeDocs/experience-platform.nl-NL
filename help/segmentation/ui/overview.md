@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1730'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,11 @@ Ga voor meer informatie naar de [segmentdashboardhulplijn](../../dashboards/guid
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Evaluatiemethode"
 >abstract="De methodes van de evaluatie voor segmenten omvatten partij, het stromen, en rand."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Alle segmenten aan schema toevoegen"
+>abstract="Schakel deze optie in om alle batchevaluatiesegmenten op te nemen in de geplande dagelijkse update om 3:30 uur UTC. Uitschakelen om alle segmenten uit de geplande update te verwijderen."
 
 Selecteer **[!UICONTROL Browse]** voor een lijst met alle segmentdefinities voor uw IMS-organisatie.
 
