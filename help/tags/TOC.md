@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: d9787b6d093037a2d346ac3bd2f37220ace43ad2
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 25%
+source-wordcount: '402'
+ht-degree: 24%
 
 ---
 
@@ -199,6 +199,7 @@ ht-degree: 25%
 * [Ondersteuning voor Internet Explorer 10 en 11 wordt afgeschaft](./ie-deprecation.md)
 * Aanvullende informatie {#release-notes}
    * [Laatste](./release-notes/current.md)
+   * [Opmerkingen bij de release 2021](./release-notes/2021.md)
    * [Opmerkingen bij de release 2020](./release-notes/2020.md)
    * [Opmerkingen bij de release 2019](./release-notes/2019.md)
    * [Opmerkingen bij de release 2018](./release-notes/2018.md)
