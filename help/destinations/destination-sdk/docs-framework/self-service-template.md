@@ -2,9 +2,9 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1423'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,13 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+
+### Kenmerken en identiteiten toewijzen {#map}
+
+*Voeg informatie over ondersteunde toewijzingen tussen bron- en doelvelden toe in de stap Toewijzing van de activeringsworkflow. Uw doel biedt mogelijk ondersteuning voor het exporteren van profielkenmerken, naamruimten of beide. Sommige velden zijn mogelijk verplicht. Doelkenmerken kunnen vooraf gedefinieerd of aangepast zijn. Roep de belangrijke waarschuwingen uit en gebruik voorbeelden, bij voorkeur met screenshots. Twee voorbeelden van doelpagina&#39;s die u ter referentie kunt gebruiken zijn:*
+
+* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 

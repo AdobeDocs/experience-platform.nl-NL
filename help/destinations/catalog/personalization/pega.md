@@ -2,7 +2,7 @@
 title: Verbinding met PEGA-client
 description: Gebruik de bestemming van de Hub van het Besluit van de Klant van Pega in Adobe Experience Platform om profielattributen en segmentlidmaatschapsgegevens naar de Hub van het Besluit van de Klant van Pega voor volgende-best-actie beslissing te verzenden.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 144aa80beeb13fde7ca339692774e3d20256f49c
+source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -102,7 +102,7 @@ Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbes
 
 In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, raadt Adobe u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
-### Voorbeeld van toewijzing: profielupdates activeren in [!DNL Pega Customer Decision Hub]
+### Voorbeeld van toewijzing: profielupdates activeren in [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het exporteren van profielen naar [!DNL Pega Customer Decision Hub].
 
