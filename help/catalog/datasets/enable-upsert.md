@@ -4,9 +4,9 @@ title: Een gegevensset voor profielupdates inschakelen met behulp van API's
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform API's kunt gebruiken om een gegevensset met "upsert"-mogelijkheden in te schakelen om updates uit te voeren naar gegevens in het realtime profiel van klanten.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
+source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -126,14 +126,13 @@ GET /dataSets/{DATASET_ID}
 ```
 
 | Parameter | Beschrijving |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | De id van een gegevensset die u wilt inspecteren. |
 
 **Verzoek**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -196,11 +195,11 @@ Onder de `tags` eigenschap, kunt u zien dat `unifiedProfile` is aanwezig met de 
 
 ### De gegevensset voor profiel uitschakelen
 
-Om een profiel-Toegelaten dataset voor updates te vormen, moet u eerst onbruikbaar maken `unifiedProfile` en vervolgens weer inschakelen naast de `isUpsert` tag. Dit wordt gedaan gebruikend twee verzoeken van PATCH, één om onbruikbaar te maken en één om re-toe te laten.
+Om een profiel-Toegelaten dataset voor updates te vormen, moet u eerst onbruikbaar maken `unifiedProfile` en `unifiedIdentity` -tags en vervolgens weer inschakelen naast de `isUpsert` tag. Dit wordt gedaan gebruikend twee verzoeken van PATCH, één om onbruikbaar te maken en één om re-toe te laten.
 
 >[!WARNING]
 >
->Gegevens die in de gegevensset worden opgenomen terwijl deze is uitgeschakeld, worden niet opgenomen in de profielopslag. Het wordt aanbevolen geen gegevens in de gegevensset in te voeren totdat deze opnieuw is ingeschakeld voor Profiel.
+>Gegevens die in de gegevensset worden opgenomen terwijl deze is uitgeschakeld, worden niet opgenomen in de profielopslag. U zou moeten vermijden het opnemen van gegevens in de dataset tot het voor Profiel opnieuw is toegelaten.
 
 **API-indeling**
 
@@ -209,29 +208,37 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Parameter | Beschrijving |
-|---|---|
-| `{DATASET_ID}` | De id van een gegevensset die u wilt bijwerken. |
+| --------- | ----------- |
+| `{DATASET_ID}` | De id van de gegevensset die u wilt bijwerken. |
 
 **Verzoek**
 
-De eerste instantie van de PATCH-aanvraag bevat een `path` tot `unifiedProfile` instellen `value` tot `enabled:false` om de tag uit te schakelen.
+De eerste instantie van de PATCH-aanvraag bevat een `path` tot `unifiedProfile` en `path` tot `unifiedIdentity`, de instelling `value` tot `enabled:false` voor beide paden om de tags uit te schakelen.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **Antwoord**
 
-Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `unifiedProfile` tag is nu uitgeschakeld.
+Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `unifiedProfile` en `unifiedIdentity` tags zijn nu uitgeschakeld.
 
 ```json
 [
@@ -250,28 +257,42 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Parameter | Beschrijving |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | De id van een gegevensset die u wilt bijwerken. |
 
 **Verzoek**
 
-De verzoekende instantie omvat een `path` tot `unifiedProfile` instellen `value` de `enabled` en `isUpsert` tags, beide ingesteld op `true`.
+De verzoekende instantie omvat een `path` tot `unifiedProfile` instellen `value` de `enabled` en `isUpsert` tags, beide ingesteld op `true`en `path` tot `unifiedIdentity` instellen `value` de `enabled` tag ingesteld op `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **Antwoord**
-Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `unifiedProfile` tag is nu ingeschakeld en geconfigureerd voor kenmerkupdates.
+
+Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `unifiedProfile` tag en `unifiedIdentity` tag is nu ingeschakeld en geconfigureerd voor kenmerkupdates.
 
 ```json
 [
