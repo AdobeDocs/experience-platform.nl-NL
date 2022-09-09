@@ -2,9 +2,9 @@
 title: Verlopen gegevensset beheren
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 769c872d67141b4973b29a492e72c23491e2d1ae
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 >De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
 
 De [[!UICONTROL Data Hygiene] werkruimte](./overview.md) in Adobe Experience Platform UI staat u toe om een datasetvervaldatum te plannen. Wanneer een dataset zijn vervaldatum bereikt, beginnen het gegevens meer, de Dienst van de Identiteit, en het Profiel van de Klant in real time afzonderlijke processen om de inhoud van de dataset uit hun respectieve diensten te verwijderen. Zodra de gegevens van alle drie de diensten worden geschrapt, wordt de vervaldatum duidelijk volledig.
+
+>[!WARNING]
+>
+>Als een dataset wordt geplaatst om te verlopen, moet u om het even welke gegevensstromen manueel veranderen die gegevens in die dataset kunnen opnemen zodat uw stroomafwaartse werkschema&#39;s niet negatief worden beïnvloed.
 
 Dit document behandelt hoe te om datasettermijnen in de UI van het Platform te plannen en te beheren.
 

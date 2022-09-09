@@ -2,9 +2,9 @@
 title: API-eindpunt voor gegevenssetvervaldatums
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1405'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,10 @@ Een gegevenssetvervaldatum is slechts een getimed-vertraagde schrappingsverricht
 Op elk ogenblik alvorens dataset-schrapping eigenlijk in werking wordt gesteld, kunt u het verlopen annuleren of zijn trekkertijd wijzigen. Na het annuleren van een datasetvervaldatum, kunt u het opnieuw openen door een nieuwe vervaldatum te plaatsen.
 
 Zodra de datasetschrapping in werking wordt gesteld, zal zijn vervalsingstaak worden gemerkt zoals `executing`en mag niet worden gewijzigd. De gegevensset zelf kan maximaal zeven dagen worden hersteld, maar alleen via een handmatig proces dat via een Adobe-serviceaanvraag wordt geïnitieerd. Aangezien het verzoek uitvoert, beginnen de gegevens meer, de Dienst van de Identiteit, en het Profiel van de Klant in real time afzonderlijke processen om de inhoud van de dataset uit hun respectieve diensten te verwijderen. Zodra de gegevens van alle drie de diensten worden geschrapt, wordt de vervaldatum duidelijk zoals `executed`.
+
+>[!WARNING]
+>
+>Als een dataset wordt geplaatst om te verlopen, moet u om het even welke gegevensstromen manueel veranderen die gegevens in die dataset kunnen opnemen zodat uw stroomafwaartse werkschema&#39;s niet negatief worden beïnvloed.
 
 ## Aan de slag
 
