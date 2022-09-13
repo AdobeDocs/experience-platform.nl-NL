@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Data Governance
 breadcrumb-title: Handleiding voor gegevensbeheer
 user-guide-description: Beperkingen voor gegevensgebruik afdwingen door labels, marketingacties en beleid te gebruiken.
 feature: Data Governance
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: c84926fe88ab02503220ca377170521077dc517e
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '96'
 ht-degree: 7%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 7%
 # Adobe Experience Platform Data Governance {#data-governance}
 
 * [Overzicht van gegevensbeheer](home.md)
+* [End-to-end hulplijn](./e2e.md)
 * Labels voor gegevensgebruik {#labels}
    * [Overzicht](labels/overview.md)
    * [Verklarende woordenlijst met labels](labels/reference.md)
