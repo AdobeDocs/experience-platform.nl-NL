@@ -1,9 +1,10 @@
 ---
 title: Ondersteunde browsers
 description: Een lijst met meerdere browsers die compatibel zijn met een Adobe Experience Platform-tagruntime.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
+source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 1%
 
 ---
@@ -19,9 +20,8 @@ De tagruntime in Adobe Experience Platform (geleverd aan websites van klanten) i
 - Chrome (laatste)
 - Safari (laatste)
 - Firefox (nieuwste)
-- IE (10 en hoger)
 - Rand (nieuwste)
-- iOS Safari (nieuwste)
+- iOS Safari (laatste)
 - Android Chrome (laatste)
 
 Alle uitbreidingscodes die in de runtime worden opgenomen, moeten ook deze browsers ondersteunen.
