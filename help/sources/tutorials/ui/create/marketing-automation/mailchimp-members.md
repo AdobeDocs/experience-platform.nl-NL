@@ -5,10 +5,10 @@ title: Een MailChimp-bronverbinding voor leden maken met de gebruikersinterface 
 topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform met MailChimp-leden verbindt via de gebruikersinterface van het Platform.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '649'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,7 @@ De [!DNL Mailchimp Members] De bron steunt zowel OAuth 2 vernieuwt Code als basi
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Host | De basis-URL waarmee verbinding wordt gemaakt met de MailChimp-API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
+| Domein | De basis-URL waarmee verbinding wordt gemaakt met de MailChimp-API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
 | Autorisatietest-URL | De autorisatietest-URL wordt gebruikt om referenties te valideren wanneer verbinding wordt gemaakt [!DNL Mailchimp] naar Platform. Als dit niet wordt opgegeven, worden de referenties in plaats daarvan automatisch gecontroleerd tijdens het maken van de bronverbinding. |
 | Toegangstoken | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
@@ -43,7 +43,7 @@ Voor meer informatie bij het gebruiken van OAuth 2 om uw voor authentiek te verk
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Host | De basis-URL waarmee verbinding wordt gemaakt met de MailChimp-API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
+| Domein | De basis-URL waarmee verbinding wordt gemaakt met de MailChimp-API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com`, waarbij `{DC}` vertegenwoordigt het datacenter dat overeenkomt met uw account. |
 | Gebruikersnaam | De gebruikersnaam die overeenkomt met uw MailChimp-account. Dit is vereist voor basisverificatie. |
 | Wachtwoord | Het wachtwoord dat overeenkomt met uw MailChimp-account. Dit is vereist voor basisverificatie. |
 
@@ -74,13 +74,13 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 #### Verifiëren met OAuth 2
 
-Als u OAuth 2 wilt gebruiken, selecteert u [!UICONTROL OAuth 2 Refresh Code], geef waarden op voor uw host, test URL voor autorisatie en toegangstoken en selecteer vervolgens **[!UICONTROL Connect to source]**. Laat uw referenties even valideren en selecteer **[!UICONTROL Next]** om verder te gaan.
+Als u OAuth 2 wilt gebruiken, selecteert u [!UICONTROL OAuth 2 Refresh Code], geef waarden op voor uw domein, test de URL voor autorisatie en toegangstoken. Selecteer vervolgens **[!UICONTROL Connect to source]**. Laat uw referenties even valideren en selecteer **[!UICONTROL Next]** om verder te gaan.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-members/oauth.png)
 
 #### Verifiëren met basisverificatie
 
-Selecteer [!UICONTROL Basic authentication], geef waarden op voor uw host, gebruikersnaam en wachtwoord en selecteer **[!UICONTROL Connect to source]**. Laat uw referenties even valideren en selecteer **[!UICONTROL Next]** om verder te gaan.
+Selecteer [!UICONTROL Basic authentication], geef waarden op voor uw domein, gebruikersnaam en wachtwoord en selecteer **[!UICONTROL Connect to source]**. Laat uw referenties even valideren en selecteer **[!UICONTROL Next]** om verder te gaan.
 
 ![basis](../../../../images/tutorials/create/mailchimp-members/basic.png)
 

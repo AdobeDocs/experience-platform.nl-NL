@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bro
 title: (Bèta)Creeer een Verbinding van de Bron van het Mixpaneel in UI
 description: Leer hoe u een Mixpanel-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '852'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,6 @@ Om verbinding te maken [!DNL Mixpanel] als u een Platform wilt maken, moet u waa
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Host | De [!DNL Mixpanel] onbewerkte API-eindpunt voor gegevensexport. Zie de [!DNL Raw Data Export API] in de [Referentiedocumentatie van de API van Mixpanel](https://developer.mixpanel.com/reference/overview) voor meer informatie . | `https://data.mixpanel.com` |
 | Gebruikersnaam | De gebruikersnaam van de serviceaccount die overeenkomt met uw [!DNL Mixpanel] account. Zie de [[!DNL Mixpanel] serviceaccountdocumentatie](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) voor meer informatie . | `Test8.6d4ee7.mp-service-account` |
 | Wachtwoord | Het wachtwoord voor de serviceaccount dat overeenkomt met uw [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | Project-id | Uw [!DNL Mixpanel] project-id. Deze id is vereist om een bronverbinding te maken. Zie de [[!DNL Mixpanel] documentatie over projectinstellingen](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) en de [[!DNL Mixpanel] gids over het maken en beheren van projecten](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) voor meer informatie . | `2384945` |

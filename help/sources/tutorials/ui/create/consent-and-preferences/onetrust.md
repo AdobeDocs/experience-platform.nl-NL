@@ -5,9 +5,10 @@ title: (Beta) Creeer een OneTrust Source Connection in UI
 topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een OneTrust-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
+source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ Om verbinding te maken [!DNL OneTrust Integration] aan Platform, moet u waarden 
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Host | Het milieu waarvan [!DNL OneTrust Integration] gegevens moeten worden opgehaald. | `https://uat.onetrust.com/` |
+| Hostnaam | Het milieu waarvan [!DNL OneTrust Integration] gegevens moeten worden opgehaald. | `https://uat.onetrust.com/` |
 | Autorisatietest-URL | (Optioneel) De autorisatietest-URL wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |  |
 | Toegangstoken | Het toegangstoken dat met uw [!DNL OneTrust Integration] account. | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 

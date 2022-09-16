@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;bronnen;connectors;bron connectors;bronnen
 title: Een Zendesk Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Zendesk-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 3%
@@ -33,7 +33,7 @@ Om toegang te krijgen tot uw [!DNL Zendesk] account op Platform, moet u waarden 
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Host | Het unieke domein dat specifiek is voor uw account dat tijdens het registratieproces is gemaakt. | `https://yoursubdomain.zendesk.com` |
+| Subdomein | Het unieke domein dat specifiek is voor uw account dat tijdens het registratieproces is gemaakt. | `https://yoursubdomain.zendesk.com` |
 | Toegangstoken | Zendesk API-token. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Voor meer informatie over het verifiëren van uw [!DNL Zendesk] bron, zie [[!DNL Zendesk] bronoverzicht](../../../../connectors/customer-success/zendesk.md).

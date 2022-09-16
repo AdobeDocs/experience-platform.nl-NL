@@ -5,9 +5,9 @@ title: Een dataflow maken voor Zendesk met behulp van de Flow Service API
 topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Zendesk met behulp van de Flow Service API.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1996'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ Om toegang te krijgen tot uw [!DNL Zendesk] account op Platform, moet u waarden 
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
+| `subdomain` | Het unieke domein dat aan uw account is gekoppeld. | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Zendesk API-token. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Voor meer informatie over het verifiëren van uw [!DNL Zendesk] bron, zie [[!DNL Zendesk] bronoverzicht](../../../../connectors/customer-success/zendesk.md).
@@ -77,6 +78,7 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
+                "subdomain": "{SUBDOMAIN}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -90,6 +92,7 @@ curl -X POST \
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
 | `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
 | `auth.params.` | Bevat de geloofsbrieven die worden vereist om uw bron voor authentiek te verklaren. |
+| `auth.params.subdomain` | Het unieke domein dat aan uw account is gekoppeld. De indeling van subdomein is `https://yoursubdomain.zendesk.com`. |
 | `auth.params.accessToken` | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
 **Antwoord**
