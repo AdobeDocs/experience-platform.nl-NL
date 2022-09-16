@@ -1,9 +1,9 @@
 ---
 title: End-to-end handleiding voor gegevensbeheer
 description: Volg het volledige proces voor het afdwingen van beperkingen van het gegevensgebruik voor gebieden en datasets in Adobe Experience Platform.
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Selecteer in het volgende scherm de marketingacties waarvoor dit beleid de eerde
 
 ![Afbeelding die een marketingactie toont die wordt toegewezen aan een beleid in de gebruikersinterface](./images/e2e/select-marketing-action.png)
 
-Het definitieve scherm toont een samenvatting van de details van het beleid en de acties het zal beperken waarvoor etiketten. Selecteren **[!UICONTROL Finish]** om het beleid te creëren en in te schakelen.
+Het definitieve scherm toont een samenvatting van de details van het beleid en de acties het zal beperken waarvoor etiketten. Selecteren **[!UICONTROL Finish]** om het beleid te creëren.
 
 ![Afbeelding die het beleid dat wordt geconfigureerd, weergeeft in de gebruikersinterface](./images/e2e/confirm-policy.png)
 
