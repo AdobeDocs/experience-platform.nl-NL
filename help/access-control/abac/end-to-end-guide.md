@@ -4,9 +4,9 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2099'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,35 @@ Als u beheerdersrechten hebt, gaat u naar [Adobe Experience Cloud](https://exper
 De werkruimte voor machtigingen voor de gebruikersinterface van het Platform wordt geopend in het dialoogvenster **[!UICONTROL Roles]** pagina.
 
 ## Labels op een rol toepassen {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="Wat zijn labels?"
+>abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Platform biedt verschillende Adobe-gedefinieerde &quot;core&quot;-labels voor gegevensgebruik, die een groot aantal gemeenschappelijke beperkingen omvatten die van toepassing zijn op gegevensbeheer. Met gevoelige &quot;S&quot;-labels zoals RHD (Gereglementeerde gezondheidsgegevens) kunt u bijvoorbeeld gegevens categoriseren die verwijzen naar beschermde gezondheidsinformatie (PHI). U kunt ook uw eigen aangepaste labels definiëren die aan de behoeften van uw organisatie voldoen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Overzicht van labels voor gegevensgebruik"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Nieuw label maken"
+>abstract="U kunt uw eigen aangepaste labels maken die aansluiten op de behoeften van uw organisatie. De etiketten van de douane kunnen worden gebruikt om zowel gegevensbeheer als toegangsbeheerconfiguraties op uw gegevens toe te passen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Aangepaste labels beheren"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Wat zijn rollen?"
+>abstract="Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan en bouwstenen van toegangsbeheerbeleid zijn. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Rollen beheren"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Nieuwe rol maken"
+>abstract="U kunt een nieuwe rol tot stand brengen om gebruikers beter te categoriseren die tot uw instantie van het Platform toegang hebben. Bijvoorbeeld, kunt u een rol voor een Intern Team van de Marketing tot stand brengen en het etiket RHD op die rol toepassen, die uw Intern Team van de Marketing zal toestaan om tot de Beschermde Informatie van de Gezondheid (PHI) toegang te hebben. Alternatief, kunt u een rol voor een Extern Agentschap ook tot stand brengen en die roltoegang tot PHI gegevens ontkennen door het etiket RHD op die rol niet toe te passen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Een nieuwe rol maken"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Roloverzicht"
+>abstract="In het dialoogvenster Roloverzicht worden de bronnen en sandboxen weergegeven waartoe een bepaalde rol toegang heeft."
 
 Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan, en bouwstenen van toegangsbeheerbeleid zijn. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van toegang worden toegewezen zij nodig hebben.
 
@@ -117,6 +146,34 @@ De **[!UICONTROL Edit labels]** wordt weergegeven, zodat u de labels kunt kiezen
 Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]**.
 
 ## Creeer een beleid van de toegangscontrole {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="Wat is het beleid?"
+>abstract="Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Elke organisatie komt met een standaardbeleid dat u moet activeren om regels voor middelen zoals segmenten en schemagebieden te bepalen. Standaardbeleid kan niet worden bewerkt of verwijderd. Het standaardbeleid kan echter worden geactiveerd of gedeactiveerd."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Beleid beheren"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="Een beleid maken"
+>abstract="Creeer een beleid om de acties te bepalen die uw gebruikers tegen uw segmenten en schemagebieden kunnen en kunnen nemen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Een beleid maken"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="Toelaatbare en ontoelaatbare acties voor een beleid configureren"
+>abstract="Selecteer Toegang toestaan tot, om toelaatbare acties te vormen die uw gebruikers tegen middelen kunnen maken. Selecteer ontkennen toegang tot, om ontoelaatbare acties te vormen die uw gebruikers tegen middelen niet kunnen maken."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Een beleid bewerken"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="Machtigingen voor een bron configureren"
+>abstract="Een bron is het element dat of het object dat een gebruiker kan of kan benaderen. De middelen kunnen segmenten of schema&#39;s zijn. U kunt schrijven vormen, lezen, of schrappen toestemmingen voor segmenten en schemagebieden."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="Voorwaarden bewerken"
+>abstract="Pas voorwaardelijke verklaringen op uw beleid toe om gebruikerstoegang tot bepaalde middelen te vormen. Selecteer gelijke allen om gebruikers te vereisen om rollen met de nauwkeurige zelfde etiketten te hebben zoals een middel om toegang te worden toegestaan. Selecteer gelijke om het even welk om gebruikers slechts te vereisen om een rol met enkel één etiket te hebben dat een middel aanpast. De etiketten kunnen of als kern of douanelabels worden bepaald, met kernetiketten die etiketten vertegenwoordigen die worden gecreeerd en door Adobe en douanelabels worden verstrekt die etiketten vertegenwoordigen die u voor uw organisatie creeerde."
 
 Het beleid van de controle van de toegang hefboomhefboometiketten om te bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. Het beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. In dit voorbeeld wordt toegang tot schemavelden en -segmenten in alle sandboxen geweigerd voor gebruikers die niet over de overeenkomende labels in het schemaveld beschikken.
 
