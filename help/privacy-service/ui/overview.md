@@ -5,14 +5,19 @@ title: Overzicht gebruikersinterface Privacy Service
 topic-legacy: UI guide
 description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 1%
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
-# [!DNL Privacy Service] Overzicht van gebruikersinterface
+# [!DNL Privacy Service] Overzicht van gebruikersinterface {#privacy-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacy_privacyconsole_requests"
+>title="Verzoeken om informatie"
+>abstract="Deze widget geeft het aantal verzonden en voltooide verzoeken voor het gegevenssubject weer dat gedurende een bepaalde dag door de Privacy Service is verwerkt. Voor meer informatie over uw processen van de Privacy Service, selecteer **Verzoeken** in de linkernavigatie."
 
 Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u privacy- en compatibiliteitsverzoeken in verschillende oplossingen kunt coördineren. In dit document wordt de [!DNL Privacy Service] UI. Voor informatie over het gebruik van de API raadpleegt u de [Handleiding Privacy Service-API](../api/overview.md).
 

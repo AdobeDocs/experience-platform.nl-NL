@@ -2,14 +2,24 @@
 title: UI-gids voor gegevenshygiëne
 description: Leer hoe u taken voor gegevenshygiëne beheert in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
 
-# UI-gids voor gegevenshygiëne
+# UI-gids voor gegevenshygiëne {#hygiene-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_privacyconsole_consumer"
+>title="Hygiënnewiel voor gegevens"
+>abstract="Deze widget geeft de status weer van Data Hygiene-verwijdertaken voor de geselecteerde tijdlijn. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_privacyconsole_recents"
+>title="Recente werkorders voor gegevenshygiëne"
+>abstract="Deze widget toont de vijf meest recente gemaakte of bijgewerkte werkorders voor gegevenshygiëne, afhankelijk van de optie die u in de rechterbovenhoek selecteert. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
 
 >[!IMPORTANT]
 >
