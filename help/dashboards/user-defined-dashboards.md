@@ -2,9 +2,9 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,18 @@ De [!UICONTROL Create dashboard] wordt weergegeven. Voer een beschrijvende naam 
 
 Het nieuwe lege dashboard wordt met de door u gekozen naam weergegeven in de linkerbovenhoek van de weergave.
 
-## Een widget maken
+## Een widget maken {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Maximum aantal widgets"
+>abstract="Door de gebruiker gedefinieerde dashboards ondersteunen maximaal tien widgets. Nadat u tien widgets aan uw dashboard hebt toegevoegd, [!UICONTROL Add new widget] is uitgeschakeld en wordt grijs weergegeven."
 
 Selecteer in de nieuwe dashboardweergave de optie **[!UICONTROL Add new widget]** om het maken van de widget te starten.
+
+>[!IMPORTANT]
+>
+>Door de gebruiker gedefinieerde dashboards ondersteunen maximaal tien widgets. Nadat u tien widgets aan uw dashboard hebt toegevoegd, [!UICONTROL Add new widget] is uitgeschakeld en wordt grijs weergegeven.
 
 ![Het nieuwe lege dashboard met de markering Nieuwe widget toevoegen.](./images/user-defined-dashboards/add-new-widget.png)
 
