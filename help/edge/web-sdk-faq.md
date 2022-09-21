@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 720960b7d63c30707f823fdfafc2299289ea0a11
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1934'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Alloy is de codenaam voor het Web SDK van Adobe Experience Platform. Het wordt g
 
 ## Moeten klanten Adobe Experience Platform kopen om de [!DNL Web SDK]?
 
-Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SDK gratis gebruiken. Klanten die de [!DNL Web SDK] zal de juiste toestemmingen moeten vormen om schema&#39;s, datasets, identiteitsnamespaces, en gegevensstromen in de UI van de Inzameling van Gegevens van Adobe Experience Platform tot stand te brengen.
+Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SDK gratis gebruiken. Klanten die de [!DNL Web SDK] zal de juiste toestemmingen moeten vormen om schema&#39;s, datasets, identiteitsnamespaces, en gegevensstromen in de Inzameling UI van Gegevens of Experience Platform UI tot stand te brengen.
 
 Voor meer informatie over het configureren van deze machtigingen raadpleegt u onze documentatie over [beheer van gegevensverzamelingsmachtigingen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -135,7 +135,7 @@ Nee. U kunt de `alloy.js` bestand zelf.
 
 Echter:
 
-* Adobe Experience Platform Web SDK vereist iets genoemd een identiteitskaart DataStream zodat kan het randnetwerk de stroom identificeren en bepalen wat met de gegevens te doen. Deze id wordt gemaakt in het Experience Platform. Dit betekent niet u de UI van de Inzameling van Gegevens moet gebruiken om eigenschappen tot stand te brengen of de code op te stellen JavaScript, maar u moet markeringen gebruiken om een configuratieidentiteitskaart tot stand te brengen.
+* Adobe Experience Platform Web SDK vereist iets genoemd een identiteitskaart DataStream zodat kan het randnetwerk de stroom identificeren en bepalen wat met de gegevens te doen. Deze id wordt gemaakt in het Experience Platform. Dit betekent niet dat u de interface moet gebruiken om eigenschappen te maken of de JavaScript-code te implementeren, maar dat u wel tags moet gebruiken om een configuratie-id te maken.
 
 * Tags zijn niet alleen de beste beschikbare tag en SDK-manager, maar maken het erg eenvoudig om te implementeren `alloy.js` en kaartgegevens naar XDM-schema&#39;s. Als u besluit geen labels te gebruiken, moet u de implementatie beheren `alloy.js`, het voorkomen, en het in kaart brengen van uw gegevens in XDM alvorens het te verzenden. Dit is een _veel_ moeilijker te verwerken dan het gebruik van labels.
 

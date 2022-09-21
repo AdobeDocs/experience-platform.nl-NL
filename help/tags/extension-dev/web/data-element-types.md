@@ -1,9 +1,10 @@
 ---
 title: Typen gegevenselementen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het gegevenstype data-element definieert voor een tagextensie in een webeigenschap.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -22,13 +23,13 @@ In dit document wordt beschreven hoe u gegevenselematypen voor een webextensie i
 
 >[!IMPORTANT]
 >
->Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [gegevenselementen voor randuitbreidingen](../edge/data-element-types.md).
+>Als u een randuitbreiding ontwikkelt, zie de gids op [gegevenselemetypen voor randextensies](../edge/data-element-types.md) in plaats daarvan.
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
-1. Een [mening](./views.md) getoond binnen de UI van de Inzameling van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
+1. A [weergave](./views.md) getoond binnen UI van het Experience Platform en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en gegevens op te halen.
 
 Overweeg een situatie waarin u gebruikers wilt toestaan om gegevens op te halen uit een lokaal opslagitem met de naam `productName`. Uw module kan als volgt kijken:
@@ -39,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-Als u de naam van het lokale opslagitem configureerbaar wilt maken voor de Adobe Experience Platform-gebruiker, kunt u toestaan dat de gebruiker een naam invoert en de naam vervolgens opslaat in het `settings`-object. Het object kan er ongeveer als volgt uitzien:
+Als u de naam van het lokale opslagitem configureerbaar wilt maken voor de Adobe Experience Platform-gebruiker, kunt u toestaan dat de gebruiker een naam invoert en de naam vervolgens in de `settings` object. Het object kan er ongeveer als volgt uitzien:
 
 ```js
 {
@@ -57,7 +58,7 @@ module.exports = function(settings) {
 
 ## Ondersteuning van standaardwaarden
 
-Houd er rekening mee dat gebruikers de optie hebben om een standaardwaarde voor elk gegevenselement te configureren. Als de bibliotheekmodule voor gegevenselementen de waarde `undefined` of `null` retourneert, wordt deze automatisch vervangen door de standaardwaarde die de gebruiker voor het gegevenselement heeft geconfigureerd.
+Houd er rekening mee dat gebruikers de optie hebben om een standaardwaarde voor elk gegevenselement te configureren. Als de bibliotheekmodule voor gegevenselementen een waarde retourneert van `undefined` of `null`, wordt deze automatisch vervangen door de standaardwaarde die de gebruiker voor het gegevenselement heeft geconfigureerd.
 
 ## Contextafhankelijke gebeurtenisgegevens
 
@@ -69,11 +70,11 @@ module.exports = function(settings, event) {
 };
 ```
 
-Het object `event` moet de volgende eigenschappen bevatten:
+De `event` object moet de volgende eigenschappen bevatten:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `$type` | Een tekenreeks die de naam van de extensie en de gebeurtenis beschrijft en waaraan een punt is toegevoegd. Bijvoorbeeld, `youtube.play`. |
 | `$rule` | Een object dat informatie bevat over de regel die momenteel wordt uitgevoerd. Het object moet de volgende subeigenschappen bevatten:<ul><li>`id`: De id van de regel die momenteel wordt uitgevoerd.</li><li>`name`: De naam van de regel die momenteel wordt uitgevoerd.</li></ul> |
 
-De uitbreiding die het gebeurtenistype verstrekt dat de regel teweegbracht kan naar keuze om het even welke andere nuttige informatie aan dit `event` voorwerp toevoegen.
+De uitbreiding die het gebeurtenistype verstrekt dat de regel teweegbracht kan andere nuttige informatie aan dit optioneel toevoegen `event` object.

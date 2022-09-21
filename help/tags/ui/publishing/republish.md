@@ -1,9 +1,10 @@
 ---
 title: Bibliotheek opnieuw publiceren
 description: Leer hoe u een vorige tagbibliotheek opnieuw publiceert in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -20,11 +21,11 @@ Het ophaalproces is afhankelijk van uw omgevingsinstellingen op het moment dat d
 
 De volgende opties zijn beschikbaar:
 
-* **Host: Beheerd door Adobe, Archief: Uit:** Als u de door de host van Adobe beheerde bibliotheek gebruikt en uw bibliotheek niet archiveert, kunt u deze oudere bibliotheken opnieuw publiceren.
+* **Host: Beheerd door Adobe, Archief: Uit:** Als u de beheerde bibliotheek door de host van Adobe gebruikt en uw bibliotheek niet archiveert, kunt u deze oudere bibliotheken opnieuw publiceren.
 
-* **Host: Beheerd door Adobe, Archief: Aan:** Als u de bibliotheek van de host Beheerd door Adobe gebruikt en u archiveert, kunt u deze oudere bibliotheken downloaden.
+* **Host: Beheerd door Adobe, Archief: Aan:** Als u de beheerde bibliotheek van de gastheer van Adobe gebruikt en uw bibliotheek archiveert, dan kunt u deze oudere bibliotheken downloaden.
 
-* **Host: SFTP, archiveren: Aan of Uit:** Als u de gastheer SFTP gebruikt, wordt verondersteld dat u uw eigen archiveringsstrategieën op zijn plaats hebt en geen terugwinningsopties beschikbaar zijn.
+* **Host: SFTP, archiveren: Aan of uit:** Als u de gastheer van SFTP gebruikt, wordt verondersteld dat u uw eigen archiefstrategieën op zijn plaats hebt en geen terugwinningsopties beschikbaar zijn.
 
 Ophaalopties voor mobiele eigenschappen zijn nog niet beschikbaar.
 
@@ -44,7 +45,7 @@ Dit betekent dat wanneer u een oudere bibliotheek opnieuw publiceert:
 
 * De manier waarop ontwikkelings- en staging-omgevingen berekenen wat upstream is, verandert niet
 
-Overweeg het scenario wanneer u wegens een probleem met een specifieke regel terugdraait. De herziening van de regels die nu in productie is, zou bijvoorbeeld drie oude herzieningen kunnen zijn.  Wanneer u die regel in de UI van de Inzameling van Gegevens bekijkt om het te bevestigen, weerspiegelt het nog de recentste opgeslagen veranderingen eerder dan wat momenteel in productie is.
+Overweeg het scenario wanneer u wegens een probleem met een specifieke regel terugdraait. De herziening van de regels die nu in productie is, zou bijvoorbeeld drie oude herzieningen kunnen zijn.  Wanneer u die regel in UI bekijkt om het te bevestigen, weerspiegelt het nog de recentste opgeslagen veranderingen eerder dan wat momenteel in productie is.
 
 Om deze reden, deelt het Platform u mee dat een bezit in een opnieuw gepubliceerde staat als herinnering is dat wat u in het gebruikersinterface van de Inzameling van Gegevens ziet een weinig verder verwijderd uit Productie dan normaal is. Deze melding is niet toegestaan en wordt de eerste keer dat u de eigenschap weergeeft, eenmaal per browsersessie weergegeven.
 
@@ -55,7 +56,7 @@ Om deze reden, deelt het Platform u mee dat een bezit in een opnieuw gepubliceer
 Vanuit het scherm Publiceren:
 
 1. Zoek de bibliotheek in de Gepubliceerde kolom die u zou willen opnieuw publiceren.
-1. Selecteer de ellips (`...`) in de hoger-juiste hoek van de kaart van de Bibliotheek.
+1. De ovaal selecteren (`...`) in de rechterbovenhoek van de Bibliotheekkaart.
 1. Selecteer **[!UICONTROL Republish]**.
 
 ## Download
@@ -69,5 +70,5 @@ Het downloaden van een gearchiveerde bibliotheek is eenvoudiger. U verwijst niet
 Vanuit het scherm Publiceren:
 
 1. Zoek de bibliotheek in de kolom Published die u wilt downloaden.
-1. Selecteer de ellips (`...`) in de hoger-juiste hoek van de kaart van de Bibliotheek.
+1. De ovaal selecteren (`...`) in de rechterbovenhoek van de Bibliotheekkaart.
 1. Selecteer **[!UICONTROL Download]**.

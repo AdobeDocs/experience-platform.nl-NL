@@ -2,9 +2,9 @@
 title: Extension Manifest
 description: Leer hoe u een JSON-manifestbestand configureert dat Adobe Experience Platform informeert over de juiste manier om uw extensie te gebruiken.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2645'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Een typedefinitie is een voorwerp dat wordt gebruikt om een gebeurtenis, een voo
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Optioneel)</em></td>
-      <td>Indien verstrekt, <code>displayName</code> wordt vermeld onder de <code>categoryName</code> binnen de UI van de Inzameling van Gegevens. Alle typen met hetzelfde <code>categoryName</code> worden onder dezelfde rubriek vermeld. Als uw extensie bijvoorbeeld een <code>keyUp</code> gebeurtenistype en een <code>keyDown</code> gebeurtenistype en beide hadden een <code>categoryName</code> van <code>Keyboard</code>beide gebeurtenistypen worden vermeld onder de categorie Toetsenbord terwijl de gebruiker een regel maakt en een keuze maakt uit de lijst met beschikbare gebeurtenistypen. De waarde van <code>categoryName</code> moet leesbaar zijn voor de mens.</td>
+      <td>Indien verstrekt, <code>displayName</code> wordt vermeld onder de <code>categoryName</code> in de gebruikersinterface. Alle typen met hetzelfde <code>categoryName</code> worden onder dezelfde rubriek vermeld. Als uw extensie bijvoorbeeld een <code>keyUp</code> gebeurtenistype en een <code>keyDown</code> gebeurtenistype en beide hadden een <code>categoryName</code> van <code>Keyboard</code>beide gebeurtenistypen worden vermeld onder de categorie Toetsenbord terwijl de gebruiker een regel maakt en een keuze maakt uit de lijst met beschikbare gebeurtenistypen. De waarde van <code>categoryName</code> moet leesbaar zijn voor de mens.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

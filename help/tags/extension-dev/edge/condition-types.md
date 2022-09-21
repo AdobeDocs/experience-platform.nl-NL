@@ -1,9 +1,10 @@
 ---
 title: Voorwaardetypen voor randextensies
 description: Leer hoe u een voorwaardetype-bibliotheekmodule voor een randuitbreiding in Adobe Experience Platform definieert.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -22,16 +23,16 @@ In dit document wordt beschreven hoe u voorwaardetypen voor een randextensie in 
 
 >[!IMPORTANT]
 >
->Als u een webextensie ontwikkelt, raadpleegt u in plaats daarvan de handleiding over voorwaardetypen [voor webextensies](../web/condition-types.md).
+>Als u een webextensie ontwikkelt, raadpleegt u de handleiding op [voorwaardetypen voor webextensies](../web/condition-types.md) in plaats daarvan.
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
 
 Voorwaardetypen bestaan gewoonlijk uit het volgende:
 
-1. Een mening die binnen UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
+1. Een mening die binnen UI van het Experience Platform en UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
 2. Een bibliotheekmodule die in de tagruntime-bibliotheek wordt uitgestraald om de instellingen te interpreteren en een voorwaarde te evalueren.
 
-Bijvoorbeeld, als u wilt evalueren of de gebruiker op de gastheer `example.com` is, kan uw module als dit kijken.
+Als u bijvoorbeeld wilt beoordelen of de gebruiker zich op de host bevindt `example.com`, kan uw module er zo uitzien.
 
 ```js
 module.exports = (context) => {
@@ -61,9 +62,9 @@ module.exports = (context) => {
 
 Het resultaat dat door een voorwaardenmodule wordt geretourneerd, kan een van de volgende zijn:
 
-1. Een booleaanse waarde (`true` of `false`).
-1. Een [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) die een booleaanse waarde retourneert zodra deze is opgelost.
+1. Een Booleaanse waarde (`true` of `false`).
+1. A [beloven](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) die een Booleaanse waarde retourneert nadat deze is omgezet.
 
 ## Context van de module Bibliotheek
 
-Alle voorwaardemodules hebben toegang tot een `context` variabele die wordt verstrekt wanneer de module wordt geroepen. U kunt meer [hier](./context.md) leren.
+Alle voorwaardemodules hebben toegang tot een `context` variabele die wordt verstrekt wanneer de module wordt geroepen. Meer informatie [hier](./context.md).

@@ -1,9 +1,10 @@
 ---
 title: Voorwaardetypen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het type condition definieert voor een tagextensie in een webeigenschap.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -22,18 +23,18 @@ In dit document wordt beschreven hoe u voorwaardetypen voor een webextensie in A
 
 >[!NOTE]
 >
->Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [voorwaardetypes voor randuitbreidingen](../edge/condition-types.md).
+>Als u een randuitbreiding ontwikkelt, zie de gids op [voorwaardetypen voor randextensies](../edge/condition-types.md) in plaats daarvan.
 >
->In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
 
 Voorwaardetypen bestaan gewoonlijk uit het volgende:
 
-1. Een [mening](./views.md) getoond binnen de UI van de Inzameling van Gegevens die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
+1. A [weergave](./views.md) getoond binnen UI van het Experience Platform en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
 2. Een bibliotheekmodule die in de tagruntime-bibliotheek wordt uitgestraald om de instellingen te interpreteren en een voorwaarde te evalueren.
 
 Een voorwaardetype bibliotheekmodule heeft één doel: evalueren of iets waar of onwaar is. Wat het evalueert, is aan jou.
 
-Bijvoorbeeld, als u wilde evalueren of de gebruiker op de gastheer `example.com` is, kan uw module als dit kijken:
+Als u bijvoorbeeld wilt beoordelen of de gebruiker zich op de host bevindt `example.com`, ziet uw module er mogelijk als volgt uit:
 
 ```js
 module.exports = function(settings) {
@@ -67,11 +68,11 @@ module.exports = function(settings, event) {
 };
 ```
 
-Het object `event` moet de volgende eigenschappen bevatten:
+De `event` object moet de volgende eigenschappen bevatten:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `$type` | Een tekenreeks die de naam van de extensie en de gebeurtenis beschrijft en waaraan een punt is toegevoegd. Bijvoorbeeld, `youtube.play`. |
 | `$rule` | Een object dat informatie bevat over de regel die momenteel wordt uitgevoerd. Het object moet de volgende subeigenschappen bevatten:<ul><li>`id`: De id van de regel die momenteel wordt uitgevoerd.</li><li>`name`: De naam van de regel die momenteel wordt uitgevoerd.</li></ul> |
 
-De uitbreiding die het gebeurtenistype verstrekt dat de regel teweegbracht kan naar keuze om het even welke andere nuttige informatie aan dit `event` voorwerp toevoegen.
+De uitbreiding die het gebeurtenistype verstrekt dat de regel teweegbracht kan andere nuttige informatie aan dit optioneel toevoegen `event` object.

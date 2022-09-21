@@ -2,9 +2,9 @@
 title: Het eindpunt van componenten van de regel
 description: Leer hoe te om vraag aan het /rule_components eindpunt in Reactor API te maken.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1200'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Tags voor gegevensverzameling [regels](./rules.md) controleert het gedrag van de
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u regelcomponenten in de Reactor-API beheert. Voor details over hoe te met regels en regelcomponenten in de UI van de Inzameling van Gegevens in wisselwerking te staan, gelieve te verwijzen naar [UI-hulplijn](../../ui/managing-resources/rules.md).
+>In dit document wordt beschreven hoe u regelcomponenten in de Reactor-API beheert. Voor details over hoe te met regels en regelcomponenten in UI in wisselwerking te staan, gelieve te verwijzen naar [UI-hulplijn](../../ui/managing-resources/rules.md).
 
 Regelcomponenten hebben drie basistypen:
 

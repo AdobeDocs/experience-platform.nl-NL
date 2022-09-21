@@ -2,9 +2,9 @@
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 5a30bd502cd3950f3c74d5c39d0c7e395fcbb839
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Data Prep is een Adobe Experience Platform-service waarmee u gegevens kunt toewi
 >* [Gegevensindelingen verwerken met Data Prep](../../data-prep/data-handling.md)
 
 
-Deze gids behandelt hoe te om uw gegevens binnen de UI van de Inzameling van Gegevens in kaart te brengen. Als u de stappen wilt volgen, start u het proces voor het maken van een gegevensstroom tot (en met) de [basisconfiguratiestap](./overview.md#create).
+In deze handleiding wordt uitgelegd hoe u uw gegevens in de gebruikersinterface kunt toewijzen. Als u de stappen wilt volgen, start u het proces voor het maken van een gegevensstroom tot (en met) de [basisconfiguratiestap](./overview.md#create).
 
 Raadpleeg de volgende video voor een snelle demonstratie van het proces Gegevensvoorbereiding voor gegevensverzameling:
 
@@ -203,4 +203,4 @@ Als het aantal vereiste velden nul bereikt en u tevreden bent met de toewijzing,
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om uw gegevens aan XDM in kaart te brengen wanneer vestiging een gegevensstroom in de UI van de Inzameling van Gegevens. Als u de algemene zelfstudie voor gegevensstromen hebt gevolgd, kunt u nu terugkeren naar de volgende stap [gegevensstroomdetails weergeven](./overview.md).
+In deze handleiding wordt beschreven hoe u uw gegevens aan XDM kunt toewijzen bij het instellen van een gegevensstroom in de gebruikersinterface. Als u de algemene zelfstudie voor gegevensstromen hebt gevolgd, kunt u nu terugkeren naar de volgende stap [gegevensstroomdetails weergeven](./overview.md).

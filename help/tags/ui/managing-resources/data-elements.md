@@ -2,10 +2,10 @@
 title: Gegevenselementen
 description: De elementen van gegevens zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1610'
-ht-degree: 0%
+source-wordcount: '1601'
+ht-degree: 1%
 
 ---
 
@@ -161,7 +161,7 @@ Hiermee wordt de waarde opgehaald van:
 
 Met behulp van het padveld kan naar elk beschikbaar JavaScript-object of -variabele worden verwezen.
 
-Als u JavaScript-variabelen of objecteigenschappen in uw opmaak wilt verzamelen en deze wilt gebruiken met een van uw extensies of regels, kunnen gegevenselementen worden gebruikt om deze waarden vast te leggen. Deze manier, kunt u naar het gegevenselement door uw regels verwijzen, en als de bron van de gegevens ooit verandert, moet u slechts uw verwijzing naar de bron (het gegevenselement) in één plaats binnen UI van de Inzameling van Gegevens veranderen.
+Als u JavaScript-variabelen of objecteigenschappen in uw opmaak wilt verzamelen en deze wilt gebruiken met een van uw extensies of regels, kunnen gegevenselementen worden gebruikt om deze waarden vast te leggen. Op deze manier kunt u naar het gegevenselement in uw regels verwijzen en als de bron van de gegevens ooit verandert, hoeft u uw verwijzing naar de bron (het gegevenselement) slechts op één plaats te wijzigen.
 
 Stel dat uw markering een JavaScript-variabele bevat met de naam `Page_Name`, als volgt:
 
@@ -257,7 +257,7 @@ Enkele gangbare gebruiksgevallen zijn:
 
 ## Ingebouwde gegevenselementen
 
-U moet een aangepast gegevenselement maken in de gebruikersinterface voor gegevensverzameling als u eerder een van de volgende gegevenselementen hebt gebruikt:
+U moet aanvullende aangepaste gegevenselementen maken als u eerder een van de volgende gegevenselementen hebt gebruikt:
 
 * URI
 * Protocol

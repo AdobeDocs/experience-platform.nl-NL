@@ -1,9 +1,10 @@
 ---
 title: Overzicht Adobe Target-extensie
 description: Meer informatie over de tagextensie voor Adobe Target in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1184'
 ht-degree: 0%
 
 ---
@@ -22,15 +23,15 @@ Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het g
 >
 > De Adobe Target-extensie vereist at.js. mbox.js wordt niet ondersteund.
 
-Als de extensie Adobe Target nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de aanwijzer op de extensie Doel en selecteert u **[!UICONTROL Install]**.
+Als de extensie Adobe Target nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de cursor boven de doelextensie en selecteert u **[!UICONTROL Install]**.
 
-Als u de extensie wilt configureren, opent u het tabblad [!UICONTROL Extensions], plaatst u de muis boven de extensie en selecteert u **[!UICONTROL Configure]**.
+Als u de extensie wilt configureren, opent u de [!UICONTROL Extensions] , plaatst u de cursor boven de extensie en selecteert u vervolgens **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-target-config.png)
 
 ### at.js Settings
 
-Al uw montages at.js, met uitzondering van de Onderbreking worden automatisch teruggewonnen van uw configuratie at.js in het gebruikersinterface van het Doel. De uitbreiding wint slechts montages van het Doel gebruikersinterface terug wanneer het eerst wordt toegevoegd, zodat zouden alle montages in de UI van de Inzameling van Gegevens moeten worden beheerd als de extra updates nodig zijn.
+Al uw montages at.js, met uitzondering van de Onderbreking worden automatisch teruggewonnen van uw configuratie at.js in het gebruikersinterface van het Doel. De extensie haalt alleen instellingen uit de gebruikersinterface van het doel op wanneer deze voor het eerst wordt toegevoegd. Alle instellingen moeten daarom in de gebruikersinterface worden beheerd als er extra updates nodig zijn.
 
 De volgende configuratieopties zijn beschikbaar:
 
@@ -60,18 +61,18 @@ Het domein waar de verzoeken van het Doel worden verzonden. Dit zou bijna altijd
 
 Bepaalt waar Doel cookies instelt in de browsers.
 
-* **Uitgeschakeld:** Stelt de cookies alleen in op het domein van de eerste partij. Dit is de standaardinstelling.
-* **Ingeschakeld:** Stelt cookies in op zowel het domein van de eerste partij als het domein van het externe doel (het &quot;serverdomein&quot;).
+* **Uitgeschakeld:** Stelt de cookies alleen in op het domein van de eerste fabrikant. Dit is de standaardinstelling.
+* **Ingeschakeld:** Stelt cookies in op zowel het eerste domein als het externe doeldomein (het &#39;serverdomein&#39;).
 
 #### Time-out (ms)
 
 Als de reactie van Doel niet binnen de bepaalde periode wordt ontvangen, de vraagtijden uit en de standaardinhoud wordt getoond. Tijdens de bezoekerssessie wordt nog steeds geprobeerd om aanvullende verzoeken in te dienen. Het gebrek is 3000ms, die van de Onderbreking verschillend zou kunnen zijn die in het gebruikersinterface van het Doel wordt gevormd.
 
-Raadpleeg [Adobe Target help](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html) voor meer informatie over de werking van de instelling Time-out.
+Raadpleeg voor meer informatie over de werking van de instelling Time-out de optie [Adobe Target Help](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html).
 
 #### Andere at.js-instellingen beschikbaar in de gebruikersinterface van Doel
 
-Verschillende instellingen die beschikbaar zijn op de pagina [!UICONTROL Edit at.js settings] van de interface Doel maken geen deel uit van de extensie Doel. Hier volgen enkele suggesties voor het uitvoeren van taken:
+Verschillende instellingen die beschikbaar zijn op de [!UICONTROL Edit at.js settings] De pagina van Doel UI maakt geen deel uit van de uitbreiding van het Doel. Hier volgen enkele suggesties voor het uitvoeren van taken:
 
 * Automatisch globale mbox maken Deze instelling wordt vervangen door de actie Globale mbox branden in de extensie Doel.
 * Bibliotheekkop Deze instelling maakt geen deel uit van de doelextensie. Plaats code die voor at.js in een actie van de Uitbreiding van de Kern > van de Code van de Douane moet worden geladen alvorens de actie van het Doel van de Lading te gebruiken.
@@ -94,14 +95,14 @@ Er is geen configuratie nodig.
 Voeg parameters toe aan alle mbox-aanvragen. De handeling Doel laden moet eerder worden gebruikt.
 
 1. Geef de naam en waarde op van de parameters die u wilt toevoegen.
-1. Selecteer **plus (+)** pictogram om meer parameters toe te voegen.
+1. Selecteer **plus (+)** om meer parameters toe te voegen.
 
 ### Globale Mbox-parameters toevoegen
 
 Voeg alleen parameters toe aan uw algemene mbox-aanvragen. De handeling Doel laden moet eerder worden gebruikt.
 
 1. Geef de naam en waarde op van de parameters die u wilt toevoegen.
-1. Selecteer **plus (+)** pictogram om meer parameters toe te voegen.
+1. Selecteer **plus (+)** om meer parameters toe te voegen.
 
 ### Globale standaardmap
 
@@ -111,10 +112,10 @@ Geef op of het verbergen van het lichaam moet worden ingeschakeld om flikkering 
 
 De volgende opties zijn beschikbaar:
 
-* **Body Hiding:** u kunt deze instelling in- of uitschakelen. De standaardwaarde is Enabled, wat betekent dat de BODY van HTML verborgen is.
-* **Verborgen stijl hoofdtekst:** de standaardwaarde is  `body{opacity:0}`. Deze waarde kan worden gewijzigd in iets anders, zoals `body{display:none}`.
+* **Bodyhiding:** U kunt deze instelling in- of uitschakelen. De standaardwaarde is Enabled, wat betekent HTML BODY verborgen is.
+* **Verborgen stijl hoofdtekst:** De standaardwaarde is `body{opacity:0}`. Deze waarde kan worden gewijzigd in iets anders, zoals `body{display:none}`.
 
-Raadpleeg voor meer informatie de [online Help-documentatie over het doel](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
+Raadpleeg voor meer informatie de [Online Help-documentatie van Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
 
 ## Basisimplementatie van Adobe Target
 
@@ -184,7 +185,7 @@ Het codefragment dat u vooraf verbergt, ziet er als volgt uit en kan worden gemi
 }(window, document, "body {opacity: 0 !important}", 3000));
 ```
 
-Standaard wordt in het fragment het hele HTML-BODY verborgen. In sommige gevallen wilt u mogelijk alleen bepaalde HTML-elementen vooraf verbergen en niet de hele pagina. U kunt dit bereiken door de stijlparameter aan te passen. Vervang de pagina door iets dat alleen bepaalde gebieden op de pagina vooraf verbergt.
+Standaard wordt in het fragment het hele HTML-BODY verborgen. In sommige gevallen wilt u mogelijk alleen bepaalde HTML-elementen vooraf verbergen, en niet de hele pagina. U kunt dit bereiken door de stijlparameter aan te passen. Vervang de pagina door iets dat alleen bepaalde gebieden op de pagina vooraf verbergt.
 
 Als u bijvoorbeeld twee gebieden hebt die worden aangeduid met ID&#39;s container-1 en container-2, kan de stijl worden vervangen door:
 

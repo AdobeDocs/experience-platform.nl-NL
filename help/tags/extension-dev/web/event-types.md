@@ -1,9 +1,10 @@
 ---
 title: Gebeurtenistypen voor webextensies
 description: Leer hoe u een bibliotheekmodule voor het type gebeurtenis definieert voor een webextensie in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -22,14 +23,14 @@ In dit document wordt beschreven hoe u gebeurtenistypen voor een webextensie in 
 
 >[!NOTE]
 >
->In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Zie het overzicht op [bibliotheekmodule formatteren](./format.md) voor een inleiding aan hun implementatie alvorens aan deze gids terug te keren.
+>In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Zie het overzicht op [Opmaak van de module Bibliotheek](./format.md) een inleiding tot de uitvoering ervan voordat wordt teruggekomen op deze handleiding.
 
 Gebeurtenistypen worden gedefinieerd door extensies en bestaan doorgaans uit de volgende kenmerken:
 
-1. Een [weergave](./views.md) wordt weergegeven in de gebruikersinterface voor gegevensverzameling waarmee gebruikers instellingen voor de gebeurtenis kunnen wijzigen.
+1. A [weergave](./views.md) weergegeven in de gebruikersinterface van het Experience Platform en de gebruikersinterface voor gegevensverzameling waarmee gebruikers instellingen voor de gebeurtenis kunnen wijzigen.
 2. Een bibliotheekmodule die wordt uitgegeven in de tagruntime-bibliotheek om de instellingen te interpreteren en te controleren of een bepaalde activiteit plaatsvindt.
 
-`module.exports` accepteer zowel de  `settings` als de  `trigger` parameters. Dit maakt het aanpassen van het gebeurtenistype mogelijk.
+`module.exports` beide `settings` en `trigger` parameters. Dit maakt het aanpassen van het gebeurtenistype mogelijk.
 
 ```js
 module.exports = function(settings, trigger) { … };
@@ -38,7 +39,7 @@ module.exports = function(settings, trigger) { … };
 | Parameter | Beschrijving |
 | --- | --- |
 | `settings` | Een object dat de instellingen bevat die de gebruiker in de weergave van het gebeurtenistype heeft geconfigureerd. U hebt de uiteindelijke controle over wat er in dit object gebeurt. |
-| `trigger` | Een functie die de module moet aanroepen wanneer de regel moet worden geactiveerd. Er is een één-op-één verhouding tussen een `settings` voorwerp, een `trigger` functie, en een regel. Dit betekent dat de trekkerfunctie u voor één regel ontving niet kan worden gebruikt om een verschillende regel in werking te stellen. |
+| `trigger` | Een functie die de module moet aanroepen wanneer de regel moet worden geactiveerd. Er bestaat een één-op-één relatie tussen een `settings` object, een `trigger` en een regel. Dit betekent dat de trekkerfunctie u voor één regel ontving niet kan worden gebruikt om een verschillende regel in werking te stellen. |
 
 >[!NOTE]
 >
@@ -70,7 +71,7 @@ module.exports = function(settings, trigger) {
 
 ## Contextafhankelijke gebeurtenisgegevens doorgeven
 
-Wanneer een regel wordt teweeggebracht, is het vaak nuttig om extra detail over de gebeurtenis te verstrekken die voorkwam. Gebruikers die regels maken, kunnen deze informatie nuttig vinden om een bepaald gedrag te bereiken. Bijvoorbeeld, als een teller een regel wil tot stand brengen waar een analytische baken wordt verzonden telkens als de gebruiker het scherm veegt. De uitbreiding zou een `swipe` gebeurtenistype moeten verstrekken zodat de teller dit gebeurtenistype kon gebruiken om de aangewezen regel teweeg te brengen. Ervan uitgaande dat de markeerteken ook de hoek zou willen aangeven waarop de veegbeweging op het baken heeft plaatsgevonden, is dit moeilijk zonder aanvullende informatie. Als u aanvullende informatie wilt geven over de gebeurtenis die heeft plaatsgevonden, geeft u een object door wanneer u de functie `trigger` aanroept. Bijvoorbeeld:
+Wanneer een regel wordt teweeggebracht, is het vaak nuttig om extra detail over de gebeurtenis te verstrekken die voorkwam. Gebruikers die regels maken, kunnen deze informatie nuttig vinden om een bepaald gedrag te bereiken. Bijvoorbeeld, als een teller een regel wil tot stand brengen waar een analytische baken wordt verzonden telkens als de gebruiker het scherm veegt. De uitbreiding zou een `swipe` gebeurtenistype zodat de markeerteken dit gebeurtenistype kan gebruiken om de juiste regel te activeren. Ervan uitgaande dat de markeerteken ook de hoek zou willen aangeven waarop de veegbeweging op het baken heeft plaatsgevonden, is dit moeilijk zonder aanvullende informatie. Als u aanvullende informatie wilt geven over de gebeurtenis die heeft plaatsgevonden, geeft u een object door wanneer u de `trigger` functie. Bijvoorbeeld:
 
 ```js
 trigger({
@@ -78,11 +79,11 @@ trigger({
 });
 ```
 
-Deze waarde kan vervolgens door de waarde `%event.swipeAngle%` in een tekstveld op te geven. Ze hebben ook vanuit andere contexten toegang tot `event.swipeAngle` (zoals een aangepaste code-actie). Het is mogelijk andere typen optionele gebeurtenisinformatie op te nemen die op dezelfde manier voor een markeerteken nuttig kunnen zijn.
+De teller kon deze waarde op een analytisch baken dan gebruiken door de waarde te specificeren `%event.swipeAngle%` in een tekstveld. Zij kunnen ook `event.swipeAngle` ook vanuit andere contexten (zoals een aangepaste code-actie). Het is mogelijk andere typen optionele gebeurtenisinformatie op te nemen die op dezelfde manier voor een markeerteken nuttig kunnen zijn.
 
 ### [!DNL nativeEvent]
 
-Als uw gebeurtenistype op een inheemse gebeurtenis (bijvoorbeeld, als uw uitbreiding een `click` gebeurtenistype) verstrekte, wordt het geadviseerd om het `nativeEvent` bezit als volgt te plaatsen.
+Als uw gebeurtenistype op een inheemse gebeurtenis gebaseerd is (bijvoorbeeld als uw uitbreiding verstrekte een `click` gebeurtenistype), wordt aangeraden het `nativeEvent` eigenschap als volgt.
 
 ```js
 trigger({
@@ -94,7 +95,7 @@ Dit kan handig zijn voor marketers die toegang proberen te krijgen tot informati
 
 ### [!DNL element]
 
-Als er een sterke verhouding tussen een element en de gebeurtenis is die voorkwam, wordt het geadviseerd om het `element` bezit aan de knoop van DOM van het element te plaatsen. Bijvoorbeeld, als uw uitbreiding een `click` gebeurtenistype verstrekt en u marketers toestaat om het te vormen zodat zou de regel in brand steken slechts als een element met identiteitskaart van `herobanner` wordt geselecteerd. Als de gebruiker in dit geval de hoofdbanner selecteert, wordt aanbevolen `trigger` aan te roepen en `element` in te stellen op het DOM-knooppunt van de hoofdbanner.
+Als er een sterke relatie is tussen een element en de gebeurtenis die is opgetreden, wordt aanbevolen om de instelling `element` eigenschap aan het DOM-knooppunt van het element. Als uw extensie bijvoorbeeld een `click` gebeurtenistype en u staat marketers toe het te vormen zodat zou de regel slechts in brand steken als een element met identiteitskaart van `herobanner` is geselecteerd. Als de gebruiker in dit geval de hoofdbanner selecteert, wordt aangeraden `trigger` en instellen `element` op het DOM-knooppunt van de hoofdbanner.
 
 ```js
 trigger({
@@ -104,9 +105,9 @@ trigger({
 
 ## Regelvolgorde respecteren
 
-Met labels kunnen gebruikers regels bestellen. Een gebruiker kan bijvoorbeeld twee regels maken die zowel het gebeurtenistype oriëntatie wijzigen als de volgorde waarin de regels worden doorlopen. Ervan uitgaande dat de Adobe Experience Platform-gebruiker een bestelwaarde van `2` opgeeft voor de gebeurtenis die de oriëntatiewijziging in Regel A veroorzaakt en een orderwaarde van `1` voor de gebeurtenis die de oriëntatiewijziging in Regel B veroorzaakt. Dit geeft aan dat wanneer de oriëntatie op een mobiel apparaat verandert, regel B vóór regel A moet worden geactiveerd (regels met waarden in een lagere volgorde worden eerst geactiveerd).
+Met labels kunnen gebruikers regels bestellen. Een gebruiker kan bijvoorbeeld twee regels maken die zowel het gebeurtenistype oriëntatie wijzigen als de volgorde waarin de regels worden doorlopen. Ervan uitgaande dat de Adobe Experience Platform-gebruiker een orderwaarde opgeeft van `2` voor de gebeurtenis oriëntatiewijziging in regel A en een orderwaarde van `1` voor de gebeurtenis die de oriëntatiewijziging in regel B veroorzaakt. Dit geeft aan dat wanneer de oriëntatie op een mobiel apparaat verandert, regel B vóór regel A moet worden geactiveerd (regels met waarden in een lagere volgorde worden eerst geactiveerd).
 
-Zoals eerder vermeld, zal de uitgevoerde functie in onze gebeurtenismodule eens voor elke regel worden geroepen die om ons gebeurtenistype is gevormd te gebruiken. Elke keer dat de geëxporteerde functie wordt aangeroepen, wordt deze een unieke functie `trigger` doorgegeven die aan een specifieke regel is gekoppeld. In het zojuist beschreven scenario wordt onze geëxporteerde functie één keer aangeroepen met een functie `trigger` gekoppeld aan regel B en vervolgens opnieuw met een functie `trigger` gekoppeld aan regel A. Regel B komt eerst omdat de gebruiker het een lager-ordewaarde dan Regel A heeft gegeven. Wanneer onze bibliotheekmodule een oriëntatiewijziging detecteert, is het belangrijk dat we de `trigger`-functies in dezelfde volgorde aanroepen als de functies die aan de bibliotheekmodule zijn toegewezen.
+Zoals eerder vermeld, zal de uitgevoerde functie in onze gebeurtenismodule eens voor elke regel worden geroepen die om ons gebeurtenistype is gevormd te gebruiken. Elke keer dat de geëxporteerde functie wordt aangeroepen, wordt deze een unieke functie doorgegeven `trigger` functie die aan een specifieke regel is gebonden. In het zojuist beschreven scenario wordt onze geëxporteerde functie één keer aangeroepen met een `trigger` functie gekoppeld aan regel B en vervolgens opnieuw met een `trigger` functie die aan regel A is gekoppeld. Regel B komt eerst omdat de gebruiker het een lager-ordewaarde dan Regel A heeft gegeven. Wanneer in onze bibliotheekmodule een wijziging in de oriëntatie wordt gedetecteerd, is het belangrijk dat u de `trigger` functies in dezelfde volgorde als de bibliotheekmodule.
 
 In de voorbeeldcode hieronder, merk op dat wanneer een oriëntatieverandering wordt ontdekt, de trekkerfuncties in de zelfde orde worden geroepen zij aan onze uitgevoerde functie werden verstrekt:
 

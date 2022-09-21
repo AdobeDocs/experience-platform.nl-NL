@@ -1,9 +1,10 @@
 ---
 title: Typen gegevenselementen voor randextensies
 description: Leer hoe u een bibliotheekmodule van het gegevenstype data-element definieert voor een tagextensie in een randeigenschap.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -22,13 +23,13 @@ In dit document wordt beschreven hoe u gegevenselemetypen definieert voor een ra
 
 >[!IMPORTANT]
 >
->Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids over [gegevenselementen voor Webuitbreidingen](../web/data-element-types.md).
+>Als u een webextensie ontwikkelt, raadpleegt u de handleiding op [gegevenselemetypen voor webextensies](../web/data-element-types.md) in plaats daarvan.
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
-1. Een mening die binnen UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
+1. Een mening die binnen UI van het Experience Platform en UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en gegevens op te halen.
 
 Als u gebruikers wilt toestaan om een stuk gegevens van de laag van douanegegevens terug te winnen, kan uw module als dit voorbeeld kijken.
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Als u de gegevens die voor de gegevenslaag worden teruggegeven configureerbaar wilt maken door de gebruiker van Adobe Experience Platform, kunt u de gebruiker toestaan om een zeer belangrijke naam in te voeren en dan de naam aan het `settings` voorwerp te bewaren. Het object zou er ongeveer zo kunnen uitzien.
+Als u de gegevens die voor de gegevenslaag worden teruggegeven door de gebruiker van Adobe Experience Platform configureerbaar wilt maken, kunt u de gebruiker toestaan om een zeer belangrijke naam in te voeren en dan sparen de naam aan `settings` object. Het object zou er ongeveer zo kunnen uitzien.
 
 ```js
 {
@@ -59,4 +60,4 @@ module.exports = (context) => {
 
 ## Context van de module Bibliotheek
 
-Alle gegevenselementmodules hebben toegang tot een `context` variabele die wordt verstrekt wanneer de module wordt geroepen. U kunt meer [hier](./context.md) leren.
+Alle gegevenselementmodules hebben toegang tot een `context` variabele die wordt verstrekt wanneer de module wordt geroepen. Meer informatie [hier](./context.md).

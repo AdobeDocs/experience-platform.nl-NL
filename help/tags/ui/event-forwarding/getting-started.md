@@ -3,9 +3,9 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '834'
 ht-degree: 1%
 
 ---
@@ -38,11 +38,11 @@ Nadat u gegevens naar het Edge-netwerk hebt verzonden, kunt u Adobe-oplossingen 
 
 Maak uw schema in Adobe Experience Platform.
 
-1. Maak een schema door **[!UICONTROL Schemas]****[!UICONTROL Create Schema]** te selecteren en de optie **[!UICONTROL XDM ExperienceEvent]** te kiezen.
+1. Een schema maken door **[!UICONTROL Schemas]**>**[!UICONTROL Create Schema]** en kiest u de **[!UICONTROL XDM ExperienceEvent]** optie.
 
 1. Geef het schema een naam en een korte beschrijving.
 
-1. U kunt de de gebiedsgroep van &quot;het Webdetails van de ErvaringEvent&quot;toevoegen door **[!UICONTROL Add]** naast **[!UICONTROL Field Groups]** te selecteren.
+1. U kunt de veldgroep &quot;ExperienceEvent-webdetails&quot; toevoegen door **[!UICONTROL Add]** naast **[!UICONTROL Field Groups]**.
 
    >[!NOTE]
    >
@@ -50,11 +50,11 @@ Maak uw schema in Adobe Experience Platform.
 
 1. Sla het schema op en noteer de naam die u het hebt gegeven.
 
-Voor meer informatie over schema&#39;s, zie [het ModelHulp van het Systeem van Gegevens van de Ervaring (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl).
+Voor meer informatie over schema&#39;s, zie [Help-systeem voor Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl).
 
 ## Een eigenschap voor het doorsturen van gebeurtenissen maken
 
-In de UI van de Inzameling van Gegevens creeer een bezit van type &quot;Rand.&quot;
+In de **[!UICONTROL Tags]** werkruimte, een eigenschap van het type maken **[!UICONTROL Edge]**.
 
 1. Selecteer **[!UICONTROL New Property]**.
 
@@ -64,33 +64,28 @@ In de UI van de Inzameling van Gegevens creeer een bezit van type &quot;Rand.&qu
 
 1. Selecteer **[!UICONTROL Save]**.
 
-Nadat u de eigenschap hebt gemaakt, gaat u naar het tabblad **[!UICONTROL Environments]** voor de nieuwe eigenschap en maakt u
-notitie van de milieu-id&#39;s. Als de in de gegevensstroom gebruikte Adobe Org verschilt van de Adobe die bij gebeurtenis door:sturen wordt gebruikt, kunt u milieu-id van het **[!UICONTROL Environments]** lusje kopiëren en het kleven wanneer het creëren van een gegevensstroom. Anders kunt u de omgeving selecteren in een vervolgkeuzemenu.
+Nadat u de eigenschap hebt gemaakt, gaat u naar de **[!UICONTROL Environments]** voor de nieuwe eigenschap en noteer de milieu-id&#39;s. Als de in de gegevensstroom gebruikte Adobe Org verschilt van de Adobe Org die in gebeurtenis door:sturen wordt gebruikt, kunt u milieu-id van kopiëren **[!UICONTROL Environments]** en plakt deze bij het maken van een gegevensstroom. Anders kunt u de omgeving selecteren in een vervolgkeuzemenu.
 
 ## Een gegevensstroom maken
 
 Om uw gegevensstroom in Adobe Experience Platform tot stand te brengen, gebruik identiteitskaart van het Milieu die wanneer u de gebeurtenis creeerde door:sturen bezit wordt geproduceerd.
 
-1. Gebruik de verbinding in de linkerspoor van de UI van de Inzameling van Gegevens om de interface van gegevensstromen te openen.
-
-1. Selecteer **[!UICONTROL Datastreams]**.
+1. Selecteren **[!UICONTROL Datastreams]** in de linkernavigatie.
 
 1. Geef de configuratie een naam en geef een optionele beschrijving op.
 De beschrijving helpt om configuraties in een lijst van verscheidene configuraties te identificeren.
 
 1. Selecteer **[!UICONTROL Save]**.
 
-
-
 ## Gebeurtenis doorsturen inschakelen
 
 Daarna, vorm het Netwerk van de Rand om gegevens naar gebeurtenis door:sturen, en naar andere producten van Adobe te verzenden.
 
-1. Selecteer in de interface voor gegevensstromen de eigenschap die u hebt gemaakt.
+1. In de **[!UICONTROL Datastreams]** selecteert u de eigenschap die u hebt gemaakt.
 
 1. Selecteer de ontwikkelings-, productie- of staging-omgeving.
 
-   Of, om gegevens naar een gebeurtenis te verzenden die milieu buiten de Adobe org door:sturen, selecteer **[!UICONTROL Switch to Advanced Mode]** en deeg in een identiteitskaart ID wordt verstrekt wanneer u een gebeurtenis creeert die bezit door:sturen.
+   Of, om gegevens naar een gebeurtenis te verzenden die milieu buiten Adobe org door:sturen, selecteer **[!UICONTROL Switch to Advanced Mode]** en plak in een id. ID wordt verstrekt wanneer u een gebeurtenis creeert die bezit door:sturen.
 
 1. Schakel de benodigde gereedschappen in en configureer deze naar wens.
 
@@ -102,17 +97,9 @@ Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
 ## Vorm de uitbreiding van SDK van het Web van het Platform om gegevens naar de eerder gemaakte gegevensstroom te verzenden
 
-Creeer uw bezit in de Inzameling UI van Gegevens, dan gebruik de uitbreiding van SDK van het Web van Adobe Experience Platform om het te vormen.
+Maak uw eigenschap in het dialoogvenster **[!UICONTROL Tags]** werkruimte, navigeer vervolgens naar **[!UICONTROL Extensions]** en selecteer de uitbreiding van SDK van het Web van het Experience Platform van de catalogus om het te vormen en te installeren.
 
-1. Geef de eigenschap een naam.
-
-   U kunt meerdere Alloy-instanties hebben. U hebt bijvoorbeeld verschillende eigenschappen voor het bijhouden van randen vóór en na betaling.
-
-1. Selecteer de organisatie-id.
-
-1. Selecteer het Edge-domein.
-
-Zie [de uitbreidingsdocumentatie van SDK van het Web](../../extensions/web/sdk/overview.md) voor meer configuratieopties.
+Zie de [Web SDK-uitbreidingsdocumentatie](../../extensions/web/sdk/overview.md) voor meer informatie over configuratieopties.
 
 ## Creeer een markeringsregel om gegevens naar het Web SDK van het Platform te verzenden
 
@@ -120,7 +107,7 @@ Nadat het bovenstaande op zijn plaats is, bouwt gegevensdefinities, regels, etc.
 
 Creeer een regel van de paginading gebruikend de uitbreiding van SDK van het Web van het Platform en het &quot;Send Event&quot;actietype:
 
-1. Open het tabblad **[!UICONTROL Rules]** en selecteer **[!UICONTROL Create New Rule]**.
+1. Open de **[!UICONTROL Rules]** tab, dan selecteren **[!UICONTROL Create New Rule]**.
 
 1. Geef de regel een naam.
 
@@ -128,9 +115,9 @@ Creeer een regel van de paginading gebruikend de uitbreiding van SDK van het Web
 
 1. Voeg een gebeurtenis toe door een extensie en een van de gebeurtenistypen te kiezen die beschikbaar zijn voor die extensie, en configureer vervolgens de instellingen voor de gebeurtenis. Selecteer bijvoorbeeld **[!UICONTROL Core - Window Loaded]**.
 
-1. Voeg een actie toe gebruikend de uitbreiding van SDK van het Web van het Platform. Selecteer **[!UICONTROL Send Event]** in de lijst **[!UICONTROL Action Type]**, selecteer de gewenste Instantie (instantie Alloy die vroeger wordt gevormd), en selecteer dan een gegevenselement om aan het XDM gegevensblok binnen de slag van de Legering toe te voegen.
+1. Voeg een actie toe gebruikend de uitbreiding van SDK van het Web van het Platform. Selecteren **[!UICONTROL Send Event]** van de **[!UICONTROL Action Type]** Selecteer de gewenste instantie (Alloy-instantie die eerder is geconfigureerd) en selecteer vervolgens een gegevenselement dat u wilt toevoegen aan het XDM-gegevensblok in de Alloy-hit.
 
-1. Laat de rest van de instellingen als standaard voor dit voorbeeld staan en selecteer **[!UICONTROL Save]**.
+1. Laat de overige instellingen als standaard voor dit voorbeeld staan en selecteer **[!UICONTROL Save]**.
 
 In een ander voorbeeld kunt u een regel maken die de gegevenslaag naar Edge verzendt wanneer de gebruiker de cursor op een opgegeven knop plaatst.
 

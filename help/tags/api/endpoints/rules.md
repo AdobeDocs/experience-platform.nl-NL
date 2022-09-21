@@ -2,9 +2,9 @@
 title: Het eindpunt van regels
 description: Leer hoe te om vraag aan het /rules eindpunt in Reactor API te maken.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '931'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ In de context van de markeringen van de gegevensinzameling, controleren de regel
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in de UI van de Inzameling van Gegevens in wisselwerking te staan, verwijs naar [UI-hulplijn](../../ui/managing-resources/rules.md).
+>In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in UI in wisselwerking te staan, verwijs naar [UI-hulplijn](../../ui/managing-resources/rules.md).
 
 Een regel behoort tot exact één regel [eigenschap](./properties.md). Een eigenschap kan vele regels bevatten.
 

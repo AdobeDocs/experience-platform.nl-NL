@@ -2,9 +2,9 @@
 title: Premium CDN-ondersteuning voor tags
 description: Leer over de premiumfunctie CDN voor tags en hoe u deze kunt gebruiken om uw inhoud in meerdere geografische regio's te leveren.
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Wanneer u een [Door Adobe beheerde host](./hosts/managed-by-adobe-host.md) om uw
 
 Om dit te verklaren, verstrekken de markeringen in Experience Platform een premieCDN eigenschap die u toestaat om inhoud aan deze speciale gebieden te leveren.
 
-Premium CDN-ondersteuning is een betaalde functie en moet door uw organisatie worden aangeschaft om deze in te schakelen en te gebruiken. Deze gids behandelt hoe te om deze eigenschap in de UI van de Inzameling van Gegevens te vormen en te gebruiken nadat het is gekocht.
+Premium CDN-ondersteuning is een betaalde functie en moet door uw organisatie worden aangeschaft om deze in te schakelen en te gebruiken. Deze gids behandelt hoe te om deze eigenschap in de UI van het Experience Platform of UI van de Inzameling van Gegevens te vormen en te gebruiken nadat het is gekocht.
 
 ## Premium-CDN inschakelen voor uw organisatie
 
-Premium CDN is ingeschakeld op bedrijfsniveau. Zodra uw organisatie de premieCDN eigenschap heeft gekocht, zal een beheerder van Adobe voor uw bedrijf in de Inzameling van Gegevens UI toelaten.
+Premium CDN is ingeschakeld op bedrijfsniveau. Zodra uw organisatie de premieeigenschap CDN heeft gekocht, zal een beheerder van Adobe de eigenschap in UI voor uw bedrijf toelaten.
 
 ## Tagbibliotheken opnieuw samenstellen en installeren met bijgewerkte insluitcodes
 

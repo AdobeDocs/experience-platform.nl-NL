@@ -1,9 +1,10 @@
 ---
 title: Release-aantekeningen voor de extensie AEM Asset Insights
 description: De meest recente release bevat informatie over de tagextensie AEM Asset Insights in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
@@ -21,8 +22,8 @@ ht-degree: 0%
 **Functies**
 
 - Deze verlenging is bedoeld om samen met AEM Asset Insights te worden gebruikt.
-- Meer specifiek, vervangt het ***pageTracker*** proces en paginacode.
-- Wanneer gevormd in de UI van de Inzameling van Gegevens, verzendt deze uitbreiding AEM de Indrukking van Activa en klikt metriek aan Adobe Analytics, die dan automatisch terug in de rapporten van de Inzichten van Activa in AEM zal worden ingevoerd.
+- Meer in het bijzonder vervangt het de ***pageTracker*** proces- en paginacode.
+- Wanneer gevormd en geactiveerd, verzendt deze uitbreiding AEM de Indrukking van Activa en klikt metriek naar Adobe Analytics, die dan automatisch terug in de rapporten van de Inzichten van Activa in AEM zal worden ingevoerd.
 
 **Opgeloste problemen**
 

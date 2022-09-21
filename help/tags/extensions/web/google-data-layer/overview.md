@@ -1,9 +1,10 @@
 ---
 title: Google Data Layer Extension
 description: Meer informatie over de tagextensie Google Client Data Layer in Adobe Experience Platform.
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ Versie 1.0.x van de extensie is een bètaversie. Deze uitbreiding is niet volled
 
 ## Installatie
 
-Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface voor gegevensverzameling en selecteert u **Google-gegevenslaag**.
+Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface van het Experience Platform of de gebruikersinterface van de gegevensverzameling en selecteert u **Google-gegevenslaag**.
 
 Nadat de extensie is geïnstalleerd, wordt elke keer dat de tagbibliotheek op uw website wordt geladen, een gegevenslaag gemaakt of geopend.
 

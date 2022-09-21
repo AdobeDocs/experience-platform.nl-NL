@@ -1,9 +1,10 @@
 ---
 title: Typen handelingen voor randextensies
 description: Leer hoe u een bibliotheekmodule van het type action definieert voor een tagextensie in een randeigenschap.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -22,13 +23,13 @@ In dit document wordt beschreven hoe u actietypen voor een randextensie in Adobe
 
 >[!IMPORTANT]
 >
->Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids over [actietypes voor Webuitbreidingen](../web/action-types.md).
+>Als u een webextensie ontwikkelt, raadpleegt u de handleiding op [actietypen voor webextensies](../web/action-types.md) in plaats daarvan.
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [bibliotheekmodule formatteren](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
 
 Handelingstypen bestaan doorgaans uit:
 
-1. Een mening die binnen UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor de actie te wijzigen.
+1. Een mening die binnen UI van het Experience Platform en UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor de actie te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en een actie uit te voeren.
 
 Bijvoorbeeld, kan een module om sommige gegevens aan een derdeeindpunt door:sturen als dit kijken.
@@ -76,6 +77,6 @@ module.exports = (context) {
 
 ## Handelingsresultaat
 
-Het resultaat dat door een actiemodule wordt geretourneerd, kan om het even welk zijn. Als de actie een asynchrone taak moet uitvoeren, kunt u [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) terugkeren die het resultaat terugkeert u wilt zodra het oplost.
+Het resultaat dat door een actiemodule wordt geretourneerd, kan om het even welk zijn. Als de handeling een asynchrone taak moet uitvoeren, kunt u een [beloven](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) dat het gewenste resultaat oplevert wanneer het is opgelost.
 
-Het actieresultaat wordt opgeslagen in een `ruleStash` sleutel die aan alle modules door de `context` parameter (`context.arc.ruleStash`) ter beschikking wordt gesteld. U kunt meer over `ruleStash` [hier](./context.md#rulestash) leren.
+Het resultaat van de handeling wordt opgeslagen in een `ruleStash` sleutel die via de `context` parameter (`context.arc.ruleStash`). Meer informatie over `ruleStash` [hier](./context.md#rulestash).

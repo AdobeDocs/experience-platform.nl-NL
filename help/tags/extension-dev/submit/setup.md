@@ -1,9 +1,10 @@
 ---
 title: Experience Cloud Organisatie instellen
 description: Leer hoe u een Adobe Experience Cloud-organisatie registreert om extensies voor Adobe Experience Platform te gaan ontwikkelen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ee36319d-5de8-462e-879b-311445cf334c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -16,11 +17,11 @@ ht-degree: 0%
 
 Voor het ontwikkelen van extensies voor tags in Adobe Experience Platform is het nodig een Adobe Experience Cloud-organisatie te registreren.
 
-Experience Cloud-klanten krijgen een organisatie toegewezen op het moment dat contracten worden ondertekend. Als u een bestaande klant bent en al een organisatie hebt geregistreerd, kunt u dit document overslaan en doorgaan naar de handleiding op [het verlenen van gebruikerstoegang voor extensieontwikkeling](./access.md). Als u geen klant van de Experience Cloud bent, kunt u een organisatie hebben die door zich bij één van de hieronder vermelde de partnerprogramma&#39;s van de Adobe tot stand te brengen wordt gecreeerd.
+Experience Cloud-klanten krijgen een organisatie toegewezen op het moment dat contracten worden ondertekend. Als u een bestaande klant bent en al een organisatie hebt geregistreerd, kunt u dit document overslaan en doorgaan naar de gids [verlenen van gebruikerstoegang voor uitbreidingsontwikkeling](./access.md). Als u geen klant van de Experience Cloud bent, kunt u een organisatie hebben die door zich bij één van de hieronder vermelde de partnerprogramma&#39;s van de Adobe tot stand te brengen wordt gecreeerd.
 
 ## Exchange-partnerprogramma
 
-Dit programma is voor partners die technologie hebben die aan Adobe wordt gecomprimeerd en met de technologieën van Adobe kan worden geïntegreerd om waarde aan onze wederzijdse klanten toe te voegen. Dit programma onderhoudt een [marketplace](https://www.adobeexchange.com/experiencecloud.html) waar partners lijsten kunnen maken die hun integratie bevorderen. U kunt de registratiegids [hier](https://partners.adobe.com/exchangeprogram/experiencecloud/reg-guide.html) zien en u kunt met uw registratie [hier](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) beginnen.
+Dit programma is voor partners die technologie hebben die aan Adobe wordt gecomprimeerd en met de technologieën van Adobe kan worden geïntegreerd om waarde aan onze wederzijdse klanten toe te voegen. Dit programma handhaaft een [marktplaats](https://www.adobeexchange.com/experiencecloud.html) waarbij partners lijsten kunnen maken die hun integratie bevorderen. U kunt de registratiehandleiding bekijken [hier](https://partners.adobe.com/exchangeprogram/experiencecloud/reg-guide.html) en je kunt beginnen met je inschrijving [hier](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html).
 
 U moet lid zijn van dit programma om openbaar vermelde tagextensies voor Adobe Experience Platform te maken die worden weergegeven op de markt.
 
@@ -30,17 +31,19 @@ U moet lid zijn van dit programma om openbaar vermelde tagextensies voor Adobe E
 
 ## Het Programma van de Partner van de oplossing (SPP)
 
-Dit programma is voor het raadplegen van bedrijven die klanten van de Adobe helpen het grootste deel van hun investeringen en partners maken die de oplossingen van de Adobe doorverkopen. Voor een stapsgewijze gids op hoe te om zich bij het Programma van de Partner van de Oplossing aan [de website van Adobe Spark ](https://spark.adobe.com/page/7PKZzIJJjkcDd/), of voor meer informatie te voegen bezoek [de plaats van het Programma van de Partner van de Oplossing](https://solutionpartners.adobe.com/home.html).
+Dit programma is voor het raadplegen van bedrijven die klanten van de Adobe helpen het grootste deel van hun investeringen en partners maken die de oplossingen van de Adobe doorverkopen. Voor een stapsgewijze gids op hoe te om zich bij het Programma van de Partner van de Oplossing aan te sluiten navigeert [de Adobe Spark-website](https://spark.adobe.com/page/7PKZzIJJjkcDd/)of voor meer informatie gaat u naar [De plaats van het Programma van de Partner van de Oplossing](https://solutionpartners.adobe.com/home.html).
 
 >[!NOTE]
 >
->De Partners van de oplossing moeten [register](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) voor het Programma van de Partner van de Uitwisseling aangezien de overeenkomst van de Uitwisseling de voorwaarden voor de uitbreidingsontwikkeling van Adobe Experience Platform bevat.
+>De Partners van de oplossing moeten ook [registreren](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) voor het Programma van de Partner van de Uitwisseling aangezien de overeenkomst van de Uitwisseling de voorwaarden voor de uitbreidingsontwikkeling van Adobe Experience Platform bevat.
 >
->Voordat u uw Exchange-registratie voltooit, stuurt u een e-mail naar Exchange-beheerder op <ExchangeHelpEC@adobe.com> en legt u uit dat u zich registreert, zodat u uw extensie kunt promoten. Als u dit niet doet, wordt uw toepassing waarschijnlijk geweigerd en verwijst u naar de SPP.
+>Voordat je je inschrijving voor Exchange hebt voltooid, stuur je een e-mail naar Exchange-beheerder op <ExchangeHelpEC@adobe.com> en leg uit dat u zich registreert, zodat u uw extensie kunt promoten. Als u dit niet doet, wordt uw toepassing waarschijnlijk geweigerd en verwijst u naar de SPP.
 >
 >Uw bedrijfs-e-mail kan momenteel slechts in één partnerprogramma tegelijkertijd worden gebruikt, zodat zult u een verschillende collectieve e-mail als geregistreerde contact voor elk van de programma&#39;s moeten gebruiken.
 
-Zodra uw bedrijf in het programma van de Partner van de Uitwisseling is, kunt u toegang tot de Oplossingen van Adobe verzoeken door binnen aan [de Plaats van de Partner van de Uitwisseling te ondertekenen ](https://partners.adobe.com/exchangeprogram/experiencecloud) en de hieronder stappen te volgen. Als u reeds een Rekening van de Experience Cloud en toegang tot oplossingen hebt, maar u hebt geen toegang tot de UI van de Inzameling van Gegevens in Adobe Experience Platform, te zien gelieve [instructies voor vestiging groepen en gebruikers](../../ui/administration/user-permissions.md).
+Zodra uw bedrijf in het programma van de Partner van de Uitwisseling is, kunt u toegang tot de Oplossingen van Adobe verzoeken door binnen aan te ondertekenen [Exchange Partner-site](https://partners.adobe.com/exchangeprogram/experiencecloud) en volgt u de onderstaande stappen.
+
+Als u een Experience Cloud-account hebt die toegang vereist tot de interface voor gegevensverzameling en de gebruikersinterface van het Experience Platform, raadpleegt u de [machtigingengids voor gegevensverzameling](../../../collection/permissions.md).
 
 ## Voor onafhankelijke ontwikkelaars
 

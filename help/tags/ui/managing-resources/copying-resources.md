@@ -1,9 +1,10 @@
 ---
 title: Bronnen kopiëren
 description: Leer hoe u een nieuwe tagbron maakt met behulp van de instellingen van een bestaande tagbron in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,11 @@ Het kopiëren van een middel leidt tot een duplicaat van dat middel in de gespec
 
 ## Een kopie starten
 
-U kunt een kopie van een extensie starten door de geïnstalleerde extensies te bekijken, de vervolgkeuzepijl op de knop **[!UICONTROL Configure]** te selecteren en **[!UICONTROL Copy]** te selecteren.
+U kunt een kopie van een extensie starten door de geïnstalleerde extensies te bekijken en de vervolgkeuzepijl te selecteren op de knop **[!UICONTROL Configure]** en selecteren **[!UICONTROL Copy]**.
 
 ![De extensie Analytics kopiëren](../../images/copy-initiate-extension.png)
 
-Voor eigenschappen, regels, en gegevenselementen, selecteer eenvoudig de bron u wilt kopiëren en dan **[!UICONTROL Copy]** in het actiemenu selecteren.
+Voor eigenschappen, regels, en gegevenselementen, selecteer eenvoudig de bron u wilt kopiëren en dan selecteren **[!UICONTROL Copy]** in het menu Handelingen.
 
 ![Mijn regel voor Analytics kopiëren](../../images/copy-initiate-rule.png)
 
@@ -34,7 +35,7 @@ Als u een regel of een gegevenselement kopieert, kunt u in het dialoogvenster Ko
 
 >[!NOTE]
 >
->In de Inzameling UI van Gegevens, is het niet mogelijk om middelen aan een ander Bezit te kopiëren als één Bezit voor uitbreidingsontwikkeling wordt gevormd en het andere Bezit niet is.
+>Het is niet mogelijk om middelen aan een ander bezit te kopiëren als één bezit voor uitbreidingsontwikkeling wordt gevormd en het andere bezit niet is.
 
 Nadat u het gewenste gedrag hebt geconfigureerd, selecteert u **[!UICONTROL Copy]**.
 
@@ -66,5 +67,5 @@ Alle regels en gegevenselementen worden verstrekt door een uitbreiding, zodat wa
 Het dialoogvenster Kopiëren bevat een uitleg van wat er precies zal gebeuren voordat u begint met kopiëren. Het bovenstaande dialoogvenster is bedoeld voor een regel, maar hetzelfde geldt voor gegevenselementen.
 
 1. **Extensies die door deze regels worden vereist, worden gekopieerd.** Dit laat u weten dat de vereiste uitbreidingen samen met de regel zullen gaan.  Deze kopieën volgen dezelfde regels als een kopie van een reguliere extensie die hierboven wordt beschreven.
-1. **Extensie-instellingen worden NIET gekopieerd als de extensie al is geïnstalleerd.** Dit betekent dat als de vereiste extensies al bestaan op de eigenschap destination, de extensie ongewijzigd blijft.  Als u de extensie-instellingen ook wilt kopiëren, gebruikt u de schakeloptie **Extensie-instellingen vervangen voor doeleigenschap** en wordt de uitleg dienovereenkomstig bijgewerkt.
+1. **Extensie-instellingen worden NIET gekopieerd als de extensie al is geïnstalleerd.** Dit betekent dat als de vereiste extensies al bestaan op de eigenschap destination, de extensie ongewijzigd blijft.  Als u de extensie-instellingen ook wilt kopiëren, kunt u de opdracht **Extensie-instellingen vervangen voor doeleigenschap** schakelt en wordt de uitleg dienovereenkomstig bijgewerkt.
 1. **Gegevenselementen die door deze regels worden vereist, worden NIET gekopieerd.** Deze uitleg geldt alleen voor regels.  Regels vertrouwen vaak op gegevenselementen om correct te functioneren.  Als u een regel naar een nieuwe eigenschap kopieert, moet u ook alle vereiste gegevenselementen als een afzonderlijke actie kopiëren.

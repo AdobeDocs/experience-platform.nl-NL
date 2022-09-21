@@ -1,9 +1,10 @@
 ---
 title: Extensieconfiguratie
-description: Leer hoe u een tagextensie configureert om algemene instellingen van een gebruiker te verzamelen in de gebruikersinterface voor gegevensverzameling van Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Leer hoe te om een markeringsuitbreiding te vormen om globale montages van een gebruiker in de UI van Adobe Experience Platform of UI van de Inzameling van Gegevens te verzamelen.
+exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -16,8 +17,8 @@ ht-degree: 0%
 
 De configuratie van de uitbreiding is de manier waardoor een uitbreiding globale montages van een gebruiker verzamelt. Bijvoorbeeld, overweeg een uitbreiding die de gebruiker toestaat om een baken te verzenden gebruikend een Send actie van het Bandje, en het baken moet altijd een rekeningsidentiteitskaart bevatten. We willen gebruikers niet lastig maken door hen elke keer om de account-id te vragen wanneer ze een handeling Send Beacon configureren. In plaats daarvan moet de extensie eenmaal om de account-id vragen vanuit de configuratieweergave van de extensie. Telkens wanneer een baken moet worden verzonden, kan de Send module van de de actielobiebibliotheek van het Baken rekeningsidentiteitskaart van de uitbreidingsconfiguratie trekken en het toevoegen aan het baken.
 
-Wanneer gebruikers een extensie installeren op een eigenschap tag in Adobe Experience Platform, wordt hun de configuratieweergave van de extensie getoond die uw extensie biedt. Ze kunnen de installatie van de extensie niet voltooien zonder de extensieconfiguratie te voltooien. Zie het document op [views](./web/views.md) om te leren hoe te om een mening voor uitbreidingsconfiguratie tot stand te brengen.
+Wanneer gebruikers een extensie installeren op een eigenschap tag in Adobe Experience Platform, wordt hun de configuratieweergave van de extensie getoond die uw extensie biedt. Ze kunnen de installatie van de extensie niet voltooien zonder de extensieconfiguratie te voltooien. Document weergeven op [views](./web/views.md) leren hoe te om een mening voor uitbreidingsconfiguratie tot stand te brengen.
 
-Nadat de instellingen zijn opgeslagen vanuit een configuratieweergave voor extensies, worden deze weergegeven in de runtimebibliotheek van de tag. U kunt tot deze montages van de modules van de uitbreidingsbibliotheek dan toegang hebben door [`turbine.getExtensionSettings()`](./turbine.md#get-extension-settings) te roepen.
+Nadat de instellingen zijn opgeslagen vanuit een configuratieweergave voor extensies, worden deze weergegeven in de runtimebibliotheek van de tag. U kunt tot deze montages van de modules van de uitbreidingsbibliotheek dan toegang hebben door te roepen [`turbine.getExtensionSettings()`](./turbine.md#get-extension-settings).
 
 De configuratie van de uitbreiding is een facultatieve eigenschap die u aan hefboomwerking kunt verkiezen.

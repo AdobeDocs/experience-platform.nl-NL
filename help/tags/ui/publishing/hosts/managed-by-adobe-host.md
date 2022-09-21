@@ -1,9 +1,10 @@
 ---
 title: Overzicht van door Adobe beheerde hosts
 description: Leer meer over de standaardhostingoptie voor het implementeren van builds van tagbibliotheken in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Akamai voert meer dan 137.000 servers uit in 87 landen binnen meer dan 1.150 net
 
 Als een volledige knoop daalt, dient Akamai van de volgende dichtstbijzijnde knoop met de zelfde caching inhoud. Knooppunten worden dynamisch geselecteerd op basis van de locatie van de bezoeker, de verkeerslading en andere factoren, zodat de inhoud consistent wordt aangeboden vanaf het beste lokale knooppunt voor elke bezoeker.
 
-Bestanden die op Akamai worden gehost, hebben het domein `assets.adobedtm.com`. U kunt hier veilig naar verwijzen (`http://` of `https://`) op basis van de manier waarop deze wordt aangeroepen in uw ingesloten `<script>`-code.
+Bestanden die op Akamai worden gehost, hebben een domein van `assets.adobedtm.com`. U kunt hier veilig naar verwijzen (`http://` of `https://`) op basis van de manier waarop deze wordt aangeroepen in uw ingesloten `<script>` code.
 
 >[!WARNING]
 >
@@ -73,9 +74,9 @@ Deze gefaseerde cachevervalsingen geven de groepen van de oorspronkelijke server
 
 ### Browser in cache plaatsen {#browser}
 
-Bibliotheekbuilds worden ook in het cachegeheugen van de browser opgeslagen via de HTTP-header `cache-control`. Als u hosts met Adobe-beheer gebruikt, hebt u geen controle over de headers die worden geretourneerd in API-reacties. De standaardinstelling van de Adobe voor caching wordt dus gebruikt. Met andere woorden, u kunt geen douanekopballen voor Adobe-geleide gastheren gebruiken. Als u een aangepaste `cache-control` kopbal vereist, kunt u [self-hosting](self-hosting-libraries.md) in plaats daarvan willen overwegen.
+Bibliotheekbuilds worden ook in de cache van de browser geplaatst door het gebruik van de `cache-control` HTTP-header. Als u hosts met Adobe-beheer gebruikt, hebt u geen controle over de headers die worden geretourneerd in API-reacties. De standaardinstelling van de Adobe voor caching wordt dus gebruikt. Met andere woorden, u kunt geen douanekopballen voor Adobe-geleide gastheren gebruiken. Als u een aangepaste `cache-control` header, wilt u wellicht overwegen [zelfhosting](self-hosting-libraries.md) in plaats daarvan.
 
-De tijd-aan-levende (TTL) voor uw browser-caching bibliotheek bouwt (die door `cache-control` kopbal wordt bepaald) zal afhankelijk van het markeringsmilieu variëren u gebruikt:
+De tijd-aan-levende (TTL) voor uw browser-caching bibliotheek bouwt (die door wordt bepaald `cache-control` (header) varieert afhankelijk van de tagomgeving die u gebruikt:
 
 | Omgeving | `cache-control` value |
 | --- | --- |
@@ -87,20 +88,19 @@ Zoals in de bovenstaande tabel wordt aangegeven, wordt het in cache plaatsen van
 
 De cache-control headers worden alleen toegepast op de hoofdbibliotheek. Eventuele subbronnen onder de hoofdbibliotheek worden altijd als netto-nieuw beschouwd en daarom is het niet nodig deze in de cache op te slaan in de browser.
 
-## Het gebruiken van Adobe-beheerde ontvangen in de UI van de Inzameling van Gegevens
+## Het gebruiken van Adobe-beheerde ontvangen in UI
 
-Wanneer u eerst een bezit in [de Inzameling UI](https://experience.adobe.com/#/data-collection/) van Gegevens creeert, wordt een Adobe-geleide gastheer automatisch gecreeerd voor u. Alle beschikbare milieu&#39;s die onmiddellijk bruikbare eigenschappen hebben worden ook toegewezen aan de Adobe-beheerde gastheer door gebrek.
+Wanneer u eerst een bezit in de UI van het Platform of UI van de Inzameling van Gegevens creeert, wordt een Adobe-geleide gastheer automatisch gecreeerd voor u. Alle beschikbare milieu&#39;s die onmiddellijk bruikbare eigenschappen hebben worden ook toegewezen aan de Adobe-beheerde gastheer door gebrek.
 
 >[!NOTE]
 >
 >Als de standaard Adobe-beheerde gastheer van alle milieu&#39;s unassigned, kan de gastheer worden geschrapt. Als u terug naar een Adobe-geleide gastheer wilt schakelen nadat dit doet, kunt u een nieuwe gastheer door de volgende stappen tot stand brengen:
 >
->1. Selecteer het **[!UICONTROL Hosts]** lusje op uw bezit, dan uitgezocht **[!UICONTROL Add Host]**.
->1. Geef een naam voor de host op en selecteer **[!UICONTROL Managed by Adobe]** als het hosttype en selecteer **[!UICONTROL Save]**.
+>1. Selecteer **[!UICONTROL Hosts]** tab op uw eigenschap, en selecteer vervolgens **[!UICONTROL Add Host]**.
+>1. Geef een naam op voor de host, selecteer **[!UICONTROL Managed by Adobe]** als het type host, selecteert u vervolgens **[!UICONTROL Save]**.
 
 >
->
-Vervolgens kunt u uw omgevingen naar wens opnieuw toewijzen aan de host met Adobe-beheer.
+>Vervolgens kunt u uw omgevingen naar wens opnieuw toewijzen aan de host met Adobe-beheer.
 
 ## Volgende stappen
 
@@ -109,4 +109,4 @@ Dit document biedt een overzicht van de door Adobe beheerde hosting van tagbibli
 * [SFTP-hosting](./sftp-host.md)
 * [Bibliotheken die zichzelf hosten](./self-hosting-libraries.md)
 
-Raadpleeg de [handleiding voor omgevingen](../environments.md) voor meer informatie over het beheren van hosts voor uw omgevingen.
+Voor meer informatie over het beheren van hosts voor uw omgevingen raadpleegt u de [Omgevingsgids](../environments.md).
