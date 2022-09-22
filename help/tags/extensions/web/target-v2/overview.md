@@ -2,9 +2,9 @@
 title: Overzicht van Adobe Target v2-extensie
 description: Meer informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Als u de extensie wilt configureren, opent u het tabblad Extensies, plaatst u de
 
 ### at.js-instellingen
 
-Al uw montages at.js, met uitzondering van de Onderbreking, worden automatisch teruggewonnen van uw configuratie at.js in het Doel UI. De uitbreiding wint slechts montages van het Doel UI terug wanneer het eerst wordt toegevoegd, zodat zouden alle montages in UI moeten worden beheerd als de extra updates nodig zijn.
+Al uw montages at.js, met uitzondering van de Onderbreking, worden automatisch teruggewonnen van uw configuratie at.js in het Doel UI. De uitbreiding wint slechts montages van het Doel UI terug wanneer het eerst wordt toegevoegd, zodat zouden alle montages in UI van de Inzameling van Gegevens moeten worden beheerd als de extra updates nodig zijn.
 
 De volgende configuratieopties zijn beschikbaar:
 
@@ -134,7 +134,7 @@ Houd rekening met het volgende wanneer u het voorverborgen fragment gebruikt:
    * Wanneer de pagina de aanvraagtijden uit laadt
    * Wanneer het fragment zelf een keer uitvalt
 * De actie &quot;Vuurpagina laden&quot; moet op alle pagina&#39;s worden gebruikt met het voorverborgen fragment om de duur van het voorverbergen te minimaliseren.
-* Het verbergen van de hoofdtekst moet ook worden ingeschakeld in de handeling Verzoek om pagina laden in de regel Pagina laden die u voor Doel gebruikt. anders blijven alle paginalading verborgen gedurende de time-outperiode.
+* Het verbergen van het lichaam moet ook in de actie van het Verzoek van de Lading van de Pagina in de Lading van de Pagina worden toegelaten u voor Doel in UI van de Inzameling van Gegevens gebruikt; anders blijven alle paginalading verborgen gedurende de time-outperiode.
 
 Het codefragment dat u vooraf verbergt, ziet er als volgt uit en kan worden geminificeerd. De configureerbare opties zijn aan het eind:
 

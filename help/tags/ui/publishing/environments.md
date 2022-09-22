@@ -2,9 +2,9 @@
 title: Omgevingen
 description: Leer meer over het concept van labelomgevingen en hoe deze werken in Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1456'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Selecteren **[!UICONTROL Host]** om een vooraf geconfigureerde host voor de omge
 
 ![](./images/environments/select-host.png)
 
-Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over het creëren en vormen van markeringsgastheren, verwijs naar [Overzicht van hosts](./hosts/hosts-overview.md).
+Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over om gastheren in de Inzameling van Gegevens UI tot stand te brengen en te vormen, verwijs naar [Overzicht van hosts](./hosts/hosts-overview.md).
 
 ### Archiefinstelling {#archive}
 

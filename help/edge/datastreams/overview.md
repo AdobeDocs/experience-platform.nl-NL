@@ -3,9 +3,9 @@ title: Overzicht gegevensstromen
 description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1642'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [configureren, opdracht](../fundamentals/configuring-the-sdk.md) in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), worden in gegevensstreams alle andere configuraties voor de SDK afgehandeld. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
-In dit document worden de stappen beschreven voor het configureren van een gegevensstroom in de gebruikersinterface.
+In dit document worden de stappen beschreven voor het configureren van een gegevensstroom in de gebruikersinterface voor gegevensverzameling.
 
 ## Toegang krijgen tot [!UICONTROL Datastreams] werkruimte
 
-U kunt gegevensstromen in de UI van de Inzameling van Gegevens of UI van het Experience Platform tot stand brengen en beheren door te selecteren **[!UICONTROL Datastreams]** in de linkernavigatie.
+U kunt gegevensstromen in de UI van de Inzameling van Gegevens tot stand brengen en beheren door te selecteren **[!UICONTROL Datastreams]** in de linkernavigatie.
 
-![Het tabblad Gegevensstromen in de gebruikersinterface](../images/datastreams/overview/datastreams-tab.png)
+![Het lusje van gegevensstromen in de UI van de Inzameling van Gegevens](../images/datastreams/overview/datastreams-tab.png)
 
 De [!UICONTROL Datastreams] wordt een lijst weergegeven met bestaande gegevensstromen, inclusief de vriendelijke naam, id en datum die als laatste is gewijzigd. Selecteer de naam van een gegevensstroom die u wilt [zijn details bekijken en de diensten vormen](#view-details).
 
@@ -106,7 +106,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzo
 
 >[!IMPORTANT]
 >
->Wanneer het toelaten van een gegevensstroom voor Platform, neem nota van de zandbak van het Platform die u momenteel gebruikt, zoals getoond in het hoogste lint van UI.
+>Wanneer het toelaten van een gegevensstroom voor Platform, neem nota van de zandbak van het Platform die u momenteel gebruikt, zoals getoond in het hoogste lint van UI van de Inzameling van Gegevens.
 >
 >![Geselecteerde sandbox](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ De hoofdpagina van de [!UICONTROL Datastreams] wordt de werkruimte opnieuw weerg
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om gegevensstromen in UI te beheren. Voor meer informatie over om SDK van het Web na vestiging een gegevensstroom te installeren en te vormen, verwijs naar [E2E-handleiding voor gegevensverzameling](../../collection/e2e.md#install).
+Deze gids behandelde hoe te om gegevensstromen in de Inzameling van Gegevens UI te beheren. Voor meer informatie over om SDK van het Web na vestiging een gegevensstroom te installeren en te vormen, verwijs naar [E2E-handleiding voor gegevensverzameling](../../collection/e2e.md#install).

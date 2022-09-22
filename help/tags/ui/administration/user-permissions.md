@@ -2,9 +2,9 @@
 title: Gebruikersmachtigingen voor tags
 description: Leer over de verschillende soorten toestemmingen beschikbaar voor markeringen en sommige basisimplementatiestrategieën voor verschillende zaken van bedrijfsgebruik.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Standaard bieden productprofielen toegang tot alle eigenschappen die binnen uw b
 
 ### Eigendomsrechten {#property-rights}
 
-Om het even welk markeringsbezit dat u in UI creeert wordt beschikbaar in Admin Console, die u toestaat om het bezit met specifieke bezitsrechten in het zelfde productprofiel te groeperen.
+Om het even welk bezit dat u in UI creeert van de Inzameling van Gegevens wordt beschikbaar in Admin Console, toestaand u om het bezit met specifieke bezitsrechten in het zelfde productprofiel te groeperen.
 
 Als een bepaald productprofiel bijvoorbeeld geen toegang heeft tot Eigenschap A1, kunnen gebruikers die tot dat profiel behoren geen instellingen zien of wijzigen binnen Eigenschap A1.
 
@@ -52,7 +52,7 @@ De volgende tabel geeft een overzicht van de beschikbare eigendomsrechten en de 
 
 | Eigenschappenrecht | Beschrijving |
 | --- | --- |
-| **Ontwikkelen** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Regels en gegevenselementen maken</li><li>Bibliotheken maken en deze bouwen in bestaande ontwikkelomgevingen</li><li>Bibliotheek ter goedkeuring verzenden</li></ul>De meeste dagelijkse taken in UI vereisen dit recht. |
+| **Ontwikkelen** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Regels en gegevenselementen maken</li><li>Bibliotheken maken en deze bouwen in bestaande ontwikkelomgevingen</li><li>Bibliotheek ter goedkeuring verzenden</li></ul>De meeste dagelijkse taken in UI van de Inzameling van Gegevens vereisen dit recht. |
 | **Goedkeuren** | Hierdoor kunt u een verzonden bibliotheek gebruiken en bouwen naar de testomgeving. U kunt ook een bibliotheek goedkeuren voor publicatie nadat het testen is voltooid. |
 | **Publicatie** | Hierdoor kunt u goedgekeurde bibliotheken publiceren naar de productieomgeving. |
 | **Extensies beheren** | Op deze manier kunt u de volgende handelingen uitvoeren: <ul><li>Nieuwe extensies installeren op een eigenschap</li><li>De configuratie voor een reeds geïnstalleerde extensie wijzigen</li><li>Een extensie verwijderen</li></ul>Raadpleeg de documentatie bij het overzicht van extensies voor [meer informatie over extensies](../managing-resources/extensions/overview.md). Deze rol behoort gewoonlijk tot IT of Marketing, afhankelijk van uw organisatie. |

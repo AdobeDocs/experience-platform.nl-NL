@@ -2,9 +2,9 @@
 title: Publishing Flow
 description: Leer meer over het maken van bibliotheken, het testen van builds en het goedkeuren van deze voor productie in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1397'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Wanneer het over de het publiceren stroom aankomt, zijn er vier basisstaten dat 
 * [[!UICONTROL Approved]](#approved)
 * [[!UICONTROL Published]](#published)
 
-Deze vier staten worden als kolommen weergegeven in de **[!UICONTROL Publishing Flow]** tab.
+Deze vier staten worden als kolommen weergegeven in de **[!UICONTROL Publishing Flow]** in de gebruikersinterface voor gegevensverzameling.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Wat in de upstream wordt opgenomen, is afhankelijk van het huidige werkgebied va
 
 ![](./images/approval-workflow/upstream.png)
 
-Wanneer u een bibliotheek in de gebruikersinterface bewerkt, worden alle bronnen die van de upstream zijn overgeërfd, weergegeven in het dialoogvenster **[!UICONTROL Resources Upstream]** sectie. Als u deze bronnen wilt weergeven, selecteert u het tabblad Uitvouwen onder de sectiekop.
+Wanneer u een bibliotheek in de UI van de Inzameling van Gegevens uitgeeft, worden alle middelen die van upstream worden geërft vertegenwoordigd in **[!UICONTROL Resources Upstream]** sectie. Als u deze bronnen wilt weergeven, selecteert u het tabblad Uitvouwen onder de sectiekop.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

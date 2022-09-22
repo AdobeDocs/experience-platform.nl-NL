@@ -2,7 +2,7 @@
 title: End-to-end testen uploaden en implementeren voor een extensie
 description: Leer hoe u uw extensie kunt valideren, uploaden en testen in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Als u de extensies van tags in Adobe Experience Platform wilt testen, gebruikt u de API-tags en/of opdrachtregelprogramma&#39;s om de extensiepakketten te uploaden. Vervolgens gebruikt u de gebruikersinterface van het Platform of de gebruikersinterface van de gegevensverzameling om uw extensiepakket te installeren in een eigenschap en de mogelijkheden ervan uit te oefenen in een tagbibliotheek en te bouwen.
+Als u de extensies van tags in Adobe Experience Platform wilt testen, gebruikt u de API-tags en/of opdrachtregelprogramma&#39;s om de extensiepakketten te uploaden. Vervolgens gebruikt u de UI voor gegevensverzameling om het extensiepakket te installeren op een eigenschap en de mogelijkheden ervan uit te oefenen in een tagbibliotheek en te bouwen.
 
 In dit document wordt beschreven hoe u end-to-end tests voor uw extensie kunt implementeren.
 
@@ -74,7 +74,7 @@ Uw extensiepakket wordt vervolgens geüpload en de uploader geeft u de id van he
 
 >[!NOTE]
 >
->Tijdens het uploaden of patchen worden extensiepakketten in een status in behandeling geplaatst, terwijl het systeem het pakket asynchroon extraheert en implementeert. Tijdens dit proces kunt u de opdracht `extension_package` ID voor de status met behulp van de API en binnen de UI. Er wordt een extensiekaart weergegeven in de catalogus die is gemarkeerd als In behandeling.
+>Tijdens het uploaden of patchen worden extensiepakketten in een status in behandeling geplaatst, terwijl het systeem het pakket asynchroon extraheert en implementeert. Tijdens dit proces kunt u de opdracht `extension_package` ID voor zijn status die API en binnen de UI van de Inzameling van Gegevens gebruikt. Er wordt een extensiekaart weergegeven in de catalogus die is gemarkeerd als In behandeling.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Uw extensiepakket wordt vervolgens geüpload en de uploader geeft u de id van he
 
 ## Een ontwikkeleigenschap maken {#property}
 
-Nadat u zich bij UI hebt aangemeld en selecteert u **[!UICONTROL Tags]** in de linkernavigatie [!UICONTROL Properties] wordt weergegeven. Een eigenschap is een container voor de tags die u wilt implementeren en kan op een of meerdere sites worden gebruikt.
+Nadat u zich in UI van de Inzameling van Gegevens ondertekent, wordt het scherm van Eigenschappen getoond. Een eigenschap is een container voor de tags die u wilt implementeren en kan op een of meerdere sites worden gebruikt.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -142,7 +142,7 @@ Extensies kunnen gegevenselementen definiëren als dat nodig is om de extensie t
 
 Wanneer een gebruiker de extensie selecteert in het menu **Extensie** vervolgkeuzelijst **Type gegevenselement** dropdown is bevolkt met om het even welke die elementtypes van gegevens door uw uitbreiding worden verstrekt. De gebruiker kan dan elk gegevenselement aan zijn bronwaarde in kaart brengen. De elementen van gegevens kunnen dan worden gebruikt wanneer het bouwen van regels in de Gebeurtenis van de Verandering van het Element van Gegevens of de Gebeurtenis van de Code van de Douane om een uit te voeren regel teweeg te brengen. Een gegevenselement kan ook in de Voorwaarde van het Element van Gegevens of andere Voorwaarden, Uitzonderingen, of Acties in een regel worden gebruikt.
 
-Zodra het gegevenselement wordt gecreeerd (de afbeelding wordt opstelling), kunnen de gebruikers de brongegevens door het gegevenselement eenvoudig van verwijzingen te voorzien van verwijzingen voorzien. Als de bron van de waarde verandert (site wordt opnieuw ontworpen, enz.) gebruikers hoeven de toewijzing slechts eenmaal in UI bij te werken en alle gegevenselementen zullen automatisch de nieuwe bronwaarde ontvangen.
+Zodra het gegevenselement wordt gecreeerd (de afbeelding wordt opstelling), kunnen de gebruikers de brongegevens door het gegevenselement eenvoudig van verwijzingen te voorzien van verwijzingen voorzien. Als de bron van de waarde verandert (site wordt opnieuw ontworpen, enz.) gebruikers hoeven de afbeelding slechts één keer bij te werken in de gebruikersinterface voor gegevensverzameling en alle gegevenselementen ontvangen automatisch de nieuwe bronwaarde.
 
 ### Regels
 
@@ -226,6 +226,6 @@ Wanneer u veranderingen ontdekt die aan uw uitbreidingspakket moeten worden aang
    >
    >Argumenten kunnen op de bevellijn worden overgegaan om tijd te besparen door het herhaalde ingaan van geloofsbrieven te vermijden. Lees voor meer informatie hierover de [reactoruploader, documentatie](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. De installatiestap kan worden overgeslagen wanneer een bestaand pakket wordt bijgewerkt.
-1. Wijzig middelen - als de configuratie voor om het even welk van uw uitbreidingscomponenten is veranderd, zult u die middelen in UI moeten bijwerken.
+1. Wijzig middelen - als de configuratie voor om het even welk van uw uitbreidingscomponenten is veranderd, zult u die middelen in de Inzameling van Gegevens UI moeten bijwerken.
 1. Voeg de meest recente wijzigingen toe aan uw bibliotheek en maak de bibliotheek opnieuw.
 1. Voltooi nog een testronde.

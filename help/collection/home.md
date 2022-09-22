@@ -5,9 +5,9 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '464'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,7 @@ Deze gids verstrekt een inleiding op hoog niveau aan gegevensinzameling en hoe h
 
 ## Tags, Web SDK en Mobile SDK
 
-De SDK van het Web SDK van het Platform en van het Platform Mobiele SDK doen ineenstorten en alle het productbibliotheken van Adobe in één enkele ontwikkelingskit voor Web en mobiele platforms respectievelijk comprimeren. Deze kunnen worden geïmplementeerd met onbewerkte code of met [tags](../tags/home.md) via de gebruikersinterface voor gegevensverzameling of de gebruikersinterface van Adobe Experience Platform.
+De SDK van het Web SDK van het Platform en van het Platform Mobiele SDK doen ineenstorten en alle het productbibliotheken van Adobe in één enkele ontwikkelingskit voor Web en mobiele platforms respectievelijk comprimeren. Deze kunnen worden geïmplementeerd met onbewerkte code of met [tags](../tags/home.md) via de gebruikersinterface voor gegevensverzameling.
 
 Het samenpersen van deze bibliotheken versnelt gegevensinzameling en consolideert verrichtingen in één enkele stroom van cliënt-zijapparaten aan het Netwerk van de Rand van het Platform.
 

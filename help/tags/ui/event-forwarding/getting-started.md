@@ -3,9 +3,9 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '874'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Voor meer informatie over schema&#39;s, zie [Help-systeem voor Experience Data M
 
 ## Een eigenschap voor het doorsturen van gebeurtenissen maken
 
-In de **[!UICONTROL Tags]** werkruimte, een eigenschap van het type maken **[!UICONTROL Edge]**.
+In de UI van de Inzameling van Gegevens creeer een bezit van type &quot;Rand.&quot;
 
 1. Selecteer **[!UICONTROL New Property]**.
 
@@ -70,18 +70,22 @@ Nadat u de eigenschap hebt gemaakt, gaat u naar de **[!UICONTROL Environments]**
 
 Om uw gegevensstroom in Adobe Experience Platform tot stand te brengen, gebruik identiteitskaart van het Milieu die wanneer u de gebeurtenis creeerde door:sturen bezit wordt geproduceerd.
 
-1. Selecteren **[!UICONTROL Datastreams]** in de linkernavigatie.
+1. Gebruik de verbinding in de linkerspoor van de UI van de Inzameling van Gegevens om de interface van gegevensstromen te openen.
+
+1. Selecteer **[!UICONTROL Datastreams]**.
 
 1. Geef de configuratie een naam en geef een optionele beschrijving op.
 De beschrijving helpt om configuraties in een lijst van verscheidene configuraties te identificeren.
 
 1. Selecteer **[!UICONTROL Save]**.
 
+
+
 ## Gebeurtenis doorsturen inschakelen
 
 Daarna, vorm het Netwerk van de Rand om gegevens naar gebeurtenis door:sturen, en naar andere producten van Adobe te verzenden.
 
-1. In de **[!UICONTROL Datastreams]** selecteert u de eigenschap die u hebt gemaakt.
+1. Selecteer in de interface voor gegevensstromen de eigenschap die u hebt gemaakt.
 
 1. Selecteer de ontwikkelings-, productie- of staging-omgeving.
 
@@ -97,9 +101,17 @@ Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
 ## Vorm de uitbreiding van SDK van het Web van het Platform om gegevens naar de eerder gemaakte gegevensstroom te verzenden
 
-Maak uw eigenschap in het dialoogvenster **[!UICONTROL Tags]** werkruimte, navigeer vervolgens naar **[!UICONTROL Extensions]** en selecteer de uitbreiding van SDK van het Web van het Experience Platform van de catalogus om het te vormen en te installeren.
+Creeer uw bezit in de Inzameling UI van Gegevens, dan gebruik de uitbreiding van SDK van het Web van Adobe Experience Platform om het te vormen.
 
-Zie de [Web SDK-uitbreidingsdocumentatie](../../extensions/web/sdk/overview.md) voor meer informatie over configuratieopties.
+1. Geef de eigenschap een naam.
+
+   U kunt meerdere Alloy-instanties hebben. U hebt bijvoorbeeld verschillende eigenschappen voor het bijhouden van randen vóór en na betaling.
+
+1. Selecteer de organisatie-id.
+
+1. Selecteer het Edge-domein.
+
+Zie de [Web SDK-uitbreidingsdocumentatie](../../extensions/web/sdk/overview.md) voor meer configuratieopties.
 
 ## Creeer een markeringsregel om gegevens naar het Web SDK van het Platform te verzenden
 

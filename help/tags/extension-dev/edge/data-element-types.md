@@ -2,9 +2,9 @@
 title: Typen gegevenselementen voor randextensies
 description: Leer hoe u een bibliotheekmodule van het gegevenstype data-element definieert voor een tagextensie in een randeigenschap.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ In dit document wordt beschreven hoe u gegevenselemetypen definieert voor een ra
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
-1. Een mening die binnen UI van het Experience Platform en UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
+1. Een mening die binnen UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en gegevens op te halen.
 
 Als u gebruikers wilt toestaan om een stuk gegevens van de laag van douanegegevens terug te winnen, kan uw module als dit voorbeeld kijken.

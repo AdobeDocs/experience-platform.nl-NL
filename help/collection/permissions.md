@@ -2,9 +2,9 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1282'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Deze gids toont u hoe te om toestemmingen voor de eigenschappen van de gegevensi
 
 ## Aan de slag
 
-Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een **productprofielbeheerder**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen in een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise Administration guide voor meer informatie.
+Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een beheerder van het productprofiel. Andere beheerdersrollen die machtigingen kunnen beheren, zijn productbeheerders (die alle profielen binnen een product kunnen beheren) en systeembeheerders (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise Administration guide voor meer informatie.
 
 Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie voor meer informatie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Voor meer informatie over het beheren van gebruikers voor een productprofiel raa
 
 ## Volgende stappen
 
-Deze gids behandelde de beschikbare toestemmingen voor de Inzameling van Gegevens en hoe te om hen door Admin Console te beheren. Raadpleeg voor meer informatie over het beheren van machtigingen voor andere Adobe Experience Platform-mogelijkheden de [toegangsbeheerdocumentatie](../access-control/home.md).
+Deze gids behandelde de beschikbare toestemmingen voor de Inzameling van Gegevens UI en hoe te om hen door Admin Console te beheren. Raadpleeg voor meer informatie over het beheren van machtigingen voor andere Adobe Experience Platform-mogelijkheden de [toegangsbeheerdocumentatie](../access-control/home.md).

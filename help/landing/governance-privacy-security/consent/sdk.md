@@ -3,7 +3,7 @@ title: Gegevens met toestemming van de klant verwerken met de Adobe Experience P
 topic-legacy: getting started
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten te verwerken in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 0%
@@ -23,7 +23,7 @@ In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens ov
 * [Een gegevensset maken met de standaard Adobe](./adobe/dataset.md)
 * [Creeer een dataset gebruikend de norm TCF 2.0](./iab/dataset.md)
 
-Deze handleiding volgt de workflow voor het instellen van de SDK met de tagextensie in de gebruikersinterface. Raadpleeg de volgende documenten in plaats van deze handleiding als u de extensie niet wilt gebruiken en de zelfstandige versie van de SDK rechtstreeks op uw site wilt insluiten:
+Deze handleiding volgt de workflow voor het instellen van de SDK met behulp van de tagextensie in de gebruikersinterface voor gegevensverzameling. Raadpleeg de volgende documenten in plaats van deze handleiding als u de extensie niet wilt gebruiken en de zelfstandige versie van de SDK rechtstreeks op uw site wilt insluiten:
 
 * [Een gegevensstroom configureren](../../../edge/datastreams/overview.md)
 * [De SDK installeren](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ De installatiestappen in deze handleiding vereisen een goed begrip van de uitbre
 
 ## Een gegevensstroom instellen
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een gegevensstroom configureert. Selecteer in de UI voor gegevensverzameling of de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Datastreams]** in de linkernavigatie.
+SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een gegevensstroom configureert. Selecteer in de gebruikersinterface voor gegevensverzameling de optie **[!UICONTROL Datastreams]** in de linkernavigatie.
 
 Nadat u een nieuwe gegevensstroom hebt gemaakt of een bestaande gegevensstroom hebt geselecteerd om te bewerken, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de hieronder vermelde waarden om het formulier in te vullen.
 
@@ -80,7 +80,7 @@ Als het gebied van de gebruiker door CMP wordt bepaald, kunt u de volgende stapp
 1. Stel in de gebeurtenishandler een `adobeDefaultConsent` variabele gebaseerd op het gebied van de gebruiker, en laadt dan het manuscript van de markeringsbibliotheek gebruikend JavaScript.
 1. Stel een gegevenselement in dat gebruikmaakt van de `adobeDefaultConsent` JavaScript-variabele en gebruik dit gegevenselement als de standaardwaarde voor de toestemming voor de gebruiker.
 
-Selecteer **[!UICONTROL Data Elements]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Add Data Element]** om naar het dialoogvenster voor het maken van gegevenselementen te navigeren.
+Als u een gegevenselement wilt maken in de gebruikersinterface voor gegevensverzameling, selecteert u **[!UICONTROL Data Elements]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Add Data Element]** om naar het dialoogvenster voor het maken van gegevenselementen te navigeren.
 
 Van hieruit moet u een [!UICONTROL JavaScript Variable] gegevenselement gebaseerd op `adobeDefaultConsent`. Selecteren **[!UICONTROL Save]** wanneer gereed.
 

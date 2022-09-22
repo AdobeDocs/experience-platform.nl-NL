@@ -2,9 +2,9 @@
 title: Voorwaardetypen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het type condition definieert voor een tagextensie in een webeigenschap.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ In dit document wordt beschreven hoe u voorwaardetypen voor een webextensie in A
 
 Voorwaardetypen bestaan gewoonlijk uit het volgende:
 
-1. A [weergave](./views.md) getoond binnen UI van het Experience Platform en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
+1. A [weergave](./views.md) getoond binnen UI van de Inzameling van Gegevens die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
 2. Een bibliotheekmodule die in de tagruntime-bibliotheek wordt uitgestraald om de instellingen te interpreteren en een voorwaarde te evalueren.
 
 Een voorwaardetype bibliotheekmodule heeft één doel: evalueren of iets waar of onwaar is. Wat het evalueert, is aan jou.

@@ -2,9 +2,9 @@
 title: Overzicht van extensieontwikkeling
 description: In deze video ziet u de belangrijkste componenten van verschillende extensietypen en het ontwikkelingsproces voor extensies in Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -37,11 +37,11 @@ U kunt bibliotheekmodulebestanden op elke gewenste locatie in de extensiemap pla
 
 ### Weergaven
 
-Een weergave is een HTML-bestand dat in een [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door het Platform UI en UI van de Inzameling van Gegevens. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
+Een weergave is een HTML-bestand dat in een [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door de Inzameling van Gegevens UI. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
 
 Het belangrijkste meningsdossier voor om het even welke uitbreiding is zijn configuratie. Zie de sectie over [extensieconfiguraties](#configuration) voor meer informatie .
 
-Er gelden geen beperkingen ten aanzien van de bibliotheken die in uw weergaven worden gebruikt. Met andere woorden, u kunt jQuery, Onderstreping, Reageren, Angular, Bootstrap of andere gebruiken. Het wordt echter nog steeds aangeraden om uw extensie er net zo uit te laten zien als de interface.
+Er gelden geen beperkingen ten aanzien van de bibliotheken die in uw weergaven worden gebruikt. Met andere woorden, u kunt jQuery, Onderstreping, Reageren, Angular, Bootstrap of andere gebruiken. Nochtans, wordt het nog geadviseerd om uw uitbreiding een gelijkaardige blik te maken en aan de UI van de Inzameling van Gegevens te voelen.
 
 U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) in één submap te plaatsen die is gescheiden van de bibliotheekmodulebestanden. In `extension.json`kunt u beschrijven waar deze submap voor de weergave zich bevindt. Platform zal deze subdirectory (en slechts deze subdirectory) van zijn Webservers dan dienen.
 

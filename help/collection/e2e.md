@@ -2,9 +2,9 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van Adobe Experience Platform-mogelijkheden voor gegevensverzameling.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: da17b273d5464ecd8b00aa37de51425ce3a9a576
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2537'
+source-wordcount: '2524'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,6 @@ Deze gids verstrekt een zelfstudie op hoog niveau van hoe te om een gebeurtenis 
 >[!NOTE]
 >
 >U kunt er ook voor kiezen om de SDK handmatig te installeren en te configureren als u geen tags wilt gebruiken, maar de omringende stappen moeten nog steeds worden uitgevoerd zoals hieronder wordt beschreven.
->
->Alle stappen die de UI van de Inzameling van Gegevens impliceren kunnen ook in de UI van het Experience Platform worden uitgevoerd.
 
 ## Vereisten
 
@@ -59,7 +57,7 @@ De eerste stap in vestiging uw verrichtingen van de gegevensinzameling is een sc
 >
 >XDM-schema&#39;s zijn zeer aanpasbaar. In plaats van overdreven voorschrijvend te zijn, concentreren de hieronder geschetste stappen zich specifiek op de schemavereisten voor het Web SDK. Buiten deze parameters kunt u de resterende structuur van uw gegevens definiëren, hoe u dat ook wilt.
 
-Selecteer in de gebruikersinterface de optie **[!UICONTROL Schemas]** in de linkernavigatie. Van hier, kunt u een lijst van eerder gecreeerd schema&#39;s zien die tot uw organisatie behoren. Selecteer **[!UICONTROL Create schema]** selecteert u vervolgens **[!UICONTROL XDM ExperienceEvent]** in het vervolgkeuzemenu.
+Selecteer in de gebruikersinterface voor gegevensverzameling de optie **[!UICONTROL Schemas]** in de linkernavigatie. Van hier, kunt u een lijst van eerder gecreeerd schema&#39;s zien die tot uw organisatie behoren. Selecteer **[!UICONTROL Create schema]** selecteert u vervolgens **[!UICONTROL XDM ExperienceEvent]** in het vervolgkeuzemenu.
 
 ![Werkruimte Schemas](./images/e2e/schemas.png)
 
@@ -99,7 +97,7 @@ Een gegevensstroom is een configuratie die het Netwerk van de Rand vertelt waar 
 >
 >Als u wilt gebruiken [gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md) (ervan uitgaande dat uw organisatie een licentie heeft voor de functionaliteit), moet u deze voor een gegevensstroom inschakelen, op dezelfde manier als u Adobe-producten inschakelt. Details over dit proces worden besproken in een [sectie later](#event-forwarding).
 
-Selecteren **[!UICONTROL Datastreams]** in de linkernavigatie. Van hier kunt u een bestaande gegevensstroom van de lijst selecteren om uit te geven, of u kunt een nieuwe configuratie tot stand brengen door te selecteren **[!UICONTROL New Datastream]**.
+Selecteer in de gebruikersinterface voor gegevensverzameling de optie **[!UICONTROL Datastreams]**. Van hier kunt u een bestaande gegevensstroom van de lijst selecteren om uit te geven, of u kunt een nieuwe configuratie tot stand brengen door te selecteren **[!UICONTROL New Datastream]**.
 
 ![DataStreams](./images/e2e/datastreams.png)
 

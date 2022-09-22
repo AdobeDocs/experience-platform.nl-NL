@@ -3,9 +3,9 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Terwijl de markeringen gebeurtenisgegevens direct van uw plaats of inheemse mobi
 
 ### Properties {#properties}
 
-Het door:sturen van de gebeurtenis handhaaft zijn eigen opslag eigenschappen los van markeringen, die u in de UI van het Experience Platform of UI van de Inzameling van Gegevens kunt bekijken door te selecteren **[!UICONTROL Event Forwarding]** in de linkernavigatie.
+Het door:sturen van de gebeurtenis handhaaft zijn eigen opslag eigenschappen los van markeringen, die u in de UI van de Inzameling van Gegevens kunt bekijken door te selecteren **[!UICONTROL Event Forwarding]** in de linkernavigatie.
 
 ![Eigenschappen voor het doorsturen van gebeurtenissen in de gebruikersinterface voor gegevensverzameling](../../images/ui/event-forwarding/overview/properties.png)
 

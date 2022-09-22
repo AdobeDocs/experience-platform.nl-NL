@@ -2,9 +2,9 @@
 title: Overzicht van door Adobe beheerde hosts
 description: Leer meer over de standaardhostingoptie voor het implementeren van builds van tagbibliotheken in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -88,9 +88,9 @@ Zoals in de bovenstaande tabel wordt aangegeven, wordt het in cache plaatsen van
 
 De cache-control headers worden alleen toegepast op de hoofdbibliotheek. Eventuele subbronnen onder de hoofdbibliotheek worden altijd als netto-nieuw beschouwd en daarom is het niet nodig deze in de cache op te slaan in de browser.
 
-## Het gebruiken van Adobe-beheerde ontvangen in UI
+## Het gebruiken van Adobe-beheerde ontvangen in de UI van de Inzameling van Gegevens
 
-Wanneer u eerst een bezit in de UI van het Platform of UI van de Inzameling van Gegevens creeert, wordt een Adobe-geleide gastheer automatisch gecreeerd voor u. Alle beschikbare milieu&#39;s die onmiddellijk bruikbare eigenschappen hebben worden ook toegewezen aan de Adobe-beheerde gastheer door gebrek.
+Wanneer u voor het eerst een eigenschap maakt in het dialoogvenster [UI voor gegevensverzameling](https://experience.adobe.com/#/data-collection/), wordt automatisch een Adobe-geleide gastheer gecreeerd voor u. Alle beschikbare milieu&#39;s die onmiddellijk bruikbare eigenschappen hebben worden ook toegewezen aan de Adobe-beheerde gastheer door gebrek.
 
 >[!NOTE]
 >

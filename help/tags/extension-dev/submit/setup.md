@@ -2,9 +2,9 @@
 title: Experience Cloud Organisatie instellen
 description: Leer hoe u een Adobe Experience Cloud-organisatie registreert om extensies voor Adobe Experience Platform te gaan ontwikkelen.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,7 @@ Dit programma is voor het raadplegen van bedrijven die klanten van de Adobe help
 >
 >Uw bedrijfs-e-mail kan momenteel slechts in één partnerprogramma tegelijkertijd worden gebruikt, zodat zult u een verschillende collectieve e-mail als geregistreerde contact voor elk van de programma&#39;s moeten gebruiken.
 
-Zodra uw bedrijf in het programma van de Partner van de Uitwisseling is, kunt u toegang tot de Oplossingen van Adobe verzoeken door binnen aan te ondertekenen [Exchange Partner-site](https://partners.adobe.com/exchangeprogram/experiencecloud) en volgt u de onderstaande stappen.
-
-Als u een Experience Cloud-account hebt die toegang vereist tot de interface voor gegevensverzameling en de gebruikersinterface van het Experience Platform, raadpleegt u de [machtigingengids voor gegevensverzameling](../../../collection/permissions.md).
+Zodra uw bedrijf in het programma van de Partner van de Uitwisseling is, kunt u toegang tot de Oplossingen van Adobe verzoeken door binnen aan te ondertekenen [Exchange Partner-site](https://partners.adobe.com/exchangeprogram/experiencecloud) en volgt u de onderstaande stappen. Als u al een Experience Cloud-account en toegang tot oplossingen hebt, maar u hebt geen toegang tot de interface voor gegevensverzameling in Adobe Experience Platform, raadpleegt u de [instructies voor het instellen van groepen en gebruikers](../../ui/administration/user-permissions.md).
 
 ## Voor onafhankelijke ontwikkelaars
 

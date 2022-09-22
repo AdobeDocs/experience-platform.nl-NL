@@ -2,9 +2,9 @@
 title: Typen handelingen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het type action definieert voor een tagextensie in een webeigenschap.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ In dit document wordt beschreven hoe u actietypen voor een webextensie in Adobe 
 
 Handelingstypen bestaan doorgaans uit:
 
-1. A [weergave](./views.md) getoond binnen UI van het Experience Platform en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de actie te wijzigen.
+1. A [weergave](./views.md) getoond binnen UI van de Inzameling van Gegevens die gebruikers toestaat om montages voor de actie te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en een actie uit te voeren.
 
 ```js

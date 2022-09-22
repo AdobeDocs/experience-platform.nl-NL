@@ -2,9 +2,9 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '5472'
+source-wordcount: '5482'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Als het element een ankertag is (`<a>`) aan gekoppelde inhoud, kunt u ook opgeve
 
 Wanneer u koppelingsvertraging gebruikt, voorkomt Platform eigenlijk dat de browser van de pagina af navigeert. Vervolgens wordt er een JavaScript-omleiding uitgevoerd naar de oorspronkelijke bestemming na de opgegeven time-out. Dit is vooral gevaarlijk wanneer de paginamarkering `<a>` -tags waarop de gebruiker niet werkelijk van de pagina af kan navigeren vanwege de bedoelde functionaliteit. Als u uw probleem niet op een andere manier kunt oplossen, zou u met uw selecteursdefinitie uiterst nauwkeurig moeten zijn zodat deze gebeurtenis precies teweegbrengt waar u het nodig hebt en nergens anders.
 
-De standaardwaarde voor de vertraging van de koppeling is 100 milliseconden. Tags wachten altijd op de opgegeven tijd en houden op geen enkele manier verband met de uitvoering van de handelingen van de regel. Het is mogelijk dat de vertraging de gebruiker zal dwingen langer te wachten dan noodzakelijk is, en ook dat de vertraging niet lang genoeg zal zijn voor alle acties van de regel met succes te voltooien. Langere vertragingen verstrekken meer tijd voor regeluitvoering maar ook verslechteren de gebruikerservaring.
+De standaardwaarde voor de vertraging van de koppeling is 100 milliseconden. Tags wachten altijd op de opgegeven tijd en zijn op geen enkele wijze verbonden met de uitvoering van de handelingen van de regel. Het is mogelijk dat de vertraging de gebruiker zal dwingen langer te wachten dan noodzakelijk is, en ook de mogelijkheid dat de vertraging niet lang genoeg voor alle acties van de regel met succes zal zijn voltooid. Langere vertragingen verstrekken meer tijd voor regeluitvoering maar ook verslechteren de gebruikerservaring.
 
 Om de vertraging in te voeren is het nodig om zowel het geselecteerde element te verstrekken dat de gebeurtenis teweegbrengt, als de specifieke hoeveelheid tijd alvorens de gebeurtenis wordt teweeggebracht.
 
@@ -242,7 +242,7 @@ console.log(event);
 return true;
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de console van de browser. Zodra u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic beslissing binnen uw douanecode gebruiken.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Zodra u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic beslissing binnen uw douanecode gebruiken.
 
 *Voorwaardenvolgorde*
 
@@ -430,7 +430,7 @@ Selecteer de schermresolutie die bezoekers op hun apparaten moeten gebruiken om 
 
 1. Selecteer of de breedte van de schermresolutie van het apparaat van de bezoeker groter moet zijn dan, gelijk aan of kleiner dan de opgegeven waarde.
 1. Geef het aantal pixels op dat nodig is voor de breedte van de schermresolutie.
-1. Selecteer of de schermresolutiehoogte van het apparaat van de bezoeker groter moet zijn dan, gelijk aan of kleiner dan de opgegeven waarde.
+1. Selecteer of de schermresolutiehoogte van het apparaat van de bezoeker groter dan, gelijk aan of kleiner dan de opgegeven waarde moet zijn.
 1. Geef het aantal pixels op dat nodig is voor de hoogte van de schermresolutie.
 
 #### Venstergrootte
@@ -566,7 +566,7 @@ Wanneer JavaScript als taal wordt geselecteerd, een variabele genoemd `event` wo
 console.log(event);
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de console van de browser. Nadat u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic besluit binnen uw douanecode gebruiken, een stuk van verzenden `event` -object naar een server enzovoort.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Nadat u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic besluit binnen uw douanecode gebruiken, een stuk van verzenden `event` -object naar een server enzovoort.
 
 ### Verwerking van aangepaste code
 
@@ -688,7 +688,7 @@ console.log(event);
 return true;
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de console van de browser. Zodra u begrijpt welke informatie onder de diverse regels beschikbaar is die uw gegevenselement kunnen gebruiken, kunt u het voor programmatic besluit binnen uw douanecode gebruiken of een stuk van het terugkeren `event` -object als waarde van het gegevenselement.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Zodra u begrijpt welke informatie onder de diverse regels beschikbaar is die uw gegevenselement kunnen gebruiken, kunt u het voor programmatic besluit binnen uw douanecode gebruiken of een stuk van het terugkeren `event` -object als waarde van het gegevenselement.
 
 ### DOM-kenmerk
 
@@ -708,7 +708,7 @@ Hiermee wordt de waarde opgehaald van:
 
 Met behulp van het padveld kan naar elk beschikbaar JavaScript-object of -variabele worden verwezen.
 
-Taggegevenselementen kunnen worden gebruikt om uw opmaak van JavaScript-variabelen of objecteigenschappen vast te leggen. Deze waarden kunnen vervolgens worden gebruikt binnen uw extensies of aangepaste regels door te verwijzen naar de elementen met taggegevens. Als de bron van de gegevens verandert, is het alleen nodig om de verwijzing naar de bron bij te werken.
+Taggegevenselementen kunnen worden gebruikt om uw opmaak van JavaScript-variabelen of objecteigenschappen vast te leggen. Deze waarden kunnen vervolgens worden gebruikt binnen uw extensies of aangepaste regels door te verwijzen naar de elementen met taggegevens. Als de bron van de gegevens verandert, is het slechts noodzakelijk om de verwijzing naar de bron binnen UI van de Inzameling van Gegevens bij te werken.
 
 In het onderstaande voorbeeld bevat de markering een JavaScript-variabele met de naam `Page_Name`.
 
@@ -719,7 +719,7 @@ In het onderstaande voorbeeld bevat de markering een JavaScript-variabele met de
 </script>
 ```
 
-Wanneer u het gegevenselement maakt, geeft u gewoon het pad naar die variabele op.
+Wanneer u het gegevenselement in de UI van de Inzameling van Gegevens creeert, verstrek eenvoudig de weg aan die variabele.
 
 Als u een gegevensverzamelingsobject gebruikt als onderdeel van uw gegevenslaag, gebruikt u puntnotatie in het pad om te verwijzen naar het object en de eigenschap die u in het gegevenselement wilt vastleggen, zoals `_myData.pageName`, of `digitalData.pageName`, enzovoort.
 
@@ -807,7 +807,7 @@ U kunt een van de volgende paginakenmerken selecteren voor gebruik in het gegeve
 
 Geef één URL-parameter op in het veld URL-parameter.
 
-Alleen de naamsectie is nodig en speciale aanduidingen zoals &quot;?&quot; of &quot;=&quot; moet worden weggelaten
+Alleen de naamsectie is nodig en speciale aanduidingen zoals &quot;?&quot; of &quot;=&quot;moet worden weggelaten
 
 #### Voorbeeld:
 

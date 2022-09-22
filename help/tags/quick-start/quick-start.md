@@ -2,9 +2,9 @@
 title: Snelstartgids
 description: Leer hoe u snel aan de slag kunt met tags in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,13 @@ De basisworkflow voor labels:
 
 Tags zijn volledig geïntegreerd met uw Adobe ID. De toestemmingen van de gebruiker worden beheerd door de Admin Console met andere producten en oplossingen van Adobe van de [!DNL Creative Cloud], [!DNL Document Cloud]en Experience Cloud.
 
-Tags hebben een op rechten gebaseerd gebruikersbeheersysteem. Dit betekent dat individuele rechten expliciet moeten worden toegekend. Deze rechten worden toegewezen aan groepen, en gebruikers worden toegevoegd aan de juiste groepen om toegang te krijgen. Zelfs als uw organisatie toegang tot de Inzameling van Gegevens heeft, kunnen de individuele gebruikers niets doen tot een beheerder hen uitdrukkelijk sommige rechten verleent.
+Tags hebben een op rechten gebaseerd gebruikersbeheersysteem. Dit betekent dat individuele rechten expliciet moeten worden toegekend. Deze rechten worden toegewezen aan groepen, en gebruikers worden toegevoegd aan de juiste groepen om toegang te krijgen. Zelfs als uw organisatie toegang tot UI van de Inzameling van Gegevens heeft, kunnen de individuele gebruikers niets doen tot een Beheerder van Org hen uitdrukkelijk sommige rechten verleent.
 
-Voor gedetailleerde instructies over het maken van groepen en het toevoegen van gebruikers voor tags raadpleegt u de [machtigingengids voor gegevensverzameling](../../collection/permissions.md).
+Voor gedetailleerde instructies over het maken van groepen en het toevoegen van gebruikers voor tags raadpleegt u de [gebruikersmachtigingen](../ui/administration/user-permissions.md) document.
 
 ## 2. Aanmelden
 
-Nadat de markeringsrechten aan uw Adobe ID zijn toegevoegd, moet u login aan het Experience Platform UI of UI van de Inzameling van Gegevens. U kunt dit doen door rechtstreeks naar de [Aanmeldingsscherm Experience Cloud](https://experience.adobe.com/)en selecteert u **[!UICONTROL Data Collection]** of **[!UICONTROL Experience Platform]**.
+Nadat de markeringsrechten aan uw Adobe ID zijn toegevoegd, moet u login aan de UI van de Inzameling van Gegevens. U kunt dit doen door rechtstreeks naar de [Aanmeldingsscherm Experience Cloud](https://experiencecloud.adobe.com)en selecteert u de gebruikersinterface voor gegevensverzameling op het tabblad Snelle toegang.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Nadat de markeringsrechten aan uw Adobe ID zijn toegevoegd, moet u login aan het
 
 ## 3. Een eigenschap maken
 
-Nadat u zich hebt aangemeld bij de gebruikersinterface, maakt u eerst een eigenschap. Een eigenschap is in feite een container die u vult met extensies, regels, gegevenselementen en bibliotheken wanneer u tags op uw site implementeert. Veel mensen maken een eigenschap voor elke website (of groep nauw verwante sites) waar ze dezelfde set tags willen implementeren.
+Zodra u in UI van de Inzameling van Gegevens hebt geregistreerd, het eerste te doen ding is een bezit tot stand te brengen. Een eigenschap is in feite een container die u vult met extensies, regels, gegevenselementen en bibliotheken wanneer u tags op uw site implementeert. Veel mensen maken een eigenschap voor elke website (of groep nauw verwante sites) waar ze dezelfde set tags willen implementeren.
 
 Zie voor meer informatie over het maken van eigenschappen [Een eigenschap maken](../ui/administration/companies-and-properties.md).
 
@@ -67,7 +67,7 @@ Wat tags in Platform echt uniek maakt, is dat deze extensies door iedereen kunne
 * Sessie en lokale opslag
 * Alleen over alles
 
-Nadat het gegevenselement wordt bepaald, kunt u het element overal in UI voor om het even welke uitbreiding gebruiken. Zie de documentatie op [Gegevenselementen](../ui/managing-resources/data-elements.md) voor meer gedetailleerde informatie.
+Nadat het gegevenselement wordt bepaald, kunt u het element overal door de Inzameling van Gegevens UI voor om het even welke uitbreiding gebruiken. Zie de documentatie op [Gegevenselementen](../ui/managing-resources/data-elements.md) voor meer gedetailleerde informatie.
 
 **Regels** bevinden zich in de logische kern van uw implementatie en bepalen wat, wanneer, waar en hoe alle tags op uw site worden gebruikt. Definieer een gebeurtenis, stel voorwaarden en uitzonderingen in en definieer vervolgens de handelingen en volgorde. Tot slot publiceer uw veranderingen om de resultaten te zien. Zie voor meer informatie [Regels](../ui/managing-resources/rules.md).
 

@@ -2,9 +2,9 @@
 title: Insluitcodes testen met Adobe Experience Platform Debugger
 description: Leer hoe u met Foutopsporing op Platform verschillende insluitcodes voor Adobe Experience Platform op uw website lokaal kunt testen.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Als u wijzigingen aanbrengt in uw tagbibliotheek die in Adobe Experience Platfor
 
 ## Vereisten
 
-Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en insluitcodes voor tags. Zie de [Overzicht van omgevingen](./environments.md) voor meer informatie .
+Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en insluitcodes in de gebruikersinterface voor gegevensverzameling. Zie de [Overzicht van omgevingen](./environments.md) voor meer informatie .
 
 Deze zelfstudie vereist ook dat u de browserextensie van Foutopsporing voor Platforms hebt geïnstalleerd. Foutopsporing voor Platforms is alleen beschikbaar voor Chrome- en Firefox-browsers. Gebruik een van de volgende koppelingen om de extensie te installeren voordat u de zelfstudie start:
 

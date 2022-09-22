@@ -3,9 +3,9 @@ title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '870'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
    ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
 
-1. Volg de instructies op [de SDK installeren](../../fundamentals/installing-the-sdk.md) (De SDK kan zelfstandig of via de gebruikersinterface worden geïnstalleerd. Zie de [snel aan de slag met tags](../../../tags/quick-start/quick-start.md)) voor meer informatie.
+1. Volg de instructies op [de SDK installeren](../../fundamentals/installing-the-sdk.md) (De SDK kan zelfstandig of via de [UI voor gegevensverzameling](https://experience.adobe.com/#/data-collection/). Zie de [snel aan de slag met tags](../../../tags/quick-start/quick-start.md)) voor meer informatie.
 1. [De SDK configureren](../../fundamentals/configuring-the-sdk.md) voor Offer decisioning. Hieronder vindt u aanvullende specifieke stappen voor Offer decisioning.
 
    * De zelfstandige SDK installeren
