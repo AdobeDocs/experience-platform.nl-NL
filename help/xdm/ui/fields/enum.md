@@ -5,7 +5,7 @@ title: Enum Fields definiëren in de UI
 description: Leer hoe u een opsommingsveld definieert in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f6fefda974d2ae6fd4b035ef3b5fe633311c9772
+source-git-commit: 878d99d9eb45f40ff76e5e90116abf032be1c93f
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Enumvelden definiëren in de gebruikersinterface {#enum}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="Opsommingen en voorgestelde waarden"
 >abstract="Een opsomming beperkt een tekenreeksveld om alleen gegevens toe te staan die overeenkomen met een vooraf gedefinieerde set waarden die moeten worden ingevoerd. U kunt ook een set voorgestelde waarden voor het veld definiëren die de opname niet beperken, maar in plaats daarvan de kenmerken definiëren waaruit u in de segmentatie kunt kiezen. Raadpleeg de documentatie voor meer informatie."
 
