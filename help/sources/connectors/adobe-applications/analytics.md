@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;Analytics Source Connec
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 352993365dfcd4f39e7aea337b014430f7bad41c
+source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,3 @@ Deze velden zijn niet gemarkeerd als identiteiten. In plaats daarvan worden deze
 * `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
 
 Als ECID aanwezig is in het identiteitsoverzicht, wordt dit gemarkeerd als de primaire identiteit voor de gebeurtenis. In dat geval kan de steun op ECID gebaseerd zijn vanwege de [Abonnementsserviceperiode](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Anders wordt STEUN gemarkeerd als de primaire identiteit voor de gebeurtenis. AACUSTOMID is nooit gemarkeerd als primaire id voor de gebeurtenis. Als AACUSTOMID echter aanwezig is, is de STEUN gebaseerd op AACUSTOMID vanwege de Experience Cloud volgorde van de activiteiten.
-
-### Customer Journey Analytics- en primaire id
-
-Voor Customer Journey Analytics is de definitie van de primaire id alleen belangrijk als u de primaire id als de persoon-id gebruikt. Dit is echter niet verplicht. U kunt een andere identiteitskolom kiezen als Persoon-id.
