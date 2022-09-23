@@ -4,9 +4,9 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Om dit te doen, moet u rollen, middelen, en beleid vormen.
 
 U zult:
 
-* [Label de rollen voor uw gebruikers]{#label-roles}: Gebruik het voorbeeld van een zorgleverancier (ACME Business Group) wiens marketinggroep samenwerkt met externe bureaus.
-* [Etiketteer uw middelen (schemagebieden en segmenten)]{#label-resources}: Wijs het **[!UICONTROL PHI/ Regulated Health Data]** label aan schemamiddelen en segmenten.
-* [Het beleid maken dat ze met elkaar verbindt]{#policy}: Creeer een beleid om de etiketten op uw middelen aan de etiketten in uw rol te verbinden ontkennend toegang tot schemagebieden en segmenten. Hierdoor wordt toegang tot het schemaveld en -segment in alle sandboxen geweigerd voor gebruikers die geen overeenkomende labels hebben.
+* [Label de rollen voor uw gebruikers](#label-roles): Gebruik het voorbeeld van een zorgleverancier (ACME Business Group) wiens marketinggroep samenwerkt met externe bureaus.
+* [Etiketteer uw middelen (schemagebieden en segmenten)](#label-resources): Wijs het **[!UICONTROL PHI/ Regulated Health Data]** label aan schemamiddelen en segmenten.
+* [Het beleid maken dat ze met elkaar verbindt](#policy): Creeer een beleid om de etiketten op uw middelen aan de etiketten in uw rol te verbinden ontkennend toegang tot schemagebieden en segmenten. Hierdoor wordt toegang tot het schemaveld en -segment in alle sandboxen geweigerd voor gebruikers die geen overeenkomende labels hebben.
 
 ## Toestemmingen
 
@@ -162,7 +162,7 @@ Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Toelaatbare en ontoelaatbare acties voor een beleid configureren"
->abstract="Selecteer Toegang toestaan tot, om toelaatbare acties te vormen die uw gebruikers tegen middelen kunnen maken. Selecteer ontkennen toegang tot, om ontoelaatbare acties te vormen die uw gebruikers tegen middelen niet kunnen maken."
+>abstract="A <b>toegang weigeren tot</b> beleid zal gebruikers toegang ontzeggen wanneer aan de criteria wordt voldaan. Indien gecombineerd met <b>De volgende fout is onwaar</b> - alle gebruikers krijgen geen toegang tenzij zij voldoen aan de desbetreffende criteria. Dit type van beleid staat u toe om een gevoelig middel te beschermen en slechts toegang tot gebruikers toe te staan die passende etiketten hebben. <br>A <b>toegang tot</b> het beleid zal gebruikers toegang verlenen wanneer aan de criteria wordt voldaan . Indien gecombineerd met <b>Het volgende is waar</b> - gebruikers krijgen toegang als zij voldoen aan de criteria die hiervoor zijn vastgesteld. Dit ontkent niet uitdrukkelijk toegang tot gebruikers, maar voegt een vergunningstoegang toe. Dit type van beleid staat u toe om extra toegang tot middel en naast die gebruikers te verlenen die reeds toegang door roltoestemmingen zouden kunnen hebben.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Een beleid bewerken"
 
 >[!CONTEXTUALHELP]
