@@ -2,43 +2,32 @@
 title: Verizon MediaYahoo DataX-verbinding
 description: DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
 
-# Verizon Media/Yahoo DataX-verbinding
+# [!DNL Verizon Media/Yahoo DataX] verbinding
 
 ## Overzicht {#overview}
 
-DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen.
+[!DNL DataX] is een aggregaat [!DNL Verizon Media/Yahoo] infrastructuur die gastheren diverse componenten die toelaten [!DNL Verizon Media/Yahoo] gegevens op een veilige, geautomatiseerde en schaalbare manier met haar externe partners uit te wisselen.
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door het DataX-team van Verizon Media/Yahoo. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Deze documentatiepagina is gemaakt door [!DNL Verizon Media/Yahoo]s [!DNL DataX] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## Vereisten {#prerequisites}
 
 **MDM-id**
 
-Dit is een unieke id in Yahoo DataX en het is een verplicht veld voor het instellen van gegevensexport naar dit doel. Als u deze id niet kent, neemt u contact op met uw Yahoo Data X-accountmanager.
-
-**Snelheidslimiet**
-
-DataX is tariefbeperkt binnen de quota voor taxonomie en publieksposten die in [DataX-documentatie](https://developer.verizonmedia.com/datax/guide/rate-limits/).
-
-
-| Foutcode | Foutbericht | Beschrijving |
-|---------|----------|---------|
-| 429 Te veel verzoeken | Snelheidslimiet overschreden per uur **(Limiet: 100)** | Aantal toegestane verzoeken in een uur per leverancier. |
-
-{style=&quot;table-layout:auto&quot;}
+Dit is een unieke id in [!DNL Yahoo DataX] en het is een verplicht veld voor het instellen van gegevensexport naar deze bestemming . Neem contact op met uw [!DNL Yahoo DataX] accountmanager.
 
 **Metagegevens over taxonomie**
 
-De bron Taxonomy definieert een extensie via de structuur van Base DataX-metagegevens
+Het middel Taxonomy bepaalt een uitbreiding over de Basis [!DNL DataX] Metagegevensstructuur
 
 ```
 {
@@ -59,11 +48,26 @@ De bron Taxonomy definieert een extensie via de structuur van Base DataX-metageg
 }
 ```
 
-Meer informatie over [Metagegevens over taxonomie](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) in de documentatie voor ontwikkelaars van DataX.
+Meer informatie over [Metagegevens over taxonomie](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) in de [!DNL DataX] ontwikkelaarsdocumentatie.
+
+## Snelheidslimieten en guardrails {#rate-limits-guardrails}
+
+>[!IMPORTANT]
+>
+>Bij het activeren van meer dan 100 segmenten naar [!DNL Verizon Media/Yahoo DataX], zou u tarief beperkende fouten van de bestemming kunnen ontvangen. Bij het activeren van segmenten op de [!DNL Yahoo/DataX] doel, wordt aangeraden minder dan 100 segmenten in één activeringsgegevensstroom te activeren. Als u meer segmenten moet activeren, maakt u een nieuw doel op hetzelfde account.
+
+[!DNL DataX] is tariefbeperkt binnen de limieten voor taxonomie en publieksposten die in de [DataX-documentatie](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+
+
+| Foutcode | Foutbericht | Beschrijving |
+|---------|----------|---------|
+| 429 Te veel verzoeken | Snelheidslimiet overschreden per uur **(Limiet: 100)** | Aantal toegestane verzoeken in een uur per leverancier. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Verizon Media ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+[!DNL Verizon Media] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -86,7 +90,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Gevallen gebruiken {#use-cases}
 
-DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen kiezen met e-mailadressen die in VMG (Verizon Media) zijn uitgeschakeld, zodat ze snel een nieuw segment kunnen maken en de gewenste doelgroep kunnen duwen met de bijna-real-time API van VMG.
+[!DNL DataX] API&#39;s zijn beschikbaar voor adverteerders die zich willen richten op een specifieke doelgroep die e-mailadressen heeft verwijderd in [!DNL Verizon Media] (VMG) kan snel een nieuw segment maken en de gewenste doelgroep duwen met VMG&#39;s bijna-real-time API.
 
 ## Verbinden met doel {#connect}
 
@@ -104,7 +108,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL MDM ID]**: Dit is een unieke id in Yahoo DataX en het is een verplicht veld voor het instellen van gegevensexport naar dit doel. Als u deze ID niet kent, neemt u contact op met uw Yahoo Data X accountmanager.  Met MDM IDs, kunnen de gegevens voor gebruik slechts met een bepaalde reeks exclusieve gebruikers (zoals eerste partijgegevens voor adverteerders) worden beperkt.
+* **[!UICONTROL MDM ID]**: Dit is een unieke id in [!DNL Yahoo DataX] en het is een verplicht veld voor het instellen van gegevensexport naar deze bestemming . Neem contact op met uw [!DNL Yahoo DataX] accountmanager.  Met MDM IDs, kunnen de gegevens voor gebruik slechts met een bepaalde reeks exclusieve gebruikers (zoals eerste partijgegevens voor adverteerders) worden beperkt.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -126,4 +130,4 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 
 ## Aanvullende bronnen {#additional-resources}
 
-Lees voor meer informatie de Yahoo/Verizon-media [documentatie over DataX](https://developer.verizonmedia.com/datax/guide/).
+Lees voor meer informatie de [!DNL Yahoo/Verizon Media] [documentatie over [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
