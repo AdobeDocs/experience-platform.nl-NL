@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX-verbinding
 description: DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
+source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '767'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Meer informatie over [Metagegevens over taxonomie](https://developer.verizonmedi
 
 >[!IMPORTANT]
 >
->Bij het activeren van meer dan 100 segmenten naar [!DNL Verizon Media/Yahoo DataX], zou u tarief beperkende fouten van de bestemming kunnen ontvangen. Bij het activeren van segmenten op de [!DNL Yahoo/DataX] doel, wordt aangeraden minder dan 100 segmenten in één activeringsgegevensstroom te activeren. Als u meer segmenten moet activeren, maakt u een nieuw doel op hetzelfde account.
+>Bij het activeren van meer dan 100 segmenten naar [!DNL Verizon Media/Yahoo DataX], zou u tarief beperkende fouten van de bestemming kunnen ontvangen. Wanneer het activeren van segmenten aan deze bestemming, probeer om minder dan 100 segmenten in één activeringsdataflow te activeren. Als u meer segmenten moet activeren, maakt u een nieuw doel op hetzelfde account.
 
 [!DNL DataX] is tariefbeperkt binnen de limieten voor taxonomie en publieksposten die in de [DataX-documentatie](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
