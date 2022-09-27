@@ -2,9 +2,9 @@
 title: UI-gids voor gegevenshygiëne
 description: Leer hoe u taken voor gegevenshygiëne beheert in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
+source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ ht-degree: 0%
 >title="Recente werkorders voor gegevenshygiëne"
 >abstract="Deze widget toont de vijf meest recente gemaakte of bijgewerkte werkorders voor gegevenshygiëne, afhankelijk van de optie die u in de rechterbovenhoek selecteert. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
 
->[!IMPORTANT]
->
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
-
 De **[!UICONTROL Data Hygiene]** In de Adobe Experience Platform UI kunt u verschillende taken voor gegevenshygiëne maken en controleren, waaronder het verwijderen van de identiteit van de consument en het plannen van gegevenssetvervaldatums.
 
 In deze handleiding wordt beschreven hoe u de taken voor gegevenshygiëne in de gebruikersinterface van het Platform kunt beheren. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie [Handleiding voor API voor gegevenshygiëne](../api/overview.md).
@@ -36,4 +32,5 @@ Als u de werkruimte wilt openen, selecteert u **[!UICONTROL Data Hygiene]** in d
 Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verrichtingen van de gegevenshygiëne vormen. Raadpleeg de volgende secties van deze handleiding voor meer informatie:
 
 * [Door bestaande werkorders bladeren](./browse.md)
-* [Verlopen gegevenssets beheren](./dataset-expiration.md)
+* [Een verzoek voor het verlopen van een gegevensset maken](./dataset-expiration.md)
+* [Een verzoek tot verwijdering van een consument maken](./delete-consumer.md)

@@ -2,11 +2,9 @@
 title: Consumentengegevens verwijderen
 description: In de gebruikersinterface van Adobe Experience Platform leert u hoe u consumentenrecords kunt verwijderen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
+>Verzoeken om verwijdering door de consument zijn alleen beschikbaar voor organisaties die een Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
 
 De [[!UICONTROL Data Hygiene] werkruimte](./overview.md) in de gebruikersinterface van Adobe Experience Platform kunt u de consumentengegevens verwijderen die deelnemen aan Identiteitsservice en Real-time klantprofiel.
 
@@ -37,7 +35,7 @@ Selecteer **[!UICONTROL Create request]** van de hoofdpagina in de werkruimte.
 
 ![Afbeelding die de [!UICONTROL Create request] knop die wordt geselecteerd](../images/ui/delete-consumer/create-request-button.png)
 
-Het dialoogvenster Aanvragen wordt geopend. Standaard worden de **[!UICONTROL Consumer]** optie is geselecteerd onder de optie **[!UICONTROL Action]** sectie. Laat deze optie ingeschakeld.
+Het dialoogvenster Aanvragen wordt geopend. Standaard worden de **[!UICONTROL Consumer]** optie is geselecteerd onder de optie **[!UICONTROL Requested Action]** sectie. Laat deze optie ingeschakeld.
 
 ![Afbeelding die de geselecteerde optie voor de consument weergeeft in het dialoogvenster Maken](../images/ui/delete-consumer/consumer-action.png)
 
@@ -130,7 +128,7 @@ Als u meer identiteiten wilt toevoegen, selecteert u het plusteken (![Afbeelding
 
 ## Verzend het verzoek (#submit)
 
-Als u alle gewenste identiteiten aan de aanvraag hebt toegevoegd, selecteert u **[!UICONTROL Submit]**.
+Als u klaar bent met het toevoegen van identiteiten aan het verzoek, onder **[!UICONTROL Request settings]** Geef een naam en een optionele beschrijving voor de aanvraag op voordat u deze selecteert **[!UICONTROL Submit]**.
 
 ![Afbeelding die de [!UICONTROL Submit] knop die wordt geselecteerd](../images/ui/delete-consumer/submit.png)
 
@@ -138,16 +136,14 @@ U wordt gevraagd de lijst met identiteiten te bevestigen waarvan u de gegevens w
 
 ![Afbeelding met bevestigingsvenster](../images/ui/delete-consumer/confirm-request.png)
 
-Nadat het verzoek is verzonden, wordt een werkorder gemaakt en wordt deze weergegeven op het tabblad [!UICONTROL Consumer] tabblad van het dialoogvenster [!UICONTROL Data Hygiene] werkruimte. Van hier, kunt u de status van de het werkorde controleren aangezien het het verzoek verwerkt. De meeste werkorders voor het verwijderen van gegevens door consumenten duren enkele dagen.
+Nadat het verzoek is verzonden, wordt een werkorder gemaakt en wordt deze weergegeven op het tabblad [!UICONTROL Consumer] tabblad van het dialoogvenster [!UICONTROL Data Hygiene] werkruimte. Van hier, kunt u de status van de het werkorde controleren aangezien het het verzoek verwerkt.
+
+>[!NOTE]
+>
+>Zie de overzichtssectie over [tijdlijnen en transparantie](../home.md#consumer-delete-transparency) voor meer informatie over de wijze waarop verwijderingen door consumenten worden verwerkt zodra ze zijn uitgevoerd.
 
 ## Volgende stappen
 
 In dit document wordt beschreven hoe consumentengegevens in de gebruikersinterface van het Experience Platform kunnen worden verwijderd. Voor informatie over hoe te om andere taken van de gegevenshygiëne in UI uit te voeren, verwijs naar [Overzicht van de interface voor gegevenshygiëne](./overview.md).
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
-To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->
+Raadpleeg voor meer informatie over het verwijderen van consumentenrecords met de Data Hygiene-API [eindpuntgids voor werkorders](../api/workorder.md).
