@@ -1,15 +1,11 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de bronschakelaar van de manager van het publiek;Audience Manager;de schakelaar van de publieksmanager
-solution: Experience Platform
 title: Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface
-topic-legacy: overview
-type: Tutorial
-description: Deze zelfstudie begeleidt u door de stappen om een bronschakelaars voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
+description: Deze zelfstudie begeleidt u door de stappen om een bronverbinding voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -20,20 +16,28 @@ Deze zelfstudie begeleidt u door de stappen om een bronschakelaar voor Adobe Aud
 
 ## Een bronverbinding maken met Adobe Audience Manager
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Sources] te openen. In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
-Selecteer [!UICONTROL Adobe applications] onder de categorie **[!UICONTROL Adobe Audience Manager]** en selecteer **[!UICONTROL Configure]**.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
+
+Onder [!UICONTROL Adobe Application], selecteert u **[!UICONTROL Adobe Audience Manager]** en selecteer vervolgens **[!UICONTROL Set up]**.
 
 ![catalogus](../../../../images/tutorials/create/aam/catalog.png)
 
-De stap [!UICONTROL Select traits and segments] verschijnt, die u van een interactieve interface voorzien om uw eigenschappen, segmenten, en gegevens te onderzoeken en te selecteren.
+### Kenmerken en segmenten selecteren
 
-* Het linkerpaneel van de interface bevat de [!UICONTROL Select traits and segments] opties, evenals een hiërarchische folder van alle segmenten beschikbaar aan u.
+>[!NOTE]
+>
+>U kunt geen regionale gegevens van de bron van de Audience Manager aan Experience Platform opnemen. Als u beschikt over gevallen waarin Analytics regionale gegevens vereist, gebruikt u de [Bronconnector voor analyse](../adobe-applications/analytics.md).
+
+De [!UICONTROL Select traits and segments] de stap verschijnt, die u van een interactieve interface voorzien om uw eigenschappen, segmenten, en gegevens te onderzoeken en te selecteren.
+
+* Het linkerpaneel van de interface bevat het [!UICONTROL Select traits and segments] en een hiërarchische map met alle segmenten die voor u beschikbaar zijn.
 * De juiste helft van de interface staat u toe om met geselecteerde segmenten in wisselwerking te staan en door specifieke gegevens te kiezen u wilt gebruiken.
 
 ![add-data](../../../../images/tutorials/create/aam/add-data.png)
 
-Om door beschikbare segmenten te navigeren, selecteer de omslag u van het [!UICONTROL All Segments] paneel wilt toegang hebben. Als u een map selecteert, kunt u de hiërarchie van een map doorlopen en krijgt u een lijst met segmenten om door te filteren.
+Als u door beschikbare segmenten wilt navigeren, selecteert u de map die u wilt openen in het dialoogvenster [!UICONTROL All Segments] deelvenster. Als u een map selecteert, kunt u de hiërarchie van een map doorlopen en krijgt u een lijst met segmenten om door te filteren.
 
 ![segmentmap](../../../../images/tutorials/create/aam/segment-folder.png)
 
@@ -41,20 +45,20 @@ Nadat u de gewenste segmenten hebt geïdentificeerd en geselecteerd, wordt aan d
 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
-U kunt ook de vakken **[!UICONTROL Select all segments]** en **[!UICONTROL Select all traits]** selecteren. Het selecteren van alle segmenten zal de segmenten van de Audience Manager aan Platform brengen, terwijl het selecteren van alle eigenschappen alle eerste partijsporen van Audience Manager toelaat.
+U kunt ook de **[!UICONTROL Select all segments]** en **[!UICONTROL Select all traits]** vakken. Het selecteren van alle segmenten zal de segmenten van de Audience Manager aan Platform brengen, terwijl het selecteren van alle eigenschappen alle eerste partijsporen van Audience Manager toelaat.
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]**
 
 ![alle segmenten](../../../../images/tutorials/create/aam/all-segments.png)
 
-De stap [!UICONTROL Review] wordt weergegeven, zodat u de geselecteerde kenmerken en segmenten kunt bekijken voordat ze met het Platform worden verbonden. De details worden gegroepeerd in de volgende categorieën:
+De [!UICONTROL Review] wordt weergegeven, zodat u de geselecteerde kenmerken en segmenten kunt bekijken voordat ze met het Platform worden verbonden. De details worden gegroepeerd in de volgende categorieën:
 
 * **[!UICONTROL Connection]**: Toont het bronplatform en de status van de verbinding.
 * **[!UICONTROL Selected data]**: Hiermee geeft u het aantal geselecteerde segmenten en de ingeschakelde kenmerken weer.
 
 ![revisie](../../../../images/tutorials/create/aam/review.png)
 
-Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
+Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
 ## Volgende stappen
 
