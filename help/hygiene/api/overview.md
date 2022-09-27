@@ -2,9 +2,9 @@
 title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '345'
 ht-degree: 1%
 
 ---
@@ -46,6 +46,10 @@ A work order is a representation of a data hygiene task that deletes consumer id
 ## Verlopen gegevensset
 
 Een gegevenssetvervaldatum is een tijd-vertraagde actie &quot;schrapt een dataset&quot;. Door een datasetvervaldatum te creëren, specificeert u een toekomstige tijd waarbij die dataset zou moeten worden geschrapt. Zie de [eindpuntgids gegevensset](./dataset-expiration.md) voor meer informatie over het plannen van datasetvervaldata in API.
+
+## Quota
+
+Uw organisatie is beperkt tot een vooraf vastgesteld maandelijks taakquotum voor elk type gegevenshygiënebewerking, dat kan variëren afhankelijk van de licentie. Zie de [hulplijn voor quotumeindpunt](./quota.md) voor meer informatie over het bekijken van de huidige quotastatus van uw gegevenshygiëneprocessen.
 
 ## Volgende stappen
 
