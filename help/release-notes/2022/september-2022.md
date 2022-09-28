@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
+source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2699'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Controlelogboeken](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensverzameling](#data-collection)
+- [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Query-service](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer va
 
 Met de Adobe Experience Platform-mogelijkheden voor gegevenshygiëne kunt u uw gegevens opschonen door automatische gegevenssetvervaldatums te plannen en via programmacode consumentengegevens te verwijderen op basis van identiteit.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Consumentenverwijderingsmogelijkheden zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
 
 Raadpleeg de volgende documentatie om aan de slag te gaan met gegevenshygiëne:
 
@@ -127,10 +128,39 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Functie | Beschrijving |
 | --- | --- |
 | Integratie van linkernavigatie in de gebruikersinterface van het Platform | Alle mogelijkheden die eerder exclusief waren aan de UI van de Inzameling van Gegevens (met inbegrip van markeringen, gebeurtenis door:sturen, en gegevensstromen) zijn nu ook beschikbaar door de linkernavigatie in Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform. |
+| Toewijzing door gebruiker in tags en gebeurtenis doorsturen | Als aanbieding beschikbaar is [!UICONTROL Properties] in markeringen en gebeurtenis door:sturen, toont elk vermeld bezit nu wanneer het het laatst werd bijgewerkt, en welke gebruiker de update maakte. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| Destination SDK | Destination SDK biedt nu volledige ondersteuning voor partners en klanten die in batch (of op bestand gebaseerd) gemaakte of persoonlijke doelen maken. Lees de volgende documentatiepagina&#39;s voor meer informatie: <ul><li>[Overzicht van Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Een op een bestand gebaseerde bestemming configureren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test uw op een bestand gebaseerde doelen](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe of bijgewerkte doelen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | De [!DNL Salesforce CRM] de bestemming is bijgewerkt om zowel contacten en leidt updates, als prestatiesverbeteringen voor snellere updates te steunen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe of bijgewerkte documentatie**
+
+| Documentatie | Beschrijving |
+| ----------- | ----------- |
+| API-documentatie voor Doelen Flow Service | De [Referentiedocumentatie voor doel-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) werd bijgewerkt om begeleiding op te nemen over hoe te om verrichtingen op op dossier-gebaseerde bestemmingen uit te voeren. Bewerkingen voor streamingdoelen worden later toegevoegd. |
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
