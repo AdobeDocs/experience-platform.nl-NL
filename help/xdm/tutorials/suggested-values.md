@@ -1,19 +1,38 @@
 ---
-title: Voorgestelde waarden toevoegen aan een veld
+title: Voorgestelde waarden beheren in de API
 description: Leer hoe u voorgestelde waarden toevoegt aan een tekenreeksveld in de API voor schemaregistratie.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
 
-# Voorgestelde waarden aan een veld toevoegen
+# Aanbevolen waarden beheren in de API
 
-In het Model van Gegevens van de Ervaring (XDM), vertegenwoordigt een enumgebied een koordgebied dat tot een vooraf bepaalde ondergroep van waarden wordt beperkt. Enum-velden kunnen validatie bieden om ervoor te zorgen dat ingesloten gegevens voldoen aan een set geaccepteerde waarden. U kunt echter ook een set voorgestelde waarden voor een tekenreeksveld definiëren zonder deze als beperkingen in te stellen.
+Voor elk tekenreeksveld in het XDM (Experience Data Model) kunt u een **enum** dat de waarden die het veld kan invoeren, beperkt tot een vooraf gedefinieerde set. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
 
-In de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)worden de beperkte waarden voor een opsommingsveld weergegeven door een `enum` array, terwijl een `meta:enum` -object biedt vriendelijke weergavenamen voor deze waarden:
+In tegenstelling tot opsommingen, toevoegen **voorgestelde waarden** aan een tekenreeksveld te koppelen, beperkt niet de waarden die het kan invoeren. De voorgestelde waarden hebben daarentegen invloed op de beschikbare vooraf gedefinieerde waarden in het dialoogvenster [Segmenteringsinterface](../../segmentation/ui/overview.md) wanneer het tekenreeksveld wordt opgenomen als een kenmerk.
+
+>[!NOTE]
+>
+>Er is een ongeveer vijf-minieme vertraging voor de bijgewerkte voorgestelde waarden van een gebied om in de Segmentatie UI worden weerspiegeld.
+
+In deze handleiding wordt beschreven hoe u voorgestelde waarden kunt beheren met de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Raadpleeg voor meer informatie over hoe u dit kunt doen in de gebruikersinterface van Adobe Experience Platform de [UI-handleiding voor opsommingen en voorgestelde waarden](../ui/fields/enum.md).
+
+## Vereisten
+
+Deze gids veronderstelt u met de elementen van schemacompositie in XDM vertrouwd bent en hoe te om de Registratie API van het Schema te gebruiken om middelen tot stand te brengen en uit te geven XDM. Raadpleeg de volgende documentatie als u een inleiding nodig hebt:
+
+* [Basisbeginselen van de schemacompositie](../schema/composition.md)
+* [Handleiding Schema Registry API](../api/overview.md)
+
+U wordt ook ten zeerste aangeraden de [evolutieregels voor nummers en voorgestelde waarden](../ui/fields/enum.md#evolution) als u bestaande velden bijwerkt. Als u voorgestelde waarden voor schema&#39;s beheert die aan een unie deelnemen, zie [regels voor het samenvoegen van opsommingen en voorgestelde waarden](../ui/fields/enum.md#merging).
+
+## Samenstelling
+
+In de API kunnen de beperkte waarden voor een **enum** veld wordt weergegeven door een `enum` array, terwijl een `meta:enum` -object biedt vriendelijke weergavenamen voor deze waarden:
 
 ```json
 "exampleStringField": {
@@ -34,7 +53,7 @@ In de [Schema-register-API](https://developer.adobe.com/experience-platform-apis
 
 Voor opsommingsvelden is het schemaregister niet toegestaan `meta:enum` die verder gaan dan de in `enum`, omdat pogingen om tekenreekswaarden buiten deze beperkingen in te voeren geen validatie zouden doorstaan.
 
-U kunt ook een tekenreeksveld definiëren dat geen `enum` -array en gebruikt alleen de `meta:enum` object voor het aangeven van voorgestelde waarden:
+U kunt ook een tekenreeksveld definiëren dat geen `enum` -array en gebruikt alleen de `meta:enum` aan te duiden object **voorgestelde waarden**:
 
 ```json
 "exampleStringField": {
@@ -48,16 +67,13 @@ U kunt ook een tekenreeksveld definiëren dat geen `enum` -array en gebruikt all
 }
 ```
 
-Aangezien de tekenreeks geen `enum` array om beperkingen te definiëren, `meta:enum` Deze eigenschap kan worden uitgebreid met nieuwe waarden. In deze zelfstudie wordt uitgelegd hoe u voorgestelde waarden kunt toevoegen aan standaard- en aangepaste tekenreeksvelden in de API voor schemaregistratie.
+Aangezien de tekenreeks geen `enum` array om beperkingen te definiëren, `meta:enum` Deze eigenschap kan worden uitgebreid met nieuwe waarden.
 
-## Vereisten
+## Voorgestelde waarden voor standaardvelden beheren
 
-Deze gids veronderstelt u met de elementen van schemacompositie in XDM vertrouwd bent en hoe te om de Registratie API van het Schema te gebruiken om middelen tot stand te brengen en uit te geven XDM. Raadpleeg de volgende documentatie als u een inleiding nodig hebt:
+Voor bestaande standaardvelden kunt u [voorgestelde waarden toevoegen](#add-suggested-standard) of [voorgestelde waarden verwijderen](#remove-suggested-standard).
 
-* [Basisbeginselen van de schemacompositie](../schema/composition.md)
-* [Handleiding Schema Registry API](../api/overview.md)
-
-## Voorgestelde waarden toevoegen aan een standaardveld
+### Voorgestelde waarden toevoegen {#add-suggested-standard}
 
 De `meta:enum` van een standaardtekenreeksveld kunt u een [beschrijvingsbestand vriendelijke naam](../api/descriptors.md#friendly-name) voor het betrokken veld in een bepaald schema.
 
@@ -135,9 +151,71 @@ Nadat de descriptor is toegepast, reageert de schemaregistratie met het volgende
 >}
 >```
 
-## Voorgestelde waarden toevoegen aan een aangepast veld
+### Voorgestelde waarden verwijderen {#remove-suggested-standard}
 
-De `meta:enum` van een aangepast veld kunt u de bovenliggende klasse, veldgroep of het gegevenstype van het veld bijwerken via een PATCH-aanvraag.
+Als een standaardtekenreeksveld vooraf gedefinieerde voorgestelde waarden heeft, kunt u alle waarden verwijderen die u niet in segmentatie wilt zien. Dit doet u door een [beschrijvingsbestand vriendelijke naam](../api/descriptors.md#friendly-name) voor het schema dat een `xdm:excludeMetaEnum` eigenschap.
+
+**API-indeling**
+
+```http
+POST /tenant/descriptors
+```
+
+**Verzoek**
+
+Met het volgende verzoek worden de voorgestelde waarden verwijderd &quot;[!DNL Web Form Filled Out]&quot; en &quot;[!DNL Media ping]&quot; for `eventType` in een schema gebaseerd op de [XDM ExperienceEvent, klasse](../classes/experienceevent.md).
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "@type": "xdm:alternateDisplayInfo",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/xdm:eventType",
+        "xdm:excludeMetaEnum": {
+          "web.formFilledOut": "Web Form Filled Out",
+          "media.ping": "Media ping"
+        }
+      }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een beschrijvende naam moet deze waarde worden ingesteld op `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
+| `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
+| `xdm:sourceProperty` | Het pad naar de specifieke eigenschap waarvan u de voorgestelde waarden wilt beheren. Het pad moet beginnen met een schuine streep (`/`) en niet met één. Niet opnemen `properties` in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | Een object dat de voorgestelde waarden beschrijft die moeten worden uitgesloten voor het veld in segmentatie. De sleutel en de waarde voor elk item moeten overeenkomen met die in het origineel `meta:enum` van het veld om de vermelding uit te sluiten. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Antwoord**
+
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de nieuwe descriptor. De voorgestelde waarden die onder `xdm:excludeMetaEnum` wordt nu verborgen voor de segmentatie-interface.
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out"
+  },
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
+```
+
+## Voorgestelde waarden voor een aangepast veld beheren {#suggested-custom}
+
+Om het `meta:enum` van een aangepast veld kunt u de bovenliggende klasse, veldgroep of het gegevenstype van het veld bijwerken via een PATCH-aanvraag.
 
 >[!WARNING]
 >
@@ -198,4 +276,4 @@ Na het toepassen van de verandering, antwoordt de Registratie van het Schema met
 
 ## Volgende stappen
 
-Deze gids besprak hoe te om voorgestelde waarden aan koordgebieden in de Registratie API van het Schema toe te voegen. Zie de handleiding op [aangepaste velden in de API definiëren](./custom-fields-api.md) voor meer informatie over het maken van verschillende veldtypen.
+Deze gids behandelde hoe te om voorgestelde waarden voor koordgebieden in de Registratie API van het Schema te beheren. Zie de handleiding op [aangepaste velden in de API definiëren](./custom-fields-api.md) voor meer informatie over het maken van verschillende veldtypen.
