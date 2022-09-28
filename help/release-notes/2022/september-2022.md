@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
 workflow-type: tm+mt
 source-wordcount: '2485'
 ht-degree: 1%
@@ -64,7 +64,7 @@ Raadpleeg de volgende documentatie om aan de slag te gaan met gegevenshygiëne:
 
 ## [!UICONTROL Privacy Console] {#privacy-console}
 
-De [!UICONTROL Privacy Console] in de interface van het Experience Platform biedt een dashboardweergave van belangrijke inzichten van privacygerelateerde functies, zoals [verzoeken van de betrokkene van Privacy Service], [gegevenshygiëne-werkorders], en [auditlogboeken]. De console biedt ook verschillende gebruiksaanwijzingen voor in-product toepassingen om u te helpen bij het doorlopen van gebruikelijke workflows voor privacy.
+De [!UICONTROL Privacy Console] in de interface van het Experience Platform biedt een dashboardweergave van belangrijke inzichten van privacygerelateerde functies, zoals [verzoeken van de betrokkene van Privacy Service](../../privacy-service/home.md), [gegevenshygiëne-werkorders](../../hygiene/home.md), en [auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md). De console biedt ook verschillende gebruiksaanwijzingen voor in-product toepassingen om u te helpen bij het doorlopen van gebruikelijke workflows voor privacy.
 
 Zie de [Overzicht van de privacyconsole](../../landing/governance-privacy-security/privacy-console.md) voor meer informatie over de functie.
 
@@ -218,6 +218,6 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 | Ondersteuning voor Adobe Campaign Managed Cloud Service | Met de Adobe Campaign Managed Cloud Service-bron kunt u uw Adobe Campaign v8.4-gegevens voor levering en bijhouden van logbestanden naar het Experience Platform brengen. Lees de handleiding op [een Adobe Campaign Managed Cloud Service-bronverbinding maken in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/campaign.md) voor meer informatie . |
 | API-ondersteuning voor inname op aanvraag voor batchbronnen | Gebruik inname op aanvraag om een ad-hocflowrun voor een bepaalde gegevensstroom te maken met de [!DNL Flow Service] API. De gecreeerde looppas van de stroom moet aan éénmalige opname worden geplaatst. Lees voor meer informatie de handleiding op [een flow-run maken voor opname op aanvraag met behulp van de API](../../sources/tutorials/api/on-demand-ingestion.md) voor meer informatie . |
 | API-ondersteuning voor het opnieuw proberen van mislukte gegevensstroombewerkingen voor batchbronnen | Gebruik de `re-trigger` bewerking om de mislukte gegevensstroom opnieuw uit te voeren via de API. Lees de handleiding op [opnieuw proberen, mislukte gegevensstroombewerkingen met de API](../../sources/tutorials/api/retry-flows.md) voor meer informatie . |
-| API-ondersteuning voor het filteren van gegevens op rijniveau voor de [!DNL Google BigQuery] en [!DNL Snowflake] bronnen | Gebruik logische operatoren en vergelijkingsoperatoren om gegevens op rijniveau te filteren voor de [!DNL Google BigQuery] en [!DNL Snowflake] bronnen. Lees de handleiding over het filteren van gegevens voor een bron met behulp van de API voor meer informatie. |
+| API-ondersteuning voor het filteren van gegevens op rijniveau voor de [!DNL Google BigQuery] en [!DNL Snowflake] bronnen | Gebruik logische operatoren en vergelijkingsoperatoren om gegevens op rijniveau te filteren voor de [!DNL Google BigQuery] en [!DNL Snowflake] bronnen. Lees de handleiding op [gegevens filteren voor een bron met behulp van de API](../../sources/tutorials/api/filter.md) voor meer informatie . |
 
 Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).

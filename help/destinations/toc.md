@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 9336545ce77406ca8b1a04d9b9c0ce7752aa9ce5
+source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '945'
 ht-degree: 1%
 
 ---
@@ -173,9 +173,9 @@ ht-degree: 1%
    * Destination SDK-functionaliteit {#functionality}
       * [Configuratieopties](./destination-sdk/configuration-options.md)
       * [Streaming doelconfiguratie](./destination-sdk/destination-configuration.md)
-      * [(Beta) Bestandsgebaseerde doelconfiguratie](./destination-sdk/file-based-destination-configuration.md)
+      * [Bestandsgebaseerde doelconfiguratie](./destination-sdk/file-based-destination-configuration.md)
       * [Streaming doelserver- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
-      * [(bèta) server- en bestandsserver met bestandsgebaseerde doelen](./destination-sdk/server-and-file-configuration.md)
+      * [Bestandsgebaseerde server- en bestandsdoelbestanden](./destination-sdk/server-and-file-configuration.md)
       * [Berichtindeling](./destination-sdk/message-format.md)
       * [Metagegevensbeheer voor het publiek](./destination-sdk/audience-metadata-management.md)
       * Verificatie {#authentication}
@@ -205,15 +205,16 @@ ht-degree: 1%
             * [Gevalideerde klantvelden valideren](./destination-sdk/file-based-render-template-api.md)
    * Hulplijnen {#guides}
       * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
-      * [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/submit-destination.md)
       * Bestandsgebaseerde doelen configureren {#configure-file-based-destinations}
-         * [(Bèta) Vorm een bestemming van Amazon S3 met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanedossier - noem](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [(bèta) Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [(Beta) Configureer een Azure Blob Storage-bestemming met aangepaste opties voor bestandsindeling en aangepaste bestandsnaamconfiguratie](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [(Beta) Vorm een Azure bestemming van de Opslag van het Gegevensmeer met de opties van de douanedossier het formatteren en de configuratie van de douanedossier - noem](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [(bèta) Vorm een bestemmings van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanedossier - noem](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [(Beta) Vorm een bestemming SFTP met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanenaam van het dossier](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [Opties voor bestandsindeling configureren](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [Een Amazon S3-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [Een Azure Blob Storage-bestemming configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [Een Azure Data Lake Storage-bestemming configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [Vorm een bestemming van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanenaam van het dossier](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [Een SFTP-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Referenties {#reference}
       * [Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen](./destination-sdk/rate-limiting-retry-policy.md)
       * [Ondersteunde transformatiefuncties](./destination-sdk/supported-functions.md)

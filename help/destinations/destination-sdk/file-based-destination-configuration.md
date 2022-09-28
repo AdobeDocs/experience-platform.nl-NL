@@ -1,29 +1,27 @@
 ---
-description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
-title: (Bèta) op dossier-gebaseerde opties van de bestemmingsconfiguratie voor Destination SDK
+description: Deze configuratie staat u toe om essentiële informatie voor uw op dossier-gebaseerde bestemming, zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
+title: Bestandsgebaseerde opties voor doelconfiguratie voor Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
 workflow-type: tm+mt
-source-wordcount: '2353'
+source-wordcount: '2628'
 ht-degree: 2%
 
 ---
 
-# (Beta) Bestandsgebaseerde doelconfiguratie {#destination-configuration}
+# Bestandsgebaseerde doelconfiguratie {#destination-configuration}
 
 ## Overzicht {#overview}
 
->[!IMPORTANT]
->
->Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
+Deze configuratie staat u toe om essentiële informatie voor uw op dossier-gebaseerde bestemming, zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd. U kunt deze configuratie ook gebruiken om opties met betrekking tot het bestandstype, de bestandsindeling of de compressie-instellingen van uw geëxporteerde bestanden weer te geven.
 
-Deze configuratie staat u toe om essentiële informatie voor uw op dossier-gebaseerde bestemming, zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
-
-Deze configuratie verbindt ook de andere configuraties die voor uw bestemming worden vereist aan het werk - bestemmingsserver en publieksmeta-gegevens - aan dit. Lees hoe u naar de twee configuraties in een [hieronder](./destination-configuration.md#connecting-all-configurations).
+Deze configuratie verbindt ook de andere configuraties die voor uw bestemming worden vereist aan het werk - bestemmingsserver en publieksmeta-gegevens - aan dit. Lees hoe u naar de twee configuraties in een [hieronder](./file-based-destination-configuration.md#connecting-all-configurations).
 
 U kunt de in dit document beschreven functionaliteit configureren met de `/authoring/destinations` API-eindpunt. Lezen [API-eindpuntbewerkingen voor doelen](./destination-configuration-api.md) voor een volledige lijst van verrichtingen kunt u op het eindpunt uitvoeren.
 
 ## Amazon S3-doelconfiguratievoorbeeld {#batch-example-configuration}
+
+Hieronder ziet u een voorbeeld van een aangepaste, persoonlijke Amazon S3-bestemming die is gemaakt via de `/destinations` configuratieeindpunt.
 
 ```json
 {
@@ -368,9 +366,9 @@ Wanneer u SFTP met SSH zeer belangrijke authentificatietype vormt, worden de geb
 
 Gebruik deze sectie om gebruikers te vragen aangepaste velden in te vullen, specifiek voor uw doel, wanneer u verbinding maakt met het doel in de gebruikersinterface van het Experience Platform.
 
-In het onderstaande voorbeeld: `customerDataFields` vereist dat gebruikers een naam voor hun bestemming invoeren en een [!DNL Amazon S3] De naam van de emmertje en de omslagweg, evenals een compressietype, dossierformaat, en verscheidene andere opties van de dossieruitvoer.
+In het onderstaande voorbeeld: `customerDataFields` vereist dat gebruikers een naam voor hun bestemming invoeren en een [!DNL Amazon S3] De naam van de emmertje en de omslagweg, evenals een compressietype, dossierformaat, en verscheidene andere dossier formatterende opties.
 
-U kunt tot de klanteninput van de gebieden van klantgegevens toegang hebben en gebruiken in malplaatje. De macro gebruiken `{{customerData.name}}`. Als u gebruikers bijvoorbeeld vraagt een Amazon S3 emmerveld in te voeren, met de naam `bucket`kunt u de sjabloon openen door de macro te gebruiken `{{customerData.bucket}}`. Bekijk een voorbeeld van hoe een gebied van klantengegevens in wordt gebruikt [doelserverconfiguratie](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+U kunt tot de klanteninput van de gebieden van klantgegevens toegang hebben en gebruiken in malplaatje. De macro gebruiken `{{customerData.exampleName}}`. Als u gebruikers bijvoorbeeld vraagt een Amazon S3 emmerveld in te voeren, met de naam `bucket`kunt u de sjabloon openen door de macro te gebruiken `{{customerData.bucket}}`. Bekijk een voorbeeld van hoe een gebied van klantengegevens in wordt gebruikt [doelserverconfiguratie](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -558,6 +556,10 @@ U kunt tot de klanteninput van de gebieden van klantgegevens toegang hebben en g
       }
 ```
 
+>[!TIP]
+>
+>Alle opmaakconfiguraties in het bovenstaande voorbeeld worden in het gedeelte [bestandsindelingconfiguratie](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) sectie.
+
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `name` | Tekenreeks | Geef een naam op voor het aangepaste veld dat u introduceert. |
@@ -578,7 +580,7 @@ Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
-      "category":"S3",
+      "category":"cloudStorage",
       "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
       "flowRunsSupported":true,
@@ -591,7 +593,7 @@ Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe
 |---------|----------|------|
 | `documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Doelcatalogus](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruiken `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` is de naam van uw bestemming. Voor een bestemming genoemd Moviestar, zou u gebruiken `http://www.adobe.com/go/destinations-moviestar-en`. Merk op dat deze verbinding slechts werkt nadat Adobe uw bestemming live plaatst en de documentatie wordt gepubliceerd. |
 | `category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees voor meer informatie [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-| `iconUrl` | Tekenreeks | De URL waar u het pictogram hebt gehost dat in de cataloguskaart van de doelen moet worden weergegeven. |
+| `iconUrl` | Tekenreeks | De URL waar u het pictogram hebt gehost dat in de cataloguskaart van de doelen moet worden weergegeven. Dit is niet vereist voor persoonlijke aangepaste integraties. Voor productieve configuraties, moet u een pictogram met het team van de Adobe delen wanneer u [de bestemming ter controle verzenden](/help/destinations/destination-sdk/submit-destination.md#logo). |
 | `connectionType` | Tekenreeks | Het type verbinding, afhankelijk van het doel. Ondersteunde waarden: <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
 | `flowRunsSupported` | Boolean | Geeft aan of de doelverbinding is opgenomen in het dialoogvenster [UI voor flowuitvoering](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). Wanneer u deze instelling instelt op `true`: <ul><li>De **[!UICONTROL Last dataflow run date]** en **[!UICONTROL Last dataflow run status]** worden weergegeven in de doelpagina voor bladeren.</li><li>De **[!UICONTROL Dataflow runs]** en **[!UICONTROL Activation data]** tabbladen worden weergegeven op de pagina van de doelweergave.</li></ul> |
 | `monitoringSupported` | Boolean | Geeft aan of de doelverbinding is opgenomen in het dialoogvenster [UI controleren](../ui/destinations-workspace.md#browse). Wanneer u deze instelling instelt op `true`de **[!UICONTROL View in monitoring]** Deze optie wordt weergegeven in de doelpagina Bladeren. |
@@ -600,6 +602,10 @@ Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe
 {style=&quot;table-layout:auto&quot;}
 
 ## Levering bestemming {#destination-delivery}
+
+De sectie van de bestemmingslevering wijst erop waar precies de uitgevoerde gegevens gaan en welke authentificatieregel in de plaats wordt gebruikt waar de gegevens zullen landen. U moet een of meer opgeven `destinationServerId`s waar de gegevens en authentificatieregel zullen worden geleverd. In de meeste gevallen, is de authentificatieregel die u zou moeten gebruiken `CUSTOMER_AUTHENTICATION`.
+
+De `deliveryMatchers` -sectie is optioneel en kan worden gebruikt als u meerdere `destinationServerId`s. Als dat het geval is, `deliveryMatchers` geeft aan hoe de geëxporteerde gegevens moeten worden gesplitst tussen de verschillende doelservers.
 
 ```json
  "destinationDelivery":[
@@ -621,7 +627,7 @@ Deze sectie verwijst naar de elementen UI in de configuratie hierboven die Adobe
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform] klanten verbinden met uw bestemming. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruiken `CUSTOMER_AUTHENTICATION` als de klanten van het Platform zich bij uw systeem via om het even welke volgende methodes aanmelden: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Gebruiken `PLATFORM_AUTHENTICATION` als er een globaal authentificatiesysteem tussen Adobe en uw bestemming en is [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een object credentials maken met de opdracht [Credentials](./credentials-configuration-api.md) configuratie. </li><li>Gebruiken `NONE` als geen authentificatie wordt vereist om gegevens naar uw bestemmingsplatform te verzenden. </li></ul> |
-| `destinationServerId` | Tekenreeks | De `instanceId` van de [doelserverconfiguratie](./destination-server-api.md) gebruikt voor deze bestemming. |
+| `destinationServerId` | Tekenreeks | De `instanceId` van de [doelserverconfiguratie](./server-and-file-configuration.md) u [gemaakt](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) voor deze bestemming. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -649,7 +655,15 @@ Via de `audienceTemplateId`Deze sectie koppelt deze configuratie ook aan de [doe
 
 ## Schemaconfiguratie in de toewijzingsstap {#schema-configuration}
 
+Adobe Experience Platform Destination SDK steunt partner-bepaalde schema&#39;s. Een partner-bepaald schema staat gebruikers toe om profielattributen en identiteiten aan douaneschema&#39;s in kaart te brengen die door bestemmingspartners worden bepaald, gelijkend op [streaming doelen](destination-configuration.md#schema-configuration) workflow.
+
 Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de workflow voor doelactivering in te schakelen. Aan de hand van de onderstaande parameters kunt u bepalen of gebruikers van Experience Platforms profielkenmerken en/of identiteiten kunnen toewijzen aan uw bestandsdoel.
+
+U kunt statische, hard-gecodeerde schemagebieden tot stand brengen of u kunt een dynamisch schema specificeren dat het Experience Platform met zou moeten verbinden om gebieden in het doelschema van het toewijzingswerkschema dynamisch terug te winnen en te bevolken. Het doelschema wordt weergegeven in de onderstaande schermafbeelding.
+
+![Schermafbeelding die de doelschemavelden markeert in de toewijzingsstap van de activeringsworkflow.](/help/destinations/destination-sdk/assets/target-schema-fields.png)
+
+### Statische hardcoded schemagebiedconfiguratie
 
 ```json
 "schemaConfig":{
@@ -681,16 +695,14 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de workflow vo
 
 ### Dynamische schemaconfiguratie in de kaartstap {#dynamic-schema-configuration}
 
-Adobe Experience Platform Destination SDK steunt partner-bepaalde schema&#39;s. Een partner-bepaald schema staat gebruikers toe om profielattributen en identiteiten aan douaneschema&#39;s in kaart te brengen die door bestemmingspartners worden bepaald, gelijkend op [streaming doelen](destination-configuration.md#schema-configuration) workflow.
-
-Gebruik de parameters in  `dynamicSchemaConfig` om uw eigen schema te bepalen dat de de profielattributen en/of identiteiten van het Platform aan kunnen worden in kaart gebracht.
+Gebruik de parameters in  `dynamicSchemaConfig` om uw eigen schema dynamisch terug te winnen dat de de profielattributen en/of identiteiten van het Platform aan kunnen worden in kaart gebracht.
 
 ```json
 "schemaConfig":{
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}",
+         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -706,7 +718,7 @@ Gebruik de parameters in  `dynamicSchemaConfig` om uw eigen schema te bepalen da
 | `profileRequired` | Boolean | Gebruiken `true` als de gebruikers profielattributen van Experience Platform aan douanekenmerken op de kant van uw bestemming zouden moeten kunnen in kaart brengen, zoals aangetoond in de voorbeeldconfiguratie hierboven. |
 | `segmentRequired` | Boolean | Altijd gebruiken `segmentRequired:true`. |
 | `identityRequired` | Boolean | Gebruiken `true` als gebruikers naamruimten van het Experience Platform aan uw gewenste schema moeten kunnen toewijzen. |
-| `destinationServerId` | Tekenreeks | De `instanceId` van de [doelserverconfiguratie](./destination-server-api.md) gebruikt voor deze bestemming. |
+| `destinationServerId` | Tekenreeks | De `instanceId` van de [doelserverconfiguratie](./destination-server-api.md) die u hebt gemaakt voor uw dynamische schema. Deze bestemmingsserver omvat het eindpunt van HTTP dat het Experience Platform zal roepen om het dynamische die schema terug te winnen wordt gebruikt om doelgebieden te bevolken. |
 | `authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform] klanten verbinden met uw bestemming. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruiken `CUSTOMER_AUTHENTICATION` als de klanten van het Platform zich bij uw systeem via om het even welke volgende methodes aanmelden: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Gebruiken `PLATFORM_AUTHENTICATION` als er een globaal authentificatiesysteem tussen Adobe en uw bestemming en is [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een object credentials maken met de opdracht [Credentials](./credentials-configuration-api.md) configuratie. </li><li>Gebruiken `NONE` als geen authentificatie wordt vereist om gegevens naar uw bestemmingsplatform te verzenden. </li></ul> |
 | `value` | Tekenreeks | De naam van het schema dat in het gebruikersinterface van het Experience Platform, in de toewijzingsstap moet worden getoond. |
 | `responseFormat` | Tekenreeks | Altijd instellen op `SCHEMA` wanneer u een aangepast schema definieert. |
@@ -720,7 +732,7 @@ De parameters in deze sectie bepalen welke identiteiten uw bestemming goedkeurt.
 
 ```json
 "identityNamespaces": {
-        "adobe_id": {
+        "crm_id": {
             "acceptsAttributes": true,
             "acceptsCustomNamespaces": true
         },
@@ -736,9 +748,9 @@ U moet aangeven welke [!DNL Platform] id&#39;s die klanten kunnen exporteren naa
 Naamruimten vereisen geen 1-op-1-overeenkomst tussen [!DNL Platform] en uw bestemming.
 Klanten kunnen bijvoorbeeld een [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL IDFA] naamruimte vanaf uw bestemming, of ze kunnen hetzelfde toewijzen [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL Customer ID] naamruimte in uw doel.
 
-## Batchconfiguratie {#batch-configuration}
+## Batchconfiguratie - Bestandsnaamgeving en exportplanning {#batch-configuration}
 
-Deze sectie verwijst naar de instellingen voor het exporteren van bestanden in de bovenstaande configuratie die Adobe moet gebruiken voor uw doel in de Adobe Experience Platform-gebruikersinterface.
+Deze sectie verwijst naar de instellingen voor bestandsnaamgeving en exportplanning die voor uw doel worden weergegeven in de gebruikersinterface van Adobe Experience Platform. De waarden die u hier instelt, worden weergegeven in de [Segmentexport plannen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) stap van de workflow voor activering van bestandsdoelen.
 
 ```json
 "batchConfig":{
@@ -796,7 +808,10 @@ Deze sectie verwijst naar de instellingen voor het exporteren van bestanden in d
 
 Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geëxporteerde bestandsnamen moeten bevatten. De macro&#39;s in de onderstaande tabel beschrijven de elementen in de gebruikersinterface in het dialoogvenster [bestandsnaamconfiguratie](../ui/activate-batch-profile-destinations.md#file-names) scherm.
 
-Als beste praktijken moet u altijd omvatten `SEGMENT_ID` in de geëxporteerde bestandsnamen. Segment-id&#39;s zijn uniek, dus het opnemen ervan in de bestandsnaam is de beste manier om ervoor te zorgen dat bestandsnamen ook uniek zijn.
+
+>[!TIP]
+> 
+>Als beste praktijken moet u altijd omvatten `SEGMENT_ID` in de geëxporteerde bestandsnamen. Segment-id&#39;s zijn uniek, dus het opnemen ervan in de bestandsnaam is de beste manier om ervoor te zorgen dat bestandsnamen ook uniek zijn.
 
 | Macro | UI-label | Beschrijving | Voorbeeld |
 |---|---|---|---|
@@ -849,7 +864,7 @@ U kunt de `backfillHistoricalProfileData` parameter in de bestemmingsconfigurati
 
 ## Hoe deze configuratie alle noodzakelijke informatie voor uw bestemming verbindt {#connecting-all-configurations}
 
-Sommige van uw bestemmingsmontages moeten door worden gevormd [doelserver](./server-and-file-configuration.md) of de [doelmetagegevensconfiguratie](./audience-metadata-management.md). De bestemmingsconfiguratie die hier wordt beschreven verbindt al deze montages door de twee andere configuraties als volgt van verwijzingen te voorzien:
+Sommige van uw bestemmingsmontages moeten door worden gevormd [doelserver](./server-and-file-configuration.md) of de [doelmetagegevensconfiguratie](./audience-metadata-management.md) eindpunten. De bestemmingsconfiguratie die hier wordt beschreven verbindt al deze montages door de twee andere configuraties als volgt van verwijzingen te voorzien:
 
-* Gebruik de `destinationServerId` om naar de bestemmingsserver en malplaatjeconfiguratie te verwijzen opstelling voor uw bestemming.
+* Gebruik de `destinationServerId` om naar de bestemmingsserver en de configuratie van het dossiermalplaatje te verwijzen opstelling voor uw bestemming.
 * Gebruik de `audienceMetadataId` om naar de configuratie van publieksmeta-gegevens te verwijzen opstelling voor uw bestemming.

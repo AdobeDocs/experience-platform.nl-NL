@@ -1,14 +1,15 @@
 ---
 description: Leer hoe te om Destination SDK te gebruiken om een bestemming van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanedossier te vormen - noem.
-title: (Beta) Vorm een bestemming van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanedossier - noem.
-source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
+title: Configureer een DLZ-bestemming (Data Landing Zone) met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
+exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
-# (Beta) Configureer een [!DNL Data Landing Zone (DLZ)] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
+# Een [!DNL Data Landing Zone (DLZ)] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
 

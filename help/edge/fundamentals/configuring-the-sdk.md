@@ -4,10 +4,10 @@ description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
+source-git-commit: ed39d782ba6991a00a31b48abb9d143e15e6d89e
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 4%
+source-wordcount: '999'
+ht-degree: 3%
 
 ---
 
@@ -44,15 +44,26 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 
 Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie. Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u verschillende vormen `edgeConfigId` voor elke instantie.
 
-### `context`
+### `context` {#context}
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | ---------------- | ------------ | -------------------------------------------------- |
-| Array van tekenreeksen | Nee | `["web", "device", "environment", "placeContext"]` |
+| Array van tekenreeksen | Nee | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
 
 {style=&quot;table-layout:auto&quot;}
 
 Geeft aan welke contextcategorieën automatisch moeten worden verzameld, zoals beschreven in [Automatische informatie](../data-collection/automatic-information.md). Als deze configuratie niet wordt gespecificeerd, worden alle categorieën gebruikt door gebrek.
+
+>[!IMPORTANT]
+>
+>Alle contexteigenschappen, met uitzondering van `highEntropyUserAgentHints`, zijn standaard ingeschakeld. Als u contexteigenschappen manueel in uw configuratie van SDK van het Web specificeerde, moet u alle contexteigenschappen toelaten om de noodzakelijke informatie te blijven verzamelen.
+
+Inschakelen [hoge entropieclienthints](user-agent-client-hints.md#enabling-high-entropy-client-hints) op uw plaatsing van SDK van het Web, moet u extra omvatten `highEntropyUserAgentHints` naast uw bestaande configuratie.
+
+Als u bijvoorbeeld hoge entropientroy-clienthints wilt ophalen van westeigenschappen, ziet uw configuratie er als volgt uit:
+
+`context: ["highEntropyUserAgentHints", "web"]`
+
 
 ### `debugEnabled`
 
@@ -134,9 +145,9 @@ Hiermee stelt u de standaardtoestemming van de gebruiker in. Gebruik deze instel
 * `"out"`: Wanneer deze instelling is ingesteld, worden de werkzaamheden verwijderd totdat de gebruiker voorkeuren voor toestemming heeft ingesteld.
 Nadat de voorkeuren van de gebruiker zijn opgegeven, gaat het werk door of wordt het afgebroken op basis van de voorkeuren van de gebruiker. Zie [Ondersteunende toestemming](../consent/supporting-consent.md) voor meer informatie .
 
-## Persoonlijke opties
+## Persoonlijke opties {#personalization}
 
-### `prehidingStyle`
+### `prehidingStyle` {#prehidingStyle}
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
@@ -151,6 +162,16 @@ Als een element op uw webpagina bijvoorbeeld een id heeft van `container`, waarv
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
+
+### `targetMigrationEnabled` {#targetMigrationEnabled}
+
+Deze optie moet worden gebruikt bij het migreren van afzonderlijke pagina&#39;s van [!DNL at.js] naar Web SDK.
+
+Gebruik deze optie om de SDK van het Web toe te laten om de erfenis te lezen en te schrijven `mbox` en `mboxEdgeCluster` cookies die worden gebruikt door [!DNL at.js]. Zo kunt u het bezoekersprofiel behouden terwijl u overschakelt van een pagina die de SDK van Web gebruikt naar een pagina die de [!DNL at.js] bibliotheek en omgekeerd.
+
+| **Type** | **Vereist** | **Standaardwaarde** |
+| -------- | ------------ | ----------------- |
+| Boolean | Nee | `false` |
 
 ## Opties voor soorten publiek
 
@@ -184,7 +205,9 @@ Inschakelen [!DNL Audience Manager] URL-doelen, waarmee URL&#39;s kunnen worden 
 
 {style=&quot;table-layout:auto&quot;}
 
-Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Deze optie helpt bij het overstappen naar het gebruik van Adobe Experience Platform Web SDK, terwijl sommige delen van de site wellicht nog steeds Visitor.js gebruiken. Als de Bezoeker-API op de pagina is gedefinieerd, vraagt de SDK de Bezoeker-API voor de ECID. Met deze optie kunt u pagina&#39;s met twee tags toevoegen met de Adobe Experience Platform Web SDK en toch dezelfde ECID hebben.
+Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Deze optie helpt bij het overstappen naar het gebruik van Adobe Experience Platform Web SDK, terwijl sommige delen van de site wellicht nog steeds Visitor.js gebruiken.
+
+Als de Bezoeker-API op de pagina is gedefinieerd, vraagt de SDK de Bezoeker-API voor de ECID. Met deze optie kunt u pagina&#39;s met twee tags toevoegen met de Adobe Experience Platform Web SDK en toch dezelfde ECID hebben.
 
 ### `thirdPartyCookiesEnabled`
 

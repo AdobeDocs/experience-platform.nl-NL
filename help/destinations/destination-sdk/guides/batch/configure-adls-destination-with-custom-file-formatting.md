@@ -1,14 +1,15 @@
 ---
 description: Leer hoe u Destination SDK kunt gebruiken om een Azure Data Lake Storage-bestemming te configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
-title: (Beta) Vorm een Azure bestemming van de Opslag van Gegevens Meer met de opties van de douanedossier het formatteren en de configuratie van de douanedossier - noem.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+title: Configureer een Azure Data Lake Storage-bestemming met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
+exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
 
-# (Beta) Configureer en [!DNL Azure Data Lake Storage] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
+# Een [!DNL Azure Data Lake Storage] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
 

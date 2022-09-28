@@ -2,7 +2,7 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een geproduceerde bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -42,8 +42,8 @@ In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
 
 Verstrek een beschrijving van de gebruiksgevallen die uw bestemming voor klanten van het Experience Platform oplost. Uw beschrijvingen kunnen gelijkaardig zijn aan gebruiksgevallen van bestaande partners:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Maak een publiek op basis van uw klantenlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs is beschikbaar voor adverteerders die een specifieke publieksgroep willen richten die e-mailadressen in de Media van de Verizon (VMG) wordt afgeveegd kan snel een nieuw segment tot stand brengen en de gewenste publieksgroep duwen gebruikend de bijna-real-time API van VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen kiezen met e-mailadressen die in VMG (Verizon Media) zijn uitgeschakeld, zodat ze snel een nieuw segment kunnen maken en de gewenste doelgroep kunnen duwen met de bijna-real-time API van VMG.
 
 ## Testresultaten na gebruik van de API voor testbestemming
 
@@ -225,7 +225,7 @@ Geef de id van de publicatieaanvraag voor uw doel op. Voor informatie over het o
 
 Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](./overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming tot stand te brengen. Geef als onderdeel van het verzendproces de pull request (PR) voor de doeldocumentatie op.
 
-## Logo voor uw doel
+## Logo voor uw doel {#logo}
 
 De doelcatalogus bevat een logo voor elke doelkaart. Neem in uw e-mailbericht een afbeelding op met het logo voor uw bestemming.
 

@@ -1,15 +1,15 @@
 ---
 description: Leer hoe u Destination SDK gebruikt om een SFTP-bestemming te configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
-title: (Beta) Vorm een bestemming SFTP met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanenaam van het dossier.
+title: Configureer een SFTP-bestemming met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
 
-# (Beta) Vorm een bestemming SFTP met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanenaam van het dossier
+# Een SFTP-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
 

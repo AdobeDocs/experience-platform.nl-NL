@@ -1,10 +1,10 @@
 ---
-description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
+description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt of opslagplaats te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: af8718f7d5351993c5e4aa00822ed7d2b290b9f0
+source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 ## Overzicht {#destinations-sdk}
 
-Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
+Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt of opslagplaats te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 
-De documentatie van de Destination SDK verstrekt instructies voor u om het Adobe Experience Platform Destination SDK te gebruiken om een productievere bestemmingsintegratie met Adobe Experience Platform te vormen, te testen en vrij te geven, en uw bestemming te hebben deel van de steeds groeiende bestemmingscatalogus worden.
+De documentatie van de Destination SDK verstrekt instructies voor u om het Adobe Experience Platform Destination SDK te gebruiken om een productievere bestemmingsintegratie met Adobe Experience Platform te vormen, te testen en vrij te geven, en uw bestemming te hebben deel van de steeds groeiende bestemmingscatalogus worden. Door Destination SDK te gebruiken, kunt u uw eigen douane privé bestemming ook tot stand brengen om gegevens uit te voeren die aan uw behoeften worden aangepast.
 
 ![Overzicht van de doelcatalogus](./assets/destinations-catalog-overview.png)
 
@@ -26,7 +26,7 @@ Als partner van Destination SDK, kunt u van het toevoegen van uw geproduceerde b
 2. Introduceer een branded bestemmingskaart in de catalogus van de bestemmingen van het Experience Platform voor vereenvoudigde klantenopstelling en bewustzijn.
 3. Wees uitgerust met een productieve bestemmingsintegratie met Adobe Experience Platform en Real-time Customer Data Platform.
 
-Als klant van het Experience Platform, kunt u een eigen privé douanebestemming ontwerpen, die het best uw activeringsbehoeften kan aanpassen.
+Als klant van het Experience Platform, kunt u een eigen privé douanebestemming ook ontwerpen, die het best uw activeringsbehoeften kan aanpassen.
 
 ![Destination SDK visueel diagram](./assets/destination-sdk-visual.png)
 
@@ -51,6 +51,10 @@ Door Destination SDK, steunt Adobe Experience Platform integratie in real time m
 * Configureerbare verificatie
 * Een pakket test- en validatie-API&#39;s waarmee u uw doelconfiguraties kunt testen en doorlopen
 
+Via Destination SDK kunt u ook integratie instellen om bestanden periodiek naar de gewenste opslaglocatie te exporteren. De real-time integratie met Experience Platform ondersteunt mogelijkheden zoals:
+* Bestand exporteren in verschillende ondersteunde indelingen (CSV, Parquet, JSON)
+* Configureerbare opties voor bestandsindeling waarmee u de indeling van de geëxporteerde bestanden kunt structureren en aan uw downstreamvereisten kunt voldoen.
+
 Lees meer over de technische vereisten aan de kant van de bestemmingen in de [integratievereisten](./integration-prerequisites.md) artikel.
 
 ## Toegang tot Destination SDK krijgen {#get-access}
@@ -72,8 +76,8 @@ Het proces om uw bestemming in Experience Platform te vormen wordt hieronder ges
 
 1. Als u ISV of SI bent, zie het krijgen toegangsinformatie in de sectie hierboven. [Adobe Experience Platform-activering](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) klanten kunnen deze stap overslaan.
 2. [Verzoek om een Experience Platform-sandbox te leveren](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) en laat de toestemming van de bestemmingsauteur toe.
-3. Bouw uw integratie op. Volg de instructies in de productdocumentatie om te configureren [streaming doelen](./configure-destination-instructions.md) of [bestandsgebaseerde doelen (bèta)](./configure-file-based-destination-instructions.md).
-4. Test uw integratie. Volg de instructies in de productdocumentatie om te testen [streaming doelen](./test-destination.md) of [bestandsgebaseerde doelen (bèta)](./file-based-destination-testing-overview.md).
+3. Bouw uw integratie op. Volg de instructies in de productdocumentatie om te configureren [streaming doelen](./configure-destination-instructions.md) of [bestandsgebaseerde doelen](./configure-file-based-destination-instructions.md).
+4. Test uw integratie. Volg de instructies in de productdocumentatie om te testen [streaming doelen](./test-destination.md) of [bestandsgebaseerde doelen](./file-based-destination-testing-overview.md).
 5. Als u een ISV of SI creeert [productievere integratie](./overview.md#productized-custom-integrations), [uw integratie verzenden](./submit-destination.md) voor Adobe (de standaardresponstijd is vijf werkdagen).
 6. Als u ISV of SI creërend een productieve integratie bent, gebruik [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie op Experience League voor uw bestemming tot stand te brengen.
 7. Voor productieve integratie, zodra goedgekeurd door Adobe, zal uw integratie verschijnen in [Catalogus Experience Platform](/help/destinations/catalog/overview.md).

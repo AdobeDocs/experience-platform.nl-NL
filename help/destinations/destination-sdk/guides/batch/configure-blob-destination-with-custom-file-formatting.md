@@ -1,14 +1,15 @@
 ---
 description: Leer hoe u Destination SDK kunt gebruiken om een Azure Blob Storage-bestemming te configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
-title: (Beta) Configureer een Azure Blob Storage-bestemming met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+title: Configureer een Azure Blob Storage-bestemming met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
+exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '766'
 ht-degree: 0%
 
 ---
 
-# (Beta) Configureer en [!DNL Azure Blob Storage] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
+# Een [!DNL Azure Blob Storage] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
 

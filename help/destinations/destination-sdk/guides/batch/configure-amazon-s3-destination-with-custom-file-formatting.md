@@ -1,14 +1,15 @@
 ---
 description: Leer hoe u Destination SDK gebruikt om een Amazon S3-bestemming te configureren met aangepaste bestandsnaam- en opmaakopties.
-title: (Beta) Configureer een Amazon S3-bestemming met aangepaste bestandsnaam- en opmaakopties.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+title: Configureer een Amazon S3-bestemming met aangepaste bestandsnaam en opmaakopties.
+exl-id: eed73572-5050-44fa-ba16-90729c65495e
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
 
-# (bèta) Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties
+# Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties
 
 ## Overzicht {#overview}
 

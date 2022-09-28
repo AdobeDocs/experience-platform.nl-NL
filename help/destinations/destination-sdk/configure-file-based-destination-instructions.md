@@ -1,15 +1,15 @@
 ---
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
-title: (Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen
+title: Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
-# (Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen
+# Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
 
 ## Overzicht {#overview}
 

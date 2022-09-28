@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
-source-git-commit: 2b9edb258e647dc04faadbbaeab429cf8ac3e0ec
+source-git-commit: d32d23ca26419c1619033924d776be4f112e619a
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 13%
+source-wordcount: '186'
+ht-degree: 12%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 13%
 
 * [Overzicht van Platform Web SDK](home.md)
 * Grondbeginselen {#fundamentals}
+   * [Ondersteunde gebruiksgevallen](fundamentals/supported-use-cases.md)
    * [Vereisten](fundamentals/prerequisite.md)
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
    * [De SDK configureren](fundamentals/configuring-the-sdk.md)
@@ -25,7 +26,7 @@ ht-degree: 13%
    * [Foutopsporing](fundamentals/debugging.md)
    * [Een CSP configureren](fundamentals/configuring-a-csp.md)
    * [Interactie met meerdere eigenschappen](fundamentals/interacting-with-multiple-properties.md)
-   * [Ondersteunde gebruiksgevallen](fundamentals/supported-use-cases.md)
+   * [Client-tips voor gebruikersagent](fundamentals/user-agent-client-hints.md)
 * DataStreams {#datastreams}
    * [Overzicht](./datastreams/overview.md)
    * [Gegevensvoorvoegsel voor gegevensverzameling](./datastreams/data-prep.md)

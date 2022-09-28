@@ -1,15 +1,15 @@
 ---
 description: Leer hoe u Destination SDK gebruikt om een Amazon S3-bestemming te configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
-title: (bèta) Vorm een bestemming van Amazon S3 met vooraf bepaalde dossier het formatteren opties en de configuratie van de douanenaam van het dossier.
+title: Configureer een Amazon S3-bestemming met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
 
-# (Beta) Configureer en [!DNL Amazon S3] doel met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
+# Een [!DNL Amazon S3] doel met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
 

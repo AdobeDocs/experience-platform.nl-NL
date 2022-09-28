@@ -2,9 +2,9 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
+source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1459'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het *YourDestination* doel, hier
 |---|---|---|
 | GAID | Google-advertentie-id | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
-| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
+| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lees het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
 | phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
@@ -120,7 +120,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Lees voor meer informatie over waarschuwingen de handleiding op [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -130,7 +130,11 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+*Doorhalen wat niet van toepassing is - Als u een nieuwe streamingbestemming documenteert, blijft de eerste alinea onder. Als u een nieuw op een bestand gebaseerd doel documenteert, houd de tweede paragraaf.*
+
+Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+
+Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 

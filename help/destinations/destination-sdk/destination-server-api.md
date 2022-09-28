@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in Adobe Experience Platform Destination SDK via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: API-bewerkingen voor eindpunt doelserver
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1361'
 ht-degree: 1%
 
 ---
@@ -81,10 +81,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde configuratie van de bestemmingsserver terug.
 
 ## Configuratie maken voor een op een bestand gebaseerde doelserver {#create-file-based}
-
->[!IMPORTANT]
->
->Bestandsgebaseerde doelondersteuning in Adobe Experience Platform Destination SDK staat momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 ### Voorbeeldconfiguratie SFTP-doelserver {#sftp-server-sample}
 

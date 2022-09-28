@@ -2,9 +2,9 @@
 description: Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK kunt verifiëren en gebruiken. Het omvat instructies op hoe te om de authentificatiegeloofsbrieven van de Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings auteurstoegang te verkrijgen.
 title: Aan de slag met Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '610'
 ht-degree: 2%
 
 ---
@@ -78,7 +78,7 @@ Door de stappen in dit artikel te volgen, hebt u authentificatiegeloofsbrieven a
 * Lees de volgende configuratiegidsen, afhankelijk van uw bestemmingstype:
 
    * [Gebruik Destination SDK om een streamingbestemming te configureren](./configure-destination-instructions.md)
-   * [(Bèta) Gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](./configure-file-based-destination-instructions.md)
+   * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./configure-file-based-destination-instructions.md)
 
 * Voor alle bewerkingen raadpleegt u de [API-documentatie voor doelontwerp](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Gebruik de [Postman-collectie van bestemmingsAuthoring-API](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) om uw bestemming te vormen gebruikend de Destination SDK API eindpunten. Als u aan de slag wilt met Postman, raadpleegt u de [stappen voor het importeren van omgevingen en verzamelingen](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) en [videohandleiding voor het maken van de Postman-omgeving](https://video.tv.adobe.com/v/28832).
