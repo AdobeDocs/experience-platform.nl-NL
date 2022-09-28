@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '831'
 ht-degree: 5%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 5%
       - [Bron voor analytische classificaties](connectors/adobe-applications/classifications.md)
       - [Analysebron](connectors/adobe-applications/analytics.md)
       - [Bron Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Adobe Campaign Managed Cloud Services-bron](connectors/adobe-applications/campaign.md)
       - [Kenmerkbron van klant](connectors/adobe-applications/customer-attributes.md)
       - [Bron gegevensverzameling](connectors/adobe-applications/data-collection.md)
       - Veldtoewijzingen {#mapping}
@@ -202,7 +203,7 @@ ht-degree: 5%
          - [Adobe Analytics (rapportsuite-gegevens)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (classificatiegegevens)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
+         - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Reclame {#advertising}
