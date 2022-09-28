@@ -3,9 +3,9 @@ keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;acti
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,24 @@ Zie voor meer informatie de [doeltypen en -categorieën, overzicht](./destinatio
 
 De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuift omlaag naar de onderkant van de pagina.
 
+De volgende lijst schetst de toestemmingen en toestemmingscombinaties die worden vereist om bepaalde acties op bestemmingen uit te voeren:
+
+| Machtigingsniveau | Beschrijving |
+| ---- | ----|
+| **[!UICONTROL Manage Destinations]** | Om met bestemmingen te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om segmenten aan bestemmingen te activeren, hebt u het nodig **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
+
+{style=&quot;table-layout:auto&quot;}
+
 Voor meer informatie over toegangscontroles, zie [Gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md).
+
+### Op kenmerken gebaseerd toegangsbeheer voor bestemmingen {#attribute-based-access}
+
+Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van kenmerken.
+
+Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op gebieden toepassen die u toestemmingen hebt. Bovendien kunt u geen gegevens naar een bestemming uitvoeren als u geen toegang tot alle gebieden in de dataset hebt.
+
+Voor meer informatie over hoe de bestemmingen met op attribuut-gebaseerde toegangscontroles werken, lees [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md#destinations).
 
 ## Beperkingen op gegevensbeheer bij het activeren van gegevens naar bestemmingen {#data-governance}
 
@@ -64,7 +81,7 @@ Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platfo
 * [E-mailmarketingdoelen](./catalog/email-marketing/overview.md)
 * [Sociale bestemmingen](./catalog/social/overview.md)
 
-Zie de stap Controleren in de volgende handleidingen voor meer informatie over schendingen van gegevensbeleid in de workflow voor segmentactivering:
+Voor meer informatie over de schendingen van gegevensbeleid in de werkstroom van de segmentactivering, zie **[!UICONTROL Review]** stap in de volgende hulplijnen:
 
 * [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](./ui/activate-segment-streaming-destinations.md#review)
 * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md#review)

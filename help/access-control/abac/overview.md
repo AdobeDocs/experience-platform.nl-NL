@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
+source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1684'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Platform gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) productp
 
 Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../home.md).
 
-### Doelen
+### Doelen {#destinations}
 
 [!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Platform naadloos in werking te stellen. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
@@ -72,6 +72,15 @@ Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebr
    * Tijdens het activeringsproces moeten gebruikers mogelijk segmenten selecteren die ze op een bestemming willen activeren. Als beheerder, kunt u gebruikers in uw organisatie voorzien om segmenten slechts te zien die met etiketten worden geëtiketteerd die de gebruikers toegang hebben tot, en segmenten die geen etiketten bevatten.
 * Vorm gebruikerstoegang om specifieke gebieden in het activeringsproces te bekijken, die op rol, toestemmingen, en etiketten wordt gebaseerd;
    * Tijdens het activeringsproces moeten gebruikers mogelijk velden selecteren die ze op een bestemming willen activeren. Als beheerder, kunt u gebruikers in uw organisatie verstrekken om gebieden slechts te zien die met etiketten worden geëtiketteerd die de gebruikers toegang hebben tot, en gebieden die geen etiketten bevatten.
+
+>[!IMPORTANT]
+>
+>Samenvattend, houd in mening de volgende implicaties wanneer het werken met bestemmingen en op attribuut-gebaseerde toegangsbeheer:
+>
+>* U kunt alleen segmenten activeren die u hebt gemachtigd om te openen en te bekijken in het dialoogvenster [segmentbladerweergave](/help/segmentation/ui/overview.md#browse) en [stap voor segment selecteren](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) van de activeringsworkflow.
+>* In de [toewijzingsstap van de activeringsworkflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), kunt u alleen de velden weergeven en selecteren voor activering waarvoor u toegangsrechten hebt.
+>* Wanneer u extra segmenten wilt activeren naar een bestaand doel waar u geen toegang hebt tot alle velden die zijn toegewezen voor export, wordt de activeringsworkflow voor u geblokkeerd.
+
 
 Voor meer informatie over [!DNL Destinations], verwijst u naar de [[!DNL Destinations] overzicht](../../destinations/home.md).
 
