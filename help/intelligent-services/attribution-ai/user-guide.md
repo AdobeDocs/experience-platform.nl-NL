@@ -5,9 +5,9 @@ title: Handleiding voor Attribution AI-gebruikersinterface
 topic-legacy: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
+source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
 workflow-type: tm+mt
-source-wordcount: '2616'
+source-wordcount: '2784'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden
 
 - **[!UICONTROL Edit]**: Selecteren **[!UICONTROL Edit]** staat u toe om een bestaande de dienstinstantie te wijzigen. U kunt de naam, beschrijving, status en scores van de instantie bewerken.
 - **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** Hiermee wordt de geselecteerde service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
-- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen.
+- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal uit Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-time klantprofiel worden echter niet verwijderd.
 - **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die wordt gebruikt. Als meer dan één dataset door Attribution AI wordt gebruikt, &quot;Veelvoud&quot;die door het aantal datasets wordt gevolgd wordt getoond. Als u de hyperlink selecteert, wordt de voorvertoning van de datasets weergegeven.
 - **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 
@@ -261,6 +261,14 @@ Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het be
 Als u uw trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finish]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Selecteren **[!UICONTROL Ok]** om naar de **[!UICONTROL Service instances]** pagina waar u uw de dienstinstantie kunt zien.
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
+
+## Beleid inzake governance
+
+Zodra u door het werkschema gaat om een instantie tot stand te brengen en de configuratie van het model voor te leggen, [beleidshandhaving](/help/data-governance/enforcement/auto-enforcement.md) controleert of er overtredingen zijn. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties binnen het Platform in overeenstemming zijn met het beleid voor gegevensgebruik.
+
+![popup met beleidsovertreding](./images/user-guide/policy-violation-popover-aai.png)
+
+De popover biedt specifieke informatie over de schending. U kunt deze schendingen door beleidsmontages en andere maatregelen oplossen die niet direct met het configuratiewerkschema verwant zijn. U kunt bijvoorbeeld de labels wijzigen, zodat bepaalde velden mogen worden gebruikt voor wetenschappelijke doeleinden. Alternatief, kon u de modelconfiguratie zelf ook wijzigen zodat het om het even wat met een etiket op het niet gebruikt. Raadpleeg de documentatie voor meer informatie over het instellen van [beleid](/help/data-governance/policies/overview.md).
 
 ## Op kenmerken gebaseerd toegangsbeheer
 
