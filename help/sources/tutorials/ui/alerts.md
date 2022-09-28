@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen; waarschuwingen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-waarschuwingen in de gebruikersinterface
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
+source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ De beschikbare alarm voor bronnen dataflows zijn:
 | Bronnen DataAfter Run Start | Deze waarschuwing stuurt u een bericht wanneer uw brongegevensstroom is begonnen. |
 | Bronnen DataAfterFlow voltooid | Deze waarschuwing stuurt u een bericht wanneer gegevens van uw bron met succes aan Platform worden opgenomen. |
 | Bronnen DataAfterFlow-fout | Deze waarschuwing stuurt u een bericht als er een fout optreedt in uw gegevensstroom. |
-| Bronnen Gegevensstroom Gebrek aan Ingestie | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven. |
+| ~~Bronnen Gegevensstroom Gebrek aan Ingestie~~ | ~~Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven.~~ <br>**Opmerking:** Je ontvangt geen waarschuwingen meer omdat deze waarschuwing is afgekeurd. |
 
 Selecteer de waarschuwingen waarop u zich wilt abonneren en selecteer **[!UICONTROL Next]** om uw gegevensstroom te bekijken en te voltooien.
 

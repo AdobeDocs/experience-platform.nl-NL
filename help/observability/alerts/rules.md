@@ -4,9 +4,9 @@ title: Standaardwaarschuwingsregels
 description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
+source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,15 @@ De volgende waarschuwingsregels gelden specifiek voor [Gegevensinname](../../ing
 | Bron: Run-info | Resources Flow Run Success | Deze waarschuwing wordt geactiveerd wanneer gegevens zijn ingevoerd via een bronverbinding. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Fout bij uitvoeren bronstroom | Deze waarschuwing treedt op wanneer een fout optreedt bij het opnemen van gegevens van een bronverbinding. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Vertraging bij inname | Deze waarschuwing wordt geactiveerd wanneer een batch-opname-flow langer duurt dan 150 minuten om te verwerken. |
-| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Ingestief | Deze waarschuwing treedt op wanneer de verhouding van mislukte records ten opzichte van alle records een drempel van 0,5% overschrijdt. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Als u zich eerder hebt geabonneerd op het volgende type waarschuwingen, ontvangt u geen waarschuwingen meer omdat deze waarschuwing is afgekeurd:
+
+| Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
+| --- | --- | --- |
+| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven. |
 
 {style=&quot;table-layout:auto&quot;}
 
