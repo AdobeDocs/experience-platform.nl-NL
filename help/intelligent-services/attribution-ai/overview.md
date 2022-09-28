@@ -6,7 +6,7 @@ topic-legacy: Attribution AI
 description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren. Voorbeelden van aanraakpunten zijn weergave- en impressies, e-mail verzenden, e-mail openen en klikken met betaalde zoekopdrachten.
 landing-page-description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Overzicht van Attribution AI
 
-Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, algoritmische attributiedienst die de invloed en de stijgende invloed van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketeers marketing- en advertentieuitgaven meten en optimaliseren door inzicht te krijgen in de impact van elke individuele interactie van de klant in elke fase van de reis van de klant.
+Attribution AI, als onderdeel van Intelligent Services, is een multi-channel algoritmische attributiedienst die de invloed en de stijgende invloed van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketeers marketing- en advertentieuitgaven meten en optimaliseren door inzicht te krijgen in de impact van elke individuele interactie van de klant in elke fase van de reizen van de klant.
 
 ## Attribution AI begrijpen
 
@@ -38,7 +38,7 @@ U kunt Attribution AI gebruiken als hulp bij het gebruik van de volgende voorbee
 - **Directe rapportage**: Geef managers inzicht in de werkelijke incrementele impact van marketing, zowel als geheel als per kanaal, regio, SKU, enz.
 - **Begrotingstoewijzing**: Beslissingen over begrotingstoewijzing via marketingkanaal informeren.
 - **Campagne optimaliseren**: Begrijp binnen elk kanaal welke campagnes, creatieven, en sleutelwoorden beter werken waarvoor SKUs of Geos. Zo kunt u naar elk kanaal kijken zodat het marketingteam hun tactiek kan optimaliseren.
-- **Toekenning van de volledige trechter**: Begrijp het effect van de marketing over de volledige klantenreis. Bijvoorbeeld gratis account voor betaalde conversie en hoger.
+- **Toekenning van de volledige trechter**: Begrijp de invloed van marketing over de volledige klantenreis. Bijvoorbeeld gratis account voor betaalde conversie en hoger.
 - **Partnerevaluaties**: De doeltreffendheid van agentschappen en partners evalueren op basis van toewijzingsresultaten.
 
 ### Extra functies
