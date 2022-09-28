@@ -2,9 +2,9 @@
 title: Bronnen kopiëren
 description: Leer hoe u een nieuwe tagbron maakt met behulp van de instellingen van een bestaande tagbron in Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Als u een regel of een gegevenselement kopieert, kunt u in het dialoogvenster Ko
 
 >[!NOTE]
 >
->In de Inzameling UI van Gegevens, is het niet mogelijk om middelen aan een ander Bezit te kopiëren als één Bezit voor uitbreidingsontwikkeling wordt gevormd en het andere Bezit niet is.
+>Het is niet mogelijk om middelen aan een ander bezit te kopiëren als één bezit voor uitbreidingsontwikkeling wordt gevormd en het andere bezit niet is.
 
 Nadat u het gewenste gedrag hebt geconfigureerd, selecteert u **[!UICONTROL Copy]**.
 

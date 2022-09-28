@@ -5,9 +5,9 @@ title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2549'
+source-wordcount: '2544'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Zodra u CMP hebt gevormd om toestemmingskoorden te produceren, moet u het Web SD
 
 ### Een nieuwe gegevensstroom maken
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe gegevensstroom voor Platform maakt in de gebruikersinterface voor gegevensverzameling. De specifieke stappen voor hoe te om een nieuwe gegevensstroom tot stand te brengen worden verstrekt in [SDK-documentatie](../../../../edge/datastreams/overview.md).
+SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe gegevensstroom voor Platform maakt. De specifieke stappen voor hoe te om een nieuwe gegevensstroom tot stand te brengen worden verstrekt in [SDK-documentatie](../../../../edge/datastreams/overview.md).
 
 Nadat u een unieke naam voor de gegevensstroom hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 

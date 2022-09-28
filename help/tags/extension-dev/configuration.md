@@ -1,10 +1,10 @@
 ---
 title: Extensieconfiguratie
-description: Leer hoe u een tagextensie configureert om algemene instellingen van een gebruiker te verzamelen in de gebruikersinterface voor gegevensverzameling van Adobe Experience Platform.
+description: Leer hoe te om een markeringsuitbreiding te vormen om globale montages van een gebruiker in de UI van Adobe Experience Platform of UI van de Inzameling van Gegevens te verzamelen.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---

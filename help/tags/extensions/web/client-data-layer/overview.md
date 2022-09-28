@@ -2,9 +2,9 @@
 title: Adobe Client Data Layer Extension
 description: Meer informatie over de tagextensie Adobe Client Data Layer in Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installatie
 
-Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface voor gegevensverzameling en selecteert u Gegevenslaag Adobe-client.
+Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface van het Experience Platform of de gebruikersinterface van de gegevensverzameling en selecteert u Gegevenslaag van Adobe-client.
 
 ![ACDL-extensieweergave in catalogus](./images/catalog.png)
 

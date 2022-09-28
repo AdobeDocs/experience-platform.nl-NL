@@ -2,9 +2,9 @@
 title: Gebeurtenistypen voor webextensies
 description: Leer hoe u een bibliotheekmodule voor het type gebeurtenis definieert voor een webextensie in Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ In dit document wordt beschreven hoe u gebeurtenistypen voor een webextensie in 
 
 Gebeurtenistypen worden gedefinieerd door extensies en bestaan doorgaans uit de volgende kenmerken:
 
-1. A [weergave](./views.md) weergegeven in de gebruikersinterface voor gegevensverzameling waarin gebruikers instellingen voor de gebeurtenis kunnen wijzigen.
+1. A [weergave](./views.md) weergegeven in de gebruikersinterface van het Experience Platform en de gebruikersinterface voor gegevensverzameling waarmee gebruikers instellingen voor de gebeurtenis kunnen wijzigen.
 2. Een bibliotheekmodule die wordt uitgegeven in de tagruntime-bibliotheek om de instellingen te interpreteren en te controleren of een bepaalde activiteit plaatsvindt.
 
 `module.exports` beide `settings` en `trigger` parameters. Dit maakt het aanpassen van het gebeurtenistype mogelijk.

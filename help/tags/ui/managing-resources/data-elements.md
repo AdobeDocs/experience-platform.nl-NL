@@ -2,9 +2,9 @@
 title: Gegevenselementen
 description: De elementen van gegevens zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1601'
 ht-degree: 1%
 
 ---
@@ -161,7 +161,7 @@ Hiermee wordt de waarde opgehaald van:
 
 Met behulp van het padveld kan naar elk beschikbaar JavaScript-object of -variabele worden verwezen.
 
-Als u JavaScript-variabelen of objecteigenschappen in uw opmaak wilt verzamelen en deze wilt gebruiken met een van uw extensies of regels, kunnen gegevenselementen worden gebruikt om deze waarden vast te leggen. Deze manier, kunt u naar het gegevenselement door uw regels verwijzen, en als de bron van de gegevens ooit verandert, moet u slechts uw verwijzing naar de bron (het gegevenselement) in één plaats binnen UI van de Inzameling van Gegevens veranderen.
+Als u JavaScript-variabelen of objecteigenschappen in uw opmaak wilt verzamelen en deze wilt gebruiken met een van uw extensies of regels, kunnen gegevenselementen worden gebruikt om deze waarden vast te leggen. Op deze manier kunt u naar het gegevenselement in uw regels verwijzen en als de bron van de gegevens ooit verandert, hoeft u uw verwijzing naar de bron (het gegevenselement) slechts op één plaats te wijzigen.
 
 Stel dat uw markering een JavaScript-variabele bevat met de naam `Page_Name`, als volgt:
 
@@ -257,7 +257,7 @@ Enkele gangbare gebruiksgevallen zijn:
 
 ## Ingebouwde gegevenselementen
 
-U moet een aangepast gegevenselement maken in de gebruikersinterface voor gegevensverzameling als u eerder een van de volgende gegevenselementen hebt gebruikt:
+U moet aanvullende aangepaste gegevenselementen maken als u eerder een van de volgende gegevenselementen hebt gebruikt:
 
 * URI
 * Protocol

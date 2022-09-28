@@ -2,9 +2,9 @@
 title: Bibliotheek opnieuw publiceren
 description: Leer hoe u een vorige tagbibliotheek opnieuw publiceert in Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Dit betekent dat wanneer u een oudere bibliotheek opnieuw publiceert:
 
 * De manier waarop ontwikkelings- en staging-omgevingen berekenen wat upstream is, verandert niet
 
-Overweeg het scenario wanneer u wegens een probleem met een specifieke regel terugdraait. De herziening van de regels die nu in productie is, zou bijvoorbeeld drie oude herzieningen kunnen zijn.  Wanneer u die regel in de UI van de Inzameling van Gegevens bekijkt om het te bevestigen, weerspiegelt het nog de recentste opgeslagen veranderingen eerder dan wat momenteel in productie is.
+Overweeg het scenario wanneer u wegens een probleem met een specifieke regel terugdraait. De herziening van de regels die nu in productie is, zou bijvoorbeeld drie oude herzieningen kunnen zijn.  Wanneer u die regel in UI bekijkt om het te bevestigen, weerspiegelt het nog de recentste opgeslagen veranderingen eerder dan wat momenteel in productie is.
 
 Om deze reden, deelt het Platform u mee dat een bezit in een opnieuw gepubliceerde staat als herinnering is dat wat u in het gebruikersinterface van de Inzameling van Gegevens ziet een weinig verder verwijderd uit Productie dan normaal is. Deze melding is niet toegestaan en wordt de eerste keer dat u de eigenschap weergeeft, eenmaal per browsersessie weergegeven.
 

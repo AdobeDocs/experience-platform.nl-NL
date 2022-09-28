@@ -2,9 +2,9 @@
 title: Typen gegevenselementen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het gegevenstype data-element definieert voor een tagextensie in een webeigenschap.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ In dit document wordt beschreven hoe u gegevenselematypen voor een webextensie i
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
-1. A [weergave](./views.md) getoond binnen UI van de Inzameling van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
+1. A [weergave](./views.md) getoond binnen UI van het Experience Platform en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en gegevens op te halen.
 
 Overweeg een situatie waarin u gebruikers wilt toestaan om gegevens op te halen uit een lokaal opslagitem met de naam `productName`. Uw module kan als volgt kijken:

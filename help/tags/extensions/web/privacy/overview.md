@@ -2,9 +2,9 @@
 title: Overzicht van Adobe Privacy Extension
 description: Meer informatie over de extensie Adobe Privacy in Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Met de extensie van de Adobe Privacy-tag kunt u gebruikers-id&#39;s die aan eindgebruikers zijn toegewezen, verzamelen en verwijderen via Adobe-oplossingen op client-side apparaten. Verzamelde id&#39;s kunnen vervolgens worden verzonden naar [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) om de persoonlijke gegevens van de verwante persoon te openen of te verwijderen in ondersteunde Adobe Experience Cloud-toepassingen.
 
-Deze gids behandelt hoe te om de uitbreiding van de Privacy van de Adobe in de Inzameling van Gegevens UI te installeren en te vormen.
+Deze gids behandelt hoe te om de uitbreiding van de Privacy van de Adobe in de UI van het Experience Platform of UI van de Inzameling van Gegevens te installeren en te vormen.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Deze gids behandelt hoe te om de uitbreiding van de Privacy van de Adobe in de I
 
 ## De extensie installeren en configureren
 
-Selecteer in de gebruikersinterface voor gegevensverzameling de optie **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** tab. Gebruik de zoekbalk om de lijst met beschikbare extensies te versmallen tot u de Adobe Privacy hebt gevonden. Selecteren **[!UICONTROL Install]** om door te gaan.
+Selecteren **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** tab. Gebruik de zoekbalk om de lijst met beschikbare extensies te versmallen tot u de Adobe Privacy hebt gevonden. Selecteren **[!UICONTROL Install]** om door te gaan.
 
 ![De extensie installeren](../../../images/extensions/privacy/install.png)
 
@@ -71,7 +71,7 @@ Wanneer u de extensie Adobe Privacy gebruikt, moet u de vereiste callback-functi
 
 ### Een gegevenselement definiëren om identiteiten af te handelen
 
-In de UI van de Inzameling van Gegevens, begin het proces om een nieuw gegevenselement tot stand te brengen door te selecteren **[!UICONTROL Data Elements]** in de linkernavigatie, gevolgd door **[!UICONTROL Add Data Element]**. Zodra u op het configuratiescherm bent, uitgezocht **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Custom Code]** voor het gegevenstype data. Selecteer **[!UICONTROL Open Editor]** in het rechterdeelvenster.
+Start het proces voor het maken van een nieuw gegevenselement door op **[!UICONTROL Data Elements]** in de linkernavigatie, gevolgd door **[!UICONTROL Add Data Element]**. Zodra u op het configuratiescherm bent, uitgezocht **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Custom Code]** voor het gegevenstype data. Selecteer **[!UICONTROL Open Editor]** in het rechterdeelvenster.
 
 ![Type gegevenselement selecteren](../../../images/extensions/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Nadat u de extensie hebt geïnstalleerd, kunt u deze uitschakelen of verwijderen
 
 ## Volgende stappen
 
-Deze gids behandelde het gebruik van de de markeringsuitbreiding van de Privacy van de Adobe in de UI van de Inzameling van Gegevens. Voor meer informatie over de functies die door de extensie worden geboden, waaronder voorbeelden van het gebruik ervan met onbewerkte code, raadpleegt u de [Overzicht van de Privacy JavaScript-bibliotheek](../../../../privacy-service/js-library.md) in de documentatie bij de Privacy Service.
+Deze handleiding behandelde het gebruik van de extensie van de Adobe Privacy-tag in de gebruikersinterface. Voor meer informatie over de functies die door de extensie worden geboden, waaronder voorbeelden van het gebruik ervan met onbewerkte code, raadpleegt u de [Overzicht van de Privacy JavaScript-bibliotheek](../../../../privacy-service/js-library.md) in de documentatie bij de Privacy Service.

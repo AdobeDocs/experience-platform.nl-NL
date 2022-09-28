@@ -2,9 +2,9 @@
 title: Overzicht van extensie voor het bijhouden van video in BrightStor
 description: Meer informatie over de extensie van de tag BrightStor Video Tracking in Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ De volgende video-uitbreidingsobjecten moeten worden opgenomen:
 
 >[!TIP]
 >
->Voor degenen die misschien geen veelvoudige eVars of steunen voor elk videoelement willen verstrekken, is er een alternatieve methode. Waarden voor gegevenselementen kunnen worden samengevoegd in de gebruikersinterface voor gegevensverzameling. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de [Classification Rule Builder](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) documentatie voor meer informatie. Tot slot worden zij in Analysis Workspace als een segment toegepast.
+>Voor degenen die niet veelvoudige eVars of steunen voor elk video element zouden kunnen willen verstrekken, worden de waarden van het gegevenselement aaneengeschakeld als alternatieve methode. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de [Classification Rule Builder](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) documentatie voor meer informatie. Tot slot worden zij in Analysis Workspace als een segment toegepast.
 >
 >Hiertoe maakt u een nieuw gegevenselement, bijvoorbeeld &quot;Video MetaData&quot;, en programmeert u dit om alle videogegevenselementen (hierboven vermeld) aan elkaar te koppelen.
 

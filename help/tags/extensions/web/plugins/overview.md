@@ -2,10 +2,10 @@
 title: Algemeen overzicht van extensie Analytics
 description: Meer informatie over de extensie Common Analytics in Adobe Experience Platform.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 1%
+source-wordcount: '406'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ De extensie Common Analytics Plugins biedt de volgende handelingen:
 >
 >Hoewel deze handeling eenvoudiger te implementeren is, wordt u door Adobe Consulting niet aangeraden deze handeling te gebruiken, omdat hierdoor het gewicht van de plug-in toeneemt.
 
-In deze handeling kunt u elke plug-in selecteren die u in de implementatie wilt opnemen en de wijzigingen opslaan. Selecteer zo veel of weinig als u tijdens de implementatie wilt gebruiken. In het dialoogvenster Analytics vindt u koppelingen naar documentatie over het gebruik van elke plug-in en een korte beschrijving. [Overzicht van plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+In deze handeling kunt u elke plug-in selecteren die u in de implementatie wilt opnemen en de wijzigingen opslaan. Selecteer zo veel of weinig als u tijdens de implementatie wilt gebruiken.
 
 ### Insteekmodule initialiseren
 
@@ -58,36 +58,17 @@ Met deze acties initialiseert u de specifieke plug-in die u afzonderlijk wilt ge
 
 ## Algemene gegevenselementen van plug-ins voor Analytics
 
-In deze sectie worden de gegevenselementen beschreven die beschikbaar zijn in de extensie Common Analytics Plugins.
+De volgende gegevenselementen zijn beschikbaar in de Common Analytics Plugins-extensie, waarmee tagmogelijkheden worden gebruikt voor het instellen en configureren van de corresponderende plug-ins in Analytics:
 
-### getGeoCoordinates
+* `getGeoCoordinates`
+* `getNewRepeat`
+* `getPageName`
+* `getResponsiveLayout`
+* `getTimeParting`
+* `getTimeSinceLastVisit`
+* `getVisitDuration`
+* `getVisitNum`
 
-Hiermee kunnen gebruikers de native interface voor gegevensverzameling in Adobe Experience Platform gebruiken om de plug-in getGeoCoordinates in te stellen en te configureren.
-
-### getNewRepeat
-
-Hiermee kunnen gebruikers de native gegevensverzamelingsinterface gebruiken om de getNewRepeat-plug-in in te stellen en te configureren.
-
-### getPageName
-
-Hiermee kunnen gebruikers de native gegevensverzamelingsinterface gebruiken om de getPageName-insteekmodule in te stellen en te configureren.
-
-### getResponsiveLayout
-
-Hiermee kunnen gebruikers de native gegevensverzamelingsinterface gebruiken om de getResponsiveLayout-insteekmodule in te stellen en te configureren.
-
-### getTimeParting
-
-Hiermee kunnen gebruikers de native interface voor gegevensverzameling gebruiken om de getTimeParting-plug-in in te stellen en te configureren.
-
-### getTimeSinceLastVisit
-
-Hiermee kunnen gebruikers de native gegevensverzamelingsinterface gebruiken om de getTimeSinceLastVisit-insteekmodule in te stellen en te configureren.
-
-### getVisitDuration
-
-Hiermee kunnen gebruikers de native interface voor gegevensverzameling gebruiken om de getVisitDuration-insteekmodule in te stellen en te configureren.
-
-### getVisitNum
-
-Hiermee kunnen gebruikers de native interface voor gegevensverzameling gebruiken om de getVisitNum-plug-in in te stellen en te configureren.
+>[!NOTE]
+>
+>Voor meer informatie over de bovenstaande plug-ins raadpleegt u de [Analysedocumentatie](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).

@@ -1,10 +1,10 @@
 ---
 title: De extensie Adobe Experience Platform Web SDK configureren
-description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in de UI van de Inzameling van Gegevens te vormen.
+description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in UI te vormen.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Met de tagextensie Adobe Experience Platform Web SDK worden gegevens vanuit wegeigenschappen via het Adobe Experience Platform Edge Network verzonden naar Adobe Experience Cloud. Met de extensie kunt u gegevens streamen naar een Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
 
-Dit document behandelt hoe te om de uitbreiding in de Inzameling UI van Gegevens te vormen.
+Dit document behandelt hoe te om de uitbreiding in UI te vormen.
 
 ## Aan de slag
 
-Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in de Inzameling UI van Gegevens en selecteer **[!UICONTROL Extensions]** tab. Onder het Web SDK van het Platform, selecteer **[!UICONTROL Configure]**.
+Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in UI en selecteer **[!UICONTROL Extensions]** tab. Onder het Web SDK van het Platform, selecteer **[!UICONTROL Configure]**.
 
 ![](../images/extension/overview/configure.png)
 

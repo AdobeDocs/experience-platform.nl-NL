@@ -2,9 +2,9 @@
 title: Overzicht Adobe Target-extensie
 description: Meer informatie over de tagextensie voor Adobe Target in Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1184'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Als u de extensie wilt configureren, opent u de [!UICONTROL Extensions] , plaats
 
 ### at.js Settings
 
-Al uw montages at.js, met uitzondering van de Onderbreking worden automatisch teruggewonnen van uw configuratie at.js in het gebruikersinterface van het Doel. De uitbreiding wint slechts montages van het Doel gebruikersinterface terug wanneer het eerst wordt toegevoegd, zodat zouden alle montages in de UI van de Inzameling van Gegevens moeten worden beheerd als de extra updates nodig zijn.
+Al uw montages at.js, met uitzondering van de Onderbreking worden automatisch teruggewonnen van uw configuratie at.js in het gebruikersinterface van het Doel. De extensie haalt alleen instellingen uit de gebruikersinterface van het doel op wanneer deze voor het eerst wordt toegevoegd. Alle instellingen moeten daarom in de gebruikersinterface worden beheerd als er extra updates nodig zijn.
 
 De volgende configuratieopties zijn beschikbaar:
 

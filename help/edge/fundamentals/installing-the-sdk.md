@@ -3,9 +3,9 @@ title: De SDK van Adobe Experience Platform Web installeren
 description: Leer hoe te om het Web SDK van het Experience Platform te installeren.
 keywords: web sdk installatie;installeren web sdk;Internet Explorer;promise;npm pakket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Er zijn drie ondersteunde manieren om Adobe Experience Platform Web SDK te gebruiken:
 
-1. De aangewezen manier om het Web SDK van Adobe Experience Platform te gebruiken is via de UI van de Inzameling van Gegevens.
+1. De aangewezen manier om het Web SDK van Adobe Experience Platform te gebruiken is via de UI van de Inzameling van Gegevens of Experience Platform UI.
 1. De SDK van het Web van Adobe Experience Platform is ook beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik.
 1. Gebruik de NPM-bibliotheek die EcmaScript 5- en EcmaScript 2015 (ES6)-modules exporteert.
 

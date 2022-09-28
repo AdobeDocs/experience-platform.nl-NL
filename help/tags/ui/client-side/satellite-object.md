@@ -2,9 +2,9 @@
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1290'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ In het gegeven voorbeeld, als een gegevenselement met een passende naam bestaat,
 
 >[!NOTE]
 >
->U kunt percentages gebruiken (`%`) syntaxis aan verwijzingsvariabelen voor vele vormgebieden in de UI van de Inzameling van Gegevens, die de behoefte vermindert om te roepen `_satellite.getVar()`. Als u bijvoorbeeld `%product%` heeft toegang tot de waarde van het element met productgegevens of de aangepaste variabele.
+>U kunt percentages gebruiken (`%`) syntaxis gebruiken om te verwijzen naar variabelen voor vele formuliervelden in uw tagimplementatie, waardoor de noodzaak om te bellen afneemt `_satellite.getVar()`. Als u bijvoorbeeld `%product%` heeft toegang tot de waarde van het element met productgegevens of de aangepaste variabele.
 
 Wanneer een gebeurtenis een regel teweegbrengt, kunt u het overeenkomstige regeltype overgaan `event` object in `_satellite.getVar()` zoals:
 

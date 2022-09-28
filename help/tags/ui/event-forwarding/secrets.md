@@ -1,10 +1,10 @@
 ---
 title: Secreten configureren bij doorsturen van gebeurtenissen
-description: Leer hoe te om geheimen in de Inzameling UI van Gegevens te vormen om aan eindpunten voor authentiek te verklaren die in gebeurtenis door:sturen eigenschappen worden gebruikt.
+description: Leer hoe te om geheimen in UI te vormen voor authentiek te verklaren aan eindpunten die in gebeurtenis worden gebruikt door:sturen eigenschappen.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Er zijn momenteel drie ondersteunde geheime typen:
 
 {style=&quot;table-layout:auto&quot;}
 
-Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor een gebeurtenis te vormen door:sturen ([!UICONTROL Edge]) in de UI voor gegevensverzameling.
+Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor een gebeurtenis te vormen door:sturen ([!UICONTROL Edge]) in de gebruikersinterface van het Experience Platform of de gebruikersinterface van de gegevensverzameling.
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor een
 
 ## Vereisten
 
-Deze gids veronderstelt dat u reeds vertrouwd met bent hoe te om middelen voor markeringen en gebeurtenis te beheren die in de Inzameling UI van Gegevens door:sturen, met inbegrip van hoe te om een gegevenselement en een gebeurtenis tot stand te brengen die regel door:sturen. Zie de handleiding op [resources beheren](../managing-resources/overview.md) als u een inleiding nodig hebt.
+Deze gids veronderstelt dat u reeds vertrouwd met bent hoe te om middelen voor markeringen en gebeurtenis te beheren door:sturen in UI, met inbegrip van hoe te om een gegevenselement en een gebeurtenis tot stand te brengen door:sturen regel. Zie de handleiding op [resources beheren](../managing-resources/overview.md) als u een inleiding nodig hebt.
 
 U hebt ook een goed inzicht in de publicatiestroom voor tags en het doorsturen van gebeurtenissen, inclusief hoe u bronnen aan een bibliotheek kunt toevoegen en een build op uw website kunt installeren om deze te testen. Zie de [publicatieoverzicht](../publishing/overview.md) voor meer informatie .
 
 ## Een geheim maken {#create}
 
-Om een geheim tot stand te brengen, login aan de Inzameling UI van Gegevens en open de gebeurtenis die bezit door:sturen u het geheim onder wilt toevoegen. Selecteer vervolgens **[!UICONTROL Secrets]** in de linkernavigatie, gevolgd door **[!UICONTROL Create New Secret]**.
+Als u een geheim wilt maken, selecteert u **[!UICONTROL Event Forwarding]** in de linkernavigatie, dan open de gebeurtenis die bezit door:sturen u het geheim onder wilt toevoegen. Selecteer vervolgens **[!UICONTROL Secrets]** in de linkernavigatie, gevolgd door **[!UICONTROL Create New Secret]**.
 
 ![Nieuw geheim maken](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ Als u een HTTP-geheim wilt maken, selecteert u **[!UICONTROL Simple HTTP]** van 
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Als u een OAuth 2-geheim wilt maken, selecteert u **[!UICONTROL OAuth 2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Geef in de onderstaande velden uw [[!UICONTROL Client ID] en [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] in de UI van de Inzameling van Gegevens is een aaneenschakeling tussen de gastheer van de vergunningsserver en de symbolische weg.
+Als u een OAuth 2-geheim wilt maken, selecteert u **[!UICONTROL OAuth 2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Geef in de onderstaande velden uw [[!UICONTROL Client ID] en [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] in UI is een aaneenschakeling tussen de gastheer van de vergunningsserver en de symbolische weg.
 
 ![OAuth 2-geheim](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ Door veelvoudige geheimen aan één enkel gegevenselement toe te wijzen en het o
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om geheimen in de Inzameling UI van Gegevens te beheren. Voor informatie over hoe u met geheimen communiceert met de Reactor-API raadpleegt u de [punthulplijn voor geheimen](../../api/endpoints/secrets.md).
+Deze gids behandelde hoe te om geheimen in UI te beheren. Voor informatie over hoe u met geheimen communiceert met de Reactor-API raadpleegt u de [punthulplijn voor geheimen](../../api/endpoints/secrets.md).

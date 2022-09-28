@@ -2,9 +2,9 @@
 title: Voorwaardetypen voor randextensies
 description: Leer hoe u een voorwaardetype-bibliotheekmodule voor een randuitbreiding in Adobe Experience Platform definieert.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ In dit document wordt beschreven hoe u voorwaardetypen voor een randextensie in 
 
 Voorwaardetypen bestaan gewoonlijk uit het volgende:
 
-1. Een mening die binnen UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
+1. Een mening die binnen UI van het Experience Platform en UI van de Inzameling van Gegevens wordt getoond die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
 2. Een bibliotheekmodule die in de tagruntime-bibliotheek wordt uitgestraald om de instellingen te interpreteren en een voorwaarde te evalueren.
 
 Als u bijvoorbeeld wilt beoordelen of de gebruiker zich op de host bevindt `example.com`, kan uw module er zo uitzien.

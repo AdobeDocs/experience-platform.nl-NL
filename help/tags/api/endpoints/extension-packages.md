@@ -2,9 +2,9 @@
 title: Extensiepakketten, eindpunt
 description: Leer hoe te om vraag aan het /extension_packages eindpunt in Reactor API te maken.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '956'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Een extensiepakket vertegenwoordigt een [extension](./extensions.md) zoals geschreven door een extensieontwikkelaar. Een extensiepakket definieert aanvullende mogelijkheden die beschikbaar kunnen worden gemaakt voor gebruikers van tags. Meestal worden deze mogelijkheden in de vorm van [regelcomponenten](./rule-components.md) (gebeurtenissen, voorwaarden en acties) en [gegevenselementen](./data-elements.md), maar kan ook hoofdmodules en gedeelde modules omvatten.
 
-De pakketten van de uitbreiding worden getoond in de uitbreidingscatalogus binnen de Inzameling van Gegevens UI voor gebruikers om te installeren. Het toevoegen van een extensiepakket aan een eigenschap wordt uitgevoerd door een extensie te maken met een koppeling naar het extensiepakket.
+Extensiepakketten worden weergegeven in de extensiecatalogus in de gebruikersinterface van de gegevensverzameling en in de gebruikersinterface van Adobe Experience Platform. Het toevoegen van een extensiepakket aan een eigenschap wordt uitgevoerd door een extensie te maken met een koppeling naar het extensiepakket.
 
 Een extensiepakket behoort tot de [bedrijf](./companies.md) van de ontwikkelaar die het heeft gemaakt.
 
