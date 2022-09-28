@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Sources
-source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
+source-git-commit: ae6ec330ce62024a0eccec0dbc5c29e9a4645de2
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '837'
 ht-degree: 5%
 
 ---
@@ -191,6 +191,7 @@ ht-degree: 5%
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
       - [Streaming gegevens verzamelen](tutorials/api/collect/streaming.md)
    - [Op aanvraag inslikken](tutorials/api/on-demand-ingestion.md)
+   - [Gegevens filteren op bronniveau](tutorials/api/filter.md)
    - [Dataflows bewaken](tutorials/api/monitor.md)
    - [Accounts bijwerken](tutorials/api/update.md)
    - [Gegevensstromen bijwerken](tutorials/api/update-dataflows.md)
