@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '2294'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Het werken met segmentdefinities vereist een begrip van de diverse [!DNL Experie
 
 Het is ook belangrijk om twee belangrijke termen te kennen die in dit document worden gebruikt en het verschil tussen hen te begrijpen:
 - **Segmentdefinitie**: De regelreeks die wordt gebruikt om zeer belangrijke eigenschappen of gedrag van een doelpubliek te beschrijven.
-- **Publiek**: De resulterende set profielen die voldoen aan de criteria van een segmentdefinitie.
+- **Publiek**: De resulterende set profielen die voldoen aan de criteria van een segmentdefinitie. Dit kan worden gemaakt via Adobe Experience Platform (publiek dat door Platforms wordt gegenereerd) of via een externe bron (extern gegenereerd publiek).
 
 ## Overzicht
 
@@ -62,7 +62,7 @@ Ga voor meer informatie naar de [segmentdashboardhulplijn](../../dashboards/guid
 >title="Alle segmenten aan schema toevoegen"
 >abstract="Schakel deze optie in om alle batchevaluatiesegmenten op te nemen in de geplande dagelijkse update om 3:30 uur UTC. Uitschakelen om alle segmenten uit de geplande update te verwijderen."
 
-Selecteer **[!UICONTROL Browse]** voor een lijst met alle segmentdefinities voor uw IMS-organisatie.
+Selecteer **[!UICONTROL Browse]** om een lijst van alle segmentdefinities voor uw organisatie te zien.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ Selecteren **[!UICONTROL Create segment]** gaat u naar de Segment Builder. Voor 
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-De rechterzijbalk bevat informatie over alle segmenten binnen de IMS-organisatie, met een overzicht van het totale aantal segmenten, de laatste evaluatiedatum, de volgende evaluatiedatum en een uitsplitsing van de segmenten naar evaluatiemethode.
+De rechterzijbalk bevat informatie over alle segmenten binnen de organisatie, met een overzicht van het totale aantal segmenten, de laatste evaluatiedatum, de volgende evaluatiedatum en een uitsplitsing van de segmenten naar evaluatiemethode.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ De pagina met segmentdetails wordt weergegeven. Bovenaan, is er een samenvatting
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### Overzicht van segment
+### Overzicht van segment {#segment-summary}
 
 De **[!UICONTROL Segment summary]** bevat informatie zoals de ID, naam, beschrijving en details van de kenmerken.
 
@@ -191,6 +191,80 @@ Het toelaten van uw segmentdefinities voor geplande evaluatie kan worden gedaan 
 Planningen kunnen momenteel alleen worden gemaakt met behulp van de API. Voor gedetailleerde stappen bij het maken, bewerken en werken met planningen met behulp van de API, volgt u de zelfstudie voor het evalueren en benaderen van segmentresultaten, met name de sectie over [geplande evaluatie met behulp van de API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Doelgroepen {#audiences}
+
+>[!IMPORTANT]
+>
+>De publieksfunctionaliteit is momenteel beperkt in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+Selecteer **[!UICONTROL Audiences]** tabblad om een lijst weer te geven met alle soorten publiek voor uw organisatie.
+
+![Een lijst met soorten publiek voor uw organisatie.](../images/ui/overview/list-audiences.png)
+
+Standaard wordt in deze weergave informatie weergegeven over het publiek, zoals de naam, het aantal profielen, de oorsprong, de datum waarop het bestand is gemaakt en de datum waarop het laatst is gewijzigd.
+
+U kunt de ![Tabel aanpassen](../images/ui/overview/customize-table.png) om te wijzigen welke velden worden weergegeven.
+
+![De knop Tabel aanpassen is gemarkeerd. Als u deze knop selecteert, kunt u de velden aanpassen die op de pagina Soorten publiek worden weergegeven.](../images/ui/overview/select-customize-table.png)
+
+Er wordt een pop-up weergegeven met alle velden die in de tabel kunnen worden weergegeven.
+
+![De kenmerken die kunnen worden weergegeven voor de sectie Soorten publiek bladeren.](../images/ui/overview/customize-table-attributes.png)
+
+| Veld | Beschrijving |
+| ----- | ----------- | 
+| [!UICONTROL Name] | De naam van het publiek. |
+| [!UICONTROL Profile count] | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
+| [!UICONTROL Origin] | De oorsprong van het publiek. Als dit publiek Platform-geproduceerd was, zal het een oorsprong van de Dienst van de Segmentatie hebben. |
+| [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Published`, en `Archived`. |
+| [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn `On Demand`, `Scheduled`, en `Continuous`. |
+| [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
+| [!UICONTROL Created] | De tijd en datum waarop het publiek is gemaakt. |
+| [!UICONTROL Last updated] | De tijd en datum waarop het publiek voor het laatst is gemaakt. |
+| [!UICONTROL Access labels] | De toegangslabels voor het publiek. De etiketten van de toegang staan u toe om datasets en gebieden volgens gebruiksbeleid te categoriseren dat op die gegevens van toepassing is. Deze labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
+
+U kunt **[!UICONTROL Create Audience]** om een publiek te maken.
+
+![De knop voor een publiek maken is gemarkeerd en geeft aan waar u wilt selecteren om een publiek te maken.](../images/ui/overview/create-audience.png)
+
+Er wordt een pop-up weergegeven, zodat u kunt kiezen tussen het samenstellen van een publiek of het samenstellen van regels.
+
+![Een popover die de twee soorten publiek toont u kunt tot stand brengen.](../images/ui/overview/create-audience-type.png)
+
+Selecteren **[!UICONTROL Compose Audiences]** neemt u aan de Bouwer van de Publiek. Lees voor meer informatie over het maken van soorten publiek de [Handleiding Audience Builder](./audience-builder.md).
+
+Selecteren **[!UICONTROL Build Rule]** gaat u naar de Segment Builder. Voor meer informatie over het maken van segmenten leest u de [Handleiding Segment Builder](./segment-builder.md)
+
+## Details publiek {#audience-details}
+
+Als u meer details over een specifiek publiek wilt zien, selecteert u de naam van een publiek in het dialoogvenster [!UICONTROL Audiences] tab.
+
+De pagina met publieksdetails wordt weergegeven. Deze pagina verschilt in details afhankelijk van het feit of het publiek is gegenereerd met Adobe Experience Platform of van een externe bron zoals Audience Orchestration.
+
+### Door Platforms gegenereerd publiek
+
+Lees voor meer informatie over publiek dat door Platforms wordt gegenereerd de [overzichtssectie segment](#segment-summary).
+
+### Extern gegenereerd publiek
+
+Boven aan de pagina met publieksdetails ziet u een overzicht van het publiek en details over de dataset waarin het publiek wordt opgeslagen.
+
+![De verstrekte details voor een extern geproduceerd publiek.](../images/ui/overview/externally-generated-audience.png)
+
+De **[!UICONTROL Audience summary]** bevat informatie zoals de ID, naam, beschrijving en details van de kenmerken.
+
+De **[!UICONTROL Dataset details]** bevat informatie zoals de naam, beschrijving, tabelnaam, bron en schema. U kunt **[!UICONTROL View dataset]** voor meer informatie over de dataset.
+
+| Veld | Beschrijving |
+| ----- | ----------- |
+| [!UICONTROL Name] | De naam van de gegevensset. |
+| [!UICONTROL Description] | De beschrijving van de gegevensset. |
+| [!UICONTROL Table name] | De tabelnaam van de gegevensset. |
+| [!UICONTROL Source] | De bron van de gegevensset. Voor extern gegenereerde soorten publiek wordt deze waarde **Schema**. |
+| [!UICONTROL Schema] | Het type van XDM schema dat de dataset aan beantwoordt. |
+
+Voor meer informatie over gegevenssets leest u de [Overzicht van gegevenssets](../../catalog/datasets/overview.md).
 
 ## Streaming segmentering {#streaming-segmentation}
 
