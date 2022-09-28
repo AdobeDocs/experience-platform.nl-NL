@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
+source-git-commit: f1f7bef6bcac5abfaa01f10849f41a55fef797e5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '208'
 ht-degree: 6%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 6%
    - [SQL-functies in Spark](sql/spark-sql-functions.md)
    - [Opdrachten Metagegevens](sql/metadata.md)
    - [Vooraf voorbereide instructies](sql/prepared-statements.md)
+   - [Gegevenssetvoorbeelden](sql/dataset-samples.md)
 - Client verbinden met Query-service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [SSL-modi](./clients/ssl-modes.md)
