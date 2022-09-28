@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
+source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1773'
 ht-degree: 1%
 
 ---
@@ -12,12 +12,95 @@ ht-degree: 1%
 
 **Releasedatum: 28 september 2022**
 
+Nieuwe functies in Adobe Experience Platform:
+
+- [Gegevenshygiëne](#data-hygiene)
+- [[!UICONTROL Privacy Console]](#privacy-console)
+
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [Controlelogboeken](#audit-logs)
+- [Gegevensverzameling](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Bronnen](#sources)
+
+## Gegevenshygiëne {#data-hygiene}
+
+Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
+
+Met de Adobe Experience Platform-mogelijkheden voor gegevenshygiëne kunt u uw gegevens opschonen door automatische gegevenssetvervaldatums te plannen en via programmacode consumentengegevens te verwijderen op basis van identiteit.
+
+>[!NOTE]
+>
+>Consumentenverwijderingsmogelijkheden zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
+
+Raadpleeg de volgende documentatie om aan de slag te gaan met gegevenshygiëne:
+
+- [Overzicht van gegevenshygiëne](../../hygiene/home.md): Leer de grondbeginselen van de mogelijkheden van de Platform van de gegevenshygiëne.
+- [[!UICONTROL Data Hygiene] UI-hulplijn](../../hygiene/ui/overview.md): Leer hoe te om datasetvervaldatums te plannen en de consument schrapt verzoeken binnen het gebruikersinterface van de Platform.
+- [Handleiding voor API voor gegevenshygiëne](../../hygiene/api/overview.md): Alle activiteiten van de gegevenshygiëne die u in UI kunt uitvoeren kunnen ook programmatically zijn
+
+## [!UICONTROL Privacy Console] {#privacy-console}
+
+De [!UICONTROL Privacy Console] in de interface van het Experience Platform biedt een dashboardweergave van belangrijke inzichten van privacygerelateerde functies, zoals [verzoeken van de betrokkene van Privacy Service], [gegevenshygiëne-werkorders], en [auditlogboeken]. De console biedt ook verschillende gebruiksaanwijzingen voor in-product toepassingen om u te helpen bij het doorlopen van gebruikelijke workflows voor privacy.
+
+Zie de [Overzicht van de privacyconsole](../../landing/governance-privacy-security/privacy-console.md) voor meer informatie over de functie.
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen voor de klant. Dit staat voor marketing analisten toe om modellen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
+
+### Attribution AI
+
+Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+
+| Functie | Beschrijving |
+| --- | --- |
+| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) voor meer informatie. |
+| Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
+
+Voor meer informatie over Attribution AI, [Overzicht van Attribution AI](../../intelligent-services/attribution-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
+
+### Customer AI
+
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren.
+
+| Functie | Beschrijving |
+| --- | --- |
+| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md) voor meer informatie. |
+| Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
+
+Voor meer informatie over AI van de Klant, lees [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
+
+## Controlelogboeken {#audit-logs}
+
+Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en mogelijkheden te controleren. De auditlogboeken bevatten informatie over wie wat heeft gedaan en wanneer.
+
+**Bijgewerkte functies**
+
+| Functie | Naam | Beschrijving |
+| --- | --- | --- |
+| Toegevoegde bronnen | <ul><li>Attribution AI-instantie</li><li>AI-exemplaar van klant</li><li>DataStream</li></ul> | De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt. Als de eigenschap wordt toegelaten moet u niet manueel logboekinzameling toelaten. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over de verschillende middel-specifieke gebeurtenistypen die door controlelogboeken in Platform worden gevolgd, verwijs naar [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Gegevensverzameling
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Integratie van linkernavigatie in de gebruikersinterface van het Platform | Alle mogelijkheden die eerder exclusief waren aan de UI van de Inzameling van Gegevens (met inbegrip van markeringen, gebeurtenis door:sturen, en gegevensstromen) zijn nu ook beschikbaar door de linkernavigatie in Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -77,32 +160,6 @@ Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag
 | Ondersteuning voor het verwijderen van gegevenssets | De Dienst van de identiteit steunt nu dataset schrapping wanneer het verzoeken door [Catalogusservice-API](https://developer.adobe.com/experience-platform-apis/references/catalog/), UI of Data Hygiene. Lees de handleiding op [het schrappen van datasets in UI](../../catalog/datasets/user-guide.md#delete-a-dataset) voor meer informatie . |
 
 Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md).
-
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
-
-Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen voor de klant. Dit staat voor marketing analisten toe om modellen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
-
-### Attribution AI
-
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
-
-| Functie | Beschrijving |
-| --- | --- |
-| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) voor meer informatie. |
-| Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
-
-Voor meer informatie over Attribution AI, [Overzicht van Attribution AI](../../intelligent-services/attribution-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
-
-### Customer AI
-
-De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren.
-
-| Functie | Beschrijving |
-| --- | --- |
-| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md) voor meer informatie. |
-| Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
-
-Voor meer informatie over AI van de Klant, lees [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
 
 ## Bronnen {#sources}
 
