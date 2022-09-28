@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 962baf6258629f319c24ec1503ea82f04b6c9c95
+source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 0%
@@ -304,6 +304,7 @@ Een succesvolle reactie keert de details van de dataflow specificatie verantwoor
   "version": "1.0",
   "attributes": {
     "isSourceFlow": true,
+    "flacValidationSupported": true,
     "frequency": "batch",
     "notification": {
       "category": "sources",
@@ -481,16 +482,21 @@ Een succesvolle reactie keert de details van de dataflow specificatie verantwoor
         "type": "object",
         "description": "defines various params required for creating flow run.",
         "properties": {
+          "startTime": {
+            "type": "integer",
+            "description": "An integer that defines the start time of the run. The value is represented in Unix epoch time."
+          },
           "windowStartTime": {
             "type": "integer",
-            "description": "The start time for the dataflow in epoch time."
+            "description": "An integer that defines the start time of the window against which data is to be pulled. The value is represented in Unix epoch time."
           },
           "windowEndTime": {
             "type": "integer",
-            "description": "The end time for the dataflow in epoch time."
+            "description": "An integer that defines the end time of the window against which data is to be pulled.  The value is represented in Unix epoch time."
           }
         },
         "required": [
+          "startTime",
           "windowStartTime",
           "windowEndTime"
         ]
