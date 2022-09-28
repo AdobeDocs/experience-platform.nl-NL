@@ -4,9 +4,9 @@ description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Ad
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De API voor gegevenshygiëne bevindt zich momenteel in een bètaversie. De in dit document beschreven functionaliteit kan worden gewijzigd.
+>Dit eindpunt vertegenwoordigt de bètafunctionaliteit voor consument schrapt. Voor de meest recente functionaliteit gebruikt u de [`/workorder` eindpunt](./workorder.md) in plaats daarvan.
 
 Met de API voor gegevenshygiëne kunt u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch corrigeren of verwijderen.
 

@@ -2,10 +2,10 @@
 title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 1%
+source-wordcount: '415'
+ht-degree: 0%
 
 ---
 
@@ -39,13 +39,17 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Dit document bevat een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/api-guide.md#sample-api) in de gids Aan de slag voor Experience Platform APIs.
 
-<!-- ## Work orders
-
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
-
 ## Verlopen gegevensset
 
 Een gegevenssetvervaldatum is een tijd-vertraagde actie &quot;schrapt een dataset&quot;. Door een datasetvervaldatum te creëren, specificeert u een toekomstige tijd waarbij die dataset zou moeten worden geschrapt. Zie de [eindpuntgids gegevensset](./dataset-expiration.md) voor meer informatie over het plannen van datasetvervaldata in API.
+
+## Verwijderen van consumenten
+
+>[!NOTE]
+>
+>Verwijderen door de consument is alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Sheild hebben aangeschaft.
+
+Met de API voor gegevenshygiëne kunt u alle records verwijderen die zijn gekoppeld aan een consumentenidentiteit in een of alle gegevenssets. Alle taken op het gebied van gegevenshygiëne die de identiteit van de consument verwijderen, worden weergegeven door een constructie die een werkorder wordt genoemd. Zie de [eindpuntgids voor werkorders](./workorder.md) voor meer informatie over het werken met de consument verwijdert u de API.
 
 ## Quota
 
