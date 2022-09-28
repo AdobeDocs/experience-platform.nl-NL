@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2737'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,9 @@ Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer va
 
 Met de Adobe Experience Platform-mogelijkheden voor gegevenshygiëne kunt u uw gegevens opschonen door automatische gegevenssetvervaldatums te plannen en via programmacode consumentengegevens te verwijderen op basis van identiteit.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Consumentenverwijderingsmogelijkheden zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
 
 Raadpleeg de volgende documentatie om aan de slag te gaan met gegevenshygiëne:
 
@@ -115,6 +115,9 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 | Functie | Beschrijving |
 | --- | --- |
 | Label tijdens gebruik | Wanneer het label in de widgetbibliotheek wordt weergegeven, identificeert het in-use-label gemakkelijk de aanwezigheid van bestaande widgets in het dashboard. Hierdoor kunt u dubbel werk gemakkelijk voorkomen, maar u kunt nog steeds dezelfde widget meer dan één keer toevoegen als u wilt. |
+| Door gebruiker gedefinieerde dashboards | Door de gebruiker gedefinieerde dashboards helpen u om inzichten te versnellen en visualisaties aan te passen door u in staat te stellen aangepaste dashboards te maken en te beheren. Met door de gebruiker gedefinieerde dashboards kunt u op maat gemaakte widgets maken, toevoegen en bewerken om belangrijke metriek die voor uw organisatie van belang is, zichtbaar te maken. Lees de [functiehandleiding](../../dashboards/user-defined-dashboards.md) voor meer informatie. |
+| Gegevensmodel gegevens Platform klantgegevens | De eigenschap van het Model van Gegevens van de Gegevens van de Klant van het Platform van Gegevens (CDP) benadrukt de gegevensmodellen en SQL die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets macht. U kunt deze SQL vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Lees de [Handleiding CDP-gegevensmodel voor ingesloten gegevens](../../dashboards/cdp-insights-data-model.md) voor meer informatie. |
+| De widget Rapport voor publiek-overlap | Deze widget is beschikbaar voor beide [!UICONTROL Profiles] en [!UICONTROL Segments] dashboards. Het rapport bevat een geordende lijst met soorten publiek die worden gerangschikt op basis van de hoogste of laagste overlappende percentages voor het gekozen segment. Van de [!UICONTROL Profiles] het dashboard u kunt filteren en bekijken uw publieksoverlap door beleid van alle beschikbare segmenten samen te voegen. De [!UICONTROL Segments] Met dashboards kunt u de publieksoverlap filteren op een bepaald segment.<br>Gebruik deze analyse om nieuwe, krachtige segmenten te bouwen en te vermijden verzendend het zelfde publiek naar verschillende bestemmingen. Het verslag helpt ook verborgen inzichten te identificeren om segmentatie te verbeteren of unieke profielen te vinden om na te streven. |
 
 Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
 
@@ -127,6 +130,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Functie | Beschrijving |
 | --- | --- |
 | Integratie van linkernavigatie in de gebruikersinterface van het Platform | Alle mogelijkheden die eerder exclusief waren aan de UI van de Inzameling van Gegevens (met inbegrip van markeringen, gebeurtenis door:sturen, en gegevensstromen) zijn nu ook beschikbaar door de linkernavigatie in Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform. |
+| Toewijzing door gebruiker in tags en gebeurtenis doorsturen | Als aanbieding beschikbaar is [!UICONTROL Properties] in markeringen en gebeurtenis door:sturen, toont elk vermeld bezit nu wanneer het het laatst werd bijgewerkt, en welke gebruiker de update maakte. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -2,18 +2,14 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
 
-# Door gebruiker gedefinieerde dashboards (bèta)
-
->[!IMPORTANT]
->
->De door de gebruiker gedefinieerde dashboardfunctie bevindt zich in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
+# Door gebruiker gedefinieerde dashboards
 
 Met Adobe Experience Platform-dashboards kunt u snel inzicht krijgen en de visualisatie aanpassen via de door de gebruiker gedefinieerde dashboards-functie. Met deze functie kunt u aangepaste dashboards maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren.
 

@@ -1,20 +1,17 @@
 ---
 title: Gegevensmodel gegevens klant-Platform (CDP)
 description: Leer hoe te om SQL vragen van de Modellen van Gegevens van Gegevens van CDP van Inzichten te gebruiken om uw eigen CDP rapporten voor uw marketing en KPI gebruiksgevallen aan te passen.
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-# (Bèta) Customer Data Platform (CDP) Insights Data Model
+# Gegevensmodel gegevens klant-Platform (CDP)
 
->[!IMPORTANT]
->
->De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
-
-De eigenschap van het Model van Gegevens van de Gegevens van de Klant van het Platform van Gegevens (CDP) benadrukt de gegevensmodellen en SQL die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets macht. U kunt deze SQL vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw gebruikte dashboards worden gebruikt.
+De eigenschap van het Model van Gegevens van de Gegevens van de Klant van het Platform van Gegevens (CDP) benadrukt de gegevensmodellen en SQL die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets macht. U kunt deze SQL vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt.
 
 ## Vereisten
 
