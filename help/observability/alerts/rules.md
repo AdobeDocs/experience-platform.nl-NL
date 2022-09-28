@@ -4,9 +4,9 @@ title: Standaardwaarschuwingsregels
 description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
+source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -92,6 +92,18 @@ De volgende waarschuwingsregels gelden specifiek voor [bestemmingen](../../desti
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Het percentage kippingen overschrijdt de drempel | Deze waarschuwing wordt geactiveerd wanneer de verhouding van overgeslagen id&#39;s tot totale id&#39;s een drempel overschrijdt. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Query-service
+
+De volgende waarschuwingsregels gelden specifiek voor [Query-service](../../query-service/home.md):
+
+| Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
+| --- | --- | --- |
+| Ad-hocinformatie over Query Service | Ad-hocsucces met Query Service | Deze waarschuwing wordt geactiveerd wanneer een ad-hocschemataak correct is voltooid. |
+| Ad-hocvertragingen, fouten en fouten in de zoekservice | Ad-hocfout met Query Service | Deze waarschuwing wordt geactiveerd wanneer een ad-hocschemaaktaak mislukt. |
+| Query Service-informatie voor geplande query | Query Service gepland starten van query | Deze waarschuwing wordt geactiveerd wanneer een geplande query wordt uitgevoerd. |
+| Query Service-informatie voor geplande query | Zoekservice gepland succes met query | Deze waarschuwing wordt geactiveerd wanneer een geplande querytaak correct is voltooid. |
+| De Dienst van de vraag geplande vraagvertragingen, mislukkingen en fouten | query-service met geplande queryfout | Deze waarschuwing wordt geactiveerd wanneer een geplande querytaak mislukt. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
