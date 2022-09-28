@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2485'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,11 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Controlelogboeken](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [Gegevensverzameling](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
+- [Query-service](#query-service)
 - [Bronnen](#sources)
 
 ## Op kenmerken gebaseerd toegangsbeheer {#abac}
@@ -106,7 +108,17 @@ Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en
 
 Voor meer informatie over de verschillende middel-specifieke gebeurtenistypen die door controlelogboeken in Platform worden gevolgd, verwijs naar [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Gegevensverzameling
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+
+| Functie | Beschrijving |
+| --- | --- |
+| Label tijdens gebruik | Wanneer het label in de widgetbibliotheek wordt weergegeven, identificeert het in-use-label gemakkelijk de aanwezigheid van bestaande widgets in het dashboard. Hierdoor kunt u dubbel werk gemakkelijk voorkomen, maar u kunt nog steeds dezelfde widget meer dan één keer toevoegen als u wilt. |
+
+Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
+
+## Gegevensverzameling {#data-collection}
 
 Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
@@ -178,6 +190,19 @@ Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag
 | Ondersteuning voor het verwijderen van gegevenssets | De Dienst van de identiteit steunt nu dataset schrapping wanneer het verzoeken door [Catalogusservice-API](https://developer.adobe.com/experience-platform-apis/references/catalog/), UI of Data Hygiene. Lees de handleiding op [het schrappen van datasets in UI](../../catalog/datasets/user-guide.md#delete-a-dataset) voor meer informatie . |
 
 Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md).
+
+## Query-service {#query-service}
+
+De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Alert-abonnements-API | Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het Platform of beide. Op dit moment kunnen querywaarschuwingen alleen worden geabonneerd op [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| Gegevenssetvoorbeelden | De datasetsteekproeven van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer verminderde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. |
+
+Voor meer informatie over [!DNL Query Service], zie de [[!DNL Query Service] overzicht](../../query-service/home.md).
 
 ## Bronnen {#sources}
 
