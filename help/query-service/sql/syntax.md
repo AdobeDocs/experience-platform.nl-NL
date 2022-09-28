@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
+source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3160'
 ht-degree: 2%
 
 ---
@@ -488,6 +488,30 @@ Als u de waarde voor een instelling wilt retourneren, gebruikt u `SET [property 
 ## PostgreSQL-opdrachten
 
 De subsecties hieronder behandelen de bevelen PostgreSQL die door de Dienst van de Vraag worden gesteund.
+
+### TABEL ANALYSEREN
+
+De `ANALYZE TABLE` het bevel berekent statistieken voor een lijst op de versnelde opslag. De statistieken worden berekend over uitgevoerde vragen CTAS of ITAS voor een bepaalde lijst op versnelde opslag.
+
+**Voorbeeld**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na gebruik van de `ANALYZE TABLE` opdracht:-
+
+| Berekende waarden | Beschrijving |
+|---|---|
+| `field` | De naam van de kolom in een tabel. |
+| `data-type` | Het acceptabele type gegevens voor elke kolom. |
+| `count` | Het aantal rijen dat een waarde bevat die niet gelijk is aan null voor dit veld. |
+| `distinct-count` | Het aantal unieke of verschillende waarden voor dit veld. |
+| `missing` | Het aantal rijen met een null-waarde voor dit veld. |
+| `max` | De maximumwaarde uit de geanalyseerde tabel. |
+| `min` | De minimumwaarde uit de geanalyseerde tabel. |
+| `mean` | De gemiddelde waarde van de geanalyseerde tabel. |
+| `stdev` | De standaardafwijking van de geanalyseerde tabel. |
 
 ### BEGINNEN
 
