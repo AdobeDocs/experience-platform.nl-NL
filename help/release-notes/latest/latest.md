@@ -1,9 +1,9 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
-description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
+title: Opmerkingen bij de release van Adobe Experience Platform
+description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
+source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '3020'
 ht-degree: 1%
 
 ---

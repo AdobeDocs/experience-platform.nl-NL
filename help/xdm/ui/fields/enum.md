@@ -5,9 +5,9 @@ title: Enum Fields en voorgestelde waarden in UI bepalen
 description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: e515e32588991e468429c9256533732d04a4339f
+source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Selecteren **[!UICONTROL Enums and Suggested Values]** selecteert u vervolgens *
 
 ![Afbeelding met de optie Suggesties voor waarden die is geselecteerd in de gebruikersinterface](../../images/ui/fields/enum/suggested-add-row.png)
 
-Onder de **[!UICONTROL Display Name]** kolom, verstrek een mensvriendelijke naam voor de waarde aangezien u het in de Segmentatie UI wilt verschijnen. Als u meer voorgestelde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** en herhaal dit proces zo nodig. Als u een eerder toegevoegde rij wilt verwijderen, selecteert u het verwijderpictogram (![Afbeelding van het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png)) naast de desbetreffende rij.
+Onder de **[!UICONTROL Display Name]** kolom, verstrek een mensvriendelijke naam voor de waarde aangezien u het in de Segmentatie UI wilt verschijnen. Als u meer voorgestelde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** en herhaal dit proces zo nodig. Als u een eerder toegevoegde rij wilt verwijderen, selecteert u ![het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
 
 Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
@@ -61,25 +61,25 @@ Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te p
 
 ### Voorgestelde waarden voor standaardvelden beheren
 
-Sommige velden van standaard XDM-componenten bevatten hun eigen voorgestelde waarden, zoals `eventType` van de [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). Wanneer u deze velden in uw schema&#39;s gebruikt, kunt u met de beschikbare schakelopties bepalen welke bestaande voorgestelde waarden moeten worden gebruikt.
+Sommige velden van standaard XDM-componenten bevatten hun eigen voorgestelde waarden, zoals `eventType` van de [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). Hoewel u aanvullende voorgestelde waarden voor een standaardveld kunt maken, kunt u voorgestelde waarden die niet door uw organisatie zijn gedefinieerd, niet wijzigen of verwijderen. Als u een standaardveld in de gebruikersinterface weergeeft, worden de voorgestelde waarden weergegeven, maar alleen-lezen.
 
 ![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/suggested-standard.png)
 
-Net als aangepaste velden selecteert u **[!UICONTROL Add row]** om uw eigen voorgestelde waarden voor standaardvelden toe te voegen.
+Als u nieuwe voorgestelde waarden voor een standaardveld wilt toevoegen, selecteert u **[!UICONTROL Add row]**. Als u een voorgestelde waarde wilt verwijderen die eerder door uw organisatie is toegevoegd, selecteert u ![het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
 
-![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/suggested-standard.png)
+![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### Voorgestelde waarden voor standaardvelden verwijderen
+<!-- ### Removing suggested values for standard fields
 
-Alleen voorgestelde waarden die u definieert, kunnen uit een standaardveld worden verwijderd. Bestaande gesuggereerde waarden kunnen worden uitgeschakeld, zodat ze niet meer worden weergegeven in het vervolgkeuzemenu voor segmentatie, maar niet rechtstreeks kunnen worden verwijderd.
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-Neem bijvoorbeeld een profielschema waarin de voorgestelde waarde voor de standaard `person.gender` veld is uitgeschakeld:
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
 
-![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/standard-enum-disabled.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
 
-In dit voorbeeld wordt de weergavenaam &quot;[!UICONTROL Non-specific]&quot; is nu uitgeschakeld zodat deze niet meer wordt weergegeven in de vervolgkeuzelijst voor segmentatie. De waarde `non_specific` maakt nog steeds deel uit van de lijst van opgesomde velden en is daarom nog steeds toegestaan bij inname. Met andere woorden, u kunt de eigenlijke opsommingswaarde voor het standaardveld niet uitschakelen, omdat dit in strijd is met het beginsel dat alleen wijzigingen worden toegestaan die een veld minder restrictief maken.
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-Zie de [sectie hieronder](#evolution) voor meer informatie over de regels voor het bijwerken van lijsten en voorgestelde waarden voor bestaande schemagebieden.
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## Evolutieregels voor opsommingen en voorgestelde waarden {#evolution}
 
@@ -109,6 +109,13 @@ Als in verschillende veldgroepen wordt verwezen naar hetzelfde aangepaste veldpa
 
 * Eventuele extra voorgestelde waarden zijn **AANGEVOEGD** in de unie .
 * Als dezelfde extra voorgestelde waarde in meer dan één schema is gedefinieerd, zijn deze waarden **SAMENGEVOEGD** in de unie . Met andere woorden, dezelfde voorgestelde waarde wordt niet twee keer na het samenvoegen weergegeven.
+
+## Beperkingen voor validatie
+
+Vanwege de huidige systeembeperkingen zijn er twee gevallen waarin een enum niet door het systeem wordt gevalideerd tijdens inname:
+
+1. De opsomming wordt gedefinieerd op een [arrayveld](./array.md).
+1. De opsomming wordt meer dan één niveau diep gedefinieerd in de schemahiërarchie.
 
 ## Volgende stappen
 
