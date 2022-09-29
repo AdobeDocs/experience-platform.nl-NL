@@ -2,7 +2,7 @@
 title: Integreer de Steun van IAB TCF 2.0 gebruikend markeringen en de Uitbreiding van SDK van het Web van het Platform
 description: Leer hoe u IAB TCF 2.0-toestemming voor tags en de Adobe Experience Platform Web SDK-extensie instelt.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 0%
@@ -13,23 +13,23 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een markeringsbezit voor het verzenden van IAB TCF 2.0 toestemmingsinformatie naar Adobe gebruikend de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform.
 
-Als u geen markeringen wenst te gebruiken, te verwijzen gelieve naar de gids op [gebruikend IAB TCF 2.0 zonder markeringen](./without-launch.md).
+Als u geen tags wilt gebruiken, raadpleegt u de handleiding op [IAB TCF 2.0 gebruiken zonder tags](./without-launch.md).
 
 ## Aan de slag
 
 Om IAB TCF 2.0 met markeringen en de uitbreiding van SDK van het Web van het Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
 
-Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwing de [Adobe Experience Platform Web SDK overview](../../home.md) en de [Veelgestelde vragen](../../web-sdk-faq.md) documentatie.
+Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwing de [Overzicht Adobe Experience Platform Web SDK](../../home.md) en de [Veelgestelde vragen](../../web-sdk-faq.md) documentatie.
 
 ## Standaardtoestemming instellen
 
-Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u Experience Events wilt bewaren voor klanten die geen toestemmingskoekje hebben, plaats dit aan `pending`. Als u Experience Events wilt verwijderen voor klanten die geen toestemmingscookie hebben, stelt u deze in op `out`. U kunt ook een gegevenselement gebruiken om de standaardwaarde voor toestemming dynamisch in te stellen.
+Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u de Gebeurtenissen van de Ervaring voor klanten wilt een rij vormen die geen toestemmingskoekje hebben, plaats dit aan `pending`. Als u Experience Events wilt verwijderen voor klanten die geen toestemmingscookie hebben, stelt u deze in op `out`. U kunt ook een gegevenselement gebruiken om de standaardwaarde voor toestemming dynamisch in te stellen.
 
-Voor meer informatie over hoe te om standaardtoestemming te vormen, verwijs naar [standaardtoestemmingssectie](../../fundamentals/configuring-the-sdk.md#default-consent) in de de configuratiegids van SDK.
+Voor meer informatie over hoe te om standaardtoestemming te vormen, verwijs naar [sectie voor standaardtoestemming](../../fundamentals/configuring-the-sdk.md#default-consent) in de SDK-configuratiegids.
 
 ## Profiel bijwerken met toestemmingsinformatie {#consent-code-1}
 
-Als u de handeling `setConsent` wilt aanroepen wanneer uw klanten hun voorkeuren hebben gewijzigd, moet u een nieuwe tagregel maken. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype van de &quot;Code van de Douane&quot;van de uitbreiding van de Kern.
+Om de `setConsent` actie wanneer uw klanten toestemmingsvoorkeur zijn veranderd, moet u een nieuwe markeringsregel tot stand brengen. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype &quot;van de Code van de Kern&quot;van de uitbreiding.
 
 Gebruik het volgende codevoorbeeld voor uw nieuwe gebeurtenis:
 
@@ -55,7 +55,7 @@ addEventListener();
 
 Deze aangepaste code doet twee dingen:
 
-* Stelt twee gegevenselementen in, één met de toestemmingstekenreeks en één met de markering `gdprApplies`. Dit is handig als u de handeling &quot;Instemming instellen&quot; later invult.
+* Stelt twee gegevenselementen in, één met de toestemmingstekenreeks en één met de `gdprApplies` markering. Dit is handig als u de handeling &quot;Instemming instellen&quot; later invult.
 
 * De regel wordt geactiveerd wanneer de voorkeuren voor toestemming zijn gewijzigd. De actie &quot;Goedkeuring instellen&quot; moet worden gebruikt wanneer de voorkeuren voor toestemming zijn gewijzigd. Voeg de actie &quot;Goedkeuring instellen&quot; toe aan de extensie en vul het formulier als volgt in:
 
@@ -64,7 +64,7 @@ Deze aangepaste code doet twee dingen:
 * Waarde: &quot;%IAB TCF toestemming String%&quot;
 * GDPR is van toepassing: &quot;%IAB TCF toestemming GDPR%&quot;
 
-![IAB-actie voor toestemming instellen](../../images/consent/iab-tcf/with-launch/iab-action.png)
+![IAB-actie voor toestemming instellen](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -72,13 +72,13 @@ Deze aangepaste code doet twee dingen:
 
 ## Een XDM-gegevenselement maken voor Experience Events
 
-De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de het schemagroep van de Privacy van de Gebeurtenis van de Ervaring aan uw schema hebt toegevoegd, zou u een `consentStrings` sleutel in het voorwerp XDM moeten hebben.
+De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de het schemagroep van de Privacy van de Gebeurtenis van de Ervaring aan uw schema hebt toegevoegd, zou u een `consentStrings` in het XDM-object.
 
 1. Selecteer **[!UICONTROL consentStrings]**.
 
-1. Kies **[!UICONTROL Provide individual items]** en selecteer **[!UICONTROL Add Item]**.
+1. Kies **[!UICONTROL Provide individual items]** en selecteert u **[!UICONTROL Add Item]**.
 
-1. Breid **[!UICONTROL consentString]** rubriek uit, en breid het eerste punt uit, dan vul de volgende waarden in:
+1. Breid uit **[!UICONTROL consentString]** en vouw het eerste item uit en vul vervolgens de volgende waarden in:
 
 * `consentStandard`: IAB TCF
 * `consentStandardVersion`: 2,0
@@ -113,7 +113,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-Deze code is identiek aan de vorige douanecode, behalve dat zowel `useractioncomplete` als `tcloaded` gebeurtenissen worden behandeld. De [vorige aangepaste code](#consent-code-1) wordt alleen geactiveerd wanneer de klant voor het eerst zijn voorkeuren kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
+Deze code is identiek aan de vorige aangepaste code, behalve dat beide `useractioncomplete` en `tcloaded` gebeurtenissen worden afgehandeld. De [vorige aangepaste code](#consent-code-1) wordt alleen geactiveerd wanneer de klant voor het eerst zijn voorkeuren kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
 
 Voeg een actie &quot;Send Event&quot;van de uitbreiding van SDK van het Web van het Platform toe. Kies in het XDM-veld het XDM-gegevenselement dat u in de vorige sectie hebt gemaakt.
 
@@ -123,4 +123,4 @@ Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of het platform van de Gegevens van de Klant in real time te integreren. Zie [IAB Transparency &amp; Consent Framework 2.0 overzicht](./overview.md) voor meer informatie.
+Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of het platform van de Gegevens van de Klant in real time te integreren. Zie de [IAB-overzicht van transparantie en instemming in framework 2.0](./overview.md) voor meer informatie .

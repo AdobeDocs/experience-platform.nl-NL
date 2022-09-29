@@ -2,7 +2,7 @@
 title: De extensie Adobe Experience Platform Web SDK configureren
 description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in UI te vormen.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 0%
@@ -19,15 +19,15 @@ Dit document behandelt hoe te om de uitbreiding in UI te vormen.
 
 Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in UI en selecteer **[!UICONTROL Extensions]** tab. Onder het Web SDK van het Platform, selecteer **[!UICONTROL Configure]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 Als u de extensie nog niet hebt geïnstalleerd, selecteert u de **[!UICONTROL Catalog]** tab. Van de lijst van beschikbare uitbreidingen, vind de uitbreiding van SDK van het Web van het Platform en selecteer **[!UICONTROL Install]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 In beide gevallen, komt u bij de configuratiepagina voor het Web SDK van het Platform aan. In de volgende secties worden de configuratieopties van de extensie uitgelegd.
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## Algemene configuratieopties
 
@@ -56,7 +56,7 @@ Zie de handleiding op [gegevensstromen](../datastreams/overview.md) voor meer in
 
 ## [!UICONTROL Privacy]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 De [!UICONTROL Privacy] kunt u configureren hoe de SDK de signalen van uw website voor gebruikerstoestemming verwerkt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven. Het standaard toestemmingsniveau wordt niet bewaard aan het profiel van de gebruiker. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
 
@@ -71,7 +71,7 @@ Gebruik uit of in afwachting als u expliciete gebruikerstoestemming voor uw bedr
 
 ## [!UICONTROL Identity]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL Migrate ECID from VisitorAPI]
 
@@ -83,13 +83,13 @@ Met deze optie kan de SDK proberen een gebruikers-id op te slaan in een cookie v
 
 ## [!UICONTROL Personalization]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 Als u bepaalde onderdelen wilt verbergen als uw site wordt geladen terwijl er gepersonaliseerde inhoud is geladen, kunt u de elementen opgeven die u wilt verbergen in de voorverborgen stijleditor. Vervolgens kunt u het standaard voorverborgen fragment dat u ontvangt, kopiëren en in het dialoogvenster `<head>`-element van uw HTML-site.
 
 ## [!UICONTROL Data Collection]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL Callback function]
 
@@ -105,7 +105,7 @@ Door gebrek, verzamelt SDK bepaalde contextgegevens betreffende apparaat, Web, m
 
 ## [!UICONTROL Advanced Settings]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL Edge base path]
 

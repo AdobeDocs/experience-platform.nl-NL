@@ -3,9 +3,9 @@ title: Overzicht gegevensstromen
 description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1692'
 ht-degree: 1%
 
 ---
@@ -20,29 +20,29 @@ In dit document worden de stappen beschreven voor het configureren van een gegev
 
 U kunt gegevensstromen in de UI van de Inzameling van Gegevens of UI van het Experience Platform tot stand brengen en beheren door te selecteren **[!UICONTROL Datastreams]** in de linkernavigatie.
 
-![Het tabblad Gegevensstromen in de gebruikersinterface](../images/datastreams/overview/datastreams-tab.png)
+![Het tabblad Gegevensstromen in de gebruikersinterface](../assets/datastreams/overview/datastreams-tab.png)
 
 De [!UICONTROL Datastreams] wordt een lijst weergegeven met bestaande gegevensstromen, inclusief de vriendelijke naam, id en datum die als laatste is gewijzigd. Selecteer de naam van een gegevensstroom die u wilt [zijn details bekijken en de diensten vormen](#view-details).
 
 Selecteer het pictogram Meer (**...**) voor een bepaalde gegevensstroom om meer opties weer te geven. Selecteren **[!UICONTROL Edit]** om de [basisconfiguratie](#configure) voor de gegevensstroom, of selecteer **[!UICONTROL Delete]** om de gegevensstroom te verwijderen.
 
-![Opties om bestaande gegevensstroom te bewerken of te verwijderen](../images/datastreams/overview/edit-datastream.png)
+![Opties om bestaande gegevensstroom te bewerken of te verwijderen](../assets/datastreams/overview/edit-datastream.png)
 
 ## Een nieuwe gegevensstroom maken {#create}
 
 Als u een gegevensstroom wilt maken, selecteert u **[!UICONTROL New Datastream]**.
 
-![Nieuwe gegevensstroom selecteren](../images/datastreams/overview/new-datastream-button.png)
+![Nieuwe gegevensstroom selecteren](../assets/datastreams/overview/new-datastream-button.png)
 
 De workflow voor het maken van de gegevensstroom wordt weergegeven, te beginnen bij de configuratiestap. Van hier, moet u een naam en een facultatieve beschrijving voor de gegevensstroom verstrekken.
 
 Als u deze gegevensstroom voor gebruik in Experience Platform vormt en SDK van het Web van het Platform gebruikt, moet u ook selecteren [op gebeurtenissen gebaseerd XDM-schema (Experience Data Model)](../../xdm/classes/experienceevent.md) om de gegevens te vertegenwoordigen u bij het opnemen bent.
 
-![Basisconfiguratie voor een gegevensstroom](../images/datastreams/overview/configure.png)
+![Basisconfiguratie voor een gegevensstroom](../assets/datastreams/overview/configure.png)
 
 Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om de gegevensstroom te vormen.
 
-![Geavanceerde configuratieopties](../images/datastreams/overview/advanced-options.png)
+![Geavanceerde configuratieopties](../assets/datastreams/overview/advanced-options.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -57,7 +57,7 @@ Als u vanaf hier uw gegevensstroom configureert voor Experience Platform, volgt 
 
 Nadat u een nieuwe gegevensstroom hebt geconfigureerd of een bestaande gegevensstroom hebt geselecteerd, wordt de detailpagina voor die gegevensstroom weergegeven. Hier vindt u meer informatie over de gegevensstroom, inclusief de bijbehorende id.
 
-![De pagina Details van een gemaakte gegevensstroom](../images/datastreams/overview/view-details.png)
+![De pagina Details van een gemaakte gegevensstroom](../assets/datastreams/overview/view-details.png)
 
 Vanuit het scherm met gegevensstroomdetails kunt u [toevoegen, services](#add-services) om functies in te schakelen van de Adobe Experience Cloud-producten waartoe u toegang hebt. U kunt de gegevensstroom ook uitgeven [basisconfiguratie](#create), werkt de [toewijzingsregels](./data-prep.md), [de gegevensstroom kopiëren](#copy), of deze volledig verwijderen.
 
@@ -65,15 +65,15 @@ Vanuit het scherm met gegevensstroomdetails kunt u [toevoegen, services](#add-se
 
 Selecteer op de detailpagina van een gegevensstroom de optie **[!UICONTROL Add Service]** om de beschikbare services voor die gegevensstroom toe te voegen.
 
-![Selecteer Service toevoegen om door te gaan](../images/datastreams/overview/add-service.png)
+![Selecteer Service toevoegen om door te gaan](../assets/datastreams/overview/add-service.png)
 
 Voor het volgende scherm, gebruik dropdown menu om de dienst te selecteren voor deze gegevensstroom te vormen. Alleen de services waartoe u toegang hebt, worden in deze lijst weergegeven.
 
-![Selecteer een service in de lijst](../images/datastreams/overview/service-selection.png)
+![Selecteer een service in de lijst](../assets/datastreams/overview/service-selection.png)
 
 Selecteer de gewenste service, vul de configuratieopties in die worden weergegeven en selecteer **[!UICONTROL Save]** om de dienst aan de datastream toe te voegen. Alle toegevoegde diensten verschijnen in de detailmening voor de gegevensstroom.
 
-![Services die aan een gegevensstroom zijn toegevoegd](../images/datastreams/overview/services-added.png)
+![Services die aan een gegevensstroom zijn toegevoegd](../assets/datastreams/overview/services-added.png)
 
 In de onderstaande subsecties worden de configuratieopties voor elke service beschreven.
 
@@ -85,7 +85,7 @@ In de onderstaande subsecties worden de configuratieopties voor elke service bes
 
 Deze service bepaalt of en hoe gegevens naar Adobe Analytics worden verzonden. Meer informatie vindt u in de handleiding op [gegevens verzenden naar Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics-instellingen blokkeren](../images/datastreams/overview/analytics-config.png)
+![Adobe Analytics-instellingen blokkeren](../assets/datastreams/overview/analytics-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -95,7 +95,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Analytics worden verzonden. M
 
 Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzonden. Alles wat nodig is om gegevens naar de Audience Manager te verzenden, moet deze sectie inschakelen. De andere instellingen zijn optioneel, maar worden aangemoedigd.
 
-![Adobe Publiek beheren, instellingenblok](../images/datastreams/overview/audience-manager-config.png)
+![Adobe Publiek beheren, instellingenblok](../assets/datastreams/overview/audience-manager-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -108,27 +108,28 @@ Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzo
 >
 >Wanneer het toelaten van een gegevensstroom voor Platform, neem nota van de zandbak van het Platform die u momenteel gebruikt, zoals getoond in het hoogste lint van UI.
 >
->![Geselecteerde sandbox](../images/datastreams/overview/platform-sandbox.png)
+>![Geselecteerde sandbox](../assets/datastreams/overview/platform-sandbox.png)
 >
 >Sandboxen zijn virtuele partities in Adobe Experience Platform waarmee u uw gegevens en implementaties kunt isoleren van die in uw organisatie. Wanneer een gegevensstroom is gemaakt, kan de sandbox niet meer worden gewijzigd. Zie voor meer informatie over de rol van sandboxen in Experience Platform de klasse [sandboxdocumentatie](../../sandboxes/home.md).
 
 Deze service bepaalt of en hoe gegevens naar Adobe Experience Platform worden verzonden.
 
-![Adobe Experience Platform-instellingenblok](../images/datastreams/overview/platform-config.png)
+![Adobe Experience Platform-instellingenblok](../assets/datastreams/overview/platform-config.png)
 
 | Instelling | Beschrijving |
 |---| --- |
 | [!UICONTROL Event Dataset] | **(Vereist)** Selecteer de dataset van het Platform dat de gegevens van de klantengebeurtenis zullen worden gestroomd aan. Dit schema moet de [XDM ExperienceEvent, klasse](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Profile Dataset] | Selecteer de dataset van het Platform dat de gegevens van de klantenattributen zullen worden verzonden naar. Dit schema moet de [Afzonderlijke XDM-profielklasse](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | Selecteer dit checkbox om Offer decisioning voor een implementatie van SDK van het Web van het Platform toe te laten. Zie de handleiding op [het gebruiken van Offer decisioning met het Web SDK van het Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) voor meer details over de implementatie. Raadpleeg voor meer informatie over de mogelijkheden van Offer decisioning de [Adobe Journey Optimizer-documentatie](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=nl). |
-| [!UICONTROL Edge Segmentation] | Schakel dit selectievakje in om in te schakelen [randsegmentatie](../../segmentation/ui/edge-segmentation.md) voor deze gegevensstroom. Wanneer de SDK gegevens via een voor edge-segmentatie ingeschakelde gegevensstroom verzendt, worden bijgewerkte segmentlidmaatschappen voor het profiel in kwestie teruggestuurd in de reactie.<br><br>Deze optie kan in combinatie met [!UICONTROL Personalization Destinations] for [gebruiksgevallen voor personalisatie op de volgende pagina](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Personalization Destinations] | Wanneer u deze optie inschakelt nadat u het [!UICONTROL Edge Segmentation] checkbox, staat deze optie de datastream toe om met verpersoonlijkingsbestemmingen, zoals te verbinden [Aangepaste aanpassing](../../destinations/catalog/personalization/custom-personalization.md). Raadpleeg de documentatie bij bestemmingen voor specifieke stappen over [het vormen verpersoonlijkingsbestemmingen](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Offer Decisioning] | Selecteer dit checkbox om Offer decisioning voor een implementatie van SDK van het Web van het Platform toe te laten. Zie de handleiding op [het gebruiken van Offer decisioning met het Web SDK van het Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) voor meer details over de implementatie. <br><br> Raadpleeg voor meer informatie over de mogelijkheden van Offer decisioning de [Adobe Journey Optimizer-documentatie](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=nl). |
+| [!UICONTROL Edge Segmentation] | Schakel dit selectievakje in om in te schakelen [randsegmentatie](../../segmentation/ui/edge-segmentation.md) voor deze gegevensstroom. Wanneer de SDK gegevens via een voor edge-segmentatie ingeschakelde gegevensstroom verzendt, worden bijgewerkte segmentlidmaatschappen voor het profiel in kwestie teruggestuurd in de reactie.<br><br>Deze optie kan in combinatie met [!UICONTROL Personalization Destinations] for [gebruiksgevallen voor personalisatie op de volgende pagina](../../destinations/ui/configure-personalization-destinations.md)of in combinatie met [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL Personalization Destinations] | Wanneer u deze optie inschakelt nadat u het [!UICONTROL Edge Segmentation] checkbox, staat deze optie de datastream toe om met verpersoonlijkingsbestemmingen, zoals te verbinden [Aangepaste aanpassing](../../destinations/catalog/personalization/custom-personalization.md). <br><br>Raadpleeg de documentatie bij bestemmingen voor specifieke stappen over [het vormen verpersoonlijkingsbestemmingen](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Adobe Journey Optimizer] | Schakel dit selectievakje in om in te schakelen [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en) voor deze gegevensstroom. <br><br> Als u deze optie inschakelt, kan de gegevensstroom gepersonaliseerde inhoud van binnenkomende webcampagnes en op apps gebaseerde campagnes retourneren in [!DNL Adobe Journey Optimizer]. Deze optie is vereist [!UICONTROL Edge Segmentation] om actief te zijn. Indien [!UICONTROL Edge Segmentation] is uitgeschakeld, wordt deze optie grijs weergegeven. |
 
 ### Adobe Target-instellingen {#target}
 
 Deze service bepaalt of en hoe gegevens naar Adobe Target worden verzonden.
 
-![Adobe Target-instellingenblok](../images/datastreams/overview/target-config.png)
+![Adobe Target-instellingenblok](../assets/datastreams/overview/target-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -140,7 +141,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Target worden verzonden.
 
 Deze service bepaalt of en hoe gegevens worden verzonden naar [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md).
 
-![Het door:sturen van de gebeurtenis sectie van de configuratie UI](../images/datastreams/overview/event-forwarding-config.png)
+![Het door:sturen van de gebeurtenis sectie van de configuratie UI](../assets/datastreams/overview/event-forwarding-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -161,15 +162,15 @@ U kunt een kopie van een bestaande gegevensstroom maken en de details ervan desg
 
 Vanaf de hoofdpagina in het dialoogvenster [!UICONTROL Datastreams] werkruimte, selecteert u de ellips (**....**) voor de gegevensstroom in kwestie, dan selecteren **[!UICONTROL Copy]**.
 
-![Afbeelding die de [!UICONTROL Copy] optie die wordt geselecteerd in de lijstweergave van de gegevensstroom](../images/datastreams/overview/copy-datastream-list.png)
+![Afbeelding die de [!UICONTROL Copy] optie die wordt geselecteerd in de lijstweergave van de gegevensstroom](../assets/datastreams/overview/copy-datastream-list.png)
 
 U kunt ook **[!UICONTROL Copy Datastream]** in de detailweergave van een bepaalde gegevensstroom.
 
-![Afbeelding die de [!UICONTROL Copy] optie die wordt geselecteerd uit de datastream detailweergave](../images/datastreams/overview/copy-datastream-details.png)
+![Afbeelding die de [!UICONTROL Copy] optie die wordt geselecteerd uit de datastream detailweergave](../assets/datastreams/overview/copy-datastream-details.png)
 
 Er wordt een bevestigingsdialoogvenster weergegeven waarin u wordt gevraagd een unieke naam op te geven voor de nieuwe gegevensstroom die moet worden gemaakt, en waarin u informatie kunt vinden over de configuratieopties waarover u de gegevens wilt kopiëren. Indien gereed, selecteert u **[!UICONTROL Copy]**.
 
-![Afbeelding van het bevestigingsvenster voor het kopiëren van een gegevensstroom](../images/datastreams/overview/copy-datastream-confirm.png)
+![Afbeelding van het bevestigingsvenster voor het kopiëren van een gegevensstroom](../assets/datastreams/overview/copy-datastream-confirm.png)
 
 De hoofdpagina van de [!UICONTROL Datastreams] wordt de werkruimte opnieuw weergegeven met de nieuwe gegevensstroom.
 
