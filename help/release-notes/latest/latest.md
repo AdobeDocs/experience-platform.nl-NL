@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
+source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
 workflow-type: tm+mt
-source-wordcount: '2737'
+source-wordcount: '2717'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 
 | Functie | Beschrijving |
 | --- | --- |
-| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) voor meer informatie. |
+| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten een modelconfiguratie opslaan als een conceptversie en deze blijven bewerken totdat deze voltooid is voordat ze training en scoring volgen. Scenario&#39;s waar deze functie nuttig is, zijn onder andere wanneer een gebruiker meerdere velden heeft die in de workflow moeten worden gedefinieerd, maar die vanwege tijdbeperkingen niet kunnen worden voltooid. Een ander scenario is wanneer één of meerdere datasetstatistieken worden verwerkt en nog niet beschikbaar. Lees de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) voor meer informatie. |
 | Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
 
 Voor meer informatie over Attribution AI, [Overzicht van Attribution AI](../../intelligent-services/attribution-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
@@ -89,7 +89,7 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 
 | Functie | Beschrijving |
 | --- | --- |
-| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md) voor meer informatie. |
+| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten een modelconfiguratie opslaan als een conceptversie en deze blijven bewerken totdat deze voltooid is voordat ze training en scoring volgen. Scenario&#39;s waar deze functie nuttig is, zijn onder andere wanneer een gebruiker meerdere velden heeft die in de workflow moeten worden gedefinieerd, maar die vanwege tijdbeperkingen niet kunnen worden voltooid. Een ander scenario is wanneer één of meerdere datasetstatistieken worden verwerkt en nog niet beschikbaar. Lees de [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) voor meer informatie. |
 | Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
 
 Voor meer informatie over AI van de Klant, lees [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
