@@ -3,9 +3,9 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Overzicht van de dashboardwidget-bibliotheek
 description: Deze handleiding bevat stapsgewijze instructies voor toegang tot de widgetbibliotheek in Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,12 @@ Selecteren **[!UICONTROL Widget library]** om de widgetbibliotheek te openen en 
 Van de [!UICONTROL Widget library]selecteert u een widget in de lijst met beschikbare standaard- of aangepaste widgets. Een vinkje in de hoek van de widget geeft de selectie aan.
 
 ![De widgetbibliotheek met een geselecteerde widget en een vinkje gemarkeerd.](../images/customization/confirm-selected-widget-to-add.png)
+
+### Label tijdens gebruik {#in-use-label}
+
+Widgets die al aan een dashboard zijn toegevoegd, hebben een [!UICONTROL In-use] label dat aan hen wordt verbonden wanneer bekeken in de widgetbibliotheek. Met dit label worden widgets gemarkeerd die al aan het dashboard zijn toegevoegd om dubbel werk te voorkomen. U kunt desgewenst nog steeds dezelfde widget meerdere keren toevoegen.
+
+![De widgetbibliotheek met het label in gebruik gemarkeerd.](../images/customization/in-use-label.png)
 
 Als u alle vereiste widgets hebt geselecteerd, selecteert u **[!UICONTROL Add widgets]** om uw keuze te bevestigen en de widgets aan het dashboard toe te voegen.
 
