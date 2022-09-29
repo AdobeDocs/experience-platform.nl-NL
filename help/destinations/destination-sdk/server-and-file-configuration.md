@@ -2,9 +2,9 @@
 description: De server en de specificaties van de dossierconfiguratie voor op dossier-gebaseerde bestemmingen kunnen in Adobe Experience Platform Destination SDK via het /destination-servers eindpunt worden gevormd.
 title: Configuratieopties voor op een bestand gebaseerde specificaties van de doelserver
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1248'
 ht-degree: 5%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 5%
 # Server- en bestandsconfiguratie voor op een bestand gebaseerde serverspecificaties
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->De functionaliteit om op dossier-gebaseerde bestemmingen te vormen en voor te leggen gebruikend Adobe Experience Platform Destination SDK is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 Op deze pagina worden alle configuratieopties voor de server weergegeven voor de doelservers op basis van bestanden en ziet u hoe u verschillende opties voor de bestandsconfiguratie instelt voor gebruikers die bestanden exporteren van het Experience Platform naar uw bestemming.
 

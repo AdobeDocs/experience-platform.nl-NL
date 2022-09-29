@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->De functionaliteit om op dossier-gebaseerde bestemmingen te vormen en voor te leggen gebruikend Adobe Experience Platform Destination SDK is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 In deze pagina wordt beschreven hoe u de informatie in [Configuratieopties in de SDK Doelen](./configuration-options.md) en in andere Destination SDK-functionaliteit en API-referentiedocumenten om een [bestandsgebaseerd doel](../../destinations/destination-types.md#file-based). De stappen worden in de onderstaande volgorde weergegeven.
 

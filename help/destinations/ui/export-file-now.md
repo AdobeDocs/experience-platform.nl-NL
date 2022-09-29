@@ -3,9 +3,9 @@ title: (Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen g
 type: Tutorial
 description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met behulp van de interface van het Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De **[!UICONTROL Export file now]** in Adobe Experience Platform Destination SDK is momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
+>De **[!UICONTROL Export file now]** in Adobe Experience Platform bevindt zich momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
 >Neem contact op met uw Adobe-vertegenwoordiger voor toegang tot deze functie.
 
 >[!IMPORTANT]

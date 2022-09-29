@@ -2,9 +2,9 @@
 description: Leer hoe u Destination SDK gebruikt om een SFTP-bestemming te configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 title: Configureer een SFTP-bestemming met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Een SFTP-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->De functionaliteit om op dossier-gebaseerde bestemmingen te vormen die Adobe Experience Platform Destination SDK gebruiken is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 Deze pagina beschrijft hoe Destination SDK te gebruiken om een bestemming van SFTP met vooraf bepaald, gebrek te vormen [opties voor bestandsindeling](../../server-and-file-configuration.md#file-configuration) en een aangepaste [bestandsnaamconfiguratie](../../file-based-destination-configuration.md#file-name-configuration).
 

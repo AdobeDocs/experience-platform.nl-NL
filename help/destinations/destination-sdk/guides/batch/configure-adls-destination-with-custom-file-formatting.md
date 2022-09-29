@@ -2,9 +2,9 @@
 description: Leer hoe u Destination SDK kunt gebruiken om een Azure Data Lake Storage-bestemming te configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 title: Configureer een Azure Data Lake Storage-bestemming met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Een [!DNL Azure Data Lake Storage] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->De functionaliteit om op dossier-gebaseerde bestemmingen te vormen die Adobe Experience Platform Destination SDK gebruiken is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 In deze pagina wordt beschreven hoe u Destination SDK kunt gebruiken om een [!DNL Azure Data Lake Storage] doel met aangepaste [opties voor bestandsindeling](../../server-and-file-configuration.md#file-configuration) en een aangepaste [bestandsnaamconfiguratie](../../file-based-destination-configuration.md#file-name-configuration).
 

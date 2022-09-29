@@ -2,9 +2,9 @@
 description: Leer hoe te om Destination SDK te gebruiken om een bestemming van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanedossier te vormen - noem.
 title: Configureer een DLZ-bestemming (Data Landing Zone) met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Een [!DNL Data Landing Zone (DLZ)] doel met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->De functionaliteit om op dossier-gebaseerde bestemmingen te vormen die Adobe Experience Platform Destination SDK gebruiken is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 In deze pagina wordt beschreven hoe u Destination SDK kunt gebruiken om een [!DNL Data Landing Zone] doel met aangepaste [opties voor bestandsindeling](../../server-and-file-configuration.md#file-configuration) en een aangepaste [bestandsnaamconfiguratie](../../file-based-destination-configuration.md#file-name-configuration).
 

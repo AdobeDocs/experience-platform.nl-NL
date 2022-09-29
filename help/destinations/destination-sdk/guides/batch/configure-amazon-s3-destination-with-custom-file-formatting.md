@@ -2,9 +2,9 @@
 description: Leer hoe u Destination SDK gebruikt om een Amazon S3-bestemming te configureren met aangepaste bestandsnaam- en opmaakopties.
 title: Configureer een Amazon S3-bestemming met aangepaste bestandsnaam en opmaakopties.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->De functionaliteit om op dossier-gebaseerde bestemmingen te vormen die Adobe Experience Platform Destination SDK gebruiken is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 Deze pagina beschrijft hoe te Destination SDK gebruiken om een bestemming van Amazon S3 met douane te vormen [opties voor bestandsindeling](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) en een aangepaste [bestandsnaamconfiguratie](/help/destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration).
 
