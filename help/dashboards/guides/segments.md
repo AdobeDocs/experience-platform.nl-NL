@@ -4,9 +4,9 @@ title: Handleiding dashboard voor segmenten
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1981'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
 * [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 * [[!UICONTROL Audience overlap]](#audience-overlap)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Scheduled activations]](#scheduled-activations)
@@ -147,14 +148,33 @@ Met deze widget kunt u uw segmentatiestrategie optimaliseren door de gelijkeniss
 
 ![De widget publiek overlapt.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+Met deze widget wordt een tabelweergave gemaakt van de overlappende gegevens van het publiek voor een bepaald segment. Er wordt een lijst met vijf soorten publiek weergegeven, van de hoogste tot de laagste overlappende percentages, die wordt gekozen in het vervolgkeuzemenu boven in het scherm. Voor de duidelijkheid wordt het gekozen segment weergegeven in het dialoogvenster [!UICONTROL SEGMENT A NAME] kolom. De analyse van de overlappingen van het publiek wordt verstrekt voor het tweede segment dat in het [!UICONTROL SEGMENT B NAME] kolom. De procentuele overlapping wordt vermeld in de derde kolom, tot op twaalf decimalen nauwkeurig.
 
-<!-- ![The Audience overlap report widget.]() -->
+Het publiek overlapt rapport helpt u om nieuwe, krachtige segmenten te bouwen. Wanneer u een hoog percentage van de overlappingen observeert, kunt u het publiek onderdrukken en voorkomen dat hetzelfde publiek naar andere bestemmingen wordt gestuurd. Ze helpen u ook verborgen inzichten te identificeren die kunnen helpen met betere segmentatie. Met een laag percentage overlappingen kunt u unieke profielen zoeken.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+Selecteren **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te openen dat meer segmenten bevat die gegevens overlappen.
+
+![De publiek overlapt rapport widget met View meer benadrukt.](../images/segments/audience-overlap-report.png)
+
+De [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Selecteer het instellingenpictogram (![Het instellingenpictogram.](../images/segments/settings-icon.png)) om kolommen uit de tabel te verwijderen of toe te voegen.
+
+![Het dialoogvenster Publiek overlapt het rapport.](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Selecteer **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
+
+Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]**.
+
+![Het publiek overlapt het rapportdialoogvenster met de gemarkeerde ovalen en downloadoptie.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+Selecteer een rij in het rapport om een Venn-diagram van de overlappende analyse te openen. Houd de muisaanwijzer boven een gedeelte van het Venn-diagram om het aantal profielen in een dialoogvenster weer te geven.
+
+![Het publiek overlapt rapportdialoog met een diagram van de Venn en een benadrukte rij.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Selecteren **[!UICONTROL Close]** om terug te keren naar de [!UICONTROL Segments] dashboard.
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
