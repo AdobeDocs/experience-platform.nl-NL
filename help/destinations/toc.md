@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
+source-git-commit: e1845bfa5b3387b45385a21ff7535906689dd89c
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -118,7 +118,7 @@ ht-degree: 1%
    * E-mailmarketingdoelen {#email-marketing}
       * [Overzicht van e-mailmarketingdoelen](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-verbinding](./catalog/email-marketing/adobe-campaign.md)
-      * [Adobe Campaign Managed Services-verbinding](./catalog/email-marketing/adobe-campaign-managed-services.md)
+      * [Adobe Campaign Managed Cloud Services-verbinding](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
       * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
