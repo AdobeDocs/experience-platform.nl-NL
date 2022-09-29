@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Meer informatie over aangepaste toegankelijkheidsoplossingen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,10 @@ Wanneer het gebruiken van de Bouwer van het Segment UI om, met segmenten binnen 
 * De gebruikersinterface van Segment Builder is toegankelijk via toetsenbordnavigatie.
 * Schermlezers herkennen markeringen voor opmaakcodes voor koppen en kunnen de kop samen met het niveau ervan aankondigen.
 * Andere ondersteunende hulpmiddelen kunnen de visuele weergave van een pagina wijzigen door correct gecodeerde koppen te gebruiken om een omtrek of een alternatieve weergave weer te geven.
+
+U kunt nu de linker- en rechterrails van het gesegmenteerde canvas samenvouwen of uitvouwen om meer schermruimte te verkrijgen. Deze functie is vooral handig omdat deze bij 200% zoomen volledige functionaliteit biedt.
+
+![Het segmentbuildercanvas met de openingswidgets voor linker- en rechterspoor gemarkeerd.](images/left-right-rail-expandables.png)
 
 ## Query Service-editor
 
