@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
+source-git-commit: dd17e0903f69a6d639582d83bcd22b269aedb5d0
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '3048'
 ht-degree: 1%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 | Label tijdens gebruik | Wanneer het label in de widgetbibliotheek wordt weergegeven, identificeert het in-use-label gemakkelijk de aanwezigheid van bestaande widgets in het dashboard. Hierdoor kunt u dubbel werk gemakkelijk voorkomen, maar u kunt nog steeds dezelfde widget meer dan één keer toevoegen als u wilt. |
 | Door gebruiker gedefinieerde dashboards | Door de gebruiker gedefinieerde dashboards helpen u om inzichten te versnellen en visualisaties aan te passen door u in staat te stellen aangepaste dashboards te maken en te beheren. Met door de gebruiker gedefinieerde dashboards kunt u op maat gemaakte widgets maken, toevoegen en bewerken om belangrijke metriek die voor uw organisatie van belang is, zichtbaar te maken. Lees de [functiehandleiding](../../dashboards/user-defined-dashboards.md) voor meer informatie. |
 | Gegevensmodel gegevens Platform klantgegevens | De eigenschap van het Model van Gegevens van de Gegevens van de Klant van het Platform van Gegevens (CDP) benadrukt de gegevensmodellen en SQL die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets macht. U kunt deze SQL vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Lees de [Handleiding CDP-gegevensmodel voor ingesloten gegevens](../../dashboards/cdp-insights-data-model.md) voor meer informatie. |
-| De widget Rapport voor publiek-overlap | Deze widget is beschikbaar voor beide [!UICONTROL Profiles] en [!UICONTROL Segments] dashboards. Het rapport bevat een geordende lijst met soorten publiek die worden gerangschikt op basis van de hoogste of laagste overlappende percentages voor het gekozen segment. Van de [!UICONTROL Profiles] het dashboard u kunt filteren en bekijken uw publieksoverlap door beleid van alle beschikbare segmenten samen te voegen. De [!UICONTROL Segments] Met dashboards kunt u de publieksoverlap filteren op een bepaald segment.<br>Gebruik deze analyse om nieuwe, krachtige segmenten te bouwen en te vermijden verzendend het zelfde publiek naar verschillende bestemmingen. Het verslag helpt ook verborgen inzichten te identificeren om segmentatie te verbeteren of unieke profielen te vinden om na te streven. |
+| De widget Rapport voor publiek-overlap | Deze widget is beschikbaar voor beide [!UICONTROL Profiles] en [!UICONTROL Segments] dashboards. Het rapport bevat een geordende lijst met soorten publiek die worden gerangschikt op basis van de hoogste of laagste overlappende percentages voor het gekozen segment. Van de [!UICONTROL Profiles] het dashboard u kunt filteren en bekijken uw publieksoverlap door beleid van alle beschikbare segmenten samen te voegen. De [!UICONTROL Segments] Met dashboards kunt u de publieksoverlap filteren op een bepaald segment.<br>Gebruik deze analyse om nieuwe, krachtige segmenten te bouwen en te vermijden verzendend het zelfde publiek naar verschillende bestemmingen. Het verslag helpt ook verborgen inzichten te identificeren om segmentatie te verbeteren of unieke profielen te vinden om na te streven. Lees de respectievelijke [profielen](../../dashboards/guides/profiles.md#audience-overlap-report) en [segmenten](../../dashboards/guides/segments.md#audience-overlap-report) widgethulplijnen voor meer informatie. |
 
 Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 
 | Functie | Beschrijving |
 | --- | --- |
-| Alert-abonnements-API | Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het Platform of beide. Op dit moment kunnen querywaarschuwingen alleen worden geabonneerd op [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Gegevenssetvoorbeelden | De datasetsteekproeven van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer verminderde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. |
+| Alert-abonnements-API | Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het Platform of beide. Op dit moment kunnen querywaarschuwingen alleen worden geabonneerd op [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). Zie de [documentatie met querywaarschuwingen](../../query-service/api/alert-subscriptions.md) voor meer informatie. |
+| Gegevenssetvoorbeelden | De datasetsteekproeven van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer verminderde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. Zie de [Gegevenssetvoorbeeldgids](../../query-service/sql/dataset-samples.md) voor meer informatie. |
 
 Voor meer informatie over [!DNL Query Service], zie de [[!DNL Query Service] overzicht](../../query-service/home.md).
 
