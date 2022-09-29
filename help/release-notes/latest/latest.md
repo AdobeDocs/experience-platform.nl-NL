@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
+source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
 workflow-type: tm+mt
-source-wordcount: '2717'
+source-wordcount: '2900'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Controlelogboeken](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensverzameling](#data-collection)
+- [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Query-service](#query-service)
@@ -135,6 +136,34 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| Destination SDK | Destination SDK biedt nu volledige ondersteuning voor partners en klanten die in batch (of op bestand gebaseerd) gemaakte of persoonlijke doelen maken. Lees de volgende documentatiepagina&#39;s voor meer informatie: <ul><li>[Overzicht van Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Een op een bestand gebaseerde bestemming configureren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test uw op een bestand gebaseerde doelen](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe of bijgewerkte doelen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | De [!DNL Salesforce CRM] de bestemming is bijgewerkt om zowel contacten en leidt updates, als prestatiesverbeteringen voor snellere updates te steunen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe of bijgewerkte documentatie**
+
+| Documentatie | Beschrijving |
+| ----------- | ----------- |
+| API-documentatie voor Doelen Flow Service | De [Referentiedocumentatie voor doel-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) werd bijgewerkt om begeleiding op te nemen over hoe te om verrichtingen op op dossier-gebaseerde bestemmingen uit te voeren. Bewerkingen voor streamingdoelen worden later toegevoegd. |
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
