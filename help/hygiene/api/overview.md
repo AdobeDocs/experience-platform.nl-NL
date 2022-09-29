@@ -2,9 +2,9 @@
 title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
 
 Met de Data Hygiene-API kunt u via programmacode de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform corrigeren of verwijderen, en kunt u de vervaldatums voor gegevenssets plannen. Deze gids behandelt de eerste vereiste stappen aan het gebruiken van API en verstrekt verbindingen aan meer eindpunt-specifieke documentatie.
 
@@ -44,10 +44,6 @@ Dit document bevat een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken mo
 Een gegevenssetvervaldatum is een tijd-vertraagde actie &quot;schrapt een dataset&quot;. Door een datasetvervaldatum te creëren, specificeert u een toekomstige tijd waarbij die dataset zou moeten worden geschrapt. Zie de [eindpuntgids gegevensset](./dataset-expiration.md) voor meer informatie over het plannen van datasetvervaldata in API.
 
 ## Verwijderen van consumenten
-
->[!NOTE]
->
->Verwijderen door de consument is alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Sheild hebben aangeschaft.
 
 Met de API voor gegevenshygiëne kunt u alle records verwijderen die zijn gekoppeld aan een consumentenidentiteit in een of alle gegevenssets. Alle taken op het gebied van gegevenshygiëne die de identiteit van de consument verwijderen, worden weergegeven door een constructie die een werkorder wordt genoemd. Zie de [eindpuntgids voor werkorders](./workorder.md) voor meer informatie over het werken met de consument verwijdert u de API.
 

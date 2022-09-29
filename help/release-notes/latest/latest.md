@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '2900'
+source-wordcount: '2516'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,6 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Controlelogboeken](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensverzameling](#data-collection)
-- [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Query-service](#query-service)
@@ -79,7 +78,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 
 | Functie | Beschrijving |
 | --- | --- |
-| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten een modelconfiguratie opslaan als een conceptversie en deze blijven bewerken totdat deze voltooid is voordat ze training en scoring volgen. Scenario&#39;s waar deze functie nuttig is, zijn onder andere wanneer een gebruiker meerdere velden heeft die in de workflow moeten worden gedefinieerd, maar die vanwege tijdbeperkingen niet kunnen worden voltooid. Een ander scenario is wanneer één of meerdere datasetstatistieken worden verwerkt en nog niet beschikbaar. Lees de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) voor meer informatie. |
+| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Gebruikershandleiding voor Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) voor meer informatie. |
 | Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
 
 Voor meer informatie over Attribution AI, [Overzicht van Attribution AI](../../intelligent-services/attribution-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
@@ -90,7 +89,7 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 
 | Functie | Beschrijving |
 | --- | --- |
-| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten een modelconfiguratie opslaan als een conceptversie en deze blijven bewerken totdat deze voltooid is voordat ze training en scoring volgen. Scenario&#39;s waar deze functie nuttig is, zijn onder andere wanneer een gebruiker meerdere velden heeft die in de workflow moeten worden gedefinieerd, maar die vanwege tijdbeperkingen niet kunnen worden voltooid. Een ander scenario is wanneer één of meerdere datasetstatistieken worden verwerkt en nog niet beschikbaar. Lees de [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) voor meer informatie. |
+| Concept-instantie opslaan | Met deze nieuwe functie kunnen marketinganalisten de modelconfiguratie tijdens configuraties opslaan als een concept-instantie en het concept blijven bewerken tot de voltooiing is voltooid voordat ze training en scoring volgen. Scenario&#39;s waar deze eigenschap nuttig is omvatten, maar niet beperkt tot, wanneer de gebruikers veelvoudige gebieden in het configuratiewerkschema hebben te bepalen dat zij niet in één gaan kunnen voltooien of wanneer één of meerdere datasetstatistieken (zoals kolomvolledigheid) tijd om nemen te worden verwerkt alvorens zij beschikbaar worden. Lees de [Handleiding voor AI-gebruikers van klant](../../intelligent-services/customer-ai/user-guide/configure.md) voor meer informatie. |
 | Beleid inzake governance | Nadat de gebruikers voorleggen om een geval door het configuratiewerkschema tot stand te brengen, controleert de nieuwe dienst van de beleidshandhaving of er om het even welke beleidsschendingen van gegevensgebruik zijn en toont de details in popover. Het zorgt ervoor dat de gegevensverrichtingen en de marketing acties met het beleid van het gegevensgebruik verenigbaar zijn dat op Adobe Experience Platform wordt gevormd. |
 
 Voor meer informatie over AI van de Klant, lees [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
@@ -116,9 +115,6 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 | Functie | Beschrijving |
 | --- | --- |
 | Label tijdens gebruik | Wanneer het label in de widgetbibliotheek wordt weergegeven, identificeert het in-use-label gemakkelijk de aanwezigheid van bestaande widgets in het dashboard. Hierdoor kunt u dubbel werk gemakkelijk voorkomen, maar u kunt nog steeds dezelfde widget meer dan één keer toevoegen als u wilt. |
-| Door gebruiker gedefinieerde dashboards | Door de gebruiker gedefinieerde dashboards helpen u om inzichten te versnellen en visualisaties aan te passen door u in staat te stellen aangepaste dashboards te maken en te beheren. Met door de gebruiker gedefinieerde dashboards kunt u op maat gemaakte widgets maken, toevoegen en bewerken om belangrijke metriek die voor uw organisatie van belang is, zichtbaar te maken. Lees de [functiehandleiding](../../dashboards/user-defined-dashboards.md) voor meer informatie. |
-| Gegevensmodel gegevens Platform klantgegevens | De eigenschap van het Model van Gegevens van de Gegevens van de Klant van het Platform van Gegevens (CDP) benadrukt de gegevensmodellen en SQL die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets macht. U kunt deze SQL vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Lees de [Handleiding CDP-gegevensmodel voor ingesloten gegevens](../../dashboards/cdp-insights-data-model.md) voor meer informatie. |
-| De widget Rapport voor publiek-overlap | Deze widget is beschikbaar voor beide [!UICONTROL Profiles] en [!UICONTROL Segments] dashboards. Het rapport bevat een geordende lijst met soorten publiek die worden gerangschikt op basis van de hoogste of laagste overlappende percentages voor het gekozen segment. Van de [!UICONTROL Profiles] het dashboard u kunt filteren en bekijken uw publieksoverlap door beleid van alle beschikbare segmenten samen te voegen. De [!UICONTROL Segments] Met dashboards kunt u de publieksoverlap filteren op een bepaald segment.<br>Gebruik deze analyse om nieuwe, krachtige segmenten te bouwen en te vermijden verzendend het zelfde publiek naar verschillende bestemmingen. Het verslag helpt ook verborgen inzichten te identificeren om segmentatie te verbeteren of unieke profielen te vinden om na te streven. |
 
 Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
 
@@ -136,34 +132,6 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| ----------- | ----------- |
-| Destination SDK | Destination SDK biedt nu volledige ondersteuning voor partners en klanten die in batch (of op bestand gebaseerd) gemaakte of persoonlijke doelen maken. Lees de volgende documentatiepagina&#39;s voor meer informatie: <ul><li>[Overzicht van Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Een op een bestand gebaseerde bestemming configureren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test uw op een bestand gebaseerde doelen](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Nieuwe of bijgewerkte doelen**
-
-| Bestemming | Beschrijving |
-| ----------- | ----------- |
-| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | De [!DNL Salesforce CRM] de bestemming is bijgewerkt om zowel contacten en leidt updates, als prestatiesverbeteringen voor snellere updates te steunen. |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Nieuwe of bijgewerkte documentatie**
-
-| Documentatie | Beschrijving |
-| ----------- | ----------- |
-| API-documentatie voor Doelen Flow Service | De [Referentiedocumentatie voor doel-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) werd bijgewerkt om begeleiding op te nemen over hoe te om verrichtingen op op dossier-gebaseerde bestemmingen uit te voeren. Bewerkingen voor streamingdoelen worden later toegevoegd. |
-
-Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

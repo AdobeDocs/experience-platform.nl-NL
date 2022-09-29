@@ -5,9 +5,9 @@ title: Handleiding voor Attribution AI-gebruikersinterface
 topic-legacy: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
+source-git-commit: 8f41233df9691fd10361b58a472576dec36d11b4
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2784'
 ht-degree: 0%
 
 ---
@@ -70,10 +70,6 @@ Het infopictogram selecteren ![infopictogram](./images/user-guide/info-icon.png)
 
 De voorproef van de dataset bevat gegevens zoals de laatste updatetijd, bronschema, en een voorproef van de eerste tien kolommen.
 
-Selecteren **[!UICONTROL Save]** om uw concepten op te slaan terwijl u de workflow beweegt. U kunt ook conceptmodelconfiguraties opslaan en naar de volgende stap in de workflow gaan. Gebruiken **[!UICONTROL Save and continue]** om concepten te maken en op te slaan tijdens modelconfiguraties. De eigenschap laat u toe om concepten van de modelconfiguratie tot stand te brengen en te bewaren en is bijzonder nuttig wanneer u vele gebieden in het configuratiewerkschema moet bepalen.
-
-![De Create workflow van het tabblad Data Science Services met Opslaan en opslaan en doorgaan gemarkeerd.](./images/user-guide/aai-save-save-&-exit.png)
-
 ### Volledige gegevensset {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -96,7 +92,7 @@ U kunt zich nu bij veelvoudige datasets aan elkaar aansluiten die op de identite
 
 Als u een identiteit wilt selecteren, selecteert u de onderstreepte waarde in de kolom Identiteit. De keuzelijst Selecteer een identiteit wordt weergegeven.
 
-![zelfde naamruimte selecteren](./images/user-guide/aai-identity-map-save-and-exit.png)
+![zelfde naamruimte selecteren](./images/user-guide/aai-identity-map.png)
 
 Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteert u het juiste identiteitsveld voor uw gebruik. Er zijn bijvoorbeeld twee e-mailidentiteiten beschikbaar binnen de naamruimte van de e-mail, een werk en persoonlijke e-mail. Afhankelijk van het gebruiksgeval, zal een persoonlijke e-mail eerder worden ingevuld en nuttiger in individuele voorspellingen zijn. Dit betekent dat u `EMAIL (personalEmail.address)` als uw identiteit.
 
@@ -112,7 +108,7 @@ Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteer
 
 Nadat u klaar bent met het selecteren en toevoegen van datasets, **Kaart** wordt weergegeven. Attribution AI vereist dat u het het kanaalgebied van Media voor elke dataset in kaart brengt u in de vorige stap selecteerde. Dit is omdat zonder de het kanaalafbeelding van Media tussen datasets, de inzichten die uit Attribution AI worden afgeleid niet behoorlijk kunnen tonen makend de inzichten pagina moeilijk te interpreteren. Hoewel alleen het Media-kanaal vereist is, wordt u ten zeerste aangeraden een aantal optionele velden zoals Media-actie, Campagnenaam, Campagnegroep en Campagne-tag toe te wijzen. Hierdoor kan de Attribution AI meer inzicht krijgen en optimale resultaten behalen.
 
-![toewijzing](./images/user-guide/mapping-save-&-exit.png)
+![toewijzing](./images/user-guide/mapping.png)
 
 ## Gebeurtenissen definiëren {#define-events}
 
@@ -202,13 +198,13 @@ U kunt aanvullende aanraakpunten toevoegen door **Aanraakpunt toevoegen** en het
 
 Wanneer u alle benodigde aanraakpunten hebt gedefinieerd, bladert u omhoog en selecteert u **Volgende** in de rechterbovenhoek om door te gaan naar de laatste stap.
 
-![voltooid definiëren](./images/user-guide/define_event_save_and_exit.png)
+![voltooid definiëren](./images/user-guide/define_event_next.png)
 
 ## Geavanceerde instellingen voor training en scores
 
 De laatste pagina in Attribution AI is de **[!UICONTROL Advanced]** pagina die wordt gebruikt voor het instellen van training en scoring.
 
-![nieuwe paginasetopties](./images/user-guide/advanced_settings_set_options.png)
+![nieuwe pagina, geavanceerd](./images/user-guide/advanced_settings.png)
 
 ### Training plannen
 
@@ -270,7 +266,7 @@ Als u uw trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finish]*
 
 Zodra u door het werkschema gaat om een instantie tot stand te brengen en de configuratie van het model voor te leggen, [beleidshandhaving](/help/data-governance/enforcement/auto-enforcement.md) controleert of er overtredingen zijn. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties binnen het Platform in overeenstemming zijn met het beleid voor gegevensgebruik.
 
-![popup met beleidsovertreding](./images/user-guide/policy-violation-popover-aai.png)
+![popup met beleidsovertreding](./images/user-guide/policy-violation-popover.png)
 
 De popover biedt specifieke informatie over de schending. U kunt deze schendingen door beleidsmontages en andere maatregelen oplossen die niet direct met het configuratiewerkschema verwant zijn. U kunt bijvoorbeeld de labels wijzigen, zodat bepaalde velden mogen worden gebruikt voor wetenschappelijke doeleinden. Alternatief, kon u de modelconfiguratie zelf ook wijzigen zodat het om het even wat met een etiket op het niet gebruikt. Raadpleeg de documentatie voor meer informatie over het instellen van [beleid](/help/data-governance/policies/overview.md).
 
@@ -302,7 +298,7 @@ Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create instance
 
 Nadat u een instantie met beperkte informatie hebt gemaakt, gaat u verder naar **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![De werkruimte Attribution AI met de beperkte velden van de instantieresultaten gemarkeerd.](./images/user-guide/information-not-displayed-save-and-exit.png)
+![De werkruimte Attribution AI met de beperkte velden van de instantieresultaten gemarkeerd.](./images/user-guide/information-not-displayed.png)
 
 ## Volgende stappen
 

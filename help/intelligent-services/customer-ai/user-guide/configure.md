@@ -6,9 +6,9 @@ title: Een AI-instantie van een klant configureren
 topic-legacy: Instance creation
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
+source-git-commit: 8f41233df9691fd10361b58a472576dec36d11b4
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3145'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Geef de vereiste waarden op en selecteer vervolgens **[!UICONTROL Next]** om doo
 
 Door het ontwerp gebruikt de AI van de Klant Adobe Analytics, Adobe Audience Manager, Experience Events in het algemeen, en Consumer Experience Event-gegevens om de eigenschapscores te berekenen. Bij het selecteren van een gegevensset worden alleen gegevenssets weergegeven die compatibel zijn met Customer AI. Als u een gegevensset wilt selecteren, selecteert u de **+**) naast de naam van de gegevensset of schakelt u het selectievakje in om meerdere gegevenssets tegelijk toe te voegen. Gebruik de onderzoeksoptie om de datasets snel te vinden u in geinteresseerd bent.
 
-![Gegevensset selecteren en zoeken](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
+![Gegevensset selecteren en zoeken](../images/user-guide/configure-dataset-page.png)
 
 Nadat u de gegevenssets hebt geselecteerd die u wilt gebruiken, selecteert u de **[!UICONTROL Add]** knoop om de datasets aan de ruit van de datasetvoorproef toe te voegen.
 
@@ -78,10 +78,6 @@ Het infopictogram selecteren ![infopictogram](../images/user-guide/info-icon.png
 ![Gegevensset selecteren en zoeken](../images/user-guide/dataset-info.png)
 
 De voorproef van de dataset bevat gegevens zoals de laatste updatetijd, bronschema, en een voorproef van de eerste tien kolommen.
-
-Selecteren **[!UICONTROL Save]** om uw concepten op te slaan terwijl u de workflow beweegt. U kunt ook conceptmodelconfiguraties opslaan en naar de volgende stap in de workflow gaan. Gebruiken **[!UICONTROL Save and continue]** om concepten te maken en op te slaan tijdens modelconfiguraties. De eigenschap laat u toe om concepten van de modelconfiguratie tot stand te brengen en te bewaren en is bijzonder nuttig wanneer u vele gebieden in het configuratiewerkschema moet bepalen.
-
-![De workflow Maken van het tabblad Customer AI van Data Science Services met Opslaan en opslaan en doorgaan gemarkeerd.](../images/user-guide/cai-save-and-exit.png)
 
 ### Volledige gegevensset {#dataset-completeness}
 
@@ -240,7 +236,7 @@ Met de schakeloptie Profiel kan de Klant-AI de resultaten van de scoring exporte
 
 Wanneer u voor het eerst een AI van de Klant gebruikt, kunt u deze functie uitschakelen totdat u tevreden bent met de resultaten van de modeluitvoer. Dit verhindert u veelvoudige het scoren datasets aan uw Profielen van de Klant te uploaden terwijl het verfijnen van uw model. Als u klaar bent met het kalibreren van het model, kunt u het model klonen met de opdracht [kloonoptie](#set-up-your-instance) van de **Service-instanties** pagina. Op deze manier kunt u een kopie van uw model maken en het profiel in- en uitschakelen.
 
-![Schakelen tussen profielen](../images/user-guide/advanced-workflow-save.png)
+![Schakelen tussen profielen](../images/user-guide/advanced-workflow.png)
 
 Als u het scoreschema hebt ingesteld, zijn de voorspellingsuitsluitingen opgenomen en de profielschakelaar op de gewenste positie hebt ingesteld, selecteert u **[!UICONTROL Finish]** in de rechterbovenhoek om uw exemplaar van de Klant AI te creëren.
 
@@ -286,11 +282,11 @@ Bovenaan in de AI-werkruimte van de klant **pagina met inzichten**, merk op dat 
 
 Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create instance workflow]** pagina, lijkt een waarschuwing u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![De AI-werkruimte van de Klant met de beperkte velden van de voorvertoningsdatasets met de beperkte schemaresultaten gemarkeerd.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
+![De AI-werkruimte van de Klant met de beperkte velden van de voorvertoningsdatasets met de beperkte schemaresultaten gemarkeerd.](../images/user-guide/restricted-dataset-preview.png)
 
 Nadat u een instantie met beperkte informatie hebt gemaakt, gaat u verder naar **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van de service.](../images/user-guide/information-not-displayed-save-and-exit.png)
+![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van de service.](../images/user-guide/information-not-displayed.png)
 
 ## Volgende stappen {#next-steps}
 
