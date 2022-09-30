@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om essentiële informatie voor uw op dossier-gebaseerde bestemming, zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Bestandsgebaseerde opties voor doelconfiguratie voor Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
+source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2985'
 ht-degree: 2%
 
 ---
@@ -722,6 +722,54 @@ Gebruik de parameters in  `dynamicSchemaConfig` om uw eigen schema dynamisch ter
 | `authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform] klanten verbinden met uw bestemming. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruiken `CUSTOMER_AUTHENTICATION` als de klanten van het Platform zich bij uw systeem via om het even welke volgende methodes aanmelden: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Gebruiken `PLATFORM_AUTHENTICATION` als er een globaal authentificatiesysteem tussen Adobe en uw bestemming en is [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een object credentials maken met de opdracht [Credentials](./credentials-configuration-api.md) configuratie. </li><li>Gebruiken `NONE` als geen authentificatie wordt vereist om gegevens naar uw bestemmingsplatform te verzenden. </li></ul> |
 | `value` | Tekenreeks | De naam van het schema dat in het gebruikersinterface van het Experience Platform, in de toewijzingsstap moet worden getoond. |
 | `responseFormat` | Tekenreeks | Altijd instellen op `SCHEMA` wanneer u een aangepast schema definieert. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### Vereiste toewijzingen {#required-mappings}
+
+Binnen de schemaconfiguratie, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn toewijzingen die gebruikers kunnen bekijken maar niet wijzigen wanneer zij opstelling een verbinding aan uw bestemming. U kunt bijvoorbeeld het veld E-mailadres instellen om altijd naar de bestemming te worden verzonden in de geëxporteerde bestanden. Zie onder een voorbeeld van een schemaconfiguratie met vereiste afbeeldingen en hoe het in de afbeeldingsstap van het [gegevens activeren naar workflow voor batchdoelen](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+```json
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+```
+
+![Afbeelding van de vereiste toewijzingen in de activeringsstroom van de gebruikersinterface.](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+>[!NOTE]
+>
+>Momenteel worden combinaties van vereiste toewijzingen ondersteund:
+>* U kunt een vereist brongebied en een vereist bestemmingsgebied vormen. In dit geval kunnen gebruikers geen van de twee velden bewerken of selecteren en alleen de selectie weergeven.
+>* U kunt een vereist bestemmingsgebied slechts vormen. In dit geval kunnen gebruikers een bronveld selecteren om toe te wijzen aan het doel.
+>
+> Alleen een vereist bronveld configureren is momenteel *niet* ondersteund.
+
+Gebruik de parameters die in de onderstaande tabel worden beschreven als u de vereiste toewijzingen wilt toevoegen aan de activeringsworkflow voor uw bestemming.
+
+| Parameter | Type | Beschrijving |
+|---------|----------|------|
+| `requiredMappingsOnly` | Boolean | Geeft aan of gebruikers andere kenmerken en identiteiten in de activeringsstroom kunnen toewijzen, *behalve* de vereiste toewijzingen die u definieert. |
+| `requiredMappings.mandatoryRequired` | Boolean | Ingesteld op true als dit veld een verplicht kenmerk moet zijn dat altijd aanwezig moet zijn in het exporteren van bestanden naar uw doel. Meer informatie over [verplichte kenmerken](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | Boolean | Ingesteld op true als dit veld moet worden gebruikt als een deduplicatietoets bij het exporteren van bestanden naar uw doel. Meer informatie over [deduplicatietoetsen](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | Tekenreeks | Gebruikt wanneer u een brongebied zoals vereist vormt. Geeft aan welk type veld het bronveld is. Beschikbare opties zijn: <ul><li>`"text/x.schema-path"` wanneer het bronveld een vooraf gedefinieerd XDM-kenmerk is</li><li>`"text/x.aep-xl"` als het bronveld een functie is, bijvoorbeeld als aan de kant van het bronveld aan een voorwaarde moet worden voldaan. Lees voor meer informatie over ondersteunde functies de [Gegevensprep](/help/data-prep/api/functions.md) documentatie.</li></ul> |
+| `requiredMappings.source` | Tekenreeks | Hiermee wordt aangegeven wat het vereiste bronveld moet zijn. |
+| `requiredMappings.destination` | Tekenreeks | Hiermee wordt aangegeven wat het vereiste doelveld moet zijn. |
 
 {style=&quot;table-layout:auto&quot;}
 
