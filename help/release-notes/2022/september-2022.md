@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3009'
+source-wordcount: '2844'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,6 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Controlelogboeken](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensverzameling](#data-collection)
-- [Gegevenshygiëne](#data-hygiene)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
@@ -118,27 +117,6 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 -->
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
-
-## Gegevenshygiëne {#data-hygiene}
-
-Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
-
-Met de Adobe Experience Platform-mogelijkheden voor gegevenshygiëne kunt u uw gegevens opschonen door automatische gegevenssetvervaldatums te plannen en via programmacode consumentengegevens te verwijderen op basis van identiteit.
-
->[!IMPORTANT]
->
->De mogelijkheden voor gegevenshygiëne zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
-
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Bijgewerkte UI-workflows | De workflows voor [het plannen van datasettermijnen](../../hygiene/ui/dataset-expiration.md) en [verwijderen van consumentengegevens](../../hygiene/ui/delete-consumer.md) zijn gestroomlijnd in de gebruikersinterface. |
-| API-eindpunt van quota | U kunt quota-informatie voor de processen van de gegevenshygiëne van uw organisatie nu terugwinnen door de [`/quota` eindpunt](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-Raadpleeg voor meer informatie over de mogelijkheden voor gegevenshygiëne van het Platform de [overzicht van de gegevenshygiëne](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
