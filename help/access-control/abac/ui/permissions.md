@@ -3,18 +3,14 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
 
 # Machtigingen voor een rol beheren
-
->[!IMPORTANT]
->
->Op attributen-gebaseerde toegangscontrole is momenteel beschikbaar in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten. Deze mogelijkheid is beschikbaar voor alle Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
 
 >[!IMPORTANT]
 >

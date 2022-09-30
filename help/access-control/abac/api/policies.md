@@ -4,18 +4,14 @@ solution: Experience Platform
 title: API-eindpunt voor toegangsbeheerbeleid
 description: Het /policies eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om beleid in Adobe Experience Platform programmatically te beheren.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
 
 # Doel van toegangsbeheerbeleid
-
->[!IMPORTANT]
->
->Op attributen-gebaseerde toegangscontrole is momenteel beschikbaar in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten. Deze mogelijkheid is beschikbaar voor alle Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
 
 Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen om toelaatbare en ontoelaatbare acties te vestigen. Dit beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. De `/policies` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om beleid, met inbegrip van informatie over de regels programmatically te beheren die hen evenals hun respectieve onderwerpvoorwaarden beheersen.
 

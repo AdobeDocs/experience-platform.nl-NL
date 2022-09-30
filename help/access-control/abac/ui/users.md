@@ -3,18 +3,14 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Toegangsbeheer op basis van kenmerken Gebruikers beheren
 description: Dit document bevat informatie over het beheer van gebruikers en gebruikersgroepen via de machtigingsinterface in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '158'
 ht-degree: 1%
 
 ---
 
 # Gebruikers beheren
-
->[!IMPORTANT]
->
->Op attributen-gebaseerde toegangscontrole is momenteel beschikbaar in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten. Deze mogelijkheid is beschikbaar voor alle Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
 
 Als u gebruikersdetails en rollen wilt bekijken zij aan worden toegewezen, selecteer **[!UICONTROL Users]** tab.
 
