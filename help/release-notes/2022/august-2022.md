@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2022
 description: De release van augustus 2022 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2081'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 
 {style=&quot;table-layout:auto&quot;}
 
-**Opmerking**: Attribution AI zal niet beschikbaar zijn bij bestaande klanten van het gezondheidsschild of het privacyschild tot nader order.
+**Opmerking**: Attribution AI zal niet beschikbaar zijn bij bestaande klanten van het gezondheidsschild tot nader order.
 
 Zie voor meer informatie over Attribution AI de [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overzicht.
 
@@ -56,7 +56,7 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 
 {style=&quot;table-layout:auto&quot;}
 
-**Opmerking**: Klanten van AI zijn tot nader order niet bij bestaande klanten van het gezondheidsschild of het privacyschild beschikbaar.
+**Opmerking**: Klanten met AI zijn tot nader order niet beschikbaar bij bestaande klanten met het gezondheidsschild.
 
 Voor meer informatie over AI van de Klant, gelieve te zien [Customer AI](../../intelligent-services/customer-ai/overview.md) overzicht.
 

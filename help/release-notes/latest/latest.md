@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3074'
+source-wordcount: '3011'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,6 @@ Nieuwe functies in Adobe Experience Platform:
 
 - [Op kenmerken gebaseerd toegangsbeheer](#abac)
 - [Gegevenshygiëne](#data-hygiene)
-- [[!UICONTROL Privacy Console]](#privacy-console)
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
@@ -55,19 +54,13 @@ Met de Adobe Experience Platform-mogelijkheden voor gegevenshygiëne kunt u uw g
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Privacy Shield hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
 
 Raadpleeg de volgende documentatie om aan de slag te gaan met gegevenshygiëne:
 
 - [Overzicht van gegevenshygiëne](../../hygiene/home.md): Leer de grondbeginselen van de mogelijkheden van de Platform van de gegevenshygiëne.
 - [[!UICONTROL Data Hygiene] UI-hulplijn](../../hygiene/ui/overview.md): Leer hoe te om datasetvervaldatums te plannen en de consument schrapt verzoeken binnen het gebruikersinterface van de Platform.
 - [Handleiding voor API voor gegevenshygiëne](../../hygiene/api/overview.md): Alle activiteiten van de gegevenshygiëne die u in UI kunt uitvoeren kunnen ook programmatically zijn
-
-## [!UICONTROL Privacy Console] {#privacy-console}
-
-De [!UICONTROL Privacy Console] in de interface van het Experience Platform biedt een dashboardweergave van belangrijke inzichten van privacygerelateerde functies, zoals [verzoeken van de betrokkene van Privacy Service](../../privacy-service/home.md), [gegevenshygiëne-werkorders](../../hygiene/home.md), en [auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md). De console biedt ook verschillende gebruiksaanwijzingen voor in-product toepassingen om u te helpen bij het doorlopen van gebruikelijke workflows voor privacy.
-
-Zie de [Overzicht van de privacyconsole](../../landing/governance-privacy-security/privacy-console.md) voor meer informatie over de functie.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
