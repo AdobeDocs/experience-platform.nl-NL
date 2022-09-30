@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
+source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
 workflow-type: tm+mt
-source-wordcount: '3011'
+source-wordcount: '3008'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 1%
 Nieuwe functies in Adobe Experience Platform:
 
 - [Op kenmerken gebaseerd toegangsbeheer](#abac)
-- [Gegevenshygiëne](#data-hygiene)
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
@@ -23,6 +22,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Controlelogboeken](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensverzameling](#data-collection)
+- [Gegevenshygiëne](#data-hygiene)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
@@ -45,22 +45,6 @@ Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisat
 | Toestemmingen | De toestemmingen zijn het gebied van Experience Cloud waar de beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren. Door Toestemmingen, kunt u rollen tot stand brengen en beheren, de gewenste middeltoestemmingen voor deze rollen toewijzen, en beleid bouwen aan hefboomwerkingsetiketten en bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld. Zie voor meer informatie de [Handleiding voor machtigingen-UI](../../access-control/abac/ui/browse.md). |
 
 Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie [op attributen-gebaseerd toegangsbeheeroverzicht](../../access-control/abac/overview.md). Voor een uitvoerige gids over het op attributen-gebaseerde toegangsbeheerwerkschema, lees [attribuut-based toegangsbeheergids van begin tot eind](../../access-control/abac/end-to-end-guide.md).
-
-## Gegevenshygiëne {#data-hygiene}
-
-Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
-
-Met de Adobe Experience Platform-mogelijkheden voor gegevenshygiëne kunt u uw gegevens opschonen door automatische gegevenssetvervaldatums te plannen en via programmacode consumentengegevens te verwijderen op basis van identiteit.
-
->[!IMPORTANT]
->
->De mogelijkheden voor gegevenshygiëne zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
-
-Raadpleeg de volgende documentatie om aan de slag te gaan met gegevenshygiëne:
-
-- [Overzicht van gegevenshygiëne](../../hygiene/home.md): Leer de grondbeginselen van de mogelijkheden van de Platform van de gegevenshygiëne.
-- [[!UICONTROL Data Hygiene] UI-hulplijn](../../hygiene/ui/overview.md): Leer hoe te om datasetvervaldatums te plannen en de consument schrapt verzoeken binnen het gebruikersinterface van de Platform.
-- [Handleiding voor API voor gegevenshygiëne](../../hygiene/api/overview.md): Alle activiteiten van de gegevenshygiëne die u in UI kunt uitvoeren kunnen ook programmatically zijn
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -135,6 +119,27 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 
+## Gegevenshygiëne {#data-hygiene}
+
+Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
+
+Met de Adobe Experience Platform-mogelijkheden voor gegevenshygiëne kunt u uw gegevens opschonen door automatische gegevenssetvervaldatums te plannen en via programmacode consumentengegevens te verwijderen op basis van identiteit.
+
+>[!IMPORTANT]
+>
+>De mogelijkheden voor gegevenshygiëne zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Bijgewerkte UI-workflows | De workflows voor [het plannen van datasettermijnen](../../hygiene/ui/dataset-expiration.md) en [verwijderen van consumentengegevens](../../hygiene/ui/delete-consumer.md) zijn gestroomlijnd in de gebruikersinterface. |
+| API-eindpunt van quota | U kunt quota-informatie voor de processen van de gegevenshygiëne van uw organisatie nu terugwinnen door de [`/quota` eindpunt](../../hygiene/api/quota.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Raadpleeg voor meer informatie over de mogelijkheden voor gegevenshygiëne van het Platform de [overzicht van de gegevenshygiëne](../../hygiene/home.md).
+
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
@@ -151,7 +156,7 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen. [Aan de slag met campagne](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Deze integratie werkt met Let op: deze integratie werkt met [Adobe Campaign versie 8.4 of hoger](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen. [Aan de slag met campagne](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Deze integratie werkt met [Adobe Campaign versie 8.4 of hoger](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | De [!DNL Salesforce CRM] de bestemming is bijgewerkt om zowel contacten en leidt updates, als prestatiesverbeteringen voor snellere updates te steunen. |
 
 {style=&quot;table-layout:auto&quot;}
