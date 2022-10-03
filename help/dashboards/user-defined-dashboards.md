@@ -2,9 +2,9 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: d874fed681449c6f5114196cface157c8c406d69
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,11 @@ ht-degree: 0%
 # Door gebruiker gedefinieerde dashboards
 
 Met Adobe Experience Platform-dashboards kunt u snel inzicht krijgen en de visualisatie aanpassen via de door de gebruiker gedefinieerde dashboards-functie. Met deze functie kunt u aangepaste dashboards maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren.
+
+>[!IMPORTANT]
+>
+>Om ervoor te zorgen dat elke query voor een Real-time Customer Data Platform-inzichten over voldoende bronnen beschikt om efficiënt te worden uitgevoerd, houdt de API het gebruik van bronnen bij door er corrency-sleuven aan elke query toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
