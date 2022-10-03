@@ -2,14 +2,19 @@
 title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
 description: De nieuwste releaseopmerkingen voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
+source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
+
+## 28 september 2022
+
+* **Adobe Experience Platform-integratie linker-nav**: Alle mogelijkheden die eerder exclusief waren aan de UI van de Inzameling van Gegevens (met inbegrip van markeringen en gebeurtenis het door:sturen) zijn nu ook beschikbaar door de linkernavigatie in UI van het Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform.
+* **Toewijzing door gebruiker in tags en gebeurtenis doorsturen**: Wanneer een lijst van beschikbare eigenschappen in markeringen en gebeurtenis het door:sturen, toont elk vermeld bezit nu wanneer het het laatst werd bijgewerkt en door wie.
 
 ## 27 juli 2022
 
