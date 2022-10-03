@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;alarm;
 title: API-eindpunt voor abonnementen waarschuwen
 description: Deze gids verstrekt steekproefHTTP- verzoeken en reacties voor diverse API vraag u aan het waakzame abonnementseindpunt met de Dienst API van de Vraag kunt maken.
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 0%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Antwoord**
 
-Een succesvolle reactie keert een status van de HTML van 200 en alle alarm terug die aan worden geabonneerd. Dit omvat de waarschuwings-id, het type waarschuwing, de Adobe geregistreerde e-mailadressen van de abonnee en het bijbehorende berichtkanaal.
+Een succesvolle reactie keert een status van HTTP van 200 en alle alarm terug die aan worden geabonneerd. Dit omvat de waarschuwings-id, het type waarschuwing, de Adobe geregistreerde e-mailadressen van de abonnee en het bijbehorende berichtkanaal.
 
 ```json
 {
