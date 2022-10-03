@@ -5,9 +5,9 @@ title: Beperkingen voor XDM-veldtypen
 topic-legacy: overview
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -126,11 +126,11 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 * [Scala, .NET en CosmosDB](#scala)
 * [MongoDB, Aerospike en Protobuf 2](#mongo)
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >Onder de standaard XDM types die in de lijsten hieronder worden vermeld, [!UICONTROL Map] type is ook opgenomen. Kaarten worden gebruikt in standaardschema&#39;s wanneer de gegevens als sleutels worden vertegenwoordigd die aan bepaalde waarden in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.
 >
->De kaart-type gebieden zijn gereserveerd voor industrie en verkopersschemagebruik en daarom kunnen niet in douanemiddelen worden gebruikt die u bepaalt. De opname van het kaarttype in de onderstaande tabellen is alleen bedoeld om u te helpen bepalen hoe u uw bestaande gegevens kunt toewijzen aan XDM als deze momenteel zijn opgeslagen in een van de hieronder vermelde indelingen.
+>Vele standaardXDM componenten gebruiken kaarttypes, en u kunt ook [aangepaste kaartvelden definiëren](../tutorials/custom-fields-api.md#maps) indien gewenst. De opname van het kaarttype in de onderstaande tabellen is bedoeld om u te helpen bepalen hoe u uw bestaande gegevens kunt toewijzen aan XDM als deze momenteel zijn opgeslagen in een van de hieronder vermelde indelingen.
 
 ### Parquet, Spark SQL en Java {#parquet}
 
