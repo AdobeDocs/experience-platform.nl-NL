@@ -3,14 +3,14 @@ keywords: Experience Platform;query;query-service;problemen oplossen;instructies
 title: Guardrails voor Query-service
 description: Dit document bevat informatie over gebruiksbeperkingen voor gegevens van Query Service om u te helpen uw querygebruik te optimaliseren.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: d874fed681449c6f5114196cface157c8c406d69
+source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
 
-# Guardrails voor gegevens van Query Service
+# Guardrails voor Query-service
 
 De begeleiding is drempels die begeleiding voor gegevens en systeemgebruik, prestatiesoptimalisering, en vermijding van fouten of onverwachte resultaten in Adobe Experience Platform verstrekken.
 
@@ -23,10 +23,6 @@ Voordat u doorgaat met dit document, hebt u een goed inzicht in de twee hieronde
 * **Ad-hocquery&#39;s**: Voor uitvoering `SELECT` query&#39;s voor het verkennen, experimenteren en valideren van gegevens waar de resultaten van de query&#39;s **zijn niet opgeslagen** op het data Lake.
 
 * **Batchquery&#39;s**: Voor uitvoering `INSERT TABLE AS SELECT` en `CREATE TABLE AS SELECT` query&#39;s voor het opschonen, vormgeven, manipuleren en verrijken van gegevens. De resultaten van deze query&#39;s **worden opgeslagen** op het data Lake. De maatstaf voor het meten van het verbruik van deze functionaliteit is computeruren.
-
->[!IMPORTANT]
->
->Om ervoor te zorgen dat elke query voor een Real-time Customer Data Platform-inzichten over voldoende bronnen beschikt om efficiënt te worden uitgevoerd, houdt de API het gebruik van bronnen bij door er corrency-sleuven aan elke query toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
 
 In de onderstaande afbeelding ziet u hoe de mogelijkheden van Query Service momenteel zijn verpakt en in licentie worden gegeven:
 
@@ -71,6 +67,8 @@ De lijsten hieronder verstrekken de geadviseerde guardrailgrenzen en beschrijvin
 | Resultaten geretourneerd via | Gegevensset | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
 {style=&quot;table-layout:auto&quot;}
+
+Om ervoor te zorgen dat elke query voor een Real-time Customer Data Platform-inzichten over voldoende bronnen beschikt om efficiënt te worden uitgevoerd, houdt de API het gebruik van bronnen bij door er corrency-sleuven aan elke query toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
 
 ## Volgende stappen
 
