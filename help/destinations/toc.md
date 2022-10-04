@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: e1845bfa5b3387b45385a21ff7535906689dd89c
+source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '948'
 ht-degree: 1%
 
 ---
@@ -131,6 +131,7 @@ ht-degree: 1%
       * [Koppeling met kenmerken van luchtschip](./catalog/mobile-engagement/airship-attributes.md)
       * [Koppeling met vliegtuigcodes](./catalog/mobile-engagement/airship-tags.md)
       * [Braze verbinding](./catalog/mobile-engagement/braze.md)
+      * [Lijnverbinding](./catalog/mobile-engagement/line.md)
    * Aanpassingsdoelen {#personalization}
       * [Overzicht van personalisatiedoelen](./catalog/personalization/overview.md)
       * [Adobe Target-verbinding](./catalog/personalization/adobe-target-connection.md)
