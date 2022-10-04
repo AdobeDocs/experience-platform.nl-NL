@@ -5,9 +5,9 @@ title: Overzicht van afstemming van segment
 topic-legacy: overview
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
+source-git-commit: 2329065b938d97f48a23be5250fec535355db770
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1919'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ De lijst met ondersteunde naamruimten ziet er als volgt uit:
 
 | Naamruimte | Beschrijving |
 | --------- | ----------- |
-| E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Zie het volgende document op [SHA256-hashingondersteuning](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) voor meer informatie . |
+| E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Platform biedt twee methoden om hashing bij gegevensverzameling te ondersteunen, via [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) en via [voorvoegsel gegevens](../../../data-prep/functions.md#hashing). |
 | Telefoon (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | ECID | Een naamruimte die een ECID-waarde (Experience Cloud ID) vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie de [ECID-overzicht](../../../identity-service/ecid.md) voor meer informatie . |
 | Apple IDFA (ID voor adverteerders) | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [op rente gebaseerde advertenties](https://support.apple.com/en-us/HT202074) voor meer informatie . |
