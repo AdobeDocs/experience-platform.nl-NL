@@ -4,9 +4,9 @@ title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2497'
 ht-degree: 0%
 
 ---
@@ -122,6 +122,11 @@ Gebruik de **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip
 1. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
 
 ### Incrementele bestanden exporteren {#export-incremental-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Exportopties voor bestanden voor gegevenssets"
+>abstract="Selecteren **Incrementele bestanden exporteren** om alleen de gegevens te exporteren die sinds de laatste export aan de gegevensset zijn toegevoegd. <br> De eerste incrementele bestandsuitvoer bevat alle gegevens in de gegevensset, die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de gegevens die sinds de eerste export aan de gegevensset zijn toegevoegd."
 
 Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te activeren waarbij het eerste bestand een volledige momentopname is van alle profielkwalificaties voor het geselecteerde segment, en volgende bestanden zijn incrementele profielkwalificaties sinds de vorige exportbewerking.
 
