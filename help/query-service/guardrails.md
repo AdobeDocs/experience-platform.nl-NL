@@ -3,9 +3,9 @@ keywords: Experience Platform;query;query-service;problemen oplossen;instructies
 title: Guardrails voor Query-service
 description: Dit document bevat informatie over gebruiksbeperkingen voor gegevens van Query Service om u te helpen uw querygebruik te optimaliseren.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -67,6 +67,8 @@ De lijsten hieronder verstrekken de geadviseerde guardrailgrenzen en beschrijvin
 | Resultaten geretourneerd via | Gegevensset | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Dashboards-inzichten die zijn gegenereerd met query&#39;s {#dashboard-insights}
 
 Om ervoor te zorgen dat elke query voor een Real-time Customer Data Platform-inzichten over voldoende bronnen beschikt om efficiënt te worden uitgevoerd, houdt de API het gebruik van bronnen bij door er corrency-sleuven aan elke query toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
 
