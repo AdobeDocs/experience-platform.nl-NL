@@ -2,9 +2,9 @@
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,15 @@ Voor gedetailleerde instructies over hoe te opstelling de bestemming en activeer
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een Marketo-bestemming en het activeren van segmenten.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de bovenstaande handleiding.
+>De video weerspiegelt niet volledig de huidige mogelijkheden. Voor de meest actuele informatie raadpleegt u de bovenstaande handleiding. De volgende delen van de video zijn verouderd:
+> 
+>* De doelkaart die u in UI van het Experience Platform zou moeten gebruiken is **[!UICONTROL Marketo V2]**.
+>* De nieuwe video wordt niet weergegeven **[!UICONTROL Person creation]** in het veld Verbinding maken met doel.
+>* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu vele andere gebieden van profielattributen naast de informatie van het segmentlidmaatschap in kaart brengen die op het ogenblik werd gesteund de video werd geregistreerd. U kunt ook segmentleden exporteren naar Marketo die nog niet voorkomen in uw statische Marketo-lijsten. Deze leden worden toegevoegd aan de lijsten.
+>* In de **[!UICONTROL Schedule segment step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
