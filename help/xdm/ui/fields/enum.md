@@ -5,7 +5,7 @@ title: Enum Fields en voorgestelde waarden in UI bepalen
 description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
+source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
 >title="Opsommingen en voorgestelde waarden"
->abstract="An **Enum** beperkt een tekenreeksveld zodat alleen gegevens zijn toegestaan die overeenkomen met een vooraf gedefinieerde set waarden die moeten worden ingevoerd. Aan elke beperking kan een **Weergavenaam** die kenmerkdropdowns in de Segmentatie UI bevolkt. **Voorgestelde waarden** voor een veld de opname niet beperken en alleen de weergavenamen bepalen die in Segmentatie worden weergegeven. Als u veelvoudige schema&#39;s hebt die een gebied delen dat tot een gemeenschappelijke klasse of een gebiedsgroep behoort, en u verschillende aantallen of voorgestelde waarden voor dat gebied tussen elk schema bepaalt, worden die waarden samengevoegd en toegevoegd in het unieschema."
+>abstract="An **Enum** beperkt een tekenreeksveld zodat alleen gegevens zijn toegestaan die overeenkomen met een vooraf gedefinieerde set waarden die moeten worden ingevoerd. Aan elke opsommingsbeperking kan een **Weergavenaam** die kenmerkdropdowns in de Segmentatie UI bevolkt. **Voorgestelde waarden** voor een veld de opname niet beperken en alleen de weergavenamen bepalen die in Segmentatie worden weergegeven. Als u veelvoudige schema&#39;s hebt die een gebied delen dat tot een gemeenschappelijke klasse of een gebiedsgroep behoort, en u verschillende aantallen of voorgestelde waarden voor dat gebied tussen elk schema bepaalt, worden die waarden samengevoegd en toegevoegd in het unieschema."
 
 In het Model van Gegevens van de Ervaring (XDM), kan een koordgebied een vooraf bepaalde reeks toegelaten of voorgestelde waarden worden gegeven om beter te controleren welke waarden in dat gebied worden opgenomen of hoe het in segmentatie zal gedragen.
 
