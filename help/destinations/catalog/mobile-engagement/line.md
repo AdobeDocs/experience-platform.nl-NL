@@ -2,9 +2,9 @@
 keywords: mobiel;mobiele betrokkenheidsdoelen;LINE;LINE mobiele betrokkenheidsbestemming
 title: LINE-verbinding
 description: De bestemming van de LIJN staat u toe om profielen aan uw segment van het Platform toe te voegen en gepersonaliseerde ervaringen aan verbonden gebruikers te leveren.
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,10 @@ Houd rekening met de volgende voorwaarden in [!DNL LINE]om gegevens van Platform
 
 #### U hebt een [!DNL LINE] account {#prerequisites-account}
 
-Ga naar de [!DNL LINE] [inschrijving](https://account.line.biz/signup) pagina om te registreren en een account te maken, als u er nog geen hebt.
+U moet zich registreren en een [!DNL LINE] account, als u er nog geen hebt. Een account maken:
+
+1. Ga naar de [!DNL LINE] [aanmelding bij account](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) page
+2. Selecteer **[!UICONTROL Create an account]**.
 
 #### De [!DNL LINE channel access token (long-lived)] van de [!DNL LINE] ontwikkelaarsconsole {#gather-credentials}
 
