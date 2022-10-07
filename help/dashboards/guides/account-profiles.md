@@ -2,9 +2,9 @@
 title: Dashboardgids voor accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 
 * [Totaal rekeningen per bedrijfstak](#total-accounts-by-industry)
 * [Accountprofielen toegevoegd](#account-profiles-added)
+* [Predictieve spreiding van scores](#predictive-scoring-distribution)
+* [Predictieve scoring van invloedrijke factoren](#predictive-scoring-top-influential-factors)
 
 ### Totaal rekeningen per bedrijfstak {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Deze widget gebruikt een kleurengecodeerd staafdiagram om het aantal profielen t
 
 ![De widget Accountprofielen toegevoegd.](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### Predictieve spreiding van scores {#predictive-scoring-distribution}
+
+De [!UICONTROL Predictive scoring distribution] widget geeft de verdeling van de score van alle accountprofielen weer om u te helpen de gezondheid van uw verkooppijplijn in één oogopslag te begrijpen . De het scoren gegevens worden overgebracht door een donutgrafiek en een kolomgrafiek.
+
+Het donutdiagram toont het aandeel van uw totale accountprofielen in elk van de sterke, gemiddelde en lage neiging om emmers te kopen. De sleutel bevat meer details over de secties met kleurcodes, waaronder de bereiken van het scoremmer en het aantal accountprofielen in dat bereik.
+
+De kolomgrafiek verstrekt een meer korrelige het scoren mislukking. Elke kolom toont het aantal rekeningsprofielen in elk van de 20 5-punt verhogende emmers.
+
+Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
+
+![De widget voor voorspellende codeverdeling.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Predictieve scoring van invloedrijke factoren {#predictive-scoring-top-influential-factors}
+
+De [!UICONTROL Predictive scoring top influential factors] widget helpt u de belangrijkste factoren te begrijpen die de scores voor elke aandrijvingsemmer drijven.
+
+Deze widget toont de belangrijkste invloedrijke factoren voor elk van de hoge, gemiddelde, en lage aandrijvingsemmers. Een staaf voor elke invloedrijke factor geeft het percentage aan van de accountprofielen in dat eigenschapssemmer dat de specifieke invloedrijke factor bevat.
+
+Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
+
+![De widget Voorspelende score met invloedrijke factoren.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu de locatie [!UICONTROL Account Profiles] dashboard. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Als u meer wilt weten over het werken met accountprofielen als onderdeel van uw B2B-gegevens in de interface van het Experience Platform, raadpleegt u de [overzicht van accountprofielen](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B Edition.
+Door dit document te volgen, moet u nu weten hoe u de [!UICONTROL Account Profiles] dashboard. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Als u meer wilt weten over het werken met accountprofielen als onderdeel van uw B2B-gegevens in de interface van het Experience Platform, raadpleegt u de [overzicht van accountprofielen](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B Edition.
