@@ -2,7 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;alarm;
 title: API-eindpunt voor abonnementen waarschuwen
 description: Deze gids verstrekt steekproefHTTP- verzoeken en reacties voor diverse API vraag u aan het waakzame abonnementseindpunt met de Dienst API van de Vraag kunt maken.
-source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
+hide: true
+hidefromtoc: true
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 0%

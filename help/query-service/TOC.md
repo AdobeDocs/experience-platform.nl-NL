@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 feature: Queries
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '214'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,6 @@ ht-degree: 6%
    - [Verbindingsparameters](api/connection-parameters.md)
    - [Geplande query&#39;s](api/scheduled-queries.md)
    - [Runs voor geplande vragen](api/runs-scheduled-queries.md)
-   - [Query-waarschuwingen](api/alert-subscriptions.md)
    - [Zoeksjablonen](api/query-templates.md)
 - Gebruikersinterface Query Service {#ui}
    - [Overzicht van gebruikersinterface](ui/overview.md)
