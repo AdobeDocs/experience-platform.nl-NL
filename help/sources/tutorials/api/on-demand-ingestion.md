@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;de stroomdienst;
 title: (Bèta) creeer een Looppas van de Stroom voor Ingestie op bestelling gebruikend de Dienst API van de Stroom
 description: In deze zelfstudie worden de stappen beschreven voor het maken van een flow die op aanvraag wordt uitgevoerd voor opname met behulp van de Flow Service API
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -70,6 +70,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -82,9 +83,10 @@ curl -X POST \
 | Parameter | Beschrijving |
 | --- | --- |
 | `flowId` | De id van de flow waarop de flow wordt uitgevoerd. |
+| `params.startTime` | Een geheel getal dat de begintijd van de uitvoering definieert. De waarde wordt weergegeven in unieke tijdperk. |
 | `params.windowStartTime` | Een geheel getal dat de begintijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
 | `params.windowEndTime` | Een geheel getal dat de eindtijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
-| `params.deltaColumn` | De deltakolom wordt vereist om de gegevens te verdelen en nieuw opgenomen gegevens van historische gegevens te scheiden. |
+| `params.deltaColumn` | De deltakolom wordt vereist om de gegevens te verdelen en nieuw opgenomen gegevens van historische gegevens te scheiden. **Opmerking**: De `deltaColumn` is alleen nodig bij het maken van uw eerste flowuitvoering. |
 | `params.deltaColumn.name` | De naam van de deltakolom. |
 
 **Antwoord**
@@ -93,53 +95,36 @@ Een succesvolle reactie keert de details van de pas gecreëerde stroomlooppas, m
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | De id van de nieuwe flow-run. Zie de handleiding op [ophalen, stroomspecificaties](../api/collect/database-nosql.md#specs) voor meer informatie over op tabel-gebaseerde runtime specificaties. |
-| `createdAt` | De unieke tijdstempel die aangeeft wanneer de flowuitvoering is gemaakt. |
-| `updatedAt` | De unieke tijdstempel die aangeeft wanneer de flowuitvoering voor het laatst is bijgewerkt. |
-| `createdBy` | De organisatie-id van de gebruiker die de flow heeft gemaakt. |
-| `updatedBy` | De organisatie-id van de gebruiker die de flowuitvoering voor het laatst heeft bijgewerkt. |
-| `createdClient` | De toepassingsclient die de flow heeft gemaakt. |
-| `updatedClient` | De toepassingsclient die de flowuitvoering voor het laatst heeft bijgewerkt. |
-| `sandboxId` | De id van de sandbox die de flowuitvoering bevat. |
-| `sandboxName` | De naam van de sandbox die de uitgevoerde flow bevat. |
-| `imsOrgId` | De organisatie-id. |
-| `flowId` | De id van de flow waarop de flow wordt uitgevoerd. |
-| `params.windowStartTime` | Een geheel getal dat de begintijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
-| `params.windowEndTime` | Een geheel getal dat de eindtijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
-| `params.deltaColumn` | De deltakolom wordt vereist om de gegevens te verdelen en nieuw opgenomen gegevens van historische gegevens te scheiden. **Opmerking**: De `deltaColumn` is alleen nodig bij het maken van uw eerste flowuitvoering. |
-| `params.deltaColumn.name` | De naam van de deltakolom. |
 | `etag` | De middelversie van de stroomlooppas. |
-| `metrics` | This property displays a status summary for the flow run. |
+<!-- 
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
+| `params.deltaColumn.name` | The name of the delta column. |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## Een doorloop maken voor een op een bestand gebaseerde bron
 
@@ -170,6 +155,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -179,6 +165,7 @@ curl -X POST \
 | Parameter | Beschrijving |
 | --- | --- |
 | `flowId` | De id van de flow waarop de flow wordt uitgevoerd. |
+| `params.startTime` | Een geheel getal dat de begintijd van de uitvoering definieert. De waarde wordt weergegeven in unieke tijdperk. |
 | `params.windowStartTime` | Een geheel getal dat de begintijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
 | `params.windowEndTime` | Een geheel getal dat de eindtijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
 
@@ -189,49 +176,19 @@ Een succesvolle reactie keert de details van de pas gecreëerde stroomlooppas, m
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van de nieuwe flow-run. Zie de handleiding op [ophalen, stroomspecificaties](../api/collect/cloud-storage.md#specs) voor meer informatie over op dossier-gebaseerde looppasspecificaties. |
-| `createdAt` | De unieke tijdstempel die aangeeft wanneer de flowuitvoering is gemaakt. |
-| `updatedAt` | De unieke tijdstempel die aangeeft wanneer de flowuitvoering voor het laatst is bijgewerkt. |
-| `createdBy` | De organisatie-id van de gebruiker die de flow heeft gemaakt. |
-| `updatedBy` | De organisatie-id van de gebruiker die de flowuitvoering voor het laatst heeft bijgewerkt. |
-| `createdClient` | De toepassingsclient die de flow heeft gemaakt. |
-| `updatedClient` | De toepassingsclient die de flowuitvoering voor het laatst heeft bijgewerkt. |
-| `sandboxId` | De id van de sandbox die de flowuitvoering bevat. |
-| `sandboxName` | De naam van de sandbox die de uitgevoerde flow bevat. |
-| `imsOrgId` | De organisatie-id. |
-| `flowId` | De id van de flow waarop de flow wordt uitgevoerd. |
-| `params.windowStartTime` | Een geheel getal dat de begintijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
-| `params.windowEndTime` | Een geheel getal dat de eindtijd definieert van het venster waarin gegevens moeten worden opgehaald. De waarde wordt uitgedrukt in unieke tijd. |
+| `id` | De id van de nieuwe flow-run. Zie de handleiding op [ophalen, stroomspecificaties](../api/collect/database-nosql.md#specs) voor meer informatie over op tabel-gebaseerde runtime specificaties. |
 | `etag` | De middelversie van de stroomlooppas. |
-| `metrics` | This property displays a status summary for the flow run. |
-
 
 ## De stroomuitvoering controleren
 
