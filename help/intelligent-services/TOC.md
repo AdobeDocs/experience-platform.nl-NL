@@ -3,8 +3,8 @@ solution: Experience Platform
 audience: user
 user-guide-title: Help bij Intelligente services
 breadcrumb-title: Handleiding voor intelligente services
-user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken van uw gegevens over marketinggebeurtenissen.
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+user-guide-description: Gebruik de intelligente diensten van AI om scores te produceren, inzichten te ontdekken, en segmenten van uw gegevens van de marketinggebeurtenissen tot stand te brengen.
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 4%

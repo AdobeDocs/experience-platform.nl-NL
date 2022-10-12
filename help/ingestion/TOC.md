@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Help bij Adobe Experience Platform-gegevensverwerking
 breadcrumb-title: Handleiding voor gegevensinname
-user-guide-description: Breng uw gegevens in Platform door partij of het stromen ingestie.
+user-guide-description: Breng uw gegevens in Experience Platform door partij of het stromen ingestie.
 feature: Data Ingestion
-source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '129'
 ht-degree: 3%
 
 ---

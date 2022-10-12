@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Toegangsbeheer in Adobe Experience Platform Help
 breadcrumb-title: Handleiding voor toegangsbeheer
-user-guide-description: Gebruik productprofielen in Adobe Admin Console om gebruikers te koppelen aan machtigingen en sandboxen.
+user-guide-description: Gebruik productprofielen in Adobe Admin Console om gebruikersmachtigingen te beheren. Leer hoe u gebruikers kunt toewijzen aan producten en sandboxen.
 feature: Access Control
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '124'
+ht-degree: 11%
 
 ---
 
