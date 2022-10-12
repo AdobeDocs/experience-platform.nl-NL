@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
+source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1989'
 ht-degree: 1%
 
 ---
@@ -110,6 +110,7 @@ De instructies in deze sectie verwijzen naar het aantal en de aard van de segmen
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Segmenten per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 segmenten hebben, zolang er minder dan 4000 segmenten in elke afzonderlijke sandbox zijn. Het maken van extra segmenten kan van invloed zijn op de systeemprestaties. |
+| Randsegmenten per sandbox | 150 | Zacht | Een organisatie kan in totaal meer dan 150 randsegmenten hebben, zolang er zich in elke sandbox minder dan 150 randsegmenten bevinden. Het maken van extra randsegmenten kan van invloed zijn op de systeemprestaties. |
 | Streaming segmenten per sandbox | 500 | Zacht | Een organisatie kan in totaal meer dan 500 streaming segmenten hebben, zolang er zich in elke sandbox minder dan 500 streaming segmenten bevinden. Het maken van extra streaming segmenten kan van invloed zijn op de systeemprestaties. |
 | Batchsegmenten per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 batchsegmenten hebben, zolang er zich in elke sandbox minder dan 4000 batchsegmenten bevinden. Het maken van extra batchsegmenten kan van invloed zijn op de systeemprestaties. |
 
