@@ -3,7 +3,7 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
+source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Nieuwe functies**
 
-* Extra ondersteuning voor Volledige migratie van pagina naar pagina. Het Adobe Target-profiel blijft nu behouden wanneer een bezoeker zich tussen de pagina&#39;s at.js en Web SDK verplaatst.
+* Extra ondersteuning voor [Volledige migratie pagina voor pagina](home.md#migrating-to-web-sdk). Het Adobe Target-profiel blijft nu behouden wanneer een bezoeker zich tussen de pagina&#39;s at.js en Web SDK verplaatst.
 * Toegevoegde configureerbare ondersteuning voor [hoge entropgebruiker-Agent de wenken van de Cliënt](fundamentals/user-agent-client-hints.md#high-entropy).
 * Extra ondersteuning voor de nieuwe `applyResponse` gebruiken. Hierdoor is een hybride personalisatie mogelijk via de [Edge Network Server-API](../server-api/overview.md).
 * Koppelingen in de QA-modus werken nu op meerdere pagina&#39;s.
