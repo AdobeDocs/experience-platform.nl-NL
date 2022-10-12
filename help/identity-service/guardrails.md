@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
+source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '445'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ In de volgende tabel worden de bestaande regels beschreven die u moet volgen om 
 | --- | --- | --- |
 | ECID | <ul><li>De identiteitswaarde van een ECID moet precies 38 tekens zijn.</li><li>De identiteitswaarde van een ECID mag alleen uit getallen bestaan.</li></ul> | <ul><li>Als de identiteitswaarde van ECID niet precies 38 tekens is, wordt de record overgeslagen.</li><li>Als de identiteitswaarde van ECID niet-numerieke tekens bevat, wordt de record overgeslagen.</li></ul> |
 | Niet-ECID | De identiteitswaarde mag niet langer zijn dan 1024 tekens. | Als de identiteitswaarde meer dan 1024 tekens bevat, wordt de record overgeslagen. |
+
+### Naamnaamruimte-opname
+
+Vanaf 31 januari 2023 blokkeert Identity Service de inname van Adobe Analytics ID (AID) voor nieuwe klanten. Deze identiteit wordt doorgaans via het dialoogvenster [Adobe Analytics-bron](../sources/connectors/adobe-applications/analytics.md) en de [Adobe Audience Manager-bron](../sources//connectors/adobe-applications/audience-manager.md) en is overbodig omdat de ECID dezelfde webbrowser vertegenwoordigt. Neem contact op met uw accountmanager als u deze standaardconfiguratie wilt wijzigen.
 
 ## Volgende stappen
 
