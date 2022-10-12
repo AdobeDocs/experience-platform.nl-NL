@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt of opslagplaats te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
+source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,13 @@ Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u t
 
 De documentatie van de Destination SDK verstrekt instructies voor u om het Adobe Experience Platform Destination SDK te gebruiken om een productievere bestemmingsintegratie met Adobe Experience Platform te vormen, te testen en vrij te geven, en uw bestemming te hebben deel van de steeds groeiende bestemmingscatalogus worden. Door Destination SDK te gebruiken, kunt u uw eigen douane privé bestemming ook tot stand brengen om gegevens uit te voeren die aan uw behoeften worden aangepast.
 
-![Overzicht van de doelcatalogus](./assets/destinations-catalog-overview.png)
+![Schermafbeelding van de gebruikersinterface van het Experience Platform, met de doelcatalogus](./assets/destinations-catalog-overview.png)
 
 ## Productie- en aangepaste integratie {#productized-custom-integrations}
+
+>[!IMPORTANT]
+>
+> Deze functionaliteit om privé douanebestemmingen tot stand te brengen is beschikbaar slechts aan [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 Als partner van Destination SDK, kunt u van het toevoegen van uw geproduceerde bestemming aan het profiteren [Catalogus Experience Platform](/help/destinations/catalog/overview.md):
 1. Standaardiseer integratieconfiguraties voor alle klanten met vooraf geconfigureerde parameters en vereenvoudig de installatie-ervaring voor klanten.
@@ -28,19 +32,7 @@ Als partner van Destination SDK, kunt u van het toevoegen van uw geproduceerde b
 
 Als klant van het Experience Platform, kunt u een eigen privé douanebestemming ook ontwerpen, die het best uw activeringsbehoeften kan aanpassen.
 
-![Destination SDK visueel diagram](./assets/destination-sdk-visual.png)
-
-<!--
-
-## Types of destinations in Adobe Experience Platform {#types-of-destinations}
-
-In Adobe Experience Platform, we distinguish between two destination types - *connections* and *extensions*. In the user interface, customers can choose between two types of connection destinations, Profile Export destinations and Segment Export destinations. For more details around the difference between the different destination types, read [Destination Types and Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en).
-
-![Destination types](./assets/types-of-destinations.png)
-
-This documentation set provides you with all the necessary information to add your destination to Adobe Experience Platform, as a *connection*, either Profile Export or Segment Export. To set up an extension, visit the [Experience Platform Launch developer portal](https://developer.adobelaunch.com/extensions/).
-
--->
+![Een overzichtsdiagram dat toont hoe de bestemmingsontwikkelaars met Destination SDK communiceren en hoe de klanten in real time CDP van productieve en privé bestemmingen profiteren.](./assets/destination-sdk-visual.png)
 
 ## Ondersteunde soorten integratie {#supported-integration-types}
 
