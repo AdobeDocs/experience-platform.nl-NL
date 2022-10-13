@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '2101'
 ht-degree: 1%
 
 ---
@@ -151,13 +151,17 @@ Meer informatie over een CNAME is beschikbaar in het dialoogvenster [Adobe-docum
 
 ## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
 
-Ja, gebruikt momenteel SDK van het Web overal tussen 1-4 koekjes afhankelijk van uw implementatie. Hieronder volgt een lijst van de 4 koekjes die u met het Web SDK en de manier zou kunnen zien dat zij worden gebruikt:
+Ja, gebruikt momenteel SDK van het Web overal tussen één tot zeven koekjes afhankelijk van uw implementatie. Hieronder volgt een lijst van de koekjes die u met het Web SDK en de manier zou kunnen zien dat zij worden gebruikt:
 
-**kndct_orgid_identity:** Het identiteitscookie wordt gebruikt om de ECID op te slaan, evenals enige andere informatie met betrekking tot de ECID.
-
-**kndctr_orgid_toestemming:** In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen.
-
-**kndctr_orgid_cluster:** In dit cookie wordt het gebied Experience Edge opgeslagen dat de verzoeken van de huidige gebruiker weergeeft. Het gebied wordt gebruikt in de weg URL zodat de Rand van de Ervaring de aanvraag naar het correcte gebied kan leiden. Dit koekje heeft een leven van 30 minuten, zodat als een gebruiker met een verschillend IP adres verbindt, het verzoek aan het dichtste gebied kan worden verpletterd.
+| **Naam** | **maxAge** | **Vriendelijke leeftijd** | **Beschrijving** |
+|---|---|---|---|
+| **kndct_orgid_identity** | 34128000 | 395 dagen | In het identiteitscookie wordt de ECID opgeslagen, evenals andere informatie over de ECID. |
+| **kndctr_orgid_permission_check** | 7200 | 2 uur | In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen. |
+| **kndctr_orgid_permission** | 15552000 | 180 dagen | Deze op zitting-gebaseerde koekje geeft de server aan om de server van de toestemmingsvoorkeur omhoog te kijken. |
+| **kndctr_orgid_cluster** | 1800 | 30 minuten | In dit cookie wordt het gebied Experience Edge opgeslagen dat de verzoeken van de huidige gebruiker weergeeft. Het gebied wordt gebruikt in de weg URL zodat de Rand van de Ervaring de aanvraag naar het correcte gebied kan leiden. Dit koekje heeft een leven van 30 minuten, zodat als een gebruiker met een verschillend IP adres verbindt, het verzoek aan het dichtste gebied kan worden verpletterd. |
+| **mbox** | 63072000 | 2 jaar | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Hierdoor wordt het doel [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) in te stellen door de Web SDK. |
+| **mboxEdgeCluster** | 1800 | 30 minuten | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Met dit cookie kan de SDK van het Web de juiste Edge-cluster meedelen aan at.js, zodat de doelprofielen synchroon kunnen blijven terwijl gebruikers door een site navigeren. |
+| **AMCV_##@AdobeOrg** | 34128000 | 395 dagen | Dit cookie wordt alleen weergegeven wanneer ID-migratie op de Adobe Experience Platform Web SDK is ingeschakeld. Dit koekje helpt wanneer het overgaan naar Web SDK terwijl sommige delen van de plaats nog bezoekor.js gebruiken. Zie de [idMigrationEnabled-documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) voor meer informatie over deze instelling. |
 
 Wanneer het gebruiken van SDK van het Web, plaatst het Netwerk van de Rand één of meerdere hierboven koekjes. Het netwerk van de Rand plaatst alle koekjes met `secure` en `sameSite="none"` kenmerken.
 
