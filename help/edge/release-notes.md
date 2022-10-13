@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
+source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 0%
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](extension/web-sdk-ext-release-notes.md).
+
+## Versie 2.13.1 - 13 oktober 2022
+
+* Probleem verholpen waarbij bezoekersmigratie niet werkt als window.Visitor na het configureren wordt gedefinieerd. Dit is vooral een probleem wanneer u met Adobe-tags werkt.
+* Probleem verholpen waarbij `device.screenWidth` en `device.screenHeight` werden in sommige omgevingen als tekenreeksen gevuld.
 
 ## Versie 2.13.0 - 28 september 2022
 
