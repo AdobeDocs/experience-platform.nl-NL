@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentierechten;licenties;aanbevolen procedures
 title: Aanbevolen werkwijzen voor gegevensbeheer
-description: In dit document worden aanbevolen procedures beschreven en gereedschappen waarmee u uw licentierechten beter kunt beheren met Adobe Experience Platform.
+description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
+source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
 workflow-type: tm+mt
-source-wordcount: '2531'
+source-wordcount: '2528'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 ## Het gebruiksdashboard voor licenties
 
-De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u een momentopname kunt bekijken van de licentiegegevens van uw organisatie voor Platform. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de opname is gemaakt. De momentopname is geen benadering of een steekproef van gegevens, en het dashboard werkt niet in real time bij.
+De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u een momentopname van de licentiegegevens van uw organisatie voor Platform kunt bekijken. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de opname is gemaakt. De momentopname is geen benadering of een steekproef van gegevens, en het dashboard werkt niet in real time bij.
 
 Zie de handleiding voor meer informatie over [het gebruiken van het dashboard van het vergunningsgebruik op Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
