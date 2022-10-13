@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
+source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 | Geen gegevensstroom geselecteerd | Gegevensstroom geselecteerd |
 |---|---|
-| <ul><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/configure-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt segmenten alleen voor de productiesandbox delen met de Adobe Target-verbinding.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/configure-personalization-destinations.md) worden ondersteund.</li><li>Delen van segmenten wordt ondersteund voor andere sandboxen.</li></ul> |
+| <ul><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/configure-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt segmenten alleen delen met de Adobe Target-verbinding voor de *standaardproductiesandbox*.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/configure-personalization-destinations.md) worden ondersteund.</li><li>Delen van segmenten wordt ondersteund voor andere sandboxen.</li></ul> |
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
