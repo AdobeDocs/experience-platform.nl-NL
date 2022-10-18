@@ -1,11 +1,11 @@
 ---
-keywords: 'reclame; borden; '
+keywords: reclame; borden;
 title: Microsoft Bing-verbinding
 description: Met de Microsoft Bing-verbindingsbestemming kunt u gerichte digitale campagnes heroriënteren en publieksgericht voeren in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 812688043a7da943832b5798de0f433928634998
+source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '598'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: Uw [!DNL Bing Ads CID].
+* **[!UICONTROL Account ID]**: Uw [!DNL Bing Ads Customer ID] (CID). Uw CID is een geheel getal, dat u kunt vinden in de URL wanneer u zich aanmeldt [!DNL Microsoft Advertising].
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -90,11 +90,9 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
-In de [Segmentatieschema](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u uw segmenten aan hun overeenkomstige numerieke segmentidentiteitskaart in manueel in kaart brengen [!DNL Bing] bestemming. De numerieke segment-id invullen vanuit [!DNL Bing] in de [!UICONTROL Mapping ID] veld.
+In de [Segmentatieschema](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de segmentnaam in manueel in kaart brengen [!UICONTROL Mapping ID] veld. Dit zorgt ervoor dat segmentmetagegevens correct worden doorgegeven aan [!DNL Bing].
 
-![UI-afbeelding die het scherm met segmenttoewijzing weergeeft met een voorbeeld van Bing Mapping ID](../../assets/catalog/advertising/bing/mapping-id.png)
-
-Indien [!UICONTROL Mapping ID] beantwoordt niet aan een segmentidentiteitskaart in de bestemming van de Bing, zult u niet de verwachte publieksgegevens in uw rekening van de Bing zien.
+![De beeld die van UI het scherm van het segmentprogramma met een voorbeeld van toont hoe te om de segmentnaam aan identiteitskaart van de Toewijzing van de Bing in kaart te brengen.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Geëxporteerde gegevens {#exported-data}
 
