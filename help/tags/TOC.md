@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
+source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 25%
 
 ---
@@ -127,6 +127,8 @@ ht-degree: 25%
       * Google-gegevenslaag {#google-data-layer}
          * [Overzicht](./extensions/web/google-data-layer/overview.md)
          * [Aanvullende informatie](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Splunk] {#splunk}
+         * [Overzicht](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] video tracking-extensie {#youtube}
          * [Overzicht](./extensions/web/youtube/overview.md)
          * [Aanvullende informatie](./extensions/web/youtube/release-notes.md)
