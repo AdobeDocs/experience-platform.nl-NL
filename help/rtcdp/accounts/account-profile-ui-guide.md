@@ -3,9 +3,9 @@ keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbe
 title: Gebruikersgids voor accountprofiel
 description: Door het gebruik van accountprofielen kunt u met Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,6 @@ Voor meer informatie over het maken van overeenkomsten met accounts raadpleegt u
 
 Als u door accountprofielen wilt bladeren, selecteert u eerst **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie.
 
-![Profielen selecteren in linkernavigatie](images/b2b-account-browse.png)
-
 Op de **[!UICONTROL Browse]** kunt u accountprofielen verkennen aan de hand van een account-id van een verbonden onderneming of door de brongegevens rechtstreeks in te voeren.
 
 ![Gebruik account-id om profielen te verkennen](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ Hierdoor wordt het **[!UICONTROL Select source]** , waarin u een bron kunt selec
 
 Raadpleeg voor meer informatie over het verbinden van bedrijfsbronnen de [overzicht van bronnen](../sources/sources-overview.md).
 
-![Bronworkflow selecteren](images/b2b-account-select-source.png)
-
 U kunt een bron kiezen door het keuzerondje naast de naam van de verbinding te selecteren en vervolgens **[!UICONTROL Select]** om terug te keren naar de [!UICONTROL Browse] tab.
+
+![Bronworkflow selecteren](images/b2b-account-select-source.png)
 
 Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account ID]** met betrekking tot de bron. Als u bijvoorbeeld een Salesforce-bron selecteert, moet u een account-id invoeren in de Salesforce-instantie om het accountprofiel weer te geven dat aan die id is gekoppeld.
 
