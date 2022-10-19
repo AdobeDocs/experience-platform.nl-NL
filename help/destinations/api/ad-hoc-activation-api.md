@@ -6,9 +6,9 @@ description: Dit artikel illustreert de end-to-end workflow voor het activeren v
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
+source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1525'
 ht-degree: 0%
 
 ---
@@ -124,6 +124,10 @@ De id van de segmentexporttaak bevindt zich in `id` eigenschap, zoals hieronder 
 ## Stap 5: De ad-hocactiveringstaak uitvoeren {#activation-job}
 
 Adobe Experience Platform voert elke 24 uur een geplande segmentatietaak uit. De API voor ad-hocactivering wordt uitgevoerd op basis van de meest recente segmentatieresultaten.
+
+>[!IMPORTANT]
+>
+>Let op de volgende eenmalige beperking: Voordat u een ad-hocactiveringstaak uitvoert, moet u ervoor zorgen dat ten minste 20 minuten zijn verstreken vanaf het moment dat het segment voor het eerst werd geactiveerd volgens het schema dat u instelt in [Stap 3 - de activeringsstroom van de Platform UI creëren](#activation-flow).
 
 Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande segmentexporttaak voor uw segmenten is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd.
 
