@@ -5,9 +5,9 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '513'
 ht-degree: 3%
 
 ---
@@ -47,6 +47,8 @@ Het samenpersen van deze bibliotheken versnelt gegevensinzameling en consolideer
 ## Platform Edge Network en gegevensstreams {#edge}
 
 Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met tags kunt u [gegevensstromen](../edge/datastreams/overview.md) voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder de clientcode te wijzigen.
+
+Bovendien zijn de gegevensstromen geïntegreerd met verscheidene mogelijkheden van het Platform die helpen ervoor zorgen dat om het even welke gevoelige gegevens u verzendt correct met betrekking tot organisatiebeleid en wettelijke verordeningen wordt behandeld. Zie de sectie over [verwerking van gevoelige gegevens](../edge/datastreams/overview.md#sensitive) in de documentatie van gegevensstromen voor meer informatie.
 
 ![DataStreams en Adobe-oplossingen](./images/home/adobe-solutions.png)
 
