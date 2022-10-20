@@ -5,9 +5,9 @@ title: Enum Fields en voorgestelde waarden in UI bepalen
 description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
+source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 In het Model van Gegevens van de Ervaring (XDM), kan een koordgebied een vooraf bepaalde reeks toegelaten of voorgestelde waarden worden gegeven om beter te controleren welke waarden in dat gebied worden opgenomen of hoe het in segmentatie zal gedragen.
 
-An **enum** beperkt de waarden die voor een tekenreeksveld kunnen worden ingevoerd tot een vooraf gedefinieerde set. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
+**[!UICONTROL Enums]** de waarden die voor een tekenreeksveld kunnen worden ingevoerd, beperken tot een vooraf gedefinieerde set. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
 
-In tegenstelling tot opsommingen, toevoegen **voorgestelde waarden** aan een tekenreeksveld te koppelen, beperkt niet de waarden die het kan invoeren. De voorgestelde waarden hebben daarentegen invloed op de beschikbare vooraf gedefinieerde waarden in het dialoogvenster [Segmenteringsinterface](../../../segmentation/ui/overview.md) wanneer het tekenreeksveld wordt opgenomen als een kenmerk.
+In tegenstelling tot opsommingen, **[!UICONTROL Suggested values]** kunt u een set aanbevolen waarden opgeven voor een tekenreeksveld dat de waarden die het kan invoeren niet beperkt. De voorgestelde waarden hebben daarentegen invloed op de beschikbare vooraf gedefinieerde waarden in het dialoogvenster [Segmenteringsinterface](../../../segmentation/ui/overview.md) wanneer het tekenreeksveld wordt opgenomen als een kenmerk.
 
 Wanneer [een nieuw veld definiëren](./overview.md#define) in de Adobe Experience Platform-gebruikersinterface en het type instellen op [!UICONTROL String]kunt u een [enum](#enum) of [voorgestelde waarden](#suggested-values) voor dat veld.
 
