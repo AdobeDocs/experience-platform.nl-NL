@@ -1,7 +1,7 @@
 ---
 title: Overzicht van gesplitste extensie
 description: Leer over de uitbreiding Splunk voor gebeurtenis door:sturen in Adobe Experience Platform.
-source-git-commit: e6f0bdcdb11630730834e353064abb960d3d0ea1
+source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 0%
@@ -79,7 +79,7 @@ De volgende stap bestaat uit het toewijzen van de Splunk-gebeurteniseigenschappe
 | [!UICONTROL Source] | De bronwaarde die aan de gebeurtenisgegevens moet worden toegewezen. Als u bijvoorbeeld gegevens verzendt vanuit een toepassing die u ontwikkelt, stelt u deze sleutel in op de naam van de app. |
 | [!UICONTROL Index] | De naam van de index van de gebeurtenisgegevens. De index die u hier opgeeft, moet zich binnen de lijst met toegestane indexen bevinden als voor het token de parameter indexes is ingesteld. |
 | [!UICONTROL Time] | De tijd van de gebeurtenis. De standaardtijdnotatie is UNIX-tijd (in de notatie) `<sec>.<ms>`) en is afhankelijk van uw lokale tijdzone. Bijvoorbeeld: `1433188255.500` Geeft 1433188255 seconden en 500 milliseconden na het tijdperk aan, of maandag 1 juni 2015, bij 7:50:17:00 GMT. |
-| [!UICONTROL Fields] | Geef een onbewerkt JSON-object of een set sleutelwaardeparen op die expliciete aangepaste velden bevatten die tijdens de indextijd moeten worden gedefinieerd.  De `fields` key is niet van toepassing op onbewerkte gegevens.<br><br>Verzoeken met `fields` eigenschap moet naar de `/collector/event` eindpunt, of anders zullen zij niet worden geïndexeerd. Voor meer informatie, zie de documentatie van de Splunk op [geïndexeerde veldextracties](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Fields] | Geef een onbewerkt JSON-object of een set sleutelwaardeparen op die expliciete aangepaste velden bevatten die tijdens de indextijd moeten worden gedefinieerd.  De `fields` key is niet van toepassing op onbewerkte gegevens.<br><br>Verzoeken met `fields` eigenschap moet naar de `/collector/event` eindpunt, of anders zullen zij niet worden geïndexeerd. Voor meer informatie, zie de documentatie van de Splunk op [geïndexeerde veldextracties](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Gegevens valideren in Splunk {#validate}
 
