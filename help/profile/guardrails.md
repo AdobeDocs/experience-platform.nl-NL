@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1902'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,4 @@ Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebelei
 
 ### Gegevenssets van de Adobe Analytics-rapportsuite in Platform {#aa-datasets}
 
-Een maximum van één (1) dataset van de het rapportreeks van Adobe Analytics zou voor Profiel moeten worden toegelaten. Dit is een zachte grens, die betekent dat u meer dan één dataset van de Analyse voor Profiel kunt toelaten, maar het wordt niet geadviseerd omdat het onbedoelde gevolgen voor uw gegevens kan hebben. Dit is toe te schrijven aan de verschillen tussen schema&#39;s van het Gegevensmodel van de Ervaring (XDM), die de semantische structuur voor gegevens in Experience Platform verstrekken en voor consistentie in gegevensinterpretatie, en de klantgerichte aard van eVars en omzettingsvariabelen in Adobe Analytics toestaan.
-
-In Adobe Analytics kan een enkele organisatie bijvoorbeeld meerdere rapportensuites hebben. Als rapportsuite A eVar 4 aanwijst als &#39;interne zoekterm&#39; en rapportsuite B eVar 4 aanwijst als &#39;verwijzend domein&#39;, worden deze waarden in hetzelfde veld in Profiel opgenomen, wat verwarring en een verslechterende gegevenskwaliteit veroorzaakt.
+De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle gegevensconflicten worden opgelost. U kunt de functie Gegevensvoorbeeld gebruiken om gegevensconflicten op te lossen over eVars, Lijsten, en Props. Voor meer informatie over het gebruik van de functie Data Prep, leest u de [UI-hulplijn Adobe Analytics-connector](../sources/tutorials/ui/create/adobe-applications/analytics.md).
