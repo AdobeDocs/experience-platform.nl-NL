@@ -1,29 +1,29 @@
 ---
-title: Gegevensmodel gegevens klant-Platform (CDP)
-description: Leer hoe te om SQL vragen van de Modellen van Gegevens van Gegevens van CDP van Inzichten te gebruiken om uw eigen CDP rapporten voor uw marketing en KPI gebruiksgevallen aan te passen.
+title: Real-time Customer Data Platform Insights-gegevensmodel
+description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksproblemen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
 
-# Gegevensmodel gegevens klant-Platform (CDP)
+# Real-time Customer Data Platform Insights-gegevensmodel
 
-De eigenschap van het Model van Gegevens van de Gegevens van de Klant van het Platform van Gegevens (CDP) benadrukt de gegevensmodellen en SQL die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets macht. U kunt deze SQL vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt.
+De functie Real-time Customer Data Platform Insights Data Model stelt de gegevensmodellen en SQL beschikbaar die de inzichten voor diverse profiel-, doel- en segmentatiewidgets kracht geven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documenten rapporteert om te leren [hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Vereisten
 
 Deze handleiding vereist een goed begrip van de [door de gebruiker gedefinieerde dashboardfunctie](./user-defined-dashboards.md). Lees de documentatie voordat u verdergaat met deze handleiding.
 
-## CDP-inzichtsrapporten en -gebruiksgevallen
+## Real-Time CDP inzichtsrapporten en gebruiksgevallen
 
-CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met segmenten en bestemmingen. Er zijn verschillende sterschemamodellen ontwikkeld om een aantal veelvoorkomende gevallen van marketinggebruik te beantwoorden en elk gegevensmodel kan meerdere gebruiksgevallen ondersteunen.
+Rapportering door Real-Time CDP biedt inzicht in uw profielgegevens en de relatie ervan met segmenten en bestemmingen. Er zijn verschillende sterschemamodellen ontwikkeld om een aantal veelvoorkomende gevallen van marketinggebruik te beantwoorden en elk gegevensmodel kan meerdere gebruiksgevallen ondersteunen.
 
 >[!IMPORTANT]
 >
->De gegevens die voor CDP rapportering worden gebruikt zijn nauwkeurig voor een gekozen samenvoegbeleid en van de meest recente dagmomentopname.
+>De gegevens die worden gebruikt voor Real-Time CDP-rapportage zijn nauwkeurig voor een gekozen samenvoegingsbeleid en van de meest recente dagelijkse momentopname.
 
 ### Profielmodel {#profile-model}
 

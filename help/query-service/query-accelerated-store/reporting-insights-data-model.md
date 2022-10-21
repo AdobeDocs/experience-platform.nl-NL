@@ -1,9 +1,9 @@
 ---
 title: Query-versnelde rapportage-inzichten voor opslag
 description: Leer hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen.
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 De vraag versnelde opslag staat u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Doorgaans worden gegevens regelmatig verwerkt (bijvoorbeeld op uurbasis of dagelijks), waar geaggregeerde weergaven worden gemaakt en gerapporteerd. De analyse van deze verslagen, die op basis van geaggregeerde gegevens zijn opgesteld, leidt tot inzichten die tot doel hebben de bedrijfsresultaten te verbeteren. De opslag met query-versnelling biedt een cacheservice, gelijktijdige uitvoering, een interactieve ervaring en een stateless API. Er wordt echter aangenomen dat de gegevens vooraf worden verwerkt en geoptimaliseerd voor geaggregeerd opvragen en niet voor onbewerkte opvragen van gegevens.
 
-Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Real-time Customer Data Platform-gegevensmodellen. Vervolgens kunt u naar keuze uw rapportinzichten gebruiken of insluiten in een rapportage-/visualisatieframework van uw keuze. Het CDP gegevensmodel in real time van Adobe Experience Platform verstrekt inzichten op profielen, segmenten, en bestemmingen en laat in real time CDP inzicht dashboards toe. Dit document begeleidt u door het proces om uw rapporteringsgegevensmodel van inzicht te creëren en ook hoe te om CDP gegevensmodellen in real time uit te breiden zoals nodig.
+Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Real-time Customer Data Platform-gegevensmodellen. Vervolgens kunt u naar keuze uw rapportinzichten gebruiken of insluiten in een rapportage-/visualisatieframework van uw keuze. Raadpleeg de documentatie bij het Real-time Customer Data Platform Insights-gegevensmodel voor meer informatie over [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../dashboards/cdp-insights-data-model.md).
+
+Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in profielen, segmenten en doelen en maakt het mogelijk om dashboards met inzicht in Real-Time CDP te gebruiken. Dit document begeleidt u door het proces van het creëren van uw het gegevensmodel van het Rapport van Inzichten en ook hoe te om de gegevensmodellen van Real-Time CDP uit te breiden zoals nodig.
 
 ## Vereisten
 
@@ -20,7 +22,7 @@ In deze zelfstudie worden door de gebruiker gedefinieerde dashboards gebruikt om
 
 ## Aan de slag
 
-Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de CDP gegevensmodellen in real time uit te breiden die verrijkte gegevens van het Platform houden. Zie de [verpakking](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), en [licenties](../data-distiller/licence-usage.md) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens Distiller SKU hebt, kunt u voor meer informatie contact opnemen met een medewerker van de klantenservice van de Adobe.
+Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de de gegevensmodellen van Real-Time CDP uit te breiden die verrijkte Platform gegevens houden. Zie de [verpakking](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), en [licenties](../data-distiller/licence-usage.md) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens Distiller SKU hebt, kunt u voor meer informatie contact opnemen met een medewerker van de klantenservice van de Adobe.
 
 ## Een gegevensmodel voor het rapporteren van inzichten maken
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Breid uw gegevensmodel met het Real-time CDP gegevensmodel van inzichten uit
+## Vergroot uw gegevensmodel met het Real-Time CDP-gegevensmodel voor inzichten
 
 U kunt het publieksmodel uitbreiden met extra details om een rijkere dimensietabel te maken. U kunt bijvoorbeeld de segmentnaam en de doelnaam toewijzen aan de externe publieksidentificatie. Om dit te doen, gebruik de Dienst van de Vraag om een nieuwe dataset tot stand te brengen of te verfrissen en het toe te voegen aan het publieksmodel dat segmenten en bestemmingen met een externe identiteit combineert. In het onderstaande diagram wordt het concept van deze extensie van het gegevensmodel geïllustreerd.
 
-![Een ERD diagram dat het Real-time CDP inzicht gegevensmodel en het Vraag versnelde opslagmodel verbindt.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Een ERD diagram dat het Real-Time CDP inzicht gegevensmodel en het Vraag versnelde opslagmodel verbindt.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Tabellen met dimensies maken om uw model met rapportageinzichten uit te breiden
 
-De Dienst van de Vraag van het gebruik om zeer belangrijke beschrijvende attributen van de verrijkte Echte CDP afmetingsdatasets aan toe te voegen `audienceinsight` gegevensmodel en vestigen een verband tussen uw feitenlijst en de nieuwe afmetingslijst. SQL toont hieronder aan hoe te om bestaande afmetinglijsten in uw rapporterend gegevensmodel van inzichten te integreren.
+De Dienst van de Vraag van het gebruik om zeer belangrijke beschrijvende attributen van de verrijkte de afmetingsdatasets van Real-Time CDP aan toe te voegen `audienceinsight` gegevensmodel en vestigen een verband tussen uw feitenlijst en de nieuwe afmetingslijst. SQL toont hieronder aan hoe te om bestaande afmetinglijsten in uw rapporterend gegevensmodel van inzichten te integreren.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
