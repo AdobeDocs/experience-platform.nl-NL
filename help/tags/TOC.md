@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
+source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 25%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -129,10 +129,10 @@ ht-degree: 25%
          * [Aanvullende informatie](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL Splunk] {#splunk}
          * [Overzicht](./extensions/web/splunk/overview.md)
-      * [!DNL YouTube] video tracking-extensie {#youtube}
+      * [!DNL YouTube] video bijhouden {#youtube}
          * [Overzicht](./extensions/web/youtube/overview.md)
          * [Aanvullende informatie](./extensions/web/youtube/release-notes.md)
-      * [!DNL Zendesk] API-extensie voor gebeurtenissen {#zendesk}
+      * [!DNL Zendesk] API voor gebeurtenissen {#zendesk}
          * [Overzicht](./extensions/web/zendesk/overview.md)
    * [Extensies van derden](./extensions/3rd-party-extensions.md)
 * Uitbreiding {#extension-dev}
