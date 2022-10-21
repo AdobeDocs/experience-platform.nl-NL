@@ -2,9 +2,9 @@
 title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in UI te vormen voor authentiek te verklaren aan eindpunten die in gebeurtenis worden gebruikt door:sturen eigenschappen.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,12 @@ Er verschijnt een pop-up met de mededeling dat het geheim handmatig moet worden 
 ![Google-autorisatiepopup](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Er wordt een dialoogvenster weergegeven waarin u de referenties voor uw Google-account kunt invoeren. Volg de herinneringen om gebeurtenis door:sturen toegang tot uw gegevens onder het geselecteerde werkingsgebied te verlenen. Zodra het vergunningsproces volledig is, wordt het geheim gecreeerd.
+
+>[!IMPORTANT]
+>
+>Als in uw organisatie een beleid voor herverificatie is ingesteld voor Google Cloud-toepassingen, worden de gemaakte geheimen niet vernieuwd nadat de verificatie is verlopen (tussen 1 en 24 uur, afhankelijk van de beleidsconfiguratie).
+>
+>Meld u aan bij de Google Admin-console en navigeer naar de **[!DNL App access control]** pagina zodat u de gebeurtenis kunt markeren door:sturen app (de Gebeurtenis die van Adobe Real-Time CDP door:sturen) als [!DNL Trusted]. Raadpleeg de documentatie van Google op [sessielengtes instellen voor Google Cloud-services](https://support.google.com/a/answer/9368756) voor meer informatie .
 
 ## Een geheim bewerken
 
