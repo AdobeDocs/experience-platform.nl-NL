@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2210'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Onder de **[!UICONTROL Adobe applications]** categorie, selecteert u **[!UICONTR
 
 ### Gegevens selecteren
 
+>[!IMPORTANT]
+>
+>De op het scherm vermelde rapportreeksen kunnen afkomstig zijn uit verschillende regio&#39;s. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform-regio&#39;s. Controleer of dit door uw bedrijf is toegestaan.
+
 De **[!UICONTROL Analytics source add data]** deze stap bevat een lijst met [!DNL Analytics] rapporteert reeksgegevens om een bronverbinding met te maken.
 
 Een rapportsuite is een container met gegevens die de basis vormt van [!DNL Analytics] rapportage. Een organisatie kan vele rapportreeksen hebben, elk die verschillende datasets bevatten.
@@ -58,7 +62,7 @@ Er kunnen meerdere interne verbindingen worden gemaakt om meerdere rapportsuites
 
 >[!NOTE]
 >
->Gegevens uit meerdere rapportsuites kunnen alleen voor realtime klantgegevensprofiel worden ingeschakeld als er geen gegevensconflicten zijn, zoals twee aangepaste eigenschappen (eVars, lijsten en props) die een andere betekenis hebben.
+>Gegevens uit meerdere rapportsuites kunnen alleen voor realtime-klantprofiel worden ingeschakeld als er geen gegevensconflicten zijn, zoals twee aangepaste eigenschappen (eVars, lijsten en props) die een andere betekenis hebben.
 
 Om een [!DNL Analytics] bronverbinding, selecteer een rapportreeks en selecteer dan **[!UICONTROL Next]** om verder te gaan.
 
@@ -288,10 +292,10 @@ Als u een gegevensstroom wilt verwijderen, gaat u naar de [!UICONTROL Dataflows]
 
 Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste inname is voltooid, [!DNL Analytics] gegevens en worden gebruikt door downstreamdiensten van Platforms, zoals [!DNL Real-time Customer Profile] en Segmenteringsservice. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] - overzicht](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] - overzicht](../../../../../segmentation/home.md)
-* [[!DNL Data Science Workspace] - overzicht](../../../../../data-science-workspace/home.md)
-* [[!DNL Query Service] - overzicht](../../../../../query-service/home.md)
+* [[!DNL Real-time Customer Profile]-overzicht](../../../../../profile/home.md)
+* [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace]-overzicht](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service]-overzicht](../../../../../query-service/home.md)
 
 De volgende video is bedoeld ter ondersteuning van uw inzicht in het opnemen van gegevens via de Adobe Analytics Source-connector:
 
