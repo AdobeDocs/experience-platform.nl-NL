@@ -5,9 +5,9 @@ title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,6 @@ De eerste stap voor het gebruik van externe doelgroepen is het maken van een naa
 Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](../../identity-service/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteit maakt, voegt u de brongegevens toe aan de naamruimte voor identiteit en markeert u de naamruimte [!UICONTROL Type] als **[!UICONTROL Non-people identifier]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
-
->[!NOTE]
->
->Als u aangepaste naamruimten wilt gebruiken voor externe doelgroepen, moet u een ondersteuningsticket maken. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 ## Een schema maken voor de metagegevens van het segment
 
