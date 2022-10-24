@@ -2,9 +2,9 @@
 title: Personalisatie via Adobe Target
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen die in Adobe Target zijn gemaakt, te leveren en te renderen.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ De Edge Network Server-API kan gepersonaliseerde ervaringen die in Adobe Target 
 
 >[!IMPORTANT]
 >
->Persoonlijke ervaringen die zijn gemaakt via de [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) worden niet ondersteund door de server-API.
+>Persoonlijke ervaringen die zijn gemaakt via de [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) niet volledig worden ondersteund door de server-API. De server-API kan **ophalen** activiteiten gemaakt door VEC, maar server API kan niet **renderen** door VEC gecreëerde activiteiten. Als u activiteiten wilt renderen die door VEC zijn gemaakt, moet u de opdracht [Web SDK](../edge/home.md).
 
 ## Uw gegevensstroom configureren {#configure-your-datastream}
 
