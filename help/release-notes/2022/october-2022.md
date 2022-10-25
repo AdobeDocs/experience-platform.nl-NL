@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2022
 description: In de releaseopmerkingen van oktober 2022 voor Adobe Experience Platform.
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '755'
 ht-degree: 1%
 
 ---
@@ -12,14 +12,13 @@ ht-degree: 1%
 
 **Releasedatum: 26 oktober 2022**
 
-Nieuwe functies in Adobe Experience Platform:
-
 - [Door de klant beheerde sleutels](#cmk)
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Gegevensverzameling](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
+- [Query-service](#query-service)
 - [Bronnen](#sources)
 
 ## Door de klant beheerde sleutels {#cmk}
@@ -57,6 +56,21 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
+
+## Query-service {#query-service}
+
+De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Vraag versnelde het melden van inzichten gegevensmodel | Als deel van Gegevens Distiller SKU, staat de vraag versnelde opslag u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Met de opslag met versnelde query kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Adobe Real-time Customer Data Platform-gegevensmodellen om uw rapporteringsinzichten en hun visualisaties te verbeteren. Zie de [document met query-versnelde gegevens voor winkelrapporten](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) voor meer informatie over deze functie. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over de Diensten van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
+Nieuwe functies in Adobe Experience Platform:
 
 ## Bronnen {#sources}
 
