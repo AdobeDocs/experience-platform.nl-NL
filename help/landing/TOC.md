@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform uw klanten in real time persoonlijke ervaringen kan bieden.
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 24efebb89ba36f5047558acd368638f456356a9e
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 7%
    * [Taalondersteuning](documentation/language-support.md)
 * Toepassingsservices op basis van Platform {#ecosystem}
    * [Overzicht](application-services.md)
-   * [Real-time Customer Data Platform (alle edities)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Adobe Real-time Customer Data Platform (alle edities)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
@@ -59,6 +59,7 @@ ht-degree: 7%
    * Controlelogboeken {#audit-logs}
       * [Overzicht](./governance-privacy-security/audit-logs/overview.md)
    * [Gegevenscodering](./governance-privacy-security/encryption.md)
+   * [Door de klant beheerde sleutels](./governance-privacy-security/customer-managed-keys.md)
 * Licentiegebruik en guardrails {#license}
    * [Aanbevolen best practices voor licentierechten voor gegevensbeheer](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
