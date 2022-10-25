@@ -1,15 +1,19 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;
-title: Een Adobe Workfront-bronverbinding maken in de gebruikersinterface
+title: (bèta) Een Adobe Workfront-bronverbinding maken in de gebruikersinterface
 description: Deze zelfstudie bevat stappen voor het maken van een Adobe Workfront-bronverbinding waarmee uw Workfront-gegevens via de gebruikersinterface naar Adobe Experience Platform worden overgebracht.
-source-git-commit: 99741a3be4d50d1a812e945483c9ed1577a0a999
+source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
 
-# Een Adobe Workfront-bronverbinding maken in de gebruikersinterface
+# (bèta) Een Adobe Workfront-bronverbinding maken in de gebruikersinterface
+
+>[!NOTE]
+>
+>De Adobe Workfront-bron is bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 Deze zelfstudie bevat stappen voor het maken van een Adobe Workfront-bronverbinding waarmee uw Workfront-gegevens via de gebruikersinterface naar Adobe Experience Platform worden overgebracht.
 
