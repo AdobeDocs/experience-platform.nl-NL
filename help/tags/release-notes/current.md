@@ -2,14 +2,20 @@
 title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
 description: De nieuwste releaseopmerkingen voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
+
+## 26 oktober 2022
+
+* **Gevoelige gegevensverwerking voor gegevensstromen**: De gegevensstromen gebruiken nu verscheidene technologieën van de Platform om gevoelige gegevens zoals die door verordeningen zoals de Wet van de Portabiliteit en van de Verantwoording van de Ziekteverzekering (HIPAA) worden afgedwongen adequaat te behandelen. Zie de sectie over [verwerking van gevoelige gegevens in gegevensstreams](../../edge/datastreams/overview.md#sensitive) voor meer informatie .
+* **[!DNL Splunk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Splunk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Splunk] extensieoverzicht](../extensions/web/splunk/overview.md) voor meer informatie .
+* **[!DNL Zendesk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Zendesk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Zendesk] extensieoverzicht](../extensions/web/zendesk/overview.md) voor meer informatie .
 
 ## 28 september 2022
 
