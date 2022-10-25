@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: fe8d5f3a73c7db311cd0d82c2a7f3ac63fb1edac
+source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '844'
 ht-degree: 5%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 5%
       - [Adobe Campaign Managed Cloud Services-bron](connectors/adobe-applications/campaign.md)
       - [Kenmerkbron van klant](connectors/adobe-applications/customer-attributes.md)
       - [Bron gegevensverzameling](connectors/adobe-applications/data-collection.md)
+      - [Workfront-bron](connectors/adobe-applications/workfront.md)
       - Veldtoewijzingen {#mapping}
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -207,6 +208,7 @@ ht-degree: 5%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Reclame {#advertising}
          - [Google-advertenties](tutorials/ui/create/advertising/ads.md)
       - Analyse {#analytics}

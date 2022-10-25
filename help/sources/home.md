@@ -5,9 +5,9 @@ title: Overzicht van bronconnectors
 topic-legacy: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
+source-git-commit: 7bcdfb2a49e0c0b65282d401114754a4cc114ad8
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1093'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,19 @@ Bronnen in Experience Platform worden ingedeeld in de volgende categorieën:
 Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager, worden ingesloten. Zie de volgende verwante documenten voor meer informatie:
 
 - [Adobe Audience Manager-bronoverzicht](connectors/adobe-applications/audience-manager.md)
-- [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
+   - [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Overzicht van Adobe Analytics Classifications Data source](connectors/adobe-applications/classifications.md)
-- [Een gegevensbronverbinding voor Adobe Analytics Classifications maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/classifications.md)
+   - [Een gegevensbronverbinding voor Adobe Analytics Classifications maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Overzicht van Adobe Analytics Report Suite-gegevensbron](connectors/adobe-applications/analytics.md)
-- [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
+   - [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Adobe Campaign Managed Cloud Services-bronoverzicht](connectors/adobe-applications/campaign.md)
-- [Een Adobe Campaign Managed Cloud Services-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/campaign.md)
+   - [Een Adobe Campaign Managed Cloud Services-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Overzicht van de bron van Adobe-gegevensverzameling](connectors/adobe-applications/data-collection.md)
-- [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+   - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] bronoverzicht](connectors/adobe-applications/marketo/marketo.md)
-- [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Adobe Workfront-bronoverzicht](connectors/adobe-applications/workfront.md)
+   - [Een Workfront-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Reclame {#advertising}
 
