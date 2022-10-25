@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
+source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '853'
 ht-degree: 5%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 5%
       - [Veeva CRM-connector](connectors/crm/veeva.md)
       - [Zoho CRM-aansluiting](connectors/crm/zoho.md)
    - Klantsucces {#customer-success}
+      - [Cloud oracle Service](connectors/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud-aansluiting](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow-connector](connectors/customer-success/servicenow.md)
       - [Zendesk-connector](connectors/customer-success/zendesk.md)
@@ -130,6 +131,7 @@ ht-degree: 5%
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Klantsucces {#customer-success}
+         - [Cloud oracle Service](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -236,6 +238,7 @@ ht-degree: 5%
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Klant geslaagd {#customer-success}
+         - [Cloud oracle Service](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
