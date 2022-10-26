@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;de bronschakelaar van d
 title: Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface
 description: Deze zelfstudie begeleidt u door de stappen om een bronverbinding voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Nadat u de gewenste segmenten hebt geïdentificeerd en geselecteerd, wordt aan d
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 U kunt ook de **[!UICONTROL Select all segments]** en **[!UICONTROL Select all traits]** vakken. Het selecteren van alle segmenten zal de segmenten van de Audience Manager aan Platform brengen, terwijl het selecteren van alle eigenschappen alle eerste partijsporen van Audience Manager toelaat.
+
+>[!WARNING]
+>
+>De inname van grote populaties in het Audience Manager segment heeft een directe invloed op uw totale aantal profielen wanneer u eerst een segment van de Audience Manager naar het Platform verzendt gebruikend de bron van de Audience Manager. Dit betekent dat het selecteren van alle segmenten kan leiden tot een aantal profielen dat groter is dan uw gebruiksrechten voor licenties. Controleer uw [gebruiksrecht licentie](../../../../../dashboards/guides/license-usage.md) voordat u verdergaat.
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]**
 
