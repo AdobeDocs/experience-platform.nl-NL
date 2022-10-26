@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
-source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
+source-git-commit: 021a0833941f250475786bb8629542c50229b238
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '912'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,7 @@ Nieuwe functies in Adobe Experience Platform:
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Gegevensverzameling](#data-collection)
+- [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
@@ -42,6 +43,27 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | [!DNL Zendesk] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Zendesk] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Zendesk] extensieoverzicht](../../tags/extensions/web/zendesk/overview.md) voor meer informatie . |
 
 {style=&quot;table-layout:auto&quot;}
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte doelen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | De lijn is een populair communicatie platform dat mensen, de diensten en de informatie verbindt en van een praatjeapp tot een hub voor vermaak, sociale, en dagelijkse activiteiten is gegroeid. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 is een op cloud gebaseerd bedrijfstoepassingsplatform dat de Planning van het Middel van de Onderneming (ERP) en het Beheer van de Verhouding van de Klant (CRM) samen met productiviteitstoepassingen en AI hulpmiddelen combineert, om van begin tot eind vlottere en meer gecontroleerde verrichtingen, beter groeipotentieel en lagere kosten te brengen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe of bijgewerkte documentatie**
+
+| Documentatie | Beschrijving |
+| ----------- | ----------- |
+| [Doelgeleidingen](../../destinations/guardrails.md) | Deze pagina bevat standaardgebruiks- en tarieflimieten voor activeringsgedrag. |
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
