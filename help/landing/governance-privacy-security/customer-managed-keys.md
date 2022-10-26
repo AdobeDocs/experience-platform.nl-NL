@@ -1,9 +1,9 @@
 ---
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
-source-git-commit: f06f00f7581ccd7fe64f5292a53ebb0303c65069
+source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Zodra u bij **[!DNL Review + create]** U kunt de details van de sleutelvault bek
 
 ![Basisconfiguratie voor de sleutelkluis](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Microsoft een firewalluitzondering verlenen
+## Netwerkopties configureren
 
 Als uw sleutelkluis wordt gevormd om openbare toegang tot bepaalde virtuele netwerken te beperken of openbare toegang volledig onbruikbaar te maken, moet u Microsoft een firewalluitzondering verlenen.
 
