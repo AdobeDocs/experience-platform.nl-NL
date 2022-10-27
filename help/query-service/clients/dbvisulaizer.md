@@ -5,9 +5,9 @@ title: Connect DbVisualizer aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Gebruik de zoekbalk of selecteer [!DNL PostgreSQL] in de vervolgkeuzelijst met b
 
 Selecteer in de werkruimte Databaseverbinding de optie **[!DNL Properties]** tab, gevolgd door de **[!DNL Driver Properties]** op de navigatiezijbalk.
 
-![De werkruimte Databaseverbinding met de tab Eigenschappen gemarkeerd.](../images/clients/dbvisualizer/driver-properties.png)
+![De werkruimte Databaseverbinding met Eigenschappen en Eigenschappen van stuurprogramma gemarkeerd.](../images/clients/dbvisualizer/driver-properties.png)
 
 De bestuurderseigenschappen die in de lijst hieronder worden gezien worden geadviseerd om het gebruik van SSL met DBVisualizer toe te laten.
 
@@ -57,7 +57,7 @@ De bestuurderseigenschappen die in de lijst hieronder worden gezien worden geadv
 
 De `PGHOST` en `user` worden waarden opgehaald uit uw Adobe Experience Platform-referenties. Meld u aan bij de gebruikersinterface van het Platform en selecteer **[!UICONTROL Queries]** van de linkernavigatie, gevolgd door **[!UICONTROL Credentials]**. Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [aanmeldingsgids](../ui/credentials.md).
 
-![Experience Platform vraagt het Dashboard van Referenties met benadrukte geloofsbrieven.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![De pagina Credentials van de werkruimte van de Vragen van het Experience Platform met Geloofsbrieven en de Vervalende Gemarkeerde Referenties.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] biedt ook niet-vervallende geloofsbrieven aan om voor eenmalig opstelling met derdecliënten toe te staan. Zie de documentatie voor [volledige instructies op hoe te om niet vervallende geloofsbrieven te produceren en te gebruiken](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ Selecteer **[!DNL Authentication]** vanaf de navigatiezijbalk onder [!DNL Postgr
 
 Controleer in het deelvenster Verbindingsverificatie beide de opties **[!DNL Require Userid]** en **[!DNL Require Password]** selectievakjes en selecteer vervolgens **[!DNL Apply]**.
 
-![Het deelvenster Verbindingsverificatie met de selectievakjes Gebruiker en Wachtwoord gemarkeerd.](../images/clients/dbvisualizer/connection-authentication.png)
+![Het deelvenster Verificatie voor [!DNL PostgreSQL] Databaseverbinding met de selectievakjes Gebruiker vereisen en Wachtwoord gemarkeerd.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Verbinding maken met Platform
 
@@ -90,11 +90,11 @@ Als u een verbinding wilt maken, selecteert u de optie **[!DNL Connection]** in 
 
 Nadat u alle relevante gegevens hebt ingevoerd, selecteert u **[!DNL Connect]**.
 
-![De werkruimte Databaseverbinding met het tabblad Verbinding en de knop Verbinding gemarkeerd.](../images/clients/dbvisualizer/connect.png)
+![De [!DNL PostgreSQL] De werkruimte Databaseverbinding met het tabblad Verbinding en de knop Verbinding gemarkeerd.](../images/clients/dbvisualizer/connect.png)
 
 De [!DNL Connect] wordt bij de eerste gelegenheid van de sessie weergegeven.
 
-![Het dialoogvenster Verbinding maken met de tekstvelden voor databasegebruikers en databasewachtwoorden wordt gemarkeerd.](../images/clients/dbvisualizer/connect-dialog.png)
+![De verbinding: [!DNL PostgreSQL] met de gemarkeerde tekstvelden Database-gebruikersnaam en Database-wachtwoord.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Voer uw gebruikersnaam en wachtwoord in en selecteer **[!DNL Connect]**. Er verschijnt een bericht in het logbestand ter bevestiging van een geslaagde verbinding.
 

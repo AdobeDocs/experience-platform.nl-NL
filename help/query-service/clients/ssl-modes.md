@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;de dienst van de vraag
 title: SSL-opties voor Query Service
 description: Leer meer over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en hoe u verbinding maakt via de SSL-modus Volledig controleren.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: be877502f63fe08f17abe7cb0cf9f247394bf1ac
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -33,8 +33,8 @@ De verschillende `sslmode` parameterwaarden bieden verschillende beschermingsniv
 | `allow` | Gedeeltelijk | Nee | Veiligheid is geen prioriteit, snelheid en een lage verwerkingsoverhead zijn belangrijker. Deze modus kiest alleen voor codering als de server erop staat. |
 | `prefer` | Gedeeltelijk | Nee | Codering is niet vereist, maar de communicatie wordt gecodeerd als de server dit ondersteunt. |
 | `require` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. ServerSSL-certificaatvalidatie is niet vereist. |
-| `verify-ca` | Ja | Afhankelijk van CA-beleid | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de PostgreSQL-thuismap. [Details worden hieronder gegeven](#instructions) |
-| `verify-full` | Ja | Ja | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de PostgreSQL-thuismap. [Details worden hieronder gegeven](#instructions). |
+| `verify-ca` | Ja | Afhankelijk van CA-beleid | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in uw [!DNL PostgreSQL] thuismap. [Details worden hieronder gegeven](#instructions) |
+| `verify-full` | Ja | Ja | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in uw [!DNL PostgreSQL] thuismap. [Details worden hieronder gegeven](#instructions). |
 
 >[!NOTE]
 >

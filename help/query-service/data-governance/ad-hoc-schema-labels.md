@@ -2,9 +2,9 @@
 title: Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema's
 description: Een handleiding voor het beperken van toegang tot gegevensvelden in ad-hocschema's die via Adobe Experience Platform Query Service worden gegenereerd.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -56,13 +56,13 @@ Als u gegevenslabels voor uw ad-hocschema wilt bewerken, selecteert u de optie [
 
 ## Labels voor het schema of veld bewerken
 
-Als u de labels voor het hele schema wilt bewerken, selecteert u het potloodpictogram (![](../images/data-governance/edit-icon.png)) aan de zijkant van de naam van het schema onder de [!UICONTROL Labels] tab.
+Als u de labels voor het hele schema wilt bewerken, selecteert u het potloodpictogram (![Een potloodpictogram.](../images/data-governance/edit-icon.png)) naast de naam van het schema onder de [!UICONTROL Labels] tab.
 
 ![De labelweergave in de werkruimte Schema&#39;s met het potloodpictogram gemarkeerd.](../images/data-governance/edit-entire-schema-labels.png)
 
 Als u een label op een bestaand veld wilt toepassen, selecteert u een of meer velden in de lijst gevolgd door [!UICONTROL Edit governance labels] in de rechterzijbalk.
 
-![In de labelweergave in de werkruimte Schema&#39;s wordt de optie &#39;Regellabels bewerken&#39; gemarkeerd in het rechterzijpaneel.](../images/data-governance/edit-governance-labels.png)
+![De labelweergave in de werkruimte Schema&#39;s met de optie &#39;Regellabels bewerken&#39; gemarkeerd in de rechterzijbalk.](../images/data-governance/edit-governance-labels.png)
 
 ## Pop-up Labels bewerken
 

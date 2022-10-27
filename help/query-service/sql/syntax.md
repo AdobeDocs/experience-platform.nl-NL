@@ -5,9 +5,9 @@ title: SQL-syntaxis in Query-service
 topic-legacy: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -449,7 +449,7 @@ In het voorbeeld wordt het volgende geretourneerd:
 
 In dit tweede voorbeeld worden het concept en de toepassing van het `inline` functie. Het gegevensmodel voor het voorbeeld wordt in de onderstaande afbeelding weergegeven.
 
-![Een schemadiagram voor productListItems](../images/sql/productListItems.png)
+![Een schemadiagram voor productListItems.](../images/sql/productListItems.png)
 
 **Voorbeeld**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 Als u de waarde voor een instelling wilt retourneren, gebruikt u `SET [property key]` zonder `property_value`.
 
-## PostgreSQL-opdrachten
+## [!DNL PostgreSQL] opdrachten
 
-De subsecties hieronder behandelen de bevelen PostgreSQL die door de Dienst van de Vraag worden gesteund.
+In de onderstaande subsecties worden de [!DNL PostgreSQL] bevelen die door de Dienst van de Vraag worden gesteund.
 
 ### TABEL ANALYSEREN
 
@@ -677,7 +677,7 @@ Meer informatie over de standaard SELECT-queryparameters vindt u in het gedeelte
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `TEMPORARY` of `TEMP` | Een optionele parameter. Indien gespecificeerd, zal de lijst die wordt gecreeerd een tijdelijke lijst zijn. |
-| `UNLOGGED` | Een optionele parameter. Indien gespecificeerd, zal de lijst die zoals wordt gecreeerd een niet geregistreerde lijst zijn. Meer informatie over niet-geregistreerde tabellen vindt u in de [PostSQL-documentatie](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Een optionele parameter. Indien gespecificeerd, zal de lijst die zoals wordt gecreeerd een niet geregistreerde lijst zijn. Meer informatie over niet-geregistreerde tabellen vindt u in de [[!DNL PostgreSQL] documentatie](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | De naam van de tabel die moet worden gemaakt. |
 
 **Voorbeeld**

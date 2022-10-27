@@ -5,9 +5,9 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3737'
+source-wordcount: '3763'
 ht-degree: 1%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Nadat u zich hebt aangemeld bij Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van UI om te navigeren naar [!UICONTROL Datasets] dashboard.
 - De datasets [!UICONTROL Browse] wordt geopend. Met de zoekbalk kunt u de beschikbare opties verfijnen. Selecteer een dataset van de getoonde lijst.
 
-![Een dataset die in het Platform UI wordt benadrukt.](./images/troubleshooting/dataset-selection.png)
+![Het dashboard van Datasets in het Platform UI met de onderzoeksbar en een dataset benadrukte.](./images/troubleshooting/dataset-selection.png)
 
-- De [!UICONTROL Datasets activity] wordt weergegeven. Selecteren [!UICONTROL Preview dataset] om een dialoog van het schema XDM en in tabelvorm mening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer informatie vindt u in het gedeelte [een voorbeeld bekijken van een gegevenssetdocumentatie](../catalog/datasets/user-guide.md#preview-a-dataset)
+- De [!UICONTROL Datasets activity] wordt weergegeven. Selecteren **[!UICONTROL Preview dataset]** om een dialoog van het schema XDM en in tabelvorm mening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer informatie vindt u in het gedeelte [een voorbeeld bekijken van een gegevenssetdocumentatie](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![Het XDM-schema en de tabelweergave van de samengevoegde gegevens.](./images/troubleshooting/dataset-preview.png)
+![Het de activiteitslusje van de Dataset van het dashboard van Datasets met benadrukte dataset van de Voorproef.](./images/troubleshooting/dataset-preview.png)
 
 - Selecteer een veld in het schema om de inhoud ervan in een samengevoegde kolom weer te geven. De naam van de kolom wordt boven de inhoud weergegeven aan de rechterkant van de pagina. Kopieer deze naam voor het opvragen van deze gegevensset.
 
-![De kolomnaam van een genestelde dataset die in UI wordt benadrukt.](./images/troubleshooting/column-name.png)
+![Het XDM-schema en de tabelweergave van de samengevoegde gegevens. De kolomnaam van een genestelde dataset wordt benadrukt in UI.](./images/troubleshooting/column-name.png)
 
 Zie de documentatie voor meer informatie over [hoe te werken met geneste gegevensstructuren](./best-practices/nested-data-structures.md) het gebruiken van de Redacteur van de Vraag of een derdecliënt.
 +++
@@ -119,12 +119,12 @@ Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. O
 - Navigeren naar [https://www.adobe.com/](https://www.adobe.com/) in uw webbrowser.
 - Selecteer rechts van de bovenste navigatiebalk de optie **[!UICONTROL Sign In]**.
 
-![De Adobe-website met aanmeldingsnaam gemarkeerd.](./images/troubleshooting/adobe-sign-in.png)
+![De Adobe-website met Sign in gemarkeerd.](./images/troubleshooting/adobe-sign-in.png)
 
 - Gebruik uw Adobe ID en wachtwoord die bij uw Adobe-licentie zijn geregistreerd.
 - Selecteren **[!UICONTROL Help & Support]** in de bovenste navigatiebalk.
 
-![Het vervolgkeuzemenu van de bovenste navigatiebalk met de Help en ondersteuning is gemarkeerd.](./images/troubleshooting/help-and-support.png)
+![Het bovenste vervolgkeuzemenu op de navigatiebalk met Help en ondersteuning, Enterprise Support en Contact met ons gemarkeerd.](./images/troubleshooting/help-and-support.png)
 
 Een vervolgkeuzelijst wordt weergegeven met een [!UICONTROL Help and support] sectie. Selecteren **[!UICONTROL Contact us]** om de virtuele assistent voor de klantenservice van Adobe te openen, of selecteer **[!UICONTROL Enterprise support]** voor specifieke hulp voor grote organisaties.
 +++

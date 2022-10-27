@@ -5,9 +5,9 @@ title: RStudio verbinden met Query Service
 topic-legacy: connect
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -20,29 +20,29 @@ Dit document doorloopt de stappen voor het verbinden [!DNL RStudio] met Adobe Ex
 >
 > Deze handleiding gaat ervan uit dat u al toegang hebt tot [!DNL RStudio] en zijn vertrouwd met het gebruik ervan. Meer informatie over [!DNL RStudio] kunt u vinden in het dialoogvenster [ambtenaar [!DNL RStudio] documentatie](https://rstudio.com/products/rstudio/).
 > 
-> Bovendien, om RStudio met de Dienst van de Vraag te gebruiken, moet u de Bestuurder PostSQL JDBC 4.2 installeren. U kunt het JDBC-stuurprogramma downloaden van het dialoogvenster [Officiële PostSQL-site](https://jdbc.postgresql.org/download/).
+> Daarnaast te gebruiken [!DNL RStudio] met de Dienst van de Vraag, moet u installeren [!DNL PostgreSQL] JDBC 4.2-stuurprogramma. U kunt het JDBC-stuurprogramma downloaden van het dialoogvenster [[!DNL PostgreSQL] officiële site](https://jdbc.postgresql.org/download/).
 
 ## Een [!DNL Query Service] verbinding in de [!DNL RStudio] interface
 
 Na installatie [!DNL RStudio]moet u het RJDBC-pakket installeren. Ga naar de **[!DNL Packages]** en selecteert u **[!DNL Install]**.
 
-![](../images/clients/rstudio/install-package.png)
+![De [!DNL RStudio] dashboard met pakketten en installatie gemarkeerd.](../images/clients/rstudio/install-package.png)
 
 Er wordt een pop-up weergegeven met de **[!DNL Install Packages]** scherm. Zorg ervoor dat **[!DNL Repository (CRAN)]** is geselecteerd voor de **[!DNL Install from]** sectie. De waarde voor **[!DNL Packages]** moeten `RJDBC`. Zorgen **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren.
 
-![](../images/clients/rstudio/install-jrdbc.png)
+![Het dialoogvenster Pakketten installeren met RJDBC is in het veld Pakketten ingevoerd en is gemarkeerd.](../images/clients/rstudio/install-jrdbc.png)
 
-Nu het RJDBC-pakket is geïnstalleerd, start u RStudio opnieuw om het installatieproces te voltooien.
+Nu het RJDBC-pakket is geïnstalleerd, start u het opnieuw op [!DNL RStudio] om het installatieproces te voltooien.
 
-Nadat RStudio opnieuw is begonnen, kunt u met de Dienst van de Vraag nu verbinden. Selecteer **[!DNL RJDBC]** in de **[!DNL Packages]** en voert u de volgende opdracht in de console in:
+Na [!DNL RStudio] opnieuw is gestart, kunt u nu verbinding maken met Query Service. Selecteer **[!DNL RJDBC]** in de **[!DNL Packages]** en voert u de volgende opdracht in de console in:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Waar {PAD NAAR DE POSTGRESQL JDBC JAR} het pad vertegenwoordigt naar de PostSQL JDBC JAR die op uw computer is geïnstalleerd.
+Wanneer `{PATH TO THE POSTGRESQL JDBC JAR}` staat voor het pad naar de [!DNL PostgreSQL] JDBC JAR die op uw computer is geïnstalleerd.
 
-Nu, kunt u uw verbinding aan de Dienst van de Vraag tot stand brengen door het volgende bevel in de console in te gaan:
+Nu, kunt u uw verbinding aan de Dienst van de Vraag tot stand brengen. Ga het volgende bevel in de console in:
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -54,7 +54,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [aanmeldingsgids](../ui/credentials.md). Meld u aan om uw referenties te zoeken [!DNL Platform]selecteert u vervolgens **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
-![](../images/clients/rstudio/connection-rjdbc.png)
+![De console-uitvoer in [!DNL RStudio] van de verbinding aan de Dienst van de Vraag.](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Bezig met schrijven van query&#39;s
 

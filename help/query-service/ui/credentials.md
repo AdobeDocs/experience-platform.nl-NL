@@ -5,9 +5,9 @@ title: Handleiding Query Service Credentials
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
@@ -82,9 +82,9 @@ Het configuratie-JSON-bestand bevat informatie zoals de naam van de technische a
 
 Nadat u de gegenereerde gegevens hebt opgeslagen, selecteert u **[!UICONTROL Close]**. U kunt nu een lijst zien van al uw niet-vervallende geloofsbrieven.
 
-![Het tabblad Credentials van het dashboard van Query&#39;s met de sectie Niet-vervallende referenties uitgevouwen.](../images/ui/credentials/list-credentials.png)
+![Het tabblad Credentials van het dashboard Vragen met de sectie Niet-vervallende referenties gemarkeerd.](../images/ui/credentials/list-credentials.png)
 
-U kunt uw niet-vervallende gegevens bewerken of verwijderen. Als u een niet-vervallende referentie wilt bewerken, selecteert u het potloodpictogram (![](../images/ui/credentials/edit-icon.png)). Als u een niet-vervallende referentie wilt verwijderen, selecteert u het verwijderingspictogram (![](../images/ui/credentials/delete-icon.png)).
+U kunt uw niet-vervallende gegevens bewerken of verwijderen. Als u een niet-vervallende referentie wilt bewerken, selecteert u het potloodpictogram (![Een potloodpictogram.](../images/ui/credentials/edit-icon.png)). Als u een niet-vervallende referentie wilt verwijderen, selecteert u het verwijderingspictogram (![Een prullenbakpictogram.](../images/ui/credentials/delete-icon.png)).
 
 Wanneer u een niet-verkennende referentie bewerkt, wordt een modaal veld weergegeven. U kunt de volgende gegevens opgeven om bij te werken:
 
@@ -102,7 +102,7 @@ U kunt of de het verlopen of niet-verlopen geloofsbrieven gebruiken om met exter
 
 De afbeelding geeft de locatie aan van elke parameter die in de gebruikersinterface wordt gevonden, behalve het wachtwoord van de niet-vervallende gegevens. Terwijl niet-vervallende geloofsbrieven door hun JSON configuratiedossiers worden verstrekt, kunt u uw het verlopen geloofsbrieven onder bekijken **Credentials** in de gebruikersinterface.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![Het tabblad Credentials van de werkruimte Vragen met de sectie Verstrekkende referenties gemarkeerd.](../images/ui/credentials/expiring-credentials.png)
 
 In de onderstaande tabel worden de parameters beschreven die doorgaans vereist zijn om verbinding te maken met externe clients.
 

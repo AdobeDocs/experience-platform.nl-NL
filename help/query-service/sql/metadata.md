@@ -5,17 +5,16 @@ title: Metadata PostgreSQL-opdrachten in Query Service
 topic-legacy: metadata
 description: Een lijst met PostgreSQL-opdrachten die momenteel worden ondersteund voor het opvragen van metagegevens in Adobe Experience Platform Query Service.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
-# Metadata PostgreSQL commands in de Dienst van de Vraag
+# Metagegevens [!DNL PostgreSQL] opdrachten in Query-service
 
-Voor meta-gegevens op uw dataset, worden de volgende bevelen PostgreSQL momenteel gesteund voor het vragen:
+Voor meta-gegevens op uw dataset, het volgende [!DNL PostgreSQL] opdrachten worden momenteel ondersteund voor het opvragen van:
 
 >[!NOTE]
 >
@@ -42,6 +41,6 @@ Voor meta-gegevens op uw dataset, worden de volgende bevelen PostgreSQL momentee
 | `\showtables` | Hier worden de volgende gegevens weergegeven: <br>naam: De naam waarmee naar de tabel wordt verwezen.<br>datasetId: De id van de gegevensset die wordt opgeslagen.<br>gegevensset: De naam van de gegevensset die wordt opgeslagen.<br>beschrijving: Een beschrijving van de gegevensset.<br>opgelost: Een booleaanse waarde die aangeeft of de dataset in de huidige sessie wordt opgelost. |
 | `\timing` | Hiermee schakelt u de weergave in of uit. De weergave is in milliseconden. Intervallen langer dan één seconde worden weergegeven in minuten:seconden-indeling, waarbij uren- en dagvelden worden toegevoegd wanneer dat nodig is. |
 
-Alle bevelen die met `\d` beginnen kunnen worden gecombineerd. U kunt bijvoorbeeld `\dtsn` uitgeven om een lijst van alle lijsten, opeenvolgingen, en schema&#39;s te tonen. `\d` op zichzelf toont alle zichtbare tabellen, weergaven, gematerialiseerde weergaven en reeksen.
+Alle opdrachten die beginnen met `\d` kan worden gecombineerd. U kunt bijvoorbeeld `\dtsn` om een lijst van alle lijsten, opeenvolgingen, en schema&#39;s te tonen. `\d` op zichzelf toont alle zichtbare tabellen, weergaven, gematerialiseerde weergaven en reeksen.
 
-Raadpleeg de documentatie op [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) voor meer informatie over de bovenstaande opdrachten. Houd er echter rekening mee dat niet alle opties in de documentatie van PostgreSQL worden ondersteund door [!DNL Experience Platform].
+Raadpleeg voor meer informatie over de bovenstaande opdrachten de documentatie op [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Houd er echter rekening mee dat niet alle opties in het dialoogvenster [!DNL PostgreSQL] documentatie wordt ondersteund door [!DNL Experience Platform].

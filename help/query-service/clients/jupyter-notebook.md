@@ -1,9 +1,9 @@
 ---
 title: Verbind Jupyter Notitieboekje aan de Dienst van de Vraag
 description: Leer hoe u Jupyter-laptop kunt verbinden met Adobe Experience Platform Query Service.
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Om de vereiste geloofsbrieven te verkrijgen voor het verbinden [!DNL Jupyter Not
 
 Nadat u een nieuwe [!DNL Jupyter Notebook] webtoepassing, selecteert u de **[!DNL New]** vervolgkeuzelijst gevolgd door **[!DNL Python 3]** om een nieuw notebook te maken. De [!DNL Notebook] wordt weergegeven.
 
-![De [!DNL Jupiter Notebook] Het lusje van het dossier met [!DNL New dropdown] en [!DNL Python] 3 gemarkeerd.](../images/clients/jupyter-notebook/new-notebook.png)
+![De [!DNL Jupiter Notebook] Het lusje van het dossier met [!DNL New] dropdown en [!DNL Python] 3 gemarkeerd.](../images/clients/jupyter-notebook/new-notebook.png)
 
 Op de eerste regel van de [!DNL Notebook] Voer de volgende waarde in in de editor: `pip install psycopg2-binary` en selecteert u **[!DNL Run]** in de opdrachtbalk. Onder de invoerregel wordt een succesbericht weergegeven.
 

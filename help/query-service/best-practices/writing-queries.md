@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
@@ -206,7 +206,7 @@ Na het verbinden met de Dienst van de Vraag, kunt u al uw beschikbare lijsten op
 
 ### Standaardtabelweergave
 
-De `\d` toont de standaard PostSQL-weergave voor het weergeven van tabellen. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
+De `\d` toont het bevel de norm [!DNL PostgreSQL] weergave voor tabellen met lijsten. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
 ```sql
              List of relations

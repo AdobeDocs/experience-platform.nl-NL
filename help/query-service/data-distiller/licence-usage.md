@@ -1,7 +1,7 @@
 ---
 title: Gebruik van batch-query's controleren
 description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van de Data Distiller-licentie van uw organisatie.
-source-git-commit: 74175e5e2ce31427ef6ea8d93055d6ca3a8406f4
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -34,4 +34,4 @@ De [!UICONTROL Compute hours] widget gebruikt een lijngrafiek om de tijd van de 
 >
 >De [!UICONTROL Compute hours] widget is alleen van toepassing op klanten met de Data Distiller-licentie voor batchquery&#39;s.
 
-![Het licentieverbruiksdashboard met de widget Aantal uren berekenen gemarkeerd.](../images/data-distiller/compute-hours.png)
+![Het licentieverbruiksdashboard met de widget computeruren gemarkeerd.](../images/data-distiller/compute-hours.png)

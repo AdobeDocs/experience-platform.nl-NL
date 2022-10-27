@@ -1,7 +1,8 @@
 ---
 title: Query-sjablonen
 description: Zoeksjablonen zijn herbruikbare opgeslagen SQL-query's die andere gebruikers opnieuw kunnen gebruiken om tijd en moeite te besparen. Zij kunnen worden gecreeerd gebruikend de Redacteur van de Vraag of de Dienst API van de Vraag en zijn beschikbaar voor gebruik op alle datasets van het Experience Platform.
-source-git-commit: 5ed822ec16e8e8d38e93370440242ec4c1c01320
+exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 1%
@@ -26,9 +27,11 @@ U kunt vraagmalplaatjes door twee methodes tot stand brengen, of door een verzoe
 
 Zie de documentatie voor instructies op hoe te om de Redacteur van de Vraag te gebruiken aan [schrijven](./user-guide.md#query-authoring) en [query&#39;s opslaan](./user-guide.md#saving-queries). Nadat u een naam hebt gegeven aan de query en de query hebt opgeslagen, kunt u deze opnieuw gebruiken als een querysjabloon in het menu [!UICONTROL Browse] tab.
 
-Selecteer in de werkruimte Query&#39;s van de gebruikersinterface van het Platform de optie **[!UICONTROL Browse]** om de lijst met beschikbare opgeslagen query&#39;s weer te geven.
+Selecteer in de werkruimte Query&#39;s van de gebruikersinterface van het Platform de optie **[!UICONTROL Templates]** om de lijst met beschikbare opgeslagen query&#39;s weer te geven.
 
-![De zoekwerkruimte met het tabblad Bladeren gemarkeerd.](../images/ui/query-templates/query-templates.png)
+<!-- This may need updating idf the Schedule are added to a separate Tab -->
+
+![De zoekwerkruimte met het tabblad Sjablonen gemarkeerd.](../images/ui/query-templates/query-templates.png)
 
 Als u relevante sjabloongegevens wilt zoeken, selecteert u een querysjabloon in de lijst die beschikbaar is om het deelvenster Details te openen.
 

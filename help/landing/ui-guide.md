@@ -5,9 +5,9 @@ title: Overzicht gebruikersinterface Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1751'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ De **[!UICONTROL Schemas]** In deze sectie kunt u XDM-schema&#39;s (Experience D
 
 De **[!UICONTROL Datasets]** de sectie laat u datasets tot stand brengen en beheren. Meer informatie over datasets vindt u in het gedeelte [gebruikershandleiding voor gegevenssets](../catalog/datasets/user-guide.md).
 
-De **[!UICONTROL Queries]** in deze sectie kunt u query&#39;s maken en beheren, SQL-query&#39;s van de Adobe Experience Platform Query Service registreren en uw PostSQL-referenties bekijken. Meer informatie over query&#39;s vindt u in de [Gebruikershandleiding voor Query Service](../query-service/ui/overview.md).
+De **[!UICONTROL Queries]** de sectie laat u vragen tot stand brengen en leiden, SQL vragen registreren die door de Dienst van de Vraag van Adobe Experience Platform worden gemaakt en uw bekijken [!DNL PostgreSQL] referenties. Meer informatie over query&#39;s vindt u in de [Gebruikershandleiding voor Query Service](../query-service/ui/overview.md).
 
 De **[!UICONTROL Monitoring]** kunt u de opname van batch- en streaming-tags controleren. Meer informatie over controle vindt u in de [gebruikershandleiding voor het controleren van gegevensinvoer](../ingestion/quality/monitor-data-ingestion.md).
 

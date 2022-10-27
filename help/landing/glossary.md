@@ -5,9 +5,9 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
 workflow-type: tm+mt
-source-wordcount: '7430'
+source-wordcount: '7429'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 **Klasse**: In het Model van Gegevens van de Ervaring (XDM), bepaalt een klasse de kleinste reeks gebieden die worden gebruikt om een schema te bouwen en bepaalt het basisgedrag van het bedrijfsvoorwerp dat het schema vertegenwoordigt.
 
-**Client**: Een client is een extern hulpprogramma of een externe toepassing waarmee verbinding wordt gemaakt [!DNL Query Service] via het PostgreSQL-protocol of HTTP API.
+**Client**: Een client is een extern hulpprogramma of een externe toepassing waarmee verbinding wordt gemaakt [!DNL Query Service] via [!DNL PostgreSQL] protocol of HTTP API.
 
 **Verzameling**: In [!DNL Offer Decisioning]Verzamelingen zijn subsets van aanbiedingen die zijn gebaseerd op vooraf gedefinieerde voorwaarden die door een marketmaker zijn gedefinieerd, zoals de categorie van de aanbieding.
 

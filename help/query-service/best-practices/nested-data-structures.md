@@ -3,9 +3,9 @@ keywords: Experience Platform;query-service;Query-service;geneste gegevensstruct
 title: Werken met geneste gegevensstructuren in Query Service
 description: Dit document biedt een werkvoorbeeld voor het verwerken en transformeren van geneste gegevensvelden met CTAS- en INSERT INTO-instructies.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service ondersteunt het gebruik van geneste gegevensvelden. De complexiteit van bedrijfsgegevensstructuren kan het transformeren of verwerken van deze gegevens ingewikkeld maken. Dit document verstrekt voorbeelden van om, datasets met complexe gegevenstypes met inbegrip van genestelde gegevensstructuren tot stand te brengen te verwerken of om te zetten.
 
-De Dienst van de vraag verstrekt een interface PostgreSQL om SQL vragen op alle datasets in werking te stellen die door Experience Platform worden beheerd. Platform ondersteunt het gebruik van primitieve of complexe gegevenstypen in tabelkolommen, zoals struct, arrays, maps en diep geneste struct, arrays en maps. Datasets kunnen ook geneste structuren bevatten waarbij het gegevenstype van de kolom zo complex kan zijn als een array van geneste structuren, of een kaart met kaarten waarin de waarde van een sleutelwaardepaar een structuur met meerdere nestniveaus kan zijn.
+De Dienst van de vraag verstrekt een [!DNL PostgreSQL] interface om SQL vragen op alle datasets in werking te stellen die door Experience Platform worden beheerd. Platform ondersteunt het gebruik van primitieve of complexe gegevenstypen in tabelkolommen, zoals struct, arrays, maps en diep geneste struct, arrays en maps. Datasets kunnen ook geneste structuren bevatten waarbij het gegevenstype van de kolom zo complex kan zijn als een array van geneste structuren, of een kaart met kaarten waarin de waarde van een sleutelwaardepaar een structuur met meerdere nestniveaus kan zijn.
 
 ## Aan de slag
 

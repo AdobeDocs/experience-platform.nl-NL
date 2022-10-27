@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL aan vraaggegevens binnen het gegevens meer in Experience Platform.
 feature: Queries
-source-git-commit: cc855d46d594d8a55d26873b25060367cf726926
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '223'
 ht-degree: 5%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 5%
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [SSL-modi](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
-   - [Db Visualizer](./clients/dbvisulaizer.md)
+   - [DbVisualizer](./clients/dbvisulaizer.md)
    - [Jupyter-laptop](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [Postico](clients/postico.md)

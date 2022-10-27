@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: Met Adobe Experience Platform Query Service kunt u gegevenssets maken vanuit de gebruikersinterface. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
+source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 0%
 
 ## Gegevenssets genereren vanuit de gebruikersinterface van Adobe Experience Platform
 
+<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
+
 Ga als volgt te werk om gegevenssets te maken van de gebruikersinterface van Adobe Experience Platform (UI):
 
 1. Maak een query met een verbonden client en valideer de uitvoer. Leren hoe u query&#39;s kunt schrijven met [!DNL Query Editor], lees de [!DNL Query Editor] UI-hulplijn [over het schrijven van vragen](./user-guide.md#writing-queries).
@@ -27,13 +29,13 @@ Ga als volgt te werk om gegevenssets te maken van de gebruikersinterface van Ado
 
 3. Selecteer in het deelvenster Query-details de optie **[!UICONTROL Output dataset]**.
 
-   ![Gegevensset uitvoer selecteren](../images/ui/create-datasets/output-dataset.png)
+   ![Het lusje van het Malplaatje van de Werkruimte van Vragen met Uitvoer benadrukte dataset van de Output.](../images/ui/create-datasets/output-dataset.png)
 
 4. Voer in het dialoogvenster dat wordt weergegeven een naam in voor de gegevensset die is toegevoegd met uw LDAP-id. De naam van de gegevensset hoeft niet uniek of SQL-veilig te zijn. Merk op dat de lijstnaam voor uw dataset zal worden geproduceerd gebaseerd op de datasetnaam u hier creeert.
 
 5. Voer vervolgens een beschrijving in voor uw gegevensset in het dialoogvenster [!UICONTROL Description] veld en selecteer **[!UICONTROL Run query]**.
 
-   ![Query uitvoeren](../images/ui/create-datasets/run-query.png)
+   ![De datasetdialoog van de Output met de datasetdetails en de looppasvraag benadrukte](../images/ui/create-datasets/run-query.png)
 
 6. Wanneer de query is uitgevoerd, navigeert u naar **[!UICONTROL Datasets]** om de dataset te bekijken u hebt gecreeerd. Meer over leren hoe te om gemeenschappelijke acties uit te voeren wanneer het werken met datasets binnen de Platform UI, zie [UI-gids voor gegevensbestanden](../../catalog/datasets/user-guide.md).
 

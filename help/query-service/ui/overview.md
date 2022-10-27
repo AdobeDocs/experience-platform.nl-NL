@@ -5,9 +5,9 @@ title: UI-gids voor zoekservice
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -26,15 +26,15 @@ De [!DNL Query Editor] laat u toe om vragen te schrijven en uit te voeren zonder
 
 ![Een ingezoomd object met het oog op de [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Bladeren {#browse}
+## Sjablonen {#browse}
 
-De **[!UICONTROL Browse]** tabblad geeft query&#39;s weer die zijn opgeslagen door gebruikers in uw organisatie. Het is nuttig om van deze als vraagprojecten te denken, aangezien de vragen hier worden bewaard nog onder bouw kunnen zijn. Vragen weergegeven op de **[!UICONTROL Browse]** tabblad wordt ook weergegeven als query&#39;s in het dialoogvenster **[!UICONTROL Log]** tab als ze eerder zijn uitgevoerd door [!DNL Query Service].
+De **[!UICONTROL Templates]** tabblad geeft query&#39;s weer die zijn opgeslagen door gebruikers in uw organisatie. Het is nuttig om van deze als vraagprojecten te denken, aangezien de vragen hier worden bewaard nog onder bouw kunnen zijn. Vragen weergegeven op de **[!UICONTROL Templates]** tabblad wordt ook weergegeven als query&#39;s in het dialoogvenster **[!UICONTROL Log]** tab als ze eerder zijn uitgevoerd door [!DNL Query Service].
 
-![Een ingezoomd in mening het dashboard van Vragen doorbladert lusje die verscheidene bewaarde vragen toont.](../images/ui/overview/browse.png)
+![Een ingezoomd in mening van het lusje van Malplaatjes van het Dashboard van Vragen tonend verscheidene bewaarde vragen.](../images/ui/overview/templates.png)
 
 | Kolom | Beschrijving |
 | --- | --- |
-| **[!UICONTROL Name]** | De naam van de query die door de gebruiker is gemaakt. U kunt op de naam selecteren om de query te openen in het dialoogvenster [!DNL Query Editor]. U kunt de onderzoeksbar ook gebruiken om op de Naam van een vraag te zoeken. Zoekopdrachten zijn hoofdlettergevoelig. |
+| **[!UICONTROL Name]** | Het naamveld is de naam van de query die door de gebruiker is gemaakt, of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, is de naam van de query een fragment van de eerste SQL die is gebruikt om de query te maken. U kunt de naam van de query selecteren om de query te openen in het dialoogvenster [!DNL Query Editor]. U kunt ook de zoekbalk gebruiken om te zoeken naar de [!UICONTROL Name] van een query. Zoekopdrachten zijn hoofdlettergevoelig. |
 | **[!UICONTROL SQL]** | De eerste paar tekens van de SQL-query. Als u de muis boven de code houdt, wordt de volledige query weergegeven. |
 | **[!UICONTROL Modified by]** | De laatste gebruiker die de query heeft gewijzigd. Elke gebruiker in uw organisatie die toegang heeft tot [!DNL Query Service] kan query&#39;s wijzigen. |
 | **[!UICONTROL Last modified]** | De datum en de tijd van de laatste wijziging in de query, in de tijdzone van de browser. |

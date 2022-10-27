@@ -5,9 +5,9 @@ title: Overzicht van de PostgreSQL Source Connector
 topic-legacy: overview
 description: Leer hoe u PostSQL met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ## Verbinden [!DNL PostgreSQL] tot [!DNL Platform] gebruiken, API&#39;s
 
-- [Een PostgreSQL-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/postgres.md)
+- [Een [!DNL PostgreSQL] basisverbinding met de Flow Service API](../../tutorials/api/create/databases/postgres.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden [!DNL PostgreSQL] tot [!DNL Platform] gebruiken van UI
 
-- [Een PostSQL-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/postgres.md)
+- [Een [!DNL PostgreSQL] bronverbinding in de gebruikersinterface](../../tutorials/ui/create/databases/postgres.md)
 - [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)

@@ -5,9 +5,9 @@ title: Connect Aqua Data Studio aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ De **[!DNL Register Server]** wordt weergegeven. Onder de **[!DNL General]** tab
 - **[!DNL Host and Port]**: Het gastheereindpunt en zijn haven voor [!DNL Query Service]. U moet poort 80 gebruiken om verbinding te maken met [!DNL Query Service].
 - **[!DNL Database]:** De database die wordt gebruikt. De waarde voor de gebruikersinterface van het Platform gebruiken `dbname`: `prod:all`.
 
-![Het lusje van de Studio Algemeen van Gegevens Aqua met de vereiste benadrukte inputgebieden.](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![De [!DNL Aqua Data Studio] Het tabblad Algemeen met de vereiste invoervelden gemarkeerd.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] geloofsbrieven
 
@@ -56,7 +56,7 @@ Selecteer vervolgens de **[!DNL Driver]** tab. Onder **[!DNL Parameters]**, stel
 >
 >Zie de [[!DNL Query Service] SSL-documentatie](./ssl-modes.md) voor meer informatie over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en over het maken van verbindingen met deze service `verify-full` SSL-modus.
 
-![Het lusje van de Bestuurder van de Studio van Gegevens Aqua met het benadrukte gebied van Parameters.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![De [!DNL Aqua Data Studio] Het tabblad Stuurprogramma met het veld Parameters gemarkeerd.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 Selecteer **[!DNL Test Connection]** om ervoor te zorgen dat uw gegevens correct werken. Selecteer **[!DNL Save]** om uw server te registreren. Er verschijnt een bevestigingsvenster waarin de verbinding wordt bevestigd en de verbinding wordt weergegeven op het dashboard. U kunt nu verbinding maken met de server en de bijbehorende schemaobjecten weergeven.
 
