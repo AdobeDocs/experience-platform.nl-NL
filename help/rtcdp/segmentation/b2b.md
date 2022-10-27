@@ -1,17 +1,17 @@
 ---
-title: De Gevallen van het Gebruik van de segmentatie voor Echte - tijdCDP B2B Uitgave
-description: Een overzicht van de diverse beschikbare Echte - tijdCDP B2B de gebruiksgevallen van de Uitgave.
+title: Gebruiksscenario's voor segmentatie voor Real-time Customer Data Platform B2B Edition
+description: Een overzicht van de verschillende beschikbare Adobe Real-time Customer Data Platform B2B Edition-gebruiksscenario's.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
 
 # Gebruiksscenario&#39;s voor segmentatie voor Real-time Customer Data Platform B2B Edition
 
-Dit document bevat voorbeelden van segmentdefinities in Real-time CDP B2B Edition en hoe verschillende typen kenmerken kunnen worden gecombineerd voor algemene B2B-gebruiksgevallen. Als u wilt weten hoe doelen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+Dit document bevat voorbeelden van segmentdefinities in Adobe Real-time Customer Data Platform B2B Edition en hoe verschillende typen kenmerken kunnen worden gecombineerd voor veelgebruikte B2B-toepassingen. Als u wilt weten hoe doelen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
@@ -114,4 +114,4 @@ Alle profielen zoeken met een hoofdscore van meer dan 80.
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit overzicht, hebt u nu een inzicht in de segmentatiemogelijkheden die beschikbaar gebruikend CDP In real time, B2B Uitgave zijn. Voor meer informatie over de Segmenteringsdienst, gelieve te lezen [Segmenteringsdocumentatie](../../segmentation/home.md).
+Na het lezen van dit overzicht hebt u nu inzicht in de segmentatiemogelijkheden die beschikbaar zijn met Real-Time CDP, B2B Edition. Voor meer informatie over de Segmenteringsdienst, gelieve te lezen [Segmenteringsdocumentatie](../../segmentation/home.md).

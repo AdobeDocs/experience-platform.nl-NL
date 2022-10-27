@@ -3,7 +3,7 @@ keywords: rtcdp bestemmingen;bestemmingen rtcdp;de bestemmingen in real time de 
 title: Doelen in Real-time Customer Data Platform
 description: Dit document biedt een overzicht van Doelen in Adobe Experience Platform
 exl-id: 82f4bad2-a0e7-4f49-ac2f-412b5c5c35f3
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform november 2021
 description: De release van november 2021 bevat notities voor Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 1%
@@ -31,9 +31,9 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 **Releasedatum: 12 november 2021**
 
-Gebaseerd op Real-time Customer Data Platform (Real-Time CDP), is de Echte - tijdCDP B2B Uitgave speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
+Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
 
-Er zijn verbeteringen aan een verscheidenheid van de mogelijkheden van Adobe Experience Platform die Real-time CDP B2B Uitgave van zijn B2C tegenhanger onderscheiden. Zij omvatten verbeteringen aan het Model van de Gegevens van de Ervaring (XDM) voor B2B gebruiksgevallen, verbeteringen aan identiteitsresolutie en profielsegmentatie, evenals een douane-gebouwde schakelaar en bestemming voor Marketo Engage. Met de Marketo-connector kunnen B2B-merken hun toonaangevende B2B-betrokkenheidsgegevens verbinden met gedragsinformatie om de leads te voeden en marketingactiviteiten op basis van account te verbeteren.
+Er zijn verbeteringen aangebracht in verschillende Adobe Experience Platform-mogelijkheden die Real-Time CDP B2B Edition onderscheiden van de B2C-tegenhanger. Zij omvatten verbeteringen aan het Model van de Gegevens van de Ervaring (XDM) voor B2B gebruiksgevallen, verbeteringen aan identiteitsresolutie en profielsegmentatie, evenals een douane-gebouwde schakelaar en bestemming voor Marketo Engage. Met de Marketo-connector kunnen B2B-merken hun toonaangevende B2B-betrokkenheidsgegevens verbinden met gedragsinformatie om de leads te voeden en marketingactiviteiten op basis van account te verbeteren.
 
 -[Nieuwe B2B- en B2P-edities](#editions)
 -[Nieuwe Marketo-gegevensbron en -bestemmingsconnectors](#marketo)
@@ -41,9 +41,9 @@ Er zijn verbeteringen aan een verscheidenheid van de mogelijkheden van Adobe Exp
 
 ### Nieuwe B2B- en B2P-edities {#editions}
 
-Nieuwe B2B- en B2P-edities die B2B-gegevens en -functionaliteit opleveren voor CDP-producten en CDP-producten in realtime en producten voor activering van Platforms, kunnen worden aangeschaft.
+Nieuwe B2B- en B2P-edities die B2B-gegevens en -functionaliteit leveren aan zowel Real-Time CDP- als Platform Activation-producten zijn verkrijgbaar.
 
-Voor meer informatie over Real-time CDP B2B Edition raadpleegt u de [overzicht](../../rtcdp/overview.md).
+Voor meer informatie over de Real-Time CDP B2B Edition raadpleegt u de [overzicht](../../rtcdp/overview.md).
 
 ### Nieuwe Marketo-gegevensbron en -bestemmingsconnectors {#marketo}
 

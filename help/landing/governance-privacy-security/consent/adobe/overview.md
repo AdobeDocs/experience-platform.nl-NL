@@ -5,9 +5,9 @@ title: Verwerking van toestemming in Adobe Experience Platform
 topic-legacy: getting started
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Dit document biedt een overzicht van hoe u de gegevensbewerkingen van uw Platfor
 
 >[!NOTE]
 >
->Dit document richt zich op het verwerken van toestemmingsgegevens die de norm Adobe gebruiken. Als u toestemmingsgegevens in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0 verwerkt, zie de gids op [TCF 2.0-ondersteuning in Real-time Customer Data Platform](../iab/overview.md).
+>Dit document richt zich op het verwerken van toestemmingsgegevens die de norm Adobe gebruiken. Als u toestemmingsgegevens in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0 verwerkt, zie de gids op [TCF 2.0-ondersteuning in Adobe Real-time Customer Data Platform](../iab/overview.md).
 
 ## Vereisten
 

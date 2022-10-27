@@ -5,9 +5,9 @@ title: Toegang tot en functies van Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: Het volgende document schetst de toestemmingen van de Werkruimte van de Wetenschap van Gegevens en toegang tot eigenschappen.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '688'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ Het volgende document schetst de toestemmingen van de Werkruimte van de Wetensch
 
 ![DSW-tabbladen](./images/access/platform-tabs.png)
 
-- **Laptops:** Verstrekt een interactieve ontwikkelomgeving ([JupyterLab](./jupyterlab/overview.md)) om, uw gegevens op Experience Platform te onderzoeken te analyseren en te modelleren.
-- **Modellen:** biedt gereedschappen waarmee u geavanceerde methoden en modellen voor machinaal leren kunt maken, publiceren en opslaan. Voor meer informatie gaat u naar de zelfstudie [Een model voor machinetlering maken en publiceren](./models-recipes/create-publish-model.md).
-- **Services:** bevat zowel services die door Adobe worden aangeboden, zoals  [AI/ML-](../intelligent-services/home.md) services, als aangepaste services die u hebt gemaakt met de werkruimte voor wetenschap van gegevens.
+- **Laptops:** Biedt een interactieve ontwikkelomgeving ([JupyterLab](./jupyterlab/overview.md)) om uw gegevens op het Experience Platform te verkennen, te analyseren en te modelleren.
+- **Modellen:** Verstrekt hulpmiddelen die worden gebruikt om, geavanceerde machine het leren recepten en modellen tot stand te brengen te publiceren en op te slaan. Ga voor meer informatie naar de [een leermodel voor computers maken en publiceren](./models-recipes/create-publish-model.md) zelfstudie.
+- **Services:** Bevat beide door Adobe geleverde services, zoals [AI/ML-services](../intelligent-services/home.md) en alle aangepaste services die u hebt gemaakt met Data Science Workspace.
 
 Waarom zie ik slechts het lusje van de Diensten?
 
-- Uw organisatie heeft alleen recht op RTCDP (Real-Time Customer Data Platform), dat de AI/ML Service van de Klant omvat.
+- Uw organisatie heeft alleen recht op Adobe Real-time Customer Data Platform (Real-Time CDP), dat de AI/ML Service van de Klant omvat.
 
-Als u om het even welke **Gegevens Wetenschap** lusjes niet kunt zien en wenst om de eigenschappen van de Werkruimte van de Wetenschap van Gegevens te gebruiken, contacteer uw bedrijfbeheerder om te controleren of hebt u een vergunning van de Intelligentie van Adobe Experience Platform.
+Als u geen van de **Gegevenswetenschap** de dossiers en wensen om de eigenschappen van de Werkruimte van de Wetenschap van Gegevens te gebruiken, contacteer uw bedrijfbeheerder om te controleren of hebt u een vergunning van de Intelligentie van Adobe Experience Platform.
 
 ## Gegevenswetenschapswerkruimte verpakken
 
@@ -53,17 +53,17 @@ De volgende lijst schetst enkele zeer belangrijke verschillen voor de Toestemmin
 
 ## Toegangsbeheer
 
-Toegangsbeheer voor Experience Platform wordt beheerd via de [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie.
+Toegangscontrole voor Experience Platform wordt beheerd via [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie de [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie .
 
 Om de Werkruimte van de Wetenschap van Gegevens te gebruiken, moet de toestemming &quot;van de Werkruimte van de Wetenschap van Gegevens&quot;worden toegelaten. In de volgende tabel worden de effecten weergegeven van het inschakelen of uitschakelen van deze machtiging:
 
 | Machtiging | Ingeschakeld | Uitgeschakeld |
 |---|---|---|
-| Werkruimte voor gegevenswetenschap beheren | Verleent toegang tot alle diensten in de Werkruimte van de Wetenschap van Gegevens. | API- en UI-toegang tot alle services in de Data Science Workspace is uitgeschakeld. Als **Laptops**, **Modellen** en **Services** zijn uitgeschakeld, is het selecteren van de pagina&#39;s  niet mogelijk. <li>Toegang tot **Services** is mogelijk nog steeds beschikbaar via Real-time Customer Data Platform (RTCDP).</li> |
+| Werkruimte voor gegevenswetenschap beheren | Verleent toegang tot alle diensten in de Werkruimte van de Wetenschap van Gegevens. | API- en UI-toegang tot alle services in de Data Science Workspace is uitgeschakeld. Als deze optie is uitgeschakeld, selecteert u de **Laptops**, **Modellen**, en **Services** pagina&#39;s zijn niet toegestaan. <li>Toegang tot **Services** kan nog steeds beschikbaar zijn via Adobe Real-time Customer Data Platform (Real-Time CDP).</li> |
 
 ## Sandbox-ondersteuning
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke instantie van het Platform steunt veelvoudige productie en niet productie zandbakken, elk die zijn eigen bibliotheek van Platform middelen handhaven. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Zie het [overzicht van sandboxen](../sandboxes/home.md) voor meer informatie over sandboxen.
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke instantie van het Platform steunt veelvoudige productie en niet productie zandbakken, elk die zijn eigen bibliotheek van Platform middelen handhaven. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Zie voor meer informatie over sandboxen de [sandboxen, overzicht](../sandboxes/home.md).
 
 Momenteel geldt voor de Data Science Workspace de volgende sandbox-beperking:
 
@@ -73,4 +73,4 @@ Momenteel geldt voor de Data Science Workspace de volgende sandbox-beperking:
 
 Dit document schetste de verschillende soorten toegang en eigenschappen beschikbaar in de Werkruimte van de Wetenschap van Gegevens.
 
-Om meer over de Werkruimte van de Wetenschap van Gegevens, zoals een volledig werkschema van dag tot dag te leren, te beginnen door [de werkruimteanalyse van de Wetenschap van Gegevens](./walkthrough.md) te lezen. Voor meer algemene informatie, bezoek [Overzicht van de Werkruimte van de Wetenschap van Gegevens](./home.md).
+Om meer over de Werkruimte van de Wetenschap van Gegevens, zoals een volledig dagelijks werkschema te leren, gelieve te beginnen door te lezen [Analyse van de Data Science Workspace](./walkthrough.md) documentatie. Ga voor meer algemene informatie naar de [Overzicht van de Data Science Workspace](./home.md).

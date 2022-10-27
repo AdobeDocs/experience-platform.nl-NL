@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2022
 description: In de release van maart 2022 staat Adobe Experience Platform vermeld.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Raadpleeg voor meer informatie over auditlogs in Platform de [overzicht van audi
 >
 >De functie Verwante accounts is alleen beschikbaar voor klanten van de Real-Time CDP B2B Edition.
 
-B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen, elk met inbegrip van slechts gedeeltelijke of zelfs conflicterende gegevens voor dezelfde reële bedrijfsentiteit. Dit zorgt voor een enorme uitdaging om tot een accuraat beeld van hun klanten te komen, waardoor de efficiëntie en effectiviteit van hun B2B-marketing- en -verkoopinspanningen afnemen. Met de vrijgave van de desbetreffende rekeningen, [!DNL Real-time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert. U kunt de verwante rekeningen in uw segmentdefinities omvatten om uw bereik uit te breiden of bredere criteria in uw segmenten toe te passen.
+B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen, elk met inbegrip van slechts gedeeltelijke of zelfs conflicterende gegevens voor dezelfde reële bedrijfsentiteit. Dit zorgt voor een enorme uitdaging om tot een accuraat beeld van hun klanten te komen, waardoor de efficiëntie en effectiviteit van hun B2B-marketing- en -verkoopinspanningen afnemen. Met de vrijgave van de desbetreffende rekeningen, [!DNL Real-Time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert. U kunt de verwante rekeningen in uw segmentdefinities omvatten om uw bereik uit te breiden of bredere criteria in uw segmenten toe te passen.
 
 Meer informatie over de functie vindt u op de volgende documentatiepagina&#39;s:
 
@@ -55,7 +55,7 @@ Meer informatie over de functie vindt u op de volgende documentatiepagina&#39;s:
 - [Het tabblad Verwante accounts in de gebruikersinterface voor het accountprofiel](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Hoe verwant rekeningen in segmentdefinities gebruiken](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Meer over Echte - tijdCDP B2B Uitgave leren, zie [overzicht](../../rtcdp/overview.md).
+Als u meer wilt weten over de Real-Time CDP B2B Edition, raadpleegt u de [overzicht](../../rtcdp/overview.md).
 
 ## Waarschuwingen {#alerts}
 

@@ -5,9 +5,9 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7422'
+source-wordcount: '7430'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 **C5-contractlabel**: A `C5` Op het gebruikslabel voor contractgegevens wordt aangegeven dat gegevens niet kunnen worden gebruikt voor het maken van een verwijzing naar andere sites naar inhoud of advertenties op basis van interesse. Het op rente-gebaseerde richten, of verpersoonlijking, komt voor als de volgende drie voorwaarden worden vervuld: De ter plaatse verzamelde gegevens worden gebruikt om conclusies te trekken over het belang van de gebruiker; wordt gebruikt in een andere context, zoals op een andere site of een andere app; en wordt gebruikt om te selecteren welke inhoud of advertenties worden aangeboden op basis van die conclusies.
 
-**C6-contractlabel**: A `C6` op het gebruikslabel voor contractgegevens wordt aangegeven dat gegevens niet kunnen worden gebruikt voor on-site en doelwitten. Voor onsite advertenties kunt u onder andere advertenties selecteren en leveren op de websites van uw organisatie of apps of de levering en effectiviteit van dergelijke advertenties meten. Hiertoe behoren het gebruik van eerder verzamelde onsite gegevens over het belang van de gebruiker bij het selecteren van advertenties, het verwerken van gegevens over welke advertenties werden weergegeven, het tijdstip en de plaats waar deze werden weergegeven en het nemen van maatregelen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie.
+**C6-contractlabel**: A `C6` op het gebruikslabel voor contractgegevens wordt aangegeven dat gegevens niet kunnen worden gebruikt voor on-site en doelwitten. Voor onsite advertenties kunt u onder andere advertenties selecteren en leveren op de websites van uw organisatie of apps of de levering en effectiviteit van dergelijke advertenties meten. Hiertoe behoren het gebruik van eerder verzamelde onsite gegevens over het belang van de gebruiker bij het selecteren van advertenties, het verwerken van gegevens over welke advertenties werden weergegeven, het tijdstip en de plaats waar deze werden weergegeven en het nemen van maatregelen met betrekking tot de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie.
 
 **C7-contractlabel**: A `C7` op het gebruikslabel voor contractgegevens wordt aangegeven dat gegevens niet kunnen worden gebruikt voor het on-site maken van inhoud. Tot de onsite doelgerichte inhoud behoren de selectie en levering van inhoud op de websites van uw organisatie of apps, of het meten van de levering en doeltreffendheid van dergelijke inhoud. Dit omvat eerder verzamelde informatie over het belang van gebruikers om inhoud te selecteren, gegevens te verwerken over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld het selecteren van inhoud hebben ondernomen.
 
@@ -298,7 +298,7 @@ ht-degree: 0%
 
 **Invoerfunctie**: Een inputeigenschap wordt gespecificeerd in eigenschapafbeelding en door een machine-leert model gebruikt om voorspellingen te maken.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] zoals [!DNL Attribution AI] en [!DNL Customer AI] zijn machinaal-leren, kunstmatig-intelligentie-gebaseerde modellen die Experience Platform (of toepassingen die bovenop Platform zoals Real-time Customer Data Platform worden gebouwd) vereisen om te lopen en te werken.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] zoals [!DNL Attribution AI] en [!DNL Customer AI] zijn machinaal-leren, kunstmatig-intelligentie-gebaseerde modellen die Experience Platform (of toepassingen die bovenop Platform zoals Adobe Real-time Customer Data Platform worden gebouwd) vereisen om te lopen en te werken.
 
 **Op interesse gebaseerde gerichtheid of personalisatie**: Rentegerichte gericht zijn, ook bekend als verpersoonlijking, komt voor als aan de volgende drie voorwaarden wordt voldaan:
 
@@ -414,7 +414,7 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] Hiermee worden bekende en onbekende klantgegevens samengebracht om vertrouwde klantprofielen te maken met vereenvoudigde integratie, intelligente segmentatie en realtime activering over de digitale reis van de klant.
+**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) verenigt bekende en onbekende klantgegevens om vertrouwde klantprofielen te maken met vereenvoudigde integratie, intelligente segmentatie en realtime activering over de digitale reis van de klant.
 
 **Klantprofiel in realtime**: Het profiel van de Klant in real time (soms genoemd Profiel) verstrekt een holistische mening van elke individuele klant door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Met profiel kunt u uw klantgegevens consolideren in afzonderlijke profielen die een actioneerbare, tijdstempelaccount voor elke interactie van de klant bieden.
 

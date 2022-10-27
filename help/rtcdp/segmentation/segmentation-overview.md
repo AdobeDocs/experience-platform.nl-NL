@@ -1,20 +1,20 @@
 ---
 keywords: segmentatie; segmentatie rtcdp;realtime segmentering van klantgegevens
 title: Segmenteringsservice in Real-time Customer Data Platform
-description: CDP in real time wordt gebouwd bovenop Adobe Experience Platform en gebruikt veel van de diensten en de functionaliteit van het Experience Platform. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
+description: Adobe Real-Time Customer Data Platformå is gebouwd boven op Adobe Experience Platform en gebruikt veel van de services en functionaliteit van het Experience Platform. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
+# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (In real time CDP) staat u toe om gegevens van veelvoudige bronnen te brengen om een gecoördineerde en verenigbare ervaring voor uw klanten te drijven. Het aanbieden van relevante gepersonaliseerde marketingcampagnes kan worden bereikt met behulp van de [!DNL Segmentation Service], deel van Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) biedt u de mogelijkheid om gegevens van meerdere bronnen over te brengen, zodat uw klanten een gecoördineerde en consistente ervaring kunnen opdoen. Het aanbieden van relevante gepersonaliseerde marketingcampagnes kan worden bereikt met behulp van de [!DNL Segmentation Service], deel van Adobe Experience Platform.
 
-CDP in real time wordt gebouwd bovenop Adobe Experience Platform en gebruikt veel van [!DNL Experience Platform] diensten en functionaliteit. Met de [!DNL Segmentation Service], kunt u op maat gemaakte marketing door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen verstrekken.
+Real-Time CDP is gebouwd op Adobe Experience Platform en gebruikt veel van de [!DNL Experience Platform] diensten en functionaliteit. Met de [!DNL Segmentation Service], kunt u op maat gemaakte marketing door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen verstrekken.
 
 ## Segmentatie
 
@@ -32,7 +32,7 @@ Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een 
 
 * Het verstrekken van zeer nauwkeurige klantenaandrijvingsmodellen voor sterkere segmentatie en het richten.
 * Inzicht in de invloedrijke factoren en de waarschijnlijkheid achter bepaalde gedragingen van klanten.
-* Het verstrekken van klantgerichte opties voor de unieke gebruiksgevallen van uw bedrijf en gegevens.
+* Het bieden van klantgerichte opties voor de unieke gebruiksgevallen en de gegevens van uw bedrijf.
 * Verbetering van het Real-Time Klantprofiel met klantennestscores zoals churn en conversie.
 * Klantenprofielen verbeteren met invloedrijke factoren voor populatiescore.
 * Het creëren van segmenten van klanten die op invloedrijke factoren en aandrijvingsscores worden gebaseerd.
@@ -52,4 +52,4 @@ Als u meer wilt weten over AI van klanten, kunt u beginnen met een bezoek aan de
 
 ## Volgende stappen
 
-Na het lezen van dit overzicht, zou u nu moeten begrijpen hoe In real time CDP gebruikt [!DNL Segmentation Service] het verbeteren van de aanpassing en de aanpassing van marketingcampagnes. Voor meer informatie over de [!DNL Segmentation Service], lees de [Segmenteringsdocumentatie](../../segmentation/home.md).
+Nadat u dit overzicht hebt gelezen, moet u nu begrijpen hoe Real-Time CDP [!DNL Segmentation Service] het verbeteren van de aanpassing en de aanpassing van marketingcampagnes. Voor meer informatie over de [!DNL Segmentation Service], lees de [Segmenteringsdocumentatie](../../segmentation/home.md).

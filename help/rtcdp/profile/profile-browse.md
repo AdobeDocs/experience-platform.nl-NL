@@ -1,11 +1,11 @@
 ---
 keywords: weergaveprofielen rtcdp;rtcdp, profielweergave;rtcdp-profielen
 title: Bladeren door profielen in Real-time Customer Data Platform
-description: Met Real-time Customer Data Platform kunt u in real-time door de gegevens van het klantprofiel bladeren via de Adobe Experience Platform-gebruikersinterface.
+description: Met Adobe Real-time Customer Data Platform kunt u in real-time door de gegevens van het klantprofiel bladeren via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ Het profiel van de Klant in real time leidt tot een holistische mening van elk v
 
 In de gebruikersinterface van Adobe Experience Platform kunt u deze alleen-lezen profielen weergeven en belangrijke informatie over elk van uw individuele klanten bekijken, zoals hun voorkeuren, gebeurtenissen uit het verleden, interacties en de segmenten waartoe het individu behoort.
 
-Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en kan daardoor gebruikmaken van de mogelijkheden voor profielweergave in de gebruikersinterface van het Experience Platform. Voor een gedetailleerde gids over het bekijken van klantenprofielen binnen het gebruikersinterface van het Platform, verwijs naar [Gebruikershandleiding voor het profiel van de klant in realtime](../../profile/ui/user-guide.md).
+Adobe Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en kan daardoor gebruikmaken van de mogelijkheden voor profielweergave in de gebruikersinterface van het Experience Platform. Voor een gedetailleerde gids over het bekijken van klantenprofielen binnen het gebruikersinterface van het Platform, verwijs naar [Gebruikershandleiding voor het profiel van de klant in realtime](../../profile/ui/user-guide.md).
 
-## Profielverbeteringen voor CDP en B2B Edition in realtime
+## Profielverbeteringen voor Real-Time CDP, B2B Edition
 
-Naast de mogelijkheden voor het bladeren van profielen die door Adobe Experience Platform worden ondersteund, kunnen gebruikers van CDP en B2B Edition in realtime toegang krijgen tot B2B-kenmerken en -gebeurtenissen binnen het klantprofiel op het tabblad [!UICONTROL Attributes] en [!UICONTROL Events] tabs, respectievelijk. B2B-gegevens kunnen ook worden gebruikt om segmentatie uit te voeren, waarbij die segmenten onder de [!UICONTROL Segment membership] naast niet-B2B-segmenten.
+Naast de bladermogelijkheden van het profiel die door Adobe Experience Platform worden ondersteund, kunnen gebruikers van Real-Time CDP, B2B Edition toegang krijgen tot B2B-kenmerken en -gebeurtenissen binnen het klantprofiel op het tabblad [!UICONTROL Attributes] en [!UICONTROL Events] tabs, respectievelijk. B2B-gegevens kunnen ook worden gebruikt om segmentatie uit te voeren, waarbij die segmenten onder de [!UICONTROL Segment membership] naast niet-B2B-segmenten.
 
-CDP, B2B Edition in real-time, biedt u ook de mogelijkheid om te bladeren [!UICONTROL Accounts], [!UICONTROL Opportunities], en [!UICONTROL Source records] van over uw ondernemingsbronnen die met een individuele klant worden geassocieerd.
+Met Real-Time CDP, B2B Edition kunt u ook bladeren [!UICONTROL Accounts], [!UICONTROL Opportunities], en [!UICONTROL Source records] van over uw ondernemingsbronnen die met een individuele klant worden geassocieerd.
 
 Als u deze verbeteringen wilt verkennen, voert u eerst de stappen uit die in het dialoogvenster [Gebruikershandleiding voor het profiel van de klant in realtime](../../profile/ui/user-guide.md) om door een profiel te bladeren door beleid of naamruimte van de identiteit samen te voegen.
 
@@ -43,7 +43,7 @@ Voor meer informatie over het weergeven en verkennen van accountprofielen begint
 
 ### Tabblad Kansen
 
-De **[!UICONTROL Opportunities]** bevat details over open en afgesloten mogelijkheden met betrekking tot de account. Deze kansen kunnen in Experience Platform van veelvoudige bronnen worden opgenomen, nochtans in real time CDP, maakt B2B Uitgave het voor marketers gemakkelijk om al deze kansen samen op één plaats te zien.
+De **[!UICONTROL Opportunities]** bevat details over open en afgesloten mogelijkheden met betrekking tot de account. Deze kansen kunnen in Experience Platform van veelvoudige bronnen worden opgenomen, nochtans maakt de Real-Time CDP, B2B Uitgave het voor marketers gemakkelijk om al deze kansen samen te zien op één plaats.
 
 Elke kans bevat informatie zoals de naam van de kans, de hoeveelheid kansen, het werkgebied en of de kans open, gesloten, gewonnen of verloren is.
 

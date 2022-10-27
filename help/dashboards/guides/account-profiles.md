@@ -2,9 +2,9 @@
 title: Dashboardgids voor accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Voor een overzicht van alle functies in de gebruikersinterface van het accountpr
 
 ## Aan de slag
 
-U moet recht hebben op [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) om toegang te krijgen tot B2B [!UICONTROL Account Profiles] dashboard.
+U moet recht hebben op [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) om toegang te krijgen tot B2B [!UICONTROL Account Profiles] dashboard.
 
 ## Gegevens van accountprofielen
 
@@ -45,7 +45,7 @@ Selecteer [!UICONTROL Profile ID] uit de resultaten die op de [!UICONTROL Browse
 
 ![Op het tabblad Accountprofielen worden de resultaten weergegeven en de profiel-id gemarkeerd.](../images/account-profiles/account-profiles-browse-tab.png)
 
-De accountprofielgegevens die worden weergegeven op het tabblad [!UICONTROL Details] tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Zie de documentatie op [bladeren door accountprofielen in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) voor meer informatie over de weergavemogelijkheden van het accountprofiel in de gebruikersinterface van het Platform.
+De accountprofielgegevens die worden weergegeven op het tabblad [!UICONTROL Details] tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Zie de documentatie op [bladeren door accountprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) voor meer informatie over de weergavemogelijkheden van het accountprofiel in de gebruikersinterface van het Platform.
 
 ## De [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 

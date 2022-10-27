@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbeteringstaken voor profielen controleren
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Gebruik de **[!UICONTROL Show failures only]** schakelen om alleen de mislukte v
 
 Door deze zelfstudie te volgen, kunt u metriek voor profielverrijkingsbanen met succes controleren en begrijpen. Raadpleeg de volgende documenten voor meer informatie:
 
-* [Verwante rekeningen in real time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Verwante rekeningen in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Het tabblad Verwante accounts in de gebruikersinterface voor het accountprofiel](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Lood-aan-rekening matching in real time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Predictieve lead- en account scoring in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Lood-aan-rekening matching in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Voorspelende lead- en accountscoring in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

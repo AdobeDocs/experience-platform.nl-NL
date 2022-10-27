@@ -1,9 +1,9 @@
 ---
 title: Query Service-pakketten
 description: Het volgende document schetst de pakketten mogelijkheden en producten beschikbaar voor de Dienst van de Vraag en benadrukt de verschillen tussen ad hoc en partijvragen.
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform Query Service kan worden onderverdeeld in twee mogelij
 
 De mogelijkheden van de Dienst van de vraag worden verpakt met de volgende producten en toe:voegen-ons:
 
-- **Toepassingen op basis van Platforms** (Real-time Customer Data Platform, Customer Journey Analytics en Adobe Journey Optimizer): De toegang van de Dienst van de vraag om ad hoc vragen uit te voeren wordt verleend vanaf het begin met elke variatie en rij van op Platform-gebaseerde toepassingen.
+- **Toepassingen op basis van Platforms** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics en Adobe Journey Optimizer): De toegang van de Dienst van de vraag om ad hoc vragen uit te voeren wordt verleend vanaf het begin met elke variatie en rij van op Platform-gebaseerde toepassingen.
 - **[!DNL Data Distiller]** (add-onpakket dat u kunt kopen met Adobe Real-Time CDP, Customer Journey Analytics en Adobe Journey Optimizer): De toegang van de Dienst van de vraag om partijvragen uit te voeren wordt verleend met [!DNL Data Distiller].
 
 De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op hoe worden gebaseerd zij verpakt:
@@ -30,7 +30,7 @@ De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op 
 | Ondersteuning voor hoofdletters en kleine letters gebruiken | <ul><li>&#x200B;</li><li>&#x200B; voor gegevensdetectie</li><li>Gegevensvalidatie</li><li>Experimentatie</li></ul> | <ul><li>Reiniging</li><li>Vorm</li><li>Bewerken</li><li>Verrijken</li></ul> |
 | Ondersteunde semantiek | <ul><li>Vragen SELECTEREN</li></ul> | <ul><li>CTAS- en ITAS-query&#39;s</li></ul> |
 | Maximale uitvoeringstijd | 10 minuten | 24 uur |
-| Licentiemetrisch | **Vraag gebruiker gelijktijdig**: <ul><li>1 gelijktijdige gebruiker (Real-time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 gelijktijdige gebruikers (Customer Journey Analytics) &#x200B;</li></ul> **Query gelijktijdig**: <ul><li>1 gelijktijdige uitgevoerde vraag (alle toepassingen) &#x200B;</li></ul> **Extra add-on voor gebruikers van ad-hocquery&#39;s** kan worden aangeschaft om de geautoriseerde ad-hocqueryrechten van klanten te verhogen. <ul><li>+5 extra gebruikers per verpakking</li><li>+1 extra gelijktijdige lopende vraag per pak</li></ul> | **Rekenuren**: <ul><li>Variabele (bereik gebaseerd op de rechten van de klant)</li></ul> **Rekenuren** is een maatregel van de hoeveelheid tijd die door de motor van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd. |
+| Licentiemetrisch | **Vraag gebruiker gelijktijdig**: <ul><li>1 gelijktijdige gebruiker (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 gelijktijdige gebruikers (Customer Journey Analytics) &#x200B;</li></ul> **Query gelijktijdig**: <ul><li>1 gelijktijdige uitgevoerde vraag (alle toepassingen) &#x200B;</li></ul> **Extra add-on voor gebruikers van ad-hocquery&#39;s** kan worden aangeschaft om de geautoriseerde ad-hocqueryrechten van klanten te verhogen. <ul><li>+5 extra gebruikers per verpakking</li><li>+1 extra gelijktijdige lopende vraag per pak</li></ul> | **Rekenuren**: <ul><li>Variabele (bereik gebaseerd op de rechten van de klant)</li></ul> **Rekenuren** is een maatregel van de hoeveelheid tijd die door de motor van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd. |
 | Interface voor query-uitvoering | <ul><li>Gebruikersinterface Query Service</li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li></ul> | <ul><li>Query-interface </li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li><li>REST-API’s </li></ul> |
 | Zoekresultaten geretourneerd via | Gebruikersinterface client | Afgeleide dataset die in het gegevensmeer wordt opgeslagen |
 | Resultaatlimiet | <ul><li>Query-gebruikersinterface - 100 rijen</li><li>Client van derden - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | <ul><li>Query-gebruikersinterface (geen bovenlimiet voor rijen)</li><li>Externe clients (geen bovengrens voor rijen)</li><li>[!DNL PostgresSQL] client (geen bovenlimiet voor rijen)</li><li>REST API&#39;s (geen bovengrens voor rijen)</li></ul> |

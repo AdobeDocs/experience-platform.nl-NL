@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een bron van CRM tot stand te brengen gebruikend Platform UI.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1384'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op 
 
 >[!NOTE]
 >
->Als u [!DNL Salesforce] als onderdeel van Real-time Customer Data Platform B2B Edition, raadpleegt u de [[!DNL Salesforce] veldtoewijzingsdocument](../../../connectors/adobe-applications/mapping/salesforce.md) voor richtsnoeren voor het in kaart brengen [!DNL Salesforce] bronvelden naar de desbetreffende XDM-doelvelden.
+>Als u [!DNL Salesforce] als onderdeel van Adobe Real-time Customer Data Platform B2B Edition, raadpleegt u de [[!DNL Salesforce] veldtoewijzingsdocument](../../../connectors/adobe-applications/mapping/salesforce.md) voor richtsnoeren voor het in kaart brengen [!DNL Salesforce] bronvelden naar de desbetreffende XDM-doelvelden.
 
 Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
@@ -145,8 +145,8 @@ U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeer
 
 Door dit leerprogramma te volgen, hebt u met succes een dataflow gecreeerd om gegevens van uw bron van CRM aan Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] - overzicht](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] - overzicht](../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile]-overzicht](../../../../profile/home.md)
+* [[!DNL Data Science Workspace]-overzicht](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

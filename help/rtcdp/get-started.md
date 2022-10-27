@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
 title: Aan de slag met Real-time Customer Data Platform
-description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Real-time Customer Data Platform.
+description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-time Customer Data Platform.
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2328'
 ht-degree: 0%
 
 ---
 
 # Aan de slag met Real-time Customer Data Platform
 
-Deze gids Aan de slag leidt u door een steekproefimplementatie van Real-time Customer Data Platform (Real-time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
+Deze gids Aan de slag leidt u door een steekproefimplementatie van Real-time Customer Data Platform (Real-Time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
 
 In dit voorbeeld ziet u de kracht van Real-time Customer Data Platform, aangedreven door Adobe Experience Platform, om:
 
@@ -39,7 +39,7 @@ Het resultaat is dat Luma de volgende zakelijke doelstellingen heeft:
 
 Om aan deze doelstellingen te voldoen, moet het marketing team klantengegevens op schaal kunnen beheren.
 
-Met CDP in real time, aangedreven door Adobe Experience Platform, kan de marketing organisatie van Luma:
+Met Real-Time CDP, aangedreven door Adobe Experience Platform, kan de marketingorganisatie van Luma:
 
 1. Verzamel gegevens van verschillende platforms en zorg ervoor dat deze downstream beschikbaar zijn voor andere marketingactiviteiten.
 1. Maak één realtime weergave van hun consumenten, onafhankelijk van waar de gegevens vandaan komen.
@@ -141,7 +141,7 @@ Al deze gegevens uit verschillende bronnen worden samengevoegd in één enkel un
 
 ## Databron configureren
 
-Gebruiken [!DNL Real-time Customer Data Platform] nieuwe gegevensbronnen in Platform te brengen. CDP in real time omvat een catalogus van gegevensbronnen die snel en gemakkelijk aan het profiel kunnen worden toegevoegd.
+Gebruiken [!DNL Real-Time Customer Data Platform] nieuwe gegevensbronnen in Platform te brengen. Real-Time CDP bevat een catalogus met gegevensbronnen die snel en eenvoudig aan het profiel kunnen worden toegevoegd.
 
 ![afbeelding](assets/luma-source-cat.png)
 
@@ -178,7 +178,7 @@ Luma heeft een groot aantal interne beleidslijnen die het gebruik van bepaalde s
 
 ![](assets/governance-labels.png)
 
-Nadat labels voor gegevensgebruik zijn toegepast, kan Luma vervolgens gegevensbeheer gebruiken om beleidsregels voor gegevensgebruik te maken. Het beleid van het gebruik van gegevens is regels die de soorten acties beschrijven die u op gegevens mag uitvoeren die bepaalde etiketten bevatten. Wanneer wordt geprobeerd om een actie in real time CDP uit te voeren die een beleidsschending vormt, wordt de actie verhinderd en een alarm gegeven om te tonen welk beleid werd geschonden en waarom.
+Nadat labels voor gegevensgebruik zijn toegepast, kan Luma vervolgens gegevensbeheer gebruiken om beleidsregels voor gegevensgebruik te maken. Het beleid van het gebruik van gegevens is regels die de soorten acties beschrijven die u op gegevens mag uitvoeren die bepaalde etiketten bevatten. Wanneer wordt geprobeerd een handeling in Real-Time CDP uit te voeren die een beleidsschending vormt, wordt de handeling voorkomen en wordt een waarschuwing gegeven om aan te tonen welk beleid is geschonden en waarom.
 
 ## Het samenbrengen van de gegevens voor een specifieke klant
 
@@ -193,7 +193,7 @@ Alle profielinformatie Luma heeft over Sarah displays. Dit omvat haar persoonlij
 | Identiteiten | Hiermee geeft u de identiteiten weer die aan elkaar zijn gekoppeld in [!DNL Platform] van Sarah&#39;s interacties met Luma via kanalen en apparaten. Haar ECID van de website wordt weergegeven. Haar identiteit omvat ook de ECID van haar mobiele app, haar e-mailadres, een CRM-id van de onlangs toegevoegde [!DNL Microsoft Dynamics] dataset, en een loyaliteitsidentiteitskaart die in Adobe Experience Platform van het systeem van de loyaliteit Luma wordt overgegaan. |
 | Gebeurtenissen | Toont alle interactiegegevens van Sarah met het merk Luma. Dit omvat het item dat ze net bekeken heeft, alles wat ze in het verleden bekeken heeft, de e-mails die ze heeft ontvangen, haar interacties met het callcenter, en op welk kanaal en apparaat deze interacties plaatsvonden. |
 
-Het profiel in real time CDP vermindert het werkschema van het marketingteam Luma van weken aan notulen en ontgrendelt mogelijkheden voor verpersoonlijking die op deze 360 graadklantenmening wordt gebaseerd. In het profiel worden de gedragsgegevens samengevoegd vanaf het moment dat ze door de site bladert voordat ze zich aanmeldt, met haar bestaande klantprofiel, en wordt een uitgebreide weergave van Sarah gemaakt.
+Het Real-Time CDP-profiel reduceert de workflow van het marketingteam van Luma van weken tot minuten en ontgrendelt mogelijkheden voor personalisatie op basis van deze 360-gradenweergave. In het profiel worden de gedragsgegevens samengevoegd vanaf het moment dat ze door de site bladert voordat ze zich aanmeldt, met haar bestaande klantprofiel, en wordt een uitgebreide weergave van Sarah gemaakt.
 
 Het marketingteam kan deze verbeterde functie gebruiken. [!DNL Real-time Customer Profile] om Sarah&#39;s ervaring beter te personaliseren en haar merkloyaliteit met Luma te vergroten.
 
@@ -234,7 +234,7 @@ Als je het segment &quot;Gift Giving Cart Abandoner&quot; hebt toegevoegd, kun j
 
 Selecteer **[!UICONTROL Send to destinations]**.
 
-In CDP in real time, kan Luma naadloos op hun publiekssegmenten voor verpersoonlijking handelen.\
+In Real-Time CDP kan Luma naadloos optreden op de doelsegmenten voor personalisatie.\
 Hier zien wij alle bestemmingen beschikbaar voor Luma om deze bestemming naar, zowel Adobe als niet-Adobe oplossingen te verzenden:
 
 ![afbeelding](assets/luma-dest.png)
@@ -297,7 +297,7 @@ Dankzij de mogelijkheden van publieksonderdrukking zal Sarah niet gericht zijn o
 
 ## Het profiel analyseren
 
-Luminantiemarkeringen gebruiken Adobe Experience Platform om het cadeaugivesegment op het CDP-dashboard in real time te bekijken. Ze bekijken de resultaten van dit initiatief in de loop der tijd en zien dat het groeit. Klanten reageren op aanbiedingen en geven meer geld uit.
+Luminantiemarkeringen gebruiken Adobe Experience Platform om het schenkingsensegment op het Real-Time CDP-dashboard te bekijken. Ze bekijken de resultaten van dit initiatief in de loop der tijd en zien dat het groeit. Klanten reageren op aanbiedingen en geven meer geld uit.
 
 Deze inzichten stellen de marketers in staat actie te ondernemen op dit signaal, dat werd gevoed door deze gegevens beschikbaar te hebben in CDP en klanten als Sarah aan het segment te laten vastzitten.
 

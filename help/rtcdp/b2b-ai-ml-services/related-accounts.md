@@ -1,9 +1,9 @@
 ---
 title: Gerelateerde accounts in Real-Time CDP B2B Edition
 type: Documentation
-description: Een overzicht en meer informatie over de verwante rekeningeneigenschap in Experience Platform in real time CDP B2B.
+description: In Experience Platform Real-Time CDP B2B wordt een overzicht en meer informatie over de desbetreffende rekeningen gegeven.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 4%
@@ -26,7 +26,7 @@ B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen,
 
 {style=&quot;table-layout:auto&quot;}
 
-Met bijbehorende rekeningen [!DNL Real-time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert.
+Met bijbehorende rekeningen [!DNL Real-Time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert.
 
 ![Scherm met verwante accounts in de gebruikersinterface van het Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 

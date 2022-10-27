@@ -1,23 +1,23 @@
 ---
 title: Schemas in Real-time Customer Data Platform B2B Edition
-description: Een overzicht van de rol van de schema's van het Gegevensmodel van de Ervaring (XDM) in de Uitgave van Real-time Customer Data Platform B2B.
+description: Een overzicht van de rol van de schema's van het Gegevensmodel van de Ervaring (XDM) in de Uitgave van Adobe Real-time Customer Data Platform B2B.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Schemas in Real-time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition biedt verschillende standaarden [Experience Data Model (XDM)-klassen](../../xdm/schema/composition.md#class) die gegevens bevatten over essentiële B2B-gegevensentiteiten, zoals accounts, mogelijkheden, campagnes en meer. Bovendien in real time CDP B2B Uitgave staat u toe om vele-aan-één verhoudingen tussen deze schema&#39;s te bepalen zodat kunnen zij aan de geavanceerde gevallen van het segmentatiegebruik deelnemen.
+Adobe Real-time Customer Data Platform B2B Edition biedt verschillende standaarden [Experience Data Model (XDM)-klassen](../../xdm/schema/composition.md#class) die gegevens bevatten over essentiële B2B-gegevensentiteiten, zoals accounts, mogelijkheden, campagnes en meer. Bovendien staat de Uitgave van Real-Time CDP B2B u toe om vele-aan-één verhoudingen tussen deze schema&#39;s te bepalen zodat kunnen zij aan de geavanceerde gevallen van het segmentatiegebruik deelnemen.
 
 >[!IMPORTANT]
 >
->U moet toegang tot CDP B2B Uitgave in real time hebben om B2B- schema&#39;s aan deel te nemen [Klantprofiel in realtime](../../profile/home.md).
+>U moet toegang hebben tot Real-Time CDP B2B Edition om B2B-schema&#39;s te kunnen gebruiken [Klantprofiel in realtime](../../profile/home.md).
 
-De volgende standaardklassen worden verstrekt in Echt - tijd CDP B2B Uitgave:
+De volgende standaardklassen zijn beschikbaar in Real-Time CDP B2B Edition:
 
 * [XDM Business Account](../../xdm/classes/b2b/business-account.md)
 * [XDM Zakelijke account Person Relatie](../../xdm/classes/b2b/business-account-person-relation.md)

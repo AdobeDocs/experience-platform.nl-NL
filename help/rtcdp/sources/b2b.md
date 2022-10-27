@@ -1,10 +1,10 @@
 ---
 title: Bronnen in Real-time Customer Data Platform B2B Edition
-description: Een overzicht van de rol van bronnen in Real-time Customer Data Platform B2B Edition.
+description: Een overzicht van de rol van bronnen in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Als u Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [overzicht van bronnen](./sources-overview.md) in plaats daarvan.
+>Als u Adobe Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [overzicht van bronnen](./sources-overview.md) in plaats daarvan.
 
-Met Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via verschillende bronnen overbrengen, waaronder de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) onder andere de bronaansluiting, Salesforce, Amazon S3 en ADLS. Deze waaier van bronnen voorziet u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten.
+Met Adobe Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via verschillende bronnen overbrengen, waaronder de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) onder andere de bronaansluiting, Salesforce, Amazon S3 en ADLS. Deze waaier van bronnen voorziet u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten.
 
 Als u wilt weten hoe bronnen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 

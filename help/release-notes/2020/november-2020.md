@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2161'
 ht-degree: 2%
@@ -120,7 +120,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), zijn de bestemmi
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Doeldetails UX-updates | De de bestemmingswerkschema&#39;s van CDP in real time omvatten nu gealigneerde controle zodat kunt u zien welke batch-activeringen succesvol waren. Met deze functie kunnen gebruikers problemen rechtstreeks in de workflow voor batchbestemmingen oplossen via waarschuwingen en een controledashboard om fouten in de verwerkingspijplijn bij te houden. |
+| Doeldetails UX-updates | De bestemmingswerkstroom van Real-Time CDP omvat nu gealigneerde controle zodat kunt u zien welke batch-activeringen succesvol waren. Met deze functie kunnen gebruikers problemen rechtstreeks in de workflow voor batchbestemmingen oplossen via waarschuwingen en een controledashboard om fouten in de verwerkingspijplijn bij te houden. |
 | Bestandsversleuteling | Voor op bestanden gebaseerde doelen kunnen gebruikers nu versleuteling toevoegen aan hun geëxporteerde bestanden. |
 | Bestanden plannen | Voor zowel e-mailopslagdoelen als cloudopslagdoelen kunnen gebruikers een eenmalige export maken of dagelijkse momentopnamen maken. |
 | Verplichte velden | Gebruikers kunnen velden markeren als verplicht, zodat alleen velden die het verplichte veld bevatten, worden geëxporteerd. |

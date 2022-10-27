@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 4%
@@ -20,7 +20,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -45,7 +45,7 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 | Bestemming | Beschrijving |
 |--- | ---|
-| [!DNL Google Customer Match] | Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere, in Google gevestigde en bediende eigendommen, zoals: [!DNL Search], [!DNL Shopping], Gmail en YouTube. <br><br> Ga naar [!DNL Google Customer Match] [page](../../destinations/catalog/advertising/google-customer-match.md) in de bestemmingscatalogus voor meer informatie over de bestemming en hoe te opstelling het in real time CDP. |
+| [!DNL Google Customer Match] | Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere, in Google gevestigde en bediende eigendommen, zoals: [!DNL Search], [!DNL Shopping], Gmail en YouTube. <br><br> Ga naar [!DNL Google Customer Match] [page](../../destinations/catalog/advertising/google-customer-match.md) in de lijst met bestemmingen voor meer informatie over het doel en hoe u het kunt instellen in Real-Time CDP. |
 
 **Nieuwe functies**
 
@@ -54,17 +54,17 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 | Aangepaste bestandsnaameditor | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud waarmee u de naam van de geëxporteerde bestanden kunt bewerken. Raadpleeg voor meer informatie de [ Stap configureren](../../destinations/ui/activate-batch-profile-destinations.md) in de activeringsworkflow. |
 | Aanbevolen kenmerken | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud die aanbevolen kenmerken bevat om aan de geëxporteerde bestanden toe te voegen. Raadpleeg voor meer informatie de [stap Kenmerken selecteren](../../destinations/ui/activate-batch-profile-destinations.md) in de activeringsworkflow. |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Gebouwd op Experience Platform, Real-time Customer Data Platform ([!DNL Real-time CDP]) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen met intelligente besluitvorming door de klantenreis te activeren. [!DNL Real-time CDP] combineert veelvoudige bronnen van ondernemingsgegevens om klantenprofielen in real time tot stand te brengen. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+Gebouwd op Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen met intelligente besluitvorming door de klantenreis te activeren. [!DNL Real-Time CDP] combineert veelvoudige bronnen van ondernemingsgegevens om klantenprofielen in real time tot stand te brengen. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| IAB TCF 2.0-ondersteuning | [!DNL Real-time CDP] is nu een geregistreerde leverancier voor versie 2.0 van [!DNL Transparency & Consent Framework] (TCF), zoals beschreven door de [!DNL Interactive Advertising Bureau] (IAB). U kunt uw gegevensverrichtingen en profielschema&#39;s vormen om de gegevens van de klantentoestemming goed te keuren die door CMP worden geproduceerd, en de toestemmingsvoorkeur van uw klanten af te dwingen wanneer het activeren van segmenten aan stroomafwaartse bestemmingen. |
+| IAB TCF 2.0-ondersteuning | [!DNL Real-Time CDP] is nu een geregistreerde leverancier voor versie 2.0 van [!DNL Transparency & Consent Framework] (TCF), zoals beschreven door de [!DNL Interactive Advertising Bureau] (IAB). U kunt uw gegevensverrichtingen en profielschema&#39;s vormen om de gegevens van de klantentoestemming goed te keuren die door CMP worden geproduceerd, en de toestemmingsvoorkeur van uw klanten af te dwingen wanneer het activeren van segmenten aan stroomafwaartse bestemmingen. |
 
-Voor meer informatie over [!DNL Real-time CDP], zie de [[!DNL Real-time CDP] overzicht](../../rtcdp/overview.md).
+Voor meer informatie over [!DNL Real-Time CDP], zie de [[!DNL Real-Time CDP] overzicht](../../rtcdp/overview.md).
 
 ## Bronnen {#sources}
 

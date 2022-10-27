@@ -1,16 +1,16 @@
 ---
-title: Predictieve lead- en account scoring in Real-time CDP B2B
+title: Voorspelende lead- en accountscoring in Real-Time CDP B2B
 type: Documentation
 description: Een overzicht en meer informatie over de voorspellende lood en rekeningseigenschap in Experience Platform CDP B2B.
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
 
 ---
 
-# Predictieve lead- en account scoring in Real-time CDP B2B
+# Voorspelende lead- en accountscoring in Real-Time CDP B2B
 
 B2B-marketers staan voor meerdere uitdagingen boven aan de marketingtrechter. Om doeltreffend te zijn, hebben B2B-marketers een geautomatiseerde manier nodig om het grote aantal mensen te kwalificeren, zodat zij zich kunnen richten op de doelstellingen met hoge waarde. De kwalificatie moet worden afgestemd op het uiteindelijke verkoopresultaat, en niet alleen op de marketingconversie.
 

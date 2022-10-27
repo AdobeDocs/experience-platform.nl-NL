@@ -1,16 +1,16 @@
 ---
-title: Voorspelende lead- en accountscore beheren in Real-time CDP B2B
+title: Beheer voorspellende leads en accountscoring in Real-Time CDP B2B
 type: Documentation
 description: Dit document bevat informatie over het beheer van de functie voor het voorspellen van leads en accounts in Experience Platform CDP B2B.
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '964'
 ht-degree: 2%
 
 ---
 
-# Beheer voorspellende leads en accountscoring in Real-time Customer Data Platform, B2B Edition
+# Beheer voorspellende leads en accountscoring in Adobe Real-time Customer Data Platform, B2B Edition
 
 >[!NOTE]
 >

@@ -1,16 +1,16 @@
 ---
-title: Lood-aan-rekening matching in real time CDP B2B
+title: Lood-aan-rekening matching in Real-Time CDP B2B
 type: Documentation
 description: Een overzicht en meer informatie over de lead to account matching feature in Experience Platform CDP B2B.
-source-git-commit: 827bd1b930478c3c0b553a9485f98545771a9062
+exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '612'
+ht-degree: 2%
 
 ---
 
-
-# Lood-aan-rekening matching in real time CDP B2B
+# Lood-aan-rekening matching in Real-Time CDP B2B
 
 ## Overzicht {#overview}
 

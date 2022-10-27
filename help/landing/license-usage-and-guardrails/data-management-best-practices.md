@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentie
 title: Aanbevolen werkwijzen voor gegevensbeheer
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2529'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Wanneer u Experience Platform vergunning geeft, wordt u voorzien van de toestemm
 
 De [!DNL Profile Richness] De metrische waarde is afhankelijk van de licentie die u hebt aangeschaft. Er zijn twee berekeningen voor [!DNL Profile Richness] beschikbaar:
 
-* De som van alle productiegegevens die in Real-time Customer Data Platform zijn opgeslagen (d.w.z. profielservice en identiteitsdienst) op elk moment, gedeeld door de [!DNL Addressable Audience];
+* De som van alle productiegegevens die in Adobe Real-time Customer Data Platform zijn opgeslagen (d.w.z. profielservice en identiteitsdienst) op elk moment, gedeeld door de [!DNL Addressable Audience];
 * De som van alle gegevens die in het Platform zijn opgeslagen (inclusief, maar niet beperkt tot [!DNL Data Lake], de Dienst van het Profiel, en de Dienst van de Identiteit) op om het even welk punt in tijd en om het even welke gegevens die u door (in plaats van het opslaan binnen) Platform in de afgelopen 12 maanden stroomt, gedeeld door [!DNL Addressable Audience].
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft.

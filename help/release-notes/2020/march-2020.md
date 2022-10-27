@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: opmerkingen bij de release;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 3%
@@ -39,8 +39,8 @@ Adobe Experience Platform Data Governance is een reeks strategieën en technolog
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Geautomatiseerde handhaving van beleid voor gegevensgebruik voor [!DNL Real-time Customer Data Platform] | Het beleid van het gegevensgebruik wordt nu afgedwongen in het werkschema van het activeren van gegevens aan bestemmingen. Het Beleid van gegevens wordt ook ingebed en afgedwongen wanneer het aanbrengen van veranderingen die bestaande activeringen (zoals veranderingen in datasetetiketten, fusiebeleid, segmentdefinities, en anderen) beïnvloeden. |
-| Gegevenslijn voor handhaving | Wanneer een beleid van het gegevensgebruik in real time CDP wordt geschonden, toont UI een bericht dat de informatie van de gegevenslijn bevat om de gebruiker te helpen begrijpen waarom het beleid werd geschonden en wat zij kunnen doen om de schending op te lossen. |
+| Geautomatiseerde handhaving van beleid voor gegevensgebruik voor [!DNL Real-Time Customer Data Platform] | Het beleid van het gegevensgebruik wordt nu afgedwongen in het werkschema van het activeren van gegevens aan bestemmingen. Het Beleid van gegevens wordt ook ingebed en afgedwongen wanneer het aanbrengen van veranderingen die bestaande activeringen (zoals veranderingen in datasetetiketten, fusiebeleid, segmentdefinities, en anderen) beïnvloeden. |
+| Gegevenslijn voor handhaving | Wanneer een beleid van het gegevensgebruik in Real-Time CDP wordt geschonden, toont UI een bericht dat de informatie van de gegevenslijn bevat om de gebruiker te helpen begrijpen waarom het beleid werd geschonden en wat zij kunnen doen om de schending op te lossen. |
 
 
 **Bekende problemen**
@@ -76,8 +76,8 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 | Bestemming | Beschrijving |
 |--- | ---|
-| Opslagdoelen voor cloud | CDP in real time kan nu uw segmenten als gegevensdossiers aan uw leveren [!DNL Amazon S3] of SFTP-cloudopslaglocaties. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden. |
-| Reclamebestemmingen | De [!DNL Google] de bestemmingskaart is nu verdeeld in drie bestemmingskaarten, voor de drie verschillende [!DNL Google] platformen die momenteel worden ondersteund in CDP in realtime: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Weergave en video 360. |
+| Opslagdoelen voor cloud | Real-Time CDP kan nu uw segmenten als gegevensbestanden aan uw [!DNL Amazon S3] of SFTP-cloudopslaglocaties. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden. |
+| Reclamebestemmingen | De [!DNL Google] de bestemmingskaart is nu verdeeld in drie bestemmingskaarten, voor de drie verschillende [!DNL Google] platforms die momenteel worden ondersteund in Real-Time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Weergave en video 360. |
 
 Ga voor meer informatie naar de [Overzicht van doelen](../../destinations/home.md)
 

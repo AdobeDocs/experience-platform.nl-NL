@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: opmerkingen bij de release;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 3%
@@ -93,12 +93,12 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), zijn de bestemmi
 
 **Nieuwe bestemmingen**
 
-CDP in real time ondersteunt nu gegevensactivering tot meer dan vijftig [!DNL Experience Cloud Launch] extensies, analyses, personalisatie en andere gebruiksgevallen inschakelen. Zie hieronder voor meer informatie:
+Real-Time CDP ondersteunt nu gegevensactivering tot meer dan 50 [!DNL Experience Cloud Launch] extensies, analyses, personalisatie en andere gebruiksgevallen inschakelen. Zie hieronder voor meer informatie:
 
 | Documentatie | Beschrijving |
 |--- | ---|
-| [Doeltypen en -categorieën](../../destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface In real time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
-| [Experience Platform Launch-extensies](../../destinations/catalog/launch-extensions/overview.md) | Op deze pagina wordt uitgelegd wat [!DNL Launch] extensies zijn, geven een overzicht van de gebruikte hoofdletters en kleine letters en koppelingen naar documentatie voor elke extensie [!DNL Launch] extensie in Real-Time CDP. |
+| [Doeltypen en -categorieën](../../destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface van Real-Time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
+| [Experience Platform Launch-extensies](../../destinations/catalog/launch-extensions/overview.md) | Op deze pagina wordt uitgelegd wat [!DNL Launch] extensies zijn, geven een overzicht van de gebruikte hoofdletters en kleine letters en koppelingen naar documentatie voor elke extensie [!DNL Launch] in Real-Time CDP. |
 
 Zie voor meer informatie de [Overzicht van doelen](../../destinations/home.md).
 

@@ -5,9 +5,9 @@ title: Overzicht van gegevensverzameling
 topic-legacy: overview
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
@@ -64,7 +64,7 @@ Bovendien zijn de gegevensstromen geïntegreerd met verscheidene mogelijkheden v
 
 >[!NOTE]
 >
->Het door:sturen van gebeurtenissen is een betaalde eigenschap die slechts als deel van het aanbieden van de Verbindingen van Real-time Customer Data Platform inbegrepen is.
+>Het door:sturen van gebeurtenissen is een betaalde eigenschap die slechts als deel van het aanbieden van de Verbindingen van Adobe Real-time Customer Data Platform inbegrepen is.
 
 ## Volgende stappen
 

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 **Releasedatum: 18 november 2019**
 
 Nieuwe functies in Adobe Experience Platform:
-* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
@@ -27,15 +27,15 @@ Updates voor bestaande functies:
 * [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-De Real-time Customer Data Platform (Real-Time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met intelligente beslissingen gedurende de hele reis van de klant. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+De Real-time Customer Data Platform (Real-Time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven om bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door middel van intelligente beslissingen gedurende de hele reis van de klant. Real-Time CDP combineert meerdere bedrijfsgegevensbronnen om uniforme profielen in real-time te maken die kunnen worden gebruikt om een-op-een gepersonaliseerde klantenervaring op alle kanalen en apparaten te bieden.
 
-[!DNL Real-time Customer Data Platform] omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie en gegevenswetenschap zodat u profielen kunt maken en het publiek kunt definiëren, en rijke inzichten kunt afleiden terwijl u strikte beleidsregels voor gegevensbeheer kunt afdwingen.
+[!DNL Real-Time Customer Data Platform] omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie en gegevenswetenschap zodat u profielen kunt maken en het publiek kunt definiëren, en rijke inzichten kunt afleiden terwijl u strikte beleidsregels voor gegevensbeheer kunt afdwingen.
 
 Adobe maakt verbinding met een groot ecosysteem van partners, om nog maar te zwijgen van de native integratie met Adobe Experience Cloud, zodat u deze doelgroepen naadloos kunt activeren en klanten overal goede ervaringen kunt bieden, van on-site of in-app personalisatie tot e-mail, betaalde media, callcenters, aangesloten apparaten en nog veel meer.
 
-Met CDP in real time, kunt u:
+Met Real-Time CDP kunt u:
 
 * Zorg voor één weergave van uw klant met een stroomsgewijze verzameling van klantgegevens in de hele onderneming.
 * Profielen op verantwoordelijke wijze beheren met vertrouwde governance en privacyopties voor bekende en onbekende id&#39;s.
@@ -48,17 +48,17 @@ Zie voor meer informatie de [Real-time Customer Data Platform-documentatie](../.
 
 | Functie | Beschrijving |
 |---|---|
-| Doelen | Vooraf gebouwde integratie met bestemmingsplatforms die door Adobe worden gesteund [!DNL Real-time Customer Data Platform] die gegevens op een naadloze manier aan die partners activeren. Zie [Doelen](#destinations) hieronder voor meer informatie . |
-| Metrisch dashboard voor startpagina | De homepage van Real-time Customer Data Platform (Real-time CDP) omvat een metriek dashboard dat informatie over profielen en segmenten toont. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie over [Real-time Customer Data Platform-meetgegevens](#real-time-customer-data-platform-metrics) hieronder. |
+| Doelen | Vooraf gebouwde integratie met bestemmingsplatforms die door Adobe worden gesteund [!DNL Real-Time Customer Data Platform] die gegevens op een naadloze manier aan die partners activeren. Zie [Doelen](#destinations) hieronder voor meer informatie . |
+| Metrisch dashboard voor startpagina | De startpagina van Real-time Customer Data Platform (Real-Time CDP) bevat een dashboard voor meetgegevens met informatie over profielen en segmenten. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie over [Real-time Customer Data Platform-meetgegevens](#real-time-customer-data-platform-metrics) hieronder. |
 | Bronnen | U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen. Zie de [Bronnen](#sources) hieronder voor meer informatie. |
 
-**[!DNL Real-time Customer Data Platform]cijfers**
+**[!DNL Real-Time Customer Data Platform]cijfers**
 
-De Real-time Customer Data Platform-startpagina (Real-time CDP), die een metriek-dashboard bevat, wordt weergegeven wanneer u zich aanmeldt bij Real-time CDP.
+De startpagina van Real-time Customer Data Platform (Real-Time CDP), die een dashboard voor cijfergegevens bevat, wordt weergegeven wanneer u zich aanmeldt bij Real-Time CDP.
 
-De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. CDP in real time verstrekt metrische kaarten door uw ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
+De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. Real-Time CDP biedt metrische kaarten voor je hele ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
 
-Als er geen gegevens in het systeem zijn wanneer u login aan CDP in real time, verschijnt het dashboard op de homepage niet. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Terwijl gegevens worden verzameld, wordt het dashboard automatisch bijgewerkt om informatie over die gegevens weer te geven.
+Als het systeem geen gegevens bevat wanneer u zich aanmeldt bij Real-Time CDP, wordt het dashboard op de startpagina niet weergegeven. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Terwijl gegevens worden verzameld, wordt het dashboard automatisch bijgewerkt om informatie over die gegevens weer te geven.
 
 Zie voor meer informatie de [Overzicht van Real-time Customer Data Platform-meetgegevens](../../rtcdp/home-page-dashboards.md)
 

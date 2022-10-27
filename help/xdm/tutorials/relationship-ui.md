@@ -6,9 +6,9 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een verb
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Dit document bevat een zelfstudie voor het definiëren van een relatie tussen tw
 
 >[!NOTE]
 >
->Raadpleeg de handleiding voor meer informatie over het maken van een vele-op-één relatie in Real-time Customer Data Platform B2B Edition [B2B-relaties maken](./relationship-b2b.md).
+>Raadpleeg de handleiding voor meer informatie over het maken van een vele-op-één relatie in Adobe Real-time Customer Data Platform B2B Edition [B2B-relaties maken](./relationship-b2b.md).
 
 ## Aan de slag
 

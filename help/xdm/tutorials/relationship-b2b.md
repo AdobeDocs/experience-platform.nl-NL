@@ -1,10 +1,10 @@
 ---
 title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
-description: Leer hoe u een vele-op-één relatie tussen twee schema's in Real-time Customer Data Platform B2B Edition definieert.
+description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B Edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >title="Referentieschema"
 >abstract="Selecteer het schema u een verband met wilt vestigen. Afhankelijk van de klasse van het schema, kan het bestaande verhoudingen met andere entiteiten in de context B2B ook hebben. Zie de documentatie om te leren hoe de B2B schemaklassen op elkaar betrekking hebben."
 
-Real-time Customer Data Platform B2B Edition biedt verschillende XDM-klassen (Experience Data Model) die fundamentele B2B-gegevensentiteiten vastleggen, waaronder [rekeningen](../classes/b2b/business-account.md), [kansen](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md)en meer. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik binnen [Klantprofiel in realtime](../../profile/home.md), kunt u gegevens uit verschillende bronnen samenvoegen in een verenigde vertegenwoordiging genoemd een unieschema.
+Adobe Real-time Customer Data Platform B2B Edition biedt verschillende XDM-klassen (Experience Data Model) die fundamentele B2B-gegevensentiteiten vastleggen, waaronder [rekeningen](../classes/b2b/business-account.md), [kansen](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md)en meer. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik binnen [Klantprofiel in realtime](../../profile/home.md), kunt u gegevens uit verschillende bronnen samenvoegen in een verenigde vertegenwoordiging genoemd een unieschema.
 
 Unieschema&#39;s kunnen echter alleen velden bevatten die zijn vastgelegd door schema&#39;s die dezelfde klasse delen. Hier komen schemarelaties binnen. Door relaties in uw B2B-schema&#39;s uit te voeren, kunt u beschrijven hoe deze bedrijfsentiteiten met elkaar verband houden en kunt u kenmerken van meerdere klassen in downstreamgevallen van segmentatiegebruik opnemen.
 
@@ -24,7 +24,7 @@ Het volgende diagram verstrekt een voorbeeld van hoe de verschillende klassen B2
 
 ![B2B-klassenrelaties](../images/tutorials/relationship-b2b/classes.png)
 
-Deze zelfstudie behandelt de stappen om een vele-aan-één verhouding tussen twee schema&#39;s in Echte - tijd CDP B2B Uitgave te bepalen.
+Deze zelfstudie behandelt de stappen voor het definiëren van een vele-op-één relatie tussen twee schema&#39;s in Real-Time CDP B2B Edition.
 
 >[!NOTE]
 >
@@ -123,4 +123,4 @@ Als u de structuur van het bestemmingsschema bekijkt, verschijnt de relatiemarke
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u met succes een vele-aan-één verhouding tussen twee schema&#39;s gecreeerd gebruikend [!DNL Schema Editor]. Zodra het gegeven is opgenomen gebruikend datasets die op deze schema&#39;s worden gebaseerd en dat het gegeven in de de gegevensopslag van het Profiel is geactiveerd, kunt u attributen van beide schema&#39;s voor multi-klassensegmenteringsgebruiksgevallen gebruiken. Raadpleeg de documentatie bij Real-time CDP B2B Edition voor meer informatie.
+Door dit leerprogramma te volgen, hebt u met succes een vele-aan-één verhouding tussen twee schema&#39;s gecreeerd gebruikend [!DNL Schema Editor]. Zodra het gegeven is opgenomen gebruikend datasets die op deze schema&#39;s worden gebaseerd en dat het gegeven in de de gegevensopslag van het Profiel is geactiveerd, kunt u attributen van beide schema&#39;s voor multi-klassensegmenteringsgebruiksgevallen gebruiken. Raadpleeg de documentatie bij Real-Time CDP B2B Edition voor meer informatie.

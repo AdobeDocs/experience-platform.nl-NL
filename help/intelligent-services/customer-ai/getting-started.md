@@ -6,9 +6,9 @@ title: Aan de slag met Customer AI
 topic-legacy: Getting started
 description: Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ De gidsen voor AI van de Klant vereisen een werkend inzicht in de diverse dienst
 - [Overzicht van XDM (Experience Data Model)](../../xdm/home.md): XDM is het basiskader dat toestaat [!DNL Adobe Experience Cloud], aangedreven door Experience Platform, om het juiste bericht te leveren aan de juiste persoon, op het juiste kanaal, op precies het juiste moment. De methodologie waarop het Experience Platform wordt gebouwd, het Systeem van XDM, stelt de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform in werking.
 - [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Dit document verstrekt een inleiding aan de schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema&#39;s die in moeten worden gebruikt [!DNL Adobe Experience Platform].
 - [Bouwschema&#39;s](../../xdm/tutorials/create-schema-ui.md): Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
-- [Overzicht van het realtime klantprofiel](../../rtcdp/overview.md): Gebaseerd op [!DNL Adobe Experience Platform]Real-time Customer Data Platform (Real-time CDP) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen met intelligente besluitvorming tijdens de reis van de klant te activeren. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+- [Overzicht van het realtime klantprofiel](../../rtcdp/overview.md): Gebaseerd op [!DNL Adobe Experience Platform]Adobe Real-time Customer Data Platform (Real-Time CDP) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met intelligente beslissingen gedurende de hele reis van de klant. Real-Time CDP combineert meerdere bedrijfsgegevensbronnen om uniforme profielen in real-time te maken die kunnen worden gebruikt om een-op-een gepersonaliseerde klantenervaring op alle kanalen en apparaten te bieden.
 - [Overzicht van segmentatieservice](../../segmentation/home.md): De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
 - [Gebruikershandleiding voor Segment Builder](../../segmentation/tutorials/create-a-segment.md): Met Platform kunt u eenvoudig segmenten maken en openen en kunt u verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren.
 

@@ -1,7 +1,7 @@
 ---
 title: (bèta) Adobe Commerce-bestemmingsconnector
 description: Leer hoe verkopers van Adobe Commerce en Real-Time CDP de winkelervaring kunnen aanpassen door zeer relevante site-inhoud en -promoties te leveren, aangepast aan klantsegmenten die in Real-Time CDP zijn gemaakt en beheerd.
-source-git-commit: 51c5458f444220fb526eb9e82417ae6456857de6
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 1%
@@ -36,7 +36,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus met doelen voor bepaalde bètaklanten die CDP Premier of Ultimate en Adobe Commerce in realtime hebben aangeschaft.
+Deze extensie is beschikbaar in de doelcatalogus voor bepaalde bètaklanten die Real-Time CDP Premiere of Ultimate en Adobe Commerce hebben aangeschaft.
 
 Bètaklanten moeten toegang hebben tot:
 
@@ -90,7 +90,7 @@ Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../u
 
 ## Volgende stappen in [!DNL Adobe Commerce]
 
-Nu u hebt gevormd [!DNL Commerce] doel binnen Experience Platform, moet u vormen [!DNL Commerce Admin] om de segmenten in real time CDP in te voeren u creeerde. Zie de [[!DNL Commerce] documentatie](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) voor meer informatie.
+Nu u hebt gevormd [!DNL Commerce] doel binnen Experience Platform, moet u vormen [!DNL Commerce Admin] om de Real-Time CDP-segmenten die u hebt gemaakt te importeren. Zie de [[!DNL Commerce] documentatie](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) voor meer informatie.
 
 ## Gegevens exporteren valideren {#exported-data}
 

@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt of opslagplaats te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
@@ -23,16 +23,16 @@ De documentatie van de Destination SDK verstrekt instructies voor u om het Adobe
 
 >[!IMPORTANT]
 >
-> Deze functionaliteit om privé douanebestemmingen tot stand te brengen is beschikbaar slechts aan [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze functionaliteit om privé douanebestemmingen tot stand te brengen is beschikbaar slechts aan [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 Als partner van Destination SDK, kunt u van het toevoegen van uw geproduceerde bestemming aan het profiteren [Catalogus Experience Platform](/help/destinations/catalog/overview.md):
 1. Standaardiseer integratieconfiguraties voor alle klanten met vooraf geconfigureerde parameters en vereenvoudig de installatie-ervaring voor klanten.
 2. Introduceer een branded bestemmingskaart in de catalogus van de bestemmingen van het Experience Platform voor vereenvoudigde klantenopstelling en bewustzijn.
-3. Wees uitgerust met een productieve bestemmingsintegratie met Adobe Experience Platform en Real-time Customer Data Platform.
+3. Wees uitgerust met een productieve bestemmingsintegratie met Adobe Experience Platform en Adobe Real-time Customer Data Platform.
 
 Als klant van het Experience Platform, kunt u een eigen privé douanebestemming ook ontwerpen, die het best uw activeringsbehoeften kan aanpassen.
 
-![Een overzichtsdiagram dat toont hoe de bestemmingsontwikkelaars met Destination SDK communiceren en hoe de klanten in real time CDP van productieve en privé bestemmingen profiteren.](./assets/destination-sdk-visual.png)
+![Een overzichtsdiagram dat toont hoe de bestemmingsontwikkelaars met Destination SDK communiceren en hoe de klanten van Real-Time CDP van productiviteit en privé bestemmingen profiteren.](./assets/destination-sdk-visual.png)
 
 ## Ondersteunde soorten integratie {#supported-integration-types}
 

@@ -2,11 +2,11 @@
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;b2b;cdp
 solution: Experience Platform
 title: Aan de slag met Real-time Customer Data Platform B2B Edition
-description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Real-time Customer Data Platform B2B Edition.
+description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1196'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ In realtime Klantprofiel voegt gegevens van verschillende bronnen samen om gecon
 
 ## Gegevens in Experience Platform plaatsen
 
-Vervolgens gebruikt de Bodea-markering de [Marketo Engage-aansluiting](../sources/connectors/adobe-applications/marketo/marketo.md) gegevens in Platform in te voeren voor gebruik in downstreamdiensten. U kunt gegevens ook opnemen door een van de goedgekeurde bronnen voor Real-time CDP B2B Edition te gebruiken.
+Vervolgens gebruikt de Bodea-markering de [Marketo Engage-aansluiting](../sources/connectors/adobe-applications/marketo/marketo.md) gegevens in Platform in te voeren voor gebruik in downstreamdiensten. U kunt ook gegevens invoeren door een van de goedgekeurde bronnen voor Real-Time CDP B2B Edition te gebruiken.
 
 >[!NOTE]
 > 
@@ -84,7 +84,7 @@ In dit voorbeeld vindt het segment alle mensen die in de verkoopafdeling werken 
 
 >[!NOTE]
 > 
->Voor instructies over hoe te om segmenten tot stand te brengen om uw gegevens te evalueren zie [Handleiding voor de gebruikersinterface van Segment Builder](../segmentation/ui/segment-builder.md). Raadpleeg voor specifiekere gevallen van B2B-segmentatiegebruik de [segmentatieoverzicht voor Real-time CDP B2B Edition](./segmentation/b2b.md).
+>Voor instructies over hoe te om segmenten tot stand te brengen om uw gegevens te evalueren zie [Handleiding voor de gebruikersinterface van Segment Builder](../segmentation/ui/segment-builder.md). Raadpleeg voor specifiekere gevallen van B2B-segmentatiegebruik de [segmentatieoverzicht voor Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 De Bouwer van het Segment staat u toe om een verhandelbaar publiek van de gegevens van het Profiel van de Klant in real time tot stand te brengen en ramingen van uw prospectief publiek te bekijken die op de combinatie attributen, gebeurtenissen, en bestaand publiek worden gebaseerd u bepaalde.
 
@@ -104,4 +104,4 @@ Met de Bodea-markering activeert u het segment naar de Marketo-bestemming, zodat
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de verschillende Adobe Experience Platform-services die door Real-time CDP B2B Edition worden gebruikt, met succes benut. Dientengevolge, hebt u geleerd om uw B2B gegevens in te voeren, te segmenteren, te evalueren en uit te voeren als actionable publiek dat over verschillende kanalen kan worden betrokken.
+Door deze zelfstudie te volgen, hebt u de verschillende Adobe Experience Platform-services benut die door Real-Time CDP B2B Edition worden gebruikt. Dientengevolge, hebt u geleerd om uw B2B gegevens in te voeren, te segmenteren, te evalueren en uit te voeren als actionable publiek dat over verschillende kanalen kan worden betrokken.

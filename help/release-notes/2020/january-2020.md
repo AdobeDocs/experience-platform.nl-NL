@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 3%
@@ -91,13 +91,13 @@ Voor meer informatie over bronnen raadpleegt u de [overzicht van bronnen](../../
 
 ## Doelen {#destinations}
 
-In [Real-time CDP](../../rtcdp/overview.md), zijn de bestemmingen prebuilt integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [Real-Time CDP](../../rtcdp/overview.md), zijn de bestemmingen prebuilt integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 |--- | ---|
-| Ondersteuning voor toegangsbeheermachtigingen | De functionaliteit van Doelen in Echt - tijd CDP werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. |
+| Ondersteuning voor toegangsbeheermachtigingen | De functie Doelen in Real-Time CDP werkt met Adobe Experience Platform-toegangsbeheermachtigingen. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. |
 
 **Toegangsbeheermachtigingen**
 

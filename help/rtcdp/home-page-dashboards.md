@@ -3,22 +3,22 @@ keywords: metriek-overzicht; rtcdp metriek - overzicht
 title: Homepage van Real-time Customer Data Platform en dashboards
 description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '600'
 ht-degree: 1%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] homepage en dashboards
+# [!DNL Real-Time Customer Data Platform] homepage en dashboards
 
-De Real-time Customer Data Platform-startpagina (Real-time CDP), die een metriek-dashboard bevat, wordt weergegeven wanneer u zich aanmeldt bij Real-time CDP.
+De startpagina van Adobe Real-time Customer Data Platform (Real-Time CDP), die een dashboard voor cijfergegevens bevat, wordt weergegeven wanneer u zich aanmeldt bij Real-Time CDP.
 
-De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. CDP in real time verstrekt metrische kaarten door uw ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
+De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. Real-Time CDP biedt metrische kaarten voor je hele ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
 
 ![afbeelding](assets/home.png)
 
-Als er geen gegevens in het systeem zijn wanneer u login aan CDP in real time, verschijnt het dashboard op de homepage niet. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Als gegevens worden verzameld, met andere woorden als <!--sources-->datasets, profielen, segmenten, en bestemmingen worden gecreeerd en de gegevens stromen in systeem-dashboard automatisch updates aan vertoningsinformatie over die gegevens<!-- in metric cards-->.
+Als het systeem geen gegevens bevat wanneer u zich aanmeldt bij Real-Time CDP, wordt het dashboard op de startpagina niet weergegeven. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Als gegevens worden verzameld, met andere woorden als <!--sources-->datasets, profielen, segmenten, en bestemmingen worden gecreeerd en de gegevens stromen in systeem-dashboard automatisch updates aan vertoningsinformatie over die gegevens<!-- in metric cards-->.
 
 ## Dashboardweergave startpagina
 
@@ -53,7 +53,7 @@ Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md
 
 Het aantal profielen wordt eenmaal per 24 uur bijgewerkt.
 
-Zie voor meer informatie over profielen [Een verenigde mening van uw klant in Echt - tijd CDP](profile/profile-overview.md).
+Zie voor meer informatie over profielen [Een uniforme weergave van uw klant in Real-Time CDP](profile/profile-overview.md).
 
 ### Segmenten
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

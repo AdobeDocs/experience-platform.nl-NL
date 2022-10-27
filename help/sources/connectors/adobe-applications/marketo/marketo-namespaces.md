@@ -5,9 +5,9 @@ title: B2B-naamruimten en -schema's
 topic-legacy: overview
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: c6ba91f6aa64f02ac3571bb960d4005fdade3d57
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Dit document bevat informatie over de onderliggende instelling voor de naamruimt
 
 >[!IMPORTANT]
 >
->U moet toegang hebben tot [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) om aan B2B-schema&#39;s deel te nemen [Klantprofiel in realtime](../../../../profile/home.md).
+>U moet toegang hebben tot [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) om aan B2B-schema&#39;s deel te nemen [Klantprofiel in realtime](../../../../profile/home.md).
 
 ## B2B-naamruimten instellen en hulpprogramma voor automatisch genereren van schema&#39;s
 

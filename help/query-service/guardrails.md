@@ -3,7 +3,7 @@ keywords: Experience Platform;query;query-service;problemen oplossen;instructies
 title: Guardrails voor Query-service
 description: Dit document bevat informatie over gebruiksbeperkingen voor gegevens van Query Service om u te helpen uw querygebruik te optimaliseren.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: e40a9fb0149e194de693a98e5d185860a255b5c4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 1%
@@ -84,7 +84,7 @@ De lijst hieronder verstrekt de geadviseerde guardrailgrenzen en beschrijving vo
 
 | Guardrail | Limiet | Type limiet | Beschrijving |
 |---|---|---|---|
-| Gelijktijdige query | 4 | Hard | Om ervoor te zorgen dat de vragen over samengevoegde gegevens via rapporteringsAPI (met inbegrip van vragen die gegevensmodellen zoals de CDP gegevensmodellen in real time verbeteren) de middelen hebben om efficiënt uit te voeren, houdt het rapporterende API middelgebruik door opeenvolgingsgroeven aan elke vraag toe te wijzen. Het systeem zet vragen in een rij en wacht tot de opeenslagen van de gelijktijdige dienst beschikbaar worden of zij van het geheime voorgeheugen kunnen worden gediend. Een maximum van vier gezamenlijke vraaggroeven is beschikbaar op elk bepaald ogenblik.<br>Als u toegang hebt tot de API voor rapportage via een BI-programma en meer gelijktijdige uitvoering nodig hebt, is een BI-server vereist. |
+| Gelijktijdige query | 4 | Hard | Om ervoor te zorgen dat de vragen over samengevoegde gegevens via rapporteringsAPI (met inbegrip van vragen die gegevensmodellen zoals de gegevensmodellen van Real-Time CDP verbeteren) de middelen hebben om efficiënt uit te voeren, houdt het rapporterende API middelgebruik door de opeenvolgingen van de wisselingscapaciteit aan elke vraag toe te wijzen. Het systeem zet vragen in een rij en wacht tot de opeenslagen van de gelijktijdige dienst beschikbaar worden of zij van het geheime voorgeheugen kunnen worden gediend. Een maximum van vier gezamenlijke vraaggroeven is beschikbaar op elk bepaald ogenblik.<br>Als u toegang hebt tot de API voor rapportage via een BI-programma en meer gelijktijdige uitvoering nodig hebt, is een BI-server vereist. |
 
 {style=&quot;table-layout:auto&quot;}
 

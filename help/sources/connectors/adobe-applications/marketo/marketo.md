@@ -5,9 +5,9 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: efa6891024cacd383f4cd958162a7a4f8ead0624
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Met de [!DNL Marketo] bronaansluiting, kunt u B2B-gegevens van [!DNL Marketo] om
 
 >[!IMPORTANT]
 >
->U moet toegang hebben tot [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) om alle Marketo datasets voor segmentatie met te gebruiken [Klantprofiel in realtime](../../../../profile/home.md). Zonder CDP B2B Uitgave in real time, kunt u de bron van Marketo nog gebruiken om gegevens van de mensen en activiteitendatasets aan het Profiel van de Klant in real time voor segmentatie te brengen.
+>U moet toegang hebben tot [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) om alle Marketo datasets voor segmentatie met te gebruiken [Klantprofiel in realtime](../../../../profile/home.md). Zonder Real-Time CDP B2B Edition kunt u nog steeds de Marketo-bron gebruiken om gegevens van de personen- en activiteitengegevenssets naar Real-time klantprofiel te verzenden voor segmentatie.
 
 Dit document biedt een overzicht van de [!DNL Marketo] bronschakelaar, met inbegrip van informatie over hoe te om de schakelaar voor authentiek te verklaren, hoe te om in kaart te brengen [!DNL Marketo] velden naar Experience Data Model (XDM) en de gegevenslatentie van de connector.
 
@@ -82,4 +82,4 @@ In de volgende documentatie vindt u meer informatie over het maken van een [!DNL
 * Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met worden gebruikt [!DNL Marketo], zie de documentatie voor [B2B-naamruimten en -schema&#39;s](./marketo-namespaces.md).
 * Voor informatie over het zoeken naar uw [!DNL Marketo] munchkin-id en het genereren van uw referenties raadpleegt u de [[!DNL Marketo] verificatiegids](./marketo-auth.md).
 * Voor informatie over de specifieke toewijzingsregels die van toepassing zijn op [!DNL Marketo] datasets, zie de documentatie over [[!DNL Marketo] veldtoewijzingen](../mapping/marketo.md).
-* Voor algemene informatie over [!DNL Real-time Customer Data Platform B2B Edition] en de bijbehorende functies, raadpleegt u de documentatie over [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* Voor algemene informatie over [!DNL Real-Time Customer Data Platform B2B Edition] en de bijbehorende functies, raadpleegt u de documentatie over [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

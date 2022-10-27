@@ -1,10 +1,10 @@
 ---
 title: Adobe Advertising Cloud DSP-verbinding
-description: Adobe Advertising Cloud DSP is een geïntegreerde bestemming voor de [!DNL Adobe Real-time Customer Data Profile], zodat u geverifieerde first-party-segmenten kunt delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne.
+description: Adobe Advertising Cloud DSP is een geïntegreerde bestemming voor Adobe Real-time Customer Data Platform, waardoor u geverifieerde first-party segmenten kunt delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van Advertising Cl
 
 ### Gebruiksscenario voor reclame
 
-Een online detailhandelaar wil zijn klanten met hoge waarde door een vertoningscampagne opnieuw richten zonder koekjes voor het richten te gebruiken. De detailhandelaar deelt een segment dat bestaat uit de gehashte e-mail-id&#39;s van zijn klanten met een hoge waarde uit zijn [!DNL Real-Time CDP] aan zijn DSP account. DSP zet vervolgens de gehashte e-mailadressen om in geverifieerde [!DNL RampIDs] via een partnerschap tussen DSP en LiveRamp. Het resultaat [!DNL RampIDs] kan in een vertoningscampagne worden gebruikt om het publiek te richten.
+Een online detailhandelaar wil zijn klanten met hoge waarde door een vertoningscampagne opnieuw richten zonder koekjes voor het richten te gebruiken. De detailhandelaar deelt een segment dat bestaat uit de gehashte e-mailadressen van zijn klanten met een hoge waarde van zijn Adobe Real-time Customer Data Platform (Real-Time CDP)-account naar zijn DSP. DSP zet vervolgens de gehashte e-mailadressen om in geverifieerde [!DNL RampIDs] via een partnerschap tussen DSP en LiveRamp. Het resultaat [!DNL RampIDs] kan in een vertoningscampagne worden gebruikt om het publiek te richten.
 
 ### Gebruiksscenario van het Agentschap
 
@@ -33,7 +33,7 @@ Een mediabedrijf met een DSP account voert een herrichtingscampagne namens zijn 
 
 ## Vereisten {#prerequisites}
 
-* DSP instellingen op accountniveau en op campagnereniveau om delen met segmenten mogelijk te maken [!DNL LiveRamp RampID], waarin klantgegevens worden omgezet in [!DNL RampIDs] om doelsegmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren. [!DNL RampID] via een partnerschap tussen DSP en [!DNL LiveRamp]en u hebt uw eigen [!DNL LiveRamp] lidmaatschap om het te gebruiken.
+* DSP instellingen op accountniveau en op campagnereniveau om delen met segmenten mogelijk te maken [!DNL LiveRamp RampID], waarin klantgegevens worden omgezet in [!DNL RampIDs] om doelsegmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren. [!DNL RampID] via een partnerschap tussen DSP en [!DNL LiveRamp]en je hebt je eigen [!DNL LiveRamp] lidmaatschap om het te gebruiken.
 * De Experience Cloud organisatie-id voor de account van het Experience Platform. Je kunt je id vinden op je [!DNL Real-Time CDP] pagina met gebruikersprofielen.
 * A [[!DNL Real-Time CDP] bron in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) om segmenten te ontvangen voor activering van de campagne. Uw DSP accountteam zal de bron maken met uw Experience Cloud-organisatie-id.
 * De bronsleutel voor de DSP account of adverteerder, die wordt gegenereerd wanneer een [[!DNL Real-Time CDP] bron wordt gemaakt in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Uw DSP accountteam zal deze sleutel met u delen. U gaat het binnen het Experience Platform gebruiken om een doelverbinding met de Advertising Cloud DSP-bestemming te maken, zoals [hieronder beschreven](#authenticate).
