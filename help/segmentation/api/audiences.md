@@ -3,15 +3,21 @@ keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentati
 title: API-eindpunt voor soorten publiek
 topic-legacy: developer guide
 description: Het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om publiek voor uw organisatie programmatically te beheren.
-source-git-commit: 2a0c1f55115c541962f7bd3b7b11d367da50ff3b
+exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+hide: true
+hidefromtoc: true
+source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1515'
 ht-degree: 0%
 
 ---
 
-
 # Eind publiek
+
+>[!IMPORTANT]
+>
+>Het publiekseindpunt is momenteel in bèta en is niet beschikbaar aan alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Een publiek is een verzameling personen die vergelijkbare gedragingen en/of kenmerken delen. Deze verzamelingen mensen kunnen worden gegenereerd met Adobe Experience Platform of met externe bronnen. U kunt de `/audiences` eindpunt in de Segmentatie API, die u toestaat om publiek programmatically terug te winnen, tot stand te brengen bij te werken en te schrappen.
 
