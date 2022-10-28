@@ -2,7 +2,7 @@
 title: Overzicht van door Adobe beheerde hosts
 description: Leer meer over de standaardhostingoptie voor het implementeren van builds van tagbibliotheken in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Zodra uw bouwstijl aan de Adobe-beheerde gastheer is opgesteld, verspreidt CDN d
 >
 >Voor Adobe-beheerde gastheren, kan de zeer eerste gepubliceerde bibliotheek aan om het even welk nieuw milieu tot vijf minuten vergen om uit aan globale CDN te verspreiden.
 
-Wanneer een Edge-knooppunt een aanvraag voor een specifiek bestand ontvangt (zoals de build van de bibliotheek), controleert het knooppunt eerst de waarde time-to-live (TTL) in het bestand. Als de TTL niet is verlopen, dient de randknoop de caching versie. Als TTL is verlopen, dan verzoekt de randknoop om een nieuw exemplaar van de dichtstbijzijnde oorsprong, dat verfrist exemplaar, en dan caches de verfriste exemplaar met nieuwe TTL.
+Wanneer een Edge-knooppunt een aanvraag voor een specifiek bestand ontvangt (zoals de build van de bibliotheek), controleert het knooppunt eerst de vervaltijd van het bestand. Als de tijd niet is verlopen, dient het randknooppunt de versie in de cache. Als de tijd is verlopen, dan verzoekt de randknoop om een nieuw exemplaar van de dichtstbijzijnde oorsprong, dient dat verfriste exemplaar, en beslaat dan het verfriste exemplaar met een nieuwe vervaltijd in het voorgeheugen.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Deze gefaseerde cachevervalsingen geven de groepen van de oorspronkelijke server
 
 Bibliotheekbuilds worden ook in de cache van de browser geplaatst door het gebruik van de `cache-control` HTTP-header. Als u hosts met Adobe-beheer gebruikt, hebt u geen controle over de headers die worden geretourneerd in API-reacties. De standaardinstelling van de Adobe voor caching wordt dus gebruikt. Met andere woorden, u kunt geen douanekopballen voor Adobe-geleide gastheren gebruiken. Als u een aangepaste `cache-control` header, wilt u wellicht overwegen [zelfhosting](self-hosting-libraries.md) in plaats daarvan.
 
-De tijd-aan-levende (TTL) voor uw browser-caching bibliotheek bouwt (die door wordt bepaald `cache-control` (header) varieert afhankelijk van de tagomgeving die u gebruikt:
+De vervaltijd voor uw browser-caching bibliotheek bouwt (die door wordt bepaald `cache-control` (header) varieert afhankelijk van de tagomgeving die u gebruikt:
 
 | Omgeving | `cache-control` value |
 | --- | --- |

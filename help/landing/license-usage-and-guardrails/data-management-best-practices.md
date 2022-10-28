@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentie
 title: Aanbevolen werkwijzen voor gegevensbeheer
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2134'
 ht-degree: 0%
 
 ---
@@ -88,12 +88,12 @@ Gegevens kunnen in een of meer systemen in Platform worden ingevoerd, namelijk d
 
 ### Welke gegevens moeten worden bewaard?
 
-U kunt zowel gegevensinnamefilters als vervalregels (ook wel &quot;TTL&quot; genoemd) toepassen om gegevens te verwijderen die verouderd zijn geworden voor uw gebruiksgevallen. Gewoonlijk verbruikt gedragsgegevens (zoals analysegegevens) aanzienlijk meer opslag dan recordgegevens (zoals CRM-gegevens). Veel gebruikers in het Platform hebben bijvoorbeeld een toename tot 90% van de profielen die alleen worden gevuld met gedragsgegevens, in vergelijking met recordgegevens. Daarom is het beheren van uw gedragsgegevens essentieel om naleving binnen uw vergunningsrechten te verzekeren.
+U kunt zowel gegevensinnamefilters als vervalregels toepassen om gegevens te verwijderen die verouderd zijn geworden voor uw gebruiksgevallen. Gewoonlijk verbruikt gedragsgegevens (zoals analysegegevens) aanzienlijk meer opslag dan recordgegevens (zoals CRM-gegevens). Veel gebruikers in het Platform hebben bijvoorbeeld een toename tot 90% van de profielen die alleen worden gevuld met gedragsgegevens, in vergelijking met recordgegevens. Daarom is het beheren van uw gedragsgegevens essentieel om naleving binnen uw vergunningsrechten te verzekeren.
 
 U kunt een aantal tools gebruiken om binnen uw gebruiksrechten voor licenties te blijven:
 
 * [Inktfilters](#ingestion-filters)
-* [Profile Service TTL](#profile-service)
+* [Profielopslag](#profile-service)
 
 ### Inktfilters {#ingestion-filters}
 
@@ -109,9 +109,7 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 
 {style=&quot;table-layout:auto&quot;}
 
-### Profielservice {#profile-service}
-
-Met de TTL-functie (time-to-live) van de profielservice kunt u TTL toepassen op gegevens in de profielopslag. Hierdoor kan het systeem automatisch gegevens verwijderen die na verloop van tijd minder waarde hebben.
+### Profielopslag {#profile-service}
 
 De profielopslag bestaat uit de volgende componenten:
 
@@ -124,53 +122,20 @@ De profielopslag bestaat uit de volgende componenten:
 
 {style=&quot;table-layout:auto&quot;}
 
+
+
 #### Compositierapporten voor profielopslag
 
-Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de Opslag van het Profiel begrijpen. Deze rapporten helpen u geïnformeerde beslissingen te nemen over hoe en waar u uw profiel-TTL&#39;s instelt om uw licentiegebruik beter te optimaliseren:
+Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de Opslag van het Profiel begrijpen. Met deze rapporten kunt u geïnformeerde beslissingen nemen over hoe en waar u de vervaldatum van de Experience Event moet instellen om uw licentiegebruik beter te optimaliseren:
 
-* **API voor gegevensset-overlap**: Toont de datasets die het meest aan uw Adresseerbare Publiek bijdragen. U kunt dit rapport gebruiken om te bepalen welke [!DNL ExperienceEvent] datasets om TTL voor te plaatsen. Zie de zelfstudie aan [het produceren van de dataset overlappend rapport](../../profile/tutorials/dataset-overlap-report.md) voor meer informatie .
+* **API voor gegevensset-overlap**: Toont de datasets die het meest aan uw Adresseerbare Publiek bijdragen. U kunt dit rapport gebruiken om te bepalen welke [!DNL ExperienceEvent] datasets om een vervaldatum in te stellen voor. Zie de zelfstudie aan [het produceren van de dataset overlappend rapport](../../profile/tutorials/dataset-overlap-report.md) voor meer informatie .
 * **API voor overlappen van identiteiten**: Toont de identiteit namespaces die het meest aan uw Adresseerbare Publiek bijdragen. Zie de zelfstudie aan [het genereren van het overlappingsrapport voor de identiteit](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) voor meer informatie .
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### [!DNL ExperienceEvent] DataSet TTL {#dataset-ttl}
+#### Verlopen van gebeurtenissen beleven {#event-expirations}
 
-U kunt TTL op profiel-toegelaten datasets toepassen om gedragsgegevens uit de Opslag van het Profiel te verwijderen die niet meer waardevol voor uw gebruiksgevallen is. Zodra TTL wordt toegepast op een profiel-Toegelaten dataset, verwijdert het Platform automatisch gegevens die niet meer door een tweedelige proces nodig zijn:
-
-* Op alle nieuwe gegevens die naar voren worden verplaatst, wordt de vervalwaarde van TTL toegepast op het tijdstip van opname;
-* Voor alle bestaande gegevens wordt de vervalwaarde van TTL toegepast als onderdeel van een eenmalige back-upsysteemtaak.
-
-U kunt verwachten dat de TTL-waarde voor elke gebeurtenis van de tijdstempel van de gebeurtenis afkomstig is. Alle gebeurtenissen ouder dan de vervalwaarde van TTL worden onmiddellijk gelaten vallen aangezien de systeembaan loopt. Alle andere gebeurtenissen worden weggelaten aangezien zij de waarde naderen die van TTL in gebeurtenistimestamp wordt aangewezen.
-
-Zie het volgende voorbeeld voor meer informatie over [!DNL ExperienceEvent] Dataset TTL.
-
-Als u op 15 mei een TTL-waarde van 30 dagen toepast, dan:
-
-* Voor alle nieuwe gebeurtenissen wordt een GVTO van 30 dagen toegepast zodra ze binnenkomen;
-* Alle bestaande gebeurtenissen met een tijdstempel die ouder is dan 15 april, worden onmiddellijk verwijderd door een systeemtaak.;
-* Gebeurtenissen die een tijdstempel hebben na 15 april, verlopen hun tijdstempel voor de gebeurtenis + TTL-dagen. Dus een evenement met een tijdstempel van 18 april zal drie dagen na 15 mei aflopen.
-
->[!IMPORTANT]
->
->Zodra een TTL wordt toegepast, zullen om het even welke gegevens die ouder zijn dan het geselecteerde TTL aantal dagen zijn **permanent** verwijderd en kan niet worden hersteld.
-
-Alvorens TTL toe te passen, moet u ervoor zorgen om een raadplegingsvenster van om het even welke segmenten binnen de grens van TTL te houden. Anders, kunnen de segmentresultaten onjuist worden nadat TTL wordt toegepast. Als u bijvoorbeeld een TTL van 30 dagen hebt toegepast voor Adobe Analytics-gegevens en een TTL van 365 dagen voor In-Store Transactiegegevens, leidt het volgende segment tot onjuiste resultaten:
-
-* Bekeken productpagina in de laatste 60 dagen, gevolgd door een aankoop in de winkel;
-* Toevoegen aan winkelwagentje, gevolgd door geen aankoop in de laatste 60 dagen.
-
-Omgekeerd, zal het volgende nog correcte resultaten creëren:
-
-* Bekeken productpagina in de laatste 14 dagen, gevolgd door een aankoop in de winkel;
-* heeft de afgelopen 30 dagen een specifieke Help-pagina online bekeken;
-* in de laatste 120 dagen een product offline heeft gekocht;
-* Toegevoegd aan winkelwagentje, gevolgd door aankoop in de laatste 14 dagen.
-
->[!TIP]
->
->Voor gemak, kunt u zelfde TTL voor alle datasets houden, zodat u zich niet over het effect van TTL over datasets in segmentatielogica moet ongerust maken.
-
-Raadpleeg de documentatie over voor meer informatie over het toepassen van TTL op profielgegevens [Profile Service TTL](../../profile/apply-ttl.md).
+Dit vermogen staat u toe om gedragsgegevens uit een profiel-toegelaten dataset automatisch te verwijderen die niet meer waardevol voor uw gebruiksgevallen is. Zie het overzicht op [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) voor details over hoe dit proces werkt zodra het voor een dataset wordt toegelaten.
 
 ## Overzicht van best practices voor compatibiliteit met het gebruik van licenties {#best-practices}
 
@@ -179,7 +144,7 @@ Hieronder volgt een lijst met aanbevolen tips die u kunt volgen om ervoor te zor
 * Gebruik de [licentiegebruiksdashboard](../../dashboards/guides/license-usage.md) om de trends van het klantengebruik te volgen en te controleren. Hierdoor kunt u eventuele overschrijdingen die zich kunnen voordoen, overtreffen.
 * Configureren [innamefilters](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
 * Zorg ervoor dat u alleen [ingeschakelde gegevenssets voor profiel](#ingestion-filters) die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
-* Een [[!DNL ExperienceEvent] DataSet TTL](#dataset-ttl) voor gegevens met hoge frequentie, zoals webgegevens.
+* Een [Ervaring gebeurtenisvervaldatum](#event-expirations) voor hoogfrequente gegevens zoals webgegevens.
 * Controleer de [Profielsamenstellingsrapporten](#profile-store-composition-reports) om inzicht te krijgen in de samenstelling van je profielwinkel. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
 
 ## Overzicht en beschikbaarheid van functies {#feature-summary}
@@ -191,7 +156,7 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 | Functie | Beschrijving |
 | --- | --- |
 | [Datasets voor profiel in-/uitschakelen](../../catalog/datasets/user-guide.md) | Gegevenssetopname in de profielservice in- of uitschakelen |
-| [!DNL ExperienceEvent] DataSet TTL | Pas een vervaldatum van TTL voor gedragsdatasets in de Winkel van het Profiel toe. Neem contact op met uw Adobe Support-vertegenwoordiger. |
+| [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe Support-vertegenwoordiger om deze functie in te schakelen. |
 | [Adobe Analytics Data Prep-filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname |
 | [Adobe Audience Manager-bronverbindingsfilters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Bronverbindingsfilters van Audience Manager toepassen om onnodige gegevens uit te sluiten van inname |
 | [SDK-gegevensfilters toestaan](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Alloy-filters toepassen om onnodige gegevens uit te sluiten van inname |

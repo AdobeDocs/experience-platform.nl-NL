@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Voorbeeld van voorbeeldstatus (Profile Preview) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2870'
+source-wordcount: '2869'
 ht-degree: 0%
 
 ---
@@ -303,7 +303,7 @@ De reactie omvat een `data` array, met afzonderlijke objecten die de details voo
 
 ## Genereer het overlappingsrapport voor de gegevensset
 
-Het rapport van de overlapping van datasets verstrekt zicht in de samenstelling van de Opslag van het Profiel van uw organisatie door de datasets bloot te stellen die het meest aan uw adresseerbare publiek (samengevoegde profielen) bijdragen. Naast het verstrekken van inzichten in uw gegevens, kan dit rapport u acties helpen om vergunningsgebruik te optimaliseren, zoals het plaatsen van TTL voor bepaalde datasets.
+Het rapport van de overlapping van datasets verstrekt zicht in de samenstelling van de Opslag van het Profiel van uw organisatie door de datasets bloot te stellen die het meest aan uw adresseerbare publiek (samengevoegde profielen) bijdragen. Naast het verstrekken van inzichten in uw gegevens, kan dit rapport u acties helpen om vergunningsgebruik te optimaliseren, zoals het plaatsen van vervalsingen voor bepaalde datasets.
 
 U kunt het rapport van de datasetoverlapping produceren door een verzoek van de GET aan te voeren `/previewsamplestatus/report/dataset/overlap` eindpunt.
 

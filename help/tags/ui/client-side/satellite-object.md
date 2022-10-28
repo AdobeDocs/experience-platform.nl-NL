@@ -2,7 +2,7 @@
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1290'
 ht-degree: 1%
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->In het oude [`setCookie`](#setCookie) Bij het instellen van cookies was het derde (optionele) argument voor deze functieaanroep een geheel getal dat de &#39;time-to-live&#39; (TTL) van het cookie in dagen aangeeft. In deze nieuwe methode wordt een object &quot;attributes&quot; geaccepteerd als een derde argument. Als u een TTL voor een koekje wilt plaatsen gebruikend de nieuwe methode, moet u verstrekken `expires` in het object attributes en stel dit in op de gewenste waarde. Dit wordt in het onderstaande voorbeeld getoond.
+>In het oude [`setCookie`](#setCookie) Bij het instellen van cookies was het derde (optionele) argument voor deze functieaanroep een geheel getal dat de vervaltijd van het cookie in dagen aangeeft. In deze nieuwe methode wordt een object &quot;attributes&quot; geaccepteerd als een derde argument. Als u een vervaldatum voor een cookie wilt instellen met de nieuwe methode, moet u een `expires` in het object attributes en stel dit in op de gewenste waarde. Dit wordt in het onderstaande voorbeeld getoond.
 
 **Voorbeeld**
 

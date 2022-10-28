@@ -4,9 +4,9 @@ description: Leer hoe Adobe Experience Platform Edge Network de clientstatus beh
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: client;state;management;edge;network;gateway;api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '850'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,7 @@ De staat die door [!DNL Edge Network] in de responsinstantie `Handle` object met
 | --- | --- | --- |
 | `key` | Tekenreeks | **Vereist**. De naam van het item. |
 | `value` | Tekenreeks | *Optioneel*. De invoerwaarde. |
-| `maxAge` | Geheel | *Optioneel* De ingstijd-aan-levende (TTL), in seconden. Als items ontbreken, worden deze alleen voor de huidige sessie opgeslagen. |
+| `maxAge` | Geheel | *Optioneel* De tijd (in seconden) tot de ingang verloopt. Als items ontbreken, worden deze alleen voor de huidige sessie opgeslagen. |
 | `attrs` | `Map<String, String>` | *Optioneel*. Een optionele lijst met entry-attributen. Voor alle veilige verbindingen met een veilige referentie-HTTP-header, `SameSite` kenmerk is ingesteld op `None`. |
 
 

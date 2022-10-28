@@ -5,14 +5,14 @@ title: Overzicht van segmentatieservice
 topic-legacy: overview
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service] - overzicht
+# [!DNL Segmentation Service]-overzicht
 
 Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw te produceren [!DNL Real-time Customer Profile] gegevens. Deze segmenten worden centraal geconfigureerd en onderhouden op [!DNL Platform]en gemakkelijk toegankelijk zijn door elke Adobe-oplossing.
 
@@ -44,7 +44,7 @@ Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinit
 >
 >Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie over aanpassen [!DNL Experience Data Model] (XDM), ga naar [Zelfstudie Schema Editor](../xdm/tutorials/create-schema-ui.md).
 >
->Bovendien, als time-to-live (TTL) op de dataset wordt toegelaten, zou dit het lidmaatschap van het gecreeerde segment kunnen beïnvloeden. Voor meer informatie over TTL en hoe het segmentatie kan beïnvloeden, gelieve te lezen [TTL-gids voor profielservice](../profile/apply-ttl.md).
+>Bovendien, als een waarde van de Vervaldatum van de Gebeurtenis van de Ervaring op de dataset wordt toegelaten, zou dit het lidmaatschap van het gecreeerde segment kunnen beïnvloeden. Lees de handleiding op [Verlopen van gebeurtenissen beleven](../profile/event-expirations.md) voor meer informatie over hoe deze eigenschap segmentatie kan beïnvloeden.
 
 ## Segmenten evalueren {#evaluate-segments}
 

@@ -5,9 +5,9 @@ title: Aanbevolen procedures voor gegevensmodellering
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2694'
+source-wordcount: '2695'
 ht-degree: 1%
 
 ---
@@ -102,7 +102,7 @@ Een bedrijf wil bijvoorbeeld alle &quot;Gold&quot; of &quot;Platinum&quot; leden
 
 #### Gebruiksgevallen activeren
 
-Naast overwegingen met betrekking tot gevallen van segmentatiegebruik, zou u ook de activeringsgebruiksgevallen voor die segmenten moeten herzien om extra relevante attributen te identificeren.
+Naast overwegingen met betrekking tot gevallen waarin segmentatie wordt gebruikt, moet u ook de activeringsgebruiksgevallen voor die segmenten bekijken om aanvullende relevante kenmerken te identificeren.
 
 Bijvoorbeeld, heeft een bedrijf een publiekssegment gebouwd dat op de regel wordt gebaseerd dat `country = US`. Vervolgens wil het bedrijf bij het activeren van dat segment naar bepaalde downstreamdoelen alle geëxporteerde profielen filteren op basis van de status van het land van herkomst. Daarom `state` moet ook worden vastgelegd in de toepasselijke profielentiteit.
 
@@ -175,7 +175,7 @@ De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om abonnemente
 **Cons**
 
 * De segmentatie wordt complexer voor het originele voorgenomen gebruiksgeval (identificerend de status van de recentste abonnementen van klanten). Het segment heeft nu extra logica nodig om de laatste abonnementsgebeurtenis voor een klant te markeren om zijn status te controleren.
-* Gebeurtenissen hebben een hoger risico om automatisch te vervallen en uit de profielopslag te worden verwijderd. Zie de handleiding op [Profiel-TTL](../../profile/apply-ttl.md) voor meer informatie .
+* Gebeurtenissen hebben een hoger risico om automatisch te vervallen en uit de profielopslag te worden verwijderd. Zie de handleiding op [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) voor meer informatie .
 
 ## Schema&#39;s maken op basis van uw gecategoriseerde entiteiten
 
