@@ -1,26 +1,26 @@
 ---
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
 
 # Door de klant beheerde sleutels in Adobe Experience Platform
 
-Alle gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecodeerd met systeemtoetsen. Als u een toepassing gebruikt die bovenop Platform wordt gebouwd, kunt u verkiezen om uw eigen encryptiesleutels in plaats daarvan te gebruiken, die u grotere controle over uw gegevensveiligheid geven.
+Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecodeerd met systeemtoetsen. Als u een toepassing gebruikt die bovenop Platform wordt gebouwd, kunt u verkiezen om uw eigen encryptiesleutels in plaats daarvan te gebruiken, die u grotere controle over uw gegevensveiligheid geven.
 
 Dit document behandelt het proces voor het toelaten van de klant-geleide sleuteleigenschap (CMK) in Platform.
 
 ## Procesoverzicht
 
-CMK is opgenomen in het gezondheidsschild en het aanbod van privacy en beveiligingsschild van Adobe. Nadat uw organisatie een van deze aanbiedingen heeft aangeschaft, kunt u een eenmalig proces starten om de functie in te stellen.
+CMK is opgenomen in het gezondheidsschild en het aanbod van privacy en beveiligingsschild van Adobe. Nadat uw organisatie een licentie voor een van deze aanbiedingen heeft aangeschaft, kunt u een eenmalig proces starten om de functie in te stellen.
 
 >[!WARNING]
 >
->Nadat u CMK hebt ingesteld, kunt u niet terugkeren naar de toetsen die door het systeem worden beheerd. U bent verantwoordelijk voor het veilig beheren van uw toetsen en sleutelvarianten binnen [!DNL Azure] om te voorkomen dat toegang tot uw gegevens verloren gaat.
+>Nadat u CMK hebt ingesteld, kunt u niet terugkeren naar de toetsen die door het systeem worden beheerd. U bent verantwoordelijk voor het veilig beheren van uw sleutels en het bieden van toegang tot uw Key Vault-, Key- en CMK-app binnen [!DNL Azure] om te voorkomen dat toegang tot uw gegevens verloren gaat.
 
 Het proces is als volgt:
 
@@ -29,7 +29,7 @@ Het proces is als volgt:
 1. [De serviceprincipal toewijzen voor de CMK-toepassing](#assign-to-role) naar een geschikte rol voor de sleutelkluis.
 1. API-aanroepen gebruiken voor [Verstuur uw encryptiesleutel-id naar Adobe](#send-to-adobe).
 
-Wanneer het installatieproces is voltooid, worden alle gegevens die in het Platform van alle sandboxen zijn ingevoerd, gecodeerd met uw [!DNL Azure] toetsinstelling, specifiek voor uw [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) en [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) middelen. CMK-functies [!DNL Azure]s [openbaar voorvertoningsprogramma](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) om dit mogelijk te maken.
+Wanneer het installatieproces is voltooid, worden alle gegevens die in het Platform van alle sandboxen zijn ingevoerd, gecodeerd met uw [!DNL Azure] toetsinstelling, specifiek voor uw [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) en [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) middelen. Als u CMK wilt gebruiken, gebruikt u [!DNL Microsoft Azure] functionaliteit die deel kan uitmaken van [openbaar voorvertoningsprogramma](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Een [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -165,6 +165,10 @@ De **[!UICONTROL Key Identifier]** wordt de URI-id voor de sleutel weergegeven. 
 
 Nadat u de sleutelvault-URI hebt verkregen, kunt u deze met een verzoek van de POST naar het CMK-configuratiepunt verzenden.
 
+>[!NOTE]
+>
+>Alleen de sleutelvault en sleutelnaam worden met Adobe opgeslagen, niet de sleutelversie.
+
 **Verzoek**
 
 ```shell
@@ -265,6 +269,10 @@ De `status` attribuut kan één van vier waarden met de volgende betekenis hebbe
 
 ## Volgende stappen
 
-Door de bovenstaande stappen te voltooien, hebt u CMK voor uw organisatie ingeschakeld. Alle gegevens die in het Platform worden ingevoerd, worden nu gecodeerd en gedecodeerd met de sleutel(s) in het [!DNL Azure] Key Vault. Als u de toegang van het Platform tot uw gegevens wilt intrekken, kunt u de gebruikersrol die aan de toepassing is gekoppeld, verwijderen uit de sleutelkluis [!DNL Azure].
+Door de bovenstaande stappen te voltooien, hebt u CMK voor uw organisatie ingeschakeld. Gegevens die in Platform worden ingevoerd, worden nu gecodeerd en gedecodeerd met de sleutel(s) in uw [!DNL Azure] Key Vault. Als u de toegang van het Platform tot uw gegevens wilt intrekken, kunt u de gebruikersrol die aan de toepassing is gekoppeld, verwijderen uit de sleutelkluis [!DNL Azure].
 
-Nadat u de toegang tot de toepassing hebt uitgeschakeld, duurt het 2 tot 24 uur voordat gegevens in het Platform niet meer toegankelijk zijn. Hetzelfde tijdbereik geldt voor gegevens die opnieuw beschikbaar moeten worden wanneer ze opnieuw toegang tot de toepassing krijgen.
+Nadat u de toegang tot de toepassing hebt uitgeschakeld, kan het een paar minuten tot 24 uur duren voordat de gegevens in het Platform niet meer toegankelijk zijn. Dezelfde tijdvertraging geldt voor gegevens die weer beschikbaar komen wanneer de toegang tot de toepassing opnieuw wordt ingeschakeld.
+
+>[!WARNING]
+>
+>Als de Key Vault-, Key- of CMK-toepassing eenmaal is uitgeschakeld en gegevens in Platform niet meer toegankelijk zijn, zijn downstreambewerkingen met betrekking tot die gegevens niet meer mogelijk. Zorg ervoor dat u de downstreameffecten begrijpt van het intrekken van de toegang van het Platform tot uw gegevens voordat u wijzigingen aanbrengt in uw configuratie.
