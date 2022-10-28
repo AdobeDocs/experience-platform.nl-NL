@@ -1,9 +1,9 @@
 ---
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -24,12 +24,12 @@ CMK is opgenomen in het gezondheidsschild en het aanbod van privacy en beveiligi
 
 Het proces is als volgt:
 
-1. [Een [!DNL Microsoft Azure] Key Vault](#create-key-vault)vervolgens [een coderingssleutel genereren](#generate-a-key) (gebaseerd op het beleid van uw organisatie) die uiteindelijk met Adobe zal worden gedeeld.
-1. API-aanroepen gebruiken voor [de CMK-toepassing registreren](#register-app) met uw [!DNL Azure] huurder.
-1. [De serviceprincipal toewijzen voor de CMK-toepassing](#assign-to-role) naar een geschikte rol voor de sleutelkluis.
-1. API-aanroepen gebruiken voor [Verstuur uw encryptiesleutel-id naar Adobe](#send-to-adobe).
+1. [Een [!DNL Microsoft Azure] Key Vault](#create-key-vault) op basis van het beleid van uw organisatie [een coderingssleutel genereren](#generate-a-key) dat zal uiteindelijk met Adobe worden gedeeld .
+1. API-aanroepen gebruiken voor [CMK-toepassing instellen](#register-app) met uw [!DNL Azure] huurder.
+1. API-aanroepen gebruiken voor [Verstuur uw encryptiesleutel-id naar Adobe](#send-to-adobe) en start het schakelingsproces voor de functie.
+1. [Controleer de status van de configuratie](#check-status) om te controleren of CMK is ingeschakeld.
 
-Wanneer het installatieproces is voltooid, worden alle gegevens die in het Platform van alle sandboxen zijn ingevoerd, gecodeerd met uw [!DNL Azure] toetsinstelling, specifiek voor uw [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) en [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) middelen. Als u CMK wilt gebruiken, gebruikt u [!DNL Microsoft Azure] functionaliteit die deel kan uitmaken van [openbaar voorvertoningsprogramma](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Wanneer het installatieproces is voltooid, worden alle gegevens die in het Platform van alle sandboxen zijn ingevoerd, gecodeerd met uw [!DNL Azure] toetsinstelling. Als u CMK wilt gebruiken, gebruikt u [!DNL Microsoft Azure] functionaliteit die deel kan uitmaken van [openbaar voorvertoningsprogramma](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Een [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -65,7 +65,7 @@ Zodra u bij **[!DNL Review + create]** U kunt de details van de sleutelvault bek
 
 ![Basisconfiguratie voor de sleutelkluis](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Netwerkopties configureren
+### Netwerkopties configureren
 
 Als uw sleutelkluis wordt gevormd om openbare toegang tot bepaalde virtuele netwerken te beperken of openbare toegang volledig onbruikbaar te maken, moet u Microsoft een firewalluitzondering verlenen.
 
@@ -73,7 +73,7 @@ Selecteren **[!DNL Networking]** in de linkernavigatie. Onder **[!DNL Firewalls 
 
 ![Basisconfiguratie voor de sleutelkluis](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## Een sleutel genereren {#generate-a-key}
+### Een sleutel genereren {#generate-a-key}
 
 Nadat u een sleutelvault hebt gemaakt, kunt u een nieuwe sleutel genereren. Ga naar de **[!DNL Keys]** en selecteert u **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ De geconfigureerde sleutel wordt weergegeven in de lijst met toetsen voor de vau
 
 ![Toegevoegde sleutel](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## De CMK-toepassing registreren {#register-app}
+## De CMK-toepassing instellen {#register-app}
 
 Wanneer u de sleutelkluis hebt geconfigureerd, moet u zich registreren voor de CMK-toepassing die een koppeling naar uw [!DNL Azure] huurder.
 
@@ -135,7 +135,7 @@ Kopieer en plak de `applicationRedirectUrl` adres in browser om een authentifica
 
 ![Aanvraag voor machtiging accepteren](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## De CMK-toepassing toewijzen aan een rol {#assign-to-role}
+### De CMK-toepassing toewijzen aan een rol {#assign-to-role}
 
 Navigeer na het voltooien van het verificatieproces terug naar uw [!DNL Azure] Key Vault en selecteer **[!DNL Access control]** in de linkernavigatie. Selecteer **[!DNL Add]** gevolgd door **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ Kies in het volgende scherm de optie **[!DNL Select members]** een dialoog op ga
 >
 >Als u uw toepassing niet in de lijst kunt vinden, dan is uw de diensthoofd niet in uw huurder goedgekeurd. Werk met uw [!DNL Azure] beheerder of vertegenwoordiger om ervoor te zorgen dat u de juiste rechten hebt.
 
-## Sleutel-URI naar Adobe verzenden {#send-to-adobe}
+## De configuratie van de coderingssleutel op het Experience Platform inschakelen {#send-to-adobe}
 
 Nadat u de CMK-toepassing hebt geïnstalleerd op [!DNL Azure]kunt u de id van de coderingssleutel naar Adobe sturen. Selecteren **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
 
@@ -221,7 +221,7 @@ Een succesvolle reactie keert de details van de configuratietaak terug.
 
 De taak moet de verwerking binnen een paar minuten voltooien.
 
-### De status van de configuratie controleren {#check-status}
+## De status van de configuratie controleren {#check-status}
 
 Om de status van het configuratieverzoek te controleren, kunt u een verzoek van de GET indienen.
 
