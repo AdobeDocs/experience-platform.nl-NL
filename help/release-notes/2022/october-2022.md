@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2022
 description: In de releaseopmerkingen van oktober 2022 voor Adobe Experience Platform.
-source-git-commit: 021a0833941f250475786bb8629542c50229b238
+source-git-commit: d6858ab1389a0b5cfadc9f79b20b80c1c36a114e
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '974'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | De lijn is een populair communicatie platform dat mensen, de diensten en de informatie verbindt en van een praatjeapp tot een hub voor vermaak, sociale, en dagelijkse activiteiten is gegroeid. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 is een op cloud gebaseerd bedrijfstoepassingsplatform dat de Planning van het Middel van de Onderneming (ERP) en het Beheer van de Verhouding van de Klant (CRM) samen met productiviteitstoepassingen en AI hulpmiddelen combineert, om van begin tot eind vlottere en meer gecontroleerde verrichtingen, beter groeipotentieel en lagere kosten te brengen. |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | De [!DNL (Beta) Adobe Commerce] met de doelconnector kunt u een of meer Real-Time CDP-segmenten selecteren die u voor uw [!DNL Adobe Commerce] -account voor een dynamische, op maat gesneden ervaring voor kopers. Within [!DNL Adobe Commerce], kunt u die Real-Time CDP-segmenten selecteren om unieke aanbiedingen in de winkelwagen aan te passen, zoals &#39;Koop 2 krijg 1 gratis&#39;. U kunt ook hoofdbanners weergeven en de productprijzen wijzigen via promotieaanbiedingen, die allemaal zijn aangepast aan Adobe Real-Time CDP-segmenten. |
 
 {style=&quot;table-layout:auto&quot;}
 
