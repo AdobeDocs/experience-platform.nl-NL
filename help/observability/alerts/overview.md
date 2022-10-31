@@ -4,9 +4,9 @@ title: Overzicht van waarschuwingen
 description: Meer informatie over waarschuwingen in Adobe Experience Platform, waaronder de structuur van de definitie van waarschuwingsregels.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '755'
 ht-degree: 1%
 
 ---
@@ -82,6 +82,10 @@ Als u met waarschuwingen wilt werken in de gebruikersinterface van het Platform,
 Met de machtiging Waarschuwingen weergeven kunt u ontvangen waarschuwingen weergeven door het belpictogram te selecteren (![Bell Icon](../images/alerts/overview/icon.png)) in de rechterbovenhoek.
 
 ![](../images/alerts/overview/ui.png)
+
+>[!NOTE]
+>
+> Selecteer een waarschuwing om naar een verwant dashboard te navigeren voor meer gedetailleerde informatie over waarom de alarm is teweeggebracht.
 
 Bovendien [!UICONTROL Alerts] in UI staat individuele gebruikers toe om aan specifieke waakzame types in te tekenen, en staat beheerders toe om waakzame regels geheel toe te laten of onbruikbaar te maken. Zie de [UI-hulplijn](./ui.md) voor meer informatie over het beheer van waarschuwingen.
 
