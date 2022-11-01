@@ -1,9 +1,9 @@
 ---
 title: Quota API-eindpunt
 description: Het /quota eindpunt in de Hygiene API van Gegevens staat u toe om uw gebruik van de gegevenshygiëne tegen de maandelijkse quotagrenzen van uw organisatie voor elk baantype te controleren.
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '352'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die een gezondheidsschild hebben aangeschaft.
+>De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die deze producten hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**.
 
 De `/quota` Het eindpunt in de Hygiene API van Gegevens staat u toe om uw gebruik van de gegevenshygiëne tegen de quotagrenzen van uw organisatie voor elk baantype te controleren.
 

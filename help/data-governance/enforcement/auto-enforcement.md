@@ -5,9 +5,9 @@ title: Automatische beleidscontrole
 topic-legacy: guide
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1686'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Selecteren **[!UICONTROL List view]** om de gegevenskoppeling als een lijst weer
 
 >[!IMPORTANT]
 >
->Het beleid van de toestemming is momenteel slechts beschikbaar voor organisaties die het Schild van de Gezondheidszorg hebben gekocht.
+>Beleid voor goedkeuring is momenteel alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**.
 
 Als u [gemaakt toestemmingsbeleid](../policies/user-guide.md#consent-policy) en u activeert een segment naar een bestemming, kunt u zien hoe uw toestemmingsbeleid het percentage profielen beïnvloedt die in de activering inbegrepen zijn.
 
