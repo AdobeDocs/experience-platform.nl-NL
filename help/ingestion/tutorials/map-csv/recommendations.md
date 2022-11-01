@@ -1,9 +1,9 @@
 ---
 title: Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde Recommendations (bèta)
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand met behulp van door AI gegenereerde aanbevelingen kunt toewijzen aan een XDM-schema.
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -35,13 +35,13 @@ Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UIC
 
 De **[!UICONTROL Map CSV XDM schema]** wordt weergegeven, vanaf de **[!UICONTROL Dataflow detail]** stap.
 
-Selecteren **[!UICONTROL Create a new schema using ML recommendations]**, waardoor nieuwe besturingselementen worden weergegeven. Kies de juiste klasse voor CSV-gegevens die u wilt toewijzen ([!UICONTROL Profile] of [!UICONTROL ExperienceEvent]), en gebruik dropdown menu om de relevante industrie voor uw zaken te selecteren. Als uw organisatie onder een [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) model, selecteer **[!UICONTROL B2B data]** selectievakje.
+Selecteren **[!UICONTROL Create a new schema using ML recommendations]**, waardoor nieuwe besturingselementen worden weergegeven. Kies de juiste klasse voor de CSV-gegevens die u wilt toewijzen ([!UICONTROL Profile] of [!UICONTROL ExperienceEvent]). U kunt optioneel het vervolgkeuzemenu gebruiken om de relevante branche voor uw bedrijf te selecteren of leeg laten als de opgegeven categorieën niet op u van toepassing zijn. Als uw organisatie onder een [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) model, selecteer **[!UICONTROL B2B data]** selectievakje.
 
 ![De [!UICONTROL Dataflow detail] met de optie voor ML-aanbevelingen geselecteerd. [!UICONTROL Profile] is geselecteerd voor de klasse en [!UICONTROL Telecommunications] geselecteerd voor de industrie](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 Van hier, verstrek een naam voor het schema dat van de CSV- gegevens zal worden gecreeerd, en een naam voor de outputdataset die de gegevens zal bevatten die onder dat schema worden opgenomen.
 
-U kunt naar keuze de volgende extra eigenschappen voor dataflow vormen:
+U kunt naar keuze de volgende extra eigenschappen voor dataflow vormen alvorens te werk te gaan:
 
 | Invoernaam | Beschrijving |
 | --- | --- |
@@ -50,6 +50,8 @@ U kunt naar keuze de volgende extra eigenschappen voor dataflow vormen:
 | [!UICONTROL Partial ingestion] | Als deze optie is ingeschakeld, worden geldige records voor nieuwe batchgegevens opgenomen binnen een opgegeven foutdrempel. Deze drempel staat u toe om het percentage aanvaardbare fouten te vormen alvorens de volledige partij ontbreekt. |
 | [!UICONTROL Dataflow details] | Geef een naam en een optionele beschrijving op voor de gegevensstroom waarmee de CSV-gegevens in het Platform worden geplaatst. Aan de gegevensstroom wordt automatisch een standaardnaam toegewezen wanneer u deze workflow start. Het wijzigen van de naam is optioneel. |
 | [!UICONTROL Alerts] | Selecteren in een lijst met [waarschuwingen in producten](../../../observability/alerts/overview.md) dat u betreffende de status van de gegevensstroom wilt ontvangen zodra het in werking is gesteld. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Wanneer u klaar bent met het configureren van de gegevensstroom, selecteert u **[!UICONTROL Next]**.
 
@@ -81,7 +83,7 @@ Gebruik de voorvertoning van de veldtoewijzing om bestaande toewijzingen te bewe
 
 ### Veldgroepen bewerken {#edit-field-groups}
 
-De CSV-velden worden automatisch toegewezen aan bestaande veldgroepen met behulp van XML-modellen. Als u de veldgroep voor een bepaald CSV-veld wilt wijzigen, selecteert u **[!UICONTROL Edit]** naast de schemastructuur.
+De CSV-velden worden automatisch toegewezen aan bestaande XDM-veldgroepen met behulp van XML-modellen. Als u de veldgroep voor een bepaald CSV-veld wilt wijzigen, selecteert u **[!UICONTROL Edit]** naast de schemastructuur.
 
 ![De [!UICONTROL Edit] knop die wordt geselecteerd naast de schemaboom](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
