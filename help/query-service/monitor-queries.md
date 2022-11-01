@@ -1,14 +1,14 @@
 ---
 title: Beeldschermquery's
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
-source-git-commit: 62863fc5b59a8185ea01f19dd3c50bf22fdd1e55
+source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 0%
 
 ---
 
-# Bewakingsquery&#39;s (beperkte release)
+# Bewaking van query&#39;s (beperkte release)
 
 >[!IMPORTANT]
 >
