@@ -5,7 +5,7 @@ title: Overzicht van partiële batchverwerking
 topic-legacy: overview
 description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -110,7 +110,7 @@ U kunt nu gegevens uploaden met de **Gegevens toevoegen** en wordt het gedeeltel
 
 ### Gebruik de &quot;[!UICONTROL Map CSV to XDM schema]&quot;&quot;flow {#map-flow}
 
-Als u &quot;[!UICONTROL Map CSV to XDM schema]&quot;, voert u de vermelde stappen uit in de [Zelfstudie Een CSV-bestand toewijzen](../tutorials/map-a-csv-file.md). Wanneer u de **[!UICONTROL Add data]** neem nota van de **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** velden.
+Als u &quot;[!UICONTROL Map CSV to XDM schema]&quot;, voert u de vermelde stappen uit in de [Zelfstudie Een CSV-bestand toewijzen](../tutorials/map-csv/overview.md). Wanneer u de **[!UICONTROL Add data]** neem nota van de **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** velden.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

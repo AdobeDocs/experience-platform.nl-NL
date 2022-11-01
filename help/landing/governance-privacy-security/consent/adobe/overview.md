@@ -5,7 +5,7 @@ title: Verwerking van toestemming in Adobe Experience Platform
 topic-legacy: getting started
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Raadpleeg de documentatie bij de Mobile SDK voor [configureren van de mobiele ex
 
 U kunt XDM-Volgzame toestemmingsgegevens van een Csv- dossier door batch-opname in te voeren. Dit kan nuttig zijn als u een achterstand van eerder verzamelde toestemmingsgegevens hebt die nog in uw klantenprofielen moet worden geïntegreerd.
 
-Volg de zelfstudie op [een CSV-bestand toewijzen aan XDM](../../../../ingestion/tutorials/map-a-csv-file.md) om te leren hoe u uw gegevensvelden kunt omzetten in XDM en deze kunt opnemen in Platform. Wanneer u de [!UICONTROL Destination] voor de toewijzing, zorg ervoor dat u selecteert **[!UICONTROL Use existing dataset]** en kiest u de optie [!DNL Profile]-enabled toestemmingsdataset u eerder creeerde.
+Volg de zelfstudie op [een CSV-bestand toewijzen aan XDM](../../../../ingestion/tutorials/map-csv/overview.md) om te leren hoe u uw gegevensvelden kunt omzetten in XDM en deze kunt opnemen in Platform. Wanneer u de [!UICONTROL Destination] voor de toewijzing, zorg ervoor dat u selecteert **[!UICONTROL Use existing dataset]** en kiest u de optie [!DNL Profile]-enabled toestemmingsdataset u eerder creeerde.
 
 ## Implementatie testen {#test-implementation}
 

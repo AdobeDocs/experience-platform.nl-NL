@@ -4,8 +4,7 @@ title: Voorbeeldgegevens genereren voor een XDM-schema in de gebruikersinterface
 description: Leer hoe u voorbeeld-JSON-gegevens kunt genereren op basis van een bestaand schema in de Adobe Experience Platform-gebruikersinterface.
 topic-legacy: user guide
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Om gegevens in Adobe Experience Platform in te voeren, moeten de indeling en de 
 
 Voor elk schema dat u in de interface van het Experience Platform definieert, kunt u een voorbeeld-JSON-object genereren dat voldoet aan de structuur van het schema. Dit voorwerp kan als malplaatje voor om het even welke gegevens dienen die in datasets worden opgenomen die het betrokken schema in dienst nemen.
 
-Selecteer **[!UICONTROL Schemas]** in de linkernavigatie in de interface van het Platform. Zoek onder het tabblad **[!UICONTROL Browse]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Download sample file]**.
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. Onder de **[!UICONTROL Browse]** Zoek het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Download sample file]**.
 
 ![](../images/ui/sample/sample-data.png)
 
@@ -26,8 +25,8 @@ Een voorbeeld-JSON-bestand wordt gedownload door de browser. U kunt dit dossier 
 
 ## Volgende stappen
 
-Deze handleiding besprak hoe u een voorbeeld-JSON-bestand kunt genereren op basis van een XDM-schema in de gebruikersinterface van het Platform. Leren hoe te om steekproefgegevens te produceren gebruikend de Registratie API van het Schema, zie [de gids van het eindpunt van steekproefgegevens](../api/sample-data.md).
+Deze handleiding besprak hoe u een voorbeeld-JSON-bestand kunt genereren op basis van een XDM-schema in de gebruikersinterface van het Platform. Zie voor meer informatie over het genereren van voorbeeldgegevens met de API voor schemaregistratie [eindgids met voorbeeldgegevens](../api/sample-data.md).
 
-Als u klaar bent om met het opnemen van gegevens te beginnen, raadpleegt u de zelfstudie over [het toewijzen van een CSV-bestand aan XDM](../../ingestion/tutorials/map-a-csv-file.md) om te leren hoe u een plat gegevensbestand (zoals een CSV) kunt toewijzen aan een XDM-schema en het in Platform kunt opnemen. Alternatief, kunt u [bronverbinding ](../../sources/home.md) vestigen om uw gegevens van een externe bron in te brengen en het in kaart te brengen aan XDM.
+Als u klaar bent om gegevens in te voeren, raadpleegt u de zelfstudie [een CSV-bestand toewijzen aan XDM](../../ingestion/tutorials/map-csv/overview.md) om te leren hoe u een vlak gegevensbestand (zoals een CSV) kunt toewijzen aan een XDM-schema en dit kunt opnemen in het Platform. U kunt ook een [bronverbinding](../../sources/home.md) om uw gegevens van een externe bron in te brengen en het in kaart te brengen aan XDM.
 
-Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte in UI, verwijs naar [[!UICONTROL Schemas] werkruimteoverzicht](./overview.md).
+Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] in de gebruikersinterface, raadpleegt u de [[!UICONTROL Schemas] werkruimte - overzicht](./overview.md).

@@ -5,7 +5,7 @@ title: Gegevens voorbereiden voor gebruik in intelligente services
 topic-legacy: Intelligent Services
 description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services gebruiken XDM-schema's (Experience Data Model) om dit te bereiken.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2923'
 ht-degree: 0%
@@ -356,7 +356,7 @@ Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volg
 
 #### Gegevens toewijzen en opnemen {#ingest}
 
-Na het creëren van een CEE schema en dataset, kunt u beginnen uw gegevenslijsten aan het schema in kaart te brengen en die gegevens in Platform in te voeren. Zie de zelfstudie aan [een CSV-bestand toewijzen aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md) voor stappen op hoe te om dit in UI uit te voeren. U kunt het volgende gebruiken [JSON-voorbeeldbestand](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) om het innameproces te testen voordat u uw eigen gegevens gebruikt.
+Na het creëren van een CEE schema en dataset, kunt u beginnen uw gegevenslijsten aan het schema in kaart te brengen en die gegevens in Platform in te voeren. Zie de zelfstudie aan [een CSV-bestand toewijzen aan een XDM-schema](../ingestion/tutorials/map-csv/overview.md) voor stappen op hoe te om dit in UI uit te voeren. U kunt het volgende gebruiken [JSON-voorbeeldbestand](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) om het innameproces te testen voordat u uw eigen gegevens gebruikt.
 
 Zodra een dataset is bevolkt, kan de zelfde dataset worden gebruikt om extra gegevensdossiers in te voeren.
 

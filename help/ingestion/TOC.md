@@ -4,10 +4,10 @@ user-guide-title: Help bij Adobe Experience Platform-gegevensverwerking
 breadcrumb-title: Handleiding voor gegevensinname
 user-guide-description: Breng uw gegevens in Experience Platform door partij of het stromen ingestie.
 feature: Data Ingestion
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 3%
+source-wordcount: '145'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,10 @@ ht-degree: 3%
    - [Gedeeltelijke batch ingestie](batch-ingestion/partial.md)
    - [Problemen oplossen](batch-ingestion/troubleshooting.md)
 - Lesbestanden {#tutorials}
-   - [Een CSV-bestand toewijzen aan XDM](tutorials/map-a-csv-file.md)
+   - Een CSV-bestand toewijzen aan XDM {#map-csv}
+      - [Overzicht](./tutorials/map-csv/overview.md)
+      - [Een CSV-bestand toewijzen aan een bestaand schema](./tutorials/map-csv/existing-schema.md)
+      - [Een CSV-bestand toewijzen met behulp van door AI gegenereerde aanbevelingen](./tutorials/map-csv/recommendations.md)
    - [Batchgegevens invoeren met de gebruikersinterface](tutorials/ingest-batch-data.md)
    - [Een geverifieerde streamingverbinding maken](tutorials/create-authenticated-streaming-connection.md)
    - [Een streamingverbinding (API) maken](tutorials/create-streaming-connection.md)

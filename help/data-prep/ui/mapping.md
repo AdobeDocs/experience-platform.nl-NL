@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand
 title: UI-gids voor gegevenprepress
 description: Dit document biedt aanwijzingen voor het gebruik van functies voor gegevensvoorvoegsel in de gebruikersinterface van het Platform om CSV-bestanden toe te wijzen aan een XDM-schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 0%
@@ -79,7 +79,7 @@ De **[!UICONTROL mapping]** biedt u een uitgebreid hulpmiddel om brongebieden va
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### De toewijzingsinterface
+### De toewijzingsinterface {#mapping-interface}
 
 De toewijzingsinterface bevat een dashboard dat informatie verschaft over de status van uw toewijzingsvelden binnen de context van de innameworkflow. Op het dashboard worden de volgende gegevens over de toewijzingsvelden weergegeven:
 
