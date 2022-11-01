@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
-source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
+source-git-commit: 15a1fd71bc5f00efdd475abd3385dc6bf4737a17
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '193'
 ht-degree: 12%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 12%
       * [Gegevens verzenden naar Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalisatie {#personalization}
    * [Aangepaste inhoud renderen](personalization/rendering-personalization-content.md)
+   * [Personalisatie via hybride implementatie](personalization/hybrid-personalization.md)
    * [flikkering beheren](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Overzicht](personalization/adobe-target/target-overview.md)
