@@ -1,9 +1,9 @@
 ---
 title: (bèta) Adobe Commerce-bestemmingsconnector
 description: Leer hoe verkopers van Adobe Commerce en Real-Time CDP de winkelervaring kunnen aanpassen door zeer relevante site-inhoud en -promoties te leveren, aangepast aan klantsegmenten die in Real-Time CDP zijn gemaakt en beheerd.
-source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
+source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '667'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../u
 
 Nu u hebt gevormd [!DNL Commerce] doel binnen Experience Platform, moet u vormen [!DNL Commerce Admin] om de Real-Time CDP-segmenten die u hebt gemaakt te importeren. Zie de [[!DNL Commerce] documentatie](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) voor meer informatie.
 
-## Gegevens exporteren valideren {#exported-data}
+## Activering van publiek valideren bij Handel {#exported-data}
 
 Nadat u Real-Time CDP-segmenten hebt geactiveerd voor uw [!DNL Adobe Commerce] -account, ziet u de segmenten beschikbaar in het dialoogvenster [!DNL Admin] wanneer u een prijsregel voor winkelwagentjes maakt:
 
