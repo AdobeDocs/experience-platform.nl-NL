@@ -5,7 +5,7 @@ title: UI-gids voor zoekservice
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
@@ -18,7 +18,7 @@ De Adobe Experience Platform [!DNL Query Service] biedt een gebruikersinterface 
 
 ## [!DNL Query Editor]
 
-De [!DNL Query Editor] laat u toe om vragen te schrijven en uit te voeren zonder een externe cliënt te gebruiken. Selecteren **[!UICONTROL Create Query]** om de [!DNL Query Editor] en maak een nieuwe query. U hebt ook toegang tot de [!DNL Query Editor] door een query te selecteren in het menu **[!UICONTROL Log]** of **[!UICONTROL Browse]** tabs. Als u een eerder uitgevoerde of opgeslagen query selecteert, wordt het dialoogvenster [!DNL Query Editor] en geeft u de SQL voor de geselecteerde query weer.
+De [!DNL Query Editor] laat u toe om vragen te schrijven en uit te voeren zonder een externe cliënt te gebruiken. Selecteren **[!UICONTROL Create Query]** om de [!DNL Query Editor] en maak een nieuwe query. U hebt ook toegang tot de [!DNL Query Editor] door een query te selecteren in het menu **[!UICONTROL Log]** of **[!UICONTROL Templates]** tabs. Als u een eerder uitgevoerde of opgeslagen query selecteert, wordt het dialoogvenster [!DNL Query Editor] en geeft u de SQL voor de geselecteerde query weer.
 
 ![Het dashboard Vragen met de markering Query maken.](../images/ui/overview/overview.png)
 

@@ -5,9 +5,9 @@ title: UI-gids voor zoekprogramma
 topic-legacy: query editor
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
+source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '2003'
 ht-degree: 0%
 
 ---
@@ -116,13 +116,19 @@ In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste
 >
 >Hier volgt een lijst met beperkingen voor geplande query&#39;s wanneer u de Query Editor gebruikt. Zij zijn niet van toepassing op de [!DNL Query Service] API:<br/>U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd.<br/>U **kan** voeg een programma aan een parameterized vraag toe.<br/>Geplande query&#39;s **kan** bevat een anoniem blok.
 
-Als u een schema aan een query wilt toevoegen, selecteert u **[!UICONTROL Add schedule]**.
+Planningen worden ingesteld in de Query-editor. Alleen query&#39;s die al als een sjabloon zijn opgeslagen, kunnen echter worden gepland. Om een programma aan een vraag toe te voegen, selecteer een vraagmalplaatje van of [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] om naar de Redacteur van de Vraag te navigeren.
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+Lees de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
 
-![De Redacteur van de Vraag met Add benadrukt programma.](../images/ui/query-editor/add-schedule.png)
+Wanneer een opgeslagen query wordt benaderd vanuit de Query-editor, wordt [!UICONTROL Schedules] onder de naam van de query. Selecteer **[!UICONTROL Schedules]**.
 
-De **[!UICONTROL Schedule details]** wordt weergegeven. Op deze pagina, kunt u de frequentie van de geplande vraag kiezen, de data de geplande vraag zal lopen, evenals welke dataset om de vraag naar uit te voeren.
+![De Query-editor met het tabblad Planningen gemarkeerd.](../images/ui/query-editor/schedules-tab.png)
+
+De werkruimte Planningen wordt weergegeven. Selecteren **[!UICONTROL Add Schedule]** om een schema te maken.
+
+![De werkruimte van het Programma van de Redacteur van de Vraag met Add benadrukt programma.](../images/ui/query-editor/add-schedule.png)
+
+De pagina met planningsdetails wordt weergegeven. Op deze pagina, kunt u de frequentie van de geplande vraag, de begin en einddatum, de dag van de week kiezen de geplande vraag zal lopen, evenals welke dataset om de vraag naar uit te voeren.
 
 ![Het venster Schema-details is gemarkeerd.](../images/ui/query-editor/schedule-details.png)
 
@@ -140,39 +146,35 @@ Voor de dataset, hebt u de optie om of een bestaande dataset te gebruiken of een
 >
 > Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, doet u **niet** de noodzaak om `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag, aangezien de datasets reeds worden geplaatst. Met inbegrip van `INSERT INTO` of `CREATE TABLE AS SELECT` als onderdeel van uw geplande query&#39;s resulteert in een fout.
 
-Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om een schema te maken.
+Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om een schema te maken. U bent teruggekeerd aan de planningswerkruimte die details van het onlangs gecreeerde programma, met inbegrip van planningsidentiteitskaart, het programma zelf, en de de outputdataset van het programma toont. U kunt programmaidentiteitskaart gebruiken om meer informatie over de looppas van de geplande vraag zelf te zoeken. Lees voor meer informatie de [Geplande de eindpuntgids van vraaglooppas](../api/runs-scheduled-queries.md).
 
-De pagina van de vraagdetails verschijnt opnieuw, en toont nu de details van het pas gecreëerde programma, met inbegrip van planningsidentiteitskaart, het programma zelf, en de de outputdataset van het programma. U kunt programmaidentiteitskaart gebruiken om meer informatie over de looppas van de geplande vraag zelf te zoeken. Lees voor meer informatie de [Geplande de eindpuntgids van vraaglooppas](../api/runs-scheduled-queries.md).
+![De werkruimte van programma&#39;s met het onlangs gecreeerde programma benadrukt.](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> U kunt alleen plannen **één** vraagmalplaatje gebruikend UI. Als u extra programma&#39;s aan een vraagmalplaatje wilt toevoegen, zult u API moeten gebruiken. Als er al een schema is toegevoegd met de API, gaat u **niet** kan extra programma&#39;s toevoegen gebruikend UI. Als de veelvoudige programma&#39;s reeds in bijlage aan een vraagmalplaatje zijn, slechts zal het oudste programma worden getoond. Lees de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
->
-> Bovendien, zou u de pagina moeten verfrissen als u wilt verzekeren u de recentste staat voor het programma hebt u bekijkt.
+#### Een schema verwijderen of uitschakelen {#delete-schedule}
 
-#### Een schema verwijderen {#delete-schedule}
+U kunt een programma uit de werkruimte van programma&#39;s schrappen of onbruikbaar maken. U moet een vraagmalplaatje van één van beide selecteren [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] om naar de Redacteur van de Vraag te navigeren en te selecteren **[!UICONTROL Schedule]** voor toegang tot de werkruimte voor schema&#39;s.
 
-U kunt een schema verwijderen door **[!UICONTROL Delete a schedule]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![De Redacteur van de Vraag met onbruikbaar maken programma en schrap benadrukt programma.](../images/ui/query-editor/delete-schedule.png)
+Selecteer een schema in de rijen met beschikbare schema&#39;s. U kunt de knevel gebruiken om de geplande vraag onbruikbaar te maken of toe te laten.
 
 >[!IMPORTANT]
 >
-> Als u een programma voor een vraag wilt schrappen, moet u eerst het programma onbruikbaar maken.
+>U moet het programma onbruikbaar maken alvorens u een programma voor een vraag kunt schrappen.
+
+Selecteren **[!UICONTROL Delete a schedule]** om het uitgeschakelde schema te verwijderen.
+
+![De planningswerkruimte met Uitschakelen programma en Schrapping benadrukt programma.](../images/ui/query-editor/delete-schedule.png)
 
 ### Bezig met opslaan van query&#39;s {#saving-queries}
 
-[!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Selecteer **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
+De [!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Selecteer **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
 
 >[!NOTE]
 >
->Vragen die zijn genoemd en opgeslagen in de Query-editor, zijn beschikbaar als sjablonen in het dashboard Query [!UICONTROL Browse] tab. Zie de [sjabloondocumentatie](./query-templates.md) voor meer informatie .
+>Vragen die zijn genoemd en opgeslagen in de Query-editor, zijn beschikbaar als sjablonen in het dashboard Query [!UICONTROL Templates] tab. Zie de [sjabloondocumentatie](./query-templates.md) voor meer informatie .
 
 ### Hoe te om vorige vragen te vinden {#previous-queries}
 
-Alle query&#39;s uitgevoerd van [!DNL Query Editor] worden vastgelegd in de logbestandentabel. U kunt de zoekfunctionaliteit in het dialoogvenster **[!UICONTROL Log]** om query-uitvoeringen te zoeken. Opgeslagen query&#39;s worden weergegeven in het dialoogvenster **[!UICONTROL Browse]** tab.
+Alle query&#39;s uitgevoerd van [!DNL Query Editor] worden vastgelegd in de logbestandentabel. U kunt de zoekfunctionaliteit in het dialoogvenster **[!UICONTROL Log]** om query-uitvoeringen te zoeken. Opgeslagen query&#39;s worden weergegeven in het dialoogvenster **[!UICONTROL Templates]** tab.
 
 Zie de [Overzicht van Query Service](./overview.md) voor meer informatie .
 
@@ -182,7 +184,7 @@ Zie de [Overzicht van Query Service](./overview.md) voor meer informatie .
 
 ## Vragen uitvoeren met de Query Editor {#executing-queries}
 
-Een query uitvoeren in [!DNL Query Editor], kunt u SQL in de redacteur ingaan of een vorige vraag van laden **[!UICONTROL Log]** of **[!UICONTROL Browse]** en selecteert u **Afspelen**. De status van query-uitvoering wordt weergegeven in het dialoogvenster **[!UICONTROL Console]** en de uitvoergegevens worden weergegeven in het dialoogvenster **[!UICONTROL Results]** tab.
+Een query uitvoeren in [!DNL Query Editor], kunt u SQL in de redacteur ingaan of een vorige vraag van laden **[!UICONTROL Log]** of **[!UICONTROL Templates]** en selecteert u **Afspelen**. De status van query-uitvoering wordt weergegeven in het dialoogvenster **[!UICONTROL Console]** en de uitvoergegevens worden weergegeven in het dialoogvenster **[!UICONTROL Results]** tab.
 
 ### Console {#console}
 
