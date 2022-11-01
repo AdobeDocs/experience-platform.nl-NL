@@ -4,9 +4,9 @@ title: Doeldashboardgids
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2648'
+source-wordcount: '2649'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Voor een overzicht van de bestemmingen en een lijst van alle beschikbare bestemm
 
 ## [!UICONTROL Destinations] dashboardgegevens {#destinations-dashboard-data}
 
-De [!UICONTROL Destinations] het dashboard toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten. De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het dashboard van bestemmingen werkt niet in real time bij.
+Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten. De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het dashboard van bestemmingen werkt niet in real time bij.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ De datum en tijd van de meest recente momentopname worden getoond bij de bovenka
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, [!UICONTROL Destinations] dashboard en [!UICONTROL Overview] zijn niet zichtbaar. In plaats daarvan selecteert u [!UICONTROL Destinations] van de linkernavigatie toont de [!UICONTROL Catalog] tab. Meer informatie over de [!UICONTROL Catalog] tabblad, verwijst naar de [[!UICONTROL Destinations] werkruimtegids](../../destinations/ui/destinations-workspace.md).
+>Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, dashboard van Doelen en [!UICONTROL Overview] zijn niet zichtbaar. In plaats daarvan selecteert u [!UICONTROL Destinations] van de linkernavigatie toont de [!UICONTROL Catalog] tab. Meer informatie over de [!UICONTROL Catalog] tabblad, verwijst naar de [[!UICONTROL Destinations] werkruimtegids](../../destinations/ui/destinations-workspace.md).
 
 ![Het overzicht van de Doelen UI van het Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
 
@@ -120,7 +120,7 @@ De bijgewerkte getoonde datum toont de laatste tijd het segment aan de bestemmin
 
 Als u de naam van een segment selecteert in de lijst die wordt weergegeven op de widget, gaat u naar de segmentdetails. U kunt ook **[!UICONTROL View All]** om aan het segment te navigeren doorbladert lusje en selecteert dan de naam van een segment om zijn details te bekijken.
 
-Voor meer informatie over het werken met segmenten in Experience Platform, gelieve te beginnen door te lezen [Overzicht van segmentatieservice](../../segmentation/home.md).
+Raadpleeg voor meer informatie over het werken met segmenten in Experience Platform de [Overzicht van segmentatieservice](../../segmentation/home.md).
 
 ![Het tabblad Overzicht van het dashboard Doelen met de widget Onlangs geactiveerde segmenten gemarkeerd.](../images/destinations/recently-activated-segments.png)
 
