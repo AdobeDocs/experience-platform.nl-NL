@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
+source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
 workflow-type: tm+mt
-source-wordcount: '1902'
+source-wordcount: '1905'
 ht-degree: 1%
 
 ---
@@ -136,7 +136,7 @@ De [!DNL Profile] opslaggegevensmodel bestaat uit twee kerneenheidstypen:
 
 ### Profielfragmenten
 
-In dit document zijn er verschillende hulplijnen die naar &quot;profielfragmenten&quot; verwijzen. In Experience Platform worden meerdere profielfragmenten samengevoegd tot het realtime klantprofiel. Elk fragment vertegenwoordigt een unieke primaire identiteit en de overeenkomstige record- of gebeurtenisgegevens voor die id binnen een bepaalde gegevensset. Raadpleeg voor meer informatie over profielfragmenten de [Profieloverzicht](home.md#profile-fragments-vs-merged-profiles).
+In dit document zijn er verschillende hulplijnen die naar &quot;profielfragmenten&quot; verwijzen. In Experience Platform worden meerdere profielfragmenten samengevoegd tot het realtime klantprofiel. Elk fragment vertegenwoordigt een unieke primaire identiteit en de corresponderende record of volledige set gebeurtenisgegevens voor die id binnen een bepaalde gegevensset. Raadpleeg voor meer informatie over profielfragmenten de [Profieloverzicht](home.md#profile-fragments-vs-merged-profiles).
 
 ### Beleid samenvoegen {#merge-policies}
 
