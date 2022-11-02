@@ -5,9 +5,9 @@ title: Velden toewijzen voor de Marketo Engage-bron
 topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 ## Activiteiten {#activities}
 
 De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als u standaardactiviteiten wilt gebruiken, moet u het schema bijwerken met de [schema automatisch genereren](../marketo/marketo-namespaces.md) omdat u nieuwe `activities` de gegevensstroom zonder uw schema bij te werken, zal de toewijzingsmalplaatjes ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nieuwe of bijgewerkte velden worden echter niet in het Platform opgenomen.
+
+Zie de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/experienceevent.md) voor meer informatie over de klasse XDM en XDM gebiedsgroep(en).
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -136,6 +138,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 
 ## Programma&#39;s {#programs}
 
+Lees de [Overzicht van XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [Business Campagne Details schema groep](../../../../xdm/field-groups/b2b-campaign/details.md) hulplijn.
+
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -164,6 +168,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 {style=&quot;table-layout:auto&quot;}
 
 ## Lidmaatschap van programma {#program-memberships}
+
+Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne Member Details schema groep](../../../../xdm/field-groups/b2b-campaign-members/details.md) hulplijn.
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -196,6 +202,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 
 ## Bedrijven {#companies}
 
+Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
+
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -226,6 +234,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 
 ## Statische lijsten {#static-lists}
 
+Lees de [Overzicht van XDM Business Marketing List](../../../../xdm/classes/b2b/business-marketing-list.md) voor meer informatie over de klasse XDM.
+
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -241,6 +251,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 {style=&quot;table-layout:auto&quot;}
 
 ## Statische lijstlidmaatschap {#static-list-memberships}
+
+Lees de [Overzicht van leden van XDM Business Marketing List](../../../../xdm/classes/b2b/business-marketing-list-members.md) voor meer informatie over de Klasse XDM.
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -260,6 +272,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 >[!IMPORTANT]
 >
 >De genoemde rekeningen dataset is slechts noodzakelijk met de op rekening-gebaseerde marketing van Marketo (ABM) eigenschap. Als u ABM niet gebruikt, hoeft u geen toewijzingen in te stellen voor benoemde accounts.
+
+Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -286,6 +300,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 {style=&quot;table-layout:auto&quot;}
 
 ## Kansen {#opportunities}
+
+Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -322,6 +338,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 
 ## Contactrollen opportunity {#opportunity-contact-roles}
 
+Lees de [Overzicht van de XDM Business Opportunity Person Relatie](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
+
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -340,6 +358,8 @@ De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als
 {style=&quot;table-layout:auto&quot;}
 
 ## Personen {#persons}
+
+Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Person Details schema, veldgroep](../../../../xdm/field-groups/profile/business-person-details.md) gids en [XDM Business Person Components Schema, veldgroep](../../../../xdm/field-groups/profile/business-person-components.md) hulplijn.
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |

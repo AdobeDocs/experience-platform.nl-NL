@@ -3,10 +3,10 @@ keywords: Experience Platform;home;populaire onderwerpen;Salesforce;salesforce;f
 title: Salesforce-toewijzingsvelden
 description: De onderstaande tabellen bevatten de toewijzingen tussen Salesforce-bronvelden en de bijbehorende XDM-velden.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '494'
+ht-degree: 0%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 1%
 De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronvelden en de bijbehorende XDM-velden (Experience Data Model).
 
 ## Contact {#contact}
+
+Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Person Details schema, veldgroep](../../../../xdm/field-groups/profile/business-person-details.md) gids en [XDM Business Person Components Schema, veldgroep](../../../../xdm/field-groups/profile/business-person-components.md) hulplijn.
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -74,6 +76,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 ## Lood {#lead}
 
+Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Person Details schema, veldgroep](../../../../xdm/field-groups/profile/business-person-details.md) gids en [XDM Business Person Components Schema, veldgroep](../../../../xdm/field-groups/profile/business-person-components.md) hulplijn.
+
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
@@ -122,6 +126,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 {style=&quot;table-layout:auto&quot;}
 
 ## Account {#account}
+
+Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -177,6 +183,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 ## Opportunity {#opportunity}
 
+Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
+
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -216,6 +224,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 ## Contactrol opportunity {#opportunity-contact-role}
 
+Lees de [Overzicht van de XDM Business Opportunity Person Relatie-klasse](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) voor meer informatie over de klasse XDM.
+
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -239,6 +249,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 {style=&quot;table-layout:auto&quot;}
 
 ## Campaign {#campaign}
+
+Lees de [Overzicht van de klasse XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne details schema groep](../../../../xdm/field-groups/b2b-campaign/details.md) hulplijn.
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -269,6 +281,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 ## Campagnelid {#campaign-member}
 
+Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne Member Details schema groep](../../../../xdm/field-groups/b2b-campaign/details.md) document.
+
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -292,6 +306,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 | `Type` | `b2b.personType` |
 
 ## Contactpersoon account {#account-contact-relation}
+
+Lees de [XDM Business Account Person Relatie-klasse](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
 
 | Bronveld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
