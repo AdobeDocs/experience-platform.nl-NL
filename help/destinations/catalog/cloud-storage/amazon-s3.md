@@ -3,18 +3,36 @@ keywords: Amazon S3;S3 doel;s3;amazon s3
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon S3] verbinding {#s3-connection}
 
+## Doelwijziging {#changelog}
+
+>[!IMPORTANT]
+>
+>Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL Amazon S3] kaarten in de lijst met bestemmingen.
+>* Als u al bestanden exporteert naar de **[!UICONTROL Amazon S3]** bestemming: Maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL Amazon S3 beta]** bestemming.
+>* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Amazon S3]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Amazon S3 beta]** kaart om bestanden te exporteren naar **[!UICONTROL Amazon S3]**.
+
+
+![Afbeelding van de twee Amazon S3-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+
+Verbeteringen in de nieuwe [!DNL Amazon S3] bestemmingskaart omvat:
+
+* [Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
+* Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## Overzicht {#overview}
 
-Een live uitgaande verbinding maken met uw [!DNL Amazon Web Services] (AWS) S3-opslag om CSV-gegevensbestanden periodiek van Adobe Experience Platform naar uw eigen S3-emmers te exporteren.
+Een live uitgaande verbinding maken met uw [!DNL Amazon S3] opslag om periodiek gegevensbestanden van Adobe Experience Platform naar uw eigen S3 emmers uit te voeren.
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -110,6 +128,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
+## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
+
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
+
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Amazon S3] bestemmingen, [!DNL Platform] maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor segmentactivering.
+Voor [!DNL Amazon S3] bestemmingen, [!DNL Platform] maakt een gegevensbestand op de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor segmentactivering.

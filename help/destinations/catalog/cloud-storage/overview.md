@@ -3,9 +3,9 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob] en SFTP. Voor [!DNL Amazon Kinesis] en [!DNL Azure Event Hubs] doelen, gegevens worden gestreamd uit Experience Platform in [!DNL JSON] gebruiken.
+Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]en SFTP. Voor [!DNL Amazon Kinesis] en [!DNL Azure Event Hubs] doelen, gegevens worden gestreamd uit Experience Platform in [!DNL JSON] gebruiken.
 
 ![Adobe-cloudopslagbestemmingen](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ Adobe Experience Platform ondersteunt de volgende cloudopslagdoelen:
 * [Amazon Kinesis-verbinding](amazon-kinesis.md)
 * [Amazon S3-verbinding](amazon-s3.md)
 * [Azure Blob-verbinding](azure-blob.md)
+* [(Beta) Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure Event Hubs-verbinding](azure-event-hubs.md)
+* [(Bèta) Data Landing Zone](data-landing-zone.md)
+* [(bèta) Google Cloud Storage](google-cloud-storage.md)
 * [SFTP-verbinding](sftp.md)
 
 ## Verbinding maken met een nieuwe bestemming voor cloudopslag {#connect-destination}

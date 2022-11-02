@@ -3,14 +3,32 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om regelmatig CSV-gegevensbestanden uit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 1%
+source-wordcount: '853'
+ht-degree: 0%
 
 ---
 
 # [!DNL Azure Blob] verbinding
+
+## Doelwijziging {#changelog}
+
+>[!IMPORTANT]
+>
+>Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL Azure Blob] kaarten in de lijst met bestemmingen.
+>* Als u al bestanden exporteert naar de **[!UICONTROL Azure Blob]** bestemming: Maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL Azure Blob beta]** bestemming.
+>* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Azure Blob]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Azure Blob beta]** kaart om bestanden te exporteren naar **[!UICONTROL Azure Blob]**.
+
+
+![Afbeelding van de twee Azure Blob-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+
+Verbeteringen in de nieuwe [!DNL Azure Blob] bestemmingskaart omvat:
+
+* [Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
+* Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## Overzicht {#overview}
 
@@ -89,6 +107,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+
+## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
+
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
 
 ## Geëxporteerde gegevens {#exported-data}
 

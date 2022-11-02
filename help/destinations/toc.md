@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor publicatiecampagnes voor meerdere kanalen, e-mailcampagnes, gerichte advertenties en nog veel meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 5c938f8158cfd16b8904ee1e7f67b6ce66b2e45c
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '985'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 1%
       * [De publieksgegevens van de activering aan de bestemmingen van het profielverzoek](./ui/activate-profile-request-destinations.md)
       * [Vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](./ui/configure-personalization-destinations.md)
       * [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
+      * [(Bèta) de datasets van de uitvoer gebruikend Experience Platform UI](./ui/export-datasets.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
    * [Doelaccounts bijwerken](./ui/update-accounts.md)
    * [Doelaccounts verwijderen](./ui/delete-destination-account.md)
@@ -103,7 +104,10 @@ ht-degree: 1%
       * [Amazon Kinesis-verbinding](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-verbinding](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-verbinding](./catalog/cloud-storage/azure-blob.md)
+      * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure Event Hubs-verbinding](./catalog/cloud-storage/azure-event-hubs.md)
+      * [(Bèta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [(bèta) Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
       * [IP adres lijst van gewenste personen voor wolkenopslagbestemmingen](./catalog/cloud-storage/ip-address-allow-list.md)
    * Klantrelatie Relationship Management (CRM)-bestemmingen {#crm}

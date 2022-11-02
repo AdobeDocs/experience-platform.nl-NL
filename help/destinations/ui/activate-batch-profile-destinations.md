@@ -4,9 +4,9 @@ title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
+source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '3353'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>
+>Sommige klanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden, zien het nieuwe **[!UICONTROL Mapping]** stap als onderdeel van hun activeringsworkflow naar de [nieuwe bètawolopslagbestemmingen](/help/release-notes/2022/october-2022.md#destinations). Let ook op het volgende: [bekende beperkingen](#known-limitations) als onderdeel van de release.
 
 ## Overzicht {#overview}
 
@@ -162,13 +164,13 @@ Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te a
 >title="Bestandsnaam configureren"
 >abstract="Voor op een bestand gebaseerde doelen wordt een unieke bestandsnaam per segment gegenereerd. Met de bestandsnaameditor kunt u een unieke bestandsnaam maken en bewerken of de standaardnaam behouden."
 
-De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen.
+Voor de meeste bestemmingen, bestaan de standaarddossiernamen uit bestemmingsnaam, segmentidentiteitskaart, en een datum en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen. Merk op dat sommige bestemmingsontwikkelaars zouden kunnen selecteren om verschillende standaard dossier te hebben toevoegt opties voor hun bestemmingen worden getoond.
 
 Selecteer het potloodpictogram om een modaal venster te openen en de bestandsnamen te bewerken. Bestandsnamen mogen maximaal 255 tekens bevatten.
 
 >[!NOTE]
 >
->In de onderstaande afbeelding ziet u hoe bestandsnamen kunnen worden bewerkt voor Amazon S3-doelen, maar het proces is identiek voor alle batchbestemmingen (bijvoorbeeld SFTP of Azure Blob Storage).
+>In de onderstaande afbeelding ziet u hoe bestandsnamen kunnen worden bewerkt voor [!DNL Amazon S3] bestemmingen maar het proces is identiek voor alle batchbestemmingen (bijvoorbeeld SFTP); [!DNL Azure Blob Storage], of [!DNL Google Cloud Storage]).
 
 ![Afbeelding die het potloodpictogram markeert. Hiermee worden bestandsnamen geconfigureerd.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
@@ -178,9 +180,17 @@ In de bestandsnaameditor kunt u verschillende componenten selecteren om aan de b
 
 De doelnaam en segment-id kunnen niet uit bestandsnamen worden verwijderd. Naast deze, kunt u het volgende toevoegen:
 
-* **[!UICONTROL Segment name]**: U kunt de segmentnaam aan de bestandsnaam toevoegen.
-* **[!UICONTROL Date and time]**: Selecteer tussen het toevoegen van een `MMDDYYYY_HHMMSS` gebruiken of een Unix 10-cijferige tijdstempel van het tijdstip waarop de bestanden worden gegenereerd. Kies een van deze opties als u voor de bestanden een dynamische bestandsnaam wilt genereren bij elke incrementele exportbewerking.
-* **[!UICONTROL Custom text]**: Voeg aangepaste tekst toe aan de bestandsnamen.
+| Bestandsnaam, optie | Beschrijving |
+|---------|----------|
+| **[!UICONTROL Segment name]** | De naam van het geëxporteerde segment. |
+| **[!UICONTROL Date and time]** | Selecteer tussen het toevoegen van een `MMDDYYYY_HHMMSS` gebruiken of een Unix 10-cijferige tijdstempel van het tijdstip waarop de bestanden worden gegenereerd. Kies een van deze opties als u voor de bestanden een dynamische bestandsnaam wilt genereren bij elke incrementele exportbewerking. |
+| **[!UICONTROL Custom text]** | Alle aangepaste tekst die u aan de bestandsnamen wilt toevoegen. |
+| **[!UICONTROL Destination ID]** | De id van de doelgegevensstroom die u gebruikt om het segment te exporteren. <br> **Opmerking**: Deze optie voor het toevoegen van bestanden is alleen beschikbaar voor bètaklanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden. Neem contact op met uw Adobe-vertegenwoordiger of de klantenservice als u toegang wilt tot het bètaprogramma. |
+| **[!UICONTROL Destination name]** | De naam van de bestemmingsgegevensstroom u gebruikt om het segment uit te voeren. <br> **Opmerking**: Deze optie voor het toevoegen van bestanden is alleen beschikbaar voor bètaklanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden. Neem contact op met uw Adobe-vertegenwoordiger of de klantenservice als u toegang wilt tot het bètaprogramma. |
+| **[!UICONTROL Organization name]** | Uw organisatienaam binnen Experience Platform. <br> **Opmerking**: Deze optie voor het toevoegen van bestanden is alleen beschikbaar voor bètaklanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden. Neem contact op met uw Adobe-vertegenwoordiger of de klantenservice als u toegang wilt tot het bètaprogramma. |
+| **[!UICONTROL Sandbox name]** | De id van de sandbox die u gebruikt om het segment te exporteren. <br> **Opmerking**: Deze optie voor het toevoegen van bestanden is alleen beschikbaar voor bètaklanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden. Neem contact op met uw Adobe-vertegenwoordiger of de klantenservice als u toegang wilt tot het bètaprogramma. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Selecteren **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 
@@ -193,7 +203,6 @@ Nadat u alle segmenten hebt geconfigureerd, selecteert u **[!UICONTROL Next]** o
 ## Profielkenmerken selecteren {#select-attributes}
 
 Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren die u naar de doelbestemming wilt verzenden.
-
 
 1. In de **[!UICONTROL Select attributes]** pagina, selecteert u **[!UICONTROL Add new field]**.
 
@@ -386,6 +395,75 @@ Adobe raadt u aan een naamruimte voor identiteiten te selecteren, zoals een [!DN
 >
 > Als het veld `person.name.firstName` heeft bepaalde etiketten van het gegevensgebruik die met de het op de markt brengen van de bestemming in conflict zijn, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Zie voor meer informatie [Beheer van gegevens in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
+## (bèta) Toewijzing {#mapping}
+
+>[!IMPORTANT]
+> 
+>Selecteer bèta-klanten om een verbeterde **[!UICONTROL Mapping]** stap die de [Profielkenmerken selecteren](#select-attributes) stap hierboven beschreven. Deze nieuwe **[!UICONTROL Mapping]** Met deze stap kunt u de koppen van geëxporteerde bestanden naar de gewenste aangepaste namen bewerken.
+> 
+> De functionaliteit en documentatie kunnen worden gewijzigd. Neem contact op met uw Adobe-vertegenwoordiger of de klantenservice als u toegang wilt tot dit bètaprogramma.
+
+In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de bestanden die naar de doelbestemming zijn geëxporteerd. Profielkenmerken en -identiteiten selecteren voor exporteren:
+
+1. In de **[!UICONTROL Mapping]** pagina, selecteert u **[!UICONTROL Add new field]**.
+
+   ![Voeg nieuwe gebiedscontrole toe die in het kaartwerkschema wordt benadrukt.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
+
+1. Selecteer de pijl rechts van de knop **[!UICONTROL Source field]** vermelding.
+
+   ![Selecteer controle van brongebied die in het kaartwerkschema wordt benadrukt.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+1. In de **[!UICONTROL Select source field]** pagina, selecteert u de profielkenmerken en -identiteiten die u wilt opnemen in de geëxporteerde bestanden naar de bestemming en kiest u **[!UICONTROL Select]**.
+
+   >[!TIP]
+   > 
+   >U kunt het zoekveld gebruiken om de selectie te verkleinen, zoals in de onderstaande afbeelding wordt getoond.
+
+   ![Modal venster met profielkenmerken die kunnen worden geëxporteerd naar de bestemming.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
+
+
+1. Het veld dat u hebt geselecteerd voor export, wordt nu weergegeven in de toewijzingsweergave. Desgewenst kunt u de naam van de koptekst in het geëxporteerde bestand bewerken. Selecteer hiertoe het pictogram in het doelveld.
+
+   ![Modal venster met profielkenmerken die kunnen worden geëxporteerd naar de bestemming.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
+
+1. In de **[!UICONTROL Select target field]** pagina, typt u de gewenste naam van de koptekst in het geëxporteerde bestand en kiest u **[!UICONTROL Select]**.
+
+   ![Het modulaire venster dat een typed-binnen vriendschappelijke naam voor een kopbal toont.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. Het veld dat u hebt geselecteerd voor export, verschijnt nu in de toewijzingsweergave en toont de bewerkte koptekst in het geëxporteerde bestand.
+
+   ![Modal venster met profielkenmerken die kunnen worden geëxporteerd naar de bestemming.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (Optioneel) U kunt het geëxporteerde veld selecteren als een [verplichte sleutel](#mandatory-keys) of [deduplicatiesleutel](#deduplication-keys).
+
+   ![Modal venster met profielkenmerken die kunnen worden geëxporteerd naar de bestemming.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. Herhaal bovenstaande stappen om meer velden voor exporteren toe te voegen.
+
+### Bekende beperkingen {#known-limitations}
+
+De nieuwe **[!UICONTROL Mapping]** De pagina heeft de volgende bekende beperkingen:
+
+#### Het kenmerk Segmentlidmaatschap kan niet worden geselecteerd via de toewijzingsworkflow
+
+Vanwege een bekende beperking kun je momenteel de **[!UICONTROL Select field]** toe te voegen venster `segmentMembership.status` naar uw bestand exporteren. In plaats daarvan moet u de waarde handmatig plakken `xdm: segmentMembership.status` in het schemagebied, zoals hieronder getoond.
+
+![De opname van het scherm die de oplossing van het segmentlidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+
+Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmentMembership.status` is geselecteerd:
+* Als de `segmentMembership.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
+* Als de `segmentMembership.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
+
+#### Naamruimten kunnen momenteel niet worden geselecteerd voor exporteren
+
+Het selecteren van naamruimten voor exporteren, zoals wordt weergegeven in de onderstaande afbeelding, wordt momenteel niet ondersteund. Als u naamruimten selecteert die u wilt exporteren, wordt een fout weergegeven in het dialoogvenster **[!UICONTROL Review]** stap.
+
+![Niet-ondersteunde toewijzing van identiteitsuitvoer](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+
+Als tijdelijke oplossing kunt u:
+* Gebruik de oude opslagdoelen van de cloud voor de dataflows waar u naamruimten wilt opnemen in de exportbewerkingen
+* Upload identiteiten als attributen in Experience Platform, dan voer hen naar uw bestemmingen van de wolkenopslag uit.
+
 ## Controleren {#review}
 
 Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selecteren **[!UICONTROL Cancel]** om de stroom op te delen, **[!UICONTROL Back]** om uw instellingen te wijzigen, of **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
@@ -402,11 +480,10 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Fi
 
 ## Segmentactivering verifiëren {#verify}
 
-
-Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een `.csv` in de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De standaardbestandsindeling is:
+Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een `.csv` in de opslaglocatie die u hebt opgegeven. Er wordt een nieuw bestand verwacht dat op uw opslaglocatie wordt gemaakt volgens het schema dat u instelt in de workflow. De standaardbestandsindeling is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-De bestanden die u op drie opeenvolgende dagen ontvangt, kunnen er als volgt uitzien:
+Als u bijvoorbeeld een dagelijkse exportfrequentie selecteert, kunnen de bestanden die u op drie opeenvolgende dagen ontvangt er als volgt uitzien:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv

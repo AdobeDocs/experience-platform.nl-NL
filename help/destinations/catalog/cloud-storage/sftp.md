@@ -3,14 +3,32 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '794'
 ht-degree: 0%
 
 ---
 
 # SFTP-verbinding
+
+## Doelwijziging {#changelog}
+
+>[!IMPORTANT]
+>
+>Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL SFTP] kaarten in de lijst met bestemmingen.
+>* Als u al bestanden exporteert naar de **[!UICONTROL SFTP]** bestemming: Maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL SFTP beta]** bestemming.
+>* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL SFTP]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL SFTP beta]** kaart om bestanden te exporteren naar **[!UICONTROL SFTP]**.
+
+
+![Afbeelding van de twee SFTP-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+
+Verbeteringen in de nieuwe [!DNL SFTP] bestemmingskaart omvat:
+
+* [Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
+* Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## Overzicht {#overview}
 
@@ -18,7 +36,7 @@ Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbest
 
 >[!IMPORTANT]
 >
-> Hoewel Experience Platform gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen locaties voor cloudopslag voor het exporteren van gegevens: [!DNL Amazon S3] en [!DNL Azure Blob].
+> Hoewel Experience Platform gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen locaties voor cloudopslag voor het exporteren van gegevens: [!DNL Amazon S3] en [!DNL SFTP].
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -95,6 +113,10 @@ Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+
+## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
+
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
 
 ## Geëxporteerde gegevens {#exported-data}
 
