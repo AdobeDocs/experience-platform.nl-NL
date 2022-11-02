@@ -3,9 +3,9 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,12 @@ Meer informatie over hoe [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina
 In de onderstaande video worden de bijzonderheden van de twee soorten doelen uitgelegd:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## (bèta) Dataset exportbestemmingen {#dataset-export-destinations}
+
+Sommige bestemmingen van de wolkenopslag in de catalogus van bestemmingen steunen dataset de uitvoer. Gebruik deze doelen om onbewerkte gegevenssets te exporteren naar opslaglocaties in de cloud.
+
+Meer informatie over hoe [exportgegevenssets](/help/destinations/ui/export-datasets.md).
 
 ## Extensies {#extensions}
 

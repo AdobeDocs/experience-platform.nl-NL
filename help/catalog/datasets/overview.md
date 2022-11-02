@@ -5,9 +5,9 @@ title: Overzicht van gegevenssets
 topic-legacy: datasets
 description: Dit document verstrekt een overzicht op hoog niveau van datasets in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,7 @@ Hieronder volgt een lijst met downstreamservices die gegevenssets gebruiken voor
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Hiermee kunt u segmenten samenstellen en soorten publiek genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze doelgroepen kunnen vervolgens naar hun eigen gegevensbestanden worden geëxporteerd binnen de [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Gebruikt machinaal leren en kunstmatige intelligentie om inzichten in grote datasets te ontdekken.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Hiermee kunt u standaard-SQL gebruiken om gegevens op te vragen in [!DNL Experience Platform], worden alle gegevenssets binnen de [!DNL Data Lake] en het vangen van vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Science Workspace], of [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform-bestemmingsservice](../../destinations/home.md): Hiermee kunt u [exportgegevenssets](/help/destinations/ui/export-datasets.md) naar uw gewenste locatie voor cloudopslag of e-mailmarketing, voor rapportage of gegevenswetenschappelijke activiteiten.
 
 ## Volgende stappen
 

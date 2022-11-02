@@ -3,9 +3,9 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
+source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1108'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Selecteer in Adobe Experience Platform **[!UICONTROL Destinations]** van de link
 
 De [!UICONTROL Destinations] de werkruimte bestaat uit vijf secties, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], en [!UICONTROL System View], zoals beschreven in de onderstaande punten.
 
-![Overzicht van bestemmingen](../assets/ui/workspace/destinations-overview.png)
+![Het dashboard met het overzicht van bestemmingen bevat drie widgets.](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Overview] {#overview}
 
@@ -37,16 +37,18 @@ De [!DNL Platform] De gebruikersinterface verstrekt verscheidene onderzoek en fi
 * Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
 * Doelen filteren met de opdracht [!UICONTROL Categories] controle.
 * Schakelen tussen [!UICONTROL All destinations] en [!UICONTROL My destinations]. Wanneer u **[!UICONTROL All destinations]**, alle beschikbare [!DNL Platform] doelen worden weergegeven. Wanneer u **[!UICONTROL My destinations]**, kunt u alleen de doelen zien waarmee u een verbinding hebt gemaakt.
-* Selecteren voor weergave **[!UICONTROL Connections]** en/of **[!UICONTROL Extensions]**. Om het verschil tussen de twee categorieën te begrijpen, zie [Doeltypen en -categorieën](../destination-types.md).
+* Selecteer deze optie om de **[!UICONTROL Connections]** en/of **[!UICONTROL Extensions]** typen. Als u het verschil tussen de twee categorieën wilt begrijpen, leest u [Doeltypen en -categorieën](../destination-types.md).
 
-![Catalogus](../assets/ui/workspace/catalog.png)
+![De catalogus van bestemmingen die een paar reclame en wolkenopslagbestemmingen toont.](../assets/ui/workspace/catalog.png)
 
-De doelkaarten bevatten een van de **[!UICONTROL Set up]** of **[!UICONTROL Activate segments]** controle, en een secundaire controle die meer opties omhoog brengt. Deze besturingselementen worden hieronder beschreven:
+De bestemmingskaarten bevatten primaire en secundaire controleopties. De primaire besturingselementen omvatten: [!UICONTROL Set up], [!UICONTROL Activate], [!UICONTROL Activate segments], of [!UICONTROL Export datasets]. Met de secundaire besturingselementen kunt u opties weergeven. Deze besturingselementen worden hieronder beschreven:
 
 | Control | Beschrijving |
 |---------|----------|
 | [!UICONTROL Set up] | Hiermee kunt u verbinding maken met het doel. |
-| [!UICONTROL Activate segments] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten activeren. |
+| [!UICONTROL Activate] | Zodra u een verbinding aan de bestemming hebt gevestigd, kunt u segmenten activeren of datasets uitvoeren aan deze bestemming. |
+| [!UICONTROL Activate segments] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten naar deze bestemming activeren. |
+| [!UICONTROL Export datasets] | Zodra u een verbinding aan de bestemming hebt gevestigd, kunt u datasets naar deze bestemming uitvoeren. |
 | [!UICONTROL View account] | Bekijk de accounts waarmee u verbinding hebt gemaakt voor een bestemming. |
 | [!UICONTROL View dataflows] | Bekijk de gegevensactiveringsstromen die voor een bestemming bestaan. |
 | [!UICONTROL View documentation] | Opent een verbinding aan de documentatiepagina voor die specifieke bestemming, voor meer informatie en om u te helpen opstelling het. |
@@ -67,9 +69,9 @@ De **[!UICONTROL Accounts]** bevat details over de verbindingen die u hebt gemaa
 
 >[!TIP]
 >
-> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Platform] en gebruikt u de ![Knop Segmenten activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]**om segmenten naar dat doel te verzenden.
-> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Platform] en gebruikt u de ![Knop Details bewerken ](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]**knop aan [update](update-accounts.md) de details van een bestaande bestemmingsrekening.
-> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Platform] en gebruikt u de ![Knop Verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**knop aan [delete](delete-destination-account.md) een bestaande bestemmingsrekening.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Platform] en gebruikt u de ![Besturingselement activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate segments]**/**[!UICONTROL Export datasets]**controle om segmenten of datasets naar die bestemming uit te voeren.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Platform] en gebruikt u de ![Detailbesturingselement bewerken ](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]**controle op [update](update-accounts.md) de details van een bestaande bestemmingsrekening.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Platform] en gebruikt u de ![Besturingselement verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**controle op [delete](delete-destination-account.md) een bestaande bestemmingsrekening.
 
 
 ![Het tabblad Accounts](../assets/ui/workspace/destination-account-options.png)
@@ -90,10 +92,10 @@ De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt g
 
 >[!TIP]
 >
-> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Knop Segmenten activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]**om segmenten naar dat doel te verzenden.
-> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Knop Verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**knop aan [remove](delete-destinations.md) een bestaande verbinding met een doel.
-> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Weergeven in controleknop ](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]**om activeringsinformatie voor dit doel weer te geven in het dialoogvenster [controledashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] en gebruikt u de ![Abonneren op waarschuwingen ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]**knop voor abonneren op waarschuwingen over doelgegevensstroom. U kunt zich op alarm intekenen om berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen. Zie [Abonneren op in-context-bestemmingswaarschuwingen](alerts.md) voor gedetailleerde informatie over waarschuwingen over bestemmingsgegevensstroom.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Segmentbesturingselement activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**controle om segmenten of datasets naar die bestemming uit te voeren.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Besturingselement verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**controle op [remove](delete-destinations.md) een bestaande verbinding met een doel.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Weergeven in controle ](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]**besturingselement voor weergave van activeringsinformatie voor deze bestemming in het dialoogvenster [controledashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Abonneren op waarschuwingen ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]**controle om aan bestemmingsgegevensstroomalarm in te schrijven. U kunt zich op alarm intekenen om berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen. Zie [Abonneren op in-context-bestemmingswaarschuwingen](alerts.md) voor gedetailleerde informatie over waarschuwingen over bestemmingsgegevensstroom.
 
 
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
