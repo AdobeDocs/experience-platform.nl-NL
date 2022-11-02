@@ -5,9 +5,9 @@ title: API-handleiding voor query-service
 topic-legacy: query templates
 description: Met de API van de Query Service kunnen ontwikkelaars hun Adobe Experience Platform-gegevens opvragen met behulp van standaard SQL. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -55,6 +55,7 @@ Nu u begrijpt welke kopballen aan gebruik zijn, bent u bereid beginnen het richt
 - [Geplande query&#39;s](scheduled-queries.md)
 - [Runs voor geplande vragen](runs-scheduled-queries.md)
 - [Zoeksjablonen](query-templates.md)
+- [Versnelde query&#39;s](./accelerated-queries.md)
 - [Waarschuwingsabonnementen](./alert-subscriptions.md)
 
 ## Volgende stappen
