@@ -2,7 +2,7 @@
 title: (bèta) [!DNL Google Ad Manager 360] verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '876'
 ht-degree: 0%
@@ -62,8 +62,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >
 >Google heeft het proces vereenvoudigd om externe publieksbeheerplatforms te verbinden met Google Ad Manager 360. U kunt nu het proces doorlopen om op zelfbediening een koppeling te maken naar Google Ad Manager 360. Lezen [Segmenten van platforms voor gegevensbeheer](https://support.google.com/admanager/answer/3289669?hl=en) in de documentatie van Google. Je moet de onderstaande id&#39;s laten weergeven.
 
-* **Account-id**: De account-id van Adobe met Google. Account-id: 87933855.
-* **Klant-id**: De klant-id van Adobe met Google. Klant-id: 89690775.
+* **Account-id**: Adobe-id met Google. Account-id: 87933855.
+* **Klant-id**: Adobe-id met Google. Klant-id: 89690775.
 * **Netwerkcode**: Dit is uw [!DNL Google Ad Manager] netwerk-id, gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface en in de URL.
 * **Koppeling-id voor publiek**: Dit is een specifieke id die aan uw [!DNL Google Ad Manager] netwerk (niet uw [!DNL Network code]), ook gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface.
 * Je accounttype. DFP door Google of AdX koper.
@@ -81,7 +81,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] aan Platform.
-* **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met een basiscodering van 64 tekens die wordt gebruikt voor de verificatie van uw [!DNL Google Cloud Storage] aan Platform.
+* **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met als basiscode 64-codering die wordt gebruikt voor de verificatie van uw [!DNL Google Cloud Storage] aan Platform.
 
 Voor meer informatie over deze waarden raadpleegt u de [HMAC-sleutels voor Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) hulplijn. Raadpleeg voor meer informatie over het genereren van uw eigen toegangstoets-id en geheime toegangstoets de [[!DNL Google Cloud Storage] bronoverzicht](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 

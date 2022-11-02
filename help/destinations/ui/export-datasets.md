@@ -2,9 +2,9 @@
 title: (bèta) Datasets exporteren naar Cloud Storage-doelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,11 @@ Gebruik de controlevakjes links van de datasetnamen om de datasets te selecteren
 ![De de uitvoerwerkschema van de gegevensset die de Uitgezochte datasetstap tonen waar u kunt selecteren welke datasets aan uitvoer.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Gegevensexport voor schema {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Exportopties voor bestanden voor gegevenssets"
+>abstract="Selecteren **Incrementele bestanden exporteren** om alleen de gegevens te exporteren die sinds de laatste export aan de gegevensset zijn toegevoegd. <br> De eerste incrementele bestandsuitvoer bevat alle gegevens in de gegevensset, die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de gegevens die sinds de eerste export aan de gegevensset zijn toegevoegd."
 
 In de **[!UICONTROL Scheduling]** stap, kunt u een begindatum evenals een uitvoerkadentie voor uw datasetuitvoer plaatsen.
 
