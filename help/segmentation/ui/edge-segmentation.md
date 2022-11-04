@@ -5,9 +5,9 @@ title: gebruikersgids voor Edge Segmentation
 topic-legacy: ui guide
 description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 75583d9688f0c5ee0fe4627ce64b5436ca621aa1
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -58,3 +58,11 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 ## Volgende stappen
 
 In deze handleiding wordt uitgelegd hoe u segmenten met randsegmentatie op Adobe Experience Platform kunt evalueren. Voor meer informatie over het gebruik van de gebruikersinterface van het Experience Platform leest u de [Gebruikershandleiding voor segmentatie](./overview.md). Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmenten met Experience Platform-API&#39;s naar de [hulplijn voor Edge-segmentatie-API](../api/edge-segmentation.md).
+
+## Aanhangsel
+
+In de volgende sectie worden veelgestelde vragen over de segmentatie van randen weergegeven:
+
+### Hoe lang duurt het voor een segment beschikbaar is op het Edge-netwerk?
+
+Het duurt tot één uur voor een segment beschikbaar is in het Edge-netwerk.
