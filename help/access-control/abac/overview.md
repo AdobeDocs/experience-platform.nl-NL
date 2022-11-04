@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1777'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,18 @@ De volgende secties verstrekken informatie over hoe op attribuut-gebaseerde toeg
 ### Toegangsbeheer
 
 Platform gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer. Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u toestemmingen op Adobe Experience Cloud, in plaats van de Profielen van het Product in Adobe Admin Console beginnen te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
+
+Er is beperkte beschikbaarheid voor op attribuut-gebaseerde toegangsbeheer voor klanten die Gezondheidszorg en/of de Schilden van de Privacy kopen. De functies van deze functionaliteit zijn onder andere:
+
+* Machtigingsinterface: Verstrekt een interface voor u om gebruikersrollen, toestemmingen en beleid voor op attributen-gebaseerd toegangsbeheer te bepalen.
+
+* Etikettering: Voeg, geef, verwijder etiketten aan gebruikersrollen, schemagebieden, segmenten, en andere gesteunde voorwerpen toe, om het beleid van de toegangscontrole te hefboomwerking.
+
+De beleidswerkschema&#39;s voor alle Experience Platform-aangedreven toepassingen van Admin Console aan de nieuwe interface van Toestemmingen worden geschakeld.
+
+>[!IMPORTANT]
+>
+>Uw productprofielen worden automatisch gemigreerd naar de interface voor machtigingen als uw organisatie is ingeschakeld. De productprofielen in Admin Console blijven op dit moment ongewijzigd. Gelieve **niet** pas uw productprofielen aan nadat uw organisatie is toegelaten.
 
 Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../home.md).
 

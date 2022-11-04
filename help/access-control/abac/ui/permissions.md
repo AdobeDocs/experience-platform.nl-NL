@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -147,9 +147,21 @@ Als u een gebruikersgroep uit een rol wilt verwijderen, selecteert u de **X** na
 
 De **[!UICONTROL Remove user group]** wordt weergegeven en u wordt gevraagd het verwijderen te bevestigen.
 
-![flash-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flash-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 U wordt teruggestuurd naar de **[!UICONTROL User groups]** tab.
+
+## Gebruikers aan Experience Platform toevoegen via een productprofiel
+
+Als u een gebruiker aan een productprofiel wilt toevoegen, meldt u zich aan bij de Admin Console en selecteert u **[!UICONTROL Add users]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+De **[!UICONTROL Add users to your team]** wordt weergegeven. Voer het e-mailadres, de voornaam (optioneel) en de achternaam (optioneel) van de gebruiker in.
+
+Selecteer het potloodpictogram om producten en gebruikersgroepen te selecteren. Selecteer **[!UICONTROL Adobe Exoerience Platform]** selecteert u vervolgens **[!UICONTROL AEP-Default-All-Users]** selecteert u vervolgens  **[!UICONTROL Save]**.
+
+![productprofiel](../../images/flac-ui/product-profile.png)
 
 ## Volgende stappen
 
