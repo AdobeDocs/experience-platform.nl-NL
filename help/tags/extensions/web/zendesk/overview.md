@@ -1,7 +1,8 @@
 ---
 title: Zendesk event forward extension
 description: Zendesk event forward extension for Adobe Experience Platform.
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 3%
@@ -53,7 +54,7 @@ Onder **[!UICONTROL Zendesk Domain]**, voert u de waarde in voor uw Zendesk-subd
 
 ## Vorm een gebeurtenis door:sturen regel
 
-Begin creërend een nieuwe gebeurtenis door:sturen regel [regel](../../../ui/managing-resources/rules.md) en configureer de voorwaarden naar wens. Selecteer bij het selecteren van de handelingen voor de regel de optie [!UICONTROL Splunk] en selecteert u vervolgens de extensie [!UICONTROL Create Event] actietype.
+Begin creërend een nieuwe gebeurtenis door:sturen regel [regel](../../../ui/managing-resources/rules.md) en configureer de voorwaarden naar wens. Selecteer bij het selecteren van de handelingen voor de regel de optie [!UICONTROL Zendesk] en selecteert u vervolgens de extensie [!UICONTROL Create Event] actietype.
 
 ![Regel definiëren](../../../images/extensions/zendesk/rule.png)
 

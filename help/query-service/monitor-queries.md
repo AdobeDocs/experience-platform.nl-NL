@@ -1,18 +1,15 @@
 ---
 title: Beeldschermquery's
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
 
-# Bewaking van query&#39;s (beperkte release)
-
->[!IMPORTANT]
->
->Deze functie is momenteel een beperkte release en is alleen beschikbaar voor een klein aantal klanten.
+# Bewakingsvragen
 
 Adobe Experience Platform biedt een verbeterde zichtbaarheid voor de status van alle querytaken via de gebruikersinterface. Van [!UICONTROL Scheduled Queries] kunt u belangrijke informatie over uw vraaglooppas nu vinden die de status, planningsdetails, en foutenmeldingen/codes omvat indien zij ontbreken. U kunt aan alarm voor vragen ook intekenen die op hun status door UI voor om het even welk van deze vragen worden gebaseerd door [!UICONTROL Scheduled Queries] tab.
 
@@ -126,4 +123,3 @@ U kunt de SQL-query van deze weergave naar het klembord kopiëren. Selecteer het
 Selecteren **[!UICONTROL Query]** om terug te keren naar het scherm met planningsdetails, of **[!UICONTROL Scheduled Queries]** om terug te keren naar de [!UICONTROL Scheduled Queries] tab.
 
 ![Het scherm met details van de looppas met benadrukte Vraag.](./images/monitor-queries/return-navigation.png)
-
