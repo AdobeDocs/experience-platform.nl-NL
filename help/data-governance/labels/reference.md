@@ -5,9 +5,9 @@ title: Woordenlijst met gegevensgebruikslabels
 topic-legacy: labels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
+source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2117'
 ht-degree: 1%
 
 ---
@@ -30,17 +30,18 @@ De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te catego
 
 | Label | Definitie |
 | --- | --- |
-| **C1** | Gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerde vorm, zonder individuele of apparaat-id&#39;s. [Meer informatie...](#c1) |
-| **C2** | Gegevens kunnen niet naar derden worden geëxporteerd. [Meer informatie...](#c2) |
-| **C3** | Gegevens kunnen niet met rechtstreeks identificeerbare informatie worden gecombineerd of anderszins worden gebruikt. [Meer informatie...](#c3) |
-| **C4** | Gegevens kunnen niet worden gebruikt voor advertenties of inhoud die on-site of intersite zijn. [Meer informatie...](#c4) |
-| **C5** | Gegevens kunnen niet worden gebruikt voor op rente gebaseerde, cross-site gerichte adressering van inhoud of advertenties. [Meer informatie...](#c5) |
-| **C6** | Gegevens kunnen niet worden gebruikt voor on-site advertenties. [Meer informatie...](#c6) |
-| **C7** | Gegevens kunnen niet worden gebruikt voor het on-site maken van inhoud. [Meer informatie...](#c7) |
-| **C8** | Gegevens kunnen niet worden gebruikt voor het meten van de websites of apps van uw organisatie. [Meer informatie...](#c8) |
-| **C9** | Gegevens kunnen niet worden gebruikt in Data Science-workflows. [Meer informatie...](#c9) |
-| **C10** | Gegevens kunnen niet worden gebruikt voor activering van een gestikte identiteit. [Meer informatie...](#c10) |
-| **C11** | De gegevens kunnen niet met de partners van de Aanpassing van het Segment worden gedeeld. [Meer informatie...](#c11) |
+| [C1](#c1) | Gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerde vorm, zonder individuele of apparaat-id&#39;s. |
+| [C2](#c2) | Gegevens kunnen niet naar derden worden geëxporteerd. |
+| [C3](#c3) | Gegevens kunnen niet met rechtstreeks identificeerbare informatie worden gecombineerd of anderszins worden gebruikt. |
+| [C4](#c4) | Gegevens kunnen niet worden gebruikt voor advertenties of inhoud die on-site of intersite zijn. |
+| [C5](#c5) | Gegevens kunnen niet worden gebruikt voor op rente gebaseerde, cross-site gerichte adressering van inhoud of advertenties. |
+| [C6](#c6) | Gegevens kunnen niet worden gebruikt voor on-site advertenties. |
+| [C7](#c7) | Gegevens kunnen niet worden gebruikt voor het on-site maken van inhoud. |
+| [C8](#c8) | Gegevens kunnen niet worden gebruikt voor het meten van de websites of apps van uw organisatie. |
+| [C9](#c9) | Gegevens kunnen niet worden gebruikt in Data Science-workflows. |
+| [C10](#c10) | Gegevens kunnen niet worden gebruikt voor activering van een gestikte identiteit. |
+| [C11](#c11) | De gegevens kunnen niet met de partners van de Aanpassing van het Segment worden gedeeld. |
+| [C12](#c12) | Gegevens kunnen op geen enkele manier worden geëxporteerd. |
 
 ## Identiteitslabels
 
@@ -78,7 +79,7 @@ Sommige gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd i
 
 #### C2 {#c2}
 
-Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. Het C2-label is restrictiever dan [C1](#c1), waarvoor alleen aggregatie en anonieme gegevens vereist zijn.
+Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. Het C2-label is restrictiever dan [C1](#c1), waarvoor alleen aggregatie en anonieme gegevens vereist zijn, maar die minder restrictief zijn dan [C12](#c12), waardoor gegevens volledig worden geëxporteerd, ongeacht de bestemming.
 
 #### C3 {#c3}
 
@@ -86,7 +87,7 @@ Sommige gegevensleveranciers hebben bedingen in hun contracten die het combinere
 
 #### C4 {#c4}
 
-C4 is het meest beperkende etiket - het omvat etiketten [C5](#c5), [C6](#c6), en [C7](#c7).
+C4 omvat labels [C5](#c5), [C6](#c6), en [C7](#c7). Het is een van de meest beperkende labels, op de tweede plaats [C12](#c12).
 
 #### C5 {#c5}
 
@@ -139,3 +140,7 @@ Sommige beleidsregels voor gegevensgebruik beperken het gebruik van verankerde i
 #### C11 {#c11}
 
 Met Adobe Experience Platform Segment Match kunt u eersteklas segmenten afstemmen op privacy- en toestemmingsvoorkeuren, waardoor beter ontwikkelde profielen en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
+
+#### C12 {#c12}
+
+Gegevens met dit label kunnen op geen enkele manier uit het Platform worden geëxporteerd. Velden met het label C12 zijn uitgesloten van CSV-downloads, API-verbruik en activeringsworkflows.
