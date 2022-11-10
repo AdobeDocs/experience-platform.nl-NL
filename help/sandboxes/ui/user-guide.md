@@ -5,10 +5,10 @@ title: Gebruiksaanwijzing voor sandbox
 topic-legacy: user guide
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 0%
+source-wordcount: '796'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,17 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u g
 
 ![sandbox-changed](../images/ui/sandbox-switched.png)
 
-## Een nieuwe sandbox maken
+## Een nieuwe sandbox maken {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Naam sandbox"
+>abstract="De naam van de sandbox is de tekst die aan de achterkant wordt gebruikt om een unieke id voor deze sandbox te maken."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Sandbox-titel"
+>abstract="De sandboxtitel is de weergavenaam die de sandbox in menu&#39;s en vervolgkeuzelijsten in de gehele interface van het Experience Platform vertegenwoordigt."
 
 >[!NOTE]
 >
@@ -68,7 +78,7 @@ Als u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe san
 
 >[!WARNING]
 >
->Hieronder volgt een lijst met uitzonderingen die kunnen voorkomen dat u de standaardproductiessandbox of een door de gebruiker gemaakte productiesandbox opnieuw instelt: <ul><li>De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) gebruiken.</li><li>De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>De standaardproductiefandbox kan niet worden opnieuw ingesteld als het gegevens voor zowel eigenschappen CDA als PBD bevat.</li><li>Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of de Dienst van de Kern van de Audience kan na een waarschuwingsbericht worden teruggesteld.</li></ul>
+>Hieronder volgt een lijst met uitzonderingen die kunnen voorkomen dat u de standaardproductiessandbox of een door de gebruiker gemaakte productiesandbox opnieuw instelt: <ul><li>De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) gebruiken.</li><li>De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl).</li><li>De standaardproductiefandbox kan niet worden opnieuw ingesteld als het gegevens voor zowel eigenschappen CDA als PBD bevat.</li><li>Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of de Dienst van de Kern van de Audience kan na een waarschuwingsbericht worden teruggesteld.</li></ul>
 
 Als u een productie- of ontwikkelingssandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
 

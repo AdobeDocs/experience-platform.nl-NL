@@ -2,9 +2,9 @@
 title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in UI te vormen voor authentiek te verklaren aan eindpunten die in gebeurtenis worden gebruikt door:sturen eigenschappen.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ Deze gids veronderstelt dat u reeds vertrouwd met bent hoe te om middelen voor m
 U hebt ook een goed inzicht in de publicatiestroom voor tags en het doorsturen van gebeurtenissen, inclusief hoe u bronnen aan een bibliotheek kunt toevoegen en een build op uw website kunt installeren om deze te testen. Zie de [publicatieoverzicht](../publishing/overview.md) voor meer informatie .
 
 ## Een geheim maken {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Omgevingen voor geheimen"
+>abstract="Opdat een geheim door gebeurtenis te gebruiken door:sturen, moet het aan een bestaand milieu worden toegewezen. Als u geen milieu&#39;s hebt die voor uw gebeurtenis door:sturen bezit worden gecreeerd, moet u hen vormen alvorens verder te gaan."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Overzicht van omgevingen"
 
 Als u een geheim wilt maken, selecteert u **[!UICONTROL Event Forwarding]** in de linkernavigatie, dan open de gebeurtenis die bezit door:sturen u het geheim onder wilt toevoegen. Selecteer vervolgens **[!UICONTROL Secrets]** in de linkernavigatie, gevolgd door **[!UICONTROL Create New Secret]**.
 

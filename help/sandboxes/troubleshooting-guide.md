@@ -5,10 +5,10 @@ title: Handleiding voor probleemoplossing voor sandboxen
 topic-legacy: troubleshooting guide
 description: Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 0%
+source-wordcount: '857'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,13 @@ Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virt
 
 Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie de [sandboxen, overzicht](home.md) voor meer informatie .
 
-## Welke typen sandboxen zijn beschikbaar en wat zijn de verschillen tussen deze typen?
+## Welke typen sandboxen zijn beschikbaar en wat zijn de verschillen tussen deze typen? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Sandbox-type"
+>abstract="Het type sandbox geeft aan of dit een productie- of ontwikkelingssandbox is. Productiesandboxen omvatten actieve gegevens- en ontwikkelingssandboxen die worden gebruikt voor testen en ontwikkelen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Een sandbox maken in de gebruikersinterface"
 
 Het Experience Platform bevat twee sandboxtypen:
 
@@ -48,7 +54,7 @@ Een instantie van het Experience Platform steunt veelvoudige productie en ontwik
 
 Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal.
 
-De zandbakken van de productie kunnen worden teruggesteld of worden geschrapt, behalve productie zandbakken die ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) -functie, of als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) gebruiken.
+De zandbakken van de productie kunnen worden teruggesteld of worden geschrapt, behalve productie zandbakken die ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) -functie, of als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) gebruiken.
 
 U kunt de titel van een productiesandbox bijwerken. De naam van een productiesandbox kan echter niet worden gewijzigd.
 

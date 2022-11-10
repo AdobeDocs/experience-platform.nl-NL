@@ -5,14 +5,19 @@ title: Overzicht van beleidsregels voor gegevensgebruik
 topic-legacy: policies
 description: Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen het Experience Platform, of dat u er een beperking voor hebt.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
 
-# Overzicht van beleidsregels voor gegevensgebruik
+# Overzicht van beleidsregels voor gegevensgebruik {#policies-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="Gegevensgebruik beperken"
+>abstract="Het beleidstype voor gegevensgebruik evalueert specifieke marketingacties die worden toegepast op labels voor gegevensbeheer om het gegevensgebruik voor marketingactiviteiten te beperken."
 
 Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen mag uitvoeren [!DNL Experience Platform].
 
@@ -20,6 +25,10 @@ Er zijn twee soorten beleid beschikbaar:
 
 * **[!UICONTROL Data governance policy]**: Beperk de gegevensactivering op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de betrokken gegevens worden meegevoerd.
 * **[!UICONTROL Consent policy]**: De profielen filteren waarop kan worden geactiveerd [bestemmingen](../../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten
+
+>[!NOTE]
+>
+>Beleid voor gegevensgebruik mag niet worden verward met [toegangsbeheerbeleid](../../access-control/abac/end-to-end-guide.md#policy), die bepalen of bepaalde gebruikers van het Platform in uw organisatie tot bepaalde gegevensgebieden kunnen toegang hebben, en gevormd door [!UICONTROL Permissions] tab.
 
 Dit document biedt een overzicht op hoog niveau van het beleid voor gegevensgebruik en bevat koppelingen naar verdere documentatie voor het werken met het beleid in de gebruikersinterface of de API.
 

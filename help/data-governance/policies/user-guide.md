@@ -5,9 +5,9 @@ title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1345'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,12 @@ Het beleid van de goedkeuring bestaat uit twee logische componenten:
 * **[!UICONTROL If]**: De voorwaarde die de beleidscontrole zal teweegbrengen. Dit kan gebaseerd zijn op een bepaalde marketingactie die wordt uitgevoerd, de aanwezigheid van bepaalde labels voor gegevensgebruik of een combinatie van beide.
 * **[!UICONTROL Then]**: De toestemmingskenmerken die aanwezig moeten zijn opdat een profiel wordt opgenomen in de actie die het beleid heeft geïnitieerd.
 
-#### Voorwaarden configureren
+#### Voorwaarden configureren {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="Indien voorwaarde"
+>abstract="Begin door de voorwaarden te bepalen die de beleidscontrole zullen teweegbrengen. Voorwaarden kunnen bestaan uit bepaalde marketingacties, bepaalde etiketten voor gegevensbeheer of een combinatie van beide."
 
 Onder de **[!UICONTROL If]** selecteert u de marketingacties en/of labels voor gegevensgebruik die dit beleid moeten activeren. Selecteren **[!UICONTROL View all]** en **[!UICONTROL Select labels]** de volledige lijsten van de beschikbare marketingacties en etiketten te bekijken.
 
@@ -108,7 +113,12 @@ Als u meer dan één voorwaarde selecteert, kunt u het pictogram gebruiken dat t
 
 ![](../images/policies/and-or-selection.png)
 
-#### Goedkeuringskenmerken selecteren
+#### Goedkeuringskenmerken selecteren {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Dan voorwaarde"
+>abstract="Zodra uw &quot;als&quot;voorwaarde is bepaald, gebruik de sectie &quot;toen&quot;om minstens één toestemmingsattribuut van het unieschema te selecteren. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is."
 
 Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
 
