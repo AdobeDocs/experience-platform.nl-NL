@@ -1,7 +1,8 @@
 ---
 title: (bèta) Adobe Commerce-bestemmingsconnector
 description: Leer hoe verkopers van Adobe Commerce en Real-Time CDP de winkelervaring kunnen aanpassen door zeer relevante site-inhoud en -promoties te leveren, aangepast aan klantsegmenten die in Real-Time CDP zijn gemaakt en beheerd.
-source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
+source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 1%
@@ -42,7 +43,7 @@ Bètaklanten moeten toegang hebben tot:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
-- [Adobe Commerce Cloud versie 2.4.3 of hoger](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud versie 2.4.4 of hoger](https://business.adobe.com/products/magento/magento-commerce.html)
 
 In Experience Platform, creeer het volgende:
 
