@@ -2,9 +2,9 @@
 title: Bladeren in werkorders voor gegevenshygiëne
 description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Aantal identiteiten"
->abstract="Het aantal identiteiten waarvoor is gevraagd dat ze in deze werkorder moeten worden verwijderd. De in de telling opgenomen identiteiten hoeven niet noodzakelijkerwijs in de betrokken gegevensbestanden te bestaan. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="Het aantal identiteiten waarvan de verslagen werden verzocht om als deel van deze het werkorde te worden bijgewerkt of te worden geschrapt. De in de telling opgenomen identiteiten hoeven niet noodzakelijkerwijs in de betrokken gegevensbestanden te bestaan. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
