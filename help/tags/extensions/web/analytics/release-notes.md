@@ -2,18 +2,29 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 6bb452285ea98380617afd13462b4a2b9a8e8b68
+source-git-commit: cc04a40b2fb649511950ed80af7028a19154dcdd
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1333'
 ht-degree: 5%
 
 ---
 
 # Opmerkingen bij de release Adobe Analytics-extensie
 
+Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagextensie.
+
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>De extensie van de tag Analytics indien vaak bijgewerkt als reactie op updates van de [JavaScript-bibliotheek voor meting van app](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Zie de [Opmerkingen bij de release AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) voor meer informatie over de hieronder vermelde specifieke versies.
+
+## 23 september 2022
+
+**Adobe Analytics Extension 1.9.1**
+
+**Functies**:
+
+* Bijgewerkt naar AppMeasurement v2.23.0.
+* De extensie kan nu hoge entropie verzamelen [gebruiker-agent cliëntwenken](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) zoals ondersteund door de nieuwste versie van AppMeasurement.
 
 ## 28 februari 2022
 
