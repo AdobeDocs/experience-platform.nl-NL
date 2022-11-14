@@ -2,9 +2,9 @@
 title: Overzicht van gegevenshygiëne
 description: Met Adobe Experience Platform Data Hygiene kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,10 @@ Het volgende gebeurt wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expir
 {style=&quot;table-layout:auto&quot;}
 
 ### Verwijderen van consumenten {#consumer-delete-transparency}
+
+>[!IMPORTANT]
+>
+>Verwijderen door de consument is alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
 
 Het volgende gebeurt wanneer een [verzoek om verwijdering door consument](./ui/delete-consumer.md) wordt gemaakt:
 

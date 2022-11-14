@@ -2,9 +2,9 @@
 title: Consumentengegevens verwijderen
 description: In de gebruikersinterface van Adobe Experience Platform leert u hoe u consumentenrecords kunt verwijderen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die deze producten hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**.
+>Verzoeken om consumentengegevens te verwijderen zijn alleen beschikbaar voor organisaties die **Adobe Healthcare Shield**.
 
 De [[!UICONTROL Data Hygiene] werkruimte](./overview.md) in de gebruikersinterface van Adobe Experience Platform kunt u de consumentengegevens verwijderen die deelnemen aan Identiteitsservice en Real-time klantprofiel.
 

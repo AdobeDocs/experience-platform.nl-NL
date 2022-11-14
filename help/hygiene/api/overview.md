@@ -2,9 +2,9 @@
 title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,10 @@ Dit document bevat een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken mo
 Een gegevenssetvervaldatum is een tijd-vertraagde actie &quot;schrapt een dataset&quot;. Door een datasetvervaldatum te creëren, specificeert u een toekomstige tijd waarbij die dataset zou moeten worden geschrapt. Zie de [eindpuntgids gegevensset](./dataset-expiration.md) voor meer informatie over het plannen van datasetvervaldata in API.
 
 ## Verwijderen van consumenten
+
+>[!IMPORTANT]
+>
+>Verzoeken om verwijdering van de consument zijn alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
 
 Met de API voor gegevenshygiëne kunt u alle records verwijderen die zijn gekoppeld aan een consumentenidentiteit in een of alle gegevenssets. Alle taken op het gebied van gegevenshygiëne die de identiteit van de consument verwijderen, worden weergegeven door een constructie die een werkorder wordt genoemd. Zie de [eindpuntgids voor werkorders](./workorder.md) voor meer informatie over het werken met de consument verwijdert u de API.
 
