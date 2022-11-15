@@ -2,20 +2,23 @@
 title: Consumentengegevens verwijderen
 description: In de gebruikersinterface van Adobe Experience Platform leert u hoe u consumentenrecords kunt verwijderen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
 
 # Consumentengegevens verwijderen
 
+De [[!UICONTROL Data Hygiene] werkruimte](./overview.md) in de gebruikersinterface van Adobe Experience Platform kunt u de consumentengegevens verwijderen die deelnemen aan Identiteitsservice en Real-time klantprofiel.
+
 >[!IMPORTANT]
 >
 >Verzoeken om consumentengegevens te verwijderen zijn alleen beschikbaar voor organisaties die **Adobe Healthcare Shield**.
-
-De [[!UICONTROL Data Hygiene] werkruimte](./overview.md) in de gebruikersinterface van Adobe Experience Platform kunt u de consumentengegevens verwijderen die deelnemen aan Identiteitsservice en Real-time klantprofiel.
+>
+>
+>De consument schrapt wordt bedoeld om voor gegevens te worden gebruikt die, anonieme gegevens verwijderen, of gegevens minimaliseren. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
 
 ## Vereisten
 

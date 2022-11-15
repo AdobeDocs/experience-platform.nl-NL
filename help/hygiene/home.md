@@ -2,9 +2,9 @@
 title: Overzicht van gegevenshygiëne
 description: Met Adobe Experience Platform Data Hygiene kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,11 @@ Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer va
 Met de mogelijkheden voor gegevenshygiëne van het Platform kunt u uw opgeslagen consumentengegevens als volgt beheren:
 
 * Het plannen van geautomatiseerde datasetvervaldatums
-* Verwijderen van consumentengegevens op basis van ingebedde identiteiten
+* Gegevens van individuele consumenten uit uw records verwijderen
+
+>[!IMPORTANT]
+>
+>De consument schrapt wordt bedoeld om voor gegevens te worden gebruikt die, anonieme gegevens verwijderen, of gegevens minimaliseren. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../privacy-service/home.md) in plaats daarvan.
 
 Deze activiteiten kunnen worden uitgevoerd met behulp van de [[!UICONTROL Data Hygiene] UI-werkruimte](#ui) of de [API voor gegevenshygiëne](#api). Wanneer een taak voor gegevenshygiëne wordt uitgevoerd, zorgt het systeem voor transparantie-updates bij elke stap van het proces. Zie de sectie over [tijdlijnen en transparantie](#timelines-and-transparency) voor meer informatie over hoe elk baantype in het systeem wordt vertegenwoordigd.
 

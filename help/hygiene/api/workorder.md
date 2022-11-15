@@ -2,9 +2,9 @@
 title: Eindpunt van API voor werkorder
 description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor consumentenidentiteiten programmatically te beheren.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,9 @@ De `/workorder` Het eindpunt in de Hygiene API van Gegevens staat u toe om consu
 >[!IMPORTANT]
 >
 >Verzoeken om consumentengegevens te verwijderen zijn alleen beschikbaar voor organisaties die **Adobe Healthcare Shield**.
+>
+>
+>De consument schrapt wordt bedoeld om voor gegevens te worden gebruikt die, anonieme gegevens verwijderen, of gegevens minimaliseren. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
 
 ## Aan de slag
 
