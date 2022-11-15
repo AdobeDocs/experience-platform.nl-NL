@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
 description: Dit document bevat een uitgebreide handleiding voor ontwikkelaars die werken met batch-opname-API's voor Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2413'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Zorg ervoor dat u een unieke bestandsnaam gebruikt, zodat er geen conflict optreedt met een ander bestand voor de batch met bestanden die wordt verzonden. |
 
 **Verzoek**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `acme/customers/campaigns/summer.json`. |
 
 **Antwoord**
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Zorg ervoor dat u een unieke bestandsnaam gebruikt, zodat er geen conflict optreedt met een ander bestand voor de batch met bestanden die wordt verzonden. |
 
 **Verzoek**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `acme/customers/campaigns/summer.parquet`. |
 
 **Antwoord**
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Zorg ervoor dat u een unieke bestandsnaam gebruikt, zodat er geen conflict optreedt met een ander bestand voor de batch met bestanden die wordt verzonden. |
 
 **Verzoek**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In gehele getallen, het begin en het eind van de gevraagde waaier. |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `acme/customers/campaigns/summer.json`. |
 
 
 **Antwoord**
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Zorg ervoor dat u een unieke bestandsnaam gebruikt, zodat er geen conflict optreedt met een ander bestand voor de batch met bestanden die wordt verzonden. |
 
 **Verzoek**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `acme/customers/campaigns/summer.csv`. |
 
 
 **Antwoord**
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Zorg ervoor dat u een unieke bestandsnaam gebruikt, zodat er geen conflict optreedt met een ander bestand voor de batch met bestanden die wordt verzonden. |
 
 **Verzoek**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, zoals `acme/customers/campaigns/summer.json`. |
 
 **Antwoord**
 
