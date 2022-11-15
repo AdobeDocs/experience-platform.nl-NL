@@ -1,9 +1,10 @@
 ---
 title: Extensie Google Ads Enhanced Conversies
 description: Meer informatie over de extensie Google Ads Enhanced Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -35,6 +36,10 @@ Verbeterde conversies maken gebruik van de [!DNL Google Ads] API voor het toevoe
 >Om de cliënt-zijomzettingsgebeurtenis met de eerste partijgegevens te associëren die van gebeurtenis door:sturen, `transaction_ID` moet het zelfde in beide vraag zijn. Voor meer informatie over waar deze waarde voor elke dienst moet worden verstrekt, zie de secties bij het vormen van omzettingsacties voor [tags](#conversion-action-tags) en [gebeurtenis doorsturen](#conversion-action-event-forwarding), respectievelijk.
 
 Aangezien bij het verzenden van conversiegebeurtenissen zowel een client-side als een server-side implementatie is betrokken, bevat dit document de vereiste stappen voor het instellen van de client-side [[!DNL Google Global Site Tag] (gtag) extensie](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) naast de [!DNL Enhanced Conversions] extensie voor het doorsturen van gebeurtenissen.
+
+In de volgende video wordt een inleiding gegeven op de [!DNL Enhanced Conversions] uitbreiding en doorloopt de implementatiestappen op hoog niveau :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Conversie verzenden met tags
 
