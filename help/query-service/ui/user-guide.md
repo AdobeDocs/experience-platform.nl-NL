@@ -5,9 +5,9 @@ title: UI-gids voor zoekprogramma
 topic-legacy: query editor
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+source-git-commit: d71bab9839289a8a1df849025b6db1b2b497087d
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,11 @@ Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met gren
 
 ![De invoer van de Redacteur van de Vraag die drop-down lijstnaamsuggesties toont.](../images/ui/query-editor/tables-auto.png)
 
-### Configuratieschakeloptie voor UI automatisch aanvullen {#auto-complete}
+### (Bèta) de auto-volledige configuratieknevel UI {#auto-complete}
+
+>[!IMPORTANT]
+>
+>Deze functie bevindt zich momenteel in bèta en uw organisatie heeft er wellicht nog geen toegang toe. De functionaliteit en documentatie kunnen worden gewijzigd.
 
 De [!DNL Query Editor] stelt automatisch potentiële SQL sleutelwoorden samen met lijst of kolomdetails voor de vraag voor aangezien u het schrijft. De functie voor automatisch aanvullen is standaard ingeschakeld en kan op elk gewenst moment worden uitgeschakeld of ingeschakeld door de optie [!UICONTROL Syntax auto-complete] knevel aan het hoogste recht van de Redacteur van de Vraag.
 
