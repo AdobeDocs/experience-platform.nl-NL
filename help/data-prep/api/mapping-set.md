@@ -5,9 +5,9 @@ title: API-eindpunt voor toewijzingssets
 topic-legacy: mapping sets
 description: U kunt het `/mappingSets eindpunt ` in Adobe Experience Platform API gebruiken om kaartreeksen programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | De id van het XDM-schema waarnaar u verwijst. |
 | `outputSchema.schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie over dit veld vindt u in het gedeelte [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Het brontype beschrijft hoe de waarde uit de bron aan de bestemming zal worden gehaald. |
+| `mappings.sourceType` | Het brontype beschrijft hoe de waarde uit de bron aan de bestemming zal worden gehaald. Het brontype ondersteunt twee mogelijke waarden: <ul><li>`ATTRIBUTE`: Het brontype `ATTRIBUTE` wordt gebruikt wanneer het inputattribuut van een bronschema afkomstig is.</li><li>`EXPRESSION`: Het brontype `EXPRESSION` wordt gebruikt wanneer de afbeelding wordt voltooid gebruikend een berekend gebied.</li></ul> **WAARSCHUWING**: Als u de waarden van het brontype onjuist instelt, kunnen de toewijzingssets onbewerkbaar worden gemaakt. |
 | `mappings.source` | De locatie waar u de gegevens wilt toewijzen. |
 | `mappings.destination` | De locatie waar de gegevens moeten worden toegewezen. |
 

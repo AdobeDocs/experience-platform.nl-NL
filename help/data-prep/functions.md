@@ -5,9 +5,9 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
+source-wordcount: '4337'
 ht-degree: 2%
 
 ---
@@ -234,6 +234,11 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 {style=&quot;table-layout:auto&quot;}
 
 ### Functies van gebruikersagent {#user-agent}
+
+Om het even welke gebruikersagent functies in de lijst hieronder kunnen één van beiden van de volgende waarden terugkeren:
+
+* Telefoon - Een mobiel apparaat met een klein scherm (gewoonlijk &lt; 7 inch)
+* Mobiel - Een mobiel apparaat dat nog moet worden geïdentificeerd. Dit mobiele apparaat kan een eReader, een tablet, een telefoon, een horloge, enz. zijn.
 
 >[!NOTE]
 >
