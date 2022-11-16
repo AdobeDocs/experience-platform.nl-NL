@@ -2,10 +2,10 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '1885'
-ht-degree: 2%
+source-wordcount: '1891'
+ht-degree: 1%
 
 ---
 
@@ -212,21 +212,21 @@ Gebruik de parameters in `schemaConfig` om de toewijzingsstap van de workflow vo
 
 De parameters in deze sectie bepalen welke identiteiten uw bestemming goedkeurt. Deze configuratie vult ook de doelidentiteiten en -kenmerken in de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de gebruikersinterface van het Experience Platform, waar de gebruikers identiteiten en attributen van hun schema&#39;s XDM aan het schema in uw bestemming in kaart brengen.
 
-U moet aangeven welke [!DNL Platform] id&#39;s die klanten kunnen exporteren naar uw bestemming. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] identiteitsnaamruimten die klanten vanaf uw bestemming kunnen toewijzen aan naamruimten. U kunt ook aangeven of klanten aangepaste naamruimten kunnen toewijzen aan identiteiten die door uw doel worden ondersteund.
+U moet aangeven welke [!DNL Platform] id&#39;s die klanten kunnen exporteren naar uw bestemming. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] identiteitsnaamruimten die klanten vanaf uw bestemming kunnen toewijzen aan naamruimten. U kunt ook aangeven of klanten aangepaste naamruimten kunnen toewijzen aan identiteiten die door uw doel worden ondersteund (`acceptsCustomNamespaces: true`) en als klanten standaard XDM-kenmerken kunnen toewijzen aan identiteiten die door uw doel worden ondersteund (`acceptsAttributes: true`).
 
 Naamruimten vereisen geen 1-op-1-overeenkomst tussen [!DNL Platform] en uw bestemming.
 Klanten kunnen bijvoorbeeld een [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL IDFA] naamruimte vanaf uw bestemming, of ze kunnen hetzelfde toewijzen [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL Customer ID] naamruimte in uw doel.
 
-Lees meer in de [Overzicht van naamruimte van id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl).
+Meer informatie over identiteiten in het dialoogvenster [Overzicht van naamruimte van id](/help/identity-service/namespaces.md).
 
 ![Doelidentiteiten renderen in de gebruikersinterface](./assets/target-identities-ui.png)
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `acceptsAttributes` | Boolean | Hiermee geeft u aan of uw doel standaardprofielkenmerken accepteert. Gewoonlijk, worden deze attributen benadrukt in de documentatie van partners. |
+| `acceptsAttributes` | Boolean | Geeft aan of klanten standaardprofielkenmerken kunnen toewijzen aan de identiteit die u configureert. |
 | `acceptsCustomNamespaces` | Boolean | Geeft aan of klanten aangepaste naamruimten kunnen instellen op uw bestemming. |
 | `transformation` | Tekenreeks | *Niet weergegeven in voorbeeldconfiguratie*. Wordt bijvoorbeeld gebruikt als de [!DNL Platform] de klant heeft onbewerkte e-mailadressen als attribuut en uw platform accepteert alleen gehashte e-mailadressen. In dit object kunt u de transformatie uitvoeren die moet worden toegepast (de e-mail bijvoorbeeld omzetten in kleine letters en vervolgens hash). Zie voor een voorbeeld `requiredTransformation` in de [API-naslaggids voor doelconfiguratie](./destination-configuration-api.md#update). |
-| `acceptedGlobalNamespaces` | - | Wordt gebruikt voor gevallen waarin uw platform accepteert [standaardnaamruimten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (bijvoorbeeld IDFA), zodat u gebruikers van het Platform kunt beperken tot het selecteren van deze naamruimten. |
+| `acceptedGlobalNamespaces` | - | Geeft aan welke [standaardnaamruimten](/help/identity-service/namespaces.md#standard) (bijvoorbeeld, IDFA) klanten kunnen aan de identiteit in kaart brengen die u vormt. <br> Wanneer u `acceptedGlobalNamespaces`kunt u `"requiredTransformation":"sha256(lower($))"` om e-mailadressen of telefoonnummers in kleine letters en te hashen. |
 
 {style=&quot;table-layout:auto&quot;}
 

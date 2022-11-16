@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om essentiële informatie voor uw op dossier-gebaseerde bestemming, zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Bestandsgebaseerde opties voor doelconfiguratie voor Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '2953'
+source-wordcount: '2976'
 ht-degree: 2%
 
 ---
@@ -794,10 +794,13 @@ De parameters in deze sectie bepalen welke identiteiten uw bestemming goedkeurt.
     },
 ```
 
-U moet aangeven welke [!DNL Platform] id&#39;s die klanten kunnen exporteren naar uw bestemming. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] identiteitsnaamruimten die klanten vanaf uw bestemming kunnen toewijzen aan naamruimten. U kunt ook aangeven of klanten aangepaste naamruimten kunnen toewijzen aan identiteiten die door uw doel worden ondersteund.
+U moet aangeven welke [!DNL Platform] id&#39;s die klanten kunnen exporteren naar uw bestemming. Enkele voorbeelden zijn [!DNL Experience Cloud ID], gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID]). Deze waarden zijn [!DNL Platform] identiteitsnaamruimten die klanten vanaf uw bestemming kunnen toewijzen aan naamruimten. U kunt ook aangeven of klanten aangepaste naamruimten kunnen toewijzen aan identiteiten die door uw doel worden ondersteund (`acceptsCustomNamespaces: true`) en als klanten standaard XDM-kenmerken kunnen toewijzen aan identiteiten die door uw doel worden ondersteund (`acceptsAttributes: true`).
 
 Naamruimten vereisen geen 1-op-1-overeenkomst tussen [!DNL Platform] en uw bestemming.
 Klanten kunnen bijvoorbeeld een [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL IDFA] naamruimte vanaf uw bestemming, of ze kunnen hetzelfde toewijzen [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL Customer ID] naamruimte in uw doel.
+
+Meer informatie over identiteiten in het dialoogvenster [Overzicht van naamruimte van id](/help/identity-service/namespaces.md).
+
 
 ## Batchconfiguratie - Bestandsnaamgeving en exportplanning {#batch-configuration}
 
