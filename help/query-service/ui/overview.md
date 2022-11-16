@@ -5,9 +5,9 @@ title: UI-gids voor zoekservice
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,29 @@ De [!DNL Query Editor] laat u toe om vragen te schrijven en uit te voeren zonder
 [!DNL Query Editor] biedt bewerkruimte waarin u een query kunt typen. Terwijl u typt, voltooit de redacteur automatisch SQL gereserveerde woorden, lijsten, en gebiedsnamen binnen lijsten. Wanneer u klaar bent met het schrijven van uw query, selecteert u de opdracht **Afspelen** om de query uit te voeren. De **[!UICONTROL Console]** onder de editor ziet u wat [!DNL Query Service] doet momenteel, erop wijst die wanneer een vraag is teruggekeerd. De **[!UICONTROL Result]** naast de Console worden de resultaten van de query weergegeven. Zie de [Handleiding voor Query-editor](./user-guide.md) voor meer informatie over het gebruik van de [!DNL Query Editor].
 
 ![Een ingezoomd object met het oog op de [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+
+## Geplande query&#39;s {#scheduled-queries}
+
+Vragen die al als een sjabloon zijn opgeslagen, kunnen worden gepland voor uitvoering op een normale agenda. Wanneer het plannen van een vraag, kunt u de frequentie van looppas, de begin en einddatum, de dag van de week kiezen de geplande vraaglooppas, evenals de dataset om de vraag naar uit te voeren. De programma&#39;s van de vraag worden geplaatst gebruikend de Redacteur van de Vraag.
+
+Leren hoe te om een vraag door UI te plannen, zie [Gids voor geplande query&#39;s](./user-guide.md#scheduled-queries). Lees de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
+
+Zodra een vraag is gepland verschijnt het in de lijst van geplande vragen op [!UICONTROL Scheduled Queries] tab. De volledige details betreffende de vraag, de looppas, de schepper, en de tijdopnemers kunnen worden gevonden door een geplande vraag van de lijst te selecteren.
+
+![De werkruimte van Vragen met het Geplande lusje van Vragen benadrukte en tonende rijen van vraagprogramma&#39;s.](../images/ui/overview/scheduled-queries.png)
+
+| Kolom | Beschrijving |
+| --- | --- |
+| **[!UICONTROL Name]** | Het naamveld is de sjabloonnaam of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, is de naam van de query een fragment van de eerste SQL die is gebruikt om de query te maken. |
+| **[!UICONTROL Template]** | De sjabloonnaam van de query. Selecteer een sjabloonnaam om naar de Query-editor te navigeren. Het vraagmalplaatje wordt getoond in de Redacteur van de Vraag voor gemak. Als er geen malplaatjenaam is, wordt de rij duidelijk met een koppelteken en er is geen capaciteit om aan de Redacteur van de Vraag om de vraag te bekijken opnieuw te richten. |
+| **[!UICONTROL SQL]** | Een fragment van de SQL-query. |
+| **[!UICONTROL Run frequency]** | Dit is de kadentie waarbij uw vraag wordt geplaatst om te lopen. De beschikbare waarden zijn `Run once` en `Scheduled`. U kunt query&#39;s filteren op basis van hun uitvoeringsfrequentie. |
+| **[!UICONTROL Created by]** | De naam van de gebruiker die de query heeft gemaakt. |
+| **[!UICONTROL Created]** | De tijdstempel in UTC-indeling waarin de query is gemaakt. |
+| **[!UICONTROL Last run timestamp]** | De meest recente tijdstempel toen de query werd uitgevoerd. Deze kolom benadrukt of een vraag volgens zijn huidig programma is uitgevoerd. |
+| **[!UICONTROL Last run status]** | De status van de meest recente queryuitvoering. De drie statuswaarden zijn: `successful` `failed` of `in progress`. |
+
+Raadpleeg de documentatie voor meer informatie over hoe u [controleert vragen door de Dienst UI van de Vraag](../monitor-queries.md).
 
 ## Sjablonen {#browse}
 
