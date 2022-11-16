@@ -3,9 +3,9 @@ title: Gegevensversleuteling in Adobe Experience Platform
 topic-legacy: data protection
 description: Leer hoe gegevens worden gecodeerd tijdens de doorvoer en in rust in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Nadat gegevens in het systeem zijn ingevoerd en [gecodeerd in rust](#at-rest), k
 
 Gegevens die door Platform worden opgenomen en gebruikt, worden opgeslagen in het datumpeer, een hoogst korrelige gegevensopslag die alle gegevens bevat die door het systeem, ongeacht oorsprong of dossierformaat worden beheerd. Alle gegevens die in het gegevensmeer worden voortgeduurd, worden gecodeerd, opgeslagen en in geïsoleerd [[!DNL Microsoft Azure Data Lake] Opslag](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) -instantie die uniek is voor uw organisatie.
 
-Voor meer informatie over hoe gegevens in rust worden gecodeerd in Azure Data Lake Storage en Cosmos DB raadpleegt u de [officiële Azure-documentatie](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+Zie voor meer informatie over hoe gegevens in rust in Azure Data Lake Storage gecodeerd zijn [officiële Azure-documentatie](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Volgende stappen
 
