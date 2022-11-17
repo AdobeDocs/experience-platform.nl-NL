@@ -4,9 +4,9 @@ title: Standaardwaarschuwingsregels
 description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
+source-git-commit: 44e337778bbfe901687383418981dbae83b356a7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -99,8 +99,6 @@ De volgende waarschuwingsregels gelden specifiek voor [Query-service](../../quer
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
-| Ad-hocinformatie over Query Service | Ad-hocsucces met Query Service | Deze waarschuwing wordt geactiveerd wanneer een ad-hocschemataak correct is voltooid. |
-| Ad-hocvertragingen, fouten en fouten in de zoekservice | Ad-hocfout met Query Service | Deze waarschuwing wordt geactiveerd wanneer een ad-hocschemaaktaak mislukt. |
 | Query Service-informatie voor geplande query | Query Service gepland starten van query | Deze waarschuwing wordt geactiveerd wanneer een geplande query wordt uitgevoerd. |
 | Query Service-informatie voor geplande query | Zoekservice gepland succes met query | Deze waarschuwing wordt geactiveerd wanneer een geplande querytaak correct is voltooid. |
 | De Dienst van de vraag geplande vraagvertragingen, mislukkingen en fouten | query-service met geplande queryfout | Deze waarschuwing wordt geactiveerd wanneer een geplande querytaak mislukt. |
