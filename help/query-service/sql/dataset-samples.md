@@ -1,18 +1,19 @@
 ---
 title: Gegevenssetvoorbeelden
 description: De de steekproefdatasets van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer gereduceerde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. Deze gids verstrekt informatie over hoe te om uw steekproeven voor benaderende vraagverwerking te beheren
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-# (bèta) Gegevenssetvoorbeelden
+# (Beperkte release) Gegevenssetvoorbeelden
 
 >[!IMPORTANT]
 >
->De eigenschap van de gegevenssetsteekproeven is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
+>De eigenschap van de gegevenssetsteekproeven is momenteel in een beperkte versie en niet beschikbaar aan alle klanten.
 
 De Dienst van de Vraag van Adobe Experience Platform verstrekt steekproefdatasets als deel van zijn benaderende mogelijkheden van de vraagverwerking. Voorbeeldgegevenssets worden gemaakt met uniforme willekeurige steekproeven op basis van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets die slechts een percentage van verslagen van origineel gebruiken. Dit percentage staat bekend als de bemonsteringsfrequentie. Als u de samplingfrequentie aanpast om de balans tussen nauwkeurigheid en verwerkingstijd te bepalen, kunt u verkennende query&#39;s uitvoeren op grote gegevens met een aanzienlijk kortere verwerkingstijd, wat ten koste gaat van de nauwkeurigheid van de query.
 
