@@ -1,9 +1,10 @@
 ---
 title: Adobe Campaign Managed Cloud Services-verbinding
 description: Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
+source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1332'
 ht-degree: 0%
 
 ---
@@ -46,29 +47,6 @@ Zodra de berichten zijn verzonden, willen ze het klantprofiel in het Adobe Exper
 Het resultaat is kanaalcampagnes die consistenter zijn in het gehele ecosysteem van de cloud van Adobe Experience en een uitgebreid klantprofiel dat zich snel aanpast en leert.
 
 [Meer informatie over Adobe Campaign-integratie met Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
-
-
-## Vereisten {#prerequisites}
-
-Als u wilt dat Campagne gegevens van Adobe Experience Platform kan ophalen, moet u een campagne-API-project maken en de klantenservice vragen om de bijbehorende client-id aan een lijst van gewenste personen toe te voegen.
-
->[!NOTE]
->
->Algemene informatie over het maken van een API-project vindt u in [deze documentatie](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman.html)
-
-1. Aanmelden bij [Adobe Developer Console](https://console.adobe.io/) en maak een nieuw project.
-
-1. Selecteren **[!UICONTROL Add API]** en kiest u **[!UICONTROL Adobe Campaign]**.
-
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/create-api.png)
-
-1. Een sleutelpaar genereren.
-
-1. Selecteer `<Instance Name> - admin` productprofiel en selecteer **[!UICONTROL Save configured API]**.
-
-1. Uw API-project is gemaakt. Noteer de **[!UICONTROL Client ID]** weergegeven in uw project. Neem contact op met de klantenservice van Adobe en vraag hen om uw client-id aan een lijst van gewenste personen toe te voegen.
-
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/client-id.png)
 
 ## Ondersteunde identiteiten {#supported-identities}
 
