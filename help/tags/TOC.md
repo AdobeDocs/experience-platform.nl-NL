@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
+source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '417'
 ht-degree: 25%
 
 ---
@@ -119,16 +119,18 @@ ht-degree: 25%
          * [Overzicht](./extensions/web/core/overview.md)
          * [Gebeurtenis doorsturen](./extensions/web/core/event-forwarding.md)
          * [Aanvullende informatie](./extensions/web/core/release-notes.md)
-      * [!DNL Mailchimp] Rand {#mailchimp-edge}
-         * [Overzicht](./extensions/web/mailchimp/overview.md)
-      * [!DNL Marketo Munchkin] {#marketo}
-         * [Overzicht](./extensions/web/marketo/overview.md)
-         * [Aanvullende informatie](./extensions/web/marketo/release-notes.md)
       * Verbeterde Google-conversies toevoegen {#google-ads-enhanced-conversions}
          * [Overzicht](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Google-gegevenslaag {#google-data-layer}
          * [Overzicht](./extensions/web/google-data-layer/overview.md)
          * [Aanvullende informatie](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Mailchimp] Rand {#mailchimp-edge}
+         * [Overzicht](./extensions/web/mailchimp/overview.md)
+      * [!DNL Marketo Munchkin] {#marketo}
+         * [Overzicht](./extensions/web/marketo/overview.md)
+         * [Aanvullende informatie](./extensions/web/marketo/release-notes.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [Overzicht](./extensions/web/azure/overview.md)
       * [!DNL Splunk] {#splunk}
          * [Overzicht](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] video bijhouden {#youtube}
