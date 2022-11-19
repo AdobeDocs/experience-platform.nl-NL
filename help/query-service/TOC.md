@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL aan vraaggegevens binnen het gegevens meer in Experience Platform.
 feature: Queries
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
+source-git-commit: 3764418c5c8a6159ec23f3cc7ba77792c9f15106
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '231'
 ht-degree: 5%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 5%
    - [Attributieanalyse](use-cases/attribution-analysis.md)
    - [Bot filteren](use-cases/bot-filtering.md)
    - [Web- en mobiele analysemogelijkheden](use-cases/analytics-insights.md)
+   - [Propensiteitsscore](use-cases/propensity-score.md)
 - Query Service-API {#api}
    - [Aan de slag](api/getting-started.md)
    - [Zoekopdrachten](api/queries.md)
