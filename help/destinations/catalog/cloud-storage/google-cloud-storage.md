@@ -1,9 +1,10 @@
 ---
 title: (bèta) Google Cloud Storage-verbinding
 description: Leer hoe u verbinding maakt met Google Cloud Storage en segmenten activeert of gegevenssets exporteert.
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: ab274270-ae8c-4264-ba64-700b118e6435
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
@@ -59,9 +60,9 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 * **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] aan Platform. Voor informatie over het verkrijgen van deze waarde leest u de [voorwaarden](#prerequisites) hierboven.
 * **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met als basiscode 64-codering die wordt gebruikt voor de verificatie van uw [!DNL Google Cloud Storage] aan Platform. Voor informatie over het verkrijgen van deze waarde leest u de [voorwaarden](#prerequisites) hierboven.
-* **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet worden geschreven als een [!DNL Base64-encoded] tekenreeks. Bekijk een voorbeeld van een correct geformatteerde, base64-gecodeerde sleutel in de documentatieverbinding hieronder. Het middelste deel wordt verkort om kort te zijn.
+* **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-   ![Afbeelding die een voorbeeld toont van een PGP-sleutel met de juiste indeling en basis64-codering in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 Voor meer informatie over deze waarden leest u de [HMAC-sleutels voor Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) hulplijn. Raadpleeg voor meer informatie over het genereren van uw eigen toegangstoets-id en geheime toegangstoets de [[!DNL Google Cloud Storage] bronoverzicht](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
