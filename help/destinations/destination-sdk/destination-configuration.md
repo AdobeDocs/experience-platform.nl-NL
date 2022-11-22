@@ -2,7 +2,7 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 1%
@@ -104,7 +104,7 @@ Dit is een voorbeeldconfiguratie van een fictieve streamingbestemming, Moviestar
             "includeSegmentId":true,
             "includeSegmentStatus":true,
             "includeIdentity":true,
-            "oneIdentityPerGroup":false,
+            "oneIdentityPerGroup":true,
             "groups":[
                {
                   "namespaces":[
