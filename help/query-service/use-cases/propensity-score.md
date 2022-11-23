@@ -1,16 +1,19 @@
 ---
 title: Een volheidsscore bepalen met behulp van een door een machine gegenereerd voorspellend model voor leren
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om uw vooruitlopende model op Platform gegevens toe te passen. Dit document laat zien hoe u gegevens van Platforms kunt gebruiken om te voorspellen hoe de klant bij elk bezoek geneigd is om  aan te schaffen.
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Bepaal een aandrijvingsscore gebruikend een machine-leren-Gegenereerd vooruitgangsmodel
 
-Met behulp van Query Service kunt u gegevens van Experience Platforms op uw computerleerplatforms gebruiken om voorspellende modellen te genereren, zoals proxyscores. In deze handleiding wordt uitgelegd hoe u de Query-service kunt gebruiken om gegevens naar uw computerplatform te verzenden om een model op te leiden in een computerlaptop. Het opgeleide model kan op gegevens worden toegepast gebruikend SQL om de neiging van een klant te voorspellen om voor elk bezoek te kopen.
+Met behulp van Query Service kunt u voorspellende modellen, zoals proxyscores, gebruiken die op uw computerleerplatform zijn gebaseerd om Experience Platform-gegevens te analyseren.
+
+In deze handleiding wordt uitgelegd hoe u de Query-service kunt gebruiken om gegevens naar uw computerplatform te verzenden om een model op te leiden in een computerlaptop. Het opgeleide model kan op gegevens worden toegepast gebruikend SQL om de neiging van een klant te voorspellen om voor elk bezoek te kopen.
 
 ## Aan de slag
 
@@ -322,5 +325,3 @@ De nauwkeurigheid van het bootstrapped model wordt dan gesorteerd. Daarna worden
 ![De opdracht Afdrukken om het betrouwbaarheidsinterval van de densiteitsscore weer te geven.](../images/use-cases/confidence-interval.png)
 
 In het bovenstaande cijfer staat dat als u slechts 1000 rijen nodig hebt om uw modellen te trainen, u kunt verwachten dat de nauwkeurigheid tussen ongeveer 84% en 88% zal dalen. U kunt de `LIMIT` clausule in de vragen van de Dienst van de Vraag die op uw behoeften worden gebaseerd om de prestaties van de modellen te verzekeren.
-
-
