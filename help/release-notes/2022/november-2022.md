@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform november 2022
 description: De release van november 2022 bevat notities voor Adobe Experience Platform.
-source-git-commit: 9d5511697d3d4de2926c8862fdd413e2a9f1d1a2
+source-git-commit: 3c78fc1cbfcd00f0fd5facfdf07bbc2757f492fa
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 2%
+source-wordcount: '454'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,37 @@ ht-degree: 2%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Gegevensverzameling](#data-collection)
+- [Experience Data Model (XDM)](#xdm)
 - [Bronnen](#sources)
+
+## Gegevensverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [!DNL AWS] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Amazon Web Services] ([!DNL AWS]) met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL AWS] extensieoverzicht](../../tags/extensions/web/aws/overview.md) voor meer informatie . |
+| [!DNL Google Ads Enhanced Conversions] extensie voor het doorsturen van gebeurtenissen | U kunt nu conversiegegevens verzenden naar [!DNL Google Ads] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Google Ads Enhanced Conversions] extensieoverzicht](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) voor meer informatie . |
+| [!DNL Microsoft Azure] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Microsoft Azure] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Microsoft Azure] extensieoverzicht](../../tags/extensions/web/azure/overview.md) voor meer informatie . |
+
+Voor meer informatie over de mogelijkheden van de gegevensinzameling van het Platform, zie [overzicht van gegevensverzameling](../../collection/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Velden toewijzen aan aangepaste klassen wanneer deze rechtstreeks aan een schema worden toegevoegd | Wanneer [een afzonderlijk veld rechtstreeks aan een schema toevoegen](../../xdm/ui/resources/schemas.md#add-individual-fields), voorheen kon u het veld alleen aan een veldgroep toewijzen als bovenliggende bron. Naast veldgroepen kunt u nu [het veld toewijzen aan een aangepaste klasse](../../xdm/ui/resources/schemas.md.md#add-to-class) als bovenliggende bron. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
 ## Bronnen {#sources}
 
