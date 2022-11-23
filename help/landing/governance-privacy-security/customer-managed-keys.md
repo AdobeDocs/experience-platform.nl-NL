@@ -2,9 +2,9 @@
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Dit document behandelt het proces voor het toelaten van de klant-geleide sleutel
 
 ## Vereisten
 
-Als u CMK wilt inschakelen, moet u toegang hebben tot **alles** van de volgende functies in [!DNL Microsoft Azure]:
+Als u CMK wilt inschakelen, moet u [!DNL Azure] Key Vault moet worden geconfigureerd met de volgende instellingen:
 
-* [Op rollen gebaseerd toegangsbeheerbeleid](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (mag niet worden verward met dezelfde functie in het Experience Platform)
-* [Belangrijke vault soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Wrijvingsbescherming](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Reinigingsbeveiliging inschakelen](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [soft-delete inschakelen](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Toegang configureren met [!DNL Azure] rolgebaseerd toegangsbeheer](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## Procesoverzicht
 
