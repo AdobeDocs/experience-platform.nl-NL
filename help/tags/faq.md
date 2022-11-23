@@ -2,9 +2,9 @@
 title: Handleiding voor het oplossen van problemen met tags
 description: Antwoorden op veelgestelde vragen over tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 6109e44ff4b20cadbd3a5016517e954c10c68931
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1044'
 ht-degree: 0%
 
 ---
@@ -106,4 +106,4 @@ Zie de handleiding op [machtigingen beheren](../collection/permissions.md) om te
 
 ## Wat als ik andere vragen heb?
 
-Als u andere vragen hebt, kunt u vragen stellen over [Community-pagina voor Adobe Experience Platform-gegevensverzameling](https://adobe.com/go/launchme) op Experience League, of sluit zich aan bij [officiële Slack-groep voor tagontwikkelaars](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Als u andere vragen hebt, kunt u vragen stellen over [Community-pagina voor Adobe Experience Platform-gegevensverzameling](https://adobe.com/go/launchme) op Experience League, of sluit zich aan bij [community Slack-werkruimte](http://join.connectionsdevs.chat) voor ontwikkelaars en technische implementatieonderwerpen.
