@@ -5,9 +5,9 @@ title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 3fc498de60256006d27ada72a7b5f4fff71c4472
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '3071'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Met de Schema-editor kunt u afzonderlijke velden rechtstreeks aan een schema toe
 
 >[!IMPORTANT]
 >
->Hoewel de Redacteur van het Schema functioneel u toestaat om individuele gebieden aan een schema direct toe te voegen, verandert dit niet het feit dat alle gebieden in een XDM schema door zijn klasse of een gebiedsgroep moeten worden verstrekt die met die klasse compatibel is. Zoals in de volgende secties wordt uitgelegd, worden alle afzonderlijke velden nog steeds aan een veldgroep gekoppeld als een belangrijke stap wanneer ze aan een schema worden toegevoegd.
+>Hoewel de Redacteur van het Schema functioneel u toestaat om individuele gebieden aan een schema direct toe te voegen, verandert dit niet het feit dat alle gebieden in een XDM schema door zijn klasse of een gebiedsgroep moeten worden verstrekt die met die klasse compatibel is. Zoals in de volgende secties wordt uitgelegd, worden alle afzonderlijke velden nog steeds gekoppeld aan een klasse of veldgroep als een belangrijke stap wanneer ze aan een schema worden toegevoegd.
 
 ### Standaardvelden toevoegen {#add-standard-fields}
 
@@ -172,7 +172,17 @@ Typ de naam van het veld dat u wilt toevoegen en het systeem zoekt automatisch n
 
 ![Nieuw veld](../../images/ui/resources/schemas/custom-field-search.png)
 
-Hier geeft u een weergavenaam en gegevenstype op voor het veld. Onder **[!UICONTROL Assign field group]** selecteert u een veldgroep waaraan het nieuwe veld moet worden gekoppeld. Typ de naam van de veldgroep en als u dat eerder hebt gedaan [aangepaste veldgroepen maken](./field-groups.md#create) deze worden weergegeven in de vervolgkeuzelijst. U kunt ook een unieke naam in het veld typen om een nieuwe veldgroep te maken.
+Na het verstrekken van een vertoningsnaam en gegevenstype voor het gebied, is de volgende stap het gebied aan een ouderXDM middel toe te wijzen. Als in uw schema een aangepaste klasse wordt gebruikt, kunt u [Voeg het veld toe aan de toegewezen klasse](#add-to-class) of [veldgroep](#add-to-field-group) in plaats daarvan. Als uw schema echter een standaardklasse gebruikt, kunt u het aangepaste veld alleen aan een veldgroep toewijzen.
+
+#### Het veld toewijzen aan een aangepaste veldgroep {#add-to-field-group}
+
+>[!NOTE]
+>
+>In deze sectie wordt alleen beschreven hoe u het veld toewijst aan een aangepaste veldgroep. Als u in plaats daarvan een standaardveldgroep met het nieuwe aangepaste veld wilt uitbreiden, raadpleegt u de sectie over [aangepaste velden toevoegen aan standaardveldgroepen](#custom-fields-for-standard-groups).
+
+Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Field Group]**. Als uw schema een standaardklasse gebruikt, is dit de enige beschikbare optie en door gebrek geselecteerd.
+
+Vervolgens moet u een veldgroep selecteren waaraan het nieuwe veld moet worden gekoppeld. Typ de naam van de veldgroep in de opgegeven tekstinvoer. Als u bestaande aangepaste veldgroepen hebt die overeenkomen met de invoer, worden deze weergegeven in de vervolgkeuzelijst. U kunt ook een unieke naam typen om een nieuwe veldgroep te maken.
 
 ![Veldgroep selecteren](../../images/ui/resources/schemas/select-field-group.png)
 
@@ -180,7 +190,7 @@ Hier geeft u een weergavenaam en gegevenstype op voor het veld. Onder **[!UICONT
 >
 >Als u een bestaande aangepaste veldgroep selecteert, nemen alle andere schema&#39;s die die veldgroep gebruiken ook het nieuwe toegevoegde veld over nadat u de wijzigingen hebt opgeslagen. Om deze reden, slechts selecteer een bestaande gebiedsgroep als u dit type van propagatie wilt. Anders kunt u beter een nieuwe aangepaste veldgroep maken.
 
-Als u klaar bent, selecteert u **[!UICONTROL Apply]**.
+Nadat u de veldgroep in de lijst hebt geselecteerd, selecteert u **[!UICONTROL Apply]**.
 
 ![Veld toepassen](../../images/ui/resources/schemas/apply-field.png)
 
@@ -192,7 +202,21 @@ Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder h
 >
 >De overige velden die door de geselecteerde aangepaste veldgroep worden opgegeven, worden standaard uit het schema verwijderd. Als u enkele van deze velden aan het schema wilt toevoegen, selecteert u een veld dat tot de groep behoort en selecteert u vervolgens **[!UICONTROL Manage related fields]** in het rechterspoor.
 
-#### Aangepaste velden toevoegen aan de structuur van standaardveldgroepen {#custom-fields-for-standard-groups}
+#### Het veld toewijzen aan een aangepaste klasse {#add-to-class}
+
+Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]**. Het invoerveld hieronder wordt vervangen door de naam van de aangepaste klasse van het huidige schema om aan te geven dat het nieuwe veld wordt toegewezen aan deze klasse.
+
+![De [!UICONTROL Class] optie die wordt geselecteerd voor de nieuwe gebiedstoewijzing.](../../images/ui/resources/schemas/assign-field-to-class.png)
+
+Ga door met het configureren van het veld naar wens en selecteer **[!UICONTROL Apply]** wanneer gereed.
+
+![[!UICONTROL Apply] geselecteerd voor het nieuwe veld.](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
+
+Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder het canvas [huurder-id](../../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. Als u de klassenaam in de linkerrails selecteert, wordt het nieuwe veld weergegeven als onderdeel van de klassenstructuur.
+
+![Het nieuwe veld dat wordt toegepast op de structuur van de aangepaste klasse, weergegeven op het canvas.](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
+
+### Aangepaste velden toevoegen aan de structuur van standaardveldgroepen {#custom-fields-for-standard-groups}
 
 Als het schema u werkt een voorwerp-type gebied heeft dat door een standaardgebiedsgroep wordt verstrekt, kunt u uw eigen douanevelden aan dat standaardobject toevoegen.
 
