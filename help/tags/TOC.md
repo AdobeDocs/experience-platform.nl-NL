@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
+source-git-commit: de09106f4446981176ca001f607d540b490de8d1
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '418'
 ht-degree: 25%
 
 ---
@@ -106,6 +106,8 @@ ht-degree: 25%
       * Adobe Target v2 {#target-v2}
          * [Overzicht](./extensions/web/target-v2/overview.md)
          * [Aanvullende informatie](./extensions/web/target-v2/release-notes.md)
+      * [!DNL AWS] {#aws}
+         * [Overzicht](./extensions/web/aws/overview.md)
       * [!DNL BrightCove] video bijhouden {#brightcove}
          * [Overzicht](./extensions/web/brightcove/overview.md)
          * [Aanvullende informatie](./extensions/web/brightcove/release-notes.md)
