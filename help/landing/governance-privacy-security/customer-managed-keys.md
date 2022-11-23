@@ -1,9 +1,10 @@
 ---
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
-source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
+exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
+source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
@@ -13,6 +14,14 @@ ht-degree: 0%
 Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecodeerd met systeemtoetsen. Als u een toepassing gebruikt die bovenop Platform wordt gebouwd, kunt u verkiezen om uw eigen encryptiesleutels in plaats daarvan te gebruiken, die u grotere controle over uw gegevensveiligheid geven.
 
 Dit document behandelt het proces voor het toelaten van de klant-geleide sleuteleigenschap (CMK) in Platform.
+
+## Vereisten
+
+Als u CMK wilt inschakelen, moet u toegang hebben tot **alles** van de volgende functies in [!DNL Microsoft Azure]:
+
+* [Op rollen gebaseerd toegangsbeheerbeleid](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (mag niet worden verward met dezelfde functie in het Experience Platform)
+* [Belangrijke vault soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Wrijvingsbescherming](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 
 ## Procesoverzicht
 
@@ -24,7 +33,7 @@ CMK is opgenomen in het gezondheidsschild en het aanbod van privacy en beveiligi
 
 Het proces is als volgt:
 
-1. [Een [!DNL Microsoft Azure] Key Vault](#create-key-vault) op basis van het beleid van uw organisatie [een coderingssleutel genereren](#generate-a-key) dat zal uiteindelijk met Adobe worden gedeeld .
+1. [Een [!DNL Azure] Key Vault](#create-key-vault) op basis van het beleid van uw organisatie [een coderingssleutel genereren](#generate-a-key) dat zal uiteindelijk met Adobe worden gedeeld .
 1. API-aanroepen gebruiken voor [CMK-toepassing instellen](#register-app) met uw [!DNL Azure] huurder.
 1. API-aanroepen gebruiken voor [Verstuur uw encryptiesleutel-id naar Adobe](#send-to-adobe) en start het schakelingsproces voor de functie.
 1. [Controleer de status van de configuratie](#check-status) om te controleren of CMK is ingeschakeld.
@@ -97,11 +106,13 @@ De geconfigureerde sleutel wordt weergegeven in de lijst met toetsen voor de vau
 
 Wanneer u de sleutelkluis hebt geconfigureerd, moet u zich registreren voor de CMK-toepassing die een koppeling naar uw [!DNL Azure] huurder.
 
->[!NOTE]
->
->Wanneer u de CMK-toepassing registreert, moet u oproepen naar Platform-API&#39;s uitvoeren. Voor details op hoe te om de vereiste authentificatiekopballen te verzamelen om deze vraag te maken, zie [Handleiding voor Platform-API-verificatie](../../landing/api-authentication.md).
->
->Terwijl de authentificatiegids instructies op hoe te om uw eigen unieke waarde voor vereiste te produceren verstrekt `x-api-key` aanvraagkoptekst, alle API-bewerkingen in deze handleiding gebruiken de statische waarde `acp_provisioning` in plaats daarvan. U moet nog steeds uw eigen waarden opgeven voor `{ACCESS_TOKEN}` en `{ORG_ID}`echter.
+### Aan de slag
+
+Wanneer u de CMK-toepassing registreert, moet u oproepen naar Platform-API&#39;s uitvoeren. Voor details op hoe te om de vereiste authentificatiekopballen te verzamelen om deze vraag te maken, zie [Handleiding voor Platform-API-verificatie](../../landing/api-authentication.md).
+
+Terwijl de authentificatiegids instructies op hoe te om uw eigen unieke waarde voor vereiste te produceren verstrekt `x-api-key` aanvraagkoptekst, alle API-bewerkingen in deze handleiding gebruiken de statische waarde `acp_provisioning` in plaats daarvan. U moet nog steeds uw eigen waarden opgeven voor `{ACCESS_TOKEN}` en `{ORG_ID}`echter.
+
+In alle API-aanroepen die in deze handleiding worden getoond, `platform.adobe.io` wordt gebruikt als wortelweg, die aan het gebied VA7 in gebreke blijft. Als uw organisatie een ander gebied gebruikt, `platform` moet worden gevolgd door een streepje en de regiocode die aan uw organisatie is toegewezen: `nld2` voor NLD2 of `aus5` voor AUS5 (bijvoorbeeld: `platform-aus5.adobe.io`). Als u het gebied van uw organisatie niet kent, gelieve uw systeembeheerder te contacteren.
 
 ### URL voor verificatie ophalen
 
@@ -183,7 +194,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -193,7 +204,7 @@ curl -X POST \
 | `name` | Een naam voor de configuratie. Zorg ervoor dat u deze waarde onthoudt omdat deze nodig is om de status van de configuratie bij een [latere stap](#check-status). De waarde is hoofdlettergevoelig. |
 | `type` | Het configuratietype. Moet worden ingesteld op `BYOK_CONFIG`. |
 | `imsOrgId` | Uw IMS-organisatie-id. Dit moet dezelfde waarde zijn als in het kader van de `x-gw-ims-org-id` header. |
-| `configData` | Bevat de volgende details over de configuratie:<ul><li>`providerType`: Moet worden ingesteld op `AZURE_KEYVAULT`.</li><li>`keyVaultIdentifier`: De sleutelkluis-URI die u hebt gekopieerd [eerder](#send-to-adobe).</li></ul> |
+| `configData` | Bevat de volgende details over de configuratie:<ul><li>`providerType`: Moet worden ingesteld op `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: De sleutelkluis-URI die u hebt gekopieerd [eerder](#send-to-adobe).</li></ul> |
 
 **Antwoord**
 
