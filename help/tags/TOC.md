@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: de09106f4446981176ca001f607d540b490de8d1
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 25%
+source-wordcount: '952'
+ht-degree: 12%
 
 ---
 
@@ -64,83 +64,164 @@ ht-degree: 25%
    * [Gebruikersmachtigingen](./ui/administration/user-permissions.md)
 * Extensies {#extensions}
    * [Overzicht](./extensions/overview.md)
-   * Adobe-extensies {#adobe}
-      * [Overzicht](./extensions/web/overview.md)
+   * Tagextensies (client-side) {#client}
+      * [Overzicht](./extensions/client/overview.md)
+      * [Toegankelijke snelheidscijfers voor de site](https://exchange.adobe.com/apps/ec/103053)
+      * [Activity Map-klant](https://exchange.adobe.com/apps/ec/101531)
+      * [Pagina Actie vernieuwen](https://exchange.adobe.com/apps/ec/102848)
+      * [Websites bijhouden aanpassen](https://exchange.adobe.com/apps/ec/103195)
+      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
-         * [Overzicht](./extensions/web/analytics/overview.md)
-         * [Gedeelde modules](./extensions/web/analytics/shared-modules.md)
-         * [Aanvullende informatie](./extensions/web/analytics/release-notes.md)
+         * [Overzicht](./extensions/client/analytics/overview.md)
+         * [Gedeelde modules](./extensions/client/analytics/shared-modules.md)
+         * [Aanvullende informatie](./extensions/client/analytics/release-notes.md)
+      * [Adobe Analytics en Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
+      * [Adobe Analytics &amp; Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
+      * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Adobe Analytics-producttekenreeks {#product-string}
-         * [Overzicht](./extensions/web/product-string/overview.md)
-         * [Aanvullende informatie](./extensions/web/product-string/release-notes.md)
+         * [Overzicht](./extensions/client/product-string/overview.md)
+         * [Aanvullende informatie](./extensions/client/product-string/release-notes.md)
+      * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
       * Adobe Audience Manager {#audience-manager}
-         * [Overzicht](./extensions/web/audience-manager/overview.md)
+         * [Overzicht](./extensions/client/audience-manager/overview.md)
       * Gegevenslaag Adobe-client {#client-data-layer}
-         * [Overzicht](./extensions/web/client-data-layer/overview.md)
-         * [Aanvullende informatie](./extensions/web/client-data-layer/release-notes.md)
+         * [Overzicht](./extensions/client/client-data-layer/overview.md)
+         * [Aanvullende informatie](./extensions/client/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
-         * [Overzicht](./extensions/web/contexthub/overview.md)
+         * [Overzicht](./extensions/client/contexthub/overview.md)
+      * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Adobe Experience Cloud ID Service {#id-service}
-         * [Overzicht](./extensions/web/id-service/overview.md)
-         * [Aanvullende informatie](./extensions/web/id-service/release-notes.md)
+         * [Overzicht](./extensions/client/id-service/overview.md)
+         * [Aanvullende informatie](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform Demo {#platform-demo}
-         * [Overzicht](./extensions/web/platform-demo/overview.md)
+         * [Overzicht](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#sdk}
-         * [Overzicht](./extensions/web/sdk/overview.md)
-      * Adobe Experience Platform Cloud Connector {#cloud-connector}
-         * [Overzicht](./extensions/web/cloud-connector/overview.md)
+         * [Overzicht](./extensions/client/sdk/overview.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
-         * [Overzicht](./extensions/web/asset-insights/overview.md)
-         * [Aanvullende informatie](./extensions/web/asset-insights/release-notes.md)
+         * [Overzicht](./extensions/client/asset-insights/overview.md)
+         * [Aanvullende informatie](./extensions/client/asset-insights/release-notes.md)
+      * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * Adobe Media Analytics voor audio en video {#media-analytics}
-         * [Overzicht](./extensions/web/media-analytics/overview.md)
-         * [Aanvullende informatie](./extensions/web/media-analytics/release-notes.md)
+         * [Overzicht](./extensions/client/media-analytics/overview.md)
+         * [Aanvullende informatie](./extensions/client/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
-         * [Overzicht](./extensions/web/media-analytics-3x/overview.md)
-         * [Aanvullende informatie](./extensions/web/media-analytics-3x/release-notes.md)
+         * [Overzicht](./extensions/client/media-analytics-3x/overview.md)
+         * [Aanvullende informatie](./extensions/client/media-analytics-3x/release-notes.md)
       * Adobe Privacy {#privacy}
-         * [Overzicht](./extensions/web/privacy/overview.md)
+         * [Overzicht](./extensions/client/privacy/overview.md)
+      * [Adobe Report Suite-kiezer](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
-         * [Overzicht](./extensions/web/target/overview.md)
-         * [Aanvullende informatie](./extensions/web/target/release-notes.md)
+         * [Overzicht](./extensions/client/target/overview.md)
+         * [Aanvullende informatie](./extensions/client/target/release-notes.md)
       * Adobe Target v2 {#target-v2}
-         * [Overzicht](./extensions/web/target-v2/overview.md)
-         * [Aanvullende informatie](./extensions/web/target-v2/release-notes.md)
-      * [!DNL AWS] {#aws}
-         * [Overzicht](./extensions/web/aws/overview.md)
+         * [Overzicht](./extensions/client/target-v2/overview.md)
+         * [Aanvullende informatie](./extensions/client/target-v2/release-notes.md)
+      * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
+      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [Asset Insights AEM](https://exchange.adobe.com/apps/ec/103406)
+      * [JS-kennisgeving Airrem](https://exchange.adobe.com/apps/ec/103342)
+      * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
+      * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
+      * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
+      * [Awin-conversietag](https://exchange.adobe.com/apps/ec/103240)
+      * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
+      * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
+      * [Branch](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] video bijhouden {#brightcove}
-         * [Overzicht](./extensions/web/brightcove/overview.md)
-         * [Aanvullende informatie](./extensions/web/brightcove/release-notes.md)
+         * [Overzicht](./extensions/client/brightcove/overview.md)
+         * [Aanvullende informatie](./extensions/client/brightcove/release-notes.md)
+      * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
+      * [Kanaalbron-id](https://exchange.adobe.com/apps/ec/101412)
+      * [Cheetah Ervaringen](https://exchange.adobe.com/apps/ec/102759)
+      * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Gebruikelijke plug-ins voor Analytics {#plugins}
-         * [Overzicht](./extensions/web/plugins/overview.md)
-         * [Aanvullende informatie](./extensions/web/plugins/release-notes.md)
+         * [Overzicht](./extensions/client/plugins/overview.md)
+         * [Aanvullende informatie](./extensions/client/plugins/release-notes.md)
       * Algemene insteekmodules voor Web SDK {#web-sdk-plugins}
-         * [Overzicht](./extensions/web/web-sdk-plugins/overview.md)
-         * [Aanvullende informatie](./extensions/web/web-sdk-plugins/release-notes.md)
+         * [Overzicht](./extensions/client/web-sdk-plugins/overview.md)
+         * [Aanvullende informatie](./extensions/client/web-sdk-plugins/release-notes.md)
+      * [Concat](https://exchange.adobe.com/apps/ec/104690)
+      * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
+      * [Cookie-beheer voor toestemming door gebruikers CMP v2](https://exchange.adobe.com/apps/ec/107037)
       * Kern {#core}
-         * [Overzicht](./extensions/web/core/overview.md)
-         * [Gebeurtenis doorsturen](./extensions/web/core/event-forwarding.md)
-         * [Aanvullende informatie](./extensions/web/core/release-notes.md)
-      * Verbeterde Google-conversies toevoegen {#google-ads-enhanced-conversions}
-         * [Overzicht](./extensions/web/google-ads-enhanced-conversions/overview.md)
+         * [Overzicht](./extensions/client/core/overview.md)
+         * [Aanvullende informatie](./extensions/client/core/release-notes.md)
+      * [Aangepaste foutopsporingslogger](https://exchange.adobe.com/apps/ec/104698)
+      * [Klantenherkenning](https://exchange.adobe.com/apps/ec/100688)
+      * [Assistent gegevenselement (DEA)](https://exchange.adobe.com/apps/ec/101413)
+      * [Data Layer Manager](https://exchange.adobe.com/apps/ec/101462)
+      * [Decibel](https://exchange.adobe.com/apps/ec/100913)
+      * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
+      * [Differentiële privacy](https://exchange.adobe.com/apps/ec/104535)
+      * [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)
+      * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [OneTag knipperen](https://exchange.adobe.com/apps/ec/101392)
+      * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
+      * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
+      * [Voorspelfunctie van Genesys](https://exchange.adobe.com/apps/ec/106148)
       * Google-gegevenslaag {#google-data-layer}
-         * [Overzicht](./extensions/web/google-data-layer/overview.md)
-         * [Aanvullende informatie](./extensions/web/google-data-layer/release-notes.md)
-      * [!DNL Mailchimp] Rand {#mailchimp-edge}
-         * [Overzicht](./extensions/web/mailchimp/overview.md)
+         * [Overzicht](./extensions/client/google-data-layer/overview.md)
+         * [Aanvullende informatie](./extensions/client/google-data-layer/release-notes.md)
+      * [Google Global Site Tag (tag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
+      * [InMoment](https://exchange.adobe.com/apps/ec/100847)
+      * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
+      * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
+      * [KickFire](https://exchange.adobe.com/apps/ec/101621)
+      * [Toewijzingstabel](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
-         * [Overzicht](./extensions/web/marketo/overview.md)
-         * [Aanvullende informatie](./extensions/web/marketo/release-notes.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
-         * [Overzicht](./extensions/web/azure/overview.md)
-      * [!DNL Splunk] {#splunk}
-         * [Overzicht](./extensions/web/splunk/overview.md)
+         * [Overzicht](./extensions/client/marketo/overview.md)
+         * [Aanvullende informatie](./extensions/client/marketo/release-notes.md)
+      * [Master eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)
+      * [Monitor](https://exchange.adobe.com/apps/ec/106544)
+      * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
+      * [OneTrust Consent-beheer voor cookies](https://exchange.adobe.com/apps/ec/100340)
+      * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
+      * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
+      * [Pinterest-conversie bijhouden](https://exchange.adobe.com/apps/ec/100523)
+      * [Pixellader](https://exchange.adobe.com/apps/ec/100152)
+      * [Feedback op website van Qualtrics](https://exchange.adobe.com/apps/ec/101569)
+      * [Quantum Metric](https://exchange.adobe.com/apps/ec/101535)
+      * [Momentum oplossen](https://exchange.adobe.com/apps/ec/108352)
+      * [Rokt](https://exchange.adobe.com/apps/ec/107591)
+      * [SDI-enquête](https://exchange.adobe.com/apps/ec/102991)
+      * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
+      * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+      * [SPA Weergave wijzigen](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [Opslagspanner](https://exchange.adobe.com/apps/ec/102990)
+      * [TAGS van Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
+      * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
+      * [Verrijking van gegevens in Tealium](https://exchange.adobe.com/apps/ec/104217)
+      * [TMMData Foundation-Platform](https://exchange.adobe.com/apps/ec/100148)
+      * [TrustArc Cookie-toegangsbeheer](https://exchange.adobe.com/apps/ec/107037)
+      * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)
+      * [Webvariaties](https://exchange.adobe.com/apps/ec/106769)
+      * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
+      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
+      * [Tekstomzetting bijhouden](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] Afspelen](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube] video bijhouden {#youtube}
-         * [Overzicht](./extensions/web/youtube/overview.md)
-         * [Aanvullende informatie](./extensions/web/youtube/release-notes.md)
+         * [Overzicht](./extensions/client/youtube/overview.md)
+         * [Aanvullende informatie](./extensions/client/youtube/release-notes.md)
+   * Gebeurtenis die uitbreidingen (server-kant) door:sturen {#server}
+      * [Overzicht](./extensions/server/overview.md)
+      * Adobe Experience Platform Cloud Connector {#cloud-connector}
+         * [Overzicht](./extensions/server/cloud-connector/overview.md)
+      * [!DNL AWS] {#aws}
+         * [Overzicht](./extensions/server/aws/overview.md)
+      * Kern {#core}
+         * [Overzicht](./extensions/server/core/overview.md)
+      * Verbeterde Google-conversies toevoegen {#google-ads-enhanced-conversions}
+         * [Overzicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * [!DNL Mailchimp] Rand {#mailchimp}
+         * [Overzicht](./extensions/server/mailchimp/overview.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [Overzicht](./extensions/server/azure/overview.md)
+      * [PegPeg-klantbeslissingshub](https://exchange.adobe.com/apps/ec/107597)
+      * [Conversie-API magnetisch](https://exchange.adobe.com/apps/ec/108550)
+      * [!DNL Splunk] {#splunk}
+         * [Overzicht](./extensions/server/splunk/overview.md)
       * [!DNL Zendesk] API voor gebeurtenissen {#zendesk}
-         * [Overzicht](./extensions/web/zendesk/overview.md)
-   * [Extensies van derden](./extensions/3rd-party-extensions.md)
+         * [Overzicht](./extensions/server/zendesk/overview.md)
 * Uitbreiding {#extension-dev}
    * [Overzicht](./extension-dev/overview.md)
    * [Aan de slag](./extension-dev/getting-started.md)

@@ -2,7 +2,7 @@
 title: Regels
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Als een opgegeven gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd, w
 
 * **Voorwaarden**: Verfijn de gebeurtenis door om het even welke voorwaarden te vormen die voor een gebeurtenis waar moeten zijn om de regel teweeg te brengen. Een uitzondering wordt gedefinieerd als een NOT-voorwaarde. De veelvoudige voorwaarden worden aangesloten bij door EN.
 
-Welke gebeurtenissen beschikbaar zijn, is afhankelijk van de extensies die zijn geïnstalleerd. Voor informatie over de gebeurtenissen in de extensie Core raadpleegt u [Gebeurtenistypen van de kernextensie](../../extensions/web/core/overview.md#core-extension-event-types).
+Welke gebeurtenissen beschikbaar zijn, is afhankelijk van de extensies die zijn geïnstalleerd. Voor informatie over de gebeurtenissen in de extensie Core raadpleegt u [Gebeurtenistypen van de kernextensie](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Handelingen (dan)
 

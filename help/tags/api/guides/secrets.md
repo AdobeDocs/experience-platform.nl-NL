@@ -2,7 +2,7 @@
 title: Geheimen in de Reactor-API
 description: Leer de grondbeginselen van hoe te om geheimen in Reactor API voor gebruik in gebeurtenishet door:sturen te vormen.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 1%
@@ -131,7 +131,7 @@ Nadat het uitwisselingsartefact met succes op het milieu wordt bewaard, `activat
 
 ## Verwijzen naar geheimen {#referencing-secrets}
 
-Als u naar een geheim wilt verwijzen, moet u een gegevenselement van het type &quot;[!UICONTROL Secret]&quot; (verstrekt door de [[!UICONTROL Core] extension](../../extensions/web/core/overview.md)) voor een gebeurtenis die bezit door:sturen. Wanneer het vormen van dit gegevenselement, wordt u ertoe aangezet om te wijzen op welk geheim aan gebruik voor elk milieu. U kunt dan regels tot stand brengen die naar een geheim gegevenselement, zoals binnen de kopbal voor een vraag van HTTP verwijzen.
+Als u naar een geheim wilt verwijzen, moet u een gegevenselement van het type &quot;[!UICONTROL Secret]&quot; (verstrekt door de [[!UICONTROL Core] extension](../../extensions/client/core/overview.md)) voor een gebeurtenis die bezit door:sturen. Wanneer het vormen van dit gegevenselement, wordt u ertoe aangezet om te wijzen op welk geheim aan gebruik voor elk milieu. U kunt dan regels tot stand brengen die naar een geheim gegevenselement, zoals binnen de kopbal voor een vraag van HTTP verwijzen.
 
 ![Geheim gegevenselement](../../images/api/guides/secrets/data-element.png)
 

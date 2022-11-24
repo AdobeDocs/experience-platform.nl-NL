@@ -5,7 +5,7 @@ title: Overzicht van Adobe Privacy JavaScript-bibliotheek
 topic-legacy: overview
 description: Met de Adobe Privacy JavaScript-bibliotheek kunt u gegevenssubject-id's ophalen voor gebruik in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 4%
@@ -48,7 +48,7 @@ Als u het dialoogvenster [!DNL Privacy JS Library], moet u het op uw computer in
 * Installeer met npm door de volgende opdracht uit te voeren: `npm install @adobe/adobe-privacy`
 * Downloaden vanaf de [Experience Cloud GitHub-opslagplaats](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-U kunt de bibliotheek ook installeren met een tagextensie. Zie het overzicht op de [Adobe Privacy-tagextensie](../tags/extensions/web/privacy/overview.md) voor meer informatie .
+U kunt de bibliotheek ook installeren met een tagextensie. Zie het overzicht op de [Adobe Privacy-tagextensie](../tags/extensions/client/privacy/overview.md) voor meer informatie .
 
 ## Instantiëren van de [!DNL Privacy JS Library]
 

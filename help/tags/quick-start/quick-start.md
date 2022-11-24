@@ -2,7 +2,7 @@
 title: Snelstartgids
 description: Leer hoe u snel aan de slag kunt met tags in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Zie voor meer informatie over het maken van eigenschappen [Een eigenschap maken]
 
 Een uitbreiding is een integratie die door Adobe of een partner van Adobe wordt gebouwd die nieuwe en eindeloze opties voor de markeringen toevoegt die u aan uw plaatsen kunt opstellen. Als u een tag ziet als een besturingssysteem, zijn extensies de apps die u installeert om de specifieke taken uit te voeren die u nodig hebt.
 
-Alle nieuwe eigenschappen worden geleverd met de [Kernextensie](../extensions/web/core/overview.md) geïnstalleerd. Mobiele eigenschappen worden geleverd met extra extensies. De uitbreiding van de Kern wordt gebouwd door Adobe om een robuuste standaardreeks gegevenselementtypes voor uw gegevenslaag en gebeurtenistypen voor uw regels te verstrekken. De meeste handelingen die u wilt uitvoeren (een ECID ophalen, verzenden [!DNL Adobe Analytics] bakens, laadt de [!DNL Target] global mbox, enz.) zijn afkomstig van extensies die u installeert vanuit de catalogus.
+Alle nieuwe eigenschappen worden geleverd met de [Kernextensie](../extensions/client/core/overview.md) geïnstalleerd. Mobiele eigenschappen worden geleverd met extra extensies. De uitbreiding van de Kern wordt gebouwd door Adobe om een robuuste standaardreeks gegevenselementtypes voor uw gegevenslaag en gebeurtenistypen voor uw regels te verstrekken. De meeste handelingen die u wilt uitvoeren (een ECID ophalen, verzenden [!DNL Adobe Analytics] bakens, laadt de [!DNL Target] global mbox, enz.) zijn afkomstig van extensies die u installeert vanuit de catalogus.
 
 Wat tags in Platform echt uniek maakt, is dat deze extensies door iedereen kunnen worden gemaakt. Moet u een Facebook-hermarketingpixel op uw site neerzetten? Bekijk de extensie die Facebook heeft gemaakt. Wilt u hetzelfde voor Twitter of Gekoppeld in? Gebruik deze extensies. Moet u een enquête uitvoeren? Kijk naar Vraag Pro of Voorzien. Moet u privacy beheren en toestemming van uw eindgebruikers geven om mee te werken? [!DNL GDPR]? Kijk goed naar Evidon en Vertrouwboog. Wilt u een gedetailleerd inzicht zien in het gedrag van individuele gebruikers op uw site? Kijk eens naar Clicktale. Zie de sectie over [toevoegen, nieuwe extensie](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

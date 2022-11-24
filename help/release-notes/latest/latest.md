@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: De meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
+source-git-commit: f8e8ec0fb13fc988d47bb3bbe85f953e66b33f13
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%
@@ -27,9 +27,9 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL AWS] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Amazon Web Services] ([!DNL AWS]) met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL AWS] extensieoverzicht](../../tags/extensions/web/aws/overview.md) voor meer informatie . |
-| [!DNL Google Ads Enhanced Conversions] extensie voor het doorsturen van gebeurtenissen | U kunt nu conversiegegevens verzenden naar [!DNL Google Ads] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Google Ads Enhanced Conversions] extensieoverzicht](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) voor meer informatie . |
-| [!DNL Microsoft Azure] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Microsoft Azure] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Microsoft Azure] extensieoverzicht](../../tags/extensions/web/azure/overview.md) voor meer informatie . |
+| [!DNL AWS] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Amazon Web Services] ([!DNL AWS]) met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL AWS] extensieoverzicht](../../tags/extensions/server/aws/overview.md) voor meer informatie . |
+| [!DNL Google Ads Enhanced Conversions] extensie voor het doorsturen van gebeurtenissen | U kunt nu conversiegegevens verzenden naar [!DNL Google Ads] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Google Ads Enhanced Conversions] extensieoverzicht](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) voor meer informatie . |
+| [!DNL Microsoft Azure] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Microsoft Azure] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Microsoft Azure] extensieoverzicht](../../tags/extensions/server/azure/overview.md) voor meer informatie . |
 
 Voor meer informatie over de mogelijkheden van de gegevensinzameling van het Platform, zie [overzicht van gegevensverzameling](../../collection/home.md).
 

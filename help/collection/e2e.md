@@ -2,7 +2,7 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van Adobe Experience Platform-mogelijkheden voor gegevensverzameling.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 0%
@@ -212,7 +212,7 @@ De pagina voor gebeurtenisconfiguratie wordt weergegeven. Als u een gebeurtenis 
 
 >[!NOTE]
 >
->Zie voor meer informatie over de verschillende gebeurtenistypen die worden geleverd door Adobe-webextensies, zoals hoe u ze kunt configureren de [Referentie voor Adobe-extensies](../tags/extensions/web/overview.md) in de tagdocumentatie.
+>Zie voor meer informatie over de verschillende gebeurtenistypen die worden geleverd door Adobe-webextensies, zoals hoe u ze kunt configureren de [Referentie voor Adobe-extensies](../tags/extensions/client/overview.md) in de tagdocumentatie.
 
 Met de gebeurtenis voor het verzenden van formulieren kunt u een [CSS-kiezer](https://www.w3schools.com/css/css_selectors.asp) om naar een specifiek element te verwijzen waarop de regel moet worden geactiveerd. In het onderstaande voorbeeld wordt de id `add-to-cart-form` wordt gebruikt, zodat deze regel alleen wordt geactiveerd voor het formulier &quot;Toevoegen aan winkelwagentje&quot;. Selecteren **[!UICONTROL Keep Changes]** om de gebeurtenis aan de regel toe te voegen.
 

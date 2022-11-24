@@ -3,7 +3,7 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Lijst met eigenschappen voor het doorsturen van gebeurtenissen **[!UICONTROL Edg
 
 ### Extensies {#extensions}
 
-Het doorsturen van gebeurtenissen heeft een eigen catalogus met compatibele extensies, zoals de [Kern](../../extensions/web/core/event-forwarding.md) uitbreiding en [Adobe Cloud Connector](../../extensions/web/cloud-connector/overview.md) extensie. U kunt de beschikbare uitbreidingen voor gebeurtenis bekijken die eigenschappen door:sturen in UI door te selecteren **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]**.
+Het doorsturen van gebeurtenissen heeft een eigen catalogus met compatibele extensies, zoals de [Kern](../../extensions/server/core/overview.md) uitbreiding en [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) extensie. U kunt de beschikbare uitbreidingen voor gebeurtenis bekijken die eigenschappen door:sturen in UI door te selecteren **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]**.
 
 ![Gebeurtenis die uitbreidingen in de Inzameling UI door:sturen van Gegevens](../../images/ui/event-forwarding/overview/extensions.png)
 

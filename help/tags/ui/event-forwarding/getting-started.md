@@ -3,7 +3,7 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegevens naar Adobe Experience Platform Edge Network worden verzonden met een of meer van de volgende drie opties:
 
-* [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
+* [Adobe Experience Platform Web SDK](../../extensions/client/sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
 * [Server-naar-server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
 
@@ -99,7 +99,7 @@ Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
 Maak uw eigenschap in het dialoogvenster **[!UICONTROL Tags]** werkruimte, navigeer vervolgens naar **[!UICONTROL Extensions]** en selecteer de uitbreiding van SDK van het Web van het Experience Platform van de catalogus om het te vormen en te installeren.
 
-Zie de [Web SDK-uitbreidingsdocumentatie](../../extensions/web/sdk/overview.md) voor meer informatie over configuratieopties.
+Zie de [Web SDK-uitbreidingsdocumentatie](../../extensions/client/sdk/overview.md) voor meer informatie over configuratieopties.
 
 ## Creeer een markeringsregel om gegevens naar het Web SDK van het Platform te verzenden
 

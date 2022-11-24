@@ -2,7 +2,7 @@
 title: Asynchrone implementatie
 description: Leer hoe u Adobe Experience Platform-tagbibliotheken asynchroon op uw website kunt implementeren.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Ten eerste, omdat de tagbibliotheek kan zijn geladen voor- of nadat de onderkant
 
 Ten tweede kan de tagbibliotheek klaar zijn met laden voor of na de [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) Er is een browsergebeurtenis (DOM Ready) opgetreden.
 
-Vanwege deze twee punten is het de moeite waard om te laten zien hoe de [Bibliotheek geladen](../../extensions/web/core/overview.md#library-loaded-page-top), [Pagina onder](../../extensions/web/core/overview.md#page-bottom), [gereed voor DOM](../../extensions/web/core/overview.md#page-bottom), en [Venster geladen](../../extensions/web/core/overview.md#window-loaded) gebeurtenistypen van de functie Core bij het asynchroon laden van een tagbibliotheek.
+Vanwege deze twee punten is het de moeite waard om te laten zien hoe de [Bibliotheek geladen](../../extensions/client/core/overview.md#library-loaded-page-top), [Pagina onder](../../extensions/client/core/overview.md#page-bottom), [gereed voor DOM](../../extensions/client/core/overview.md#page-bottom), en [Venster geladen](../../extensions/client/core/overview.md#window-loaded) gebeurtenistypen van de functie Core bij het asynchroon laden van een tagbibliotheek.
 
 Als de eigenschap tag de volgende vier regels bevat:
 

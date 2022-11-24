@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
 description: De nieuwste releaseopmerkingen voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -14,8 +14,8 @@ ht-degree: 0%
 ## 26 oktober 2022
 
 * **Gevoelige gegevensverwerking voor gegevensstromen**: De gegevensstromen gebruiken nu verscheidene technologieën van de Platform om gevoelige gegevens zoals die door verordeningen zoals de Wet van de Portabiliteit en van de Verantwoording van de Ziekteverzekering (HIPAA) worden afgedwongen adequaat te behandelen. Zie de sectie over [verwerking van gevoelige gegevens in gegevensstreams](../../edge/datastreams/overview.md#sensitive) voor meer informatie .
-* **[!DNL Splunk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Splunk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Splunk] extensieoverzicht](../extensions/web/splunk/overview.md) voor meer informatie .
-* **[!DNL Zendesk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Zendesk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Zendesk] extensieoverzicht](../extensions/web/zendesk/overview.md) voor meer informatie .
+* **[!DNL Splunk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Splunk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Splunk] extensieoverzicht](../extensions/server/splunk/overview.md) voor meer informatie .
+* **[!DNL Zendesk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Zendesk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Zendesk] extensieoverzicht](../extensions/server/zendesk/overview.md) voor meer informatie .
 
 ## 28 september 2022
 
@@ -32,6 +32,6 @@ ht-degree: 0%
 
 Nieuwe extensies zijn vrijgegeven:
 
-* [Google Data Layer-tagextensie](../extensions/web/google-data-layer/overview.md): Hiermee kunt u een Google-gegevenslaag gebruiken in de implementatie van tags.
+* [Google Data Layer-tagextensie](../extensions/client/google-data-layer/overview.md): Hiermee kunt u een Google-gegevenslaag gebruiken in de implementatie van tags.
 * [Google Ads Enhanced Conversions-gebeurtenis door:sturen extensie](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Hiermee kunt u uw Google Ads-conversies in real-time verbeteren.
-* [Mailchimp-gebeurtenis door:sturen, extensie](../extensions/web/mailchimp/overview.md): Verstuurt gebeurtenissen naar de Mailchimp Marketing-API die e-mails kan activeren voor Mailchimp-marketingcampagnes, -reizen of -transacties.
+* [Mailchimp-gebeurtenis door:sturen, extensie](../extensions/server/mailchimp/overview.md): Verstuurt gebeurtenissen naar de Mailchimp Marketing-API die e-mails kan activeren voor Mailchimp-marketingcampagnes, -reizen of -transacties.
