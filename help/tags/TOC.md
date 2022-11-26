@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 32662a5586e0b0b0af7ef14ce27022216a76fac5
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 12%
+source-wordcount: '965'
+ht-degree: 11%
 
 ---
 
@@ -155,6 +155,7 @@ ht-degree: 12%
       * [Differentiële privacy](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [OneTag knipperen](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -210,6 +211,7 @@ ht-degree: 12%
          * [Overzicht](./extensions/server/aws/overview.md)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
+      * [Facebook Conversies-API](https://exchange.adobe.com/apps/ec/105509)
       * Verbeterde Google-conversies toevoegen {#google-ads-enhanced-conversions}
          * [Overzicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Rand {#mailchimp}
