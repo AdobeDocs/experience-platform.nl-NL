@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
 breadcrumb-title: Handleiding voor Privacy Service
 user-guide-description: Beheer verzoeken om klantgegevens om te voldoen aan wettelijke privacyregels zoals GDPR en CCPA.
 feature: Privacy
-source-git-commit: e74d0658d5c389a22497301d289e0310d28731f0
+source-git-commit: 5cb229b4b7609a566298d4ed8bf630447ff62700
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 19%
+source-wordcount: '88'
+ht-degree: 18%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 19%
 # Adobe Experience Platform Privacy Service {#privacy}
 
 * [Overzicht van Privacy Service](./home.md)
+* [Machtigingen voor Privacy Service beheren](./permissions.md)
 * [Privacy Service- en Experience Cloud-toepassingen](./experience-cloud-apps.md)
 * [Identiteitsgegevens voor privacyverzoeken](./identity-data.md)
 * [Overzicht van Privacy JS Library](./js-library.md)
