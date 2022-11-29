@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;Analytics Source Connec
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,9 @@ De verwachte latentie voor Analytics Data on Platform wordt in de onderstaande t
 | Nieuwe gegevens naar [!DNL Real-time Customer Profile] (A4T **niet** ingeschakeld) | &lt; 2 minuten |
 | Nieuwe gegevens naar [!DNL Real-time Customer Profile] (A4T **is** ingeschakeld) | &lt; 15 minuten |
 | Nieuwe gegevens voor Data Lake | &lt; 90 minuten |
-| Backfill-gegevens (13 maanden of 10 miljard gebeurtenissen, afhankelijk van welke waarde lager is) | &lt; 4 weken |
+| Terugvulling van gebeurtenissen van minder dan 10 miljard | &lt; 4 weken |
+
+De terugvullingen van analysemogelijkheden worden standaard ingesteld op 13 maanden. De limiet van 10 miljard gebeurtenissen die in bovenstaande tabel worden genoemd, is strikt in verhouding tot de verwachte latentie.
 
 >[!NOTE]
 >
