@@ -5,9 +5,9 @@ title: Overzicht van de Google PubSub Source Connector
 topic-legacy: overview
 description: Leer hoe u Google PubSub met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
+source-git-commit: 28c07150958c6ac22bf2a23537d5792b8990b2d3
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals [!DNL AWS], [!DNL Google Cloud Platform], en [!DNL Azure], zodat u gegevens van deze systemen in Platform kunt brengen voor gebruik in downstreamdiensten en -bestemmingen.
 
-Met bronnen voor cloudopslag kunt u uw gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens van [!DNL Azure Event Hubs] in real time.
+Met bronnen voor cloudopslag kunt u uw gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens van [!DNL Google PubSub] in real time.
 
 ## Verbinden [!DNL Google PubSub] naar Platform
 
