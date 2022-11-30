@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maak streamingverbinding;api-hulplijn;zelfstudie;maak een streamingverbinding;streaming opname;opname;
-title: Een HTTP API-streamingverbinding maken met de API
-description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
+title: Een HTTP API voor streaming verbinding maken met de Flow Service API
+description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
+source-git-commit: 26c967418e983322cc39aa799a681d258638d769
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -259,10 +259,10 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
       "createdBy": "acme@AdobeID",
       "updatedBy": "acme@AdobeID",
       "createdClient": "{CREATED_CLIENT}",
-      "updatedClient": "{UPDATEDD_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
       "sandboxId": "{SANDBOX_ID}",
       "sandboxName": "{SANDBOX_NAME}",
-      "imsOrgId": "{ORG_ID}}",
+      "imsOrgId": "{ORG_ID}",
       "name": "ACME Streaming Connection XDM Data",
       "description": "ACME streaming connection for customer data",
       "connectionSpec": {
