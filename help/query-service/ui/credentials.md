@@ -5,9 +5,9 @@ title: Handleiding Query Service Credentials
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,12 @@ ht-degree: 0%
 
 Met Adobe Experience Platform Query Service kunt u verbinding maken met externe clients. U kunt met deze externe cliënten verbinden door of het verlopen van geloofsbrieven of niet-vervallende geloofsbrieven te gebruiken.
 
-## Referenties vervallen
+## Referenties vervallen {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="SSL-modus van client"
+>abstract="SSL moet worden ingeschakeld in clients die zijn verbonden met Query Service. Zorg ervoor dat de SSL-modus is ingesteld op &#39;require&#39;."
 
 U kunt verlopen referenties gebruiken om snel een verbinding met een externe client in te stellen.
 
@@ -96,7 +101,7 @@ Wanneer u een niet-verkennende referentie bewerkt, wordt een modaal veld weergeg
 
 Als u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Update account]** om de update van uw referenties te voltooien.
 
-## Referenties gebruiken om verbinding te maken met externe clients
+## Referenties gebruiken om verbinding te maken met externe clients {#use-credential-to-connect}
 
 U kunt of de het verlopen of niet-verlopen geloofsbrieven gebruiken om met externe cliënten, zoals de Studio van Gegevens Aqua, Leider, of Power BI te verbinden. De invoermethode voor deze referenties is afhankelijk van de externe client. Raadpleeg de documentatie van de externe client voor specifieke instructies over het gebruik van deze referenties.
 
