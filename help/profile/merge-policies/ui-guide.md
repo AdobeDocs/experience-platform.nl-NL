@@ -4,9 +4,9 @@ title: UI-gids voor samenvoegingsbeleid
 type: Documentation
 description: Wanneer het brengen van gegevens uit veelvoudige bronnen samen in Experience Platform, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen. Deze handleiding bevat stapsgewijze instructies voor het werken met samenvoegbeleidsregels via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2195'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ De eerste stap in het werkschema staat u toe om uw samenvoegbeleid te vormen doo
    * **[!UICONTROL Private Graph]**: Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
 * **[!UICONTROL Default merge policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet de standaardinstelling voor uw organisatie is. Als de kiezer is ingeschakeld, wordt een waarschuwing weergegeven met de vraag of u het standaardsamenvoegbeleid van uw organisatie wilt wijzigen. Zie de [overzicht van samenvoegbeleid](overview.md) voor meer informatie over standaardbeleid voor samenvoegen.
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Active-On-Edge Merge Policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid aan de rand actief is. Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Als u wilt dat een segment aan de rand wordt geactiveerd (gemarkeerd als een randsegment), moet het segment zijn gekoppeld aan een samenvoegingsbeleid dat is gemarkeerd als actief aan de rand. Als een segment **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het segment niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming segment. Bovendien kan elke IMS-organisatie alleen **één** samenvoegbeleid dat op rand actief is.
+* **[!UICONTROL Active-On-Edge Merge Policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid aan de rand actief is. Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Als u wilt dat een segment aan de rand wordt geactiveerd (gemarkeerd als een randsegment), moet het segment zijn gekoppeld aan een samenvoegingsbeleid dat is gemarkeerd als actief aan de rand. Als een segment **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het segment niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming segment. Bovendien kan elke sandbox in een organisatie alleen **één** samenvoegbeleid dat op rand actief is.
 
 Nadat de vereiste velden zijn voltooid, kunt u **[!UICONTROL Next]** om door te gaan met de workflow.
 
@@ -145,7 +145,7 @@ Net als bij het selecteren van profielgegevenssets wordt door het selecteren van
 
 De laatste stap in de workflow is het controleren van het samenvoegbeleid. De **[!UICONTROL Review]** het scherm toont informatie over uw samenvoegbeleid, met inbegrip van de identiteitskaart die methode stitching selecteerde, geselecteerde fusiemethode, en de datasets inbegrepen. (Als u alle meegeleverde profiel- of ExperienceEvent-gegevenssets wilt weergeven, selecteert u het aantal gegevenssets waarmee u de vervolgkeuzelijst wilt uitvouwen.)
 
-Wordt ook op het revisiescherm weergegeven: **[!UICONTROL Preview data]** tabel met voorbeeldprofielrecords die uw samenvoegbeleid gebruiken. Zo kunt u een voorvertoning weergeven van een klantprofiel voordat u het samenvoegbeleid opslaat.
+Wordt ook op het revisiescherm weergegeven: **[!UICONTROL Preview data]** tabel met voorbeeldprofielrecords die uw samenvoegbeleid gebruiken. Zo kunt u een voorvertoning bekijken van een klantprofiel voordat u het samenvoegbeleid opslaat.
 
 Controleer of u de configuratie van het samenvoegbeleid en de voorbeeldgegevens zorgvuldig controleert voordat u selecteert **[!UICONTROL Finish]** om de aanmaakworkflow te voltooien.
 
@@ -153,7 +153,7 @@ Controleer of u de configuratie van het samenvoegbeleid en de voorbeeldgegevens 
 
 Als u **[!UICONTROL Timestamp ordered]** als fusiemethode voor uw samenvoegingsbeleid, omvat de lijst van de datasets van het Profiel alle datasets die door uw organisatie met betrekking tot de schemaklasse, in volgorde van timestamp zijn gecreeerd. De lijst van datasets ExperienceEvent omvat alle datasets die uw organisatie voor de gekozen schemaklasse heeft gecreeerd en aan de datasets van het Profiel zal worden toegevoegd.
 
-De **[!UICONTROL Preview data]** de lijst toont de verslagen van het steekproefprofiel die op een timestamp opdracht geven tot van de datasets worden gebaseerd. Zo kunt u een voorvertoning weergeven van een klantprofiel voordat u het samenvoegbeleid opslaat.
+De **[!UICONTROL Preview data]** de lijst toont de verslagen van het steekproefprofiel die op een timestamp het opdracht geven tot van de datasets worden gebaseerd. Zo kunt u een voorvertoning bekijken van een klantprofiel voordat u het samenvoegbeleid opslaat.
 
 ![](../images/merge-policies/timestamp-review.png)
 
@@ -161,7 +161,7 @@ De **[!UICONTROL Preview data]** de lijst toont de verslagen van het steekproefp
 
 Als u **[!UICONTROL Dataset precedence]** als samenvoegmethode voor uw samenvoegbeleid, omvatten de lijsten van Profiel en de datasets ExperienceEvent slechts de datasets van het Profiel en van de ExperienceEvent die u tijdens het creatiewerkschema selecteerde, respectievelijk. De orde van de datasets van het Profiel zou de belangrijkheid moeten aanpassen die u tijdens verwezenlijking specificeerde. Als dat niet het geval is, gebruikt u de [!UICONTROL Back] om terug te keren naar de vorige workflowstappen en de prioriteit aan te passen.
 
-De **[!UICONTROL Preview data]** de lijst toont de verslagen van het steekproefprofiel gebruikend de geselecteerde datasets. Zo kunt u een voorvertoning weergeven van een klantprofiel voordat u het samenvoegbeleid opslaat.
+De **[!UICONTROL Preview data]** de lijst toont de verslagen van het steekproefprofiel gebruikend de geselecteerde datasets. Zo kunt u een voorvertoning bekijken van een klantprofiel voordat u het samenvoegbeleid opslaat.
 
 ![](../images/merge-policies/dataset-precedence-review.png)
 
