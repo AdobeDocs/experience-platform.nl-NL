@@ -1,59 +1,34 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maak streamingverbinding;api-hulplijn;zelfstudie;maak een streamingverbinding;streaming opname;opname;
-solution: Experience Platform
 title: Een HTTP API-streamingverbinding maken met de API
-topic-legacy: tutorial
-type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1415'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL HTTP API] streamingverbinding met de API
+# Een HTTP API-streamingverbinding maken met de [!DNL Flow Service] API
 
-De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+De Flow Service wordt gebruikt om klantgegevens van verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om u door de stappen te lopen om een het stromen verbinding tot stand te brengen gebruikend de Dienst API van de Stroom.
+Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om u door de stappen te lopen om een het stromen verbinding tot stand te brengen gebruikend [!DNL Flow Service] API.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert ervaringsgegevens.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert ervaringsgegevens.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 Bovendien, vereist het creëren van een het stromen verbinding u om een doelXDM schema en een dataset te hebben. Lees de zelfstudie voor meer informatie over het maken van deze [streaming recordgegevens](../../../../../ingestion/tutorials/streaming-record-data.md) of de zelfstudie [streaming tijdreeksgegevens](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
+### Platform-API&#39;s gebruiken
 
-### API-voorbeeldaanroepen lezen
-
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
-
-### Waarden verzamelen voor vereiste koppen
-
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
-
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../../../../sandboxes/home.md).
-
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
-
-- Inhoudstype: application/json
+Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -63,6 +38,8 @@ Een basisverbinding geeft de bron aan en bevat de informatie die nodig is om de 
 
 Niet-geverifieerde verbindingen zijn de standaardstreamingverbindingen die u kunt maken wanneer u gegevens wilt streamen naar het Platform.
 
+Als u een niet-geverifieerde basisverbinding wilt maken, vraagt u een POST om `/connections` eindpunt terwijl het verstrekken van een naam voor uw verbinding, het gegevenstype, en identiteitskaart van de de verbindingsspecificatie van HTTP API. Deze id is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+
 **API-indeling**
 
 ```http
@@ -71,7 +48,11 @@ POST /flowservice/connections
 
 **Verzoek**
 
-Als u een streamingverbinding wilt maken, moet u de provider-id en de verbindingsspecificatie-id opgeven als onderdeel van het verzoek om POST. De provider-id is `521eee4d-8cbe-4906-bb48-fb6bd4450033` en de verbindingsspecificatie-id is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Met de volgende aanvraag wordt een basisverbinding voor de HTTP-API gemaakt.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -81,29 +62,55 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
-     "connectionSpec": {
-         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-         "version": "1.0"
-     },
-     "auth": {
-         "specName": "Streaming Connection",
-         "params": {
-             "sourceId": "Sample connection",
-             "dataType": "xdm",
-             "name": "Sample connection"
-         }
-     }
- }'
+    "name": "ACME Streaming Connection XDM Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "xdm"
+      }
+    }
+  }'
 ```
 
+>[!TAB Onbewerkte gegevens]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "name": "ACME Streaming Connection Raw Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "raw"
+      }
+    }
+  }'
+```
+
+>[!ENDTABS]
+
 | Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `auth.params.sourceId` | De id van de streamingverbinding die u wilt maken. |
-| `auth.params.dataType` | Het gegevenstype voor de streamingverbinding. Deze waarde moet `xdm`. |
+| --- | --- |
+| `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
+| `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met HTTP API. Deze id is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
+| `auth.params.dataType` | Het gegevenstype voor de streamingverbinding. Tot de ondersteunde waarden behoren: `xdm` en `raw`. |
 | `auth.params.name` | De naam van de streamingverbinding die u wilt maken. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` voor streamingverbindingen. |
 
 **Antwoord**
 
@@ -111,19 +118,22 @@ Een geslaagde reactie retourneert HTTP-status 201 met gegevens over de nieuwe ve
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `id` | De `id` van uw nieuwe verbinding. Dit wordt hierna aangeduid als `{CONNECTION_ID}`. |
-| `etag` | Een id die is toegewezen aan de verbinding en die de revisie van de verbinding opgeeft. |
+| `id` | De `id` van uw nieuwe basisverbinding. |
+| `etag` | Een id die is toegewezen aan de verbinding en die de versie van de basisverbinding opgeeft. |
 
 ### Geverifieerde verbinding
 
 De voor authentiek verklaarde verbindingen zouden moeten worden gebruikt wanneer u tussen verslagen moet onderscheiden die uit vertrouwde op en niet-vertrouwde op bronnen komen. Gebruikers die gegevens met PII (Personeel Identified Information) willen verzenden, moeten een geverifieerde verbinding maken bij het streamen van gegevens naar het Platform.
+
+Als u een geverifieerde basisverbinding wilt maken, moet u uw bron-id opgeven en aangeven of verificatie vereist is wanneer u een verzoek tot POST bij de `/connections` eindpunt.
+
 
 **API-indeling**
 
@@ -133,7 +143,11 @@ POST /flowservice/connections
 
 **Verzoek**
 
-Als u een streamingverbinding wilt maken, moet u de provider-id en de verbindingsspecificatie-id opgeven als onderdeel van het verzoek om POST. De provider-id is `521eee4d-8cbe-4906-bb48-fb6bd4450033` en de verbindingsspecificatie-id is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Met de volgende aanvraag wordt een geverifieerde basisverbinding voor de HTTP-API gemaakt.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -143,8 +157,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
+     "name": "ACME Streaming Connection XDM Data Authenticated",
+     "description": "ACME streaming connection for customer data",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
          "version": "1.0"
@@ -152,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "{SOURCE_ID}",
              "dataType": "xdm",
              "name": "Sample connection",
              "authenticationRequired": true
@@ -161,14 +175,40 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  }
 ```
 
+>[!TAB Onbewerkte gegevens]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+     "name": "ACME Streaming Connection Raw Data Authenticated",
+     "description": "ACME streaming connection for customer data",
+     "connectionSpec": {
+         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+         "version": "1.0"
+     },
+     "auth": {
+         "specName": "Streaming Connection",
+         "params": {
+             "sourceId": "Sample connection",
+             "dataType": "raw",
+             "name": "Sample connection",
+             "authenticationRequired": true
+         }
+     }
+ }
+```
+
+>[!ENDTABS]
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `auth.params.sourceId` | De id van de streamingverbinding die u wilt maken. |
-| `auth.params.dataType` | Het gegevenstype voor de streamingverbinding. Deze waarde moet `xdm`. |
-| `auth.params.name` | De naam van de streamingverbinding die u wilt maken. |
 | `auth.params.authenticationRequired` | De parameter die opgeeft dat de gemaakte streamingverbinding |
-| `connectionSpec.id` | De verbindingsspecificatie `id` voor streamingverbindingen. |
 
 **Antwoord**
 
@@ -176,15 +216,10 @@ Een geslaagde reactie retourneert HTTP-status 201 met gegevens over de nieuwe ve
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `id` | De `id` van uw nieuwe verbinding. Dit wordt hierna aangeduid als `{CONNECTION_ID}`. |
-| `etag` | Een id die is toegewezen aan de verbinding en die de revisie van de verbinding opgeeft. |
 
 ## URL voor streamingeindpunt ophalen
 
@@ -193,17 +228,17 @@ Als de basisverbinding is gemaakt, kunt u nu de URL van het streamingeindpunt op
 **API-indeling**
 
 ```http
-GET /flowservice/connections/{CONNECTION_ID}
+GET /flowservice/connections/{BASE_CONNECTION_ID}
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De `id` De waarde van de verbinding die u eerder hebt gemaakt. |
+| `{BASE_CONNECTION_ID}` | De `id` De waarde van de verbinding die u eerder hebt gemaakt. |
 
 **Verzoek**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -216,42 +251,46 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ```json
 {
-    "items": [
-        {
-            "createdAt": 1583971856947,
-            "updatedAt": 1583971856947,
-            "createdBy": "{API_KEY}",
-            "updatedBy": "{API_KEY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
-            "id": "77a05521-91d6-451c-a055-2191d6851c34",
-            "name": "Another new sample connection (Experience Event)",
-            "description": "Sample description",
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Streaming Connection",
-                "params": {
-                    "sourceId": "Sample connection (ExperienceEvent)",
-                    "inletUrl": "https://dcs.adobedc.net/collection/a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "inletId": "a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "dataType": "xdm",
-                    "name": "Sample connection (ExperienceEvent)"
-                }
-            },
-            "version": "\"56008aee-0000-0200-0000-5e697e150000\"",
-            "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
+  "items": [
+    {
+      "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "createdAt": 1669238699119,
+      "updatedAt": 1669238699119,
+      "createdBy": "acme@AdobeID",
+      "updatedBy": "acme@AdobeID",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATEDD_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}}",
+      "name": "ACME Streaming Connection XDM Data",
+      "description": "ACME streaming connection for customer data",
+      "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+      },
+      "state": "enabled",
+      "auth": {
+        "specName": "Streaming Connection",
+        "params": {
+          "sourceId": "ACME Streaming Connection XDM Data",
+          "inletUrl": "https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "authenticationRequired": false,
+          "inletId": "667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "dataType": "xdm",
+          "name": "ACME Streaming Connection XDM Data"
         }
-    ]
+      },
+      "version": "\"f50185ed-0000-0200-0000-637e8fad0000\"",
+      "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
+    }
+  ]
 }
 ```
 
 ## Een bronverbinding maken {#source}
 
-Nadat u de basisverbinding hebt gemaakt, moet u een bronverbinding maken. Wanneer u een bronverbinding maakt, hebt u de `id` waarde van uw gemaakte basisverbinding.
+Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding.
 
 **API-indeling**
 
@@ -270,14 +309,14 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample source connection",
-    "description": "Sample source connection description",
-    "baseConnectionId": "{BASE_CONNECTION_ID}",
-    "connectionSpec": {
-        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-        "version": "1.0"
-    }
-}'
+      "name": "ACME Streaming Source Connection for Customer Data",
+      "description": "A streaming source connection for ACME XDM Customer Data",
+      "baseConnectionId": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "connectionSpec": {
+          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+          "version": "1.0"
+      }
+    }'
 ```
 
 **Antwoord**
@@ -286,8 +325,8 @@ Een geslaagde reactie retourneert HTTP-status 201 met gedetailleerde informatie 
 
 ```json
 {
-    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
-    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+  "id": "34ece231-294d-416c-ad2a-5a5dfb2bc69f",
+  "etag": "\"d505125b-0000-0200-0000-637eb7790000\""
 }
 ```
 
@@ -307,9 +346,7 @@ Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, z
 
 ## Een doelverbinding maken {#target}
 
-Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
-
-U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan het meer van Gegevens. Met deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, vraagt u de POST om `/targetConnections` terwijl het verstrekken van IDs voor uw doeldataset en doelXDM schema. Tijdens deze stap, moet u ook identiteitskaart van de de verbindingsspecificatie van het datumpigment verstrekken. Deze id is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API-indeling**
 
@@ -328,19 +365,22 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample target connection",
-    "description": "Sample target connection description",
-    "connectionSpec": {
-        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-        "version": "1.0"
-    },
-    "data": {
-        "format": "parquet_xdm"
-    },
-    "params": {
-        "dataSetId": "{DATASET_ID}"
-    }
-}'
+      "name": "ACME Streaming Target Connection",
+      "description": "ACME Streaming Target Connection",
+      "data": {
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "version": "application/vnd.adobe.xed-full+json;version=1.0"
+          }
+      },
+      "params": {
+          "dataSetId": "637eb7fadc8a211b6312b65b"
+      },
+          "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      }
+  }'
 ```
 
 **Antwoord**
@@ -349,8 +389,8 @@ Een geslaagde reactie retourneert HTTP-status 201 met details van de nieuwe doel
 
 ```json
 {
-    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
-    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+  "id": "07f2f6ff-1da5-4704-916a-c615b873cba9",
+  "etag": "\"340680f7-0000-0200-0000-637eb8730000\""
 }
 ```
 
@@ -370,31 +410,31 @@ POST /mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-        "xdmVersion": "1.0",
-        "mappings": [
-            {
-                "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "firstName",
-                "identity": false,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "lastName",
-                "identity": false,
-                "version": 0
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+      "xdmVersion": "1.0",
+      "mappings": [
+          {
+              "destinationXdmPath": "person.name.firstName",
+              "sourceAttribute": "firstName",
+              "identity": false,
+              "version": 0
+          },
+          {
+              "destinationXdmPath": "person.name.lastName",
+              "sourceAttribute": "lastName",
+              "identity": false,
+              "version": 0
+          }
+      ]
+  }'
 ```
 
 | Eigenschap | Beschrijving |
@@ -407,14 +447,17 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ```json
 {
-    "id": "380b032b445a46008e77585e046efe5e",
-    "version": 0,
-    "createdDate": 1604960750613,
-    "modifiedDate": 1604960750613,
-    "createdBy": "{CREATED_BY}",
-    "modifiedBy": "{MODIFIED_BY}"
+  "id": "79a623960d3f4969835c9e00dc90c8df",
+  "version": 0,
+  "createdDate": 1669249214031,
+  "modifiedDate": 1669249214031,
+  "createdBy": "acme@AdobeID",
+  "modifiedBy": "acme@AdobeID"
 }
 ```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
 
 ## Een gegevensstroom maken
 
@@ -428,6 +471,10 @@ POST /flows
 
 **Verzoek**
 
+>[!BEGINTABS]
+
+>[!TAB Zonder transformaties]
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -437,33 +484,63 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name": "HTTP API streaming dataflow",
-        "description": "HTTP API streaming dataflow",
-        "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
-        ],
-        "targetConnectionIds": [
-            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
-        ],
-        "transformations": [
-            {
-            "name": "Mapping",
-            "params": {
-                "mappingId": "380b032b445a46008e77585e046efe5e",
-                "mappingVersion": 0
-            }
-            }
-        ]
+      "name": "ACME Streaming Dataflow",
+      "description": "ACME streaming dataflow for customer data",
+      "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ]
     }'
 ```
 
+>[!TAB Met transformaties]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "<name>",
+      "description": "<description>",
+      "flowSpec": {
+        "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ],
+      "transformations": [
+        {
+          "name": "Mapping",
+          "params": {
+            "mappingId": "79a623960d3f4969835c9e00dc90c8df",
+            "mappingVersion": 0
+          }
+        }
+      ]
+    }'
+```
+
+>[!ENDTABS]
+
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `flowSpec.id` | De flowspecificatie-id voor [!DNL HTTP API]. Deze id is: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
+| `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de gegevensstroom. |
+| `flowSpec.id` | De flowspecificatie-id voor [!DNL HTTP API]. Als u een gegevensstroom met transformaties wilt maken, moet u  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. Als u een gegevensstroom zonder transformaties wilt maken, gebruikt u `d8a6f005-7eaf-4153-983e-e8574508b877`. |
 | `sourceConnectionIds` | De [bron-verbindings-id](#source) opgehaald in een eerdere stap. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target) opgehaald in een eerdere stap. |
 | `transformations.params.mappingId` | De [toewijzing-id](#mapping) opgehaald in een eerdere stap. |
@@ -474,10 +551,113 @@ Een geslaagde reactie retourneert HTTP-status 201 met details over de nieuwe geg
 
 ```json
 {
-    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
-    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
+  "id": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+  "etag": "\"dc0459ae-0000-0200-0000-637ebaec0000\""
 }
 ```
+
+
+## Post gegevens die aan Platform moeten worden opgenomen {#ingest-data}
+
+Nu u uw stroom hebt gecreeerd, kunt u uw JSON bericht naar het het stromen eindpunt verzenden u eerder creeerde.
+
+**API-indeling**
+
+```http
+POST /collection/{INLET_URL}
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{INLET_URL}` | De URL van het streamingeindpunt. U kunt deze URL ophalen door een GET-aanvraag in te dienen bij de `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding. |
+
+**Verzoek**
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+        "header": {
+          "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+          },
+          "flowId": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+          "datasetId": "604a18a3bae67d18db6d258c"
+        },
+        "body": {
+          "xdmMeta": {
+            "schemaRef": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+            }
+          },
+          "xdmEntity": {
+            "_id": "http-source-connector-acme-01",
+            "person": {
+              "name": {
+                "firstName": "suman",
+                "lastName": "nolan"
+              }
+            },
+            "workEmail": {
+              "primary": true,
+              "address": "suman@acme.com",
+              "type": "work",
+              "status": "active"
+            }
+          }
+        }
+      }'
+```
+
+>[!TAB Onbewerkte gegevens]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!ENDTABS]
+
+**Antwoord**
+
+Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgenomen informatie.
+
+```json
+{
+    "inletId": "{BASE_CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `{BASE_CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
+| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
+| `receivedTimeMs` | Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
+
 
 ## Volgende stappen
 
@@ -507,59 +687,3 @@ Als de `Authorization` header is not present, or an invalid/expired access token
     }
 }
 ```
-
-### Gegevens na RAW die moeten worden ingevoerd op het Platform {#ingest-data}
-
-Nu u uw stroom hebt gecreeerd, kunt u uw JSON bericht naar het het stromen eindpunt verzenden u eerder creeerde.
-
-**API-indeling**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | De `id` de waarde van de nieuwe streamingverbinding. |
-
-**Verzoek**
-
-Het voorbeeldverzoek neemt onbewerkte gegevens aan het het stromen eindpunt op dat eerder werd gecreeerd.
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male",
-      "birthday": {
-          "year": 1984,
-          "month": 6,
-          "day": 9
-      }
-  }'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgenomen informatie.
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
-| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
-| `receivedTimeMs` | Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
