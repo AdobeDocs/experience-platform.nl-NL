@@ -1,21 +1,21 @@
 ---
-title: Consumentengegevens verwijderen met de API voor gegevenshygiëne
+title: Records verwijderen met de API voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
-# Consumentengegevens verwijderen met de Data Hygiene-API
+# Records verwijderen met de API voor gegevenshygiëne
 
 >[!IMPORTANT]
 >
->Dit eindpunt vertegenwoordigt de bètafunctionaliteit voor consument schrapt. Voor de meest recente functionaliteit gebruikt u de [`/workorder` eindpunt](./workorder.md) in plaats daarvan.
+>Dit eindpunt vertegenwoordigt de bètafunctionaliteit voor verslag schrapt. Voor de meest recente functionaliteit gebruikt u de [`/workorder` eindpunt](./workorder.md) in plaats daarvan.
 
 Met de API voor gegevenshygiëne kunt u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch corrigeren of verwijderen.
 

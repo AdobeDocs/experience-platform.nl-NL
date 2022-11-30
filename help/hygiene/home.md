@@ -2,7 +2,7 @@
 title: Overzicht van gegevenshygiëne
 description: Met Adobe Experience Platform Data Hygiene kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 0%
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
 
-Met de mogelijkheden voor gegevenshygiëne van het Platform kunt u uw opgeslagen consumentengegevens als volgt beheren:
+Met de mogelijkheden voor gegevenshygiëne van Platform kunt u de opgeslagen gegevens als volgt beheren:
 
 * Het plannen van geautomatiseerde datasetvervaldatums
-* Gegevens van individuele consumenten uit uw records verwijderen
+* Afzonderlijke records uit een of alle gegevenssets verwijderen
 
 >[!IMPORTANT]
 >
->De consument schrapt wordt bedoeld om voor gegevens te worden gebruikt die, anonieme gegevens verwijderen, of gegevens minimaliseren. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../privacy-service/home.md) in plaats daarvan.
+>Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../privacy-service/home.md) in plaats daarvan.
 
 Deze activiteiten kunnen worden uitgevoerd met behulp van de [[!UICONTROL Data Hygiene] UI-werkruimte](#ui) of de [API voor gegevenshygiëne](#api). Wanneer een taak voor gegevenshygiëne wordt uitgevoerd, zorgt het systeem voor transparantie-updates bij elke stap van het proces. Zie de sectie over [tijdlijnen en transparantie](#timelines-and-transparency) voor meer informatie over hoe elk baantype in het systeem wordt vertegenwoordigd.
 
@@ -40,7 +40,7 @@ De [!UICONTROL Data Hygiene] De gebruikersinterface is gebaseerd op de API voor 
 
 ## Tijdlijnen en transparantie
 
-Verzoeken voor het verwijderen en verlopen van gegevenssets door de consument hebben elk hun eigen verwerkingstijden en bieden updates voor de transparantie op belangrijke punten in hun respectieve workflows. Raadpleeg de onderstaande secties voor meer informatie over elk taaktype.
+Verzoeken om gegevens te verwijderen en gegevenssets te laten vervallen hebben elk hun eigen verwerkingstijden en verschaffen transparantie-updates op de belangrijkste punten in hun respectieve workflows. Raadpleeg de onderstaande secties voor meer informatie over elk taaktype.
 
 ### Verlopen gegevensset {#dataset-expiration-transparency}
 
@@ -57,17 +57,17 @@ Het volgende gebeurt wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expir
 
 {style=&quot;table-layout:auto&quot;}
 
-### Verwijderen van consumenten {#consumer-delete-transparency}
+### Opnemen wordt verwijderd {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->Verwijderen door de consument is alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
+>Verwijderen van records is alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
 
-Het volgende gebeurt wanneer een [verzoek om verwijdering door consument](./ui/delete-consumer.md) wordt gemaakt:
+Het volgende gebeurt wanneer een [recordverwijderaanvraag](./ui/record-delete.md) wordt gemaakt:
 
 | Werkgebied | Tijd na indiening van verzoek | Beschrijving |
 | --- | --- | --- |
-| Verzoek is ingediend | 0 uur | Een gegevensbeheerder of privacyanalist verzendt een aanvraag voor verwijderen door de consument. De aanvraag is zichtbaar in het dialoogvenster [!UICONTROL Data Hygiene UI] nadat zij is ingediend. |
+| Verzoek is ingediend | 0 uur | Een gegevensbeheerder of privacyanalist verzendt een verzoek om een record te verwijderen. De aanvraag is zichtbaar in het dialoogvenster [!UICONTROL Data Hygiene UI] nadat zij is ingediend. |
 | Profielzoekopdrachten bijgewerkt | 3 uur | De wijziging in het aantal profielen die wordt veroorzaakt door de verwijderde identiteit wordt weerspiegeld in [dashboardwidgets](../dashboards/guides/profiles.md#profile-count-trend) en andere verslagen. |
 | Segmenten bijgewerkt | 24 uur | Als profielen eenmaal zijn verwijderd, gelden alle verwante [segmenten](../segmentation/home.md) worden aangepast aan de nieuwe grootte. |
 | Reizen en bestemmingen bijgewerkt | 26 uur | [Reizen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), en [bestemmingen](../destinations/home.md) worden bijgewerkt op basis van wijzigingen in gerelateerde segmenten. |

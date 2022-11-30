@@ -1,9 +1,10 @@
 ---
 title: Quota API-eindpunt
 description: Het /quota eindpunt in de Hygiene API van Gegevens staat u toe om uw gebruik van de gegevenshygiëne tegen de maandelijkse quotagrenzen van uw organisatie voor elk baantype te controleren.
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
+source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '350'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ De `/quota` Het eindpunt in de Hygiene API van Gegevens staat u toe om uw gebrui
 
 Voor elk taaktype voor gegevenshygiëne worden de quota op de volgende manieren gehandhaafd:
 
-* Verwijderen door de consument en updates van velden zijn beperkt tot een bepaald aantal aanvragen per maand.
+* Verwijderen en bijwerken van records is beperkt tot een bepaald aantal aanvragen per maand.
 * Dataset-vervaldatums hebben een vaste limiet voor het aantal taken die tegelijkertijd actief zijn, ongeacht wanneer de vervaldatums worden uitgevoerd.
 
 ## Aan de slag
@@ -42,7 +43,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUOTA_TYPE}` | Een optionele queryparameter die het type quota opgeeft dat moet worden opgehaald. Indien niet `quotaType` opgegeven, worden alle quota-waarden geretourneerd in de API-reactie. Tot de toegestane tekstwaarden behoren:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Consumentenschrappingen</li><li>`fieldUpdateWorkOrderDatasetQuota`: Veldupdates</li></ul> |
+| `{QUOTA_TYPE}` | Een optionele queryparameter die het type quota opgeeft dat moet worden opgehaald. Indien niet `quotaType` opgegeven, worden alle quota-waarden geretourneerd in de API-reactie. Tot de toegestane tekstwaarden behoren:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Opnemen wordt verwijderd</li><li>`fieldUpdateWorkOrderDatasetQuota`: Updates opnemen</li></ul> |
 
 **Verzoek**
 
@@ -70,7 +71,7 @@ Als u met succes reageert, worden de details van uw quota voor gegevenshygiëne 
     },
     {
       "name": "deleteIdentityWorkOrderQuota",
-      "description": "The number of Consumer Delete Work Order requests for the organization for this month.",
+      "description": "The number of Record Delete Work Order requests for the organization for this month.",
       "consumed": 390,
       "quota": 10000
     }
@@ -80,6 +81,6 @@ Als u met succes reageert, worden de details van uw quota voor gegevenshygiëne 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `quotas` | Hier worden de quota-gegevens voor elk taaktype voor gegevenshygiëne weergegeven. Elk quotaobject bevat de volgende eigenschappen:<ul><li>`name`: Het taaktype voor gegevenshygiëne:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Consumentenschrappingen</li></ul></li><li>`description`: Een beschrijving van het taaktype voor gegevenshygiëne.</li><li>`consumed`: Het aantal banen van dit type loopt in de huidige maandelijkse periode.</li><li>`quota`: De quota voor dit taaktype. Voor verwijderen door consumenten en veldupdates geeft dit het aantal banen aan dat voor elke maandelijkse periode kan worden uitgevoerd. Voor gegevenssetvervaldatums, vertegenwoordigt dit het aantal banen die op om het even welk bepaald ogenblik gelijktijdig actief kunnen zijn.</li></ul> |
+| `quotas` | Hier worden de quota-gegevens voor elk taaktype voor gegevenshygiëne weergegeven. Elk quotaobject bevat de volgende eigenschappen:<ul><li>`name`: Het taaktype voor gegevenshygiëne:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Opnemen wordt verwijderd</li></ul></li><li>`description`: Een beschrijving van het taaktype voor gegevenshygiëne.</li><li>`consumed`: Het aantal banen van dit type loopt in de huidige maandelijkse periode.</li><li>`quota`: De quota voor dit taaktype. Voor het verwijderen en bijwerken van records geeft dit het aantal taken aan dat voor elke maandelijkse periode kan worden uitgevoerd. Voor gegevenssetvervaldatums, vertegenwoordigt dit het aantal banen die op om het even welk bepaald ogenblik gelijktijdig actief kunnen zijn.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}

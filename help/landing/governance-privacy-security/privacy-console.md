@@ -1,7 +1,7 @@
 ---
 title: Overzicht van de privacyconsole
 description: Leer hoe u uw workflows met betrekking tot privacy kunt controleren in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 4fa1b826d033ace6536af920b070e8eebbbf401c
+source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 1%
@@ -32,7 +32,7 @@ De functie van elke widget wordt hieronder uitgelegd:
 
 | Widget-naam | Beschrijving |
 | --- | --- |
-| Status van werkzaamheden voor gegevenshygiëne | Toont de status van verwijderingsprocessen voor consumenten onder [Gegevenshygiëne](../../hygiene/home.md) voor het geselecteerde tijdkader. Gebruik het vervolgkeuzemenu om het tijdskader te wijzigen tussen de laatste 7 dagen, 14 dagen en 30 dagen. |
+| Status van werkzaamheden voor gegevenshygiëne | Toont de status van processen voor het verwijderen van records onder [Gegevenshygiëne](../../hygiene/home.md) voor het geselecteerde tijdkader. Gebruik het vervolgkeuzemenu om het tijdskader te wijzigen tussen de laatste 7 dagen, 14 dagen en 30 dagen. |
 | Recente gegevenshygiënewerkorders | Toont de meest recente [Gegevenshygiëne](../../hygiene/home.md) werkorders die door het systeem worden verwerkt. Gebruik dropdown om tussen onlangs gecreeerde het werkorden en onlangs bijgewerkte het werkorden te schakelen. |
 | Meest voorkomende acties | Hiermee worden de meest frequente handelingen op het Platform weergegeven als vastgelegd door [auditlogboeken](./audit-logs/overview.md) voor het geselecteerde tijdkader. Gebruik het vervolgkeuzemenu om het tijdskader te wijzigen tussen de laatste 7 dagen, 14 dagen en 30 dagen. |
 | Meest actieve gebruikers | Toont de meest actieve gebruikers van het Platform binnen uw organisatie zoals die door wordt gevangen [auditlogboeken](./audit-logs/overview.md) voor het geselecteerde tijdkader. Gebruik het vervolgkeuzemenu om het tijdskader te wijzigen tussen de laatste 7 dagen, 14 dagen en 30 dagen. |

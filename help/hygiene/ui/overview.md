@@ -2,9 +2,9 @@
 title: UI-gids voor gegevenshygiëne
 description: Leer hoe u taken voor gegevenshygiëne beheert in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Hygiënnewiel voor gegevens"
->abstract="Deze widget geeft de status weer van Data Hygiene-verwijdertaken voor de geselecteerde tijdlijn. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
+>abstract="Deze widget geeft de status van gegevenshygiënrecord-verwijdertaken voor het geselecteerde tijdframe weer. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Recente werkorders voor gegevenshygiëne"
 >abstract="Deze widget toont de vijf meest recente gemaakte of bijgewerkte werkorders voor gegevenshygiëne, afhankelijk van de optie die u in de rechterbovenhoek selecteert. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
 
-De **[!UICONTROL Data Hygiene]** In de Adobe Experience Platform UI kunt u verschillende taken voor gegevenshygiëne maken en controleren, waaronder het verwijderen van de identiteit van de consument en het plannen van gegevenssetvervaldatums.
+De **[!UICONTROL Data Hygiene]** De werkruimte in Adobe Experience Platform UI staat u toe om diverse taken van de gegevenshygiëne tot stand te brengen en te controleren, met inbegrip van het schrappen van verslagen en het plannen van datasetvervalsing.
 
 In deze handleiding wordt beschreven hoe u de taken voor gegevenshygiëne in de gebruikersinterface van het Platform kunt beheren. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie [Handleiding voor API voor gegevenshygiëne](../api/overview.md).
 
@@ -33,4 +33,4 @@ Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verrichtingen va
 
 * [Door bestaande werkorders bladeren](./browse.md)
 * [Een verzoek voor het verlopen van een gegevensset maken](./dataset-expiration.md)
-* [Een verzoek tot verwijdering van een consument maken](./delete-consumer.md)
+* [Een verzoek tot verwijdering van records maken](./record-delete.md)

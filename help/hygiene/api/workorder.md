@@ -1,32 +1,32 @@
 ---
 title: Eindpunt van API voor werkorder
-description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor consumentenidentiteiten programmatically te beheren.
+description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor identiteiten programmatically te beheren.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
 
 # Werkordereindpunt
 
-De `/workorder` Het eindpunt in de Hygiene API van Gegevens staat u toe om consument te beheren schrapt verzoeken in Adobe Experience Platform.
+De `/workorder` Het eindpunt in de Hygiene API van Gegevens staat u toe om verslagen te beheren schrapt verzoeken in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Verzoeken om consumentengegevens te verwijderen zijn alleen beschikbaar voor organisaties die **Adobe Healthcare Shield**.
+>Aanvragen voor het verwijderen van records zijn alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Healthcare Shield**.
 >
 >
->De consument schrapt wordt bedoeld om voor gegevens te worden gebruikt die, anonieme gegevens verwijderen, of gegevens minimaliseren. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
+>Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
 
 ## Aan de slag
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Controleer voordat je doorgaat de [overzicht](./overview.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
-## Een verzoek tot verwijdering van een consument maken {#delete-consumers}
+## Een verzoek tot verwijdering van records maken {#create}
 
-U kunt één of meerdere consumentenidentiteiten van één enkele dataset of alle datasets schrappen door een verzoek van de POST aan de `/workorder` eindpunt.
+U kunt één of meerdere identiteiten van één enkele dataset of alle datasets schrappen door een verzoek van de POST aan het `/workorder` eindpunt.
 
 **API-indeling**
 
@@ -36,7 +36,7 @@ POST /workorder
 
 **Verzoek**
 
-Afhankelijk van de waarde van de `datasetId` verstrekt in de verzoeklading, zal de API vraag consumentenidentiteiten van alle datasets of één enkele dataset schrappen die u specificeert. Het volgende verzoek schrapt drie consumentenidentiteiten van een specifieke dataset.
+Afhankelijk van de waarde van de `datasetId` verstrekt in de verzoeklading, zal de API vraag identiteiten van alle datasets of één enkele dataset schrappen die u specificeert. Het volgende verzoek schrapt drie identiteiten van een specifieke dataset.
 
 ```shell
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
-        "displayName": "Example Consumer Delete Request",
+        "displayName": "Example Record Delete Request",
         "description": "Cleanup identities required by Jira request 12345.",
         "identities": [
           {
@@ -76,17 +76,17 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `action` | De uit te voeren actie. De waarde moet worden ingesteld op `delete_identity` voor verwijderen door de consument. |
+| `action` | De uit te voeren actie. De waarde moet worden ingesteld op `delete_identity` voor verwijderen van records. |
 | `datasetId` | Als u uit één enkele dataset schrapt, moet deze waarde identiteitskaart van de dataset in kwestie zijn. Als u uit alle datasets schrapt, plaats de waarde aan `ALL`.<br><br>Als u één enkele dataset specificeert, moet het bijbehorende schema van de Gegevens van de Ervaring van de dataset van het Model (XDM) een primaire bepaalde identiteit hebben. |
-| `displayName` | De weergavenaam voor het verzoek om verwijdering van de consument. |
-| `description` | Een beschrijving voor het verzoek tot verwijdering van de consument. |
+| `displayName` | De weergavenaam voor het verzoek om het verwijderen van records. |
+| `description` | Een beschrijving voor het verzoek om record te verwijderen. |
 | `identities` | Een array met de identiteiten van ten minste één gebruiker van wie u de gegevens wilt verwijderen. Elke identiteit bestaat uit een [naamruimte identity](../../identity-service/namespaces.md) en een waarde:<ul><li>`namespace`: Bevat één tekenreekseigenschap, `code`, die staat voor de naamruimte identity. </li><li>`id`: De identiteitswaarde.</ul>Indien `datasetId` geeft één gegevensset aan, elke entiteit onder `identities` moet dezelfde naamruimte gebruiken als de primaire identiteit van het schema.<br><br>Indien `datasetId` is ingesteld op `ALL`de `identities` array is niet beperkt tot één naamruimte omdat elke dataset anders kan zijn. Uw verzoeken blijven echter beperkt tot de naamruimten die beschikbaar zijn voor uw organisatie, zoals gerapporteerd door [Identiteitsservice](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
-Met een geslaagde reactie worden de gegevens van de verwijdering door de consument geretourneerd.
+Als de reactie succesvol was, worden de details van de record delete geretourneerd.
 
 ```json
 {
@@ -99,7 +99,7 @@ Met een geslaagde reactie worden de gegevens van de verwijdering door de consume
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345."
 }
 ```
@@ -109,7 +109,7 @@ Met een geslaagde reactie worden de gegevens van de verwijdering door de consume
 | `workorderId` | De id van de verwijderingsvolgorde. Dit kan worden gebruikt om de status van de schrapping later omhoog te kijken. |
 | `orgId` | Uw organisatie-id. |
 | `bundleId` | De id van de bundel waaraan deze verwijderingsvolgorde is gekoppeld, wordt gebruikt voor foutopsporingsdoeleinden. Meerdere verwijderingsopdrachten worden gebundeld om door downstreamdiensten te worden verwerkt. |
-| `action` | De actie die door de het werkorde wordt uitgevoerd. Voor verwijderen door consument is de waarde `identity-delete`. |
+| `action` | De actie die door de het werkorde wordt uitgevoerd. Voor record-verwijderingen is de waarde `identity-delete`. |
 | `createdAt` | Een tijdstempel met het tijdstip waarop de verwijderingsvolgorde is gemaakt. |
 | `updatedAt` | Een tijdstempel van wanneer de verwijderingsvolgorde voor het laatst is bijgewerkt. |
 | `status` | De huidige status van de verwijderingsopdracht. |
@@ -118,9 +118,9 @@ Met een geslaagde reactie worden de gegevens van de verwijdering door de consume
 
 {style=&quot;table-layout:auto&quot;}
 
-## De status van een verwijdering van een consument ophalen (#lookup)
+## De status van een record verwijderen (#lookup)
 
-Na [een verzoek tot verwijdering van een consument maken](#delete-consumers), kunt u de status controleren met een GET-aanvraag.
+Na [een verzoek tot verwijdering van records maken](#create), kunt u de status controleren met een GET-aanvraag.
 
 **API-indeling**
 
@@ -130,7 +130,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{WORK_ORDER_ID}` | De `workorderId` van de consument verwijderen die u opzoekt. |
+| `{WORK_ORDER_ID}` | De `workorderId` van de record verwijderen die u opzoekt. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -160,7 +160,7 @@ Een geslaagde reactie retourneert de details van de verwijderingsbewerking, incl
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345.",
   "productStatusDetails": [
     {
@@ -187,7 +187,7 @@ Een geslaagde reactie retourneert de details van de verwijderingsbewerking, incl
 | `workorderId` | De id van de verwijderingsvolgorde. Dit kan worden gebruikt om de status van de schrapping later omhoog te kijken. |
 | `orgId` | Uw organisatie-id. |
 | `bundleId` | De id van de bundel waaraan deze verwijderingsvolgorde is gekoppeld, wordt gebruikt voor foutopsporingsdoeleinden. Meerdere verwijderingsopdrachten worden gebundeld om door downstreamdiensten te worden verwerkt. |
-| `action` | De actie die door de het werkorde wordt uitgevoerd. Voor verwijderen door consument is de waarde `identity-delete`. |
+| `action` | De actie die door de het werkorde wordt uitgevoerd. Voor record-verwijderingen is de waarde `identity-delete`. |
 | `createdAt` | Een tijdstempel met het tijdstip waarop de verwijderingsvolgorde is gemaakt. |
 | `updatedAt` | Een tijdstempel van wanneer de verwijderingsvolgorde voor het laatst is bijgewerkt. |
 | `status` | De huidige status van de verwijderingsopdracht. |
@@ -195,9 +195,9 @@ Een geslaagde reactie retourneert de details van de verwijderingsbewerking, incl
 | `datasetId` | De id van de gegevensset waarop het verzoek betrekking heeft. Als het verzoek voor alle datasets is, zal de waarde worden geplaatst aan `ALL`. |
 | `productStatusDetails` | Een array die de huidige status van downstreamprocessen met betrekking tot de aanvraag opsomt. Elk matrixobject bevat de volgende eigenschappen:<ul><li>`productName`: De naam van de downstreamservice.</li><li>`productStatus`: De huidige verwerkingsstatus van het verzoek van de downstreamdienst.</li><li>`createdAt`: Een tijdstempel van wanneer de meest recente status door de service is gepost.</li></ul> |
 
-## Een aanvraag voor het verwijderen van een consument bijwerken
+## Een verzoek tot het verwijderen van records bijwerken
 
-U kunt de `displayName` en `description` voor een consument door een PUT aan te vragen.
+U kunt de `displayName` en `description` voor een record verwijderen door een PUT aan te vragen.
 
 **API-indeling**
 
@@ -207,7 +207,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{WORK_ORDER_ID}` | De `workorderId` van de consument verwijderen die u opzoekt. |
+| `{WORK_ORDER_ID}` | De `workorderId` van de record verwijderen die u opzoekt. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -228,14 +228,14 @@ curl -X GET \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `displayName` | Een bijgewerkte weergavenaam voor de aanvraag tot verwijdering van consumentengegevens. |
-| `description` | Een bijgewerkte beschrijving voor het verzoek tot verwijdering van de consument. |
+| `displayName` | Een bijgewerkte weergavenaam voor het verzoek om het verwijderen van records. |
+| `description` | Een bijgewerkte beschrijving voor de aanvraag om het record te verwijderen. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwoord**
 
-Met een geslaagde reactie worden de gegevens van de verwijdering door de consument geretourneerd.
+Als de reactie succesvol was, worden de details van de record delete geretourneerd.
 
 ```json
 {
@@ -275,7 +275,7 @@ Met een geslaagde reactie worden de gegevens van de verwijdering door de consume
 | `workorderId` | De id van de verwijderingsvolgorde. Dit kan worden gebruikt om de status van de schrapping later omhoog te kijken. |
 | `orgId` | Uw organisatie-id. |
 | `bundleId` | De id van de bundel waaraan deze verwijderingsvolgorde is gekoppeld, wordt gebruikt voor foutopsporingsdoeleinden. Meerdere verwijderingsopdrachten worden gebundeld om door downstreamdiensten te worden verwerkt. |
-| `action` | De actie die door de het werkorde wordt uitgevoerd. Voor verwijderen door consument is de waarde `identity-delete`. |
+| `action` | De actie die door de het werkorde wordt uitgevoerd. Voor record-verwijderingen is de waarde `identity-delete`. |
 | `createdAt` | Een tijdstempel met het tijdstip waarop de verwijderingsvolgorde is gemaakt. |
 | `updatedAt` | Een tijdstempel van wanneer de verwijderingsvolgorde voor het laatst is bijgewerkt. |
 | `status` | De huidige status van de verwijderingsopdracht. |

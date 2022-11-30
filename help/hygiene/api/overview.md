@@ -2,9 +2,9 @@
 title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -43,16 +43,16 @@ Dit document bevat een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken mo
 
 Een gegevenssetvervaldatum is een tijd-vertraagde actie &quot;schrapt een dataset&quot;. Door een datasetvervaldatum te creëren, specificeert u een toekomstige tijd waarbij die dataset zou moeten worden geschrapt. Zie de [eindpuntgids gegevensset](./dataset-expiration.md) voor meer informatie over het plannen van datasetvervaldata in API.
 
-## Verwijderen van consumenten
+## Opnemen wordt verwijderd
 
 >[!IMPORTANT]
 >
->Verzoeken om consumentengegevens te verwijderen zijn alleen beschikbaar voor organisaties die **Adobe Healthcare Shield**.
+>Aanvragen voor het verwijderen van records zijn alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Healthcare Shield**.
 >
 >
->De consument schrapt wordt bedoeld om voor gegevens te worden gebruikt die, anonieme gegevens verwijderen, of gegevens minimaliseren. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
+>Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
 
-Met de API voor gegevenshygiëne kunt u alle records verwijderen die zijn gekoppeld aan een consumentenidentiteit in een of alle gegevenssets. Alle taken op het gebied van gegevenshygiëne die de identiteit van de consument verwijderen, worden weergegeven door een constructie die een werkorder wordt genoemd. Zie de [eindpuntgids voor werkorders](./workorder.md) voor meer informatie over het werken met de consument verwijdert u de API.
+Met de API voor gegevenshygiëne kunt u alle records verwijderen die aan een identiteit in een of alle gegevenssets zijn gekoppeld. Alle taken op het gebied van gegevenshygiëne die identiteiten verwijderen, worden weergegeven door een constructie die een werkorder wordt genoemd. Zie de [eindpuntgids voor werkorders](./workorder.md) verwijdert de API voor meer informatie over het werken met records.
 
 ## Quota
 

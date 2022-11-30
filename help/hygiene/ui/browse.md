@@ -2,7 +2,7 @@
 title: Bladeren in werkorders voor gegevenshygiëne
 description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Wanneer u voor het eerst toegang krijgt tot **[!UICONTROL Data Hygiene]** in de 
 
 ![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het Platform](../images/ui/browse/work-order-list.png)
 
-In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeven. Selecteren **[!UICONTROL Consumer]** een lijst van verwijderingstaken voor consumenten te bekijken, en **[!UICONTROL Dataset]** om een lijst van geplande datasettermijnen te bekijken.
+In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeven. Selecteren **[!UICONTROL Consumer]** een lijst met taken voor het verwijderen van records weergeven, en **[!UICONTROL Dataset]** om een lijst van geplande datasettermijnen te bekijken.
 
 ![Afbeelding die de [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png)
 
@@ -41,9 +41,9 @@ Selecteer het trechter-pictogram (![Afbeelding van het trechter-pictogram](../im
 
 Afhankelijk van het type werkorder dat u bekijkt, zijn verschillende filteropties beschikbaar.
 
-### Verwijderen van filters voor consumenten
+### Filters voor het verwijderen van records
 
-De volgende filters zijn van toepassing op verzoeken tot verwijdering door de consument:
+De volgende filters zijn van toepassing op recordverwijderingsverzoeken:
 
 | Filter | Beschrijving |
 | --- | --- |
@@ -78,8 +78,8 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Reactie verwijderen door consument"
->abstract="Wanneer een consumentenverwijderingsproces een reactie van het systeem ontvangt, worden deze berichten onder de **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>title="Reactie record verwijderen"
+>abstract="Wanneer een proces van de verslagschrapping een reactie van het systeem ontvangt, worden deze berichten getoond onder **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
 Selecteer de id van een vermelde werkorder om de details ervan weer te geven.
 
@@ -87,11 +87,11 @@ Selecteer de id van een vermelde werkorder om de details ervan weer te geven.
 
 Afhankelijk van het type geselecteerde werkorder, worden verschillende informatie en controles verstrekt. Deze worden behandeld in de onderstaande secties.
 
-### Details verwijderen van consumenten {#consumer-delete}
+### Gegevens opnemen {#record-delete}
 
-De details van een verzoek tot verwijdering door de consument omvatten de huidige status en de tijd die is verstreken sinds het verzoek is ingediend. Elke aanvraag bevat ook een **[!UICONTROL Status by service]** sectie die individuele statusdetails over elke stroomafwaartse dienst verstrekt die bij de schrapping betrokken is. Op het juiste spoor, kunt u controles gebruiken om de naam en beschrijving van de het werkorde bij te werken.
+De details van een verzoek om een record te schrappen omvatten zijn huidige status en de tijd die is verstreken sinds het verzoek werd gemaakt. Elke aanvraag bevat ook een **[!UICONTROL Status by service]** sectie die individuele statusdetails over elke stroomafwaartse dienst verstrekt die bij de schrapping betrokken is. Op het juiste spoor, kunt u controles gebruiken om de naam en beschrijving van de het werkorde bij te werken.
 
-![Afbeelding met de detailpagina van een werkorder voor verwijderen door consumenten](../images/ui/browse/consumer-delete-details.png)
+![Afbeelding met de detailpagina voor een werkvolgorde voor het verwijderen van records](../images/ui/browse/record-delete-details.png)
 
 ### Gegevens betreffende de vervaldatum van de gegevensset {#dataset-expiration}
 
@@ -104,4 +104,4 @@ De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basi
 Deze handleiding besprak hoe u bestaande werkorders voor gegevenshygiëne in de gebruikersinterface van het Platform kunt weergeven en beheren. Raadpleeg de volgende documentatie voor informatie over het maken van uw eigen werkorders:
 
 * [Verlopen gegevenssets beheren](./dataset-expiration.md)
-* [Verwijderen van consumenten beheren](./delete-consumer.md)
+* [Record verwijderen beheren](./record-delete.md)
