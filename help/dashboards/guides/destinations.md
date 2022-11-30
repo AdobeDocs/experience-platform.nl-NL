@@ -4,9 +4,9 @@ title: Doeldashboardgids
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2649'
+source-wordcount: '2852'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,16 @@ In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aange
 ## Standaardwidgets {#standard-widgets}
 
 Adobe verstrekt veelvoudige standaardwidgets die u kunt gebruiken om verschillende metriek met betrekking tot uw bestemmingen te visualiseren en de volledigheid van de segmenten beschikbaar voor uw gegevensanalyse te beoordelen. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
+
+### Vereisten {#prerequisites}
+
+Voordat u doorgaat met de beschrijvingen van standaardwidgets, moet u de definities van de volgende belangrijke termen die in de documentatie worden gebruikt, goed kennen:
+
+* **Segment:** Een segment is **het geheel van regels** die kenmerken en gebeurtenisgegevens bevatten die een aantal profielen als een publiek kwalificeren.
+* **Publiek**: Een publiek is **de reeks profielen** die voldoen aan de criteria van een segmentdefinitie.
+* **Toegewezen/toewijzen**: Gegevenstoewijzing is het proces waarbij brongegevensvelden worden toegewezen aan verwante doelvelden in een doel.
+* **Identiteit**: Een identiteit is een id die uniek een individuele klant vertegenwoordigt, zoals een cookie-id, apparaat-id of e-mailadres.
+* **Activeren**: Activate is de actie die door een gebruiker wordt ondernomen om een segment of profielen aan een bestemming zoals Oracle Eloqua, Google, of Marketing Cloud Salesforce in kaart te brengen.
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
@@ -139,6 +149,8 @@ U kunt de details van een segment bekijken door de naam van een segment van de g
 
 ![De onlangs geactiveerde segmenten op bestemmingswidget.](../images/destinations/recently-activated-segments-by-destination.png)
 
+Zie de sectie met voorwaarden voor de [definities van gebruikte termen](#prerequisites) in deze beschrijving.
+
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ Het vervolgkeuzemenu voor de doel-id filtert de beschikbare segmenten. De filter
 In de kolom met identiteiten wordt het aantal bron-id&#39;s in het segment geteld dat kan worden toegewezen aan de id die is gekozen in het vervolgkeuzemenu van de widget-id.
 
 ![De segmenten zonder toewijzing op de identiteitswidget.](../images/destinations/unmapped-segments-by-identity.png)
+
+Zie de sectie met voorwaarden voor de [definities van gebruikte termen](#prerequisites) in deze beschrijving.
 
 ### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ Widget verstrekt een twee kolomlijst om een lijst van actieve bestemmingsplatfor
 
 ### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
 
-De [!UICONTROL Activated audiences across all destinations] widget geeft het totale aantal soorten publiek aan dat voor alle bestemmingen in één meting wordt geactiveerd. Dit getal is nauwkeurig tot aan de meest recente opname.
+De [!UICONTROL Activated audiences across all destinations] widget geeft het totale aantal soorten publiek aan dat voor alle bestemmingen in één meting wordt geactiveerd. Deze widget geeft het aantal doelgroepen weer en niet het aantal segmenten. Dit getal is nauwkeurig tot aan de meest recente opname.
 
 ![Het actieve publiek voor alle doelen van de widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Selecteren **[!UICONTROL Audiences]** om naar de bestemmingen te navigeren [!UICONTROL Browse] tab. Deze pagina verstrekt een lijst van alle toegelaten bestemmingen en een verscheidenheid van relevante metriek. Zie de documentatie voor [meer informatie over de [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+Selecteren **[!UICONTROL Audiences]** om naar de bestemmingen te navigeren [!UICONTROL Browse] tab. Deze pagina verstrekt een lijst van alle toegelaten bestemmingen en een verscheidenheid van relevante metriek. Zie de documentatie voor meer informatie over de [[!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+Zie de sectie met voorwaarden voor de [definities van gebruikte termen](#prerequisites) in deze beschrijving.
 
 ### [!UICONTROL Activated audiences] {#activated-audiences}
 
@@ -276,6 +292,8 @@ Selecteren **[!UICONTROL Audiences]** om naar de detailspagina van het bestemmin
 ![De pagina met informatie over het doeldashboard met het tabblad Activeringsgegevens is gemarkeerd.](../images/destinations/activation-data-tab.png)
 
 Deze widget helpt u de waarde van uw bestemmingen te begrijpen die op het aantal publiek wordt gebaseerd dat bij een blik wordt geactiveerd. Het biedt ook eenvoudig toegang tot meer gedetailleerde informatie voor verdere analyse.
+
+Zie de sectie met voorwaarden voor de [definities van gebruikte termen](#prerequisites) in deze beschrijving.
 
 ## Volgende stappen
 
