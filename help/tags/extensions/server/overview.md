@@ -1,9 +1,10 @@
 ---
 title: Verwijzing naar extensies doorsturen van gebeurtenissen
 description: Documentatie zoeken voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
+source-git-commit: fbdfbe4be6e3b1e5ad212a4e5ebd3551cec3a89a
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -23,6 +24,7 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [Kern](./core/overview.md)
+* [Facebook Conversies-API](https://exchange.adobe.com/apps/ec/105509)
 * [Verbeterde Google-conversies toevoegen](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Rand](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
