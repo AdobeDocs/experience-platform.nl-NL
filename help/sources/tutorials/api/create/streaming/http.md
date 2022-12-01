@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
 description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 26c967418e983322cc39aa799a681d258638d769
+source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Een geslaagde reactie retourneert HTTP-status 201 met gegevens over de nieuwe ve
 
 De voor authentiek verklaarde verbindingen zouden moeten worden gebruikt wanneer u tussen verslagen moet onderscheiden die uit vertrouwde op en niet-vertrouwde op bronnen komen. Gebruikers die gegevens met PII (Personeel Identified Information) willen verzenden, moeten een geverifieerde verbinding maken bij het streamen van gegevens naar het Platform.
 
-Als u een geverifieerde basisverbinding wilt maken, moet u uw bron-id opgeven en aangeven of verificatie vereist is wanneer u een verzoek tot POST bij de `/connections` eindpunt.
+Als u een geverifieerde basisverbinding wilt maken, moet u de opdracht `authenticationRequired` parameter in uw verzoek en specificeer zijn waarde als `true`. Tijdens deze stap kunt u ook een bron-id opgeven voor uw geverifieerde basisverbinding. Deze parameter is optioneel en gebruikt dezelfde waarde als de parameter `name` kenmerk, als dit niet wordt opgegeven.
 
 
 **API-indeling**
@@ -166,9 +166,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "{SOURCE_ID}",
+             "sourceId": "Authenticated XDM streaming connection",
              "dataType": "xdm",
-             "name": "Sample connection",
+             "name": "Authenticated XDM streaming connection",
              "authenticationRequired": true
          }
      }
@@ -194,9 +194,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "Authenticated raw streaming connection",
              "dataType": "raw",
-             "name": "Sample connection",
+             "name": "Authenticated raw streaming connection",
              "authenticationRequired": true
          }
      }
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.sourceId` | De id van de streamingverbinding die u wilt maken. |
+| `auth.params.sourceId` | Een extra id die kan worden gebruikt bij het maken van een geverifieerde basisverbinding. Deze parameter is optioneel en gebruikt dezelfde waarde als de parameter `name` kenmerk, als dit niet wordt opgegeven. |
 | `auth.params.authenticationRequired` | De parameter die opgeeft dat de gemaakte streamingverbinding |
 
 **Antwoord**
