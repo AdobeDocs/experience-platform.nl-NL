@@ -2,9 +2,9 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,12 @@ U kunt widgets opnieuw rangschikken en de grootte ervan wijzigen in deze werkrui
 
 Om ervoor te zorgen dat elke vraag voor een Adobe Real-time Customer Data Platform inzichten dashboard genoeg middelen heeft om efficiënt uit te voeren, volgt API middelgebruik door gelijkheidsgroeven aan elke vraag toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
 
-## Volgende stappen
+## Volgende stappen en extra bronnen
 
 Door dit document te lezen hebt u een beter inzicht in hoe u een aangepast dashboard kunt maken en hoe u aangepaste widgets voor dat dashboard kunt maken, bewerken en bijwerken.
 
 Om de beschikbare pre-gevormde metriek en visualisaties voor te ontdekken [profielen](./guides/profiles.md#standard-widgets), [segmenten](./guides/segments.md#standard-widgets), en [bestemmingen](./guides/destinations.md#standard-widgets) dashboards, zie de lijst van standaardwidgets in hun respectieve documentatie.
+
+Bekijk de volgende video om uw inzicht in door de gebruiker gedefinieerde dashboards in Experience Platform te versterken:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

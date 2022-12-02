@@ -4,9 +4,9 @@ title: Handleiding voor het gebruiksdashboard voor licenties
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Als u naar het dashboard voor licentiegebruik in de gebruikersinterface van het 
 >
 >Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers kunnen het dashboard alleen weergeven als ze de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; hebben gekregen. Voor stappen voor het verlenen van toegangstoestemmingen voor het bekijken van het dashboard van het vergunningsgebruik, gelieve te verwijzen naar [Handleiding voor dashboardmachtigingen](../permissions.md).
 
-![](../images/license-usage/dashboard-overview.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik.](../images/license-usage/dashboard-overview.png)
 
 ### Een sandbox selecteren
 
@@ -41,7 +41,7 @@ Als u een sandbox wilt kiezen die u in het dashboard wilt weergeven, selecteert 
 
 Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: selecteren [!UICONTROL Production] of [!UICONTROL Development] verstrekt verbruiksrapporten voor alle productie of ontwikkelingszandbakken, respectievelijk.
 
-![](../images/license-usage/select-sandbox.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de sandboxkiezer gemarkeerd.](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -56,11 +56,11 @@ Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetze
 
 Nadat u een sandbox hebt geselecteerd, kunt u de vervolgkeuzelijst voor het datumbereik gebruiken om de periode te selecteren die moet worden weergegeven in het dashboard. Er zijn meerdere opties beschikbaar, waaronder de standaardwaarde van de laatste 30 dagen.
 
-![](../images/license-usage/select-date-range.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de vervolgkeuzelijst voor datumbereik gemarkeerd.](../images/license-usage/select-date-range.png)
 
 U kunt ook **[!UICONTROL Custom date]** om de periode te kiezen die wordt getoond.
 
-![](../images/license-usage/select-custom-date.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de opties voor het aangepaste datumbereik gemarkeerd.](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
@@ -68,7 +68,7 @@ Het licentiegebruikdashboard bestaat uit widgets, die alleen-lezen cijfers weerg
 
 Elke widget geeft een lijngrafiek weer waarin de werkelijke nummers voor uw organisatie worden vergeleken met het totale beschikbare aantal voor licenties van uw organisatie en een percentage van het totale gebruik.
 
-![](../images/license-usage/widgets.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de lijngrafiek van de metrische widget voor samplelicentiegebruik gemarkeerd.](../images/license-usage/widgets.png)
 
 ## Beschikbare cijfers
 

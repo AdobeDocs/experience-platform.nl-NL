@@ -2,13 +2,13 @@
 keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen
 title: Overzicht van dashboard-aanpassing
 description: Meer informatie over de manieren waarop u de gegevens die in uw Adobe Experience Platform-dashboards worden weergegeven, kunt aanpassen.
-source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
+exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
+source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van aanpassen van dashboard
 
@@ -16,41 +16,41 @@ De profielen, segmenten en doeldashboards die beschikbaar zijn in Adobe Experien
 
 >[!NOTE]
 >
->De widgets die worden weergegeven in het dashboard [!UICONTROL License usage] kunnen niet worden aangepast. Lees voor meer informatie over dit unieke dashboard de [licentiegebruiksdashboarddocumentatie](../guides/license-usage.md).
+>De widgets die worden weergegeven in het dialoogvenster [!UICONTROL License usage] het dashboard kan niet worden aangepast. Voor meer informatie over dit unieke dashboard leest u de [dashboarddocumentatie voor licentiegebruik](../guides/license-usage.md).
 
 ## Het dashboard wijzigen
 
-Als u **[!UICONTROL Modify dashboard]** selecteert in de dashboards met profielen, segmenten of doelen, kunt u de grootte, de volgorde en de locatie aanpassen van de widgets die momenteel zichtbaar zijn in het dashboard. Raadpleeg de [wijzigende handleiding voor dashboards](modify.md) voor informatie over hoe u de weergave van widgets in uw dashboards kunt wijzigen.
+Selecteren **[!UICONTROL Modify dashboard]** in de dashboards van profielen, segmenten of doelen kunt u de grootte, de volgorde en de locatie aanpassen van de widgets die momenteel zichtbaar zijn in het dashboard. Voor informatie over het wijzigen van de weergave van widgets in uw dashboards raadpleegt u de [wijzigen, handleiding voor dashboards](modify.md).
 
 ## De widgetbibliotheek
 
-In de widgetbibliotheek in Experience Platform kunt u alle [standaard](#standard-widgets) en [aangepaste](#custom-widgets) widgets weergeven die beschikbaar zijn voor uw organisatie. Vanuit het dashboard (bijvoorbeeld het dashboard voor profielen) kunt u **[!UICONTROL Modify dashboard]** selecteren om de knop **[!UICONTROL Widget library]** weer te geven.
+In de widgetbibliotheek in Experience Platform kunt u alle [standaard](#standard-widgets) en [aangepast](#custom-widgets) widgets beschikbaar voor uw organisatie. Vanuit het dashboard (bijvoorbeeld het dashboard voor profielen) kunt u **[!UICONTROL Modify dashboard]** om de **[!UICONTROL Widget library]** knop.
 
-![](../images/customization/modify-dashboard.png)
+![Het dashboard Profielen met het dashboard Wijzigen gemarkeerd.](../images/customization/modify-dashboard.png)
 
-Selecteer **[!UICONTROL Widget library]** om de widgetbibliotheek te openen en alle beschikbare standaardmetriek weer te geven of te beginnen met het maken van aangepaste widgets.
+Selecteren **[!UICONTROL Widget library]** om de widgetbibliotheek te openen en alle beschikbare standaardmetriek te bekijken of te beginnen met het maken van aangepaste widgets.
 
-![](../images/customization/widget-library-button.png)
+![Het dashboard Profielen met een widgetbibliotheek gemarkeerd.](../images/customization/widget-library-button.png)
 
 ### Standaardwidgets {#standard-widgets}
 
 Standaardwidgets verwijzen naar de widgets die Adobe in uw dashboards kan gebruiken. Deze widgets zijn alleen-lezen en kunnen niet door uw organisatie worden bewerkt.
 
-In de widgetbibliotheek bevat het tabblad **[!UICONTROL Standard]** alle beschikbare standaardwidgets die door Adobe worden verschaft. U kunt de dashboards bijwerken gebruikend om het even welk van deze standaardmetriek. Raadpleeg de handleiding voor [het gebruik van standaardwidgets in dashboards](standard-widgets.md) voor meer informatie over het toevoegen van standaardwidgets aan het dashboard.
+In de widgetbibliotheek **[!UICONTROL Standard]** bevat alle beschikbare standaardwidgets die door Adobe worden verschaft. U kunt de dashboards bijwerken gebruikend om het even welk van deze standaardmetriek. Raadpleeg de handleiding voor meer informatie over het toevoegen van standaardwidgets aan het dashboard [standaardwidgets gebruiken in dashboards](standard-widgets.md).
 
 ### Aangepaste widgets {#custom-widgets}
 
-Aangepaste widgets verwijzen naar widgets die zijn gemaakt en gedeeld door leden van uw organisatie. Deze widgets worden gemaakt via het tabblad **[!UICONTROL Custom]** van de widgetbibliotheek en vereisen dat uw organisatie beschikbare metriek opgeeft via het gebruik van een [schema](#edit-schema)
+Aangepaste widgets verwijzen naar widgets die zijn gemaakt en gedeeld door leden van uw organisatie. Deze widgets worden gemaakt via de **[!UICONTROL Custom]** tabblad van de widgetbibliotheek. Uw organisatie moet de beschikbare metriek opgeven via het gebruik van een [schema](#edit-schema)
 
-Raadpleeg de [aangepaste widgets voor dashboardgids](custom-widgets.md) voor volledige stappen voor het maken van uw eigen widgets.
+Voor volledige stappen voor het maken van uw eigen widgets raadpleegt u de [aangepaste widgets voor hulplijn voor dashboards](custom-widgets.md).
 
-![](../images/customization/widget-library.png)
+![De werkruimte van de widgetbibliotheek met Standaard en Aangepast gemarkeerd.](../images/customization/widget-library.png)
 
 #### Schema bewerken {#edit-schema}
 
-Als u een [aangepaste widget](#custom-widgets) voor uw dashboards wilt maken, moet u eerst het kenmerk Real-time klantprofiel identificeren waarop de widget wordt gebaseerd.
+Om een [aangepaste widget](#custom-widgets) voor uw dashboards, moet u eerst het attribuut van het Profiel van de Klant in real time identificeren waarop widget zal worden gebaseerd.
 
-Voor geleidelijke instructies voor het uitgeven van het schema van uw organisatie om douanedashboardwidgets tot stand te brengen, gelieve de gids voor [het uitgeven van uw dashboardschema](edit-schema.md) te bezoeken.
+Voor stapsgewijze instructies voor het bewerken van het schema van uw organisatie om aangepaste dashboardwidgets te maken, raadpleegt u de handleiding voor [het bewerken van uw dashboardschema](edit-schema.md).
 
 ## Volgende stappen
 

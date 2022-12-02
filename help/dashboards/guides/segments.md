@@ -4,9 +4,9 @@ title: Handleiding dashboard voor segmenten
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over segmenten die uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '1979'
+source-wordcount: '1992'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Ga naar de [!UICONTROL Segments] dashboard in de interface van het Platform, sel
 >
 >Als uw organisatie nieuw aan Platform is en nog niet de actieve datasets van het Profiel of gecreeerd verenigingsbeleid heeft, [!UICONTROL Segments] het dashboard is niet zichtbaar. In plaats daarvan [!UICONTROL Overview] het lusje toont verbindingen en documentatie om u te helpen met segmentatie beginnen.
 
-![Het tabblad Overzicht van het dashboard Segmenten.](../images/segments/dashboard-overview.png)
+![Het tabblad Overzicht van het dashboard Segmenten met Segmenten en Overzicht gemarkeerd.](../images/segments/dashboard-overview.png)
 
 ### De [!UICONTROL Segments] dashboard {#modify}
 
@@ -204,7 +204,7 @@ De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identit
 
 Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![Het dialoogvenster Profielen op identiteitsbijschriften.](../images/segments/profiles-by-identity.png)
+![Het dashboardoverzicht Segmenten met de optie Profielen op identiteitswidget en Bijschriften gemarkeerd.](../images/segments/profiles-by-identity.png)
 
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 

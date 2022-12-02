@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3165'
+source-wordcount: '3196'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Als u naar het dashboard Profielen in de gebruikersinterface van het Platform wi
 >
 >Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het dashboard van Profielen niet zichtbaar. In plaats daarvan [!UICONTROL Overview] op het tabblad vindt u koppelingen en documentatie om u te helpen aan de slag te gaan met het Real-Time Klantprofiel.
 
-![](../images/profiles/dashboard-overview.png)
+![Het dashboard Profielen Experience Platform met profielen en overzicht gemarkeerd.](../images/profiles/dashboard-overview.png)
 
 ### Het dashboard Profielen wijzigen
 
@@ -142,7 +142,7 @@ Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voo
 >
 >Een andere algemene reden is dat er verschillen zijn tussen de tijd waarop de dashboardmomentopname wordt gemaakt en de tijd waarop de voorbeeldtaak voor de [!UICONTROL Browse] tab. U kunt zien wanneer de [!UICONTROL Profile count] widget is voor het laatst bijgewerkt door naar de tijdstempel op de widget te kijken. Meer informatie over de manier waarop de voorbeeldtaak wordt geactiveerd op het tabblad [!UICONTROL Browse] tabblad, zie de [sectie voor het aantal profielen in de gebruikersgids Gebruikersprofiel voor realtime klanten](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![Het dashboard Profielen Experience Platform met de widget Aantal profielen gemarkeerd.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profile count trend] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ Raadpleeg de sectie over profielfragmenten voor meer informatie over profielfrag
 
 Ga voor meer informatie over identiteiten naar de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![Het dashboardoverzicht van Profielen met de widget Identiteitsoverlap gemarkeerd.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 

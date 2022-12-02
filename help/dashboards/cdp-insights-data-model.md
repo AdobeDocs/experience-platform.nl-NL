@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform Insights-gegevensmodel
 description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksproblemen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -81,10 +81,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 Het naamruimtemodel bestaat uit de volgende gegevenssets:
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
@@ -149,9 +149,9 @@ GROUP BY
 Het segmentmodel bestaat uit de volgende datasets:
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
@@ -260,9 +260,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 Het namespace-segment model wordt samengesteld uit de volgende datasets:
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -270,7 +270,7 @@ Het namespace-segment model wordt samengesteld uit de volgende datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het segmentmodel.](./images/cdp-insights/namespace-segment-model.png)
+![Een ERD van het namespace-segmentmodel.](./images/cdp-insights/namespace-segment-model.png)
 
 #### Profielen op identiteit voor een geval van segmentgebruik
 
@@ -300,13 +300,13 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 Het overlap naamruimtemodel bestaat uit de volgende gegevenssets:
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het segmentmodel.](./images/cdp-insights/overlap-namespace-model.png)
+![Een ERD van het overlap-naamruimtemodel.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### Identiteitsoverlapping (profielen) gebruikt hoofdletters/kleine letters
 
@@ -364,7 +364,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 De overlappende naamruimte per segmentmodel bestaat uit de volgende datasets:
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
@@ -374,7 +374,7 @@ De overlappende naamruimte per segmentmodel bestaat uit de volgende datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het segmentmodel.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Een ERD van de overlappende naamruimte per segmentmodel.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### Identiteitsoverlap (segmenten) gebruiken hoofdletters/kleine letters
 

@@ -4,9 +4,9 @@ title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Que
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, segment, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ De naamgevingsconventie van deze gegevenssets is **Profile-Snapshot-export** gev
 
 Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
-![](images/query/profile-attribute.png)
+![Een voorvertoning van de gegevensset Profielmomentopname-Exporteren.](images/query/profile-attribute.png)
 
 #### Gegevenssets van profielkenmerken toewijzen om beleid-id&#39;s samen te voegen
 
@@ -72,7 +72,7 @@ De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-exp
 
 Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
-![](images/query/segment-metadata.png)
+![Een voorvertoning van de dataset Segmentdefinition-Snapshot-Export.](images/query/segment-metadata.png)
 
 ### Gegevensset met doelmetagegevens
 
@@ -82,7 +82,7 @@ De naamgevingsconventie van deze gegevensset is **DIM_Doel**.
 
 Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
-![](images/query/destinations-metadata.png)
+![Een voorvertoning van de gegevensset DIM_Destination.](images/query/destinations-metadata.png)
 
 ## (Beta) CDP-rapporten (Customer Data Platform)
 
