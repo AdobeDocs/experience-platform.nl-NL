@@ -2,9 +2,9 @@
 title: Microsoft Azure Extension Overview
 description: Meer informatie over de Microsoft Azure-extensie voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: 8b972841c8412d510fce4c970a09d9c1eecd401e
+source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Aangezien de extensie geen configuratie-eigenschappen heeft, wordt deze direct t
 
 ## Vorm een gebeurtenis door:sturen regel {#rule}
 
-Begin creërend een nieuwe gebeurtenis door:sturen regel en vorm zijn voorwaarden zoals gewenst. Selecteer bij het selecteren van de handelingen voor de regel de optie **[!UICONTROL Microsoft Azure]** voor de extensie selecteert u vervolgens **[!UICONTROL Send Data to Event Hubs]** voor het actietype.
+Begin creërend een nieuwe gebeurtenis door:sturen regel en vorm zijn voorwaarden zoals gewenst. Selecteer bij het selecteren van de handelingen voor de regel de optie **[!UICONTROL Microsoft Azure]** voor de extensie selecteert u vervolgens **[!UICONTROL Send Data to Event Hubs]** voor actietype.
 
 ![De [!UICONTROL Send Data to Event Hubs] actietype dat voor een regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/azure/select-action-type.png)
 
