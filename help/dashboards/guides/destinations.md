@@ -4,7 +4,7 @@ title: Doeldashboardgids
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '2852'
 ht-degree: 0%
@@ -273,7 +273,13 @@ Widget verstrekt een twee kolomlijst om een lijst van actieve bestemmingsplatfor
 
 ### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
 
-De [!UICONTROL Activated audiences across all destinations] widget geeft het totale aantal soorten publiek aan dat voor alle bestemmingen in één meting wordt geactiveerd. Deze widget geeft het aantal doelgroepen weer en niet het aantal segmenten. Dit getal is nauwkeurig tot aan de meest recente opname.
+De [!UICONTROL Activated audiences across all destinations] widget geeft het totale aantal soorten publiek aan dat voor alle bestemmingen in één meting wordt geactiveerd.
+
+>[!NOTE]
+>
+>Deze widget geeft het aantal doelgroepen weer en niet het aantal segmenten.
+
+Dit getal is nauwkeurig tot aan de meest recente opname.
 
 ![Het actieve publiek voor alle doelen van de widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
