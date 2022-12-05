@@ -5,9 +5,9 @@ title: Connect DbVisualizer aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
+source-git-commit: 640a89231abf96a966f55dce2e3a7242c739538f
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ De bestuurderseigenschappen die in de lijst hieronder worden gezien worden geadv
 | ------ | ------ |
 | `PGHOST` | De hostnaam voor de [!DNL PostgreSQL] server. Deze waarde is uw Experience Platform [!UICONTROL Host] referentie. |
 | `ssl` | De SSL-waarde definiëren `1` om het gebruik van SSL in te schakelen. |
-| `sslmode` | Dit bepaalt het gebruik van SSL-vereisten. U **moet** de waarde gebruiken `require` om deze eis mogelijk te maken. |
+| `sslmode` | Hiermee bepaalt u het niveau van SSL-beveiliging. U wordt aangeraden de `require` SSL-modus bij het verbinden van clients van derden met Adobe Experience Platform. De `require` De wijze zorgt ervoor dat de encryptie op alle mededelingen wordt vereist en dat het netwerk wordt vertrouwd om met de correcte server te verbinden. ServerSSL-certificaatvalidatie is niet vereist. Zie de documentatie over [SSL-opties voor het verbinden van clients van derden](./ssl-modes.md) tot [!DNL Query Service]. |
 | `user` | De gebruikersnaam die aan de database is gekoppeld, is uw organisatie-id. Het is een alfanumerieke tekenreeks die eindigt in `@adobe.org` |
 
 >[!IMPORTANT]
