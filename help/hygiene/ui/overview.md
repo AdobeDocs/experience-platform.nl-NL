@@ -2,9 +2,9 @@
 title: UI-gids voor gegevenshygiëne
 description: Leer hoe u taken voor gegevenshygiëne beheert in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Hygiënnewiel voor gegevens"
->abstract="Deze widget geeft de status van gegevenshygiënrecord-verwijdertaken voor het geselecteerde tijdframe weer. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
+>title="Status van verzoeken om gegevens"
+>abstract="Deze widget geeft de totale aantallen van gemaakte, mislukte en voltooide taken voor het verwijderen van records in de gegevenshygiëne weer. Voor meer informatie over uw processen van de Hygiëne van Gegevens, selecteer **Gegevenshygiëne** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
