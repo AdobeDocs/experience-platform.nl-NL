@@ -5,9 +5,9 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic-legacy: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,11 @@ De functies van de Prep van gegevens kunnen worden gebruikt om waarden te bereke
 
 Een veldnaam kan elke geldige id zijn: een reeks van Unicode-letters en -cijfers met een onbeperkte lengte, te beginnen met een letter, het dollarteken (`$`), of het onderstrepingsteken (`_`). De namen van variabelen zijn ook hoofdlettergevoelig.
 
-Als deze conventie niet wordt gevolgd door een veldnaam, moet de veldnaam worden omwikkeld met `${}`. Als de veldnaam bijvoorbeeld &quot;Voornaam&quot; of &quot;Voornaam&quot; is, moet de naam als volgt worden omwikkeld `${First Name}` of `${First.Name}` respectievelijk.
+Als deze conventie niet wordt gevolgd door een veldnaam, moet de veldnaam worden omwikkeld met `${}`. Als de veldnaam bijvoorbeeld &quot;Voornaam&quot; of &quot;Voornaam&quot; is, moet de naam als volgt worden omwikkeld `${First Name}` of `${First\.Name}` respectievelijk.
+
+>[!TIP]
+>
+>Wanneer het in wisselwerking staan met hiërarchieën, als een kindattribuut een periode (`.`), moet u een backslash gebruiken (`\`) gebruiken om speciale tekens te verwijderen. Lees voor meer informatie de handleiding op [speciale tekens verwijderen](home.md#escape-special-characters).
 
 Bovendien, als een gebiedsnaam is **alle** van de volgende gereserveerde trefwoorden: `${}`:
 
