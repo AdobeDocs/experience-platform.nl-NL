@@ -3,9 +3,9 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -97,4 +97,4 @@ Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeli
 
 De verbindingen en extensies in het dialoogvenster [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Reclame**, **Cloud-opslag**, **Platformen voor enquêtes**, **E-mailmarketing**, enz.), afhankelijk van de marketingactie die ze u helpen te bereiken. Voor meer informatie over elk van de categorieën, evenals de bestemmingen inbegrepen in elke categorie, zie [Documentatie doelcatalogus](./catalog/overview.md).
 
-![Doelcategorieën](./assets/destination-types/destination-categories-menu.png)
+![Doelcategorieën die zijn gemarkeerd in de cataloguspagina.](./assets/destination-types/destination-categories-menu.png)

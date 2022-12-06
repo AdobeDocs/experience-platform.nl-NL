@@ -4,9 +4,9 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 434b9ed4f64320b5fd73b752716cb34a8e48aec9
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Afhankelijk van het doel waarmee u verbinding maakt, wordt u mogelijk gevraagd v
 
 ![Afbeelding die de vereiste en optionele invoerparameters weergeeft wanneer verbinding wordt gemaakt met een doel van een handelsbureau.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### Opties voor bestandsindeling instellen voor geëxporteerde bestanden {#file-formatting-and-compression-options}
+### (bèta) Opties voor bestandsindeling instellen voor geëxporteerde bestanden {#file-formatting-and-compression-options}
 
 Voor op bestanden gebaseerde doelen kunt u verschillende instellingen configureren die betrekking hebben op de indeling en comprimeren van de geëxporteerde bestanden. Voor meer informatie over alle beschikbare opties voor opmaak en compressie leest u de [Zelfstudie over het configureren van opties voor bestandsindeling voor op bestanden gebaseerde doelen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
