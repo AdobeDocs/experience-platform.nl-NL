@@ -6,9 +6,9 @@ description: Dit artikel illustreert de end-to-end workflow voor het activeren v
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
+source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 0%
 
 Met de API voor ad-hocactivering kunnen marketers publiekssegmenten programmatisch op een snelle en efficiënte manier naar doelen activeren voor situaties waarin onmiddellijke activering vereist is.
 
+Gebruik de API voor ad-hocactivering om volledige bestanden te exporteren naar het gewenste systeem voor het ontvangen van bestanden. Activering van ad-hocgroepen wordt alleen ondersteund door [batchbestandsgebaseerde doelen](../destination-types.md#file-based).
+
 In het onderstaande diagram ziet u de end-to-end workflow voor het activeren van segmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die elke 24 uur in Platform plaatsvinden.
 
 ![ad-hocactivering](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->Activering van ad-hocgroepen wordt alleen ondersteund door [batchbestandsgebaseerde doelen](../destination-types.md#file-based).
+
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -129,7 +129,7 @@ Adobe Experience Platform voert elke 24 uur een geplande segmentatietaak uit. De
 >
 >Let op de volgende eenmalige beperking: Voordat u een ad-hocactiveringstaak uitvoert, moet u ervoor zorgen dat ten minste 20 minuten zijn verstreken vanaf het moment dat het segment voor het eerst werd geactiveerd volgens het schema dat u instelt in [Stap 3 - de activeringsstroom van de Platform UI creëren](#activation-flow).
 
-Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande segmentexporttaak voor uw segmenten is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd.
+Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande segmentexporttaak voor uw segmenten is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd om een volledig bestand te exporteren.
 
 Nadat de segmentexporttaak is voltooid, kunt u de activering activeren.
 
@@ -250,3 +250,4 @@ Wanneer u de API voor ad-hocactivering gebruikt, kunt u foutberichten tegenkomen
 ## Verwante informatie {#related-information}
 
 * [Verbinden met batchbestemmingen en gegevens activeren met de Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
+* [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](/help/destinations/ui/export-file-now.md)
