@@ -5,9 +5,9 @@ title: Connect DbVisualizer aan de Dienst van de Vraag
 topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 640a89231abf96a966f55dce2e3a7242c739538f
+source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -36,38 +36,44 @@ Gebruik de zoekbalk of selecteer [!DNL PostgreSQL] in de vervolgkeuzelijst met b
 
 ![Het vervolgkeuzemenu voor de bestuurdersnaam met [!DNL PostgreSQL] gemarkeerd.](../images/clients/dbvisualizer/driver-name.png)
 
+### Eigenschappen instellen voor uw verbinding {#properties}
+
 Selecteer in de werkruimte Databaseverbinding de optie **[!DNL Properties]** tab, gevolgd door de **[!DNL Driver Properties]** op de navigatiezijbalk.
 
 ![De werkruimte Databaseverbinding met Eigenschappen en Eigenschappen van stuurprogramma gemarkeerd.](../images/clients/dbvisualizer/driver-properties.png)
 
-De bestuurderseigenschappen die in de lijst hieronder worden gezien worden geadviseerd om het gebruik van SSL met DBVisualizer toe te laten.
-
-| Eigenschap | Beschrijving |
-| ------ | ------ |
-| `PGHOST` | De hostnaam voor de [!DNL PostgreSQL] server. Deze waarde is uw Experience Platform [!UICONTROL Host] referentie. |
-| `ssl` | De SSL-waarde definiëren `1` om het gebruik van SSL in te schakelen. |
-| `sslmode` | Hiermee bepaalt u het niveau van SSL-beveiliging. U wordt aangeraden de `require` SSL-modus bij het verbinden van clients van derden met Adobe Experience Platform. De `require` De wijze zorgt ervoor dat de encryptie op alle mededelingen wordt vereist en dat het netwerk wordt vertrouwd om met de correcte server te verbinden. ServerSSL-certificaatvalidatie is niet vereist. Zie de documentatie over [SSL-opties voor het verbinden van clients van derden](./ssl-modes.md) tot [!DNL Query Service]. |
-| `user` | De gebruikersnaam die aan de database is gekoppeld, is uw organisatie-id. Het is een alfanumerieke tekenreeks die eindigt in `@adobe.org` |
+Voer vervolgens de stuurprogramma-eigenschappen in die in de onderstaande tabel worden beschreven.
 
 >[!IMPORTANT]
 >
->Zie de [[!DNL Query Service] SSL-documentatie](./ssl-modes.md) voor meer informatie over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en over het maken van verbindingen met deze service `verify-full` SSL-modus.
+>Om DBVisualizer met Adobe Experience Platform te verbinden, moet u het gebruik van SSL toelaten. Zie de [Documentatie over SSL-modi](./ssl-modes.md) voor meer informatie over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en over het maken van verbindingen met deze service `verify-full` SSL-modus.
 
-### [!DNL Query Service] geloofsbrieven
-
-De `PGHOST` en `user` worden waarden opgehaald uit uw Adobe Experience Platform-referenties. Meld u aan bij de gebruikersinterface van het Platform en selecteer **[!UICONTROL Queries]** van de linkernavigatie, gevolgd door **[!UICONTROL Credentials]**. Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [aanmeldingsgids](../ui/credentials.md).
-
-![De pagina Credentials van de werkruimte van de Vragen van het Experience Platform met Geloofsbrieven en de Vervalende Gemarkeerde Referenties.](../images/clients/dbvisualizer/query-service-credentials-page.png)
-
-[!DNL Query Service] biedt ook niet-vervallende geloofsbrieven aan om voor eenmalig opstelling met derdecliënten toe te staan. Zie de documentatie voor [volledige instructies op hoe te om niet vervallende geloofsbrieven te produceren en te gebruiken](../ui/credentials.md#non-expiring-credentials).
+| Eigenschap | Beschrijving |
+| ------ | ------ |
+| `PGHOST` | De hostnaam voor de [!DNL PostgreSQL] server. Deze waarde is uw Experience Platform **[!UICONTROL Host]geloofsbrieven**. |
+| `ssl` | De SSL-waarde definiëren `1` om het gebruik van SSL in te schakelen. |
+| `sslmode` | Hiermee bepaalt u het niveau van SSL-beveiliging. U wordt aangeraden de `require` SSL-modus bij het verbinden van clients van derden met Adobe Experience Platform. De `require` De wijze zorgt ervoor dat de encryptie op alle mededelingen wordt vereist en dat het netwerk wordt vertrouwd om met de correcte server te verbinden. ServerSSL-certificaatvalidatie is niet vereist. |
+| `user` | De gebruikersnaam die aan de database is gekoppeld, is uw organisatie-id. Het is een alfanumerieke tekenreeks die eindigt in `@Adobe.Org`. Deze waarde is uw Experience Platform **[!UICONTROL Username]geloofsbrieven**. |
 
 Gebruik de zoekbalk om elke eigenschap te zoeken en selecteer vervolgens de bijbehorende cel voor de waarde van de parameter. De cel wordt in blauw gemarkeerd. Voer de referentie van het Platform in het veld Waarde in en selecteer **[!DNL Apply]** om de bestuurderseigenschap toe te voegen.
+
+![Het tabblad Eigenschappen van DBVisulaizer-stuurprogramma met een ingevoerde waarde en de optie Toepassen gemarkeerd.](../images/clients/dbvisualizer/apply-parameter-value.png)
 
 >[!NOTE]
 >
 >Een seconde toevoegen `user` profiel, selecteren `user` Selecteer vervolgens in de parameterkolom het pictogram blauw + (plus) om referenties voor elke gebruiker toe te voegen. Selecteren **[!DNL Apply]** om de bestuurderseigenschap toe te voegen.
 
 De [!DNL Edited] de kolom toont een controleteken om erop te wijzen dat de parameterwaarde is bijgewerkt.
+
+### Invoer[!DNL Query Service] geloofsbrieven
+
+Als u de referenties wilt zoeken die nodig zijn om BBVisualizer te verbinden met Query Service, meldt u zich aan bij de gebruikersinterface van het Platform en selecteert u **[!UICONTROL Queries]** van de linkernavigatie, gevolgd door **[!UICONTROL Credentials]**. Meer informatie over het zoeken naar uw **host**, **poort**, **database**, **gebruikersnaam**, en **password** referenties, lees de [aanmeldingsgids](../ui/credentials.md).
+
+![De pagina Credentials van de werkruimte van de Vragen van het Experience Platform met Geloofsbrieven en de Vervalende Gemarkeerde Referenties.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+
+>[!IMPORTANT]
+>
+>[!DNL Query Service] biedt ook niet-vervallende geloofsbrieven aan om voor eenmalig opstelling met derdecliënten toe te staan. Zie de documentatie voor [volledige instructies op hoe te om niet vervallende geloofsbrieven te produceren en te gebruiken](../ui/credentials.md#non-expiring-credentials). U moet dit proces voltooien als u BDVisualizer wilt aansluiten als een eenmalige installatie. De `credential` en `technicalAccountId` De verkregen waarden omvatten de waarde voor DBVisualizer `password` parameter.
 
 ## Verificatie
 
@@ -79,14 +85,20 @@ Controleer in het deelvenster Verbindingsverificatie beide de opties **[!DNL Req
 
 ## Verbinding maken met Platform
 
-Als u een verbinding wilt maken, selecteert u de optie **[!DNL Connection]** in de werkruimte Databaseverbinding en voer uw gegevens voor het Experience Platform in voor de volgende instellingen.
+U kunt een verbinding maken met vervallende of niet-vervallende gegevens. Als u een verbinding wilt maken, selecteert u de optie **[!DNL Connection]** in de werkruimte Databaseverbinding en voer uw gegevens voor het Experience Platform in voor de volgende instellingen.
 
-- **Naam**: U wordt aangeraden een vriendelijke naam op te geven om de verbinding te herkennen.
-- **Databaseserver**: Dit is uw Experience Platform [!UICONTROL Host] referentie.
-- **Databasepoort**: De poort voor [!DNL Query Service]. U moet poort 80 gebruiken om verbinding te maken met [!DNL Query Service].
-- **Database**: De referentie gebruiken `dbname` value `prod:all`.
-- **Database-gebruiker**: Dit is uw organisatie-id voor Platform. De gebruikersnaam heeft de notatie `ORG_ID@AdobeOrg`.
-- **Wachtwoord database**: Dit is een alfanumerieke tekenreeks die wordt gevonden op het tabblad [!DNL Query Service] verificatiedashboard.
+>[!NOTE]
+>
+>Alle geloofsbrieven die door BDVisualizer in de lijst hieronder worden vereist zijn het zelfde voor het verlopen en niet-verlopen geloofsbrieven tenzij vermeld in de parameterbeschrijving.
+
+| Verbindingsparameter | Beschrijving |
+|---|---|
+| **[!UICONTROL Name]** | Maak een naam voor de verbinding. U wordt geadviseerd om een mensvriendelijke naam te verstrekken om de verbinding te erkennen. |
+| **[!UICONTROL Database Server]** | Dit is uw Experience Platform **[!UICONTROL Host]** referentie. |
+| **[!UICONTROL Database Port]** | De poort voor [!DNL Query Service]. U moet poort gebruiken **80** om te verbinden met [!DNL Query Service]. |
+| **[!UICONTROL Database]** | Uw Experience Platform gebruiken **[!UICONTROL Database]** referentie waarde: `prod:all`. |
+| **[!UICONTROL Database Userid]** | Dit is uw organisatie-id voor Platform. Uw Experience Platform gebruiken **[!UICONTROL Username]** referentie. De id heeft de notatie `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL Database Password]** | Deze alfanumerieke tekenreeks is uw Experience Platform **[!UICONTROL Password]** credential.If you want non-expiring credentials, this value is the concatenated arguments from the `technicalAccountID` en de `credential` gedownload in de configuratie JSON-bestand. De wachtwoordwaarde heeft de vorm: {technicalAccountId}:{credential}. Het configuratieJSON dossier voor niet-vervallende geloofsbrieven is een eenmalig download tijdens hun initialisering die Adobe geen exemplaar van houdt. |
 
 Nadat u alle relevante gegevens hebt ingevoerd, selecteert u **[!DNL Connect]**.
 
