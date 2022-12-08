@@ -5,10 +5,10 @@ title: Overzicht gebruikersinterface Privacy Service
 topic-legacy: UI guide
 description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 8814c8a7e8feac4901917663d5cbeb5dddb8c288
+source-git-commit: 76e431301f961484436fe47d28079ee47dbcc8ed
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
@@ -31,9 +31,7 @@ De gebruikersinterface van de Privacy Service [!DNL Privacy Service] kunt u priv
 >
 >U moet een Adobe ID hebben om te kunnen verifiëren bij de [!DNL Privacy Service] UI. Daarnaast moet u over systeembeheerdersrechten beschikken binnen uw IMS-organisatie.
 
-Meld u aan bij [Adobe Experience Cloud](https://experience.adobe.com/)
-
-Nadat u zich hebt aangemeld, selecteert u **[!UICONTROL Privacy UI]**.
+Meld u aan bij [Adobe Experience Cloud](https://experience.adobe.com/) en selecteert u **[!UICONTROL Privacy UI]** onder het snelmenu.
 
 ![](../images/ui-overview/quick-access.png)
 
