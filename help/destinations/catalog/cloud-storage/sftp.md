@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL SFTP]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL SFTP beta]** kaart om bestanden te exporteren naar **[!UICONTROL SFTP]**.
 
 
-![Afbeelding van de twee SFTP-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![Afbeelding van de twee SFTP-doelkaarten in een weergave Naast elkaar.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 Verbeteringen in de nieuwe [!DNL SFTP] bestemmingskaart omvat:
 
@@ -104,6 +104,8 @@ Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de
 * **[!UICONTROL Name]**: Voer een naam in die u zal helpen deze bestemming in het gebruikersinterface van het Experience Platform identificeren;
 * **[!UICONTROL Description]**: een beschrijving voor deze bestemming invoeren;
 * **[!UICONTROL Folder path]**: Voer het pad in naar de map op de SFTP-locatie waar de bestanden worden geëxporteerd.
+* **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming.
 
 ## Segmenten naar dit doel activeren {#activate}
 

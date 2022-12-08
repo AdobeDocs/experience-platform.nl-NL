@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om regelmatig CSV-gegevensbestanden uit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Azure Blob]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Azure Blob beta]** kaart om bestanden te exporteren naar **[!UICONTROL Azure Blob]**.
 
 
-![Afbeelding van de twee Azure Blob-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+![Afbeelding van de twee Azure Blob-doelkaarten in een weergave Naast elkaar.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 Verbeteringen in de nieuwe [!DNL Azure Blob] bestemmingskaart omvat:
 
@@ -93,6 +93,8 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: Voer een beschrijving van deze bestemming in.
 * **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
 * **[!UICONTROL Container]**: Voer de naam in van de [!DNL Azure Blob Storage] container die door deze bestemming moet worden gebruikt.
+* **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Azure Blob beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Azure Blob beta]** bestemming.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 

@@ -2,9 +2,9 @@
 title: (bèta) Google Cloud Storage-verbinding
 description: Leer hoe u verbinding maakt met Google Cloud Storage en segmenten activeert of gegevenssets exporteert.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Om Platform met te verbinden [!DNL Google Cloud Storage], moet u eerst interoperabiliteit voor uw [!DNL Google Cloud Storage] account. Voor toegang tot de interoperabiliteitsinstelling opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Settings]** van de **[!UICONTROL Cloud Storage]** in het navigatievenster.
 
-![Google Cloud Platform-dashboard met Cloud Storage en Settings gemarkeerd.](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
+![Google Cloud Platform-dashboard met Cloud Storage en Settings gemarkeerd.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 De **[!UICONTROL Settings]** wordt weergegeven. Hier kunt u informatie over uw [!DNL Google] project-id en details over uw [!DNL Google Cloud Storage] account. Om tot interoperabiliteitsmontages toegang te hebben, selecteer **[!UICONTROL Interoperability]** in de bovenste koptekst.
 
-![Het tabblad Interoperabiliteit wordt gemarkeerd op het dashboard voor het Google Cloud-Platform.](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![Het tabblad Interoperabiliteit wordt gemarkeerd op het dashboard voor het Google Cloud-Platform.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 De **[!UICONTROL Interoperability]** De pagina bevat informatie over authentificatie, toegangstoetsen, en het standaardproject verbonden aan uw de dienstrekening. Als u een nieuwe toegangstoets-id en een geheime toegangssleutel voor uw serviceaccount wilt genereren, selecteert u **[!UICONTROL Create a Key for a Service Account]**.
 
-![De sleutel voor een serviceaccountbesturingselement maken die is gemarkeerd op het dashboard voor Google Cloud-Platforms.](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![De sleutel voor een serviceaccountbesturingselement maken die is gemarkeerd op het dashboard voor Google Cloud-Platforms.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 U kunt uw onlangs gegenereerde toegangstoets-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] aan Platform.
 
@@ -74,6 +74,8 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt.
 * **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+* **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 

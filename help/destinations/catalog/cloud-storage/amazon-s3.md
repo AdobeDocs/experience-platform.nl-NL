@@ -3,9 +3,9 @@ keywords: Amazon S3;S3 doel;s3;amazon s3
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL Amazon S3] kaarten in de lijst met bestemmingen.
->* Als u al bestanden exporteert naar de **[!UICONTROL Amazon S3]** bestemming: Maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL Amazon S3 beta]** bestemming.
+>* Als u al bestanden exporteert naar de **[!UICONTROL Amazon S3]** doel, maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL Amazon S3 beta]** bestemming.
 >* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Amazon S3]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Amazon S3 beta]** kaart om bestanden te exporteren naar **[!UICONTROL Amazon S3]**.
 
 
-![Afbeelding van de twee Amazon S3-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![Afbeelding van de twee Amazon S3-doelkaarten in een weergave Naast elkaar.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 Verbeteringen in de nieuwe [!DNL Amazon S3] bestemmingskaart omvat:
 
@@ -88,6 +88,9 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: Voer een beschrijving van deze bestemming in.
 * **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt.
 * **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+* **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Amazon S3 beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Amazon S3 beta]** bestemming.
+
 
 >[!TIP]
 >
