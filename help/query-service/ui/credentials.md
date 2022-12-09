@@ -5,9 +5,9 @@ title: Handleiding Query Service Credentials
 topic-legacy: guide
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
+source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1271'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,15 @@ De **[!UICONTROL Expiring credentials]** Deze sectie bevat de volgende informati
 - **[!UICONTROL Username]**: De gebruikersnaam die u gebruikt om verbinding te maken met Query Service.
 - **[!UICONTROL Password]**: Het wachtwoord dat u zult gebruiken om met de Dienst van de Vraag te verbinden.
 - **[!UICONTROL PSQL command]**: Een bevel dat automatisch alle relevante informatie voor u heeft opgenomen om met de Dienst van de Vraag te verbinden gebruikend PSQL op de bevellijn.
-- **[!UICONTROL Expires]**: De vervaldatum voor de vervallende geloofsbrieven. De referenties verlopen 24 uur nadat ze zijn gegenereerd.
+- **[!UICONTROL Expires]**: De vervaldatum en tijd voor de verloopgeloofsbrieven. De standaard geldigheidstermijn van het token is 24 uur, maar deze kan worden gewijzigd in de geavanceerde instellingen van de Admin Console.
+
+>[!TIP]
+>
+>Om het zittingsleven voor uw het verlopen geloofsbrieven verbinding aan de Dienst van de Vraag te veranderen, navigeer aan [Admin Console](https://adminconsole.adobe.com/) en selecteer de volgende opties op het scherm: **Instellingen** > **Privacy en beveiliging** > **Verificatie-instellingen** > **Geavanceerde instellingen** > **Max. sessielevensduur**.
+>
+>![Het lusje van de montages van de Admin Console met Privacy en Veiligheid, de montages van de Authentificatie, en het Max zittingsleven benadrukte.](../images/ui/credentials/max-session-life.png)
+>
+>Zie de documentatie van de Hulp van de Adobe voor meer informatie over [Geavanceerde instellingen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) aangeboden door Admin Console.
 
 ## Niet-verlopen referenties {#non-expiring-credentials}
 
