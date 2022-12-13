@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
+source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '969'
 ht-degree: 11%
 
 ---
@@ -155,7 +155,6 @@ ht-degree: 11%
       * [Differentiële privacy](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
-      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [OneTag knipperen](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -173,6 +172,8 @@ ht-degree: 11%
          * [Overzicht](./extensions/client/marketo/overview.md)
          * [Aanvullende informatie](./extensions/client/marketo/release-notes.md)
       * [Master eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)
+      * [!DNL Meta Pixel] {#meta}
+         * [Overzicht](./extensions/client/meta/overview.md)
       * [Monitor](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
       * [OneTrust Consent-beheer voor cookies](https://exchange.adobe.com/apps/ec/100340)
@@ -300,3 +301,4 @@ ht-degree: 11%
    * [Opmerkingen bij de release 2020](./release-notes/2020.md)
    * [Opmerkingen bij de release 2019](./release-notes/2019.md)
    * [Opmerkingen bij de release 2018](./release-notes/2018.md)
+
