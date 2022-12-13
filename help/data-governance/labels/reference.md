@@ -5,9 +5,9 @@ title: Woordenlijst met gegevensgebruikslabels
 topic-legacy: labels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2108'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 >abstract="Er zijn verschillende categorieën labels voor gegevensgebruik. Adobe-bepaalde etiketten omvatten contractetiketten, identiteitslabels, en gevoelige etiketten. De etiketten die door uw organisatie worden bepaald zijn gecategoriseerd als douanelabels."
 >text="See the data usage labels glossary for more information on these label types."
 
-Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Adobe Experience Platform Data Governance biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
+Met labels voor gegevensgebruik kunt u gegevenssets en velden indelen op basis van [bestuursbeleid](../policies/overview.md) en [toegangsbeheerbeleid](../../access-control/abac/overview.md) die op die gegevens van toepassing zijn. Adobe Experience Platform biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
 
-In dit document worden de basislabels voor gegevensgebruik beschreven die momenteel worden geleverd door [!DNL Experience Platform]. Meer informatie over gegevensbeheer vindt u in de [Overzicht van gegevensbeheer](../home.md).
+In dit document worden de basislabels voor gegevensgebruik beschreven die momenteel door het Experience Platform worden geleverd.
 
 ## Contractlabels
 
@@ -135,7 +135,7 @@ Sommige contracten bevatten expliciete verbodsbepalingen voor het gebruik van ge
 
 #### C10 {#c10}
 
-Sommige beleidsregels voor gegevensgebruik beperken het gebruik van verankerde identiteitsgegevens voor personalisatie. Het label C10 wordt automatisch toegepast op segmenten als in het samenvoegbeleid de optie &quot;particuliere grafiek&quot; wordt gebruikt.
+Sommige beleidsregels voor gegevensbeheer beperken het gebruik van verankerde identiteitsgegevens voor personalisatie. Het label C10 wordt automatisch toegepast op segmenten als in het samenvoegbeleid de optie &quot;particuliere grafiek&quot; wordt gebruikt.
 
 #### C11 {#c11}
 

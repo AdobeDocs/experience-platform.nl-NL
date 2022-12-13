@@ -5,9 +5,9 @@ title: Overzicht van gegevenssets
 topic-legacy: datasets
 description: Dit document verstrekt een overzicht op hoog niveau van datasets in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,10 @@ Zie de [Overzicht van gegevensinname](../../ingestion/home.md) voor meer informa
 ## Gebruikslabels toepassen op gegevenssets
 
 Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren om ervoor te zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Met het gegevensbeheerframework kunt u gebruikslabels toepassen om gegevens te categoriseren volgens het gebruiksbeleid dat op die gegevens van toepassing is.
+
+>[!IMPORTANT]
+>
+>Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert toegangsbeleid voor de gegevens tot stand te brengen, moet u [labels toepassen op het schema](../../xdm/tutorials/labels.md) dat de gegevensset op die gegevens is gebaseerd. Zie het overzicht op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
 
 De etiketten van het gebruik van gegevens kunnen op volledige datasets of individuele datasetgebieden worden toegepast. De etiketten die op het datasetniveau worden toegevoegd worden geërft door alle gebieden binnen die dataset.
 

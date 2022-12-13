@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
-title: Op kenmerken gebaseerd toegangsbeheer Een beleid maken
-description: Dit document bevat informatie over het beheer van beleid via de interface voor machtigingen in Adobe Experience Cloud
+title: Beleid voor toegangsbeheer beheren
+description: Dit document biedt informatie over het beheer van het beleid voor toegangsbeheer via de interface voor machtigingen in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
 
-# Beleid beheren
+# Beleid voor toegangsbeheer beheren
 
-Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Het beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden.
+Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen om toelaatbare en ontoelaatbare acties te vestigen. Het toegangsbeleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden.
+
+>[!IMPORTANT]
+>
+>Het beleid van de toegang moet niet met het beleid van het gegevensgebruik worden verward, dat controleert hoe het gegeven in Adobe Experience Platform wordt gebruikt in plaats van welke gebruikers in uw organisatie toegang tot het hebben. Zie de handleiding bij het maken van [beleid voor gegevensgebruik](../../../data-governance/policies/create.md) voor meer informatie .
 
 ## Nieuw beleid maken
 

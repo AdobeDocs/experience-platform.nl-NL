@@ -5,16 +5,16 @@ title: API-eindpunten voor beleidsevaluatie
 topic-legacy: developer guide
 description: Zodra de marketing acties zijn gecreeerd en het beleid is bepaald, kunt u de Dienst API van het Beleid gebruiken om te evalueren of om het even welk beleid door bepaalde acties wordt geschonden. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
 
 # Eindpunten van de beleidsevaluatie
 
-Nadat u marketingacties hebt gemaakt en beleid hebt gedefinieerd, kunt u de opdracht [!DNL Policy Service] API om te beoordelen of beleidsregels worden overtreden door bepaalde handelingen. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
+Nadat u marketingacties hebt gemaakt en beleid voor gegevensgebruik hebt gedefinieerd, kunt u de opdracht [!DNL Policy Service] API om te beoordelen of beleidsregels worden overtreden door bepaalde handelingen. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
 
 Standaard worden alleen beleidsregels waarvan de status is ingesteld op `ENABLED` deelnemen aan de evaluatie. U kunt echter wel de queryparameter gebruiken `?includeDraft=true` om `DRAFT` evaluatiebeleid.
 

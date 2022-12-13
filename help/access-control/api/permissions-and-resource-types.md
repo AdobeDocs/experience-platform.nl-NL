@@ -3,18 +3,18 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheertoestemmi
 solution: Experience Platform
 title: Referentie-API-eindpunt
 topic-legacy: developer guide
-description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET aan het /acl/verwijzingspunten in de Controle API van de Toegang te richten. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid voor de huidige gebruiker weer te geven.
+description: Het verwijzingspunten in Toegangsbeheer API staat u toe om de namen van beschikbare toestemmingen en middeltypes te bekijken, die dan kunnen worden gebruikt om efficiënt toegangsbeheerbeleid voor de huidige gebruiker te bekijken.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
 # Referentie-eindpunt
 
-U kunt een lijst maken van de namen van alle toestemmingen en middeltypes door een verzoek van de GET tot de `/acl/reference` eindpunt. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen naar [doeltreffend beleid weergeven](./effective-policies.md) voor de huidige gebruiker.
+U kunt een lijst maken van de namen van alle toestemmingen en middeltypes door een verzoek van de GET tot de `/acl/reference` eindpunt. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen naar [doeltreffend beleid voor toegangscontrole weergeven](./effective-policies.md) voor de huidige gebruiker.
 
 Een toestemming is een beleid dat door Adobe Admin Console wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een middeltype is een beleid dat gelezen toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Platform] bron (zoals datasets of schema&#39;s).
 

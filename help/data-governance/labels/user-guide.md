@@ -5,18 +5,22 @@ title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: labels
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1239'
 ht-degree: 0%
 
 ---
 
 # Labels voor gegevensgebruik beheren in de gebruikersinterface
 
-In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface. Voordat u de handleiding kunt gebruiken, raadpleegt u de [Overzicht van gegevensbeheer](../home.md) voor een krachtigere inleiding van het gegevensbeheerskader.
+In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface.
 
 ## Labels beheren op het niveau van de gegevensset
+
+>[!IMPORTANT]
+>
+>Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert toegangsbeleid voor de gegevens tot stand te brengen, moet u [labels toepassen op het schema](../../xdm/tutorials/labels.md) dat de gegevensset op die gegevens is gebaseerd. Zie het overzicht op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
 
 Om de etiketten van het gegevensgebruik op het datasetniveau te beheren, moet u een bestaande dataset selecteren of nieuwe creëren. Nadat u zich hebt aangemeld bij Adobe Experience Platform, selecteert u **[!UICONTROL Datasets]** op de linkernavigatie om de **[!UICONTROL Datasets]** werkruimte. Deze pagina maakt een lijst van alle gecreeerde datasets die tot uw organisatie behoren, samen met nuttige details met betrekking tot elke dataset.
 
@@ -75,6 +79,10 @@ De **[!UICONTROL Show Inherited Labels]** de knevel is door gebrek, dat u toesta
 ![Overerfde labels verbergen](../images/labels/inherited-labels.png)
 
 ## Labels beheren op het niveau van het gegevenssetveld
+
+>[!IMPORTANT]
+>
+>Het toepassen van labels op gegevenssetveldniveau wordt alleen ondersteund voor gevallen waarin gebruik wordt gemaakt van gegevensbeheer. Als u probeert toegangsbeleid voor de gegevens tot stand te brengen, moet u [labels toepassen op het schema](../../xdm/tutorials/labels.md) dat de gegevensset op die gegevens is gebaseerd. Zie het overzicht op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
 
 Doorgaan met de workflow voor [gegevensgebruikslabels toevoegen en bewerken op gegevenssetniveau](#add-labels)kunt u ook labels op veldniveau beheren in het dialoogvenster **[!UICONTROL Data Governance]** werkruimte voor die dataset.
 

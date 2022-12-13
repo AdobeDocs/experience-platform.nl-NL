@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevensbeheer;gegevensgebruiksbeleid
 solution: Experience Platform
-title: Een beleid voor gegevensgebruik maken in de API
+title: Een beleid voor gegevensbeheer maken in de API
 topic-legacy: policies
 type: Tutorial
-description: De dienst API van het Beleid staat u toe om het beleid van het gegevensgebruik tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten van het gegevensgebruik bevatten. Dit document verstrekt een geleidelijke zelfstudie voor het creëren van een beleid gebruikend de Dienst API van het Beleid.
+description: Leer hoe u een beleid voor gegevensbeheer maakt met de API voor beleidsservice.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 0%
+source-wordcount: '1200'
+ht-degree: 1%
 
 ---
 
-# Een beleid voor gegevensgebruik maken in de API
+# Een beleid voor gegevensbeheer maken in de API
 
-De [Beleidsservice-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) Hiermee kunt u beleid voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten.
+De [Beleidsservice-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) Hiermee kunt u beleid voor gegevensbeheer maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten.
 
-Dit document bevat een stapsgewijze zelfstudie voor het maken van een beleid met de [!DNL Policy Service] API. Voor een uitgebreidere handleiding voor de verschillende bewerkingen die beschikbaar zijn in de API raadpleegt u de [Handleiding voor ontwikkelaars van beleidsservices](../api/getting-started.md).
+Dit document bevat een stapsgewijze zelfstudie voor het maken van een beleid voor governance met behulp van de [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>Voor stappen op hoe te om een beleid van de toegangscontrole tot stand te brengen, zie `/policies` eindpuntgids voor [API voor toegangsbeheer](../../access-control/abac/api/policies.md). Als u wilt leren hoe u een beleid voor toestemming maakt, raadpleegt u de [beleid UI-gids](./user-guide.md#consent-policy).
 
 ## Aan de slag
 

@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
-title: API-eindpunt voor beleidsregels voor gegevensgebruik
+title: API-eindpunt voor beleidsregels voor gegevensbeheer
 topic-legacy: developer guide
-description: Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen Experience Platform mag uitvoeren. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensgebruik.
+description: Beleid voor gegevensbeheer is regels die door uw organisatie worden toegepast en die een beschrijving geven van de soorten marketingacties die u mag uitvoeren op gegevens binnen het Experience Platform of waarvan u een beperking hebt ingesteld. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensbeheer.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
 
-# beleidseindpunt voor gegevensgebruik
+# Doel van beleidsregels voor gegevensbeheer
 
-Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen mag uitvoeren [!DNL Experience Platform]. De `/policies` in de [!DNL Policy Service API] staat u toe om het beleid van het gegevensgebruik voor uw organisatie programmatically te beheren.
+Beleid voor gegevensbeheer is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen [!DNL Experience Platform]. De `/policies` in de [!DNL Policy Service API] staat u toe om het beleid van het gegevensbeheer voor uw organisatie programmatically te beheren.
 
 >[!IMPORTANT]
 >
->Dit eindpunt moet niet worden verward met het `/policies` in de [API voor toegangsbeheer](../../access-control/abac/api/policies.md), die wordt gebruikt om het beleid van de toegangscontrole te beheren.
+>Het beleid van het bestuur moet niet met toegangsbeheerbeleid worden verward, dat de specifieke gegevensattributen bepaalt die door bepaalde gebruikers van de Platform in uw organisatie kunnen worden betreden. Zie de `/policies` eindpuntgids voor [API voor toegangsbeheer](../../access-control/abac/api/policies.md) voor details op hoe te om toegangsbeheerbeleid programmatically te beheren.
 
 ## Aan de slag
 
@@ -611,7 +611,7 @@ U kunt de verwijdering bevestigen door te proberen het beleid opnieuw op te zoek
 
 ## Een lijst met ingeschakelde kernbeleidsregels ophalen {#list-enabled-core}
 
-Door gebrek, slechts neemt het toegelaten beleid van het gegevensgebruik aan evaluatie deel. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan wordt toegelaten `/enabledCorePolicies` eindpunt.
+Standaard wordt alleen beleid voor gegevensbeheer aan de evaluatie toegevoegd. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan wordt toegelaten `/enabledCorePolicies` eindpunt.
 
 **API-indeling**
 
@@ -663,7 +663,7 @@ Een succesvolle reactie keert de lijst van toegelaten kernbeleid onder terug `po
 
 ## De lijst met ingeschakelde kernbeleidsregels bijwerken {#update-enabled-core}
 
-Door gebrek, slechts neemt het toegelaten beleid van het gegevensgebruik aan evaluatie deel. Door een PUT aan de `/enabledCorePolicies` eindpunt, kunt u de lijst van toegelaten kernbeleid voor uw organisatie bijwerken gebruikend één enkele vraag.
+Standaard wordt alleen beleid voor gegevensbeheer aan de evaluatie toegevoegd. Door een PUT aan de `/enabledCorePolicies` eindpunt, kunt u de lijst van toegelaten kernbeleid voor uw organisatie bijwerken gebruikend één enkele vraag.
 
 >[!NOTE]
 >

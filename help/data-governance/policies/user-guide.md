@@ -5,16 +5,20 @@ title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1347'
 ht-degree: 0%
 
 ---
 
 # Beleid voor gegevensgebruik beheren in de gebruikersinterface
 
-Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in het dialoogvenster **Beleid** werkruimte in de [!DNL Experience Platform] gebruikersinterface.
+In dit document wordt beschreven hoe u het **[!UICONTROL Policies]** in de gebruikersinterface van Adobe Experience Platform om beleid voor gegevensgebruik te maken en te beheren.
+
+>[!NOTE]
+>
+>Voor informatie over hoe te om toegangsbeheerbeleid in UI te beheren, verwijs naar [Op attributen-gebaseerde gids van het toegangsbeheer UI](../../access-control/abac/ui/policies.md) in plaats daarvan.
 
 >[!IMPORTANT]
 >
@@ -24,7 +28,7 @@ Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee 
 
 Deze handleiding vereist een goed begrip van het volgende: [!DNL Experience Platform] concepten:
 
-* [Data Governance](../home.md)
+* [Gegevensbeheer](../home.md)
 * [Beleid voor gegevensgebruik](./overview.md)
 
 ## Bestaande beleidsvormen weergeven {#view-policies}

@@ -3,18 +3,18 @@ keywords: Experience Platform;thuis;populaire onderwerpen;effectief beleid;toega
 solution: Experience Platform
 title: Efficiënt beleid API-eindpunt
 topic-legacy: developer guide
-description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor het weergeven van effectief beleid met behulp van de API voor toegangsbeheer voor Adobe Experience Platform.
+description: Leer hoe u effectief toegangsbeleid kunt weergeven met de API voor toegangsbeheer voor Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 0%
+source-wordcount: '292'
+ht-degree: 1%
 
 ---
 
 # Doeltreffend beleidseindpunt
 
-Om effectief beleid voor de huidige gebruiker te bekijken, doe een verzoek van de POST aan `/acl/effective-policies` in de [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
+Om effectief toegangsbeheerbeleid voor de huidige gebruiker te bekijken, doe een verzoek van de POST aan `/acl/effective-policies` in de [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
 
 **API-indeling**
 
@@ -65,7 +65,7 @@ Een succesvolle reactie keert informatie over de toestemmingen en middeltypes te
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u de [!DNL Access Control] API om informatie over actieve toestemmingen en verwant beleid voor middeltypes terug te keren. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie de [toegangsbeheeroverzicht](../home.md).
+In dit document wordt beschreven hoe u de [!DNL Access Control] API om informatie over actieve toestemmingen en verwant toegangsbeleid voor middeltypes terug te keren. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie de [toegangsbeheeroverzicht](../home.md).
 
 ## Aanhangsel
 

@@ -5,9 +5,9 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '7429'
+source-wordcount: '7427'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 **Console**: In [!DNL Query Service], verstrekt de console informatie over de status en de verrichting van een vraag. De console toont de verbindingsstatus aan [!DNL Query Service], querybewerkingen die worden uitgevoerd en foutberichten die het resultaat zijn van deze query&#39;s.
 
-**Contractlabels (&quot;C&quot;)**: De etiketten van het gegevensgebruik van het contract (&quot;C&quot;) worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of met het beleid van het gegevensbeheer van een klant verwant zijn.
+**Contractlabels (&quot;C&quot;)**: De etiketten van het gegevensgebruik van het contract (&quot;C&quot;) worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of met het beleid van het gegevensbeheer van uw organisatie verwant zijn.
 
 **C1-contractlabel**: A `C1` Met een label voor het gebruik van contractgegevens kunnen gegevens alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerd formulier, zonder individuele of apparaatid&#39;s in te sluiten. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
 
@@ -502,7 +502,7 @@ ht-degree: 0%
 
 **Bronaansluiting**: Bronconnectors (ook wel bronnen genoemd) helpen gebruikers eenvoudig gegevens uit meerdere bronnen in te voeren, zodat ze gegevens kunnen structureren, labelen en verbeteren met behulp van Experience Platforms. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
 
-**Streaming verbinding**: Een het stromen verbinding is een uniek eindpunt dat door Adobe wordt verstrekt en aan de Organisatie IMS van een klant wordt gebonden om gegevens in Experience Platform te stromen.
+**Streaming verbinding**: Een het stromen verbinding is een uniek eindpunt dat door Adobe wordt verstrekt en aan uw organisatie wordt gebonden om gegevens in Experience Platform te stromen.
 
 **Standaardnaamruimte**: De standaard identiteitsnamespaces zijn vooraf bepaalde identiteitsnamespaces die door Adobe worden verstrekt, die industrie-standaard oplossingen vertegenwoordigen die algemeen worden gebruikt om klanten te identificeren.
 

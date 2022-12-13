@@ -2,12 +2,12 @@
 keywords: Experience Platform;huis;populaire onderwerpen;api;op attributen-gebaseerde toegangscontrole;Op Attribuut-Gebaseerd Toegangsbeheer
 solution: Experience Platform
 title: API-handleiding voor toegangsbeheer op basis van kenmerken
-description: Met de API voor toegangsbeheer op basis van kenmerken kunt u rollen en beleid in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+description: Met de API voor toegangsbeheer op basis van kenmerken kunt u rollen en toegangsbeleid in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 1%
+source-wordcount: '450'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 1%
 Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform waarmee beheerders de toegang tot specifieke objecten en/of mogelijkheden kunnen beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
 
 De op attribuut-gebaseerde toegangsbeheer API wordt gebruikt om tot rollen, producten, toestemmingscategorieën, en toestemmingsreeksen binnen Adobe Experience Platform toegang te hebben, die een gebruikersinterface verstrekken en RESTful API waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn.
+
+>[!IMPORTANT]
+>
+>Op attributen-gebaseerde toegangsbeheer moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform wordt gebruikt eerder dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [Handleiding Beleidsservice-API](../../../data-governance/api/overview.md) voor stappen over hoe te om programmatically hefboomwerking deze mogelijkheden te gebruiken.
 
 Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
 

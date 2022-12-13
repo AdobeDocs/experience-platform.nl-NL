@@ -5,9 +5,9 @@ title: API-handleiding voor beleidsservice
 topic-legacy: developer guide
 description: Met de Beleidsservice-API kunnen ontwikkelaars labels en beleidsregels voor gegevensgebruik in Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,13 @@ Handelingen voor het in de handel brengen (ook wel marketinggevallen genoemd) zi
 
 ## Beleid
 
-Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen mag uitvoeren [!DNL Experience Platform]. Een beleid wordt gedefinieerd door het volgende:
+Beleid voor gegevensbeheer is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>Het beleid van het gegevensbeheer moet niet met toegangsbeheerbeleid worden verward, dat de specifieke gegevensattributen bepaalt die door bepaalde gebruikers van de Platform in uw organisatie kunnen worden betreden. Zie de handleiding op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
+
+Een beleid inzake gegevensbeheer wordt als volgt gedefinieerd:
 
 1. Een specifieke marketingactie
 1. De labels voor gegevensgebruik waarvoor de handeling niet kan worden uitgevoerd
@@ -41,7 +47,7 @@ Zie voor meer informatie over het beheren van beleid in de API [leidraad voor be
 
 Nadat labels voor gegevensgebruik zijn toegepast op [!DNL Platform] De datasets, en het beleid van het gegevensgebruik zijn bepaald voor marketing acties tegen die etiketten, de mogelijkheden van het Beleid van Gegevens staan u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
 
-De [!DNL Policy Service] API verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om te controleren als om het even welke beleidsschendingen voorkomen. Op basis van de API-reactie kunt u vervolgens protocollen in uw ervaringstoepassing instellen om op de juiste wijze de naleving van het gegevensgebruiksbeleid af te dwingen. Zie de [eindpuntgids voor evaluatie](./evaluation.md) voor meer informatie .
+De [!DNL Policy Service] API verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om te controleren als om het even welke beleidsschendingen voorkomen. Op basis van de API-reactie kunt u vervolgens protocollen instellen in uw ervaringstoepassing om op de juiste wijze de naleving van het gegevensgebruiksbeleid af te dwingen. Zie de [eindpuntgids voor evaluatie](./evaluation.md) voor meer informatie .
 
 ## Volgende stappen
 

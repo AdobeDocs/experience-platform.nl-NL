@@ -1,9 +1,10 @@
 ---
 title: End-to-end handleiding voor gegevensbeheer
 description: Volg het volledige proces voor het afdwingen van beperkingen van het gegevensgebruik voor gebieden en datasets in Adobe Experience Platform.
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1454'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Als u wilt bepalen welke marketingacties op bepaalde gegevenssets en velden in A
 1. [Beleid voor gegevensbeheer configureren en inschakelen](#policy) die bepalen welke soorten geëtiketteerde gegevens voor bepaalde marketing acties kunnen worden gebruikt.
 1. [Marketing-acties toepassen op uw doelen](#destinations) om aan te geven welk beleid van toepassing is op gegevens die naar die bestemmingen worden verzonden.
 
-Als u klaar bent met het configureren van uw labels, beleid en marketingacties, kunt u [uw beleidshandhaving testen](#test) ervoor te zorgen dat het naar behoren functioneert.
+Als u klaar bent met het configureren van uw labels, beheerbeleid en marketingacties, kunt u [uw beleidshandhaving testen](#test) ervoor te zorgen dat het naar behoren functioneert.
 
 Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in de UI van het Platform te vormen en af te dwingen. Voor meer gedetailleerde informatie over de eigenschappen die in deze gids worden gebruikt, verwijs naar de overzichtsdocumentatie over de volgende onderwerpen:
 
@@ -24,6 +25,10 @@ Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in
 * [Labels voor gegevensgebruik](./labels/overview.md)
 * [Beleid voor gegevensgebruik](./policies/overview.md)
 * [Beleidshandhaving](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>Deze gids concentreert zich op hoe te opstelling en beleid te handhaven voor hoe de gegevens in Experience Platform worden gebruikt of worden geactiveerd. Als u probeert te beperken **toegang** aan de gegevens zelf voor bepaalde gebruikers van het Platform binnen uw organisatie, zie de gids van begin tot eind op [attribuut-based toegangsbeheer](../access-control/abac/end-to-end-guide.md) in plaats daarvan. Op attributen-gebaseerde toegangscontrole gebruikt ook etiketten en beleid, maar voor een verschillend gebruiksgeval dan gegevensbeheer.
 
 ## Labels toepassen {#labels}
 

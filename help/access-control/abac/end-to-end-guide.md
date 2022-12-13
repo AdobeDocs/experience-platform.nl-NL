@@ -2,9 +2,10 @@
 keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;
 title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin tot eind
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
-source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
+exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2260'
+source-wordcount: '2305'
 ht-degree: 0%
 
 ---
@@ -13,8 +14,11 @@ ht-degree: 0%
 
 Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform die klanten met meerdere merken en privacy meer flexibiliteit biedt om gebruikerstoegang te beheren. De toegang tot individuele voorwerpen, zoals schemagebieden en segmenten, kan met beleid worden verleend/worden ontkend dat op de attributen en de rol van de objecten wordt gebaseerd. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke gebruikers van Platforms in uw organisatie.
 
-Deze functionaliteit staat u toe om schemagebieden, segmenten, etc. met etiketten te categoriseren die organisatie of gegevensgebruikswerkingsgebied bepalen. U kunt dezelfde labels toepassen op reizen, aanbiedingen en andere objecten in Adobe Journey Optimizer. Tegelijkertijd kunnen beheerders toegangsbeleid definiëren rondom XDM-schemavelden en beter bepalen welke gebruikers of groepen (interne, externe of externe gebruikers) toegang hebben tot deze velden.
+Deze functionaliteit staat u toe om schemagebieden, segmenten, etc. met etiketten te categoriseren die organisatie of gegevensgebruikswerkingsgebied bepalen. U kunt dezelfde labels toepassen op reizen, aanbiedingen en andere objecten in Adobe Journey Optimizer. Tegelijkertijd kunnen beheerders toegangsbeleid definiëren rondom XDM-schemavelden (Experience Data Model) en beter beheren welke gebruikers of groepen (interne, externe of externe gebruikers) toegang hebben tot deze velden.
 
+>[!NOTE]
+>
+>Dit document concentreert zich op het gebruiksgeval van het beleid van de toegangscontrole. Als u beleid wilt instellen om het **gebruiken** van gegevens eerder dan welke gebruikers van het Platform tot het toegang hebben, zie de gids van begin tot eind op [gegevensbeheer](../../data-governance/e2e.md) in plaats daarvan.
 
 ## Aan de slag
 

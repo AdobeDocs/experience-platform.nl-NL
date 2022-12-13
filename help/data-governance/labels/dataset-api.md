@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;dataset api;beheer gegevensgebruik;gegevensgebruik api
 solution: Experience Platform
-title: 'Labels voor gegevensgebruik voor gegevenssets beheren met API''s '
+title: Labels voor gegevensgebruik voor gegevenssets beheren met API's
 topic-legacy: developer guide
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 # Gegevensgebruikslabels voor gegevenssets beheren met behulp van API&#39;s
 
 De [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) staat u toe om gebruiksetiketten voor datasets toe te passen en uit te geven. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de [!DNL Catalog Service] API die gegevenssetmetagegevens beheert.
+
+>[!IMPORTANT]
+>
+>Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert toegangsbeleid voor de gegevens tot stand te brengen, moet u [labels toepassen op het schema](../../xdm/tutorials/labels.md) dat de gegevensset op die gegevens is gebaseerd. Zie het overzicht op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
 
 In dit document wordt beschreven hoe u labels voor gegevenssets en velden kunt beheren met de [!DNL Dataset Service API]. Voor stappen over hoe te om de etiketten van het gegevensgebruik zelf te beheren die API vraag gebruiken, zie [eindhulplijn voor labels](../api/labels.md) voor de [!DNL Policy Service API].
 
@@ -155,10 +159,6 @@ Een succesvolle reactie keert de bijgewerkte reeks etiketten voor de dataset ter
 
 ## Volgende stappen
 
-Door dit document te lezen hebt u geleerd hoe u gegevensgebruikslabels voor gegevenssets en velden kunt beheren met de [!DNL Dataset Service] API.
-
-Zodra u de etiketten van het gegevensgebruik op dataset en gebied-niveau hebt toegevoegd, kunt u beginnen gegevens in te nemen [!DNL Experience Platform]. Als u meer wilt weten, begint u met het lezen van de [documentatie over gegevensinvoer](../../ingestion/home.md).
-
-U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die u hebt toegepast. Zie voor meer informatie de [overzicht van beleidsregels voor gegevensgebruik](../policies/overview.md).
+Door dit document te lezen hebt u geleerd hoe u gegevensgebruikslabels voor gegevenssets en velden kunt beheren met de [!DNL Dataset Service] API. U kunt nu definiëren [beleid voor gegevensgebruik](../policies/overview.md) en [toegangsbeheerbeleid](../../access-control/abac/ui/policies.md) op basis van de labels die u hebt toegepast.
 
 Voor meer informatie over het beheren van datasets in [!DNL Experience Platform], zie de [Overzicht van gegevenssets](../../catalog/datasets/overview.md).

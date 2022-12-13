@@ -1,13 +1,13 @@
 ---
 title: (Bèta) De handelsbank - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
-source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
+exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 1%
 
 ---
-
 
 # (bèta) De [!DNL Trade Desk] - CRM-verbinding
 
@@ -90,7 +90,7 @@ Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Advertiser ID]**: uw [!DNL Trade Desk Advertiser ID], die door uw [!DNL Trade Desk] Accountmanager of gevonden onder [!DNL Advertiser Preferences] in de [!DNL Trade Desk] UI.
 
-Wanneer het verbinden met de bestemming, is het plaatsen van een beleid van het Beheer van Gegevens volledig facultatief. Controleer het Experience Platform [gegevensbeheer - overzicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) voor meer informatie .
+Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Controleer het Experience Platform [gegevensbeheer - overzicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) voor meer informatie .
 
 ## Segmenten naar dit doel activeren {#activate}
 

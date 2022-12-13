@@ -3,22 +3,22 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangscontrole Bladeren
 description: Dit document bevat informatie over het gebruik van de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '342'
 ht-degree: 3%
 
 ---
 
 # Handleiding voor machtigingen
 
-Machtigingen zijn het gebied van Adobe Experience Cloud waar beheerders gebruikersrollen en toegangsbeleid kunnen definiëren om toegangsmachtigingen voor functies en objecten binnen een producttoepassing te beheren.
+[!UICONTROL Permissions] Dit is het gebied van Adobe Experience Cloud waar beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
 
-Met toestemmingen, kunt u vormen:
+Met [!UICONTROL Permissions]kunt u configureren:
 
+* [Toegangsbeleid](./policies.md)
 * [Labels](./labels.md)
 * [Toestemmingen](./permissions.md)
-* [Beleid](./permissions.md)
 * [Rollen](./roles.md)
 * [Sandboxen](./sandboxes.md)
 * [Gebruikers](./users.md)

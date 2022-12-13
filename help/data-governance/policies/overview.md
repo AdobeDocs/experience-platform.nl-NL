@@ -3,11 +3,11 @@ keywords: Experience Platform;thuis;populaire onderwerpen;module;DULE
 solution: Experience Platform
 title: Overzicht van beleidsregels voor gegevensgebruik
 topic-legacy: policies
-description: Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen het Experience Platform, of dat u er een beperking voor hebt.
+description: Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens in Adobe Experience Platform of waarvan u een beperking hebt ingesteld.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
