@@ -5,7 +5,7 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '4062'
 ht-degree: 0%
@@ -253,7 +253,7 @@ De geldige waaiers van deze scalaire types kunnen verder tot bepaalde patronen, 
 
 >[!NOTE]
 >
->Het &quot;kaart&quot;gebiedstype staat voor sleutel-waarde paargegevens, met inbegrip van veelvoudige waarden voor één enkele sleutel toe. Kaarten vindt u in standaard XDM-klassen en -veldgroepen, maar u kunt ook aangepaste kaarten definiëren met behulp van de API voor schemaregistratie. Zie de zelfstudie aan [aangepaste velden definiëren](../tutorials/custom-fields-api.md#maps) voor meer informatie .
+>Het &quot;kaart&quot;gebiedstype staat voor sleutel-waarde paargegevens, met inbegrip van veelvoudige waarden voor één enkele sleutel toe. Kaarten vindt u in standaard XDM-klassen en -veldgroepen, maar u kunt ook aangepaste kaarten definiëren met behulp van de API voor schemaregistratie. Zie de zelfstudie aan [aangepaste velden definiëren](../tutorials/custom-fields-api.md#custom-maps) voor meer informatie .
 
 ## Compositievoorbeeld
 
