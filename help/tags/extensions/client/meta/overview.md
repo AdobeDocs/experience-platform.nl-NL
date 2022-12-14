@@ -1,9 +1,9 @@
 ---
 title: Overzicht van Meta-pixelextensie
 description: Meer informatie over de extensie Meta Pixel in Adobe Experience Platform.
-source-git-commit: 87376172f89858bfa883084461544a2c50ba5009
+source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 0%
 
 De [!DNL Meta Pixel] met de extensie van tags kunt u gebruikmaken van [!DNL Pixel] functies in de tagbibliotheken aan de clientzijde. In dit document wordt beschreven hoe u de extensie installeert en de mogelijkheden ervan kunt gebruiken in een [regel](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Conversions API extension doc is published)
 >[!NOTE]
 >
->If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
--->
+>Als u servergebeurtenissen probeert te verzenden naar [!DNL Meta] in plaats van vanaf de client [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) in plaats daarvan.
 
 ## Vereisten
 

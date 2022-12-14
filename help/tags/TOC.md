@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
+source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 11%
+source-wordcount: '963'
+ht-degree: 12%
 
 ---
 
@@ -213,11 +213,12 @@ ht-degree: 11%
       * [Cloud Connector voor Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
-      * [Facebook Conversies-API](https://exchange.adobe.com/apps/ec/105509)
       * Verbeterde Google-conversies toevoegen {#google-ads-enhanced-conversions}
          * [Overzicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Rand {#mailchimp}
          * [Overzicht](./extensions/server/mailchimp/overview.md)
+      * [!DNL Meta Conversions API] {#meta}
+         * [Overzicht](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [Overzicht](./extensions/server/azure/overview.md)
       * [PegPeg-klantbeslissingshub](https://exchange.adobe.com/apps/ec/107597)
