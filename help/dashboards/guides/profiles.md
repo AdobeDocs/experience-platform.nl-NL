@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het klantprofiel in realtime van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3196'
+source-wordcount: '3165'
 ht-degree: 0%
 
 ---
@@ -275,14 +275,19 @@ De [!UICONTROL Unsegmented Profiles Trend] widget geeft een illustratie van de l
 
 ### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+De niet-gesegmenteerde profielen per identiteitswidget zijn vanaf oktober 2022 afgekeurd en zijn niet meer beschikbaar.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="Gesegmenteerde profielen opsplitsen op identiteit"
->abstract="Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id."
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-De [!UICONTROL Unsegmented Profiles by Identity] widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden in een staafdiagram weergegeven, zodat ze gemakkelijk kunnen worden vergeleken.
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![De widget Niet-gesegmenteerde profielen op basis van identiteit.](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Audiences] {#audiences}
 
@@ -318,8 +323,7 @@ De [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster ka
 ![Het dialoogvenster Publiek overlapt het rapport.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->Selecteer **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
+Selecteer **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
 
 Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]**.
 
