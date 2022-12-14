@@ -5,10 +5,10 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
+source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
 workflow-type: tm+mt
-source-wordcount: '3763'
-ht-degree: 1%
+source-wordcount: '4344'
+ht-degree: 0%
 
 ---
 
@@ -38,14 +38,19 @@ Deze sectie bevat informatie over prestaties, beperkingen en processen.
 +++Antwoord Een mogelijke oorzaak is de functie voor automatisch aanvullen. De eigenschap verwerkt bepaalde meta-gegevensbevelen die de redacteur tijdens vraag het uitgeven soms kunnen vertragen.
 +++
 
-### Kan ik Postman gebruiken voor de API voor zoekservices?
+### Kan ik gebruiken [!DNL Postman] voor de API van de Query-service?
 
-+++Antwoord ja, kunt u visualiseren en met alle Adobe API diensten in wisselwerking staan gebruikend Postman (een vrije, derdetoepassing). Kijk naar de [Postman Setup Guide](https://video.tv.adobe.com/v/28832) voor stapsgewijze instructies voor het instellen van een project in Adobe Developer Console en het verkrijgen van alle vereiste gegevens voor gebruik met Postman. Zie de officiële documentatie voor [richtlijnen voor het starten, uitvoeren en delen van Postman-verzamelingen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Antwoord ja, u kunt visualiseren en met alle Adobe API diensten in wisselwerking staan gebruikend [!DNL Postman] (een gratis toepassing van derden). Kijk naar de [[!DNL Postman] installatiehandleiding](https://video.tv.adobe.com/v/28832) voor stapsgewijze instructies voor het instellen van een project in Adobe Developer Console en het verkrijgen van alle vereiste referenties voor gebruik met [!DNL Postman]. Zie de officiële documentatie voor [richtlijnen voor het starten, uitvoeren en delen [!DNL Postman] verzamelingen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Is er een grens aan het maximumaantal rijen die van een vraag door UI zijn teruggekeerd?
 
 ++ antwoord ja, de Dienst van de Vraag past intern een grens van 50.000 rijen toe tenzij een expliciete grens extern wordt gespecificeerd. Zie de leidraad voor [interactieve query-uitvoering](./best-practices/writing-queries.md#interactive-query-execution) voor meer informatie .
++++
+
+### Kan ik query&#39;s gebruiken om rijen bij te werken?
+
++++Antwoord in partijvragen, wordt het bijwerken van een rij binnen de dataset niet gesteund.
 +++
 
 ### Is er een grens van de gegevensgrootte voor de resulterende output van een vraag?
@@ -77,6 +82,11 @@ SELECT * FROM customers LIMIT 0;
 ### Is er om het even welke kwestie of effect op de prestaties van de Dienst van de Vraag als de veelvoudige vragen gelijktijdig lopen?
 
 +++Antwoord nr. De Dienst van de vraag heeft een autoscaling vermogen dat gezamenlijke vragen verzekert geen merkbaar effect op de prestaties van de dienst hebben.
++++
+
+### Kan ik gereserveerde trefwoorden als kolomnaam gebruiken?
+
++++Antwoord Er zijn bepaalde gereserveerde trefwoorden die niet als kolomnaam zoals kunnen worden gebruikt, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Als u deze sleutelwoorden wilt gebruiken, dan moet u deze kolommen ontsnappen.
 +++
 
 ### Hoe vind ik een kolomnaam van een hiërarchische dataset?
@@ -451,6 +461,76 @@ WHERE T2.ID IS NULL
 ### Kan ik een dataset tot stand brengen gebruikend een vraag CTAS met een dubbel onderstreeptekennaam zoals die getoond in UI? Bijvoorbeeld: `test_table_001`.
 
 +++Antwoord nr, is dit een opzettelijke beperking over Experience Platform die op alle diensten van Adobe, met inbegrip van de Dienst van de Vraag van toepassing is. Een naam met twee onderstrepingstekens is aanvaardbaar als schema en datasetnaam, maar de lijstnaam voor de dataset kan slechts één enkel onderstrepingsteken bevatten.
++++
+
+### Hoeveel gezamenlijke vragen kunt u tegelijkertijd lopen?
+
++++Antwoord Er is geen grens van de vraaggelijktijdig aangezien de partijvragen als achterste deelbanen in werking worden gesteld. Er is echter een time-outlimiet voor de query ingesteld op 24 uur.
++++
+
+### Is er een activiteitendashboard waar u vraagactiviteiten en status kunt zien?
+
++++Antwoord Er zijn controle en alarmeringsmogelijkheden om vraagactiviteiten en statussen te controleren. Zie de [Integratie van controlelogbestand voor Query Service](./data-governance/audit-log-guide.md) en de [querylogs](./ui/overview.md#log) documenten voor meer informatie.
++++
+
+### Is er een manier om updates terug te draaien? Bijvoorbeeld, als er een fout is of sommige berekeningen moeten aanpassen wanneer het schrijven van gegevens terug naar Platform, hoe zou dat scenario moeten worden behandeld?
+
++++Antwoord Momenteel steunen wij geen terugdraaiversies of updates op die manier.
++++
+
+### Hoe kunt u query&#39;s optimaliseren in Adobe Experience Platform?
+
++++Antwoord Het systeem heeft geen indexen aangezien het geen gegevensbestand is maar het heeft andere optimalisaties op zijn plaats verbonden aan de gegevensopslag. De volgende opties zijn beschikbaar om uw vragen te stemmen:
+
+- Een op tijd gebaseerd filter op tijdlijngegevens.
+- Geoptimaliseerde onderdruk voor het struct gegevenstype.
+- Geoptimaliseerde kosten- en geheugenpush-down voor arrays en gegevenstypen in kaart.
+- Incrementele verwerking met behulp van momentopnamen.
+- Een blijvend gegevensformaat.
++++
+
+### Kunnen logins tot bepaalde aspecten van de Dienst van de Vraag worden beperkt of is het een &quot;alle of niets&quot;oplossing?
+
++++De Dienst van de Vraag van het Antwoord is een &quot;al of niets&quot;oplossing. Gedeeltelijke toegang kan niet worden opgegeven.
++++
+
+### Kan ik beperken welke dienst van de gegevensVraag kan gebruiken, of heeft het eenvoudig toegang tot het volledige de gegevens van Adobe Experience Platform meer?
+
++++Antwoord ja, kunt u het vragen tot datasets met read-only toegang beperken.
++++
+
+### Welke andere opties zijn er voor het beperken van de gegevens die de Dienst van de Vraag kan toegang hebben?
+
++++Antwoord Er zijn drie benaderingen om toegang te beperken. Deze zijn als volgt:
+
+- Gebruik alleen de instructies SELECT en geef gegevenssets alleen-lezen toegang. Wijs ook de machtiging voor query beheren toe.
+- Gebruik de instructies SELECT/INSERT/CREATE en geef datasets schrijftoegang. Wijs ook de machtiging voor query-beheer toe.
+- Gebruik een integratierekening met de vorige bovenstaande suggesties en wijs de toestemming van de vraagintegratie toe.
+
++++
+
+### Zodra de gegevens door de Dienst van de Vraag worden teruggegeven, zijn er om het even welke controles die door Platform kunnen worden in werking gesteld om ervoor te zorgen dat het geen beschermde gegevens heeft teruggegeven?
+
+- De Dienst van de vraag steunt op attribuut-gebaseerde toegangsbeheer. U kunt toegang tot gegevens op kolom/bladniveau en/of struct niveau beperken. Zie de documentatie om meer over op attribuut-gebaseerde toegangsbeheer te leren.
+
+### Kan ik een SSL-modus opgeven voor de verbinding met een externe client? Kan ik bijvoorbeeld &#39;verify-full&#39; gebruiken met Power BI?
+
++++Antwoord ja, worden de SSL wijzen gesteund. Zie de [Documentatie over SSL-modi](./clients/ssl-modes.md) voor een uitsplitsing van de verschillende beschikbare SSL-modi en het beschermingsniveau dat zij bieden.
++++
+
+### Gebruiken wij TLS 1.2 voor alle verbindingen van Power BI cliënten aan de vraagdienst?
+
+++ + Antwoord Ja. Doorvoergegevens zijn altijd compatibel met HTTPS. De versie die momenteel wordt ondersteund, is TLS1.2.
++++
+
+### Gebruikt een verbinding gemaakt op poort 80 nog https?
+
+++ + Antwoord ja, een verbinding die op haven 80 wordt gemaakt gebruikt nog SSL. U kunt ook poort 5432 gebruiken.
++++
+
+### Kan ik toegang tot specifieke datasets en kolommen voor een bepaalde verbinding controleren? Hoe wordt dit gevormd?
+
++++Antwoord ja, op attribuut-gebaseerde toegangsbeheer wordt afgedwongen als gevormd. Zie de [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md) voor meer informatie .
 +++
 
 ## Data exporteren {#exporting-data}
