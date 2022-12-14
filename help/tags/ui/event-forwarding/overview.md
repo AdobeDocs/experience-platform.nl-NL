@@ -3,9 +3,9 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ In labelregels worden gegevenselementen gekoppeld aan een `%` aan het begin en e
 
 #### Reeks handelingen {#action-sequencing}
 
-De [!UICONTROL Actions] sectie van een gebeurtenis die regel door:sturen wordt altijd opeenvolgend uitgevoerd. Zorg ervoor dat de volgorde van de handelingen correct is wanneer u een regel opslaat. Deze uitvoeringsvolgorde kan niet asynchroon worden uitgevoerd, zoals met tags.
+De [!UICONTROL Actions] sectie van een gebeurtenis die regel door:sturen wordt altijd opeenvolgend uitgevoerd. Bijvoorbeeld, als een regel twee acties heeft, zal de tweede actie niet met uitvoering beginnen tot de vorige actie volledig is (en in gevallen waar een reactie van een eindpunt wordt verwacht, heeft dat eindpunt geantwoord). Zorg ervoor dat de volgorde van de handelingen correct is wanneer u een regel opslaat. Deze uitvoeringsvolgorde kan niet asynchroon worden uitgevoerd, zoals wel mogelijk is met labelregels.
 
 ## Geheimen {#secrets}
 
