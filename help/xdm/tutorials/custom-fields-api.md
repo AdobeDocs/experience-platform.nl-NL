@@ -2,9 +2,9 @@
 title: XDM-velden definiëren in de API voor schemaregister
 description: Leer hoe u verschillende velden definieert bij het maken van XDM-bronnen (Custom Experience Data Model) in de Schema Registry API.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 0947eb38bdb18cb3783723cb11be79d3d32a3b76
+source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ U kunt desgewenst beperken welke soorten waarden voor de tekenreeks kunnen worde
 }
 ```
 
-U kunt optionele klantgerichte labels voor elke waarde opgeven onder een `meta:enum` eigenschap, waarbij elk label met een bijbehorende toets wordt afgespeeld `enum` waarde.
+U kunt klant-onder ogen ziet etiketten voor elke waarde naar keuze verstrekken onder a `meta:enum` eigenschap, waarbij elk label met een overeenkomstige waarde onder `enum`.
 
 ```json
 "sampleField": {
