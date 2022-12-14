@@ -5,9 +5,9 @@ title: Edge Segmentation met de API
 topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,11 @@ Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag a
 | Query die verwijst naar een kaart | Elke segmentdefinitie die verwijst naar een kaart met eigenschappen. | Personen die aan hun winkelwagentje hebben toegevoegd op basis van externe segmentgegevens. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 Daarnaast wordt het segment **moet** gebonden zijn aan een samenvoegbeleid dat op rand actief is. Lees voor meer informatie over samenvoegingsbeleid de [handleiding voor samenvoegbeleid](../../profile/api/merge-policies.md).
+
+Een segmentdefinitie zal **niet** voor randsegmentatie in de volgende scenario&#39;s worden toegelaten:
+
+- De segmentdefinitie omvat een combinatie van één gebeurtenis en een `inSegment` gebeurtenis.
+   - Als het segment echter in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** worden ingeschakeld voor randsegmentatie.
 
 ## Alle segmenten ophalen die zijn ingeschakeld voor segmentatie van randen
 
