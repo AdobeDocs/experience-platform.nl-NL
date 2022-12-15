@@ -3,9 +3,9 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om het Netwerk van de Rand van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
+source-git-commit: eb9d2f9a233f4214057db5136f32fc1290ece63c
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -78,6 +78,8 @@ De **[!UICONTROL Path]** waarde voor het gegevenselement moet het patroon volgen
 ### Regels {#rules}
 
 Het maken van regels bij het doorsturen van eigenschappen voor gebeurtenissen werkt op vergelijkbare wijze als labels, waarbij het belangrijkste verschil is dat u geen gebeurtenissen als regelcomponenten kunt selecteren. In plaats daarvan verwerkt een gebeurtenis die regel door:sturen alle gebeurtenissen het van ontvangt [datastream](../../../edge/datastreams/overview.md) en stuurt deze evenementen door naar bestemmingen indien aan bepaalde voorwaarden is voldaan.
+
+Bovendien is er een onderbreking van 30 seconden die op één enkele gebeurtenis van toepassing is aangezien het over alle regels (en vandaar alle acties) binnen een gebeurtenis wordt verwerkt die bezit door:sturen. Dit betekent dat alle regels en alle handelingen voor één gebeurtenis binnen dit tijdsbestek moeten worden voltooid.
 
 ![Gebeurtenis door:sturen regels in de UI van de Inzameling van Gegevens](../../images/ui/event-forwarding/overview/rules.png)
 
