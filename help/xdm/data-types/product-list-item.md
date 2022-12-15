@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Gegevenstype van productlijst
 topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het item in de productlijst.
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
+source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -21,14 +22,18 @@ De waarden die in dit gegevenstype worden vastgelegd, kunnen afwijken van de pro
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
+| `selectedOptions` | Array van objecten | Bevat aangepaste opties die zijn gekozen voor een configureerbaar product. Elk lijstitem is een object met de volgende eigenschappen:<ul><li>`attribute`: Een naam voor het configureerbare attribuut.</li><li>`value`: De waarde van het kenmerk.</li></ul> |
 | `SKU` | [!UICONTROL String] | Stock keeping unit (SKU), de unieke identificator voor een product dat door de verkoper wordt gedefinieerd. |
-| `_id` | [!UICONTROL String] | The line item identifier for this product entry. Het product zelf wordt geïdentificeerd via `product`. |
-| `currencyCode` | [!UICONTROL String] | De alfabetische valutacode [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) die wordt gebruikt voor de prijsstelling van het product. |
+| `_id` | [!UICONTROL String] | The line item identifier for this product entry. Het product zelf wordt geïdentificeerd door `product`. |
+| `currencyCode` | [!UICONTROL String] | De [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) alfabetische valutacode die wordt gebruikt voor de prijsstelling van het product. |
+| `discountAmount` | [!UICONTROL Double] | Als het product wordt verdisconteerd, is dit het verschil tussen de normale prijs en de speciale prijs voor het product. |
 | `name` | [!UICONTROL String] | De weergavenaam van het product zoals deze aan de gebruiker wordt getoond voor deze productweergave. |
 | `priceTotal` | [!UICONTROL Double] | De totale prijs voor het item van de productlijn. |
 | `product` | [!UICONTROL String] (URI) | De URI `$id` van het XDM-schema dat het product zelf vastlegt. |
 | `productAddMethod` | [!UICONTROL String] | De methode die door de bezoeker is gebruikt om een product-item aan de lijst toe te voegen. |
-| `quantity` | [!UICONTROL Integer] | Het aantal eenheden dat de klant heeft aangegeven van het product te verlangen. |
+| `productImageUrl` | [!UICONTROL String] | Een URL voor de hoofdafbeelding van het product. |
+| `quantity` | [!UICONTROL Integer] | Het aantal eenheden dat de klant heeft aangegeven te vragen voor het product. |
+| `unitOfMeasureCode` | [!UICONTROL String] | De norm [maateenheid](https://ucum.org/ucum) voor het product als gerelateerd aan de `quantity` eigenschap. |
 
 {style=&quot;table-layout:auto&quot;}
 
