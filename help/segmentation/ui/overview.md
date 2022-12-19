@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2316'
 ht-degree: 0%
 
 ---
@@ -66,11 +66,11 @@ Selecteer **[!UICONTROL Browse]** om een lijst van alle segmentdefinities voor u
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Deze mening maakt een lijst van informatie over de segmentdefinitie met inbegrip van de uitsplitsing, de koeling, de profieltelling, de evaluatiemethode, gecreeerd datum, en laatst gewijzigde datum.
+Deze weergave bevat informatie over de segmentdefinitie, inclusief het aantal profielen, de datum waarop het segment is gemaakt en de datum waarop het laatst is gewijzigd.
 
-De uitsplitsing toont een staafgrafiek die het percentage van profielen schetst die tot elk van de volgende statussen behoren: [!UICONTROL Realized], [!UICONTROL Existing], en [!UICONTROL Exiting]. Daarnaast wordt de uitsplitsing in de [!UICONTROL Browse] tab is de nauwkeurigste uitsplitsing van de segmentstatus. Als dit getal afwijkt van wat staat vermeld op de knop [!UICONTROL Overview] gebruikt u de nummers op het tabblad [!UICONTROL Browse] als de juiste bron van informatie, aangezien [!UICONTROL Overview] tabnummers worden slechts eenmaal per dag bijgewerkt.
+U kunt extra velden aan deze weergave toevoegen door AFBEELDING te selecteren. Deze extra gebieden omvatten onderbreking, koor, evaluatiemethode, en baanidentiteitskaart
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+Als de indeling is geselecteerd, wordt in het scherm een staafgrafiek weergegeven met het percentage profielen dat tot elk van de volgende statussen behoort: [!UICONTROL Realized], [!UICONTROL Existing], en [!UICONTROL Exiting]. Daarnaast wordt de uitsplitsing in de [!UICONTROL Browse] tab is de nauwkeurigste uitsplitsing van de segmentstatus. Als dit getal afwijkt van wat staat vermeld op de knop [!UICONTROL Overview] gebruikt u de nummers op het tabblad [!UICONTROL Browse] als de juiste bron van informatie, aangezien [!UICONTROL Overview] tabnummers worden slechts eenmaal per dag bijgewerkt.
 
 | Status | Beschrijving |
 | ------ | ----------- |
