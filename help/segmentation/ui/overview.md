@@ -5,9 +5,9 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2566'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ De **[!UICONTROL Segments]** het dashboard schetst zeer belangrijke metriek met 
 
 Ga voor meer informatie naar de [segmentdashboardhulplijn](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![Het segmentdashboard wordt weergegeven. Er worden verschillende widgets weergegeven, zoals de omvang van het publiek, profielen op basis van identiteit, identiteitsbedekking en de trend om de omvang van het publiek te wijzigen.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Bladeren {#browse}
 
@@ -60,15 +60,15 @@ Ga voor meer informatie naar de [segmentdashboardhulplijn](../../dashboards/guid
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Alle segmenten aan schema toevoegen"
->abstract="Schakel deze optie in om alle batchevaluatiesegmenten op te nemen in de geplande dagelijkse update om 3:30 uur UTC. Uitschakelen om alle segmenten uit de geplande update te verwijderen."
+>abstract="Schakel deze optie in om alle batchevaluatiesegmenten op te nemen in de dagelijkse geplande update. Uitschakelen om alle segmenten uit de geplande update te verwijderen."
 
 Selecteer **[!UICONTROL Browse]** om een lijst van alle segmentdefinities voor uw organisatie te zien.
 
-![](../images/ui/overview/segment-browse-all.png)
+![De segmenten bladeren het scherm wordt getoond. Een lijst van alle segmenten die tot de organisatie behoren wordt getoond.](../images/ui/overview/segment-browse-all.png)
 
 Deze weergave bevat informatie over de segmentdefinitie, inclusief het aantal profielen, de datum waarop het segment is gemaakt en de datum waarop het laatst is gewijzigd.
 
-U kunt extra velden aan deze weergave toevoegen door AFBEELDING te selecteren. Deze extra gebieden omvatten onderbreking, koor, evaluatiemethode, en baanidentiteitskaart
+U kunt extra velden aan deze weergave toevoegen door ![het pictogram van het filterkenmerk](../images/ui/overview/filter-attribute.png). Deze extra gebieden omvatten onderbreking, koor, evaluatiemethode, en baanidentiteitskaart
 
 Als de indeling is geselecteerd, wordt in het scherm een staafgrafiek weergegeven met het percentage profielen dat tot elk van de volgende statussen behoort: [!UICONTROL Realized], [!UICONTROL Existing], en [!UICONTROL Exiting]. Daarnaast wordt de uitsplitsing in de [!UICONTROL Browse] tab is de nauwkeurigste uitsplitsing van de segmentstatus. Als dit getal afwijkt van wat staat vermeld op de knop [!UICONTROL Overview] gebruikt u de nummers op het tabblad [!UICONTROL Browse] als de juiste bron van informatie, aangezien [!UICONTROL Overview] tabnummers worden slechts eenmaal per dag bijgewerkt.
 
@@ -82,7 +82,7 @@ De kolom vertegenwoordigt het percentage profielen die binnen een segmentdefinit
 
 De evaluatiemethode kan streaming, batch of edge zijn. Streaming segmenten worden voortdurend geëvalueerd terwijl gegevens in het systeem worden ingevoerd. De segmenten van de partij worden geëvalueerd volgens een vastgesteld programma. De segmenten van de rand worden geëvalueerd in real time, die voor de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte toestaan.
 
-![](../images/ui/overview/segment-browse-segments.png)
+![De segmenten binnen het segment doorbladeren pagina worden benadrukt.](../images/ui/overview/segment-browse-segments.png)
 
 Boven aan de pagina staan opties voor het toevoegen van alle segmenten aan een schema en het maken van een nieuw segment.
 
@@ -90,11 +90,11 @@ Toggling **[!UICONTROL Add all segments to schedule]** zal geplande segmentatie 
 
 Selecteren **[!UICONTROL Create segment]** gaat u naar de Segment Builder. Voor meer informatie over het maken van segmenten leest u de sectie over [segment maken in de gebruikershandleiding](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![De hoogste navigatiebar op de segment doorbladert pagina wordt benadrukt. Deze bar bevat een knevel om alle segmenten aan een programma en een knoop toe te voegen om een segment tot stand te brengen.](../images/ui/overview/segment-browse-top.png)
 
 De rechterzijbalk bevat informatie over alle segmenten binnen de organisatie, met een overzicht van het totale aantal segmenten, de laatste evaluatiedatum, de volgende evaluatiedatum en een uitsplitsing van de segmenten naar evaluatiemethode.
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![De rechterzijbalk van de pagina Bladeren door segment wordt gemarkeerd. De informatie over de segmenten in de organisatie wordt getoond. Dit omvat informatie zoals het totale aantal segmenten, de laatste geëvalueerde tijd, de volgende geëvalueerde tijd, evenals een uitsplitsing van de verschillende segmenttypes.](../images/ui/overview/segment-browse-segment-info.png)
 
 Het selecteren van de rij van de segmentdefinitie verstrekt een samenvatting van de segmentdefinitie, met inbegrip van opties om of het segment uit te geven of te schrappen, het segment aan een bestemming, het gekwalificeerde publiek voor het segment, de totale publieksgrootte, naast de naam van het segment, beschrijving, evaluatiemethode, gecreeerde datum, en laatst gewijzigde datum te activeren.
 
@@ -102,7 +102,7 @@ Het selecteren van de rij van de segmentdefinitie verstrekt een samenvatting van
 >
 > U zult **niet** kan een segment schrappen dat in een bestemmingsactivering wordt gebruikt.
 
-![](../images/ui/overview/segment-browse-details.png)
+![De details over het geselecteerde segment worden getoond. Dit omvat details over het aantal gekwalificeerde profielen, de procentuele uitsplitsing van gekwalificeerde profielen ten opzichte van het totaal van profielen, de laatste evaluatiedatum.](../images/ui/overview/segment-browse-details.png)
 
 ## Segmentdefinitiedetails {#segment-details}
 
@@ -110,7 +110,7 @@ Als u meer details wilt zien over een specifieke segmentdefinitie, selecteert u 
 
 De pagina met segmentdetails wordt weergegeven. Bovenaan, is er een samenvatting van de segmentdefinitie, informatie over de gekwalificeerde publieksgrootte, evenals bestemmingen het segment voor wordt geactiveerd.
 
-![](../images/ui/overview/segment-details-summary.png)
+![De pagina met segmentdefinitiedetails wordt weergegeven. De segmentsamenvatting, het totale publiek in segment, en de geactiveerde bestemmingskaarten worden benadrukt.](../images/ui/overview/segment-details-summary.png)
 
 ### Overzicht van segment {#segment-summary}
 
@@ -118,7 +118,7 @@ De **[!UICONTROL Segment summary]** bevat informatie zoals de ID, naam, beschrij
 
 Bovendien, krijgt u de optie om of het segment aan een bestemming te activeren of het segment uit te geven. Selecteren **[!UICONTROL Activate to destination]** Hiermee kunt u het segment activeren naar een bestemming. Voor meer gedetailleerde informatie over het activeren van een segment naar een bestemming, gelieve te lezen [activeringsoverzicht](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![De knop Activeren naar doel is gemarkeerd.](../images/ui/overview/segment-details-activate.png)
 
 Selecteren **[!UICONTROL Edit segment]** brengt u naar de [!DNL Segment Builder]. Voor meer informatie over het gebruik van de [!DNL Segment Builder] werkruimte, lees de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md).
 
@@ -158,13 +158,13 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 
 Meer gedetailleerde informatie over elk [!DNL Profile] kunt u zien door de [!DNL Profile] ID. Als u meer wilt weten over de details van een profiel, leest u de [[!DNL Real-time Customer Profile] gebruikershandleiding](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![De voorbeeldprofielen voor de segmentdefinitie worden gemarkeerd. Voorbeelden van profielgegevens zijn de profiel-id, de voornaam, de achternaam en het e-mailadres van de persoon.](../images/ui/overview/segment-details-profiles.png)
 
 ## Segment maken {#create-segment}
 
 Selecteren **[!UICONTROL Create segment]** in de rechterbovenhoek de [!DNL Segment Builder] werkruimte, waarin u kunt beginnen met het maken van een segmentdefinitie.
 
-![](../images/ui/overview/segment-browse-create.png)
+![Op de doorbladerpagina van het Segment, wordt de Create segmentknoop benadrukt.](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] werkruimte
 
@@ -172,7 +172,7 @@ Selecteren **[!UICONTROL Create segment]** in de rechterbovenhoek de [!DNL Segme
 
 Voor meer informatie over het gebruik van de [!DNL Segment Builder] werkruimte, lees de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![De werkruimte van de Bouwer van het Segment wordt getoond.](../images/ui/overview/segment-builder.png)
 
 ## Geplande segmentatie {#scheduled-segmentation}
 
@@ -190,7 +190,7 @@ Het toelaten van uw segmentdefinities voor geplande evaluatie kan worden gedaan 
 
 Planningen kunnen momenteel alleen worden gemaakt met behulp van de API. Voor gedetailleerde stappen bij het maken, bewerken en werken met planningen met behulp van de API, volgt u de zelfstudie voor het evalueren en benaderen van segmentresultaten, met name de sectie over [geplande evaluatie met behulp van de API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![De knevel om alle segmenten aan een programma toe te voegen wordt benadrukt op de Segmenten doorbladert pagina.](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Doelgroepen {#audiences}
 
@@ -290,7 +290,7 @@ Meer informatie over de segmentatie van de randen vindt u in de [UI-hulplijn voo
 
 Als u klaar bent met het maken van uw segment, wordt het segment geanalyseerd door Adobe Experience Platform Data Governance om ervoor te zorgen dat er geen beleidsovertredingen binnen het segment plaatsvinden. Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie .
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![De beleidsschendingen voor het segment worden getoond.](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Volgende stappen en extra bronnen {#next-steps}
 

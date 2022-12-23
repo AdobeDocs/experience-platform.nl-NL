@@ -5,10 +5,9 @@ title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refact
 topic-legacy: ui guide
 description: De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -21,12 +20,12 @@ Vóór de versie van Oktober 2020, verwijzen alle regel-niveau, groep-niveau, en
 
 Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking zijn gekoppeld.
 
-![](../images/ui/segment-refactoring/former-time-constraint.png)
+![De vroegere stijl van tijdbeperkingen wordt benadrukt in de Bouwer van het Segment.](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: Een voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Yesterday]&quot;.
+Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: Eén voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Yesterday]&quot;.
 
 Het vorige segment is gelijkwaardig aan het volgende segment — beide gebeurtenis-vlakke tijdbeperkingen zijn verbonden gebruikend een exploitant AND. De eerste tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Training&quot; en die vandaag plaatsvindt, terwijl de tweede tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Huisdieren&quot; en die gisteren heeft plaatsgevonden.
 
-![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
+![De nieuwe stijl van tijdbeperkingen wordt benadrukt in de Bouwer van het Segment.](../images/ui/segment-refactoring/time-constraint-1.png) ![De nieuwe stijl van tijdbeperkingen wordt benadrukt in de Bouwer van het Segment.](../images/ui/segment-refactoring/time-constraint-2.png)
 
 Dit refactoring van tijdbeperkingen beïnvloedt ook tijdbeperkingen die gebruikend een exploitant OF worden verbonden.

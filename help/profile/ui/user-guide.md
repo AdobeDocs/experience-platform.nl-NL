@@ -4,9 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel in realtime
 topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1875'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Het profieldashboard bevat een overzicht van de belangrijkste maatstaven die bet
 
 Ga voor meer informatie naar de [Handleiding voor profieldashboard](../../dashboards/guides/profiles.md).
 
-![](../../dashboards/images/profiles/dashboard-overview.png)
+![Het dashboard Profiel wordt weergegeven.](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## [!UICONTROL Browse] tabmetriek
 
@@ -51,7 +51,7 @@ Aan de rechterkant van het **[!UICONTROL Browse]** tab is [aantal profielen](#pr
 
 Naast deze metriek, verstrekt deze sectie een laatste bijgewerkte datum en tijd, die tonen wanneer de metriek het laatst werden geëvalueerd.
 
-![](../images/user-guide/browse-metrics.png)
+![De maatstaven van het Profiel worden weergegeven en gemarkeerd.](../images/user-guide/browse-metrics.png)
 
 ### Aantal profielen {#profile-count}
 
@@ -75,7 +75,7 @@ Vergelijkbaar met de [aantal profielen](#profile-count) metrisch, wanneer de inn
 
 Op de **[!UICONTROL Browse]** kunt u voorbeeldprofielen weergeven met behulp van een samenvoegbeleid of specifieke profielen opzoeken met behulp van een naamruimte en waarde voor identiteit.
 
-![](../images/user-guide/none-selected.png)
+![De profielen die bij de organisatie horen, worden weergegeven.](../images/user-guide/none-selected.png)
 
 ### Bladeren op [!UICONTROL Merge policy]
 
@@ -85,36 +85,35 @@ De **[!UICONTROL Browse]** wordt standaard ingesteld op het standaardsamenvoegbe
 >
 >Als er geen samenvoegbeleid is geselecteerd, gebruikt u de selectieknop naast de knop **[!UICONTROL Merge policy]** om het dialoogvenster Selectie te openen.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![De kiezer voor samenvoegbeleid wordt gemarkeerd.](../images/user-guide/browse-by-merge-policy.png)
 
 Als u een samenvoegbeleid wilt kiezen in het menu **[!UICONTROL Select merge policy]** selecteert u het keuzerondje naast de naam van het beleid en gebruikt u **[!UICONTROL Select]** om terug te keren naar de [!UICONTROL Browse] tab. U kunt vervolgens **[!UICONTROL View]** om de steekproefprofielen te verfrissen en een steekproef van profielen te zien met het nieuwe toegepaste samenvoegbeleid.
 
-![](../images/user-guide/select-merge-policy.png)
+![Er wordt een dialoogvenster weergegeven waarin u het samenvoegbeleid kunt selecteren waarop u wilt filteren.](../images/user-guide/select-merge-policy.png)
 
 De profielen die worden getoond vertegenwoordigen een steekproef van maximaal 20 profielen van de het profielopslag van uw organisatie, nadat het geselecteerde samenvoegbeleid is toegepast. De voorbeeldprofielen voor het geselecteerde samenvoegbeleid worden vernieuwd wanneer nieuwe gegevens worden toegevoegd aan de profielopslag van uw organisatie.
 
 Als u de details van een van de voorbeeldprofielen wilt weergeven, selecteert u de optie **[!UICONTROL Profile ID]**. Zie de sectie verderop in deze handleiding voor meer informatie [profieldetails weergeven](#profile-detail).
 
-![](../images/user-guide/sample-profiles.png)
+![Voorbeeldprofielen die overeenkomen met het samenvoegbeleid worden weergegeven.](../images/user-guide/sample-profiles.png)
 
 Als u meer wilt weten over samenvoegingsbeleid en hun rol in het Platform, raadpleegt u de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
-
 
 ### Bladeren op [!UICONTROL Identity] {#browse-identity}
 
 Op de **[!UICONTROL Browse]** kunt u een naamruimte voor identiteiten gebruiken om een specifiek profiel op te zoeken aan de hand van een identiteitswaarde. Als u bladert op basis van een identiteit, moet u een samenvoegbeleid, een naamruimte voor identiteit en een identiteitswaarde opgeven.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![De kiezer voor het samenvoegbeleid wordt gemarkeerd.](../images/user-guide/browse-by-merge-policy.png)
 
 Gebruik indien nodig de **[!UICONTROL Merge policy]** om de **[!UICONTROL Select merge policy]** en kiest u het samenvoegbeleid dat u wilt gebruiken.
 
-![](../images/user-guide/select-merge-policy.png)
+![Er wordt een dialoogvenster weergegeven waarin u het samenvoegbeleid kunt selecteren waarop u wilt filteren.](../images/user-guide/select-merge-policy.png)
 
 Gebruik vervolgens de **[!UICONTROL Identity namespace]** om de **[!UICONTROL Select identity namespace]** en kiest u de naamruimte waarin u wilt zoeken. Als uw organisatie veel naamruimten heeft, kunt u de zoekbalk in het dialoogvenster gebruiken om de naam van een naamruimte te typen.
 
 U kunt een naamruimte selecteren om aanvullende details weer te geven of het keuzerondje selecteren om een naamruimte te kiezen. U kunt vervolgens **[!UICONTROL Select]** om door te gaan.
 
-![](../images/user-guide/select-identity-namespace.png)
+![Er wordt een dialoogvenster weergegeven waarin u de naamruimte kunt selecteren waarnaar u wilt filteren.](../images/user-guide/select-identity-namespace.png)
 
 Nadat u een [!UICONTROL Identity namespace] en terugkeren naar de [!UICONTROL Browse] kunt u een **[!UICONTROL Identity value]** heeft betrekking op de naamruimte die u hebt geselecteerd.
 
@@ -122,11 +121,11 @@ Nadat u een [!UICONTROL Identity namespace] en terugkeren naar de [!UICONTROL Br
 >
 >Deze waarde is specifiek voor een individueel klantprofiel en moet een geldige waarde zijn voor de opgegeven naamruimte. Als u bijvoorbeeld de naamruimte E-mail selecteert, hebt u een identiteitswaarde nodig in de vorm van een geldig e-mailadres.
 
-![](../images/user-guide/filter-identity-value.png)
+![De identiteitswaarde waarop u wilt filteren, wordt gemarkeerd.](../images/user-guide/filter-identity-value.png)
 
 Nadat een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en er wordt één profiel geretourneerd dat overeenkomt met de waarde. Selecteer **[!UICONTROL Profile ID]** om de profieldetails te bekijken.
 
-![](../images/user-guide/filtered-identity-value.png)
+![Het profiel dat overeenkomt met de identiteitswaarde wordt gemarkeerd.](../images/user-guide/filtered-identity-value.png)
 
 ## Profieldetails weergeven {#profile-detail}
 
@@ -134,7 +133,7 @@ Nadat u een **[!UICONTROL Profile ID]** de **[!UICONTROL Detail]** wordt geopend
 
 De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeursprofielkenmerken weer te geven. Als u meer wilt weten over het aanpassen van deze velden, inclusief stapsgewijze instructies voor het toevoegen en verwijderen van kenmerken en het wijzigen van het formaat van dashboarddeelvensters, leest u de [handleiding voor het aanpassen van profieldetails](profile-customization.md).
 
-![](../images/user-guide/profile-detail.png)
+![Het tabblad Details is gemarkeerd. De profieldetails worden getoond.](../images/user-guide/profile-detail.png)
 
 U kunt aanvullende informatie met betrekking tot het individuele klantenprofiel bekijken door een andere beschikbare lusjes te selecteren. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het segmentlidmaatschap dat de segmenten toont waarvoor het profiel momenteel gekwalificeerd is.
 
@@ -144,7 +143,7 @@ De **[!UICONTROL Attributes]** bevat een lijstweergave waarin een overzicht word
 
 Deze kenmerken kunnen ook als een JSON-object worden weergegeven door **[!UICONTROL View JSON]**. Dit is handig voor gebruikers die beter willen begrijpen hoe de profielkenmerken in het Platform worden ingevoerd.
 
-![](../images/user-guide/attributes.png)
+![Het tabblad Kenmerken is gemarkeerd. De profielkenmerken worden weergegeven.](../images/user-guide/attributes.png)
 
 ### Het tabblad Gebeurtenissen
 
@@ -152,7 +151,7 @@ De **[!UICONTROL Events]** bevat gegevens van de 100 meest recente ExperienceEve
 
 Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door **[!UICONTROL View JSON]**. Dit is handig om te begrijpen hoe gebeurtenissen in het Platform worden vastgelegd.
 
-![](../images/user-guide/events.png)
+![Het tabblad Gebeurtenissen is gemarkeerd. De profielgebeurtenissen worden weergegeven.](../images/user-guide/events.png)
 
 ### Tabblad Segmentlidmaatschap
 
@@ -160,7 +159,7 @@ De **[!UICONTROL Segment membership]** wordt een lijst weergegeven met de naam e
 
 Raadpleeg voor meer informatie over segmentering in Experience Platform de [Documentatie Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![](../images/user-guide/segment-membership.png)
+![Het tabblad Segmentlidmaatschap is gemarkeerd. De details van het profielsegmentlidmaatschap worden getoond.](../images/user-guide/segment-membership.png)
 
 ## Beleid samenvoegen
 
@@ -168,7 +167,7 @@ Van de belangrijkste **[!UICONTROL Profiles]** selecteert u de **[!UICONTROL Mer
 
 Zie voor meer informatie over samenvoegingsbeleid de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policies.png)
+![Het tabblad Samenvoegen wordt gemarkeerd. Het samenvoegingsbeleid dat bij de organisatie hoort, wordt weergegeven.](../images/user-guide/merge-policies.png)
 
 ## Unieschema {#union-schema}
 
@@ -176,7 +175,7 @@ Van de belangrijkste **[!UICONTROL Profiles]** selecteert u de **[!UICONTROL Uni
 
 Ga voor meer informatie over vakbondsschema&#39;s naar de [UI-hulplijn verenigingsschema](union-schema.md).
 
-![](../images/user-guide/union-schema.png)
+![Het tabblad Unieschema wordt gemarkeerd. Unieregelingen die tot de organisatie behoren, worden weergegeven.](../images/user-guide/union-schema.png)
 
 ## Volgende stappen
 

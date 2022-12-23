@@ -5,9 +5,9 @@ title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ De eerste stap voor het gebruik van externe doelgroepen is het maken van een naa
 
 Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](../../identity-service/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteit maakt, voegt u de brongegevens toe aan de naamruimte voor identiteit en markeert u de naamruimte [!UICONTROL Type] als **[!UICONTROL Non-people identifier]**.
 
-![](../images/tutorials/external-audiences/identity-namespace-info.png)
+![De id van de niet-persoon wordt gemarkeerd in het modaal van de naamruimte Naam maken.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## Een schema maken voor de metagegevens van het segment
 
@@ -52,19 +52,19 @@ Nadat u een naamruimte voor identiteiten hebt gemaakt, moet u een nieuw schema m
 
 Als u wilt beginnen met het samenstellen van een schema, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door de **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schemas. Selecteer **[!UICONTROL Browse]** om een volledige selectie van de beschikbare schematypen te zien.
 
-![](../images/tutorials/external-audiences/create-schema-browse.png)
+![Zowel creeer schema als doorbladert worden benadrukt.](../images/tutorials/external-audiences/create-schema-browse.png)
 
 Aangezien u een segmentdefinitie maakt, die een vooraf gedefinieerde klasse is, selecteert u **[!UICONTROL Use existing class]**. Selecteer nu de **[!UICONTROL Segment definition]** klasse, gevolgd door **[!UICONTROL Assign class]**.
 
-![](../images/tutorials/external-audiences/assign-class.png)
+![De segmentdefinitieklasse wordt gemarkeerd.](../images/tutorials/external-audiences/assign-class.png)
 
 Nu uw schema is gecreeerd, zult u moeten specificeren welk gebied segmentidentiteitskaart zal bevatten. Dit veld moet worden gemarkeerd als de primaire identiteit en worden toegewezen aan de naamruimten die u eerder hebt gemaakt.
 
-![](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![De selectievakjes om het geselecteerde veld als de primaire identiteit te markeren, worden gemarkeerd in de Schema-editor.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
 Na het markeren van `_id` veld als primaire identiteit, selecteer de titel van het schema, gevolgd door de schakeloptie met het label **[!UICONTROL Profile]**. Selecteren **[!UICONTROL Enable]** om het schema in te schakelen voor [!DNL Real-time Customer Profile].
 
-![](../images/tutorials/external-audiences/schema-profile.png)
+![De knevel om het schema voor Profiel toe te laten wordt benadrukt in de Redacteur van het Schema.](../images/tutorials/external-audiences/schema-profile.png)
 
 Dit schema is nu ingeschakeld voor Profiel, waarbij de primaire identificatie is toegewezen aan de naamruimte voor niet-persoonlijke identiteit die u hebt gemaakt. Dientengevolge, betekent dit dat de segmentmeta-gegevens die in Platform worden ingevoerd gebruikend dit schema in Profiel zullen worden opgenomen zonder met andere op mensen betrekking hebbende gegevens van het Profiel worden samengevoegd.
 
@@ -74,11 +74,11 @@ Na het vormen van het schema, zult u een dataset voor de segmentmeta-gegevens mo
 
 Om een dataset tot stand te brengen, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#create). U moet de **[!UICONTROL Create dataset from schema]** met het eerder gemaakte schema.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![Het schema dat u uw dataset wilt baseren wordt benadrukt.](../images/tutorials/external-audiences/select-schema.png)
 
 Na het creëren van de dataset, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#enable-profile) om deze dataset voor het Profiel van de Klant in real time toe te laten.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![De knevel om het schema voor Profiel toe te laten wordt benadrukt in de de activiteitenpagina van de Dataset.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Gebruikersgegevens instellen en importeren
 
@@ -94,7 +94,7 @@ Als u een streamingverbinding wilt maken, volgt u de instructies in het dialoogv
 
 Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke streamingeindpunt waarnaar u de gegevens kunt verzenden. Als u wilt weten hoe u gegevens naar deze eindpunten verzendt, leest u de [zelfstudie over streaming recordgegevens](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![Het streamingeindpunt voor de streamingverbinding wordt gemarkeerd op de pagina met brondetails.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Structuur van metagegevens voor het publiek
 
@@ -151,7 +151,7 @@ Hieronder ziet u een voorbeeld van de metagegevens van de externe doelgroep:
 
 Zodra het geïmporteerde publiek is ingesteld, kunnen deze worden gebruikt als onderdeel van het segmenteringsproces. Ga naar de Segment Builder en selecteer **[!UICONTROL Audiences]** in de **[!UICONTROL Fields]** sectie.
 
-![](../images/tutorials/external-audiences/external-audiences.png)
+![De externe publiekskiezer in de Segment Builder wordt gemarkeerd.](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Volgende stappen
 
@@ -165,15 +165,15 @@ Naast het gebruiken van ingevoerde externe publieksmeta-gegevens en het gebruike
 
 Als u wilt beginnen met het samenstellen van een schema, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door de **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schemas. Selecteer **[!UICONTROL XDM Individual Profile]**.
 
-![](../images/tutorials/external-audiences/create-schema-profile.png)
+![Het XDM-gebied Individueel profiel wordt gemarkeerd.](../images/tutorials/external-audiences/create-schema-profile.png)
 
 Nu het schema is gecreeerd, zult u de het gebiedsgroep van het segmentlidmaatschap als deel van het schema moeten toevoegen. Selecteer [!UICONTROL Segment Membership Details], gevolgd door [!UICONTROL Add field groups].
 
-![](../images/tutorials/external-audiences/segment-membership-details.png)
+![De de gebiedsgroep van de Details van het Lidmaatschap van het Segment wordt benadrukt.](../images/tutorials/external-audiences/segment-membership-details.png)
 
 Zorg er bovendien voor dat het schema is gemarkeerd voor **[!UICONTROL Profile]**. Hiervoor moet u een veld markeren als de primaire identiteit.
 
-![](../images/tutorials/external-audiences/external-segment-profile.png)
+![De knevel om het schema voor Profiel toe te laten wordt benadrukt in de Redacteur van het Schema.](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### De gegevensset instellen
 
@@ -181,11 +181,11 @@ Na het creëren van uw schema, zult u een dataset moeten creëren.
 
 Om een dataset tot stand te brengen, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#create). U moet de **[!UICONTROL Create dataset from schema]** met het eerder gemaakte schema.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![Het schema dat u gebruikt om de database te maken, wordt gemarkeerd.](../images/tutorials/external-audiences/select-schema.png)
 
 Na het creëren van de dataset, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#enable-profile) om deze dataset voor het Profiel van de Klant in real time toe te laten.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![De knevel om het schema voor Profiel toe te laten wordt benadrukt in creeer datasetwerkschema.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Externe gegevens voor publieksleden instellen en importeren
 
@@ -201,7 +201,7 @@ Als u een streamingverbinding wilt maken, volgt u de instructies in het dialoogv
 
 Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke streamingeindpunt waarnaar u de gegevens kunt verzenden. Als u wilt weten hoe u gegevens naar deze eindpunten verzendt, leest u de [zelfstudie over streaming recordgegevens](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![Het streamingeindpunt voor de streamingverbinding wordt gemarkeerd op de pagina met brondetails.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Segmentlidmaatschapsstructuur
 
