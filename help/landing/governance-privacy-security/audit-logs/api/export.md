@@ -1,9 +1,10 @@
 ---
 title: Audit events export API Endpoint
 description: Leer hoe u auditgebeurtenissen in Experience Platform exporteert met de API voor auditquery.
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
+source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,11 +21,11 @@ GET /audit/export
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `timestamp` | Wanneer u filtert met een tijdstempel, kunt u het beste een bereik gebruiken met de operatoren > en &lt; in plaats van een exacte waarde. <br/>Voorbeeld: ?property=timestamp&lt;2020-02-08T02:46:48.610862Z&amp;property=timestamp>2020-01-01T02:46:48,610862Z. |
-| `status` | De status van de actie. Een status kan een van de volgende zijn: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
-| `action` | Het type actie dat is opgenomen voor de gebeurtenis. Een handeling kan een van de volgende handelingen zijn: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
+| `timestamp` | Wanneer u filtert met een tijdstempel, kunt u het beste een bereik gebruiken met de operatoren > en &lt; in plaats van een exacte waarde. <br/>Voorbeeld: `?property=timestamp<2020-02-08T02:46:48.610862Z&property=timestamp>2020-01-01T02:46:48.610862Z`. |
+| `status` | De status van de actie. Een status kan een van de volgende zijn: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/>Voorbeeld: `?property=status==Deny`. |
+| `action` | Het type actie dat is opgenomen voor de gebeurtenis. Een handeling kan een van de volgende handelingen zijn: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`Remove` </li><li>`Reset` </li><li>`Segment Activate` </li><li>`Segment remove` </li><li>`Update` </li></ul> Voorbeeld: `?property=action==Create`. |
 | `user` | De gebruiker die de gebeurtenis heeft uitgevoerd. |
-| `assetType` | Het type van middel van het Platform dat de actie werd uitgevoerd. |
+| `assetType` | Het type van middel van het Platform dat de actie werd uitgevoerd. <br/>Voorbeeld: `?property=assetType==<an asset type>`. |
 
 **Verzoek**
 
