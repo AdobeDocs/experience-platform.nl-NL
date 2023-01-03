@@ -5,9 +5,9 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '7427'
+source-wordcount: '7913'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,8 @@ ht-degree: 0%
 **Amazon S3-emmertje**: [!DNL Amazon S3] emmers zijn de basiscontainers voor gegevens die zijn opgeslagen in de [!DNL Amazon] ecosysteem. Emmers bevatten objecten. Elk object wordt opgeslagen en opgehaald met een unieke door de ontwikkelaar toegewezen sleutel.
 
 **Amazon S3-connector**: De [!DNL Amazon] S3 schakelaar staat klanten van Experience Platform toe om veilig te verbinden en tot hun toegang te hebben [!DNL Amazon] S3-gegevens.
+
+**APA**: De [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) bevordert en beschermt de privacy van individuen en regelt hoe Australische overheidsinstellingen en organisaties persoonlijke informatie verwerken. De [!DNL Privacy Act] omvat beginselen die van toepassing zijn op organisaties uit de particuliere sector. Individuen hebben bijvoorbeeld het recht te begrijpen waarom de persoonlijke gegevens worden verzameld en hoe deze worden gebruikt, of ze toegang hebben tot hun gegevens, deze kunnen wissen en persoonlijke gegevens kunnen corrigeren.
 
 **Opslagstrategie toevoegen**: De opslagstrategie &quot;toevoegen&quot; is een optie die wordt gebruikt wanneer gegevens van derden worden opgegeven die via een verbinding moeten worden ingevoerd en wanneer nieuwe gegevens of rijen aan het einde van de gegevensset worden toegevoegd. De eerder opgenomen rijen blijven ongewijzigd en alleen rijen die zijn gemaakt sinds de laatste geplande uitvoering, worden op het Experience Platform ingevoerd. Rijen die in het bronsysteem zijn gewijzigd, blijven ongewijzigd op het Experience Platform.
 
@@ -90,6 +92,8 @@ ht-degree: 0%
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (soms [!DNL Catalog]) is het registratiesysteem voor gegevenslocatie en -verbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het gegevensmeer als dossiers en folders worden opgeslagen, [!DNL Catalog] bevat de metagegevens en een beschrijving van deze bestanden en mappen voor opzoekings-, controle- en gegevensbeheerdoeleinden.
 
+**CCPA**: De [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) Verbetert de privacyrechten en consumentenbescherming voor inwoners van Californië in de Verenigde Staten. De CCPA biedt de inwoners van Californië nieuwe privacyrechten op het gebied van gegevens, waaronder het recht op toegang tot en verwijdering van hun persoonsgegevens, om te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
+
 **Klasse**: In het Model van Gegevens van de Ervaring (XDM), bepaalt een klasse de kleinste reeks gebieden die worden gebruikt om een schema te bouwen en bepaalt het basisgedrag van het bedrijfsvoorwerp dat het schema vertegenwoordigt.
 
 **Client**: Een client is een extern hulpprogramma of een externe toepassing waarmee verbinding wordt gemaakt [!DNL Query Service] via [!DNL PostgreSQL] protocol of HTTP API.
@@ -107,6 +111,8 @@ ht-degree: 0%
 **Console**: In [!DNL Query Service], verstrekt de console informatie over de status en de verrichting van een vraag. De console toont de verbindingsstatus aan [!DNL Query Service], querybewerkingen die worden uitgevoerd en foutberichten die het resultaat zijn van deze query&#39;s.
 
 **Contractlabels (&quot;C&quot;)**: De etiketten van het gegevensgebruik van het contract (&quot;C&quot;) worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of met het beleid van het gegevensbeheer van uw organisatie verwant zijn.
+
+**CPRA**: De [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) Hiermee kunt u delen van de [!DNL California Consumer Privacy Act (CCPA)]. De [!DNL CPRA] stelt een nieuwe basislijn vast voor de privacy van consumentengegevens in Californië door de rechten van de consument te verhogen en het soort gegevens dat onder een bredere definitie van gevoelige persoonlijke informatie valt, uit te breiden. Bovendien [!DNL CPRA] heeft het California Privacy Protection Agency opgericht, een nieuwe instantie die zich bezighoudt met de implementatie en handhaving van regels inzake gegevensbescherming.
 
 **C1-contractlabel**: A `C1` Met een label voor het gebruik van contractgegevens kunnen gegevens alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerd formulier, zonder individuele of apparaatid&#39;s in te sluiten. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
 
@@ -262,6 +268,8 @@ ht-degree: 0%
 
 ## H
 
+**HIPAA**: De [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) is een federale wet van de Verenigde Staten die wordt opgesteld om de efficiëntie van de gezondheidszorg te verbeteren, de overdraagbaarheid van ziektekostenverzekeringen te verbeteren en de privacy van patiënten en leden van gezondheidsplannen te beschermen. Op grond van de HIPAA hebben individuen recht op toegang tot hun informatie en op wijziging daarvan en op het verkrijgen van kopieën van hun medische dossiers of gezondheidsinformatie. De onder de HIPAA-regeling vallende entiteiten en zakelijke vennoten van onder de HIPAA-regeling vallende entiteiten moeten zich daaraan houden.
+
 **Host**: In de context van markeringen, specificeert een gastheer de plaats, het domein, en gebruikersgeloofsbrieven noodzakelijk voor het systeem om een bouwstijl te leveren.
 
 **Uur**: In de context van geplande het dossieruitvoer, programma&#39;s stijgende dossieruitvoer om de 3, 6, 8, of 12 uur.
@@ -316,6 +324,8 @@ ht-degree: 0%
 
 ## L
 
+**LGPD**: De [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) beoogt de behandeling van persoonsgegevens van alle natuurlijke of rechtspersonen in Brazilië te regelen. De LGPD geeft de burgers van Brazilië het recht om hun persoonsgegevens te raadplegen en te wissen, te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
+
 **Bibliotheek**: In de context van tags is een bibliotheek een set bedrijfslogica die instructies bevat voor hoe de tagbibliotheek zich moet gedragen op het clientapparaat.
 
 **Entiteiten opzoeken**: In de context van gegevensmodellering, vertegenwoordigen de raadplegingsentiteiten concepten die op een individuele persoon kunnen betrekking hebben, maar niet direct kunnen worden gebruikt om het individu te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op de klassen van het Model van de Gegevens van de Douane van de Ervaring (XDM) worden gebaseerd.
@@ -342,6 +352,8 @@ ht-degree: 0%
 
 ## N
 
+**[!DNL New Zealand Privacy Act]**: De [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controleert hoe de agentschappen de persoonsgegevens van burgers en organisaties uit Nieuw-Zeeland kunnen verzamelen, gebruiken, bekendmaken, opslaan en toegankelijk maken. In 2020 werd in de meest recente versie van de wet een aanzienlijke aanpassing van deze privacywetten geïntroduceerd, waaronder nieuwe delicten, hogere boetes, verplichte meldingen van inbreuken op gegevens en uitbreiding van de bevoegdheden van de privacycommissaris.
+
 **Niet-productiesandbox**: Niet-productiesandboxen zijn sandboxen die doorgaans worden gebruikt voor ontwikkelings-experimenten, -tests of -proeven. In tegenstelling tot productiesandboxen kunnen niet-productiesandboxen worden hersteld en verwijderd.
 
 **[!DNL Notebooks]**: [!DNL Notebooks] zijn ontworpen met [!DNL Jupyter Notebook] en kan worden uitgevoerd om gegevensanalyse uit te voeren.
@@ -367,6 +379,8 @@ ht-degree: 0%
 **Gedeeltelijke inname**: Gedeeltelijke invoer maakt het opnemen van geldige records met batchgegevens binnen een opgegeven foutdrempel mogelijk. Foutdiagnostiek voor mislukte records kan worden gedownload of geopend in [!UICONTROL Monitoring] of [!UICONTROL Sources] DataFlow-overzicht.
 
 **Parketbestanden**: Een Parquet-bestand is een kolombestandsindeling met complexe geneste gegevensstructuren. De dossiers van de parket worden vereist voor het toevoegen van gegevens om een schemadataset te bevolken.
+
+**PDPA**: De [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) is ingevoerd om Thaise eigenaars van gegevens te beschermen tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
 
 **Aangepaste aanbiedingen**: Een gepersonaliseerd aanbod is een aanpasbaar marketingbericht op basis van geschiktheidsregels en -beperkingen.
 
@@ -529,6 +543,8 @@ ht-degree: 0%
 **Unieschema**: Een samenvoegingsschema is een consolidatie van schema&#39;s die dezelfde klasse delen en waarvoor [!DNL Real-time Customer Profile]. De veelvoudige verenigingsschema&#39;s kunnen voor een organisatie bestaan, maar er kan slechts één verenigingsschema per klasse zijn.
 
 ## V
+
+**VCDPA**: De [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) biedt nieuwe rechten op privacy van gegevens aan inwoners van Virginia (&quot;Consumers&quot;), waaronder het recht op toegang tot, verwijdering en correctie van persoonsgegevens. Consumenten hebben ook het recht om zich uit te sluiten van de verkoop van persoonsgegevens, om af te zien van profilering op basis van persoonsgegevens en om persoonlijke reclame te verwerken.
 
 ## W
 

@@ -5,9 +5,9 @@ title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 topic-legacy: UI guide
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,25 @@ Het dashboard voor de [!DNL Privacy Service] De gebruikersinterface bevat twee w
 
 ### Type verordening
 
-[!DNL Privacy Service] ondersteunt aanvragen voor een baan voor verschillende privacyregels:
+[!DNL Privacy Service] ondersteunt taakaanvragen voor verschillende privacyregels. In de volgende tabel worden de ondersteunde verordeningen en het bijbehorende label weergegeven, zoals weergegeven in de gebruikersinterface:
 
-* De [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* De [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
-* Thailand [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* Brazilië [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* Nieuw-Zeeland [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| UI-label | Verordening |
+| --- | --- |
+| [!UICONTROL CCPA] | De [!DNL California Consumer Privacy Act] |
+| [!UICONTROL GDPR] | De [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | Thailand [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | Brazilië [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | Nieuw-Zeeland [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | De [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | De [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | De [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | De [!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Zie het overzicht op [ondersteunde privacyregels](../regulations/overview.md) voor meer informatie over de juridische context van elke verordening.
 
 Taken voor elk type regelgeving worden afzonderlijk bijgehouden. Als u wilt schakelen tussen regelgevingstypen, selecteert u de optie **[!UICONTROL Regulation Type]** en selecteer de gewenste verordening in de lijst.
 

@@ -5,9 +5,9 @@ title: API-eindpunt voor privacytaken
 topic-legacy: developer guide
 description: Leer hoe u privacytaken voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`gdpr` (Europese Unie)</li><li>`ccpa` (Californië)</li><li>`lgpd_bra` (Brazilië)</li><li>`nzpa_nzl` (Nieuw-Zeeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 
@@ -161,7 +161,7 @@ curl -X POST \
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing request. Accepteerde waarden zijn `normal` en `low`. Indien `priority` wordt weggelaten, is het standaardgedrag `normal`. |
 | `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar door de opgegeven verzameling gebruikers-id&#39;s wordt verwezen, worden anoniem gemaakt. Indien `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
 | `mergePolicyId` | Bij het indienen van privacyverzoeken voor realtime-klantprofiel (`profileService`), kunt u naar keuze identiteitskaart van specifiek verstrekken [samenvoegingsbeleid](../../profile/merge-policies/overview.md) die u wilt gebruiken voor het stikken van id&#39;s. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken segmentinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
-| `regulation` **(Vereist)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`gdpr` (Europese Unie)</li><li>`ccpa` (Californië)</li><li>`lgpd_bra` (Brazilië)</li><li>`nzpa_nzl` (Nieuw-Zeeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
+| `regulation` **(Vereist)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
 
 {style=&quot;table-layout:auto&quot;}
 

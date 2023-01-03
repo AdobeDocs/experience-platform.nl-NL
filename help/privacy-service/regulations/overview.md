@@ -5,9 +5,9 @@ title: Overzicht van privacy Regulations
 topic-legacy: troubleshooting
 description: Dit document biedt een overzicht van de verschillende privacyregels die door Adobe Experience Cloud worden ondersteund.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 74624291b77e586c6adeb3e08b12a1dae92d419a
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Dit document biedt een overzicht van de verschillende privacyregels die door Adobe Experience Cloud worden ondersteund.
 
-Door Adobe Experience Platform Privacy Service te gebruiken, steunt Experience Cloud toegang en schrapt verzoeken die op de volgende verordeningen worden gebaseerd:
+Door het gebruik van [Adobe Experience Platform Privacy Service](../home.md), steunt Experience Cloud toegang en schrappingsverzoeken die op de volgende verordeningen worden gebaseerd:
 
 | Verordening | Beschrijving |
 | --- | --- |
@@ -29,6 +29,8 @@ Door Adobe Experience Platform Privacy Service te gebruiken, steunt Experience C
 | Nieuw-Zeeland [!DNL Privacy Act] | De [Nieuw-Zeeland [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controleert hoe de agentschappen de persoonsgegevens van burgers en organisaties uit Nieuw-Zeeland kunnen verzamelen, gebruiken, bekendmaken, opslaan en toegankelijk maken. In 2020 werd in de meest recente versie van de wet een aanzienlijke aanpassing van deze privacywetten geïntroduceerd, waaronder nieuwe delicten, hogere boetes, verplichte meldingen van inbreuken op gegevens en uitbreiding van de bevoegdheden van de privacycommissaris. |
 | PDPA (Thailand) | De [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) is ingevoerd om Thaise eigenaars van gegevens te beschermen tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens. |
 | VCDPA (Virginia) | De [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) biedt nieuwe rechten op privacy van gegevens aan inwoners van Virginia (&quot;Consumers&quot;), waaronder het recht op toegang tot, verwijdering en correctie van persoonsgegevens. Consumenten hebben ook het recht om zich uit te sluiten van de verkoop van persoonsgegevens, om af te zien van profilering op basis van persoonsgegevens en om persoonlijke reclame te verwerken. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Volgende stappen
 
