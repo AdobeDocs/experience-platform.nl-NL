@@ -5,9 +5,9 @@ title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
+source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -50,10 +50,6 @@ U kunt nu beginnen [toevoegen van velden aan de klasse](#add-fields), die door a
 
 ## Een bestaande klasse bewerken {#edit}
 
->[!IMPORTANT]
->
->Aangepaste klassen die na 30 april 2022 zijn gemaakt, kunnen niet rechtstreeks worden bewerkt en er wordt momenteel een oplossing ontwikkeld. Als oplossing kunt u [een aangepaste veldgroep maken](./field-groups.md) en gebruikt deze opnieuw voor elk schema dat de aangepaste klasse gebruikt die u wilt uitbreiden. Deze beperking geldt niet voor aangepaste klassen die vóór 30 april 2022 zijn gemaakt.
-
 >[!NOTE]
 >
 >Alleen aangepaste klassen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor kernklassen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor hun velden worden bewerkt binnen de context van afzonderlijke schema&#39;s. Zie de sectie over [weergavenamen voor schemavelden bewerken](./schemas.md#display-names) voor meer informatie.
@@ -73,10 +69,6 @@ De [!DNL Schema Editor] verschijnt, terwijl de structuur van het schema op het c
 ![](../../images/ui/resources/classes/edit.png)
 
 ## Velden aan een klasse toevoegen {#add-fields}
-
->[!IMPORTANT]
->
->Aangepaste klassen die na 30 april 2022 zijn gemaakt, kunnen niet rechtstreeks worden bewerkt en er wordt momenteel een oplossing ontwikkeld. Als oplossing kunt u [een aangepaste veldgroep maken](./field-groups.md) en gebruikt deze opnieuw voor elk schema dat de aangepaste klasse gebruikt die u wilt uitbreiden. Deze beperking geldt niet voor aangepaste klassen die vóór 30 april 2022 zijn gemaakt.
 
 Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend in het dialoogvenster [!UICONTROL Schema Editor], kunt u beginnen gebieden aan de klasse toe te voegen. Als u een nieuw veld wilt toevoegen, selecteert u de optie **plus (+)** naast de naam van het schema.
 
