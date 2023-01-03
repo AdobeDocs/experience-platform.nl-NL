@@ -2,9 +2,9 @@
 title: Overzicht AWS-extensie
 description: Meer informatie over de AWS-extensie voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) is een platform voor cloud computing dat een groot aantal verschillende services biedt, zoals gedistribueerd computergebruik, databaseopslag, levering van inhoud en beheer van klantrelaties (CRM).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) is een platform voor cloud computing dat een groot aantal verschillende services biedt, zoals gedistribueerde computers, databaseopslag, levering van inhoud en SAA-integratieservices (software-as-a-service) voor relatiebeheer voor klanten (CRM) en planning van bedrijfsmiddelen (ERP).
 
 De [!DNL AWS] [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) extensiefuncties [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) om gebeurtenissen van Adobe Experience Platform Edge Network te verzenden naar [!DNL AWS] voor verdere verwerking. Deze gids behandelt hoe te om de uitbreiding te installeren en zijn mogelijkheden in een gebeurtenis aan te wenden die regel door:sturen.
 
