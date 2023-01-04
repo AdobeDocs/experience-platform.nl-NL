@@ -4,9 +4,9 @@ title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
+source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
 workflow-type: tm+mt
-source-wordcount: '3296'
+source-wordcount: '3299'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren 
 
    ![Afbeeldingsmarkering waarmee u een bronveld kunt selecteren.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. In de **[!UICONTROL Select field]** pagina, selecteert u de XDM-kenmerken die u naar het doel wilt verzenden en kiest u **[!UICONTROL Select]**.
+1. In de **[!UICONTROL Select field]** pagina, selecteert u de XDM-kenmerken of naamruimten die u naar het doel wilt verzenden en kiest u **[!UICONTROL Select]**.
 
    ![Afbeelding waarin de verschillende velden worden weergegeven die beschikbaar zijn als bronvelden.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
