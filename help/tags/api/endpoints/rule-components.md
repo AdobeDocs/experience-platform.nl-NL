@@ -2,9 +2,9 @@
 title: Het eindpunt van componenten van de regel
 description: Leer hoe te om vraag aan het /rule_components eindpunt in Reactor API te maken.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1185'
 ht-degree: 1%
 
 ---
@@ -305,22 +305,22 @@ U kunt een nieuwe regelcomponent tot stand brengen door een verzoek van de POST 
 **API-indeling**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `RULE_ID` | De `id` van de regel waarvoor u een regelcomponent definieert. |
+| `PROPERTY_ID` | De `id` van het bezit dat u de regelcomponent onder bepaalt. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe regelcomponent voor de gespecificeerde regel. De vraag associeert ook de regelcomponent met een bestaande uitbreiding door `relationships` eigenschap. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
+Met de volgende aanvraag wordt een nieuwe regelcomponent gemaakt. In de lading, `relationships` de eigenschap koppelt de component aan een of meer specifieke regels en een bestaande extensie. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | Een geheel dat op de prioriteit voor de bijbehorende regel wijst in brand te steken. |
 | `attributes.settings` | A settings JSON object represented as a string. |
 | `attributes.timeout` | Een geheel getal dat de time-out aangeeft van de actie die achtereenvolgens wordt uitgevoerd. |
-| `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de `delegate_descriptor_id`.</li><li>`rules`: De regel waaronder deze component wordt gedefinieerd. Moet de zelfde regelidentiteitskaart zijn die in de verzoekweg wordt verstrekt.</li></ol>Voor meer algemene informatie over relaties raadpleegt u de [relatiehulplijn](../guides/relationships.md). |
+| `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de `delegate_descriptor_id`.</li><li>`rules`: De regel waaronder deze component wordt gedefinieerd.</li></ol>Voor meer algemene informatie over relaties raadpleegt u de [relatiehulplijn](../guides/relationships.md). |
 | `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde zijn `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -2,7 +2,7 @@
 title: B2B-brongegevenstype
 description: Dit document biedt een overzicht van het gegevenstype B2B Source Experience Data Model (XDM).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 1%
@@ -23,7 +23,7 @@ De [!UICONTROL B2B Source] Met het gegevenstype kunt u de oorspronkelijke tekenr
 | --- | --- | --- |
 | `sourceID` | Tekenreeks | Een unieke id voor de bronrecord. |
 | `sourceInstanceID` | Tekenreeks | De instantie- of organisatie-id van de brongegevens. |
-| `sourceKey` | Tekenreeks | Een unieke id die bestaat uit de `sourceId`, `sourceInstanceId`, en `sourceType` samengevoegd in de volgende indeling: `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Sommige bronschakelaars zoals Marketo voegen deze waarde automatisch voor bepaalde herkenningstekens samen. Andere moeten manueel worden aaneengeschakeld gebruikend [Gegevensprep `concat` function](../../data-prep/functions.md#string), bijvoorbeeld: `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | Tekenreeks | Een unieke id die bestaat uit de `sourceId`, `sourceInstanceId`, en `sourceType` samengevoegd in de volgende indeling: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Sommige bronschakelaars zoals Marketo voegen deze waarde automatisch voor bepaalde herkenningstekens samen. Andere moeten manueel worden aaneengeschakeld gebruikend [Gegevensprep `concat` function](../../data-prep/functions.md#string), bijvoorbeeld: `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | Tekenreeks | De naam van het platform dat de brongegevens levert. |
 
 {style=&quot;table-layout:auto&quot;}
